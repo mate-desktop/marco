@@ -211,8 +211,8 @@ meta_preview_draw (GtkWidget *widget,
   border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
 
   gtk_widget_get_allocation (widget, &allocation);
-  client_width = allocation.width - preview->borders.visible.left - preview->borders.visible.right - border_width * 2;
-  client_height = allocation.height - preview->borders.visible.top - preview->borders.visible.bottom - border_width * 2;
+  client_width = allocation.width - preview->borders.total.left - preview->borders.total.right - border_width * 2;
+  client_height = allocation.height - preview->borders.total.top - preview->borders.total.bottom - border_width * 2;
 
   if (client_width < 0)
     client_width = 1;
@@ -254,7 +254,7 @@ meta_preview_get_preferred_width (GtkWidget *widget,
 
   ensure_info (preview);
 
-  *minimum = *natural = preview->borders.visible.left + preview->borders.visible.right;
+  *minimum = *natural = preview->borders.total.left + preview->borders.total.right;
 
   child = gtk_bin_get_child (GTK_BIN (preview));
   if (child && gtk_widget_get_visible (child))
@@ -290,7 +290,7 @@ meta_preview_get_preferred_height (GtkWidget *widget,
 
   ensure_info (preview);
 
-  *minimum = *natural = preview->borders.visible.top + preview->borders.visible.bottom;
+  *minimum = *natural = preview->borders.total.top + preview->borders.total.bottom;
 
   child = gtk_bin_get_child (GTK_BIN (preview));
   if (child && gtk_widget_get_visible (child))
@@ -335,11 +335,12 @@ meta_preview_size_allocate (GtkWidget         *widget,
       gtk_widget_get_visible (child))
     {
       gtk_widget_get_allocation (widget, &widget_allocation);
-      child_allocation.x = widget_allocation.x + border_width + preview->borders.visible.left;
-      child_allocation.y = widget_allocation.y + border_width + preview->borders.visible.top;
+      child_allocation.x = widget_allocation.x + border_width + preview->borders.total.left;
+      child_allocation.y = widget_allocation.y + border_width + preview->borders.total.top;
 
-      child_allocation.width = MAX (1, widget_allocation.width - border_width * 2 - preview->borders.visible.left - preview->borders.visible.right);
-      child_allocation.height = MAX (1, widget_allocation.height - border_width * 2 - preview->borders.visible.top - preview->borders.visible.bottom);
+      child_allocation.width = MAX (1, widget_allocation.width - border_width * 2 - preview->borders.total.left - preview->borders.total.right);
+      child_allocation.height = MAX (1, widget_allocation.height - border_width * 2 - preview->borders.total.top - preview->borders.total.bottom);
+
       gtk_widget_size_allocate (gtk_bin_get_child (GTK_BIN (widget)), &child_allocation);
     }
 }
