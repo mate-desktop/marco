@@ -1,0 +1,9 @@
+#!/bin/sh
+
+pkgname=mate-window-manager
+
+if [ -f /usr/sbin/mateconfpkg ]; then
+	/usr/sbin/mateconfpkg --install ${pkgname}
+fi
+
+exit 0

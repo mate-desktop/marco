@@ -1,0 +1,40 @@
+pkgname=mate-window-manager
+pkgver=2011.11.28
+pkgrel=1
+pkgdesc="A window manager for MATE"
+arch=(i686 x86_64)
+license=('GPL')
+depends=('mate-conf' 'mate-dialogs' 'libgtop' 'libwnck') #  'libcanberra' 'startup-notification'
+makedepends=('intltool' 'pkgconfig' 'mate-doc-utils')
+options=('!emptydirs' '!libtool')
+install=mate-window-manager.install
+url="http://matsusoft.com.ar/projects"
+groups=('mate')
+source=(http://sourceforge.net/projects/matede/files/${pkgver}/${pkgname}.tar.gz/download
+        metacity-restartstyle.patch)
+sha256sums=('bbacc3cd0b7cb0d44d0417613d151cc3178a4b0fcf3ff77b4d254c9927f9942e'
+            'ea2450ca3e4fb59166ec18ff4844cc61cb16865880dc6b125078a3ab47bf2caf')
+
+build() {
+    cd "${srcdir}/${pkgname}"
+    patch -Np1 -i "${srcdir}/metacity-restartstyle.patch" || return 1
+    ./autogen.sh \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --libexecdir=/usr/lib/mate-window-manager \
+        --disable-static \
+        --disable-startup-notification \
+        --disable-scrollkeeper || return 1
+    make || return 1
+}
+
+package() {
+    cd "${srcdir}/${pkgname}"
+
+    make MATECONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 DESTDIR="${pkgdir}" install || return 1
+
+    install -m755 -d "${pkgdir}/usr/share/mateconf/schemas"
+    mateconf-merge-schema "${pkgdir}/usr/share/mateconf/schemas/${pkgname}.schemas" --domain ${pkgname} ${pkgdir}/etc/mateconf/schemas/*.schemas
+    rm -f ${pkgdir}/etc/mateconf/schemas/*.schemas
+}

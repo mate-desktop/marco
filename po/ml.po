@@ -1,0 +1,2311 @@
+# translation of ml.po to
+# translation of marco.master.ml.po to
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# FSF-India <locale@gnu.org.in>, 2003.
+# Ani Peter <apeter@redhat.com>, 2006, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: ml\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=marco&component=general\n"
+"POT-Creation-Date: 2010-03-25 08:59+0000\n"
+"PO-Revision-Date: 2010-03-26 11:56+0530\n"
+"Last-Translator: \n"
+"Language-Team:  <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
+
+#: ../src/50-marco-desktop-key.xml.in.h:1
+msgid "Desktop"
+msgstr "പണിയിടം"
+
+#: ../src/50-marco-key.xml.in.h:1
+msgid "Window Management"
+msgstr "ജാലക നിരീക്ഷണം"
+
+#: ../src/core/bell.c:294
+msgid "Bell event"
+msgstr "ബെല്‍ ഇവന്റ്"
+
+#: ../src/core/core.c:206
+#, c-format
+msgid "Unknown window information request: %d"
+msgstr "ജാലകത്തിനുള്ള ആവശ്യം അപരിചിതമായ സ്ഥലത്ത് നിന്നും : %d"
+
+#. Translators: %s is a window title
+#: ../src/core/delete.c:96
+#, c-format
+msgid "<tt>%s</tt> is not responding."
+msgstr "<tt>%s</tt> മറുപടി നല്‍കുന്നില്ല."
+
+#: ../src/core/delete.c:101
+msgid ""
+"You may choose to wait a short while for it to continue or force the "
+"application to quit entirely."
+msgstr ""
+"ഒന്നെങ്കില്‍ നിങ്ങള്‍ക്കു് അല്‍പനേരം കാത്തിരിക്കുന്നതിനായി തെരഞ്ഞെടുക്കാം അല്ലെങ്കില്‍ പൂര്‍ണ്ണമായി "
+"പ്രയോഗത്തില്‍ നിന്നും പുറത്തു് കടക്കാം."
+
+#: ../src/core/delete.c:110
+msgid "_Wait"
+msgstr "_കാത്തിരിക്കുക"
+
+#: ../src/core/delete.c:110
+msgid "_Force Quit"
+msgstr "_നിര്‍ബന്ധമായും പുറത്തു് കടക്കുക"
+
+#: ../src/core/delete.c:208
+#, c-format
+msgid "Failed to get hostname: %s\n"
+msgstr "ആതിഥേയനാമം ലഭിക്കുന്നതില്‌ പരാജയപ്പെട്ടു: %s\n"
+
+#: ../src/core/display.c:258
+#, c-format
+msgid "Missing %s extension required for compositing"
+msgstr "കംപോസിറ്റിങിനുള്ള %s എക്സ്റ്റെന്‍ഷന്‍ ആവശ്യമുണ്ടു്"
+
+#: ../src/core/display.c:336
+#, c-format
+msgid "Failed to open X Window System display '%s'\n"
+msgstr "XWindow തുറക്കുന്നതില്‌ പരാജയം : %s\n"
+
+#: ../src/core/errors.c:272
+#, c-format
+msgid ""
+"Lost connection to the display '%s';\n"
+"most likely the X server was shut down or you killed/destroyed\n"
+"the window manager.\n"
+msgstr ""
+"'%s' പ്രദര്‍ശനത്തിലേക്കുള്ള കണക്ഷന്‍ നഷ്ടപ്പെട്ടു;\n"
+"മിക്കവാറും X സര്‍വര്‍ അടച്ചു പൂട്ടിയിരിക്കാം, അല്ലെങ്കില്‍ നിങ്ങള്‍ ജാലക പാലകനെ\n"
+"ഇല്ലാതാക്കിയിരിക്കാം.\n"
+
+#: ../src/core/errors.c:279
+#, c-format
+msgid "Fatal IO error %d (%s) on display '%s'.\n"
+msgstr "ഗുരുതരമായ IO പിശക് %d (%s) ('%s' ദൃശ്യത്തില്‍).\n"
+
+#: ../src/core/keybindings.c:680
+#, c-format
+msgid ""
+"Some other program is already using the key %s with modifiers %x as a "
+"binding\n"
+msgstr "%s കീ %x മോഡിഫയറുകള്‍ക്കൊപ്പം ഒരു ബൈന്‍ഡിങായി മറ്റു ചില പ്രോഗ്രാമുകള്‍ നിലവില്‍ ഉപയോഗിക്കുന്നു.‌\n"
+
+#. Displayed when a keybinding which is
+#. * supposed to launch a program fails.
+#.
+#: ../src/core/keybindings.c:2294
+#, c-format
+msgid ""
+"There was an error running <tt>%s</tt>:\n"
+"\n"
+"%s"
+msgstr ""
+"<tt>%s</tt> പ്രവര്‍ത്തിപ്പിക്കുന്നതില്‍ പിശക്:\n"
+"\n"
+"%s"
+
+#: ../src/core/keybindings.c:2383
+#, c-format
+msgid "No command %d has been defined.\n"
+msgstr "%d എന്ന കമാന്‍ഡ് ലഭ്യമല്ല.\n"
+
+#: ../src/core/keybindings.c:3337
+#, c-format
+msgid "No terminal command has been defined.\n"
+msgstr "ഒരു ടെര്‍മിനല്‍ കമാന്‍ഡും ലഭ്യമല്ല.\n"
+
+#: ../src/core/main.c:131
+#, c-format
+msgid ""
+"marco %s\n"
+"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
+"This is free software; see the source for copying conditions.\n"
+"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A "
+"PARTICULAR PURPOSE.\n"
+msgstr ""
+"മെറ്റാസിറ്റി %s\n"
+"പകര്‍പ്പവകാശം (C) 2001-%s ഹാവക് പെനിങ്ടണ്‍, Red Hat, Inc.-ഉം മറ്റുള്ളവരും\n"
+"ഇതൊരു സ്വതന്ത്ര സോഫ്റ്റ്‌വെയറാണു്; പകര്‍പ്പു് നിലപാടുകള്‍ക്കായി സോഴ്സ് കാണുക.\n"
+"വാറണ്ടി ലഭ്യമല്ല; വ്യാപാരയോഗ്യതയോ ഒരു പ്രത്യേക കാര്യത്തിനു് ചേരുന്നതാണെന്നോ പരോക്ഷമായി "
+"ഉള്‍‌ക്കൊള്ളുന്ന വാറണ്ടി പോലും ഇല്ല.\n"
+
+#: ../src/core/main.c:269
+msgid "Disable connection to session manager"
+msgstr "സെഷന്‍ മാനേജറിലേക്കുള്ള കണക്ഷന്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക"
+
+#: ../src/core/main.c:275
+msgid "Replace the running window manager with Marco"
+msgstr "പ്രവര്‍ത്തനത്തിലുള്ള ജാലകത്തിന്റെ മാനേജറിനെ മെറ്റാസിറ്റി ഉപയോഗിച്ച് മാറ്റുക"
+
+#: ../src/core/main.c:281
+msgid "Specify session management ID"
+msgstr "സെഷന്‍ കൈകാര്യം ചെയ്യുന്ന ID നല്‍കുക"
+
+#: ../src/core/main.c:286
+msgid "X Display to use"
+msgstr "ഉപയോഗിക്കുന്നതിനുള്ള X ഡിസ്പ്ളെ"
+
+#: ../src/core/main.c:292
+msgid "Initialize session from savefile"
+msgstr "savefile-ല്‍ നിന്നും സെഷന്‍ ആരംഭിക്കുക"
+
+#: ../src/core/main.c:298
+msgid "Print version"
+msgstr "പ്രിന്റ് ചെയ്യുവാനുള്ള പതിപ്പു്"
+
+#: ../src/core/main.c:304
+msgid "Make X calls synchronous"
+msgstr "X കോളുകള്‍ സിന്‍ക്രൊണസാക്കുക"
+
+#: ../src/core/main.c:310
+msgid "Turn compositing on"
+msgstr "കംപോസിറ്റിങ് ഓണ്‍ ആക്കുക"
+
+#: ../src/core/main.c:316
+msgid "Turn compositing off"
+msgstr "കംപോസിറ്റിങ് ഓഫ് ആക്കുക"
+
+#: ../src/core/main.c:322
+msgid "Don't make fullscreen windows that are maximized and have no decorations"
+msgstr "ഏറ്റവും വലിതും അലങ്കാരങ്ങളില്ലാത്തതുമായ ജാലകങ്ങള്‍ പൂര്‍ണ്ണവലിപ്പത്തിലാക്കരുതു്"
+
+#: ../src/core/main.c:528
+#, c-format
+msgid "Failed to scan themes directory: %s\n"
+msgstr "പ്രമേയം സ്കാന്‍ ചെയ്യുവാന്‍ കഴിഞ്ഞില്ല: %s\n"
+
+#: ../src/core/main.c:544
+#, c-format
+msgid "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
+msgstr "ഒരു പ്രമേയം ലഭ്യമായില്ല! %s നിലവിലുണ്ടെന്നും പതിവായ പ്രമേയങ്ങള്‍ ലഭ്യമെന്നും ഉറപ്പാക്കുക.\n"
+
+#: ../src/core/main.c:603
+#, c-format
+msgid "Failed to restart: %s\n"
+msgstr "പുനരാരംഭിക്കുന്നതില്‌ പരാജയപ്പെട്ടു: %s\n"
+
+#.
+#. * We found it, but it was invalid.  Complain.
+#. *
+#. * FIXME: This replicates the original behaviour, but in the future
+#. * we might consider reverting invalid keys to their original values.
+#. * (We know the old value, so we can look up a suitable string in
+#. * the symtab.)
+#. *
+#. * (Empty comment follows so the translators don't see this.)
+#.
+#.
+#: ../src/core/prefs.c:508 ../src/core/prefs.c:663
+#, c-format
+msgid "MateConf key '%s' is set to an invalid value\n"
+msgstr "MateConf കീ '%s' തെറ്റായ മൂല്ല്യമായി സജ്ജമാക്കിയിരിക്കുന്നു\n"
+
+#: ../src/core/prefs.c:589 ../src/core/prefs.c:832
+#, c-format
+msgid "%d stored in MateConf key %s is out of range %d to %d\n"
+msgstr "%d MateConf കീ %s-ല്‍ സൂക്ഷിച്ചിരിക്കുന്നു. %d മുതല്‍ %d വരെ പരിധിയ്ക്കു് പുറത്താണു്\n"
+
+#: ../src/core/prefs.c:633 ../src/core/prefs.c:710 ../src/core/prefs.c:758
+#: ../src/core/prefs.c:822 ../src/core/prefs.c:1115 ../src/core/prefs.c:1131
+#: ../src/core/prefs.c:1148 ../src/core/prefs.c:1164
+#, c-format
+msgid "MateConf key \"%s\" is set to an invalid type\n"
+msgstr "MateConf കീ \"%s\" ശരിയായ തരമായി സജ്ജമല്ല\n"
+
+#: ../src/core/prefs.c:1234
+msgid ""
+"Workarounds for broken applications disabled. Some applications may not "
+"behave properly.\n"
+msgstr ""
+"തകരാറുള്ള പ്രയോഗങ്ങളിലുള്ള പ്രവര്‍ത്തനങ്ങള്‍ നിര്‍ജ്ജീവം. ചില പ്രയോഗങ്ങള്‍ ശരിയായി "
+"പ്രവര്‍ത്തിക്കുന്നതല്ല.\n"
+
+#: ../src/core/prefs.c:1305
+#, c-format
+msgid "Could not parse font description \"%s\" from MateConf key %s\n"
+msgstr "അക്ഷരസഞ്ചയ വിവരണം \"%s\" MateConf കീ %s-ല്‍ നിന്നും പാഴ്സ് ചെയ്യുവാന്‍ സാധ്യമല്ല\n"
+
+#: ../src/core/prefs.c:1367
+#, c-format
+msgid ""
+"\"%s\" found in configuration database is not a valid value for mouse button "
+"modifier\n"
+msgstr "ക്രമീകരണ ഡേറ്റാബെയിസില്‍ ലഭ്യമായ \"%s\" മൌസ് ബട്ടണ്‍ മോഡിഫയറിനുള്ള ശരിയായൊരു മൂല്ല്യമല്ല\n"
+
+#: ../src/core/prefs.c:1788
+#, c-format
+msgid "Error setting number of workspaces to %d: %s\n"
+msgstr "%d-ലേക്ക് പണിയറകളുടെ എണ്ണം സജ്ജമാക്കുന്നതില്‍ പിശക്: %s\n"
+
+#: ../src/core/prefs.c:1953 ../src/core/prefs.c:2456
+#, c-format
+msgid "Workspace %d"
+msgstr "പണിയറ %d"
+
+#: ../src/core/prefs.c:1983 ../src/core/prefs.c:2161
+#, c-format
+msgid ""
+"\"%s\" found in configuration database is not a valid value for keybinding "
+"\"%s\"\n"
+msgstr "ക്രമീകരണ ഡേറ്റാബെയിസില്‍ ലഭ്യമായ \"%s\" കീബൈന്‍ഡിങിനുള്ള \"%s\" ശരിയായൊരു മൂല്ല്യമല്ല\n"
+
+#: ../src/core/prefs.c:2537
+#, c-format
+msgid "Error setting name for workspace %d to \"%s\": %s\n"
+msgstr "%d യില്‌നിന്ന് \"%s\"ലേക്ക് പണിയറയുടെ പേ‌ര‌് സജ്ജമാക്കുന്നതില്‌ തെറ്റ്: %s\n"
+
+#: ../src/core/prefs.c:2741
+#, c-format
+msgid "Error setting compositor status: %s\n"
+msgstr "കംപോസിറ്റര്‍ അവസ്ഥ സജ്ജമാക്കുന്നതില്‍ പിശക്: %s\n"
+
+#: ../src/core/screen.c:357
+#, c-format
+msgid "Screen %d on display '%s' is invalid\n"
+msgstr "സ്ക്രീന്‍ %d തെറ്റാണു്. ഇതു് '%s' പ്രദര്‍ശത്തിലാണു്\n"
+
+#: ../src/core/screen.c:373
+#, c-format
+msgid ""
+"Screen %d on display \"%s\" already has a window manager; try using the --"
+"replace option to replace the current window manager.\n"
+msgstr ""
+"സ്ക്രീന്‍ %d, \"%s\" പ്രദര്‍ശനത്തിലുള്ളതില്‍ നിലവില്‍ ഒരു ജാലക പാലകനുണ്ടു്; നിലവിലുള്ള ജാലക "
+"പാലകനെ മാറ്റുന്നതിനായി --replace ഉപാധി ഉപയോഗിക്കുക.\n"
+
+#: ../src/core/screen.c:400
+#, c-format
+msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
+msgstr "സ്ക്രീന്‍ %d, \"%s\" പ്രദര്‍ശനത്തിലുള്ള ജാലക പാലക തെരഞ്ഞെടുക്കല്‍ ലഭ്യമാകുവാന്‍ സാധിച്ചില്ല\n"
+
+#: ../src/core/screen.c:458
+#, c-format
+msgid "Screen %d on display \"%s\" already has a window manager\n"
+msgstr "സ്ക്രീന്‍ %d, \"%s\" പ്രദര്‍ശനത്തിലുള്ളതില്‍ നിലവില്‍ ഒരു ജാലക പാലകനുണ്ടു്\n"
+
+#: ../src/core/screen.c:668
+#, c-format
+msgid "Could not release screen %d on display \"%s\"\n"
+msgstr "സ്ക്രീന്‍ %d \"%s\" പ്രദര്‍ശനത്തില്‍ വിടുവാന്‍ സാധ്യമല്ല\n"
+
+#. Translators: Please don't translate "Control", "Shift", etc, since these
+#. * are hardcoded (in gtk/gtkaccelgroup.c; it's not marco's fault).
+#. * "disabled" must also stay as it is.
+#.
+#: ../src/core/schema-bindings.c:169
+msgid ""
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
+"\n"
+"The parser is fairly liberal and allows lower or upper case, and also "
+"abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the "
+"special string \"disabled\", then there will be no keybinding for this "
+"action."
+msgstr ""
+"മാതൃക \"<Control>a\" അല്ലെങ്കില്‍ \"<Shift><Alt>F1\" പോലെയാണു്.\n"
+"\n"
+"ലോവര്‍ അല്ലെങ്കില്‍ അപ്പര്‍ കേസ്, \"<Ctl>\", \"<Ctl>\" പോലുള്ള അബ്രീവിയേഷനുകള്‍ എന്നിവ പാഴ്സര്‍ "
+"അനുവദിക്കുന്നു. ഉപാധി \"പ്രവര്‍ത്തന രഹിതം\" എന്നാക്കിയാല്‍, ഈ പ്രവര്‍ത്തിയ്ക്കു് കീബൈന്‍ഡിങ് ലഭ്യമല്ല."
+
+#: ../src/core/schema-bindings.c:177
+msgid ""
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
+"\n"
+"The parser is fairly liberal and allows lower or upper case, and also "
+"abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the "
+"special string \"disabled\", then there will be no keybinding for this "
+"action.\n"
+"\n"
+"This keybinding may be reversed by holding down the \"shift\" key; "
+"therefore, \"shift\" cannot be one of the keys it uses."
+msgstr ""
+"മാതൃക \"<Control>a\" അല്ലെങ്കില്‍ \"<Shift><Alt>F1\" പോലെയാണു്.\n"
+"\n"
+"ലോവര്‍ അല്ലെങ്കില്‍ അപ്പര്‍ കേസ്, \"<Ctl>\", \"<Ctl>\" പോലുള്ള അബ്രീവിയേഷനുകള്‍ എന്നിവ പാഴ്സര്‍ "
+"അനുവദിക്കുന്നു. ഉപാധി \"പ്രവര്‍ത്തന രഹിതം\" എന്നാക്കിയാല്‍, ഈ പ്രവര്‍ത്തിയ്ക്കു് കീബൈന്‍ഡിങ് "
+"ലഭ്യമല്ല.\n"
+"\n"
+"\"shift\" കീ അല്‍പനേരം അമര്‍ത്തിപിടിച്ചാല്‍, കീബൈന്‍ഡിങ് തിരിച്ചു പ്രവര്‍ത്തിക്കുന്നു; അതിനാല്‍ "
+"\"shift\" ഉപയോഗിക്കുവാന്‍ പാടില്ല."
+
+#: ../src/core/session.c:850 ../src/core/session.c:857
+#, c-format
+msgid "Could not create directory '%s': %s\n"
+msgstr "'%s'എന്ന കൂട് ഉണ്ടാക്കാന്‌ കഴിയുന്നില്ല: %s\n"
+
+#: ../src/core/session.c:867
+#, c-format
+msgid "Could not open session file '%s' for writing: %s\n"
+msgstr "%s എഴുതാനായി തുറക്കുന്നതില്‌ %s പരാജയം\n"
+
+#: ../src/core/session.c:1008
+#, c-format
+msgid "Error writing session file '%s': %s\n"
+msgstr "'%s' രചനാ എഴുതുന്നതില്‌ പരാജയം: %s\n"
+
+#: ../src/core/session.c:1013
+#, c-format
+msgid "Error closing session file '%s': %s\n"
+msgstr "'%s' രചന അട‌യ്‌ക്കുന്നതില്‌‌ പരാജയം: %s\n"
+
+#. oh, just give up
+#: ../src/core/session.c:1106
+#, c-format
+msgid "Failed to read saved session file %s: %s\n"
+msgstr "രചന %sലെ പ്രമേയം വായിക്കുന്നതില്‌ പരാജയപ്പെട്ടു: %s\n"
+
+#: ../src/core/session.c:1145
+#, c-format
+msgid "Failed to parse saved session file: %s\n"
+msgstr "രചന  വായിക്കുന്നതില്‌ പരാജയപ്പെട്ടു: %s\n"
+
+#: ../src/core/session.c:1194
+#, c-format
+msgid "<marco_session> attribute seen but we already have the session ID"
+msgstr "<marco_session> വിശേഷത ലഭ്യമായി പക്ഷേ നമുക്ക് നിലവില്‍ സെഷന്‍ ID ഉണ്ടു്."
+
+#: ../src/core/session.c:1207 ../src/core/session.c:1282
+#: ../src/core/session.c:1314 ../src/core/session.c:1386
+#: ../src/core/session.c:1446
+#, c-format
+msgid "Unknown attribute %s on <%s> element"
+msgstr "%s വിശേഷത അപരിചിതം, <%s> എലമെന്റില്‍"
+
+#: ../src/core/session.c:1224
+#, c-format
+msgid "nested <window> tag"
+msgstr "തരക്കെട്ടില്ലാത്ത ജാലകം"
+
+#: ../src/core/session.c:1466
+#, c-format
+msgid "Unknown element %s"
+msgstr "%s ന്റെ അറിയാത്ത ഘടകം"
+
+#: ../src/core/session.c:1818
+msgid ""
+"These windows do not support &quot;save current setup&quot; and will have to "
+"be restarted manually next time you log in."
+msgstr ""
+"ഈ ജാലകങ്ങള്‍ &quot;നിലവിലുള്ള സജ്ജമീകരണം സൂക്ഷിക്കുക&quot; പിന്തുണയ്ക്കിന്നില്ല. അടുത്ത തവണ "
+"നിങ്ങള്‍ ലോഗിന്‍ ചെയ്യുമ്പോള്‍ സ്വയമായി വീണ്ടും ആരംഭിക്കേണ്ടതാണു്."
+
+#: ../src/core/util.c:101
+#, c-format
+msgid "Failed to open debug log: %s\n"
+msgstr "തുറക്കുന്നതില്‌ പരാജയം: %s\n"
+
+#: ../src/core/util.c:111
+#, c-format
+msgid "Failed to fdopen() log file %s: %s\n"
+msgstr "fdopen() log രചന %s തുറക്കുന്നതില്‌ പരാജയം : %s\n"
+
+#: ../src/core/util.c:117
+#, c-format
+msgid "Opened log file %s\n"
+msgstr "തുറന്ന ഒരു ലോഗ് രചന %s\n"
+
+#: ../src/core/util.c:136 ../src/tools/marco-message.c:176
+#, c-format
+msgid "Marco was compiled without support for verbose mode\n"
+msgstr "verbose-നുള്ള പിന്തുണ ഇല്ലാതെയാണ് മെറ്റാ സിറ്റി തയ്യാറാക്കിയത്\n"
+
+#: ../src/core/util.c:236
+msgid "Window manager: "
+msgstr "ജാലക പാലകന്:‌"
+
+#: ../src/core/util.c:388
+msgid "Bug in window manager: "
+msgstr "ജാലക പാലകനിലെ ഛിദ്രം: ‌"
+
+#: ../src/core/util.c:421
+msgid "Window manager warning: "
+msgstr "ജാലക പാലകന്റെ മുന്നറിയിപ്പ്:‌"
+
+#: ../src/core/util.c:449
+msgid "Window manager error: "
+msgstr "ജാലക പാലകന്റെ തെറ്റ്:‌‌"
+
+#. Translators: This is the title used on dialog boxes
+#. eof all-keybindings.h
+#: ../src/core/util.c:570 ../src/marco.desktop.in.h:1
+#: ../src/marco-wm.desktop.in.h:1
+msgid "Marco"
+msgstr "മെറ്റാസിറ്റി"
+
+#. first time through
+#: ../src/core/window.c:5642
+#, c-format
+msgid ""
+"Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
+"window as specified in the ICCCM.\n"
+msgstr ""
+"ICCCM-ല്‍ വ്യക്തമാക്കിയിരിക്കുന്നതു് പോലെ WM_CLIENT_LEADER ജാലകത്തില്‍ സജ്ജമാക്കുന്നതിനു് പകരം, "
+"%s ജാലകം സ്വയം അതില്‍ SM_CLIENT_ID സജ്ജമാക്കുന്നു.\n"
+
+#. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
+#. * authoritative source for that info. Some apps such as mplayer or
+#. * xine disable resize via MWM but not WM_NORMAL_HINTS, but that
+#. * leads to e.g. us not fullscreening their windows.  Apps that set
+#. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
+#. * about these apps but make them work.
+#.
+#: ../src/core/window.c:6207
+#, c-format
+msgid ""
+"Window %s sets an MWM hint indicating it isn't resizable, but sets min size %"
+"d x %d and max size %d x %d; this doesn't make much sense.\n"
+msgstr ""
+"%s ജാലകം ഒരു MWM സജ്ജമാക്കുന്നു, ഇതിന്റെ വ്യാപ്തി മാറ്റുവാന്‍ സാധ്യമല്ലെന്നിതു് സൂചിപ്പിക്കുന്നു. "
+"പക്ഷേ ഏറ്റവും ചെറിയ വ്യപ്തി %d x %d എന്നും ഏറ്റവും കൂടിയതു് %d x %d എന്നും സജ്ജമാക്കുന്നു.\n"
+
+#: ../src/core/window-props.c:244
+#, c-format
+msgid "Application set a bogus _NET_WM_PID %lu\n"
+msgstr "പ്രയോഗം ഒരു bogus _NET_WM_PID %lu സജ്ജമാക്കുന്നു\n"
+
+#. Translators: the title of a window from another machine
+#: ../src/core/window-props.c:388
+#, c-format
+msgid "%s (on %s)"
+msgstr "%s (%s-ല്‍)"
+
+#. Simple case-- don't bother to look it up.  It's root.
+#: ../src/core/window-props.c:420
+#, c-format
+msgid "%s (as superuser)"
+msgstr "%s (സൂപ്പര്‍ യൂസറായി)"
+
+#. Translators: the title of a window owned by another user
+#. * on this machine
+#: ../src/core/window-props.c:438
+#, c-format
+msgid "%s (as %s)"
+msgstr "%s (%s ആയി)"
+
+#. Translators: the title of a window owned by another user
+#. * on this machine, whose name we don't know
+#: ../src/core/window-props.c:444
+#, c-format
+msgid "%s (as another user)"
+msgstr "%s (മറ്റൊരു ഉപയോക്താവായി)"
+
+#: ../src/core/window-props.c:1430
+#, c-format
+msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
+msgstr "തെറ്റായ WM_TRANSIENT_FOR ജാലകം 0x%lx %s-നു് നല്‍കിയിരിക്കുന്നു.\n"
+
+#: ../src/core/xprops.c:155
+#, c-format
+msgid ""
+"Window 0x%lx has property %s\n"
+"that was expected to have type %s format %d\n"
+"and actually has type %s format %d n_items %d.\n"
+"This is most likely an application bug, not a window manager bug.\n"
+"The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
+msgstr ""
+"0x%lx ജാലകത്തിനു് %s വിശേഷതയുണ്ടു്.\n"
+"%s രീതിയിലുള്ള %d മാതൃക പ്രതീക്ഷിച്ചു\n"
+"പക്ഷേ, യഥാര്‍ത്ഥത്തിലുള്ളതു് %s രീതിയിലുള്ള %d n_items %d ശൈലിയാണു്.\n"
+"ഇതു് ജാലകത്തിലുള്ളൊരു ബഗാണു്.\n"
+"ജാലകത്തിനു് തലക്കെട്ട്=\"%s\" ക്ലാസ്സ്=\"%s\" പേരു്=\"%s\" ഉണ്ടു്\n"
+
+#: ../src/core/xprops.c:401
+#, c-format
+msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
+msgstr "%s വിശേഷതയില്‍ തെറ്റായ UTF-8 ഉണ്ടു്, 0x%lx ജാലകത്തിലാണിതുള്ളതു്.\n"
+
+#: ../src/core/xprops.c:484
+#, c-format
+msgid "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the list\n"
+msgstr ""
+"%s വിശേഷതയില്‍ തെറ്റായ UTF-8 ഉണ്ടു്, 0x%lx ജാലകത്തിലുള്ള പട്ടികയിലുള്ള %d "
+"വസ്തുവിലാണിതുള്ളതു്.\n"
+
+#: ../src/include/all-keybindings.h:88
+msgid "Switch to workspace 1"
+msgstr "പപണിയറകള്‍ 1ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:90
+msgid "Switch to workspace 2"
+msgstr "പണിയറകള്‍ 2ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:92
+msgid "Switch to workspace 3"
+msgstr "പണിയറകള്‍ 3ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:94
+msgid "Switch to workspace 4"
+msgstr "പണിയറകള്‍ 4ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:96
+msgid "Switch to workspace 5"
+msgstr "പണിയറകള്‍ 5ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:98
+msgid "Switch to workspace 6"
+msgstr "പണിയറകള്‍ 6ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:100
+msgid "Switch to workspace 7"
+msgstr "പണിയറകള്‍ 7ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:102
+msgid "Switch to workspace 8"
+msgstr "പണിയറകള്‍ 8ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:104
+msgid "Switch to workspace 9"
+msgstr "പണിയറകള്‍ 9ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:106
+msgid "Switch to workspace 10"
+msgstr "പണിയറകള്‍ 10ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:108
+msgid "Switch to workspace 11"
+msgstr "പണിയറകള്‍ 11ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:110
+msgid "Switch to workspace 12"
+msgstr "പണിയറകള്‍ 12ലേക്ക് മാറ്റൂ"
+
+#: ../src/include/all-keybindings.h:122
+msgid "Switch to workspace on the left of the current workspace"
+msgstr "നിലവിലുള്ള പണിയറയുടെ ഇടതുവശത്തുള്ള പണിയറയിലേക്കു് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:126
+msgid "Switch to workspace on the right of the current workspace"
+msgstr "നിലവിലുള്ള പണിയറയുടെ വലതുവശത്തുള്ള പണിയറയിലേക്കു് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:130
+msgid "Switch to workspace above the current workspace"
+msgstr "നിലവിലുള്ള പണിയറയുടെ മുകളിലുള്ള പണിയറയിലേക്കു് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:134
+msgid "Switch to workspace below the current workspace"
+msgstr "നിലവിലുള്ള പണിയറയുടെ താഴെയുള്ള പണിയറയിലേക്കു് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:150
+msgid "Move between windows of an application, using a popup window"
+msgstr "ഒരു പോപ്പപ്പ് ജാലകം ഉപയോഗിച്ചു് പ്രയോഗത്തിലുള്ള ജാലകങ്ങളിലൂടെ നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:153
+msgid "Move backward between windows of an application, using a popup window"
+msgstr "ഒരു പോപ്പപ്പ് ജാലകം ഉപയോഗിച്ചു് പ്രയോഗത്തിലുള്ള ജാലകങ്ങളിലൂടെ പുറകോട്ട് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:157
+msgid "Move between windows, using a popup window"
+msgstr "ഒരു പോപ്പപ്പ് ജാലകം ഉപയോഗിച്ചു് ജാലകങ്ങളിലൂടെ നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:160
+msgid "Move backward between windows, using a popup window"
+msgstr "ഒരു പോപ്പപ്പ് ജാലകം ഉപയോഗിച്ചു് ജാലകങ്ങളിലൂടെ പുറകോട്ട് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:163
+msgid "Move between panels and the desktop, using a popup window"
+msgstr "ഒരു പോപ്പപ്പ് ജാലകം ഉപയോഗിച്ചു് പാനലുകളുടേയും പണിയിടത്തിലൂടേയും നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:166
+msgid "Move backward between panels and the desktop, using a popup window"
+msgstr "ഒരു പോപ്പപ്പ് ജാലകം ഉപയോഗിച്ചു് പാനലുകളുടേയും പണിയിടത്തിലൂടേയും പുറകോട്ട് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:171
+msgid "Move between windows of an application immediately"
+msgstr "ഒരു പ്രയോഗത്തിനുള്ള ജാലകങ്ങളിലൂടെ പെട്ടെന്നു് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:174
+msgid "Move backward between windows of an application immediately"
+msgstr "ഒരു പ്രയോഗത്തിനുള്ള ജാലകങ്ങളിലൂടെ പെട്ടെന്നു് പുറകോട്ട് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:177
+msgid "Move between windows immediately"
+msgstr "ജാലകങ്ങളിലൂടെ പെട്ടെന്നു് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:180
+msgid "Move backward between windows immediately"
+msgstr "ജാലകങ്ങളിലൂടെ പെട്ടെന്നു് പുറകോട്ട് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:183
+msgid "Move between panels and the desktop immediately"
+msgstr "പാനലുകളുടേയും പണിയിടത്തിലൂടേയും പെട്ടെന്നു് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:186
+msgid "Move backward between panels and the desktop immediately"
+msgstr "പാനലുകളുടേയും പണിയിടത്തിലൂടേയും പെട്ടെന്നു് പുറകോട്ട് നീങ്ങുക"
+
+#: ../src/include/all-keybindings.h:191
+msgid "Hide all normal windows and set focus to the desktop"
+msgstr "എല്ലാ സാധാരണ ജാലകങ്ങളും അദൃശ്യമാക്കി പണിയിടം കാണിക്കുക"
+
+#: ../src/include/all-keybindings.h:194
+msgid "Show the panel's main menu"
+msgstr "പാനലിന്റെ പ്രധാന മെനു കാണിക്കുക"
+
+#: ../src/include/all-keybindings.h:197
+msgid "Show the panel's \"Run Application\" dialog box"
+msgstr "പാനലിലുള്ള \"പ്രയോഗം പ്രവര്‍ത്തിപ്പിക്കുക\" ഡയലോഗ് ബോക്സ് കാണിക്കുക"
+
+#: ../src/include/all-keybindings.h:238
+msgid "Take a screenshot"
+msgstr "ഒരു സ്ക്രീന്‍ ഷോട്ട് എടുക്കുക"
+
+#: ../src/include/all-keybindings.h:240
+msgid "Take a screenshot of a window"
+msgstr "ജാലകത്തിന്റെ ഒരു സ്ക്രീന്‍ ഷോട്ട് എടുക്കുക"
+
+#: ../src/include/all-keybindings.h:242
+msgid "Run a terminal"
+msgstr "ഒരു ടെര്‍മിനല്‍ ലഭ്യമാക്കുക"
+
+#: ../src/include/all-keybindings.h:257
+msgid "Activate the window menu"
+msgstr "ജാലക പട്ടികയെ സജ്ജമാക്കുക"
+
+#: ../src/include/all-keybindings.h:260
+msgid "Toggle fullscreen mode"
+msgstr "അക്ഷര വിവര രീതിയില്‌ അളവ് ദൃശ്യമാക്കുക"
+
+#: ../src/include/all-keybindings.h:262
+msgid "Toggle maximization state"
+msgstr "ഏറ്റവും കൂടതലാക്കുന്ന അവസ്ഥ ടൊഗ്ഗിള്‍ ചെയ്യുക"
+
+#: ../src/include/all-keybindings.h:264
+msgid "Toggle whether a window will always be visible over other windows"
+msgstr "മറ്റു് ജാലകങ്ങള്‍ക്കിടയില്‍ ഒരു ജാലകം ദൃശ്യമാകുമോ എന്നു് ടൊഗിള്‍ ചെയ്യുക"
+
+#: ../src/include/all-keybindings.h:266
+msgid "Maximize window"
+msgstr "ജാലകം ഏറ്റവും വലുതാക്കുക"
+
+#: ../src/include/all-keybindings.h:268
+msgid "Restore window"
+msgstr "ജാലകം വീണ്ടെടുക്കുക"
+
+#: ../src/include/all-keybindings.h:270
+msgid "Toggle shaded state"
+msgstr "ഷേഡ് ചെയ്ത അവസ്ഥ ടൊഗ്ഗിള്‍ ചെയ്യുക"
+
+#: ../src/include/all-keybindings.h:272
+msgid "Minimize window"
+msgstr "ജാലകം ഏറ്റവും ചെറുതാക്കുക"
+
+#: ../src/include/all-keybindings.h:274
+msgid "Close window"
+msgstr "ജാലകം അടയ്‍ക്കുക"
+
+#: ../src/include/all-keybindings.h:276
+msgid "Move window"
+msgstr "ജാലകം നീക്കുക"
+
+#: ../src/include/all-keybindings.h:278
+msgid "Resize window"
+msgstr "ജാലകത്തിന്റെ വലിപ്പം മാറ്റുക"
+
+#: ../src/include/all-keybindings.h:281
+msgid "Toggle whether window is on all workspaces or just one"
+msgstr "എല്ലാ പണിയറകളിലെയും ജാലകമുണ്ടോ അതോ ഒന്നിലേയുള്ളോ എന്നു് ടൊഗിള്‍ ചെയ്യുക"
+
+#: ../src/include/all-keybindings.h:285
+msgid "Move window to workspace 1"
+msgstr "പണിയറ ജാലകം ഒന്നിലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:288
+msgid "Move window to workspace 2"
+msgstr "പണിയറ ജാലകം 2ലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:291
+msgid "Move window to workspace 3"
+msgstr "പണിയറ ജാലകം 3ലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:294
+msgid "Move window to workspace 4"
+msgstr "പണിയറ ജാലകം 4ലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:297
+msgid "Move window to workspace 5"
+msgstr "പണിയറ ജാലകം 5ലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:300
+msgid "Move window to workspace 6"
+msgstr "പണിയറ ജാലകം 6ലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:303
+msgid "Move window to workspace 7"
+msgstr "പണിയറ ജാലകം 7ലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:306
+msgid "Move window to workspace 8"
+msgstr "പണിയറ ജാലകം 8ലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:309
+msgid "Move window to workspace 9"
+msgstr "പണിയറ ജാലകം 9ലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:312
+msgid "Move window to workspace 10"
+msgstr "പണിയറ ജാലകം പത്തിലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:315
+msgid "Move window to workspace 11"
+msgstr "പണിയറ ജാലകം 11ലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:318
+msgid "Move window to workspace 12"
+msgstr "പണിയറ ജാലകം 12ലേക്ക് നീക്കുക"
+
+#: ../src/include/all-keybindings.h:330
+msgid "Move window one workspace to the left"
+msgstr "ഒരു പണിയറ‌‌‌‌‌യ‌്ക്ക് ഇടതുവശത്തേക്ക് ജാലകം നീക്കുക"
+
+#: ../src/include/all-keybindings.h:333
+msgid "Move window one workspace to the right"
+msgstr "ഒരു പണിയറ‌‌‌‌‌യ‌്ക്ക് വലതുവശത്തേക്ക് ജാലകം നീക്കുക"
+
+#: ../src/include/all-keybindings.h:336
+msgid "Move window one workspace up"
+msgstr "പണിയറകളിലെ ജാലകം മുകളിലേക്ക് ചലിപ്പിക്കുക"
+
+#: ../src/include/all-keybindings.h:339
+msgid "Move window one workspace down"
+msgstr "ഒരു പണിയറ താഴെ ജാലകം നീക്കുക"
+
+#: ../src/include/all-keybindings.h:342
+msgid "Raise window if it's covered by another window, otherwise lower it"
+msgstr "ജാലകം മറ്റൊരു ജാലകമുപയോഗിച്ചു് മറയ്ക്കുന്നെങ്കില്‍ ഉയര്‍ത്തുക അല്ലെങ്കില്‍ താഴെയാക്കുക"
+
+#: ../src/include/all-keybindings.h:344
+msgid "Raise window above other windows"
+msgstr "ജാലകം മറ്റ് ജാലകങ്ങളുടെ മുകളിലേക്ക് ഉയ‌ര്‍ത്തുക"
+
+#: ../src/include/all-keybindings.h:346
+msgid "Lower window below other windows"
+msgstr "ജാലകം മറ്റ് ജാലകങ്ങള്‍ക്കടിയിലാക്കുക"
+
+#: ../src/include/all-keybindings.h:350
+msgid "Maximize window vertically"
+msgstr "ജാലകം ലംബമായ് വലുതാക്കുക"
+
+#: ../src/include/all-keybindings.h:354
+msgid "Maximize window horizontally"
+msgstr "ജാലകം തിരശ്ചീനമായ് വലുതാക്കുക"
+
+#: ../src/include/all-keybindings.h:358
+msgid "Move window to north-west (top left) corner"
+msgstr "സ്ക്രീനിന്റെ തെക്ക്-പടിഞ്ഞാറ് (മുകളില്‍ ഇടതു്) വശത്തേക്ക് ജാലകം മാറ്റുക"
+
+#: ../src/include/all-keybindings.h:361
+msgid "Move window to north-east (top right) corner"
+msgstr "സ്ക്രീനിന്റെ തെക്ക്-കിഴക്ക് (മുകളില്‍ വലതു്) വശത്തേക്ക് ജാലകം മാറ്റുക"
+
+#: ../src/include/all-keybindings.h:364
+msgid "Move window to south-west (bottom left) corner"
+msgstr "സ്ക്രീനിന്റെ വടക്ക്-പടിഞ്ഞാറ് (താഴെ ഇടതു്) വശത്തേക്ക് ജാലകം മാറ്റുക"
+
+#: ../src/include/all-keybindings.h:367
+msgid "Move window to south-east (bottom right) corner"
+msgstr "സ്ക്രീനിന്റെ വടക്ക്-കിഴക്ക് (താഴെ വലതു്) വശത്തേക്ക് ജാലകം മാറ്റുക"
+
+#: ../src/include/all-keybindings.h:371
+msgid "Move window to north (top) side of screen"
+msgstr "സ്ക്രീനിന്റെ തെക്ക് (മുകളില്‍) വശത്തേക്ക് ജാലകം മാറ്റുക"
+
+#: ../src/include/all-keybindings.h:374
+msgid "Move window to south (bottom) side of screen"
+msgstr "സ്ക്രീനിന്റെ വടക്ക് (താഴെ) വശത്തേക്ക് ജാലകം മാറ്റുക"
+
+#: ../src/include/all-keybindings.h:377
+msgid "Move window to east (right) side of screen"
+msgstr "സ്ക്രീനിന്റെ കിഴക്ക് (വലതു്) വശത്തേക്ക് ജാലകം മാറ്റുക"
+
+#: ../src/include/all-keybindings.h:380
+msgid "Move window to west (left) side of screen"
+msgstr "സ്ക്രീനിന്റെ പടിഞ്ഞാറ് (ഇടതു്) വശത്തേക്ക് ജാലകം മാറ്റുക"
+
+#: ../src/include/all-keybindings.h:383
+msgid "Move window to center of screen"
+msgstr "സ്ക്രീനിന്റെ മദ്ധ്യത്തേക്ക് ജാലകം മാറ്റുക"
+
+#: ../src/marco.schemas.in.in.h:1
+msgid "(Not implemented) Navigation works in terms of applications not windows"
+msgstr "(ലഭ്യമാക്കിയിട്ടില്ല) പ്രയോഗങ്ങളിലൂടെ സഞ്ചരിക്കാം, ജാലകങ്ങളിലൂടെ സാധ്യമല്ല"
+
+#: ../src/marco.schemas.in.in.h:2
+msgid ""
+"A font description string describing a font for window titlebars. The size "
+"from the description will only be used if the titlebar_font_size option is "
+"set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
+"option is set to true."
+msgstr ""
+"ഒരു അക്ഷരസഞ്ചയ വിവരണ സ്ട്രിങ് ജാലകത്തിന്റെ ടൈട്ടില്‍ബാറുകള്‍ക്കുള്ള അക്ഷരസഞ്ചയിനുള്ള വിവരണം "
+"ലഭ്യമാക്കുന്നു. titlebar_font_size ഉപാധി 0 എങ്കില്‍ മാത്രം വിവരണത്തിലുള്ള വ്യാപ്തി "
+"ഉപയോഗിക്കുന്നു. കൂടാതെ, titlebar_uses_desktop_font ഉപാധി true ആയി സജ്ജമെങ്കില്‍ ഈ "
+"ഉപാധി പ്രവര്‍ത്തന രഹിതമാകുന്നു."
+
+#: ../src/marco.schemas.in.in.h:3
+msgid "Action on title bar double-click"
+msgstr "തലക്കെട്ടിനുള്ള ബാര്‍ രണ്ട് തവണ ക്ലിക്ക് ചെയ്യുമ്പോള്‍ ഉണ്ടാകുന്ന പ്രവര്‍ത്തി"
+
+#: ../src/marco.schemas.in.in.h:4
+msgid "Action on title bar middle-click"
+msgstr "തലക്കെട്ടിനുള്ള ബാറില്‍ നടുക്ക് ക്ളിക്ക് ചെയ്യുമ്പോള്‍ ഉണ്ടാകുന്ന പ്രവര്‍ത്തി"
+
+#: ../src/marco.schemas.in.in.h:5
+msgid "Action on title bar right-click"
+msgstr "തലക്കെട്ടിനുള്ള ബാറില്‍ റൈറ്റ് ക്ളിക്ക് ചെയ്യുമ്പോള്‍ ഉണ്ടാകുന്ന പ്രവര്‍ത്തി"
+
+#: ../src/marco.schemas.in.in.h:6
+msgid "Arrangement of buttons on the titlebar"
+msgstr "തലക്കെട്ടിനുള്ള ബാറില്‍ ബട്ടണുകളുടെ ക്രമീകരണം"
+
+#: ../src/marco.schemas.in.in.h:7
+msgid ""
+"Arrangement of buttons on the titlebar. The value should be a string, such "
+"as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
+"corner of the window from the right corner, and the button names are comma-"
+"separated. Duplicate buttons are not allowed. Unknown button names are "
+"silently ignored so that buttons can be added in future marco versions "
+"without breaking older versions. A special spacer tag can be used to insert "
+"some space between two adjacent buttons."
+msgstr ""
+"ടൈറ്റില്‍ ബാറിലുള്ള ബട്ടണുകളുടെ ക്രമം. മൂല്ല്യം ഒരു സ്ട്രിങായിരിക്കണം, അതായതു്, \"menu:"
+"minimize,maximize,spacer,close\"; ജാലകത്തിന്റെ ഇടതുള്ള മൂല വലുതുള്ള മൂലയില്‍ നിന്നും "
+"വേര്‍തിരിക്കുന്നതിനായി കോളണും ബട്ടണ്‍ നാമങ്ങള്‍ വേര്‍തിരിക്കുന്നതിനായി കോമയും ഉപയോഗിക്കുന്നു, "
+"ആവര്‍ത്തിച്ചുള്ള ബട്ടണുകള്‍ അനുവദിക്കുന്നതല്ല. അപരിചിതമായ ബട്ടണുകള്‍ അവഗണിക്കുന്നു, അങ്ങനെ പഴയ "
+"പതിപ്പുകള്‍ക്കു് തകരാറുണ്ടാകാതെ പുതിയ പതിപ്പുകളുടെ ഇനിയുള്ള പതിപ്പുകളില്‍ ബട്ടണുകള്‍ ചേര്‍ക്കുവാന്‍ "
+"സാധിക്കുന്നു. അടുത്തുള്ള രണ്ടു് ബട്ടണുകള്‍ തമ്മിലുള്ള സ്ഥലത്തു് ഒരു പ്രത്യേക സ്പെയിസര്‍ ടാഗ് ചേര്‍ക്കുവാന്‍ "
+"സാധിക്കുന്നു."
+
+#: ../src/marco.schemas.in.in.h:8
+msgid "Automatically raises the focused window"
+msgstr "അവസ്ഥാ മാറ്റങ്ങള്‍ സ്വയമേവ സംരക്ഷിക്കുക"
+
+#: ../src/marco.schemas.in.in.h:9
+msgid ""
+"Clicking a window while holding down this modifier key will move the window "
+"(left click), resize the window (middle click), or show the window menu "
+"(right click). The middle and right click operations may be swapped using "
+"the \"resize_with_right_button\" key. Modifier is expressed as \"&lt;Alt&gt;"
+"\" or \"&lt;Super&gt;\" for example."
+msgstr ""
+"ഈ മോഡിഫയര്‍ കീ അല്‍പനേരം അമര്‍ത്തുമ്പോള്‍ ഒരു ജാലകം ക്ലിക്ക് ചെയ്താല്‍, ജാലകം മുകളിലേക്ക് നീക്കുന്നു "
+"(ഇടതു് ക്ലിക്ക്), ജാലകത്തിന്റെ വ്യാപ്തി മാറ്റുന്നു (മിഡില്‍ ക്ലിക്ക്), അല്ലെങ്കില്‍ ജാലകത്തിനുള്ള മെനു "
+"കാണിക്കുന്നു (റൈറ്റ് ക്ലിക്ക്). \"resize_with_right_button\" കീ ഉപയോഗിച്ചു് മദ്ധ്യവും വലതുമുള്ള "
+"പ്രക്രിയകള്‍ മാറ്റുവാന്‍ സാധിക്കുന്നു. ഉദാഹരണത്തിനായി \"&lt;Alt&gt;\" അല്ലെങ്കില്‍ \"&lt;"
+"Super&gt;\" ആയി മോഡിഫയര്‍ ലഭ്യമാക്കുന്നു."
+
+#: ../src/marco.schemas.in.in.h:10
+msgid "Commands to run in response to keybindings"
+msgstr "കീബൈന്‍ഡിങിനുള്ള മറുപടിയായി പ്രവര്‍ത്തിക്കുന്ന കമാന്‍ഡുകള്‍"
+
+#: ../src/marco.schemas.in.in.h:11
+msgid "Compositing Manager"
+msgstr "കംപോസിറ്റിങ് മാനേജര്‍"
+
+#: ../src/marco.schemas.in.in.h:12
+msgid "Control how new windows get focus"
+msgstr "പുതിയ ജാലകങ്ങളിലേക്കുള്ള ശ്രദ്ധ നിയന്ത്രിക്കുന്നു"
+
+#: ../src/marco.schemas.in.in.h:13
+msgid "Current theme"
+msgstr "സജീവ തീം"
+
+#: ../src/marco.schemas.in.in.h:14
+msgid "Delay in milliseconds for the auto raise option"
+msgstr "സ്വയം ഉയര്‍ത്തുന്ന ഉപാധിയ്ക്കുള്ള താമസം മില്ലിസെക്കന്‍ഡുകളില്‍"
+
+#: ../src/marco.schemas.in.in.h:15
+msgid "Determines whether Marco is a compositing manager."
+msgstr "മെറ്റാസിറ്റി ഒരു കംപോസിറ്റിങ് മാനേജറാണെന്നു് നിശ്ചയിക്കുന്നു."
+
+#: ../src/marco.schemas.in.in.h:16
+msgid ""
+"Determines whether applications or the system can generate audible 'beeps'; "
+"may be used in conjunction with 'visual bell' to allow silent 'beeps'."
+msgstr ""
+"പ്രയോഗങ്ങള്‍ അല്ലെങ്കില്‍ സിസ്റ്റം കേള്‍ക്കാവുന്ന 'ബീപ്പുകള്‍' ഉണ്ടാക്കുന്നു എന്നു് നിശ്ചയിക്കുന്നു; 'വിശ്വല്‍ "
+"ബെല്‍' അല്ലെങ്കില്‍ നിശബ്ദ 'ബീപ്പുകള്‍' ഒന്നിച്ചുപയോഗിക്കുവാന്‍ സാധിക്കുന്നു."
+
+#: ../src/marco.schemas.in.in.h:17
+msgid "Disable misfeatures that are required by old or broken applications"
+msgstr "പഴയ അല്ലെങ്കില്‍ തകരാറുള്ള പ്രയോഗങ്ങള്‍ക്കാവശ്യമുള്ള വിശേഷതകള്‍ പ്രവര്‍ത്തന രഹിതമാക്കുന്നു"
+
+#: ../src/marco.schemas.in.in.h:18
+msgid "Enable Visual Bell"
+msgstr "വിശ്വല്‍ ബെല്‍ സജ്ജമാക്കുക"
+
+#: ../src/marco.schemas.in.in.h:19
+msgid ""
+"If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
+"the focused window will be automatically raised after a delay specified by "
+"the auto_raise_delay key. This is not related to clicking on a window to "
+"raise it, nor to entering a window during drag-and-drop."
+msgstr ""
+"true ആയി സജ്ജവും, ഫോക്കസ് മോഡ് \"സ്ലോപ്പി\" അല്ലെങ്കില്‍ \"മൌസ്\" ആണെങ്കില്‍ "
+"auto_raise_delay കീ വ്യക്തമാക്കിയിരിക്കുന്ന താമസത്തിനു് ശേഷം സ്വമായി ഫോക്കസ് ചെയ്യുന്ന "
+"ജാലകം ഉയര്‍ത്തുന്നു. ഒരു ജാലകത്തില്‍ ക്ലിക്ക് ചെയ്തു് ഉയര്‍ത്തന്നതു് പോലെയോ അല്ലെങ്കില്‍ വലിച്ചിട്ടൊരു "
+"ജാലകത്തില്‍ പ്രവേശിക്കുന്നതു് പോലെയോ അല്ലിതു്"
+
+#: ../src/marco.schemas.in.in.h:20
+msgid ""
+"If true, ignore the titlebar_font option, and use the standard application "
+"font for window titles."
+msgstr ""
+"true എങ്കില്‍, titlebar_font ഉപാധി ഉപേക്ഷിക്കുക. ജാലക തലക്കെട്ടുകള്‍ക്കു് പ്രയോഗങ്ങള്‍ക്കു് "
+"സാധാരണയുള്ള അക്ഷരസഞ്ചയം ഉപയോഗിക്കുക."
+
+#: ../src/marco.schemas.in.in.h:21
+msgid ""
+"If true, marco will give the user less feedback by using wireframes, "
+"avoiding animations, or other means. This is a significant reduction in "
+"usability for many users, but may allow legacy applications to continue "
+"working, and may also be a useful tradeoff for terminal servers. However, "
+"the wireframe feature is disabled when accessibility is on."
+msgstr ""
+"true എങ്കില്‍, വയര്‍ഫ്രെയിമുകളുപയോഗിച്ചും ആനിമേഷനുകള്‍ ഒഴിവാക്കിയും മെറ്റാസിറ്റി ഉപയോക്താവിനു് "
+"കുറഞ്ഞ അഭിപ്രായങ്ങള്‍ നല്‍കുന്നു. എന്നിരുന്നാലും, ആക്സസിബിളിറ്റി ഓണ്‍ ആകുമ്പോള്‍ വയര്‍ഫ്രെയിം വിശേഷത "
+"പ്രവര്‍ത്തന രഹിതമാക്കുന്നു."
+
+#: ../src/marco.schemas.in.in.h:22
+msgid ""
+"If true, then Marco works in terms of applications rather than windows. "
+"The concept is a bit abstract, but in general an application-based setup is "
+"more like the Mac and less like Windows. When you focus a window in "
+"application-based mode, all the windows in the application will be raised. "
+"Also, in application-based mode, focus clicks are not passed through to "
+"windows in other applications. Application-based mode is, however, largely "
+"unimplemented at the moment."
+msgstr ""
+"true ആണെങ്കില്‍, മെറ്റാസിറ്റി ജാലകങ്ങള്‍ക്കു് പകരം പ്രയോഗങ്ങള്‍ക്കായി പ്രവര്‍ത്തിക്കുന്നു. ആശയം ഒരു "
+"പക്ഷേ വ്യക്തമല്ലായിരിക്കാം, പക്ഷേ സാധാരണയായി, പ്രയോഗത്തിനടിസ്ഥാനമുള്ള സജ്ജീകരണം മാകില്‍ "
+"കൂടുതലും വിന്‍ഡോസില്‍ കുറവുമാണു്. നിങ്ങള്‍ പ്രയോഗം അടിസ്ഥാനത്തിലുള്ള മോഡില്‍, ഒരു ജാലകത്തില്‍ ഫോക്കസ് "
+"ചെയ്യുമ്പോള്‍, പ്രയോഗത്തിലുള്ള എല്ലാ ജാലകങ്ങളും ഉയര്‍ത്തുന്നു. കൂടാതെ, മറ്റ് പ്രയോഗങ്ങളില്‍ "
+"ജാലകത്തിലൂടെ ഫോക്കസ് ക്ലിക്കുകള്‍ നല്‍കുന്നതല്ല. നിലവില്‍ പ്രയോഗം അടിസ്ഥാനത്തിലുള്ള മോഡ് ലഭ്യമല്ല."
+
+#: ../src/marco.schemas.in.in.h:23
+msgid "If true, trade off usability for less resource usage"
+msgstr "true എങ്കില്‍, കുറഞ്ഞ റിസോഴ്സ് ഉപയോഗം മാറ്റുക"
+
+#: ../src/marco.schemas.in.in.h:24
+msgid "Modifier to use for modified window click actions"
+msgstr "മാറ്റം വരുത്തിയ ജാലകങ്ങളുടെ ക്ലിക്ക് പ്രവര്‍ത്തനങ്ങള്‍ക്കുള്ള മോഡിഫയര്‍"
+
+#: ../src/marco.schemas.in.in.h:25
+msgid "Name of workspace"
+msgstr "പണിയറയുടെ പേര‌്"
+
+#: ../src/marco.schemas.in.in.h:26
+msgid "Number of workspaces"
+msgstr "പണിയറകളുടെ എണ്ണം"
+
+#: ../src/marco.schemas.in.in.h:27
+msgid ""
+"Number of workspaces. Must be more than zero, and has a fixed maximum to "
+"prevent making the desktop unusable by accidentally asking for too many "
+"workspaces."
+msgstr ""
+"പണിയറകളുടെ എണ്ണം. പൂജ്യത്തില്‍ കൂടുതലായിരിക്കണം. കൂടാതെ അബദ്ധവശാല്‍ അനവധി പണിയറകള്‍ "
+"ആവശ്യപ്പെട്ട് പണിയിടം ഉപയോഗിക്കുവാന്‍ സാധ്യമാകാതിരിക്കുന്നതു് ഒഴിവാക്കുന്നതിനായി സ്ഥിരമായ കൂടിയ "
+"മൂല്ല്യമുണ്ടു്."
+
+#: ../src/marco.schemas.in.in.h:28
+msgid "Run a defined command"
+msgstr "നിര്‍വചിച്ച നിര്‍ദ്ദേശം പ്രാവര്‍ത്തികമാക്കൂ"
+
+#: ../src/marco.schemas.in.in.h:29
+msgid ""
+"Set this to true to resize with the right button and show a menu with the "
+"middle button while holding down the key given in \"mouse_button_modifier\"; "
+"set it to false to make it work the opposite way around."
+msgstr ""
+"റൈറ്റ് ബട്ടണ്‍ ഉപയോഗിച്ചു് വ്യാപ്തി കൂട്ടുന്നതിനും \"mouse_button_modifier\"-ല്‍ ലഭ്യമായ കീ "
+"അല്‍പനേരം പിടിച്ച് മിഡില്‍ ബട്ടണ്‍ ഉപയോഗിച്ചു് മെനു കാണിക്കുന്നതിനും ഇതു് true ആയി സജ്ജമാക്കുക; "
+"തിരിച്ചു പ്രവര്‍ത്തിക്കുന്നതിനായി false ആയി സജ്ജമാക്കുക."
+
+#: ../src/marco.schemas.in.in.h:30
+msgid ""
+"Setting this option to false can lead to buggy behavior, so users are "
+"strongly discouraged from changing it from the default of true. Many actions "
+"(e.g. clicking in the client area, moving or resizing the window) normally "
+"raise the window as a side-effect. Setting this option to false, which is "
+"strongly discouraged, will decouple raising from other user actions, and "
+"ignore raise requests generated by applications. See http://bugzilla.mate."
+"org/show_bug.cgi?id=445447#c6. Even when this option is false, windows can "
+"still be raised by an alt-left-click anywhere on the window, a normal click "
+"on the window decorations, or by special messages from pagers, such as "
+"activation requests from tasklist applets. This option is currently disabled "
+"in click-to-focus mode. Note that the list of ways to raise windows when "
+"raise_on_click is false does not include programmatic requests from "
+"applications to raise windows; such requests will be ignored regardless of "
+"the reason for the request. If you are an application developer and have a "
+"user complaining that your application does not work with this setting "
+"disabled, tell them it is _their_ fault for breaking their window manager "
+"and that they need to change this option back to true or live with the \"bug"
+"\" they requested."
+msgstr ""
+"false ആയി ഈ ഉപാധി സജ്ജമാക്കിയാല്‍ ഇതു് തെറ്റായി പ്രവര്‍ത്തിക്കുന്നു.അതിനാല്‍ സ്വതവേയുള്ള true "
+"മാറ്റുന്നതില്‍ നിന്നും ഉപയോക്താക്കളെ നിരുത്സാഹപ്പെടുത്തുന്നു. പല പ്രവര്‍ത്തികള്‍ (ഉദാ, ക്ലൈന്റ് സ്ഥലത്ത് "
+"ക്ലിക്ക്ചെയ്യുക അല്ലെങ്കില്‍ ജാലകം നീക്കുക അല്ലെങ്കില്‍ വ്യാപ്തി മാറ്റുക) സാധാരണ ഇതിന്റെ ഫലമായി "
+"ജാലകം ഉയര്‍ത്തുന്നു. ഈ ഉപാധി false ആക്കിയാല്‍, പ്രയോഗങ്ങള്‍ നല്‍കുന്ന ആവശ്യങ്ങള്‍ അവഗണിക്കുന്നു."
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 കാണുക. ഈ ഉപാധി false "
+"ആകുമ്പോഴും,ജാലകത്തിലെവിടെങ്കിലുമുള്ള alt-left-click, ജാലകം അലങ്കാരങ്ങളിലുള്ള സാധാരണ "
+"ക്ലിക്ക്, ടാസ്ക് ലിസ്റ്റ് ആപ്ലെറ്റുകളില്‍ നിന്നുള്ള സജീവമാക്കല്‍ ആവശ്യങ്ങള്‍ പോലുള്ള പേജറുകളില്‍ നിന്നുള്ള "
+"പ്രത്യേക സന്ദേശങ്ങള്‍എന്നിവ ജാലകം ഉയര്‍ത്തുന്നു. നിലവില്‍ ഈ ഉപാധി click-to-focusമോഡില്‍ "
+"പ്രവര്‍ത്തന രഹിതമാണു്. raise_on_click false ആകുമ്പോള്‍ജാലകം ഉയര്‍ത്തുവാനുള്ളതില്‍ പ്രയോഗങ്ങളില്‍ "
+"നിന്നുള്ള പ്രോഗ്രമാറ്റിക്ആവശ്യങ്ങള്‍ ഉള്‍പ്പെടുന്നില്ല; ആവശ്യമെന്തിനെന്നു് നോക്കാതെ അവഅവഗണിക്കുന്നു. "
+"നിങ്ങള്‍ ഒരു പ്രയോഗം ഡവലപ്പറും, ഈ സജ്ജീകരണം പ്രവര്‍ത്തന രഹിതമാകുമ്പോള്‍ പ്രയോഗം "
+"പ്രവര്‍ത്തിക്കുന്നില്ല എന്ന പരാതിയുമായിഒരു ഉപയോക്താവും ഉണ്ടെങ്കില്‍, പാലക ജാലകന്‍ തകര്‍ന്നതു് "
+"സ്വന്തംപിശകുകൊണ്ടാണെന്നും ഉപാധി true ആക്കണമെന്നും ഉപയോക്താവിനെഅറിയിക്കുക. അല്ലെങ്കില്‍ ഈ "
+"\"ബഗുമായി\" പൊരുത്തപ്പെടുക."
+
+#: ../src/marco.schemas.in.in.h:31
+msgid ""
+"Some applications disregard specifications in ways that result in window "
+"manager misfeatures. This option puts Marco in a rigorously correct mode, "
+"which gives a more consistent user interface, provided one does not need to "
+"run any misbehaving applications."
+msgstr ""
+"ജാലക പാലകന്റെ വിശേഷകള്‍ നഷ്ടമാകും വിധം ചില പ്രയോഗങ്ങള്‍ വിവരണങ്ങള്‍ ഉപേക്ഷിക്കുന്നു. ഇതു് "
+"മെറ്റസിറ്റി ശരിയായ മോഡില്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നു. ഇങ്ങനെ സ്ഥിരമായൊരു യൂസര്‍ ഇന്റര്‍ഫെയിസ് "
+"ലഭ്യമാകുന്നു. തകരാറുള്ള പ്രയോഗങ്ങള്‍ പ്രവര്‍ത്തിക്കുന്നുമില്ല"
+
+#: ../src/marco.schemas.in.in.h:32
+msgid "System Bell is Audible"
+msgstr "സിസ്റ്റം ബെല്‍ കേള്‍ക്കുവാന്‍ സാധിക്കുന്നു"
+
+#: ../src/marco.schemas.in.in.h:33
+msgid ""
+"Tells Marco how to implement the visual indication that the system bell "
+"or another application 'bell' indicator has been rung. Currently there are "
+"two valid values, \"fullscreen\", which causes a fullscreen white-black "
+"flash, and \"frame_flash\" which causes the titlebar of the application "
+"which sent the bell signal to flash. If the application which sent the bell "
+"is unknown (as is usually the case for the default \"system beep\"), the "
+"currently focused window's titlebar is flashed."
+msgstr ""
+"സിസ്റ്റം ബെല്‍ അല്ലെങ്കില്‍ മറ്റൊരു പ്രയോഗത്തിനുള്ള 'ബെല്‍' പ്രവര്‍ത്തിച്ചു എന്നുള്ള വിശ്വല്‍ സൂചന എങ്ങനെ "
+"ലഭ്യമാക്കണമെന്നു് മെറ്റസിറ്റിയെ അറിയിക്കുന്നു. നിലവില്‍ ശരിയായ രണ്ടു് മൂല്ല്യങ്ങളുണ്ടു്: പൂര്‍ണ്ണ സ്ക്രീന്‍ "
+"വൈറ്റ്-ബ്ലാക്ക് ഫ്ലാഷിനായി \"fullscreen\", ഫ്ലാഷിലേക്ക് ബെല്‍ സിഗ്നല്‍ അയയ്ക്കുന്ന പ്രയോഗത്തിനുള്ള "
+"ടൈറ്റില്‍ബാറിനായി \"frame_flash\". ബെല്‍ ലഭ്യമാക്കിയ പ്രയോഗം അപരിചിതമെങ്കില്‍ "
+"(സ്വതവേയുള്ളത് \"system beep\"), നിലവില്‍ ഫോക്കസ് ചെയ്യുന്ന ജാലകത്തിന്റെ ടൈറ്റില്‍ബാര്‍ ഫ്ലാഷ് "
+"ചെയ്യുന്നു."
+
+#: ../src/marco.schemas.in.in.h:34
+msgid ""
+"The /apps/marco/global_keybindings/run_command_N keys define keybindings "
+"that correspond to these commands. Pressing the keybinding for run_command_N "
+"will execute command_N."
+msgstr ""
+"ഈ കമാന്‍ഡുകള്‍ക്കുള്ള കീബൈന്‍ഡിങുകള്‍ /apps/marco/global_keybindings/ run_command_N "
+"കീകള്‍ നിഷ്കര്‍ഷിക്കുന്നു. run_command_N-നുള്ള കീബൈന്‍ഡിങ് അമര്‍ത്തുന്നതു് command_N "
+"പ്രവര്‍ത്തിപ്പിക്കുന്നു"
+
+#: ../src/marco.schemas.in.in.h:35
+msgid ""
+"The /apps/marco/global_keybindings/run_command_screenshot key defines a "
+"keybinding which causes the command specified by this setting to be invoked."
+msgstr ""
+"ഈ സജ്ജീകരണം നല്‍കിയ കമാന്‍ഡ് ലഭ്യമാക്കുന്നതിനായി /apps/marco/global_keybindings/"
+"run_command_screenshot കീ ഒരു കീബൈന്‍ഡിങ് നിഷ്കര്‍ഷിക്കുന്നു."
+
+#: ../src/marco.schemas.in.in.h:36
+msgid ""
+"The /apps/marco/global_keybindings/run_command_window_screenshot key "
+"defines a keybinding which causes the command specified by this setting to "
+"be invoked."
+msgstr ""
+"ഈ സജ്ജീകരണം നല്‍കിയ കമാന്‍ഡ് ലഭ്യമാക്കുന്നതിനായി /apps/marco/global_keybindings/"
+"run_command_window_screenshot കീ ഒരു കീബൈന്‍ഡിങ് നിഷ്കര്‍ഷിക്കുന്നു."
+
+#: ../src/marco.schemas.in.in.h:37
+msgid ""
+"The keybinding that runs the correspondingly-numbered command in /apps/"
+"marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" or "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
+"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
+"then there will be no keybinding for this action."
+msgstr ""
+"/apps/marco/keybinding_commands-ലുള്ള കമാന്‍ഡ് പ്രവര്‍ത്തിപ്പിക്കുന്ന കീബൈന്‍ഡിങ്. മാതൃക "
+"\"&lt;Control&gt;a\" അല്ലെങ്കില്‍ \"&lt;Shift&gt;&lt;Alt&gt;F1\" പോലെയാണു്. ലോവര്‍ "
+"അല്ലെങ്കില്‍ അപ്പര്‍ കേസ്, \"&lt;Control&gt;\", \"&lt;Control&gt;\" പോലുള്ള "
+"അബ്രീവിയേഷനുകള്‍ എന്നിവ പാഴ്സര്‍ അനുവദിക്കുന്നു. ഉപാധി \"പ്രവര്‍ത്തന രഹിതം\" എന്നാക്കിയാല്‍, ഈ "
+"പ്രവര്‍ത്തിയ്ക്കു് കീബൈന്‍ഡിങ് ലഭ്യമല്ല."
+
+#: ../src/marco.schemas.in.in.h:38
+msgid "The name of a workspace."
+msgstr "പണിയറുടെ പേര‍്"
+
+#: ../src/marco.schemas.in.in.h:39
+msgid "The screenshot command"
+msgstr "സ്ക്രീന്‍ ഷോട്ടിനുള്ള കമാന്‍ഡ്"
+
+#: ../src/marco.schemas.in.in.h:40
+msgid ""
+"The theme determines the appearance of window borders, titlebar, and so "
+"forth."
+msgstr "വിന്‍ഡോ അതിരുകള്‍, ടൈറ്റില്‍ബാര്‍ എന്നിങ്ങളെയുള്ളവയുടെ കാഴ്ച പ്രമേയം നിശ്ചയിക്കുന്നു."
+
+#: ../src/marco.schemas.in.in.h:41
+msgid ""
+"The time delay before raising a window if auto_raise is set to true. The "
+"delay is given in thousandths of a second."
+msgstr ""
+"auto_raise true ആണെങ്കില്‍ ഒരു ജാലകം ഉയര്‍ത്തുന്നതിനു് മുമ്പുള്ള താമസം. സമയം ഒരു സെക്കന്‍ഡിന്റെ "
+"ആയിരത്തിലൊന്നായി നല്‍കുന്നു."
+
+#: ../src/marco.schemas.in.in.h:42
+msgid ""
+"The window focus mode indicates how windows are activated. It has three "
+"possible values; \"click\" means windows must be clicked in order to focus "
+"them, \"sloppy\" means windows are focused when the mouse enters the window, "
+"and \"mouse\" means windows are focused when the mouse enters the window and "
+"unfocused when the mouse leaves the window."
+msgstr ""
+"എങ്ങനെ ജാലകം സജീവമാക്കുന്നു എന്നു് ജാലകം ഫോക്കസ് മോഡ് സൂചിപ്പിക്കുന്നു. ഇതിനു് മൂന്നു് മൂല്ല്യങ്ങളുണ്ടു്; "
+"\"click\" - ജാലകം ഫോക്കസ് ചെയ്യുന്നതിനു് മാത്രം അവ ക്ലിക്ക് ചെയ്യണം, \"sloppy\" - "
+"ജാലകത്തില്‍ മൌസ് പ്രവേശിക്കുമ്പോള്‍ അവ ഫോക്കസ് ചെയ്യപ്പെടുന്നു, \"mouse\" -  ജാലകത്തില്‍ മൌസ് "
+"പ്രവേശിക്കുമ്പോള്‍ അവ ഫോക്കസ് ചെയ്യപ്പെടുന്നു, മൌസ് ജാലകം ഉപേക്ഷിക്കുമ്പോള്‍ ഫോക്കസ് നഷ്ടപ്പെടുന്നു."
+
+#: ../src/marco.schemas.in.in.h:43
+msgid "The window screenshot command"
+msgstr "ജാലകത്തിന്റെ സ്ക്രീന്‍ഷോട്ടിനുള്ള കമാന്‍ഡ്"
+
+#: ../src/marco.schemas.in.in.h:44
+msgid ""
+"This option determines the effects of double-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will "
+"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+"ടൈറ്റില്‍ ബാറില്‍ ഡബിള്‍ ക്ലിക്ക് ചെയ്യുന്നതിന്റെ ഫലം ഈ ഉപാധി നല്‍കുന്നു.നിലവില്‍ സാധുതയുള്ള "
+"ഉപാധികള്‍:'toggle_shade'- ജാലകം ഷെയിഡ്/അണ്‍ഷെയിഡ് ചെയ്യുന്നു, 'toggle_maximize' - "
+"ജാലകം വലുതു്/ചെറുതാക്കുന്നു, 'toggle_maximize_horizontally' , "
+"'toggle_maximize_vertically' എന്നിവ ആ ദിശയില്‍ മാത്രം ജാലകം വലുതു്/ചെറുതാക്കുന്നു, "
+"'minimize' - ജാലകം ചെറുതാക്കുന്നു,'shade' - ജാലകം മുകളിലേക്ക് റോള്‍ ചെയ്യുന്നു, 'menu' - "
+"ജാലകത്തിനുള്ള മെനു ലഭ്യമാക്കുന്നു, 'lower' - എല്ലാത്തിനും പുറകില്‍ ജാലകം സ്ഥാപിക്കുന്നു, 'none' "
+"- ഒന്നും ചെയ്യുന്നില്ല"
+
+#: ../src/marco.schemas.in.in.h:45
+msgid ""
+"This option determines the effects of middle-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will "
+"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+"ടൈറ്റില്‍ ബാറില്‍ മിഡില്‍ ക്ലിക്ക് ചെയ്യുന്നതിന്റെ ഫലം ഈ ഉപാധി നല്‍കുന്നു.നിലവില്‍ സാധുതയുള്ള "
+"ഉപാധികള്‍:'toggle_shade'- ജാലകം ഷെയിഡ്/അണ്‍ഷെയിഡ് ചെയ്യുന്നു, 'toggle_maximize' - "
+"ജാലകം വലുതു്/ചെറുതാക്കുന്നു, 'toggle_maximize_horizontally' , "
+"'toggle_maximize_vertically' എന്നിവ ആ ദിശയില്‍ മാത്രം ജാലകം വലുതു്/ചെറുതാക്കുന്നു, "
+"'minimize' - ജാലകം ചെറുതാക്കുന്നു,'shade' - ജാലകം മുകളിലേക്ക് റോള്‍ ചെയ്യുന്നു, 'menu' - "
+"ജാലകത്തിനുള്ള മെനു ലഭ്യമാക്കുന്നു, 'lower' - എല്ലാത്തിനും പുറകില്‍ ജാലകം സ്ഥാപിക്കുന്നു, 'none' "
+"- ഒന്നും ചെയ്യുന്നില്ല"
+
+#: ../src/marco.schemas.in.in.h:46
+msgid ""
+"This option determines the effects of right-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will "
+"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+"ടൈറ്റില്‍ ബാറില്‍ റൈറ്റ് ക്ലിക്ക് ചെയ്യുന്നതിന്റെ ഫലം ഈ ഉപാധി നല്‍കുന്നു.നിലവില്‍ സാധുതയുള്ള "
+"ഉപാധികള്‍:'toggle_shade'- ജാലകം ഷെയിഡ്/അണ്‍ഷെയിഡ് ചെയ്യുന്നു, 'toggle_maximize' - "
+"ജാലകം വലുതു്/ചെറുതാക്കുന്നു, 'toggle_maximize_horizontally' , "
+"'toggle_maximize_vertically' എന്നിവ ആ ദിശയില്‍ മാത്രം ജാലകം വലുതു്/ചെറുതാക്കുന്നു, "
+"'minimize' - ജാലകം ചെറുതാക്കുന്നു,'shade' - ജാലകം മുകളിലേക്ക് റോള്‍ ചെയ്യുന്നു, 'menu' - "
+"ജാലകത്തിനുള്ള മെനു ലഭ്യമാക്കുന്നു, 'lower' - എല്ലാത്തിനും പുറകില്‍ ജാലകം സ്ഥാപിക്കുന്നു, 'none' "
+"- ഒന്നും ചെയ്യുന്നില്ല"
+
+#: ../src/marco.schemas.in.in.h:47
+msgid ""
+"This option provides additional control over how newly created windows get "
+"focus. It has two possible values; \"smart\" applies the user's normal focus "
+"mode, and \"strict\" results in windows started from a terminal not being "
+"given focus."
+msgstr ""
+"പുതുതായി ഉണ്ടാക്കിയ ജാലകങ്ങളിലേക്ക് കൂടുതല്‍ സൂചിക നിയന്ത്രണം ഈ ഉപാധി ലഭ്യമാക്കുന്നു. രണ്ടു് "
+"മൂല്ല്യങ്ങളുണ്ടു്; \"smart\" ഉപയോക്താവിന്റെ സാധാരണ ഫോക്കസ് മോഡ് ലഭ്യമാക്കുന്നു, \"strict\" "
+"ഫലമാകുന്നതു് ഒരു ടെര്‍മിനലില്‍ ആരംഭിച്ച ജാലകങ്ങളാകുന്നു, ഇവയില്‍ ഫോക്കസ് ലഭ്യമല്ല."
+
+#: ../src/marco.schemas.in.in.h:48
+msgid ""
+"Turns on a visual indication when an application or the system issues a "
+"'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
+"environments."
+msgstr ""
+"ഒരു പ്രയോഗം അല്ലെങ്കില്‍ ഒരു സിസ്റ്റം 'മണി' അല്ലെങ്കില്‍ 'ബീപ്പ്' ഉണ്ടാക്കുമ്പോള്‍ കാണുവാന്‍ "
+"സാധ്യമാകുന്ന സൂചന ഓണ്‍ ചെയ്യുന്നു; കേള്‍ക്കുവാന്‍ സാധ്യമല്ലാത്ത സാഹചര്യങ്ങളില്‍ ഉപയോഗിക്കുന്നു"
+
+#: ../src/marco.schemas.in.in.h:49
+msgid "Use standard system font in window titles"
+msgstr "ജാലക തലക്കെട്ടുകള്‍ക്ക് സാധാരണയുള്ള സിസ്റ്റം അക്ഷരസഞ്ചയം ഉപയോഗിക്കുക"
+
+#: ../src/marco.schemas.in.in.h:50
+msgid "Visual Bell Type"
+msgstr "വിശ്വല്‍ ബെല്‍ രീതി"
+
+#: ../src/marco.schemas.in.in.h:51
+msgid "Whether raising should be a side-effect of other user interactions"
+msgstr "ഉയര്‍ത്തുന്നതു് മറ്റു് ഉപയോക്താക്കളുടെ ഇന്ററാക്ഷനുകളുടെ ഒരു ഫലമാണോ എന്നു്"
+
+#: ../src/marco.schemas.in.in.h:52
+msgid "Whether to resize with the right button"
+msgstr "വലതു് ബട്ടണ്‍ ഉപയോഗിച്ചു് വലിപ്പം മാറ്റണമോയെന്നു്"
+
+#: ../src/marco.schemas.in.in.h:53
+msgid "Window focus mode"
+msgstr "ജാലക കേന്ദ്രീകരണരീതി"
+
+#: ../src/marco.schemas.in.in.h:54
+msgid "Window title font"
+msgstr "ജാലക തലക്കെട്ട് അക്ഷരരൂപം"
+
+#: ../src/tools/marco-message.c:150
+#, c-format
+msgid "Usage: %s\n"
+msgstr "ഉപയോഗം: %s\n"
+
+#: ../src/ui/frames.c:1118
+msgid "Close Window"
+msgstr "ജാലകം അടയ്‍ക്കുക"
+
+#: ../src/ui/frames.c:1121
+msgid "Window Menu"
+msgstr "ജാലക പട്ടിക‌"
+
+#: ../src/ui/frames.c:1124
+msgid "Minimize Window"
+msgstr "ജാലകം ചെറുതാക്കുക"
+
+#: ../src/ui/frames.c:1127
+msgid "Maximize Window"
+msgstr "ജാലകം വലുതാക്കുക"
+
+#: ../src/ui/frames.c:1130
+msgid "Restore Window"
+msgstr "ജാലകം വീണ്ടെടുക്കുക"
+
+#: ../src/ui/frames.c:1133
+msgid "Roll Up Window"
+msgstr "ജാലകം ചുരുട്ടുക"
+
+#: ../src/ui/frames.c:1136
+msgid "Unroll Window"
+msgstr "Unroll Window"
+
+#: ../src/ui/frames.c:1139
+msgid "Keep Window On Top"
+msgstr "ജാലകം മുകളിലാക്കുക"
+
+#: ../src/ui/frames.c:1142
+msgid "Remove Window From Top"
+msgstr "ജാലകം മുകളില്‍ നിന്നും നീക്കുക"
+
+#: ../src/ui/frames.c:1145
+msgid "Always On Visible Workspace"
+msgstr "എപ്പോഴും ദൃശ്യമായ പണിയറയില്‍ "
+
+#: ../src/ui/frames.c:1148
+msgid "Put Window On Only One Workspace"
+msgstr "ഒരു പണിയറയില്‍ ജാലകം കാണിക്കുക"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:70
+msgid "Mi_nimize"
+msgstr "ചെ_റുതാക്കുക"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:72
+msgid "Ma_ximize"
+msgstr "_വലുതാക്കുക"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:74
+msgid "Unma_ximize"
+msgstr "വലുതാക്കി_യതൊഴിവാക്കുക"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:76
+msgid "Roll _Up"
+msgstr "_ചുരുട്ടുക"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:78
+msgid "_Unroll"
+msgstr "ചുരു_ളഴിക്കുക"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:80
+msgid "_Move"
+msgstr "_നീക്കുക "
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:82
+msgid "_Resize"
+msgstr "വ_ലിപ്പം മാറ്റുക"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:84
+msgid "Move Titlebar On_screen"
+msgstr "_സ്ക്രീനിലേക്ക് തലക്കെട്ടിന്റെ ബാര്‍ നീക്കുക"
+
+#. separator
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:87 ../src/ui/menu.c:89
+msgid "Always on _Top"
+msgstr "എപ്പോഴും _മുകളില്‍"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:91
+msgid "_Always on Visible Workspace"
+msgstr "_എപ്പോഴും ദൃശ്യമായ പണിയറയില്‍"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:93
+msgid "_Only on This Workspace"
+msgstr "ഈ _പണിയറയില്‍ മാത്രം"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:95
+msgid "Move to Workspace _Left"
+msgstr "_ഇടത്തുളള പണിയറയിലേക്ക് നീങ്ങുക"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:97
+msgid "Move to Workspace R_ight"
+msgstr "_വലത്തുളള പണിയറയിലേക്ക് നീങ്ങുക"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:99
+msgid "Move to Workspace _Up"
+msgstr "_മുകളിലുളള പണിയറയിലേക്ക് നീങ്ങുക"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:101
+msgid "Move to Workspace _Down"
+msgstr "_താഴെയുളള പണിയറയിലേക്ക് നീങ്ങുക"
+
+#. separator
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:105
+msgid "_Close"
+msgstr "_അടയ്ക്കുക"
+
+#: ../src/ui/menu.c:203
+#, c-format
+msgid "Workspace %d%n"
+msgstr "പണിയറ %d%n"
+
+#: ../src/ui/menu.c:213
+#, c-format
+msgid "Workspace 1_0"
+msgstr "പണിയറ 1_0"
+
+#: ../src/ui/menu.c:215
+#, c-format
+msgid "Workspace %s%d"
+msgstr "പണിയറ %s%d"
+
+#: ../src/ui/menu.c:395
+msgid "Move to Another _Workspace"
+msgstr "മറ്റൊരു _പണിയറയിലേക്ക് നീങ്ങുക"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the shift key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:104
+msgid "Shift"
+msgstr "മാറ്റുക"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the control key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:110
+msgid "Ctrl"
+msgstr "നിയന്ത്രണം"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the alt key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:116
+msgid "Alt"
+msgstr "Alt"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the meta key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:122
+msgid "Meta"
+msgstr "Meta"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the super key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:128
+msgid "Super"
+msgstr "Super"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the hyper key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:134
+msgid "Hyper"
+msgstr "Hyper"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod2 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:140
+msgid "Mod2"
+msgstr "Mod2"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod3 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:146
+msgid "Mod3"
+msgstr "Mod3"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod4 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:152
+msgid "Mod4"
+msgstr "Mod4"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod5 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:158
+msgid "Mod5"
+msgstr "Mod5"
+
+#. Translators: This represents the size of a window.  The first number is
+#. * the width of the window and the second is the height.
+#.
+#: ../src/ui/resizepopup.c:113
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/ui/theme.c:254
+msgid "top"
+msgstr "മുകളില്‌"
+
+#: ../src/ui/theme.c:256
+msgid "bottom"
+msgstr "താഴെ"
+
+#: ../src/ui/theme.c:258
+msgid "left"
+msgstr "ഇടത്"
+
+#: ../src/ui/theme.c:260
+msgid "right"
+msgstr "വലത്"
+
+#: ../src/ui/theme.c:287
+#, c-format
+msgid "frame geometry does not specify \"%s\" dimension"
+msgstr "ഫ്രെയിം ജോമെട്രി \"%s\" അളവുകള്‍ നല്‍കുന്നില്ല"
+
+#: ../src/ui/theme.c:306
+#, c-format
+msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
+msgstr "ഫ്രെയിം ജോമെട്രി \"%s\" അളവുകള്‍ നല്‍കുന്നില്ല. ഇവ \"%s\" അതിരിനുള്ളതാണു്"
+
+#: ../src/ui/theme.c:343
+#, c-format
+msgid "Button aspect ratio %g is not reasonable"
+msgstr "ബട്ടണ്‍ ആസ്പെക്ട് റേഷ്യോ %g ഉചിതമല്ല"
+
+#: ../src/ui/theme.c:355
+#, c-format
+msgid "Frame geometry does not specify size of buttons"
+msgstr "ഫ്രെയിം ജോമെട്രി ബട്ടണുകള്‍ക്കുള്ള വ്യാപ്തി നല്‍കുന്നില്ല"
+
+#: ../src/ui/theme.c:1020
+#, c-format
+msgid "Gradients should have at least two colors"
+msgstr "ഗ്രേഡിയന്റ്സിനു് കുറഞ്ഞതു് രണ്ടു് നിറങ്ങളുണ്ടാവണം"
+
+#: ../src/ui/theme.c:1146
+#, c-format
+msgid ""
+"GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL] "
+"where NORMAL is the state; could not parse \"%s\""
+msgstr ""
+"GTK നിറം വിവരണത്തില്‍ ബ്രാക്കറ്റുകളില്‍ അവസ്ഥയുണ്ടായിരിക്കണം, ഉദാ. gtk:fg[NORMAL], ഇവിടെ "
+"NORMAL ആണു് അവസ്ഥ, \"%s\" പാഴ്സ് ചെയ്യുവാനായില്ല"
+
+#: ../src/ui/theme.c:1160
+#, c-format
+msgid ""
+"GTK color specification must have a close bracket after the state, e.g. gtk:"
+"fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
+msgstr ""
+"അവസ്ഥയ്ക്കു് ശേഷം GTK നിറം വിവരണത്തില്‍ ഒരു അടയ്ക്കുന്ന ബ്രാക്കറ്റുണ്ടായിരിക്കണം, ഉദാ. gtk:fg"
+"[NORMAL], ഇവിടെ NORMAL ആണു് അവസ്ഥ, \"%s\" പാഴ്സ് ചെയ്യുവാനായില്ല"
+
+#: ../src/ui/theme.c:1171
+#, c-format
+msgid "Did not understand state \"%s\" in color specification"
+msgstr "നിറം വിവരിക്കുന്നതില്‌ \"%s\" അവസ്ഥ മനസ്സിലാക്കുവാന്‍ സാധ്യമല്ല"
+
+#: ../src/ui/theme.c:1184
+#, c-format
+msgid "Did not understand color component \"%s\" in color specification"
+msgstr "നിറത്തിന്റെ വിവരണത്തിലുള്ള നിറത്തിനുള്ള ഘടകം \"%s\" മനസ്സിലായില്ല"
+
+#: ../src/ui/theme.c:1214
+#, c-format
+msgid ""
+"Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
+"format"
+msgstr "\"blend/bg_color/fg_color/alpha\" ആണു് ബ്ലെന്‍ഡ് ശൈലി, \"%s\" ശൈലിയ്ക്കു് പാകമല്ല"
+
+#: ../src/ui/theme.c:1225
+#, c-format
+msgid "Could not parse alpha value \"%s\" in blended color"
+msgstr "%s നെ ഒരു സംഖ്യയായി വേര്‍തിരിക്കാന്‍ കഴിയുന്നില്ല"
+
+#: ../src/ui/theme.c:1235
+#, c-format
+msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
+msgstr "ബ്ലെന്‍ഡഡ് നിറത്തിലുള്ള ആല്‍ഫാ മൂല്ല്യം \"%s\" 0.0-നും 1.0-നും ഇടയിലല്ല"
+
+#: ../src/ui/theme.c:1282
+#, c-format
+msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
+msgstr "\"shade/base_color/factor\" ആണു് ഷെയിഡ് ശൈലി, \"%s\" ശൈലിയ്ക്കു് പാകമല്ല"
+
+#: ../src/ui/theme.c:1293
+#, c-format
+msgid "Could not parse shade factor \"%s\" in shaded color"
+msgstr "%s നെ ഒരു സംഖ്യയായി വേര്‍തിരിക്കാന്‍ കഴിയുന്നില്ല"
+
+#: ../src/ui/theme.c:1303
+#, c-format
+msgid "Shade factor \"%s\" in shaded color is negative"
+msgstr "ഷേയിഡഡ് നിറത്തിലുള്ള \"%s\" ഷെയിഡ് ഫാക്ടര്‍ നെഗറ്റീവാണു്"
+
+#: ../src/ui/theme.c:1332
+#, c-format
+msgid "Could not parse color \"%s\""
+msgstr "\"%s\" നിറം പാഴ്സ് ചെയ്യുവാന്‍ സാധ്യമല്ല"
+
+#: ../src/ui/theme.c:1582
+#, c-format
+msgid "Coordinate expression contains character '%s' which is not allowed"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ അനുവാദമില്ലാത്ത ഒരു അക്ഷരം '%s' ഉണ്ടു്"
+
+#: ../src/ui/theme.c:1609
+#, c-format
+msgid ""
+"Coordinate expression contains floating point number '%s' which could not be "
+"parsed"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ പാഴ്സ് ചെയ്യുവാന്‍ സാധ്യമല്ലാത്ത ഒരു ഫ്ലോട്ടിങ് പോയിന്റ് നംബര്‍ '%s' ഉണ്ടു്"
+
+#: ../src/ui/theme.c:1623
+#, c-format
+msgid "Coordinate expression contains integer '%s' which could not be parsed"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ പാഴ്സ് ചെയ്യുവാന്‍ സാധ്യമല്ലാത്ത ഒരു ഇന്റിജര്‍ '%s' ഉണ്ടു്"
+
+#: ../src/ui/theme.c:1745
+#, c-format
+msgid ""
+"Coordinate expression contained unknown operator at the start of this text: "
+"\"%s\""
+msgstr "പദാവലിയുടെ ആരംഭത്തില്‍ കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ അപരിചിതമായ ഓപ്പറേറ്ററുണ്ടു്: \"%s\""
+
+#: ../src/ui/theme.c:1802
+#, c-format
+msgid "Coordinate expression was empty or not understood"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷന്‍ ശൂന്യമായിരുന്നു അല്ലെങ്കില്‍ മനസ്സിലായില്ല"
+
+#: ../src/ui/theme.c:1913 ../src/ui/theme.c:1923 ../src/ui/theme.c:1957
+#, c-format
+msgid "Coordinate expression results in division by zero"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷന്റെ ഫലം പൂജ്യം കൊണ്ടുള്ള ഹരണമാകുന്നു"
+
+#: ../src/ui/theme.c:1965
+#, c-format
+msgid "Coordinate expression tries to use mod operator on a floating-point number"
+msgstr "ഒരു ഫ്ലോട്ടിങ്-പോയിന്റ് നംബറില്‍ കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷന്‍ mod ഓപ്പറേറ്റര്‍ ഉപയോഗിക്കുവാന്‍ ശ്രമിക്കുന്നു"
+
+#: ../src/ui/theme.c:2021
+#, c-format
+msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ ഒരു  \"%s\" ഓപ്പറേറ്റുണ്ടു് പക്ഷേ പ്രതീക്ഷിച്ചതു് ഒരു ഓപ്പറണ്ട്"
+
+#: ../src/ui/theme.c:2030
+#, c-format
+msgid "Coordinate expression had an operand where an operator was expected"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ ഒരു ഓപ്പറണ്ടുണ്ടു് പക്ഷേ പ്രതീക്ഷിച്ചതു് ഒരു ഓപ്പറേറ്റര്‍."
+
+#: ../src/ui/theme.c:2038
+#, c-format
+msgid "Coordinate expression ended with an operator instead of an operand"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷന്‍ ഒരു ഓപ്പറണ്ടിനു പകരം ഒരു ഓപ്പറേറ്റില്‍ അവസാനിച്ചു"
+
+#: ../src/ui/theme.c:2048
+#, c-format
+msgid ""
+"Coordinate expression has operator \"%c\" following operator \"%c\" with no "
+"operand in between"
+msgstr ""
+"കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ \"%c\" ഓപ്പറേറ്റര്‍, ശേഷം \"%c\" ഓപ്പറേറ്റര്‍ ഉണ്ടു്, പക്ഷേ ഇടയില്‍ "
+"ഓപ്പറണ്ടില്ല"
+
+#: ../src/ui/theme.c:2195 ../src/ui/theme.c:2236
+#, c-format
+msgid "Coordinate expression had unknown variable or constant \"%s\""
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ അപരിചിതമായ വേരിയബിള്‍ അല്ലെങ്കില്‍ കോണ്‍സ്റ്റന്റ് \"%s\" "
+
+#: ../src/ui/theme.c:2290
+#, c-format
+msgid "Coordinate expression parser overflowed its buffer."
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷന്‍ പാഴ്സര്‍ അതിലുള്ള ബഫര്‍ ഓവര്‍ഫ്ലോ ചെയ്തു."
+
+#: ../src/ui/theme.c:2319
+#, c-format
+msgid "Coordinate expression had a close parenthesis with no open parenthesis"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ അടയ്ക്കുന്നൊരു പരാന്ഥസിസ് ഉണ്ടായിരുന്നു, പക്ഷേ തുറക്കുന്നതു് ലഭ്യമല്ല"
+
+#: ../src/ui/theme.c:2383
+#, c-format
+msgid "Coordinate expression had an open parenthesis with no close parenthesis"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ ഒരു ഓപ്പണ്‍ പരാന്ഥസിസ് ഉണ്ടായിരുന്നു, പക്ഷേ അടയ്ക്കുന്നതു് ലഭ്യമല്ല"
+
+#: ../src/ui/theme.c:2394
+#, c-format
+msgid "Coordinate expression doesn't seem to have any operators or operands"
+msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ ഒരു ഓപ്പറേറ്ററും ഓപ്പറണ്ടും ലഭ്യമല്ല"
+
+#: ../src/ui/theme.c:2596 ../src/ui/theme.c:2616 ../src/ui/theme.c:2636
+#, c-format
+msgid "Theme contained an expression that resulted in an error: %s\n"
+msgstr "ഒരു പിശകുണ്ടാക്കിയ എക്സ്പ്രെഷന്‍ പ്രമേയത്തിലുണ്ടായിരുന്നു: %s\n"
+
+#: ../src/ui/theme.c:4203
+#, c-format
+msgid ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
+"specified for this frame style"
+msgstr ""
+"ഈ ഫ്രെയിം ശൈലിയ്ക്കു് <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/"
+">  വ്യക്തമാക്കിയിരിക്കണം"
+
+#: ../src/ui/theme.c:4711 ../src/ui/theme.c:4736
+#, c-format
+msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
+msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> ലഭ്യമല്ല"
+
+#: ../src/ui/theme.c:4780
+#, c-format
+msgid "Failed to load theme \"%s\": %s\n"
+msgstr "പ്രമേയം %s കൊണ്ട് വരാന് കഴിഞ്ഞില്ല: %s\n"
+
+#: ../src/ui/theme.c:4910 ../src/ui/theme.c:4917 ../src/ui/theme.c:4924
+#: ../src/ui/theme.c:4931 ../src/ui/theme.c:4938
+#, c-format
+msgid "No <%s> set for theme \"%s\""
+msgstr "<%s> \"%s\" പ്രമേയത്തിനു് സജ്ജമല്ല"
+
+#: ../src/ui/theme.c:4946
+#, c-format
+msgid ""
+"No frame style set for window type \"%s\" in theme \"%s\", add a <window "
+"type=\"%s\" style_set=\"whatever\"/> element"
+msgstr ""
+"\"%s\" ജാലക തരത്തിലുള്ള \"%s\" പ്രമേയത്തില്‍ ഒരു ഫ്രെയിം ശൈലിയും സജ്ജമല്ല, ഒരു <window "
+"type=\"%s\" style_set=\"whatever\"/> എലമെന്റ് ചേര്‍ക്കുക"
+
+#: ../src/ui/theme.c:5389 ../src/ui/theme.c:5451 ../src/ui/theme.c:5514
+#, c-format
+msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
+msgstr ""
+"ഉപയോക്താവു് നിഷ്കര്‍ഷിച്ചിട്ടുള്ള കോണ്‍സ്റ്റന്റുകള്‍ കാപ്പിറ്റല്‍ അക്ഷരത്തില്‍ ആരംഭിക്കണം; \"%s\" "
+"അങ്ങനെയല്ല"
+
+#: ../src/ui/theme.c:5397 ../src/ui/theme.c:5459 ../src/ui/theme.c:5522
+#, c-format
+msgid "Constant \"%s\" has already been defined"
+msgstr "കോണ്‍സ്റ്റന്റ് \"%s\" നിലവില്‍ നിഷ്കര്‍ഷിച്ചിട്ടുണ്ടു്"
+
+#. Translators: This means that an attribute which should have been found
+#. * on an XML element was not in fact found.
+#.
+#: ../src/ui/theme-parser.c:202
+#, c-format
+msgid "No \"%s\" attribute on element <%s>"
+msgstr "\"%s\" വിശേഷത <%s> എലമെന്റില്‍ ലഭ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:231 ../src/ui/theme-parser.c:249
+#, c-format
+msgid "Line %d character %d: %s"
+msgstr "%d-ആം വരി %d എന്ന അക്ഷരം: %s"
+
+#: ../src/ui/theme-parser.c:413
+#, c-format
+msgid "Attribute \"%s\" repeated twice on the same <%s> element"
+msgstr "\"%s\" രണ്ടു് തവണ <%s> എലമെന്റില്‍ ആവര്‍ത്തിച്ചു"
+
+#: ../src/ui/theme-parser.c:437 ../src/ui/theme-parser.c:480
+#, c-format
+msgid "Attribute \"%s\" is invalid on <%s> element in this context"
+msgstr "ഈ ആശയത്തില്‍ \"%s\" വിശേഷത <%s> എലമെന്റില്‍ തെറ്റാണു്"
+
+#: ../src/ui/theme-parser.c:522
+#, c-format
+msgid "Could not parse \"%s\" as an integer"
+msgstr "%s നെ ഒരു സംഖ്യയായി വേര്‍തിരിക്കാന്‍ കഴിയുന്നില്ല"
+
+#: ../src/ui/theme-parser.c:531 ../src/ui/theme-parser.c:586
+#, c-format
+msgid "Did not understand trailing characters \"%s\" in string \"%s\""
+msgstr "അവസാനമുള്ള \"%s\" അക്ഷരങ്ങള്‍, \"%s\" സ്ട്രിങില്‍ മനസ്സിലായില്ല"
+
+#: ../src/ui/theme-parser.c:541
+#, c-format
+msgid "Integer %ld must be positive"
+msgstr "ഇന്റിജര്‍ %ld പോസിറ്റീവായിരിക്കണം"
+
+#: ../src/ui/theme-parser.c:549
+#, c-format
+msgid "Integer %ld is too large, current max is %d"
+msgstr "ഇന്റിജര്‍ %ld വളരെ വലുതാണു്, നിലവില്‍ ഏറ്റവും കൂടുതല്‍ %d ആണു്"
+
+#: ../src/ui/theme-parser.c:577 ../src/ui/theme-parser.c:693
+#, c-format
+msgid "Could not parse \"%s\" as a floating point number"
+msgstr "%s നെ ഒരു സംഖ്യയായി വേര്‍തിരിക്കാന്‍ കഴിയുന്നില്ല"
+
+#: ../src/ui/theme-parser.c:608 ../src/ui/theme-parser.c:636
+#, c-format
+msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
+msgstr "ബൂളിയന്‍ മൂല്ല്യങ്ങള്‍ \"true\" അല്ലെങ്കില്‍ \"false\" ആയിരിക്കണം, \"%s\" അല്ല"
+
+#: ../src/ui/theme-parser.c:663
+#, c-format
+msgid "Angle must be between 0.0 and 360.0, was %g\n"
+msgstr "0.0-നും 360.0-യ്ക്കും ഇടയിലായിരിക്കണം കോണു്, %g ആയിരുന്നു\n"
+
+#: ../src/ui/theme-parser.c:726
+#, c-format
+msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
+msgstr "0.0-യ്ക്കും (അദൃശ്യം) 1.0-യ്ക്കും (കട്ടിയുള്ളതല്ല) ഇടയിലായിരിക്കണം ആല്‍ഫാ, %g ആയിരുന്നു\n"
+
+#: ../src/ui/theme-parser.c:791
+#, c-format
+msgid ""
+"Invalid title scale \"%s\" (must be one of xx-small,x-small,small,medium,"
+"large,x-large,xx-large)\n"
+msgstr ""
+"തലക്കെട്ടിനുള്ള തെറ്റായ അളവു് \"%s\" (xx-small,x-small,small,medium,large, -large,"
+"xx-large - ഇവയിലൊന്നാരിക്കണം)\n"
+
+#: ../src/ui/theme-parser.c:936 ../src/ui/theme-parser.c:999
+#: ../src/ui/theme-parser.c:1033 ../src/ui/theme-parser.c:1136
+#, c-format
+msgid "<%s> name \"%s\" used a second time"
+msgstr "<%s> പേര് \"%s\" രണ്ടാം തവണ ഉപയോഗിച്ചിരിക്കുന്നു"
+
+#: ../src/ui/theme-parser.c:948 ../src/ui/theme-parser.c:1045
+#: ../src/ui/theme-parser.c:1148
+#, c-format
+msgid "<%s> parent \"%s\" has not been defined"
+msgstr "<%s> പേരന്റ് \"%s\" വ്യക്തമാക്കിയിട്ടില്ല"
+
+#: ../src/ui/theme-parser.c:1058
+#, c-format
+msgid "<%s> geometry \"%s\" has not been defined"
+msgstr "<%s> ജോമെട്രി \"%s\" നിഷ്കര്‍ഷിച്ചിട്ടില്ല"
+
+#: ../src/ui/theme-parser.c:1071
+#, c-format
+msgid "<%s> must specify either a geometry or a parent that has a geometry"
+msgstr "<%s> ഒരു ജോമെട്രി അല്ലെങ്കില്‍ ജോമെട്രിയുള്ള പേരന്റ് നല്‍കേണ്ടതുണ്ടു്"
+
+#: ../src/ui/theme-parser.c:1113
+msgid "You must specify a background for an alpha value to be meaningful"
+msgstr "ഒരു ആല്‍ഫാ മൂല്ല്യം അര്‍ത്ഥവത്താകുന്നതിനു് ഒരു പശ്ചാത്തലം നല്‍കേണ്ടതുണ്ടു്"
+
+#: ../src/ui/theme-parser.c:1180
+#, c-format
+msgid "Unknown type \"%s\" on <%s> element"
+msgstr "<%s> എലമെന്റില്‍ അപരിചിതമായ തരത്തിലുള്ള \"%s\""
+
+#: ../src/ui/theme-parser.c:1191
+#, c-format
+msgid "Unknown style_set \"%s\" on <%s> element"
+msgstr "അപരിചിതമായ style_set \"%s\", <%s> എലമെന്റില്‍ "
+
+#: ../src/ui/theme-parser.c:1199
+#, c-format
+msgid "Window type \"%s\" has already been assigned a style set"
+msgstr "ജാലക രീതി \"%s\"-യ്ക്കു് നിലവില്‍ ഒരു ശൈലി കൂട്ടം നല്‍കിയിട്ടുണ്ടു്"
+
+#: ../src/ui/theme-parser.c:1229 ../src/ui/theme-parser.c:1293
+#: ../src/ui/theme-parser.c:1519 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2786 ../src/ui/theme-parser.c:2934
+#: ../src/ui/theme-parser.c:3126 ../src/ui/theme-parser.c:3164
+#: ../src/ui/theme-parser.c:3202 ../src/ui/theme-parser.c:3240
+#, c-format
+msgid "Element <%s> is not allowed below <%s>"
+msgstr "<%s> എലമെന്റ് <%s>-നു് താഴെ അനുവദിക്കുന്നതല്ല"
+
+#: ../src/ui/theme-parser.c:1343 ../src/ui/theme-parser.c:1357
+#: ../src/ui/theme-parser.c:1402
+msgid ""
+"Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
+"for buttons"
+msgstr "ബട്ടണുകള്‍ക്കു് \"button_width\"/\"button_height\", \"aspect_ratio\" നല്‍കുവാന്‍ സാധ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:1366
+#, c-format
+msgid "Distance \"%s\" is unknown"
+msgstr "\"%s\" എന്ന ദൂരം അപരിചിതമാണ്"
+
+#: ../src/ui/theme-parser.c:1411
+#, c-format
+msgid "Aspect ratio \"%s\" is unknown"
+msgstr "\"%s\" എന്ന ആസ്പെക്റ്റ് റേഷ്യോ അപരിചിതമാണ്"
+
+#: ../src/ui/theme-parser.c:1473
+#, c-format
+msgid "Border \"%s\" is unknown"
+msgstr "\"%s\" എന്ന അതിര് അപരിചിതമാണ്"
+
+#: ../src/ui/theme-parser.c:1784
+#, c-format
+msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
+msgstr "\"start_angle\" അല്ലെങ്കില്‍ \"എവിടെ നിന്നും\" <%s> എലമെന്റില്‍ വിശേഷത ലഭ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:1791
+#, c-format
+msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
+msgstr "\"extent_angle\" അല്ലെങ്കില്‍ \"എങ്ങോട്ട്\" വിശേഷത <%s> എലമെന്റില്‍ ലഭ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:2031
+#, c-format
+msgid "Did not understand value \"%s\" for type of gradient"
+msgstr "മൂല്ല്യം \"%s\", ഗ്രേഡിയന്റ് രീതിയ്ക്കുള്ളതു് മനസ്സിലാകുവാന്‍ സാധ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:2109 ../src/ui/theme-parser.c:2484
+#, c-format
+msgid "Did not understand fill type \"%s\" for <%s> element"
+msgstr "നിറയ്ക്കുന്ന രീതി \"%s\", <%s> എലമെന്റിനുള്ളതു് മനസ്സിലാകുവാന്‍ സാധ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:2276 ../src/ui/theme-parser.c:2359
+#: ../src/ui/theme-parser.c:2422
+#, c-format
+msgid "Did not understand state \"%s\" for <%s> element"
+msgstr "അവസ്ഥ \"%s\", <%s> എലമെന്റിനുള്ളതു് മനസ്സിലാകുവാന്‍ സാധ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:2286 ../src/ui/theme-parser.c:2369
+#, c-format
+msgid "Did not understand shadow \"%s\" for <%s> element"
+msgstr "ഷാഡോ \"%s\", <%s> എലമെന്റിനുള്ളതു് മനസ്സിലാകുവാന്‍ സാധ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:2296
+#, c-format
+msgid "Did not understand arrow \"%s\" for <%s> element"
+msgstr "ആരോ \"%s\", <%s> എലമെന്റിനുള്ളതു് മനസ്സിലാകുവാന്‍ സാധ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:2596 ../src/ui/theme-parser.c:2692
+#, c-format
+msgid "No <draw_ops> called \"%s\" has been defined"
+msgstr "ഒരു <draw_ops>-ഉം \"%s\" എന്ന പേരില്‍ ലഭ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:2608 ../src/ui/theme-parser.c:2704
+#, c-format
+msgid "Including draw_ops \"%s\" here would create a circular reference"
+msgstr "draw_ops \"%s\" ഇവിടെ ഉള്‍പ്പെടുത്തുന്നതു് ഒരു സെര്‍ക്കുലര്‍ റെഫറന്‍സുണ്ടാക്കുന്നു"
+
+#: ../src/ui/theme-parser.c:2819
+#, c-format
+msgid "Unknown position \"%s\" for frame piece"
+msgstr "ഫ്രെയിം പീസിനുള്ള അപരിചിതമായ സ്ഥാനം \"%s\""
+
+#: ../src/ui/theme-parser.c:2827
+#, c-format
+msgid "Frame style already has a piece at position %s"
+msgstr "%s സ്ഥാനത്തു് നിലവില്‍ ഫ്രെയിം ശൈലിയ്ക്കു് ഒരു പീസുണ്ടു്"
+
+#: ../src/ui/theme-parser.c:2844 ../src/ui/theme-parser.c:2919
+#, c-format
+msgid "No <draw_ops> with the name \"%s\" has been defined"
+msgstr "ഒരു <draw_ops>-ഉം \"%s\" എന്ന പേരില്‍ ലഭ്യമല്ല"
+
+#: ../src/ui/theme-parser.c:2873
+#, c-format
+msgid "Unknown function \"%s\" for button"
+msgstr "ബട്ടണുള്ള അപരിചിതമായ ഫംഗ്ഷന്‍ \"%s\""
+
+#: ../src/ui/theme-parser.c:2882
+#, c-format
+msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
+msgstr "ബട്ടണ്‍ ഫംഗ്ഷന്‍ \"%s\" ഈ പതിപ്പില്‍ ലഭ്യമല്ല (%d, %d ആവശ്യമുണ്ടു്)"
+
+#: ../src/ui/theme-parser.c:2894
+#, c-format
+msgid "Unknown state \"%s\" for button"
+msgstr "ബട്ടണുള്ള അപരിചിതമായ അവസ്ഥ \"%s\""
+
+#: ../src/ui/theme-parser.c:2902
+#, c-format
+msgid "Frame style already has a button for function %s state %s"
+msgstr "ഫംഗ്ഷന്‍ %s അവസ്ഥ %s-നു് ഫ്രെയിം ശൈലിയില്‍ നിലവില്‍ ഒരു ബട്ടണുണ്ടു്"
+
+#: ../src/ui/theme-parser.c:2973
+#, c-format
+msgid "\"%s\" is not a valid value for focus attribute"
+msgstr "ഫോക്കസ് വിശേഷതയ്ക്കുള്ള ശരിയായ മൂല്ല്യമല്ല \"%s\""
+
+#: ../src/ui/theme-parser.c:2982
+#, c-format
+msgid "\"%s\" is not a valid value for state attribute"
+msgstr "അവസ്ഥ വിശേഷതയ്ക്കുള്ള ശരിയായ മൂല്ല്യമല്ല \"%s\""
+
+#: ../src/ui/theme-parser.c:2992
+#, c-format
+msgid "A style called \"%s\" has not been defined"
+msgstr "\"%s\" എന്ന ശൈലി നിഷ്കര്‍ഷിച്ചിട്ടില്ല"
+
+#: ../src/ui/theme-parser.c:3013 ../src/ui/theme-parser.c:3036
+#, c-format
+msgid "\"%s\" is not a valid value for resize attribute"
+msgstr "വ്യാപ്തി മാറ്റുക വിശേഷതയ്ക്കുള്ള ശരിയായ മൂല്ല്യമല്ല \"%s\""
+
+#: ../src/ui/theme-parser.c:3047
+#, c-format
+msgid ""
+"Should not have \"resize\" attribute on <%s> element for maximized/shaded "
+"states"
+msgstr ""
+"ഏറ്റവും വലുതാക്കിയ/ഷെയിഡഡ് അവസ്ഥകള്‍ക്കു് <%s> എലമെന്റില്‍ \"വ്യാപ്തി മാറ്റുക\" വിശേഷത "
+"ഉണ്ടായിരിക്കരുതു്"
+
+#: ../src/ui/theme-parser.c:3061
+#, c-format
+msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
+msgstr "ഏറ്റവും വലുതാക്കിയ അവസ്ഥകള്‍ക്കു് <%s> എലമെന്റില്‍ \"വ്യാപ്തി മാറ്റുക\" വിശേഷത ഉണ്ടായിരിക്കരുതു്"
+
+#: ../src/ui/theme-parser.c:3075 ../src/ui/theme-parser.c:3097
+#, c-format
+msgid "Style has already been specified for state %s resize %s focus %s"
+msgstr "%s അവസ്ഥ വ്യാപ്തി മാറ്റുക%s %s ഫോക്കസിനായി ശൈലി നിലവില്‍ വ്യക്തമാക്കിയിട്ടുണ്ടു്"
+
+#: ../src/ui/theme-parser.c:3086 ../src/ui/theme-parser.c:3108
+#, c-format
+msgid "Style has already been specified for state %s focus %s"
+msgstr "%s അവസ്ഥ %s ഫോക്കസിനായി ശൈലി നിലവില്‍ വ്യക്തമാക്കിയിട്ടുണ്ടു്"
+
+#: ../src/ui/theme-parser.c:3147
+msgid ""
+"Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
+"attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"ഒരു <piece> എലമെന്റിനു് രണ്ടു് draw_ops ഉണ്ടാകുവാന്‍ പാടില്ല (draw_ops വിശേഷതയ്ക്കുള്ള ഒരു "
+"വിശേഷത, ഒരു <draw_ops> എലമെന്റ് അല്ലെങ്കില്‍ രണ്ടു എലമെന്റുകള്‍ നല്‍കുക)"
+
+#: ../src/ui/theme-parser.c:3185
+msgid ""
+"Can't have a two draw_ops for a <button> element (theme specified a draw_ops "
+"attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"ഒരു <button> എലമെന്റിനു് രണ്ടു് draw_ops ഉണ്ടാകുവാന്‍ പാടില്ല (draw_ops വിശേഷതയ്ക്കുള്ള ഒരു "
+"വിശേഷത, ഒരു <draw_ops> എലമെന്റ് അല്ലെങ്കില്‍ രണ്ടു എലമെന്റുകള്‍ നല്‍കുക)"
+
+#: ../src/ui/theme-parser.c:3223
+msgid ""
+"Can't have a two draw_ops for a <menu_icon> element (theme specified a "
+"draw_ops attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"ഒരു <menu_icon> എലമെന്റിനു് രണ്ടു് draw_ops ഉണ്ടാകുവാന്‍ പാടില്ല (draw_ops വിശേഷതയ്ക്കുള്ള "
+"ഒരു വിശേഷത, ഒരു <draw_ops> എലമെന്റ് അല്ലെങ്കില്‍ രണ്ടു എലമെന്റുകള്‍ നല്‍കുക)"
+
+#: ../src/ui/theme-parser.c:3271
+#, c-format
+msgid "Outermost element in theme must be <marco_theme> not <%s>"
+msgstr "പ്രമേയത്തില്‍ ഏറ്റവും പുറമേയുള്ള എലമെന്റ് <marco_theme> ആണു്, <%s> അല്ല"
+
+#: ../src/ui/theme-parser.c:3291
+#, c-format
+msgid "Element <%s> is not allowed inside a name/author/date/description element"
+msgstr "ഒരു name/author/date/description എലമെന്റില്‍ <%s> എലമെന്റ് അനുവദിക്കുന്നില്ല"
+
+#: ../src/ui/theme-parser.c:3296
+#, c-format
+msgid "Element <%s> is not allowed inside a <constant> element"
+msgstr "<constant> എലമെന്റില്‍ <%s> എലമെന്റ് അനുവദിക്കുന്നില്ല"
+
+#: ../src/ui/theme-parser.c:3308
+#, c-format
+msgid "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
+msgstr "distance/border/aspect_ratio എലമെന്റില്‍ <%s> എലമെന്റ് അനുവദിക്കുന്നില്ല"
+
+#: ../src/ui/theme-parser.c:3330
+#, c-format
+msgid "Element <%s> is not allowed inside a draw operation element"
+msgstr "ഒരു ഡ്രോ ഓപ്പറേഷന്‍ എലമെന്റില്‍ <%s> എലമെന്റ് അനുവദിക്കുന്നില്ല"
+
+#: ../src/ui/theme-parser.c:3340 ../src/ui/theme-parser.c:3370
+#: ../src/ui/theme-parser.c:3375 ../src/ui/theme-parser.c:3380
+#, c-format
+msgid "Element <%s> is not allowed inside a <%s> element"
+msgstr "<%s> എലമെന്റ് ഒരു <%s> എലമെന്റില്‍ അനുവദിക്കുന്നില്ല"
+
+#: ../src/ui/theme-parser.c:3602
+msgid "No draw_ops provided for frame piece"
+msgstr "ഫ്രെയിം പീസില്‍ draw_ops ലഭ്യമാക്കിയില്ല"
+
+#: ../src/ui/theme-parser.c:3617
+msgid "No draw_ops provided for button"
+msgstr "ബട്ടണിനു് draw_ops ലഭ്യമാക്കിയില്ല"
+
+#: ../src/ui/theme-parser.c:3669
+#, c-format
+msgid "No text is allowed inside element <%s>"
+msgstr "<%s> എലമെന്റില്‍ പദാവലി അനുവദിക്കുന്നില്ല"
+
+#: ../src/ui/theme-parser.c:3724 ../src/ui/theme-parser.c:3736
+#: ../src/ui/theme-parser.c:3748 ../src/ui/theme-parser.c:3760
+#: ../src/ui/theme-parser.c:3772
+#, c-format
+msgid "<%s> specified twice for this theme"
+msgstr "ഈ പ്രമേയത്തിനു് <%s> രണ്ടു് തവണ പറഞ്ഞിരിക്കുന്നു"
+
+#: ../src/ui/theme-parser.c:4040
+#, c-format
+msgid "Failed to find a valid file for theme %s\n"
+msgstr "%s ഥീമിന് യോജിക്കുന്ന ഒരു ഫയല്‍ ലഭ്യമാക്കുവാന്‍ സാധ്യമായില്ല\n"
+
+#: ../src/ui/theme-parser.c:4096
+#, c-format
+msgid "Theme file %s did not contain a root <marco_theme> element"
+msgstr "ഥീം ഫയല്‍ %s-ല്‍ റൂട്ട് <marco_theme> എലമെന്റില്ല"
+
+#: ../src/ui/theme-viewer.c:75
+msgid "/_Windows"
+msgstr "/_Windows"
+
+#: ../src/ui/theme-viewer.c:76
+msgid "/Windows/tearoff"
+msgstr "/Windows/tearoff"
+
+#: ../src/ui/theme-viewer.c:77
+msgid "/Windows/_Dialog"
+msgstr "/Windows/_Dialog"
+
+#: ../src/ui/theme-viewer.c:78
+msgid "/Windows/_Modal dialog"
+msgstr "/Windows/_Modal dialog"
+
+#: ../src/ui/theme-viewer.c:79
+msgid "/Windows/_Utility"
+msgstr "/Windows/_Utility"
+
+#: ../src/ui/theme-viewer.c:80
+msgid "/Windows/_Splashscreen"
+msgstr "/Windows/_Splashscreen"
+
+#: ../src/ui/theme-viewer.c:81
+msgid "/Windows/_Top dock"
+msgstr "/Windows/_Top dock"
+
+#: ../src/ui/theme-viewer.c:82
+msgid "/Windows/_Bottom dock"
+msgstr "/Windows/_Bottom dock"
+
+#: ../src/ui/theme-viewer.c:83
+msgid "/Windows/_Left dock"
+msgstr "/Windows/_Left dock"
+
+#: ../src/ui/theme-viewer.c:84
+msgid "/Windows/_Right dock"
+msgstr "/Windows/_Right dock"
+
+#: ../src/ui/theme-viewer.c:85
+msgid "/Windows/_All docks"
+msgstr "/Windows/_All docks"
+
+#: ../src/ui/theme-viewer.c:86
+msgid "/Windows/Des_ktop"
+msgstr "/Windows/Des_ktop"
+
+#: ../src/ui/theme-viewer.c:244
+msgid "This is a sample message in a sample dialog"
+msgstr "മാതൃക ഡയലോഗിലുള്ള മാതൃക സന്ദേശമാണിതു്"
+
+#: ../src/ui/theme-viewer.c:327
+#, c-format
+msgid "Fake menu item %d\n"
+msgstr "ഇല്ലാത്ത മെനു വസ്തു %d\n"
+
+#: ../src/ui/theme-viewer.c:361
+msgid "Border-only window"
+msgstr "അതിരു് മാത്രമുള്ള ജാലകം"
+
+#: ../src/ui/theme-viewer.c:363
+msgid "Bar"
+msgstr "ബാര്‍"
+
+#: ../src/ui/theme-viewer.c:380
+msgid "Normal Application Window"
+msgstr "പ്രയോഗത്തിനുള്ള സാധാരണ ജാലകം"
+
+#: ../src/ui/theme-viewer.c:384
+msgid "Dialog Box"
+msgstr "ഡയലോഗ് ബോക്സ്"
+
+#: ../src/ui/theme-viewer.c:388
+msgid "Modal Dialog Box"
+msgstr "മോഡല്‍ ഡയലോഗ് ബോക്സ്"
+
+#: ../src/ui/theme-viewer.c:392
+msgid "Utility Palette"
+msgstr "യൂട്ടിലിറ്റിയ്ക്കുള്ള നിറക്കൂട്ട്"
+
+#: ../src/ui/theme-viewer.c:396
+msgid "Torn-off Menu"
+msgstr "ടോണ്‍-ഓഫ് മെനു"
+
+#: ../src/ui/theme-viewer.c:400
+msgid "Border"
+msgstr "അതിര്"
+
+#: ../src/ui/theme-viewer.c:728
+#, c-format
+msgid "Button layout test %d"
+msgstr "ബട്ടണ്‍ ശൈലി പരീക്ഷണം %d"
+
+#: ../src/ui/theme-viewer.c:757
+#, c-format
+msgid "%g milliseconds to draw one window frame"
+msgstr "ഒരു ജാലക ഫ്രെയിം ലഭ്യമാക്കുന്നതിനായി %g മില്ലിസെക്കന്‍ഡുകള്‍"
+
+#: ../src/ui/theme-viewer.c:800
+#, c-format
+msgid "Usage: marco-theme-viewer [THEMENAME]\n"
+msgstr "ഉപയോഗിക്കേണ്ട വിധം: marco-theme-viewer [THEMENAME]\n"
+
+#: ../src/ui/theme-viewer.c:807
+#, c-format
+msgid "Error loading theme: %s\n"
+msgstr "പ്രമേയം ലോഡ് ചെയ്യുന്നതില്‍ പിശക്: %s\n"
+
+#: ../src/ui/theme-viewer.c:813
+#, c-format
+msgid "Loaded theme \"%s\" in %g seconds\n"
+msgstr "\"%s\" പ്രമേയം %g സെക്കന്‍ഡുകളില്‍ ലഭ്യമാക്കി\n"
+
+#: ../src/ui/theme-viewer.c:854
+msgid "Normal Title Font"
+msgstr "തലക്കെട്ടിനുള്ള സാധാരണ അക്ഷരസഞ്ചയം"
+
+#: ../src/ui/theme-viewer.c:860
+msgid "Small Title Font"
+msgstr "തലക്കെട്ടിനുള്ള ചെറിയ  അക്ഷരസഞ്ചയം"
+
+#: ../src/ui/theme-viewer.c:866
+msgid "Large Title Font"
+msgstr "തലക്കെട്ടിനുള്ള വലിയ അക്ഷരസഞ്ചയം"
+
+#: ../src/ui/theme-viewer.c:871
+msgid "Button Layouts"
+msgstr "ബട്ടണ്‍ ശൈലികള്‍"
+
+#: ../src/ui/theme-viewer.c:876
+msgid "Benchmark"
+msgstr "പരീക്ഷണ നിലവാരം"
+
+#: ../src/ui/theme-viewer.c:923
+msgid "Window Title Goes Here"
+msgstr "ജാലകത്തിനുള്ള തലക്കെട്ടിവിടെ"
+
+#: ../src/ui/theme-viewer.c:1027
+#, c-format
+msgid ""
+"Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
+"seconds wall clock time including X server resources (%g milliseconds per "
+"frame)\n"
+msgstr ""
+"%d ഫ്രെയിമുകള്‍ ക്ലൈന്റ് വശത്തുള്ള %g സെക്കന്‍ഡുകളിലും (ഒരു ഫ്രെയിമില്‍ %g മില്ലിസെക്കന്‍ഡുകള്‍) X "
+"റിസോഴ്സുകള്‍ ഉള്‍പ്പെടുന്ന %g സെക്കന്‍ഡുകളും (ഒരു ഫ്രെയിമില്‍ %g മില്ലിസെക്കന്‍ഡുകള്‍) ലഭ്യമാക്കി.\n"
+
+#: ../src/ui/theme-viewer.c:1246
+msgid "position expression test returned TRUE but set error"
+msgstr "പൊസിഷന്‍ എക്സ്പ്രെഷന്‍ പരീക്ഷണം TRUE മറുപടി നല്‍കി, പക്ഷേ പിശകായി സജ്ജമാക്കി"
+
+#: ../src/ui/theme-viewer.c:1248
+msgid "position expression test returned FALSE but didn't set error"
+msgstr "പൊസിഷന്‍ എക്സ്പ്രെഷന്‍ പരീക്ഷണം FALSE മറുപടി നല്‍കി, പക്ഷേ പിശകായി സജ്ജമാക്കിയില്ല"
+
+#: ../src/ui/theme-viewer.c:1252
+msgid "Error was expected but none given"
+msgstr "പിശക് പ്രതീക്ഷിച്ചു, പക്ഷേ ഒന്നും ലഭ്യമല്ല"
+
+#: ../src/ui/theme-viewer.c:1254
+#, c-format
+msgid "Error %d was expected but %d given"
+msgstr "പിശക് %d പ്രതീക്ഷിച്ചു, പക്ഷേ %d ലഭിച്ചു"
+
+#: ../src/ui/theme-viewer.c:1260
+#, c-format
+msgid "Error not expected but one was returned: %s"
+msgstr "പിശക് പ്രതീക്ഷിക്കുന്നില്ല പക്ഷേ ഒന്നു് തിരികെ ലഭിച്ചു: %s"
+
+#: ../src/ui/theme-viewer.c:1264
+#, c-format
+msgid "x value was %d, %d was expected"
+msgstr "x-ന്റെ മൂല്ല്യം %d ആയിരുന്നു, പക്ഷേ പ്രതീക്ഷിച്ചത് %d ആണ്"
+
+#: ../src/ui/theme-viewer.c:1267
+#, c-format
+msgid "y value was %d, %d was expected"
+msgstr "y-യുടെ മൂല്ല്യം %d ആയിരുന്നു, പക്ഷേ പ്രതീക്ഷിച്ചതു് %d ആണ്"
+
+#: ../src/ui/theme-viewer.c:1332
+#, c-format
+msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
+msgstr "%d കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനുകള്‍ %g സെക്കന്‍ഡുകളില്‍ പാഴ്സ് ചെയ്യുന്നു (%g സെക്കന്‍ഡുകള്‍ ശരാശരി)\n"
+

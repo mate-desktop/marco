@@ -1,0 +1,802 @@
+<?xml version="1.0"?>
+<metacity_theme>
+
+<info>
+  <name>Splint-Left</name>
+  <author>Brandon Wright</author>
+  <copyright>2009</copyright>
+  <date>January 21, 2009</date>
+  <description>A theme designed around the Tango style.</description>
+</info>
+
+<frame_geometry name="normal" rounded_top_left="true" rounded_top_right="true">
+  <distance name="left_width" value="4"/>
+  <distance name="right_width" value="4"/>
+  <distance name="bottom_height" value="4"/>
+  <distance name="left_titlebar_edge" value="4"/>
+  <distance name="right_titlebar_edge" value="4"/>
+  <aspect_ratio name="button" value="1"/>
+  <distance name="title_vertical_pad" value="2"/>
+  <border name="title_border" left="3" right="4" top="2" bottom="2"/>
+  <border name="button_border" left="1" right="1" top="3" bottom="3"/>
+</frame_geometry>
+
+<frame_geometry name="normal_small_borders" parent="normal" rounded_top_left="false" rounded_top_right="false">
+  <distance name="left_titlebar_edge" value="1" />
+  <distance name="right_titlebar_edge" value="1" />
+  <distance name="left_width" value="0" />
+  <distance name="right_width" value="0" />
+  <distance name="bottom_height" value="0" />
+</frame_geometry>
+
+<frame_geometry name="utility" parent="normal">
+</frame_geometry>
+
+<frame_geometry name="border" has_title="false" rounded_top_left="false" rounded_top_right="false">
+  <distance name="left_width" value="4"/>
+  <distance name="right_width" value="4"/>
+  <distance name="bottom_height" value="4"/>
+  <distance name="left_titlebar_edge" value="0"/>
+  <distance name="right_titlebar_edge" value="0"/>
+  <distance name="button_width" value="0"/>
+  <distance name="button_height" value="0"/>
+  <distance name="title_vertical_pad" value="4"/>
+  <border name="title_border" left="0" right="0" top="0" bottom="0"/>
+  <border name="button_border" left="0" right="0" top="0" bottom="0"/>
+</frame_geometry>
+
+<!-- Buttons -->
+<draw_ops name="button_bg">
+ 
+    <!-- Dark lines -->
+    <!-- Top line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="2"       y1="0" 
+          x2="width-3" y2="0" />
+
+    <!-- Left line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="0" y1="2" 
+          x2="0" y2="height-3" />
+
+    <!-- Right line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="width-1" y1="2" 
+          x2="width-1" y2="height-3" />
+
+    <!-- Bottom line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="2"       y1="height-1" 
+          x2="width-3" y2="height-1" />
+
+    <!-- TL Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="1" y1="1" 
+          x2="1" y2="1" />
+
+    <!-- TR Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="width-2" y1="1" 
+          x2="width-2" y2="1" />
+
+    <!-- LL Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="1" y1="height-2" 
+          x2="1" y2="height-2" />
+
+    <!-- LR Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="width-2" y1="height-2" 
+          x2="width-2" y2="height-2" />
+
+    <!-- Lighter Inside -->
+    
+    <!-- Top line -->
+    <line color="shade/gtk:bg[SELECTED]/1.2" 
+          x1="2"       y1="1" 
+          x2="width-3" y2="1" />
+
+    <!-- Bottom line -->
+    <line color="shade/gtk:bg[SELECTED]/1.2" 
+          x1="2"       y1="height-2" 
+          x2="width-3" y2="height-2" />
+
+    <!-- Left line -->
+    <line color="shade/gtk:bg[SELECTED]/1.2" 
+          x1="1" y1="2" 
+          x2="1" y2="height-3" />
+
+    <!-- Left line -->
+    <line color="shade/gtk:bg[SELECTED]/1.2" 
+          x1="width-2" y1="2" 
+          x2="width-2" y2="height-3" />
+
+    <!-- Corners -->
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="2" y1="2" 
+          x2="2" y2="2" />
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="width-3" y1="2" 
+          x2="width-3" y2="2" />
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="2" y1="height-3" 
+          x2="2" y2="height-3" />
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="width-3" y1="height-3" 
+          x2="width-3" y2="height-3" />
+</draw_ops>
+
+<draw_ops name="button_bg_prelight">
+
+    <!-- Do a fill -->
+    <rectangle color="shade/gtk:bg[SELECTED]/1.0" x="1" y="1" width="width-2" height = "height-2" filled="true" />
+
+    <!-- Dark lines -->
+    <!-- Top line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="2"       y1="0" 
+          x2="width-3" y2="0" />
+
+    <!-- Left line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="0" y1="2" 
+          x2="0" y2="height-3" />
+
+    <!-- Right line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="width-1" y1="2" 
+          x2="width-1" y2="height-3" />
+
+    <!-- Bottom line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="2"       y1="height-1" 
+          x2="width-3" y2="height-1" />
+
+    <!-- TL Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="1" y1="1" 
+          x2="1" y2="1" />
+
+    <!-- TR Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="width-2" y1="1" 
+          x2="width-2" y2="1" />
+
+    <!-- LL Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="1" y1="height-2" 
+          x2="1" y2="height-2" />
+
+    <!-- LR Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="width-2" y1="height-2" 
+          x2="width-2" y2="height-2" />
+
+    <!-- Lighter Inside -->
+    
+    <!-- Top line -->
+    <line color="shade/gtk:bg[SELECTED]/1.2" 
+          x1="2"       y1="1" 
+          x2="width-3" y2="1" />
+
+    <!-- Bottom line -->
+    <line color="shade/gtk:bg[SELECTED]/1.2" 
+          x1="2"       y1="height-2" 
+          x2="width-3" y2="height-2" />
+
+    <!-- Left line -->
+    <line color="shade/gtk:bg[SELECTED]/1.2" 
+          x1="1" y1="2" 
+          x2="1" y2="height-3" />
+
+    <!-- Left line -->
+    <line color="shade/gtk:bg[SELECTED]/1.2" 
+          x1="width-2" y1="2" 
+          x2="width-2" y2="height-3" />
+
+    <!-- Corners -->
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="2" y1="2" 
+          x2="2" y2="2" />
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="width-3" y1="2" 
+          x2="width-3" y2="2" />
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="2" y1="height-3" 
+          x2="2" y2="height-3" />
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="width-3" y1="height-3"           
+          x2="width-3" y2="height-3" />
+
+</draw_ops>
+
+<draw_ops name="button_pressed_bg">
+
+    <!-- Do a fill -->
+<!--    <rectangle color="shade/gtk:bg[SELECTED]/0.8" x="1" y="1" width="width-2" height = "height-2" filled="true" /> -->
+    <gradient type="vertical" x="1" y="1" width="width-2" height="height-2">
+        <color value="shade/gtk:bg[SELECTED]/0.9" />
+        <color value="shade/gtk:bg[SELECTED]/1.2" />
+    </gradient>
+
+    <!-- Dark lines -->
+    <!-- Top line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="2"       y1="0" 
+          x2="width-3" y2="0" />
+
+    <!-- Left line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="0" y1="2" 
+          x2="0" y2="height-3" />
+ 
+    <!-- Right line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="width-1" y1="2" 
+          x2="width-1" y2="height-3" />
+
+    <!-- Bottom line -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="2"       y1="height-1" 
+          x2="width-3" y2="height-1" />
+
+    <!-- TL Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="1" y1="1" 
+          x2="1" y2="1" />
+
+    <!-- TR Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="width-2" y1="1" 
+          x2="width-2" y2="1" />
+
+    <!-- LL Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="1" y1="height-2" 
+          x2="1" y2="height-2" />
+
+    <!-- LR Corner -->
+    <line color="shade/gtk:bg[SELECTED]/0.8" 
+          x1="width-2" y1="height-2" 
+          x2="width-2" y2="height-2" />
+
+    <!-- Lighter Inside -->
+    
+    <!-- Top line -->
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="2"       y1="1" 
+          x2="width-3" y2="1" />
+
+    <!-- Bottom line -->
+    <line color="shade/gtk:bg[SELECTED]/1.2" 
+          x1="2"       y1="height-2" 
+          x2="width-3" y2="height-2" />
+
+    <!-- Left line -->
+    <!-- <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="1" y1="2" 
+          x2="1" y2="height-3" /> -->
+
+    <gradient type="vertical" x="1" y="2" width="1" height="height-4">
+        <color value="shade/gtk:bg[SELECTED]/1.1" />
+        <color value="shade/gtk:bg[SELECTED]/1.2" />
+    </gradient>
+
+    <!-- Left line -->
+    <!-- <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="width-2" y1="2" 
+          x2="width-2" y2="height-3" /> -->
+
+
+    <gradient type="vertical" x="width-2" y="2" width="1" height="height-4">
+        <color value="shade/gtk:bg[SELECTED]/1.1" />
+        <color value="shade/gtk:bg[SELECTED]/1.2" />
+    </gradient>
+
+    <!-- Corners -->
+    <line color="shade/gtk:bg[SELECTED]/1.0" 
+          x1="2" y1="2" 
+          x2="2" y2="2" />
+    <line color="shade/gtk:bg[SELECTED]/1.0" 
+          x1="width-3" y1="2" 
+          x2="width-3" y2="2" />
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="2" y1="height-3" 
+          x2="2" y2="height-3" />
+    <line color="shade/gtk:bg[SELECTED]/1.1" 
+          x1="width-3" y1="height-3" 
+          x2="width-3" y2="height-3" />
+
+</draw_ops>
+
+<draw_ops name="menu_glyph">
+    <icon x="(width-mini_icon_width)/2"
+          y="(height-mini_icon_height)/2"
+          width="mini_icon_width" height="mini_icon_height" />
+</draw_ops>
+
+<draw_ops name="menu_glyph_unfocused">
+    <icon x="(width-mini_icon_width)/2"
+          y="(height-mini_icon_height)/2"
+          width="mini_icon_width" height="mini_icon_height" alpha="0.5"/>
+</draw_ops>
+
+<draw_ops name="close_glyph">
+    <line color="blend/white/gtk:bg[SELECTED]/0.5" x1="3" y1="2" x2="width-3" y2="height-4"/>
+    <line color="blend/white/gtk:bg[SELECTED]/0.5" x1="2" y1="3" x2="width-4" y2="height-3"/>
+    <line color="blend/white/gtk:bg[SELECTED]/0.5" x1="2" y1="height-4" x2="width-4" y2="2"/>
+    <line color="blend/white/gtk:bg[SELECTED]/0.5" x1="3" y1="height-3" x2="width-3" y2="3"/>
+    <line color="white" x1="2" y1="2" x2="width-3" y2="height-3"/>
+    <line color="white" x1="2" y1="height-3" x2="width-3" y2="2"/>
+</draw_ops>
+
+<draw_ops name="close_glyph_shadow">
+    <line color="shade/gtk:bg[SELECTED]/0.85" x1="3" y1="2" x2="width-3" y2="height-4"/>
+    <line color="shade/gtk:bg[SELECTED]/0.85" x1="2" y1="3" x2="width-4" y2="height-3"/>
+    <line color="shade/gtk:bg[SELECTED]/0.85" x1="2" y1="height-4" x2="width-4" y2="2"/>
+    <line color="shade/gtk:bg[SELECTED]/0.85" x1="3" y1="height-3" x2="width-3" y2="3"/>
+    <line color="shade/gtk:bg[SELECTED]/0.85" x1="2" y1="2" x2="width-3" y2="height-3"/>
+    <line color="shade/gtk:bg[SELECTED]/0.85" x1="2" y1="height-3" x2="width-3" y2="2"/>
+</draw_ops>
+
+<draw_ops name="close_glyph_shadow_dark">
+    <line color="shade/gtk:bg[SELECTED]/0.8" x1="3" y1="2" x2="width-3" y2="height-4"/>
+    <line color="shade/gtk:bg[SELECTED]/0.8" x1="2" y1="3" x2="width-4" y2="height-3"/>
+    <line color="shade/gtk:bg[SELECTED]/0.8" x1="2" y1="height-4" x2="width-4" y2="2"/>
+    <line color="shade/gtk:bg[SELECTED]/0.8" x1="3" y1="height-3" x2="width-3" y2="3"/>
+    <line color="shade/gtk:bg[SELECTED]/0.8" x1="2" y1="2" x2="width-3" y2="height-3"/>
+    <line color="shade/gtk:bg[SELECTED]/0.8" x1="2" y1="height-3" x2="width-3" y2="2"/>
+</draw_ops>
+
+<draw_ops name="close_glyph_unfocused">
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x1="3" y1="2" x2="width-3" y2="height-4"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x1="2" y1="3" x2="width-4" y2="height-3"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x1="2" y1="height-4" x2="width-4" y2="2"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x1="3" y1="height-3" x2="width-3" y2="3"/>
+    <line color="gtk:fg[NORMAL]" x1="2" y1="2" x2="width-3" y2="height-3"/>
+    <line color="gtk:fg[NORMAL]" x1="2" y1="height-3" x2="width-3" y2="2"/>
+</draw_ops>
+
+<draw_ops name="close_glyph_unfocused_lighter">
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.75" x1="3" y1="2" x2="width-3" y2="height-4"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.75" x1="2" y1="3" x2="width-4" y2="height-3"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.75" x1="2" y1="height-4" x2="width-4" y2="2"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.75" x1="3" y1="height-3" x2="width-3" y2="3"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x1="2" y1="2" x2="width-3" y2="height-3"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x1="2" y1="height-3" x2="width-3" y2="2"/>
+</draw_ops>
+
+<draw_ops name="maximize_glyph">
+    <rectangle color="white" x="2" y="2" width="width-4" height="height/4" filled="true"/>
+    <line color="white" x1="2" y1="2" x2="2" y2="height-3"/>
+    <line color="white" x1="2" y1="height-3" x2="width-3" y2="height-3"/>
+    <line color="white" x1="width-3" y1="2" x2="width-3" y2="height-3"/>
+</draw_ops>
+<draw_ops name="maximize_glyph_shadow">
+    <rectangle color="shade/gtk:bg[SELECTED]/0.85" x="2" y="2" width="width-4" height="height/4" filled="true"/>
+    <line color="shade/gtk:bg[SELECTED]/0.85" x1="2" y1="2" x2="2" y2="height-3"/>
+    <line color="shade/gtk:bg[SELECTED]/0.85" x1="2" y1="height-3" x2="width-3" y2="height-3"/>
+    <line color="shade/gtk:bg[SELECTED]/0.85" x1="width-3" y1="2" x2="width-3" y2="height-3"/>
+</draw_ops>
+
+<draw_ops name="maximize_glyph_shadow_dark">
+    <rectangle color="shade/gtk:bg[SELECTED]/0.8" x="2" y="2" width="width-4" height="height/4" filled="true"/>
+    <line color="shade/gtk:bg[SELECTED]/0.8" x1="2" y1="2" x2="2" y2="height-3"/>
+    <line color="shade/gtk:bg[SELECTED]/0.8" x1="2" y1="height-3" x2="width-3" y2="height-3"/>
+    <line color="shade/gtk:bg[SELECTED]/0.8" x1="width-3" y1="2" x2="width-3" y2="height-3"/>
+</draw_ops>
+
+<draw_ops name="maximize_glyph_unfocused">
+  <rectangle color="gtk:fg[NORMAL]" x="2" y="2" width="width-4" height="height/4" filled="true"/>
+    <line color="gtk:fg[NORMAL]" x1="2" y1="2" x2="2" y2="height-3"/>
+    <line color="gtk:fg[NORMAL]" x1="2" y1="height-3" x2="width-3" y2="height-3"/>
+    <line color="gtk:fg[NORMAL]" x1="width-3" y1="2" x2="width-3" y2="height-3"/> 
+</draw_ops>
+<draw_ops name="maximize_glyph_unfocused_lighter">
+    <rectangle color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x="2" y="2" width="width-4" height="height/4" filled="true"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x1="2" y1="2" x2="2" y2="height-3"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x1="2" y1="height-3" x2="width-3" y2="height-3"/>
+    <line color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x1="width-3" y1="2" x2="width-3" y2="height-3"/> 
+
+
+</draw_ops>
+
+<draw_ops name="minimize_glyph">
+    <rectangle color="white" x="2" y="height * 2 / 3" width="width-4" height="height - height * 2 / 3 - 2" filled="true" />
+</draw_ops>
+
+<draw_ops name="minimize_glyph_shadow">
+    <rectangle color="shade/gtk:bg[SELECTED]/0.85" x="2" y="height * 2 / 3" width="width-4" height="height - (height * 2 / 3) - 2" filled="true" />
+</draw_ops>
+
+<draw_ops name="minimize_glyph_shadow_dark">
+    <rectangle color="shade/gtk:bg[SELECTED]/0.8" x="2" y="height * 2 / 3" width="width-4" height="height - (height * 2 / 3) - 2" filled="true" />
+</draw_ops>
+
+<draw_ops name="minimize_glyph_unfocused">
+    <rectangle color="gtk:fg[NORMAL]" x="2" y="height * 2 / 3" width="width-4" height="height - (height * 2 / 3) - 2" filled="true" />
+</draw_ops>
+
+<draw_ops name="minimize_glyph_unfocused_lighter">
+    <rectangle color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5" x="2" y="height * 2 / 3" width="width-4" height="height - (height * 2 / 3) - 2" filled="true" />
+</draw_ops>
+
+<draw_ops name="menu_button">
+    <include name="menu_glyph" x="0" y="0"/>
+</draw_ops>
+
+<draw_ops name="menu_button_unfocused">
+    <include name="menu_glyph_unfocused" x="0" y="0" />
+</draw_ops>
+
+<draw_ops name="menu_button_pressed">
+    <include name="menu_glyph_unfocused" x="0" y="0"/>
+</draw_ops>
+
+<draw_ops name="minimize_button">
+    <include name="button_bg" x="0" y="0" width="width" height="height" />
+    <include name="minimize_glyph_shadow" x="2" y="4" width="width-4" height="height-4"/>
+    <include name="minimize_glyph" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="minimize_button_focus">
+    <include name="button_bg_prelight" x="0" y="0" width="width" height="height" />
+    <include name="minimize_glyph_shadow_dark" x="2" y="4" width="width-4" height="height-4"/>
+    <include name="minimize_glyph" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="minimize_button_unfocused">
+    <include name="minimize_glyph_unfocused_lighter" x="2" y="2" width="width-4" height="height-4" />
+</draw_ops>
+
+<draw_ops name="minimize_button_pressed">
+    <include name="button_pressed_bg"/>
+    <include name="minimize_glyph" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="minimize_button_unfocused_pressed">
+    <include name="minimize_glyph_unfocused" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+
+<draw_ops name="maximize_button">
+    <include name="button_bg" x="0" y="0" width="width" height="height" />
+    <include name="maximize_glyph_shadow" x="2" y="4" width="width-4" height="height-4"/>
+    <include name="maximize_glyph" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="maximize_button_focus">
+    <include name="button_bg_prelight" x="0" y="0" width="width" height="height" />
+    <include name="maximize_glyph_shadow_dark" x="2" y="4" width="width-4" height="height-4"/>
+    <include name="maximize_glyph" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="maximize_button_unfocused">
+    <include name="maximize_glyph_unfocused_lighter" x="2" y="2" width="width-4" height="height-4"/> 
+</draw_ops>
+
+<draw_ops name="maximize_button_unfocused_pressed">
+    <include name="maximize_glyph_unfocused" x="2" y="2" width="width-4" height="height-4"/> 
+</draw_ops>
+
+<draw_ops name="maximize_button_pressed">
+    <include name="button_pressed_bg"/>
+    <include name="maximize_glyph" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="mini_window_icon">
+  <rectangle color="gtk:bg[NORMAL]" filled="true"
+             x="0" y="0" width="width-1" height="height-1"/>
+  <rectangle color="gtk:fg[NORMAL]" filled="false"
+             x="0" y="0" width="width-1" height="height-1"/>
+  <line color="gtk:fg[NORMAL]" width="2"
+        x1="0" y1="1" x2="width" y2="1"/>
+</draw_ops>
+
+<draw_ops name="restore_button">
+    <include name="button_bg" x="0" y="0" width="width" height="height" />
+	<include name="maximize_glyph_shadow" x="3" y="5" width="width-6" height="height-6" />
+    <include name="maximize_glyph" x="3" y="3" width="width-6" height="height-6"/>
+</draw_ops>
+
+<draw_ops name="restore_button_prelight">
+    <include name="button_bg_prelight" x="0" y="0" width="width" height="height" />
+    <include name="maximize_glyph_shadow_dark" x="3" y="5" width="width-6" height="height-6"/>
+    <include name="maximize_glyph" x="3" y="3" width="width-6" height="height-6"/>
+</draw_ops>
+
+<draw_ops name="restore_button_unfocused">
+    <include name="maximize_glyph_unfocused_lighter" x="3" y="3" width="width-6" height="height-6"/>
+</draw_ops>
+
+<draw_ops name="restore_button_pressed">
+    <include name="button_pressed_bg"/>
+    <include name="maximize_glyph" x="3" y="3" width="width-6" height="height-6"/>
+</draw_ops>
+
+<draw_ops name="restore_button_unfocused_pressed">
+    <include name="maximize_glyph_unfocused" x="3" y="3" width="width-6" height="height-6"/>
+</draw_ops>
+
+<draw_ops name="close_button">
+    <include name="button_bg" x="0" y="0" width="width" height="height" />
+    <include name="close_glyph_shadow" x="2" y="4" width="width-4" height="height-4" />
+    <include name="close_glyph" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="close_button_focus">
+    <include name="button_bg_prelight" x="0" y="0" width="width" height="height" />
+    <include name="close_glyph_shadow_dark" x="2" y="4" width="width-4" height="height-4"/>
+    <include name="close_glyph" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="close_button_unfocused">
+    <include name="close_glyph_unfocused_lighter" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="close_button_unfocused_pressed">
+    <include name="close_glyph_unfocused" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="close_button_pressed">
+    <include name="button_pressed_bg"/>
+    <include name="close_glyph" x="2" y="2" width="width-4" height="height-4"/>
+</draw_ops>
+
+<draw_ops name="outer_bevel">
+  <rectangle color="shade/gtk:bg[NORMAL]/0.5"
+      x="0" y="0" width="width-1" height="height-1"/>
+</draw_ops>
+
+<draw_ops name="outer_bevel_unfocused">  
+  <rectangle color="shade/gtk:bg[NORMAL]/0.7"
+      x="0" y="0" width="width-1" height="height-1"/>
+</draw_ops>
+
+<draw_ops name="title_background">
+    
+    <rectangle color="shade/gtk:bg[SELECTED]/0.7" x="0" y="0" width="width" height="height" filled="true"/>
+    <rectangle color="shade/gtk:bg[SELECTED]/1.3" x="1" y="1" width="width-3" height="height-3"/>
+    
+    <line color="shade/gtk:bg[SELECTED]/1.3" x1="width-2" y1="1" x2="width-2" y2="height-2"/>
+
+    <gradient type="vertical" x="2" y="2" width="width-4" height="height-3">
+        <color value="shade/gtk:bg[SELECTED]/0.9"/>
+	<color value="shade/gtk:bg[SELECTED]/1.1"/>
+    </gradient> 
+    
+    <line color="shade/gtk:bg[SELECTED]/0.8"
+        x1="1" y1="height-1"
+        x2="width-2" y2="height-1" />
+
+    <line color="shade/gtk:bg[SELECTED]/1.25"
+        x1="1" y1="height-2"
+        x2="width-2" y2="height-2" />
+
+    <line color="shade/gtk:bg[SELECTED]/0.7" x1="1" y1="3" x2="3" y2="1" />
+    <line color="shade/gtk:bg[SELECTED]/0.7" x1="1" y1="4" x2="1" y2="4" />
+    <line color="shade/gtk:bg[SELECTED]/0.7" x1="4" y1="1" x2="4" y2="1" />
+
+    <line color="shade/gtk:bg[SELECTED]/0.7" x1="width-2" y1="3" x2="width-4" y2="1" />
+    <line color="shade/gtk:bg[SELECTED]/0.7" x1="width-5" y1="1" x2="width-5" y2="1" />
+    <line color="shade/gtk:bg[SELECTED]/0.7" x1="width-2" y1="3" x2="width-2" y2="4" />
+
+    <line color="shade/gtk:bg[SELECTED]/1.3" x1="2" y1="3" x2="2" y2="4" />
+    <line color="shade/gtk:bg[SELECTED]/1.3" x1="3" y1="2" x2="4" y2="2" />
+
+    <line color="shade/gtk:bg[SELECTED]/1.3" x1="width-3" y1="3" x2="width-3" y2="4" />
+    <line color="shade/gtk:bg[SELECTED]/1.3" x1="width-5" y1="2" x2="width-4" y2="2" />
+
+</draw_ops>
+
+<draw_ops name="title_background_maximized">
+    <rectangle color="shade/gtk:bg[SELECTED]/0.7" x="0" y="0" width="width" height="height" filled="true"/>
+    <rectangle color="shade/gtk:bg[SELECTED]/1.3" x="0" y="1" width="width-2" height="height-3"/>
+    
+    <line color="shade/gtk:bg[SELECTED]/1.3" x1="width-1" y1="1" x2="width-1" y2="height-2"/>
+    
+    <gradient type="vertical" x="1" y="2" width="width-2" height="height-3">
+    	<color value="shade/gtk:bg[SELECTED]/0.9"/>
+    	<color value="shade/gtk:bg[SELECTED]/1.1"/>
+    </gradient>
+    
+    <rectangle color="shade/gtk:bg[SELECTED]/1.3" x="0" y="1" width="width-1" height="height-3"/>
+    
+    <line color="shade/gtk:bg[SELECTED]/0.8"
+        x1="0" y1="height-1"
+        x2="width-1" y2="height-1" />
+
+    <line color="shade/gtk:bg[SELECTED]/1.25"
+        x1="0" y1="height-2"
+        x2="width-1" y2="height-2" />
+</draw_ops>
+
+<draw_ops name="title_unfocused_background">
+    <rectangle color="shade/gtk:bg[NORMAL]/0.7" x="0" y="0" width="width" height="height" filled="true"/>
+   
+    <gradient type="vertical" x="1" y="1" width="width-2" height="height-1">
+   	<color value="shade/gtk:bg[NORMAL]/1.0"/>
+	<color value="shade/gtk:bg[NORMAL]/1.0"/>
+    </gradient>
+
+    <line color="shade/gtk:bg[NORMAL]/1.5" x1="1" y1="1" x2="width-2" y2="1"/>
+    <line color="shade/gtk:bg[NORMAL]/1.5" x1="1" y1="1" x2="1" y2="height-1"/>
+
+    <line color="shade/gtk:bg[NORMAL]/1.5" x1="width-2" y1="1" x2="width-2" y2="height" />
+
+    <line color="shade/gtk:bg[NORMAL]/0.7" x1="1" y1="3" x2="3" y2="1" />
+    <line color="shade/gtk:bg[NORMAL]/0.7" x1="1" y1="4" x2="1" y2="4" />
+    <line color="shade/gtk:bg[NORMAL]/0.7" x1="4" y1="1" x2="4" y2="1" />
+    <line color="shade/gtk:bg[NORMAL]/0.7" x1="width-2" y1="3" x2="width-4" y2="1" />
+    <line color="shade/gtk:bg[NORMAL]/0.7" x1="width-5" y1="1" x2="width-5" y2="1" />
+    <line color="shade/gtk:bg[NORMAL]/0.7" x1="width-2" y1="3" x2="width-2" y2="4" />
+    <line color="shade/gtk:bg[NORMAL]/1.5" x1="2" y1="3" x2="2" y2="4" />
+    <line color="shade/gtk:bg[NORMAL]/1.5" x1="3" y1="2" x2="4" y2="2" />
+    <line color="shade/gtk:bg[NORMAL]/1.5" x1="width-3" y1="3" x2="width-3" y2="4" />
+    <line color="shade/gtk:bg[NORMAL]/1.5" x1="width-5" y1="2" x2="width-4" y2="2" />
+
+</draw_ops>
+
+<draw_ops name="title_unfocused_background_maximized">
+    <rectangle color="shade/gtk:bg[NORMAL]/0.7" x="0" y="0" width="width" height="height" filled="true"/>
+   
+    <gradient type="vertical" x="0" y="1" width="width" height="height-1">
+   	<color value="shade/gtk:bg[NORMAL]/1.0"/>
+	<color value="shade/gtk:bg[NORMAL]/1.0"/>
+    </gradient>
+
+    <line color="shade/gtk:bg[NORMAL]/1.5" x1="0" y1="1" x2="width-1" y2="1"/>
+
+</draw_ops>
+
+<draw_ops name="blank">
+<!-- nothing -->
+</draw_ops>
+
+<draw_ops name="focus_outline">
+    <line color="shade/gtk:bg[NORMAL]/1.5"
+    	  x1="1" y1="title_height" x2="1" y2="height-2" />
+    <line color="shade/gtk:bg[NORMAL]/1.5"
+	  x1="width-2" y1="title_height" x2="width-2" y2="height-2" />
+    <line color="shade/gtk:bg[NORMAL]/1.5"
+	  x1="2" y1="height-2" x2="width-2" y2="height-2" />
+</draw_ops>
+
+<draw_ops name="focus_background">
+  <include name="outer_bevel"/>
+  <include name="focus_outline"/>
+</draw_ops>
+
+<draw_ops name="unfocus_background">
+    <include name="outer_bevel_unfocused" />
+    <include name="focus_outline" />
+</draw_ops>
+
+<draw_ops name="title_text_focused_with_icon">
+
+    <title color="shade/gtk:bg[SELECTED]/0.8"
+           x="(0) - 1"
+           y="(((height - title_height) / 2) `max` 0) - 1"/>
+
+     
+    <title color="shade/gtk:bg[SELECTED]/0.8"
+           x="(0) - 1"
+           y="(((height - title_height) / 2) `max` 0) + 1"/> 
+
+    <title color="shade/gtk:bg[SELECTED]/0.8"
+           x="(0) + 1"
+           y="(((height - title_height) / 2) `max` 0) + 1"/> 
+
+    <title color="shade/gtk:bg[SELECTED]/0.8"
+           x="(0) + 1"
+           y="(((height - title_height) / 2) `max` 0) - 1"/>
+        
+    <title color="#ffffff"
+           x="(0)"
+           y="(((height - title_height) / 2) `max` 0)"/>
+ 
+</draw_ops>
+
+<draw_ops name="title_text_with_icon">
+    <title color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.5"
+           x="(0)"
+           y="((height - title_height) / 2) `max` 0"/> 
+</draw_ops>
+
+<draw_ops name="title_normal">
+  <include name="title_text_with_icon"/>
+</draw_ops>
+
+<draw_ops name="title_focused">
+  <include name="title_text_focused_with_icon"/>
+</draw_ops>
+
+<frame_style name="normal_unfocused" geometry="normal">
+    <piece position="entire_background" draw_ops="unfocus_background"/>
+    <piece position="titlebar" draw_ops="title_unfocused_background"/>
+    <piece position="title" draw_ops="title_normal"/>
+
+  <button function="close" state="normal" draw_ops="close_button_unfocused"/>
+  <button function="close" state="pressed" draw_ops="close_button_unfocused_pressed"/>
+  <button function="minimize" state="normal" draw_ops="minimize_button_unfocused"/>
+  <button function="minimize" state="pressed" draw_ops="minimize_button_unfocused_pressed"/>
+  <button function="maximize" state="normal" draw_ops="maximize_button_unfocused"/>
+  <button function="maximize" state="pressed" draw_ops="maximize_button_unfocused_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_button_unfocused"/>
+  <button function="menu" state="pressed" draw_ops="menu_button_unfocused"/>
+</frame_style>
+
+<frame_style name="normal_focused" geometry="normal">
+  <piece position="entire_background" draw_ops="focus_background"/>
+  <piece position="titlebar" draw_ops="title_background"/>  
+  <piece position="title" draw_ops="title_focused"/>
+  <button function="close" state="normal" draw_ops="close_button"/>
+  <button function="close" state="pressed" draw_ops="close_button_pressed"/>
+  <button function="close" state="prelight" draw_ops="close_button_focus"/>
+  <button function="minimize" state="normal" draw_ops="minimize_button"/>
+  <button function="minimize" state="pressed" draw_ops="minimize_button_pressed"/>
+  <button function="minimize" state="prelight" draw_ops="minimize_button_focus" />
+  <button function="maximize" state="normal" draw_ops="maximize_button"/>
+  <button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
+  <button function="maximize" state="prelight" draw_ops="maximize_button_focus"/>
+  <button function="menu" state="normal" draw_ops="menu_button"/>
+  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+
+</frame_style>
+
+<frame_style name="maximized_unfocused" geometry="normal_small_borders" parent="normal_unfocused">
+  <piece position="entire_background" draw_ops="blank"/>
+  <piece position="titlebar" draw_ops="title_unfocused_background_maximized"/>
+  <button function="maximize" state="normal" draw_ops="restore_button_unfocused"/>
+  <button function="maximize" state="pressed" draw_ops="restore_button_unfocused_pressed"/>
+</frame_style>
+
+<frame_style name="maximized_focused" geometry="normal_small_borders" parent="normal_focused">
+  <piece position="entire_background" draw_ops="focus_outline"/>
+  <piece position="titlebar" draw_ops="title_background_maximized"/>
+  <button function="maximize" state="normal" draw_ops="restore_button"/>
+  <button function="maximize" state="pressed" draw_ops="restore_button_pressed"/>
+  <button function="maximize" state="prelight" draw_ops="restore_button_prelight" />
+</frame_style>
+
+<frame_style name="border" geometry="border" parent="normal_unfocused">
+  <piece position="entire_background" draw_ops="outer_bevel"/>
+  <piece position="titlebar" draw_ops="blank"/>
+  <piece position="title" draw_ops="blank"/>
+</frame_style>
+
+<frame_style_set name="normal">
+<frame focus="yes" state="normal" resize="both" style="normal_focused"/>
+<frame focus="no" state="normal" resize="both" style="normal_unfocused"/>
+<frame focus="yes" state="maximized" style="maximized_focused"/>
+<frame focus="no" state="maximized" style="maximized_unfocused"/>
+<frame focus="yes" state="shaded" style="normal_focused"/>
+<frame focus="no" state="shaded" style="normal_unfocused"/>
+<frame focus="yes" state="maximized_and_shaded" style="maximized_focused"/>
+<frame focus="no" state="maximized_and_shaded" style="maximized_unfocused"/>
+</frame_style_set>
+
+<frame_style_set name="border">
+<frame focus="yes" state="normal" resize="both" style="border"/>
+<frame focus="no" state="normal" resize="both" style="border"/>
+<frame focus="yes" state="maximized" style="border"/>
+<frame focus="no" state="maximized" style="border"/>
+<frame focus="yes" state="shaded" style="border"/>
+<frame focus="no" state="shaded" style="border"/>
+<frame focus="yes" state="maximized_and_shaded" style="border"/>
+<frame focus="no" state="maximized_and_shaded" style="border"/>
+</frame_style_set>
+
+<window type="normal" style_set="normal"/>
+<window type="dialog" style_set="normal"/>
+<window type="modal_dialog" style_set="normal"/>
+<window type="menu" style_set="normal"/>
+<window type="utility" style_set="normal"/>
+<window type="border" style_set="normal"/>
+
+<menu_icon function="close" state="normal" draw_ops="close_button"/>
+<menu_icon function="maximize" state="normal" draw_ops="maximize_button"/>
+<menu_icon function="unmaximize" state="normal" draw_ops="restore_button"/>
+<menu_icon function="minimize" state="normal" draw_ops="minimize_button"/>
+
+</metacity_theme>

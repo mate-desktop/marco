@@ -1,0 +1,2486 @@
+# translation of marco.mate-2-26.po to Greek
+# kostas: 17Jul2003, 412 messages, updated translation for 2.4.
+# kostas: 30Oct2003,459 messages updated translation for Mate 2.6.
+# kostas:03Feb2004, 465 messages update.
+# Simos Xenitellis ,<simos@hellug.gr>, 2002.
+# Nikos Charonitakis <frolix68@yahoo.gr>, 2003.
+# Kostas Papadimas <pkst@gnome.org>, 2002,2003, 2004, 2006.
+# Jennie Petoumenou <epetoumenou@gmail.com>, 2009.
+# Fotis Tsamis <ftsamis@gmail.com>, 2009.
+# translation of el.po to
+# Greek translation of marco.
+# Copyright (C) 2002 Simos Xenitellis.
+# kostas: finished the translation.
+# kostas: 29Dec2002, updated translation
+# Nikos: 07Sep2003, Review translation.
+# Jennie Petoumenou <epetoumenou@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: marco.mate-2-26\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=marco&component=general\n"
+"POT-Creation-Date: 2010-03-25 08:59+0000\n"
+"PO-Revision-Date: 2010-04-09 20:43+0200\n"
+"Last-Translator: Jennie Petoumenou <epetoumenou@gmail.com>\n"
+"Language-Team: Greek <team@mate.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/50-marco-desktop-key.xml.in.h:1
+msgid "Desktop"
+msgstr "Επιφάνεια εργασίας"
+
+#: ../src/50-marco-key.xml.in.h:1
+msgid "Window Management"
+msgstr "Διαχείριση Παραθύρων"
+
+#: ../src/core/bell.c:294
+msgid "Bell event"
+msgstr "Ηχητικό συμβάν κουδουνιού"
+
+#: ../src/core/core.c:206
+#, c-format
+msgid "Unknown window information request: %d"
+msgstr "Άγνωστη αίτηση πληροφοριών παραθύρου: %d"
+
+#. Translators: %s is a window title
+#: ../src/core/delete.c:96
+#, c-format
+msgid "<tt>%s</tt> is not responding."
+msgstr "<tt>%s</tt> δεν αποκρίνεται."
+
+#: ../src/core/delete.c:101
+msgid ""
+"You may choose to wait a short while for it to continue or force the "
+"application to quit entirely."
+msgstr ""
+"Μπορείτε να επιλέξετε να περιμένετε λίγο για να συνεχίσει, ή να εξαναγκάσετε "
+"την εφαρμογή σε πλήρη έξοδο."
+
+#: ../src/core/delete.c:110
+msgid "_Wait"
+msgstr "_Αναμονή"
+
+#: ../src/core/delete.c:110
+msgid "_Force Quit"
+msgstr "_Εξαναγκασμός σε τερματισμό"
+
+# mateconf-editor/mateconf-editor.c:69 mateconf/mateconftool.c:447
+#: ../src/core/delete.c:208
+#, c-format
+msgid "Failed to get hostname: %s\n"
+msgstr "Αποτυχία λήψης του ονόματος του συστήματος: %s\n"
+
+#: ../src/core/display.c:258
+#, c-format
+msgid "Missing %s extension required for compositing"
+msgstr "Λείπει η επέκταση %s που απαιτείται για compositing"
+
+# mateconf/mateconf-internals.c:2416
+#: ../src/core/display.c:336
+#, c-format
+msgid "Failed to open X Window System display '%s'\n"
+msgstr "Αποτυχία ανοίγματος οθόνης του συστήματος παραθύρων Χ '%s'\n"
+
+#: ../src/core/errors.c:272
+#, c-format
+msgid ""
+"Lost connection to the display '%s';\n"
+"most likely the X server was shut down or you killed/destroyed\n"
+"the window manager.\n"
+msgstr ""
+"Η σύνδεση με την προβολή '%s' χάθηκε\n"
+"πιθανόν να τερματίστηκε ο εξυπηρετητής Χ ή να τερματίσατε/καταστρέψατε\n"
+"το διαχειριστή παραθύρων.\n"
+
+#: ../src/core/errors.c:279
+#, c-format
+msgid "Fatal IO error %d (%s) on display '%s'.\n"
+msgstr "Μοιραίο σφάλμα IO %d (%s) στην οθόνη '%s'.\n"
+
+#: ../src/core/keybindings.c:680
+#, c-format
+msgid ""
+"Some other program is already using the key %s with modifiers %x as a "
+"binding\n"
+msgstr ""
+"Κάποιο άλλο πρόγραμμα χρησιμοποιεί ήδη το κλειδί %s με μετατροπείς %x ώς "
+"δεσμό\n"
+
+#. Displayed when a keybinding which is
+#. * supposed to launch a program fails.
+#.
+#: ../src/core/keybindings.c:2294
+#, c-format
+msgid ""
+"There was an error running <tt>%s</tt>:\n"
+"\n"
+"%s"
+msgstr ""
+"Σφάλμα κατά την εκτέλεση του <tt>%s</tt>:\n"
+"\n"
+"%s"
+
+#: ../src/core/keybindings.c:2383
+#, c-format
+msgid "No command %d has been defined.\n"
+msgstr "Δεν έχει ορισθεί εντολή %d.\n"
+
+#: ../src/core/keybindings.c:3337
+#, c-format
+msgid "No terminal command has been defined.\n"
+msgstr "Δεν έχει ορισθεί εντολή τερματικού.\n"
+
+#: ../src/core/main.c:131
+#, c-format
+msgid ""
+"marco %s\n"
+"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
+"This is free software; see the source for copying conditions.\n"
+"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A "
+"PARTICULAR PURPOSE.\n"
+msgstr ""
+"marco %s\n"
+"Πνευματικά Δικαιώματα (C) 2001-%s Havoc Pennington, Red Hat, Inc., και "
+"άλλοι\n"
+"Αυτό είναι ελεύθερο λογισμικό, δείτε τον πηγαίο κώδικα για όρους "
+"αντιγραφής.\n"
+"ΔΕΝ παρέχεται καμία εγγύηση, ούτε ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ ούτε ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ "
+"ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ.\n"
+
+#: ../src/core/main.c:269
+msgid "Disable connection to session manager"
+msgstr "Απενεργοποίηση σύνδεσης στο διαχειριστή συνεδρίας"
+
+#: ../src/core/main.c:275
+msgid "Replace the running window manager with Marco"
+msgstr "Αντικατάσταση του διαχειριστή παραθύρων που εκτελείται με το Marco"
+
+#: ../src/core/main.c:281
+msgid "Specify session management ID"
+msgstr "Καθορισμός ID διαχείρισης συνεδρίας"
+
+#: ../src/core/main.c:286
+msgid "X Display to use"
+msgstr "X Display για χρήση"
+
+#: ../src/core/main.c:292
+msgid "Initialize session from savefile"
+msgstr "Εκκίνηση συνεδρίας από savefile"
+
+#: ../src/core/main.c:298
+msgid "Print version"
+msgstr "Εκτύπωση έκδοσης"
+
+#: ../src/core/main.c:304
+msgid "Make X calls synchronous"
+msgstr "Να καταστούν σύγχρονες οι κλήσεις του X"
+
+#: ../src/core/main.c:310
+msgid "Turn compositing on"
+msgstr "Ενεργοποίηση compositing"
+
+#: ../src/core/main.c:316
+msgid "Turn compositing off"
+msgstr "Απενεργοποίηση compositing"
+
+#: ../src/core/main.c:322
+msgid ""
+"Don't make fullscreen windows that are maximized and have no decorations"
+msgstr ""
+"Μην κάνετε παράθυρα πλήρης οθόνης που είναι μεγιστοποιημένα και δεν έχουν "
+"καμία διακόσμηση"
+
+#: ../src/core/main.c:528
+#, c-format
+msgid "Failed to scan themes directory: %s\n"
+msgstr "Αποτυχία σάρωσης καταλόγου θεμάτων: %s\n"
+
+#: ../src/core/main.c:544
+#, c-format
+msgid ""
+"Could not find a theme! Be sure %s exists and contains the usual themes.\n"
+msgstr ""
+"Δεν είναι δυνατή η εύρεση θέματος! Βεβαιωθείτε ότι το %s υπάρχει και "
+"περιέχει τα συνήθη θέματα.\n"
+
+#: ../src/core/main.c:603
+#, c-format
+msgid "Failed to restart: %s\n"
+msgstr "Αποτυχία επανεκκίνησης: %s\n"
+
+#.
+#. * We found it, but it was invalid.  Complain.
+#. *
+#. * FIXME: This replicates the original behaviour, but in the future
+#. * we might consider reverting invalid keys to their original values.
+#. * (We know the old value, so we can look up a suitable string in
+#. * the symtab.)
+#. *
+#. * (Empty comment follows so the translators don't see this.)
+#.
+#.
+#: ../src/core/prefs.c:508 ../src/core/prefs.c:663
+#, c-format
+msgid "MateConf key '%s' is set to an invalid value\n"
+msgstr "Το MateConf key '%s'  έχει ορισθεί σε μια μη έγκυρη τιμή\n"
+
+#: ../src/core/prefs.c:589 ../src/core/prefs.c:832
+#, c-format
+msgid "%d stored in MateConf key %s is out of range %d to %d\n"
+msgstr ""
+"Το %d που αποθηκεύτηκε στο κλειδί MateConf %s είναι εκτός του εύρους %d έως %d\n"
+
+#: ../src/core/prefs.c:633 ../src/core/prefs.c:710 ../src/core/prefs.c:758
+#: ../src/core/prefs.c:822 ../src/core/prefs.c:1115 ../src/core/prefs.c:1131
+#: ../src/core/prefs.c:1148 ../src/core/prefs.c:1164
+#, c-format
+msgid "MateConf key \"%s\" is set to an invalid type\n"
+msgstr "Ο τύπος που έχει οριστεί για το κλειδί MateConf \"%s\" είναι μη έγκυρος\n"
+
+#: ../src/core/prefs.c:1234
+msgid ""
+"Workarounds for broken applications disabled. Some applications may not "
+"behave properly.\n"
+msgstr ""
+"Οι προσωρινές λύσεις για προβληματικές εφαρμογές έχουν απενεργοποιηθεί. "
+"Μερικές εφαρμογές μπορεί να μη συμπεριφέρονται σωστά.\n"
+
+#: ../src/core/prefs.c:1305
+#, c-format
+msgid "Could not parse font description \"%s\" from MateConf key %s\n"
+msgstr ""
+"Αδυναμία ανάλυσης περιγραφής γραμματοσειράς \"%s\" από κλειδί MateConf %s\n"
+
+#: ../src/core/prefs.c:1367
+#, c-format
+msgid ""
+"\"%s\" found in configuration database is not a valid value for mouse button "
+"modifier\n"
+msgstr ""
+"Το \"%s\" που βρέθηκε στη βάση δεδομένων ρυθμίσεων δεν είναι μια έγκυρη τιμή "
+"για μετατροπέα κουμπιού ποντικιού\n"
+
+# mateconf/mateconfd.c:1561
+#: ../src/core/prefs.c:1788
+#, c-format
+msgid "Error setting number of workspaces to %d: %s\n"
+msgstr "Σφάλμα κατά τον ορισμό αριθμού χώρων εργασίας σε  %d: %s\n"
+
+#: ../src/core/prefs.c:1953 ../src/core/prefs.c:2456
+#, c-format
+msgid "Workspace %d"
+msgstr "Χώρος εργασίας %d"
+
+#: ../src/core/prefs.c:1983 ../src/core/prefs.c:2161
+#, c-format
+msgid ""
+"\"%s\" found in configuration database is not a valid value for keybinding "
+"\"%s\"\n"
+msgstr ""
+"Το \"%s\" που βρέθηκε στη βάση δεδομένων ρυθμίσεων δεν είναι μια έγκυρη τιμή "
+"για συνδυασμό πλήκτρων\"%s\"\n"
+
+# mateconf/mateconfd.c:1561
+#: ../src/core/prefs.c:2537
+#, c-format
+msgid "Error setting name for workspace %d to \"%s\": %s\n"
+msgstr "Σφάλμα κατά τον ορισμό ονόματος χώρου εργασίας %d σε \"%s\": %s\n"
+
+# mateconf/mateconfd.c:1561
+#: ../src/core/prefs.c:2741
+#, c-format
+msgid "Error setting compositor status: %s\n"
+msgstr "Σφάλμα κατά τον ορισμό της κατάστασης του compositor: %s\n"
+
+#: ../src/core/screen.c:357
+#, c-format
+msgid "Screen %d on display '%s' is invalid\n"
+msgstr "Η οθόνη %d στην προβολή '%s' δεν είναι έγκυρη\n"
+
+#: ../src/core/screen.c:373
+#, c-format
+msgid ""
+"Screen %d on display \"%s\" already has a window manager; try using the --"
+"replace option to replace the current window manager.\n"
+msgstr ""
+"Η οθόνη %d στην προβολή '%s' έχει ήδη ένα διαχειριστή παραθύρων. Προσπαθήστε "
+"να χρησιμοποιήσετε την επιλογή --replace για να αντικαταστήσετε τον τρέχων "
+"διαχειριστή παραθύρων.\n"
+
+#: ../src/core/screen.c:400
+#, c-format
+msgid ""
+"Could not acquire window manager selection on screen %d display \"%s\"\n"
+msgstr ""
+"Αδυναμία λήψης επιλογής διαχειριστή παραθύρων στην οθόνη %d προβολή \"%s\"\n"
+
+#: ../src/core/screen.c:458
+#, c-format
+msgid "Screen %d on display \"%s\" already has a window manager\n"
+msgstr "Η οθόνη  %d στην προβολή \"%s\" έχει ήδη ένα διαχειριστή παραθύρων\n"
+
+#: ../src/core/screen.c:668
+#, c-format
+msgid "Could not release screen %d on display \"%s\"\n"
+msgstr "Αδυναμία απελευθέρωσης οθόνης %d στην προβολή \"%s\"\n"
+
+#. Translators: Please don't translate "Control", "Shift", etc, since these
+#. * are hardcoded (in gtk/gtkaccelgroup.c; it's not marco's fault).
+#. * "disabled" must also stay as it is.
+#.
+#: ../src/core/schema-bindings.c:169
+msgid ""
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
+"\n"
+"The parser is fairly liberal and allows lower or upper case, and also "
+"abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the "
+"special string \"disabled\", then there will be no keybinding for this "
+"action."
+msgstr ""
+"Μπορεί να έχει τη μορφή \"<Control>a\" ή \"<Shift><Alt>F1\".\n"
+"\n"
+"Τα κριτήρια ανάλυσης είναι αρκετά ελαστικά· και επιτρέπουν τη χρήση πεζών ή "
+"κεφαλαίων χαρακτήρων, καθώς και συντμήσεων όπως \"<Ctl>\" ή \"<Ctrl>\". Αν "
+"ορίσετε την επιλογή στην τιμή \"ανενεργό\", τότε δεν θα ισχύει καμία "
+"συντόμευση για την ενέργεια."
+
+#: ../src/core/schema-bindings.c:177
+msgid ""
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
+"\n"
+"The parser is fairly liberal and allows lower or upper case, and also "
+"abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the "
+"special string \"disabled\", then there will be no keybinding for this "
+"action.\n"
+"\n"
+"This keybinding may be reversed by holding down the \"shift\" key; "
+"therefore, \"shift\" cannot be one of the keys it uses."
+msgstr ""
+"Μπορεί να έχει τη μορφή \"<Control>a\" ή \"<Shift><Alt>F1\".\n"
+"\n"
+"Τα κριτήρια ανάλυσης είναι αρκετά ελαστικά· επιτρέπουν τη χρήση πεζών ή "
+"κεφαλαίων χαρακτήρων, καθώς και συντμήσεων όπως \"<Ctl>\" ή \"<Ctrl>\". Αν "
+"ορίσετε την επιλογή στην τιμή \"ανενεργό\", τότε δεν θα ισχύει καμία "
+"συντόμευση για την ενέργεια.\n"
+"\n"
+"Αυτή η συντόμευση μπορεί να αντιστραφεί, αν κρατήσετε πατημένο το πλήκτρο "
+"\"shift\". Άρα, στα πλήκτρα της συντόμευσης δεν θα πρέπει να περιλαμβάνεται "
+"το \"shift\"."
+
+# mateconf/mateconf-internals.c:2333
+#: ../src/core/session.c:850 ../src/core/session.c:857
+#, c-format
+msgid "Could not create directory '%s': %s\n"
+msgstr "Αδυναμία δημιουργίας καταλόγου '%s': %s\n"
+
+# mateconf/mateconf-internals.c:789
+#: ../src/core/session.c:867
+#, c-format
+msgid "Could not open session file '%s' for writing: %s\n"
+msgstr "Αδύνατο το άνοιγμα  αρχείου συνεδρίας `%s' για εγγραφή: %s\n"
+
+#: ../src/core/session.c:1008
+#, c-format
+msgid "Error writing session file '%s': %s\n"
+msgstr "Σφάλμα εγγραφής αρχείου συνεδρίας '%s': %s\n"
+
+# mateconf/mateconf-backend.c:243
+#: ../src/core/session.c:1013
+#, c-format
+msgid "Error closing session file '%s': %s\n"
+msgstr "Σφάλμα κλεισίματος αρχείου συνεδρίας '%s': %s\n"
+
+# mateconf/mateconf-internals.c:2416
+#. oh, just give up
+#: ../src/core/session.c:1106
+#, c-format
+msgid "Failed to read saved session file %s: %s\n"
+msgstr "Αποτυχία ανάγνωσης αποθηκευμένου αρχείου συνεδρίας %s: %s\n"
+
+# mateconf/mateconf-internals.c:2416
+#: ../src/core/session.c:1145
+#, c-format
+msgid "Failed to parse saved session file: %s\n"
+msgstr "Αποτυχία ανάλυσης αποθηκευμένου αρχείου συνεδρίας: %s\n"
+
+#: ../src/core/session.c:1194
+#, c-format
+msgid "<marco_session> attribute seen but we already have the session ID"
+msgstr ""
+"βρέθηκε γνώρισμα <marco_session> αλλά ήδη έχουμε την ταυτότητα συνεδρίας "
+
+#: ../src/core/session.c:1207 ../src/core/session.c:1282
+#: ../src/core/session.c:1314 ../src/core/session.c:1386
+#: ../src/core/session.c:1446
+#, c-format
+msgid "Unknown attribute %s on <%s> element"
+msgstr "Άγνωστο γνώρισμα %s στο στοιχείο <%s>"
+
+#: ../src/core/session.c:1224
+#, c-format
+msgid "nested <window> tag"
+msgstr "ενσωματωμένη ετικέτα <window>"
+
+#: ../src/core/session.c:1466
+#, c-format
+msgid "Unknown element %s"
+msgstr "Άγνωστο στοιχείο %s "
+
+#: ../src/core/session.c:1818
+msgid ""
+"These windows do not support &quot;save current setup&quot; and will have to "
+"be restarted manually next time you log in."
+msgstr ""
+"Αυτά τα παράθυρα δεν υποστηρίζουν &quot;αποθήκευση τρέχουσας "
+"εγκατάστασης&quot; και θα πρέπει να επανεκκινηθούν στην επόμενη είσοδο από "
+"εσάς."
+
+# mateconf/mateconftool.c:1639
+#: ../src/core/util.c:101
+#, c-format
+msgid "Failed to open debug log: %s\n"
+msgstr "Αποτυχία ανοίγματος καταγραφής εκσφαλμάτωσης: %s\n"
+
+# mateconf/mateconf-internals.c:2416
+#: ../src/core/util.c:111
+#, c-format
+msgid "Failed to fdopen() log file %s: %s\n"
+msgstr "Αποτυχία  fdopen() αρχείου καταγραφής %s: %s\n"
+
+#: ../src/core/util.c:117
+#, c-format
+msgid "Opened log file %s\n"
+msgstr "Έχει ανοιχθεί το αρχείο καταγραφών %s\n"
+
+#: ../src/core/util.c:136 ../src/tools/marco-message.c:176
+#, c-format
+msgid "Marco was compiled without support for verbose mode\n"
+msgstr "Το Marco έχει γίνει compiled χωρίς υποστήριξη για verbose mode\n"
+
+#: ../src/core/util.c:236
+msgid "Window manager: "
+msgstr "Διαχειριστής παραθύρων: "
+
+#: ../src/core/util.c:388
+msgid "Bug in window manager: "
+msgstr "Σφάλμα στο διαχειριστή παραθύρων: "
+
+#: ../src/core/util.c:421
+msgid "Window manager warning: "
+msgstr "Προειδοποίηση διαχειριστή παραθύρων: "
+
+#: ../src/core/util.c:449
+msgid "Window manager error: "
+msgstr "Σφάλμα διαχειριστή παραθύρων: "
+
+#. Translators: This is the title used on dialog boxes
+#. eof all-keybindings.h
+#: ../src/core/util.c:570 ../src/marco.desktop.in.h:1
+#: ../src/marco-wm.desktop.in.h:1
+msgid "Marco"
+msgstr "Marco"
+
+#. first time through
+#: ../src/core/window.c:5642
+#, c-format
+msgid ""
+"Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
+"window as specified in the ICCCM.\n"
+msgstr ""
+"Το παράθυρο %s όρισε SM_CLIENT_ID στον εαυτό του, αντί στο παράθυρο του "
+"WM_CLIENT_LEADER όπως καθορίζεται στο ICCCM.\n"
+
+#. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
+#. * authoritative source for that info. Some apps such as mplayer or
+#. * xine disable resize via MWM but not WM_NORMAL_HINTS, but that
+#. * leads to e.g. us not fullscreening their windows.  Apps that set
+#. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
+#. * about these apps but make them work.
+#.
+#: ../src/core/window.c:6207
+#, c-format
+msgid ""
+"Window %s sets an MWM hint indicating it isn't resizable, but sets min size %"
+"d x %d and max size %d x %d; this doesn't make much sense.\n"
+msgstr ""
+"Το παράθυρο %s  όρισε μια συμβουλή  MWM ότι δεν είναι δυνατή η αλλαγή "
+"μεγέθους, αλλά όρισε ελάχιστο μέγεθος  %d x %d και μέγιστο μέγεθος %d x %d; "
+"αυτό είναι ακατανόητο.\n"
+
+#: ../src/core/window-props.c:244
+#, c-format
+msgid "Application set a bogus _NET_WM_PID %lu\n"
+msgstr "Η εφαρμογή έθεσε ένα πλαστό _NET_WM_PID %lu\n"
+
+#. Translators: the title of a window from another machine
+#: ../src/core/window-props.c:388
+#, c-format
+msgid "%s (on %s)"
+msgstr "%s (σε %s)"
+
+#. Simple case-- don't bother to look it up.  It's root.
+#: ../src/core/window-props.c:420
+#, c-format
+msgid "%s (as superuser)"
+msgstr "%s (ως υπερχρήστης)"
+
+#. Translators: the title of a window owned by another user
+#. * on this machine
+#: ../src/core/window-props.c:438
+#, c-format
+msgid "%s (as %s)"
+msgstr "%s (ως %s)"
+
+#. Translators: the title of a window owned by another user
+#. * on this machine, whose name we don't know
+#: ../src/core/window-props.c:444
+#, c-format
+msgid "%s (as another user)"
+msgstr "%s (ως άλλος χρήστης)"
+
+#: ../src/core/window-props.c:1430
+#, c-format
+msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
+msgstr "Άκυρο WM_TRANSIENT_FOR παράθυρο 0x%lx που καθορίστηκε για %s.\n"
+
+#: ../src/core/xprops.c:155
+#, c-format
+msgid ""
+"Window 0x%lx has property %s\n"
+"that was expected to have type %s format %d\n"
+"and actually has type %s format %d n_items %d.\n"
+"This is most likely an application bug, not a window manager bug.\n"
+"The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
+msgstr ""
+"Το παράθυρο 0x%lx έχει ιδιότητα %s\n"
+"η οποία αναμενόταν να έχει τύπο %s μορφή %d\n"
+"ενώ στην πραγματικότητα έχει τύπο %s μορφή %d n_items %d\n"
+"Αυτό πιθανόν να είναι σφάλμα της εφαρμογής και όχι του διαχειριστή "
+"παραθύρων.\n"
+"Το παράθυρο έχει τίτλο=\"%s\" class=\"%s\" name=\"%s\"\n"
+
+#: ../src/core/xprops.c:401
+#, c-format
+msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
+msgstr "Η ιδιότητα %s στο παράθυρο 0x%lx περιείχε μη έγκυρο UTF-8\n"
+
+#: ../src/core/xprops.c:484
+#, c-format
+msgid ""
+"Property %s on window 0x%lx contained invalid UTF-8 for item %d in the list\n"
+msgstr ""
+"Η ιδιότητα %s στο παράθυρο 0x%lx περιείχε μη έγκυρο UTF-8\n"
+" για το αντικείμενο %d στη λίστα\n"
+
+#: ../src/include/all-keybindings.h:88
+msgid "Switch to workspace 1"
+msgstr "Αλλαγή στο χώρο εργασίας 1"
+
+#: ../src/include/all-keybindings.h:90
+msgid "Switch to workspace 2"
+msgstr "Αλλαγή στο χώρο εργασίας 2"
+
+#: ../src/include/all-keybindings.h:92
+msgid "Switch to workspace 3"
+msgstr "Αλλαγή στο χώρο εργασίας 3"
+
+#: ../src/include/all-keybindings.h:94
+msgid "Switch to workspace 4"
+msgstr "Αλλαγή στο χώρο εργασίας 4"
+
+#: ../src/include/all-keybindings.h:96
+msgid "Switch to workspace 5"
+msgstr "Αλλαγή στο χώρο εργασίας 5"
+
+#: ../src/include/all-keybindings.h:98
+msgid "Switch to workspace 6"
+msgstr "Αλλαγή στο χώρο εργασίας 6"
+
+#: ../src/include/all-keybindings.h:100
+msgid "Switch to workspace 7"
+msgstr "Αλλαγή στο χώρο εργασίας 7"
+
+#: ../src/include/all-keybindings.h:102
+msgid "Switch to workspace 8"
+msgstr "Αλλαγή στο χώρο εργασίας 8"
+
+#: ../src/include/all-keybindings.h:104
+msgid "Switch to workspace 9"
+msgstr "Αλλαγή στο χώρο εργασίας 9"
+
+#: ../src/include/all-keybindings.h:106
+msgid "Switch to workspace 10"
+msgstr "Αλλαγή στο χώρο εργασίας 10"
+
+#: ../src/include/all-keybindings.h:108
+msgid "Switch to workspace 11"
+msgstr "Αλλαγή στο χώρο εργασίας 11"
+
+#: ../src/include/all-keybindings.h:110
+msgid "Switch to workspace 12"
+msgstr "Αλλαγή στο χώρο εργασίας 12"
+
+#: ../src/include/all-keybindings.h:122
+msgid "Switch to workspace on the left of the current workspace"
+msgstr "Αλλαγή στο χώρο εργασίας αριστερά του τρέχοντος"
+
+#: ../src/include/all-keybindings.h:126
+msgid "Switch to workspace on the right of the current workspace"
+msgstr "Αλλαγή στο χώρο εργασίας δεξιά του τρέχοντος"
+
+#: ../src/include/all-keybindings.h:130
+msgid "Switch to workspace above the current workspace"
+msgstr "Αλλαγή στο χώρο εργασίας πάνω από τον τρέχοντα"
+
+#: ../src/include/all-keybindings.h:134
+msgid "Switch to workspace below the current workspace"
+msgstr "Αλλαγή στο χώρο εργασίας κάτω από τον τρέχοντα"
+
+#: ../src/include/all-keybindings.h:150
+msgid "Move between windows of an application, using a popup window"
+msgstr "Εναλλαγή μεταξύ παραθύρων μιας εφαρμογής, με αναδυόμενο παράθυρο"
+
+#: ../src/include/all-keybindings.h:153
+msgid "Move backward between windows of an application, using a popup window"
+msgstr ""
+"Εναλλαγή (προς τα πίσω) μεταξύ παραθύρων μιας εφαρμογής, με αναδυόμενο "
+"παράθυρο"
+
+#: ../src/include/all-keybindings.h:157
+msgid "Move between windows, using a popup window"
+msgstr "Εναλλαγή μεταξύ παραθύρων, με αναδυόμενο παράθυρο"
+
+#: ../src/include/all-keybindings.h:160
+msgid "Move backward between windows, using a popup window"
+msgstr "Εναλλαγή (προς τα πίσω) μεταξύ παραθύρων, με αναδυόμενο παράθυρο"
+
+#: ../src/include/all-keybindings.h:163
+msgid "Move between panels and the desktop, using a popup window"
+msgstr ""
+"Εναλλαγή μεταξύ πινάκων εφαρμογών και επιφ. εργασίας, με αναδυόμενο παράθυρο"
+
+#: ../src/include/all-keybindings.h:166
+msgid "Move backward between panels and the desktop, using a popup window"
+msgstr ""
+"Εναλλαγή (προς τα πίσω) μεταξύ πινάκων εφαρμογών και επιφ. εργασίας, με "
+"αναδυόμενο παράθυρο"
+
+#: ../src/include/all-keybindings.h:171
+msgid "Move between windows of an application immediately"
+msgstr "Άμεση εναλλαγή μεταξύ παραθύρων μιας εφαρμογής"
+
+#: ../src/include/all-keybindings.h:174
+msgid "Move backward between windows of an application immediately"
+msgstr "Άμεση εναλλαγή (προς τα πίσω) μεταξύ παραθύρων μιας εφαρμογής"
+
+#: ../src/include/all-keybindings.h:177
+msgid "Move between windows immediately"
+msgstr "Άμεση εναλλαγή μεταξύ παραθύρων"
+
+#: ../src/include/all-keybindings.h:180
+msgid "Move backward between windows immediately"
+msgstr "Άμεση εναλλαγή (προς τα πίσω) μεταξύ παραθύρων"
+
+#: ../src/include/all-keybindings.h:183
+msgid "Move between panels and the desktop immediately"
+msgstr "Άμεση εναλλαγή μεταξύ πινάκων εφαρμογών και επιφάνειας εργασίας"
+
+#: ../src/include/all-keybindings.h:186
+msgid "Move backward between panels and the desktop immediately"
+msgstr ""
+"Άμεση εναλλαγή (προς τα πίσω) μεταξύ πινάκων εφαρμογών και επιφάνειας "
+"εργασίας"
+
+#: ../src/include/all-keybindings.h:191
+msgid "Hide all normal windows and set focus to the desktop"
+msgstr ""
+"Απόκρυψη όλων των κανονικών παραθύρων και εστίαση στην επιφάνεια εργασίας"
+
+#: ../src/include/all-keybindings.h:194
+msgid "Show the panel's main menu"
+msgstr "Εμφάνιση του κύριου μενού του πίνακα εφαρμογών"
+
+#: ../src/include/all-keybindings.h:197
+msgid "Show the panel's \"Run Application\" dialog box"
+msgstr "Εμφάνιση του διαλόγου \"Εκτέλεση εφαρμογής\" του πίνακα εφαρμογών"
+
+#: ../src/include/all-keybindings.h:238
+msgid "Take a screenshot"
+msgstr "Λήψη στιγμιότυπου οθόνης"
+
+#: ../src/include/all-keybindings.h:240
+msgid "Take a screenshot of a window"
+msgstr "Λήψη στιγμιότυπου ενός παραθύρου"
+
+#: ../src/include/all-keybindings.h:242
+msgid "Run a terminal"
+msgstr "Εκτέλεση ενός τερματικού"
+
+#: ../src/include/all-keybindings.h:257
+msgid "Activate the window menu"
+msgstr "Ενεργοποίηση του μενού του παραθύρου"
+
+#: ../src/include/all-keybindings.h:260
+msgid "Toggle fullscreen mode"
+msgstr "Εναλλαγή κατάστασης πλήρους οθόνης"
+
+#: ../src/include/all-keybindings.h:262
+msgid "Toggle maximization state"
+msgstr "Εναλλαγή κατάστασης μεγιστοποίησης"
+
+#: ../src/include/all-keybindings.h:264
+msgid "Toggle whether a window will always be visible over other windows"
+msgstr "Εναλλαγή του αν το παράθυρο θα είναι πάντα ορατό πάνω από τα υπόλοιπα"
+
+#: ../src/include/all-keybindings.h:266
+msgid "Maximize window"
+msgstr "Μεγιστοποίηση παραθύρου"
+
+#: ../src/include/all-keybindings.h:268
+msgid "Restore window"
+msgstr "Επαναφορά παραθύρου"
+
+#: ../src/include/all-keybindings.h:270
+msgid "Toggle shaded state"
+msgstr "Εναλλαγή σκιασμένης κατάστασης"
+
+#: ../src/include/all-keybindings.h:272
+msgid "Minimize window"
+msgstr "Ελαχιστοποίηση παραθύρου"
+
+#: ../src/include/all-keybindings.h:274
+msgid "Close window"
+msgstr "Κλείσιμο παραθύρου"
+
+#: ../src/include/all-keybindings.h:276
+msgid "Move window"
+msgstr "Μετακίνηση παραθύρου"
+
+#: ../src/include/all-keybindings.h:278
+msgid "Resize window"
+msgstr "Αλλαγή μεγέθους παραθύρου"
+
+#: ../src/include/all-keybindings.h:281
+msgid "Toggle whether window is on all workspaces or just one"
+msgstr "Εμφάνιση παραθύρου σε όλους τους χώρους εργασίας ή μόνο σε έναν"
+
+#: ../src/include/all-keybindings.h:285
+msgid "Move window to workspace 1"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 1"
+
+#: ../src/include/all-keybindings.h:288
+msgid "Move window to workspace 2"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 2"
+
+#: ../src/include/all-keybindings.h:291
+msgid "Move window to workspace 3"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 3"
+
+#: ../src/include/all-keybindings.h:294
+msgid "Move window to workspace 4"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 4"
+
+#: ../src/include/all-keybindings.h:297
+msgid "Move window to workspace 5"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 5"
+
+#: ../src/include/all-keybindings.h:300
+msgid "Move window to workspace 6"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 6"
+
+#: ../src/include/all-keybindings.h:303
+msgid "Move window to workspace 7"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 7"
+
+#: ../src/include/all-keybindings.h:306
+msgid "Move window to workspace 8"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 8"
+
+#: ../src/include/all-keybindings.h:309
+msgid "Move window to workspace 9"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 9"
+
+#: ../src/include/all-keybindings.h:312
+msgid "Move window to workspace 10"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 10"
+
+#: ../src/include/all-keybindings.h:315
+msgid "Move window to workspace 11"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 11"
+
+#: ../src/include/all-keybindings.h:318
+msgid "Move window to workspace 12"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 12"
+
+#: ../src/include/all-keybindings.h:330
+msgid "Move window one workspace to the left"
+msgstr "Μετακίνηση του παραθύρου ένα χώρο εργασίας αριστερά"
+
+#: ../src/include/all-keybindings.h:333
+msgid "Move window one workspace to the right"
+msgstr "Μετακίνηση του παραθύρου ένα χώρο εργασίας δεξιά"
+
+#: ../src/include/all-keybindings.h:336
+msgid "Move window one workspace up"
+msgstr "Μετακίνηση του παραθύρου ένα χώρο εργασίας πάνω"
+
+#: ../src/include/all-keybindings.h:339
+msgid "Move window one workspace down"
+msgstr "Μετακίνηση του παραθύρου ένα χώρο εργασίας κάτω"
+
+#: ../src/include/all-keybindings.h:342
+msgid "Raise window if it's covered by another window, otherwise lower it"
+msgstr ""
+"Ανασήκωση παραθύρου αν καλύπτεται από άλλο παράθυρο, αλλιώς χαμήλωμα του"
+
+#: ../src/include/all-keybindings.h:344
+msgid "Raise window above other windows"
+msgstr "Ανασήκωση παραθύρου πάνω από τα άλλα παράθυρα"
+
+#: ../src/include/all-keybindings.h:346
+msgid "Lower window below other windows"
+msgstr "Χαμήλωμα παραθύρου κάτω από τα άλλα παράθυρα"
+
+#: ../src/include/all-keybindings.h:350
+msgid "Maximize window vertically"
+msgstr "Μεγιστοποίηση ενός παραθύρου κάθετα"
+
+#: ../src/include/all-keybindings.h:354
+msgid "Maximize window horizontally"
+msgstr "Μεγιστοποίηση ενός παραθύρου οριζόντια"
+
+#: ../src/include/all-keybindings.h:358
+msgid "Move window to north-west (top left) corner"
+msgstr "Μετακίνηση του παραθύρου στην πάνω αριστερή γωνία"
+
+#: ../src/include/all-keybindings.h:361
+msgid "Move window to north-east (top right) corner"
+msgstr "Μετακίνηση του παραθύρου στην πάνω δεξιά γωνία"
+
+#: ../src/include/all-keybindings.h:364
+msgid "Move window to south-west (bottom left) corner"
+msgstr "Μετακίνηση του παραθύρου στην κάτω αριστερή γωνία"
+
+#: ../src/include/all-keybindings.h:367
+msgid "Move window to south-east (bottom right) corner"
+msgstr "Μετακίνηση παραθύρου στην κάτω δεξιά γωνία"
+
+#: ../src/include/all-keybindings.h:371
+msgid "Move window to north (top) side of screen"
+msgstr "Μετακίνηση παραθύρου στην πάνω μεριά της οθόνης"
+
+#: ../src/include/all-keybindings.h:374
+msgid "Move window to south (bottom) side of screen"
+msgstr "Μετακίνηση παραθύρου στην κάτω μεριά της οθόνης"
+
+#: ../src/include/all-keybindings.h:377
+msgid "Move window to east (right) side of screen"
+msgstr "Μετακίνηση παραθύρου στην δεξιά μεριά της οθόνης"
+
+#: ../src/include/all-keybindings.h:380
+msgid "Move window to west (left) side of screen"
+msgstr "Μετακίνηση παραθύρου στην αριστερή μεριά της οθόνης"
+
+#: ../src/include/all-keybindings.h:383
+msgid "Move window to center of screen"
+msgstr "Μετακίνηση παραθύρου στο κέντρο της οθόνης"
+
+#: ../src/marco.schemas.in.in.h:1
+msgid "(Not implemented) Navigation works in terms of applications not windows"
+msgstr ""
+"(Δεν εφαρμόζεται) Η πλοήγηση λειτουργεί με όρους εφαρμογών και όχι παραθύρων"
+
+#: ../src/marco.schemas.in.in.h:2
+msgid ""
+"A font description string describing a font for window titlebars. The size "
+"from the description will only be used if the titlebar_font_size option is "
+"set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
+"option is set to true."
+msgstr ""
+"Ένα αλφαριθμητικό περιγραφής που περιγράφει τη γραμματοσειρά της μπάρας "
+"τίτλου παραθύρου. Το μέγεθος από την περιγραφή θα χρησιμοποιείται μόνο αν η "
+"επιλογή μεγέθους γραμματοσειράς είναι 0. Ακόμα, αυτή η επιλογή "
+"απενεργοποιείται αν η επιλογή titlebar_uses_desktop_font είναι true."
+
+#: ../src/marco.schemas.in.in.h:3
+msgid "Action on title bar double-click"
+msgstr "Ενέργεια κατά το διπλό κλικ στη μπάρα τίτλου"
+
+#: ../src/marco.schemas.in.in.h:4
+msgid "Action on title bar middle-click"
+msgstr "Ενέργεια κατά το μεσαίο κλικ στη μπάρα τίτλου"
+
+#: ../src/marco.schemas.in.in.h:5
+msgid "Action on title bar right-click"
+msgstr "Ενέργεια κατά το δεξί κλικ στη μπάρα τίτλου"
+
+#: ../src/marco.schemas.in.in.h:6
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Διάταξη των κουμπιών στη μπάρα τίτλου"
+
+#: ../src/marco.schemas.in.in.h:7
+msgid ""
+"Arrangement of buttons on the titlebar. The value should be a string, such "
+"as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
+"corner of the window from the right corner, and the button names are comma-"
+"separated. Duplicate buttons are not allowed. Unknown button names are "
+"silently ignored so that buttons can be added in future marco versions "
+"without breaking older versions. A special spacer tag can be used to insert "
+"some space between two adjacent buttons."
+msgstr ""
+"Διάταξη των κουμπιών στη μπάρα τίτλου. Η τιμή θα πρέπει να είναι "
+"αλφαριθμητικό, όπως \"menu:minimize,maximize,close\", το σημείο χωρίζει την "
+"αριστερή γωνία του παραθύρου από τη δεξιά γωνία, και τα ονόματα κουμπιών "
+"χωρίζονται από κόμμα. Δεν επιτρέπονται διπλά κουμπιά. Άγνωστοι τύποι "
+"κουμπιών αγνοούνται σιωπηλά έτσι ώστε να μπορούν να προστεθούν σε "
+"μελλοντικές εκδόσεις του marco χωρίς να χαλάνε οι προηγούμενες εκδόσεις. "
+"Μια ειδική ετικέτα πλήκτρου διαστήματος μπορεί να χρησιμοποιηθεί για να "
+"εισάγει κενό ανάμεσα σε δύο παρακείμενα κουμπιά."
+
+#: ../src/marco.schemas.in.in.h:8
+msgid "Automatically raises the focused window"
+msgstr "Αυτόματη ανασήκωση του εστιασμένου παράθυρου"
+
+#: ../src/marco.schemas.in.in.h:9
+msgid ""
+"Clicking a window while holding down this modifier key will move the window "
+"(left click), resize the window (middle click), or show the window menu "
+"(right click). The middle and right click operations may be swapped using "
+"the \"resize_with_right_button\" key. Modifier is expressed as \"&lt;Alt&gt;"
+"\" or \"&lt;Super&gt;\" for example."
+msgstr ""
+"Κάνοντας κλικ σε ένα παράθυρο ενώ κρατώντας αυτό το πλήκτρο μετατροπής θα "
+"μετακινηθεί το παράθυρο (αριστερό κλίκ), θα γίνει αλλαγή μεγέθους (μεσαίο "
+"κλικ) ή θα εμφανιστεί το μενού παραθύρου (δεξί κλικ). Οι λειτουργίες για το "
+"μεσαίο και το δεξί πλήκτρο μπορούν να αντιμετατεθούν με χρήση του κλειδιού "
+"\"mouse_button_resize\". Ο μετατροπέας εκφράζεται για παράδειγμα ως  \"&lt;"
+"Alt&gt;\" ή \"&lt;Super&gt;\"."
+
+#: ../src/marco.schemas.in.in.h:10
+msgid "Commands to run in response to keybindings"
+msgstr "Εντολές που εκτελούνται σε αντιστοίχιση με  συνδυασμούς πλήκτρων"
+
+#: ../src/marco.schemas.in.in.h:11
+msgid "Compositing Manager"
+msgstr "Διαχειριστής Compositing"
+
+#: ../src/marco.schemas.in.in.h:12
+msgid "Control how new windows get focus"
+msgstr "Έλεγχος της λήψης εστίασης από τα νέα παράθυρα"
+
+#: ../src/marco.schemas.in.in.h:13
+msgid "Current theme"
+msgstr "Τρέχον θέμα"
+
+#: ../src/marco.schemas.in.in.h:14
+msgid "Delay in milliseconds for the auto raise option"
+msgstr "Καθυστέρηση σε ms πριν την αυτόματη ανασήκωση παραθύρων"
+
+#: ../src/marco.schemas.in.in.h:15
+msgid "Determines whether Marco is a compositing manager."
+msgstr "Καθορίζει αν το Marco είναι ένας διαχειριστής compositing"
+
+#: ../src/marco.schemas.in.in.h:16
+msgid ""
+"Determines whether applications or the system can generate audible 'beeps'; "
+"may be used in conjunction with 'visual bell' to allow silent 'beeps'."
+msgstr ""
+"Καθορίζει αν οι εφαρμογές ή το σύστημα θα δημιουργούν ήχους 'μπιπ', μπορεί "
+"να χρησιμοποιηθεί σε συνδυασμό με το 'οπτικό κουδούνι' για να επιτρέπει "
+"ήσυχα 'μπιπ'."
+
+#: ../src/marco.schemas.in.in.h:17
+msgid "Disable misfeatures that are required by old or broken applications"
+msgstr ""
+"Απενεργοποίηση κακών λειτουργιών που απαιτούνται από παλιές η χαλασμένες "
+"εφαρμογές"
+
+#: ../src/marco.schemas.in.in.h:18
+msgid "Enable Visual Bell"
+msgstr "Ενεργοποίηση οπτικού κουδουνιού"
+
+#: ../src/marco.schemas.in.in.h:19
+msgid ""
+"If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
+"the focused window will be automatically raised after a delay specified by "
+"the auto_raise_delay key. This is not related to clicking on a window to "
+"raise it, nor to entering a window during drag-and-drop."
+msgstr ""
+"Αν τεθεί σε true, και η κατάσταση εστίασης είναι \"sloppy\" ή \"mouse\", "
+"τότε το εστιασμένο παράθυρο να ανασηκωθεί αυτόματα μετά από μια καθυστέρηση "
+"που καθορίζεται από το κλειδί auto_raise_delay. Αυτή η λειτουργία δε "
+"σχετίζεται με την ανασήκωση παραθύρου όταν κάνουμε κλικ, ούτε με την εστίαση "
+"παραθύρου κατά τη μετάφορα και απόθεση (drag and drop)."
+
+#: ../src/marco.schemas.in.in.h:20
+msgid ""
+"If true, ignore the titlebar_font option, and use the standard application "
+"font for window titles."
+msgstr ""
+"Αν true, αγνοείται την επιλογή γραμματοσειράς μπάρας τίτλου, και γίνεται "
+"χρήση των καθορισμένων γραμματοσειρών για τους τίτλους παραθύρων."
+
+#: ../src/marco.schemas.in.in.h:21
+msgid ""
+"If true, marco will give the user less feedback by using wireframes, "
+"avoiding animations, or other means. This is a significant reduction in "
+"usability for many users, but may allow legacy applications to continue "
+"working, and may also be a useful tradeoff for terminal servers. However, "
+"the wireframe feature is disabled when accessibility is on."
+msgstr ""
+"Αν true, το marco θα δίνει στο χρήστη λιγότερη ανάδραση και λιγότερη "
+"αίσθηση \"άμεσων χειρισμών\" με τη χρήση wireframes και την αποφυγή "
+"κινήσεων. Αυτή είναι μια σημαντική παραχώρηση στη χρηστικότητα για πολλούς "
+"χρήστες αλλά θα επιτρέψει σε εφαρμογές legacy και εξυπηρετητές τερματικού να "
+"λειτουργήσουν εκεί που δεν μπορούσαν πριν."
+
+#: ../src/marco.schemas.in.in.h:22
+msgid ""
+"If true, then Marco works in terms of applications rather than windows. "
+"The concept is a bit abstract, but in general an application-based setup is "
+"more like the Mac and less like Windows. When you focus a window in "
+"application-based mode, all the windows in the application will be raised. "
+"Also, in application-based mode, focus clicks are not passed through to "
+"windows in other applications. Application-based mode is, however, largely "
+"unimplemented at the moment."
+msgstr ""
+"Αν true, τότε το  Marco  δουλεύει με όρους εφαρμογών αντί για παραθύρων. "
+"Η ιδέα είναι λίγο αφηρημένη αλλά σε γενικές γραμμές μια εγκατάσταση "
+"βασισμένη σε εφαρμογές μοιάζει περισσότερο σε Mac και λιγότερο σε  Windows. "
+"Όταν εστιάζετε σε ένα παράθυρο σε λειτουργία βασισμένη σε εφαρμογές, τα κλικ "
+"εστίασης δε μεταβιβάζονται μέσα από παράθυρα σε άλλες εφαρμογές. Η ύπαρξη "
+"αυτής της ρύθμισης είναι βέβαια κάπως συζητήσιμη. Αλλά είναι καλύτερα να "
+"υπάρχουν ρυθμίσεις για όλες τις λεπτομέρειες. Ακόμα η λειτουργία βασισμένη "
+"σε εφαρμογές δεν έχει εφαρμοστεί ακόμα σε μεγάλο βαθμό."
+
+#: ../src/marco.schemas.in.in.h:23
+msgid "If true, trade off usability for less resource usage"
+msgstr "An true, ανταλλαγή χρηστικότητας για λιγότερη χρήση πόρων"
+
+#: ../src/marco.schemas.in.in.h:24
+msgid "Modifier to use for modified window click actions"
+msgstr "Μετατροπέας για χρήση στις τροποποιημένες ενέργειες κλικ παραθύρων"
+
+#: ../src/marco.schemas.in.in.h:25
+msgid "Name of workspace"
+msgstr "Όνομα χώρου εργασίας"
+
+#: ../src/marco.schemas.in.in.h:26
+msgid "Number of workspaces"
+msgstr "Αριθμός χώρων εργασίας"
+
+#: ../src/marco.schemas.in.in.h:27
+msgid ""
+"Number of workspaces. Must be more than zero, and has a fixed maximum to "
+"prevent making the desktop unusable by accidentally asking for too many "
+"workspaces."
+msgstr ""
+"Αριθμός των χώρων εργασίας. Πρέπει να είναι παραπάνω από μηδέν, και έχει ένα "
+"καθορισμένο μέγιστο όριο  (ώστε να αποφευχθεί τυχαία καταστροφή της "
+"επιφάνειας εργασίας με καθορισμό εξωφρενικά πολλών χώρων εργασίας)."
+
+#: ../src/marco.schemas.in.in.h:28
+msgid "Run a defined command"
+msgstr "Εκτέλεση μιας ορισμένης εντολής φλοιού"
+
+#: ../src/marco.schemas.in.in.h:29
+msgid ""
+"Set this to true to resize with the right button and show a menu with the "
+"middle button while holding down the key given in \"mouse_button_modifier\"; "
+"set it to false to make it work the opposite way around."
+msgstr ""
+"Καθορίστε ως true για να μπορείτε να αλλάζεται το μέγεθος με το δεξί πλήκτρο "
+"και να εμφανίζεται μενού με το μεσαίο πλήκτρο καθώς έχετε πατημένο το "
+"πλήκτρο που δηλώσατε στο \"mouse_button_modifier\"· καθορίστε σε false για "
+"να έχετε την αντίθετη συμπεριφορά."
+
+#: ../src/marco.schemas.in.in.h:30
+msgid ""
+"Setting this option to false can lead to buggy behavior, so users are "
+"strongly discouraged from changing it from the default of true. Many actions "
+"(e.g. clicking in the client area, moving or resizing the window) normally "
+"raise the window as a side-effect. Setting this option to false, which is "
+"strongly discouraged, will decouple raising from other user actions, and "
+"ignore raise requests generated by applications. See http://bugzilla.mate."
+"org/show_bug.cgi?id=445447#c6. Even when this option is false, windows can "
+"still be raised by an alt-left-click anywhere on the window, a normal click "
+"on the window decorations, or by special messages from pagers, such as "
+"activation requests from tasklist applets. This option is currently disabled "
+"in click-to-focus mode. Note that the list of ways to raise windows when "
+"raise_on_click is false does not include programmatic requests from "
+"applications to raise windows; such requests will be ignored regardless of "
+"the reason for the request. If you are an application developer and have a "
+"user complaining that your application does not work with this setting "
+"disabled, tell them it is _their_ fault for breaking their window manager "
+"and that they need to change this option back to true or live with the \"bug"
+"\" they requested."
+msgstr ""
+"Ο καθορισμός αυτής της επιλογής αυτής σε ψευδής μπορεί να οδηγήσει σε "
+"προβληματική συμπεριφορά, οπότε οι χρήστες προτείνεται να μην το αλλάζουν "
+"από την τυπική τιμή αληθής. Πολλές λειτουργίες (π.χ. κλικ μέσα σε ένα "
+"παράθυρο, μετακίνηση ή αλλαγή μεγέθους παραθύρου) τυπικά εγείρουν το "
+"παράθυρο ως παρενέργεια. Ο καθορισμός της επιλογής σε ψευδής, κάτι που δε "
+"συνιστούμε, θα δημιουργήσει αποσύνδεση των αιτημάτων από άλλες ενέργειες "
+"χρηστών και αγνόηση αιτημάτων από τις  εφαρμογές. Δείτε http://bugzilla."
+"gnome.org/show_bug.cgi?id=445447#c6. Ακόμα και όταν αυτή η επιλογή είναι "
+"ψευδής τα παράθυρα μπορούν επίσης να εγερθούν πατώντας alt-left-click "
+"οπουδήποτε στο παράθυρο, ένα κανονικό κλικ στην διακόσμηση του παραθύρου ή "
+"από ειδικά μηνύματα από σελίδες δεδομένων, όπως οι αιτήσεις ενεργοποίησης "
+"από μικροεφαρμογές της γραμμής εργασιών. Αυτή η επιλογή είναι προς το παρόν "
+"απενεργοποιημένη σε κατάσταση κλικ-και-εστίαση. Παρακαλώ σημειώστε ότι η "
+"λίστα με τους τρόπους έγερσης ενός παραθύρου σε κατάσταση κλικ-και-εστίαση "
+"είναι απενεργοποιημένη δεν συμπεριλαμβάνει αιτήσεις προγραμματισμού από "
+"εφαρμογές για έγερση ενός παραθύρου. Τέτοιου είδους αιτήσεις θα αγνοηθούν "
+"ανεξαιρέτου από τον λόγο της αίτησης. Εάν είστε κατασκευαστής λογισμικού και "
+"έχετε παράπονα από χρήστες ότι η εφαρμογή σας δεν δουλεύει σωστά με αυτές "
+"της ρυθμίσεις απενεργοποιημένες, πείτε του ότι είναι _δικό _του _λάθος που "
+"παραβίασαν τον διαχειριστή παραθύρων  και ότι θα πρέπει να αλλάξουν αυτήν "
+"την επιλογή πίσω σε αληθής ή να συνεχίσουν να εργάζονται με το \"σφάλμα\" "
+"που ζήτησαν."
+
+#: ../src/marco.schemas.in.in.h:31
+msgid ""
+"Some applications disregard specifications in ways that result in window "
+"manager misfeatures. This option puts Marco in a rigorously correct mode, "
+"which gives a more consistent user interface, provided one does not need to "
+"run any misbehaving applications."
+msgstr ""
+"Some applications disregard specifications in ways that result in window "
+"manager misfeatures. This option puts Marco in a rigorously correct mode, "
+"which gives a more consistent user interface, provided one does not need to "
+"run any misbehaving applications."
+
+#: ../src/marco.schemas.in.in.h:32
+msgid "System Bell is Audible"
+msgstr "Το κουδούνι συστήματος είναι ενεργό"
+
+#: ../src/marco.schemas.in.in.h:33
+msgid ""
+"Tells Marco how to implement the visual indication that the system bell "
+"or another application 'bell' indicator has been rung. Currently there are "
+"two valid values, \"fullscreen\", which causes a fullscreen white-black "
+"flash, and \"frame_flash\" which causes the titlebar of the application "
+"which sent the bell signal to flash. If the application which sent the bell "
+"is unknown (as is usually the case for the default \"system beep\"), the "
+"currently focused window's titlebar is flashed."
+msgstr ""
+"Επικοινωνεί με το Marco για τον τρόπο με τον οποίο θα εφαρμόζεται η "
+"οπτική ένδειξη του οπτικού κουδουνιού. Αυτή τη στιγμή υπάρχουν δύο έγκυρες "
+"τιμές \"πλήρης οθόνη\", που δημιουργεί ένα ασπρόμαυρο φλάς σε πλήρη οθόνη, "
+"και  \"φλάς-πλαισίου\" που δημιουργεί ένα ένα αναβόσβημα του τίτλου της "
+"εφαρμογής που έστειλε το κουδούνισμα. Αν η εφαρμογή που έστειλε το "
+"κουδούνισμα είναι άγνωστη (όπως συνήθως συμβαίνει για το προεπιλεγμένο "
+"\"μπιπ συστήματος\") αναβοσβήνει η μπάρα τίτλου του εστιαζόμενου εκείνη τη "
+"στιγμή παραθύρου."
+
+#: ../src/marco.schemas.in.in.h:34
+msgid ""
+"The /apps/marco/global_keybindings/run_command_N keys define keybindings "
+"that correspond to these commands. Pressing the keybinding for run_command_N "
+"will execute command_N."
+msgstr ""
+"Τα κλειδιά /apps/marco/global_keybindings/run_command_N ορίζουν τους "
+"συνδυασμούς πλήκτρων που αντιστοιχούν σε αυτές τις εντολές. Πιέζοντας το "
+"συνδυασμό για run_command_N θα εκτελείται η εντολή_Ν."
+
+#: ../src/marco.schemas.in.in.h:35
+msgid ""
+"The /apps/marco/global_keybindings/run_command_screenshot key defines a "
+"keybinding which causes the command specified by this setting to be invoked."
+msgstr ""
+"Το κλειδί /apps/marco/global_keybindings/run_command_screenshot ορίζει το "
+"συνδυασμό πλήκτρων που αντιστοιχεί σε αυτή την εντολή."
+
+#: ../src/marco.schemas.in.in.h:36
+msgid ""
+"The /apps/marco/global_keybindings/run_command_window_screenshot key "
+"defines a keybinding which causes the command specified by this setting to "
+"be invoked."
+msgstr ""
+"Το κλειδί /apps/marco/global_keybindings/"
+"run_command_window_screenshotορίζει το συνδυασμό πλήκτρων που αντιστοιχεί σε "
+"αυτή την εντολή."
+
+#: ../src/marco.schemas.in.in.h:37
+msgid ""
+"The keybinding that runs the correspondingly-numbered command in /apps/"
+"marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" or "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
+"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
+"then there will be no keybinding for this action."
+msgstr ""
+"Ο συνδυασμός πλήκτρων που εκτελεί την αντίστοιχη αριθμημένη εντολή στο /apps/"
+"marco/keybinding_commands. Η διαμόρφωση μοιάζει με \"&lt;Control&gt;a\" ή "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\"..  Ο διαβιβαστής είναι φιλελεύθερος και "
+"επιτρέπει κεφαλαία και πεζά και συντομεύσεις όπως \"&lt;Ctl&gt;\" και \"&lt;"
+"Ctrl&gt;\".  Αν ορίσετε \"disabled\" δε θα υπάρχει κανένας συνδυασμός "
+"πλήκτρων για αυτή την ενέργεια."
+
+#: ../src/marco.schemas.in.in.h:38
+msgid "The name of a workspace."
+msgstr "Το όνομα του χώρου εργασίας."
+
+#: ../src/marco.schemas.in.in.h:39
+msgid "The screenshot command"
+msgstr "Η εντολή λήψης στιγμιότυπου οθόνης"
+
+#: ../src/marco.schemas.in.in.h:40
+msgid ""
+"The theme determines the appearance of window borders, titlebar, and so "
+"forth."
+msgstr ""
+"Το θέμα καθορίζει την εμφάνιση των περιγραμμάτων παραθύρου, μπάρας τίτλου "
+"κτλ."
+
+#: ../src/marco.schemas.in.in.h:41
+msgid ""
+"The time delay before raising a window if auto_raise is set to true. The "
+"delay is given in thousandths of a second."
+msgstr ""
+"Η χρονική καθυστέρηση πριν την ανασήκωση ενός παραθύρου αν το auto_raise "
+"είναι true. Η καθυστέρηση δίνεται σε χιλιοστά του δευτερολέπτου."
+
+#: ../src/marco.schemas.in.in.h:42
+msgid ""
+"The window focus mode indicates how windows are activated. It has three "
+"possible values; \"click\" means windows must be clicked in order to focus "
+"them, \"sloppy\" means windows are focused when the mouse enters the window, "
+"and \"mouse\" means windows are focused when the mouse enters the window and "
+"unfocused when the mouse leaves the window."
+msgstr ""
+"Η λειτουργία εστίασης παραθύρου ορίζει τον τρόπο που θα ενεργοποιούνται τα "
+"παράθυρα. Έχει τρείς πιθανές τιμές: \"click\" σημαίνει οτι πρέπει να γίνεται "
+"κλικ στα παράθυρα για να εστιάζονται, \"sloppy\" σημαίνει ότι τα παράθυρα "
+"εστιάζονται όταν το ποντίκι μπαίνει στο παράθυρο, και \"mouse\"  σημαίνει "
+"ότι τα παράθυρα εστιάζονται όταν το ποντίκι μπαίνει στο παράθυρο και "
+"απεστιάζονται όταν φεύγει."
+
+#: ../src/marco.schemas.in.in.h:43
+msgid "The window screenshot command"
+msgstr "Η εντολή λήψης στιγμιότυπου παραθύρου"
+
+#: ../src/marco.schemas.in.in.h:44
+msgid ""
+"This option determines the effects of double-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will "
+"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+"Αυτή η επιλογή καθορίζει τα αποτελέσματα του διπλού κλικ στη μπάρα τίτλου. "
+"Οι τρέχουσες έγκυρες επιλογές είναι 'εναλλαγή_σκίαση', που θα σκιάζει/"
+"αποσκιάζει το παράθυρο, 'εναλλαγή_μεγιστοποίηση' που θα μεγιστοποιεί/"
+"απομεγιστοποεί το παράθυρο, εναλλαγή_μεγιστοποίηση_οριζόντια και "
+"εναλλαγή_μεγιστοποίηση_κάθετα που θα μεγιστοποιεί/απομεγιστοποεί το παράθυρο "
+"μόνο σε αυτή την κατεύθυνση, 'ελαχιστοποίηση' που θα ελαχιστοποιεί το "
+"παράθυρο, 'σκίαση' που θα τυλίγει το παράθυρο προς τα πάνω, 'μενού' που θα "
+"εμφανίζει το μενού του παραθύρου, 'χαμήλωμα' που θα βάζει το παράθυρο πίσω "
+"από όλα τα άλλα, και 'καμία' που δεν θα κάνει τίποτα."
+
+#: ../src/marco.schemas.in.in.h:45
+msgid ""
+"This option determines the effects of middle-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will "
+"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+"Αυτή η επιλογή καθορίζει τα αποτελέσματα του μεσαίου κλικ στη μπάρα τίτλου. "
+"Οι τρέχουσες έγκυρες επιλογές είναι 'εναλλαγή_σκίαση', που θα σκιάζει/"
+"αποσκιάζει το παράθυρο, 'εναλλαγή_μεγιστοποίηση' που θα μεγιστοποιεί/"
+"απομεγιστοποεί το παράθυρο, εναλλαγή_μεγιστοποίηση_οριζόντια και "
+"εναλλαγή_μεγιστοποίηση_κάθετα που θα μεγιστοποιεί/απομεγιστοποεί το παράθυρο "
+"μόνο σε αυτή την κατεύθυνση, 'ελαχιστοποίηση' που θα ελαχιστοποιεί το "
+"παράθυρο, 'σκίαση' που θα τυλίγει το παράθυρο προς τα πάνω, 'μενού' που θα "
+"εμφανίζει το μενού του παραθύρου, 'χαμήλωμα' που θα βάζει το παράθυρο πίσω "
+"από όλα τα άλλα, και 'καμία' που δεν θα κάνει τίποτα."
+
+#: ../src/marco.schemas.in.in.h:46
+msgid ""
+"This option determines the effects of right-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will "
+"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+"Αυτή η επιλογή καθορίζει τα αποτελέσματα του δεξιού κλικ στη μπάρα τίτλου. "
+"Οι τρέχουσες έγκυρες επιλογές είναι 'εναλλαγή_σκίαση', που θα σκιάζει/"
+"αποσκιάζει το παράθυρο, 'εναλλαγή_μεγιστοποίηση' που θα μεγιστοποιεί/"
+"απομεγιστοποεί το παράθυρο, εναλλαγή_μεγιστοποίηση_οριζόντια και "
+"εναλλαγή_μεγιστοποίηση_κάθετα που θα μεγιστοποιεί/απομεγιστοποεί το παράθυρο "
+"μόνο σε αυτή την κατεύθυνση, 'ελαχιστοποίηση' που θα ελαχιστοποιεί το "
+"παράθυρο, 'σκίαση' που θα τυλίγει το παράθυρο προς τα πάνω, 'μενού' που θα "
+"εμφανίζει το μενού του παραθύρου, 'χαμήλωμα' που θα βάζει το παράθυρο πίσω "
+"από όλα τα άλλα, και 'καμία' που δεν θα κάνει τίποτα."
+
+#: ../src/marco.schemas.in.in.h:47
+msgid ""
+"This option provides additional control over how newly created windows get "
+"focus. It has two possible values; \"smart\" applies the user's normal focus "
+"mode, and \"strict\" results in windows started from a terminal not being "
+"given focus."
+msgstr ""
+"This option provides additional control over how newly created windows get "
+"focus. It has two possible values; \"smart\" applies the user's normal focus "
+"mode, and \"strict\" results in windows started from a terminal not being "
+"given focus."
+
+#: ../src/marco.schemas.in.in.h:48
+msgid ""
+"Turns on a visual indication when an application or the system issues a "
+"'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
+"environments."
+msgstr ""
+"Ενεργοποιεί μια οπτική ένδειξη για το πότε η εφαρμογή ή το σύστημα στέλνει "
+"ένα 'κουδούνισμα' ή 'μπιπ'. Είναι χρήσιμο για όσους έχουν προβλήματα ακοής ή "
+"για όσους εργάζονται σε θορυβώδες περιβάλλον."
+
+#: ../src/marco.schemas.in.in.h:49
+msgid "Use standard system font in window titles"
+msgstr "Χρήση κανονικής γραμματοσειράς συστήματος στους τίτλους παραθύρων."
+
+#: ../src/marco.schemas.in.in.h:50
+msgid "Visual Bell Type"
+msgstr "Οπτικό είδος κουδουνιού"
+
+#: ../src/marco.schemas.in.in.h:51
+msgid "Whether raising should be a side-effect of other user interactions"
+msgstr "Αν η ανασήκωση θα έχει παρενέργειες στις άλλες δράσεις του χρήστη"
+
+#: ../src/marco.schemas.in.in.h:52
+msgid "Whether to resize with the right button"
+msgstr "Αν θα γίνεται αλλαγή μεγέθους με το δεξί κουμπί"
+
+#: ../src/marco.schemas.in.in.h:53
+msgid "Window focus mode"
+msgstr "Λειτουργία εστίασης παραθύρου"
+
+#: ../src/marco.schemas.in.in.h:54
+msgid "Window title font"
+msgstr "Γραμματοσειρά τίτλου παραθύρου"
+
+#: ../src/tools/marco-message.c:150
+#, c-format
+msgid "Usage: %s\n"
+msgstr "Χρήση: %s\n"
+
+#: ../src/ui/frames.c:1118
+msgid "Close Window"
+msgstr "Κλείσιμο παραθύρου"
+
+#
+#: ../src/ui/frames.c:1121
+msgid "Window Menu"
+msgstr "Μενού παραθύρου"
+
+#: ../src/ui/frames.c:1124
+msgid "Minimize Window"
+msgstr "Ελαχιστοποίηση παραθύρου"
+
+#: ../src/ui/frames.c:1127
+msgid "Maximize Window"
+msgstr "Μεγιστοποίηση παραθύρου"
+
+#: ../src/ui/frames.c:1130
+msgid "Restore Window"
+msgstr "Επαναφορά παραθύρου"
+
+#: ../src/ui/frames.c:1133
+msgid "Roll Up Window"
+msgstr "Τύλιγμα παραθύρου προς τα πάνω"
+
+#: ../src/ui/frames.c:1136
+msgid "Unroll Window"
+msgstr "Ξετύλιγμα παραθύρου"
+
+#: ../src/ui/frames.c:1139
+msgid "Keep Window On Top"
+msgstr "Διατήρηση παραθύρου σε πρώτο πλάνο"
+
+#: ../src/ui/frames.c:1142
+msgid "Remove Window From Top"
+msgstr "Απομάκρυνση παραθύρου από το πρώτο πλάνο"
+
+#: ../src/ui/frames.c:1145
+msgid "Always On Visible Workspace"
+msgstr "Πάντοτε σε ορατό χώρο εργασία"
+
+#: ../src/ui/frames.c:1148
+msgid "Put Window On Only One Workspace"
+msgstr "Τοποθέτηση παράθυρου μόνο σε ένα χώρο εργασίας"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:70
+msgid "Mi_nimize"
+msgstr "Ελα_χιστοποίηση"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:72
+msgid "Ma_ximize"
+msgstr "_Μεγιστοποίηση"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:74
+msgid "Unma_ximize"
+msgstr "Απόμε_γιστοποίηση"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:76
+msgid "Roll _Up"
+msgstr "Τύλιγμα _πάνω"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:78
+msgid "_Unroll"
+msgstr "_Ξετύλιγμα"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:80
+msgid "_Move"
+msgstr "_Μετακίνηση"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:82
+msgid "_Resize"
+msgstr "Αλλαγή με_γέθους"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:84
+msgid "Move Titlebar On_screen"
+msgstr "Μετακίνηση μπάρας τίτλου στην ο_θόνη"
+
+#. separator
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:87 ../src/ui/menu.c:89
+msgid "Always on _Top"
+msgstr "Πάντα σε _πρώτο πλάνο"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:91
+msgid "_Always on Visible Workspace"
+msgstr "_Ορατό σε όλους τους χώρους εργασίας"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:93
+msgid "_Only on This Workspace"
+msgstr "Μόνο σε _αυτό το χώρο εργασίας"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:95
+msgid "Move to Workspace _Left"
+msgstr "Μετακίνηση στο χώρο εργασίας αρι_στερά"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:97
+msgid "Move to Workspace R_ight"
+msgstr "Μετακίνηση στο χώρο εργασίας δε_ξιά"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:99
+msgid "Move to Workspace _Up"
+msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας πά_νω"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:101
+msgid "Move to Workspace _Down"
+msgstr "Μετακίνηση στο χώρο εργασίας _κάτω"
+
+#. separator
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:105
+msgid "_Close"
+msgstr "_Κλείσιμο"
+
+#: ../src/ui/menu.c:203
+#, c-format
+msgid "Workspace %d%n"
+msgstr "Χώρος εργασίας %d%n"
+
+#: ../src/ui/menu.c:213
+#, c-format
+msgid "Workspace 1_0"
+msgstr "Χώρος Εργασίας 1_0"
+
+#: ../src/ui/menu.c:215
+#, c-format
+msgid "Workspace %s%d"
+msgstr "Χώρος Εργασίας %s%d"
+
+#: ../src/ui/menu.c:395
+msgid "Move to Another _Workspace"
+msgstr "Μετακίνηση σε άλλο _χώρο εργασίας"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the shift key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:104
+msgid "Shift"
+msgstr "Shift"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the control key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:110
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the alt key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:116
+msgid "Alt"
+msgstr "Alt"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the meta key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:122
+msgid "Meta"
+msgstr "Meta"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the super key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:128
+msgid "Super"
+msgstr "Super"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the hyper key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:134
+msgid "Hyper"
+msgstr "Hyper"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod2 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:140
+msgid "Mod2"
+msgstr "Mod2"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod3 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:146
+msgid "Mod3"
+msgstr "Mod3"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod4 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:152
+msgid "Mod4"
+msgstr "Mod4"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod5 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:158
+msgid "Mod5"
+msgstr "Mod5"
+
+#
+#. Translators: This represents the size of a window.  The first number is
+#. * the width of the window and the second is the height.
+#.
+#: ../src/ui/resizepopup.c:113
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/ui/theme.c:254
+msgid "top"
+msgstr "επάνω"
+
+#: ../src/ui/theme.c:256
+msgid "bottom"
+msgstr "κάτω"
+
+#: ../src/ui/theme.c:258
+msgid "left"
+msgstr "αριστερά"
+
+#: ../src/ui/theme.c:260
+msgid "right"
+msgstr "δεξιά"
+
+#: ../src/ui/theme.c:287
+#, c-format
+msgid "frame geometry does not specify \"%s\" dimension"
+msgstr "η γεωμετρία πλαισίου δεν έχει καθορίσει \"%s\" διάσταση"
+
+#: ../src/ui/theme.c:306
+#, c-format
+msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
+msgstr ""
+"η γεωμετρία πλαισίου δεν έχει καθορίσει \"%s\" διάσταση για περίγραμμα \"%s\""
+
+#: ../src/ui/theme.c:343
+#, c-format
+msgid "Button aspect ratio %g is not reasonable"
+msgstr "Η αναλογία διαστάσεων κουμπιού  %g  δεν είναι λογική"
+
+#: ../src/ui/theme.c:355
+#, c-format
+msgid "Frame geometry does not specify size of buttons"
+msgstr "Η γεωμετρία πλαισίου δεν έχει καθορίσει μέγεθος κουμπιών"
+
+#: ../src/ui/theme.c:1020
+#, c-format
+msgid "Gradients should have at least two colors"
+msgstr "Τα διαβαθμισμένα χρώματα θα πρέπει να έχουν δύο τουλάχιστον θέματα"
+
+#: ../src/ui/theme.c:1146
+#, c-format
+msgid ""
+"GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL] "
+"where NORMAL is the state; could not parse \"%s\""
+msgstr ""
+"Ο καθορισμός χρώματος GTK θα πρέπει να έχει τη κατάσταση σε αγκύλες, π.χ gtk:"
+"fg[NORMAL] όπου NORMAL είναι η κατάσταση. Αδυναμία ανάλυσης \"%s\""
+
+#: ../src/ui/theme.c:1160
+#, c-format
+msgid ""
+"GTK color specification must have a close bracket after the state, e.g. gtk:"
+"fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
+msgstr ""
+"Ο καθορισμός χρώματος GTK θα πρέπει να έχει μια αγκύλη κλεισίματος μετά την "
+"κατάσταση. π.χ gtk:fg[NORMAL] όπου NORMAL είναι η κατάσταση. Αδυναμία "
+"ανάλυσης \"%s\""
+
+#: ../src/ui/theme.c:1171
+#, c-format
+msgid "Did not understand state \"%s\" in color specification"
+msgstr "Δεν έγινε κατανοητή η κατάσταση  \"%s\" στον ορισμό χρώματος"
+
+#: ../src/ui/theme.c:1184
+#, c-format
+msgid "Did not understand color component \"%s\" in color specification"
+msgstr "Δεν έγινε κατανοητό το συστατικό χρώματος  \"%s\" στον ορισμό χρώματος"
+
+#: ../src/ui/theme.c:1214
+#, c-format
+msgid ""
+"Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
+"format"
+msgstr ""
+"Ο τύπος ανάμιξης που είναι \"blend/bg_color/fg_color/alpha\", \"%s\" δεν "
+"ταιριάζει στη διαμόρφωση"
+
+#: ../src/ui/theme.c:1225
+#, c-format
+msgid "Could not parse alpha value \"%s\" in blended color"
+msgstr "Αδυναμία ανάλυσης τιμής alpha \"%s\" στο αναμεμιγμένο χρώμα"
+
+#: ../src/ui/theme.c:1235
+#, c-format
+msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
+msgstr ""
+"Η τιμή Alpha \"%s\" στο αναμεμιγμένο χρώμα δεν είναι ανάμεσα σε 0.0 και 1.0"
+
+#: ../src/ui/theme.c:1282
+#, c-format
+msgid ""
+"Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
+msgstr ""
+"Ο τύπος σκίασης είναι  \"shade/base_color/factor\", το \"%s\" δεν ταιριάζει "
+"στον τύπο"
+
+#: ../src/ui/theme.c:1293
+#, c-format
+msgid "Could not parse shade factor \"%s\" in shaded color"
+msgstr "Αδυναμία ανάλυσης παράγοντα σκίασης \"%s\" στο σκιασμένο χρώμα"
+
+#: ../src/ui/theme.c:1303
+#, c-format
+msgid "Shade factor \"%s\" in shaded color is negative"
+msgstr "Ο παράγοντας σκίασης  \"%s\" στο σκιασμένο χρώμα είναι αρνητικός"
+
+#: ../src/ui/theme.c:1332
+#, c-format
+msgid "Could not parse color \"%s\""
+msgstr "Αδύνατη η ανάλυση χρώματος \"%s\""
+
+#: ../src/ui/theme.c:1582
+#, c-format
+msgid "Coordinate expression contains character '%s' which is not allowed"
+msgstr "Η συντεταγμένη έκφραση περιέχει ένα χαρακτήρα '%s που δεν επιτρέπεται"
+
+#: ../src/ui/theme.c:1609
+#, c-format
+msgid ""
+"Coordinate expression contains floating point number '%s' which could not be "
+"parsed"
+msgstr ""
+"Η συντεταγμένη έκφραση περιέχει αριθμό κινητού σημείου '%s' που δεν μπορεί "
+"να αναλυθεί"
+
+#: ../src/ui/theme.c:1623
+#, c-format
+msgid "Coordinate expression contains integer '%s' which could not be parsed"
+msgstr ""
+"Η συντεταγμένη έκφραση περιέχει έναν ακέραιο  '%s που δεν μπορεί να αναλυθεί"
+
+#: ../src/ui/theme.c:1745
+#, c-format
+msgid ""
+"Coordinate expression contained unknown operator at the start of this text: "
+"\"%s\""
+msgstr ""
+"Η συντεταγμένη έκφραση περιείχε έναν άγνωστο χειριστή στην αρχή αυτού του "
+"κειμένου: \"%s\""
+
+#: ../src/ui/theme.c:1802
+#, c-format
+msgid "Coordinate expression was empty or not understood"
+msgstr "Η συντεταγμένη έκφραση ήταν κενή ή δεν έγινε κατανοητή"
+
+#: ../src/ui/theme.c:1913 ../src/ui/theme.c:1923 ../src/ui/theme.c:1957
+#, c-format
+msgid "Coordinate expression results in division by zero"
+msgstr "Η συντεταγμένη έκφραση έχει σαν αποτέλεσμα διαίρεση με το μηδέν"
+
+#: ../src/ui/theme.c:1965
+#, c-format
+msgid ""
+"Coordinate expression tries to use mod operator on a floating-point number"
+msgstr ""
+"Η συντεταγμένη έκφραση  προσπαθεί να χρησιμοποίησε ιmod operator σε αριθμό "
+"κινητού σημείου"
+
+#: ../src/ui/theme.c:2021
+#, c-format
+msgid ""
+"Coordinate expression has an operator \"%s\" where an operand was expected"
+msgstr ""
+"Η συντεταγμένη έκφραση έχει ένα operator \"%s\" ενώ αναμενόταν operand "
+
+#: ../src/ui/theme.c:2030
+#, c-format
+msgid "Coordinate expression had an operand where an operator was expected"
+msgstr "Η συντεταγμένη έκφραση έχει ένα operand  ενώ αναμενόταν  operator"
+
+#: ../src/ui/theme.c:2038
+#, c-format
+msgid "Coordinate expression ended with an operator instead of an operand"
+msgstr "Η συντεταγμένη έκφραση τέλειωσε με χειριστή αντί για operand"
+
+#: ../src/ui/theme.c:2048
+#, c-format
+msgid ""
+"Coordinate expression has operator \"%c\" following operator \"%c\" with no "
+"operand in between"
+msgstr ""
+"Η συντεταγμένη έκφραση έχει operator \"%c\" ακολουθούμενο operator \"%c\" "
+"χωρίς operand μεταξύ τους"
+
+#: ../src/ui/theme.c:2195 ../src/ui/theme.c:2236
+#, c-format
+msgid "Coordinate expression had unknown variable or constant \"%s\""
+msgstr "Η συντεταγμένη έκφραση έχει άγνωστη μεταβλητή ή συνεχής \"%s\""
+
+#: ../src/ui/theme.c:2290
+#, c-format
+msgid "Coordinate expression parser overflowed its buffer."
+msgstr "Η συντεταγμένη έκφραση ήταν κενή ή δεν έγινε κατανοητή"
+
+#: ../src/ui/theme.c:2319
+#, c-format
+msgid "Coordinate expression had a close parenthesis with no open parenthesis"
+msgstr ""
+"Η συντεταγμένη έκφραση έχει μια παρένθεση κλεισίματος χωρίς να έχει ανοιχθεί "
+"παρένθεση"
+
+#: ../src/ui/theme.c:2383
+#, c-format
+msgid "Coordinate expression had an open parenthesis with no close parenthesis"
+msgstr ""
+"Η συντεταγμένη έκφραση έχει μια παρένθεση ανοίγματος χωρίς να έχει κλεισθεί "
+"παρένθεση"
+
+#: ../src/ui/theme.c:2394
+#, c-format
+msgid "Coordinate expression doesn't seem to have any operators or operands"
+msgstr "Η συντεταγμένη έκφραση δεν φαίνεται να έχει operators ή operands"
+
+#: ../src/ui/theme.c:2596 ../src/ui/theme.c:2616 ../src/ui/theme.c:2636
+#, c-format
+msgid "Theme contained an expression that resulted in an error: %s\n"
+msgstr "Το θέμα περιείχε μια έκφραση που είχε σαν αποτέλεσμα σφάλμα: %s\n"
+
+#: ../src/ui/theme.c:4203
+#, c-format
+msgid ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
+"specified for this frame style"
+msgstr ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> θα πρέπει να "
+"καθοριστεί στο στυλ πλαισίου"
+
+#: ../src/ui/theme.c:4711 ../src/ui/theme.c:4736
+#, c-format
+msgid ""
+"Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
+msgstr ""
+"Λείπει <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
+
+#: ../src/ui/theme.c:4780
+#, c-format
+msgid "Failed to load theme \"%s\": %s\n"
+msgstr "Αποτυχία φόρτωσης θέματος \"%s\": %s\n"
+
+# mateconf/mateconftool.c:877
+#: ../src/ui/theme.c:4910 ../src/ui/theme.c:4917 ../src/ui/theme.c:4924
+#: ../src/ui/theme.c:4931 ../src/ui/theme.c:4938
+#, c-format
+msgid "No <%s> set for theme \"%s\""
+msgstr "Δεν έχει ορισθεί  <%s> για θέμα \"%s\""
+
+#: ../src/ui/theme.c:4946
+#, c-format
+msgid ""
+"No frame style set for window type \"%s\" in theme \"%s\", add a <window "
+"type=\"%s\" style_set=\"whatever\"/> element"
+msgstr ""
+"Δεν έχει ορισθεί στύλ πλαισίου για τον τύπο παραθύρου \"%s\" στο θέμα \"%s"
+"\", add a <window type=\"%s\" style_set=\"whatever\"/> element"
+
+#: ../src/ui/theme.c:5389 ../src/ui/theme.c:5451 ../src/ui/theme.c:5514
+#, c-format
+msgid ""
+"User-defined constants must begin with a capital letter; \"%s\" does not"
+msgstr ""
+"Οι συνεχείς που ορίζονται από το χρήστη θα πρέπει να ξεκινάνε με κεφαλαίο "
+"γράμμα, η \"%s\" δεν έχει"
+
+#: ../src/ui/theme.c:5397 ../src/ui/theme.c:5459 ../src/ui/theme.c:5522
+#, c-format
+msgid "Constant \"%s\" has already been defined"
+msgstr "Constant \"%s\" έχει ήδη καθορισθεί"
+
+#. Translators: This means that an attribute which should have been found
+#. * on an XML element was not in fact found.
+#.
+#: ../src/ui/theme-parser.c:202
+#, c-format
+msgid "No \"%s\" attribute on element <%s>"
+msgstr "Δεν υπάρχει γνώρισμα  \"%s\" για το στοιχείο <%s>"
+
+#: ../src/ui/theme-parser.c:231 ../src/ui/theme-parser.c:249
+#, c-format
+msgid "Line %d character %d: %s"
+msgstr "Γραμμή %d χαρακτήρας %d: %s"
+
+#: ../src/ui/theme-parser.c:413
+#, c-format
+msgid "Attribute \"%s\" repeated twice on the same <%s> element"
+msgstr "Το γνώρισμα \"%s\" επαναλήφθηκε δυο φορές στο ίδιο <%s> στοιχείο"
+
+#: ../src/ui/theme-parser.c:437 ../src/ui/theme-parser.c:480
+#, c-format
+msgid "Attribute \"%s\" is invalid on <%s> element in this context"
+msgstr ""
+"Το γνώρισμα \"%s\" δεν είναι έγκυρο στο στοιχείο <%s> σε αυτήν την περίπτωση"
+
+#: ../src/ui/theme-parser.c:522
+#, c-format
+msgid "Could not parse \"%s\" as an integer"
+msgstr "Αδύνατη η ανάλυση του \"%s\" ως ακεραίου αριθμού"
+
+#: ../src/ui/theme-parser.c:531 ../src/ui/theme-parser.c:586
+#, c-format
+msgid "Did not understand trailing characters \"%s\" in string \"%s\""
+msgstr ""
+"Δεν έγινε κατανοητή η ακολουθία χαρακτήρων \"%s\" στο αλφαριθμητικό \"%s\""
+
+#: ../src/ui/theme-parser.c:541
+#, c-format
+msgid "Integer %ld must be positive"
+msgstr "Ο ακέραιος %ld θα πρέπει να είναι θετικός"
+
+#: ../src/ui/theme-parser.c:549
+#, c-format
+msgid "Integer %ld is too large, current max is %d"
+msgstr "Ο ακέραιος  %ld είναι πολύ μεγάλος , μέγιστος δυνατός %d"
+
+#: ../src/ui/theme-parser.c:577 ../src/ui/theme-parser.c:693
+#, c-format
+msgid "Could not parse \"%s\" as a floating point number"
+msgstr "Αδυναμία ανάλυσης \"%s\" ως αριθμό κινητού σημείου"
+
+#: ../src/ui/theme-parser.c:608 ../src/ui/theme-parser.c:636
+#, c-format
+msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
+msgstr ""
+"Οι τιμές Boolean θα πρέπει να είναι είτε  \"true\" ή \"false\" όχι \"%s\""
+
+#: ../src/ui/theme-parser.c:663
+#, c-format
+msgid "Angle must be between 0.0 and 360.0, was %g\n"
+msgstr "Η γωνία θα πρέπει να είναι ανάμεσα σε 0.0 και 360.0, ήταν %g\n"
+
+#: ../src/ui/theme-parser.c:726
+#, c-format
+msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
+msgstr ""
+"Το Alpha θα πρέπει να είναι ανάμεσα σε 0.0 (αόρατο) και 1.0 (πλήρης ορατό), "
+"ήταν %g\n"
+
+#: ../src/ui/theme-parser.c:791
+#, c-format
+msgid ""
+"Invalid title scale \"%s\" (must be one of xx-small,x-small,small,medium,"
+"large,x-large,xx-large)\n"
+msgstr ""
+"Μή έγκυρη κλίμακα τίτλου \"%s\" (θα πρέπει να είναι ενα από xx-small,x-small,"
+"small,medium,large,x-large,xx-large)\n"
+
+#: ../src/ui/theme-parser.c:936 ../src/ui/theme-parser.c:999
+#: ../src/ui/theme-parser.c:1033 ../src/ui/theme-parser.c:1136
+#, c-format
+msgid "<%s> name \"%s\" used a second time"
+msgstr "Το <%s> όνομα \"%s\" χρησιμοποιήθηκε για δεύτερη φορά"
+
+#: ../src/ui/theme-parser.c:948 ../src/ui/theme-parser.c:1045
+#: ../src/ui/theme-parser.c:1148
+#, c-format
+msgid "<%s> parent \"%s\" has not been defined"
+msgstr "<%s> μητρικό \"%s\" δεν έχει ορισθεί"
+
+#: ../src/ui/theme-parser.c:1058
+#, c-format
+msgid "<%s> geometry \"%s\" has not been defined"
+msgstr "<%s> γεωμετρία \"%s\"  δεν έχει ορισθεί"
+
+#: ../src/ui/theme-parser.c:1071
+#, c-format
+msgid "<%s> must specify either a geometry or a parent that has a geometry"
+msgstr ""
+"<%s> θα πρέπει να καθορίσετε είτε μια γεωμετρία είτε ένα μητρικό που έχει "
+"γεωμετρία"
+
+#: ../src/ui/theme-parser.c:1113
+msgid "You must specify a background for an alpha value to be meaningful"
+msgstr "Πρέπει να καθορίσετε ένα παρασκήνιο για να έχει νόημα μια τιμή άλφα"
+
+#: ../src/ui/theme-parser.c:1180
+#, c-format
+msgid "Unknown type \"%s\" on <%s> element"
+msgstr "Άγνωστος τύπος \"%s\" στο στοιχείο <%s> "
+
+#: ../src/ui/theme-parser.c:1191
+#, c-format
+msgid "Unknown style_set \"%s\" on <%s> element"
+msgstr "Άγνωστος ορισμός τύπου \"%s\" στο στοιχείο <%s> "
+
+#: ../src/ui/theme-parser.c:1199
+#, c-format
+msgid "Window type \"%s\" has already been assigned a style set"
+msgstr "Έχει ορισθεί ήδη ένα στυλ για τον τύπο  παραθύρου  \"%s\""
+
+#: ../src/ui/theme-parser.c:1229 ../src/ui/theme-parser.c:1293
+#: ../src/ui/theme-parser.c:1519 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2786 ../src/ui/theme-parser.c:2934
+#: ../src/ui/theme-parser.c:3126 ../src/ui/theme-parser.c:3164
+#: ../src/ui/theme-parser.c:3202 ../src/ui/theme-parser.c:3240
+#, c-format
+msgid "Element <%s> is not allowed below <%s>"
+msgstr "Το στοιχείο <%s> δεν επιτρέπεται κάτω από <%s>"
+
+#: ../src/ui/theme-parser.c:1343 ../src/ui/theme-parser.c:1357
+#: ../src/ui/theme-parser.c:1402
+msgid ""
+"Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
+"for buttons"
+msgstr ""
+"Δεν είναι δυνατός ο καθορισμός και \"ύψους_κουμπιού\"/\"πλάτους_κουμπιού\" "
+"και \"αναλογίας_διαστάσεων\" για κουμπιά"
+
+#: ../src/ui/theme-parser.c:1366
+#, c-format
+msgid "Distance \"%s\" is unknown"
+msgstr "Η απόσταση \"%s\" είναι άγνωστη"
+
+#: ../src/ui/theme-parser.c:1411
+#, c-format
+msgid "Aspect ratio \"%s\" is unknown"
+msgstr "Η αναλογία διαστάσεων \"%s\" είναι άγνωστη"
+
+#: ../src/ui/theme-parser.c:1473
+#, c-format
+msgid "Border \"%s\" is unknown"
+msgstr "Περίγραμμα  \"%s\" είναι άγνωστο"
+
+#: ../src/ui/theme-parser.c:1784
+#, c-format
+msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
+msgstr ""
+"Δεν υπάρχει γνώρισμα \"έναρξη γωνίας\"  ή γνώρισμα \"από\" για το στοιχείο <%"
+"s>"
+
+#: ../src/ui/theme-parser.c:1791
+#, c-format
+msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
+msgstr ""
+"Δεν υπάρχει γνώρισμα \"επέκταση_γωνίας\"  ή γνώρισμα \"σε\" για το στοιχείο <"
+"%s>"
+
+#: ../src/ui/theme-parser.c:2031
+#, c-format
+msgid "Did not understand value \"%s\" for type of gradient"
+msgstr "Δεν έγινε κατανοητή η τιμή \"%s\" για τον τύπο του gradient"
+
+#: ../src/ui/theme-parser.c:2109 ../src/ui/theme-parser.c:2484
+#, c-format
+msgid "Did not understand fill type \"%s\" for <%s> element"
+msgstr "Δεν έγινε κατανοητός ο τύπος γεμίσματος \"%s\" για <%s> στοιχείο"
+
+#: ../src/ui/theme-parser.c:2276 ../src/ui/theme-parser.c:2359
+#: ../src/ui/theme-parser.c:2422
+#, c-format
+msgid "Did not understand state \"%s\" for <%s> element"
+msgstr "Δεν έγινε κατανοητή η κατάσταση \"%s\" για στοιχείο <%s> )"
+
+#: ../src/ui/theme-parser.c:2286 ../src/ui/theme-parser.c:2369
+#, c-format
+msgid "Did not understand shadow \"%s\" for <%s> element"
+msgstr "Δεν έγινε κατανοητή η σκίαση \"%s\" για στοιχείο <%s> "
+
+#: ../src/ui/theme-parser.c:2296
+#, c-format
+msgid "Did not understand arrow \"%s\" for <%s> element"
+msgstr "Δεν έγινε κατανοητό το βέλος \"%s\" για στοιχείο <%s> "
+
+#: ../src/ui/theme-parser.c:2596 ../src/ui/theme-parser.c:2692
+#, c-format
+msgid "No <draw_ops> called \"%s\" has been defined"
+msgstr "Δεν έχουν ορισθεί  <λειτουργίες σχεδίασης> που ονομάζονται \"%s\""
+
+#: ../src/ui/theme-parser.c:2608 ../src/ui/theme-parser.c:2704
+#, c-format
+msgid "Including draw_ops \"%s\" here would create a circular reference"
+msgstr ""
+"Αν συμπεριλάβετε εδώ λειτουργίες σχεδίασης \"%s\" θα δημιουργήσετε μια "
+"κυκλική αναφορά"
+
+#: ../src/ui/theme-parser.c:2819
+#, c-format
+msgid "Unknown position \"%s\" for frame piece"
+msgstr "Άγνωστη θέση  \"%s\" για το κομμάτι πλαισίου"
+
+#: ../src/ui/theme-parser.c:2827
+#, c-format
+msgid "Frame style already has a piece at position %s"
+msgstr "Το στυλ πλαισίου έχει ήδη ένα κομμάτι στην θέση %s"
+
+#: ../src/ui/theme-parser.c:2844 ../src/ui/theme-parser.c:2919
+#, c-format
+msgid "No <draw_ops> with the name \"%s\" has been defined"
+msgstr "δεν έχουν ορισθεί <λειτουργίες σχεδίασης> με το όνομα  \"%s\""
+
+#: ../src/ui/theme-parser.c:2873
+#, c-format
+msgid "Unknown function \"%s\" for button"
+msgstr "Άγνωστη λειτουργία  \"%s\" για το κουμπί"
+
+#: ../src/ui/theme-parser.c:2882
+#, c-format
+msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
+msgstr ""
+"Η λειτουργία \"%s\" του κουμπιού δεν υπάρχει σε αυτή την έκδοση  (%d, "
+"χρειάζεται %d)"
+
+#
+#: ../src/ui/theme-parser.c:2894
+#, c-format
+msgid "Unknown state \"%s\" for button"
+msgstr "Άγνωστη κατάσταση \"%s\" για το κουμπί"
+
+#: ../src/ui/theme-parser.c:2902
+#, c-format
+msgid "Frame style already has a button for function %s state %s"
+msgstr ""
+"Το στυλ πλαισίου έχει ήδη ένα κουμπί για τη λειτουργία  %s κατάσταση %s"
+
+#: ../src/ui/theme-parser.c:2973
+#, c-format
+msgid "\"%s\" is not a valid value for focus attribute"
+msgstr "\"%s\" δεν είναι έγκυρη τιμή για το γνώρισμα εστίασης"
+
+#: ../src/ui/theme-parser.c:2982
+#, c-format
+msgid "\"%s\" is not a valid value for state attribute"
+msgstr "\"%s\" δεν είναι έγκυρη τιμή για το γνώρισμα κατάστασης"
+
+#: ../src/ui/theme-parser.c:2992
+#, c-format
+msgid "A style called \"%s\" has not been defined"
+msgstr "Ένα στυλ που ονομάζεται \"%s\"  δεν έχει ορισθεί"
+
+#: ../src/ui/theme-parser.c:3013 ../src/ui/theme-parser.c:3036
+#, c-format
+msgid "\"%s\" is not a valid value for resize attribute"
+msgstr "\"%s\" δεν είναι έγκυρη τιμή για το γνώρισμα αλλαγής μεγέθους"
+
+#: ../src/ui/theme-parser.c:3047
+#, c-format
+msgid ""
+"Should not have \"resize\" attribute on <%s> element for maximized/shaded "
+"states"
+msgstr ""
+"Δεν πρέπει να υπάρχει γνώρισμα \"αλλαγή μεγέθους\" στο στοιχείο <%s> για "
+"μεγιστοποιημένες/σκιασμένες καταστάσεις"
+
+#: ../src/ui/theme-parser.c:3061
+#, c-format
+msgid ""
+"Should not have \"resize\" attribute on <%s> element for maximized states"
+msgstr ""
+"Δεν πρέπει να υπάρχει γνώρισμα \"αλλαγή μεγέθους\" στο στοιχείο <%s> για "
+"μεγιστοποιημένες καταστάσεις"
+
+#: ../src/ui/theme-parser.c:3075 ../src/ui/theme-parser.c:3097
+#, c-format
+msgid "Style has already been specified for state %s resize %s focus %s"
+msgstr ""
+"Το στυλ έχει ήδη καθορισθεί για κατάσταση %s αλλαγή μεγέθους %s εστίαση %s"
+
+#: ../src/ui/theme-parser.c:3086 ../src/ui/theme-parser.c:3108
+#, c-format
+msgid "Style has already been specified for state %s focus %s"
+msgstr "Το στυλ έχει ήδη καθορισθεί για κατάσταση %s εστίαση %s"
+
+#: ../src/ui/theme-parser.c:3147
+msgid ""
+"Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
+"attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"Δεν μπορεί να υπάρχουν δυο λειτουργίες σχεδίασης για ένα στοιχείο <κομμάτι> "
+"( το θέμα έχει καθορίσει ένα γνώρισμα λειτουργίας σχεδίασης και ακόμα ένα "
+"στοιχείο <λειτουργίες σχεδίασης> ή καθόρισε δύο στοιχεία)"
+
+#: ../src/ui/theme-parser.c:3185
+msgid ""
+"Can't have a two draw_ops for a <button> element (theme specified a draw_ops "
+"attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"Δεν μπορεί να υπάρχουν δυο λειτουργίες σχεδίασης για ένα στοιχείο <κουμπί> "
+"( το θέμα έχει καθορίσει ένα γνώρισμα λειτουργίας σχεδίασης και ακόμα ένα "
+"στοιχείο <λειτουργίες σχεδίασης> ή καθόρισε δύο στοιχεία)"
+
+#: ../src/ui/theme-parser.c:3223
+msgid ""
+"Can't have a two draw_ops for a <menu_icon> element (theme specified a "
+"draw_ops attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"Δεν μπορεί να υπάρχουν δυο λειτουργίες σχεδίασης για ένα στοιχείο <εικονίδιο "
+"μενού> ( το θέμα έχει καθορίσει ένα γνώρισμα λειτουργίας σχεδίασης και ακόμα "
+"ένα στοιχείο <λειτουργίες σχεδίασης> ή καθόρισε δύο στοιχεία)"
+
+#: ../src/ui/theme-parser.c:3271
+#, c-format
+msgid "Outermost element in theme must be <marco_theme> not <%s>"
+msgstr ""
+"Το εξώτατο στοιχείο στο θέμα θα πρέπει να είναι <marco_theme> όχι <%s>"
+
+#: ../src/ui/theme-parser.c:3291
+#, c-format
+msgid ""
+"Element <%s> is not allowed inside a name/author/date/description element"
+msgstr ""
+"Το στοιχείο  <%s> δεν επιτρέπεται μέσα σε στοιχείο ονόματος/συγγραφέα/"
+"ημερομηνίας/περιγραφής"
+
+#: ../src/ui/theme-parser.c:3296
+#, c-format
+msgid "Element <%s> is not allowed inside a <constant> element"
+msgstr "Το στοιχείο  <%s> δεν επιτρέπεται μέσα σε στοιχείο <constant>"
+
+#: ../src/ui/theme-parser.c:3308
+#, c-format
+msgid ""
+"Element <%s> is not allowed inside a distance/border/aspect_ratio element"
+msgstr ""
+"Το στοιχείο  <%s> δεν επιτρέπεται μέσα σε στοιχείο απόστασης/περιγράμματος/"
+"aspect_ratio"
+
+#: ../src/ui/theme-parser.c:3330
+#, c-format
+msgid "Element <%s> is not allowed inside a draw operation element"
+msgstr ""
+"Το στοιχείο  <%s> δεν επιτρέπεται μέσα σε στοιχείο λειτουργίας σχεδίασης"
+
+#: ../src/ui/theme-parser.c:3340 ../src/ui/theme-parser.c:3370
+#: ../src/ui/theme-parser.c:3375 ../src/ui/theme-parser.c:3380
+#, c-format
+msgid "Element <%s> is not allowed inside a <%s> element"
+msgstr "Το στοιχείο  <%s> δεν επιτρέπεται μέσα σε στοιχείο <%s>"
+
+#: ../src/ui/theme-parser.c:3602
+msgid "No draw_ops provided for frame piece"
+msgstr "Δεν παρέχονται λειτουργίες σχεδίασης για το κομμάτι πλαισίου"
+
+#: ../src/ui/theme-parser.c:3617
+msgid "No draw_ops provided for button"
+msgstr "Δεν παρέχονται λειτουργίες σχεδίασης για το κουμπί"
+
+#: ../src/ui/theme-parser.c:3669
+#, c-format
+msgid "No text is allowed inside element <%s>"
+msgstr "Δεν επιτρέπεται κείμενο μέσα στο στοιχείο <%s>"
+
+#: ../src/ui/theme-parser.c:3724 ../src/ui/theme-parser.c:3736
+#: ../src/ui/theme-parser.c:3748 ../src/ui/theme-parser.c:3760
+#: ../src/ui/theme-parser.c:3772
+#, c-format
+msgid "<%s> specified twice for this theme"
+msgstr "<%s> έχει ορισθεί δύο φορές για αυτό το θέμα"
+
+# mateconf/mateconf-internals.c:2416
+#: ../src/ui/theme-parser.c:4040
+#, c-format
+msgid "Failed to find a valid file for theme %s\n"
+msgstr "Αποτυχία εύρεσης ενός έγκυρου αρχείου για το θέμα %s\n"
+
+#: ../src/ui/theme-parser.c:4096
+#, c-format
+msgid "Theme file %s did not contain a root <marco_theme> element"
+msgstr ""
+"Το αρχείο θέματος  %s δεν περιέχει ένα στοιχείο διαχειριστή <marco_theme>"
+
+#: ../src/ui/theme-viewer.c:75
+msgid "/_Windows"
+msgstr "/_Παράθυρα"
+
+#: ../src/ui/theme-viewer.c:76
+msgid "/Windows/tearoff"
+msgstr "/Παράθυρα/tearoff"
+
+#: ../src/ui/theme-viewer.c:77
+msgid "/Windows/_Dialog"
+msgstr "/Παράθυρα/_Διάλογος"
+
+#: ../src/ui/theme-viewer.c:78
+msgid "/Windows/_Modal dialog"
+msgstr "/Παράθυρα/Σ_χηματικός διάλογος"
+
+#: ../src/ui/theme-viewer.c:79
+msgid "/Windows/_Utility"
+msgstr "/Παράθυρα/Ε_φαρμογή"
+
+#: ../src/ui/theme-viewer.c:80
+msgid "/Windows/_Splashscreen"
+msgstr "/Παράθυρα/Ο_θόνη έναρξης"
+
+#: ../src/ui/theme-viewer.c:81
+msgid "/Windows/_Top dock"
+msgstr "/Παράθυρα/_Top dock"
+
+#: ../src/ui/theme-viewer.c:82
+msgid "/Windows/_Bottom dock"
+msgstr "/Παράθυρα/_Bottom dock"
+
+#: ../src/ui/theme-viewer.c:83
+msgid "/Windows/_Left dock"
+msgstr "/Παράθυρα/_Left dock"
+
+#: ../src/ui/theme-viewer.c:84
+msgid "/Windows/_Right dock"
+msgstr "/Παράθυρα/_Right dock"
+
+#: ../src/ui/theme-viewer.c:85
+msgid "/Windows/_All docks"
+msgstr "/Παράθυρα/_All docks"
+
+#: ../src/ui/theme-viewer.c:86
+msgid "/Windows/Des_ktop"
+msgstr "/Παράθυρα/Επι_φάνεια εργασίας"
+
+#: ../src/ui/theme-viewer.c:244
+msgid "This is a sample message in a sample dialog"
+msgstr "Αυτό είναι ένα κείμενο-παράδειγμα σε ένα παραδειγματικό διάλογο"
+
+#: ../src/ui/theme-viewer.c:327
+#, c-format
+msgid "Fake menu item %d\n"
+msgstr "Ψεύτικο αντικείμενο μενού %d\n"
+
+#: ../src/ui/theme-viewer.c:361
+msgid "Border-only window"
+msgstr "Παράθυρο μόνο με πλαίσιο"
+
+#: ../src/ui/theme-viewer.c:363
+msgid "Bar"
+msgstr "Μπάρα"
+
+#: ../src/ui/theme-viewer.c:380
+msgid "Normal Application Window"
+msgstr "Κανονικό παράθυρο εφαρμογής"
+
+#: ../src/ui/theme-viewer.c:384
+msgid "Dialog Box"
+msgstr "Κουτί διαλόγου"
+
+#: ../src/ui/theme-viewer.c:388
+msgid "Modal Dialog Box"
+msgstr "Κουτί σχηματικού διαλόγου"
+
+#: ../src/ui/theme-viewer.c:392
+msgid "Utility Palette"
+msgstr "Παλέτα εφαρμογής"
+
+#: ../src/ui/theme-viewer.c:396
+msgid "Torn-off Menu"
+msgstr "Αποσπώμενο μενού"
+
+#: ../src/ui/theme-viewer.c:400
+msgid "Border"
+msgstr "Πλαίσιο"
+
+#: ../src/ui/theme-viewer.c:728
+#, c-format
+msgid "Button layout test %d"
+msgstr "Δοκιμή διάταξης κουμπιού %d"
+
+#: ../src/ui/theme-viewer.c:757
+#, c-format
+msgid "%g milliseconds to draw one window frame"
+msgstr "%g χιλιοστά δευτερ. για τη σχεδίαση ενός πλαισίου παραθύρου"
+
+#: ../src/ui/theme-viewer.c:800
+#, c-format
+msgid "Usage: marco-theme-viewer [THEMENAME]\n"
+msgstr "Χρήση: marco-theme-viewer [THEMENAME]\n"
+
+# mateconf/mateconf-backend.c:243
+#: ../src/ui/theme-viewer.c:807
+#, c-format
+msgid "Error loading theme: %s\n"
+msgstr "Σφάλμα φόρτωσης θέματος: %s\n"
+
+#: ../src/ui/theme-viewer.c:813
+#, c-format
+msgid "Loaded theme \"%s\" in %g seconds\n"
+msgstr "Το θέμα \"%s\" φορτώθηκε σε %g  δευτερόλεπτα\n"
+
+#: ../src/ui/theme-viewer.c:854
+msgid "Normal Title Font"
+msgstr "Γραμματοσειρά κανονικού τίτλου"
+
+#: ../src/ui/theme-viewer.c:860
+msgid "Small Title Font"
+msgstr "Γραμματοσειρά μικρού τίτλου"
+
+#: ../src/ui/theme-viewer.c:866
+msgid "Large Title Font"
+msgstr "Γραμματοσειρά μεγάλου τίτλου"
+
+#: ../src/ui/theme-viewer.c:871
+msgid "Button Layouts"
+msgstr "Διατάξεις κουμπιού"
+
+#: ../src/ui/theme-viewer.c:876
+msgid "Benchmark"
+msgstr "Benchmark"
+
+#: ../src/ui/theme-viewer.c:923
+msgid "Window Title Goes Here"
+msgstr "Τίτλος παραθύρου εδώ"
+
+#: ../src/ui/theme-viewer.c:1027
+#, c-format
+msgid ""
+"Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
+"seconds wall clock time including X server resources (%g milliseconds per "
+"frame)\n"
+msgstr ""
+"Σχεδιάστηκαν %d πλαίσια σε %g δευτερόλεπτα από τη μεριά του πελάτη (%g "
+"χιλιοστά ανά πλαίσιο) και %g δευτερόλεπτα σε πραγματικό χρόνο "
+"συμπεριλαμβανομένων και των πόρων του εξυπηρετητή X (%g χιλιοστά ανά "
+"πλαίσιο)\n"
+
+#: ../src/ui/theme-viewer.c:1246
+msgid "position expression test returned TRUE but set error"
+msgstr "position expression test returned TRUE but set error"
+
+#: ../src/ui/theme-viewer.c:1248
+msgid "position expression test returned FALSE but didn't set error"
+msgstr "position expression test returned FALSE but didn't set error"
+
+#: ../src/ui/theme-viewer.c:1252
+msgid "Error was expected but none given"
+msgstr "Error was expected but none given"
+
+#: ../src/ui/theme-viewer.c:1254
+#, c-format
+msgid "Error %d was expected but %d given"
+msgstr "Error %d was expected but %d given"
+
+#: ../src/ui/theme-viewer.c:1260
+#, c-format
+msgid "Error not expected but one was returned: %s"
+msgstr "Error not expected but one was returned: %s"
+
+#: ../src/ui/theme-viewer.c:1264
+#, c-format
+msgid "x value was %d, %d was expected"
+msgstr "x value was %d, %d was expected"
+
+#: ../src/ui/theme-viewer.c:1267
+#, c-format
+msgid "y value was %d, %d was expected"
+msgstr "y value was %d, %d was expected"
+
+#: ../src/ui/theme-viewer.c:1332
+#, c-format
+msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
+msgstr ""
+"οι εκφράσεις συντεταγμένης %d αναλύθηκαν σε %g δευτερόλεπτα (%g δευτερόλεπτα "
+"μέσος όρος)\n"
+
+#~ msgid "Open another one of these windows"
+#~ msgstr "Άνοιγμα ακόμα ενός από αυτά τα παράθυρα"
+
+#~ msgid "This is a demo button with an 'open' icon"
+#~ msgstr "Αυτό είναι ένα κουμπί επίδειξης με ένα εικονίδιο 'άνοιγμα'"
+
+#~ msgid "This is a demo button with a 'quit' icon"
+#~ msgstr "Αυτό είναι ένα κουμπί επίδειξης με ένα εικονίδιο 'έξοδος'"
+
+#~ msgid "Failed to parse message \"%s\" from dialog process\n"
+#~ msgstr "Αποτυχία ανάλυσης μηνύματος \"%s\" της διεργασίας διαλόγου\n"

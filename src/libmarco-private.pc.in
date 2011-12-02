@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+libmate_serverdir=@libexecdir@
+
+Name: libmarco-private
+Description: Marco internals shared 
+Requires: gtk+-2.0
+Version: @VERSION@
+Libs: -L${libdir} -lmarco-private
+Cflags: -I${includedir}/marco-1

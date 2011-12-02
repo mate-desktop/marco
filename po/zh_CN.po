@@ -1,0 +1,2330 @@
+# translation of marco.po to zh_CN
+# Simplified Chinese translation of marco.
+# Copyright (C) 2002, 2003, 2004, 2009, 2010 Free Software Foundation, Inc.
+# Sun G11n <mate_int_l10n@ireland.sun.com>, 2002.
+# He Qiangqiang <carton@linux.net.cn>, 2002
+# Xiong Jiang <jxiong@offtopic.org>, 2003
+# Funda Wang <fundawang@linux.net.cn>, 2003, 2004
+# 甘露(Gan Lu) <rhythm.gan@gmail.com>, 2009.
+# Ray Wang <wanglei1123@gmail.com>, 2009.
+# Jessica Ban <bancage@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: marco master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=marco&component=general\n"
+"POT-Creation-Date: 2010-07-21 12:10+0000\n"
+"PO-Revision-Date: 2010-07-24 20:31+0800\n"
+"Last-Translator: Jessica Ban <bancage@gmail.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/50-marco-desktop-key.xml.in.h:1
+msgid "Desktop"
+msgstr "桌面"
+
+#: ../src/50-marco-key.xml.in.h:1
+msgid "Window Management"
+msgstr "窗口管理"
+
+#: ../src/core/bell.c:294
+msgid "Bell event"
+msgstr "响铃事件"
+
+#: ../src/core/core.c:206
+#, c-format
+msgid "Unknown window information request: %d"
+msgstr "未知的窗口信息请求：%d"
+
+#. Translators: %s is a window title
+#: ../src/core/delete.c:96
+#, c-format
+msgid "<tt>%s</tt> is not responding."
+msgstr "<tt>%s<tt> 未响应。"
+
+#: ../src/core/delete.c:101
+msgid ""
+"You may choose to wait a short while for it to continue or force the "
+"application to quit entirely."
+msgstr "您可以选择稍等一会儿然后继续，或者强制退出该应用程序。"
+
+#: ../src/core/delete.c:110
+msgid "_Wait"
+msgstr "等待(_W)"
+
+#: ../src/core/delete.c:110
+msgid "_Force Quit"
+msgstr "强制退出(_F)"
+
+#: ../src/core/delete.c:208
+#, c-format
+msgid "Failed to get hostname: %s\n"
+msgstr "无法获取主机名：%s\n"
+
+#: ../src/core/display.c:258
+#, c-format
+msgid "Missing %s extension required for compositing"
+msgstr "缺少复合效果所需的 %s 扩展"
+
+#: ../src/core/display.c:336
+#, c-format
+msgid "Failed to open X Window System display '%s'\n"
+msgstr "无法打开 X Window System 显示“%s”\n"
+
+#: ../src/core/errors.c:272
+#, c-format
+msgid ""
+"Lost connection to the display '%s';\n"
+"most likely the X server was shut down or you killed/destroyed\n"
+"the window manager.\n"
+msgstr ""
+"丢失到显示“%s”的连接；\n"
+"可能是 X 服务器已关闭或者您杀死/摧毁了\n"
+"窗口管理器。\n"
+
+#: ../src/core/errors.c:279
+#, c-format
+msgid "Fatal IO error %d (%s) on display '%s'.\n"
+msgstr "严重的 IO 错误 %d (%s) 出现在显示“%s”上。\n"
+
+#: ../src/core/keybindings.c:680
+#, c-format
+msgid ""
+"Some other program is already using the key %s with modifiers %x as a "
+"binding\n"
+msgstr "某个其它程序已经将按键 %s 和修饰键 %x 配合使用作为一种组合\n"
+
+#. Displayed when a keybinding which is
+#. * supposed to launch a program fails.
+#.
+#: ../src/core/keybindings.c:2294
+#, c-format
+msgid ""
+"There was an error running <tt>%s</tt>:\n"
+"\n"
+"%s"
+msgstr ""
+"运行 <tt>%s</tt>时发生错误：\n"
+"\n"
+"%s"
+
+#: ../src/core/keybindings.c:2383
+#, c-format
+msgid "No command %d has been defined.\n"
+msgstr "命令 %d 尚未定义。\n"
+
+#: ../src/core/keybindings.c:3337
+#, c-format
+msgid "No terminal command has been defined.\n"
+msgstr "终端命令尚未定义。\n"
+
+#: ../src/core/main.c:131
+#, c-format
+msgid ""
+"marco %s\n"
+"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
+"This is free software; see the source for copying conditions.\n"
+"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A "
+"PARTICULAR PURPOSE.\n"
+msgstr ""
+"marco %s\n"
+"版权所有 (C) 2001-%s Havoc Pennington, Red Hat, Inc., 以及其他人\n"
+"这是自由软件：版权条款请参见源码.\n"
+"不存在任何保证：即使是对适销性或者适合某种特定目的也不作保证。\n"
+
+#: ../src/core/main.c:269
+msgid "Disable connection to session manager"
+msgstr "禁止连接到会话管理器"
+
+#: ../src/core/main.c:275
+msgid "Replace the running window manager with Marco"
+msgstr "将运行中的窗口管理器替换为 Marco"
+
+#: ../src/core/main.c:281
+msgid "Specify session management ID"
+msgstr "指定会话管理 ID"
+
+#: ../src/core/main.c:286
+msgid "X Display to use"
+msgstr "要使用的 X 显示"
+
+#: ../src/core/main.c:292
+msgid "Initialize session from savefile"
+msgstr "从保存文件中初始化会话"
+
+#: ../src/core/main.c:298
+msgid "Print version"
+msgstr "打印版本"
+
+#: ../src/core/main.c:304
+msgid "Make X calls synchronous"
+msgstr "使 X 调用同步"
+
+#: ../src/core/main.c:310
+msgid "Turn compositing on"
+msgstr "打开复合效果"
+
+#: ../src/core/main.c:316
+msgid "Turn compositing off"
+msgstr "关闭复合效果"
+
+#: ../src/core/main.c:322
+msgid ""
+"Don't make fullscreen windows that are maximized and have no decorations"
+msgstr "不要将已最大化的窗口全屏，不要做任何装饰"
+
+#: ../src/core/main.c:528
+#, c-format
+msgid "Failed to scan themes directory: %s\n"
+msgstr "扫描主题目录失败：%s\n"
+
+#: ../src/core/main.c:544
+#, c-format
+msgid ""
+"Could not find a theme! Be sure %s exists and contains the usual themes.\n"
+msgstr "无法找到主题！请确认 %s 存在并且含有正常的主题。\n"
+
+#: ../src/core/main.c:603
+#, c-format
+msgid "Failed to restart: %s\n"
+msgstr "无法重启动：%s\n"
+
+#.
+#. * We found it, but it was invalid.  Complain.
+#. *
+#. * FIXME: This replicates the original behaviour, but in the future
+#. * we might consider reverting invalid keys to their original values.
+#. * (We know the old value, so we can look up a suitable string in
+#. * the symtab.)
+#. *
+#. * (Empty comment follows so the translators don't see this.)
+#.
+#.
+#: ../src/core/prefs.c:508 ../src/core/prefs.c:663
+#, c-format
+msgid "MateConf key '%s' is set to an invalid value\n"
+msgstr "MateConf 关键字“%s”被设置为无效值\n"
+
+#: ../src/core/prefs.c:589 ../src/core/prefs.c:832
+#, c-format
+msgid "%d stored in MateConf key %s is out of range %d to %d\n"
+msgstr "存储在 MateConf 关键字 %2$s 中的值 %1$d 超出了 %3$d 到 %4$d 的范围\n"
+
+#: ../src/core/prefs.c:633 ../src/core/prefs.c:710 ../src/core/prefs.c:758
+#: ../src/core/prefs.c:822 ../src/core/prefs.c:1115 ../src/core/prefs.c:1131
+#: ../src/core/prefs.c:1148 ../src/core/prefs.c:1164
+#, c-format
+msgid "MateConf key \"%s\" is set to an invalid type\n"
+msgstr "MateConf 关键字“%s”被设置为无效的类型\n"
+
+#: ../src/core/prefs.c:1234
+msgid ""
+"Workarounds for broken applications disabled. Some applications may not "
+"behave properly.\n"
+msgstr "有缺陷的应用程序的工作区已禁用。某些应用程序可能无法正常运行。\n"
+
+#: ../src/core/prefs.c:1305
+#, c-format
+msgid "Could not parse font description \"%s\" from MateConf key %s\n"
+msgstr "无法解析字体说明“%s”(来自 MateConf 关键字 %s)\n"
+
+#: ../src/core/prefs.c:1367
+#, c-format
+msgid ""
+"\"%s\" found in configuration database is not a valid value for mouse button "
+"modifier\n"
+msgstr "在配置数据库中找到的“%s”不是鼠标按钮修饰键的有效值\n"
+
+#: ../src/core/prefs.c:1788
+#, c-format
+msgid "Error setting number of workspaces to %d: %s\n"
+msgstr "将工作区数量设置为 %d 时出错：%s\n"
+
+#: ../src/core/prefs.c:1953 ../src/core/prefs.c:2456
+#, c-format
+msgid "Workspace %d"
+msgstr "工作区 %d"
+
+#: ../src/core/prefs.c:1983 ../src/core/prefs.c:2161
+#, c-format
+msgid ""
+"\"%s\" found in configuration database is not a valid value for keybinding "
+"\"%s\"\n"
+msgstr "在配置数据库中找到的“%s”不是按键组合“%s”的有效值\n"
+
+#: ../src/core/prefs.c:2537
+#, c-format
+msgid "Error setting name for workspace %d to \"%s\": %s\n"
+msgstr "将工作区 %d 的名称设置为“%s”时出错：%s\n"
+
+#: ../src/core/prefs.c:2741
+#, c-format
+msgid "Error setting compositor status: %s\n"
+msgstr "设置复合管理器状态时出错：%s\n"
+
+#: ../src/core/screen.c:357
+#, c-format
+msgid "Screen %d on display '%s' is invalid\n"
+msgstr "显示“%2$s”上的屏幕 %1$d 无效\n"
+
+#: ../src/core/screen.c:373
+#, c-format
+msgid ""
+"Screen %d on display \"%s\" already has a window manager; try using the --"
+"replace option to replace the current window manager.\n"
+msgstr ""
+"显示“%2$s”上的屏幕 %1$d 已经有一个窗口管理器；请尝试使用 --replace 选项替换当"
+"前的窗口管理器。\n"
+
+#: ../src/core/screen.c:400
+#, c-format
+msgid ""
+"Could not acquire window manager selection on screen %d display \"%s\"\n"
+msgstr "无法获得显示“%2$s”上的屏幕 %1$d 的窗口管理器选定项\n"
+
+#: ../src/core/screen.c:458
+#, c-format
+msgid "Screen %d on display \"%s\" already has a window manager\n"
+msgstr "在显示 \"%2$s\" 上的 %1$d 屏幕已经有一个窗口管理器\n"
+
+#: ../src/core/screen.c:668
+#, c-format
+msgid "Could not release screen %d on display \"%s\"\n"
+msgstr "无法释放显示“%2$s”上的屏幕 %1$d\n"
+
+#. Translators: Please don't translate "Control", "Shift", etc, since these
+#. * are hardcoded (in gtk/gtkaccelgroup.c; it's not marco's fault).
+#. * "disabled" must also stay as it is.
+#.
+#: ../src/core/schema-bindings.c:169
+msgid ""
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
+"\n"
+"The parser is fairly liberal and allows lower or upper case, and also "
+"abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the "
+"special string \"disabled\", then there will be no keybinding for this "
+"action."
+msgstr ""
+"其格式类似于“<Ctrl>a”或 “<Shift><Alt>F1”。\n"
+"\n"
+"该解析程序相当自由，大小写以及诸如“<Ctl>” 和“<Ctrl>” 的缩写均允许使用。如果将"
+"该选项设置为特殊字符串“disabled”，那么此操作将没有按键组合。"
+
+#: ../src/core/schema-bindings.c:177
+msgid ""
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
+"\n"
+"The parser is fairly liberal and allows lower or upper case, and also "
+"abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the "
+"special string \"disabled\", then there will be no keybinding for this "
+"action.\n"
+"\n"
+"This keybinding may be reversed by holding down the \"shift\" key; "
+"therefore, \"shift\" cannot be one of the keys it uses."
+msgstr ""
+"其格式类似于“<Ctrl>a”或 “<Shift><Alt>F1”。\n"
+"\n"
+"该解析程序相当自由，大小写以及诸如“<Ctl>”和“<Ctrl>”的缩写均允许使用。如果将该"
+"选项设置为特殊字符串“disabled”，那么此操作将没有按键组合。\n"
+"\n"
+"此按键组合可以按住“Shift”键进行反转，所以不能在组合中使用“Shift”。"
+
+#: ../src/core/session.c:850 ../src/core/session.c:857
+#, c-format
+msgid "Could not create directory '%s': %s\n"
+msgstr "无法创建目录“%s”：%s\n"
+
+#: ../src/core/session.c:867
+#, c-format
+msgid "Could not open session file '%s' for writing: %s\n"
+msgstr "无法打开会话文件“%s”进行写入：%s\n"
+
+#: ../src/core/session.c:1008
+#, c-format
+msgid "Error writing session file '%s': %s\n"
+msgstr "写入会话文件“%s”时出错：%s\n"
+
+#: ../src/core/session.c:1013
+#, c-format
+msgid "Error closing session file '%s': %s\n"
+msgstr "关闭会话文件“%s”时出错：%s\n"
+
+#: ../src/core/session.c:1143
+#, c-format
+msgid "Failed to parse saved session file: %s\n"
+msgstr "无法解析保存的会话文件：%s\n"
+
+#: ../src/core/session.c:1192
+#, c-format
+msgid "<marco_session> attribute seen but we already have the session ID"
+msgstr "<marco_session> 属性已看到，但我们已经拥有该会话 ID"
+
+#: ../src/core/session.c:1205 ../src/core/session.c:1280
+#: ../src/core/session.c:1312 ../src/core/session.c:1384
+#: ../src/core/session.c:1444
+#, c-format
+msgid "Unknown attribute %s on <%s> element"
+msgstr "<%2$s> 元素上未知的属性 %1$s"
+
+#: ../src/core/session.c:1222
+#, c-format
+msgid "nested <window> tag"
+msgstr "嵌套 <window> 标记"
+
+#: ../src/core/session.c:1464
+#, c-format
+msgid "Unknown element %s"
+msgstr "未知的元素 %s"
+
+#: ../src/core/session.c:1816
+msgid ""
+"These windows do not support &quot;save current setup&quot; and will have to "
+"be restarted manually next time you log in."
+msgstr ""
+"这些窗口不支持&quot;保存当前设置&quot;，您在下次登录时，必须手动重启动它们。"
+
+#: ../src/core/util.c:101
+#, c-format
+msgid "Failed to open debug log: %s\n"
+msgstr "无法打开调试日志：%s\n"
+
+#: ../src/core/util.c:111
+#, c-format
+msgid "Failed to fdopen() log file %s: %s\n"
+msgstr "无法对日志文件 %s 进行 fdopen() 操作：%s\n"
+
+#: ../src/core/util.c:117
+#, c-format
+msgid "Opened log file %s\n"
+msgstr "打开的日志文件 %s\n"
+
+#: ../src/core/util.c:136 ../src/tools/marco-message.c:176
+#, c-format
+msgid "Marco was compiled without support for verbose mode\n"
+msgstr "Marco 编译的时候没有加入详细模式的支持\n"
+
+#: ../src/core/util.c:236
+msgid "Window manager: "
+msgstr "窗口管理器："
+
+#: ../src/core/util.c:388
+msgid "Bug in window manager: "
+msgstr "窗口管理器中的错误："
+
+#: ../src/core/util.c:421
+msgid "Window manager warning: "
+msgstr "窗口管理器警告："
+
+#: ../src/core/util.c:449
+msgid "Window manager error: "
+msgstr "窗口管理器错误："
+
+#. Translators: This is the title used on dialog boxes
+#. eof all-keybindings.h
+#: ../src/core/util.c:570 ../src/marco.desktop.in.h:1
+#: ../src/marco-wm.desktop.in.h:1
+msgid "Marco"
+msgstr "Marco"
+
+#. first time through
+#: ../src/core/window.c:5660
+#, c-format
+msgid ""
+"Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
+"window as specified in the ICCCM.\n"
+msgstr ""
+"窗口 %s 在它自身上设置 SM_CLIENT_ID，而不是按照 ICCCM 规定的那样，设置在 "
+"WM_CLIENT_LEADER 窗口上。\n"
+
+#. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
+#. * authoritative source for that info. Some apps such as mplayer or
+#. * xine disable resize via MWM but not WM_NORMAL_HINTS, but that
+#. * leads to e.g. us not fullscreening their windows.  Apps that set
+#. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
+#. * about these apps but make them work.
+#.
+#: ../src/core/window.c:6225
+#, c-format
+msgid ""
+"Window %s sets an MWM hint indicating it isn't resizable, but sets min size %"
+"d x %d and max size %d x %d; this doesn't make much sense.\n"
+msgstr ""
+"窗口 %s 设置了一个 MWM 提示，表明它是不可改变大小的，但设置最小尺寸为 %d x %"
+"d，最大尺寸为 %d x %d；这没有任何意义。\n"
+
+#: ../src/core/window-props.c:244
+#, c-format
+msgid "Application set a bogus _NET_WM_PID %lu\n"
+msgstr "应用程序设置一个假的 _NET_WM_PID %lu\n"
+
+#. Translators: the title of a window from another machine
+#: ../src/core/window-props.c:388
+#, c-format
+msgid "%s (on %s)"
+msgstr "%s (于 %s)"
+
+#. Simple case-- don't bother to look it up.  It's root.
+#: ../src/core/window-props.c:420
+#, c-format
+msgid "%s (as superuser)"
+msgstr "%s (作为超级用户)"
+
+#. Translators: the title of a window owned by another user
+#. * on this machine
+#: ../src/core/window-props.c:438
+#, c-format
+msgid "%s (as %s)"
+msgstr "%s (于 %s)"
+
+#. Translators: the title of a window owned by another user
+#. * on this machine, whose name we don't know
+#: ../src/core/window-props.c:444
+#, c-format
+msgid "%s (as another user)"
+msgstr "%s (作为其他用户)"
+
+#: ../src/core/window-props.c:1430
+#, c-format
+msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
+msgstr "为 %2$s 指定了无效的 WM_TRANSIENT_FOR 窗口 0x%1$lx。\n"
+
+#: ../src/core/xprops.c:155
+#, c-format
+msgid ""
+"Window 0x%lx has property %s\n"
+"that was expected to have type %s format %d\n"
+"and actually has type %s format %d n_items %d.\n"
+"This is most likely an application bug, not a window manager bug.\n"
+"The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
+msgstr ""
+"窗口 0x%lx 的属性 %s\n"
+"的期望类型为 %s、格式为 %d，\n"
+"而实际类型为 %s、格式为 %d、n_items 为 %d。\n"
+"这很可能是应用程序的错误，不是窗口管理器的错误。\n"
+"窗口的标题为“%s”，类别为“%s”，名称为“%s”\n"
+
+#: ../src/core/xprops.c:401
+#, c-format
+msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
+msgstr "窗口 0x%2$lx 上的属性 %1$s 包含无效的 UTF-8\n"
+
+#: ../src/core/xprops.c:484
+#, c-format
+msgid ""
+"Property %s on window 0x%lx contained invalid UTF-8 for item %d in the list\n"
+msgstr "窗口 0x%2$lx 上的属性 %1$s 为列表中的条目 %3$d 包含无效的 UTF-8\n"
+
+#: ../src/include/all-keybindings.h:88
+msgid "Switch to workspace 1"
+msgstr "切换到工作区 1"
+
+#: ../src/include/all-keybindings.h:90
+msgid "Switch to workspace 2"
+msgstr "切换到工作区 2"
+
+#: ../src/include/all-keybindings.h:92
+msgid "Switch to workspace 3"
+msgstr "切换到工作区 3"
+
+#: ../src/include/all-keybindings.h:94
+msgid "Switch to workspace 4"
+msgstr "切换到工作区 4"
+
+#: ../src/include/all-keybindings.h:96
+msgid "Switch to workspace 5"
+msgstr "切换到工作区 5"
+
+#: ../src/include/all-keybindings.h:98
+msgid "Switch to workspace 6"
+msgstr "切换到工作区 6"
+
+#: ../src/include/all-keybindings.h:100
+msgid "Switch to workspace 7"
+msgstr "切换到工作区 7"
+
+#: ../src/include/all-keybindings.h:102
+msgid "Switch to workspace 8"
+msgstr "切换到工作区 8"
+
+#: ../src/include/all-keybindings.h:104
+msgid "Switch to workspace 9"
+msgstr "切换到工作区 9"
+
+#: ../src/include/all-keybindings.h:106
+msgid "Switch to workspace 10"
+msgstr "切换到工作区 10"
+
+#: ../src/include/all-keybindings.h:108
+msgid "Switch to workspace 11"
+msgstr "切换到工作区 11"
+
+#: ../src/include/all-keybindings.h:110
+msgid "Switch to workspace 12"
+msgstr "切换到工作区 12"
+
+#: ../src/include/all-keybindings.h:122
+msgid "Switch to workspace on the left of the current workspace"
+msgstr "切换到当前工作区左侧的工作区"
+
+#: ../src/include/all-keybindings.h:126
+msgid "Switch to workspace on the right of the current workspace"
+msgstr "切换到当前工作区右侧的工作区"
+
+#: ../src/include/all-keybindings.h:130
+msgid "Switch to workspace above the current workspace"
+msgstr "切换到当前工作区上方的工作区"
+
+#: ../src/include/all-keybindings.h:134
+msgid "Switch to workspace below the current workspace"
+msgstr "切换到当前工作区下方的工作区"
+
+#: ../src/include/all-keybindings.h:150
+msgid "Move between windows of an application, using a popup window"
+msgstr "在应用程序的窗口之间移动，使用弹出窗口"
+
+#: ../src/include/all-keybindings.h:153
+msgid "Move backward between windows of an application, using a popup window"
+msgstr "在应用程序的窗口之间反向移动，使用弹出窗口"
+
+#: ../src/include/all-keybindings.h:157
+msgid "Move between windows, using a popup window"
+msgstr "在窗口之间移动，使用弹出窗口"
+
+#: ../src/include/all-keybindings.h:160
+msgid "Move backward between windows, using a popup window"
+msgstr "在窗口之间反向移动，使用弹出窗口"
+
+#: ../src/include/all-keybindings.h:163
+msgid "Move between panels and the desktop, using a popup window"
+msgstr "在面板和桌面之间移动，使用弹出窗口"
+
+#: ../src/include/all-keybindings.h:166
+msgid "Move backward between panels and the desktop, using a popup window"
+msgstr "在面板和桌面之间反向移动，使用弹出窗口"
+
+#: ../src/include/all-keybindings.h:171
+msgid "Move between windows of an application immediately"
+msgstr "在应用程序的窗口之间立即移动焦点"
+
+#: ../src/include/all-keybindings.h:174
+msgid "Move backward between windows of an application immediately"
+msgstr "在应用程序的窗口之间即时反向移动"
+
+#: ../src/include/all-keybindings.h:177
+msgid "Move between windows immediately"
+msgstr "在窗口之间立即移动焦点"
+
+#: ../src/include/all-keybindings.h:180
+msgid "Move backward between windows immediately"
+msgstr "在窗口之间即时反向移动"
+
+#: ../src/include/all-keybindings.h:183
+msgid "Move between panels and the desktop immediately"
+msgstr "在面板和桌面之间立即移动焦点"
+
+#: ../src/include/all-keybindings.h:186
+msgid "Move backward between panels and the desktop immediately"
+msgstr "在面板和桌面之间立即反向移动焦点"
+
+#: ../src/include/all-keybindings.h:191
+msgid "Hide all normal windows and set focus to the desktop"
+msgstr "隐藏所有正常窗口并将桌面设置为焦点"
+
+#: ../src/include/all-keybindings.h:194
+msgid "Show the panel's main menu"
+msgstr "显示面板主菜单"
+
+#: ../src/include/all-keybindings.h:197
+msgid "Show the panel's \"Run Application\" dialog box"
+msgstr "显示面板的“运行应用程序”对话框"
+
+#: ../src/include/all-keybindings.h:238
+msgid "Take a screenshot"
+msgstr "屏幕抓图"
+
+#: ../src/include/all-keybindings.h:240
+msgid "Take a screenshot of a window"
+msgstr "窗口抓图"
+
+#: ../src/include/all-keybindings.h:242
+msgid "Run a terminal"
+msgstr "运行终端"
+
+#: ../src/include/all-keybindings.h:257
+msgid "Activate the window menu"
+msgstr "激活窗口菜单"
+
+#: ../src/include/all-keybindings.h:260
+msgid "Toggle fullscreen mode"
+msgstr "切换全屏模式"
+
+#: ../src/include/all-keybindings.h:262
+msgid "Toggle maximization state"
+msgstr "切换最大化状态"
+
+#: ../src/include/all-keybindings.h:264
+msgid "Toggle whether a window will always be visible over other windows"
+msgstr "在窗口是否永远可见于其它窗口之上间切换"
+
+#: ../src/include/all-keybindings.h:266
+msgid "Maximize window"
+msgstr "最大化窗口"
+
+#: ../src/include/all-keybindings.h:268
+msgid "Restore window"
+msgstr "恢复窗口"
+
+#: ../src/include/all-keybindings.h:270
+msgid "Toggle shaded state"
+msgstr "切换卷起状态"
+
+#: ../src/include/all-keybindings.h:272
+msgid "Minimize window"
+msgstr "最小化窗口"
+
+#: ../src/include/all-keybindings.h:274
+msgid "Close window"
+msgstr "关闭窗口"
+
+#: ../src/include/all-keybindings.h:276
+msgid "Move window"
+msgstr "移动窗口"
+
+#: ../src/include/all-keybindings.h:278
+msgid "Resize window"
+msgstr "改变窗口大小"
+
+#: ../src/include/all-keybindings.h:281
+msgid "Toggle whether window is on all workspaces or just one"
+msgstr "在窗口位于所有或仅一个工作区间切换"
+
+#: ../src/include/all-keybindings.h:285
+msgid "Move window to workspace 1"
+msgstr "将窗口移到工作区 1"
+
+#: ../src/include/all-keybindings.h:288
+msgid "Move window to workspace 2"
+msgstr "将窗口移到工作区 2"
+
+#: ../src/include/all-keybindings.h:291
+msgid "Move window to workspace 3"
+msgstr "将窗口移到工作区 3"
+
+#: ../src/include/all-keybindings.h:294
+msgid "Move window to workspace 4"
+msgstr "将窗口移到工作区 4"
+
+#: ../src/include/all-keybindings.h:297
+msgid "Move window to workspace 5"
+msgstr "将窗口移到工作区 5"
+
+#: ../src/include/all-keybindings.h:300
+msgid "Move window to workspace 6"
+msgstr "将窗口移到工作区 6"
+
+#: ../src/include/all-keybindings.h:303
+msgid "Move window to workspace 7"
+msgstr "将窗口移到工作区 7"
+
+#: ../src/include/all-keybindings.h:306
+msgid "Move window to workspace 8"
+msgstr "将窗口移到工作区 8"
+
+#: ../src/include/all-keybindings.h:309
+msgid "Move window to workspace 9"
+msgstr "将窗口移到工作区 9"
+
+#: ../src/include/all-keybindings.h:312
+msgid "Move window to workspace 10"
+msgstr "将窗口移到工作区 10"
+
+#: ../src/include/all-keybindings.h:315
+msgid "Move window to workspace 11"
+msgstr "将窗口移到工作区 11"
+
+#: ../src/include/all-keybindings.h:318
+msgid "Move window to workspace 12"
+msgstr "将窗口移到工作区 12"
+
+#: ../src/include/all-keybindings.h:330
+msgid "Move window one workspace to the left"
+msgstr "将窗口左移一个工作区"
+
+#: ../src/include/all-keybindings.h:333
+msgid "Move window one workspace to the right"
+msgstr "将窗口右移一个工作区"
+
+#: ../src/include/all-keybindings.h:336
+msgid "Move window one workspace up"
+msgstr "将窗口上移一个工作区"
+
+#: ../src/include/all-keybindings.h:339
+msgid "Move window one workspace down"
+msgstr "将窗口下移一个工作区"
+
+#: ../src/include/all-keybindings.h:342
+msgid "Raise window if it's covered by another window, otherwise lower it"
+msgstr "如果窗口被其他窗口遮盖，则提升它，否则降低它"
+
+#: ../src/include/all-keybindings.h:344
+msgid "Raise window above other windows"
+msgstr "将窗口提升到其它窗口之上"
+
+#: ../src/include/all-keybindings.h:346
+msgid "Lower window below other windows"
+msgstr "将窗口降低到其它窗口之下"
+
+#: ../src/include/all-keybindings.h:350
+msgid "Maximize window vertically"
+msgstr "垂直最大化窗口"
+
+#: ../src/include/all-keybindings.h:354
+msgid "Maximize window horizontally"
+msgstr "水平最大化窗口"
+
+#: ../src/include/all-keybindings.h:358
+msgid "Move window to north-west (top left) corner"
+msgstr "将窗口移到西北(左上)角"
+
+#: ../src/include/all-keybindings.h:361
+msgid "Move window to north-east (top right) corner"
+msgstr "将窗口移到东北(右上)角"
+
+#: ../src/include/all-keybindings.h:364
+msgid "Move window to south-west (bottom left) corner"
+msgstr "将窗口移到西南(左下)角"
+
+#: ../src/include/all-keybindings.h:367
+msgid "Move window to south-east (bottom right) corner"
+msgstr "将窗口移到东南(右下)角"
+
+#: ../src/include/all-keybindings.h:371
+msgid "Move window to north (top) side of screen"
+msgstr "将窗口移到屏幕北(顶)侧"
+
+#: ../src/include/all-keybindings.h:374
+msgid "Move window to south (bottom) side of screen"
+msgstr "将窗口移到屏幕南(底)侧"
+
+#: ../src/include/all-keybindings.h:377
+msgid "Move window to east (right) side of screen"
+msgstr "将窗口移到屏幕东(右)侧"
+
+#: ../src/include/all-keybindings.h:380
+msgid "Move window to west (left) side of screen"
+msgstr "将窗口移到屏幕西(左)侧"
+
+#: ../src/include/all-keybindings.h:383
+msgid "Move window to center of screen"
+msgstr "将窗口移到屏幕中心"
+
+#: ../src/marco.schemas.in.in.h:1
+msgid "(Not implemented) Navigation works in terms of applications not windows"
+msgstr "(未实现)导航以应用程序而不是窗口的方式工作"
+
+#: ../src/marco.schemas.in.in.h:2
+msgid ""
+"A font description string describing a font for window titlebars. The size "
+"from the description will only be used if the titlebar_font_size option is "
+"set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
+"option is set to true."
+msgstr ""
+"描述窗口标题栏所用字体的字体描述字符串。但是，只有在 titlebar_font_size 选项"
+"设置为 0 时，才使用该说明中的字体大小。同时，如果 titlebar_uses_desktop_font "
+"选项设置为真，则禁用该选项。默认情况下不设置 titlebar_font。"
+
+#: ../src/marco.schemas.in.in.h:3
+msgid "Action on title bar double-click"
+msgstr "双击标题栏时的动作"
+
+#: ../src/marco.schemas.in.in.h:4
+msgid "Action on title bar middle-click"
+msgstr "鼠标中键单击标题栏时的动作"
+
+#: ../src/marco.schemas.in.in.h:5
+msgid "Action on title bar right-click"
+msgstr "鼠标右键单击标题栏时的动作"
+
+#: ../src/marco.schemas.in.in.h:6
+msgid "Arrangement of buttons on the titlebar"
+msgstr "标题栏上按钮的排列"
+
+#: ../src/marco.schemas.in.in.h:7
+msgid ""
+"Arrangement of buttons on the titlebar. The value should be a string, such "
+"as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
+"corner of the window from the right corner, and the button names are comma-"
+"separated. Duplicate buttons are not allowed. Unknown button names are "
+"silently ignored so that buttons can be added in future marco versions "
+"without breaking older versions. A special spacer tag can be used to insert "
+"some space between two adjacent buttons."
+msgstr ""
+"标题栏上按钮的排列。它的值必须是一个字符串，比如“menu:minimize,maximize,"
+"spacer,close”；冒号分隔窗口左上角和右上角的按钮，按钮名称之间用逗号分隔。不允"
+"许指定重复的按钮。未知的按钮名称将被忽略，因此在将来版本的 marco 中可以添"
+"加新的按钮，而不至于破坏旧的版本。而特殊的 spacer 标记可在两个按钮之间添加一"
+"些空格。"
+
+#: ../src/marco.schemas.in.in.h:8
+msgid "Automatically raises the focused window"
+msgstr "自动提升获得焦点的窗口"
+
+#: ../src/marco.schemas.in.in.h:9
+msgid ""
+"Clicking a window while holding down this modifier key will move the window "
+"(left click), resize the window (middle click), or show the window menu "
+"(right click). The middle and right click operations may be swapped using "
+"the \"resize_with_right_button\" key. Modifier is expressed as \"&lt;Alt&gt;"
+"\" or \"&lt;Super&gt;\" for example."
+msgstr ""
+"单击窗口时如果按住这个修饰键将移动窗口(左键单击)，改变窗口大小(中键单击)，或"
+"者显示窗口菜单(右键单击)。使用“鼠标按钮更改大小”键可以互换左右键操作。例如，"
+"修饰键可写作“&lt;Alt&gt;”或者“&lt;Super&gt;”。"
+
+#: ../src/marco.schemas.in.in.h:10
+msgid "Commands to run in response to keybindings"
+msgstr "按键组合对应的执行命令"
+
+#: ../src/marco.schemas.in.in.h:11
+msgid "Compositing Manager"
+msgstr "复合管理器"
+
+#: ../src/marco.schemas.in.in.h:12
+msgid "Control how new windows get focus"
+msgstr "控制新窗口如何获得窗口"
+
+#: ../src/marco.schemas.in.in.h:13
+msgid "Current theme"
+msgstr "当前主题"
+
+#: ../src/marco.schemas.in.in.h:14
+msgid "Delay in milliseconds for the auto raise option"
+msgstr "自动提升选项的几毫秒延迟"
+
+#: ../src/marco.schemas.in.in.h:15
+msgid "Determines whether Marco is a compositing manager."
+msgstr "决定 Marco 是否是复合管理器。"
+
+#: ../src/marco.schemas.in.in.h:16
+msgid ""
+"Determines whether applications or the system can generate audible 'beeps'; "
+"may be used in conjunction with 'visual bell' to allow silent 'beeps'."
+msgstr ""
+"决定应用程序或系统是否可以生成听得见的铃声；可以和“视觉铃声”一起使用，以便允"
+"许静默的铃声。"
+
+#: ../src/marco.schemas.in.in.h:17
+msgid "Disable misfeatures that are required by old or broken applications"
+msgstr "禁用旧的或有缺陷的应用程序所需的错误功能"
+
+#: ../src/marco.schemas.in.in.h:18
+msgid "Enable Visual Bell"
+msgstr "启用视觉铃声"
+
+#: ../src/marco.schemas.in.in.h:19
+msgid ""
+"If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
+"the focused window will be automatically raised after a delay specified by "
+"the auto_raise_delay key. This is not related to clicking on a window to "
+"raise it, nor to entering a window during drag-and-drop."
+msgstr ""
+"如果为 true，而聚焦模式为“sloppy”或“mouse”，那么聚焦的窗口将会在指定延迟后自"
+"动升起，延迟的时间由 auto_raise_delay 键指定。此选项与单击行为并没有什么关"
+"系，它也与拖放时进入窗口无关。"
+
+#: ../src/marco.schemas.in.in.h:20
+msgid ""
+"If true, ignore the titlebar_font option, and use the standard application "
+"font for window titles."
+msgstr ""
+"如果为 true，则忽略 titlebar_font 选项，并为窗口标题使用标准应用程序字体。"
+
+#: ../src/marco.schemas.in.in.h:21
+msgid ""
+"If true, marco will give the user less feedback by using wireframes, "
+"avoiding animations, or other means. This is a significant reduction in "
+"usability for many users, but may allow legacy applications to continue "
+"working, and may also be a useful tradeoff for terminal servers. However, "
+"the wireframe feature is disabled when accessibility is on."
+msgstr ""
+"如果为 true，marco 将会给用户提供较少的反馈，方法是使用线框、避免动画或者"
+"其它途径。这对许多用户来说，可用性大打折扣，但是这将允许较早的应用程序和终端"
+"服务器能够顺利运行。此外，如果开启了辅助功能，系统会自动禁用线框特性。"
+
+#: ../src/marco.schemas.in.in.h:22
+msgid ""
+"If true, then Marco works in terms of applications rather than windows. "
+"The concept is a bit abstract, but in general an application-based setup is "
+"more like the Mac and less like Windows. When you focus a window in "
+"application-based mode, all the windows in the application will be raised. "
+"Also, in application-based mode, focus clicks are not passed through to "
+"windows in other applications. Application-based mode is, however, largely "
+"unimplemented at the moment."
+msgstr ""
+"如果为 true，那么 Marco 将以应用程序而不是窗口的方式工作。该概念有点抽象，"
+"但通常基于应用程序的设置更类似于 Mac 系统，而不太像 Windows 系统。当您以基于"
+"应用程序的模式聚焦窗口时，该应用程序中的所有窗口都将被提升。同时，在基于应用"
+"程序的模式下，聚焦点击不会被传递到其它应用程序中的窗口。但是，基于应用程序的"
+"模式目前还基本没有实现。"
+
+#: ../src/marco.schemas.in.in.h:23
+msgid "If true, trade off usability for less resource usage"
+msgstr "如果为 true，则以可用性为代价而降低资源占用"
+
+#: ../src/marco.schemas.in.in.h:24
+msgid "Modifier to use for modified window click actions"
+msgstr "用于修改窗口点击动作的修饰键"
+
+#: ../src/marco.schemas.in.in.h:25
+msgid "Name of workspace"
+msgstr "工作区名称"
+
+#: ../src/marco.schemas.in.in.h:26
+msgid "Number of workspaces"
+msgstr "工作区数量"
+
+#: ../src/marco.schemas.in.in.h:27
+msgid ""
+"Number of workspaces. Must be more than zero, and has a fixed maximum to "
+"prevent making the desktop unusable by accidentally asking for too many "
+"workspaces."
+msgstr ""
+"工作区数量。必须大于零，并有一个固定的最大值，以防由于不小心请求调用太多工作"
+"区而摧毁您的桌面。"
+
+#: ../src/marco.schemas.in.in.h:28
+msgid "Run a defined command"
+msgstr "运行预定义的命令"
+
+#: ../src/marco.schemas.in.in.h:29
+msgid ""
+"Set this to true to resize with the right button and show a menu with the "
+"middle button while holding down the key given in \"mouse_button_modifier\"; "
+"set it to false to make it work the opposite way around."
+msgstr ""
+"使用右键设置这个为真来更改大小并且当按下“鼠标按钮修饰键”时使用中键来显示菜"
+"单，设置这个为假来实现相反的操作。"
+
+#: ../src/marco.schemas.in.in.h:30
+msgid ""
+"Setting this option to false can lead to buggy behavior, so users are "
+"strongly discouraged from changing it from the default of true. Many actions "
+"(e.g. clicking in the client area, moving or resizing the window) normally "
+"raise the window as a side-effect. Setting this option to false, which is "
+"strongly discouraged, will decouple raising from other user actions, and "
+"ignore raise requests generated by applications. See http://bugzilla.mate."
+"org/show_bug.cgi?id=445447#c6. Even when this option is false, windows can "
+"still be raised by an alt-left-click anywhere on the window, a normal click "
+"on the window decorations, or by special messages from pagers, such as "
+"activation requests from tasklist applets. This option is currently disabled "
+"in click-to-focus mode. Note that the list of ways to raise windows when "
+"raise_on_click is false does not include programmatic requests from "
+"applications to raise windows; such requests will be ignored regardless of "
+"the reason for the request. If you are an application developer and have a "
+"user complaining that your application does not work with this setting "
+"disabled, tell them it is _their_ fault for breaking their window manager "
+"and that they need to change this option back to true or live with the \"bug"
+"\" they requested."
+msgstr ""
+"将本选项设定为 false (假)将导致有缺陷的行为，所以强烈反对用户将该值由默认的 "
+"true (真)进行更改。许多动作(例如在客户区域内单击，移动或调整窗口大小)通常都会"
+"提升窗口，这其实是个副作用。将该选项设定为 false (假)，在此强烈反对，将从其他"
+"用户动作中 decouple 提升，同时忽略由程序产生的提升要求。参见 http://bugzilla."
+"gnome.org/show_bug.cgi?id=445447#c6。但即便该选项为 false (假)，仍然可以通过 "
+"alt + 左键单击窗口任何地方，在窗口装饰条上正常单击，或从寻呼中的特别消息(诸如"
+"从任务列表小程序的激活要求)来提升窗口。该选项目前在单击以聚焦(click-to-focus)"
+"模式中禁用。注意：当 raise_on_click 设为 false (假)而同时要提升窗口的一系列办"
+"法中并不包括从程序来的编程请求；此类请求将被忽略而不管为什么请求。如果你是一"
+"名程序开发者，而有某用户埋怨你的程序无法在该设定禁用下工作，告诉他们这都是他"
+"们破坏他们窗口管理器所犯的错，他们要么将该选项改回为 true (真)，或好好享受他"
+"们自找的麻烦。"
+
+#: ../src/marco.schemas.in.in.h:31
+msgid ""
+"Some applications disregard specifications in ways that result in window "
+"manager misfeatures. This option puts Marco in a rigorously correct mode, "
+"which gives a more consistent user interface, provided one does not need to "
+"run any misbehaving applications."
+msgstr ""
+"某些应用程序破坏规定从而导致窗口管理器功能失常。该选项将 Marco 置于完全正"
+"确模式下，这样的用户界面会更具有一致性，假定您不需要运行任何有缺陷的应用程"
+"序。"
+
+#: ../src/marco.schemas.in.in.h:32
+msgid "System Bell is Audible"
+msgstr "系统铃声发声"
+
+#: ../src/marco.schemas.in.in.h:33
+msgid ""
+"Tells Marco how to implement the visual indication that the system bell "
+"or another application 'bell' indicator has been rung. Currently there are "
+"two valid values, \"fullscreen\", which causes a fullscreen white-black "
+"flash, and \"frame_flash\" which causes the titlebar of the application "
+"which sent the bell signal to flash. If the application which sent the bell "
+"is unknown (as is usually the case for the default \"system beep\"), the "
+"currently focused window's titlebar is flashed."
+msgstr ""
+"通知 Marco 如何实现系统铃声或其它应用程序响铃的视觉标识。目前有两种值，“全"
+"屏”将以黑白色闪烁整个屏幕，而“框架闪烁”将闪烁发出响铃信号的应用程序的标题栏。"
+"如果发送响铃的程序未知(通常是默认的“系统响铃”)，则闪烁当前窗口的标题栏。"
+
+#: ../src/marco.schemas.in.in.h:34
+msgid ""
+"The /apps/marco/global_keybindings/run_command_N keys define keybindings "
+"that correspond to these commands. Pressing the keybinding for run_command_N "
+"will execute command_N."
+msgstr ""
+"/apps/marco/global_keybindings/run_command_N 键值定义这些命令对应的按键组"
+"合。按下 run_command_N 对应的按键组合将执行命令 command_N。"
+
+#: ../src/marco.schemas.in.in.h:35
+msgid ""
+"The /apps/marco/global_keybindings/run_command_screenshot key defines a "
+"keybinding which causes the command specified by this setting to be invoked."
+msgstr ""
+"/apps/marco/global_keybindings/run_command_screenshot 键值定义了导致调用此"
+"设置的按键组合。"
+
+#: ../src/marco.schemas.in.in.h:36
+msgid ""
+"The /apps/marco/global_keybindings/run_command_window_screenshot key "
+"defines a keybinding which causes the command specified by this setting to "
+"be invoked."
+msgstr ""
+"/apps/marco/global_keybindings/run_command_window_screenshot 键值定义了导"
+"致调用此设置的按键组合。"
+
+#: ../src/marco.schemas.in.in.h:37
+msgid ""
+"The keybinding that runs the correspondingly-numbered command in /apps/"
+"marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" or "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
+"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
+"then there will be no keybinding for this action."
+msgstr ""
+"运行 /apps/marco/keybinding_commands 中相应编号的命令的按键组合。其格式类"
+"似于“&lt;Control&gt;a”或者“&lt;Shift&gt;&lt;Alt&gt;F1”。该分析程序的格式相当"
+"自由并允许大小写或者缩写，如“&lt;Ctl&gt;”和“&lt;Ctrl&gt;”。如果将该选项设置为"
+"特殊字符串“disabled”，那么此操作将没有按键组合。"
+
+#: ../src/marco.schemas.in.in.h:38
+msgid "The name of a workspace."
+msgstr "工作区名称。"
+
+#: ../src/marco.schemas.in.in.h:39
+msgid "The screenshot command"
+msgstr "屏幕抓图命令"
+
+#: ../src/marco.schemas.in.in.h:40
+msgid ""
+"The theme determines the appearance of window borders, titlebar, and so "
+"forth."
+msgstr "主题决定窗口边框、标题栏等的外观。"
+
+#: ../src/marco.schemas.in.in.h:41
+msgid ""
+"The time delay before raising a window if auto_raise is set to true. The "
+"delay is given in thousandths of a second."
+msgstr "提升窗口前的延迟时间(如果 auto_raise 设置为真)。延迟时间的单位为毫秒。"
+
+#: ../src/marco.schemas.in.in.h:42
+msgid ""
+"The window focus mode indicates how windows are activated. It has three "
+"possible values; \"click\" means windows must be clicked in order to focus "
+"them, \"sloppy\" means windows are focused when the mouse enters the window, "
+"and \"mouse\" means windows are focused when the mouse enters the window and "
+"unfocused when the mouse leaves the window."
+msgstr ""
+"窗口焦点模式指明窗口的激活方式。它有三个可能的值；“click”表示必须单击窗口才能"
+"聚焦该窗口，“sloppy”表示当鼠标进入窗口时，即会聚焦该窗口，“mouse”表示当鼠标进"
+"入窗口时会聚焦该窗口，当鼠标离开该窗口时则会失去焦点。"
+
+#: ../src/marco.schemas.in.in.h:43
+msgid "The window screenshot command"
+msgstr "窗口抓图命令"
+
+#: ../src/marco.schemas.in.in.h:44
+msgid ""
+"This option determines the effects of double-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will "
+"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+"这个选项决定在标题栏上双击的效果。当前有效的选项包括，“toggle_shade”将卷起/展"
+"开窗口，“toggle_maximize”将最大化/还原窗"
+"口，“toggle_maximize_horizontally”和“toggle_maximize_vertically”将分别在水平"
+"和垂直方向上最大化窗口，“minimize”将最小化窗口，“shade”将卷起窗口，“menu”将显"
+"示窗口菜单，“lower”将把窗口推至最后b，而“none”将不执行任何操作。"
+
+#: ../src/marco.schemas.in.in.h:45
+msgid ""
+"This option determines the effects of middle-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will "
+"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+"这个选项决定在标题栏上单击中键的效果。当前有效的选项包括，“toggle_shade”将卷"
+"起/展开窗口，“toggle_maximize”将最大化/还原窗"
+"口，“toggle_maximize_horizontally”和“toggle_maximize_vertically”将分别在水平"
+"和垂直方向上最大化窗口，“minimize”将最小化窗口，“shade”将卷起窗口，“menu”将显"
+"示窗口菜单，“lower”将把窗口推至最后b，而“none”将不执行任何操作。"
+
+#: ../src/marco.schemas.in.in.h:46
+msgid ""
+"This option determines the effects of right-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will "
+"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+"这个选项决定在标题栏上单击右键的效果。当前有效的选项包括，“toggle_shade”将卷"
+"起/展开窗口，“toggle_maximize”将最大化/还原窗"
+"口，“toggle_maximize_horizontally”和“toggle_maximize_vertically”将分别在水平"
+"和垂直方向上最大化窗口，“minimize”将最小化窗口，“shade”将卷起窗口，“menu”将显"
+"示窗口菜单，“lower”将把窗口推至最后b，而“none”将不执行任何操作。"
+
+#: ../src/marco.schemas.in.in.h:47
+msgid ""
+"This option provides additional control over how newly created windows get "
+"focus. It has two possible values; \"smart\" applies the user's normal focus "
+"mode, and \"strict\" results in windows started from a terminal not being "
+"given focus."
+msgstr ""
+"此选项提供了关于新创建的窗口如何获得焦点的额外控制。目前有效的选项包"
+"括，“smart”将应用用户普通的聚焦模式，而“strict”将使得通过终端启动的窗口不获得"
+"焦点。"
+
+#: ../src/marco.schemas.in.in.h:48
+msgid ""
+"Turns on a visual indication when an application or the system issues a "
+"'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
+"environments."
+msgstr ""
+"当应用程序或系统发出“铃声”时，打开视觉标识；适合有听力障碍的用户以及在吵闹的"
+"环境中使用。"
+
+#: ../src/marco.schemas.in.in.h:49
+msgid "Use standard system font in window titles"
+msgstr "在窗口标题中使用标准系统字体"
+
+#: ../src/marco.schemas.in.in.h:50
+msgid "Visual Bell Type"
+msgstr "视觉铃声类型"
+
+#: ../src/marco.schemas.in.in.h:51
+msgid "Whether raising should be a side-effect of other user interactions"
+msgstr "升起是否作为其它用户交互的副作用"
+
+#: ../src/marco.schemas.in.in.h:52
+msgid "Whether to resize with the right button"
+msgstr "是否使用右键更改大小"
+
+#: ../src/marco.schemas.in.in.h:53
+msgid "Window focus mode"
+msgstr "窗口焦点模式"
+
+#: ../src/marco.schemas.in.in.h:54
+msgid "Window title font"
+msgstr "窗口标题字体"
+
+#: ../src/tools/marco-message.c:150
+#, c-format
+msgid "Usage: %s\n"
+msgstr "用法：%s\n"
+
+#: ../src/ui/frames.c:1118
+msgid "Close Window"
+msgstr "关闭窗口"
+
+#: ../src/ui/frames.c:1121
+msgid "Window Menu"
+msgstr "窗口菜单"
+
+#: ../src/ui/frames.c:1124
+msgid "Minimize Window"
+msgstr "最小化窗口"
+
+#: ../src/ui/frames.c:1127
+msgid "Maximize Window"
+msgstr "最大化窗口"
+
+#: ../src/ui/frames.c:1130
+msgid "Restore Window"
+msgstr "恢复窗口"
+
+#: ../src/ui/frames.c:1133
+msgid "Roll Up Window"
+msgstr "卷起窗口"
+
+#: ../src/ui/frames.c:1136
+msgid "Unroll Window"
+msgstr "展开窗口"
+
+#: ../src/ui/frames.c:1139
+msgid "Keep Window On Top"
+msgstr "窗口常居顶端"
+
+#: ../src/ui/frames.c:1142
+msgid "Remove Window From Top"
+msgstr "取消窗口常居顶端"
+
+#: ../src/ui/frames.c:1145
+msgid "Always On Visible Workspace"
+msgstr "总在可见工作区"
+
+#: ../src/ui/frames.c:1148
+msgid "Put Window On Only One Workspace"
+msgstr "只将窗口放在一个工作区"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:70
+msgid "Mi_nimize"
+msgstr "最小化(_N)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:72
+msgid "Ma_ximize"
+msgstr "最大化(_X)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:74
+msgid "Unma_ximize"
+msgstr "取消最大化(_X)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:76
+msgid "Roll _Up"
+msgstr "卷起(_U)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:78
+msgid "_Unroll"
+msgstr "展开(_U)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:80
+msgid "_Move"
+msgstr "移动(_M)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:82
+msgid "_Resize"
+msgstr "改变大小(_R)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:84
+msgid "Move Titlebar On_screen"
+msgstr "将标题栏上移动到屏幕上(_S)"
+
+#. separator
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:87 ../src/ui/menu.c:89
+msgid "Always on _Top"
+msgstr "常居顶端(_T)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:91
+msgid "_Always on Visible Workspace"
+msgstr "总在可见工作区(_A)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:93
+msgid "_Only on This Workspace"
+msgstr "只在此工作区(_O)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:95
+msgid "Move to Workspace _Left"
+msgstr "移动到左侧工作区(_L)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:97
+msgid "Move to Workspace R_ight"
+msgstr "移动到右侧工作区(_I)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:99
+msgid "Move to Workspace _Up"
+msgstr "移动到上侧工作区(_U)"
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:101
+msgid "Move to Workspace _Down"
+msgstr "移动到下侧工作区(_D)"
+
+#. separator
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:105
+msgid "_Close"
+msgstr "关闭(_C)"
+
+#: ../src/ui/menu.c:203
+#, c-format
+msgid "Workspace %d%n"
+msgstr "工作区 %d%n"
+
+#: ../src/ui/menu.c:213
+#, c-format
+msgid "Workspace 1_0"
+msgstr "工作区 1_0"
+
+#: ../src/ui/menu.c:215
+#, c-format
+msgid "Workspace %s%d"
+msgstr "工作区 %s%d"
+
+#: ../src/ui/menu.c:395
+msgid "Move to Another _Workspace"
+msgstr "移动到另外的工作区(_W)"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the shift key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:104
+msgid "Shift"
+msgstr "Shift"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the control key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:110
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the alt key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:116
+msgid "Alt"
+msgstr "Alt"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the meta key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:122
+msgid "Meta"
+msgstr "Meta"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the super key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:128
+msgid "Super"
+msgstr "Super"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the hyper key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:134
+msgid "Hyper"
+msgstr "Hyper"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod2 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:140
+msgid "Mod2"
+msgstr "Mod2"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod3 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:146
+msgid "Mod3"
+msgstr "Mod3"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod4 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:152
+msgid "Mod4"
+msgstr "Mod4"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod5 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#.
+#: ../src/ui/metaaccellabel.c:158
+msgid "Mod5"
+msgstr "Mod5"
+
+#. Translators: This represents the size of a window.  The first number is
+#. * the width of the window and the second is the height.
+#.
+#: ../src/ui/resizepopup.c:113
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/ui/theme.c:254
+msgid "top"
+msgstr "上"
+
+#: ../src/ui/theme.c:256
+msgid "bottom"
+msgstr "下"
+
+#: ../src/ui/theme.c:258
+msgid "left"
+msgstr "左"
+
+#: ../src/ui/theme.c:260
+msgid "right"
+msgstr "右"
+
+#: ../src/ui/theme.c:287
+#, c-format
+msgid "frame geometry does not specify \"%s\" dimension"
+msgstr "框架几何布局没有指定“%s”尺寸"
+
+#: ../src/ui/theme.c:306
+#, c-format
+msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
+msgstr "框架几何布局没有指定“%s”尺寸(该尺寸是为边框“%s”指定的)"
+
+#: ../src/ui/theme.c:343
+#, c-format
+msgid "Button aspect ratio %g is not reasonable"
+msgstr "按钮长宽比 %g 不合理"
+
+#: ../src/ui/theme.c:355
+#, c-format
+msgid "Frame geometry does not specify size of buttons"
+msgstr "框架几何布局没有指定按钮大小"
+
+#: ../src/ui/theme.c:1020
+#, c-format
+msgid "Gradients should have at least two colors"
+msgstr "渐变应至少有两种颜色"
+
+#: ../src/ui/theme.c:1146
+#, c-format
+msgid ""
+"GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL] "
+"where NORMAL is the state; could not parse \"%s\""
+msgstr ""
+"GTK 颜色规范必须将状态包含在方括号中，例如 gtk:fg[NORMAL]其中 NORMAL 是状态；"
+"无法解析“%s”"
+
+#: ../src/ui/theme.c:1160
+#, c-format
+msgid ""
+"GTK color specification must have a close bracket after the state, e.g. gtk:"
+"fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
+msgstr ""
+"GTK 颜色规范必须在状态后有一个闭方括号，例如 gtk:fg[NORMAL]，其中 NORMAL 是状"
+"态；无法解析“%s”"
+
+#: ../src/ui/theme.c:1171
+#, c-format
+msgid "Did not understand state \"%s\" in color specification"
+msgstr "不理解颜色规范中的状态“%s”"
+
+#: ../src/ui/theme.c:1184
+#, c-format
+msgid "Did not understand color component \"%s\" in color specification"
+msgstr "不理解颜色规范中的颜色组成部分“%s”"
+
+#: ../src/ui/theme.c:1214
+#, c-format
+msgid ""
+"Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
+"format"
+msgstr "混合格式为“blend/bg_color/fg_color/alpha”，“%s”不符合该格式"
+
+#: ../src/ui/theme.c:1225
+#, c-format
+msgid "Could not parse alpha value \"%s\" in blended color"
+msgstr "无法解析混合色中的 Alpha 值“%s”"
+
+#: ../src/ui/theme.c:1235
+#, c-format
+msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
+msgstr "混合色中的 Alpha 值“%s”不在 0.0 到 1.0 之间"
+
+#: ../src/ui/theme.c:1282
+#, c-format
+msgid ""
+"Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
+msgstr "阴影格式为“shade/base_color/factor”，“%s”不符合该格式"
+
+#: ../src/ui/theme.c:1293
+#, c-format
+msgid "Could not parse shade factor \"%s\" in shaded color"
+msgstr "无法解析阴影色中的阴影因子“%s”"
+
+#: ../src/ui/theme.c:1303
+#, c-format
+msgid "Shade factor \"%s\" in shaded color is negative"
+msgstr "阴影色中的阴影因子“%s”为负数"
+
+#: ../src/ui/theme.c:1332
+#, c-format
+msgid "Could not parse color \"%s\""
+msgstr "无法解析颜色“%s”"
+
+#: ../src/ui/theme.c:1586
+#, c-format
+msgid "Coordinate expression contains character '%s' which is not allowed"
+msgstr "坐标表达式包含不允许的字符“%s”"
+
+#: ../src/ui/theme.c:1613
+#, c-format
+msgid ""
+"Coordinate expression contains floating point number '%s' which could not be "
+"parsed"
+msgstr "坐标表达式包含无法解析的浮点数“%s”"
+
+#: ../src/ui/theme.c:1627
+#, c-format
+msgid "Coordinate expression contains integer '%s' which could not be parsed"
+msgstr "坐标表达式包含无法解析的整数“%s”"
+
+#: ../src/ui/theme.c:1749
+#, c-format
+msgid ""
+"Coordinate expression contained unknown operator at the start of this text: "
+"\"%s\""
+msgstr "坐标表达式在该文本开始处包含未知的运算符：“%s”"
+
+#: ../src/ui/theme.c:1806
+#, c-format
+msgid "Coordinate expression was empty or not understood"
+msgstr "坐标表达式为空或无法理解"
+
+#: ../src/ui/theme.c:1917 ../src/ui/theme.c:1927 ../src/ui/theme.c:1961
+#, c-format
+msgid "Coordinate expression results in division by zero"
+msgstr "坐标表达式用零做除数"
+
+#: ../src/ui/theme.c:1969
+#, c-format
+msgid ""
+"Coordinate expression tries to use mod operator on a floating-point number"
+msgstr "坐标表达式试图对浮点数使用 mod 运算符"
+
+#: ../src/ui/theme.c:2025
+#, c-format
+msgid ""
+"Coordinate expression has an operator \"%s\" where an operand was expected"
+msgstr "坐标表达式的运算符“%s”应该是一个操作数"
+
+#: ../src/ui/theme.c:2034
+#, c-format
+msgid "Coordinate expression had an operand where an operator was expected"
+msgstr "坐标表达式的某个操作数应该是运算符"
+
+#: ../src/ui/theme.c:2042
+#, c-format
+msgid "Coordinate expression ended with an operator instead of an operand"
+msgstr "坐标表达式以运算符结尾，而不是以操作数结尾"
+
+#: ../src/ui/theme.c:2052
+#, c-format
+msgid ""
+"Coordinate expression has operator \"%c\" following operator \"%c\" with no "
+"operand in between"
+msgstr "坐标表达式的运算符“%c”后面跟着运算符“%c”，之间没有操作数"
+
+#: ../src/ui/theme.c:2199 ../src/ui/theme.c:2240
+#, c-format
+msgid "Coordinate expression had unknown variable or constant \"%s\""
+msgstr "坐标表达式有未知的变量或常数“%s”"
+
+#: ../src/ui/theme.c:2294
+#, c-format
+msgid "Coordinate expression parser overflowed its buffer."
+msgstr "坐标表达式溢出了其缓冲区。"
+
+#: ../src/ui/theme.c:2323
+#, c-format
+msgid "Coordinate expression had a close parenthesis with no open parenthesis"
+msgstr "坐标表达式有一个闭括号，而没有开括号"
+
+#: ../src/ui/theme.c:2387
+#, c-format
+msgid "Coordinate expression had an open parenthesis with no close parenthesis"
+msgstr "坐标表达式有一个开括号，而没有闭括号"
+
+#: ../src/ui/theme.c:2398
+#, c-format
+msgid "Coordinate expression doesn't seem to have any operators or operands"
+msgstr "坐标表达式似乎没有任何运算符或操作数"
+
+#: ../src/ui/theme.c:2602 ../src/ui/theme.c:2622 ../src/ui/theme.c:2642
+#, c-format
+msgid "Theme contained an expression that resulted in an error: %s\n"
+msgstr "主题包含的一个表达式产生错误：%s\n"
+
+#: ../src/ui/theme.c:4209
+#, c-format
+msgid ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
+"specified for this frame style"
+msgstr ""
+"必须为该框架风格指定<button function=\"%s\" state=\"%s\" draw_ops=\"whatever"
+"\"/>"
+
+#: ../src/ui/theme.c:4717 ../src/ui/theme.c:4742
+#, c-format
+msgid ""
+"Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
+msgstr ""
+"缺少 <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
+
+#: ../src/ui/theme.c:4786
+#, c-format
+msgid "Failed to load theme \"%s\": %s\n"
+msgstr "无法载入主题“%s”：%s\n"
+
+#: ../src/ui/theme.c:4916 ../src/ui/theme.c:4923 ../src/ui/theme.c:4930
+#: ../src/ui/theme.c:4937 ../src/ui/theme.c:4944
+#, c-format
+msgid "No <%s> set for theme \"%s\""
+msgstr "没有为主题“%2$s”设置 <%1$s>"
+
+#: ../src/ui/theme.c:4952
+#, c-format
+msgid ""
+"No frame style set for window type \"%s\" in theme \"%s\", add a <window "
+"type=\"%s\" style_set=\"whatever\"/> element"
+msgstr ""
+"没有为窗口类型“%s”(在主题“%s”中)设置框架风格，请添加一个 <window type=\"%s\" "
+"style_set=\"whatever\"/> 元素"
+
+#: ../src/ui/theme.c:5395 ../src/ui/theme.c:5457 ../src/ui/theme.c:5520
+#, c-format
+msgid ""
+"User-defined constants must begin with a capital letter; \"%s\" does not"
+msgstr "用户定义的常数必须以大写字母开头；而“%s”却不必"
+
+#: ../src/ui/theme.c:5403 ../src/ui/theme.c:5465 ../src/ui/theme.c:5528
+#, c-format
+msgid "Constant \"%s\" has already been defined"
+msgstr "常数“%s”已被定义"
+
+#. Translators: This means that an attribute which should have been found
+#. * on an XML element was not in fact found.
+#.
+#: ../src/ui/theme-parser.c:202
+#, c-format
+msgid "No \"%s\" attribute on element <%s>"
+msgstr "元素 <%2$s> 上没有“%1$s”属性"
+
+#: ../src/ui/theme-parser.c:231 ../src/ui/theme-parser.c:249
+#, c-format
+msgid "Line %d character %d: %s"
+msgstr "行 %d 字符 %d：%s"
+
+#: ../src/ui/theme-parser.c:413
+#, c-format
+msgid "Attribute \"%s\" repeated twice on the same <%s> element"
+msgstr "属性“%s”在同一个 <%s> 元素上重复了两次"
+
+#: ../src/ui/theme-parser.c:437 ../src/ui/theme-parser.c:480
+#, c-format
+msgid "Attribute \"%s\" is invalid on <%s> element in this context"
+msgstr "在该上下文中，属性“%s”对 <%s> 元素无效"
+
+#: ../src/ui/theme-parser.c:522
+#, c-format
+msgid "Could not parse \"%s\" as an integer"
+msgstr "无法将“%s” 解析为整数"
+
+#: ../src/ui/theme-parser.c:531 ../src/ui/theme-parser.c:586
+#, c-format
+msgid "Did not understand trailing characters \"%s\" in string \"%s\""
+msgstr "不理解结尾字符“%1$s”(位于字符串“%2$s”中)"
+
+#: ../src/ui/theme-parser.c:541
+#, c-format
+msgid "Integer %ld must be positive"
+msgstr "整数 %ld 必须是正数"
+
+#: ../src/ui/theme-parser.c:549
+#, c-format
+msgid "Integer %ld is too large, current max is %d"
+msgstr "整数 %ld 过大，当前最大值为 %d"
+
+#: ../src/ui/theme-parser.c:577 ../src/ui/theme-parser.c:693
+#, c-format
+msgid "Could not parse \"%s\" as a floating point number"
+msgstr "无法将“%s”解析为浮点数"
+
+#: ../src/ui/theme-parser.c:608 ../src/ui/theme-parser.c:636
+#, c-format
+msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
+msgstr "布尔值必须为“真”或“假”，不能为“%s”"
+
+#: ../src/ui/theme-parser.c:663
+#, c-format
+msgid "Angle must be between 0.0 and 360.0, was %g\n"
+msgstr "角度值必须界于 0.0 到 360.0 之间，现在是 %g\n"
+
+#: ../src/ui/theme-parser.c:726
+#, c-format
+msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
+msgstr "Alpha 值必须界于 0.0(不可见)到 1.0(完全不透明)之间，现在是 %g\n"
+
+#: ../src/ui/theme-parser.c:791
+#, c-format
+msgid ""
+"Invalid title scale \"%s\" (must be one of xx-small,x-small,small,medium,"
+"large,x-large,xx-large)\n"
+msgstr ""
+"无效的标题比例“%s”(必须是 xx-small、x-small、small、medium、large、x-large、"
+"xx-large 中的一个)\n"
+
+#: ../src/ui/theme-parser.c:936 ../src/ui/theme-parser.c:999
+#: ../src/ui/theme-parser.c:1033 ../src/ui/theme-parser.c:1136
+#, c-format
+msgid "<%s> name \"%s\" used a second time"
+msgstr "再次使用了 <%s> 名称“%s”"
+
+#: ../src/ui/theme-parser.c:948 ../src/ui/theme-parser.c:1045
+#: ../src/ui/theme-parser.c:1148
+#, c-format
+msgid "<%s> parent \"%s\" has not been defined"
+msgstr "<%s> 父级“%s”尚未定义"
+
+#: ../src/ui/theme-parser.c:1058
+#, c-format
+msgid "<%s> geometry \"%s\" has not been defined"
+msgstr "<%s> 几何布局“%s”尚未定义"
+
+#: ../src/ui/theme-parser.c:1071
+#, c-format
+msgid "<%s> must specify either a geometry or a parent that has a geometry"
+msgstr "<%s> 必须指定一个几何布局或者一个带有几何布局的父级"
+
+#: ../src/ui/theme-parser.c:1113
+msgid "You must specify a background for an alpha value to be meaningful"
+msgstr "要让 alpha 值有意义，您必须指定背景"
+
+#: ../src/ui/theme-parser.c:1180
+#, c-format
+msgid "Unknown type \"%s\" on <%s> element"
+msgstr "未知的类型“%s”在元素 <%s> 上"
+
+#: ../src/ui/theme-parser.c:1191
+#, c-format
+msgid "Unknown style_set \"%s\" on <%s> element"
+msgstr "未知的 style_set“%s”在元素 <%s> 上"
+
+#: ../src/ui/theme-parser.c:1199
+#, c-format
+msgid "Window type \"%s\" has already been assigned a style set"
+msgstr "已经为窗口类型“%s”指定了一种风格设置"
+
+#: ../src/ui/theme-parser.c:1229 ../src/ui/theme-parser.c:1293
+#: ../src/ui/theme-parser.c:1519 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2786 ../src/ui/theme-parser.c:2934
+#: ../src/ui/theme-parser.c:3126 ../src/ui/theme-parser.c:3164
+#: ../src/ui/theme-parser.c:3202 ../src/ui/theme-parser.c:3240
+#, c-format
+msgid "Element <%s> is not allowed below <%s>"
+msgstr "不允许元素 <%s> 在 <%s> 下方"
+
+#: ../src/ui/theme-parser.c:1343 ../src/ui/theme-parser.c:1357
+#: ../src/ui/theme-parser.c:1402
+msgid ""
+"Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
+"for buttons"
+msgstr "不能同时指定按钮的“button_width”、“button_height”和“aspect_ratio”"
+
+#: ../src/ui/theme-parser.c:1366
+#, c-format
+msgid "Distance \"%s\" is unknown"
+msgstr "距离“%s”未知"
+
+#: ../src/ui/theme-parser.c:1411
+#, c-format
+msgid "Aspect ratio \"%s\" is unknown"
+msgstr "长宽比“%s”未知"
+
+#: ../src/ui/theme-parser.c:1473
+#, c-format
+msgid "Border \"%s\" is unknown"
+msgstr "边框“%s”未知"
+
+#: ../src/ui/theme-parser.c:1784
+#, c-format
+msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
+msgstr "元素 <%s> 上没有“start_angle”或“from”属性"
+
+#: ../src/ui/theme-parser.c:1791
+#, c-format
+msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
+msgstr "元素 <%s> 上没有“extent_angle”或“to”属性"
+
+#: ../src/ui/theme-parser.c:2031
+#, c-format
+msgid "Did not understand value \"%s\" for type of gradient"
+msgstr "不理解梯度类型的值“%s”"
+
+#: ../src/ui/theme-parser.c:2109 ../src/ui/theme-parser.c:2484
+#, c-format
+msgid "Did not understand fill type \"%s\" for <%s> element"
+msgstr "不理解填充类型“%s”(用于 <%s> 元素)"
+
+#: ../src/ui/theme-parser.c:2276 ../src/ui/theme-parser.c:2359
+#: ../src/ui/theme-parser.c:2422
+#, c-format
+msgid "Did not understand state \"%s\" for <%s> element"
+msgstr "不理解状态“%s”(用于 <%s> 元素)"
+
+#: ../src/ui/theme-parser.c:2286 ../src/ui/theme-parser.c:2369
+#, c-format
+msgid "Did not understand shadow \"%s\" for <%s> element"
+msgstr "不理解阴影“%s”(用于 <%s> 元素)"
+
+#: ../src/ui/theme-parser.c:2296
+#, c-format
+msgid "Did not understand arrow \"%s\" for <%s> element"
+msgstr "不理解箭头“%s”(用于 <%s> 元素)"
+
+#: ../src/ui/theme-parser.c:2596 ../src/ui/theme-parser.c:2692
+#, c-format
+msgid "No <draw_ops> called \"%s\" has been defined"
+msgstr "尚未定义名为“%s”的 <draw_ops>"
+
+#: ../src/ui/theme-parser.c:2608 ../src/ui/theme-parser.c:2704
+#, c-format
+msgid "Including draw_ops \"%s\" here would create a circular reference"
+msgstr "此处包括 draw_ops“%s”将创建一个循环引用"
+
+#: ../src/ui/theme-parser.c:2819
+#, c-format
+msgid "Unknown position \"%s\" for frame piece"
+msgstr "框架段的位置“%s”未知"
+
+#: ../src/ui/theme-parser.c:2827
+#, c-format
+msgid "Frame style already has a piece at position %s"
+msgstr "在位置 %s 处已经有一段框架风格"
+
+#: ../src/ui/theme-parser.c:2844 ../src/ui/theme-parser.c:2919
+#, c-format
+msgid "No <draw_ops> with the name \"%s\" has been defined"
+msgstr "尚未定义名为“%s”的 <draw_ops>"
+
+#: ../src/ui/theme-parser.c:2873
+#, c-format
+msgid "Unknown function \"%s\" for button"
+msgstr "按钮的函数“%s”未知"
+
+#: ../src/ui/theme-parser.c:2882
+#, c-format
+msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
+msgstr "按钮函数“%s”在此版本(%d，需要的是 %d)中不存在"
+
+#: ../src/ui/theme-parser.c:2894
+#, c-format
+msgid "Unknown state \"%s\" for button"
+msgstr "按钮的状态“%s”未知"
+
+#: ../src/ui/theme-parser.c:2902
+#, c-format
+msgid "Frame style already has a button for function %s state %s"
+msgstr "框架风格已经有一个函数为 %s、状态为 %s 的按钮"
+
+#: ../src/ui/theme-parser.c:2973
+#, c-format
+msgid "\"%s\" is not a valid value for focus attribute"
+msgstr "“%s”不是 focus 属性的有效值"
+
+#: ../src/ui/theme-parser.c:2982
+#, c-format
+msgid "\"%s\" is not a valid value for state attribute"
+msgstr "“%s”不是 state 属性的有效值"
+
+#: ../src/ui/theme-parser.c:2992
+#, c-format
+msgid "A style called \"%s\" has not been defined"
+msgstr "尚未定义名为“%s”的风格"
+
+#: ../src/ui/theme-parser.c:3013 ../src/ui/theme-parser.c:3036
+#, c-format
+msgid "\"%s\" is not a valid value for resize attribute"
+msgstr "“%s”不是 resize 属性的有效值"
+
+#: ../src/ui/theme-parser.c:3047
+#, c-format
+msgid ""
+"Should not have \"resize\" attribute on <%s> element for maximized/shaded "
+"states"
+msgstr "状态为 maximized/shaded 的 <%s> 元素不应有“resize”属性"
+
+#: ../src/ui/theme-parser.c:3061
+#, c-format
+msgid ""
+"Should not have \"resize\" attribute on <%s> element for maximized states"
+msgstr "状态为 maximized 的 <%s> 元素不应有“resize”属性"
+
+#: ../src/ui/theme-parser.c:3075 ../src/ui/theme-parser.c:3097
+#, c-format
+msgid "Style has already been specified for state %s resize %s focus %s"
+msgstr "已经为 state 属性 %s、resize 属性 %s、focus 属性 %s 指定了风格"
+
+#: ../src/ui/theme-parser.c:3086 ../src/ui/theme-parser.c:3108
+#, c-format
+msgid "Style has already been specified for state %s focus %s"
+msgstr "已经为 state 属性 %s、focus 属性 %s 指定了风格"
+
+#: ../src/ui/theme-parser.c:3147
+msgid ""
+"Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
+"attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"一个 <piece> 元素不能有两个 draw_ops(主题指定了一个 draw_ops属性和一个 "
+"<draw_ops> 元素，或者指定了两个元素)"
+
+#: ../src/ui/theme-parser.c:3185
+msgid ""
+"Can't have a two draw_ops for a <button> element (theme specified a draw_ops "
+"attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"一个 <button> 元素不能有两个 draw_ops(主题指定了一个 draw_ops属性和一个 "
+"<draw_ops> 元素，或者指定了两个元素)"
+
+#: ../src/ui/theme-parser.c:3223
+msgid ""
+"Can't have a two draw_ops for a <menu_icon> element (theme specified a "
+"draw_ops attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"一个 <menu_icon> 元素不能有两个 draw_ops(主题指定了一个draw_ops 属性和一个 "
+"<draw_ops> 元素，或者指定了两个元素)"
+
+#: ../src/ui/theme-parser.c:3271
+#, c-format
+msgid "Outermost element in theme must be <marco_theme> not <%s>"
+msgstr "主题中最外面的元素必须是 <marco_theme>，而不能是 <%s>"
+
+#: ../src/ui/theme-parser.c:3291
+#, c-format
+msgid ""
+"Element <%s> is not allowed inside a name/author/date/description element"
+msgstr "name/author/date/description 元素中不允许有元素 <%s>"
+
+#: ../src/ui/theme-parser.c:3296
+#, c-format
+msgid "Element <%s> is not allowed inside a <constant> element"
+msgstr "<constant> 元素中不允许有元素 <%s>"
+
+#: ../src/ui/theme-parser.c:3308
+#, c-format
+msgid ""
+"Element <%s> is not allowed inside a distance/border/aspect_ratio element"
+msgstr "distance/border/aspect_ratio 元素中不允许有元素 <%s>"
+
+#: ../src/ui/theme-parser.c:3330
+#, c-format
+msgid "Element <%s> is not allowed inside a draw operation element"
+msgstr "draw operation 元素中不允许有元素 <%s>"
+
+#: ../src/ui/theme-parser.c:3340 ../src/ui/theme-parser.c:3370
+#: ../src/ui/theme-parser.c:3375 ../src/ui/theme-parser.c:3380
+#, c-format
+msgid "Element <%s> is not allowed inside a <%s> element"
+msgstr "元素 <%s> 不允许出现在 <%s> 元素内"
+
+#: ../src/ui/theme-parser.c:3602
+msgid "No draw_ops provided for frame piece"
+msgstr "没有为框架段提供 draw_ops"
+
+#: ../src/ui/theme-parser.c:3617
+msgid "No draw_ops provided for button"
+msgstr "没有为按钮提供 draw_ops"
+
+#: ../src/ui/theme-parser.c:3669
+#, c-format
+msgid "No text is allowed inside element <%s>"
+msgstr "元素 <%s> 中不允许有文本"
+
+#: ../src/ui/theme-parser.c:3724 ../src/ui/theme-parser.c:3736
+#: ../src/ui/theme-parser.c:3748 ../src/ui/theme-parser.c:3760
+#: ../src/ui/theme-parser.c:3772
+#, c-format
+msgid "<%s> specified twice for this theme"
+msgstr "为此主题指定了两次<%s>"
+
+#: ../src/ui/theme-parser.c:4040
+#, c-format
+msgid "Failed to find a valid file for theme %s\n"
+msgstr "找不到主题 %s 的有效文件\n"
+
+#: ../src/ui/theme-parser.c:4096
+#, c-format
+msgid "Theme file %s did not contain a root <marco_theme> element"
+msgstr "主题文件 %s 不包含根 <marco_theme> 元素"
+
+#: ../src/ui/theme-viewer.c:75
+msgid "/_Windows"
+msgstr "/窗口(_W)"
+
+#: ../src/ui/theme-viewer.c:76
+msgid "/Windows/tearoff"
+msgstr "/窗口(W)/撕下"
+
+#: ../src/ui/theme-viewer.c:77
+msgid "/Windows/_Dialog"
+msgstr "/窗口(W)/对话框(_D)"
+
+#: ../src/ui/theme-viewer.c:78
+msgid "/Windows/_Modal dialog"
+msgstr "/窗口(W)/模态对话框(_M)"
+
+#: ../src/ui/theme-viewer.c:79
+msgid "/Windows/_Utility"
+msgstr "/窗口(W)/工具(_U)"
+
+#: ../src/ui/theme-viewer.c:80
+msgid "/Windows/_Splashscreen"
+msgstr "/窗口(W)/启动屏幕(_S)"
+
+#: ../src/ui/theme-viewer.c:81
+msgid "/Windows/_Top dock"
+msgstr "/窗口(W)/上侧停靠(_T)"
+
+#: ../src/ui/theme-viewer.c:82
+msgid "/Windows/_Bottom dock"
+msgstr "/窗口(W)/下侧停靠(_B)"
+
+#: ../src/ui/theme-viewer.c:83
+msgid "/Windows/_Left dock"
+msgstr "/窗口(W)/左侧停靠(_L)"
+
+#: ../src/ui/theme-viewer.c:84
+msgid "/Windows/_Right dock"
+msgstr "/窗口(W)/右侧停靠(_R)"
+
+#: ../src/ui/theme-viewer.c:85
+msgid "/Windows/_All docks"
+msgstr "/窗口(W)/全部停靠(_A)"
+
+#: ../src/ui/theme-viewer.c:86
+msgid "/Windows/Des_ktop"
+msgstr "/窗口(W)/桌面(_K)"
+
+#: ../src/ui/theme-viewer.c:244
+msgid "This is a sample message in a sample dialog"
+msgstr "这是示例对话框中的示例消息"
+
+#: ../src/ui/theme-viewer.c:327
+#, c-format
+msgid "Fake menu item %d\n"
+msgstr "虚假菜单项 %d\n"
+
+#: ../src/ui/theme-viewer.c:361
+msgid "Border-only window"
+msgstr "只有边框的窗口"
+
+#: ../src/ui/theme-viewer.c:363
+msgid "Bar"
+msgstr "栏"
+
+#: ../src/ui/theme-viewer.c:380
+msgid "Normal Application Window"
+msgstr "普通的应用程序窗口"
+
+#: ../src/ui/theme-viewer.c:384
+msgid "Dialog Box"
+msgstr "对话框"
+
+#: ../src/ui/theme-viewer.c:388
+msgid "Modal Dialog Box"
+msgstr "模态对话框"
+
+#: ../src/ui/theme-viewer.c:392
+msgid "Utility Palette"
+msgstr "工具盘"
+
+#: ../src/ui/theme-viewer.c:396
+msgid "Torn-off Menu"
+msgstr "撕下的菜单"
+
+#: ../src/ui/theme-viewer.c:400
+msgid "Border"
+msgstr "边框"
+
+#: ../src/ui/theme-viewer.c:728
+#, c-format
+msgid "Button layout test %d"
+msgstr "按钮布局测试 %d"
+
+#: ../src/ui/theme-viewer.c:757
+#, c-format
+msgid "%g milliseconds to draw one window frame"
+msgstr "%g 毫秒用来绘制一个窗口框架"
+
+#: ../src/ui/theme-viewer.c:800
+#, c-format
+msgid "Usage: marco-theme-viewer [THEMENAME]\n"
+msgstr "用法：marco-theme-viewer [主题名称]\n"
+
+#: ../src/ui/theme-viewer.c:807
+#, c-format
+msgid "Error loading theme: %s\n"
+msgstr "装入主题出错：%s\n"
+
+#: ../src/ui/theme-viewer.c:813
+#, c-format
+msgid "Loaded theme \"%s\" in %g seconds\n"
+msgstr "在 %2$g 秒内装入主题“%1$s”\n"
+
+#: ../src/ui/theme-viewer.c:854
+msgid "Normal Title Font"
+msgstr "普通标题字体"
+
+#: ../src/ui/theme-viewer.c:860
+msgid "Small Title Font"
+msgstr "小标题字体"
+
+#: ../src/ui/theme-viewer.c:866
+msgid "Large Title Font"
+msgstr "大标题字体"
+
+#: ../src/ui/theme-viewer.c:871
+msgid "Button Layouts"
+msgstr "按钮布局"
+
+#: ../src/ui/theme-viewer.c:876
+msgid "Benchmark"
+msgstr "基准"
+
+#: ../src/ui/theme-viewer.c:923
+msgid "Window Title Goes Here"
+msgstr "窗口标题在这里"
+
+#: ../src/ui/theme-viewer.c:1027
+#, c-format
+msgid ""
+"Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
+"seconds wall clock time including X server resources (%g milliseconds per "
+"frame)\n"
+msgstr ""
+"在 %2$g 的客户端秒(每帧 %3$g 毫秒)和包括 X 服务器资源在内的 %4$g 秒时钟时间"
+"(每帧 %5$g 毫秒)内绘制 %1$d 帧\n"
+
+#: ../src/ui/theme-viewer.c:1246
+msgid "position expression test returned TRUE but set error"
+msgstr "位置表达式测试返回了 TRUE 但设置错误"
+
+#: ../src/ui/theme-viewer.c:1248
+msgid "position expression test returned FALSE but didn't set error"
+msgstr "位置表达式测试返回了 FALSE 但并没有设置错误"
+
+#: ../src/ui/theme-viewer.c:1252
+msgid "Error was expected but none given"
+msgstr "期待错误但没有给出错误"
+
+#: ../src/ui/theme-viewer.c:1254
+#, c-format
+msgid "Error %d was expected but %d given"
+msgstr "期待错误 %d，但给出了 %d"
+
+#: ../src/ui/theme-viewer.c:1260
+#, c-format
+msgid "Error not expected but one was returned: %s"
+msgstr "未期待错误，但返回了错误：%s"
+
+#: ../src/ui/theme-viewer.c:1264
+#, c-format
+msgid "x value was %d, %d was expected"
+msgstr "x 值为 %d，但应该为 %d"
+
+#: ../src/ui/theme-viewer.c:1267
+#, c-format
+msgid "y value was %d, %d was expected"
+msgstr "y 值为 %d，但应该为 %d "
+
+#: ../src/ui/theme-viewer.c:1332
+#, c-format
+msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
+msgstr "在 %2$g 秒内处理了 %1$d 个坐标表达式(平均 %3$g 秒)\n"
+
+#~ msgid "Failed to read saved session file %s: %s\n"
+#~ msgstr "无法读取保存的会话文件 %s：%s\n"
+
+#~ msgid "Open another one of these windows"
+#~ msgstr "打开这些窗口中的另外一个"
+
+#~ msgid "This is a demo button with an 'open' icon"
+#~ msgstr "这是一个演示按钮，带有“打开”图标"
+
+#~ msgid "This is a demo button with a 'quit' icon"
+#~ msgstr "这是一个演示按钮，带有“退出”图标"
+
+#~ msgid "Failed to parse message \"%s\" from dialog process\n"
+#~ msgstr "无法通过对话进程解析消息“%s”\n"
+
+#~ msgid "Error reading from dialog display process: %s\n"
+#~ msgstr "读取对话显示进程时出错：%s\n"
+
+#~ msgid ""
+#~ "Error launching marco-dialog to ask about killing an application: %s\n"
+#~ msgstr "启动 marco-dialog 查询有关杀死应用程序的情况时出错：%s\n"
+
+#~ msgid ""
+#~ "Error launching marco-dialog to warn about apps that don't support "
+#~ "session management: %s\n"
+#~ msgstr "启动 marco-dialog 以警告应用程序不支持会话管理时出错：%s\n"
+
+#~ msgid "Title"
+#~ msgstr "标题"
+
+#~ msgid "Class"
+#~ msgstr "类别"
+
+#~ msgid ""
+#~ "There was an error running \"%s\":\n"
+#~ "%s."
+#~ msgstr ""
+#~ "运行“%s”时发生错误：\n"
+#~ "%s"
+
+#~ msgid "<author> specified twice for this theme"
+#~ msgstr "为此主题指定了两次 <author>"
+
+#~ msgid "<copyright> specified twice for this theme"
+#~ msgstr "为此主题指定了两次 <copyright>"
+
+#~ msgid "<date> specified twice for this theme"
+#~ msgstr "为此主题指定了两次 <date>"
+
+#~ msgid "<description> specified twice for this theme"
+#~ msgstr "为此主题指定了两次 <description>"
