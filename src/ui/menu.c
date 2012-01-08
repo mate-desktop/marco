@@ -1,3 +1,4 @@
+/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 /* Marco window menu */
 
 /*
@@ -35,7 +36,8 @@
 typedef struct _MenuItem MenuItem;
 typedef struct _MenuData MenuData;
 
-typedef enum {
+typedef enum
+{
 	MENU_ITEM_SEPARATOR = 0,
 	MENU_ITEM_NORMAL,
 	MENU_ITEM_IMAGE,
@@ -44,7 +46,8 @@ typedef enum {
 	MENU_ITEM_WORKSPACE_LIST,
 } MetaMenuItemType;
 
-struct _MenuItem {
+struct _MenuItem
+{
 	MetaMenuOp op;
 	MetaMenuItemType type;
 	const char* stock_id;
@@ -53,7 +56,8 @@ struct _MenuItem {
 };
 
 
-struct _MenuData {
+struct _MenuData
+{
 	MetaWindowMenu* menu;
 	MetaMenuOp op;
 };
@@ -100,7 +104,12 @@ static MenuItem menuitems[] = {
 	{META_MENU_OP_DELETE, MENU_ITEM_IMAGE, MARCO_STOCK_DELETE, FALSE, N_("_Close")}
 };
 
-static void popup_position_func(GtkMenu* menu, gint* x, gint* y, gboolean* push_in, gpointer user_data)
+static void
+popup_position_func (GtkMenu   *menu,
+                     gint      *x,
+                     gint      *y,
+                     gboolean  *push_in,
+                     gpointer  user_data)
 {
 	GtkRequisition req;
 	GdkPoint* pos;
@@ -113,16 +122,16 @@ static void popup_position_func(GtkMenu* menu, gint* x, gint* y, gboolean* push_
 	*y = pos->y;
 
 	if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
-	{
 		*x = MAX (0, *x - req.width);
-	}
 
 	/* Ensure onscreen */
 	*x = CLAMP (*x, 0, MAX(0, gdk_screen_width() - req.width));
 	*y = CLAMP (*y, 0, MAX(0, gdk_screen_height() - req.height));
 }
 
-static void menu_closed(GtkMenu* widget, gpointer data)
+static void
+menu_closed (GtkMenu *widget,
+             gpointer data)
 {
 	MetaWindowMenu *menu;
 
@@ -130,9 +139,7 @@ static void menu_closed(GtkMenu* widget, gpointer data)
 
 	meta_frames_notify_menu_hide (menu->frames);
 
-	(*menu->func)(
-		menu,
-		GDK_DISPLAY_XDISPLAY(gdk_display_get_default()),
+  (* menu->func) (menu, GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
 		menu->client_xwindow,
 		gtk_get_current_event_time (),
 		0, 0,
@@ -141,7 +148,8 @@ static void menu_closed(GtkMenu* widget, gpointer data)
 	/* menu may now be freed */
 }
 
-static void activate_cb(GtkWidget* menuitem, gpointer data)
+static void
+activate_cb (GtkWidget *menuitem, gpointer data)
 {
   MenuData* md;
 
@@ -151,13 +159,12 @@ static void activate_cb(GtkWidget* menuitem, gpointer data)
 
 	meta_frames_notify_menu_hide(md->menu->frames);
 
-	(*md->menu->func)(
-		md->menu,
-		GDK_DISPLAY_XDISPLAY (gdk_display_get_default()),
+  (* md->menu->func) (md->menu, GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
 		md->menu->client_xwindow,
 		gtk_get_current_event_time(),
 		md->op,
-		GPOINTER_TO_INT(g_object_get_data(G_OBJECT(menuitem), "workspace")),
+                      GPOINTER_TO_INT (g_object_get_data (G_OBJECT (menuitem),
+                                                          "workspace")),
 		md->menu->data);
 
 	/* menu may now be freed */
@@ -254,7 +261,8 @@ get_workspace_name_with_accel (Display *display,
     }
 }
 
-static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
+static GtkWidget *
+menu_item_new (MenuItem *menuitem, int workspace_id)
 {
 	unsigned int key;
 	MetaVirtualModifier mods;
@@ -268,8 +276,9 @@ static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 	}
 	else if (menuitem->type == MENU_ITEM_IMAGE)
 	{
-		GtkWidget* image = gtk_image_new_from_icon_name(menuitem->stock_id, GTK_ICON_SIZE_MENU);
+      GtkWidget *image;
 
+      image = gtk_image_new_from_stock (menuitem->stock_id, GTK_ICON_SIZE_MENU);
 		mi = gtk_image_menu_item_new();
 
 		gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(mi), image);
@@ -279,23 +288,22 @@ static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 	{
 		mi = gtk_check_menu_item_new ();
 
-		gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(mi), menuitem->checked);
+      gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (mi),
+                                      menuitem->checked);
     }
 	else if (menuitem->type == MENU_ITEM_RADIOBUTTON)
 	{
 		mi = gtk_check_menu_item_new ();
 
-		gtk_check_menu_item_set_draw_as_radio (GTK_CHECK_MENU_ITEM (mi), TRUE);
-		gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (mi), menuitem->checked);
+      gtk_check_menu_item_set_draw_as_radio (GTK_CHECK_MENU_ITEM (mi),
+                                             TRUE);
+      gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (mi),
+                                      menuitem->checked);
 	}
 	else if (menuitem->type == MENU_ITEM_WORKSPACE_LIST)
-	{
 		return NULL;
-	}
 	else
-	{
 		return gtk_separator_menu_item_new();
-	}
 
 	i18n_label = _(menuitem->label);
 	meta_core_get_menu_accelerator (menuitem->op, workspace_id, &key, &mods);
@@ -306,7 +314,8 @@ static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 	gtk_container_add (GTK_CONTAINER (mi), accel_label);
 	gtk_widget_show (accel_label);
 
-	meta_accel_label_set_accelerator (META_ACCEL_LABEL (accel_label), key, mods);
+  meta_accel_label_set_accelerator (META_ACCEL_LABEL (accel_label),
+                                    key, mods);
 
 	return mi;
 }
@@ -480,29 +489,43 @@ meta_window_menu_new   (MetaFrames         *frames,
         }
     }
 
-	g_signal_connect (menu->menu, "selection_done", G_CALLBACK(menu_closed), menu);
+  g_signal_connect (menu->menu, "selection_done",
+                    G_CALLBACK (menu_closed), menu);  
 
 	return menu;
 }
 
-void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int button, guint32 timestamp)
+void
+meta_window_menu_popup (MetaWindowMenu     *menu,
+                        int                 root_x,
+                        int                 root_y,
+                        int                 button,
+                        guint32             timestamp)
 {
-	GdkPoint* pt = g_new(GdkPoint, 1);
+  GdkPoint *pt;
 
-	g_object_set_data_full(G_OBJECT(menu->menu), "destroy-point", pt, g_free);
+  pt = g_new (GdkPoint, 1);
 
-	pt->x = root_x;
-	pt->y = root_y;
+  g_object_set_data_full (G_OBJECT (menu->menu),
+                          "destroy-point",
+                          pt,
+                          g_free);
 
-	gtk_menu_popup(GTK_MENU (menu->menu), NULL, NULL, popup_position_func, pt, button, timestamp);
+  pt->x = root_x;
+  pt->y = root_y;
+
+  gtk_menu_popup (GTK_MENU (menu->menu),
+                  NULL, NULL,
+                  popup_position_func, pt,
+                  button,
+                  timestamp);
 
 	if (!GTK_MENU_SHELL(menu->menu)->have_xgrab)
-	{
 		meta_warning("GtkMenu failed to grab the pointer\n");
-	}
 }
 
-void meta_window_menu_free(MetaWindowMenu* menu)
+void
+meta_window_menu_free (MetaWindowMenu *menu)
 {
 	gtk_widget_destroy(menu->menu);
 	g_free(menu);

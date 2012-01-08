@@ -2,16 +2,7 @@ lib_LTLIBRARIES = libmarco-private.la
 
 SUBDIRS=wm-tester tools themes
 
-INCLUDES = \
-	-I$(srcdir)/include \
-	-DMARCO_LIBEXECDIR=\"$(libexecdir)\" \
-	-DHOST_ALIAS=\"@HOST_ALIAS@\" \
-	-DMARCO_LOCALEDIR=\"$(prefix)/@DATADIRNAME@/locale\" \
-	-DMARCO_PKGDATADIR=\"$(pkgdatadir)\" \
-	-DMARCO_DATADIR=\"$(datadir)\" \
-	-DG_LOG_DOMAIN=\"marco\" \
-	-DSN_API_NOT_YET_FROZEN=1 \
-	@MARCO_CFLAGS@
+INCLUDES=-I$(srcdir)/include -DMARCO_LIBEXECDIR=\"$(libexecdir)\" -DHOST_ALIAS=\"@HOST_ALIAS@\" -DMARCO_LOCALEDIR=\"$(prefix)/@DATADIRNAME@/locale\" -DMARCO_PKGDATADIR=\"$(pkgdatadir)\" -DMARCO_DATADIR=\"$(datadir)\" -DG_LOG_DOMAIN=\"marco\" -DSN_API_NOT_YET_FROZEN=1 @MARCO_CFLAGS@
 
 marco_SOURCES = \
 	core/async-getprop.c \
@@ -26,6 +17,7 @@ marco_SOURCES = \
 	compositor/compositor-xrender.c \
 	compositor/compositor-xrender.h \
 	include/compositor.h \
+	core/above-tab-keycode.c		\
 	core/constraints.c \
 	core/constraints.h \
 	core/core.c \
@@ -46,6 +38,7 @@ marco_SOURCES = \
 	core/frame.c \
 	core/frame-private.h \
 	include/frame.h \
+	gdk-compat.h				\
 	ui/gradient.c \
 	ui/gradient.h \
 	core/group-private.h \
@@ -86,6 +79,7 @@ marco_SOURCES = \
 	include/common.h \
 	include/core.h \
 	include/ui.h \
+	inlinepixbufs.h				\
 	ui/fixedtip.c \
 	ui/fixedtip.h \
 	ui/frames.c \
@@ -149,7 +143,7 @@ schema_bindings_SOURCES = \
 schema_bindings_LDADD = @MARCO_LIBS@
 marco.schemas.in: schema_bindings ${srcdir}/marco.schemas.in.in
 	@echo Generating keybinding schemas... ${srcdir}/marco.schemas.in.in
-	${builddir}/schema_bindings ${srcdir}/marco.schemas.in.in ${builddir}/marco.schemas.in
+	$(AM_V_GEN)${builddir}/schema_bindings ${srcdir}/marco.schemas.in.in ${builddir}/marco.schemas.in
 
 bin_PROGRAMS=marco marco-theme-viewer
 
@@ -198,14 +192,16 @@ else
 install-data-local:
 endif
 
-BUILT_SOURCES =
-CLEANFILES = \
-	marco.desktop \
-	marco-wm.desktop \
-	marco.schemas \
-	marco.schemas.in \
-	50-marco-desktop-key.xml \
-	50-marco-key.xml
+IMAGES=stock_maximize.png stock_minimize.png stock_delete.png
+VARIABLES=stock_maximize_data $(srcdir)/stock_maximize.png \
+          stock_minimize_data $(srcdir)/stock_minimize.png \
+          stock_delete_data $(srcdir)/stock_delete.png
+
+BUILT_SOURCES = inlinepixbufs.h
+CLEANFILES = inlinepixbufs.h marco.desktop marco-wm.desktop marco.schemas marco.schemas.in 	50-marco-desktop-key.xml 50-marco-key.xml
+
+inlinepixbufs.h: $(IMAGES)
+	$(AM_V_GEN)$(GDK_PIXBUF_CSOURCE) --raw --build-list $(VARIABLES) >$(srcdir)/inlinepixbufs.h
 
 pkgconfigdir = $(libdir)/pkgconfig
 

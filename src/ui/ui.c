@@ -1,3 +1,4 @@
+/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 /* Marco interface for talking to GTK+ UI module */
 
 /*
@@ -27,13 +28,21 @@
 #include "menu.h"
 #include "core.h"
 #include "theme.h"
+#include "inlinepixbufs.h"
+
+#include "gdk-compat.h"
 
 #include <string.h>
 #include <stdlib.h>
 
-static void meta_ui_accelerator_parse(const char* accel, guint* keysym, guint* keycode, GdkModifierType* keymask);
+static void meta_stock_icons_init (void);
+static void meta_ui_accelerator_parse (const char      *accel,
+                                       guint           *keysym,
+                                       guint           *keycode,
+                                       GdkModifierType *keymask);
 
-struct _MetaUI {
+struct _MetaUI
+{
 	Display* xdisplay;
 	Screen* xscreen;
 	MetaFrames* frames;
@@ -46,15 +55,16 @@ struct _MetaUI {
 	guint32 button_click_time;
 };
 
-void meta_ui_init(int* argc, char*** argv)
+void
+meta_ui_init (int *argc, char ***argv)
 {
 	if (!gtk_init_check (argc, argv))
-	{
 		meta_fatal ("Unable to open X display %s\n", XDisplayName (NULL));
-	}
+	meta_stock_icons_init ();
 }
 
-Display* meta_ui_get_display(void)
+Display*
+meta_ui_get_display (void)
 {
 	return GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
 }
@@ -885,13 +895,46 @@ meta_ui_accelerator_parse (const char      *accel,
                            guint           *keycode,
                            GdkModifierType *keymask)
 {
+  const char *above_tab;
   if (accel[0] == '0' && accel[1] == 'x')
     {
       *keysym = 0;
       *keycode = (guint) strtoul (accel, NULL, 16);
       *keymask = 0;
+      return;
     }
-  else
+
+  /* The key name 'Above_Tab' is special - it's not an actual keysym name,
+   * but rather refers to the key above the tab key. In order to use
+   * the GDK parsing for modifiers in combination with it, we substitute
+   * it with 'Tab' temporarily before calling gtk_accelerator_parse().
+   */
+#define is_word_character(c) (g_ascii_isalnum(c) || ((c) == '_'))
+#define ABOVE_TAB "Above_Tab"
+#define ABOVE_TAB_LEN 9
+
+  above_tab = strstr (accel, ABOVE_TAB);
+  if (above_tab &&
+      (above_tab == accel || !is_word_character (above_tab[-1])) &&
+      !is_word_character (above_tab[ABOVE_TAB_LEN]))
+    {
+      char *before = g_strndup (accel, above_tab - accel);
+      char *after = g_strdup (above_tab + ABOVE_TAB_LEN);
+      char *replaced = g_strconcat (before, "Tab", after, NULL);
+
+      gtk_accelerator_parse (replaced, NULL, keymask);
+
+      g_free (before);
+      g_free (after);
+      g_free (replaced);
+
+      *keysym = META_KEY_ABOVE_TAB;
+      return;
+    }
+
+#undef is_word_character
+#undef ABOVE_TAB
+#undef ABOVE_TAB_LEN
     gtk_accelerator_parse (accel, keysym, keymask);
 }
 
@@ -1053,40 +1096,78 @@ meta_ui_window_is_widget (MetaUI *ui,
 
 /* stock icon code Copyright (C) 2002 Jorn Baayen <jorn@nl.linux.org> */
 
-typedef struct {
+typedef struct
+{
 	char* stock_id;
 	const guint8* icon_data;
 } MetaStockIcon;
 
-int meta_ui_get_drag_threshold(MetaUI* ui)
+static void
+meta_stock_icons_init (void)
 {
-	int threshold = 8;
-	GtkSettings* settings = gtk_widget_get_settings(GTK_WIDGET(ui->frames));
+  GtkIconFactory *factory;
+  int i;
 
+  MetaStockIcon items[] =
+  {
+    { MARCO_STOCK_DELETE,   stock_delete_data   },
+    { MARCO_STOCK_MINIMIZE, stock_minimize_data },
+    { MARCO_STOCK_MAXIMIZE, stock_maximize_data }
+  };
+
+  factory = gtk_icon_factory_new ();
+  gtk_icon_factory_add_default (factory);
+
+  for (i = 0; i < (gint) G_N_ELEMENTS (items); i++)
+    {
+      GtkIconSet *icon_set;
+      GdkPixbuf *pixbuf;
+
+      pixbuf = gdk_pixbuf_new_from_inline (-1, items[i].icon_data,
+					   FALSE,
+					   NULL);
+
+      icon_set = gtk_icon_set_new_from_pixbuf (pixbuf);
+      gtk_icon_factory_add (factory, items[i].stock_id, icon_set);
+      gtk_icon_set_unref (icon_set);
+      
+      g_object_unref (G_OBJECT (pixbuf));
+    }
+
+  g_object_unref (G_OBJECT (factory));
+}
+
+int
+meta_ui_get_drag_threshold (MetaUI *ui)
+{
+  GtkSettings *settings;
+  int threshold;
+
+  settings = gtk_widget_get_settings (GTK_WIDGET (ui->frames));
+
+  threshold = 8;
 	g_object_get(G_OBJECT(settings), "gtk-dnd-drag-threshold", &threshold, NULL);
 
 	return threshold;
 }
 
-MetaUIDirection meta_ui_get_direction(void)
+MetaUIDirection
+meta_ui_get_direction (void)
 {
 	if (gtk_widget_get_default_direction() == GTK_TEXT_DIR_RTL)
-	{
 		return META_UI_DIRECTION_RTL;
-	}
 
 	return META_UI_DIRECTION_LTR;
 }
 
-GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
+GdkPixbuf *
+meta_ui_get_pixbuf_from_pixmap (Pixmap   pmap)
 {
 	GdkPixmap* gpmap;
 	GdkScreen* screen;
 	GdkPixbuf* pixbuf;
 	GdkColormap* cmap;
-	int width;
-	int height;
-	int depth;
+    int width, height, depth;
 
 	gpmap = gdk_pixmap_foreign_new(pmap);
 	screen = gdk_drawable_get_screen(gpmap);
@@ -1101,15 +1182,12 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 	depth = gdk_drawable_get_depth(GDK_DRAWABLE(gpmap));
 
 	if (depth <= 24)
-	{
 		cmap = gdk_screen_get_system_colormap(screen);
-	}
 	else
-	{
 		cmap = gdk_screen_get_rgba_colormap(screen);
-	}
 
-	pixbuf = gdk_pixbuf_get_from_drawable(NULL, gpmap, cmap, 0, 0, 0, 0, width, height);
+  pixbuf = gdk_pixbuf_get_from_drawable (NULL, gpmap, cmap, 0, 0, 0, 0,
+                                         width, height);
 
 	g_object_unref(gpmap);
 

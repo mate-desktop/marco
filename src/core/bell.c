@@ -52,7 +52,9 @@
 #include "bell.h"
 #include "screen-private.h"
 #include "prefs.h"
+#ifdef HAVE_CANBERRA
 #include <canberra-gtk.h>
+#endif
 
 /**
  * Flashes one entire screen.  This is done by making a window the size of the
@@ -284,8 +286,10 @@ meta_bell_notify (MetaDisplay *display,
 
   if (meta_prefs_bell_is_audible ())
     {
-      ca_proplist *p;
       XkbBellNotifyEvent *xkb_bell_event = (XkbBellNotifyEvent*) xkb_ev;
+
+#ifdef HAVE_CANBERRA
+      ca_proplist *p;
       MetaWindow *window;
       int res;
 
@@ -312,6 +316,9 @@ meta_bell_notify (MetaDisplay *display,
       ca_proplist_destroy (p);
 
       if (res != CA_SUCCESS && res != CA_ERROR_DISABLED)
+#else
+      if (1)
+#endif /* HAVE_CANBERRA */
         {
           /* ...and in case that failed we use the classic X11 bell. */
           XkbForceDeviceBell (display->xdisplay,

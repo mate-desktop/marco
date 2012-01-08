@@ -128,7 +128,7 @@ case "$with_gtk" in
        ;;
 esac
 
-MARCO_PC_MODULES="gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION pango >= 1.2.0 $CANBERRA_GTK"
+MARCO_PC_MODULES="gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION pango >= 1.2.0"
 AC_SUBST(GTK_API_VERSION)
 
 AC_ARG_ENABLE(mateconf,
@@ -139,6 +139,16 @@ AC_ARG_ENABLE(mateconf,
 if test x$enable_mateconf = xyes; then
     AC_DEFINE(HAVE_MATECONF,1,[Build with mateconf support])
     MARCO_PC_MODULES="$MARCO_PC_MODULES mateconf-2.0 >= 1.1.0"
+fi
+
+AC_ARG_ENABLE(canberra,
+  AC_HELP_STRING([--disable-canberra],
+                 [disable use of canberra for event sounds, for embedded non-MATE builds]),,
+  enable_canberra=yes)
+
+if test x$enable_canberra = xyes; then
+    AC_DEFINE(HAVE_CANBERRA,1,[Build with canberra support])
+    MARCO_PC_MODULES="$MARCO_PC_MODULES $CANBERRA_GTK"
 fi
 
 AC_ARG_ENABLE(verbose-mode,
@@ -569,6 +579,7 @@ marco-$VERSION (using gtk+-${GTK_API_VERSION}):
 	compiler:                 ${CC}
 
 	MateConf:                 ${enable_mateconf}
+	Canberra:                 ${enable_canberra}
 	XFree86 Xinerama:         ${use_xfree_xinerama}
 	Solaris Xinerama:         ${use_solaris_xinerama}
 	Startup notification:     ${have_startup_notification}

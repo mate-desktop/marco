@@ -215,7 +215,7 @@ async_get_property_handler (Display *dpy,
   AgPerDisplayData *dd;
   int bytes_read;
 
-  dd = (AgPerDisplayData*) data;
+  dd = (void*) data;
   
 #if 0
   printf ("%s: seeing request seq %ld buflen %d\n", __FUNCTION__,
