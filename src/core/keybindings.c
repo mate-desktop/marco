@@ -1390,9 +1390,11 @@ meta_display_process_key_event (MetaDisplay *display,
               break;
  
             case META_GRAB_OP_KEYBOARD_TABBING_NORMAL:
+            case META_GRAB_OP_KEYBOARD_TABBING_NORMAL_ALL_WORKSPACES:
             case META_GRAB_OP_KEYBOARD_TABBING_DOCK:
             case META_GRAB_OP_KEYBOARD_TABBING_GROUP:
             case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL:
+            case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL_ALL_WORKSPACES:
             case META_GRAB_OP_KEYBOARD_ESCAPING_DOCK:
             case META_GRAB_OP_KEYBOARD_ESCAPING_GROUP:
               meta_topic (META_DEBUG_KEYBINDINGS,
@@ -2079,6 +2081,7 @@ process_tab_grab (MetaDisplay *display,
                       target_window->desc);
           display->mouse_mode = FALSE;
           meta_window_activate (target_window, event->xkey.time);
+          meta_workspace_activate (target_window->workspace, event->xkey.time);
 
           meta_topic (META_DEBUG_KEYBINDINGS,
                       "Ending grab early so we can focus the target window\n");
@@ -2120,6 +2123,7 @@ process_tab_grab (MetaDisplay *display,
        switch (display->grab_op)
         {
         case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL:
+        case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL_ALL_WORKSPACES:
         case META_GRAB_OP_KEYBOARD_ESCAPING_DOCK:
          /* carry on */
           break;
@@ -2137,6 +2141,7 @@ process_tab_grab (MetaDisplay *display,
       switch (display->grab_op)
         {
         case META_GRAB_OP_KEYBOARD_TABBING_NORMAL:
+        case META_GRAB_OP_KEYBOARD_TABBING_NORMAL_ALL_WORKSPACES:
         case META_GRAB_OP_KEYBOARD_TABBING_DOCK:
           /* carry on */
           break;
@@ -2860,6 +2865,8 @@ tab_op_from_tab_type (MetaTabList type)
     {
     case META_TAB_LIST_NORMAL:
       return META_GRAB_OP_KEYBOARD_TABBING_NORMAL;
+    case META_TAB_LIST_NORMAL_ALL_WORKSPACES:
+      return META_GRAB_OP_KEYBOARD_TABBING_NORMAL_ALL_WORKSPACES;
     case META_TAB_LIST_DOCKS:
       return META_GRAB_OP_KEYBOARD_TABBING_DOCK;
     case META_TAB_LIST_GROUP:
@@ -2878,6 +2885,8 @@ cycle_op_from_tab_type (MetaTabList type)
     {
     case META_TAB_LIST_NORMAL:
       return META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL;
+    case META_TAB_LIST_NORMAL_ALL_WORKSPACES:
+      return META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL_ALL_WORKSPACES;
     case META_TAB_LIST_DOCKS:
       return META_GRAB_OP_KEYBOARD_ESCAPING_DOCK;
     case META_TAB_LIST_GROUP:
@@ -2938,6 +2947,7 @@ do_choose_window (MetaDisplay    *display,
                       initial_selection->desc);
           display->mouse_mode = FALSE;
           meta_window_activate (initial_selection, event->xkey.time);
+          meta_workspace_activate (initial_selection->workspace, event->xkey.time);
         }
       else if (meta_display_begin_grab_op (display,
                                            screen,
@@ -2967,6 +2977,7 @@ do_choose_window (MetaDisplay    *display,
               meta_display_end_grab_op (display, event->xkey.time);
               display->mouse_mode = FALSE;
               meta_window_activate (initial_selection, event->xkey.time);
+              meta_workspace_activate (initial_selection->workspace, event->xkey.time);
             }
           else
             {
