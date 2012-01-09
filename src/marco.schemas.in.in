@@ -307,6 +307,29 @@
     </schema>
 
     <schema>
+      <key>/schemas/apps/marco/general/wrap_style</key>
+      <applyto>/apps/marco/general/wrap_style</applyto>
+      <owner>marco</owner>
+      <type>string</type>
+      <default>no wrap</default>
+      <locale name="C">
+         <short>Workspace wrap style</short>
+         <long>
+         The wrap style is used to determine how to switch from one
+         workspace to another at the border of the workspace switcher.
+         When set to "no wrap", nothing will happen if you try to
+         switch to a workspace past the border of the workspace switcher.
+         If set to "classic", the old marco behavior is used:
+         the end of one row leads to the beginning of the next and
+         the end of a column leads to the beginning of the next.
+         If set to "toroidal", workspaces are connected like a doughnut:
+         the end of each row leads to its own beginning and the
+         end of each column leads to its own beginning.
+         </long>
+      </locale>
+    </schema>
+
+    <schema>
       <key>/schemas/apps/marco/general/visual_bell</key>
       <applyto>/apps/marco/general/visual_bell</applyto>
       <owner>marco</owner>
