@@ -189,7 +189,7 @@ static MateConfEnumStringPair symtab_focus_new_windows[] =
     { 0, NULL },
   };
 
-static MateConfEnumStringPair symtab_wrap_stype[] =
+static MateConfEnumStringPair symtab_wrap_style[] =
   {
     { META_WRAP_NONE,     "no wrap" },
     { META_WRAP_CLASSIC,  "classic" },
@@ -338,7 +338,7 @@ static MetaEnumPreference preferences_enum[] =
     },
     { "/apps/marco/general/wrap_style",
       META_PREF_WRAP_STYLE,
-      symtab_wrap_stype,
+      symtab_wrap_style,
       &wrap_style,
     },
     { "/apps/marco/general/visual_bell_type",
