@@ -809,21 +809,23 @@ MetaWorkspace*
 meta_workspace_get_neighbor (MetaWorkspace      *workspace,
                              MetaMotionDirection direction)
 {
-  MetaWorkspaceLayout layout;  
+  MetaWorkspaceLayout layout;
   int i, current_space, num_workspaces;
   gboolean ltr;
+  MetaWrapStyle wrap;
 
   current_space = meta_workspace_index (workspace);
   num_workspaces = meta_screen_get_n_workspaces (workspace->screen);
   meta_screen_calc_workspace_layout (workspace->screen, num_workspaces,
                                      current_space, &layout);
+  wrap = meta_prefs_get_wrap_style();
 
   meta_verbose ("Getting neighbor of %d in direction %s\n",
                 current_space, meta_motion_direction_to_string (direction));
-  
+
   ltr = meta_ui_get_direction() == META_UI_DIRECTION_LTR;
 
-  switch (direction) 
+  switch (direction)
     {
     case META_MOTION_LEFT:
       layout.current_col -= ltr ? 1 : -1;
@@ -839,14 +841,81 @@ meta_workspace_get_neighbor (MetaWorkspace      *workspace,
       break;
     }
 
+  /* LEFT */
   if (layout.current_col < 0)
-    layout.current_col = 0;
+    switch (wrap)
+      {
+      case META_WRAP_NONE:
+        layout.current_col = 0;
+        break;
+      case META_WRAP_TOROIDAL:
+        layout.current_row = layout.current_row > 0 ? layout.current_row - 1 : layout.rows - 1;
+        /* fall through */
+      case META_WRAP_CLASSIC:
+        layout.current_col = layout.cols - 1;
+      }
+  /* RIGHT */
   if (layout.current_col >= layout.cols)
-    layout.current_col = layout.cols - 1;
+    switch (wrap)
+      {
+      case META_WRAP_NONE:
+        layout.current_col = layout.cols - 1;
+        break;
+      case META_WRAP_TOROIDAL:
+        layout.current_row = layout.current_row < layout.rows - 1 ? layout.current_row + 1 : 0;
+        /* fall through */
+      case META_WRAP_CLASSIC:
+        layout.current_col = 0;
+      }
+  /* UP */
   if (layout.current_row < 0)
-    layout.current_row = 0;
+    switch (wrap)
+      {
+      case META_WRAP_NONE:
+        layout.current_row = 0;
+        break;
+      case META_WRAP_TOROIDAL:
+        layout.current_col = layout.current_col > 0 ? layout.current_col - 1 : layout.cols - 1;
+        /* fall through */
+      case META_WRAP_CLASSIC:
+        layout.current_row = layout.rows - 1;
+      }
+  /* DOWN */
   if (layout.current_row >= layout.rows)
-    layout.current_row = layout.rows - 1;
+    switch (wrap)
+      {
+      case META_WRAP_NONE:
+        layout.current_row = layout.rows - 1;
+        break;
+      case META_WRAP_TOROIDAL:
+        layout.current_col = layout.current_col < layout.cols - 1 ? layout.current_col + 1 : 0;
+        /* fall through */
+      case META_WRAP_CLASSIC:
+        layout.current_row = 0;
+      }
+
+  /* If we have an uneven arrangement of workspaces, (layout.cols - n, layout.rows - 1) may be an invalid workspace
+     e.g. we have 7 workspaces on a 3x3 pane */
+  if (wrap != META_WRAP_NONE && (layout.current_row * layout.cols + layout.current_col >= num_workspaces))
+    switch (direction)
+      {
+      case META_MOTION_LEFT:
+        layout.current_col = num_workspaces - (layout.current_row * layout.cols + 1);
+        break;
+      case META_MOTION_RIGHT:
+       layout.current_col = 0;
+       if (wrap == META_WRAP_TOROIDAL)
+         layout.current_row = 0;
+       break;
+      case META_MOTION_UP:
+        layout.current_row -= 1;
+        break;
+      case META_MOTION_DOWN:
+        layout.current_row = 0;
+        if (wrap == META_WRAP_TOROIDAL)
+	  layout.current_col = layout.current_col < layout.cols - 1 ? layout.current_col + 1 : 0;
+        break;
+      }
 
   i = layout.grid[layout.current_row * layout.cols + layout.current_col];
 
@@ -856,12 +925,12 @@ meta_workspace_get_neighbor (MetaWorkspace      *workspace,
   if (i >= num_workspaces)
     meta_bug ("calc_workspace_layout left an invalid (too-high) workspace number %d in the grid\n",
               i);
-    
+
   meta_verbose ("Neighbor workspace is %d at row %d col %d\n",
                 i, layout.current_row, layout.current_col);
 
   meta_screen_free_workspace_layout (&layout);
-  
+
   return meta_screen_get_workspace_by_index (workspace->screen, i);
 }
 
