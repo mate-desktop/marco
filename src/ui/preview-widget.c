@@ -40,30 +40,7 @@ static void     meta_preview_finalize      (GObject          *object);
 
 static GtkWidgetClass *parent_class;
 
-GType
-meta_preview_get_type (void)
-{
-  static GType preview_type = 0;
-
-  if (!preview_type)
-    {
-      static const GtkTypeInfo preview_info =
-      {
-	"MetaPreview",
-	sizeof (MetaPreview),
-	sizeof (MetaPreviewClass),
-	(GtkClassInitFunc) meta_preview_class_init,
-	(GtkObjectInitFunc) meta_preview_init,
-	/* reserved_1 */ NULL,
-        /* reserved_2 */ NULL,
-        (GtkClassInitFunc) NULL,
-      };
-
-      preview_type = gtk_type_unique (GTK_TYPE_BIN, &preview_info);
-    }
-
-  return preview_type;
-}
+G_DEFINE_TYPE (MetaPreview, meta_preview, GTK_TYPE_BIN);
 
 static void
 meta_preview_class_init (MetaPreviewClass *class)
@@ -125,7 +102,7 @@ meta_preview_new (void)
 {
   MetaPreview *preview;
   
-  preview = gtk_type_new (META_TYPE_PREVIEW);
+  preview = g_object_new (META_TYPE_PREVIEW, NULL);
   
   return GTK_WIDGET (preview);
 }

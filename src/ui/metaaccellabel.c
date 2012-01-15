@@ -52,31 +52,7 @@ static int   meta_accel_label_get_accel_width (MetaAccelLabel *accel_label);
 
 static GtkLabelClass *parent_class = NULL;
 
-
-GType
-meta_accel_label_get_type (void)
-{
-  static GType accel_label_type = 0;
-
-  if (!accel_label_type)
-    {
-      static const GtkTypeInfo accel_label_info =
-      {
-	"MetaAccelLabel",
-	sizeof (MetaAccelLabel),
-	sizeof (MetaAccelLabelClass),
-	(GtkClassInitFunc) meta_accel_label_class_init,
-	(GtkObjectInitFunc) meta_accel_label_init,
-        /* reserved_1 */ NULL,
-	/* reserved_2 */ NULL,
-	(GtkClassInitFunc) NULL,
-      };
-
-      accel_label_type = gtk_type_unique (GTK_TYPE_LABEL, &accel_label_info);
-    }
-
-  return accel_label_type;
-}
+G_DEFINE_TYPE (MetaAccelLabel, meta_accel_label, GTK_TYPE_LABEL);
 
 static void
 meta_accel_label_class_init (MetaAccelLabelClass *class)
@@ -262,7 +238,7 @@ meta_accel_label_expose_event (GtkWidget      *widget,
   GtkMisc *misc = GTK_MISC (accel_label);
   PangoLayout *layout;
 
-  if (GTK_WIDGET_DRAWABLE (accel_label))
+  if (gtk_widget_is_drawable (GTK_WIDGET (accel_label)))
     {
       int ac_width;
 
@@ -307,7 +283,7 @@ meta_accel_label_expose_event (GtkWidget      *widget,
 
           gtk_paint_layout (widget->style,
                             widget->window,
-                            GTK_WIDGET_STATE (widget),
+                            gtk_widget_get_state (widget),
 			    FALSE,
                             &event->area,
                             widget,

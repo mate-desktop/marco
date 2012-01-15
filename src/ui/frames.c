@@ -108,30 +108,7 @@ static void invalidate_whole_window (MetaFrames *frames,
 
 static GtkWidgetClass *parent_class = NULL;
 
-GType
-meta_frames_get_type (void)
-{
-  static GType frames_type = 0;
-
-  if (!frames_type)
-    {
-      static const GtkTypeInfo frames_info =
-      {
-        "MetaFrames",
-        sizeof (MetaFrames),
-        sizeof (MetaFramesClass),
-        (GtkClassInitFunc) meta_frames_class_init,
-        (GtkObjectInitFunc) meta_frames_init,
-        /* reserved_1 */ NULL,
-        /* reserved_2 */ NULL,
-        (GtkClassInitFunc) NULL,
-      };
-
-      frames_type = gtk_type_unique (GTK_TYPE_WINDOW, &frames_info);
-    }
-
-  return frames_type;
-}
+G_DEFINE_TYPE (MetaFrames, meta_frames, GTK_TYPE_WINDOW);
 
 static void
 meta_frames_class_init (MetaFramesClass *class)
@@ -460,7 +437,7 @@ meta_frames_ensure_layout (MetaFrames  *frames,
   MetaFrameType type;
   MetaFrameStyle *style;
 
-  g_return_if_fail (GTK_WIDGET_REALIZED (frames));
+  g_return_if_fail (gtk_widget_get_realized (GTK_WIDGET (frames)));
 
   widget = GTK_WIDGET (frames);
 

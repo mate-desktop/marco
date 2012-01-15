@@ -35,39 +35,14 @@ static void meta_area_finalize     (GObject        *object);
 
 static GtkMiscClass *parent_class;
 
-GType
-meta_area_get_type (void)
-{
-  static GType area_type = 0;
-
-  if (!area_type)
-    {
-      static const GtkTypeInfo area_info =
-      {
-	"MetaArea",
-	sizeof (MetaArea),
-	sizeof (MetaAreaClass),
-	(GtkClassInitFunc) meta_area_class_init,
-	(GtkObjectInitFunc) meta_area_init,
-	/* reserved_1 */ NULL,
-        /* reserved_2 */ NULL,
-        (GtkClassInitFunc) NULL,
-      };
-
-      area_type = gtk_type_unique (GTK_TYPE_MISC, &area_info);
-    }
-
-  return area_type;
-}
+G_DEFINE_TYPE (MetaArea, meta_area, GTK_TYPE_MISC);
 
 static void
 meta_area_class_init (MetaAreaClass *class)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (class);
-  GtkObjectClass *object_class;
   GtkWidgetClass *widget_class;
 
-  object_class = (GtkObjectClass*) class;
   widget_class = (GtkWidgetClass*) class;
   parent_class = g_type_class_peek (gtk_misc_get_type ());
 
@@ -80,7 +55,7 @@ meta_area_class_init (MetaAreaClass *class)
 static void
 meta_area_init (MetaArea *area)
 {
-  GTK_WIDGET_SET_FLAGS (area, GTK_NO_WINDOW);
+  gtk_widget_set_has_window (GTK_WIDGET (area), FALSE);
 }
 
 GtkWidget*
@@ -88,7 +63,7 @@ meta_area_new (void)
 {
   MetaArea *area;
   
-  area = gtk_type_new (META_TYPE_AREA);
+  area = g_object_new (META_TYPE_AREA, NULL);
   
   return GTK_WIDGET (area);
 }
@@ -118,7 +93,7 @@ meta_area_expose (GtkWidget      *widget,
   g_return_val_if_fail (META_IS_AREA (widget), FALSE);
   g_return_val_if_fail (event != NULL, FALSE);
 
-  if (GTK_WIDGET_DRAWABLE (widget))
+  if (gtk_widget_is_drawable (widget))
     {
       area = META_AREA (widget);
       misc = GTK_MISC (widget);

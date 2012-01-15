@@ -123,7 +123,7 @@ update_size_window (MetaResizePopup *popup)
   x = popup->rect.x + (popup->rect.width - width) / 2;
   y = popup->rect.y + (popup->rect.height - height) / 2;
   
-  if (GTK_WIDGET_REALIZED (popup->size_window))
+  if (gtk_widget_get_realized (popup->size_window))
     {
       /* using move_resize to avoid jumpiness */
       gdk_window_move_resize (popup->size_window->window,
@@ -145,7 +145,7 @@ sync_showing (MetaResizePopup *popup)
       if (popup->size_window)
         gtk_widget_show (popup->size_window);
       
-      if (popup->size_window && GTK_WIDGET_REALIZED (popup->size_window))
+      if (popup->size_window && gtk_widget_get_realized (popup->size_window))
         gdk_window_raise (popup->size_window->window);
     }
   else

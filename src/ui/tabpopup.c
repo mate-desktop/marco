@@ -442,7 +442,7 @@ meta_ui_tab_popup_set_showing (MetaTabPopup *popup,
     }
   else
     {
-      if (GTK_WIDGET_VISIBLE (popup->window))
+      if (gtk_widget_get_visible (popup->window))
         {
           meta_verbose ("Hiding tab popup window\n");
           gtk_widget_hide (popup->window);
@@ -508,7 +508,7 @@ display_entry (MetaTabPopup *popup,
        * we manually set the window as mapped and then manually map it
        * with gdk functions.
        */
-      GTK_WIDGET_SET_FLAGS (popup->outline_window, GTK_MAPPED);
+      gtk_widget_set_mapped (popup->outline_window, TRUE);
       gdk_window_show_unraised (popup->outline_window->window);
     }
 
