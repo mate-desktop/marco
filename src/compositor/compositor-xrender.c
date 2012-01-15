@@ -1131,8 +1131,7 @@ paint_windows (MetaScreen   *screen,
   MetaCompScreen *info = meta_screen_get_compositor_data (screen);
   Display *xdisplay = meta_display_get_xdisplay (display);
   GList *index, *last;
-  int screen_width, screen_height, screen_number;
-  Window xroot;
+  int screen_width, screen_height;
   MetaCompWindow *cw;
   XserverRegion paint_region, desktop_region;
 
@@ -1142,8 +1141,6 @@ paint_windows (MetaScreen   *screen,
     }
 
   meta_screen_get_size (screen, &screen_width, &screen_height);
-  screen_number = meta_screen_get_screen_number (screen);
-  xroot = meta_screen_get_xroot (screen);
 
   if (region == None)
     {
