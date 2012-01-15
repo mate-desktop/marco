@@ -58,7 +58,7 @@
 
 #include <stdlib.h>
 #include <sys/types.h>
-#include <wait.h>
+#include <sys/wait.h>
 #include <stdio.h>
 #include <string.h>
 #include <signal.h>
@@ -363,11 +363,10 @@ meta_finalize (void)
 {
   MetaDisplay *display = meta_get_display();
 
-  meta_session_shutdown ();
-
   if (display)
     meta_display_close (display,
                         CurrentTime); /* I doubt correct timestamps matter here */
+  meta_session_shutdown ();
 }
 
 static int sigterm_pipe_fds[2] = { -1, -1 };
@@ -377,9 +376,8 @@ sigterm_handler (int signum)
 {
   if (sigterm_pipe_fds[1] >= 0)
     {
-      int dummy;
-
-      dummy = write (sigterm_pipe_fds[1], "", 1);
+      if ( write (sigterm_pipe_fds[1], "", 1) == -1 )
+        g_printerr ("marco: write to sigterm_pipe failed.\n");
       close (sigterm_pipe_fds[1]);
       sigterm_pipe_fds[1] = -1;
     }

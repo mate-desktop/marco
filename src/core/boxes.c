@@ -311,7 +311,6 @@ meta_rectangle_resize_with_gravity (const MetaRectangle *old_rect,
    */
 
   /* First, the x direction */
-  int adjust = 0;
   switch (gravity)
     {
     case NorthWestGravity:
@@ -344,7 +343,6 @@ meta_rectangle_resize_with_gravity (const MetaRectangle *old_rect,
   rect->width = new_width;
 
   /* Next, the y direction */
-  adjust = 0;
   switch (gravity)
     {
     case NorthWestGravity:
@@ -907,6 +905,8 @@ meta_rectangle_clip_to_region (const GList         *spanning_rects,
   const MetaRectangle *best_rect = NULL;
   int                  best_overlap = 0;
 
+  if (!rect)
+    return;
   /* First, find best rectangle from spanning_rects to which we will clip
    * rect into.
    */
@@ -933,7 +933,8 @@ meta_rectangle_clip_to_region (const GList         *spanning_rects,
         continue;
 
       /* Determine maximal overlap amount */
-      meta_rectangle_intersect (rect, compare_rect, &overlap);
+      if (!meta_rectangle_intersect (rect, compare_rect, &overlap))
+        continue;
       maximal_overlap_amount_for_compare = meta_rectangle_area (&overlap);
 
       /* See if this is the best rect so far */

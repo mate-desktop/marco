@@ -108,29 +108,25 @@ static void invalidate_whole_window (MetaFrames *frames,
 
 static GtkWidgetClass *parent_class = NULL;
 
-GType
-meta_frames_get_type (void)
+G_DEFINE_TYPE (MetaFrames, meta_frames, GTK_TYPE_WINDOW);
+
+
+static GObject *
+meta_frames_constructor (GType                  gtype,
+                         guint                  n_properties,
+                         GObjectConstructParam *properties)
 {
-  static GType frames_type = 0;
+  GObject *object;
+  GObjectClass *gobject_class;
 
-  if (!frames_type)
-    {
-      static const GtkTypeInfo frames_info =
-      {
-        "MetaFrames",
-        sizeof (MetaFrames),
-        sizeof (MetaFramesClass),
-        (GtkClassInitFunc) meta_frames_class_init,
-        (GtkObjectInitFunc) meta_frames_init,
-        /* reserved_1 */ NULL,
-        /* reserved_2 */ NULL,
-        (GtkClassInitFunc) NULL,
-      };
+  gobject_class = G_OBJECT_CLASS (parent_class);
+  object = gobject_class->constructor (gtype, n_properties, properties);
 
-      frames_type = gtk_type_unique (GTK_TYPE_WINDOW, &frames_info);
-    }
+  g_object_set (object,
+                "type", GTK_WINDOW_POPUP,
+                NULL);
 
-  return frames_type;
+  return object;
 }
 
 static void
@@ -146,6 +142,7 @@ meta_frames_class_init (MetaFramesClass *class)
 
   parent_class = g_type_class_peek_parent (class);
 
+  gobject_class->constructor = meta_frames_constructor;
   gobject_class->finalize = meta_frames_finalize;
   object_class->destroy = meta_frames_destroy;
 
@@ -203,8 +200,6 @@ prefs_changed_callback (MetaPreference pref,
 static void
 meta_frames_init (MetaFrames *frames)
 {
-  GTK_WINDOW (frames)->type = GTK_WINDOW_POPUP;
-
   frames->text_heights = g_hash_table_new (NULL, NULL);
 
   frames->frames = g_hash_table_new (unsigned_long_hash, unsigned_long_equal);
@@ -460,7 +455,7 @@ meta_frames_ensure_layout (MetaFrames  *frames,
   MetaFrameType type;
   MetaFrameStyle *style;
 
-  g_return_if_fail (GTK_WIDGET_REALIZED (frames));
+  g_return_if_fail (gtk_widget_get_realized (GTK_WIDGET (frames)));
 
   widget = GTK_WIDGET (frames);
 
@@ -593,8 +588,9 @@ meta_frames_attach_style (MetaFrames  *frames,
     gtk_style_detach (frame->style);
 
   /* Weirdly, gtk_style_attach() steals a reference count from the style passed in */
-  g_object_ref (GTK_WIDGET (frames)->style);
-  frame->style = gtk_style_attach (GTK_WIDGET (frames)->style, frame->window);
+  g_object_ref (gtk_widget_get_style (GTK_WIDGET (frames)));
+  frame->style = gtk_style_attach (gtk_widget_get_style (GTK_WIDGET (frames)),
+                                   frame->window);
 }
 
 void
@@ -1443,10 +1439,8 @@ meta_frames_button_press_event (GtkWidget      *widget,
       META_GRAB_OP_NONE)
     return FALSE; /* already up to something */
 
-  if (event->button == 1 &&
-      (control == META_FRAME_CONTROL_MAXIMIZE ||
-       control == META_FRAME_CONTROL_UNMAXIMIZE ||
-       control == META_FRAME_CONTROL_MINIMIZE ||
+  if ((event->button == 1 &&
+      (control == META_FRAME_CONTROL_MINIMIZE ||
        control == META_FRAME_CONTROL_DELETE ||
        control == META_FRAME_CONTROL_SHADE ||
        control == META_FRAME_CONTROL_UNSHADE ||
@@ -1454,7 +1448,9 @@ meta_frames_button_press_event (GtkWidget      *widget,
        control == META_FRAME_CONTROL_UNABOVE ||
        control == META_FRAME_CONTROL_STICK ||
        control == META_FRAME_CONTROL_UNSTICK ||
-       control == META_FRAME_CONTROL_MENU))
+       control == META_FRAME_CONTROL_MENU)) ||
+      (control == META_FRAME_CONTROL_MAXIMIZE ||
+       control == META_FRAME_CONTROL_UNMAXIMIZE))
     {
       MetaGrabOp op = META_GRAB_OP_NONE;
 
@@ -1464,9 +1460,12 @@ meta_frames_button_press_event (GtkWidget      *widget,
           op = META_GRAB_OP_CLICKING_MINIMIZE;
           break;
         case META_FRAME_CONTROL_MAXIMIZE:
-          op = META_GRAB_OP_CLICKING_MAXIMIZE;
+          op = META_GRAB_OP_CLICKING_MAXIMIZE + event->button - 1;
+          op = op > META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL ? META_GRAB_OP_CLICKING_MAXIMIZE : op;
           break;
         case META_FRAME_CONTROL_UNMAXIMIZE:
+          op = META_GRAB_OP_CLICKING_UNMAXIMIZE + event->button - 1;
+          op = op > META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL ? META_GRAB_OP_CLICKING_UNMAXIMIZE : op;
           op = META_GRAB_OP_CLICKING_UNMAXIMIZE;
           break;
         case META_FRAME_CONTROL_DELETE:
@@ -1710,20 +1709,36 @@ meta_frames_button_release_event    (GtkWidget           *widget,
           break;
 
         case META_GRAB_OP_CLICKING_MAXIMIZE:
+        case META_GRAB_OP_CLICKING_MAXIMIZE_VERTICAL:
+        case META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL:
           if (control == META_FRAME_CONTROL_MAXIMIZE)
           {
             /* Focus the window on the maximize */
             meta_core_user_focus (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
                             frame->xwindow,
                             event->time);
-            meta_core_maximize (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+
+            if (op == META_GRAB_OP_CLICKING_MAXIMIZE)
+               meta_core_maximize (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+            if (op == META_GRAB_OP_CLICKING_MAXIMIZE_VERTICAL)
+              meta_core_toggle_maximize_vertically (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+            if (op == META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL)
+              meta_core_toggle_maximize_horizontally (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
           }
           meta_core_end_grab_op (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), event->time);
           break;
 
         case META_GRAB_OP_CLICKING_UNMAXIMIZE:
-          if (control == META_FRAME_CONTROL_UNMAXIMIZE)
-            meta_core_unmaximize (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+        case META_GRAB_OP_CLICKING_UNMAXIMIZE_VERTICAL:
+        case META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL:
+          if (control == META_FRAME_CONTROL_UNMAXIMIZE) {
+            if (op == META_GRAB_OP_CLICKING_UNMAXIMIZE)
+              meta_core_unmaximize (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+            if (op == META_GRAB_OP_CLICKING_UNMAXIMIZE_VERTICAL)
+              meta_core_toggle_maximize_vertically (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+            if (op == META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL)
+              meta_core_toggle_maximize_horizontally (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+          }
 
           meta_core_end_grab_op (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), event->time);
           break;
@@ -1930,7 +1945,11 @@ meta_frames_motion_notify_event     (GtkWidget           *widget,
     case META_GRAB_OP_CLICKING_DELETE:
     case META_GRAB_OP_CLICKING_MINIMIZE:
     case META_GRAB_OP_CLICKING_MAXIMIZE:
+    case META_GRAB_OP_CLICKING_MAXIMIZE_VERTICAL:
+    case META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL:
     case META_GRAB_OP_CLICKING_UNMAXIMIZE:
+    case META_GRAB_OP_CLICKING_UNMAXIMIZE_VERTICAL:
+    case META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL:
     case META_GRAB_OP_CLICKING_SHADE:
     case META_GRAB_OP_CLICKING_UNSHADE:
     case META_GRAB_OP_CLICKING_ABOVE:
@@ -1956,7 +1975,11 @@ meta_frames_motion_notify_event     (GtkWidget           *widget,
                ((control == META_FRAME_CONTROL_MAXIMIZE ||
                  control == META_FRAME_CONTROL_UNMAXIMIZE) &&
                 (grab_op == META_GRAB_OP_CLICKING_MAXIMIZE ||
-                 grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE)) ||
+                 grab_op == META_GRAB_OP_CLICKING_MAXIMIZE_VERTICAL ||
+                 grab_op == META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL ||
+                 grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE ||
+                 grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE_VERTICAL ||
+                 grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL)) ||
                (control == META_FRAME_CONTROL_SHADE &&
                 grab_op == META_GRAB_OP_CLICKING_SHADE) ||
                (control == META_FRAME_CONTROL_UNSHADE &&
@@ -2387,13 +2410,15 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
         button_states[META_BUTTON_TYPE_MINIMIZE] = META_BUTTON_STATE_PRELIGHT;
       break;
     case META_FRAME_CONTROL_MAXIMIZE:
-      if (grab_op == META_GRAB_OP_CLICKING_MAXIMIZE)
+      if (grab_op == META_GRAB_OP_CLICKING_MAXIMIZE || grab_op == META_GRAB_OP_CLICKING_MAXIMIZE_VERTICAL ||
+	  grab_op == META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL)
         button_states[META_BUTTON_TYPE_MAXIMIZE] = META_BUTTON_STATE_PRESSED;
       else
         button_states[META_BUTTON_TYPE_MAXIMIZE] = META_BUTTON_STATE_PRELIGHT;
       break;
     case META_FRAME_CONTROL_UNMAXIMIZE:
-      if (grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE)
+      if (grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE || grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE_VERTICAL ||
+          grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL)
         button_states[META_BUTTON_TYPE_MAXIMIZE] = META_BUTTON_STATE_PRESSED;
       else
         button_states[META_BUTTON_TYPE_MAXIMIZE] = META_BUTTON_STATE_PRELIGHT;
@@ -2607,7 +2632,7 @@ meta_frames_set_window_background (MetaFrames   *frames,
       /* Set A in ARGB to window_background_alpha, if we have ARGB */
 
       visual = gtk_widget_get_visual (GTK_WIDGET (frames));
-      if (visual->depth == 32) /* we have ARGB */
+      if (gdk_visual_get_depth (visual) == 32) /* we have ARGB */
         {
           color.pixel = (color.pixel & 0xffffff) &
             style->window_background_alpha << 24;

@@ -52,7 +52,9 @@
 #include "bell.h"
 #include "screen-private.h"
 #include "prefs.h"
+#ifdef HAVE_CANBERRA
 #include <canberra-gtk.h>
+#endif
 
 /**
  * Flashes one entire screen.  This is done by making a window the size of the
@@ -284,8 +286,10 @@ meta_bell_notify (MetaDisplay *display,
 
   if (meta_prefs_bell_is_audible ())
     {
-      ca_proplist *p;
       XkbBellNotifyEvent *xkb_bell_event = (XkbBellNotifyEvent*) xkb_ev;
+
+#ifdef HAVE_CANBERRA
+      ca_proplist *p;
       MetaWindow *window;
       int res;
 
@@ -300,10 +304,46 @@ meta_bell_notify (MetaDisplay *display,
 
       if (window)
         {
+          int x=-1, y=-1, width=-1, height=-1, screen_width=-1, screen_height=-1;
+          MetaScreen *screen;
+
+          screen = meta_window_get_screen (window);
+
           ca_proplist_sets (p, CA_PROP_WINDOW_NAME, window->title);
           ca_proplist_setf (p, CA_PROP_WINDOW_X11_XID, "%lu", (unsigned long)window->xwindow);
+          ca_proplist_setf (p, CA_PROP_WINDOW_X11_SCREEN, "%i", meta_screen_get_screen_number(screen));
           ca_proplist_sets (p, CA_PROP_APPLICATION_NAME, window->res_name);
           ca_proplist_setf (p, CA_PROP_APPLICATION_PROCESS_ID, "%d", window->net_wm_pid);
+
+          /* properties for positional sound based on window placement */
+          meta_window_get_geometry (window, &x, &y, &width, &height);
+          ca_proplist_setf (p, CA_PROP_WINDOW_X, "%i", x);
+          ca_proplist_setf (p, CA_PROP_WINDOW_Y, "%i", y);
+          ca_proplist_setf (p, CA_PROP_WINDOW_WIDTH, "%i", width);
+          ca_proplist_setf (p, CA_PROP_WINDOW_HEIGHT, "%i", height);
+
+          meta_screen_get_size (screen, &screen_width, &screen_height);
+          if (screen_width > 1)
+            {
+              x += width/2;
+              x = CLAMP(x, 0, screen_width-1);
+
+              /* From libcanberra-gtk.
+               * We use these strange format strings here to avoid that libc
+               * applies locale information on the formatting of floating
+               * numbers. */
+
+              ca_proplist_setf (p, CA_PROP_WINDOW_HPOS, "%i.%03i",
+                               (int) (x/(screen_width-1)), (int) (1000.0*x/(screen_width-1)) % 1000);
+            }
+          if (screen_height > 1)
+            {
+              y += height/2;
+              y = CLAMP(y, 0, screen_height-1);
+
+              ca_proplist_setf (p, CA_PROP_WINDOW_VPOS, "%i.%03i",
+                               (int) (y/(screen_height-1)), (int) (1000.0*y/(screen_height-1)) % 1000);
+            }
         }
 
       /* First, we try to play a real sound ... */
@@ -312,6 +352,9 @@ meta_bell_notify (MetaDisplay *display,
       ca_proplist_destroy (p);
 
       if (res != CA_SUCCESS && res != CA_ERROR_DISABLED)
+#else
+      if (1)
+#endif /* HAVE_CANBERRA */
         {
           /* ...and in case that failed we use the classic X11 bell. */
           XkbForceDeviceBell (display->xdisplay,

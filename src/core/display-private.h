@@ -1,3 +1,5 @@
+/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
+
 /* Marco X display handler */
 
 /* 
@@ -53,7 +55,10 @@ typedef struct _MetaGroupPropHooks  MetaGroupPropHooks;
 
 typedef struct MetaEdgeResistanceData MetaEdgeResistanceData;
 
-typedef void (*MetaWindowPingFunc) (MetaDisplay* display, Window xwindow, guint32 timestamp, gpointer user_data);
+typedef void (* MetaWindowPingFunc) (MetaDisplay *display,
+				     Window       xwindow,
+				     guint32      timestamp,
+				     gpointer     user_data);
 
 
 #define _NET_WM_STATE_REMOVE        0    /* remove/unset property */
@@ -67,7 +72,8 @@ typedef void (*MetaWindowPingFunc) (MetaDisplay* display, Window xwindow, guint3
  */
 #define N_IGNORED_SERIALS           4
 
-struct _MetaDisplay {
+struct _MetaDisplay
+{
 	char* name;
 	Display* xdisplay;
 
@@ -124,7 +130,8 @@ struct _MetaDisplay {
 	MetaScreen* active_screen;
 	GHashTable* window_ids;
 	int error_traps;
-	int (*error_trap_handler) (Display* display, XErrorEvent* error);  
+  int (* error_trap_handler) (Display     *display,
+                              XErrorEvent *error);  
 	int server_grab_count;
 
 	/* serials of leave/unmap events that may
@@ -202,6 +209,7 @@ struct _MetaDisplay {
 	KeySym* keymap;
 	int keysyms_per_keycode;
 	XModifierKeymap* modmap;
+  unsigned int above_tab_keycode;
 	unsigned int ignored_modifier_mask;
 	unsigned int num_lock_mask;
 	unsigned int scroll_lock_mask;
@@ -342,7 +350,7 @@ MetaScreen*   meta_display_screen_for_xwindow  (MetaDisplay *display,
 void          meta_display_grab                (MetaDisplay *display);
 void          meta_display_ungrab              (MetaDisplay *display);
 
-void          meta_display_unmanage_screen     (MetaDisplay **display,
+void          meta_display_unmanage_screen     (MetaDisplay *display,
                                                 MetaScreen  *screen,
                                                 guint32      timestamp);
 
@@ -445,7 +453,8 @@ typedef enum
 {
   META_TAB_LIST_NORMAL,
   META_TAB_LIST_DOCKS,
-  META_TAB_LIST_GROUP
+  META_TAB_LIST_GROUP,
+  META_TAB_LIST_NORMAL_ALL_WORKSPACES
 } MetaTabList;
 
 typedef enum
@@ -510,4 +519,7 @@ void meta_display_queue_autoraise_callback  (MetaDisplay *display,
                                              MetaWindow  *window);
 void meta_display_remove_autoraise_callback (MetaDisplay *display);
 
-#endif /* META_DISPLAY_PRIVATE_H */
+/* In above-tab-keycode.c */
+guint meta_display_get_above_tab_keycode (MetaDisplay *display);
+
+#endif

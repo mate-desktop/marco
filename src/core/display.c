@@ -1,3 +1,5 @@
+/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
+
 /* Marco X display handler */
 
 /* 
@@ -90,7 +92,9 @@
         (g == META_GRAB_OP_KEYBOARD_TABBING_NORMAL  ||  \
          g == META_GRAB_OP_KEYBOARD_TABBING_DOCK    ||  \
          g == META_GRAB_OP_KEYBOARD_TABBING_GROUP   ||  \
+         g == META_GRAB_OP_KEYBOARD_TABBING_NORMAL_ALL_WORKSPACES ||  \
          g == META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL ||  \
+         g == META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL_ALL_WORKSPACES ||  \
          g == META_GRAB_OP_KEYBOARD_ESCAPING_DOCK   ||  \
          g == META_GRAB_OP_KEYBOARD_ESCAPING_GROUP)
 
@@ -934,7 +938,7 @@ meta_display_close (MetaDisplay *display,
     meta_compositor_destroy (display->compositor);
   
   g_free (display);
-  display = NULL;
+  the_display = NULL;
 
   meta_quit (META_EXIT_SUCCESS);
 }
@@ -1141,9 +1145,11 @@ grab_op_is_keyboard (MetaGrabOp op)
     case META_GRAB_OP_KEYBOARD_RESIZING_SW:
     case META_GRAB_OP_KEYBOARD_RESIZING_NW:
     case META_GRAB_OP_KEYBOARD_TABBING_NORMAL:
+    case META_GRAB_OP_KEYBOARD_TABBING_NORMAL_ALL_WORKSPACES:
     case META_GRAB_OP_KEYBOARD_TABBING_DOCK:
     case META_GRAB_OP_KEYBOARD_TABBING_GROUP:
     case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL:
+    case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL_ALL_WORKSPACES:
     case META_GRAB_OP_KEYBOARD_ESCAPING_DOCK:
     case META_GRAB_OP_KEYBOARD_ESCAPING_GROUP:
     case META_GRAB_OP_KEYBOARD_WORKSPACE_SWITCHING:
@@ -1562,7 +1568,9 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
  *
  * \ingroup main
  */
-static gboolean event_callback(XEvent* event, gpointer data)
+static gboolean
+event_callback (XEvent   *event,
+                gpointer  data)
 {
   MetaWindow *window;
   MetaWindow *property_for_window;
@@ -2460,7 +2468,7 @@ static gboolean event_callback(XEvent* event, gpointer data)
                 {
                   meta_verbose ("Received set keybindings request = %d\n",
                                 (int) event->xclient.data.l[0]);
-                  meta_set_keybindings_disabled (!event->xclient.data.l[0]);
+                  meta_set_keybindings_disabled (display, !event->xclient.data.l[0]);
                 }
               else if (event->xclient.message_type ==
                        display->atom__MARCO_TOGGLE_VERBOSE)
@@ -2539,6 +2547,10 @@ static gboolean event_callback(XEvent* event, gpointer data)
                   display->last_bell_time = xkb_ev->time;
                   meta_bell_notify (display, xkb_ev);
                 }
+	      break;
+            case XkbNewKeyboardNotify:
+            case XkbMapNotify:
+              meta_display_process_mapping_event (display, event);
 	      break;
 	    }
 	}
@@ -3625,9 +3637,20 @@ meta_display_begin_grab_op (MetaDisplay *display,
                                     META_TAB_LIST_NORMAL,
                                     META_TAB_SHOW_ICON);
       break;
+    case META_GRAB_OP_KEYBOARD_TABBING_NORMAL_ALL_WORKSPACES:
+      meta_screen_ensure_tab_popup (screen,
+                                    META_TAB_LIST_NORMAL_ALL_WORKSPACES,
+                                    META_TAB_SHOW_ICON);
+      break;
     case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL:
       meta_screen_ensure_tab_popup (screen,
                                     META_TAB_LIST_NORMAL,
+                                    META_TAB_SHOW_INSTANTLY);
+      break;
+
+    case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL_ALL_WORKSPACES:
+      meta_screen_ensure_tab_popup (screen,
+                                    META_TAB_LIST_NORMAL_ALL_WORKSPACES,
                                     META_TAB_SHOW_INSTANTLY);
       break;
 
@@ -4441,7 +4464,9 @@ get_focussed_group (MetaDisplay *display)
     return NULL;
 }
 
-#define IN_TAB_CHAIN(w,t) (((t) == META_TAB_LIST_NORMAL && META_WINDOW_IN_NORMAL_TAB_CHAIN (w)) \
+#define IN_TAB_CHAIN(w,t) \
+  (((t) == META_TAB_LIST_NORMAL && META_WINDOW_IN_NORMAL_TAB_CHAIN (w)) \
+    || ((t) == META_TAB_LIST_NORMAL_ALL_WORKSPACES && META_WINDOW_IN_NORMAL_TAB_CHAIN (w)) \
     || ((t) == META_TAB_LIST_DOCKS && META_WINDOW_IN_DOCK_TAB_CHAIN (w)) \
     || ((t) == META_TAB_LIST_GROUP && META_WINDOW_IN_GROUP_TAB_CHAIN (w, get_focussed_group(w->display))))
 
@@ -4532,56 +4557,76 @@ GList*
 meta_display_get_tab_list (MetaDisplay   *display,
                            MetaTabList    type,
                            MetaScreen    *screen,
-                           MetaWorkspace *workspace)
+                           MetaWorkspace *active_workspace)
 {
-  GList *tab_list;
+  GList *tab_list, *workspace_list, *l, link;
+  MetaWorkspace *workspace;
 
-  g_return_val_if_fail (workspace != NULL, NULL);
+  g_return_val_if_fail (active_workspace != NULL, NULL);
+  
+  if (type == META_TAB_LIST_NORMAL_ALL_WORKSPACES)
+    {
+      workspace_list = screen->workspaces;
+      type = META_TAB_LIST_NORMAL;
+    }
+  else
+    {
+      link.next = NULL;
+      link.prev = NULL;
+      link.data = active_workspace;
+      workspace_list = &link;
+    }
 
+  tab_list = NULL;
   /* Windows sellout mode - MRU order. Collect unminimized windows
    * then minimized so minimized windows aren't in the way so much.
    */
-  {
-    GList *tmp;
-    
-    tab_list = NULL;
-    tmp = workspace->mru_list;
-    while (tmp != NULL)
-      {
-        MetaWindow *window = tmp->data;
-        
-        if (!window->minimized &&
-            window->screen == screen &&
-            IN_TAB_CHAIN (window, type))
-          tab_list = g_list_prepend (tab_list, window);
-        
-        tmp = tmp->next;
-      }
-  }
-
-  {
-    GList *tmp;
-    
-    tmp = workspace->mru_list;
-    while (tmp != NULL)
-      {
-        MetaWindow *window = tmp->data;
-        
-        if (window->minimized &&
-            window->screen == screen &&
-            IN_TAB_CHAIN (window, type))
-          tab_list = g_list_prepend (tab_list, window);
-        
-        tmp = tmp->next;
-      }
-  }
-
+  for (l = workspace_list; l != NULL; l = l->next)
+    {
+      GList *tmp;
+      
+      workspace = l->data;
+      
+      tmp = workspace->mru_list;
+      while (tmp != NULL)
+        {
+          MetaWindow *window = tmp->data;
+          
+          if (!window->minimized &&
+              window->screen == screen &&
+              IN_TAB_CHAIN (window, type))
+            tab_list = g_list_prepend (tab_list, window);
+          
+          tmp = tmp->next;
+        }
+    }
+  
+  for (l = workspace_list; l != NULL; l = l->next)
+    {
+      GList *tmp;
+      
+      workspace = l->data;
+      
+      tmp = workspace->mru_list;
+      while (tmp != NULL)
+        {
+          MetaWindow *window = tmp->data;
+          
+          if (window->minimized &&
+              window->screen == screen &&
+              IN_TAB_CHAIN (window, type))
+            tab_list = g_list_prepend (tab_list, window);
+          
+          tmp = tmp->next;
+        }
+    }
+  
   tab_list = g_list_reverse (tab_list);
-
+  
   {
     GSList *tmp;
     MetaWindow *l_window;
-
+    
     tmp = meta_display_list_windows (display);
 
     /* Go through all windows */
@@ -4591,7 +4636,7 @@ meta_display_get_tab_list (MetaDisplay   *display,
 
         /* Check to see if it demands attention */
         if (l_window->wm_state_demands_attention && 
-            l_window->workspace!=workspace &&
+            l_window->workspace!=active_workspace &&
             IN_TAB_CHAIN (l_window, type)) 
           {
             /* if it does, add it to the popup */
@@ -4917,7 +4962,7 @@ process_selection_clear (MetaDisplay   *display,
       meta_verbose ("Got selection clear for screen %d on display %s\n",
                     screen->number, display->name);
       
-      meta_display_unmanage_screen (&display, 
+      meta_display_unmanage_screen (display, 
                                     screen,
                                     event->xselectionclear.time);
 
@@ -4945,11 +4990,10 @@ process_selection_clear (MetaDisplay   *display,
 }
 
 void
-meta_display_unmanage_screen (MetaDisplay **displayp,
+meta_display_unmanage_screen (MetaDisplay *display,
                               MetaScreen  *screen,
                               guint32      timestamp)
 {
-  MetaDisplay *display = *displayp;
 
   meta_verbose ("Unmanaging screen %d on display %s\n",
                 screen->number, display->name);
@@ -4960,10 +5004,7 @@ meta_display_unmanage_screen (MetaDisplay **displayp,
   display->screens = g_slist_remove (display->screens, screen);
 
   if (display->screens == NULL)
-    {
       meta_display_close (display, timestamp);
-      *displayp = NULL;
-    }
 }
 
 void

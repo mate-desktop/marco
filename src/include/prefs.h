@@ -43,6 +43,7 @@ typedef enum
   META_PREF_THEME,
   META_PREF_TITLEBAR_FONT,
   META_PREF_NUM_WORKSPACES,
+  META_PREF_WRAP_STYLE,
   META_PREF_APPLICATION_BASED,
   META_PREF_KEYBINDINGS,
   META_PREF_DISABLE_WORKAROUNDS,
@@ -88,6 +89,7 @@ gboolean                    meta_prefs_get_application_based  (void);
 gboolean                    meta_prefs_get_disable_workarounds (void);
 gboolean                    meta_prefs_get_auto_raise         (void);
 int                         meta_prefs_get_auto_raise_delay   (void);
+MetaWrapStyle               meta_prefs_get_wrap_style         (void);
 gboolean                    meta_prefs_get_reduced_resources  (void);
 gboolean                    meta_prefs_get_mate_accessibility (void);
 gboolean                    meta_prefs_get_mate_animations   (void);

@@ -51,7 +51,7 @@ static int screen_right_edge = 0;
 static int screen_bottom_edge = 0;
 
 static gint
-expose_handler (GtkTooltips *tooltips)
+expose_handler (GtkTooltip *tooltips)
 {
   gtk_paint_flat_box (gtk_widget_get_style (tip), gtk_widget_get_window (tip),
                       GTK_STATE_NORMAL, GTK_SHADOW_OUT, 

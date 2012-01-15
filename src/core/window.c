@@ -47,6 +47,7 @@
 #include "effects.h"
 
 #include <X11/Xatom.h>
+#include <X11/Xlibint.h> /* For display->resource_mask */
 #include <string.h>
 
 #ifdef HAVE_SHAPE
@@ -58,6 +59,9 @@ static int destroying_windows_disallowed = 0;
 
 static void     update_sm_hints           (MetaWindow     *window);
 static void     update_net_frame_extents  (MetaWindow     *window);
+static void     restack_window            (MetaWindow     *window,
+                                           MetaWindow     *sibling,
+                                           int             direction);
 static void     recalc_window_type        (MetaWindow     *window);
 static void     recalc_window_features    (MetaWindow     *window);
 static void     invalidate_work_areas     (MetaWindow     *window);
@@ -71,6 +75,9 @@ static gboolean process_property_notify   (MetaWindow     *window,
                                            XPropertyEvent *event);
 static void     meta_window_show          (MetaWindow     *window);
 static void     meta_window_hide          (MetaWindow     *window);
+
+static gboolean meta_window_same_client (MetaWindow *window,
+                                         MetaWindow *other_window);
 
 static void     meta_window_save_rect         (MetaWindow    *window);
 static void     save_user_window_placement    (MetaWindow    *window);
@@ -4713,26 +4720,18 @@ meta_window_configure_request (MetaWindow *window,
                                   event->xconfigurerequest.width,
                                   event->xconfigurerequest.height);
 
-  /* Handle stacking. We only handle raises/lowers, mostly because
-   * stack.c really can't deal with anything else.  I guess we'll fix
-   * that if a client turns up that really requires it. Only a very
-   * few clients even require the raise/lower (and in fact all client
-   * attempts to deal with stacking order are essentially broken,
-   * since they have no idea what other clients are involved or how
-   * the stack looks).
-   *
-   * I'm pretty sure no interesting client uses TopIf, BottomIf, or
-   * Opposite anyway, so the only possible missing thing is
-   * Above/Below with a sibling set. For now we just pretend there's
-   * never a sibling set and always do the full raise/lower instead of
-   * the raise-just-above/below-sibling.
+  /* Handle stacking. We only handle raises/lowers (both absolute and
+   * relative to siblings), mostly because stack.c really can't deal with
+   * anything else.  I guess we'll fix that if a client turns up that really
+   * requires it. Only a very few clients even require the raise/lower.  I'm
+   * pretty sure no interesting client uses TopIf, BottomIf, or Opposite
+   * anyway.
    */
   if (event->xconfigurerequest.value_mask & CWStackMode)
     {
       MetaWindow *active_window;
       active_window = window->display->expected_focus_window;
-      if (meta_prefs_get_disable_workarounds () ||
-          !meta_prefs_get_raise_on_click ())
+      if (meta_prefs_get_disable_workarounds ())
         {
           meta_topic (META_DEBUG_STACK,
                       "%s sent an xconfigure stacking request; this is "
@@ -4741,6 +4740,7 @@ meta_window_configure_request (MetaWindow *window,
         }
       else if (active_window &&
                !meta_window_same_application (window, active_window) &&
+               !meta_window_same_client (window, active_window) &&
                XSERVER_TIME_IS_BEFORE (window->net_wm_user_time,
                                        active_window->net_wm_user_time))
         {
@@ -4757,19 +4757,14 @@ meta_window_configure_request (MetaWindow *window,
         }
       else
         {
-          switch (event->xconfigurerequest.detail)
+          MetaWindow *sibling = NULL;
+
+          if (event->xconfigurerequest.above != None)
             {
-            case Above:
-              meta_window_raise (window);
-              break;
-            case Below:
-              meta_window_lower (window);
-              break;
-            case TopIf:
-            case BottomIf:
-            case Opposite:
-              break;
+              sibling = meta_display_lookup_x_window (window->display,
+                event->xconfigurerequest.above);
             }
+          restack_window(window, sibling, event->xconfigurerequest.detail);
         }
     }
 
@@ -4795,6 +4790,50 @@ meta_window_property_notify (MetaWindow *window,
 #define _NET_WM_MOVERESIZE_SIZE_KEYBOARD     9
 #define _NET_WM_MOVERESIZE_MOVE_KEYBOARD    10
 #define _NET_WM_MOVERESIZE_CANCEL           11
+static void
+restack_window (MetaWindow *window,
+                MetaWindow *sibling,
+                int direction)
+{
+ switch (direction)
+   {
+   case Above:
+     if (sibling)
+       meta_window_stack_just_above (window, sibling);
+     else
+       meta_window_raise (window);
+     break;
+   case Below:
+     if (sibling)
+       meta_window_stack_just_below (window, sibling);
+     else
+       meta_window_lower (window);
+     break;
+   case TopIf:
+   case BottomIf:
+   case Opposite:
+     break;
+   }
+}
+
+static void
+handle_net_restack_window (MetaDisplay* display,
+                           XEvent *event)
+{
+  MetaWindow *window, *sibling = NULL;
+
+  window = meta_display_lookup_x_window (display,
+                                         event->xclient.window);
+
+  if (window)
+    {
+      if (event->xclient.data.l[1])
+        sibling = meta_display_lookup_x_window (display,
+                                                event->xclient.data.l[1]);
+
+      restack_window (window, sibling, event->xclient.data.l[2]);
+    }
+}
 
 gboolean
 meta_window_client_message (MetaWindow *window,
@@ -4823,6 +4862,11 @@ meta_window_client_message (MetaWindow *window,
       meta_window_delete (window, timestamp);
 
       return TRUE;
+    }
+  else if (event->xproperty.atom ==
+           display->atom__NET_RESTACK_WINDOW)
+    {
+      handle_net_restack_window (display, event);
     }
   else if (event->xclient.message_type ==
            display->atom__NET_WM_DESKTOP)
@@ -5204,12 +5248,11 @@ meta_window_client_message (MetaWindow *window,
   else if (event->xclient.message_type ==
            display->atom__NET_MOVERESIZE_WINDOW)
     {
-      int gravity, source;
+      int gravity;
       guint value_mask;
 
       gravity = (event->xclient.data.l[0] & 0xff);
       value_mask = (event->xclient.data.l[0] & 0xf00) >> 8;
-      source = (event->xclient.data.l[0] & 0xf000) >> 12;
 
       if (gravity == 0)
         gravity = window->size_hints.win_gravity;
@@ -5252,7 +5295,6 @@ meta_window_client_message (MetaWindow *window,
   else if (event->xclient.message_type ==
            display->atom__NET_WM_FULLSCREEN_MONITORS)
     {
-      MetaClientType source_indication;
       gulong top, bottom, left, right;
 
       meta_verbose ("_NET_WM_FULLSCREEN_MONITORS request for window '%s'\n",
@@ -5262,7 +5304,6 @@ meta_window_client_message (MetaWindow *window,
       bottom = event->xclient.data.l[1];
       left = event->xclient.data.l[2];
       right = event->xclient.data.l[3];
-      source_indication = event->xclient.data.l[4];
 
       meta_window_update_fullscreen_monitors (window, top, bottom, left, right);
     }
@@ -5463,8 +5504,6 @@ static gboolean
 process_property_notify (MetaWindow     *window,
                          XPropertyEvent *event)
 {
-  Window xid = window->xwindow;
-
   if (meta_is_verbose ()) /* avoid looking up the name if we don't have to */
     {
       char *property_name = XGetAtomName (window->display->xdisplay,
@@ -5473,12 +5512,6 @@ process_property_notify (MetaWindow     *window,
       meta_verbose ("Property notify on %s for %s\n",
                     window->desc, property_name);
       XFree (property_name);
-    }
-
-  if (event->atom == window->display->atom__NET_WM_USER_TIME &&
-      window->user_time_window)
-    {
-      xid = window->user_time_window;
     }
 
   meta_window_reload_property (window, event->atom, FALSE);
@@ -6607,11 +6640,11 @@ meta_window_show_menu (MetaWindow *window,
   if (!window->has_maximize_func)
     insensitive |= META_MENU_OP_UNMAXIMIZE | META_MENU_OP_MAXIMIZE;
 
-  /*if (!window->has_minimize_func)
-    insensitive |= META_MENU_OP_MINIMIZE;*/
+  if (!window->has_minimize_func)
+    insensitive |= META_MENU_OP_MINIMIZE;
 
-  /*if (!window->has_close_func)
-    insensitive |= META_MENU_OP_DELETE;*/
+  if (!window->has_close_func)
+    insensitive |= META_MENU_OP_DELETE;
 
   if (!window->has_shade_func)
     insensitive |= META_MENU_OP_SHADE | META_MENU_OP_UNSHADE;
@@ -6705,7 +6738,6 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
 {
   MetaRectangle  titlebar_rect;
   GList         *onscreen_region;
-  int            titlebar_size;
   gboolean       is_onscreen;
 
   const int min_height_needed  = 8;
@@ -6719,7 +6751,6 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
   /* Get the rectangle corresponding to the titlebar */
   meta_window_get_outer_rect (window, &titlebar_rect);
   titlebar_rect.height = window->frame->child_y;
-  titlebar_size = meta_rectangle_area (&titlebar_rect);
 
   /* Run through the spanning rectangles for the screen and see if one of
    * them overlaps with the titlebar sufficiently to consider it onscreen.
@@ -7576,6 +7607,23 @@ meta_window_same_application (MetaWindow *window,
     group==other_group;
 }
 
+/* Generally meta_window_same_application() is a better idea
+ * of "sameness", since it handles the case where multiple apps
+ * want to look like the same app or the same app wants to look
+ * like multiple apps, but in the case of workarounds for legacy
+ * applications (which likely aren't setting the group properly
+ * anyways), it may be desirable to check this as well.
+ */
+static gboolean
+meta_window_same_client (MetaWindow *window,
+                         MetaWindow *other_window)
+{
+  int resource_mask = window->display->xdisplay->resource_mask;
+
+  return ((window->xwindow & ~resource_mask) ==
+          (other_window->xwindow & ~resource_mask));
+}
+
 void
 meta_window_refresh_resize_popup (MetaWindow *window)
 {
@@ -7993,6 +8041,31 @@ ensure_mru_position_after (MetaWindow *window,
         g_list_insert_before (window->screen->active_workspace->mru_list,
                               after_this_one_position->next,
                               window);
+    }
+}
+
+void
+meta_window_stack_just_above (MetaWindow *window,
+                              MetaWindow *above_this_one)
+{
+  g_return_if_fail (window         != NULL);
+  g_return_if_fail (above_this_one != NULL);
+
+  if (window->stack_position < above_this_one->stack_position)
+    {
+      meta_topic (META_DEBUG_STACK,
+                  "Setting stack position of window %s (%d) to %d (making it above window %s).\n",
+                  window->desc,
+                  window->stack_position,
+                  above_this_one->stack_position,
+                  above_this_one->desc);
+      meta_window_set_stack_position (window, above_this_one->stack_position);
+    }
+  else
+    {
+      meta_topic (META_DEBUG_STACK,
+                  "Window %s  was already above window %s.\n",
+                  window->desc, above_this_one->desc);
     }
 }
 

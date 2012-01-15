@@ -272,13 +272,13 @@ create_gradient_window (const char *title,
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
 
   gtk_window_set_title (GTK_WINDOW (window), title);
-  
+
   drawing_area = gtk_drawing_area_new ();
 
   gtk_widget_set_size_request (drawing_area, 1, 1);
 
   gtk_window_set_default_size (GTK_WINDOW (window), 175, 175);
-  
+
   g_signal_connect (G_OBJECT (drawing_area),
                     "expose_event",
                     G_CALLBACK (expose_callback),
@@ -287,39 +287,22 @@ create_gradient_window (const char *title,
   gtk_container_add (GTK_CONTAINER (window), drawing_area);
 
   gtk_widget_show_all (window);
-  
+
   return window;
 }
 
 static void
 meta_gradient_test (void)
 {
-  GtkWidget *window;
-
-  window = create_gradient_window ("Simple vertical",
-                                   render_vertical_func);
-  
-  window = create_gradient_window ("Simple horizontal",
-                                   render_horizontal_func);
-
-  window = create_gradient_window ("Simple diagonal",
-                                   render_diagonal_func);
-
-  window = create_gradient_window ("Multi vertical",
-                                   render_vertical_multi_func);
-  
-  window = create_gradient_window ("Multi horizontal",
-                                   render_horizontal_multi_func);
-
-  window = create_gradient_window ("Multi diagonal",
-                                   render_diagonal_multi_func);
-
-  window = create_gradient_window ("Interwoven",
-                                   render_interwoven_func);
-
-  window = create_gradient_window ("Simple diagonal with horizontal multi alpha",
-                                   render_diagonal_alpha_func);
-
+  create_gradient_window ("Simple vertical", render_vertical_func);
+  create_gradient_window ("Simple horizontal", render_horizontal_func);
+  create_gradient_window ("Simple diagonal", render_diagonal_func);
+  create_gradient_window ("Multi vertical", render_vertical_multi_func);
+  create_gradient_window ("Multi horizontal", render_horizontal_multi_func);
+  create_gradient_window ("Multi diagonal", render_diagonal_multi_func);
+  create_gradient_window ("Interwoven", render_interwoven_func);
+  create_gradient_window ("Simple diagonal with horizontal multi alpha",
+                          render_diagonal_alpha_func);
 }
 
 int

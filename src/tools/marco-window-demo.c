@@ -51,7 +51,7 @@ set_gdk_window_struts (GdkWindow *window,
   vals[11] = 800;
 
   XChangeProperty (GDK_WINDOW_XDISPLAY (window),
-                   GDK_WINDOW_XWINDOW (window),
+                   GDK_WINDOW_XID (window),
                    XInternAtom (GDK_WINDOW_XDISPLAY (window),
                                 "_NET_WM_STRUT_PARTIAL", False),
                    XA_CARDINAL, 32, PropModeReplace,
@@ -62,19 +62,22 @@ static void
 on_realize_set_struts (GtkWindow *window,
                        gpointer   data)
 {
+  GtkWidget *widget;
   int left;
   int right;
   int top;
   int bottom;
 
-  g_return_if_fail (gtk_widget_get_realized (GTK_WIDGET (window)));
+  widget = GTK_WIDGET (window);
+
+  g_return_if_fail (gtk_widget_get_realized (widget));
 
   left = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (window), "meta-strut-left"));
   right = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (window), "meta-strut-right"));
   top = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (window), "meta-strut-top"));
   bottom = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (window), "meta-strut-bottom"));
   
-  set_gdk_window_struts (gtk_widget_get_window (GTK_WIDGET (window)),
+  set_gdk_window_struts (gtk_widget_get_window (widget),
                          left, right, top, bottom);
 }
 
@@ -85,6 +88,10 @@ set_gtk_window_struts (GtkWidget  *window,
                        int         top,
                        int         bottom)
 {
+  GtkWidget *widget;
+
+  widget = GTK_WIDGET (window);
+
   g_object_set_data (G_OBJECT (window), "meta-strut-left",
                      GINT_TO_POINTER (left));
   g_object_set_data (G_OBJECT (window), "meta-strut-right",
@@ -103,8 +110,8 @@ set_gtk_window_struts (GtkWidget  *window,
                           G_CALLBACK (on_realize_set_struts),
                           NULL);
 
-  if (gtk_widget_get_realized (GTK_WIDGET (window)))
-    set_gdk_window_struts (gtk_widget_get_window (GTK_WIDGET (window)),
+  if (gtk_widget_get_realized (widget))
+    set_gdk_window_struts (gtk_widget_get_window (widget),
                            left, right, top, bottom);
 }
 
@@ -118,7 +125,7 @@ set_gdk_window_type (GdkWindow  *window,
                           type, False);
   
   XChangeProperty (GDK_WINDOW_XDISPLAY (window),
-                   GDK_WINDOW_XWINDOW (window),
+                   GDK_WINDOW_XID (window),
                    XInternAtom (GDK_WINDOW_XDISPLAY (window), "_NET_WM_WINDOW_TYPE", False),
                    XA_ATOM, 32, PropModeReplace,
                    (guchar *)atoms, 
@@ -129,15 +136,18 @@ static void
 on_realize_set_type (GtkWindow *window,
                      gpointer   data)
 {
+  GtkWidget *widget;
   const char *type;
 
-  g_return_if_fail (gtk_widget_get_realized (GTK_WIDGET (window)));
+  widget = GTK_WIDGET (window);
+
+  g_return_if_fail (gtk_widget_get_realized (widget));
 
   type = g_object_get_data (G_OBJECT (window), "meta-window-type");
 
   g_return_if_fail (type != NULL);
   
-  set_gdk_window_type (gtk_widget_get_window (GTK_WIDGET (window)),
+  set_gdk_window_type (gtk_widget_get_window (widget),
                        type);
 }
 
@@ -145,6 +155,10 @@ static void
 set_gtk_window_type (GtkWindow  *window,
                      const char *type)
 {
+  GtkWidget *widget;
+
+  widget = GTK_WIDGET (window);
+
   g_object_set_data (G_OBJECT (window), "meta-window-type", (char*) type);
 
   g_signal_handlers_disconnect_by_func (G_OBJECT (window),
@@ -156,8 +170,8 @@ set_gtk_window_type (GtkWindow  *window,
                           G_CALLBACK (on_realize_set_type),
                           NULL);
 
-  if (gtk_widget_get_realized (GTK_WIDGET (window)))
-    set_gdk_window_type (gtk_widget_get_window (GTK_WIDGET (window)),
+  if (gtk_widget_get_realized (widget))
+    set_gdk_window_type (gtk_widget_get_window (widget),
                          type);
 }
 
@@ -171,14 +185,22 @@ static void
 on_realize_set_border_only (GtkWindow *window,
                             gpointer   data)
 {
-  g_return_if_fail (gtk_widget_get_realized (GTK_WIDGET (window)));
+  GtkWidget *widget;
+
+  widget = GTK_WIDGET (window);
+
+  g_return_if_fail (gtk_widget_get_realized (widget));
   
-  set_gdk_window_border_only (gtk_widget_get_window (GTK_WIDGET (window)));
+  set_gdk_window_border_only (gtk_widget_get_window (widget));
 }
 
 static void
 set_gtk_window_border_only (GtkWindow  *window)
 {
+  GtkWidget *widget;
+
+  widget = GTK_WIDGET (window);
+
   g_signal_handlers_disconnect_by_func (G_OBJECT (window),
                                         on_realize_set_border_only,
                                         NULL);
@@ -188,8 +210,8 @@ set_gtk_window_border_only (GtkWindow  *window)
                           G_CALLBACK (on_realize_set_border_only),
                           NULL);
 
-  if (gtk_widget_get_realized (GTK_WIDGET (window)))
-    set_gdk_window_border_only (gtk_widget_get_window (GTK_WIDGET (window)));
+  if (gtk_widget_get_realized (widget))
+    set_gdk_window_border_only (gtk_widget_get_window (widget));
 }
 
 int
@@ -285,17 +307,15 @@ response_cb (GtkDialog *dialog,
 }
 
 static void
-dialog_cb (gpointer             callback_data,
-           guint                callback_action,
-           GtkWidget           *widget)
+dialog_cb (GtkAction *action,
+           gpointer   callback_data)
 {
   make_dialog (GTK_WIDGET (callback_data), 1);
 }
 
 static void
-modal_dialog_cb (gpointer             callback_data,
-                 guint                callback_action,
-                 GtkWidget           *widget)
+modal_dialog_cb (GtkAction *action,
+                 gpointer   callback_data)
 {
   GtkWidget *dialog;
   
@@ -313,17 +333,15 @@ modal_dialog_cb (gpointer             callback_data,
 }
 
 static void
-no_parent_dialog_cb (gpointer             callback_data,
-                     guint                callback_action,
-                     GtkWidget           *widget)
+no_parent_dialog_cb (GtkAction *action,
+                     gpointer   callback_data)
 {
   make_dialog (NULL, 1);
 }
 
 static void
-utility_cb (gpointer             callback_data,
-            guint                callback_action,
-            GtkWidget           *widget)
+utility_cb (GtkAction *action,
+            gpointer   callback_data)
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -355,9 +373,8 @@ utility_cb (gpointer             callback_data,
 }
 
 static void
-toolbar_cb (gpointer             callback_data,
-            guint                callback_action,
-            GtkWidget           *widget)
+toolbar_cb (GtkAction *action,
+            gpointer   callback_data)
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -380,9 +397,8 @@ toolbar_cb (gpointer             callback_data,
 }
 
 static void
-menu_cb (gpointer             callback_data,
-         guint                callback_action,
-         GtkWidget           *widget)
+menu_cb (GtkAction *action,
+         gpointer   callback_data)
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -405,9 +421,8 @@ menu_cb (gpointer             callback_data,
 }
 
 static void
-override_redirect_cb (gpointer             callback_data,
-                      guint                callback_action,
-                      GtkWidget           *widget)
+override_redirect_cb (GtkAction *action,
+                      gpointer   callback_data)
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -427,9 +442,8 @@ override_redirect_cb (gpointer             callback_data,
 }
 
 static void
-border_only_cb (gpointer             callback_data,
-                guint                callback_action,
-                GtkWidget           *widget)
+border_only_cb (GtkAction *action,
+                gpointer   callback_data)
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -453,9 +467,8 @@ border_only_cb (gpointer             callback_data,
 
 #if 0
 static void
-changing_icon_cb (gpointer             callback_data,
-                  guint                callback_action,
-                  GtkWidget           *widget)
+changing_icon_cb (GtkAction *action,
+                  gpointer             callback_data)
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -521,9 +534,8 @@ focus_label (GtkWidget *window)
 }
 
 static void
-splashscreen_cb (gpointer             callback_data,
-                 guint                callback_action,
-                 GtkWidget           *widget)
+splashscreen_cb (GtkAction *action,
+                 gpointer   callback_data)
 {
   GtkWidget *window;
   GtkWidget *image;
@@ -630,10 +642,27 @@ make_dock (int type)
 }
 
 static void
-dock_cb (gpointer             callback_data,
-         guint                callback_action,
-         GtkWidget           *widget)
+dock_cb (GtkAction *action,
+         gpointer   callback_data)
 {
+  guint callback_action;
+  const gchar *name;
+
+  name = gtk_action_get_name (action);
+
+  if (!g_strcmp0 (name, "Top dock"))
+    callback_action = DOCK_TOP;
+  else if (!g_strcmp0 (name, "Bottom dock"))
+    callback_action = DOCK_BOTTOM;
+  else if (!g_strcmp0 (name, "Left dock"))
+    callback_action = DOCK_LEFT;
+  else if (!g_strcmp0 (name, "Right dock"))
+    callback_action = DOCK_RIGHT;
+  else if (!g_strcmp0 (name, "All docks"))
+    callback_action = DOCK_ALL;
+  else
+    return;
+
   if (callback_action == DOCK_ALL)
     {
       make_dock (DOCK_TOP);
@@ -648,9 +677,8 @@ dock_cb (gpointer             callback_data,
 }
 
 static void
-desktop_cb (gpointer             callback_data,
-            guint                callback_action,
-            GtkWidget           *widget)
+desktop_cb (GtkAction *action,
+            gpointer   callback_data)
 {
   GtkWidget *window;
   GtkWidget *label;
@@ -676,40 +704,20 @@ desktop_cb (gpointer             callback_data,
   gtk_widget_show_all (window);
 }
 
-static GtkItemFactoryEntry menu_items[] =
-{
-  { "/_Windows",              NULL,         NULL,                     0, "<Branch>" },
-  { "/Windows/tearoff",       NULL,         NULL,                     0, "<Tearoff>" },
-  { "/Windows/_Dialog",       "<control>d",  dialog_cb,               0, NULL },
-  { "/Windows/_Modal dialog", NULL,          modal_dialog_cb,         0, NULL },
-  { "/Windows/_Parentless dialog", NULL,     no_parent_dialog_cb,     0, NULL },
-  { "/Windows/_Utility",      "<control>u",  utility_cb,              0, NULL },
-  { "/Windows/_Splashscreen", "<control>s",  splashscreen_cb,         0, NULL },
-  { "/Windows/_Top dock",     NULL,          dock_cb,                 DOCK_TOP, NULL },
-  { "/Windows/_Bottom dock",  NULL,          dock_cb,                 DOCK_BOTTOM, NULL },
-  { "/Windows/_Left dock",    NULL,          dock_cb,                 DOCK_LEFT, NULL },
-  { "/Windows/_Right dock",   NULL,          dock_cb,                 DOCK_RIGHT, NULL },
-  { "/Windows/_All docks",    NULL,          dock_cb,                 DOCK_ALL, NULL },
-  { "/Windows/Des_ktop",      NULL,          desktop_cb,              0, NULL },
-  { "/Windows/Me_nu",         NULL,          menu_cb,                 0, NULL },
-  { "/Windows/Tool_bar",      NULL,          toolbar_cb,              0, NULL },
-  { "/Windows/Override Redirect",      NULL,          override_redirect_cb,              0, NULL },
-  { "/Windows/Border Only",      NULL,          border_only_cb,              0, NULL }
-};
-
 static void
-sleep_cb (GtkWidget *button,
+sleep_cb (GtkAction *action,
           gpointer   data)
 {
   sleep (1000);
 }
 
 static void
-toggle_aspect_ratio (GtkWidget *button,
+toggle_aspect_ratio (GtkAction *action,
                      gpointer   data)
 {
   GtkWidget *window;
   GdkGeometry geom;
+  GtkWidget *widget = GTK_WIDGET (data);
 
   if (aspect_on)
     {
@@ -724,7 +732,7 @@ toggle_aspect_ratio (GtkWidget *button,
 
   aspect_on = !aspect_on;
 
-  window = gtk_widget_get_ancestor (button, GTK_TYPE_WINDOW);
+  window = gtk_widget_get_ancestor (widget, GTK_TYPE_WINDOW);
   if (window)
     gtk_window_set_geometry_hints (GTK_WINDOW (window),
 				   GTK_WIDGET (data),
@@ -738,7 +746,7 @@ toggle_decorated_cb (GtkWidget *button,
                      gpointer   data)
 {
   GtkWidget *window;
-  window = gtk_widget_get_ancestor (button, GTK_TYPE_WINDOW);
+  window = gtk_widget_get_ancestor (data, GTK_TYPE_WINDOW);
   if (window)
     gtk_window_set_decorated (GTK_WINDOW (window),
                               !gtk_window_get_decorated (GTK_WINDOW (window)));
@@ -812,19 +820,102 @@ destroy_cb (GtkWidget *w, gpointer data)
     gtk_main_quit ();
 }
 
+static const gchar *menu_item_string =
+  "<ui>\n"
+    "<menubar>\n"
+      "<menu name='Windows' action='Windows'>\n"
+        "<menuitem name='Dialog' action='Dialog'/>\n"
+        "<menuitem name='Modal dialog' action='Modal dialog'/>\n"
+        "<menuitem name='Parentless dialog' action='Parentless dialog'/>\n"
+        "<menuitem name='Utility' action='Utility'/>\n"
+        "<menuitem name='Splashscreen' action='Splashscreen'/>\n"
+        "<menuitem name='Top dock' action='Top dock'/>\n"
+        "<menuitem name='Bottom dock' action='Bottom dock'/>\n"
+        "<menuitem name='Left dock' action='Left dock'/>\n"
+        "<menuitem name='Right dock' action='Right dock'/>\n"
+        "<menuitem name='All docks' action='All docks'/>\n"
+        "<menuitem name='Desktop' action='Desktop'/>\n"
+        "<menuitem name='Menu' action='Menu'/>\n"
+        "<menuitem name='Toolbar' action='Toolbar'/>\n"
+        "<menuitem name='Override Redirect' action='Override Redirect'/>\n"
+        "<menuitem name='Border Only' action='Border Only'/>\n"
+      "</menu>\n"
+    "</menubar>\n"
+    "<toolbar>\n"
+      "<toolitem name='New' action='New'/>\n"
+      "<toolitem name='Lock' action='Lock'/>\n"
+      "<toolitem name='Decorations' action='Decorations'/>\n"
+      "<toolitem name='Ratio' action='Ratio'/>\n"
+      "<toolitem name='Quit' action='Quit'/>\n"
+    "</toolbar>\n"
+  "</ui>\n";
+
+static const GtkActionEntry menu_items[] =
+{
+  { "Windows",                  NULL,   "_Windows",             NULL,
+    NULL,       NULL },
+  { "Dialog",                   NULL,   "_Dialog",              "<control>d",
+    NULL,       G_CALLBACK (dialog_cb) },
+  { "Modal dialog",             NULL,   "_Modal dialog",        NULL,
+    NULL,       G_CALLBACK (modal_dialog_cb) },
+  { "Parentless dialog",        NULL,   "_Parentless dialog",   NULL,
+    NULL,       G_CALLBACK (no_parent_dialog_cb) },
+  { "Utility",                  NULL,   "_Utility",             "<control>u",
+    NULL,       G_CALLBACK (utility_cb) },
+  { "Splashscreen",             NULL,   "_Splashscreen",        "<control>s",
+    NULL,       G_CALLBACK (splashscreen_cb) },
+  { "Top dock",                 NULL,   "_Top dock",            NULL,
+    NULL,       G_CALLBACK (dock_cb) },
+  { "Bottom dock",              NULL,   "_Bottom dock",         NULL,
+    NULL,       G_CALLBACK (dock_cb) },
+  { "Left dock",                NULL,   "_Left dock",           NULL,
+    NULL,       G_CALLBACK (dock_cb) },
+  { "Right dock",               NULL,   "_Right dock",          NULL,
+    NULL,       G_CALLBACK (dock_cb) },
+  { "All docks",                NULL,   "_All docks",           NULL,
+    NULL,       G_CALLBACK (dock_cb) },
+  { "Desktop",                  NULL,   "Des_ktop",             NULL,
+    NULL,       G_CALLBACK (desktop_cb) },
+  { "Menu",                     NULL,   "Me_nu",                NULL,
+    NULL,       G_CALLBACK (menu_cb) },
+  { "Toolbar",                  NULL,   "Tool_bar",             NULL,
+    NULL,       G_CALLBACK (toolbar_cb) },
+  { "Override Redirect",        NULL,   "Override Redirect",    NULL,
+    NULL,       G_CALLBACK (override_redirect_cb) },
+  { "Border Only",              NULL,   "Border Only",          NULL,
+    NULL,       G_CALLBACK (border_only_cb) }
+};
+
+static const GtkActionEntry tool_items[] =
+{
+  { "New",              GTK_STOCK_NEW,  NULL,   NULL,
+    "Open another one of these windows", G_CALLBACK (do_appwindow) },
+  { "Lock",             GTK_STOCK_OPEN, NULL,   NULL,
+    "This is a demo button that"
+    " locks up the demo",                G_CALLBACK (sleep_cb) },
+  { "Decorations",      GTK_STOCK_OPEN, NULL,   NULL,
+    "This is a demo button that "
+    "toggles window decorations",        G_CALLBACK (toggle_decorated_cb) },
+  { "Quit",             GTK_STOCK_QUIT, NULL,   NULL,
+    "This is a demo button with "
+    " a 'quit' icon",                    G_CALLBACK (clicked_toolbar_cb) },
+  { "Ratio",            GTK_STOCK_OPEN, NULL,   NULL,
+    "This is a demo button that locks the aspect ratio "
+    "using a hint",                     G_CALLBACK (toggle_aspect_ratio) }
+};
+
 static GtkWidget *
 do_appwindow (void)
 {
   GtkWidget *window;
   GtkWidget *table;
-  GtkWidget *toolbar;
   GtkWidget *handlebox;
   GtkWidget *statusbar;
   GtkWidget *contents;
   GtkWidget *sw;
   GtkTextBuffer *buffer;
-  GtkAccelGroup *accel_group;      
-  GtkItemFactory *item_factory;
+  GtkActionGroup *action_group;
+  GtkUIManager *ui_manager;
 
       
   /* Create the toplevel window
@@ -847,27 +938,28 @@ do_appwindow (void)
   /* Create the menubar
    */
       
-  accel_group = gtk_accel_group_new ();
-  gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
-  g_object_unref (accel_group);
-      
-  item_factory = gtk_item_factory_new (GTK_TYPE_MENU_BAR, "<main>", accel_group);
+  contents = gtk_text_view_new ();
 
-  /* Set up item factory to go away with the window */
-  g_object_ref (item_factory);
-  g_object_ref_sink (item_factory);
-  g_object_unref (item_factory);
-  g_object_set_data_full (G_OBJECT (window),
-                          "<main>",
-                          item_factory,
-                          (GDestroyNotify) g_object_unref);
+  action_group = gtk_action_group_new ("mainmenu");
+  gtk_action_group_add_actions (action_group,
+                                menu_items,
+                                G_N_ELEMENTS (menu_items),
+                                window);
+  gtk_action_group_add_actions (action_group,
+                                tool_items,
+                                G_N_ELEMENTS (tool_items),
+                                window);
+
+  ui_manager = gtk_ui_manager_new ();
+
+  gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
 
   /* create menu items */
-  gtk_item_factory_create_items (item_factory, G_N_ELEMENTS (menu_items),
-                                 menu_items, window);
+
+  gtk_ui_manager_add_ui_from_string (ui_manager, menu_item_string, -1, NULL);
 
   gtk_table_attach (GTK_TABLE (table),
-                    gtk_item_factory_get_widget (item_factory, "<main>"),
+                    gtk_ui_manager_get_widget (ui_manager, "/ui/menubar"),
                     /* X direction */          /* Y direction */
                     0, 1,                      0, 1,
                     GTK_EXPAND | GTK_FILL,     0,
@@ -895,7 +987,6 @@ do_appwindow (void)
   gtk_window_set_default_size (GTK_WINDOW (window),
                                200, 200);
       
-  contents = gtk_text_view_new ();
   gtk_text_view_set_wrap_mode (GTK_TEXT_VIEW (contents),
                                PANGO_WRAP_WORD);
       
@@ -904,68 +995,11 @@ do_appwindow (void)
 
   /* Create the toolbar
    */
-  toolbar = gtk_toolbar_new ();
-
-  GtkToolItem *newButton = gtk_tool_button_new_from_stock(GTK_STOCK_NEW);
-  gtk_tool_item_set_tooltip_text(newButton,
-				 "Open another one of these windows");
-  g_signal_connect(G_OBJECT(newButton),
-		   "clicked",
-		   G_CALLBACK(do_appwindow),
-		   window);
-  gtk_toolbar_insert(GTK_TOOLBAR(toolbar),
-		     newButton,
-		     -1); /*-1 means append to end of toolbar*/
-  
-			    
-  GtkToolItem *lockButton = gtk_tool_button_new_from_stock(GTK_STOCK_OPEN);
-  gtk_tool_item_set_tooltip_text(lockButton,
-				 "This is a demo button that locks up the demo");
-  g_signal_connect(G_OBJECT(lockButton),
-		   "clicked",
-		   G_CALLBACK(sleep_cb),
-		   window);
-  gtk_toolbar_insert(GTK_TOOLBAR(toolbar),
-		     lockButton,
-		     -1); /*-1 means append to end of toolbar*/
-  
-
-  GtkToolItem *decoButton = gtk_tool_button_new_from_stock(GTK_STOCK_OPEN);
-  gtk_tool_item_set_tooltip_text(decoButton,
-				 "This is a demo button that toggles window decorations");
-  g_signal_connect(G_OBJECT(decoButton),
-		   "clicked",
-		   G_CALLBACK(toggle_decorated_cb),
-		   window);
-  gtk_toolbar_insert(GTK_TOOLBAR(toolbar),
-		     decoButton,
-		     -1); /*-1 means append to end of toolbar*/
-
-  GtkToolItem *lockRatioButton = gtk_tool_button_new_from_stock(GTK_STOCK_OPEN);
-  gtk_tool_item_set_tooltip_text(lockRatioButton,
-				 "This is a demo button that locks the aspect ratio using a hint");
-  g_signal_connect(G_OBJECT(lockRatioButton),
-		   "clicked",
-		   G_CALLBACK(toggle_aspect_ratio),
-		   window);
-  gtk_toolbar_insert(GTK_TOOLBAR(toolbar),
-		     lockRatioButton,
-		     -1); /*-1 means append to end of toolbar*/
-
-  GtkToolItem *quitButton = gtk_tool_button_new_from_stock(GTK_STOCK_QUIT);
-  gtk_tool_item_set_tooltip_text(quitButton,
-				 "This is a demo button with a 'quit' icon");
-  g_signal_connect(G_OBJECT(quitButton),
-		   "clicked",
-		   G_CALLBACK(clicked_toolbar_cb),
-		   window);
-  gtk_toolbar_insert(GTK_TOOLBAR(toolbar),
-		     quitButton,
-		     -1); /*-1 means append to end of toolbar*/
 
   handlebox = gtk_handle_box_new ();
 
-  gtk_container_add (GTK_CONTAINER (handlebox), toolbar);
+  gtk_container_add (GTK_CONTAINER (handlebox),
+                     gtk_ui_manager_get_widget (ui_manager, "/ui/toolbar"));
       
   gtk_table_attach (GTK_TABLE (table),
                     handlebox,
@@ -1009,6 +1043,8 @@ do_appwindow (void)
   update_statusbar (buffer, GTK_STATUSBAR (statusbar));
 
   gtk_widget_show_all (window);
+
+  g_object_unref (ui_manager);
 
   return window;
 }

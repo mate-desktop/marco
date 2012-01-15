@@ -1,4 +1,11 @@
 THEMES= \
+	Atlanta \
+	Bright \
+	Crux \
+	Esco \
+	AgingGorilla \
+	Metabox	\
+	Simple \
 	ClearlooksRe \
 	eOS \
 	DustBlue \

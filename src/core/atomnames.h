@@ -156,11 +156,7 @@ item(_NET_WM_ACTION_ABOVE)
 item(_NET_WM_ACTION_BELOW)
 item(_NET_WM_STATE_STICKY)
 item(_NET_WM_FULLSCREEN_MONITORS)
-
-#if 0
-/* We apparently never use: */
-/* item(_NET_RESTACK_WINDOW) */
-#endif
+item(_NET_RESTACK_WINDOW)
 
 /* eof atomnames.h */
 

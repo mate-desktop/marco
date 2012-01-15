@@ -138,6 +138,9 @@ reload_keymap (MetaDisplay *display)
   if (display->keymap)
     meta_XFree (display->keymap);
 
+  /* This is expensive to compute, so we'll lazily load if and when we first
+   * need it */
+  display->above_tab_keycode = 0;
   display->keymap = XGetKeyboardMapping (display->xdisplay,
                                          display->min_keycode,
                                          display->max_keycode -
@@ -249,6 +252,16 @@ reload_modmap (MetaDisplay *display)
               display->meta_mask);
 }
 
+static guint
+keysym_to_keycode (MetaDisplay *display,
+                   guint        keysym)
+{
+  if (keysym == META_KEY_ABOVE_TAB)
+    return meta_display_get_above_tab_keycode (display);
+  else
+    return XKeysymToKeycode (display->xdisplay, keysym);
+}
+
 static void
 reload_keycodes (MetaDisplay *display)
 {
@@ -262,9 +275,11 @@ reload_keycodes (MetaDisplay *display)
       i = 0;
       while (i < display->n_key_bindings)
         {
-          if (display->key_bindings[i].keycode == 0)
-              display->key_bindings[i].keycode = XKeysymToKeycode (
-                      display->xdisplay, display->key_bindings[i].keysym);
+          if (display->key_bindings[i].keysym != 0)
+            {
+              display->key_bindings[i].keycode =
+                keysym_to_keycode (display, display->key_bindings[i].keysym);
+            }
           
           ++i;
         }
@@ -504,27 +519,50 @@ void
 meta_display_process_mapping_event (MetaDisplay *display,
                                     XEvent      *event)
 { 
+  gboolean keymap_changed = FALSE;
+  gboolean modmap_changed = FALSE;
+
+#ifdef HAVE_XKB
+  if (event->type == display->xkb_base_event_type)
+    {
+      meta_topic (META_DEBUG_KEYBINDINGS,
+                  "XKB mapping changed, will redo keybindings\n");
+
+      keymap_changed = TRUE;
+      modmap_changed = TRUE;
+    }
+  else
+#endif
   if (event->xmapping.request == MappingModifier)
     {
       meta_topic (META_DEBUG_KEYBINDINGS,
                   "Received MappingModifier event, will reload modmap and redo keybindings\n");
 
-      reload_modmap (display);
-
-      reload_modifiers (display);
-      
-      regrab_key_bindings (display);
+      modmap_changed = TRUE;
     }
   else if (event->xmapping.request == MappingKeyboard)
     {
       meta_topic (META_DEBUG_KEYBINDINGS,
                   "Received MappingKeyboard event, will reload keycodes and redo keybindings\n");
 
+      keymap_changed = TRUE;
+    }
+
+  /* Now to do the work itself */
+
+  if (keymap_changed || modmap_changed)
+    {
+      if (keymap_changed)
       reload_keymap (display);
+      /* Deciphering the modmap depends on the loaded keysyms to find out
+       * what modifiers is Super and so forth, so we need to reload it
+       * even when only the keymap changes */
       reload_modmap (display);
       
+      if (keymap_changed)
       reload_keycodes (display);
 
+      reload_modifiers (display);
       regrab_key_bindings (display);
     }
 }
@@ -589,6 +627,13 @@ meta_display_init_keys (MetaDisplay *display)
   /* Keys are actually grabbed in meta_screen_grab_keys() */
   
   meta_prefs_add_listener (bindings_changed_callback, display);
+#ifdef HAVE_XKB
+  /* meta_display_init_keys() should have already called XkbQueryExtension() */
+  if (display->xkb_base_event_type != -1)
+    XkbSelectEvents (display->xdisplay, XkbUseCoreKbd,
+                     XkbNewKeyboardNotifyMask | XkbMapNotifyMask,
+                     XkbNewKeyboardNotifyMask | XkbMapNotifyMask);
+#endif
 }
 
 void
@@ -768,6 +813,8 @@ meta_screen_grab_keys (MetaScreen *screen)
   if (screen->keys_grabbed)
     return;
 
+  if (all_bindings_disabled)
+    return;
   grab_keys (screen->display->key_bindings,
              screen->display->n_key_bindings,
              screen->display, screen->xroot,
@@ -790,6 +837,9 @@ void
 meta_window_grab_keys (MetaWindow  *window)
 {
   if (window->all_keys_grabbed)
+    return;
+
+  if (all_bindings_disabled)
     return;
 
   if (window->type == META_WINDOW_DOCK)
@@ -1340,9 +1390,11 @@ meta_display_process_key_event (MetaDisplay *display,
               break;
  
             case META_GRAB_OP_KEYBOARD_TABBING_NORMAL:
+            case META_GRAB_OP_KEYBOARD_TABBING_NORMAL_ALL_WORKSPACES:
             case META_GRAB_OP_KEYBOARD_TABBING_DOCK:
             case META_GRAB_OP_KEYBOARD_TABBING_GROUP:
             case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL:
+            case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL_ALL_WORKSPACES:
             case META_GRAB_OP_KEYBOARD_ESCAPING_DOCK:
             case META_GRAB_OP_KEYBOARD_ESCAPING_GROUP:
               meta_topic (META_DEBUG_KEYBINDINGS,
@@ -2029,6 +2081,7 @@ process_tab_grab (MetaDisplay *display,
                       target_window->desc);
           display->mouse_mode = FALSE;
           meta_window_activate (target_window, event->xkey.time);
+          meta_workspace_activate (target_window->workspace, event->xkey.time);
 
           meta_topic (META_DEBUG_KEYBINDINGS,
                       "Ending grab early so we can focus the target window\n");
@@ -2070,6 +2123,7 @@ process_tab_grab (MetaDisplay *display,
        switch (display->grab_op)
         {
         case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL:
+        case META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL_ALL_WORKSPACES:
         case META_GRAB_OP_KEYBOARD_ESCAPING_DOCK:
          /* carry on */
           break;
@@ -2087,6 +2141,7 @@ process_tab_grab (MetaDisplay *display,
       switch (display->grab_op)
         {
         case META_GRAB_OP_KEYBOARD_TABBING_NORMAL:
+        case META_GRAB_OP_KEYBOARD_TABBING_NORMAL_ALL_WORKSPACES:
         case META_GRAB_OP_KEYBOARD_TABBING_DOCK:
           /* carry on */
           break;
@@ -2810,6 +2865,8 @@ tab_op_from_tab_type (MetaTabList type)
     {
     case META_TAB_LIST_NORMAL:
       return META_GRAB_OP_KEYBOARD_TABBING_NORMAL;
+    case META_TAB_LIST_NORMAL_ALL_WORKSPACES:
+      return META_GRAB_OP_KEYBOARD_TABBING_NORMAL_ALL_WORKSPACES;
     case META_TAB_LIST_DOCKS:
       return META_GRAB_OP_KEYBOARD_TABBING_DOCK;
     case META_TAB_LIST_GROUP:
@@ -2828,6 +2885,8 @@ cycle_op_from_tab_type (MetaTabList type)
     {
     case META_TAB_LIST_NORMAL:
       return META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL;
+    case META_TAB_LIST_NORMAL_ALL_WORKSPACES:
+      return META_GRAB_OP_KEYBOARD_ESCAPING_NORMAL_ALL_WORKSPACES;
     case META_TAB_LIST_DOCKS:
       return META_GRAB_OP_KEYBOARD_ESCAPING_DOCK;
     case META_TAB_LIST_GROUP:
@@ -2888,6 +2947,7 @@ do_choose_window (MetaDisplay    *display,
                       initial_selection->desc);
           display->mouse_mode = FALSE;
           meta_window_activate (initial_selection, event->xkey.time);
+          meta_workspace_activate (initial_selection->workspace, event->xkey.time);
         }
       else if (meta_display_begin_grab_op (display,
                                            screen,
@@ -2917,6 +2977,7 @@ do_choose_window (MetaDisplay    *display,
               meta_display_end_grab_op (display, event->xkey.time);
               display->mouse_mode = FALSE;
               meta_window_activate (initial_selection, event->xkey.time);
+              meta_workspace_activate (initial_selection->workspace, event->xkey.time);
             }
           else
             {
@@ -3307,9 +3368,11 @@ handle_set_spew_mark (MetaDisplay    *display,
 }
 
 void
-meta_set_keybindings_disabled (gboolean setting)
+meta_set_keybindings_disabled (MetaDisplay *display,
+                               gboolean     setting)
 {
   all_bindings_disabled = setting;
+  regrab_key_bindings (display);
   meta_topic (META_DEBUG_KEYBINDINGS,
               "Keybindings %s\n", all_bindings_disabled ? "disabled" : "enabled");
 }

@@ -40,30 +40,7 @@ static void     meta_preview_finalize      (GObject          *object);
 
 static GtkWidgetClass *parent_class;
 
-GType
-meta_preview_get_type (void)
-{
-  static GType preview_type = 0;
-
-  if (!preview_type)
-    {
-      static const GtkTypeInfo preview_info =
-      {
-	"MetaPreview",
-	sizeof (MetaPreview),
-	sizeof (MetaPreviewClass),
-	(GtkClassInitFunc) meta_preview_class_init,
-	(GtkObjectInitFunc) meta_preview_init,
-	/* reserved_1 */ NULL,
-        /* reserved_2 */ NULL,
-        (GtkClassInitFunc) NULL,
-      };
-
-      preview_type = gtk_type_unique (GTK_TYPE_BIN, &preview_info);
-    }
-
-  return preview_type;
-}
+G_DEFINE_TYPE (MetaPreview, meta_preview, GTK_TYPE_BIN);
 
 static void
 meta_preview_class_init (MetaPreviewClass *class)
@@ -125,7 +102,7 @@ meta_preview_new (void)
 {
   MetaPreview *preview;
   
-  preview = gtk_type_new (META_TYPE_PREVIEW);
+  preview = g_object_new (META_TYPE_PREVIEW, NULL);
   
   return GTK_WIDGET (preview);
 }
@@ -316,14 +293,14 @@ meta_preview_size_allocate (GtkWidget         *widget,
 {
   MetaPreview *preview;
   int border_width;
-  GtkAllocation child_allocation;
+  GtkAllocation widget_allocation, child_allocation;
   GtkWidget *child;
   
   preview = META_PREVIEW (widget);
 
   ensure_info (preview);
   
-  widget->allocation = *allocation;
+  gtk_widget_set_allocation (widget, allocation);
 
   border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
   
@@ -331,11 +308,12 @@ meta_preview_size_allocate (GtkWidget         *widget,
   if (child &&
       gtk_widget_get_visible (child))
     {
-      child_allocation.x = widget->allocation.x + border_width + preview->left_width;
-      child_allocation.y = widget->allocation.y + border_width + preview->top_height;
+      gtk_widget_get_allocation (widget, &widget_allocation);
+      child_allocation.x = widget_allocation.x + border_width + preview->left_width;
+      child_allocation.y = widget_allocation.y + border_width + preview->top_height;
       
-      child_allocation.width = MAX (1, widget->allocation.width - border_width * 2 - preview->left_width - preview->right_width);
-      child_allocation.height = MAX (1, widget->allocation.height - border_width * 2 - preview->top_height - preview->bottom_height);
+      child_allocation.width = MAX (1, widget_allocation.width - border_width * 2 - preview->left_width - preview->right_width);
+      child_allocation.height = MAX (1, widget_allocation.height - border_width * 2 - preview->top_height - preview->bottom_height);
 
       gtk_widget_size_allocate (gtk_bin_get_child (GTK_BIN (widget)), &child_allocation);
     }
