@@ -110,6 +110,25 @@ static GtkWidgetClass *parent_class = NULL;
 
 G_DEFINE_TYPE (MetaFrames, meta_frames, GTK_TYPE_WINDOW);
 
+
+static GObject *
+meta_frames_constructor (GType                  gtype,
+                         guint                  n_properties,
+                         GObjectConstructParam *properties)
+{
+  GObject *object;
+  GObjectClass *gobject_class;
+
+  gobject_class = G_OBJECT_CLASS (parent_class);
+  object = gobject_class->constructor (gtype, n_properties, properties);
+
+  g_object_set (object,
+                "type", GTK_WINDOW_POPUP,
+                NULL);
+
+  return object;
+}
+
 static void
 meta_frames_class_init (MetaFramesClass *class)
 {
@@ -123,6 +142,7 @@ meta_frames_class_init (MetaFramesClass *class)
 
   parent_class = g_type_class_peek_parent (class);
 
+  gobject_class->constructor = meta_frames_constructor;
   gobject_class->finalize = meta_frames_finalize;
   object_class->destroy = meta_frames_destroy;
 
@@ -180,8 +200,6 @@ prefs_changed_callback (MetaPreference pref,
 static void
 meta_frames_init (MetaFrames *frames)
 {
-  GTK_WINDOW (frames)->type = GTK_WINDOW_POPUP;
-
   frames->text_heights = g_hash_table_new (NULL, NULL);
 
   frames->frames = g_hash_table_new (unsigned_long_hash, unsigned_long_equal);
@@ -570,8 +588,9 @@ meta_frames_attach_style (MetaFrames  *frames,
     gtk_style_detach (frame->style);
 
   /* Weirdly, gtk_style_attach() steals a reference count from the style passed in */
-  g_object_ref (GTK_WIDGET (frames)->style);
-  frame->style = gtk_style_attach (GTK_WIDGET (frames)->style, frame->window);
+  g_object_ref (gtk_widget_get_style (GTK_WIDGET (frames)));
+  frame->style = gtk_style_attach (gtk_widget_get_style (GTK_WIDGET (frames)),
+                                   frame->window);
 }
 
 void
@@ -2613,7 +2632,7 @@ meta_frames_set_window_background (MetaFrames   *frames,
       /* Set A in ARGB to window_background_alpha, if we have ARGB */
 
       visual = gtk_widget_get_visual (GTK_WIDGET (frames));
-      if (visual->depth == 32) /* we have ARGB */
+      if (gdk_visual_get_depth (visual) == 32) /* we have ARGB */
         {
           color.pixel = (color.pixel & 0xffffff) &
             style->window_background_alpha << 24;

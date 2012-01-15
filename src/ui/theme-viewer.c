@@ -776,6 +776,7 @@ main (int argc, char **argv)
 {
   GtkWidget *window;
   GtkWidget *collection;
+  GtkStyle *style;
   GError *err;
   clock_t start, end;
   GtkWidget *notebook;
@@ -850,26 +851,28 @@ main (int argc, char **argv)
                     G_CALLBACK (gtk_main_quit), NULL);
 
   gtk_widget_realize (window);
-  g_assert (window->style);
-  g_assert (window->style->font_desc);
+  style = gtk_widget_get_style (window);
+
+  g_assert (style);
+  g_assert (style->font_desc);
   
   notebook = gtk_notebook_new ();
   gtk_container_add (GTK_CONTAINER (window), notebook);
 
   collection = preview_collection (FONT_SIZE_NORMAL,
-                                   window->style->font_desc);
+                                   style->font_desc);
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Normal Title Font")));
   
   collection = preview_collection (FONT_SIZE_SMALL,
-                                   window->style->font_desc);
+                                   style->font_desc);
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Small Title Font")));
   
   collection = preview_collection (FONT_SIZE_LARGE,
-                                   window->style->font_desc);
+                                   style->font_desc);
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Large Title Font")));
@@ -920,7 +923,7 @@ get_flags (GtkWidget *widget)
 static int
 get_text_height (GtkWidget *widget)
 {
-  return meta_pango_font_desc_get_text_height (widget->style->font_desc,
+  return meta_pango_font_desc_get_text_height (gtk_widget_get_style (widget)->font_desc,
                                                gtk_widget_get_pango_context (widget));
 }
 
@@ -1001,7 +1004,7 @@ run_theme_benchmark (void)
       /* Creating the pixmap in the loop is right, since
        * GDK does the same with its double buffering.
        */
-      pixmap = gdk_pixmap_new (widget->window,
+      pixmap = gdk_pixmap_new (gtk_widget_get_window (widget),
                                client_width + left_width + right_width,
                                client_height + top_height + bottom_height,
                                -1);
