@@ -117,7 +117,7 @@ AC_MSG_RESULT([$with_gtk])
 
 case "$with_gtk" in
   2.0) GTK_API_VERSION=2.0
-       GTK_MIN_VERSION=2.20.0
+       GTK_MIN_VERSION=2.24.0
        CANBERRA_GTK=libcanberra-gtk
        ;;
   3.0) GTK_API_VERSION=3.0

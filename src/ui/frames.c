@@ -35,8 +35,6 @@
 #include "prefs.h"
 #include "ui.h"
 
-#include "gdk-compat.h"
-
 #ifdef HAVE_SHAPE
 #include <X11/extensions/shape.h>
 #endif
