@@ -1,16 +1,4 @@
-Marco is not a meta-City as in an urban center, but rather
-Meta-ness as in the state of being meta. i.e. marco : meta as
-opacity : opaque. Also it may have something to do with the Meta key
-on UNIX keyboards.
-
-The first release of Marco was version 2.3. Marco has no need for
-your petty hangups about version numbers.
-
-The stable releases so far are 2.4.x, 2.6.x, 2.8.[01], 2.8.1.x, 2.8.5-,
-2.10.x, 2.12.x, 2.14.x, 2.16.x.
-
-Unstable branches are 2.3.x, 2.5.x, 2.8.2-4, 2.9.x, 2.11.x, 2.13.x,
-2.15.x, 2.17.x.
+MATE Marco is a fork of GNOME Metacity.
 
 COMPILING MARCO
 ===
@@ -18,14 +6,15 @@ COMPILING MARCO
 You need GTK+ 2.2.  For startup notification to work you need
 libstartup-notification at
 http://www.freedesktop.org/software/startup-notification/ or on the
-MATE ftp site. You also need MateConf 1.2 (unless building a funky
+MATE ftp site. You also need MateConf (unless building a funky
 extra-small embedded marco with --disable-mateconf, see below).
 
 REPORTING BUGS AND SUBMITTING PATCHES
 ===
 
-Report new bugs on http://bugzilla.gnome.org. Please check for
-duplicates, *especially* if you are reporting a feature request.
+Report new bugs on https://github.com/mate-desktop/mate-window-manger.
+Please check for duplicates, *especially* if you are reporting a feature
+request.
 
 Please do *not* add "me too!" or "yes I really want this!" comments to
 feature requests in bugzilla. Please read
@@ -234,7 +223,7 @@ EWMH-compliant WMs).
 MARCO BUGS, NON-FEATURES, AND CAVEATS
 ===
 
-See bugzilla: http://bugzilla.gnome.org/query.cgi
+See github: https://github.com/mate-desktop/mate-window-manager/issues
 
 FAQ
 ===
@@ -270,22 +259,6 @@ A: If it makes sense to turn on unconditionally, or is genuinely a
    http://pobox.com/~hp/free-software-ui.html
    http://pobox.com/~hp/features.html
 
-Q: Will Marco be part of MATE?
-
-A: It is officially part of MATE as of MATE 2.2. Prior to that,
-   it was unofficially shipped as the default MATE WM by several
-   OS vendors.
-
-Q: Is Marco a Red Hat project?
-
-A: Marco's original creation was in no way funded, endorsed, or
-   encouraged by Red Hat, Inc. - I'm guessing Red Hat would not
-   consider "insufficient number of window managers for Linux" an
-   urgent problem. Just a wild guess though.
-
-   Now that marco is the default WM however, Red Hat supports some
-   bugfixing and other work.
-
 Q: Why does Marco remember the workspace/position of some apps
    but not others across logout/login?
 
@@ -311,7 +284,7 @@ A: Marco only stores sizes/positions for apps that are session
 
    So the correct way to fix the situation is to make apps
    session-aware. libSM has come with X for years, it's very
-   standardized, it's shared by MATE and KDE - even twm is
+   standardized, it's shared by GNOME and KDE - even twm is
    session-aware. So anyone who won't take a patch to add SM is more
    archaic than twm - and you should flame them. ;-)
 
