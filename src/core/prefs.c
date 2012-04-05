@@ -81,6 +81,7 @@ static MetaFocusNewWindows focus_new_windows = META_FOCUS_NEW_WINDOWS_SMART;
 static gboolean raise_on_click = TRUE;
 static char* current_theme = NULL;
 static int num_workspaces = 4;
+static MetaWrapStyle wrap_style = META_WRAP_NONE;
 static MetaActionTitlebar action_double_click_titlebar = META_ACTION_TITLEBAR_TOGGLE_MAXIMIZE;
 static MetaActionTitlebar action_middle_click_titlebar = META_ACTION_TITLEBAR_LOWER;
 static MetaActionTitlebar action_right_click_titlebar = META_ACTION_TITLEBAR_MENU;
@@ -185,6 +186,14 @@ static MateConfEnumStringPair symtab_focus_new_windows[] =
   {
     { META_FOCUS_NEW_WINDOWS_SMART,  "smart" },
     { META_FOCUS_NEW_WINDOWS_STRICT, "strict" },
+    { 0, NULL },
+  };
+
+static MateConfEnumStringPair symtab_wrap_style[] =
+  {
+    { META_WRAP_NONE,     "no wrap" },
+    { META_WRAP_CLASSIC,  "classic" },
+    { META_WRAP_TOROIDAL, "toroidal" },
     { 0, NULL },
   };
 
@@ -326,6 +335,11 @@ static MetaEnumPreference preferences_enum[] =
       META_PREF_FOCUS_MODE,
       symtab_focus_mode,
       &focus_mode,
+    },
+    { "/apps/marco/general/wrap_style",
+      META_PREF_WRAP_STYLE,
+      symtab_wrap_style,
+      &wrap_style,
     },
     { "/apps/marco/general/visual_bell_type",
       META_PREF_VISUAL_BELL_TYPE,
@@ -1642,6 +1656,12 @@ meta_prefs_get_num_workspaces (void)
   return num_workspaces;
 }
 
+MetaWrapStyle
+meta_prefs_get_wrap_style (void)
+{
+  return wrap_style;
+}
+
 gboolean
 meta_prefs_get_application_based (void)
 {
@@ -1679,7 +1699,7 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_RAISE_ON_CLICK:
       return "RAISE_ON_CLICK";
-      
+
     case META_PREF_THEME:
       return "THEME";
 
@@ -1688,6 +1708,9 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_NUM_WORKSPACES:
       return "NUM_WORKSPACES";
+
+    case META_PREF_WRAP_STYLE:
+      return "WRAP_STYLE";
 
     case META_PREF_APPLICATION_BASED:
       return "APPLICATION_BASED";
