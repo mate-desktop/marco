@@ -1443,10 +1443,8 @@ meta_frames_button_press_event (GtkWidget      *widget,
       META_GRAB_OP_NONE)
     return FALSE; /* already up to something */
 
-  if (event->button == 1 &&
-      (control == META_FRAME_CONTROL_MAXIMIZE ||
-       control == META_FRAME_CONTROL_UNMAXIMIZE ||
-       control == META_FRAME_CONTROL_MINIMIZE ||
+  if ((event->button == 1 &&
+      (control == META_FRAME_CONTROL_MINIMIZE ||
        control == META_FRAME_CONTROL_DELETE ||
        control == META_FRAME_CONTROL_SHADE ||
        control == META_FRAME_CONTROL_UNSHADE ||
@@ -1454,7 +1452,9 @@ meta_frames_button_press_event (GtkWidget      *widget,
        control == META_FRAME_CONTROL_UNABOVE ||
        control == META_FRAME_CONTROL_STICK ||
        control == META_FRAME_CONTROL_UNSTICK ||
-       control == META_FRAME_CONTROL_MENU))
+       control == META_FRAME_CONTROL_MENU)) ||
+      (control == META_FRAME_CONTROL_MAXIMIZE ||
+       control == META_FRAME_CONTROL_UNMAXIMIZE))
     {
       MetaGrabOp op = META_GRAB_OP_NONE;
 
@@ -1464,9 +1464,12 @@ meta_frames_button_press_event (GtkWidget      *widget,
           op = META_GRAB_OP_CLICKING_MINIMIZE;
           break;
         case META_FRAME_CONTROL_MAXIMIZE:
-          op = META_GRAB_OP_CLICKING_MAXIMIZE;
+          op = META_GRAB_OP_CLICKING_MAXIMIZE + event->button - 1;
+          op = op > META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL ? META_GRAB_OP_CLICKING_MAXIMIZE : op;
           break;
         case META_FRAME_CONTROL_UNMAXIMIZE:
+          op = META_GRAB_OP_CLICKING_UNMAXIMIZE + event->button - 1;
+          op = op > META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL ? META_GRAB_OP_CLICKING_UNMAXIMIZE : op;
           op = META_GRAB_OP_CLICKING_UNMAXIMIZE;
           break;
         case META_FRAME_CONTROL_DELETE:
@@ -1710,20 +1713,36 @@ meta_frames_button_release_event    (GtkWidget           *widget,
           break;
 
         case META_GRAB_OP_CLICKING_MAXIMIZE:
+        case META_GRAB_OP_CLICKING_MAXIMIZE_VERTICAL:
+        case META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL:
           if (control == META_FRAME_CONTROL_MAXIMIZE)
           {
             /* Focus the window on the maximize */
             meta_core_user_focus (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
                             frame->xwindow,
                             event->time);
-            meta_core_maximize (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+
+            if (op == META_GRAB_OP_CLICKING_MAXIMIZE)
+               meta_core_maximize (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+            if (op == META_GRAB_OP_CLICKING_MAXIMIZE_VERTICAL)
+              meta_core_toggle_maximize_vertically (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+            if (op == META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL)
+              meta_core_toggle_maximize_horizontally (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
           }
           meta_core_end_grab_op (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), event->time);
           break;
 
         case META_GRAB_OP_CLICKING_UNMAXIMIZE:
-          if (control == META_FRAME_CONTROL_UNMAXIMIZE)
-            meta_core_unmaximize (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+        case META_GRAB_OP_CLICKING_UNMAXIMIZE_VERTICAL:
+        case META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL:
+          if (control == META_FRAME_CONTROL_UNMAXIMIZE) {
+            if (op == META_GRAB_OP_CLICKING_UNMAXIMIZE)
+              meta_core_unmaximize (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+            if (op == META_GRAB_OP_CLICKING_UNMAXIMIZE_VERTICAL)
+              meta_core_toggle_maximize_vertically (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+            if (op == META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL)
+              meta_core_toggle_maximize_horizontally (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
+          }
 
           meta_core_end_grab_op (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), event->time);
           break;
@@ -1930,7 +1949,11 @@ meta_frames_motion_notify_event     (GtkWidget           *widget,
     case META_GRAB_OP_CLICKING_DELETE:
     case META_GRAB_OP_CLICKING_MINIMIZE:
     case META_GRAB_OP_CLICKING_MAXIMIZE:
+    case META_GRAB_OP_CLICKING_MAXIMIZE_VERTICAL:
+    case META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL:
     case META_GRAB_OP_CLICKING_UNMAXIMIZE:
+    case META_GRAB_OP_CLICKING_UNMAXIMIZE_VERTICAL:
+    case META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL:
     case META_GRAB_OP_CLICKING_SHADE:
     case META_GRAB_OP_CLICKING_UNSHADE:
     case META_GRAB_OP_CLICKING_ABOVE:
@@ -1956,7 +1979,11 @@ meta_frames_motion_notify_event     (GtkWidget           *widget,
                ((control == META_FRAME_CONTROL_MAXIMIZE ||
                  control == META_FRAME_CONTROL_UNMAXIMIZE) &&
                 (grab_op == META_GRAB_OP_CLICKING_MAXIMIZE ||
-                 grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE)) ||
+                 grab_op == META_GRAB_OP_CLICKING_MAXIMIZE_VERTICAL ||
+                 grab_op == META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL ||
+                 grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE ||
+                 grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE_VERTICAL ||
+                 grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL)) ||
                (control == META_FRAME_CONTROL_SHADE &&
                 grab_op == META_GRAB_OP_CLICKING_SHADE) ||
                (control == META_FRAME_CONTROL_UNSHADE &&
@@ -2387,13 +2414,15 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
         button_states[META_BUTTON_TYPE_MINIMIZE] = META_BUTTON_STATE_PRELIGHT;
       break;
     case META_FRAME_CONTROL_MAXIMIZE:
-      if (grab_op == META_GRAB_OP_CLICKING_MAXIMIZE)
+      if (grab_op == META_GRAB_OP_CLICKING_MAXIMIZE || grab_op == META_GRAB_OP_CLICKING_MAXIMIZE_VERTICAL ||
+	  grab_op == META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL)
         button_states[META_BUTTON_TYPE_MAXIMIZE] = META_BUTTON_STATE_PRESSED;
       else
         button_states[META_BUTTON_TYPE_MAXIMIZE] = META_BUTTON_STATE_PRELIGHT;
       break;
     case META_FRAME_CONTROL_UNMAXIMIZE:
-      if (grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE)
+      if (grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE || grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE_VERTICAL ||
+          grab_op == META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL)
         button_states[META_BUTTON_TYPE_MAXIMIZE] = META_BUTTON_STATE_PRESSED;
       else
         button_states[META_BUTTON_TYPE_MAXIMIZE] = META_BUTTON_STATE_PRELIGHT;

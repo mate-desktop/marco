@@ -300,10 +300,46 @@ meta_bell_notify (MetaDisplay *display,
 
       if (window)
         {
+          int x=-1, y=-1, width=-1, height=-1, screen_width=-1, screen_height=-1;
+          MetaScreen *screen;
+
+          screen = meta_window_get_screen (window);
+
           ca_proplist_sets (p, CA_PROP_WINDOW_NAME, window->title);
           ca_proplist_setf (p, CA_PROP_WINDOW_X11_XID, "%lu", (unsigned long)window->xwindow);
+          ca_proplist_setf (p, CA_PROP_WINDOW_X11_SCREEN, "%i", meta_screen_get_screen_number(screen));
           ca_proplist_sets (p, CA_PROP_APPLICATION_NAME, window->res_name);
           ca_proplist_setf (p, CA_PROP_APPLICATION_PROCESS_ID, "%d", window->net_wm_pid);
+
+          /* properties for positional sound based on window placement */
+          meta_window_get_geometry (window, &x, &y, &width, &height);
+          ca_proplist_setf (p, CA_PROP_WINDOW_X, "%i", x);
+          ca_proplist_setf (p, CA_PROP_WINDOW_Y, "%i", y);
+          ca_proplist_setf (p, CA_PROP_WINDOW_WIDTH, "%i", width);
+          ca_proplist_setf (p, CA_PROP_WINDOW_HEIGHT, "%i", height);
+
+          meta_screen_get_size (screen, &screen_width, &screen_height);
+          if (screen_width > 1)
+            {
+              x += width/2;
+              x = CLAMP(x, 0, screen_width-1);
+
+              /* From libcanberra-gtk.
+               * We use these strange format strings here to avoid that libc
+               * applies locale information on the formatting of floating
+               * numbers. */
+
+              ca_proplist_setf (p, CA_PROP_WINDOW_HPOS, "%i.%03i",
+                               (int) (x/(screen_width-1)), (int) (1000.0*x/(screen_width-1)) % 1000);
+            }
+          if (screen_height > 1)
+            {
+              y += height/2;
+              y = CLAMP(y, 0, screen_height-1);
+
+              ca_proplist_setf (p, CA_PROP_WINDOW_VPOS, "%i.%03i",
+                               (int) (y/(screen_height-1)), (int) (1000.0*y/(screen_height-1)) % 1000);
+            }
         }
 
       /* First, we try to play a real sound ... */

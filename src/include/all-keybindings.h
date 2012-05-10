@@ -158,6 +158,12 @@ keybind (switch_windows,            handle_switch,        META_TAB_LIST_NORMAL,
 keybind (switch_windows_backward,  handle_switch,        META_TAB_LIST_NORMAL,
          REVERSES_AND_REVERSED,  NULL,
         _("Move backward between windows, using a popup window"))
+keybind (switch_windows_all,        handle_switch,       META_TAB_LIST_NORMAL_ALL_WORKSPACES,
+         BINDING_REVERSES,       NULL,
+        _("Move between windows on all workspaces, using a popup window"))
+keybind (switch_windows_all_backward,handle_switch,      META_TAB_LIST_NORMAL_ALL_WORKSPACES,
+         REVERSES_AND_REVERSED,  NULL,
+        _("Move backward between windows on all workspaces, using a popup window"))
 keybind (switch_panels,             handle_switch,        META_TAB_LIST_DOCKS,
          BINDING_REVERSES,       "<Control><Alt>Tab",
         _("Move between panels and the desktop, using a popup window"))
