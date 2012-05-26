@@ -1280,7 +1280,13 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
       entries[i].key = (MetaTabEntryKey) window->xwindow;
       entries[i].title = window->title;
 
-      win_pixbuf = get_window_pixbuf (window, &width, &height);
+      /* Only get the pixbuf if the user does NOT have 
+         /apps/marco/general/compositing_fast_alt_tab set to true 
+         in mateconf. There is an obvious lag when the pixbuf is
+         retrieved. */
+      if (!meta_prefs_get_compositing_fast_alt_tab())
+        win_pixbuf = get_window_pixbuf (window, &width, &height);
+
       if (win_pixbuf == NULL)
         entries[i].icon = g_object_ref (window->icon);
       else

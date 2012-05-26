@@ -50,6 +50,7 @@
 #define KEY_TITLEBAR_FONT "/apps/marco/general/titlebar_font"
 #define KEY_NUM_WORKSPACES "/apps/marco/general/num_workspaces"
 #define KEY_COMPOSITOR "/apps/marco/general/compositing_manager"
+#define KEY_COMPOSITOR_FAST_ALT_TAB "/apps/marco/general/compositing_fast_alt_tab"
 #define KEY_MATE_ACCESSIBILITY "/desktop/mate/interface/accessibility"
 
 #define KEY_COMMAND_DIRECTORY "/apps/marco/keybinding_commands"
@@ -97,6 +98,7 @@ static gboolean mate_animations = TRUE;
 static char *cursor_theme = NULL;
 static int   cursor_size = 24;
 static gboolean compositing_manager = FALSE;
+static gboolean compositing_fast_alt_tab = FALSE;
 static gboolean resize_with_right_button = FALSE;
 static gboolean force_fullscreen = TRUE;
 
@@ -419,6 +421,11 @@ static MetaBoolPreference preferences_bool[] =
     { "/apps/marco/general/compositing_manager",
       META_PREF_COMPOSITING_MANAGER,
       &compositing_manager,
+      FALSE,
+    },
+    { "/apps/marco/general/compositing_fast_alt_tab",
+      META_PREF_COMPOSITING_FAST_ALT_TAB,
+      &compositing_fast_alt_tab,
       FALSE,
     },
     { "/apps/marco/general/resize_with_right_button",
@@ -1775,6 +1782,9 @@ meta_preference_to_string (MetaPreference pref)
     case META_PREF_COMPOSITING_MANAGER:
       return "COMPOSITING_MANAGER";
 
+    case META_PREF_COMPOSITING_FAST_ALT_TAB:
+      return "COMPOSITING_FAST_ALT_TAB";
+
     case META_PREF_RESIZE_WITH_RIGHT_BUTTON:
       return "RESIZE_WITH_RIGHT_BUTTON";
 
@@ -2730,6 +2740,12 @@ meta_prefs_get_compositing_manager (void)
   return compositing_manager;
 }
 
+gboolean
+meta_prefs_get_compositing_fast_alt_tab(void)
+{
+    return compositing_fast_alt_tab;
+}
+
 guint
 meta_prefs_get_mouse_button_resize (void)
 {
@@ -2767,6 +2783,28 @@ meta_prefs_set_compositing_manager (gboolean whether)
     }
 #else
   compositing_manager = whether;
+#endif
+}
+
+void
+meta_prefs_set_compositing_fast_alt_tab(gboolean whether)
+{
+#ifdef HAVE_MATECONF
+    GError *err = NULL;
+
+    mateconf_client_set_bool (default_client,
+                            KEY_COMPOSITOR_FAST_ALT_TAB,
+                            whether,
+                            &err);
+    
+    if (err)
+    {
+        meta_warning (_("Error setting compositor fast alt-tab status: %s\n"),
+                      err->message);
+        g_error_free (err);
+    }
+#else
+    compositing_fast_alt_tab = whether;
 #endif
 }
 

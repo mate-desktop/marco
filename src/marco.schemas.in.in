@@ -397,6 +397,21 @@
     </schema>
 
     <schema>
+      <key>/schemas/apps/marco/general/compositing_fast_alt_tab</key>
+      <applyto>/apps/marco/general/compositing_fast_alt_tab</applyto>
+      <owner>marco</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Fast Alt-Tab Enabled</short>
+        <long>
+          Whether or not fast alt-tabbing is used when the compositing
+          manager is enabled. 
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
       <key>/schemas/apps/marco/workspace_names/name</key>
       <applyto>/apps/marco/workspace_names/name_1</applyto>
       <applyto>/apps/marco/workspace_names/name_2</applyto>
