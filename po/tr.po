@@ -1,21 +1,22 @@
-# Turkish translation of marco.
-# Copyright (C) 2003 Free Software Foundation.
-# This file is distributed under the same license as the marco package.
-#
-# Sinan İmamoğlu <sinan@myrealbox.com>, 2003.
-# Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+#   <mauron@vmail.me>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: marco\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-30 18:10+0300\n"
-"PO-Revision-Date: 2009-08-30 18:10+0300\n"
-"Last-Translator: Baris Cicek <baris@teamforce.name.tr>\n"
-"Language-Team: Turkish <mate-turk@gnome.org>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-28 10:53+0100\n"
+"PO-Revision-Date: 2012-03-17 20:08+0000\n"
+"Last-Translator: mauron <mauron@vmail.me>\n"
+"Language-Team: Turkish (http://www.transifex.com/projects/p/MATE/language/tr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=1; plural=0;\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
@@ -34,38 +35,37 @@ msgstr "Zil olayı"
 msgid "Unknown window information request: %d"
 msgstr "Bilinmeyen pencere bilgi isteği: %d"
 
-#: ../src/core/delete.c:104
+#. Translators: %s is a window title
+#: ../src/core/delete.c:96
 #, c-format
-msgid ""
-"<big><b><tt>%s</tt> is not responding.</b></big>\n"
-"\n"
-"<i>You may choose to wait a short while for it to continue or force the "
-"application to quit entirely.</i>"
-msgstr ""
-"<big><b><tt>%s</tt> cevap vermiyor.</b></big>\n"
-"\n"
-"<i>Uygulamanın devam etmesi için bir müddet bekleyi seçebilirsiniz ya da "
-"uygulamanın tamamen çıkması için onu zorlayabilirsiniz.</i>"
+msgid "<tt>%s</tt> is not responding."
+msgstr "<tt>%s</tt> cevap vermiyor."
 
-#: ../src/core/delete.c:115
+#: ../src/core/delete.c:101
+msgid ""
+"You may choose to wait a short while for it to continue or force the "
+"application to quit entirely."
+msgstr "Devam etmesi için kısa bir süre bekleyebilir ya da uygulamanın çıkmasını zorlayabilirsiniz."
+
+#: ../src/core/delete.c:110
 msgid "_Wait"
 msgstr "_Bekle"
 
-#: ../src/core/delete.c:115
+#: ../src/core/delete.c:110
 msgid "_Force Quit"
 msgstr "_Sonlandır"
 
-#: ../src/core/delete.c:216
+#: ../src/core/delete.c:208
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "Makine adı alınamadı: %s\n"
 
-#: ../src/core/display.c:258
+#: ../src/core/display.c:266
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "Kompozisyon için gerekli olan %s eklentisi eksik"
 
-#: ../src/core/display.c:336
+#: ../src/core/display.c:344
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X Pencere Sistemi '%s' ekranı açılamadı\n"
@@ -76,10 +76,7 @@ msgid ""
 "Lost connection to the display '%s';\n"
 "most likely the X server was shut down or you killed/destroyed\n"
 "the window manager.\n"
-msgstr ""
-"'%s' ekranıyla bağlantı kayboldu;\n"
-"büyük olasılıkla ya X sunucusu kapandı veya pencere yöneticisini\n"
-"öldürdünüz ya da yok ettiniz.\n"
+msgstr "'%s' ekranıyla bağlantı kayboldu;\nbüyük olasılıkla ya X sunucusu kapandı veya pencere yöneticisini\nöldürdünüz ya da yok ettiniz.\n"
 
 #: ../src/core/errors.c:279
 #, c-format
@@ -91,23 +88,18 @@ msgstr "Ölümcül G/Ç hatası %d (%s); '%s' ekranında.\n"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr ""
-"%s tuşu %x değiştiricileriyle birlikte başka bir uygulama tarafından tuş "
-"bağıolarak kullanılıyor\n"
+msgstr "%s tuşu %x değiştiricileriyle birlikte başka bir uygulama tarafından tuş bağıolarak kullanılıyor\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#.
+#. 
 #: ../src/core/keybindings.c:2294
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr ""
-"<tt>%s</tt> çalıştırılırken bir hata oldu:\n"
-"\n"
-"%s"
+msgstr "<tt>%s</tt> çalıştırılırken bir hata oldu:\n\n%s"
 
 #: ../src/core/keybindings.c:2383
 #, c-format
@@ -119,80 +111,72 @@ msgstr "%d komutu tanımlanmamış.\n"
 msgid "No terminal command has been defined.\n"
 msgstr "Hiçbir termina komutu tanımlanmamış.\n"
 
-#: ../src/core/main.c:130
+#: ../src/core/main.c:131
 #, c-format
 msgid ""
 "marco %s\n"
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
-"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A "
-"PARTICULAR PURPOSE.\n"
-msgstr ""
-"marco %s\n"
-"Telif Hakkı (C) 2001-%s Havoc Pennington, Red Hat, Inc., ve başkaları\n"
-"Bu, özgür yazılımdır; telif koşullarını öğrenmek için kaynak koda bakın.\n"
-"Hiç bir garantisi, BELİRLİ BİR AMACA UYGUNLUĞU için dahi, YOKTUR.\n"
+"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr "marco %s\nTelif Hakkı (C) 2001-%s Havoc Pennington, Red Hat, Inc., ve başkaları\nBu, özgür yazılımdır; telif koşullarını öğrenmek için kaynak koda bakın.\nHiç bir garantisi, BELİRLİ BİR AMACA UYGUNLUĞU için dahi, YOKTUR.\n"
 
-#: ../src/core/main.c:268
+#: ../src/core/main.c:269
 msgid "Disable connection to session manager"
 msgstr "Ortam yöneticisine olan bağlantıyı kapat"
 
-#: ../src/core/main.c:274
+#: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
 msgstr "Çalışan pencere yöneticisini Marco ile değiştir"
 
-#: ../src/core/main.c:280
+#: ../src/core/main.c:281
 msgid "Specify session management ID"
 msgstr "Ortam yönetim ID'sini belirtin"
 
-#: ../src/core/main.c:285
+#: ../src/core/main.c:286
 msgid "X Display to use"
 msgstr "Kullanılacak X Ekranı"
 
-#: ../src/core/main.c:291
+#: ../src/core/main.c:292
 msgid "Initialize session from savefile"
 msgstr "Ortamı kayıtlı dosyadan başlat"
 
-#: ../src/core/main.c:297
+#: ../src/core/main.c:298
 msgid "Print version"
 msgstr "Sürümü yazdır"
 
-#: ../src/core/main.c:303
+#: ../src/core/main.c:304
 msgid "Make X calls synchronous"
 msgstr "X çağrılarını eşazamanlı yap"
 
-#: ../src/core/main.c:309
+#: ../src/core/main.c:310
 msgid "Turn compositing on"
 msgstr "Kompozisyonları aç"
 
-#: ../src/core/main.c:315
+#: ../src/core/main.c:316
 msgid "Turn compositing off"
 msgstr "Kompozisyonları kapat"
 
-#: ../src/core/main.c:321
+#: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "Büyütülmüş ve dekorasyonları olmayan pencereleri tam ekran yapma"
 
-#: ../src/core/main.c:543
+#: ../src/core/main.c:528
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Tema dizini taranırken hata oluştu: %s\n"
 
-#: ../src/core/main.c:559
+#: ../src/core/main.c:544
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr ""
-"Hiç tema bulunamadı! %s varlığından ve bildiğimiz temaları içerdiğinden emin "
-"olun.\n"
+msgstr "Hiç tema bulunamadı! %s varlığından ve bildiğimiz temaları içerdiğinden emin olun.\n"
 
-#: ../src/core/main.c:618
+#: ../src/core/main.c:603
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Yeniden başlatılamadı: %s\n"
 
-#.
 #. * We found it, but it was invalid.  Complain.
 #. *
 #. * FIXME: This replicates the original behaviour, but in the future
@@ -201,73 +185,66 @@ msgstr "Yeniden başlatılamadı: %s\n"
 #. * the symtab.)
 #. *
 #. * (Empty comment follows so the translators don't see this.)
-#.
-#.
-#: ../src/core/prefs.c:506 ../src/core/prefs.c:661
+#. 
+#. 
+#: ../src/core/prefs.c:508 ../src/core/prefs.c:663
 #, c-format
 msgid "MateConf key '%s' is set to an invalid value\n"
 msgstr "'%s' MateConf anahtarına geçersiz bir değer atanmış\n"
 
-#: ../src/core/prefs.c:587 ../src/core/prefs.c:830
+#: ../src/core/prefs.c:589 ../src/core/prefs.c:832
 #, c-format
 msgid "%d stored in MateConf key %s is out of range %d to %d\n"
-msgstr ""
-"%2$s MateConf anahtarında saklı %1$d değeri %3$d ile %4$d aralığının dışında\n"
+msgstr "%2$s MateConf anahtarında saklı %1$d değeri %3$d ile %4$d aralığının dışında\n"
 
-#: ../src/core/prefs.c:631 ../src/core/prefs.c:708 ../src/core/prefs.c:756
-#: ../src/core/prefs.c:820 ../src/core/prefs.c:1113 ../src/core/prefs.c:1129
-#: ../src/core/prefs.c:1146 ../src/core/prefs.c:1162
+#: ../src/core/prefs.c:633 ../src/core/prefs.c:710 ../src/core/prefs.c:758
+#: ../src/core/prefs.c:822 ../src/core/prefs.c:1115 ../src/core/prefs.c:1131
+#: ../src/core/prefs.c:1148 ../src/core/prefs.c:1164
 #, c-format
 msgid "MateConf key \"%s\" is set to an invalid type\n"
 msgstr "\"%s\" MateConf anahtarına geçersiz bir tür atanmış\n"
 
-#: ../src/core/prefs.c:1232
+#: ../src/core/prefs.c:1234
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr ""
-"Hatalı uygulamalara yönelik çözümler devre dışı. Bazı uygulamalar düzgün "
-"işlemeyebilir.\n"
+msgstr "Hatalı uygulamalara yönelik çözümler devre dışı. Bazı uygulamalar düzgün işlemeyebilir.\n"
 
-#: ../src/core/prefs.c:1303
+#: ../src/core/prefs.c:1305
 #, c-format
 msgid "Could not parse font description \"%s\" from MateConf key %s\n"
 msgstr "\"%s\" yazıtipi tanımlaması %s MateConf anahtarından ayrıştırılamadı\n"
 
-#: ../src/core/prefs.c:1365
+#: ../src/core/prefs.c:1367
 #, c-format
 msgid ""
-"\"%s\" found in configuration database is not a valid value for mouse button "
-"modifier\n"
-msgstr ""
-"Yapılandırma veritabanında bulunan \"%s\", fare düğme düzenleyicisi olarak "
-"geçerli bir değer değil\n"
+"\"%s\" found in configuration database is not a valid value for mouse button"
+" modifier\n"
+msgstr "Yapılandırma veritabanında bulunan \"%s\", fare düğme düzenleyicisi olarak geçerli bir değer değil\n"
 
-#: ../src/core/prefs.c:1786
+#: ../src/core/prefs.c:1788
 #, c-format
 msgid "Error setting number of workspaces to %d: %s\n"
 msgstr "Çalışma alanı sayısının %d yapılmasında hata: %s\n"
 
-#: ../src/core/prefs.c:1975 ../src/core/prefs.c:2478
+#: ../src/core/prefs.c:1953 ../src/core/prefs.c:2456
 #, c-format
 msgid "Workspace %d"
 msgstr "Çalışma Alanı %d"
 
-#: ../src/core/prefs.c:2005 ../src/core/prefs.c:2183
+#: ../src/core/prefs.c:1983 ../src/core/prefs.c:2161
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr ""
-"Yapılandırma veritabanında bulunan \"%s\", \"%s\" tuş bağı olarak geçerli "
-"bir değer değil\n"
+msgstr "Yapılandırma veritabanında bulunan \"%s\", \"%s\" tuş bağı olarak geçerli bir değer değil\n"
 
-#: ../src/core/prefs.c:2559
+#: ../src/core/prefs.c:2537
 #, c-format
 msgid "Error setting name for workspace %d to \"%s\": %s\n"
 msgstr "%d çalışma alanının adının \"%s\" yapılmasında hata: %s\n"
 
-#: ../src/core/prefs.c:2763
+#: ../src/core/prefs.c:2741
 #, c-format
 msgid "Error setting compositor status: %s\n"
 msgstr "Komposizyon durumu atanırken hata: %s\n"
@@ -280,26 +257,19 @@ msgstr "'%2$s' X oturumundaki ekran %1$d geçersiz\n"
 #: ../src/core/screen.c:373
 #, c-format
 msgid ""
-"Screen %d on display \"%s\" already has a window manager; try using the --"
-"replace option to replace the current window manager.\n"
-msgstr ""
-"\"%2$s\" X oturumundaki ekran %1$d bir pencere yöneticisine zaten sahip; "
-"geçerli pencere yöneticisinin yerine bir başkasını koymak için --replace "
-"seçeneğini kullanmayı deneyin.\n"
+"Screen %d on display \"%s\" already has a window manager; try using the "
+"--replace option to replace the current window manager.\n"
+msgstr "\"%2$s\" X oturumundaki ekran %1$d bir pencere yöneticisine zaten sahip; geçerli pencere yöneticisinin yerine bir başkasını koymak için --replace seçeneğini kullanmayı deneyin.\n"
 
 #: ../src/core/screen.c:400
 #, c-format
-msgid ""
-"Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr ""
-"\"%2$s\" X oturumundaki ekran %1$d hangi pencere yöneticisine "
-"sahipöğrenilemedi\n"
+msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
+msgstr "\"%2$s\" X oturumundaki ekran %1$d hangi pencere yöneticisine sahipöğrenilemedi\n"
 
 #: ../src/core/screen.c:458
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
-msgstr ""
-"\"%2$s\" X oturumundaki ekran %1$d bir pencere yöneticisine zaten sahip\n"
+msgstr "\"%2$s\" X oturumundaki ekran %1$d bir pencere yöneticisine zaten sahip\n"
 
 #: ../src/core/screen.c:668
 #, c-format
@@ -309,139 +279,109 @@ msgstr "\"%2$s\" X oturumundaki ekran %1$d serberst bırakılamadı\"\n"
 #. Translators: Please don't translate "Control", "Shift", etc, since these
 #. * are hardcoded (in gtk/gtkaccelgroup.c; it's not marco's fault).
 #. * "disabled" must also stay as it is.
-#.
+#. 
 #: ../src/core/schema-bindings.c:169
 msgid ""
 "The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
 "\n"
-"The parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the "
-"special string \"disabled\", then there will be no keybinding for this "
-"action."
-msgstr ""
-"Biçimi şunun gibi olmalıdır: \"<Control>a\" ya da \"<Shift><Alt>F1\".\n"
-"\n"
-"Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"<Ctl>\" ya da "
-"\"<Ctrl>\" gibi kısaltmalara izin verir. Seçeneğe \"disabled\" özel "
-"dizgisini değer olarakatarsanız, o eylem için tuş bağı yapılmamış olur."
+"The parser is fairly liberal and allows lower or upper case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string \"disabled\", then there will be no keybinding for this action."
+msgstr "Biçimi şunun gibi olmalıdır: \"<Control>a\" ya da \"<Shift><Alt>F1\".\n\nAyrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"<Ctl>\" ya da \"<Ctrl>\" gibi kısaltmalara izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı yapılmamış olur."
 
 #: ../src/core/schema-bindings.c:177
 msgid ""
 "The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
 "\n"
-"The parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the "
-"special string \"disabled\", then there will be no keybinding for this "
-"action.\n"
+"The parser is fairly liberal and allows lower or upper case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string \"disabled\", then there will be no keybinding for this action.\n"
 "\n"
-"This keybinding may be reversed by holding down the \"shift\" key; "
-"therefore, \"shift\" cannot be one of the keys it uses."
-msgstr ""
-"Biçimi şunun gibi olmalıdır: \"<Control>a\" ya da \"<Shift><Alt>F1\". \n"
-"\n"
-"Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"<Ctl>\" ya da "
-"\"<Ctrl>\" gibi kısaltmalara izin verir. Seçeneğe \"disabled\" özel "
-"dizgisini değer olarakatarsanız, o eylem için tuş bağı yapılmamış olur.\n"
-"\n"
-"Bu tuşbağı \"shift\" tuşuna basılı tutarak ayrılabilir, bu yüzden \"shift\" "
-"kullandığı tuşlardan bir tanesi olamaz."
+"This keybinding may be reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be one of the keys it uses."
+msgstr "Biçimi şunun gibi olmalıdır: \"<Control>a\" ya da \"<Shift><Alt>F1\". \n\nAyrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"<Ctl>\" ya da \"<Ctrl>\" gibi kısaltmalara izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı yapılmamış olur.\n\nBu tuşbağı \"shift\" tuşuna basılı tutarak ayrılabilir, bu yüzden \"shift\" kullandığı tuşlardan bir tanesi olamaz."
 
-#: ../src/core/session.c:845 ../src/core/session.c:852
+#: ../src/core/session.c:850 ../src/core/session.c:857
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "'%s' dizini oluşturulamadı: %s\n"
 
-#: ../src/core/session.c:862
+#: ../src/core/session.c:867
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "'%s' oturum dosyası yazma için açılamadı: %s\n"
 
-#: ../src/core/session.c:1003
+#: ../src/core/session.c:1008
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "'%s' oturum dosyasına yazmada hata: %s\n"
 
-#: ../src/core/session.c:1008
+#: ../src/core/session.c:1013
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "'%s' oturum dosyasını kapamada hata: %s\n"
 
-#. oh, just give up
-#: ../src/core/session.c:1101
-#, c-format
-msgid "Failed to read saved session file %s: %s\n"
-msgstr "Kaydedilmiş %s oturum dosyası okunamadı: %s\n"
-
-#: ../src/core/session.c:1140
+#: ../src/core/session.c:1143
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "Kaydedilmiş oturum dosyası ayrıştırırken hata: %s\n"
 
-#: ../src/core/session.c:1189
+#: ../src/core/session.c:1192
 #, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
-msgstr ""
-"Geçerli bir oturum kimliği bulunmasına karşın <marco_session> "
-"özniteliğiyle karşılaşıldı"
+msgstr "Geçerli bir oturum kimliği bulunmasına karşın <marco_session> özniteliğiyle karşılaşıldı"
 
-#: ../src/core/session.c:1202 ../src/core/session.c:1277
-#: ../src/core/session.c:1309 ../src/core/session.c:1381
-#: ../src/core/session.c:1441
+#: ../src/core/session.c:1205 ../src/core/session.c:1280
+#: ../src/core/session.c:1312 ../src/core/session.c:1384
+#: ../src/core/session.c:1444
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "Bilinmeyen öznitelik %s <%s> öğesinde"
 
-#: ../src/core/session.c:1219
+#: ../src/core/session.c:1222
 #, c-format
 msgid "nested <window> tag"
 msgstr "iç içe <window> imi"
 
-#: ../src/core/session.c:1461
+#: ../src/core/session.c:1464
 #, c-format
 msgid "Unknown element %s"
 msgstr "Bilinmeyen öğe %s"
 
-#: ../src/core/session.c:1812
+#: ../src/core/session.c:1816
 msgid ""
-"These windows do not support &quot;save current setup&quot; and will have to "
-"be restarted manually next time you log in."
-msgstr ""
-"Bu pencereler, &quot;geçerli durumu kaydet&quot; özelliğini desteklemiyorlar "
-"ve bir dahaki girişte kendiniz yeniden başlatmalısınız."
+"These windows do not support &quot;save current setup&quot; and will have to"
+" be restarted manually next time you log in."
+msgstr "Bu pencereler, &quot;geçerli durumu kaydet&quot; özelliğini desteklemiyorlar ve bir dahaki girişte kendiniz yeniden başlatmalısınız."
 
-#: ../src/core/util.c:103
+#: ../src/core/util.c:101
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "Hata ayıklama günlüğü açılamadı: %s\n"
 
-#: ../src/core/util.c:113
+#: ../src/core/util.c:111
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "fdopen() günlük dosyası %s açılamadı: %s\n"
 
-#: ../src/core/util.c:119
+#: ../src/core/util.c:117
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "%s günlük dosyası açıldı\n"
 
-#: ../src/core/util.c:138 ../src/tools/marco-message.c:176
+#: ../src/core/util.c:136 ../src/tools/marco-message.c:176
 #, c-format
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "Marco, ayrıntılı kip desteği olmadan derlenmiş\n"
 
-#: ../src/core/util.c:238
+#: ../src/core/util.c:236
 msgid "Window manager: "
 msgstr "Pencere yöneticisi: "
 
-#: ../src/core/util.c:390
+#: ../src/core/util.c:388
 msgid "Bug in window manager: "
 msgstr "Pencere yöneticisinde hata: "
 
-#: ../src/core/util.c:423
+#: ../src/core/util.c:421
 msgid "Window manager warning: "
 msgstr "Pencere yöneticisi uyarısı: "
 
-#: ../src/core/util.c:451
+#: ../src/core/util.c:449
 msgid "Window manager error: "
 msgstr "Pencere yöneticisi hatası: "
 
@@ -453,14 +393,12 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5627
+#: ../src/core/window.c:5660
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr ""
-"%s penceresi SM_CLIENT_ID'yi ICCCM tarafından belirtilen WM_CLIENT_LEADER'a "
-"değil kendine atadı.\n"
+msgstr "%s penceresi SM_CLIENT_ID'yi ICCCM tarafından belirtilen WM_CLIENT_LEADER'a değil kendine atadı.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -468,16 +406,13 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#.
-#: ../src/core/window.c:6192
+#. 
+#: ../src/core/window.c:6225
 #, c-format
 msgid ""
-"Window %s sets an MWM hint indicating it isn't resizable, but sets min size %"
-"d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr ""
-"%s penceresi bir yandan yeniden boyutlandırılamaz olduğunu gösteren bir MWM "
-"ipucu verirken anlamsız bir biçimde en küçük (%d x %d) ve en büyük (%d x %d) "
-"boyut sınırlarını da atıyor.\n"
+"Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
+"%d x %d and max size %d x %d; this doesn't make much sense.\n"
+msgstr "%s penceresi bir yandan yeniden boyutlandırılamaz olduğunu gösteren bir MWM ipucu verirken anlamsız bir biçimde en küçük (%d x %d) ve en büyük (%d x %d) boyut sınırlarını da atıyor.\n"
 
 #: ../src/core/window-props.c:244
 #, c-format
@@ -510,7 +445,7 @@ msgstr "%s (%s olarak)"
 msgid "%s (as another user)"
 msgstr "%s (diğer kullanıcı olarak)"
 
-#: ../src/core/window-props.c:1429
+#: ../src/core/window-props.c:1430
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "Geçersiz WM_TRANSIENT_FOR pencere 0x%lx belirtilen %s.\n"
@@ -523,12 +458,7 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr ""
-"0x%lx penceresinin %s özelliği beklenen\n"
-"%s türü ve %d biçimi yerine %s türü, %d biçimi,\n"
-"%d n_items'e sahip.\n"
-"Bu büyük olasılıkla uygulamanın bir hatası, pencere yöneticisinin değil.\n"
-"Pencerenin başlığı=\"%s\", sınıfı=\"%s\", adı=\"%s\"\n"
+msgstr "0x%lx penceresinin %s özelliği beklenen\n%s türü ve %d biçimi yerine %s türü, %d biçimi,\n%d n_items'e sahip.\nBu büyük olasılıkla uygulamanın bir hatası, pencere yöneticisinin değil.\nPencerenin başlığı=\"%s\", sınıfı=\"%s\", adı=\"%s\"\n"
 
 #: ../src/core/xprops.c:401
 #, c-format
@@ -538,10 +468,9 @@ msgstr "0x%2$lx penceresinin %1$s özelliği geçersiz UTF-8 içeriyor\n"
 #: ../src/core/xprops.c:484
 #, c-format
 msgid ""
-"Property %s on window 0x%lx contained invalid UTF-8 for item %d in the list\n"
-msgstr ""
-"0x%2$lx penceresinin %1$s özelliği listedeki öğe %3$d için geçersiz UTF-8 "
-"içeriyor\n"
+"Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
+"list\n"
+msgstr "0x%2$lx penceresinin %1$s özelliği listedeki öğe %3$d için geçersiz UTF-8 içeriyor\n"
 
 #: ../src/include/all-keybindings.h:88
 msgid "Switch to workspace 1"
@@ -793,8 +722,7 @@ msgstr "Pencereyi alttaki çalışma alanına taşı"
 
 #: ../src/include/all-keybindings.h:342
 msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr ""
-"Pencere başka pencere tafından kaplanmışsa en üste al, yoksa aşağı gönder"
+msgstr "Pencere başka pencere tafından kaplanmışsa en üste al, yoksa aşağı gönder"
 
 #: ../src/include/all-keybindings.h:344
 msgid "Raise window above other windows"
@@ -849,9 +777,9 @@ msgid "Move window to center of screen"
 msgstr "Pencereyi ekranın ortasına taşı"
 
 #: ../src/marco.schemas.in.in.h:1
-msgid "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
-"(Henüz uygulanmamış) Gezinme, pencerelere göre değil uygulamalara göre işler"
+msgid ""
+"(Not implemented) Navigation works in terms of applications not windows"
+msgstr "(Henüz uygulanmamış) Gezinme, pencerelere göre değil uygulamalara göre işler"
 
 #: ../src/marco.schemas.in.in.h:2
 msgid ""
@@ -859,12 +787,7 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr ""
-"Pencere başlık çubuklarının yazıtipini tanımlayan yazıtipi tanımlama satırı. "
-"Bu tanımın boyut kısmı yalnızca titlebar_font_size (başlık çubuğu yazıtipi "
-"boyutu) seçeneği 0'a ayarlıysa kullanılacaktır. Ayrıca eğer "
-"titlebar_uses_desktop_font (başlık çubuğu masaüstü yazıtipini kullanır) "
-"seçeneği seçilmişse bu seçenek kapalı kabul edilir."
+msgstr "Pencere başlık çubuklarının yazıtipini tanımlayan yazıtipi tanımlama satırı. Bu tanımın boyut kısmı yalnızca titlebar_font_size (başlık çubuğu yazıtipi boyutu) seçeneği 0'a ayarlıysa kullanılacaktır. Ayrıca eğer titlebar_uses_desktop_font (başlık çubuğu masaüstü yazıtipini kullanır) seçeneği seçilmişse bu seçenek kapalı kabul edilir."
 
 #: ../src/marco.schemas.in.in.h:3
 msgid "Action on title bar double-click"
@@ -891,14 +814,7 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr ""
-"Başlık çubuğundaki düğmelerin düzeni. Dizgi türünde bir değer alır, örneğin "
-"\"menu:minimize,maximize,spacer,close\"; pencerenin sol köşesindekilerle sağ "
-"köşesindekileri iki noktayla, düğme adlarını virgülle ayırın. Bir düğme "
-"birden çok kez kullanılamaz. Gelecek marco sürümlerinde eski sürümlerde "
-"soruna yol açmadan yeni düğmeler eklenebilmesi için bilinmeyen düğme adları "
-"hata vermeden göz ardı edilecektir. Ard arda iki düğme arasında biraz boşluk "
-"eklemek için özel spacer etiketi kullanılabilir."
+msgstr "Başlık çubuğundaki düğmelerin düzeni. Dizgi türünde bir değer alır, örneğin \"menu:minimize,maximize,spacer,close\"; pencerenin sol köşesindekilerle sağ köşesindekileri iki noktayla, düğme adlarını virgülle ayırın. Bir düğme birden çok kez kullanılamaz. Gelecek marco sürümlerinde eski sürümlerde soruna yol açmadan yeni düğmeler eklenebilmesi için bilinmeyen düğme adları hata vermeden göz ardı edilecektir. Ard arda iki düğme arasında biraz boşluk eklemek için özel spacer etiketi kullanılabilir."
 
 #: ../src/marco.schemas.in.in.h:8
 msgid "Automatically raises the focused window"
@@ -908,15 +824,10 @@ msgstr "Odaklanılan pencereyi kendiliğinden yükseltir"
 msgid ""
 "Clicking a window while holding down this modifier key will move the window "
 "(left click), resize the window (middle click), or show the window menu "
-"(right click). The left and right operations may be swapped using the "
-"\"mouse_button_resize\" key. Modifier is expressed as \"&lt;Alt&gt;\" or "
-"\"&lt;Super&gt;\" for example."
-msgstr ""
-"Bu değiştirici tuş basılıyken pencereye tıklamak (sol tuşla) pencereyi "
-"taşır, (orta tuşla) pencereyi boyutlandırır, ya da (sağ tuşla) pencere "
-"menüsünü gösterir. Sol ve sağ işlemleri \"mouse_button_resize\" anahtarı "
-"kullanılarak değiştirilebilir. Değiştirici, \"&lt;Alt&gt;\" ya da \"&lt;"
-"Super&gt;\" örneklerindeki gibi gösterilir."
+"(right click). The middle and right click operations may be swapped using "
+"the \"resize_with_right_button\" key. Modifier is expressed as "
+"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
+msgstr "Bu değiştirici tuşunu basılı tutarak bir pencereye tıklamak pencereyi sola kaydıracak (sol fare düğmesi), pencereyi yeniden boyutlandıracak (sağ düğme) ya da menü pencere menüsünü gösterecektir (orta düğme). Sağ ve orta tıklama işlemleri \"resize_with_right_button\" anahtarı ile yer değiştirebilirler. Değiştirici mesela \"&lt;Alt&gt;\" veya \"&lt;Super&gt;\" olarak ifade edilir. "
 
 #: ../src/marco.schemas.in.in.h:10
 msgid "Commands to run in response to keybindings"
@@ -946,9 +857,7 @@ msgstr "Marco'nin bir kompozisyon yöneticisi olmasına karar verir."
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
-"Uygulamaların veya sistemin sesli zil çıkarıp çıkartamayacaklarını belirler, "
-"sessiz zil sesleri için 'görzel zil' ile ilişkili de kullanılabilir."
+msgstr "Uygulamaların veya sistemin sesli zil çıkarıp çıkartamayacaklarını belirler, sessiz zil sesleri için 'görzel zil' ile ilişkili de kullanılabilir."
 
 #: ../src/marco.schemas.in.in.h:17
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -964,20 +873,13 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
-"Eğer seçiliyse, ve odaklama kipi \"sloppy\" ya da \"mouse\" ise odaklanan "
-"pencere belirli bir süre sonra kendiliğinden üste çıkar (bu süre "
-"auto_raise_delay anahtarıyla belirlenir). Bu bir pencereye üste çıkarmak "
-"için tıklamak ya da sürükle ve bırak sırasında pencere sınırlarına girmek "
-"ile alakalı değildir."
+msgstr "Eğer seçiliyse, ve odaklama kipi \"sloppy\" ya da \"mouse\" ise odaklanan pencere belirli bir süre sonra kendiliğinden üste çıkar (bu süre auto_raise_delay anahtarıyla belirlenir). Bu bir pencereye üste çıkarmak için tıklamak ya da sürükle ve bırak sırasında pencere sınırlarına girmek ile alakalı değildir."
 
 #: ../src/marco.schemas.in.in.h:20
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
-"Eğer seçiliyse, titlebar_font seçeneğini göz ardı edip pencere başlıklarında "
-"standart uygulama yazıtipi kullanılır."
+msgstr "Eğer seçiliyse, titlebar_font seçeneğini göz ardı edip pencere başlıklarında standart uygulama yazıtipi kullanılır."
 
 #: ../src/marco.schemas.in.in.h:21
 msgid ""
@@ -986,36 +888,22 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr ""
-"Eğer seçiliyse, marco tel çerçeveleri kullanarak, canlandırma "
-"kullanmayarak ve diğer şekillerde, kullanıcıya daha az geri bildirim verip "
-"daha az \"doğrudan işlem\"e imkan verir. Bu bir çok kullanıcı için "
-"kullanılabilirlikte belirgin biz azalmaya neden olur, ama aksi halde "
-"kullanışsız olacak terminal sunucuları ve diğer eski uygulamalar için "
-"işleyebilirlik sağlayabilir. Ancak tel çerçeve özelliği erişilebilirlik açık "
-"olduğunda etkisizleştirilecek."
+msgstr "Eğer seçiliyse, marco tel çerçeveleri kullanarak, canlandırma kullanmayarak ve diğer şekillerde, kullanıcıya daha az geri bildirim verip daha az \"doğrudan işlem\"e imkan verir. Bu bir çok kullanıcı için kullanılabilirlikte belirgin biz azalmaya neden olur, ama aksi halde kullanışsız olacak terminal sunucuları ve diğer eski uygulamalar için işleyebilirlik sağlayabilir. Ancak tel çerçeve özelliği erişilebilirlik açık olduğunda etkisizleştirilecek."
 
 #: ../src/marco.schemas.in.in.h:22
 msgid ""
-"If true, then Marco works in terms of applications rather than windows. "
-"The concept is a bit abstract, but in general an application-based setup is "
-"more like the Mac and less like Windows. When you focus a window in "
-"application-based mode, all the windows in the application will be raised. "
-"Also, in application-based mode, focus clicks are not passed through to "
-"windows in other applications. Application-based mode is, however, largely "
+"If true, then Marco works in terms of applications rather than windows. The "
+"concept is a bit abstract, but in general an application-based setup is more"
+" like the Mac and less like Windows. When you focus a window in application-"
+"based mode, all the windows in the application will be raised. Also, in "
+"application-based mode, focus clicks are not passed through to windows in "
+"other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
-"Eğer seçiliyse, Marco'nin pencerelere değil uygulamalara yönelik "
-"çalışmasını sağlar. Bu kavram biraz soyuttur, kısacası uygulama temelli "
-"çalışma Windows'tan çok Mac'takine benzer. Uygulama temelli kipte bir "
-"pencereye odaklandığınızda o uygulamanın bütün pencereleri yükseltilir. "
-"Ayrıca bu kipte odaklama amaçlı tıklamalar odaklamadan sonra bir de "
-"uygulamaya geçilmez. Uygulama tabanlı kipin büyük bölümü henüz tamamlanmadı."
+msgstr "Eğer seçiliyse, Marco'nin pencerelere değil uygulamalara yönelik çalışmasını sağlar. Bu kavram biraz soyuttur, kısacası uygulama temelli çalışma Windows'tan çok Mac'takine benzer. Uygulama temelli kipte bir pencereye odaklandığınızda o uygulamanın bütün pencereleri yükseltilir. Ayrıca bu kipte odaklama amaçlı tıklamalar odaklamadan sonra bir de uygulamaya geçilmez. Uygulama tabanlı kipin büyük bölümü henüz tamamlanmadı."
 
 #: ../src/marco.schemas.in.in.h:23
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
-"Eğer seçiliyse, daha az kaynak kullanımı için kullanılabilirliği azaltır"
+msgstr "Eğer seçiliyse, daha az kaynak kullanımı için kullanılabilirliği azaltır"
 
 #: ../src/marco.schemas.in.in.h:24
 msgid "Modifier to use for modified window click actions"
@@ -1034,10 +922,7 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
-"Çalışma alanlarının sayısı. Sıfırdan büyük olmalıdır ve yanlışlıkla çok "
-"fazla sayıda çalışma alanı talep edip masaüstünü kullanışsız hale "
-"getirmenizi engellemek için bir üst sınırı vardır."
+msgstr "Çalışma alanlarının sayısı. Sıfırdan büyük olmalıdır ve yanlışlıkla çok fazla sayıda çalışma alanı talep edip masaüstünü kullanışsız hale getirmenizi engellemek için bir üst sınırı vardır."
 
 #: ../src/marco.schemas.in.in.h:28
 msgid "Run a defined command"
@@ -1046,54 +931,31 @@ msgstr "Tanımlanmış bir komutu çalıştır"
 #: ../src/marco.schemas.in.in.h:29
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
-"middle button while holding down the key given in \"mouse_button_modifier\"; "
-"set it to false to make it work the opposite way around."
-msgstr ""
-"Bunu pencereyi sağ tuş ile yeniden boyutlandırmak ve orta tuşa basılıyken "
-"\"mouse_button_modifier\" anahtarında verilen tuşa basıldığında menü "
-"göstermek için doğru olarak atayın; tam tersi çalışması için bunu yanlış "
-"olarak atayın."
+"middle button while holding down the key given in \"mouse_button_modifier\";"
+" set it to false to make it work the opposite way around."
+msgstr "Bunu pencereyi sağ tuş ile yeniden boyutlandırmak ve orta tuşa basılıyken \"mouse_button_modifier\" anahtarında verilen tuşa basıldığında menü göstermek için doğru olarak atayın; tam tersi çalışması için bunu yanlış olarak atayın."
 
 #: ../src/marco.schemas.in.in.h:30
 msgid ""
 "Setting this option to false can lead to buggy behavior, so users are "
-"strongly discouraged from changing it from the default of true. Many actions "
-"(e.g. clicking in the client area, moving or resizing the window) normally "
+"strongly discouraged from changing it from the default of true. Many actions"
+" (e.g. clicking in the client area, moving or resizing the window) normally "
 "raise the window as a side-effect. Setting this option to false, which is "
 "strongly discouraged, will decouple raising from other user actions, and "
-"ignore raise requests generated by applications. See http://bugzilla.mate."
-"org/show_bug.cgi?id=445447#c6. Even when this option is false, windows can "
-"still be raised by an alt-left-click anywhere on the window, a normal click "
-"on the window decorations, or by special messages from pagers, such as "
-"activation requests from tasklist applets. This option is currently disabled "
-"in click-to-focus mode. Note that the list of ways to raise windows when "
-"raise_on_click is false does not include programmatic requests from "
-"applications to raise windows; such requests will be ignored regardless of "
-"the reason for the request. If you are an application developer and have a "
-"user complaining that your application does not work with this setting "
-"disabled, tell them it is _their_ fault for breaking their window manager "
-"and that they need to change this option back to true or live with the \"bug"
-"\" they requested."
-msgstr ""
-"Bu seçeneğin yanlış olarak atanması bozuk bir işleyişe sebep olur, bu yüzden "
-"kullanıcıların bu seçeneği doğru olan öntanımlı ayarından değiştirilmemesi "
-"tavsiye edilir. Çoğu işlem (örn. istemci alanına tıklama, taşıma ya da "
-"pencere yeniden boyutlandırma) normalde pencereyi yan etki olarak en üste "
-"taşır. Bu seçeneği false yapmak, ki tavsiye edilmemektedir, diğer kullanıcı "
-"eylemlerinin üste taşımasını bozacak ve uygulamalar tarafından gelen üste "
-"taşıma isteklerini yok sayacaktır. http://bugzilla.gnome.org/show_bug.cgi?"
-"id=445447#c6 sayfasına bakın. Bu seçenek yanlış olsa bile, pencereler; "
-"pencerenin herhangi bir yerine alt-sol tıklama, pencere dekorasyonlarına "
-"normal tıklama ya da sayfalayıcılardan özel iletiler, örneğin görev "
-"listesinden etkinleştirme istekleri gibi durumlarda üste taşınır. Bu özellik "
-"şimdilik odak-için-tıkla kipinde kapalıdır. Pencerelerin raise_on_click "
-"yanlış olduğunda en üste taşıma yollarının listesi sadece programdan gelen "
-"istekleri içermez; bu istekler isteğin sebebi ne olursa olsun yok "
-"sayılacaktır. Eğer bir uygulama geliştiricisi kullanıcısının bu özellik "
-"yanlış olduğunda çalışmadığı şikayetini alıyorsa, kullanıcıya bunun _kendi_ "
-"hatası olduğunu çünkü pencere yöneticisinin ayarını bozduğunu ve bu seçeneği "
-"tekrar doğru olarak ayarlaması gerektiğini ya da istenen \"hata\" ile "
-"yaşamak zorunda olduğunu söylemelidir."
+"ignore raise requests generated by applications. See "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Even when this option "
+"is false, windows can still be raised by an alt-left-click anywhere on the "
+"window, a normal click on the window decorations, or by special messages "
+"from pagers, such as activation requests from tasklist applets. This option "
+"is currently disabled in click-to-focus mode. Note that the list of ways to "
+"raise windows when raise_on_click is false does not include programmatic "
+"requests from applications to raise windows; such requests will be ignored "
+"regardless of the reason for the request. If you are an application "
+"developer and have a user complaining that your application does not work "
+"with this setting disabled, tell them it is _their_ fault for breaking their"
+" window manager and that they need to change this option back to true or "
+"live with the \"bug\" they requested."
+msgstr "Bu seçeneği yanlış değerine ayarlamak hatalı sonuçlara yol açabilir, dolayısıyla kullanıcılara hararetle varsayılan doğru değerini değiştirmemeleri tavsiye edilir. Birçok faaliyet (mesela istemci alanına tıklamak, pencereyi taşımak ya da tekrar boyutlandırmak) normalde bir yan etki olarak pencereyi yükseltir. Bu seçeneği yanlış değerine atamak, ki hararetle yapılmaması tavsiye edilir, yükseltmeyi diğer kullanıcı faaliyetlerinden ayırır ve uygulamaların yükseltme taleplerini görmezden gelir. http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 adresine bakınız. Bu seçenek yanlışa atandığında bile pencereler, pencerenin içine alt-sol-tıklama, pencere dekorasyonuna normal tıklama ya da görev listesi programcıklarının etkinleştirme istekleri ile yükseltilebilir. Bu seçenek odaklanma için tıklama kipinde devre dışı bırakılmıştır. raise_on_click yanlışa atandığında pencerelerin yükseltme yöntemlerinin uygulamalardan programatik talepleri içermediğini dikkate alınız; bu gibi talepler sebebi ne olursa olsun görmezden gelinecektir. Uygulama geliştiricisi iseniz ve kullanıcılarınız uygulamanızın bu seçeneğin devre dışı bırakıldığında çalışmadığından şikâyet ediyorsa, onlara bunun pencere yöneticilerini bozdukları için _kendi_ hataları olduğunu ve bu seçeneği tekrar doğru değerine atamaları gerektiğini ya da talep ettikleri \"hata\" ile yaşamaları gerektiğini söyleyin."
 
 #: ../src/marco.schemas.in.in.h:31
 msgid ""
@@ -1101,12 +963,7 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr ""
-"Bazı uygulamalar belirtimleri pencere yöneticisinin yanlış işlemesine sebep "
-"olacak şekilde göz ardı ederler. Bu seçenek Marco'i sıkı bir şekilde "
-"doğru kipe sokar, bu şayet kullanıcının hatalı işleyen bir uygulama "
-"çalıştırmaya ihtiyacı yoksa kullanıcı arayüzünün daha tutarlı olmasını "
-"sağlar."
+msgstr "Bazı uygulamalar belirtimleri pencere yöneticisinin yanlış işlemesine sebep olacak şekilde göz ardı ederler. Bu seçenek Marco'i sıkı bir şekilde doğru kipe sokar, bu şayet kullanıcının hatalı işleyen bir uygulama çalıştırmaya ihtiyacı yoksa kullanıcı arayüzünün daha tutarlı olmasını sağlar."
 
 #: ../src/marco.schemas.in.in.h:32
 msgid "System Bell is Audible"
@@ -1114,64 +971,44 @@ msgstr "Sistem Zili Duyulabilir"
 
 #: ../src/marco.schemas.in.in.h:33
 msgid ""
-"Tells Marco how to implement the visual indication that the system bell "
-"or another application 'bell' indicator has been rung. Currently there are "
-"two valid values, \"fullscreen\", which causes a fullscreen white-black "
-"flash, and \"frame_flash\" which causes the titlebar of the application "
-"which sent the bell signal to flash. If the application which sent the bell "
-"is unknown (as is usually the case for the default \"system beep\"), the "
-"currently focused window's titlebar is flashed."
-msgstr ""
-"Marco'e sistem zilinin veya diğer uygulama zil belirticilerinin "
-"kullanacağı görsel uyarıcı şeklini belirtir. Şu an için iki geçerli değer "
-"vardır, tüm ekranın siyah-beyaz flaşlaması için \"fullscreen\", ve "
-"uygulamanın başlık çubuğunun, zil sinyali ile flaşlaması için \"frame_flash"
-"\". Eğer zil sinyalini gönderen uygulama bilinmiyorsa (ön tanımlı \"sistem "
-"zili\" için geçerli olan durum), güncel odaklanmış pencerenin başlık çubuğu "
-"flaşlanır."
+"Tells Marco how to implement the visual indication that the system bell or "
+"another application 'bell' indicator has been rung. Currently there are two "
+"valid values, \"fullscreen\", which causes a fullscreen white-black flash, "
+"and \"frame_flash\" which causes the titlebar of the application which sent "
+"the bell signal to flash. If the application which sent the bell is unknown "
+"(as is usually the case for the default \"system beep\"), the currently "
+"focused window's titlebar is flashed."
+msgstr "Marco'e sistem zilinin veya diğer uygulama zil belirticilerinin kullanacağı görsel uyarıcı şeklini belirtir. Şu an için iki geçerli değer vardır, tüm ekranın siyah-beyaz flaşlaması için \"fullscreen\", ve uygulamanın başlık çubuğunun, zil sinyali ile flaşlaması için \"frame_flash\". Eğer zil sinyalini gönderen uygulama bilinmiyorsa (ön tanımlı \"sistem zili\" için geçerli olan durum), güncel odaklanmış pencerenin başlık çubuğu flaşlanır."
 
 #: ../src/marco.schemas.in.in.h:34
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
-"that correspond to these commands. Pressing the keybinding for run_command_N "
-"will execute command_N."
-msgstr ""
-"/apps/marco/global_keybindings/run_command_N anahtarları bu komutlara "
-"karşılık gelen tuş bağlarını tanımlar. run_command_N için tuş bağına basınca "
-"command_N çalışır."
+"that correspond to these commands. Pressing the keybinding for run_command_N"
+" will execute command_N."
+msgstr "/apps/marco/global_keybindings/run_command_N anahtarları bu komutlara karşılık gelen tuş bağlarını tanımlar. run_command_N için tuş bağına basınca command_N çalışır."
 
 #: ../src/marco.schemas.in.in.h:35
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr ""
-"/apps/marco/global_keybindings/run_command_screenshot anahtarı bu ayara "
-"atanmış komutun çalıştırılması için gereken tuş bağını tanımlar."
+msgstr "/apps/marco/global_keybindings/run_command_screenshot anahtarı bu ayara atanmış komutun çalıştırılması için gereken tuş bağını tanımlar."
 
 #: ../src/marco.schemas.in.in.h:36
 msgid ""
-"The /apps/marco/global_keybindings/run_command_window_screenshot key "
-"defines a keybinding which causes the command specified by this setting to "
-"be invoked."
-msgstr ""
-"/apps/marco/global_keybindings/run_command_window_screenshot anahtarı bu "
-"ayara atanmış komutun çalıştırılması için gereken tuş bağını tanımlar."
+"The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
+" a keybinding which causes the command specified by this setting to be "
+"invoked."
+msgstr "/apps/marco/global_keybindings/run_command_window_screenshot anahtarı bu ayara atanmış komutun çalıştırılması için gereken tuş bağını tanımlar."
 
 #: ../src/marco.schemas.in.in.h:37
 msgid ""
-"The keybinding that runs the correspondingly-numbered command in /apps/"
-"marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" or "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"The keybinding that runs the correspondingly-numbered command in "
+"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
+"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
-"/apps/marco/keybinding_commands içinde ilgili numaraya sahip komutu "
-"çalıştırmak üzere atanmış tuş bağlarını tanımlar. Biçimi şunun gibi "
-"olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-"Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" ya "
-"da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled\" özel "
-"dizgisini değer olarakatarsanız, o eylem için tuş bağı yapılmamış olur."
+msgstr "/apps/marco/keybinding_commands içinde ilgili numaraya sahip komutu çalıştırmak üzere atanmış tuş bağlarını tanımlar. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı yapılmamış olur."
 
 #: ../src/marco.schemas.in.in.h:38
 msgid "The name of a workspace."
@@ -1185,30 +1022,22 @@ msgstr "Ekran görüntüsü komutu"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
-"Tema; pencere kenarları, başlık çubuğu gibi öğelerin görünümünü belirler."
+msgstr "Tema; pencere kenarları, başlık çubuğu gibi öğelerin görünümünü belirler."
 
 #: ../src/marco.schemas.in.in.h:41
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr ""
-"Pencereyi auto_raise ayarı seçiliyse yükseltmeden önceki gecikme. Bu gecikme "
-"saniyenin binde biri cinsinden verilir."
+msgstr "Pencereyi auto_raise ayarı seçiliyse yükseltmeden önceki gecikme. Bu gecikme saniyenin binde biri cinsinden verilir."
 
 #: ../src/marco.schemas.in.in.h:42
 msgid ""
 "The window focus mode indicates how windows are activated. It has three "
 "possible values; \"click\" means windows must be clicked in order to focus "
-"them, \"sloppy\" means windows are focused when the mouse enters the window, "
-"and \"mouse\" means windows are focused when the mouse enters the window and "
-"unfocused when the mouse leaves the window."
-msgstr ""
-"Pencere odaklama kipi, pencerelerin nasıl etkinleştirileceğini belirler. Üç "
-"olası değeri vardır; \"click\" olursa pencereler tıklanarak odaklanır, "
-"\"sloppy\" olursa fare pencere sınırlarına girince kendiliğinden odaklanır, "
-"\"mouse\" olursa fare pencereye girince odaklanır ama fare çıktığında "
-"odaklama kaybolur."
+"them, \"sloppy\" means windows are focused when the mouse enters the window,"
+" and \"mouse\" means windows are focused when the mouse enters the window "
+"and unfocused when the mouse leaves the window."
+msgstr "Pencere odaklama kipi, pencerelerin nasıl etkinleştirileceğini belirler. Üç olası değeri vardır; \"click\" olursa pencereler tıklanarak odaklanır, \"sloppy\" olursa fare pencere sınırlarına girince kendiliğinden odaklanır, \"mouse\" olursa fare pencereye girince odaklanır ama fare çıktığında odaklama kaybolur."
 
 #: ../src/marco.schemas.in.in.h:43
 msgid "The window screenshot command"
@@ -1220,18 +1049,11 @@ msgid ""
 "Current valid options are 'toggle_shade', which will shade/unshade the "
 "window, 'toggle_maximize' which will maximize/unmaximize the window, "
 "'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will "
-"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
-"Bu seçenek başlık çubuğuna çift tıklamanın ne yapacağını belirler. Geçerli "
-"seçenekler: 'toggle_shade' pencereyi toplar/yayar, 'toggle_maximize' "
-"pencereyi büyültür/büyültmeyi geri alır, 'toggle_maximize_horizontally' ve "
-"'toggle_maximize_vertically' sadece o yönde pencereyi büyültür/büyültmeyi "
-"geri alır, 'minimize' pencereyi küçültür, 'shade' pencereyi yukarı toplar, "
-"'menu' pencere menüsünü gösterir, 'lower' pencereyi diğerlerinin arkasına "
-"koyar ve 'none' hiçbir şey yapmaz. "
+msgstr "Bu seçenek başlık çubuğuna çift tıklamanın ne yapacağını belirler. Geçerli seçenekler: 'toggle_shade' pencereyi toplar/yayar, 'toggle_maximize' pencereyi büyültür/büyültmeyi geri alır, 'toggle_maximize_horizontally' ve 'toggle_maximize_vertically' sadece o yönde pencereyi büyültür/büyültmeyi geri alır, 'minimize' pencereyi küçültür, 'shade' pencereyi yukarı toplar, 'menu' pencere menüsünü gösterir, 'lower' pencereyi diğerlerinin arkasına koyar ve 'none' hiçbir şey yapmaz. "
 
 #: ../src/marco.schemas.in.in.h:45
 msgid ""
@@ -1239,18 +1061,11 @@ msgid ""
 "Current valid options are 'toggle_shade', which will shade/unshade the "
 "window, 'toggle_maximize' which will maximize/unmaximize the window, "
 "'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will "
-"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
-"Bu seçenek başlık çubuğuna orta tıklamanın ne yapacağını belirler. Geçerli "
-"seçenekler: 'toggle_shade' pencereyi toplar/yayar, 'toggle_maximize' "
-"pencereyi büyültür/büyültmeyi geri alır, 'toggle_maximize_horizontally' ve "
-"'toggle_maximize_vertically' sadece o yönde pencereyi büyültür/büyültmeyi "
-"geri alır, 'minimize' pencereyi küçültür, 'shade' pencereyi yukarı toplar, "
-"'menu' pencere menüsünü gösterir, 'lower' pencereyi diğerlerinin arkasına "
-"koyar ve 'none' hiçbir şey yapmaz. "
+msgstr "Bu seçenek başlık çubuğuna orta tıklamanın ne yapacağını belirler. Geçerli seçenekler: 'toggle_shade' pencereyi toplar/yayar, 'toggle_maximize' pencereyi büyültür/büyültmeyi geri alır, 'toggle_maximize_horizontally' ve 'toggle_maximize_vertically' sadece o yönde pencereyi büyültür/büyültmeyi geri alır, 'minimize' pencereyi küçültür, 'shade' pencereyi yukarı toplar, 'menu' pencere menüsünü gösterir, 'lower' pencereyi diğerlerinin arkasına koyar ve 'none' hiçbir şey yapmaz. "
 
 #: ../src/marco.schemas.in.in.h:46
 msgid ""
@@ -1258,40 +1073,26 @@ msgid ""
 "Current valid options are 'toggle_shade', which will shade/unshade the "
 "window, 'toggle_maximize' which will maximize/unmaximize the window, "
 "'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will "
-"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
-"Bu seçenek başlık çubuğuna sağ tıklamanın ne yapacağını belirler. Geçerli "
-"seçenekler: 'toggle_shade' pencereyi toplar/yayar, 'toggle_maximize' "
-"pencereyi büyültür/büyültmeyi geri alır, 'toggle_maximize_horizontally' ve "
-"'toggle_maximize_vertically' sadece o yönde pencereyi büyültür/büyültmeyi "
-"geri alır, 'minimize' pencereyi küçültür, 'shade' pencereyi yukarı toplar, "
-"'menu' pencere menüsünü gösterir, 'lower' pencereyi diğerlerinin arkasına "
-"koyar ve 'none' hiçbir şey yapmaz. "
+msgstr "Bu seçenek başlık çubuğuna sağ tıklamanın ne yapacağını belirler. Geçerli seçenekler: 'toggle_shade' pencereyi toplar/yayar, 'toggle_maximize' pencereyi büyültür/büyültmeyi geri alır, 'toggle_maximize_horizontally' ve 'toggle_maximize_vertically' sadece o yönde pencereyi büyültür/büyültmeyi geri alır, 'minimize' pencereyi küçültür, 'shade' pencereyi yukarı toplar, 'menu' pencere menüsünü gösterir, 'lower' pencereyi diğerlerinin arkasına koyar ve 'none' hiçbir şey yapmaz. "
 
 #: ../src/marco.schemas.in.in.h:47
 msgid ""
 "This option provides additional control over how newly created windows get "
-"focus. It has two possible values; \"smart\" applies the user's normal focus "
-"mode, and \"strict\" results in windows started from a terminal not being "
+"focus. It has two possible values; \"smart\" applies the user's normal focus"
+" mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr ""
-"Bu seçenek yeni oluşturulan pencerelerin odaklanmak için ek kontroller "
-"sağlar. İki geçerli değeri vardır; \"smart\" kullanıcının normal odak kipine "
-"uygulanır ve \"strict\" uçbirimden başlatılan uygulamaların odaklanmaması "
-"ile sonuçlanır."
+msgstr "Bu seçenek yeni oluşturulan pencerelerin odaklanmak için ek kontroller sağlar. İki geçerli değeri vardır; \"smart\" kullanıcının normal odak kipine uygulanır ve \"strict\" uçbirimden başlatılan uygulamaların odaklanmaması ile sonuçlanır."
 
 #: ../src/marco.schemas.in.in.h:48
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
-"Bir uygulama veya sistem 'zil' ya da 'bip' uygulamak istediginde görsel "
-"uyarıcıları da açar; duymanın zor olduğu gürültülü ortamlar için çok "
-"kullanışlıdır."
+msgstr "Bir uygulama veya sistem 'zil' ya da 'bip' uygulamak istediginde görsel uyarıcıları da açar; duymanın zor olduğu gürültülü ortamlar için çok kullanışlıdır."
 
 #: ../src/marco.schemas.in.in.h:49
 msgid "Use standard system font in window titles"
@@ -1322,148 +1123,148 @@ msgstr "Pencere başlığı yazıtipi"
 msgid "Usage: %s\n"
 msgstr "Kullanım: %s\n"
 
-#: ../src/ui/frames.c:1118
+#: ../src/ui/frames.c:1124
 msgid "Close Window"
 msgstr "Pencereyi Kapat"
 
-#: ../src/ui/frames.c:1121
+#: ../src/ui/frames.c:1127
 msgid "Window Menu"
 msgstr "Pencere Menüsü"
 
-#: ../src/ui/frames.c:1124
+#: ../src/ui/frames.c:1130
 msgid "Minimize Window"
 msgstr "Pencereyi Küçült"
 
-#: ../src/ui/frames.c:1127
+#: ../src/ui/frames.c:1133
 msgid "Maximize Window"
 msgstr "Pencereyi Büyült"
 
-#: ../src/ui/frames.c:1130
+#: ../src/ui/frames.c:1136
 msgid "Restore Window"
 msgstr "Pencereyi Eski Boyutuna Getir"
 
-#: ../src/ui/frames.c:1133
+#: ../src/ui/frames.c:1139
 msgid "Roll Up Window"
 msgstr "Pencereyi Yukarı Sar"
 
-#: ../src/ui/frames.c:1136
+#: ../src/ui/frames.c:1142
 msgid "Unroll Window"
 msgstr "Pencereyi Geri Sar"
 
-#: ../src/ui/frames.c:1139
+#: ../src/ui/frames.c:1145
 msgid "Keep Window On Top"
 msgstr "Pencereyi Üstte Tut"
 
-#: ../src/ui/frames.c:1142
+#: ../src/ui/frames.c:1148
 msgid "Remove Window From Top"
 msgstr "Pencereyi Üstten Kaldır"
 
-#: ../src/ui/frames.c:1145
+#: ../src/ui/frames.c:1151
 msgid "Always On Visible Workspace"
 msgstr "Her Zaman Görünen Çalışma Alanında"
 
-#: ../src/ui/frames.c:1148
+#: ../src/ui/frames.c:1154
 msgid "Put Window On Only One Workspace"
 msgstr "Pencereyi Sadece Bir Çalışma Alanına Yerleştir"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:70
+#: ../src/ui/menu.c:65
 msgid "Mi_nimize"
 msgstr "_Küçült"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:72
+#: ../src/ui/menu.c:67
 msgid "Ma_ximize"
 msgstr "_Büyült"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:74
+#: ../src/ui/menu.c:69
 msgid "Unma_ximize"
 msgstr "Büyült_meyi Geri Al"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:76
+#: ../src/ui/menu.c:71
 msgid "Roll _Up"
 msgstr "Yukarı _Sar"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:78
+#: ../src/ui/menu.c:73
 msgid "_Unroll"
 msgstr "_Sarmayı Geri Al"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:80
+#: ../src/ui/menu.c:75
 msgid "_Move"
 msgstr "_Taşı"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:82
+#: ../src/ui/menu.c:77
 msgid "_Resize"
 msgstr "_Yeniden Boyutlandır"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:84
+#: ../src/ui/menu.c:79
 msgid "Move Titlebar On_screen"
 msgstr "Başlık Çubuğunu _Ekranda Taşı"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:87 ../src/ui/menu.c:89
+#: ../src/ui/menu.c:82 ../src/ui/menu.c:84
 msgid "Always on _Top"
 msgstr "Her Zaman Ü_stte"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:91
+#: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
 msgstr "Her Zaman _Görünen Çalışma Alanında"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:93
+#: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
 msgstr "Yalnız _Bu Çalışma Alanında"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:95
+#: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
 msgstr "_Soldaki Çalışma Alanına Taşı"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:97
+#: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
 msgstr "S_ağdaki Çalışma Alanına Taşı"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:99
+#: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
 msgstr "_Yukarıdaki Çalışma Alanına Taşı"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:101
+#: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
 msgstr "_Aşağıdaki Çalışma Alanına Taşı"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:105
+#: ../src/ui/menu.c:100
 msgid "_Close"
 msgstr "_Kapat"
 
-#: ../src/ui/menu.c:203
+#: ../src/ui/menu.c:197
 #, c-format
 msgid "Workspace %d%n"
 msgstr "Çalışma Alanı %d%n"
 
-#: ../src/ui/menu.c:213
+#: ../src/ui/menu.c:207
 #, c-format
 msgid "Workspace 1_0"
 msgstr "Çalışma Alanı 1_0"
 
-#: ../src/ui/menu.c:215
+#: ../src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
 msgstr "Çalışma Alanı %s%d"
 
-#: ../src/ui/menu.c:395
+#: ../src/ui/menu.c:387
 msgid "Move to Another _Workspace"
 msgstr "Başka Bir Çalışma Ala_nına Taşı"
 
@@ -1471,7 +1272,7 @@ msgstr "Başka Bir Çalışma Ala_nına Taşı"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:104
 msgid "Shift"
 msgstr "Shift"
@@ -1480,7 +1281,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:110
 msgid "Ctrl"
 msgstr "Ctrl"
@@ -1489,7 +1290,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:116
 msgid "Alt"
 msgstr "Alt"
@@ -1498,7 +1299,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:122
 msgid "Meta"
 msgstr "Meta"
@@ -1507,7 +1308,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:128
 msgid "Super"
 msgstr "Super"
@@ -1516,7 +1317,7 @@ msgstr "Super"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:134
 msgid "Hyper"
 msgstr "Hyper"
@@ -1525,7 +1326,7 @@ msgstr "Hyper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:140
 msgid "Mod2"
 msgstr "Mod2"
@@ -1534,7 +1335,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:146
 msgid "Mod3"
 msgstr "Mod3"
@@ -1543,7 +1344,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:152
 msgid "Mod4"
 msgstr "Mod4"
@@ -1552,648 +1353,600 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:158
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#.
+#. 
 #: ../src/ui/resizepopup.c:113
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:255
 msgid "top"
 msgstr "üst"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:257
 msgid "bottom"
 msgstr "alt"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:259
 msgid "left"
 msgstr "sol"
 
-#: ../src/ui/theme.c:260
+#: ../src/ui/theme.c:261
 msgid "right"
 msgstr "sağ"
 
-#: ../src/ui/theme.c:287
+#: ../src/ui/theme.c:288
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "çerçeve geometrisi \"%s\" boyutunu tanımlamıyor"
 
-#: ../src/ui/theme.c:306
+#: ../src/ui/theme.c:307
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
-msgstr ""
-"çerçeve geometrisi \"%s\" boyutunu \"%s\" pencere kenarı için tanımlamıyor"
+msgstr "çerçeve geometrisi \"%s\" boyutunu \"%s\" pencere kenarı için tanımlamıyor"
 
-#: ../src/ui/theme.c:343
+#: ../src/ui/theme.c:344
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "%g kabul edilebilir bir düğme en-boy oranı değil"
 
-#: ../src/ui/theme.c:355
+#: ../src/ui/theme.c:356
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Çerçeve geometrisi düğmelerin boyutunu tanımlamıyor"
 
-#: ../src/ui/theme.c:1020
+#: ../src/ui/theme.c:1021
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Renk geçişlerinde en az iki renk olmalı"
 
-#: ../src/ui/theme.c:1146
+#: ../src/ui/theme.c:1147
 #, c-format
 msgid ""
-"GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL] "
-"where NORMAL is the state; could not parse \"%s\""
-msgstr ""
-"GTK renk belirtiminde köşeli parantezler arasında durum verilmelidir; "
-"örneğin, gtk:fg[NORMAL] belirtiminde NORMAL, durumu gösterir; \"%s\" "
-"ayrıştırılamadı"
+"GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
+" where NORMAL is the state; could not parse \"%s\""
+msgstr "GTK renk belirtiminde köşeli parantezler arasında durum verilmelidir; örneğin, gtk:fg[NORMAL] belirtiminde NORMAL, durumu gösterir; \"%s\" ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1160
+#: ../src/ui/theme.c:1161
 #, c-format
 msgid ""
-"GTK color specification must have a close bracket after the state, e.g. gtk:"
-"fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr ""
-"GTK renk belirtiminde durumdan sonra sağ köşeli parantezleri gelmelidir; "
-"örneğin, gtk:fg[NORMAL] belirtiminde NORMAL, durumu gösterir; \"%s\" "
-"ayrıştırılamadı"
+"GTK color specification must have a close bracket after the state, e.g. "
+"gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
+msgstr "GTK renk belirtiminde durumdan sonra sağ köşeli parantezleri gelmelidir; örneğin, gtk:fg[NORMAL] belirtiminde NORMAL, durumu gösterir; \"%s\" ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1171
+#: ../src/ui/theme.c:1172
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Renk belirtimindeki \"%s\" durumu anlaşılamadı"
 
-#: ../src/ui/theme.c:1184
+#: ../src/ui/theme.c:1185
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Renk belirtimindeki \"%s\" renk bileşeni anlaşılamadı"
 
-#: ../src/ui/theme.c:1214
+#: ../src/ui/theme.c:1215
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr ""
-"Renk karışımının doğru biçimi \"blend/bg_color/fg_color/alpha\"dır; \"%s\" "
-"bu biçime uymuyor"
+msgstr "Renk karışımının doğru biçimi \"blend/bg_color/fg_color/alpha\"dır; \"%s\" bu biçime uymuyor"
 
-#: ../src/ui/theme.c:1225
+#: ../src/ui/theme.c:1226
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Renk karışımındaki \"%s\" alfa değeri ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1235
+#: ../src/ui/theme.c:1236
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "Renk karışımının alfa değeri \"%s\", 0.0 ile 1.0 arasında değil"
 
-#: ../src/ui/theme.c:1282
+#: ../src/ui/theme.c:1283
 #, c-format
-msgid ""
-"Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr ""
-"Gölgelendirmenin doğru biçimi \"shade/bas_color/factor\"dır; \"%s\" bu "
-"biçime uymuyor"
+msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
+msgstr "Gölgelendirmenin doğru biçimi \"shade/bas_color/factor\"dır; \"%s\" bu biçime uymuyor"
 
-#: ../src/ui/theme.c:1293
+#: ../src/ui/theme.c:1294
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Gölgeli rengin gölge katsayısı olan \"%s\" ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1303
+#: ../src/ui/theme.c:1304
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Gölgeli rengin gölge katsayısı olan \"%s\", negatif"
 
-#: ../src/ui/theme.c:1332
+#: ../src/ui/theme.c:1333
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "\"%s\" rengi ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1582
+#: ../src/ui/theme.c:1587
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Kordinat ifadesi izin verilmeyen '%s' karakterini içeriyor"
 
-#: ../src/ui/theme.c:1609
+#: ../src/ui/theme.c:1614
 #, c-format
 msgid ""
-"Coordinate expression contains floating point number '%s' which could not be "
-"parsed"
-msgstr ""
-"Kordinat ifadesi '%s' gerçel sayısını içeriyor ve bu sayı ayrıştırılamıyor"
+"Coordinate expression contains floating point number '%s' which could not be"
+" parsed"
+msgstr "Kordinat ifadesi '%s' gerçel sayısını içeriyor ve bu sayı ayrıştırılamıyor"
 
-#: ../src/ui/theme.c:1623
+#: ../src/ui/theme.c:1628
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Kordinat ifadesi ayrıştırılamayan '%s' tamsayısını içeriyor"
 
-#: ../src/ui/theme.c:1745
+#: ../src/ui/theme.c:1750
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr ""
-"Kordinat ifadesi bu metnin başında bilinmeyen bir işleç içeriyor: \"%s\""
+msgstr "Kordinat ifadesi bu metnin başında bilinmeyen bir işleç içeriyor: \"%s\""
 
-#: ../src/ui/theme.c:1802
+#: ../src/ui/theme.c:1807
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Kordinat ifadesi boş ya da anlaşılamadı"
 
-#: ../src/ui/theme.c:1913 ../src/ui/theme.c:1923 ../src/ui/theme.c:1957
+#: ../src/ui/theme.c:1918 ../src/ui/theme.c:1928 ../src/ui/theme.c:1962
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Kordinat ifadesi sıfıra bölümle sonuçlanıyor"
 
-#: ../src/ui/theme.c:1965
+#: ../src/ui/theme.c:1970
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr ""
-"Kordinat ifadesi bir gerçel sayı üzerinde mod (kalan bulma) işlecini "
-"kullanmaya çalıştı"
+msgstr "Kordinat ifadesi bir gerçel sayı üzerinde mod (kalan bulma) işlecini kullanmaya çalıştı"
 
-#: ../src/ui/theme.c:2021
+#: ../src/ui/theme.c:2026
 #, c-format
-msgid ""
-"Coordinate expression has an operator \"%s\" where an operand was expected"
+msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Kordinat ifadesi işleneni beklenen \"%s\", işlecini içeriyor"
 
-#: ../src/ui/theme.c:2030
+#: ../src/ui/theme.c:2035
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Kordinat ifadesi işleci beklenen bir işlenen içeriyor"
 
-#: ../src/ui/theme.c:2038
+#: ../src/ui/theme.c:2043
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Kordinat ifadesi bir işlenen yerine işleçle bitiyor"
 
-#: ../src/ui/theme.c:2048
+#: ../src/ui/theme.c:2053
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr ""
-"Kordinat ifadesi birbirlerinin izleyen ve aralarında işlenen olmayan \"%2$c"
-"\" ve \"%1$c\" işleçlerini içeriyor"
+msgstr "Kordinat ifadesi birbirlerinin izleyen ve aralarında işlenen olmayan \"%2$c\" ve \"%1$c\" işleçlerini içeriyor"
 
-#: ../src/ui/theme.c:2195 ../src/ui/theme.c:2236
+#: ../src/ui/theme.c:2200 ../src/ui/theme.c:2241
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
-msgstr ""
-"Kordinat ifadesi bilinmeyen bir değişken ya da sabit olan \"%s\" içeriyor"
+msgstr "Kordinat ifadesi bilinmeyen bir değişken ya da sabit olan \"%s\" içeriyor"
 
-#: ../src/ui/theme.c:2290
+#: ../src/ui/theme.c:2295
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Kordinat belirtim ayrıştırıcısı tamponundan taştı."
 
-#: ../src/ui/theme.c:2319
+#: ../src/ui/theme.c:2324
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Kordinat ifadesi sol parantezi olmayan bir sağ parantez içeriyor"
 
-#: ../src/ui/theme.c:2383
+#: ../src/ui/theme.c:2388
 #, c-format
-msgid "Coordinate expression had an open parenthesis with no close parenthesis"
+msgid ""
+"Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Kordinat ifadesi sağ parantezi olmayan bir sol parantez içeriyor"
 
-#: ../src/ui/theme.c:2394
+#: ../src/ui/theme.c:2399
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Kordinat ifadesi göründüğü kadarıyla ne işleç ne de işlenen içeriyor"
 
-#: ../src/ui/theme.c:2596 ../src/ui/theme.c:2616 ../src/ui/theme.c:2636
+#: ../src/ui/theme.c:2603 ../src/ui/theme.c:2623 ../src/ui/theme.c:2643
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Tema bir hata ile sonuçlanan ifadeye sahip: %s\n"
 
-#: ../src/ui/theme.c:4203
+#: ../src/ui/theme.c:4220
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr ""
-"Bu çerçeve biçeminde <button function=\"%s\" state=\"%s\" draw_ops=\"her "
-"neyse\"/> belirtilmek zorunda"
+msgstr "Bu çerçeve biçeminde <button function=\"%s\" state=\"%s\" draw_ops=\"her neyse\"/> belirtilmek zorunda"
 
-#: ../src/ui/theme.c:4711 ../src/ui/theme.c:4736
+#: ../src/ui/theme.c:4728 ../src/ui/theme.c:4753
 #, c-format
-msgid ""
-"Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
-msgstr ""
-"Eksik <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"her neyse\"/>"
+msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
+msgstr "Eksik <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"her neyse\"/>"
 
-#: ../src/ui/theme.c:4780
+#: ../src/ui/theme.c:4797
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" teması yüklenemedi: %s\n"
 
-#: ../src/ui/theme.c:4910 ../src/ui/theme.c:4917 ../src/ui/theme.c:4924
-#: ../src/ui/theme.c:4931 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:4927 ../src/ui/theme.c:4934 ../src/ui/theme.c:4941
+#: ../src/ui/theme.c:4948 ../src/ui/theme.c:4955
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "\"%2$s\" temasında hiç <%1$s> atanmamış"
 
-#: ../src/ui/theme.c:4946
+#: ../src/ui/theme.c:4963
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr ""
-"\"%2$s\" temasında \"%1$s\" pencere türüne çerçeve biçemi atanmamış, bir "
-"<window type=\"%3$s\" style_set=\"her neyse\"/> öğesi ekleyin"
+msgstr "\"%2$s\" temasında \"%1$s\" pencere türüne çerçeve biçemi atanmamış, bir <window type=\"%3$s\" style_set=\"her neyse\"/> öğesi ekleyin"
 
-#: ../src/ui/theme.c:5389 ../src/ui/theme.c:5451 ../src/ui/theme.c:5514
+#: ../src/ui/theme.c:5406 ../src/ui/theme.c:5468 ../src/ui/theme.c:5531
 #, c-format
-msgid ""
-"User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr ""
-"Kullanıcı tanımlı sabitler büyük harfle başlamalıdır; \"%s\" buna uymuyor"
+msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
+msgstr "Kullanıcı tanımlı sabitler büyük harfle başlamalıdır; \"%s\" buna uymuyor"
 
-#: ../src/ui/theme.c:5397 ../src/ui/theme.c:5459 ../src/ui/theme.c:5522
+#: ../src/ui/theme.c:5414 ../src/ui/theme.c:5476 ../src/ui/theme.c:5539
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "\"%s\" sabit değeri zaten tanımlanmış"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#.
-#: ../src/ui/theme-parser.c:202
+#. 
+#: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "<%2$s> öğesinde \"%1$s\" özniteliği yok"
 
-#: ../src/ui/theme-parser.c:231 ../src/ui/theme-parser.c:249
+#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "Satır %d karakter %d: %s"
 
-#: ../src/ui/theme-parser.c:413
+#: ../src/ui/theme-parser.c:437
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "\"%s\" özniteliği aynı <%s> öğesinde iki kez kullanılmış"
 
-#: ../src/ui/theme-parser.c:437 ../src/ui/theme-parser.c:480
+#: ../src/ui/theme-parser.c:461 ../src/ui/theme-parser.c:504
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "\"%s\" özniteliği bu içerikte <%s> öğesi için geçersiz"
 
-#: ../src/ui/theme-parser.c:522
+#: ../src/ui/theme-parser.c:546
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\" bir tamsayı olarak ayrıştırılamadı"
 
-#: ../src/ui/theme-parser.c:531 ../src/ui/theme-parser.c:586
+#: ../src/ui/theme-parser.c:555 ../src/ui/theme-parser.c:610
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "\"%2$s\" dizgisinin sonundaki \"%1$s\" karakterleri anlaşılmadı"
 
-#: ../src/ui/theme-parser.c:541
+#: ../src/ui/theme-parser.c:565
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "%ld tamsayısı pozitif olmalı"
 
-#: ../src/ui/theme-parser.c:549
+#: ../src/ui/theme-parser.c:573
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "%ld tamsayısı çok büyük, şu anda üst sınır %d"
 
-#: ../src/ui/theme-parser.c:577 ../src/ui/theme-parser.c:693
+#: ../src/ui/theme-parser.c:601 ../src/ui/theme-parser.c:717
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "\"%s\" bir gerçel sayı olarak ayrıştırılamadı"
 
-#: ../src/ui/theme-parser.c:608 ../src/ui/theme-parser.c:636
+#: ../src/ui/theme-parser.c:632 ../src/ui/theme-parser.c:660
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
-msgstr ""
-"Mantıksal değerler ancak \"true\" (doğru) ya da \"false\" (yanlış) "
-"değerlerini alabilir; \"%s\" olamaz"
+msgstr "Mantıksal değerler ancak \"true\" (doğru) ya da \"false\" (yanlış) değerlerini alabilir; \"%s\" olamaz"
 
-#: ../src/ui/theme-parser.c:663
+#: ../src/ui/theme-parser.c:687
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Açı 0.0 ile 360.0 arasında olmalı, %g verilmiş\n"
 
-#: ../src/ui/theme-parser.c:726
+#: ../src/ui/theme-parser.c:750
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr ""
-"Alfa 0.0 (görünmez) ile 1.0 (düz renk) arasında olmalıydı ama %g verilmiş\n"
+msgstr "Alfa 0.0 (görünmez) ile 1.0 (düz renk) arasında olmalıydı ama %g verilmiş\n"
 
-#: ../src/ui/theme-parser.c:791
+#: ../src/ui/theme-parser.c:815
 #, c-format
 msgid ""
-"Invalid title scale \"%s\" (must be one of xx-small,x-small,small,medium,"
-"large,x-large,xx-large)\n"
-msgstr ""
-"Geçersiz öğe ölçüsü \"%s\" (şunlardan biri olmalıdır: xx-small,x-small,small,"
-"medium,large,x-large,xx-large)\n"
+"Invalid title scale \"%s\" (must be one of xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr "Geçersiz öğe ölçüsü \"%s\" (şunlardan biri olmalıdır: xx-small,x-small,small,medium,large,x-large,xx-large)\n"
 
-#: ../src/ui/theme-parser.c:936 ../src/ui/theme-parser.c:999
-#: ../src/ui/theme-parser.c:1033 ../src/ui/theme-parser.c:1136
+#: ../src/ui/theme-parser.c:971 ../src/ui/theme-parser.c:1034
+#: ../src/ui/theme-parser.c:1068 ../src/ui/theme-parser.c:1171
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> adı \"%s\" ikinci kez kullanılmış"
 
-#: ../src/ui/theme-parser.c:948 ../src/ui/theme-parser.c:1045
-#: ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:983 ../src/ui/theme-parser.c:1080
+#: ../src/ui/theme-parser.c:1183
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> üst değeri \"%s\" tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:1058
+#: ../src/ui/theme-parser.c:1093
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> geometrisi \"%s\" tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:1071
+#: ../src/ui/theme-parser.c:1106
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s>, ya bir geometri ya da geometrisi olan bir üst öğe belirtmeli"
 
-#: ../src/ui/theme-parser.c:1113
+#: ../src/ui/theme-parser.c:1148
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "Arkaplanı anlamlı olabilmesi için bir alfa değeri ile belirtmelisiniz"
 
-#: ../src/ui/theme-parser.c:1180
+#: ../src/ui/theme-parser.c:1215
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "<%2$s> öğesinde bilinmeyen type \"%1$s\""
 
-#: ../src/ui/theme-parser.c:1191
+#: ../src/ui/theme-parser.c:1226
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "<%2$s> öğesinde bilinmeyen style_set \"%1$s\""
 
-#: ../src/ui/theme-parser.c:1199
+#: ../src/ui/theme-parser.c:1234
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "\"%s\" pencere türünün önceden atanmış bir biçem kümesi var"
 
-#: ../src/ui/theme-parser.c:1229 ../src/ui/theme-parser.c:1293
-#: ../src/ui/theme-parser.c:1519 ../src/ui/theme-parser.c:2740
-#: ../src/ui/theme-parser.c:2786 ../src/ui/theme-parser.c:2934
-#: ../src/ui/theme-parser.c:3126 ../src/ui/theme-parser.c:3164
-#: ../src/ui/theme-parser.c:3202 ../src/ui/theme-parser.c:3240
+#: ../src/ui/theme-parser.c:1264 ../src/ui/theme-parser.c:1328
+#: ../src/ui/theme-parser.c:1554 ../src/ui/theme-parser.c:2775
+#: ../src/ui/theme-parser.c:2821 ../src/ui/theme-parser.c:2979
+#: ../src/ui/theme-parser.c:3171 ../src/ui/theme-parser.c:3209
+#: ../src/ui/theme-parser.c:3247 ../src/ui/theme-parser.c:3265
+#: ../src/ui/theme-parser.c:3281 ../src/ui/theme-parser.c:3319
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "<%s> öğesi <%s> altında kullanılamaz"
 
-#: ../src/ui/theme-parser.c:1343 ../src/ui/theme-parser.c:1357
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1378 ../src/ui/theme-parser.c:1392
+#: ../src/ui/theme-parser.c:1437
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr ""
-"Düğmelere hem \"button_width\"/\"button_height\" (en-boy) değerleri hem de "
-"\"aspect_ratio\" değeri verilemez"
+msgstr "Düğmelere hem \"button_width\"/\"button_height\" (en-boy) değerleri hem de \"aspect_ratio\" değeri verilemez"
 
-#: ../src/ui/theme-parser.c:1366
+#: ../src/ui/theme-parser.c:1401
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "\"%s\" uzaklığı bilinmiyor"
 
-#: ../src/ui/theme-parser.c:1411
+#: ../src/ui/theme-parser.c:1446
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "\"%s\" en-boy oranı bilinmiyor"
 
-#: ../src/ui/theme-parser.c:1473
+#: ../src/ui/theme-parser.c:1508
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "\"%s\" pencere kenarı bilinmiyor"
 
-#: ../src/ui/theme-parser.c:1784
+#: ../src/ui/theme-parser.c:1819
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
-msgstr ""
-"<%s> öğesinde \"start_angle\" (başlama açısı) ya da \"from\" özniteliği yok"
+msgstr "<%s> öğesinde \"start_angle\" (başlama açısı) ya da \"from\" özniteliği yok"
 
-#: ../src/ui/theme-parser.c:1791
+#: ../src/ui/theme-parser.c:1826
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
-msgstr ""
-"<%s> öğesinde \"extent_angle\" (genişletme açısı) ya da \"to\" özniteliği yok"
+msgstr "<%s> öğesinde \"extent_angle\" (genişletme açısı) ya da \"to\" özniteliği yok"
 
-#: ../src/ui/theme-parser.c:2031
+#: ../src/ui/theme-parser.c:2066
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Renk geçişi türü olarak verilen \"%s\" değeri anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2109 ../src/ui/theme-parser.c:2484
+#: ../src/ui/theme-parser.c:2144 ../src/ui/theme-parser.c:2519
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "<%2$s> öğesinin doldurma türü \"%1$s\" anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2276 ../src/ui/theme-parser.c:2359
-#: ../src/ui/theme-parser.c:2422
+#: ../src/ui/theme-parser.c:2311 ../src/ui/theme-parser.c:2394
+#: ../src/ui/theme-parser.c:2457
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "<%2$s> öğesi için \"%1$s\" durumu anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2286 ../src/ui/theme-parser.c:2369
+#: ../src/ui/theme-parser.c:2321 ../src/ui/theme-parser.c:2404
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "<%2$s> öğesi için \"%1$s\" gölgesi anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2296
+#: ../src/ui/theme-parser.c:2331
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "<%2$s> öğesi için \"%1$s\" oku anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2596 ../src/ui/theme-parser.c:2692
+#: ../src/ui/theme-parser.c:2631 ../src/ui/theme-parser.c:2727
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "\"%s\" adında hiç <draw_ops> tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:2608 ../src/ui/theme-parser.c:2704
+#: ../src/ui/theme-parser.c:2643 ../src/ui/theme-parser.c:2739
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Burada \"%s\" draw_ops'unu içermek çevrimsel gönderime yol açar"
 
-#: ../src/ui/theme-parser.c:2819
+#: ../src/ui/theme-parser.c:2854
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Çerçeve parçası için bilinmeyen konum \"%s\""
 
-#: ../src/ui/theme-parser.c:2827
+#: ../src/ui/theme-parser.c:2862
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Çerçeve biçeminin %s konumunda zaten bir parça var"
 
-#: ../src/ui/theme-parser.c:2844 ../src/ui/theme-parser.c:2919
+#: ../src/ui/theme-parser.c:2879 ../src/ui/theme-parser.c:2954
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "\"%s\" adında hiç <draw_ops> tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:2873
+#: ../src/ui/theme-parser.c:2908
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Düğme için geçersiz işlev \"%s\""
 
-#: ../src/ui/theme-parser.c:2882
+#: ../src/ui/theme-parser.c:2917
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "Düğme işlevi \"%s\" bu sürümde mevcut değil (%d, gereken %d)"
 
-#: ../src/ui/theme-parser.c:2894
+#: ../src/ui/theme-parser.c:2929
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Düğme için geçersiz durum \"%s\""
 
-#: ../src/ui/theme-parser.c:2902
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Çerçeve biçeminde %s işlevi, %s durumu için zaten bir düğme var"
 
-#: ../src/ui/theme-parser.c:2973
+#: ../src/ui/theme-parser.c:3018
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\", odak özniteliği için geçerli bir değer değil"
 
-#: ../src/ui/theme-parser.c:2982
+#: ../src/ui/theme-parser.c:3027
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\", durum özniteliği için geçerli bir değer değil"
 
-#: ../src/ui/theme-parser.c:2992
+#: ../src/ui/theme-parser.c:3037
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "\"%s\" adlı bir biçem tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:3013 ../src/ui/theme-parser.c:3036
+#: ../src/ui/theme-parser.c:3058 ../src/ui/theme-parser.c:3081
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "\"%s\", yeniden boyutlandırma özniteliği için geçerli bir değer değil"
 
-#: ../src/ui/theme-parser.c:3047
+#: ../src/ui/theme-parser.c:3092
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr ""
-"<%s> öğesinin büyütülmüş/toplanmış durumlarında \"resize\" özniteliği "
-"bulunmamalı"
+msgstr "<%s> öğesinin büyütülmüş/toplanmış durumlarında \"resize\" özniteliği bulunmamalı"
 
-#: ../src/ui/theme-parser.c:3061
+#: ../src/ui/theme-parser.c:3106
 #, c-format
-msgid ""
-"Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr ""
-"<%s> öğesinin büyütülmüş durumlarında \"resize\" özniteliği bulunmamalı"
+msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
+msgstr "<%s> öğesinin büyütülmüş durumlarında \"resize\" özniteliği bulunmamalı"
 
-#: ../src/ui/theme-parser.c:3075 ../src/ui/theme-parser.c:3097
+#: ../src/ui/theme-parser.c:3120 ../src/ui/theme-parser.c:3142
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
-msgstr ""
-"%s durumu, %s yeniden boyutlandırma, %s odak için biçem zaten belirtilmiş"
+msgstr "%s durumu, %s yeniden boyutlandırma, %s odak için biçem zaten belirtilmiş"
 
-#: ../src/ui/theme-parser.c:3086 ../src/ui/theme-parser.c:3108
+#: ../src/ui/theme-parser.c:3131 ../src/ui/theme-parser.c:3153
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "%s durumu, odak %s için biçem zaten belirtilmiş"
 
-#: ../src/ui/theme-parser.c:3147
+#: ../src/ui/theme-parser.c:3192
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr ""
-"Bir <piece> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops "
-"özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
+msgstr "Bir <piece> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
 
-#: ../src/ui/theme-parser.c:3185
+#: ../src/ui/theme-parser.c:3230
 msgid ""
-"Can't have a two draw_ops for a <button> element (theme specified a draw_ops "
-"attribute and also a <draw_ops> element, or specified two elements)"
-msgstr ""
-"Bir <button> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops "
-"özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
+"Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
+" attribute and also a <draw_ops> element, or specified two elements)"
+msgstr "Bir <button> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
 
-#: ../src/ui/theme-parser.c:3223
+#: ../src/ui/theme-parser.c:3302
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr ""
-"Bir <menu_icon> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops "
-"özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
+msgstr "Bir <menu_icon> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
 
-#: ../src/ui/theme-parser.c:3271
+#: ../src/ui/theme-parser.c:3350
 #, c-format
-msgid "Outermost element in theme must be <marco_theme> not <%s>"
-msgstr "Temanın en dış öğesi <%s> değil <marco_theme> olmalıdır"
+msgid "Outermost element in theme must be <metacity_theme> not <%s>"
+msgstr "En dıştaki tema unsuru <%s> değil <metacity_theme> olmalıdır"
 
-#: ../src/ui/theme-parser.c:3291
+#: ../src/ui/theme-parser.c:3370
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
-msgstr ""
-"name/author/date/description öğelerinin içinde <%s> öğesi bulunmamalıdır"
+msgstr "name/author/date/description öğelerinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3296
+#: ../src/ui/theme-parser.c:3375
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "<constant> öğesinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3308
+#: ../src/ui/theme-parser.c:3387
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr ""
-"distance/border/aspect_ratio öğelerinin içinde <%s> öğesi bulunmamalıdır"
+msgstr "distance/border/aspect_ratio öğelerinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3330
+#: ../src/ui/theme-parser.c:3409
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "draw operation öğesinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3340 ../src/ui/theme-parser.c:3370
-#: ../src/ui/theme-parser.c:3375 ../src/ui/theme-parser.c:3380
+#: ../src/ui/theme-parser.c:3419 ../src/ui/theme-parser.c:3461
+#: ../src/ui/theme-parser.c:3466 ../src/ui/theme-parser.c:3471
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "<%2$s> öğesinin içinde <%1$s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3602
+#: ../src/ui/theme-parser.c:3693
 msgid "No draw_ops provided for frame piece"
 msgstr "Çerçeve parçası için hiç draw_ops sağlanmamış"
 
-#: ../src/ui/theme-parser.c:3617
+#: ../src/ui/theme-parser.c:3708
 msgid "No draw_ops provided for button"
 msgstr "Düğme için hiç draw_ops sağlanmamış"
 
-#: ../src/ui/theme-parser.c:3669
+#: ../src/ui/theme-parser.c:3770
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "<%s> öğesinin içinde metin bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3724 ../src/ui/theme-parser.c:3736
-#: ../src/ui/theme-parser.c:3748 ../src/ui/theme-parser.c:3760
-#: ../src/ui/theme-parser.c:3772
+#: ../src/ui/theme-parser.c:3825 ../src/ui/theme-parser.c:3837
+#: ../src/ui/theme-parser.c:3849 ../src/ui/theme-parser.c:3861
+#: ../src/ui/theme-parser.c:3873
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "Bu temada <%s> iki kez belirtilmiş"
 
-#: ../src/ui/theme-parser.c:4040
+#: ../src/ui/theme-parser.c:4149
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Tema %s için geçerli bir dosya bulunamadı\n"
 
-#: ../src/ui/theme-parser.c:4096
+#: ../src/ui/theme-parser.c:4205
 #, c-format
-msgid "Theme file %s did not contain a root <marco_theme> element"
-msgstr "Tema dosyası %s, kök <marco_theme> öğesi içermiyor"
+msgid "Theme file %s did not contain a root <metacity_theme> element"
+msgstr "%s tema dosyası kök <metacity_theme> unsuru içermiyordu"
 
 #: ../src/ui/theme-viewer.c:75
 msgid "/_Windows"
@@ -2243,1493 +1996,137 @@ msgstr "/Pencereler/_Tüm sabitlemeler"
 msgid "/Windows/Des_ktop"
 msgstr "/Pencereler/_Masaüstü"
 
-#: ../src/ui/theme-viewer.c:136
-msgid "Open another one of these windows"
-msgstr "Bu pencerelerden başka bir tane aç"
-
-#: ../src/ui/theme-viewer.c:143
-msgid "This is a demo button with an 'open' icon"
-msgstr "Bu 'aç' simgesi olan gösterim düğmesidir"
-
-#: ../src/ui/theme-viewer.c:150
-msgid "This is a demo button with a 'quit' icon"
-msgstr "Bu 'çık' simgesi olan gösterim düğmesidir"
-
-#: ../src/ui/theme-viewer.c:243
+#: ../src/ui/theme-viewer.c:244
 msgid "This is a sample message in a sample dialog"
 msgstr "Bu örnek iletişim penceresi için örnek bir iletidir"
 
-#: ../src/ui/theme-viewer.c:326
+#: ../src/ui/theme-viewer.c:327
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Sahte menü öğesi %d\n"
 
-#: ../src/ui/theme-viewer.c:360
+#: ../src/ui/theme-viewer.c:361
 msgid "Border-only window"
 msgstr "Sadece kenarı olan pencere"
 
-#: ../src/ui/theme-viewer.c:362
+#: ../src/ui/theme-viewer.c:363
 msgid "Bar"
 msgstr "Çubuk"
 
-#: ../src/ui/theme-viewer.c:379
+#: ../src/ui/theme-viewer.c:380
 msgid "Normal Application Window"
 msgstr "Normal Uygulama Penceresi"
 
-#: ../src/ui/theme-viewer.c:383
+#: ../src/ui/theme-viewer.c:384
 msgid "Dialog Box"
 msgstr "İletişim Kutusu"
 
-#: ../src/ui/theme-viewer.c:387
+#: ../src/ui/theme-viewer.c:388
 msgid "Modal Dialog Box"
 msgstr "Yardımcı İletişim Kutusu"
 
-#: ../src/ui/theme-viewer.c:391
+#: ../src/ui/theme-viewer.c:392
 msgid "Utility Palette"
 msgstr "Araç Paleti"
 
-#: ../src/ui/theme-viewer.c:395
+#: ../src/ui/theme-viewer.c:396
 msgid "Torn-off Menu"
 msgstr "Kesilebilir Menü"
 
-#: ../src/ui/theme-viewer.c:399
+#: ../src/ui/theme-viewer.c:400
 msgid "Border"
 msgstr "Kenarlık"
 
-#: ../src/ui/theme-viewer.c:727
+#: ../src/ui/theme-viewer.c:728
 #, c-format
 msgid "Button layout test %d"
 msgstr "Düğme düzeni testi %d"
 
-#: ../src/ui/theme-viewer.c:756
+#: ../src/ui/theme-viewer.c:757
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "bir pencere çerçevesi çizmek için %g milisaniye"
 
-#: ../src/ui/theme-viewer.c:799
+#: ../src/ui/theme-viewer.c:800
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Kullanım: marco-theme-viewer [TEMAİSMİ]\n"
 
-#: ../src/ui/theme-viewer.c:806
+#: ../src/ui/theme-viewer.c:807
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Tema yüklenirken hata: %s\n"
 
-#: ../src/ui/theme-viewer.c:812
+#: ../src/ui/theme-viewer.c:813
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" teması %g saniye içerisinde yüklendi\n"
 
-#: ../src/ui/theme-viewer.c:853
+#: ../src/ui/theme-viewer.c:854
 msgid "Normal Title Font"
 msgstr "Normal Başlık Yazıtipi"
 
-#: ../src/ui/theme-viewer.c:859
+#: ../src/ui/theme-viewer.c:860
 msgid "Small Title Font"
 msgstr "Küçük Başlık Yazıtipi"
 
-#: ../src/ui/theme-viewer.c:865
+#: ../src/ui/theme-viewer.c:866
 msgid "Large Title Font"
 msgstr "Büyük Başlık Yazıtipi"
 
-#: ../src/ui/theme-viewer.c:870
+#: ../src/ui/theme-viewer.c:871
 msgid "Button Layouts"
 msgstr "Düğme Düzenleri"
 
-#: ../src/ui/theme-viewer.c:875
+#: ../src/ui/theme-viewer.c:876
 msgid "Benchmark"
 msgstr "Karşılaştırma"
 
-#: ../src/ui/theme-viewer.c:922
+#: ../src/ui/theme-viewer.c:923
 msgid "Window Title Goes Here"
 msgstr "Pencere Başlığı Buraya Gelir"
 
-#: ../src/ui/theme-viewer.c:1026
+#: ../src/ui/theme-viewer.c:1027
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr ""
-"%d çerçeve %g istemci taraflı saniyede (%g milisaniye başına çerçeve) ve X "
-"sunucu kaynaları ile saat saniyesi olarak %g saniye (%g milisaniye başına "
-"çerçeve) içinde çizildi.\n"
+msgstr "%d çerçeve %g istemci taraflı saniyede (%g milisaniye başına çerçeve) ve X sunucu kaynaları ile saat saniyesi olarak %g saniye (%g milisaniye başına çerçeve) içinde çizildi.\n"
 
-#: ../src/ui/theme-viewer.c:1245
+#: ../src/ui/theme-viewer.c:1246
 msgid "position expression test returned TRUE but set error"
 msgstr "konum ifadesi testi TRUE olarak döndü ama hata belirtti"
 
-#: ../src/ui/theme-viewer.c:1247
+#: ../src/ui/theme-viewer.c:1248
 msgid "position expression test returned FALSE but didn't set error"
 msgstr "konum ifadesi testi FALSE olarak döndü ama hata belirtmedi"
 
-#: ../src/ui/theme-viewer.c:1251
+#: ../src/ui/theme-viewer.c:1252
 msgid "Error was expected but none given"
 msgstr "Hata beklendi ancak hiç bir hata verilmedi"
 
-#: ../src/ui/theme-viewer.c:1253
+#: ../src/ui/theme-viewer.c:1254
 #, c-format
 msgid "Error %d was expected but %d given"
 msgstr "Hata %d beklendi ancak %d verildi"
 
-#: ../src/ui/theme-viewer.c:1259
+#: ../src/ui/theme-viewer.c:1260
 #, c-format
 msgid "Error not expected but one was returned: %s"
 msgstr "Hata beklenmedi ancak bir hata görüldü: %s"
 
-#: ../src/ui/theme-viewer.c:1263
+#: ../src/ui/theme-viewer.c:1264
 #, c-format
 msgid "x value was %d, %d was expected"
 msgstr "x değeri %d, fakat beklenen değer %d"
 
-#: ../src/ui/theme-viewer.c:1266
+#: ../src/ui/theme-viewer.c:1267
 #, c-format
 msgid "y value was %d, %d was expected"
 msgstr "y değeri %d, fakat beklenen değer %d"
 
-#: ../src/ui/theme-viewer.c:1331
+#: ../src/ui/theme-viewer.c:1332
 #, c-format
 msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
-msgstr ""
-"%d kordinat ifadesi %g saniye içinde ayrıştırıldı (%g saniye ortalama ile)\n"
-
-#~ msgid "Failed to parse message \"%s\" from dialog process\n"
-#~ msgstr "İletişim kutusu işleminden gelen \"%s\" iletisi ayrıştırılamadı\n"
-
-#~ msgid "Error reading from dialog display process: %s\n"
-#~ msgstr "İletişim kutusu gösteren işlemde okuma hatası: %s\n"
-
-#~ msgid ""
-#~ "Error launching marco-dialog to ask about killing an application: %s\n"
-#~ msgstr ""
-#~ "marco-dialog'u bir uygulamanın öldürülmesiyle ilgili soru sormak "
-#~ "amacıyla başlatırken hata: %s\n"
-
-#~ msgid ""
-#~ "Error launching marco-dialog to print an error about a command: %s\n"
-#~ msgstr ""
-#~ "Bir komutla ilgili hatayı göstermek için marco-dialog başlatılırken "
-#~ "hata: %s\n"
-
-#~ msgid "Type of %s was not integer"
-#~ msgstr "%s türü tamsayı değil"
-
-#~ msgid ""
-#~ "%d stored in MateConf key %s is not a reasonable cursor_size; must be in the "
-#~ "range 1..128\n"
-#~ msgstr ""
-#~ "%2$s MateConf anahtarında saklı %1$d değeri geçerli bir imleç_boyutu değil; "
-#~ "1..128 aralığında olmalı\n"
-
-#~ msgid ""
-#~ "%d stored in MateConf key %s is not a reasonable number of workspaces, "
-#~ "current maximum is %d\n"
-#~ msgstr ""
-#~ "%2$s MateConf anahtarında saklı %1$d değeri geçerli bir çalışma alanı sayısı "
-#~ "değil; şu anki üst sınır: %3$d\n"
-
-#~ msgid "Unknown attribute %s on <marco_session> element"
-#~ msgstr "<marco_session> öğesinde bilinmeyen öznitelik %s"
-
-#~ msgid "Unknown attribute %s on <maximized> element"
-#~ msgstr "<maximized> öğesinde bilinmeyen öznitelik %s"
-
-#~ msgid "Unknown attribute %s on <geometry> element"
-#~ msgstr "<geometry> öğesinde bilinmeyen öznitelik %s"
-
-#~ msgid ""
-#~ "Error launching marco-dialog to warn about apps that don't support "
-#~ "session management: %s\n"
-#~ msgstr ""
-#~ "Oturum yönetimini desteklemeyen uygulamalar hakkında uyarmak için "
-#~ "marco-dialog'u çalıştırırken hata: %s\n"
-
-#~ msgid ""
-#~ "Many actions (e.g. clicking in the client area, moving or resizing the "
-#~ "window) normally raise the window as a side-effect. Setting this option "
-#~ "to false, which is strongly discouraged, will decouple raising from other "
-#~ "user actions, and ignore raise requests generated by applications. See "
-#~ "http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6."
-#~ msgstr ""
-#~ "Bir çok eylem (örn. istemci alanına tıklayarak pencereyi taşımak ve "
-#~ "yeniden boyutlandırmak) normalde yan etki olarak pencereyi yukarı "
-#~ "çıkartır. Bu seçeneği false olarak işaretlemek, şiddetle "
-#~ "önerilmemektedir, diğer kullanıcı eylemlerini ayıracak ve uygulamalar "
-#~ "tarafından yapılan yukarı çıkartma isteklerini yok sayacaktır. http://"
-#~ "bugzilla.gnome.org/show_bug.cgi?id=445447#c6 hata raporuna bakın."
-
-#~ msgid ""
-#~ "The keybinding that switches to the workspace above the current "
-#~ "workspace. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-#~ "case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-#~ "\". If you set the option to the special string \"disabled\", then there "
-#~ "will be no keybinding for this action."
-#~ msgstr ""
-#~ "Geçerli çalışma alanının üstündeki çalışma alanına geçmeyi sağlamak üzere "
-#~ "atanmış tuş bağı. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "daizin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak "
-#~ "atarsanız, o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to the workspace below the current "
-#~ "workspace. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-#~ "case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-#~ "\". If you set the option to the special string \"disabled\", then there "
-#~ "will be no keybinding for this action."
-#~ msgstr ""
-#~ "Geçerli çalışma alanının altındaki çalışma alanına geçmeyi sağlamak üzere "
-#~ "atanmış tuş bağı. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "daizin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak "
-#~ "atarsanız, o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to the workspace on the left of the current "
-#~ "workspace. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-#~ "case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-#~ "\". If you set the option to the special string \"disabled\", then there "
-#~ "will be no keybinding for this action."
-#~ msgstr ""
-#~ "Geçerli çalışma alanının solundaki çalışma alanına geçmeyi sağlamak üzere "
-#~ "atanmış tuş bağı. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "daizin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak "
-#~ "atarsanız, o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to the workspace on the right of the current "
-#~ "workspace. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-#~ "case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-#~ "\". If you set the option to the special string \"disabled\", then there "
-#~ "will be no keybinding for this action."
-#~ msgstr ""
-#~ "Geçerli çalışma alanının sağındaki çalışma alanına geçmeyi sağlamak üzere "
-#~ "atanmış tuş bağı. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "daizin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak "
-#~ "atarsanız, o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 1. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 1'e geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 10. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 10'a geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 11. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 11'e geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 12. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 12'ye geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 2. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 2'ye geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 3. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 3'e geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 4. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 4'e geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 5. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 5'e geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 6. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 6'ya geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 7. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 7'ye geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 8. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 8'e geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding that switches to workspace 9. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Çalışma alanı 9'a geçmeyi sağlamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to activate the window menu. The format looks like "
-#~ "\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is "
-#~ "fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencere menüsünü etkinleştirmek üzere atanmış tuş bağı. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to enter \"move mode\" and begin moving a window "
-#~ "using the keyboard. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-#~ "Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower "
-#~ "or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;"
-#~ "Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-#~ "then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "\"Taşıma kipi\"ne girmek, yani pencereyi klavye ile taşımaya başlamak "
-#~ "üzere atanmış tuş bağı. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" "
-#~ "ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf "
-#~ "farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi "
-#~ "kısaltmalara izin verir. Seçeneğe \"disabled\" özel dizgisini değer "
-#~ "olarak atarsanız, o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to enter \"resize mode\" and begin resizing a window "
-#~ "using the keyboard. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-#~ "Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower "
-#~ "or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;"
-#~ "Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-#~ "then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "\"Boyutlandırma kipi\"ne girmek, yani pencereyi klavye ile "
-#~ "boyutlandırmaya başlamak üzere atanmış tuş bağı. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarakatarsanız, o eylem için tuş bağı yapılmamış "
-#~ "olur."
-
-#~ msgid ""
-#~ "The keybinding used to hide all normal windows and set the focus to the "
-#~ "desktop background. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-#~ "Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower "
-#~ "or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;"
-#~ "Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-#~ "then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "Bütün sıradan pencereleri gizlemek ve masaüstüne odaklanmak üzere atanmış "
-#~ "tuş bağı. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;"
-#~ "Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, "
-#~ "o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to maximize a window. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Pencereyi ekranı kaplar boyuta getirmek üzere atanmış tuş bağı. Biçimi "
-#~ "şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to minimize a window. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Pencereyi simge boyutuna küçültmek üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window one workspace down. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi bir alttaki çalışma alanına taşımak üzere atanmış tuş bağı. "
-#~ "Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window one workspace to the left. The "
-#~ "format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "The parser is fairly liberal and allows lower or upper case, and also "
-#~ "abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set "
-#~ "the option to the special string \"disabled\", then there will be no "
-#~ "keybinding for this action."
-#~ msgstr ""
-#~ "Pencereyi bir soldaki çalışma alanına taşımak üzere atanmış tuş bağı. "
-#~ "Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window one workspace to the right. The "
-#~ "format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "The parser is fairly liberal and allows lower or upper case, and also "
-#~ "abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set "
-#~ "the option to the special string \"disabled\", then there will be no "
-#~ "keybinding for this action."
-#~ msgstr ""
-#~ "Pencereyi bir sağdaki çalışma alanına taşımak üzere atanmış tuş bağı. "
-#~ "Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window one workspace up. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi bir üstteki çalışma alanına taşımak üzere atanmış tuş bağı. "
-#~ "Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 1. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 1'e taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 10. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 10'a taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 11. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 11'e taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 12. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 12'ye taşımak üzere atanmış tuş bağı. Biçimi "
-#~ "şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 2. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 2'ye taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 3. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 3'e taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 4. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 4'e taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 5. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 5'e taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 6. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 6'ya taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 7. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 7'ye taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 8. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 8'e taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\".  Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;"
-#~ "Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move a window to workspace 9. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi çalışma alanı 9'a taşımak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus backwards between panels and the "
-#~ "desktop, using a popup window. The format looks like \"&lt;Control&gt;a\" "
-#~ "or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and "
-#~ "allows lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;"
-#~ "\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-#~ "\"disabled\", then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "Odağın panellerle masaüstü arasındaki ters yönde geçişini beliren pencere "
-#~ "aracılığıyla sağlamak üzere atanmış tuş bağı. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus backwards between panels and the "
-#~ "desktop, without a popup window. The format looks like \"&lt;Control&gt;a"
-#~ "\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and "
-#~ "allows lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;"
-#~ "\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-#~ "\"disabled\", then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "Odağın panellerle masaüstü arasındaki ters yönde geçişini beliren pencere "
-#~ "olmadan sağlamak üzere atanmış tuş bağı. Biçimi şunun gibi olmalıdır: "
-#~ "\"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı "
-#~ "büyük veyaküçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;"
-#~ "Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled\" özel "
-#~ "dizgisini değer olarakatarsanız, o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus backwards between windows of an "
-#~ "application without a popup window. Holding \"shift\" together with this "
-#~ "binding makes the direction go forward again. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Odağın pencereler arasındaki ters yönde geçişini beliren pencere olmadan "
-#~ "taşımak üzere atanmış tuş bağı. Bu tuş bağını kullanırken \"shift\" tuşu "
-#~ "basılı tutulursa haraket yönü tersine döner. Biçimi şunun gibi olmalıdır: "
-#~ "\"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı "
-#~ "büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;"
-#~ "Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled\" özel "
-#~ "dizgisini değer olarak atarsanız, o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus backwards between windows of an "
-#~ "application, using a popup window. Holding \"shift\" together with this "
-#~ "binding makes the direction go forward again. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Odağın pencereler arasındaki ters yönde geçişini beliren pencere "
-#~ "aracılığıyla taşımak üzere atanmış tuş bağı. Bu tuş bağını kullanırken "
-#~ "\"shift\" tuşu basılı tutulursa haraket yönü tersine döner. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus backwards between windows without a "
-#~ "popup window. Holding \"shift\" together with this binding makes the "
-#~ "direction go forward again. The format looks like \"&lt;Control&gt;a\" or "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-#~ "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-#~ "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled"
-#~ "\", then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "Odağın pencereler arasındaki ters yönde geçişini beliren pencere olmadan "
-#~ "taşımak üzere atanmış tuş bağı. (Geleneksel olarak &lt;Alt&gt;Escape) Bu "
-#~ "tuş bağını kullanırken \"shift\" tuşu basılı tutulursa haraket yönü "
-#~ "tersine döner. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, "
-#~ "o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus backwards between windows, using a "
-#~ "popup window. Holding \"shift\" together with this binding makes the "
-#~ "direction go forward again. The format looks like \"&lt;Control&gt;a\" or "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-#~ "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-#~ "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled"
-#~ "\", then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "Odağın pencereler arasındaki ters yönde geçişini beliren pencere "
-#~ "aracılığıyla taşımak üzere atanmış tuş bağı. (Geleneksel olarak &lt;"
-#~ "Alt&gt;Escape) Bu tuş bağını kullanırken \"shift\" tuşu basılı tutulursa "
-#~ "haraket yönü tersine döner. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;"
-#~ "a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük "
-#~ "harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi "
-#~ "kısaltmalara izin verir. Seçeneğe \"disabled\" özel dizgisini değer "
-#~ "olarak atarsanız, o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus between panels and the desktop, using a "
-#~ "popup window. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-#~ "Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower "
-#~ "or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;"
-#~ "Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-#~ "then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "Odağın panellerle masaüstü arasındaki geçişini beliren pencere "
-#~ "aracılığıyla sağlamak üzere atanmış tuş bağı. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarakatarsanız, o eylem için tuş bağı yapılmamış "
-#~ "olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus between panels and the desktop, without "
-#~ "a popup window. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-#~ "Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower "
-#~ "or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;"
-#~ "Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-#~ "then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "Odağın panellerle masaüstü arasındaki geçişini beliren pencere olmadan "
-#~ "sağlamak üzere atanmış tuş bağı. Biçimi şunun gibi olmalıdır: \"&lt;"
-#~ "Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük "
-#~ "veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;"
-#~ "Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled\" özel "
-#~ "dizgisini değer olarakatarsanız, o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus between windows of an application "
-#~ "without a popup window. Holding the \"shift\" key while using this "
-#~ "binding reverses the direction of movement. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Odağın pencereler arasındaki geçişini beliren pencere olmadan taşımak "
-#~ "üzere atanmış tuş bağı. Bu tuş bileşimini kullanırken \"shift\" tuşu "
-#~ "basılı tutulursa haraket yönü tersine döner. Biçimi şunun gibi olmalıdır: "
-#~ "\"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı "
-#~ "büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;"
-#~ "Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled\" özel "
-#~ "dizgisini değer olarak atarsanız, o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus between windows of an application, "
-#~ "using a popup window. (Traditionally &lt;Alt&gt;F6) Holding the \"shift\" "
-#~ "key while using this binding reverses the direction of movement. The "
-#~ "format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "The parser is fairly liberal and allows lower or upper case, and also "
-#~ "abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set "
-#~ "the option to the special string \"disabled\", then there will be no "
-#~ "keybinding for this action."
-#~ msgstr ""
-#~ "Odağın pencereler arasındaki geçişini beliren pencere aracılığıyla "
-#~ "taşımak üzere atanmış tuş bağı. Bu tuş bileşimini kullanırken \"shift\" "
-#~ "tuşu basılı tutulursa haraket yönü tersine döner. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus between windows without a popup window. "
-#~ "(Traditionally &lt;Alt&gt;Escape) Holding the \"shift\" key while using "
-#~ "this binding reverses the direction of movement. The format looks like "
-#~ "\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is "
-#~ "fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Odağın pencereler arasındaki geçişini beliren pencere olmadan taşımak "
-#~ "üzere atanmış tuş bağı. (Geleneksel olarak &lt;Alt&gt;Escape) Bu tuş "
-#~ "bileşimini kullanırken \"shift\" tuşu basılı tutulursa haraket yönü "
-#~ "tersine döner. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, "
-#~ "o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to move focus between windows, using a popup window. "
-#~ "(Traditionally &lt;Alt&gt;Tab) Holding the \"shift\" key while using this "
-#~ "binding reverses the direction of movement. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Odağın pencereler arasındaki geçişini beliren pencere aracılığıyla "
-#~ "taşımak üzere atanmış tuş bağı. (Geleneksel olarak &lt;Alt&gt;Escape) Bu "
-#~ "tuş bileşimini kullanırken \"shift\" tuşu basılı tutulursa haraket yönü "
-#~ "tersine döner. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, "
-#~ "o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to toggle always on top. A window that is always on "
-#~ "top will always be visible over other overlapping windows. The format "
-#~ "looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The "
-#~ "parser is fairly liberal and allows lower or upper case, and also "
-#~ "abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set "
-#~ "the option to the special string \"disabled\", then there will be no "
-#~ "keybinding for this action."
-#~ msgstr ""
-#~ "Her zaman üstte tutmayı açmak veya kapamak üzere atanmış tuş bağı. Biçimi "
-#~ "şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to toggle fullscreen mode. The format looks like "
-#~ "\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is "
-#~ "fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Tam ekran kipini açmak ya da kapamak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to toggle maximization. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Pencerenin ekranı kaplar boyutta oluşunu açıp kapamak üzere atanmış tuş "
-#~ "bağı. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;"
-#~ "Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, "
-#~ "o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to toggle shaded/unshaded state. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Pencereyi toplamak, topluysa yaymak üzere atanmış tuş bağı. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to toggle whether the window is on all workspaces or "
-#~ "just one. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-#~ "case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-#~ "\". If you set the option to the special string \"disabled\", then there "
-#~ "will be no keybinding for this action."
-#~ msgstr ""
-#~ "Pencerenin görünürlüğünün bütün çalışma alanları ile yalnızca geçerli "
-#~ "çalışma alanı arasına geçişini yapmak üzere atanmış tuş bağı. Biçimi "
-#~ "şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding used to unmaximize a window. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Ekranı kaplayan pencereyi eski durumuna getirmek üzere atanmış tuş bağı. "
-#~ "Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding which display's the panel's \"Run Application\" dialog "
-#~ "box. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". The parser is fairly liberal and allows lower or upper case, "
-#~ "and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If "
-#~ "you set the option to the special string \"disabled\", then there will be "
-#~ "no keybinding for this action."
-#~ msgstr ""
-#~ "Panelin \"Program Çalıştır\" penceresini göstermek üzere atanmış tuş "
-#~ "bağı. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;"
-#~ "Shift&gt;&lt; Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, "
-#~ "o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding which invokes a terminal. The format looks like \"&lt;"
-#~ "Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-#~ "liberal and allows lower or upper case, and also abbreviations such as "
-#~ "\"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-#~ "special string \"disabled\", then there will be no keybinding for this "
-#~ "action."
-#~ msgstr ""
-#~ "Panelin ana menüsünü göstermek üzere atanmış tuş bağı. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt; Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt; Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding which invokes the panel's screenshot utility to take a "
-#~ "screenshot of a window. The format looks like \"&lt;Control&gt;a\" or "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-#~ "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-#~ "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled"
-#~ "\", then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "Pencerenin ekran görüntüsünü alması için panelin ekran görüntüsü alıcı "
-#~ "programını çalıştırmak üzere atanmış tuş bağı. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding which invokes the panel's screenshot utility. The format "
-#~ "looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The "
-#~ "parser is fairly liberal and allows lower or upper case, and also "
-#~ "abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set "
-#~ "the option to the special string \"disabled\", then there will be no "
-#~ "keybinding for this action."
-#~ msgstr ""
-#~ "Panelin ekran görüntüsü alıcı programını çalıştırmak üzere atanmış tuş "
-#~ "bağı. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;"
-#~ "Shift&gt;&lt; Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, "
-#~ "o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "The keybinding which shows the panel's main menu. The format looks like "
-#~ "\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is "
-#~ "fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Panelin ana menüsünü göstermek üzere atanmış tuş bağı. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt; Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt; Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding changes whether a window is above or below other windows. "
-#~ "If the window is covered by another one, it raises the window above all "
-#~ "others, and if the window is already fully visible, it lowers it below "
-#~ "all others. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-#~ "case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-#~ "\". If you set the option to the special string \"disabled\", then there "
-#~ "will be no keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencerenin diğer pencerelerin üstünde mi altında mı olacağını "
-#~ "belirler. Eğer pencerenin üstünde bir başkası varsa, bu ilk pencereyi "
-#~ "diğer tüm pencerelerin üstüne yükseltir. Eğer pencere bütünüyle görünür "
-#~ "durumdaysa diğer tüm pencerelerin altına indirir. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding lowers a window below other windows. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi diğerlerinin altına indirir. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding moves a window against the north (top) side of the "
-#~ "screen. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". The parser is fairly liberal and allows lower or upper case, "
-#~ "and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If "
-#~ "you set the option to the special string \"disabled\", then there will be "
-#~ "no keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi ekranın kuzey (üst) kenarına taşır. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding moves a window into the east (right) side of the screen. "
-#~ "The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". The parser is fairly liberal and allows lower or upper case, and also "
-#~ "abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set "
-#~ "the option to the special string \"disabled\", then there will be no "
-#~ "keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi ekranın doğu (sağ) kenarına taşır. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding moves a window into the north-east (top right) corner of "
-#~ "the screen. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-#~ "case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-#~ "\". If you set the option to the special string \"disabled\", then there "
-#~ "will be no keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi ekranın kuzey-doğu (sağ üst) kenarına taşır. Biçimi "
-#~ "şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding moves a window into the north-west (top left) corner of "
-#~ "the screen. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-#~ "&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-#~ "case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-#~ "\". If you set the option to the special string \"disabled\", then there "
-#~ "will be no keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi ekranın kuzey-batı (sol üst) kenarına taşır. Biçimi "
-#~ "şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding moves a window into the south (bottom) side of the "
-#~ "screen. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". The parser is fairly liberal and allows lower or upper case, "
-#~ "and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If "
-#~ "you set the option to the special string \"disabled\", then there will be "
-#~ "no keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi ekranın güney (alt) kenarına taşır. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding moves a window into the south-east (bottom right) corner "
-#~ "of the screen. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-#~ "Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower "
-#~ "or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;"
-#~ "Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-#~ "then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi ekranın güney-doğu (sağ alt) kenarına taşır. Biçimi "
-#~ "şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding moves a window into the south-west (bottom left) corner "
-#~ "of the screen. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-#~ "Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower "
-#~ "or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;"
-#~ "Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-#~ "then there will be no keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi ekranın güney-batı (sol alt) kenarına taşır. Biçimi "
-#~ "şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;"
-#~ "Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca "
-#~ "\"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. "
-#~ "Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, o eylem için "
-#~ "tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding moves a window into the west (left) side of the screen. "
-#~ "The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". The parser is fairly liberal and allows lower or upper case, and also "
-#~ "abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set "
-#~ "the option to the special string \"disabled\", then there will be no "
-#~ "keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi ekranın batı (sol) kenarına taşır. Biçimi şunun "
-#~ "gibi olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1"
-#~ "\". Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;"
-#~ "\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe "
-#~ "\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding raises the window above other windows. The format looks "
-#~ "like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser "
-#~ "is fairly liberal and allows lower or upper case, and also abbreviations "
-#~ "such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to "
-#~ "the special string \"disabled\", then there will be no keybinding for "
-#~ "this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi diğerlerinin üstüne çıkarır. Biçimi şunun gibi "
-#~ "olmalıdır: \"&lt;Control&gt;a\" ya da \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "Ayrıştırıcı büyük veya küçük harf farkı gözetmez; ayrıca \"&lt;Ctl&gt;\" "
-#~ "ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara izin verir. Seçeneğe \"disabled"
-#~ "\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-#~ "yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding resizes a window to fill available horizontal space. The "
-#~ "format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "The parser is fairly liberal and allows lower or upper case, and also "
-#~ "abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set "
-#~ "the option to the special string \"disabled\", then there will be no "
-#~ "keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi tüm yatay boşluğu kaplayacak şekilde yeniden "
-#~ "boyutlandırır. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, "
-#~ "o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid ""
-#~ "This keybinding resizes a window to fill available vertical space. The "
-#~ "format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-#~ "The parser is fairly liberal and allows lower or upper case, and also "
-#~ "abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set "
-#~ "the option to the special string \"disabled\", then there will be no "
-#~ "keybinding for this action."
-#~ msgstr ""
-#~ "Bu tuş bağı pencereyi tüm dikey boşluğu kaplayacak şekilde yeniden "
-#~ "boyutlandırır. Biçimi şunun gibi olmalıdır: \"&lt;Control&gt;a\" ya da "
-#~ "\"&lt;Shift&gt;&lt;Alt&gt;F1\". Ayrıştırıcı büyük veya küçük harf farkı "
-#~ "gözetmez; ayrıca \"&lt;Ctl&gt;\" ya da \"&lt;Ctrl&gt;\" gibi kısaltmalara "
-#~ "izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak atarsanız, "
-#~ "o eylem için tuş bağı yapılmamış olur."
-
-#~ msgid "Toggle always on top state"
-#~ msgstr "Herzaman üstte tut durumunu aç veya kapat"
-
-#~ msgid "Unmaximize window"
-#~ msgstr "Pencereyi büyültmeyi geri al"
-
-#~ msgid "Unmaximize Window"
-#~ msgstr "Pencereyi Büyültmeyi Geri Al"
-
-#~ msgid "\"%s\" is not responding."
-#~ msgstr "\"%s\" cevap vermiyor."
-
-#~ msgid "Title"
-#~ msgstr "Başlık"
-
-#~ msgid "Class"
-#~ msgstr "Sınıf"
-
-#~ msgid "No \"%s\" attribute on <%s> element"
-#~ msgstr "<%s> öğesinde hiç \"%s\" özniteliği yok"
-
-#~ msgid "Theme already has a fallback icon"
-#~ msgstr "Temanın zaten bir son çare simgesi var"
-
-#~ msgid "Theme already has a fallback mini_icon"
-#~ msgstr "Tema zaten bir en son durum mini_icon'a sahip"
-
-#~ msgid "No \"name\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"name\" (ad) özniteliği yok"
-
-#~ msgid "No \"value\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"value\" (değer) özniteliği yok"
-
-#~ msgid "No \"top\" attribute on element <%s>"
-#~ msgstr "<%s> öğesine \"top\" (üst) özniteliği verilmemiş"
-
-#~ msgid "No \"bottom\" attribute on element <%s>"
-#~ msgstr "<%s> öğesine \"bottom\" (alt) özniteliği verilmemiş"
-
-#~ msgid "No \"left\" attribute on element <%s>"
-#~ msgstr "<%s> öğesine \"left\" (sol) özniteliği verilmemiş"
-
-#~ msgid "No \"right\" attribute on element <%s>"
-#~ msgstr "<%s> öğesine \"right\" (sağ) özniteliği verilmemiş"
-
-#~ msgid "No \"color\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"color\" (renk) özniteliği yok"
-
-#~ msgid "No \"x1\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"x1\" özniteliği yok"
-
-#~ msgid "No \"y1\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"y1\" özniteliği yok"
-
-#~ msgid "No \"x2\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"x2\" özniteliği yok"
-
-#~ msgid "No \"y2\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"y2\" özniteliği yok"
-
-#~ msgid "No \"y\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"y\" özniteliği yok"
-
-#~ msgid "No \"width\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"width\" (en) özniteliği yok"
-
-#~ msgid "No \"height\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"height\" (boy) özniteliği yok"
-
-#~ msgid "No \"start_angle\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"start_angle\" (başlama açısı) özniteliği yok"
-
-#~ msgid "No \"extent_angle\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"extent_angle\" (genişletme açısı) özniteliği yok"
-
-#~ msgid "No \"alpha\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"alpha\" (alfa) özniteliği yok"
-
-#~ msgid "No \"type\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"type\" (tür) özniteliği yok"
-
-#~ msgid "No \"filename\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"filename\" (dosya adı) özniteliği yok"
-
-#~ msgid "No \"state\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"state\" (durum) özniteliği yok"
-
-#~ msgid "No \"shadow\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"shadow\" (gölge) özniteliği yok"
-
-#~ msgid "No \"arrow\" attribute on element <%s>"
-#~ msgstr "<%s> öğesinde \"arrow\" (ok) özniteliği yok"
-
-#~ msgid "No \"value\" attribute on <%s> element"
-#~ msgstr "<%s> öğesinde \"value\" (değer) özniteliği yok"
-
-#~ msgid "No \"position\" attribute on <%s> element"
-#~ msgstr "<%s> öğesinde \"position\" (konum) özniteliği yok"
-
-#~ msgid "No \"function\" attribute on <%s> element"
-#~ msgstr "<%s> öğesinde \"function\" (işlev) özniteliği yok"
-
-#~ msgid "No \"state\" attribute on <%s> element"
-#~ msgstr "<%s> öğesinde \"state\" (durum) özniteliği yok"
-
-#~ msgid "No \"focus\" attribute on <%s> element"
-#~ msgstr "<%s> öğesinde \"focus\" (odak) özniteliği yok"
-
-#~ msgid "No \"style\" attribute on <%s> element"
-#~ msgstr "<%s> öğesinde \"style\" (biçem) özniteliği yok"
-
-#~ msgid "No \"resize\" attribute on <%s> element"
-#~ msgstr "<%s> öğesinde \"resize\" (yeniden boyutlandırma) özniteliği yok"
-
-#~ msgid "<author> specified twice for this theme"
-#~ msgstr "Bu temada <author> iki kez belirtilmiş"
-
-#~ msgid "<copyright> specified twice for this theme"
-#~ msgstr "Bu temada <copyright> iki kez belirtilmiş"
-
-#~ msgid "<date> specified twice for this theme"
-#~ msgstr "Bu temada <date> iki kez belirtilmiş"
-
-#~ msgid "<description> specified twice for this theme"
-#~ msgstr "Bu temada <description> iki kez belirtilmiş"
+msgstr "%d kordinat ifadesi %g saniye içinde ayrıştırıldı (%g saniye ortalama ile)\n"

@@ -1,21 +1,21 @@
-# translation of marco.master.po to Maithili
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Sangeeta Kumari <sangeeta09@gmail.com>, 2009.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: marco.master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=marco&component=general\n"
-"POT-Creation-Date: 2009-09-10 19:14+0000\n"
-"PO-Revision-Date: 2009-09-11 20:51+0530\n"
-"Last-Translator: Sangeeta Kumari <sangeeta09@gmail.com>\n"
-"Language-Team: Maithili <maithili.sf.net>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-28 10:53+0100\n"
+"PO-Revision-Date: 2011-12-28 10:54+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"Language: mai\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
@@ -34,34 +34,37 @@ msgstr ""
 msgid "Unknown window information request: %d"
 msgstr ""
 
-#: ../src/core/delete.c:104
+#. Translators: %s is a window title
+#: ../src/core/delete.c:96
 #, c-format
-msgid ""
-"<big><b><tt>%s</tt> is not responding.</b></big>\n"
-"\n"
-"<i>You may choose to wait a short while for it to continue or force the "
-"application to quit entirely.</i>"
+msgid "<tt>%s</tt> is not responding."
 msgstr ""
 
-#: ../src/core/delete.c:115
+#: ../src/core/delete.c:101
+msgid ""
+"You may choose to wait a short while for it to continue or force the "
+"application to quit entirely."
+msgstr ""
+
+#: ../src/core/delete.c:110
 msgid "_Wait"
 msgstr "प्रतीक्षा करू (_W)"
 
-#: ../src/core/delete.c:115
+#: ../src/core/delete.c:110
 msgid "_Force Quit"
 msgstr "जबर्दस्ती बाहर (_F)"
 
-#: ../src/core/delete.c:216
+#: ../src/core/delete.c:208
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "होस्टनाम पाबैमे विफल: %s\n"
 
-#: ../src/core/display.c:258
+#: ../src/core/display.c:266
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr ""
 
-#: ../src/core/display.c:336
+#: ../src/core/display.c:344
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X विंडो तंत्र प्रदर्शक '%s' खोलबमे विफल\n"
@@ -72,10 +75,7 @@ msgid ""
 "Lost connection to the display '%s';\n"
 "most likely the X server was shut down or you killed/destroyed\n"
 "the window manager.\n"
-msgstr ""
-"प्रदर्शक '%s' सँ कनेक्शन छूटि गेल ;\n"
-"बहुत संभावना अछि जे अथवा तँ एक्स सर्वर बन्न कए देल गेल अथवा अहाँ विंडो प्रबंधककेँ \n"
-"खत्म/समाप्त कए देने छी.\n"
+msgstr "प्रदर्शक '%s' सँ कनेक्शन छूटि गेल ;\nबहुत संभावना अछि जे अथवा तँ एक्स सर्वर बन्न कए देल गेल अथवा अहाँ विंडो प्रबंधककेँ \nखत्म/समाप्त कए देने छी.\n"
 
 #: ../src/core/errors.c:279
 #, c-format
@@ -91,7 +91,7 @@ msgstr "कोनो आन प्रोग्राम पहिले सँ �
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#.
+#. 
 #: ../src/core/keybindings.c:2294
 #, c-format
 msgid ""
@@ -110,72 +110,72 @@ msgstr "कोनो कमांड %d पारिभाषित नहि �
 msgid "No terminal command has been defined.\n"
 msgstr "कोनो टर्मिनल कमांड पारिभाषित नहि अछि.\n"
 
-#: ../src/core/main.c:130
+#: ../src/core/main.c:131
 #, c-format
 msgid ""
 "marco %s\n"
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
-"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A "
-"PARTICULAR PURPOSE.\n"
+"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 msgstr ""
 
-#: ../src/core/main.c:268
+#: ../src/core/main.c:269
 msgid "Disable connection to session manager"
 msgstr "सत्र प्रबंधकसँ संपर्क रद करू"
 
-#: ../src/core/main.c:274
+#: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
 msgstr "मेटासिटी क' सात कार्यशील विंडो प्रबंधक बदलू"
 
-#: ../src/core/main.c:280
+#: ../src/core/main.c:281
 msgid "Specify session management ID"
 msgstr "सत्र प्रबंधन आईडी निर्दिष्ट करू"
 
-#: ../src/core/main.c:285
+#: ../src/core/main.c:286
 msgid "X Display to use"
 msgstr "प्रयोग क'लेल X प्रदर्शन"
 
-#: ../src/core/main.c:291
+#: ../src/core/main.c:292
 msgid "Initialize session from savefile"
 msgstr "सहेजलफाइल क'लेल सत्र आरंभीकृत करू"
 
-#: ../src/core/main.c:297
+#: ../src/core/main.c:298
 msgid "Print version"
 msgstr "मुद्रण संस्करण"
 
-#: ../src/core/main.c:303
+#: ../src/core/main.c:304
 msgid "Make X calls synchronous"
 msgstr "X कालकेँ समतुल्यकालिक बनाबू"
 
-#: ../src/core/main.c:309
+#: ../src/core/main.c:310
 msgid "Turn compositing on"
 msgstr ""
 
-#: ../src/core/main.c:315
+#: ../src/core/main.c:316
 msgid "Turn compositing off"
 msgstr ""
 
-#: ../src/core/main.c:321
-msgid "Don't make fullscreen windows that are maximized and have no decorations"
+#: ../src/core/main.c:322
+msgid ""
+"Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 
-#: ../src/core/main.c:543
+#: ../src/core/main.c:528
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "प्रसंग डिरेक्ट्री स्कैन करबमे विफल: %s\n"
 
-#: ../src/core/main.c:559
+#: ../src/core/main.c:544
 #, c-format
-msgid "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
+msgid ""
+"Could not find a theme! Be sure %s exists and contains the usual themes.\n"
 msgstr "प्रसंग नहि खोजि सकल! सुनिश्चित करू जे %s मोजुद अछि आओर एहिमे सामान्य प्रसंग अछि.\n"
 
-#: ../src/core/main.c:618
+#: ../src/core/main.c:603
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "पुनः प्रारंभ करबमे विफल: %s\n"
 
-#.
 #. * We found it, but it was invalid.  Complain.
 #. *
 #. * FIXME: This replicates the original behaviour, but in the future
@@ -184,68 +184,66 @@ msgstr "पुनः प्रारंभ करबमे विफल: %s\n"
 #. * the symtab.)
 #. *
 #. * (Empty comment follows so the translators don't see this.)
-#.
-#.
-#: ../src/core/prefs.c:506 ../src/core/prefs.c:661
+#. 
+#. 
+#: ../src/core/prefs.c:508 ../src/core/prefs.c:663
 #, c-format
 msgid "MateConf key '%s' is set to an invalid value\n"
 msgstr "जी-कॉन्फ़ कुँजी '%s'  एकटा अवैध प्रकार मे नियत अछि\n"
 
-#: ../src/core/prefs.c:587 ../src/core/prefs.c:830
+#: ../src/core/prefs.c:589 ../src/core/prefs.c:832
 #, c-format
 msgid "%d stored in MateConf key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:631 ../src/core/prefs.c:708 ../src/core/prefs.c:756
-#: ../src/core/prefs.c:820 ../src/core/prefs.c:1113 ../src/core/prefs.c:1129
-#: ../src/core/prefs.c:1146 ../src/core/prefs.c:1162
+#: ../src/core/prefs.c:633 ../src/core/prefs.c:710 ../src/core/prefs.c:758
+#: ../src/core/prefs.c:822 ../src/core/prefs.c:1115 ../src/core/prefs.c:1131
+#: ../src/core/prefs.c:1148 ../src/core/prefs.c:1164
 #, c-format
 msgid "MateConf key \"%s\" is set to an invalid type\n"
 msgstr "जी-कॉन्फ़ कुँजी \"%s\" एकटा अवैध प्रकारमे नियत अछि\n"
 
-#: ../src/core/prefs.c:1232
+#: ../src/core/prefs.c:1234
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr ""
-"टूटल अनुप्रयोगक लेल वर्कअराउन्ड अक्षम कएल भेलहुँ अछि .भ' सकैत अछि किछु अनुप्रयोग उचित प्रकार "
-"व्यवहार नहि करै.\n"
+msgstr "टूटल अनुप्रयोगक लेल वर्कअराउन्ड अक्षम कएल भेलहुँ अछि .भ' सकैत अछि किछु अनुप्रयोग उचित प्रकार व्यवहार नहि करै.\n"
 
-#: ../src/core/prefs.c:1303
+#: ../src/core/prefs.c:1305
 #, c-format
 msgid "Could not parse font description \"%s\" from MateConf key %s\n"
 msgstr "फ़ॉन्ट विवरण \"%s\" क' व्याख्या जी-कॉन्फ़ कुँजी %s सँ नहि कए सकल\n"
 
-#: ../src/core/prefs.c:1365
+#: ../src/core/prefs.c:1367
 #, c-format
 msgid ""
-"\"%s\" found in configuration database is not a valid value for mouse button "
-"modifier\n"
+"\"%s\" found in configuration database is not a valid value for mouse button"
+" modifier\n"
 msgstr "कॉन्फ़िगरेशन डाटाबेसमे प्राप्त \"%s\" माउस बटन मॉडीफ़ायर वैध मूल्य नहि अछि\n"
 
-#: ../src/core/prefs.c:1786
+#: ../src/core/prefs.c:1788
 #, c-format
 msgid "Error setting number of workspaces to %d: %s\n"
 msgstr "कार्यस्थान सँख्या %d पर तय करब मे त्रुटि: %s भेल.\n"
 
-#: ../src/core/prefs.c:1975 ../src/core/prefs.c:2478
+#: ../src/core/prefs.c:1953 ../src/core/prefs.c:2456
 #, c-format
 msgid "Workspace %d"
 msgstr "कार्यस्थान %d"
 
-#: ../src/core/prefs.c:2005 ../src/core/prefs.c:2183
+#: ../src/core/prefs.c:1983 ../src/core/prefs.c:2161
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "कॉन्फ़िगरेशन डेटाबेसमे प्राप्त \"%s\" कीबाइंडिंग \"%s\" लेल वैध मूल्य नहि अछि\n"
 
-#: ../src/core/prefs.c:2559
+#: ../src/core/prefs.c:2537
 #, c-format
 msgid "Error setting name for workspace %d to \"%s\": %s\n"
 msgstr "कार्यस्थान नाम %d केँ \"%s\" सँ मे बदलबमे त्रुटि: %s भेल\n"
 
-#: ../src/core/prefs.c:2763
+#: ../src/core/prefs.c:2741
 #, c-format
 msgid "Error setting compositor status: %s\n"
 msgstr ""
@@ -258,11 +256,9 @@ msgstr "स्क्रीन %d जे प्रदर्शक '%s' पर अ
 #: ../src/core/screen.c:373
 #, c-format
 msgid ""
-"Screen %d on display \"%s\" already has a window manager; try using the --"
-"replace option to replace the current window manager.\n"
-msgstr ""
-"स्क्रीन %d जे प्रदर्शक \"%s\" पर अछि ओतए पहिलेसँ विंडो प्रबंधक अछि --replace विकल्प क' "
-"प्रयोग कए वर्तमान विंडो प्रबंधककेँ बदलबाक कोशिश करू.\n"
+"Screen %d on display \"%s\" already has a window manager; try using the "
+"--replace option to replace the current window manager.\n"
+msgstr "स्क्रीन %d जे प्रदर्शक \"%s\" पर अछि ओतए पहिलेसँ विंडो प्रबंधक अछि --replace विकल्प क' प्रयोग कए वर्तमान विंडो प्रबंधककेँ बदलबाक कोशिश करू.\n"
 
 #: ../src/core/screen.c:400
 #, c-format
@@ -282,122 +278,109 @@ msgstr "स्क्रीन %d जे प्रदर्शक \"%s\" पर �
 #. Translators: Please don't translate "Control", "Shift", etc, since these
 #. * are hardcoded (in gtk/gtkaccelgroup.c; it's not marco's fault).
 #. * "disabled" must also stay as it is.
-#.
+#. 
 #: ../src/core/schema-bindings.c:169
 msgid ""
 "The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
 "\n"
-"The parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the "
-"special string \"disabled\", then there will be no keybinding for this "
-"action."
+"The parser is fairly liberal and allows lower or upper case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string \"disabled\", then there will be no keybinding for this action."
 msgstr ""
 
 #: ../src/core/schema-bindings.c:177
 msgid ""
 "The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
 "\n"
-"The parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the "
-"special string \"disabled\", then there will be no keybinding for this "
-"action.\n"
+"The parser is fairly liberal and allows lower or upper case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string \"disabled\", then there will be no keybinding for this action.\n"
 "\n"
-"This keybinding may be reversed by holding down the \"shift\" key; "
-"therefore, \"shift\" cannot be one of the keys it uses."
+"This keybinding may be reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be one of the keys it uses."
 msgstr ""
 
-#: ../src/core/session.c:845 ../src/core/session.c:852
+#: ../src/core/session.c:850 ../src/core/session.c:857
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "डायरेक्ट्री '%s' बनाए नहि सकल: %s\n"
 
-#: ../src/core/session.c:862
+#: ../src/core/session.c:867
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "सत्र फ़ाइल '%s' लिखब लेल नहि खोलि सकल: %s\n"
 
-#: ../src/core/session.c:1003
+#: ../src/core/session.c:1008
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "स्त्र फ़ाइल लिखबमे त्रुटि '%s': %s\n"
 
-#: ../src/core/session.c:1008
+#: ../src/core/session.c:1013
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "सत्र फ़ाइल बन्न करबमे त्रुटि '%s': %s\n"
 
-#. oh, just give up
-#: ../src/core/session.c:1101
-#, c-format
-msgid "Failed to read saved session file %s: %s\n"
-msgstr "सहेजल गेल सत्र फ़ाइल %s पढ़बमे विफल: %s\n"
-
-#: ../src/core/session.c:1140
+#: ../src/core/session.c:1143
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "सहेजल गेल सत्र फ़ाइल: %s क' व्याख्या करबमे विफल\n"
 
-#: ../src/core/session.c:1189
+#: ../src/core/session.c:1192
 #, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr "<मेटासिटी_सत्र> गुण देखलहुँ मुदा हमरा सँग पहिलेसँ सत्र आईडी अछि"
 
-#: ../src/core/session.c:1202 ../src/core/session.c:1277
-#: ../src/core/session.c:1309 ../src/core/session.c:1381
-#: ../src/core/session.c:1441
+#: ../src/core/session.c:1205 ../src/core/session.c:1280
+#: ../src/core/session.c:1312 ../src/core/session.c:1384
+#: ../src/core/session.c:1444
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr ""
 
-#: ../src/core/session.c:1219
+#: ../src/core/session.c:1222
 #, c-format
 msgid "nested <window> tag"
 msgstr "नेस्टेड <विंडो> टैग"
 
-#: ../src/core/session.c:1461
+#: ../src/core/session.c:1464
 #, c-format
 msgid "Unknown element %s"
 msgstr "अज्ञात तत्व %s"
 
-#: ../src/core/session.c:1812
+#: ../src/core/session.c:1816
 msgid ""
-"These windows do not support &quot;save current setup&quot; and will have to "
-"be restarted manually next time you log in."
+"These windows do not support &quot;save current setup&quot; and will have to"
+" be restarted manually next time you log in."
 msgstr ""
 
-#: ../src/core/util.c:103
+#: ../src/core/util.c:101
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "डिबग लॉग: %s खोलबमे विफल\n"
 
-#: ../src/core/util.c:113
+#: ../src/core/util.c:111
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "लॉग फ़ाइल %s:  fdopen() मे विफल %s\n"
 
-#: ../src/core/util.c:119
+#: ../src/core/util.c:117
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "लॉग फ़ाइल %s  खोललक \n"
 
-#: ../src/core/util.c:138 ../src/tools/marco-message.c:176
+#: ../src/core/util.c:136 ../src/tools/marco-message.c:176
 #, c-format
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "मेटासिटीकेँ वर्बोज विधि क' बगैर कम्पाइल कएल गेल अछि\n"
 
-#: ../src/core/util.c:238
+#: ../src/core/util.c:236
 msgid "Window manager: "
 msgstr "विंडो प्रबंधक:"
 
-#: ../src/core/util.c:390
+#: ../src/core/util.c:388
 msgid "Bug in window manager: "
 msgstr "विंडो प्रबंधकमे बग:"
 
-#: ../src/core/util.c:423
+#: ../src/core/util.c:421
 msgid "Window manager warning: "
 msgstr "विंडो प्रबंधक चेतावनी"
 
-#: ../src/core/util.c:451
+#: ../src/core/util.c:449
 msgid "Window manager error: "
 msgstr "विंडो प्रबंधक त्रुटिः"
 
@@ -409,7 +392,7 @@ msgid "Marco"
 msgstr "मेटासिटी"
 
 #. first time through
-#: ../src/core/window.c:5627
+#: ../src/core/window.c:5660
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -422,16 +405,13 @@ msgstr "विंडो %s नियत करैत अछि SM_CLIENT_ID अ�
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#.
-#: ../src/core/window.c:6192
+#. 
+#: ../src/core/window.c:6225
 #, c-format
 msgid ""
-"Window %s sets an MWM hint indicating it isn't resizable, but sets min size %"
-"d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr ""
-"विंडो %s ने एकटा एमडबल्यूएम संकेत नियत कएलक ई देखबैत हुए जे ई आकार बदलब लायक नहि अछि "
-"परंतु न्यूनतम आकार नियत कएल %d x %d आओर अधिकतम आकार  %d x %d; एकर कोनो खास अर्थ "
-"नहि निकलत.\n"
+"Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
+"%d x %d and max size %d x %d; this doesn't make much sense.\n"
+msgstr "विंडो %s ने एकटा एमडबल्यूएम संकेत नियत कएलक ई देखबैत हुए जे ई आकार बदलब लायक नहि अछि परंतु न्यूनतम आकार नियत कएल %d x %d आओर अधिकतम आकार  %d x %d; एकर कोनो खास अर्थ नहि निकलत.\n"
 
 #: ../src/core/window-props.c:244
 #, c-format
@@ -464,7 +444,7 @@ msgstr ""
 msgid "%s (as another user)"
 msgstr ""
 
-#: ../src/core/window-props.c:1429
+#: ../src/core/window-props.c:1430
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "अवैध WM_TRANSIENT_FOR window 0x%lx %s क'लेल निर्दिष्ट.\n"
@@ -477,12 +457,7 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr ""
-"विंडो 0x%lx मे गुण %s अछि \n"
-"जकरामे वांछित अछि प्रकार %s फ़ॉर्मेट %d \n"
-"आओर वास्तवमे अछि प्रकार %s फ़ॉर्मेट %d  एन_वस्तुसभ %d.\n"
-"एहि बात क' बेसी संभावना अछि जे ई एकटा अनुप्रयोग बग अछि विंडो प्रबंधक बग नहि.\n"
-"विंडो क' शीर्षक अछि=\"%s\" क्लास=\"%s\" नाम=\"%s\"\n"
+msgstr "विंडो 0x%lx मे गुण %s अछि \nजकरामे वांछित अछि प्रकार %s फ़ॉर्मेट %d \nआओर वास्तवमे अछि प्रकार %s फ़ॉर्मेट %d  एन_वस्तुसभ %d.\nएहि बात क' बेसी संभावना अछि जे ई एकटा अनुप्रयोग बग अछि विंडो प्रबंधक बग नहि.\nविंडो क' शीर्षक अछि=\"%s\" क्लास=\"%s\" नाम=\"%s\"\n"
 
 #: ../src/core/xprops.c:401
 #, c-format
@@ -491,7 +466,9 @@ msgstr "गुण %s विंडो 0x%lx मे अवैध यूटीए�
 
 #: ../src/core/xprops.c:484
 #, c-format
-msgid "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the list\n"
+msgid ""
+"Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
+"list\n"
 msgstr "गुण %s विंडो 0x%lx पर %d वस्तुसभ लेल सूचीमे अवैध यूटीएफ़-8 अछि\n"
 
 #: ../src/include/all-keybindings.h:88
@@ -799,7 +776,8 @@ msgid "Move window to center of screen"
 msgstr ""
 
 #: ../src/marco.schemas.in.in.h:1
-msgid "(Not implemented) Navigation works in terms of applications not windows"
+msgid ""
+"(Not implemented) Navigation works in terms of applications not windows"
 msgstr "(कार्यान्वित नहि) सँ चलन अनुप्रयोग क' अनुसार चलैत अछि विंडोज़ सँ नहि"
 
 #: ../src/marco.schemas.in.in.h:2
@@ -808,11 +786,7 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr ""
-"एकटा फंट विवरण स्ट्रिंग विंडो शीर्षक पट्टी क'लेल फंट क' बेरमे बताएब रहल अछि विवरण सँ आकार "
-"प्रयुक्त हएताह जँ titlebar_font_size विकल्प 0 मे सेट कएल जाएत अछि, सँगे , ई विकल्प "
-"निष्क्रिय कएल जाएत अछि जँ titlebar_uses_desktop_font विकल्पकेँ सही पर सेट कएल "
-"जाएत अछि."
+msgstr "एकटा फंट विवरण स्ट्रिंग विंडो शीर्षक पट्टी क'लेल फंट क' बेरमे बताएब रहल अछि विवरण सँ आकार प्रयुक्त हएताह जँ titlebar_font_size विकल्प 0 मे सेट कएल जाएत अछि, सँगे , ई विकल्प निष्क्रिय कएल जाएत अछि जँ titlebar_uses_desktop_font विकल्पकेँ सही पर सेट कएल जाएत अछि."
 
 #: ../src/marco.schemas.in.in.h:3
 msgid "Action on title bar double-click"
@@ -849,9 +823,9 @@ msgstr "फ़ोकस कएल विंडोकेँ स्वचालि
 msgid ""
 "Clicking a window while holding down this modifier key will move the window "
 "(left click), resize the window (middle click), or show the window menu "
-"(right click). The left and right operations may be swapped using the "
-"\"mouse_button_resize\" key. Modifier is expressed as \"&lt;Alt&gt;\" or "
-"\"&lt;Super&gt;\" for example."
+"(right click). The middle and right click operations may be swapped using "
+"the \"resize_with_right_button\" key. Modifier is expressed as "
+"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
 msgstr ""
 
 #: ../src/marco.schemas.in.in.h:10
@@ -882,9 +856,7 @@ msgstr "निर्धारित करू जे Marco एकटा कं�
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
-"निर्धारित करैत अछि जे की अनुप्रयोग अथवा तंत्र सुनब योग्य बीप पैदा कए सकैत अछि साइत "
-"दृष्टिगोच़र घँटी क' सँग उपयोग कएल जाय कए शांतिमय बीप स्वीकारू."
+msgstr "निर्धारित करैत अछि जे की अनुप्रयोग अथवा तंत्र सुनब योग्य बीप पैदा कए सकैत अछि साइत दृष्टिगोच़र घँटी क' सँग उपयोग कएल जाय कए शांतिमय बीप स्वीकारू."
 
 #: ../src/marco.schemas.in.in.h:17
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -900,18 +872,13 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
-"जँ सही पर सेट कएल जाएत अछि, आओर फोकस मोड अथवा तँ \"स्लोपी\" अथवा \"माउस\" हुए तब "
-"फोकस कएल विंडो तब auto_raise_delay कुँजी सँ निर्दिष्ट विलंब सँ फोकस कएल विंडो उठाओल "
-"जएताह. ई विंडो पर क्लिक कएल जाय सँ संबंधित नहि अछि नहि तँ घीँचू आ छोड़ू पर दाखिल भ' कए."
+msgstr "जँ सही पर सेट कएल जाएत अछि, आओर फोकस मोड अथवा तँ \"स्लोपी\" अथवा \"माउस\" हुए तब फोकस कएल विंडो तब auto_raise_delay कुँजी सँ निर्दिष्ट विलंब सँ फोकस कएल विंडो उठाओल जएताह. ई विंडो पर क्लिक कएल जाय सँ संबंधित नहि अछि नहि तँ घीँचू आ छोड़ू पर दाखिल भ' कए."
 
 #: ../src/marco.schemas.in.in.h:20
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
-"जँ सही अछि शीर्षक पट्टी फ़ॉन्ट विकल्प क' अनदेखा करू आओर विंडो शीर्षक लेल मानक अनुप्रयोग "
-"फ़ॉन्ट क' प्रयोग करू"
+msgstr "जँ सही अछि शीर्षक पट्टी फ़ॉन्ट विकल्प क' अनदेखा करू आओर विंडो शीर्षक लेल मानक अनुप्रयोग फ़ॉन्ट क' प्रयोग करू"
 
 #: ../src/marco.schemas.in.in.h:21
 msgid ""
@@ -920,28 +887,18 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr ""
-"जँ सही अछि मेटासिटि प्रयोक्ताकेँ कम फीडबेक आओर सीधा हस्तक्षेप क' कम सेंस देताह, "
-"वायरफ्रेम, एनीमेशन अनदेखा करैत , अथवा आन साधन. ई महत्वपूर्ण कमी अछि कइ प्रयोक्ता क' "
-"प्रयोगमे, मुदा कइ पुरातन अनुप्रयोग आ टर्मिनल सर्वर क' अनुमति देत अछि जे ओ कखन ऑन छल रूप "
-"सँ अप्रायोगिक हाएत. हालांकि, वायरफ्रेम फीचरकेँ निष्क्रिय कएल जाएत अछि जखन पहुँच वीयर्ड "
-"डेस्कटॉप खंडनकेँ अनदेखा करब क'लेल हुए."
+msgstr "जँ सही अछि मेटासिटि प्रयोक्ताकेँ कम फीडबेक आओर सीधा हस्तक्षेप क' कम सेंस देताह, वायरफ्रेम, एनीमेशन अनदेखा करैत , अथवा आन साधन. ई महत्वपूर्ण कमी अछि कइ प्रयोक्ता क' प्रयोगमे, मुदा कइ पुरातन अनुप्रयोग आ टर्मिनल सर्वर क' अनुमति देत अछि जे ओ कखन ऑन छल रूप सँ अप्रायोगिक हाएत. हालांकि, वायरफ्रेम फीचरकेँ निष्क्रिय कएल जाएत अछि जखन पहुँच वीयर्ड डेस्कटॉप खंडनकेँ अनदेखा करब क'लेल हुए."
 
 #: ../src/marco.schemas.in.in.h:22
 msgid ""
-"If true, then Marco works in terms of applications rather than windows. "
-"The concept is a bit abstract, but in general an application-based setup is "
-"more like the Mac and less like Windows. When you focus a window in "
-"application-based mode, all the windows in the application will be raised. "
-"Also, in application-based mode, focus clicks are not passed through to "
-"windows in other applications. Application-based mode is, however, largely "
+"If true, then Marco works in terms of applications rather than windows. The "
+"concept is a bit abstract, but in general an application-based setup is more"
+" like the Mac and less like Windows. When you focus a window in application-"
+"based mode, all the windows in the application will be raised. Also, in "
+"application-based mode, focus clicks are not passed through to windows in "
+"other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
-"जँ सही अछि तँ मेटासिटी विंडो क' बजाए अनुप्रयोग जहिना कार्य करताह. परिकल्पना कनी संक्षिप्त "
-"अछि परंतु आमतौर पर अनुप्रयोग आधारित सेटअप मैक जहिना बेसी हएताह विंडोज़ क' तरहेँ कम. जँ अहाँ "
-"कोनो विंडोकेँ अनुप्रयोग आधारित मोड पर फ़ोकस करब तँ अनुप्रयोगमे क' सबहि विंडो उप्पर भ'"
-"जएताह. ई जे अनुप्रयोग आधारित मोडमे फ़ोकस क्लिक आन अनुप्रयोग क' विंडोसँ भ'कए नहि "
-"जाएत. अनुप्रयोग आधारित मोड विस्तृत रूपसँ एहि समय कार्यान्वित नहि अछि."
+msgstr "जँ सही अछि तँ मेटासिटी विंडो क' बजाए अनुप्रयोग जहिना कार्य करताह. परिकल्पना कनी संक्षिप्त अछि परंतु आमतौर पर अनुप्रयोग आधारित सेटअप मैक जहिना बेसी हएताह विंडोज़ क' तरहेँ कम. जँ अहाँ कोनो विंडोकेँ अनुप्रयोग आधारित मोड पर फ़ोकस करब तँ अनुप्रयोगमे क' सबहि विंडो उप्पर भ'जएताह. ई जे अनुप्रयोग आधारित मोडमे फ़ोकस क्लिक आन अनुप्रयोग क' विंडोसँ भ'कए नहि जाएत. अनुप्रयोग आधारित मोड विस्तृत रूपसँ एहि समय कार्यान्वित नहि अछि."
 
 #: ../src/marco.schemas.in.in.h:23
 msgid "If true, trade off usability for less resource usage"
@@ -964,9 +921,7 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
-"कार्यस्थानक सँख्या . ई शून्य सँ बेसी होनाइ चाही आओर एकरा एकटा अधिकतम पर निर्धारित कएनाइ "
-"चाही बेसी कार्यस्थान क' माँग करब पर अहाँक डेस्कटापकेँ दुर्धटनावश नष्ट हए सँ बचाबै क' लेल."
+msgstr "कार्यस्थानक सँख्या . ई शून्य सँ बेसी होनाइ चाही आओर एकरा एकटा अधिकतम पर निर्धारित कएनाइ चाही बेसी कार्यस्थान क' माँग करब पर अहाँक डेस्कटापकेँ दुर्धटनावश नष्ट हए सँ बचाबै क' लेल."
 
 #: ../src/marco.schemas.in.in.h:28
 msgid "Run a defined command"
@@ -975,30 +930,30 @@ msgstr "पारिभाषित कमांड चलाबू"
 #: ../src/marco.schemas.in.in.h:29
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
-"middle button while holding down the key given in \"mouse_button_modifier\"; "
-"set it to false to make it work the opposite way around."
+"middle button while holding down the key given in \"mouse_button_modifier\";"
+" set it to false to make it work the opposite way around."
 msgstr ""
 
 #: ../src/marco.schemas.in.in.h:30
 msgid ""
 "Setting this option to false can lead to buggy behavior, so users are "
-"strongly discouraged from changing it from the default of true. Many actions "
-"(e.g. clicking in the client area, moving or resizing the window) normally "
+"strongly discouraged from changing it from the default of true. Many actions"
+" (e.g. clicking in the client area, moving or resizing the window) normally "
 "raise the window as a side-effect. Setting this option to false, which is "
 "strongly discouraged, will decouple raising from other user actions, and "
-"ignore raise requests generated by applications. See http://bugzilla.mate."
-"org/show_bug.cgi?id=445447#c6. Even when this option is false, windows can "
-"still be raised by an alt-left-click anywhere on the window, a normal click "
-"on the window decorations, or by special messages from pagers, such as "
-"activation requests from tasklist applets. This option is currently disabled "
-"in click-to-focus mode. Note that the list of ways to raise windows when "
-"raise_on_click is false does not include programmatic requests from "
-"applications to raise windows; such requests will be ignored regardless of "
-"the reason for the request. If you are an application developer and have a "
-"user complaining that your application does not work with this setting "
-"disabled, tell them it is _their_ fault for breaking their window manager "
-"and that they need to change this option back to true or live with the \"bug"
-"\" they requested."
+"ignore raise requests generated by applications. See "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Even when this option "
+"is false, windows can still be raised by an alt-left-click anywhere on the "
+"window, a normal click on the window decorations, or by special messages "
+"from pagers, such as activation requests from tasklist applets. This option "
+"is currently disabled in click-to-focus mode. Note that the list of ways to "
+"raise windows when raise_on_click is false does not include programmatic "
+"requests from applications to raise windows; such requests will be ignored "
+"regardless of the reason for the request. If you are an application "
+"developer and have a user complaining that your application does not work "
+"with this setting disabled, tell them it is _their_ fault for breaking their"
+" window manager and that they need to change this option back to true or "
+"live with the \"bug\" they requested."
 msgstr ""
 
 #: ../src/marco.schemas.in.in.h:31
@@ -1007,10 +962,7 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr ""
-"किछु अनुप्रयोग विशेषताकेँ महत्व नहि देत अछि जे विंडो प्रबंधक मिसफीचरमे परिणाम आनैत अछि"
-"ई विकल्प Marco केँ काफी सही मोडमे राखैत अछि जे बेसी संगत प्रयोक्ता अंतरफलक "
-"देत अछि जँ कोनो गलत अनुप्रयोग नहि चलाए रहल अछि."
+msgstr "किछु अनुप्रयोग विशेषताकेँ महत्व नहि देत अछि जे विंडो प्रबंधक मिसफीचरमे परिणाम आनैत अछिई विकल्प Marco केँ काफी सही मोडमे राखैत अछि जे बेसी संगत प्रयोक्ता अंतरफलक देत अछि जँ कोनो गलत अनुप्रयोग नहि चलाए रहल अछि."
 
 #: ../src/marco.schemas.in.in.h:32
 msgid "System Bell is Audible"
@@ -1018,63 +970,44 @@ msgstr "सिस्टम घंटी सुनब योग्य अछि"
 
 #: ../src/marco.schemas.in.in.h:33
 msgid ""
-"Tells Marco how to implement the visual indication that the system bell "
-"or another application 'bell' indicator has been rung. Currently there are "
-"two valid values, \"fullscreen\", which causes a fullscreen white-black "
-"flash, and \"frame_flash\" which causes the titlebar of the application "
-"which sent the bell signal to flash. If the application which sent the bell "
-"is unknown (as is usually the case for the default \"system beep\"), the "
-"currently focused window's titlebar is flashed."
-msgstr ""
-"मेटासिटीकेँ बतबैत अछि जे कहिना दृश्य संकेत काममे लेल जाय जे तंत्र घंटी अथवा आन अनुप्रयोग "
-"घंटी बजओनाइ अछि वर्तमानमे दुइ मान्य मूल्य अछि, \"सौंसे स्क्रीन\", जे फुलस्क्रीन करिया-उज्जर फ्लेश "
-"करैत अछि आओर \"फ्रेम-फ्लैश\" जे संबंधित अनुप्रयोग क' टाइटलबारकेँ फ्लेश करब लेल संकेत करैत "
-"अछि, जकरा घंटी संकेत भेजैत अछि जँ अनुप्रयोग जकरा घंटी संकेत भेजने अछि अज्ञात अछि तँ (जहिना जे "
-"आमतौर पर डिफ़ॉल्ट \"तंत्र बीप\" मे हाएत अछि), वर्तमान फ़ोकस विंडो क' शीर्षक पट्टी फ्लैश "
-"करताह. "
+"Tells Marco how to implement the visual indication that the system bell or "
+"another application 'bell' indicator has been rung. Currently there are two "
+"valid values, \"fullscreen\", which causes a fullscreen white-black flash, "
+"and \"frame_flash\" which causes the titlebar of the application which sent "
+"the bell signal to flash. If the application which sent the bell is unknown "
+"(as is usually the case for the default \"system beep\"), the currently "
+"focused window's titlebar is flashed."
+msgstr "मेटासिटीकेँ बतबैत अछि जे कहिना दृश्य संकेत काममे लेल जाय जे तंत्र घंटी अथवा आन अनुप्रयोग घंटी बजओनाइ अछि वर्तमानमे दुइ मान्य मूल्य अछि, \"सौंसे स्क्रीन\", जे फुलस्क्रीन करिया-उज्जर फ्लेश करैत अछि आओर \"फ्रेम-फ्लैश\" जे संबंधित अनुप्रयोग क' टाइटलबारकेँ फ्लेश करब लेल संकेत करैत अछि, जकरा घंटी संकेत भेजैत अछि जँ अनुप्रयोग जकरा घंटी संकेत भेजने अछि अज्ञात अछि तँ (जहिना जे आमतौर पर डिफ़ॉल्ट \"तंत्र बीप\" मे हाएत अछि), वर्तमान फ़ोकस विंडो क' शीर्षक पट्टी फ्लैश करताह. "
 
 #: ../src/marco.schemas.in.in.h:34
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
-"that correspond to these commands. Pressing the keybinding for run_command_N "
-"will execute command_N."
-msgstr ""
-"कुंजिसभ  /apps/marco/global_keybindings/run_command_N इन कमांड क' तदनुरूप "
-"कीबाइंडिंग पारिभाषित करैत अछि. run_command_N  क' कीबाइंडिंग दाबै पर ई command_N "
-"केँ चलाएत. "
+"that correspond to these commands. Pressing the keybinding for run_command_N"
+" will execute command_N."
+msgstr "कुंजिसभ  /apps/marco/global_keybindings/run_command_N इन कमांड क' तदनुरूप कीबाइंडिंग पारिभाषित करैत अछि. run_command_N  क' कीबाइंडिंग दाबै पर ई command_N केँ चलाएत. "
 
 #: ../src/marco.schemas.in.in.h:35
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr ""
-"कुँजी /apps/marco/global_keybindings/run_command_screenshot ओ कीबाइंडिंग "
-"पारिभाषित करैत अछि जे एहि बिन्यास सँ उल्लेखित कमांडकेँ प्रारंभ करैत अछि."
+msgstr "कुँजी /apps/marco/global_keybindings/run_command_screenshot ओ कीबाइंडिंग पारिभाषित करैत अछि जे एहि बिन्यास सँ उल्लेखित कमांडकेँ प्रारंभ करैत अछि."
 
 #: ../src/marco.schemas.in.in.h:36
 msgid ""
-"The /apps/marco/global_keybindings/run_command_window_screenshot key "
-"defines a keybinding which causes the command specified by this setting to "
-"be invoked."
-msgstr ""
-"कुँजी /apps/marco/global_keybindings/run_command_window_screenshot ओ "
-"कीबाइंडिंग पारिभाषित करैत अछि जे एहि बिन्यास सँ उल्लेखित कमांडकेँ प्रारंभ करैत अछि."
+"The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
+" a keybinding which causes the command specified by this setting to be "
+"invoked."
+msgstr "कुँजी /apps/marco/global_keybindings/run_command_window_screenshot ओ कीबाइंडिंग पारिभाषित करैत अछि जे एहि बिन्यास सँ उल्लेखित कमांडकेँ प्रारंभ करैत अछि."
 
 #: ../src/marco.schemas.in.in.h:37
 msgid ""
-"The keybinding that runs the correspondingly-numbered command in /apps/"
-"marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" or "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"The keybinding that runs the correspondingly-numbered command in "
+"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
+"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
-"कीबाइंडिंग जे /apps/marco/keybinding_commands क' तदनुरूप नम्बर बला कमांडकेँ "
-"चलबैत अछि. फ़ॉर्मेट एहि तरहेँ देखाइ पड़त \"&lt;Control&gt;a\" अथवा \"&lt;Shift&gt;&lt;"
-"Alt&gt;F1. ई पारसर पूरी तरहेँ लिबरल अछि आओर पैघ अथवा छोट अक्षर दुनू स्वीकार करैत अछि, "
-"आओर संक्षिप्ताक्षरो जहिना-  \"&lt;Ctl&gt;\" आओर \"&lt;Ctrl&gt;\".  जँ अहाँ विकल्प "
-"विशेष स्ट्रिंगमे तय केने छी \"disabled\", तब ओतए एहि क्रिया लेल कोनो कीबाइंडिंग नहि "
-"हाएत."
+msgstr "कीबाइंडिंग जे /apps/marco/keybinding_commands क' तदनुरूप नम्बर बला कमांडकेँ चलबैत अछि. फ़ॉर्मेट एहि तरहेँ देखाइ पड़त \"&lt;Control&gt;a\" अथवा \"&lt;Shift&gt;&lt;Alt&gt;F1. ई पारसर पूरी तरहेँ लिबरल अछि आओर पैघ अथवा छोट अक्षर दुनू स्वीकार करैत अछि, आओर संक्षिप्ताक्षरो जहिना-  \"&lt;Ctl&gt;\" आओर \"&lt;Ctrl&gt;\".  जँ अहाँ विकल्प विशेष स्ट्रिंगमे तय केने छी \"disabled\", तब ओतए एहि क्रिया लेल कोनो कीबाइंडिंग नहि हाएत."
 
 #: ../src/marco.schemas.in.in.h:38
 msgid "The name of a workspace."
@@ -1094,22 +1027,16 @@ msgstr "प्रसंग, विंडो किनार, शीर्षक 
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr ""
-"जँ auto_raise सही पर नियत अछि तँ विंडो उप्पर उठाबै सँ पहिले विलम्ब समय. ई विलम्ब "
-"सकेण्ड क' हजारवाँ हिस्सामे देल जाएत अछि."
+msgstr "जँ auto_raise सही पर नियत अछि तँ विंडो उप्पर उठाबै सँ पहिले विलम्ब समय. ई विलम्ब सकेण्ड क' हजारवाँ हिस्सामे देल जाएत अछि."
 
 #: ../src/marco.schemas.in.in.h:42
 msgid ""
 "The window focus mode indicates how windows are activated. It has three "
 "possible values; \"click\" means windows must be clicked in order to focus "
-"them, \"sloppy\" means windows are focused when the mouse enters the window, "
-"and \"mouse\" means windows are focused when the mouse enters the window and "
-"unfocused when the mouse leaves the window."
-msgstr ""
-"विंडो फ़ोकस मोड जे संकेत करैत अछि जे विंडोज़ कहिना सक्रिय हुए. एकरा तीन संभावित मूल्य अछि, क्लिक "
-"\"क्लिक\" मतलब विंडो केँ फ़ोकस करब लेल ओकरा क्लिक कएनाइ हाएत, \"स्लॉपी\" मतलब विंडो तब "
-"फ़ोकस हाएत जखन माउस विंडोमे प्रवेश करताह, आओर \"माउस\" मतलब विंडो तब फ़ोकस हाएत जखन "
-"माउस विंडोमे प्रवेश करताह आओर फ़ोकस सँ बाहर हाएत जखन माउस विंडो सँ बाहर हाएत."
+"them, \"sloppy\" means windows are focused when the mouse enters the window,"
+" and \"mouse\" means windows are focused when the mouse enters the window "
+"and unfocused when the mouse leaves the window."
+msgstr "विंडो फ़ोकस मोड जे संकेत करैत अछि जे विंडोज़ कहिना सक्रिय हुए. एकरा तीन संभावित मूल्य अछि, क्लिक \"क्लिक\" मतलब विंडो केँ फ़ोकस करब लेल ओकरा क्लिक कएनाइ हाएत, \"स्लॉपी\" मतलब विंडो तब फ़ोकस हाएत जखन माउस विंडोमे प्रवेश करताह, आओर \"माउस\" मतलब विंडो तब फ़ोकस हाएत जखन माउस विंडोमे प्रवेश करताह आओर फ़ोकस सँ बाहर हाएत जखन माउस विंडो सँ बाहर हाएत."
 
 #: ../src/marco.schemas.in.in.h:43
 msgid "The window screenshot command"
@@ -1121,8 +1048,8 @@ msgid ""
 "Current valid options are 'toggle_shade', which will shade/unshade the "
 "window, 'toggle_maximize' which will maximize/unmaximize the window, "
 "'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will "
-"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
@@ -1133,8 +1060,8 @@ msgid ""
 "Current valid options are 'toggle_shade', which will shade/unshade the "
 "window, 'toggle_maximize' which will maximize/unmaximize the window, "
 "'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will "
-"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
@@ -1145,8 +1072,8 @@ msgid ""
 "Current valid options are 'toggle_shade', which will shade/unshade the "
 "window, 'toggle_maximize' which will maximize/unmaximize the window, "
 "'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will "
-"minimize the window, 'shade' which will roll the window up, 'menu' which "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
@@ -1154,22 +1081,17 @@ msgstr ""
 #: ../src/marco.schemas.in.in.h:47
 msgid ""
 "This option provides additional control over how newly created windows get "
-"focus. It has two possible values; \"smart\" applies the user's normal focus "
-"mode, and \"strict\" results in windows started from a terminal not being "
+"focus. It has two possible values; \"smart\" applies the user's normal focus"
+" mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr ""
-"ई विकल्प अतिरिक्त नियंत्रण देत अछि जे कहिना नवीन बनाओल विंडो फोकस पाबैत अछि एकर दुइ "
-"संभावित मान अछि; \"smart\" प्रयोक्ता क' सामान्य फोकस मोड पर लागू हाएत अछि आओर \"strict"
-"\" एहन विंडो क' रूपमे आबैत अछि जे टर्मिनल सँ फोकस नहि कएल गेल रूपमे आबैत अछि."
+msgstr "ई विकल्प अतिरिक्त नियंत्रण देत अछि जे कहिना नवीन बनाओल विंडो फोकस पाबैत अछि एकर दुइ संभावित मान अछि; \"smart\" प्रयोक्ता क' सामान्य फोकस मोड पर लागू हाएत अछि आओर \"strict\" एहन विंडो क' रूपमे आबैत अछि जे टर्मिनल सँ फोकस नहि कएल गेल रूपमे आबैत अछि."
 
 #: ../src/marco.schemas.in.in.h:48
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
-"दृश्य संकेत चालू कएनाइ जखन कोनो अनुप्रयोग अथवा तंत्र घंटी अथवा बीप जारी करैत छी तँ, शोरयुक्त "
-"वातावरण- जतए सुनबमे कठिनाइ हुए अथवा उंच सुनब बला क'लेल उपयोगी हाएत अछि."
+msgstr "दृश्य संकेत चालू कएनाइ जखन कोनो अनुप्रयोग अथवा तंत्र घंटी अथवा बीप जारी करैत छी तँ, शोरयुक्त वातावरण- जतए सुनबमे कठिनाइ हुए अथवा उंच सुनब बला क'लेल उपयोगी हाएत अछि."
 
 #: ../src/marco.schemas.in.in.h:49
 msgid "Use standard system font in window titles"
@@ -1200,148 +1122,148 @@ msgstr "विंडो शीर्षक फ़ॉन्ट"
 msgid "Usage: %s\n"
 msgstr "उपयोग: %s\n"
 
-#: ../src/ui/frames.c:1118
+#: ../src/ui/frames.c:1124
 msgid "Close Window"
 msgstr "विंडो बन्न करू"
 
-#: ../src/ui/frames.c:1121
+#: ../src/ui/frames.c:1127
 msgid "Window Menu"
 msgstr "विंडो मेन्यू"
 
-#: ../src/ui/frames.c:1124
+#: ../src/ui/frames.c:1130
 msgid "Minimize Window"
 msgstr "विंडो न्यूनतम करू"
 
-#: ../src/ui/frames.c:1127
+#: ../src/ui/frames.c:1133
 msgid "Maximize Window"
 msgstr "विंडो अधिकतम करू"
 
-#: ../src/ui/frames.c:1130
+#: ../src/ui/frames.c:1136
 msgid "Restore Window"
 msgstr "रिस्टोर विन्डो"
 
-#: ../src/ui/frames.c:1133
+#: ../src/ui/frames.c:1139
 msgid "Roll Up Window"
 msgstr "विंडो रॉल अप करू"
 
-#: ../src/ui/frames.c:1136
+#: ../src/ui/frames.c:1142
 msgid "Unroll Window"
 msgstr "विंडो खोलू"
 
-#: ../src/ui/frames.c:1139
+#: ../src/ui/frames.c:1145
 msgid "Keep Window On Top"
 msgstr "विंडोकेँ सबसँ उप्पर राखू"
 
-#: ../src/ui/frames.c:1142
+#: ../src/ui/frames.c:1148
 msgid "Remove Window From Top"
 msgstr "उप्पर सँ विंडो हटाबू"
 
-#: ../src/ui/frames.c:1145
+#: ../src/ui/frames.c:1151
 msgid "Always On Visible Workspace"
 msgstr "हरदम दृश्य कार्यस्थान पर"
 
-#: ../src/ui/frames.c:1148
+#: ../src/ui/frames.c:1154
 msgid "Put Window On Only One Workspace"
 msgstr "सिर्फ एकटा कार्यस्थान पर विंडो राखू"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:70
+#: ../src/ui/menu.c:65
 msgid "Mi_nimize"
 msgstr "न्यूनतम (_M)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:72
+#: ../src/ui/menu.c:67
 msgid "Ma_ximize"
 msgstr "पैघ करू (_x)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:74
+#: ../src/ui/menu.c:69
 msgid "Unma_ximize"
 msgstr "पैघ सँ छोट करू (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:76
+#: ../src/ui/menu.c:71
 msgid "Roll _Up"
 msgstr "उप्पर समेटू (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:78
+#: ../src/ui/menu.c:73
 msgid "_Unroll"
 msgstr "फिनु खोलू (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:80
+#: ../src/ui/menu.c:75
 msgid "_Move"
 msgstr "घसकाबू (_M)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:82
+#: ../src/ui/menu.c:77
 msgid "_Resize"
 msgstr "आकार बदलू (_R)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:84
+#: ../src/ui/menu.c:79
 msgid "Move Titlebar On_screen"
 msgstr "ऑनस्क्रीन शीर्षकबार घसकाबू (_s)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:87 ../src/ui/menu.c:89
+#: ../src/ui/menu.c:82 ../src/ui/menu.c:84
 msgid "Always on _Top"
 msgstr "हरदम शीर्ष पर (_T)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:91
+#: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
 msgstr "हरदम दृश्य कार्यस्थान पर (_A)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:93
+#: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
 msgstr "केवल एहि कार्यस्थान पर (_O)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:95
+#: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
 msgstr "बामाँ कार्यस्थानमे लए जाउ (_L)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:97
+#: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
 msgstr "दहिन्ना कार्यस्थानमे लए जाउ (_R)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:99
+#: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
 msgstr "उप्परी कार्यस्थानमे लए जाउ (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:101
+#: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
 msgstr "नीच्चा कार्यस्थानमे लए जाउ (_D)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:105
+#: ../src/ui/menu.c:100
 msgid "_Close"
 msgstr "बन्न करू (_C)"
 
-#: ../src/ui/menu.c:203
+#: ../src/ui/menu.c:197
 #, c-format
 msgid "Workspace %d%n"
 msgstr ""
 
-#: ../src/ui/menu.c:213
+#: ../src/ui/menu.c:207
 #, c-format
 msgid "Workspace 1_0"
 msgstr "कार्यस्थान 1_0"
 
-#: ../src/ui/menu.c:215
+#: ../src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
 msgstr "कार्यस्थान %s%d"
 
-#: ../src/ui/menu.c:395
+#: ../src/ui/menu.c:387
 msgid "Move to Another _Workspace"
 msgstr "दोसर कार्यस्थानमे लए जाउ (_W)"
 
@@ -1349,7 +1271,7 @@ msgstr "दोसर कार्यस्थानमे लए जाउ (_W)"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:104
 msgid "Shift"
 msgstr "Shift"
@@ -1358,7 +1280,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:110
 msgid "Ctrl"
 msgstr "Ctrl"
@@ -1367,7 +1289,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:116
 msgid "Alt"
 msgstr "Alt"
@@ -1376,7 +1298,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:122
 msgid "Meta"
 msgstr "मेटा"
@@ -1385,7 +1307,7 @@ msgstr "मेटा"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:128
 msgid "Super"
 msgstr "सुपर"
@@ -1394,7 +1316,7 @@ msgstr "सुपर"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:134
 msgid "Hyper"
 msgstr "हाइपर"
@@ -1403,7 +1325,7 @@ msgstr "हाइपर"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:140
 msgid "Mod2"
 msgstr "परि.2"
@@ -1412,7 +1334,7 @@ msgstr "परि.2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:146
 msgid "Mod3"
 msgstr "परि.3"
@@ -1421,7 +1343,7 @@ msgstr "परि.3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:152
 msgid "Mod4"
 msgstr "परि.4"
@@ -1430,616 +1352,600 @@ msgstr "परि.4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#.
+#. 
 #: ../src/ui/metaaccellabel.c:158
 msgid "Mod5"
 msgstr "परि.5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#.
+#. 
 #: ../src/ui/resizepopup.c:113
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:255
 msgid "top"
 msgstr "उप्पर"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:257
 msgid "bottom"
 msgstr "नीच्चाँ"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:259
 msgid "left"
 msgstr "बायाँ"
 
-#: ../src/ui/theme.c:260
+#: ../src/ui/theme.c:261
 msgid "right"
 msgstr "दहिन्ना"
 
-#: ../src/ui/theme.c:287
+#: ../src/ui/theme.c:288
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "फ्रेम ज्यामिती \"%s\" आयाम केँ उल्लेखित नहि करत"
 
-#: ../src/ui/theme.c:306
+#: ../src/ui/theme.c:307
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "फ्रेम ज्यामिती आयाम \"%s\" केँ किनार \"%s\" लेल उल्लेखित नहि करत"
 
-#: ../src/ui/theme.c:343
+#: ../src/ui/theme.c:344
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "बटन आस्पेक्ट रेशो %g यथोचित नहि अछि"
 
-#: ../src/ui/theme.c:355
+#: ../src/ui/theme.c:356
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "फ्रेम ज्यामिती बटनसभ क' आकारकेँ उल्लेखित नहि करत"
 
-#: ../src/ui/theme.c:1020
+#: ../src/ui/theme.c:1021
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "अनुपातमे कम सँ कम दुइ रँग हए चाही"
 
-#: ../src/ui/theme.c:1146
+#: ../src/ui/theme.c:1147
 #, c-format
 msgid ""
-"GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL] "
-"where NORMAL is the state; could not parse \"%s\""
-msgstr ""
-"जीटीके रँग लक्षण कोष्ठकमे स्थिति (स्टेट) हए चाही जहिना-  gtk:fg[NORMAL] एतय NORMAL "
-"स्थिति अछि  \"%s\" क' व्याख्या नहि कए सकल"
+"GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
+" where NORMAL is the state; could not parse \"%s\""
+msgstr "जीटीके रँग लक्षण कोष्ठकमे स्थिति (स्टेट) हए चाही जहिना-  gtk:fg[NORMAL] एतय NORMAL स्थिति अछि  \"%s\" क' व्याख्या नहि कए सकल"
 
-#: ../src/ui/theme.c:1160
+#: ../src/ui/theme.c:1161
 #, c-format
 msgid ""
-"GTK color specification must have a close bracket after the state, e.g. gtk:"
-"fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr ""
-"जीटीके रँग लक्षण स्थिति क' बाद बन्न कोष्ठकमे हए चाही. जहिना-  gtk:fg[NORMAL] एतय "
-"NORMAL स्थिति अछि  \"%s\" क' व्याख्या नहि कए सकल"
+"GTK color specification must have a close bracket after the state, e.g. "
+"gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
+msgstr "जीटीके रँग लक्षण स्थिति क' बाद बन्न कोष्ठकमे हए चाही. जहिना-  gtk:fg[NORMAL] एतय NORMAL स्थिति अछि  \"%s\" क' व्याख्या नहि कए सकल"
 
-#: ../src/ui/theme.c:1171
+#: ../src/ui/theme.c:1172
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "स्थिति \"%s\" रँग लक्षणमे समझ नहि सकल"
 
-#: ../src/ui/theme.c:1184
+#: ../src/ui/theme.c:1185
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "रंग अवयव \"%s\" रँग लक्षणमे समझ नहि सकल"
 
-#: ../src/ui/theme.c:1214
+#: ../src/ui/theme.c:1215
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr ""
-"ब्लेंड फ़ॉर्मेट अछि \"blend/bg_color/fg_color/alpha\", \"%s\" जे फ़ॉर्मेट क' अनुरूप नहि "
-"हाएत"
+msgstr "ब्लेंड फ़ॉर्मेट अछि \"blend/bg_color/fg_color/alpha\", \"%s\" जे फ़ॉर्मेट क' अनुरूप नहि हाएत"
 
-#: ../src/ui/theme.c:1225
+#: ../src/ui/theme.c:1226
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "अल्फा मूल्य \"%s\" क' ब्लेंडेड रँगमे व्याख्या नहि कए सकल"
 
-#: ../src/ui/theme.c:1235
+#: ../src/ui/theme.c:1236
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "अल्फा मूल्य \"%s\" ब्लेंडेड रँगमे 0.0 आओर 1.0 क' बीच नहि अछि"
 
-#: ../src/ui/theme.c:1282
+#: ../src/ui/theme.c:1283
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "शेड फॉर्मेट अछि \"shade/base_color/factor\", \"%s\" जे फॉर्मेट क' अनुरूप नहि हाएत"
 
-#: ../src/ui/theme.c:1293
+#: ../src/ui/theme.c:1294
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "शेड फैक्टर \"%s\" क' आभायुक्त रँगमे व्याख्या नहि कए सकल"
 
-#: ../src/ui/theme.c:1303
+#: ../src/ui/theme.c:1304
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "शेड फैक्टर \"%s\" आभायुक्त रँगमे ऋणात्मक अछि"
 
-#: ../src/ui/theme.c:1332
+#: ../src/ui/theme.c:1333
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "\"%s\" रँगक व्याख्या नहि कए सकल"
 
-#: ../src/ui/theme.c:1582
+#: ../src/ui/theme.c:1587
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "कोआर्डिनेट एक्सप्रेशनमे अक्षर '%s' अछि जे स्वीकार्य नहि अछि"
 
-#: ../src/ui/theme.c:1609
+#: ../src/ui/theme.c:1614
 #, c-format
 msgid ""
-"Coordinate expression contains floating point number '%s' which could not be "
-"parsed"
+"Coordinate expression contains floating point number '%s' which could not be"
+" parsed"
 msgstr "कोआर्डिनेट एक्सप्रेशनमे फ्लोटिंग प्वाइंट नम्बर '%s' अछि जकर व्याख्या नहि कएल जाय सकल"
 
-#: ../src/ui/theme.c:1623
+#: ../src/ui/theme.c:1628
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "कोआर्डिनेट एक्सप्रेशनमे पूर्णांक '%s' अछि जकर व्याख्या नहि कएल जाय सकल"
 
-#: ../src/ui/theme.c:1745
+#: ../src/ui/theme.c:1750
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "कोआर्डिनेट एक्सप्रेशनमे एहि पाठ: \"%s\" क' आरंभमे अज्ञात आपरेटर अछि"
 
-#: ../src/ui/theme.c:1802
+#: ../src/ui/theme.c:1807
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "कोआर्डिनेट एक्सप्रेशन अथवा खाली अछि अथवा समझल नहि जाय सकल"
 
-#: ../src/ui/theme.c:1913 ../src/ui/theme.c:1923 ../src/ui/theme.c:1957
+#: ../src/ui/theme.c:1918 ../src/ui/theme.c:1928 ../src/ui/theme.c:1962
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "कोआर्डिनेट एक्सप्रेशन परिणाम शून्य सँ भाजक क' रूपेँ भेटल"
 
-#: ../src/ui/theme.c:1965
+#: ../src/ui/theme.c:1970
 #, c-format
-msgid "Coordinate expression tries to use mod operator on a floating-point number"
+msgid ""
+"Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "कोआर्डिनेट एक्सप्रेशन, फ्लोटिंग पाइंट नम्बर पर माड आपरेटर क' उपयोगक कोशिशमे"
 
-#: ../src/ui/theme.c:2021
+#: ../src/ui/theme.c:2026
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "कोआर्डिनेट एक्सप्रेशनमे एकटा आपरेटर \"%s\" अछि जखनकि आपरेंड वांछित अछि"
 
-#: ../src/ui/theme.c:2030
+#: ../src/ui/theme.c:2035
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "कोआर्डिनेट एक्सप्रेशनमे एकटा आपरेंड अछि जखनकि आपरेटर वांछित अछि"
 
-#: ../src/ui/theme.c:2038
+#: ../src/ui/theme.c:2043
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "कोआर्डिनेट एक्सप्रेशन एकटा आपरेटर सँ अंत भ' रहल अछि एकटा आपरेंड क' बदलामे"
 
-#: ../src/ui/theme.c:2048
+#: ../src/ui/theme.c:2053
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "कोआर्डिनेट एक्सप्रेशनमे आपरेटर \"%c\" क' बाद आपरेटर \"%c\" अछि बीचमे कोनो आपरेण्ड नहि अछि"
 
-#: ../src/ui/theme.c:2195 ../src/ui/theme.c:2236
+#: ../src/ui/theme.c:2200 ../src/ui/theme.c:2241
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "कोआर्डिनेट एक्सप्रेशनमे अज्ञात चर अथवा अचर \"%s\" अछि"
 
-#: ../src/ui/theme.c:2290
+#: ../src/ui/theme.c:2295
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "कोआर्डिनेट एक्सप्रेशन विश्लेषक एकर बफरकेँ ओवरफ्लो कए गेल अछि."
 
-#: ../src/ui/theme.c:2319
+#: ../src/ui/theme.c:2324
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "कोआर्डिनेट एक्सप्रेशनमे बन्न लघुकोष्ठक अछि जकरामे कोनो खुलल कोष्ठक नहि अछि"
 
-#: ../src/ui/theme.c:2383
+#: ../src/ui/theme.c:2388
 #, c-format
-msgid "Coordinate expression had an open parenthesis with no close parenthesis"
+msgid ""
+"Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "कोआर्डिनेट एक्सप्रेशनमे खुलल लघुकोष्ठक अछि जकरामे कोनो बन्न कोष्ठक नहि अछि"
 
-#: ../src/ui/theme.c:2394
+#: ../src/ui/theme.c:2399
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "प्रतीत हाएत अछि जे कोआर्डिनेट एक्सप्रेशनमे कोनो आपरेटर अथवा आपरेंड नहि अछि"
 
-#: ../src/ui/theme.c:2596 ../src/ui/theme.c:2616 ../src/ui/theme.c:2636
+#: ../src/ui/theme.c:2603 ../src/ui/theme.c:2623 ../src/ui/theme.c:2643
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr ""
 
-#: ../src/ui/theme.c:4203
+#: ../src/ui/theme.c:4220
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr ""
-"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> एहि फ्रेम शैली लेल "
-"निर्दिष्ट कएल जएनाइ अनिवार्य अछि"
+msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> एहि फ्रेम शैली लेल निर्दिष्ट कएल जएनाइ अनिवार्य अछि"
 
-#: ../src/ui/theme.c:4711 ../src/ui/theme.c:4736
+#: ../src/ui/theme.c:4728 ../src/ui/theme.c:4753
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "नहि अछि <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: ../src/ui/theme.c:4780
+#: ../src/ui/theme.c:4797
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "प्रसंग \"%s\" लोड करबमे विफल: %s\n"
 
-#: ../src/ui/theme.c:4910 ../src/ui/theme.c:4917 ../src/ui/theme.c:4924
-#: ../src/ui/theme.c:4931 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:4927 ../src/ui/theme.c:4934 ../src/ui/theme.c:4941
+#: ../src/ui/theme.c:4948 ../src/ui/theme.c:4955
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "कोनो <%s> सेट प्रसंग \"%s\" लेल नहि अछि"
 
-#: ../src/ui/theme.c:4946
+#: ../src/ui/theme.c:4963
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr ""
-"विंडो प्रकार \"%s\" मे प्रसंग \"%s\" मे कोनो फ्रेम स्टाइल नियत नहि अछि जोड़ू <window "
-"type=\"%s\" style_set=\"whatever\"/> तत्व "
+msgstr "विंडो प्रकार \"%s\" मे प्रसंग \"%s\" मे कोनो फ्रेम स्टाइल नियत नहि अछि जोड़ू <window type=\"%s\" style_set=\"whatever\"/> तत्व "
 
-#: ../src/ui/theme.c:5389 ../src/ui/theme.c:5451 ../src/ui/theme.c:5514
+#: ../src/ui/theme.c:5406 ../src/ui/theme.c:5468 ../src/ui/theme.c:5531
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr ""
-"प्रयोक्ता द्वारा पारिभाषित स्थिरांक पैघ अक्षर सँ शुरू हए चाही, जे \"%s\" नहि भ' "
-"रहल अछि"
+msgstr "प्रयोक्ता द्वारा पारिभाषित स्थिरांक पैघ अक्षर सँ शुरू हए चाही, जे \"%s\" नहि भ' रहल अछि"
 
-#: ../src/ui/theme.c:5397 ../src/ui/theme.c:5459 ../src/ui/theme.c:5522
+#: ../src/ui/theme.c:5414 ../src/ui/theme.c:5476 ../src/ui/theme.c:5539
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "स्थिरांक \"%s\" पहिलेसँ पारिभाषित अछि"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#.
-#: ../src/ui/theme-parser.c:202
+#. 
+#: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "कोनो \"%s\" गुण तत्व पर नहि अछि <%s>"
 
-#: ../src/ui/theme-parser.c:231 ../src/ui/theme-parser.c:249
+#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "पंक्ति %d अक्षर %d: %s"
 
-#: ../src/ui/theme-parser.c:413
+#: ../src/ui/theme-parser.c:437
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "गुण \"%s\" दुइ बेर इएह <%s> तत्व पर दोहराएल गेल"
 
-#: ../src/ui/theme-parser.c:437 ../src/ui/theme-parser.c:480
+#: ../src/ui/theme-parser.c:461 ../src/ui/theme-parser.c:504
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "गुण \"%s\", <%s> तत्व ई संदर्भमे अवैध अछि "
 
-#: ../src/ui/theme-parser.c:522
+#: ../src/ui/theme-parser.c:546
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\" केँ पूर्णांक क' तरहेँ व्याख्या नहि कए सकल"
 
-#: ../src/ui/theme-parser.c:531 ../src/ui/theme-parser.c:586
+#: ../src/ui/theme-parser.c:555 ../src/ui/theme-parser.c:610
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "पुछल्ला अक्षर \"%s\" केँ स्ट्रिँग \"%s\" मे समझ नहि सकल"
 
-#: ../src/ui/theme-parser.c:541
+#: ../src/ui/theme-parser.c:565
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "पूर्णांक %ld धनात्मक होनाइ चाही"
 
-#: ../src/ui/theme-parser.c:549
+#: ../src/ui/theme-parser.c:573
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "पूर्णांक %ld बहुत पैघ अछि वर्तमान अधिकतम अछि %d"
 
-#: ../src/ui/theme-parser.c:577 ../src/ui/theme-parser.c:693
+#: ../src/ui/theme-parser.c:601 ../src/ui/theme-parser.c:717
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "\"%s\" क' फ्लोटिंग पाइंट सँख्याक तरहेँ व्याख्या नहि कए सकल"
 
-#: ../src/ui/theme-parser.c:608 ../src/ui/theme-parser.c:636
+#: ../src/ui/theme-parser.c:632 ../src/ui/theme-parser.c:660
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "बूलियन मूल्य हए चाही - \"सही\" अथवा \"गलत\" नहि जे \"%s\""
 
-#: ../src/ui/theme-parser.c:663
+#: ../src/ui/theme-parser.c:687
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "कोण 0.0 आओर  360.0, क' बीच  होनाइ चाही, जे छला %g\n"
 
-#: ../src/ui/theme-parser.c:726
+#: ../src/ui/theme-parser.c:750
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr "अल्फा 0.0 (अदृश्य) आओर 1.0 (पूर्ण अपारदर्शी), क' बीच होनाइ चाही, जे छला %g\n"
 
-#: ../src/ui/theme-parser.c:791
+#: ../src/ui/theme-parser.c:815
 #, c-format
 msgid ""
-"Invalid title scale \"%s\" (must be one of xx-small,x-small,small,medium,"
-"large,x-large,xx-large)\n"
-msgstr ""
-"अवैध शीर्षक स्केल \"%s\" (एकरामे सँ एकटा होनाइ चाहीः xx-small,x-small,small,medium,"
-"large,x-large,xx-large)\n"
+"Invalid title scale \"%s\" (must be one of xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr "अवैध शीर्षक स्केल \"%s\" (एकरामे सँ एकटा होनाइ चाहीः xx-small,x-small,small,medium,large,x-large,xx-large)\n"
 
-#: ../src/ui/theme-parser.c:936 ../src/ui/theme-parser.c:999
-#: ../src/ui/theme-parser.c:1033 ../src/ui/theme-parser.c:1136
+#: ../src/ui/theme-parser.c:971 ../src/ui/theme-parser.c:1034
+#: ../src/ui/theme-parser.c:1068 ../src/ui/theme-parser.c:1171
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> नाम \"%s\" दोसर बार उपयोगमे"
 
-#: ../src/ui/theme-parser.c:948 ../src/ui/theme-parser.c:1045
-#: ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:983 ../src/ui/theme-parser.c:1080
+#: ../src/ui/theme-parser.c:1183
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> मूल \"%s\" परिभाषित नहि अछि."
 
-#: ../src/ui/theme-parser.c:1058
+#: ../src/ui/theme-parser.c:1093
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s>ज्यामिती \"%s\" परिभाषित नहि अछि."
 
-#: ../src/ui/theme-parser.c:1071
+#: ../src/ui/theme-parser.c:1106
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> केँ अथवा तँ ज्यामिती अथवा मूल जकरामे ज्यामिती हुए, केँ निर्दिष्ट करै हाएत"
 
-#: ../src/ui/theme-parser.c:1113
+#: ../src/ui/theme-parser.c:1148
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "अहाँ अल्फा मान क' लेल अर्थपूर्ण हए क' लेल जरूर पृष्ठभूमि निर्दिष्ट करू"
 
-#: ../src/ui/theme-parser.c:1180
+#: ../src/ui/theme-parser.c:1215
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "अज्ञात प्रकार \"%s\" तत्व <%s> पर नहि "
 
-#: ../src/ui/theme-parser.c:1191
+#: ../src/ui/theme-parser.c:1226
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "अज्ञात स्टाइल-सेट \"%s\" तत्व <%s> पर नहि "
 
-#: ../src/ui/theme-parser.c:1199
+#: ../src/ui/theme-parser.c:1234
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "विंडो प्रकार \"%s\" केँ पहिले एकटा स्टाइल सेट आबंटित अछि"
 
-#: ../src/ui/theme-parser.c:1229 ../src/ui/theme-parser.c:1293
-#: ../src/ui/theme-parser.c:1519 ../src/ui/theme-parser.c:2740
-#: ../src/ui/theme-parser.c:2786 ../src/ui/theme-parser.c:2934
-#: ../src/ui/theme-parser.c:3126 ../src/ui/theme-parser.c:3164
-#: ../src/ui/theme-parser.c:3202 ../src/ui/theme-parser.c:3240
+#: ../src/ui/theme-parser.c:1264 ../src/ui/theme-parser.c:1328
+#: ../src/ui/theme-parser.c:1554 ../src/ui/theme-parser.c:2775
+#: ../src/ui/theme-parser.c:2821 ../src/ui/theme-parser.c:2979
+#: ../src/ui/theme-parser.c:3171 ../src/ui/theme-parser.c:3209
+#: ../src/ui/theme-parser.c:3247 ../src/ui/theme-parser.c:3265
+#: ../src/ui/theme-parser.c:3281 ../src/ui/theme-parser.c:3319
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "तत्व <%s>,  <%s>सँ नीच्चाँ स्वीकार्य नहि अछि"
 
-#: ../src/ui/theme-parser.c:1343 ../src/ui/theme-parser.c:1357
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1378 ../src/ui/theme-parser.c:1392
+#: ../src/ui/theme-parser.c:1437
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:1366
+#: ../src/ui/theme-parser.c:1401
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "दूरी \"%s\" अज्ञात अछि"
 
-#: ../src/ui/theme-parser.c:1411
+#: ../src/ui/theme-parser.c:1446
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "आकृति अनुपात \"%s\" अज्ञात अछि"
 
-#: ../src/ui/theme-parser.c:1473
+#: ../src/ui/theme-parser.c:1508
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "किनार \"%s\" अज्ञात अछि"
 
-#: ../src/ui/theme-parser.c:1784
+#: ../src/ui/theme-parser.c:1819
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "कोनो \"start_angle\" अथवा \"from\" गुण तत्व <%s> पर नहि "
 
-#: ../src/ui/theme-parser.c:1791
+#: ../src/ui/theme-parser.c:1826
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "कोनो \"extent_angle\" अथवा \"to\" गुण तत्व <%s> पर नहि "
 
-#: ../src/ui/theme-parser.c:2031
+#: ../src/ui/theme-parser.c:2066
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "ग्रेडिएंट प्रकार लेल मान \"%s\" समझ नहि पाया"
 
-#: ../src/ui/theme-parser.c:2109 ../src/ui/theme-parser.c:2484
+#: ../src/ui/theme-parser.c:2144 ../src/ui/theme-parser.c:2519
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "तत्व <%s> लेल भराव प्रकार \"%s\" समझ नहि पाया"
 
-#: ../src/ui/theme-parser.c:2276 ../src/ui/theme-parser.c:2359
-#: ../src/ui/theme-parser.c:2422
+#: ../src/ui/theme-parser.c:2311 ../src/ui/theme-parser.c:2394
+#: ../src/ui/theme-parser.c:2457
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "तत्व <%s> लेल स्थिति \"%s\" समझि नहि सकल"
 
-#: ../src/ui/theme-parser.c:2286 ../src/ui/theme-parser.c:2369
+#: ../src/ui/theme-parser.c:2321 ../src/ui/theme-parser.c:2404
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "तत्व <%s> लेल छाया \"%s\" समझि नहि सकल"
 
-#: ../src/ui/theme-parser.c:2296
+#: ../src/ui/theme-parser.c:2331
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "तत्व <%s> लेल एरो \"%s\" समझ नहि पाया"
 
-#: ../src/ui/theme-parser.c:2596 ../src/ui/theme-parser.c:2692
+#: ../src/ui/theme-parser.c:2631 ../src/ui/theme-parser.c:2727
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "कोनो <draw_ops> \"%s\" नाम सँ परिभाषित नहि अछि"
 
-#: ../src/ui/theme-parser.c:2608 ../src/ui/theme-parser.c:2704
+#: ../src/ui/theme-parser.c:2643 ../src/ui/theme-parser.c:2739
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "draw_ops एतय: \"%s\" जोड़बसँ सर्कुलर रेफरेंस बनि जएताह"
 
-#: ../src/ui/theme-parser.c:2819
+#: ../src/ui/theme-parser.c:2854
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "अज्ञात स्थिति \"%s\" फ्रेम पीस लेल"
 
-#: ../src/ui/theme-parser.c:2827
+#: ../src/ui/theme-parser.c:2862
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "स्थिति %s पर फ्रेम शैली क' सँग पहिले एकटा पीस अछि"
 
-#: ../src/ui/theme-parser.c:2844 ../src/ui/theme-parser.c:2919
+#: ../src/ui/theme-parser.c:2879 ../src/ui/theme-parser.c:2954
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "कोनो  <draw_ops> नाम \"%s\"  क' सँग परिभाषित नहि अछि"
 
-#: ../src/ui/theme-parser.c:2873
+#: ../src/ui/theme-parser.c:2908
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "अज्ञात फंक्शन बटन \"%s\" लेल"
 
-#: ../src/ui/theme-parser.c:2882
+#: ../src/ui/theme-parser.c:2917
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "बटन फंक्शन \"%s\" एहि संस्करण (%d, need %d) मे मोजुद नहि अछि"
 
-#: ../src/ui/theme-parser.c:2894
+#: ../src/ui/theme-parser.c:2929
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "अज्ञात स्थिति बटन \"%s\" लेल"
 
-#: ../src/ui/theme-parser.c:2902
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "फंक्शन %s स्थिति %s लेल फ्रेम शैलीमे पहिले एकटा बटन अछि"
 
-#: ../src/ui/theme-parser.c:2973
+#: ../src/ui/theme-parser.c:3018
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\" फ़ोकस गुण लेल वैध मूल्य नहि अछि"
 
-#: ../src/ui/theme-parser.c:2982
+#: ../src/ui/theme-parser.c:3027
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\" स्थिति गुण लेल वैध मूल्य नहि अछि"
 
-#: ../src/ui/theme-parser.c:2992
+#: ../src/ui/theme-parser.c:3037
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "शैली \"%s\" परिभाषित नहि अछि"
 
-#: ../src/ui/theme-parser.c:3013 ../src/ui/theme-parser.c:3036
+#: ../src/ui/theme-parser.c:3058 ../src/ui/theme-parser.c:3081
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "\"%s\" नवीन आकार गुण लेल वैध मूल्य नहि अछि"
 
-#: ../src/ui/theme-parser.c:3047
+#: ../src/ui/theme-parser.c:3092
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
 msgstr "\"नवीन-आकार\" गुण <%s> तत्व पर अधिकतम/आभायुक्त स्थिति लेल नहि अछि"
 
-#: ../src/ui/theme-parser.c:3061
+#: ../src/ui/theme-parser.c:3106
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr "\"resize\" गुणकेँ अधिकतम स्थिति क' लेल <%s> तत्व पर नहि राखनाइ चाही"
 
-#: ../src/ui/theme-parser.c:3075 ../src/ui/theme-parser.c:3097
+#: ../src/ui/theme-parser.c:3120 ../src/ui/theme-parser.c:3142
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr "शैली पहिलेसँ स्थिति %s नवीन-आकार %s फ़ोकस %s लेल निर्दिष्ट अछि"
 
-#: ../src/ui/theme-parser.c:3086 ../src/ui/theme-parser.c:3108
+#: ../src/ui/theme-parser.c:3131 ../src/ui/theme-parser.c:3153
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "शैली पहिलेसँ स्थिति %s फ़ोकस %s लेल निर्दिष्ट अछि"
 
-#: ../src/ui/theme-parser.c:3147
+#: ../src/ui/theme-parser.c:3192
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr ""
-"दुइ draw_ops नहि भ' सकत. एकटा <पीस> तत्व लेल (प्रसंग बटन कएल एकटा draw_ops एट्रिब्यूट "
-"आओर एकटा आओर <draw_ops> तत्व, अथवा बटन कएल दुइ तत्व )"
+msgstr "दुइ draw_ops नहि भ' सकत. एकटा <पीस> तत्व लेल (प्रसंग बटन कएल एकटा draw_ops एट्रिब्यूट आओर एकटा आओर <draw_ops> तत्व, अथवा बटन कएल दुइ तत्व )"
 
-#: ../src/ui/theme-parser.c:3185
+#: ../src/ui/theme-parser.c:3230
 msgid ""
-"Can't have a two draw_ops for a <button> element (theme specified a draw_ops "
-"attribute and also a <draw_ops> element, or specified two elements)"
-msgstr ""
-"दुइ draw_ops नहि भ' सकत एकटा <बटन> तत्व लेल (प्रसंग निर्दिष्ट कएल एकटा draw_ops "
-"एट्रिब्यूट आओर एकटा आओर <draw_ops> तत्व, अथवा निर्दिष्ट कएल दुइ तत्व)"
+"Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
+" attribute and also a <draw_ops> element, or specified two elements)"
+msgstr "दुइ draw_ops नहि भ' सकत एकटा <बटन> तत्व लेल (प्रसंग निर्दिष्ट कएल एकटा draw_ops एट्रिब्यूट आओर एकटा आओर <draw_ops> तत्व, अथवा निर्दिष्ट कएल दुइ तत्व)"
 
-#: ../src/ui/theme-parser.c:3223
+#: ../src/ui/theme-parser.c:3302
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
+msgstr "दुइ draw_ops नहि भ' सकत एकटा < मेनू -चिह्न> तत्व लेल (प्रसंग निर्दिष्ट कएल एकटा draw_ops एट्रिब्यूट आओर एकटा आओर <draw_ops> तत्व, अथवा निर्दिष्ट कएल दुइ तत्व)"
+
+#: ../src/ui/theme-parser.c:3350
+#, c-format
+msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr ""
-"दुइ draw_ops नहि भ' सकत एकटा < मेनू -चिह्न> तत्व लेल (प्रसंग "
-"निर्दिष्ट कएल एकटा draw_ops "
-"एट्रिब्यूट आओर एकटा आओर <draw_ops> तत्व, अथवा निर्दिष्ट कएल दुइ तत्व)"
 
-#: ../src/ui/theme-parser.c:3271
+#: ../src/ui/theme-parser.c:3370
 #, c-format
-msgid "Outermost element in theme must be <marco_theme> not <%s>"
-msgstr "प्रसंग क' सबसँ बाहरी तत्व <मेटासिटी-प्रसंग> होनाइ चाही नहि जे <%s>"
-
-#: ../src/ui/theme-parser.c:3291
-#, c-format
-msgid "Element <%s> is not allowed inside a name/author/date/description element"
+msgid ""
+"Element <%s> is not allowed inside a name/author/date/description element"
 msgstr "तत्व <%s>, एकटा name/author/date/description  तत्व क' भीतर स्वीकार्य नहि अछि"
 
-#: ../src/ui/theme-parser.c:3296
+#: ../src/ui/theme-parser.c:3375
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "तत्व <%s> <स्थिरांक> तत्व क' भीतर स्वीकार्य नहि अछि"
 
-#: ../src/ui/theme-parser.c:3308
+#: ../src/ui/theme-parser.c:3387
 #, c-format
-msgid "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
+msgid ""
+"Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr "तत्व <%s>, distance/border/aspect_ratio  तत्व क' भीतर स्वीकार्य नहि अछि"
 
-#: ../src/ui/theme-parser.c:3330
+#: ../src/ui/theme-parser.c:3409
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "तत्व <%s>, ड्रा ऑपरेशन तत्व क' भीतर स्वीकार्य नहि अछि"
 
-#: ../src/ui/theme-parser.c:3340 ../src/ui/theme-parser.c:3370
-#: ../src/ui/theme-parser.c:3375 ../src/ui/theme-parser.c:3380
+#: ../src/ui/theme-parser.c:3419 ../src/ui/theme-parser.c:3461
+#: ../src/ui/theme-parser.c:3466 ../src/ui/theme-parser.c:3471
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "तत्व <%s>, एकटा <%s> तत्व क' अंदर स्वीकार नहि अछि"
 
-#: ../src/ui/theme-parser.c:3602
+#: ../src/ui/theme-parser.c:3693
 msgid "No draw_ops provided for frame piece"
 msgstr "फ्रेम पीस लेल कोनो draw_ops नहि देल गेल अछि"
 
-#: ../src/ui/theme-parser.c:3617
+#: ../src/ui/theme-parser.c:3708
 msgid "No draw_ops provided for button"
 msgstr "बटन लेल कोनो draw_ops नहि देल गेल अछि"
 
-#: ../src/ui/theme-parser.c:3669
+#: ../src/ui/theme-parser.c:3770
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "कोनो पाठ तत्व <%s> क' अंदर स्वीकार नहि अछि"
 
-#: ../src/ui/theme-parser.c:3724 ../src/ui/theme-parser.c:3736
-#: ../src/ui/theme-parser.c:3748 ../src/ui/theme-parser.c:3760
-#: ../src/ui/theme-parser.c:3772
+#: ../src/ui/theme-parser.c:3825 ../src/ui/theme-parser.c:3837
+#: ../src/ui/theme-parser.c:3849 ../src/ui/theme-parser.c:3861
+#: ../src/ui/theme-parser.c:3873
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:4040
+#: ../src/ui/theme-parser.c:4149
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "%s थीम क' लेल वैध फाइल पाबैमे विफल\n"
 
-#: ../src/ui/theme-parser.c:4096
+#: ../src/ui/theme-parser.c:4205
 #, c-format
-msgid "Theme file %s did not contain a root <marco_theme> element"
-msgstr "प्रसंग फ़ाइल %s मे रूट <मेटासिटी-प्रसंग> तत्व सम्मिलित नहि अछि"
+msgid "Theme file %s did not contain a root <metacity_theme> element"
+msgstr ""
 
 #: ../src/ui/theme-viewer.c:75
 msgid "/_Windows"
@@ -2089,152 +1995,137 @@ msgstr "/विंडोज़/सबहि डॉक्स (_A)"
 msgid "/Windows/Des_ktop"
 msgstr "/विंडोज़/डेस्कटॉप (_k)"
 
-#: ../src/ui/theme-viewer.c:136
-msgid "Open another one of these windows"
-msgstr "एकरामेसँ एकटा आन विंडो खोलू"
-
-#: ../src/ui/theme-viewer.c:143
-msgid "This is a demo button with an 'open' icon"
-msgstr "ई 'खोलू' चिह्न युक्त एकटा डेमो बटन अछि"
-
-#: ../src/ui/theme-viewer.c:150
-msgid "This is a demo button with a 'quit' icon"
-msgstr "ई एकटा डेमो बटन अछि 'बाहर' चिह्न क' सँग"
-
-#: ../src/ui/theme-viewer.c:243
+#: ../src/ui/theme-viewer.c:244
 msgid "This is a sample message in a sample dialog"
 msgstr "ई नमूना समाद मे नमूना संदेश छल"
 
-#: ../src/ui/theme-viewer.c:326
+#: ../src/ui/theme-viewer.c:327
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "नकली मेनू वस्तु %d\n"
 
-#: ../src/ui/theme-viewer.c:360
+#: ../src/ui/theme-viewer.c:361
 msgid "Border-only window"
 msgstr "सिर्फ-किनार विंडो"
 
-#: ../src/ui/theme-viewer.c:362
+#: ../src/ui/theme-viewer.c:363
 msgid "Bar"
 msgstr "पट्टी"
 
-#: ../src/ui/theme-viewer.c:379
+#: ../src/ui/theme-viewer.c:380
 msgid "Normal Application Window"
 msgstr "सामान्य अनुप्रयोग विंडो"
 
-#: ../src/ui/theme-viewer.c:383
+#: ../src/ui/theme-viewer.c:384
 msgid "Dialog Box"
 msgstr "संवाद बक्सा"
 
-#: ../src/ui/theme-viewer.c:387
+#: ../src/ui/theme-viewer.c:388
 msgid "Modal Dialog Box"
 msgstr "मॉडल समाद बक्सा"
 
-#: ../src/ui/theme-viewer.c:391
+#: ../src/ui/theme-viewer.c:392
 msgid "Utility Palette"
 msgstr "यूटिलिटी पट्टिका"
 
-#: ../src/ui/theme-viewer.c:395
+#: ../src/ui/theme-viewer.c:396
 msgid "Torn-off Menu"
 msgstr "टॉर्न-ऑफ मेनू"
 
-#: ../src/ui/theme-viewer.c:399
+#: ../src/ui/theme-viewer.c:400
 msgid "Border"
 msgstr "किनार"
 
-#: ../src/ui/theme-viewer.c:727
+#: ../src/ui/theme-viewer.c:728
 #, c-format
 msgid "Button layout test %d"
 msgstr "बटन लेऑउट जाँच %d"
 
-#: ../src/ui/theme-viewer.c:756
+#: ../src/ui/theme-viewer.c:757
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g मिलीसेकण्ड एकटा विंडो फ्रेम ड्रॉ करबमे"
 
-#: ../src/ui/theme-viewer.c:799
+#: ../src/ui/theme-viewer.c:800
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "उपयोग: marco-theme-viewer [THEMENAME]\n"
 
-#: ../src/ui/theme-viewer.c:806
+#: ../src/ui/theme-viewer.c:807
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "प्रसंग लोड करबमे त्रुटि: %s\n"
 
-#: ../src/ui/theme-viewer.c:812
+#: ../src/ui/theme-viewer.c:813
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "प्रसंग \"%s\" लोड कएल %g सेकण्ड्समे\n"
 
-#: ../src/ui/theme-viewer.c:853
+#: ../src/ui/theme-viewer.c:854
 msgid "Normal Title Font"
 msgstr "सामान्य शीर्षक फ़ॉन्ट"
 
-#: ../src/ui/theme-viewer.c:859
+#: ../src/ui/theme-viewer.c:860
 msgid "Small Title Font"
 msgstr "छोट शीर्षक फ़ॉन्ट"
 
-#: ../src/ui/theme-viewer.c:865
+#: ../src/ui/theme-viewer.c:866
 msgid "Large Title Font"
 msgstr "पैघ शीर्षक फ़ॉन्ट"
 
-#: ../src/ui/theme-viewer.c:870
+#: ../src/ui/theme-viewer.c:871
 msgid "Button Layouts"
 msgstr "बटन लेऑउट"
 
-#: ../src/ui/theme-viewer.c:875
+#: ../src/ui/theme-viewer.c:876
 msgid "Benchmark"
 msgstr "बेंचमार्क"
 
-#: ../src/ui/theme-viewer.c:922
+#: ../src/ui/theme-viewer.c:923
 msgid "Window Title Goes Here"
 msgstr "विंडो शीर्षक एतय जएताह"
 
-#: ../src/ui/theme-viewer.c:1026
+#: ../src/ui/theme-viewer.c:1027
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr ""
-"%d frames केँ %g क्लाइंट पक्ष सेकेंडमे घीँचलक (%g milliseconds per frame) आओर %g X "
-"सर्वर संसाधनकेँ समाहित करैत सेकेंड देबार घड़ी (%g विविध प्रति फ्रेम)\n"
+msgstr "%d frames केँ %g क्लाइंट पक्ष सेकेंडमे घीँचलक (%g milliseconds per frame) आओर %g X सर्वर संसाधनकेँ समाहित करैत सेकेंड देबार घड़ी (%g विविध प्रति फ्रेम)\n"
 
-#: ../src/ui/theme-viewer.c:1245
+#: ../src/ui/theme-viewer.c:1246
 msgid "position expression test returned TRUE but set error"
 msgstr "स्थिति एक्सप्रेशन जाँच ने सही लौटाबलक परंतु त्रुटि नियत नहि कएल"
 
-#: ../src/ui/theme-viewer.c:1247
+#: ../src/ui/theme-viewer.c:1248
 msgid "position expression test returned FALSE but didn't set error"
 msgstr "स्थिति एक्सप्रेशन जाँच ने ग़लत लौटाबलक परंतु त्रुटि नियत नहि कएल"
 
-#: ../src/ui/theme-viewer.c:1251
+#: ../src/ui/theme-viewer.c:1252
 msgid "Error was expected but none given"
 msgstr "त्रुटि प्रत्याशित छल. परन्तु देल नहि गेल"
 
-#: ../src/ui/theme-viewer.c:1253
+#: ../src/ui/theme-viewer.c:1254
 #, c-format
 msgid "Error %d was expected but %d given"
 msgstr "त्रुटि %d वांछित छल परन्तु %d देल गेल "
 
-#: ../src/ui/theme-viewer.c:1259
+#: ../src/ui/theme-viewer.c:1260
 #, c-format
 msgid "Error not expected but one was returned: %s"
 msgstr "त्रुटि क' प्रत्याशा नहि छल परन्तु एकटा लौटाबल गेल : %s"
 
-#: ../src/ui/theme-viewer.c:1263
+#: ../src/ui/theme-viewer.c:1264
 #, c-format
 msgid "x value was %d, %d was expected"
 msgstr "एक्स मूल्य छल %d, %d वांछित छल"
 
-#: ../src/ui/theme-viewer.c:1266
+#: ../src/ui/theme-viewer.c:1267
 #, c-format
 msgid "y value was %d, %d was expected"
 msgstr "वाई मूल्य छल %d, %d वांछित छल"
 
-#: ../src/ui/theme-viewer.c:1331
+#: ../src/ui/theme-viewer.c:1332
 #, c-format
 msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
 msgstr "%d निर्देशांक एक्सप्रेशन्स पार्स कएल %g सेकण्ड्समे (औसतन %g सेकण्ड्स)\n"
-
