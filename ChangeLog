@@ -1,3 +1,224 @@
+commit 9cbe69d61f9826fd368d1eaec939d35fe851b775
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Jul 4 16:01:28 2012 +0200
+
+    sync translations with transifex
+
+ po/am.po          | 3048 +++++++++++++++--------------------
+ po/ar.po          | 2101 ++++---------------------
+ po/as.po          | 2417 +++++-----------------------
+ po/ast.po         | 1353 ++++++----------
+ po/az.po          | 3925 +++++++++++++++++----------------------------
+ po/be.po          | 3094 +++++++++++++++++-------------------
+ po/bg.po          | 1037 +++++-------
+ po/bn.po          | 2135 ++++---------------------
+ po/bn_IN.po       | 1137 +++++---------
+ po/br.po          | 2119 +++++++++++++------------
+ po/bs.po          | 4014 +++++++++++++++++-----------------------------
+ po/ca.po          | 2567 +++++-------------------------
+ po/ca@valencia.po | 2561 +++++-------------------------
+ po/crh.po         | 1241 +++++----------
+ po/cs.po          |  941 +++++------
+ po/cy.po          | 3937 +++++++++++++---------------------------------
+ po/da.po          | 1166 ++++----------
+ po/de.po          | 2458 +++++------------------------
+ po/dz.po          | 3201 ++++++++++++++++---------------------
+ po/el.po          | 1113 +++++--------
+ po/en_CA.po       | 4546 ++++++++++++++++++-----------------------------------
+ po/en_GB.po       | 2349 +++++----------------------
+ po/eo.po          |  627 ++++----
+ po/es.po          | 2482 +++++------------------------
+ po/et.po          | 1034 +++++++-----
+ po/eu.po          |  955 +++++------
+ po/fa.po          | 3969 +++++++++++++++++-----------------------------
+ po/fi.po          |  985 +++++-------
+ po/fr.po          | 1176 +++++---------
+ po/ga.po          |  780 +++++----
+ po/gl.po          | 1020 +++++-------
+ po/gu.po          | 1036 +++++-------
+ po/ha.po          | 2598 +++++++-----------------------
+ po/he.po          | 2280 ++++-----------------------
+ po/hi.po          | 1145 +++++---------
+ po/hr.po          | 3696 +++++++++++++------------------------------
+ po/hu.po          | 1033 +++++-------
+ po/hy.po          | 3386 ++++++++++++++++-----------------------
+ po/id.po          |  812 +++++-----
+ po/ig.po          | 2490 +++++++----------------------
+ po/is.po          | 3191 +++++++++++++++----------------------
+ po/it.po          | 1173 +++++---------
+ po/ja.po          | 2249 ++++----------------------
+ po/ka.po          | 4414 ++++++++++++++++++---------------------------------
+ po/kn.po          | 1028 +++++-------
+ po/ko.po          |  900 ++++-------
+ po/ku.po          |  954 +++++------
+ po/lt.po          | 2565 +++++-------------------------
+ po/lv.po          |  983 ++++--------
+ po/mai.po         |  913 +++++------
+ po/mg.po          | 4179 +++++++++++++++++-------------------------------
+ po/mk.po          | 3755 ++++++++++++++-----------------------------
+ po/ml.po          |  852 ++++------
+ po/mn.po          | 4073 +++++++++++++++++------------------------------
+ po/mr.po          |  850 ++++------
+ po/ms.po          | 3277 ++++++++++++++++----------------------
+ po/nb.po          |  868 ++++------
+ po/nds.po         |  753 +++++----
+ po/ne.po          | 3931 ++++++++++++++++-----------------------------
+ po/nl.po          | 1085 +++++--------
+ po/nn.po          | 2642 ++++++-------------------------
+ po/oc.po          | 1109 +++++--------
+ po/or.po          | 1176 +++++---------
+ po/pa.po          | 2092 ++++--------------------
+ po/pl.po          | 1085 +++++--------
+ po/pt.po          | 2528 +++++------------------------
+ po/pt_BR.po       | 2536 +++++-------------------------
+ po/ro.po          | 1027 +++++-------
+ po/ru.po          | 1015 +++++-------
+ po/si.po          | 3218 ++++++++++++++-----------------------
+ po/sk.po          | 2397 +++++-----------------------
+ po/sl.po          |  857 +++++-----
+ po/sq.po          | 3576 ++++++++++-------------------------------
+ po/sr.po          | 2434 +++++-----------------------
+ po/sr@latin.po    | 2434 +++++-----------------------
+ po/sv.po          |  861 +++++-----
+ po/ta.po          |  874 ++++------
+ po/te.po          | 1031 +++++-------
+ po/th.po          | 2103 ++++---------------------
+ po/tk.po          | 3022 +++++++++++++++--------------------
+ po/tr.po          | 2501 ++++++-----------------------
+ po/uk.po          | 1027 +++++-------
+ po/vi.po          | 3855 +++++++++++++--------------------------------
+ po/wa.po          | 3200 +++++++++++++++----------------------
+ po/xh.po          | 4031 +++++++++++++++++------------------------------
+ po/yo.po          | 2462 +++++++----------------------
+ po/zh_CN.po       |  831 ++++------
+ po/zh_HK.po       | 1855 ++++------------------
+ po/zh_TW.po       | 2033 ++++--------------------
+ 89 files changed, 56387 insertions(+), 129382 deletions(-)
+
+commit bfeb5339f7eadbee5a3ee067dff7ebe3b1353c1b
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Jul 4 15:54:35 2012 +0200
+
+    add po gnome copyrights file
+
+ po/gnome-copyrights.txt | 1128 +++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 1128 insertions(+)
+
+commit 919e73331003c911f8767050dc629f4057f246b1
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sat May 26 12:52:34 2012 -0400
+
+    Bumped version to 1.3.0
+
+ configure.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 07e8c1019b0e3b8fc49304bae6c074e282053925
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sat May 26 12:42:33 2012 -0400
+
+    Fixes https://github.com/mate-desktop/mate-window-manager/issues/4
+
+ src/core/prefs.c        |   38 ++++++++++++++++++++++++++++++++++++++
+ src/core/screen.c       |    8 +++++++-
+ src/include/prefs.h     |    4 ++++
+ src/marco.schemas.in.in |   15 +++++++++++++++
+ 4 files changed, 64 insertions(+), 1 deletion(-)
+
+commit ce3d3a4b6e0a93eea4d54ac4bc2907b7432e136b
+Merge: 6e5c6ab e2d0da8
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu May 10 13:08:46 2012 -0700
+
+    Merge pull request #3 from benpicco/features
+    
+    new marco features
+
+commit e2d0da87ec3f7add9643c7f7f424df080d95d8dc
+Author: Alexander Larsson <alexl@redhat.com>
+Date:   Mon Jan 9 17:55:18 2012 +0100
+
+    Introduce key combination to switch between windows on all workspaces taken from https://bugzilla.gnome.org/show_bug.cgi?id=577699
+
+ src/core/display-private.h    |    3 +-
+ src/core/display.c            |  121 +++++++++++++++++++++++++++--------------
+ src/core/keybindings.c        |   11 ++++
+ src/include/all-keybindings.h |    6 ++
+ src/include/common.h          |    2 +
+ 5 files changed, 100 insertions(+), 43 deletions(-)
+
+commit dacdbd19b2d6037235aa4ed1bd28f89286236046
+Author: Benjamin Valentin <benpicco@zedat.fu-berlin.de>
+Date:   Mon Jan 9 17:47:29 2012 +0100
+
+    implement option for classic and toroidal workspace switching, based on https://bugzilla.gnome.org/show_bug.cgi?id=89315
+
+ src/core/prefs.c        |   25 +++++++++++++-
+ src/core/workspace.c    |   87 ++++++++++++++++++++++++++++++++++++++++++-----
+ src/include/common.h    |    7 ++++
+ src/include/prefs.h     |    2 ++
+ src/marco.schemas.in.in |   23 +++++++++++++
+ 5 files changed, 134 insertions(+), 10 deletions(-)
+
+commit 3f122b87a866edb62d0402058f83974cf8a8fd54
+Author: Dylan McCall <dylanmccall@ubuntu.com>
+Date:   Mon Jan 9 02:36:16 2012 +0100
+
+    Use positional sound for audible window bell
+    
+    Many components in the GNOME desktop use libcanberra-gtk to play sounds, which
+    has led us to a wonderful world of positional sounds (in many cases), where a
+    sound seems to come from the same direction as an interaction on the screen.
+    
+    Metacity uses libcanberra for audible bells, so it is pretty straight-forward
+    to get the same feature. In my opinion, it would make Metacity's bell sound
+    suddenly awesome, for a number of reasons.
+    
+    To implement the feature, Metacity needs to give a few extra properties to
+    Canberra, which describe the position of the window associated with the bell.
+    
+    	taken from https://bugzilla.gnome.org/show_bug.cgi?id=616743
+
+ src/core/bell.c |   36 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 36 insertions(+)
+
+commit 01aeeb15748062b183c5ec400ef7bad67cf60f27
+Author: Benjamin Valentin <benpicco@zedat.fu-berlin.de>
+Date:   Sun Jan 8 07:49:32 2012 +0100
+
+    Change the behavior of the maximize button so that a middle click on it will maximize the window vertically, a right click horizontally.
+
+ src/include/common.h |    4 ++++
+ src/ui/frames.c      |   53 ++++++++++++++++++++++++++++++++++++++------------
+ 2 files changed, 45 insertions(+), 12 deletions(-)
+
+commit 6e5c6ab190ca9bddf0e2b694abd0100ab5fcc11c
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Feb 25 19:52:59 2012 +0100
+
+    Some fixes for 1.2 release
+
+ MAINTAINERS  |   43 -------------------------------------------
+ README       |   41 +++++++----------------------------------
+ configure.in |    2 +-
+ 3 files changed, 8 insertions(+), 78 deletions(-)
+
+commit 6f3aa7937bbf28bb0037a7d60afe6f5548713749
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Feb 23 21:10:59 2012 -0500
+
+    Preparing for 1.2 release
+
+ AUTHORS                |    8 +-
+ ChangeLog              |  376 ++++++++++++++++++++++++++++++++++++++++++++++++
+ autogen.sh             |    4 +-
+ configure.in           |    2 +-
+ distro/ubuntu/build    |   35 -----
+ distro/ubuntu/postinst |    9 --
+ distro/ubuntu/preinst  |    8 --
+ distro/ubuntu/prerm    |   11 --
+ 8 files changed, 386 insertions(+), 67 deletions(-)
+
 commit db0b7a3a63db55669207ef45df22e48deac33431
 Author: Perberos <perberos@gmail.com>
 Date:   Mon Jan 30 12:18:17 2012 -0300
@@ -5,7 +226,7 @@ Date:   Mon Jan 30 12:18:17 2012 -0300
     set patch on archlinux script
 
  distro/archlinux/PKGBUILD |   12 +++++-------
- 1 files changed, 5 insertions(+), 7 deletions(-)
+ 1 file changed, 5 insertions(+), 7 deletions(-)
 
 commit 321ccc54a66763f40b2c7176754d0f49664cb750
 Author: Perberos <perberos@gmail.com>
@@ -19,7 +240,7 @@ Date:   Mon Jan 30 12:14:38 2012 -0300
  doc/man/Makefile.in             |  489 -------------------
  po/Makefile.in.in               |  217 ---------
  src/wm-tester/Makefile.in       |  574 -----------------------
- 6 files changed, 0 insertions(+), 3500 deletions(-)
+ 6 files changed, 3500 deletions(-)
 
 commit b0db9d3a5b1e60536bd6648b0e0a7ac96553a11f
 Author: Steve Zesch <stevezesch2@gmail.com>
@@ -28,7 +249,7 @@ Date:   Tue Jan 10 14:52:56 2012 -0500
     Changed mate.gr.jp to gnome.gr.jp as requested in issue #86
 
  po/ChangeLog |  244 +++++++++++++++++++++++++++++-----------------------------
- po/ja.po     |   10 +-
+ po/ja.po     |   10 +--
  2 files changed, 127 insertions(+), 127 deletions(-)
 
 commit 9b2f64c8d7862ec36c59201466ab6307e96e8bdc
@@ -374,4 +595,4 @@ Date:   Thu Dec 1 23:52:01 2011 -0300
  src/wm-tester/test-gravity.c                    |  308 +
  src/wm-tester/test-resizing.c                   |  257 +
  src/wm-tester/test-size-hints.c                 |  136 +
- 315 files changed, 386687 insertions(+), 0 deletions(-)
+ 315 files changed, 386687 insertions(+)
