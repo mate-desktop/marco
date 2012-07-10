@@ -569,15 +569,15 @@
 </draw_ops>
 
 <draw_ops name="menu_glyph">
-    <icon x="(width-mini_icon_width)/2"
-          y="(height-mini_icon_height)/2"
-          width="mini_icon_width" height="mini_icon_height" />
+    <icon x="1"
+          y="1"
+          width="width-2" height="height-2" />
 </draw_ops>
 
 <draw_ops name="menu_glyph_unfocused">
-    <icon x="(width-mini_icon_width)/2"
-          y="(height-mini_icon_height)/2"
-          width="mini_icon_width" height="mini_icon_height" alpha="0.5"/>
+    <icon x="1"
+          y="1"
+          width="width-2" height="height-2" alpha="0.5"/>
 </draw_ops>
 
 <draw_ops name="close_glyph">
