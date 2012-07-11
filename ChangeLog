@@ -1,3 +1,31 @@
+commit 610f6f0fc37d01619c36b9e4bb6a18f2f61fe1e0
+Author: Perberos <perberos@gmail.com>
+Date:   Tue Jul 10 00:34:39 2012 -0300
+
+    Adjust the icon size according to the size of the title bar
+
+ src/themes/Spidey/metacity-theme-1.xml |   12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+commit e0d1023a4940dea7d3ddc8ad0e21823b9f48fe0c
+Author: Perberos <perberos@gmail.com>
+Date:   Tue Jul 10 00:32:41 2012 -0300
+
+    Adjust the icon size according to the size of the title bar
+
+ src/themes/Spidey-Left/metacity-theme-1.xml |   12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+commit fd1e4d0c7a34cd53937436c665cf833f582e2366
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Jul 5 14:21:46 2012 -0400
+
+    Preparing for 1.4 release.
+
+ ChangeLog    |  229 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ configure.in |    2 +-
+ 2 files changed, 226 insertions(+), 5 deletions(-)
+
 commit 9cbe69d61f9826fd368d1eaec939d35fe851b775
 Author: Stefano Karapetsas <stefano@karapetsas.com>
 Date:   Wed Jul 4 16:01:28 2012 +0200
