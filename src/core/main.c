@@ -362,12 +362,11 @@ static void
 meta_finalize (void)
 {
   MetaDisplay *display = meta_get_display();
-
-  meta_session_shutdown ();
-
   if (display)
     meta_display_close (display,
                         CurrentTime); /* I doubt correct timestamps matter here */
+
+  meta_session_shutdown ();
 }
 
 static int sigterm_pipe_fds[2] = { -1, -1 };
