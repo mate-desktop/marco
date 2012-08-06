@@ -32,11 +32,11 @@
 #include "workspace.h"
 
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <signal.h>
 #include <unistd.h>
 #include <errno.h>
 #include <string.h>
-#include <stdlib.h>
 #include <stdio.h>
 
 static void meta_window_present_delete_dialog (MetaWindow *window,
