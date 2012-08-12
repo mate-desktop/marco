@@ -1,5 +1,5 @@
 pkgname=mate-window-manager
-pkgver=1.1.0
+pkgver=1.4.0
 pkgrel=1
 pkgdesc="A window manager for MATE"
 arch=(i686 x86_64)
@@ -15,7 +15,6 @@ sha256sums=('ea2450ca3e4fb59166ec18ff4844cc61cb16865880dc6b125078a3ab47bf2caf')
 
 build() {
 	cd "${srcdir}/../../../"
-    patch -Np1 -i "${srcdir}/metacity-restartstyle.patch" || return 1
     ./autogen.sh \
         --prefix=/usr \
         --sysconfdir=/etc \
