@@ -811,10 +811,10 @@ root_tile (MetaScreen *screen)
     {
       XRenderColor c;
 
-      /* Background default to just plain ugly grey */
-      c.red = 0x8080;
-      c.green = 0x8080;
-      c.blue = 0x8080;
+      /* Background default to just plain black */
+      c.red = 0x0000;
+      c.green = 0x0000;
+      c.blue = 0x0000;
       c.alpha = 0xffff;
 
       XRenderFillRectangle (xdisplay, PictOpSrc, picture, &c, 0, 0, 1, 1);
