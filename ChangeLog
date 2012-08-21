@@ -1,3 +1,63 @@
+commit eef48c40861ebe35c088adc80bdde1600acda22e
+Author: Perberos <perberos@gmail.com>
+Date:   Sun Aug 12 18:35:51 2012 -0300
+
+    removing metacity-restartstyle.patch, because it was already included
+
+ distro/archlinux/PKGBUILD                    |    3 +-
+ distro/archlinux/metacity-restartstyle.patch |  139 --------------------------
+ 2 files changed, 1 insertion(+), 141 deletions(-)
+
+commit de92a9f787d80c681a1678c027dfe3dababbc8a3
+Author: Perberos <perberos@gmail.com>
+Date:   Sun Aug 12 16:36:34 2012 -0300
+
+    Update src/compositor/compositor-xrender.c
+    
+    manually edit from fix-grey-compositor.patch sent by Leandro Vital to set the default background to black (instead of grey) when compositing.
+
+ src/compositor/compositor-xrender.c |    8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit a32218e8141e13dc83d88ddf5e11afe1dc8fbd4f
+Merge: 4877f47 d97bf7a
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Aug 1 08:33:31 2012 -0700
+
+    Merge pull request #6 from NiceandGently/master
+    
+    apply Should-set-RestartStyleHint-to-RestartIfRunning-wh.patch for issue #2
+
+commit d97bf7aab0358d423cfc2b3a00079662fc821dff
+Author: raveit65 <chat-to-me@raveit.de>
+Date:   Wed Aug 1 13:16:42 2012 +0200
+
+    apply Should-set-RestartStyleHint-to-RestartIfRunning-wh.patch
+
+ src/core/display-private.h |    2 +-
+ src/core/display.c         |   15 ++++-----------
+ src/core/main.c            |    5 ++---
+ src/core/session.c         |    8 --------
+ 4 files changed, 7 insertions(+), 23 deletions(-)
+
+commit 4877f47e6d29289e49a4e1b4a12e8b736711678c
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Fri Jul 13 00:23:53 2012 -0300
+
+    Added newline to as.po
+
+ po/as.po |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 891fd1ae0d6a4cb9174c4afb38a6e04e7df750e7
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Tue Jul 10 21:46:09 2012 -0400
+
+    Preparing for 1.4 release.
+
+ ChangeLog |   28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+
 commit 610f6f0fc37d01619c36b9e4bb6a18f2f61fe1e0
 Author: Perberos <perberos@gmail.com>
 Date:   Tue Jul 10 00:34:39 2012 -0300
