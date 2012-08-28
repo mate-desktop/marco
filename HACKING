@@ -40,20 +40,20 @@ Minimal Building/Testing Environment
   build, run and test it; you can run it from some temporary
   directory.  Also, you do not need to build all of Mate in order to
   build a development version of Marco -- odds are, you may be able
-  to build marco from CVS without building any other modules.
+  to build marco from GIT without building any other modules.
 
   As long as you have gtk+ >= 2.10 and MateConf with your distro (gtk+ >=
   2.6 if you manually revert the change from bug 348633), you should
   be able to install your distro's development packages
-  (e.g. gtk2-devel, MateConf2-devel, startup-notification-devel on
+  (e.g. gtk2-devel, MateConf-devel, startup-notification-devel on
   Fedora; also, remember to install the mate-common package which is
-  needed for building cvs versions of Mate modules like Marco) as
+  needed for building git versions of Mate modules like Marco) as
   well as the standard development tools (gcc, autoconf, automake,
   pkg-config, intltool, and libtool) and be ready to build and test
   Marco.  Steps to do so:
 
-  $ svn checkout http://svn.gnome.org/svn/marco/trunk marco
-  $ cd marco
+  $ git clone https://github.com/mate-desktop/mate-window-manager.git
+  $ cd mate-window-manager
   $ ./autogen.sh --prefix /usr
   $ make
   $ ./src/marco --replace
