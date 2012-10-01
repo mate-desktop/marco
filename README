@@ -5,9 +5,7 @@ COMPILING MARCO
 
 You need GTK+ 2.2.  For startup notification to work you need
 libstartup-notification at
-http://www.freedesktop.org/software/startup-notification/ or on the
-MATE ftp site. You also need MateConf (unless building a funky
-extra-small embedded marco with --disable-mateconf, see below).
+http://www.freedesktop.org/software/startup-notification/.
 
 REPORTING BUGS AND SUBMITTING PATCHES
 ===
@@ -37,7 +35,6 @@ the theme engine.
 You can strip about 70K from the marco binary by compiling with
 options such as:
 
- --disable-mateconf
  --disable-sm
  --disable-verbose-mode
  --disable-startup-notification
@@ -83,25 +80,24 @@ MARCO FEATURES
    and should work with KWin, fvwm2, and other EWMH-compliant WMs.)
 
  - Has a simple theme system and a couple of extra themes come with it.
-   Change themes via mateconf-editor or mateconftool or MATE themes control
-   panel:
-     mateconftool-2 --type=string --set /apps/marco/general/theme Crux
-     mateconftool-2 --type=string --set /apps/marco/general/theme Gorilla
-     mateconftool-2 --type=string --set /apps/marco/general/theme Atlanta
-     mateconftool-2 --type=string --set /apps/marco/general/theme Bright
+   Change themes via gsettings:
+     gsettings set org.mate.Marco.general theme Crux
+     gsettings set org.mate.Marco.general theme Gorilla
+     gsettings set org.mate.Marco.general theme Atlanta
+     gsettings set org.mate.Marco.general theme Bright
 
    See theme-format.txt for docs on the theme format. Use
    marco-theme-viewer to preview themes.
 
- - Change number of workspaces via mateconf-editor or mateconftool:
-     mateconftool-2 --type=int --set /apps/marco/general/num_workspaces 5
+ - Change number of workspaces via gsettings:
+     gsettings set org.mate.Marco.general num_workspaces 5
 
    Can also change workspaces from MATE 2 pager.
 
  - Change focus mode:
-     mateconftool-2 --type=string --set /apps/marco/general/focus_mode mouse
-     mateconftool-2 --type=string --set /apps/marco/general/focus_mode sloppy
-     mateconftool-2 --type=string --set /apps/marco/general/focus_mode click
+     gsettings set org.mate.Marco.general focus_mode mouse
+     gsettings set org.mate.Marco.general focus_mode sloppy
+     gsettings set org.mate.Marco.general focus_mode click
 
  - Global keybinding defaults include:
 
@@ -116,10 +112,9 @@ MARCO FEATURES
 
    Change keybindings for example:
 
-     unst mateconftool-2 --type=string --set /apps/marco/global_keybindings/switch_to_workspace_1 '<Alt>F1'
+     gsettings set org.mate.Marco.global-keybindings switch_to_workspace_1 '<Alt>F1'
 
-   Also try the MATE keyboard shortcuts control panel, or
-   mateconf-editor.
+   Also try the MATE keyboard shortcuts control panel.
 
    See marco.schemas for all available bindings.
 

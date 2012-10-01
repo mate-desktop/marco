@@ -848,7 +848,7 @@ prefs_changed_callback (MetaPreference pref,
   
   if (pref == META_PREF_NUM_WORKSPACES)
     {
-      /* MateConf doesn't provide timestamps, but luckily update_num_workspaces
+      /* GSettings doesn't provide timestamps, but luckily update_num_workspaces
        * often doesn't need it...
        */
       guint32 timestamp = 
@@ -1281,8 +1281,8 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
       entries[i].title = window->title;
 
       /* Only get the pixbuf if the user does NOT have 
-         /apps/marco/general/compositing_fast_alt_tab set to true 
-         in mateconf. There is an obvious lag when the pixbuf is
+         compositing-fast-alt-tab-set to true 
+         in GSettings. There is an obvious lag when the pixbuf is
          retrieved. */
       if (!meta_prefs_get_compositing_fast_alt_tab())
         win_pixbuf = get_window_pixbuf (window, &width, &height);

@@ -97,10 +97,10 @@ gboolean                    meta_prefs_get_mate_animations   (void);
 
 const char*                 meta_prefs_get_command            (int i);
 
-char*                       meta_prefs_get_mateconf_key_for_command (int i);
+char*                       meta_prefs_get_settings_key_for_command (int i);
 
 const char*                 meta_prefs_get_terminal_command   (void);
-const char*                 meta_prefs_get_mateconf_key_for_terminal_command (void);
+const char*                 meta_prefs_get_settings_key_for_terminal_command (void);
 
 void                        meta_prefs_get_button_layout (MetaButtonLayout *button_layout);
 

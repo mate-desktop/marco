@@ -56,7 +56,7 @@ typedef void (* MetaKeyHandlerFunc) (MetaDisplay    *display,
                                      MetaKeyBinding *binding);
 
 /* Prototypes for handlers */
-#define keybind(name, handler, param, flags, stroke, description) \
+#define keybind(name, handler, param, flags) \
 static void \
 handler (MetaDisplay    *display,\
          MetaScreen     *screen,\
@@ -124,7 +124,7 @@ struct _MetaKeyBinding
   const MetaKeyHandler *handler;
 };
 
-#define keybind(name, handler, param, flags, stroke, description) \
+#define keybind(name, handler, param, flags) \
    { #name, handler, param, flags },
 static const MetaKeyHandler key_handlers[] = {
 #include "all-keybindings.h"

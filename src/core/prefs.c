@@ -27,9 +27,7 @@
 #include "prefs.h"
 #include "ui.h"
 #include "util.h"
-#ifdef HAVE_MATECONF
-#include <mateconf/mateconf-client.h>
-#endif
+#include <gio/gio.h>
 #include <string.h>
 #include <stdlib.h>
 
@@ -40,39 +38,55 @@
 #define SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 2)
 #define WIN_SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 1)
 
-/* If you add a key, it needs updating in init() and in the mateconf
- * notify listener and of course in the .schemas file.
+/* If you add a key, it needs updating in init() and in the GSettings
+ * notify listener and of course in the .gschema file.
  *
  * Keys which are handled by one of the unified handlers below are
  * not given a name here, because the purpose of the unified handlers
  * is that keys should be referred to exactly once.
  */
-#define KEY_TITLEBAR_FONT "/apps/marco/general/titlebar_font"
-#define KEY_NUM_WORKSPACES "/apps/marco/general/num_workspaces"
-#define KEY_COMPOSITOR "/apps/marco/general/compositing_manager"
-#define KEY_COMPOSITOR_FAST_ALT_TAB "/apps/marco/general/compositing_fast_alt_tab"
-#define KEY_MATE_ACCESSIBILITY "/desktop/mate/interface/accessibility"
+#define KEY_GENERAL_SCHEMA "org.mate.Marco.general"
+#define KEY_GENERAL_TITLEBAR_FONT "titlebar-font"
+#define KEY_GENERAL_NUM_WORKSPACES "num-workspaces"
+#define KEY_GENERAL_COMPOSITOR "compositing-manager"
+#define KEY_GENERAL_COMPOSITOR_FAST_ALT_TAB "compositing-fast-alt-tab"
 
-#define KEY_COMMAND_DIRECTORY "/apps/marco/keybinding_commands"
-#define KEY_COMMAND_PREFIX "/apps/marco/keybinding_commands/command_"
+#define KEY_COMMAND_SCHEMA "org.mate.Marco.keybinding-commands"
+#define KEY_COMMAND_PREFIX "command-"
 
-#define KEY_TERMINAL_DIR "/desktop/mate/applications/terminal"
-#define KEY_TERMINAL_COMMAND KEY_TERMINAL_DIR "/exec"
+#define KEY_SCREEN_BINDINGS_SCHEMA "org.mate.Marco.global-keybindings"
 
-#define KEY_SCREEN_BINDINGS_PREFIX "/apps/marco/global_keybindings"
-#define KEY_WINDOW_BINDINGS_PREFIX "/apps/marco/window_keybindings"
-#define KEY_LIST_BINDINGS_SUFFIX "_list"
+#define KEY_WINDOW_BINDINGS_SCHEMA "org.mate.Marco.window-keybindings"
 
-#define KEY_WORKSPACE_NAME_DIRECTORY "/apps/marco/workspace_names"
-#define KEY_WORKSPACE_NAME_PREFIX "/apps/marco/workspace_names/name_"
+#define KEY_WORKSPACE_NAME_SCHEMA "org.mate.Marco.workspace-names"
+#define KEY_WORKSPACE_NAME_PREFIX "name-"
 
+#define KEY_MATE_INTERFACE_SCHEMA "org.mate.interface"
+#define KEY_MATE_INTERFACE_ACCESSIBILITY "accessibility"
+#define KEY_MATE_INTERFACE_ENABLE_ANIMATIONS "enable-animations"
 
-#ifdef HAVE_MATECONF
-static MateConfClient *default_client = NULL;
+#define KEY_MATE_TERMINAL_SCHEMA "org.mate.applications-terminal"
+#define KEY_MATE_TERMINAL_COMMAND "exec"
+
+#define KEY_MATE_MOUSE_SCHEMA "org.mate.peripherals-mouse"
+#define KEY_MATE_MOUSE_CURSOR_THEME "cursor-theme"
+#define KEY_MATE_MOUSE_CURSOR_SIZE "cursor-size"
+
+#define SETTINGS(s) g_hash_table_lookup (settings_schemas, (s))
+
+static GSettings *settings_general;
+static GSettings *settings_command;
+static GSettings *settings_screen_bindings;
+static GSettings *settings_window_bindings;
+static GSettings *settings_workspace_names;
+static GSettings *settings_mate_interface;
+static GSettings *settings_mate_terminal;
+static GSettings *settings_mate_mouse;
+static GHashTable *settings_schemas;
+
 static GList *changes = NULL;
 static guint changed_idle;
 static GList *listeners = NULL;
-#endif
 
 static gboolean use_system_font = FALSE;
 static PangoFontDescription *titlebar_font = NULL;
@@ -112,42 +126,24 @@ static char *terminal_command = NULL;
 
 static char *workspace_names[MAX_REASONABLE_WORKSPACES] = { NULL, };
 
-#ifdef HAVE_MATECONF
-static gboolean handle_preference_update_enum (const gchar *key, MateConfValue *value);
+static gboolean handle_preference_update_enum (const gchar *key, GSettings *settings);
 
 static gboolean update_key_binding     (const char *name,
-                                        const char *value);
-static gboolean find_and_update_list_binding (MetaKeyPref *bindings,
-                                              const char  *name,
-                                              GSList      *value);
-static gboolean update_key_list_binding (const char *name,
-                                         GSList      *value);
+                                        gchar *value);
 static gboolean update_command            (const char  *name,
                                            const char  *value);
 static gboolean update_workspace_name     (const char  *name,
                                            const char  *value);
 
-static void change_notify (MateConfClient    *client,
-                           guint           cnxn_id,
-                           MateConfEntry     *entry,
-                           gpointer        user_data);
+static void change_notify (GSettings *settings,
+                           gchar *key,
+                           gpointer user_data);
 
-static char* mateconf_key_for_workspace_name (int i);
+static char* settings_key_for_workspace_name (int i);
 
 static void queue_changed (MetaPreference  pref);
 
-typedef enum
-  {
-    META_LIST_OF_STRINGS,
-    META_LIST_OF_MATECONFVALUE_STRINGS
-  } MetaStringListType;
-
-static gboolean update_list_binding       (MetaKeyPref *binding,
-                                           GSList      *value,
-                                           MetaStringListType type_of_value);
-
 static void     cleanup_error             (GError **error);
-static gboolean get_bool                  (const char *key, gboolean *val);
 static void maybe_give_disable_workarounds_warning (void);
 
 static void titlebar_handler (MetaPreference, const gchar*, gboolean*);
@@ -155,73 +151,18 @@ static void theme_name_handler (MetaPreference, const gchar*, gboolean*);
 static void mouse_button_mods_handler (MetaPreference, const gchar*, gboolean*);
 static void button_layout_handler (MetaPreference, const gchar*, gboolean*);
 
-#endif /* HAVE_MATECONF */
-
 static gboolean update_binding            (MetaKeyPref *binding,
-                                           const char  *value);
+                                           gchar  *value);
 
 static void     init_bindings             (void);
 static void     init_commands             (void);
 static void     init_workspace_names      (void);
-
-#ifndef HAVE_MATECONF
-static void     init_button_layout        (void);
-#endif /* !HAVE_MATECONF */
-
-#ifdef HAVE_MATECONF
 
 typedef struct
 {
   MetaPrefsChangedFunc func;
   gpointer data;
 } MetaPrefsListener;
-
-static MateConfEnumStringPair symtab_focus_mode[] =
-  {
-    { META_FOCUS_MODE_CLICK,  "click" },
-    { META_FOCUS_MODE_SLOPPY, "sloppy" },
-    { META_FOCUS_MODE_MOUSE,  "mouse" },
-    { 0, NULL },
-  };
-
-static MateConfEnumStringPair symtab_focus_new_windows[] =
-  {
-    { META_FOCUS_NEW_WINDOWS_SMART,  "smart" },
-    { META_FOCUS_NEW_WINDOWS_STRICT, "strict" },
-    { 0, NULL },
-  };
-
-static MateConfEnumStringPair symtab_wrap_style[] =
-  {
-    { META_WRAP_NONE,     "no wrap" },
-    { META_WRAP_CLASSIC,  "classic" },
-    { META_WRAP_TOROIDAL, "toroidal" },
-    { 0, NULL },
-  };
-
-static MateConfEnumStringPair symtab_visual_bell_type[] =
-  {
-    /* Note to the reader: 0 is an invalid value; these start at 1. */
-    { META_VISUAL_BELL_FULLSCREEN_FLASH, "fullscreen" },
-    { META_VISUAL_BELL_FRAME_FLASH,      "frame_flash" },
-    { 0, NULL },
-  };
-
-static MateConfEnumStringPair symtab_titlebar_action[] =
-  {
-    { META_ACTION_TITLEBAR_TOGGLE_SHADE,    "toggle_shade" },
-    { META_ACTION_TITLEBAR_TOGGLE_MAXIMIZE, "toggle_maximize" },
-    { META_ACTION_TITLEBAR_TOGGLE_MAXIMIZE_HORIZONTALLY,
-                                "toggle_maximize_horizontally" },
-    { META_ACTION_TITLEBAR_TOGGLE_MAXIMIZE_VERTICALLY,
-                                "toggle_maximize_vertically" },
-    { META_ACTION_TITLEBAR_MINIMIZE,        "minimize" },
-    { META_ACTION_TITLEBAR_NONE,            "none" },
-    { META_ACTION_TITLEBAR_LOWER,           "lower" },
-    { META_ACTION_TITLEBAR_MENU,            "menu" },
-    { META_ACTION_TITLEBAR_TOGGLE_SHADE,    "toggle_shade" },
-    { 0, NULL },
-  };
 
 /**
  * The details of one preference which is constrained to be
@@ -255,14 +196,15 @@ static MateConfEnumStringPair symtab_titlebar_action[] =
 typedef struct
 {
   gchar *key;
+  gchar *schema;
   MetaPreference pref;
-  MateConfEnumStringPair *symtab;
-  gpointer target;
+  gint *target;
 } MetaEnumPreference;
 
 typedef struct
 {
   gchar *key;
+  gchar *schema;
   MetaPreference pref;
   gboolean *target;
   gboolean becomes_true_on_destruction;
@@ -271,6 +213,7 @@ typedef struct
 typedef struct
 {
   gchar *key;
+  gchar *schema;
   MetaPreference pref;
 
   /**
@@ -306,6 +249,7 @@ typedef struct
 typedef struct
 {
   gchar *key;
+  gchar *schema;
   MetaPreference pref;
   gint *target;
   /**
@@ -328,152 +272,172 @@ typedef struct
 
 static MetaEnumPreference preferences_enum[] =
   {
-    { "/apps/marco/general/focus_new_windows",
+    { "focus-new-windows",
+      KEY_GENERAL_SCHEMA,
       META_PREF_FOCUS_NEW_WINDOWS,
-      symtab_focus_new_windows,
       &focus_new_windows,
     },
-    { "/apps/marco/general/focus_mode",
+    { "focus-mode",
+      KEY_GENERAL_SCHEMA,
       META_PREF_FOCUS_MODE,
-      symtab_focus_mode,
       &focus_mode,
     },
-    { "/apps/marco/general/wrap_style",
+    { "wrap-style",
+      KEY_GENERAL_SCHEMA,
       META_PREF_WRAP_STYLE,
-      symtab_wrap_style,
       &wrap_style,
     },
-    { "/apps/marco/general/visual_bell_type",
+    { "visual-bell-type",
+      KEY_GENERAL_SCHEMA,
       META_PREF_VISUAL_BELL_TYPE,
-      symtab_visual_bell_type,
       &visual_bell_type,
     },
-    { "/apps/marco/general/action_double_click_titlebar",
+    { "action-double-click-titlebar",
+      KEY_GENERAL_SCHEMA,
       META_PREF_ACTION_DOUBLE_CLICK_TITLEBAR,
-      symtab_titlebar_action,
       &action_double_click_titlebar,
     },
-    { "/apps/marco/general/action_middle_click_titlebar",
+    { "action-middle-click-titlebar",
+      KEY_GENERAL_SCHEMA,
       META_PREF_ACTION_MIDDLE_CLICK_TITLEBAR,
-      symtab_titlebar_action,
       &action_middle_click_titlebar,
     },
-    { "/apps/marco/general/action_right_click_titlebar",
+    { "action-right-click-titlebar",
+      KEY_GENERAL_SCHEMA,
       META_PREF_ACTION_RIGHT_CLICK_TITLEBAR,
-      symtab_titlebar_action,
       &action_right_click_titlebar,
     },
-    { NULL, 0, NULL, NULL },
+    { NULL, NULL, 0, NULL },
   };
 
 static MetaBoolPreference preferences_bool[] =
   {
-    { "/apps/marco/general/raise_on_click",
+    { "raise-on-click",
+      KEY_GENERAL_SCHEMA,
       META_PREF_RAISE_ON_CLICK,
       &raise_on_click,
       TRUE,
     },
-    { "/apps/marco/general/titlebar_uses_system_font",
+    { "titlebar-uses-system-font",
+      KEY_GENERAL_SCHEMA,
       META_PREF_TITLEBAR_FONT, /* note! shares a pref */
       &use_system_font,
       TRUE,
     },
-    { "/apps/marco/general/application_based",
+    { "application-based",
+      KEY_GENERAL_SCHEMA,
       META_PREF_APPLICATION_BASED,
       NULL, /* feature is known but disabled */
       FALSE,
     },
-    { "/apps/marco/general/disable_workarounds",
+    { "disable-workarounds",
+      KEY_GENERAL_SCHEMA,
       META_PREF_DISABLE_WORKAROUNDS,
       &disable_workarounds,
       FALSE,
     },
-    { "/apps/marco/general/auto_raise",
+    { "auto-raise",
+      KEY_GENERAL_SCHEMA,
       META_PREF_AUTO_RAISE,
       &auto_raise,
       FALSE,
     },
-    { "/apps/marco/general/visual_bell",
+    { "visual-bell",
+      KEY_GENERAL_SCHEMA,
       META_PREF_VISUAL_BELL,
       &provide_visual_bell, /* FIXME: change the name: it's confusing */
       FALSE,
     },
-    { "/apps/marco/general/audible_bell",
+    { "audible-bell",
+      KEY_GENERAL_SCHEMA,
       META_PREF_AUDIBLE_BELL,
       &bell_is_audible, /* FIXME: change the name: it's confusing */
       FALSE,
     },
-    { "/apps/marco/general/reduced_resources",
+    { "reduced-resources",
+      KEY_GENERAL_SCHEMA,
       META_PREF_REDUCED_RESOURCES,
       &reduced_resources,
       FALSE,
     },
-    { "/desktop/mate/interface/accessibility",
+    { "accessibility",
+      KEY_MATE_INTERFACE_SCHEMA,
       META_PREF_MATE_ACCESSIBILITY,
       &mate_accessibility,
       FALSE,
     },
-    { "/desktop/mate/interface/enable_animations",
+    { "enable-animations",
+      KEY_MATE_INTERFACE_SCHEMA,
       META_PREF_MATE_ANIMATIONS,
       &mate_animations,
       TRUE,
     },
-    { "/apps/marco/general/compositing_manager",
+    { "compositing-manager",
+      KEY_GENERAL_SCHEMA,
       META_PREF_COMPOSITING_MANAGER,
       &compositing_manager,
       FALSE,
     },
-    { "/apps/marco/general/compositing_fast_alt_tab",
+    { "compositing-fast-alt-tab",
+      KEY_GENERAL_SCHEMA,
       META_PREF_COMPOSITING_FAST_ALT_TAB,
       &compositing_fast_alt_tab,
       FALSE,
     },
-    { "/apps/marco/general/resize_with_right_button",
+    { "resize-with-right-button",
+      KEY_GENERAL_SCHEMA,
       META_PREF_RESIZE_WITH_RIGHT_BUTTON,
       &resize_with_right_button,
       FALSE,
     },
-    { NULL, 0, NULL, FALSE },
+    { NULL, NULL, 0, NULL, FALSE },
   };
 
 static MetaStringPreference preferences_string[] =
   {
-    { "/apps/marco/general/mouse_button_modifier",
+    { "mouse-button-modifier",
+      KEY_GENERAL_SCHEMA,
       META_PREF_MOUSE_BUTTON_MODS,
       mouse_button_mods_handler,
       NULL,
     },
-    { "/apps/marco/general/theme",
+    { "theme",
+      KEY_GENERAL_SCHEMA,
       META_PREF_THEME,
       theme_name_handler,
       NULL,
     },
-    { KEY_TITLEBAR_FONT,
+    { KEY_GENERAL_TITLEBAR_FONT,
+      KEY_GENERAL_SCHEMA,
       META_PREF_TITLEBAR_FONT,
       titlebar_handler,
       NULL,
     },
-    { KEY_TERMINAL_COMMAND,
+    { KEY_MATE_TERMINAL_COMMAND,
+      KEY_MATE_TERMINAL_SCHEMA,
       META_PREF_TERMINAL_COMMAND,
       NULL,
       &terminal_command,
     },
-    { "/apps/marco/general/button_layout",
+    { "button-layout",
+      KEY_GENERAL_SCHEMA,
       META_PREF_BUTTON_LAYOUT,
       button_layout_handler,
       NULL,
     },
-    { "/desktop/mate/peripherals/mouse/cursor_theme",
+    { "cursor-theme",
+      KEY_MATE_MOUSE_SCHEMA,
       META_PREF_CURSOR_THEME,
       NULL,
       &cursor_theme,
     },
-    { NULL, 0, NULL, NULL },
+    { NULL, NULL, 0, NULL, NULL },
   };
 
 static MetaIntPreference preferences_int[] =
   {
-    { "/apps/marco/general/num_workspaces",
+    { "num-workspaces",
+      KEY_GENERAL_SCHEMA,
       META_PREF_NUM_WORKSPACES,
       &num_workspaces,
       /* I would actually recommend we change the destroy value to 4
@@ -482,18 +446,20 @@ static MetaIntPreference preferences_int[] =
        */
       1, MAX_REASONABLE_WORKSPACES, METAINTPREFERENCE_NO_CHANGE_ON_DESTROY,
     },
-    { "/apps/marco/general/auto_raise_delay",
+    { "auto-raise-delay",
+      KEY_GENERAL_SCHEMA,
       META_PREF_AUTO_RAISE_DELAY,
       &auto_raise_delay,
       0, 10000, 0,
       /* @@@ Get rid of MAX_REASONABLE_AUTO_RAISE_DELAY */
     },
-    { "/desktop/mate/peripherals/mouse/cursor_size",
+    { "cursor-size",
+      KEY_MATE_MOUSE_SCHEMA,
       META_PREF_CURSOR_SIZE,
       &cursor_size,
       1, 128, 24,
     },
-    { NULL, 0, NULL, 0, 0, 0, },
+    { NULL, NULL, 0, NULL, 0, 0, 0, },
   };
 
 static void
@@ -503,8 +469,7 @@ handle_preference_init_enum (void)
 
   while (cursor->key!=NULL)
     {
-      char *value;
-      GError *error = NULL;
+      gint value;
 
       if (cursor->target==NULL)
         {
@@ -512,24 +477,9 @@ handle_preference_init_enum (void)
           continue;
         }
 
-      value = mateconf_client_get_string (default_client,
-                                       cursor->key,
-                                       &error);
-      cleanup_error (&error);
-
-      if (value==NULL)
-        {
-          ++cursor;
-          continue;
-        }
-
-      if (!mateconf_string_to_enum (cursor->symtab,
-                                 value,
-                                 (gint *) cursor->target))
-        meta_warning (_("MateConf key '%s' is set to an invalid value\n"),
-                      cursor->key);
-
-      g_free (value);
+      value = g_settings_get_enum (SETTINGS (cursor->schema),
+                                   cursor->key);
+      *cursor->target = value;
 
       ++cursor;
     }
@@ -543,7 +493,7 @@ handle_preference_init_bool (void)
   while (cursor->key!=NULL)
     {
       if (cursor->target!=NULL)
-        get_bool (cursor->key, cursor->target);
+        *cursor->target = g_settings_get_boolean (SETTINGS (cursor->schema), cursor->key);
 
       ++cursor;
     }
@@ -558,15 +508,12 @@ handle_preference_init_string (void)
 
   while (cursor->key!=NULL)
     {
-      char *value;
-      GError *error = NULL;
+      gchar *value;
       gboolean dummy = TRUE;
 
       /* the string "value" will be newly allocated */
-      value = mateconf_client_get_string (default_client,
-                                       cursor->key,
-                                       &error);
-      cleanup_error (&error);
+      value = g_settings_get_string (SETTINGS (cursor->schema),
+                                     cursor->key);
 
       if (cursor->handler)
         {
@@ -598,16 +545,14 @@ handle_preference_init_int (void)
   while (cursor->key!=NULL)
     {
       gint value;
-      GError *error = NULL;
 
-      value = mateconf_client_get_int (default_client,
-                                    cursor->key,
-                                    &error);
-      cleanup_error (&error);
+      value = g_settings_get_int (SETTINGS (cursor->schema),
+                                  cursor->key);
 
       if (value < cursor->minimum || value > cursor->maximum)
         {
-          meta_warning (_("%d stored in MateConf key %s is out of range %d to %d\n"),
+          /* FIXME: check if this can be avoided by GSettings */
+          meta_warning (_("%d stored in GSettings key %s is out of range %d to %d\n"),
                         value, cursor->key,  cursor->minimum, cursor->maximum);
           /* Former behaviour for out-of-range values was:
            *   - number of workspaces was clamped;
@@ -628,7 +573,7 @@ handle_preference_init_int (void)
 }
 
 static gboolean
-handle_preference_update_enum (const gchar *key, MateConfValue *value)
+handle_preference_update_enum (const gchar *key, GSettings *settings)
 {
   MetaEnumPreference *cursor = preferences_enum;
   gint old_value;
@@ -639,23 +584,6 @@ handle_preference_update_enum (const gchar *key, MateConfValue *value)
   if (cursor->key==NULL)
     /* Didn't recognise that key. */
     return FALSE;
-      
-  /* Setting it to null (that is, removing it) always means
-   * "don't change".
-   */
-
-  if (value==NULL)
-    return TRUE;
-
-  /* Check the type.  Enums are always strings. */
-
-  if (value->type != MATECONF_VALUE_STRING)
-    {
-      meta_warning (_("MateConf key \"%s\" is set to an invalid type\n"),
-                    key);
-      /* But we did recognise it. */
-      return TRUE;
-    }
 
   /* We need to know whether the value changes, so
    * store the current value away.
@@ -664,27 +592,7 @@ handle_preference_update_enum (const gchar *key, MateConfValue *value)
   old_value = * ((gint *) cursor->target);
   
   /* Now look it up... */
-
-  if (!mateconf_string_to_enum (cursor->symtab,
-                             mateconf_value_get_string (value),
-                             (gint *) cursor->target))
-    {
-      /*
-       * We found it, but it was invalid.  Complain.
-       *
-       * FIXME: This replicates the original behaviour, but in the future
-       * we might consider reverting invalid keys to their original values.
-       * (We know the old value, so we can look up a suitable string in
-       * the symtab.)
-       *
-       * (Empty comment follows so the translators don't see this.)
-       */
-
-      /*  */      
-      meta_warning (_("MateConf key '%s' is set to an invalid value\n"),
-                    key);
-      return TRUE;
-    }
+  *cursor->target = g_settings_get_int (settings, key);
 
   /* Did it change?  If so, tell the listeners about it. */
 
@@ -695,7 +603,7 @@ handle_preference_update_enum (const gchar *key, MateConfValue *value)
 }
 
 static gboolean
-handle_preference_update_bool (const gchar *key, MateConfValue *value)
+handle_preference_update_bool (const gchar *key, GSettings *settings)
 {
   MetaBoolPreference *cursor = preferences_bool;
   gboolean old_value;
@@ -710,29 +618,6 @@ handle_preference_update_bool (const gchar *key, MateConfValue *value)
   if (cursor->target==NULL)
     /* No work for us to do. */
     return TRUE;
-      
-  if (value==NULL)
-    {
-      /* Value was destroyed; let's get out of here. */
-
-      if (cursor->becomes_true_on_destruction)
-        /* This preserves the behaviour of the old system, but
-         * for all I know that might have been an oversight.
-         */
-        *((gboolean *)cursor->target) = TRUE;
-
-      return TRUE;
-    }
-
-  /* Check the type. */
-
-  if (value->type != MATECONF_VALUE_BOOL)
-    {
-      meta_warning (_("MateConf key \"%s\" is set to an invalid type\n"),
-                    key);
-      /* But we did recognise it. */
-      return TRUE;
-    }
 
   /* We need to know whether the value changes, so
    * store the current value away.
@@ -742,7 +627,7 @@ handle_preference_update_bool (const gchar *key, MateConfValue *value)
   
   /* Now look it up... */
 
-  *((gboolean *) cursor->target) = mateconf_value_get_bool (value);
+  *((gboolean *) cursor->target) = g_settings_get_boolean (settings, key);
 
   /* Did it change?  If so, tell the listeners about it. */
 
@@ -756,10 +641,10 @@ handle_preference_update_bool (const gchar *key, MateConfValue *value)
 }
 
 static gboolean
-handle_preference_update_string (const gchar *key, MateConfValue *value)
+handle_preference_update_string (const gchar *key, GSettings *settings)
 {
   MetaStringPreference *cursor = preferences_string;
-  const gchar *value_as_string;
+  gchar *value;
   gboolean inform_listeners = TRUE;
 
   while (cursor->key!=NULL && strcmp (key, cursor->key)!=0)
@@ -769,51 +654,39 @@ handle_preference_update_string (const gchar *key, MateConfValue *value)
     /* Didn't recognise that key. */
     return FALSE;
 
-  if (value==NULL)
-    return TRUE;
-
-  /* Check the type. */
-
-  if (value->type != MATECONF_VALUE_STRING)
-    {
-      meta_warning (_("MateConf key \"%s\" is set to an invalid type\n"),
-                    key);
-      /* But we did recognise it. */
-      return TRUE;
-    }
-
-  /* Docs: "The returned string is not a copy, don't try to free it." */
-  value_as_string = mateconf_value_get_string (value);
+  value = g_settings_get_string (settings, key);
 
   if (cursor->handler)
-    cursor->handler (cursor->pref, value_as_string, &inform_listeners);
+    cursor->handler (cursor->pref, value, &inform_listeners);
   else if (cursor->target)
     {
       if (*(cursor->target))
         g_free(*(cursor->target));
 
-      if (value_as_string!=NULL)
-        *(cursor->target) = g_strdup (value_as_string);
+      if (value!=NULL)
+        *(cursor->target) = g_strdup (value);
       else
         *(cursor->target) = NULL;
 
       inform_listeners =
-        (value_as_string==NULL && *(cursor->target)==NULL) ||
-        (value_as_string!=NULL && *(cursor->target)!=NULL &&
-         strcmp (value_as_string, *(cursor->target))==0);
+        (value==NULL && *(cursor->target)==NULL) ||
+        (value!=NULL && *(cursor->target)!=NULL &&
+         strcmp (value, *(cursor->target))==0);
     }
 
   if (inform_listeners)
     queue_changed (cursor->pref);
 
+  g_free (value);
+
   return TRUE;
 }
 
 static gboolean
-handle_preference_update_int (const gchar *key, MateConfValue *value)
+handle_preference_update_int (const gchar *key, GSettings *settings)
 {
   MetaIntPreference *cursor = preferences_int;
-  gint new_value;
+  gint value;
 
   while (cursor->key!=NULL && strcmp (key, cursor->key)!=0)
     ++cursor;
@@ -825,42 +698,24 @@ handle_preference_update_int (const gchar *key, MateConfValue *value)
   if (cursor->target==NULL)
     /* No work for us to do. */
     return TRUE;
-      
-  if (value==NULL)
+
+  value = g_settings_get_int (settings, key);
+
+  if (value < cursor->minimum || value > cursor->maximum)
     {
-      /* Value was destroyed. */
-
-      if (cursor->value_if_destroyed != METAINTPREFERENCE_NO_CHANGE_ON_DESTROY)
-        *((gint *)cursor->target) = cursor->value_if_destroyed;
-
-      return TRUE;
-    }
-
-  /* Check the type. */
-
-  if (value->type != MATECONF_VALUE_INT)
-    {
-      meta_warning (_("MateConf key \"%s\" is set to an invalid type\n"),
-                    key);
-      /* But we did recognise it. */
-      return TRUE;
-    }
-
-  new_value = mateconf_value_get_int (value);
-
-  if (new_value < cursor->minimum || new_value > cursor->maximum)
-    {
-      meta_warning (_("%d stored in MateConf key %s is out of range %d to %d\n"),
-                    new_value, cursor->key,
+      /* FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
+       * But some preferences depends on costants for minimum/maximum values */
+      meta_warning (_("%d stored in GSettings key %s is out of range %d to %d\n"),
+                    value, cursor->key,
                     cursor->minimum, cursor->maximum);
       return TRUE;
     }
 
   /* Did it change?  If so, tell the listeners about it. */
 
-  if (*cursor->target != new_value)
+  if (*cursor->target != value)
     {
-      *cursor->target = new_value;
+      *cursor->target = value;
       queue_changed (cursor->pref);
     }
 
@@ -868,7 +723,7 @@ handle_preference_update_int (const gchar *key, MateConfValue *value)
   
 }
 
-
+
 /****************************************************************************/
 /* Listeners.                                                               */
 /****************************************************************************/
@@ -977,70 +832,43 @@ queue_changed (MetaPreference pref)
     meta_topic (META_DEBUG_PREFS, "Change of pref %s was already pending\n",
                 meta_preference_to_string (pref));
 
-  /* add idle at priority below the mateconf notify idle */
+  /* add idle at priority below the GSettings notify idle */
+  /* FIXME is this needed for GSettings too? */
   if (changed_idle == 0)
     changed_idle = g_idle_add_full (META_PRIORITY_PREFS_NOTIFY,
                                     changed_idle_handler, NULL, NULL);
 }
 
-#else /* HAVE_MATECONF */
 
-void
-meta_prefs_add_listener (MetaPrefsChangedFunc func,
-                         gpointer             data)
-{
-  /* Nothing, because they have mateconf turned off */
-}
-
-void
-meta_prefs_remove_listener (MetaPrefsChangedFunc func,
-                            gpointer             data)
-{
-  /* Nothing, because they have mateconf turned off */
-}
-
-#endif /* HAVE_MATECONF */
-
-
 /****************************************************************************/
 /* Initialisation.                                                          */
 /****************************************************************************/
 
-#ifdef HAVE_MATECONF
-/* @@@ again, use glib's ability to tell you the size of the array */
-static gchar *mateconf_dirs_we_are_interested_in[] = {
-  "/apps/marco",
-  KEY_TERMINAL_DIR,
-  KEY_MATE_ACCESSIBILITY,
-  "/desktop/mate/peripherals/mouse",
-  "/desktop/mate/interface",
-  NULL,
-};
-#endif
-
 void
 meta_prefs_init (void)
 {
-#ifdef HAVE_MATECONF
-  GError *err = NULL;
-  gchar **mateconf_dir_cursor;
-  
-  if (default_client != NULL)
+  if (settings_general != NULL)
     return;
   
-  /* returns a reference which we hold forever */
-  default_client = mateconf_client_get_default ();
+  /* returns references which we hold forever */
+  settings_general = g_settings_new (KEY_GENERAL_SCHEMA);
+  settings_command = g_settings_new (KEY_COMMAND_SCHEMA);
+  settings_screen_bindings = g_settings_new (KEY_SCREEN_BINDINGS_SCHEMA);
+  settings_window_bindings = g_settings_new (KEY_WINDOW_BINDINGS_SCHEMA);
+  settings_workspace_names = g_settings_new (KEY_WORKSPACE_NAME_SCHEMA);
+  settings_mate_interface = g_settings_new (KEY_MATE_INTERFACE_SCHEMA);
+  settings_mate_terminal = g_settings_new (KEY_MATE_TERMINAL_SCHEMA);
+  settings_mate_mouse = g_settings_new (KEY_MATE_MOUSE_SCHEMA);
 
-  for (mateconf_dir_cursor=mateconf_dirs_we_are_interested_in;
-       *mateconf_dir_cursor!=NULL;
-       mateconf_dir_cursor++)
-    {
-      mateconf_client_add_dir (default_client,
-                            *mateconf_dir_cursor,
-                            MATECONF_CLIENT_PRELOAD_RECURSIVE,
-                            &err);
-      cleanup_error (&err);
-    }
+  settings_schemas = g_hash_table_new_full (g_str_hash, g_str_equal, NULL, g_object_unref);
+  g_hash_table_insert (settings_schemas, KEY_GENERAL_SCHEMA, settings_general);
+  g_hash_table_insert (settings_schemas, KEY_COMMAND_SCHEMA, settings_command);
+  g_hash_table_insert (settings_schemas, KEY_SCREEN_BINDINGS_SCHEMA, settings_screen_bindings);
+  g_hash_table_insert (settings_schemas, KEY_WINDOW_BINDINGS_SCHEMA, settings_window_bindings);
+  g_hash_table_insert (settings_schemas, KEY_WORKSPACE_NAME_SCHEMA, settings_workspace_names);
+  g_hash_table_insert (settings_schemas, KEY_MATE_INTERFACE_SCHEMA, settings_mate_interface);
+  g_hash_table_insert (settings_schemas, KEY_MATE_TERMINAL_SCHEMA, settings_mate_terminal);
+  g_hash_table_insert (settings_schemas, KEY_MATE_MOUSE_SCHEMA, settings_mate_mouse);
 
   /* Pick up initial values. */
 
@@ -1049,46 +877,28 @@ meta_prefs_init (void)
   handle_preference_init_string ();
   handle_preference_init_int ();
 
-  /* @@@ Is there any reason we don't do the add_dir here? */
-  for (mateconf_dir_cursor=mateconf_dirs_we_are_interested_in;
-       *mateconf_dir_cursor!=NULL;
-       mateconf_dir_cursor++)
-    {
-      mateconf_client_notify_add (default_client,
-                               *mateconf_dir_cursor,
-                               change_notify,
-                               NULL,
-                               NULL,
-                               &err);
-      cleanup_error (&err);
-    }
+  g_signal_connect (settings_general, "changed", G_CALLBACK (change_notify), NULL);
+  g_signal_connect (settings_command, "changed", G_CALLBACK (change_notify), NULL);
+  g_signal_connect (settings_screen_bindings, "changed", G_CALLBACK (change_notify), NULL);
+  g_signal_connect (settings_window_bindings, "changed", G_CALLBACK (change_notify), NULL);
+  g_signal_connect (settings_workspace_names, "changed", G_CALLBACK (change_notify), NULL);
 
-#else  /* HAVE_MATECONF */
+  g_signal_connect (settings_mate_interface, "changed::" KEY_MATE_INTERFACE_ACCESSIBILITY, G_CALLBACK (change_notify), NULL);
+  g_signal_connect (settings_mate_interface, "changed::" KEY_MATE_INTERFACE_ENABLE_ANIMATIONS, G_CALLBACK (change_notify), NULL);
+  g_signal_connect (settings_mate_terminal, "changed::" KEY_MATE_TERMINAL_COMMAND, G_CALLBACK (change_notify), NULL);
+  g_signal_connect (settings_mate_mouse, "changed::" KEY_MATE_MOUSE_CURSOR_THEME, G_CALLBACK (change_notify), NULL);
+  g_signal_connect (settings_mate_mouse, "changed::" KEY_MATE_MOUSE_CURSOR_SIZE, G_CALLBACK (change_notify), NULL);
 
-  /* Set defaults for some values that can't be set at initialization time of
-   * the static globals.  In the case of the theme, note that there is code
-   * elsewhere that will do everything possible to fallback to an existing theme
-   * if the one here does not exist.
-   */
-  titlebar_font = pango_font_description_from_string ("Sans Bold 10");
-  current_theme = g_strdup ("ClearlooksRe");
-  
-  init_button_layout();
-#endif /* HAVE_MATECONF */
-  
   init_bindings ();
   init_commands ();
   init_workspace_names ();
 }
 
-
 /****************************************************************************/
 /* Updates.                                                                 */
 /****************************************************************************/
 
-#ifdef HAVE_MATECONF
-
-gboolean (*preference_update_handler[]) (const gchar*, MateConfValue*) = {
+gboolean (*preference_update_handler[]) (const gchar*, GVariant*) = {
   handle_preference_update_enum,
   handle_preference_update_bool,
   handle_preference_update_string,
@@ -1097,18 +907,12 @@ gboolean (*preference_update_handler[]) (const gchar*, MateConfValue*) = {
 };
 
 static void
-change_notify (MateConfClient    *client,
-               guint           cnxn_id,
-               MateConfEntry     *entry,
-               gpointer        user_data)
+change_notify (GSettings *settings,
+               gchar *key,
+               gpointer user_data)
 {
-  const char *key;
-  MateConfValue *value;
   gint i=0;
   
-  key = mateconf_entry_get_key (entry);
-  value = mateconf_entry_get_value (entry);
-
   /* First, search for a handler that might know what to do. */
 
   /* FIXME: When this is all working, since the first item in every
@@ -1118,89 +922,53 @@ change_notify (MateConfClient    *client,
 
   while (preference_update_handler[i]!=NULL)
     {
-      if (preference_update_handler[i] (key, value))
-        goto out; /* Get rid of this eventually */
+      if (preference_update_handler[i] (key, settings))
+        return; /* Get rid of this eventually */
 
       i++;
     }
-  
-  if (g_str_has_prefix (key, KEY_WINDOW_BINDINGS_PREFIX) ||
-      g_str_has_prefix (key, KEY_SCREEN_BINDINGS_PREFIX))
+
+  gchar *schema_name;
+  g_object_get (settings, "schema-id", schema_name);
+
+  if (g_strcmp0 (schema_name, KEY_WINDOW_BINDINGS_SCHEMA) == 0 ||
+      g_strcmp0 (schema_name, KEY_SCREEN_BINDINGS_SCHEMA) == 0)
     {
-      if (g_str_has_suffix (key, KEY_LIST_BINDINGS_SUFFIX))
-        {
-          GSList *list;
+      gchar *str;
+      str = g_settings_get_string (settings, key);
 
-          if (value && value->type != MATECONF_VALUE_LIST)
-            {
-              meta_warning (_("MateConf key \"%s\" is set to an invalid type\n"),
-                            key);
-              goto out;
-            }
-
-          list = value ? mateconf_value_get_list (value) : NULL;
-
-          if (update_key_list_binding (key, list))
-            queue_changed (META_PREF_KEYBINDINGS);
-        }
-      else
-        {
-          const char *str;
-
-          if (value && value->type != MATECONF_VALUE_STRING)
-            {
-              meta_warning (_("MateConf key \"%s\" is set to an invalid type\n"),
-                            key);
-              goto out;
-            }
-
-          str = value ? mateconf_value_get_string (value) : NULL;
-
-          if (update_key_binding (key, str))
-            queue_changed (META_PREF_KEYBINDINGS);
-        }
+      if (update_key_binding (key, str))
+        queue_changed (META_PREF_KEYBINDINGS);
+    
+      g_free(str);
     }
-  else if (g_str_has_prefix (key, KEY_COMMAND_PREFIX))
+  else if (g_strcmp0 (schema_name, KEY_COMMAND_SCHEMA) == 0)
     {
-      const char *str;
-
-      if (value && value->type != MATECONF_VALUE_STRING)
-        {
-          meta_warning (_("MateConf key \"%s\" is set to an invalid type\n"),
-                        key);
-          goto out;
-        }
-
-      str = value ? mateconf_value_get_string (value) : NULL;
+      gchar *str;
+      str = g_settings_get_string (settings, key);
 
       if (update_command (key, str))
         queue_changed (META_PREF_COMMANDS);
+      
+      g_free(str);
     }
-  else if (g_str_has_prefix (key, KEY_WORKSPACE_NAME_PREFIX))
+  else if (g_strcmp0 (schema_name, KEY_WORKSPACE_NAME_SCHEMA))
     {
-      const char *str;
-
-      if (value && value->type != MATECONF_VALUE_STRING)
-        {
-          meta_warning (_("MateConf key \"%s\" is set to an invalid type\n"),
-                        key);
-          goto out;
-        }
-
-      str = value ? mateconf_value_get_string (value) : NULL;
+      gchar *str;
+        str = g_settings_get_string (settings, key);
 
       if (update_workspace_name (key, str))
         queue_changed (META_PREF_WORKSPACE_NAMES);
+      
+      g_free(str);
     }
   else
     {
+      /* Is this possible with GSettings? I dont think so! */
       meta_topic (META_DEBUG_PREFS, "Key %s doesn't mean anything to Marco\n",
                   key);
     }
-  
- out:
-  /* nothing */
-  return; /* AIX compiler wants something after a label like out: */
+  g_free (schema_name);
 }
 
 static void
@@ -1213,30 +981,6 @@ cleanup_error (GError **error)
       g_error_free (*error);
       *error = NULL;
     }
-}
-
-/* get_bool returns TRUE if *val is filled in, FALSE otherwise */
-/* @@@ probably worth moving this inline; only used once */
-static gboolean
-get_bool (const char *key, gboolean *val)
-{
-  GError     *err = NULL;
-  MateConfValue *value;
-  gboolean    filled_in = FALSE;
-
-  value = mateconf_client_get (default_client, key, &err);
-  cleanup_error (&err);
-  if (value)
-    {
-      if (value->type == MATECONF_VALUE_BOOL)
-        {
-          *val = mateconf_value_get_bool (value);
-          filled_in = TRUE;
-        }
-      mateconf_value_free (value);
-    }
-
-  return filled_in;
 }
 
 /**
@@ -1256,8 +1000,6 @@ maybe_give_disable_workarounds_warning (void)
                       "Some applications may not behave properly.\n"));
     }
 }
-
-#endif /* HAVE_MATECONF */
 
 MetaVirtualModifier
 meta_prefs_get_mouse_button_mods  (void)
@@ -1304,12 +1046,10 @@ meta_prefs_get_cursor_size (void)
   return cursor_size;
 }
 
-
+
 /****************************************************************************/
 /* Handlers for string preferences.                                         */
 /****************************************************************************/
-
-#ifdef HAVE_MATECONF
 
 static void
 titlebar_handler (MetaPreference pref,
@@ -1324,9 +1064,9 @@ titlebar_handler (MetaPreference pref,
   if (new_desc == NULL)
     {
       meta_warning (_("Could not parse font description "
-                      "\"%s\" from MateConf key %s\n"),
+                      "\"%s\" from GSettings key %s\n"),
                     string_value ? string_value : "(null)",
-                    KEY_TITLEBAR_FONT);
+                    KEY_GENERAL_TITLEBAR_FONT);
 
       *inform_listeners = FALSE;
 
@@ -1374,7 +1114,7 @@ mouse_button_mods_handler (MetaPreference pref,
   MetaVirtualModifier mods;
 
   meta_topic (META_DEBUG_KEYBINDINGS,
-              "Mouse button modifier has new mateconf value \"%s\"\n",
+              "Mouse button modifier has new GSettings value \"%s\"\n",
               string_value);
   if (string_value && meta_ui_parse_modifier (string_value, &mods))
     {
@@ -1383,7 +1123,7 @@ mouse_button_mods_handler (MetaPreference pref,
   else
     {
       meta_topic (META_DEBUG_KEYBINDINGS,
-                  "Failed to parse new mateconf value\n");
+                  "Failed to parse new GSettings value\n");
           
       meta_warning (_("\"%s\" found in configuration database is "
                       "not a valid value for mouse button modifier\n"),
@@ -1419,7 +1159,7 @@ button_layout_equal (const MetaButtonLayout *a,
 static MetaButtonFunction
 button_function_from_string (const char *str)
 {
-  /* FIXME: mateconf_string_to_enum is the obvious way to do this */
+  /* FIXME: g_settings_get_enum is the obvious way to do this */
 
   if (strcmp (str, "menu") == 0)
     return META_BUTTON_FUNCTION_MENU;
@@ -1646,8 +1386,6 @@ button_layout_handler (MetaPreference pref,
     }
 }
 
-#endif /* HAVE_MATECONF */
-
 const PangoFontDescription*
 meta_prefs_get_titlebar_font (void)
 {
@@ -1683,16 +1421,13 @@ meta_prefs_get_disable_workarounds (void)
   return disable_workarounds;
 }
 
-#ifdef HAVE_MATECONF
 #define MAX_REASONABLE_AUTO_RAISE_DELAY 10000
-  
-#endif /* HAVE_MATECONF */
 
 #ifdef WITH_VERBOSE_MODE
 const char*
 meta_preference_to_string (MetaPreference pref)
 {
-  /* FIXME: another case for mateconf_string_to_enum */
+  /* FIXME: another case for g_settings_get_enum */
   switch (pref)
     {
     case META_PREF_MOUSE_BUTTON_MODS:
@@ -1799,34 +1534,18 @@ meta_preference_to_string (MetaPreference pref)
 void
 meta_prefs_set_num_workspaces (int n_workspaces)
 {
-#ifdef HAVE_MATECONF
-  GError *err;
-  
-  if (default_client == NULL)
-    return;
-
   if (n_workspaces < 1)
     n_workspaces = 1;
   if (n_workspaces > MAX_REASONABLE_WORKSPACES)
     n_workspaces = MAX_REASONABLE_WORKSPACES;
   
-  err = NULL;
-  mateconf_client_set_int (default_client,
-                        KEY_NUM_WORKSPACES,
-                        n_workspaces,
-                        &err);
+  g_settings_set_int (settings_general,
+                      KEY_GENERAL_NUM_WORKSPACES,
+                      n_workspaces);
 
-  if (err)
-    {
-      meta_warning (_("Error setting number of workspaces to %d: %s\n"),
-                    num_workspaces,
-                    err->message);
-      g_error_free (err);
-    }
-#endif /* HAVE_MATECONF */
 }
 
-#define keybind(name, handler, param, flags, stroke, description) \
+#define keybind(name, handler, param, flags) \
   { #name, NULL, !!(flags & BINDING_REVERSES), !!(flags & BINDING_PER_WINDOW) },
 static MetaKeyPref key_bindings[] = {
 #include "all-keybindings.h"
@@ -1834,165 +1553,70 @@ static MetaKeyPref key_bindings[] = {
 };
 #undef keybind
 
-#ifndef HAVE_MATECONF
-
-/**
- * A type to map names of keybindings (such as "switch_windows")
- * to the binding strings themselves (such as "<Alt>Tab").
- * It exists only when MateConf is turned off in ./configure and
- * functions as a sort of ersatz MateConf.
- */
-typedef struct
-{
-  const char *name;
-  const char *keybinding;
-} MetaSimpleKeyMapping;
-
-/* FIXME: This would be neater if the array only contained entries whose
- * default keystroke was non-null.  You COULD do this by defining
- * ONLY_BOUND_BY_DEFAULT around various blocks at the cost of making
- * the bindings file way more complicated.  However, we could stop this being
- * data and move it into code.  Then the compiler would optimise away
- * the problem lines.
- */
-
-#define keybind(name, handler, param, flags, stroke, description) \
-  { #name, stroke },
-
-static MetaSimpleKeyMapping key_string_bindings[] = {
-#include "all-keybindings.h"
-  { NULL, NULL }
-};
-#undef keybind
-
-#endif /* NOT HAVE_MATECONF */
-
 static void
 init_bindings (void)
 {
-#ifdef HAVE_MATECONF
   const char *prefix[] = {
-    KEY_WINDOW_BINDINGS_PREFIX,
-    KEY_SCREEN_BINDINGS_PREFIX,
+    KEY_WINDOW_BINDINGS_SCHEMA,
+    KEY_SCREEN_BINDINGS_SCHEMA,
     NULL
   };
   int i;
-  GSList *list, *l, *list_val;
-  const char *str_val;
-  const char *key;
-  MateConfEntry *entry;
-  MateConfValue *value;
+  gchar **list;
+  gchar *str_val;
+  GSettings *bindings_settings;
 
   for (i = 0; prefix[i]; i++)
     {
-      list = mateconf_client_all_entries (default_client, prefix[i], NULL);
-      for (l = list; l; l = l->next)
+      bindings_settings = g_settings_new (prefix [i]);
+      list = g_settings_list_keys (bindings_settings);
+      while (*list != NULL)
         {
-          entry = l->data;
-          key = mateconf_entry_get_key (entry);
-          value = mateconf_entry_get_value (entry);
-          if (g_str_has_suffix (key, KEY_LIST_BINDINGS_SUFFIX))
-            {
-              list_val = mateconf_client_get_list (default_client, key, MATECONF_VALUE_STRING, NULL);
- 
-              update_key_list_binding (key, list_val);
-              g_slist_foreach (list_val, (GFunc)g_free, NULL);
-              g_slist_free (list_val);
-            }
-          else
-            {
-              str_val = mateconf_value_get_string (value);
-              update_key_binding (key, str_val);
-            }
-          mateconf_entry_free (entry);
+          str_val = g_settings_get_string (bindings_settings, *list);
+          update_key_binding (*list, str_val);
+          list++;
         }
-      g_slist_free (list);
     }
-#else /* HAVE_MATECONF */
-  int i = 0;
-  int which = 0;
-  while (key_string_bindings[i].name)
-    {
-      if (key_string_bindings[i].keybinding == NULL) {
-        ++i;
-        continue;
-      }
-    
-      while (strcmp(key_bindings[which].name, 
-                    key_string_bindings[i].name) != 0)
-        which++;
+  g_free (str_val);
+  g_object_unref (bindings_settings);
 
-      /* Set the binding */
-      update_binding (&key_bindings[which], 
-                      key_string_bindings[i].keybinding);
-
-      ++i;
-    }
-#endif /* HAVE_MATECONF */
 }
 
 static void
 init_commands (void)
 {
-#ifdef HAVE_MATECONF
-  GSList *list, *l;
-  const char *str_val;
-  const char *key;
-  MateConfEntry *entry;
-  MateConfValue *value;
+  gchar **list;
+  gchar *str_val;
 
-  list = mateconf_client_all_entries (default_client, KEY_COMMAND_DIRECTORY, NULL);
-  for (l = list; l; l = l->next)
+  list = g_settings_list_keys (settings_command);
+  while (*list != NULL)
     {
-      entry = l->data;
-      key = mateconf_entry_get_key (entry);
-      value = mateconf_entry_get_value (entry);
-      str_val = mateconf_value_get_string (value);
-      update_command (key, str_val);
-      mateconf_entry_free (entry);
+      str_val = g_settings_get_string (settings_command, *list);
+      update_command (*list, str_val);
+      list++;
     }
-  g_slist_free (list);
-#else
-  int i;
-  for (i = 0; i < MAX_COMMANDS; i++)
-    commands[i] = NULL;
-#endif /* HAVE_MATECONF */
+  g_free (str_val);
 }
 
 static void
 init_workspace_names (void)
 {
-#ifdef HAVE_MATECONF
-  GSList *list, *l;
-  const char *str_val;
-  const char *key;
-  MateConfEntry *entry;
-  MateConfValue *value;
+  gchar **list;
+  gchar *str_val;
 
-  list = mateconf_client_all_entries (default_client, KEY_WORKSPACE_NAME_DIRECTORY, NULL);
-  for (l = list; l; l = l->next)
+  list = g_settings_list_keys (settings_workspace_names);
+  while (*list != NULL)
     {
-      entry = l->data;
-      key = mateconf_entry_get_key (entry);
-      value = mateconf_entry_get_value (entry);
-      str_val = mateconf_value_get_string (value);
-      update_workspace_name (key, str_val);
-      mateconf_entry_free (entry);
+      str_val = g_settings_get_string (settings_workspace_names, *list);
+      update_workspace_name (*list, str_val);
+      list++;
     }
-  g_slist_free (list);
-#else
-  int i;
-  for (i = 0; i < MAX_REASONABLE_WORKSPACES; i++)
-    workspace_names[i] = g_strdup_printf (_("Workspace %d"), i + 1);
-
-  meta_topic (META_DEBUG_PREFS,
-              "Initialized workspace names\n");
-#endif /* HAVE_MATECONF */
+  g_free (str_val);
 }
 
 static gboolean
 update_binding (MetaKeyPref *binding,
-                const char  *value)
+                gchar  *value)
 {
   unsigned int keysym;
   unsigned int keycode;
@@ -2001,7 +1625,7 @@ update_binding (MetaKeyPref *binding,
   gboolean changed;
 
   meta_topic (META_DEBUG_KEYBINDINGS,
-              "Binding \"%s\" has new mateconf value \"%s\"\n",
+              "Binding \"%s\" has new GSettings value \"%s\"\n",
               binding->name, value ? value : "none");
   
   keysym = 0;
@@ -2012,7 +1636,7 @@ update_binding (MetaKeyPref *binding,
       if (!meta_ui_parse_accelerator (value, &keysym, &keycode, &mods))
         {
           meta_topic (META_DEBUG_KEYBINDINGS,
-                      "Failed to parse new mateconf value\n");
+                      "Failed to parse new GSettings value\n");
           meta_warning (_("\"%s\" found in configuration database is not a valid value for keybinding \"%s\"\n"),
                         value, binding->name);
 
@@ -2030,7 +1654,6 @@ update_binding (MetaKeyPref *binding,
   
    combo = binding->bindings->data;
 
-#ifdef HAVE_MATECONF
    /* Bug 329676: Bindings which can be shifted must not have no modifiers,
     * nor only SHIFT as a modifier.
     */
@@ -2040,8 +1663,6 @@ update_binding (MetaKeyPref *binding,
       (META_VIRTUAL_SHIFT_MASK == mods || 0 == mods))
     {
       gchar *old_setting;
-      gchar *key;
-      GError *err = NULL;
       
       meta_warning ("Cannot bind \"%s\" to %s: it needs a modifier "
                     "such as Ctrl or Alt.\n",
@@ -2072,30 +1693,18 @@ update_binding (MetaKeyPref *binding,
        * So we shouldn't blindly add KEY_SCREEN_BINDINGS_PREFIX
        * onto here.
        */
-      key = g_strconcat (KEY_SCREEN_BINDINGS_PREFIX, "/",
-                         binding->name, NULL);
-      
-      mateconf_client_set_string (mateconf_client_get_default (),
-                               key, old_setting, &err);
+      g_settings_set_string(settings_screen_bindings,
+                            binding->name,
+                            old_setting);
 
-      if (err)
-        {
-          meta_warning ("Error while reverting keybinding: %s\n",
-                        err->message);
-          g_error_free (err);
-          err = NULL;
-        }
-      
       g_free (old_setting);
-      g_free (key);
 
-      /* The call to mateconf_client_set_string() will cause this function
+      /* The call to g_settings_set_string() will cause this function
        * to be called again with the new value, so there's no need to
        * carry on.
        */
       return TRUE;
     }
-#endif
   
   changed = FALSE;
   if (keysym != combo->keysym ||
@@ -2122,119 +1731,6 @@ update_binding (MetaKeyPref *binding,
   return changed;
 }
 
-#ifdef HAVE_MATECONF
-static gboolean
-update_list_binding (MetaKeyPref *binding,
-                     GSList      *value,
-                     MetaStringListType type_of_value)
-{
-  unsigned int keysym;
-  unsigned int keycode;
-  MetaVirtualModifier mods;
-  gboolean changed = FALSE;
-  const gchar *pref_string;
-  GSList *pref_iterator = value, *tmp;
-  MetaKeyCombo *combo;
-
-  meta_topic (META_DEBUG_KEYBINDINGS,
-              "Binding \"%s\" has new mateconf value\n",
-              binding->name);
-  
-  if (binding->bindings == NULL)
-    {
-      /* We need to insert a dummy element into the list, because the first
-       * element is the one governed by update_binding. We only handle the
-       * subsequent elements.
-       */
-      MetaKeyCombo *blank = g_malloc0 (sizeof (MetaKeyCombo));
-      binding->bindings = g_slist_alloc();
-      binding->bindings->data = blank;
-    }
-       
-  /* Okay, so, we're about to provide a new list of key combos for this
-   * action. Delete any pre-existing list.
-   */
-  tmp = binding->bindings->next;
-  while (tmp)
-    {
-      g_free (tmp->data);
-      tmp = tmp->next;
-    }
-  g_slist_free (binding->bindings->next);
-  binding->bindings->next = NULL;
-  
-  while (pref_iterator)
-    {
-      keysym = 0;
-      keycode = 0;
-      mods = 0;
-
-      if (!pref_iterator->data)
-        {
-          pref_iterator = pref_iterator->next;
-          continue;
-        }
-
-      switch (type_of_value)
-        {
-        case META_LIST_OF_STRINGS:
-          pref_string = pref_iterator->data;
-          break;
-        case META_LIST_OF_MATECONFVALUE_STRINGS:
-          pref_string = mateconf_value_get_string (pref_iterator->data);
-          break;
-        default:
-          g_assert_not_reached ();
-        }
-      
-      if (!meta_ui_parse_accelerator (pref_string, &keysym, &keycode, &mods))
-        {
-          meta_topic (META_DEBUG_KEYBINDINGS,
-                      "Failed to parse new mateconf value\n");
-          meta_warning (_("\"%s\" found in configuration database is not a valid value for keybinding \"%s\"\n"),
-                        pref_string, binding->name);
-
-          /* Should we remove this value from the list in mateconf? */
-          pref_iterator = pref_iterator->next;
-          continue;
-        }
-
-      /* Bug 329676: Bindings which can be shifted must not have no modifiers,
-       * nor only SHIFT as a modifier.
-       */
-
-      if (binding->add_shift &&
-          0 != keysym &&
-          (META_VIRTUAL_SHIFT_MASK == mods || 0 == mods))
-        {
-          meta_warning ("Cannot bind \"%s\" to %s: it needs a modifier "
-                        "such as Ctrl or Alt.\n",
-                        binding->name,
-                        pref_string);
-
-          /* Should we remove this value from the list in mateconf? */
-
-          pref_iterator = pref_iterator->next;
-          continue;
-        }
-  
-      changed = TRUE;
-
-      combo = g_malloc0 (sizeof (MetaKeyCombo));
-      combo->keysym = keysym;
-      combo->keycode = keycode;
-      combo->modifiers = mods;
-      binding->bindings->next = g_slist_prepend (binding->bindings->next, combo);
-
-      meta_topic (META_DEBUG_KEYBINDINGS,
-                      "New keybinding for \"%s\" is keysym = 0x%x keycode = 0x%x mods = 0x%x\n",
-                      binding->name, keysym, keycode, mods);
-
-      pref_iterator = pref_iterator->next;
-    }  
-  return changed;
-}
-
 static const gchar*
 relative_key (const gchar* key)
 {
@@ -2253,7 +1749,7 @@ relative_key (const gchar* key)
 static gboolean
 find_and_update_binding (MetaKeyPref *bindings, 
                          const char  *name,
-                         const char  *value)
+                         gchar  *value)
 {
   const char *key;
   int i;
@@ -2276,45 +1772,9 @@ find_and_update_binding (MetaKeyPref *bindings,
 
 static gboolean
 update_key_binding (const char *name,
-                       const char *value)
+                    gchar *value)
 {
   return find_and_update_binding (key_bindings, name, value);
-}
-
-static gboolean
-find_and_update_list_binding (MetaKeyPref *bindings,
-                              const char  *name,
-                              GSList      *value)
-{
-  const char *key;
-  int i;
-  gchar *name_without_suffix = g_strdup(name);
-
-  name_without_suffix[strlen(name_without_suffix) - strlen(KEY_LIST_BINDINGS_SUFFIX)] = 0;
-
-  if (*name_without_suffix == '/')
-    key = relative_key (name_without_suffix);
-  else
-    key = name_without_suffix;
-
-  i = 0;
-  while (bindings[i].name &&
-         strcmp (key, bindings[i].name) != 0)
-    ++i;
-
-  g_free (name_without_suffix);
-
-  if (bindings[i].name)
-    return update_list_binding (&bindings[i], value, META_LIST_OF_MATECONFVALUE_STRINGS);
-  else
-    return FALSE;
-}
-
-static gboolean
-update_key_list_binding (const char *name,
-                            GSList *value)
-{
-  return find_and_update_list_binding (key_bindings, name, value);
 }
 
 static gboolean
@@ -2385,8 +1845,6 @@ update_command (const char  *name,
   return TRUE;
 }
 
-#endif /* HAVE_MATECONF */
-
 const char*
 meta_prefs_get_command (int i)
 {
@@ -2396,7 +1854,7 @@ meta_prefs_get_command (int i)
 }
 
 char*
-meta_prefs_get_mateconf_key_for_command (int i)
+meta_prefs_get_settings_key_for_command (int i)
 {
   char *key;
 
@@ -2406,7 +1864,7 @@ meta_prefs_get_mateconf_key_for_command (int i)
       key = g_strdup (KEY_COMMAND_PREFIX "screenshot");
       break;
     case WIN_SCREENSHOT_COMMAND_IDX:
-      key = g_strdup (KEY_COMMAND_PREFIX "window_screenshot");
+      key = g_strdup (KEY_COMMAND_PREFIX "window-screenshot");
       break;
     default:
       key = g_strdup_printf (KEY_COMMAND_PREFIX"%d", i + 1);
@@ -2423,12 +1881,11 @@ meta_prefs_get_terminal_command (void)
 }
 
 const char*
-meta_prefs_get_mateconf_key_for_terminal_command (void)
+meta_prefs_get_settings_key_for_terminal_command (void)
 {
-  return KEY_TERMINAL_COMMAND;
+  return KEY_MATE_TERMINAL_COMMAND;
 }
 
-#ifdef HAVE_MATECONF
 static gboolean
 update_workspace_name (const char  *name,
                        const char  *value)
@@ -2436,11 +1893,11 @@ update_workspace_name (const char  *name,
   char *p;
   int i;
   
-  p = strrchr (name, '_');
+  p = strrchr (name, '-');
   if (p == NULL)
     {
       meta_topic (META_DEBUG_PREFS,
-                  "Workspace name %s has no underscore?\n", name);
+                  "Workspace name %s has no dash?\n", name);
       return FALSE;
     }
   
@@ -2505,7 +1962,6 @@ update_workspace_name (const char  *name,
   
   return TRUE;
 }
-#endif /* HAVE_MATECONF */
 
 const char*
 meta_prefs_get_workspace_name (int i)
@@ -2525,9 +1981,7 @@ void
 meta_prefs_change_workspace_name (int         i,
                                   const char *name)
 {
-#ifdef HAVE_MATECONF
   char *key;
-  GError *err;
   
   g_return_if_fail (i >= 0 && i < MAX_REASONABLE_WORKSPACES);
 
@@ -2535,12 +1989,6 @@ meta_prefs_change_workspace_name (int         i,
               "Changing name of workspace %d to %s\n",
               i, name ? name : "none");
 
-  /* This is a bad hack. We have to treat empty string as
-   * "unset" because the root window property can't contain
-   * null. So it gets empty string instead and we don't want
-   * that to result in setting the empty string as a value that
-   * overrides "unset".
-   */
   if (name && *name == '\0')
     name = NULL;
   
@@ -2553,36 +2001,22 @@ meta_prefs_change_workspace_name (int         i,
       return;
     }
   
-  key = mateconf_key_for_workspace_name (i);
+  key = settings_key_for_workspace_name (i);
 
-  err = NULL;
   if (name != NULL)
-    mateconf_client_set_string (default_client,
-                             key, name,
-                             &err);
+    g_settings_set_string (settings_workspace_names,
+                          key,
+                          name);
   else
-    mateconf_client_unset (default_client,
-                        key, &err);
+    g_settings_set_string (settings_workspace_names,
+                          key,
+                          "");
 
-  
-  if (err)
-    {
-      meta_warning (_("Error setting name for workspace %d to \"%s\": %s\n"),
-                    i, name ? name : "none",
-                    err->message);
-      g_error_free (err);
-    }
-  
   g_free (key);
-#else
-  g_free (workspace_names[i]);
-  workspace_names[i] = g_strdup (name);
-#endif /* HAVE_MATECONF */
 }
 
-#ifdef HAVE_MATECONF
 static char*
-mateconf_key_for_workspace_name (int i)
+settings_key_for_workspace_name (int i)
 {
   char *key;
   
@@ -2590,7 +2024,6 @@ mateconf_key_for_workspace_name (int i)
   
   return key;
 }
-#endif /* HAVE_MATECONF */
 
 void
 meta_prefs_get_button_layout (MetaButtonLayout *button_layout_p)
@@ -2767,85 +2200,19 @@ meta_prefs_get_force_fullscreen (void)
 void
 meta_prefs_set_compositing_manager (gboolean whether)
 {
-#ifdef HAVE_MATECONF
-  GError *err = NULL;
+  g_settings_set_boolean (settings_general,
+                          KEY_GENERAL_COMPOSITOR,
+                          whether);
 
-  mateconf_client_set_bool (default_client,
-                         KEY_COMPOSITOR,
-                         whether,
-                         &err);
-
-  if (err)
-    {
-      meta_warning (_("Error setting compositor status: %s\n"),
-                    err->message);
-      g_error_free (err);
-    }
-#else
-  compositing_manager = whether;
-#endif
 }
 
 void
 meta_prefs_set_compositing_fast_alt_tab(gboolean whether)
 {
-#ifdef HAVE_MATECONF
-    GError *err = NULL;
-
-    mateconf_client_set_bool (default_client,
-                            KEY_COMPOSITOR_FAST_ALT_TAB,
-                            whether,
-                            &err);
-    
-    if (err)
-    {
-        meta_warning (_("Error setting compositor fast alt-tab status: %s\n"),
-                      err->message);
-        g_error_free (err);
-    }
-#else
-    compositing_fast_alt_tab = whether;
-#endif
+    g_settings_set_boolean (settings_general,
+                            KEY_GENERAL_COMPOSITOR_FAST_ALT_TAB,
+                            whether);
 }
-
-#ifndef HAVE_MATECONF
-static void
-init_button_layout(void)
-{
-  MetaButtonLayout button_layout_ltr = {
-    {    
-      /* buttons in the group on the left side */
-      META_BUTTON_FUNCTION_MENU,
-      META_BUTTON_FUNCTION_LAST
-    },
-    {
-      /* buttons in the group on the right side */
-      META_BUTTON_FUNCTION_MINIMIZE,
-      META_BUTTON_FUNCTION_MAXIMIZE,
-      META_BUTTON_FUNCTION_CLOSE,
-      META_BUTTON_FUNCTION_LAST
-    }
-  };
-  MetaButtonLayout button_layout_rtl = {
-    {    
-      /* buttons in the group on the left side */
-      META_BUTTON_FUNCTION_CLOSE,
-      META_BUTTON_FUNCTION_MAXIMIZE,
-      META_BUTTON_FUNCTION_MINIMIZE,
-      META_BUTTON_FUNCTION_LAST
-    },
-    {
-      /* buttons in the group on the right side */
-      META_BUTTON_FUNCTION_MENU,
-      META_BUTTON_FUNCTION_LAST
-    }
-  };
-
-  button_layout = meta_ui_get_direction() == META_UI_DIRECTION_LTR ?
-    button_layout_ltr : button_layout_rtl;
-};
-
-#endif
 
 void
 meta_prefs_set_force_fullscreen (gboolean whether)

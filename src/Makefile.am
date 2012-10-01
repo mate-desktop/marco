@@ -142,15 +142,6 @@ libmarcoinclude_HEADERS = \
 marco_theme_viewer_SOURCES= \
 	ui/theme-viewer.c
 
-schema_bindings_SOURCES = \
-	core/schema-bindings.c \
-	marco.schemas.in.in
-
-schema_bindings_LDADD = @MARCO_LIBS@
-marco.schemas.in: schema_bindings ${srcdir}/marco.schemas.in.in
-	@echo Generating keybinding schemas... ${srcdir}/marco.schemas.in.in
-	${builddir}/schema_bindings ${srcdir}/marco.schemas.in.in ${builddir}/marco.schemas.in
-
 bin_PROGRAMS=marco marco-theme-viewer
 
 EFENCE=
@@ -161,7 +152,7 @@ testboxes_SOURCES=include/util.h core/util.c include/boxes.h core/boxes.c core/t
 testgradient_SOURCES=ui/gradient.h ui/gradient.c ui/testgradient.c
 testasyncgetprop_SOURCES=core/async-getprop.h core/async-getprop.c core/testasyncgetprop.c
 
-noinst_PROGRAMS=testboxes testgradient testasyncgetprop schema_bindings
+noinst_PROGRAMS=testboxes testgradient testasyncgetprop
 
 testboxes_LDADD= @MARCO_LIBS@
 testgradient_LDADD= @MARCO_LIBS@
@@ -179,9 +170,8 @@ wmproperties_in_files=marco-wm.desktop.in
 wmproperties_files=$(wmproperties_in_files:.desktop.in=.desktop)
 wmproperties_DATA = $(wmproperties_files)
 
-schemadir = @MATECONF_SCHEMA_FILE_DIR@
-schema_in_files = marco.schemas.in
-schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+gsettings_SCHEMAS = org.mate.marco.gschema.xml
+@GSETTINGS_RULES@
 
 @INTLTOOL_XML_NOMERGE_RULE@
 
@@ -189,21 +179,10 @@ xmldir = @MATE_KEYBINDINGS_KEYSDIR@
 xml_in_files = 50-marco-desktop-key.xml.in 50-marco-key.xml.in
 xml_DATA = $(xml_in_files:.xml.in=.xml)
 
-@INTLTOOL_SCHEMAS_RULE@
-
-if MATECONF_SCHEMAS_INSTALL
-install-data-local:
-	MATECONF_CONFIG_SOURCE=$(MATECONF_SCHEMA_CONFIG_SOURCE) $(MATECONFTOOL) --makefile-install-rule $(schema_DATA)
-else
-install-data-local:
-endif
-
 BUILT_SOURCES =
 CLEANFILES = \
 	marco.desktop \
 	marco-wm.desktop \
-	marco.schemas \
-	marco.schemas.in \
 	50-marco-desktop-key.xml \
 	50-marco-key.xml
 
@@ -214,10 +193,9 @@ pkgconfig_DATA = libmarco-private.pc
 EXTRA_DIST=$(desktopfiles_files) \
 	$(wmproperties_files) \
 	$(IMAGES) \
-	$(schema_DATA) \
+	$(gsettings_SCHEMAS) \
 	$(desktopfiles_in_files) \
 	$(wmproperties_in_files) \
-	$(schema_in_files) \
 	$(xml_in_files) \
 	libmarco-private.pc.in
 

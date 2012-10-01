@@ -42,10 +42,10 @@ Minimal Building/Testing Environment
   build a development version of Marco -- odds are, you may be able
   to build marco from GIT without building any other modules.
 
-  As long as you have gtk+ >= 2.10 and MateConf with your distro (gtk+ >=
-  2.6 if you manually revert the change from bug 348633), you should
-  be able to install your distro's development packages
-  (e.g. gtk2-devel, MateConf-devel, startup-notification-devel on
+  As long as you have gtk+ >= 2.10 and GIO >= 2.25.10 with your distro
+  (gtk+ >= 2.6 if you manually revert the change from bug 348633), you
+  should be able to install your distro's development packages
+  (e.g. gtk2-devel, glib-devel, startup-notification-devel on
   Fedora; also, remember to install the mate-common package which is
   needed for building git versions of Mate modules like Marco) as
   well as the standard development tools (gcc, autoconf, automake,
