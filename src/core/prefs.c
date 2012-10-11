@@ -929,7 +929,7 @@ change_notify (GSettings *settings,
     }
 
   gchar *schema_name;
-  g_object_get (settings, "schema-id", schema_name);
+  g_object_get (settings, "schema-id", schema_name, NULL);
 
   if (g_strcmp0 (schema_name, KEY_WINDOW_BINDINGS_SCHEMA) == 0 ||
       g_strcmp0 (schema_name, KEY_SCREEN_BINDINGS_SCHEMA) == 0)
