@@ -200,9 +200,11 @@ struct _MetaFrameGeometry
   MetaButtonSpace unstick_rect;
 
 #define MAX_MIDDLE_BACKGROUNDS (MAX_BUTTONS_PER_CORNER - 2)
+  GdkRectangle left_single_background;
   GdkRectangle left_left_background;
   GdkRectangle left_middle_backgrounds[MAX_MIDDLE_BACKGROUNDS];
   GdkRectangle left_right_background;
+  GdkRectangle right_single_background;
   GdkRectangle right_left_background;
   GdkRectangle right_middle_backgrounds[MAX_MIDDLE_BACKGROUNDS];
   GdkRectangle right_right_background;

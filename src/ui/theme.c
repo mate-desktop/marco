@@ -705,8 +705,14 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
 
   for (i = 0; i < n_left; i++)
     {
-      if (i == 0) /* prefer left background if only one button */
-        left_bg_rects[i] = &fgeom->left_left_background;
+      if (i == 0) /* For the first button (From left to right) */
+        {
+          if (n_left > 1) /* Set left_left_background
+                             if we have more than one button */
+            left_bg_rects[i] = &fgeom->left_left_background;
+          else /* No background if we have only one single button */
+            left_bg_rects[i] = &fgeom->left_single_background;
+        }
       else if (i == (n_left - 1))
         left_bg_rects[i] = &fgeom->left_right_background;
       else
@@ -715,9 +721,14 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
 
   for (i = 0; i < n_right; i++)
     {
-      /* prefer right background if only one button */
-      if (i == (n_right - 1))
-        right_bg_rects[i] = &fgeom->right_right_background;
+      if (i == (n_right - 1)) /* For the first button (From right to left) */
+        {
+          if (n_right > 1) /* Set right_right_background
+                              if we have more than one button */
+            right_bg_rects[i] = &fgeom->right_right_background;
+          else /* No background if we have only one single button */
+            right_bg_rects[i] = &fgeom->right_single_background;
+        }
       else if (i == 0)
         right_bg_rects[i] = &fgeom->right_left_background;
       else
@@ -839,9 +850,9 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
       if (flags & META_FRAME_MAXIMIZED)
         {
           rect->clickable.x = rect->visible.x;
-          rect->clickable.y = 0;
-          rect->clickable.width = rect->visible.width;
-          rect->clickable.height = button_height + button_y;
+          rect->clickable.y = rect->visible.y;
+          rect->clickable.width = button_width;
+          rect->clickable.height = button_height;
 
           if (i == n_right - 1)
             rect->clickable.width += layout->right_titlebar_edge + layout->right_width + layout->button_border.right;
@@ -877,22 +888,13 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
 
       if (flags & META_FRAME_MAXIMIZED)
         {
-          if (i==0)
-            {
-              rect->clickable.x = 0;
-              rect->clickable.width = button_width + x;
-            }
-          else
-            {
-              rect->clickable.x = rect->visible.x;
-              rect->clickable.width = button_width;
-            }
-
-            rect->clickable.y = 0;
-            rect->clickable.height = button_height + button_y;
-          }
-        else
-          g_memmove (&(rect->clickable), &(rect->visible), sizeof(rect->clickable));
+          rect->clickable.x = rect->visible.x;
+          rect->clickable.y = rect->visible.y;
+          rect->clickable.width = button_width;
+          rect->clickable.height = button_height;
+        }
+      else
+        g_memmove (&(rect->clickable), &(rect->visible), sizeof(rect->clickable));
 
 
       x = rect->visible.x + rect->visible.width + layout->button_border.right;
@@ -4542,7 +4544,7 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
               /* MIDDLE_BACKGROUND type may get drawn more than once */
               if ((j == META_BUTTON_TYPE_RIGHT_MIDDLE_BACKGROUND ||
                    j == META_BUTTON_TYPE_LEFT_MIDDLE_BACKGROUND) &&
-                  middle_bg_offset < MAX_MIDDLE_BACKGROUNDS)
+                  (middle_bg_offset < (MAX_MIDDLE_BACKGROUNDS - 1)))
                 {
                   ++middle_bg_offset;
                 }
