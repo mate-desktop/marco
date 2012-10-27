@@ -176,7 +176,10 @@ gsettings_SCHEMAS = org.mate.marco.gschema.xml
 @INTLTOOL_XML_NOMERGE_RULE@
 
 xmldir = @MATE_KEYBINDINGS_KEYSDIR@
-xml_in_files = 50-marco-desktop-key.xml.in 50-marco-key.xml.in
+xml_in_files = \
+	50-marco-desktop-key.xml.in \
+	50-marco-window-key.xml.in \
+	50-marco-global-key.xml.in
 xml_DATA = $(xml_in_files:.xml.in=.xml)
 
 BUILT_SOURCES =
