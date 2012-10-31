@@ -31,7 +31,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define MAX_REASONABLE_WORKSPACES 36
+#define MAX_REASONABLE_WORKSPACES 16
 
 #define MAX_COMMANDS (32 + NUM_EXTRA_COMMANDS)
 #define NUM_EXTRA_COMMANDS 2

@@ -111,6 +111,7 @@
       <description>A font description string describing a font for window titlebars. The size from the description will only be used if the titlebar_font_size option is set to 0. Also, this option is disabled if the titlebar_uses_desktop_font option is set to true.</description>
     </key>
     <key name="num-workspaces" type="i">
+      <range min="1" max="16"/>
       <default>4</default>
       <summary>Number of workspaces</summary>
       <description>Number of workspaces. Must be more than zero, and has a fixed maximum to prevent making the desktop unusable by accidentally asking for too many workspaces.</description>
