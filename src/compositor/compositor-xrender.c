@@ -3059,6 +3059,8 @@ meta_compositor_xrender_new (MetaDisplay *display)
   xrc->atom_net_wm_window_type_toolbar = atoms[12];
   xrc->atom_net_wm_window_type_dropdown_menu = atoms[13];
   xrc->atom_net_wm_window_type_tooltip = atoms[14];
+  xrc->show_redraw = FALSE;
+  xrc->debug = FALSE;
 
 #ifdef USE_IDLE_REPAINT
   meta_verbose ("Using idle repaint\n");
