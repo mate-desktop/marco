@@ -1272,8 +1272,8 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
     {
       MetaWindow *window;
       MetaRectangle r;
-      GdkPixbuf *win_pixbuf;
-      int width, height;
+      GdkPixbuf *win_pixbuf = NULL;
+      int width = 0, height = 0;
 
       window = tmp->data;
       

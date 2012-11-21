@@ -81,6 +81,12 @@ print_backtrace (void)
 }
 #endif
 
+#ifdef __GNUC__
+#define UNUSED_VARIABLE __attribute__ ((unused))
+#else
+#define UNUSED_VARIABLE
+#endif
+
 static int error_trap_depth = 0;
 
 static int
@@ -416,7 +422,7 @@ run_speed_comparison (Display *xdisplay,
       
       while ((task = ag_get_next_completed_task (xdisplay)))
         {
-          int result;
+          int UNUSED_VARIABLE result;
           Atom actual_type;
           int actual_format;
           unsigned long n_items;

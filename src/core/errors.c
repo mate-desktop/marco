@@ -29,6 +29,12 @@
 #include <stdlib.h>
 #include <gdk/gdk.h>
 
+#ifdef __GNUC__
+#define UNUSED_VARIABLE __attribute__ ((unused))
+#else
+#define UNUSED_VARIABLE
+#endif
+
 static int x_error_handler    (Display     *display,
                                XErrorEvent *error);
 static int x_io_error_handler (Display     *display);
@@ -121,7 +127,7 @@ meta_error_trap_pop_internal  (MetaDisplay *display,
        * assumes that there are no pending GDK traps from GDK itself
        */
       
-      int (* restored_error_handler) (Display     *,
+      int UNUSED_VARIABLE (* restored_error_handler) (Display     *,
                                       XErrorEvent *);
 
       restored_error_handler = XSetErrorHandler (x_error_handler);

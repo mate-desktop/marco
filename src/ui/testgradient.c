@@ -23,6 +23,12 @@
 #include "gradient.h"
 #include <gtk/gtk.h>
 
+#ifdef __GNUC__
+#define UNUSED_VARIABLE __attribute__ ((unused))
+#else
+#define UNUSED_VARIABLE
+#endif
+
 typedef void (* RenderGradientFunc) (GdkDrawable *drawable,
                                      cairo_t     *cr,
                                      int          width,
@@ -294,7 +300,7 @@ create_gradient_window (const char *title,
 static void
 meta_gradient_test (void)
 {
-  GtkWidget *window;
+  GtkWidget UNUSED_VARIABLE *window;
 
   window = create_gradient_window ("Simple vertical",
                                    render_vertical_func);

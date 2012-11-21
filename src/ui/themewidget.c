@@ -24,6 +24,12 @@
 #include "themewidget.h"
 #include <math.h>
 
+#ifdef __GNUC__
+#define UNUSED_VARIABLE __attribute__ ((unused))
+#else
+#define UNUSED_VARIABLE
+#endif
+
 static void meta_area_class_init   (MetaAreaClass  *klass);
 static void meta_area_init         (MetaArea       *area);
 static void meta_area_size_request (GtkWidget      *widget,
@@ -64,7 +70,7 @@ static void
 meta_area_class_init (MetaAreaClass *class)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (class);
-  GtkObjectClass *object_class;
+  GtkObjectClass UNUSED_VARIABLE *object_class;
   GtkWidgetClass *widget_class;
 
   object_class = (GtkObjectClass*) class;

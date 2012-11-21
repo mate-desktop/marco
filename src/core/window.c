@@ -53,6 +53,12 @@
 #include <X11/extensions/shape.h>
 #endif
 
+#ifdef __GNUC__
+#define UNUSED_VARIABLE __attribute__ ((unused))
+#else
+#define UNUSED_VARIABLE
+#endif
+
 static int destroying_windows_disallowed = 0;
 
 
@@ -5204,7 +5210,7 @@ meta_window_client_message (MetaWindow *window,
   else if (event->xclient.message_type ==
            display->atom__NET_MOVERESIZE_WINDOW)
     {
-      int gravity, source;
+      int gravity, UNUSED_VARIABLE source;
       guint value_mask;
 
       gravity = (event->xclient.data.l[0] & 0xff);
@@ -5252,7 +5258,7 @@ meta_window_client_message (MetaWindow *window,
   else if (event->xclient.message_type ==
            display->atom__NET_WM_FULLSCREEN_MONITORS)
     {
-      MetaClientType source_indication;
+      MetaClientType UNUSED_VARIABLE source_indication;
       gulong top, bottom, left, right;
 
       meta_verbose ("_NET_WM_FULLSCREEN_MONITORS request for window '%s'\n",
@@ -5463,7 +5469,7 @@ static gboolean
 process_property_notify (MetaWindow     *window,
                          XPropertyEvent *event)
 {
-  Window xid = window->xwindow;
+  Window UNUSED_VARIABLE xid = window->xwindow;
 
   if (meta_is_verbose ()) /* avoid looking up the name if we don't have to */
     {
@@ -6705,7 +6711,7 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
 {
   MetaRectangle  titlebar_rect;
   GList         *onscreen_region;
-  int            titlebar_size;
+  int            UNUSED_VARIABLE titlebar_size;
   gboolean       is_onscreen;
 
   const int min_height_needed  = 8;
