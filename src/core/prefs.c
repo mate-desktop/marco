@@ -143,7 +143,10 @@ static char* settings_key_for_workspace_name (int i);
 
 static void queue_changed (MetaPreference  pref);
 
+#if 0
 static void     cleanup_error             (GError **error);
+#endif
+
 static void maybe_give_disable_workarounds_warning (void);
 
 static void titlebar_handler (MetaPreference, const gchar*, gboolean*);
@@ -275,37 +278,37 @@ static MetaEnumPreference preferences_enum[] =
     { "focus-new-windows",
       KEY_GENERAL_SCHEMA,
       META_PREF_FOCUS_NEW_WINDOWS,
-      &focus_new_windows,
+      (gint *) &focus_new_windows,
     },
     { "focus-mode",
       KEY_GENERAL_SCHEMA,
       META_PREF_FOCUS_MODE,
-      &focus_mode,
+      (gint *) &focus_mode,
     },
     { "wrap-style",
       KEY_GENERAL_SCHEMA,
       META_PREF_WRAP_STYLE,
-      &wrap_style,
+      (gint *) &wrap_style,
     },
     { "visual-bell-type",
       KEY_GENERAL_SCHEMA,
       META_PREF_VISUAL_BELL_TYPE,
-      &visual_bell_type,
+      (gint *) &visual_bell_type,
     },
     { "action-double-click-titlebar",
       KEY_GENERAL_SCHEMA,
       META_PREF_ACTION_DOUBLE_CLICK_TITLEBAR,
-      &action_double_click_titlebar,
+      (gint *) &action_double_click_titlebar,
     },
     { "action-middle-click-titlebar",
       KEY_GENERAL_SCHEMA,
       META_PREF_ACTION_MIDDLE_CLICK_TITLEBAR,
-      &action_middle_click_titlebar,
+      (gint *) &action_middle_click_titlebar,
     },
     { "action-right-click-titlebar",
       KEY_GENERAL_SCHEMA,
       META_PREF_ACTION_RIGHT_CLICK_TITLEBAR,
-      &action_right_click_titlebar,
+      (gint *) &action_right_click_titlebar,
     },
     { NULL, NULL, 0, NULL },
   };
@@ -898,7 +901,7 @@ meta_prefs_init (void)
 /* Updates.                                                                 */
 /****************************************************************************/
 
-gboolean (*preference_update_handler[]) (const gchar*, GVariant*) = {
+gboolean (*preference_update_handler[]) (const gchar*, GSettings*) = {
   handle_preference_update_enum,
   handle_preference_update_bool,
   handle_preference_update_string,
@@ -975,6 +978,7 @@ change_notify (GSettings *settings,
   g_free (schema_name);
 }
 
+#if 0
 static void
 cleanup_error (GError **error)
 {
@@ -986,6 +990,7 @@ cleanup_error (GError **error)
       *error = NULL;
     }
 }
+#endif
 
 /**
  * Special case: give a warning the first time disable_workarounds
@@ -1566,9 +1571,9 @@ init_bindings (void)
     NULL
   };
   int i;
-  gchar **list;
-  gchar *str_val;
-  GSettings *bindings_settings;
+  gchar **list = NULL;
+  gchar *str_val = NULL;
+  GSettings *bindings_settings = NULL;
 
   for (i = 0; prefix[i]; i++)
     {
@@ -1589,8 +1594,8 @@ init_bindings (void)
 static void
 init_commands (void)
 {
-  gchar **list;
-  gchar *str_val;
+  gchar **list = NULL;
+  gchar *str_val = NULL;
 
   list = g_settings_list_keys (settings_command);
   while (*list != NULL)
@@ -1605,8 +1610,8 @@ init_commands (void)
 static void
 init_workspace_names (void)
 {
-  gchar **list;
-  gchar *str_val;
+  gchar **list = NULL;
+  gchar *str_val = NULL;
 
   list = g_settings_list_keys (settings_workspace_names);
   while (*list != NULL)
