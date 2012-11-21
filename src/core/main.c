@@ -69,6 +69,12 @@
 #include <time.h>
 #include <unistd.h>
 
+#ifdef __GNUC__
+#define UNUSED_VARIABLE __attribute__ ((unused))
+#else
+#define UNUSED_VARIABLE
+#endif
+
 /**
  * The exit code we'll return to our parent process when we eventually die.
  */
@@ -376,7 +382,7 @@ sigterm_handler (int signum)
 {
   if (sigterm_pipe_fds[1] >= 0)
     {
-      int dummy;
+      int UNUSED_VARIABLE dummy;
 
       dummy = write (sigterm_pipe_fds[1], "", 1);
       close (sigterm_pipe_fds[1]);
@@ -415,8 +421,12 @@ main (int argc, char **argv)
   guint i;
   GIOChannel *channel;
 
+#if GLIB_CHECK_VERSION (2, 32, 0)
+  /* g_thread_init () deprecated */
+#else
   if (!g_thread_supported ())
     g_thread_init (NULL);
+#endif
   
   if (setlocale (LC_ALL, "") == NULL)
     meta_warning ("Locale not understood by C library, internationalization will not work\n");
