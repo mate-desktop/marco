@@ -595,7 +595,7 @@ handle_preference_update_enum (const gchar *key, GSettings *settings)
   old_value = * ((gint *) cursor->target);
   
   /* Now look it up... */
-  *cursor->target = g_settings_get_int (settings, key);
+  *cursor->target = g_settings_get_enum (settings, key);
 
   /* Did it change?  If so, tell the listeners about it. */
 
