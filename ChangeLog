@@ -1,3 +1,374 @@
+commit 3328432d7f8e963a37065308fa8a681c1b741741
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Jan 11 22:56:52 2013 +0100
+
+    Fix update of GSettings enum preferences
+
+ src/core/prefs.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit c2ef215448099a7a3cc83c2d8a5780b42227e484
+Merge: 3ba5164 f86f199
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Dec 20 01:31:20 2012 -0800
+
+    Merge pull request #29 from cygwinports/master
+    
+    [marco] Add mateconf-gsettings-data-convert file
+
+commit f86f19970944d3e396eb94bc6b7ec368aae7063f
+Author: Yaakov Selkowitz <yselkowitz@users.sourceforge.net>
+Date:   Wed Dec 19 22:00:34 2012 -0600
+
+    Add mateconf-gsettings-data-convert file
+
+ src/Makefile.am   |    4 ++
+ src/marco.convert |  153 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 157 insertions(+)
+
+commit 3ba516419041962944da9f9bdf0cb55810a2ad02
+Merge: d72b5f2 3c82397
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Tue Nov 20 20:57:16 2012 -0800
+
+    Merge pull request #26 from sbalneav/master
+    
+    Deprecations and warnings
+
+commit 3c82397d3fdbbaa8d1614a6f5eeeaad4ef20d3f6
+Author: Scott Balneaves <sbalneav@alburg.net>
+Date:   Tue Nov 20 22:50:33 2012 -0600
+
+    Fix deprecations and compile warnings.  Clean compile
+
+ src/compositor/compositor-xrender.c |   10 ++++++++--
+ src/core/boxes.c                    |    2 --
+ src/core/display.c                  |    4 ++++
+ src/core/errors.c                   |    8 +++++++-
+ src/core/keybindings.c              |    4 ++++
+ src/core/main.c                     |   12 +++++++++++-
+ src/core/prefs.c                    |   35 ++++++++++++++++++++---------------
+ src/core/screen.c                   |    4 ++--
+ src/core/testasyncgetprop.c         |    8 +++++++-
+ src/core/window.c                   |   14 ++++++++++----
+ src/ui/testgradient.c               |    8 +++++++-
+ src/ui/themewidget.c                |    8 +++++++-
+ 12 files changed, 87 insertions(+), 30 deletions(-)
+
+commit d72b5f2a0bbd035a98979c3519de90a194f67e05
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sun Nov 18 20:57:29 2012 -0500
+
+    fixed incorrect fsf addresses.
+
+ src/compositor/compositor-private.h |    4 ++--
+ src/compositor/compositor-xrender.c |    4 ++--
+ src/compositor/compositor-xrender.h |    4 ++--
+ src/compositor/compositor.c         |    4 ++--
+ src/core/atomnames.h                |    4 ++--
+ src/core/bell.c                     |    4 ++--
+ src/core/bell.h                     |    4 ++--
+ src/core/boxes.c                    |    4 ++--
+ src/core/constraints.c              |    4 ++--
+ src/core/constraints.h              |    4 ++--
+ src/core/core.c                     |    4 ++--
+ src/core/delete.c                   |    4 ++--
+ src/core/display-private.h          |    4 ++--
+ src/core/display.c                  |    4 ++--
+ src/core/edge-resistance.c          |    4 ++--
+ src/core/edge-resistance.h          |    4 ++--
+ src/core/effects.c                  |    4 ++--
+ src/core/effects.h                  |    4 ++--
+ src/core/errors.c                   |    4 ++--
+ src/core/eventqueue.c               |    4 ++--
+ src/core/eventqueue.h               |    4 ++--
+ src/core/frame-private.h            |    4 ++--
+ src/core/frame.c                    |    4 ++--
+ src/core/group-private.h            |    4 ++--
+ src/core/group-props.c              |    4 ++--
+ src/core/group-props.h              |    4 ++--
+ src/core/group.c                    |    4 ++--
+ src/core/group.h                    |    4 ++--
+ src/core/iconcache.c                |    4 ++--
+ src/core/iconcache.h                |    4 ++--
+ src/core/keybindings.c              |    4 ++--
+ src/core/keybindings.h              |    4 ++--
+ src/core/main.c                     |    4 ++--
+ src/core/place.c                    |    4 ++--
+ src/core/place.h                    |    4 ++--
+ src/core/prefs.c                    |    4 ++--
+ src/core/schema-bindings.c          |    4 ++--
+ src/core/screen-private.h           |    4 ++--
+ src/core/screen.c                   |    4 ++--
+ src/core/session.c                  |    4 ++--
+ src/core/session.h                  |    4 ++--
+ src/core/stack.c                    |    4 ++--
+ src/core/stack.h                    |    4 ++--
+ src/core/testboxes.c                |    4 ++--
+ src/core/util.c                     |    4 ++--
+ src/core/window-private.h           |    4 ++--
+ src/core/window-props.c             |    4 ++--
+ src/core/window-props.h             |    4 ++--
+ src/core/window.c                   |    4 ++--
+ src/core/workspace.c                |    4 ++--
+ src/core/workspace.h                |    4 ++--
+ src/core/xprops.c                   |    4 ++--
+ src/include/all-keybindings.h       |    4 ++--
+ src/include/boxes.h                 |    4 ++--
+ src/include/common.h                |    4 ++--
+ src/include/compositor.h            |    4 ++--
+ src/include/core.h                  |    4 ++--
+ src/include/display.h               |    4 ++--
+ src/include/errors.h                |    4 ++--
+ src/include/frame.h                 |    4 ++--
+ src/include/main.h                  |    4 ++--
+ src/include/prefs.h                 |    4 ++--
+ src/include/resizepopup.h           |    4 ++--
+ src/include/screen.h                |    4 ++--
+ src/include/tabpopup.h              |    4 ++--
+ src/include/types.h                 |    4 ++--
+ src/include/ui.h                    |    4 ++--
+ src/include/util.h                  |    4 ++--
+ src/include/window.h                |    4 ++--
+ src/include/xprops.h                |    4 ++--
+ src/tools/marco-grayscale.c         |    4 ++--
+ src/tools/marco-mag.c               |    4 ++--
+ src/tools/marco-message.c           |    4 ++--
+ src/tools/marco-window-demo.c       |    4 ++--
+ src/ui/draw-workspace.c             |    4 ++--
+ src/ui/draw-workspace.h             |    4 ++--
+ src/ui/fixedtip.c                   |    4 ++--
+ src/ui/fixedtip.h                   |    4 ++--
+ src/ui/frames.c                     |    4 ++--
+ src/ui/frames.h                     |    4 ++--
+ src/ui/gradient.c                   |    4 ++--
+ src/ui/gradient.h                   |    4 ++--
+ src/ui/menu.c                       |    4 ++--
+ src/ui/menu.h                       |    4 ++--
+ src/ui/metaaccellabel.c             |    4 ++--
+ src/ui/metaaccellabel.h             |    4 ++--
+ src/ui/preview-widget.c             |    4 ++--
+ src/ui/preview-widget.h             |    4 ++--
+ src/ui/resizepopup.c                |    4 ++--
+ src/ui/tabpopup.c                   |    4 ++--
+ src/ui/testgradient.c               |    4 ++--
+ src/ui/theme-parser.c               |    4 ++--
+ src/ui/theme-parser.h               |    4 ++--
+ src/ui/theme-viewer.c               |    4 ++--
+ src/ui/theme.c                      |    4 ++--
+ src/ui/theme.h                      |    4 ++--
+ src/ui/themewidget.c                |    4 ++--
+ src/ui/themewidget.h                |    4 ++--
+ src/ui/ui.c                         |    4 ++--
+ src/wm-tester/main.c                |    4 ++--
+ 100 files changed, 200 insertions(+), 200 deletions(-)
+
+commit f92f68f71e49c87a21774df9afe91b4459774921
+Merge: 366e3b6 6404a98
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Nov 11 09:19:47 2012 -0800
+
+    Merge pull request #24 from ketheriel/master
+    
+    fix startup rendering effects with composite enabled
+
+commit 6404a98fb79e7bb4c3e9c5ca9919e12c946679d7
+Author: Nelson Marques <nmo.marques@gmail.com>
+Date:   Sun Nov 11 16:58:20 2012 +0000
+
+    fix startup rendering effect with composite enabled
+
+ src/compositor/compositor-xrender.c |    2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 366e3b67f24f3f93a47222aeae16173a9039bd16
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Oct 31 15:20:55 2012 +0100
+
+    set maximum workspaces number to 16
+
+ src/core/prefs.c               |    2 +-
+ src/org.mate.marco.gschema.xml |    1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 545ba2f33c2cf0bdd3842f0ff823010ee7f9e05b
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Oct 27 16:55:23 2012 +0200
+
+    bump version to 1.5.2
+
+ configure.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 2021a69960802a6ee2562b7047a3c0eb968c470b
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Oct 27 16:37:04 2012 +0200
+
+    migrate keybindings xml files for gsettings
+
+ src/50-marco-desktop-key.xml.in |   17 +--
+ src/50-marco-global-key.xml.in  |  131 +++++++++++++++++++
+ src/50-marco-key.xml.in         |  269 ---------------------------------------
+ src/50-marco-window-key.xml.in  |  201 +++++++++++++++++++++++++++++
+ src/Makefile.am                 |    5 +-
+ 5 files changed, 342 insertions(+), 281 deletions(-)
+
+commit 44205a3b8439614e1a2b176006e9f8e6a6c49439
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Oct 27 15:44:51 2012 +0200
+
+    schema-id is new in glib 2.32
+
+ src/core/prefs.c |    4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit f5946af8359cebfebb23f2174678cbdc7c31d3eb
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Oct 27 15:39:59 2012 +0200
+
+    fix get schema name
+
+ src/core/prefs.c |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit ac9664dd0310fe98caf30e6cca3af4d3886c9291
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Oct 17 12:27:59 2012 +0200
+
+    bump version to 1.5.1
+
+ configure.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 01e99a95e4f03c36fa227e462ab1b1937a1ba225
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Oct 17 12:27:21 2012 +0200
+
+    update NEWS file
+
+ NEWS |    4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit cab5893d5e33fa40a14ca3a471c03532075f73c3
+Merge: 23656ae 354fc0e
+Author: Nelson Marques <nmo.marques@gmail.com>
+Date:   Tue Oct 16 09:48:54 2012 -0700
+
+    Merge pull request #17 from ketheriel/master
+    
+    improve support for button layout (ported from Ubuntu)
+
+commit 354fc0e850efbfa44065bcd2f9f3fb1b2267f135
+Author: Nelson Marques <nmo.marques@gmail.com>
+Date:   Tue Oct 16 17:34:30 2012 +0100
+
+    improve button theming - taken from Ubuntu
+
+ src/ui/theme.c |   52 +++++++++++++++++++++++++++-------------------------
+ src/ui/theme.h |    2 ++
+ 2 files changed, 29 insertions(+), 25 deletions(-)
+
+commit 23656ae5a7fa38ab90cb35fe9ad2604253fb1185
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Oct 11 16:57:24 2012 +0200
+
+    function call needs to pass NULL-pointer as last argument
+
+ src/core/prefs.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 2f516a620bbde0463b6464ee1ac12c2b86ab7746
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Mon Oct 1 22:52:51 2012 +0200
+
+    bump version to 1.5.0
+
+ configure.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 7f595187a140a45ee5ba2fc2b9c068b46d829f79
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Mon Oct 1 22:52:14 2012 +0200
+
+    migrate to gsettings
+
+ HACKING                        |    8 +-
+ README                         |   31 +-
+ configure.in                   |   37 +-
+ po/POTFILES.in                 |    3 -
+ src/Makefile.am                |   30 +-
+ src/core/core.c                |   42 +-
+ src/core/keybindings.c         |    4 +-
+ src/core/prefs.c               | 1189 ++++++++++------------------------------
+ src/core/screen.c              |    6 +-
+ src/include/all-keybindings.h  |  394 +++++--------
+ src/include/prefs.h            |    4 +-
+ src/marco.schemas.in.in        |  611 ---------------------
+ src/org.mate.marco.gschema.xml |  722 ++++++++++++++++++++++++
+ 13 files changed, 1193 insertions(+), 1888 deletions(-)
+
+commit 2c0d59c170ac3ef987d21599cfac7c909e8fe729
+Merge: 4829cf1 467e86c
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Aug 31 14:44:58 2012 -0700
+
+    Merge pull request #12 from NiceandGently/master
+    
+    desktop-file-validate error with marco-wm.desktop
+
+commit 467e86c24efe67adfccd786d37bc9a73ed4c81d0
+Author: Wolfgang Ulbrich <chat-to-me@raveit.de>
+Date:   Sat Sep 1 00:38:41 2012 +0300
+
+    Update src/marco-wm.desktop.in
+
+ src/marco-wm.desktop.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 4829cf1bbcbc0b30c439b48d85ff29139561280b
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Aug 28 11:31:40 2012 +0200
+
+    fix HACKING file
+    https://github.com/mate-desktop/mate-window-manager/issues/11
+
+ HACKING |   10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+commit 631ad4f4051a99919e6e4ea0e5e08b990f4ffa22
+Merge: d4b4416 ae71d9d
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Mon Aug 27 07:56:36 2012 -0700
+
+    Merge pull request #10 from stefanct/master
+    
+    Allow alt+tab etc while drag'n'drop is active
+
+commit ae71d9d2a8cb95fee662a997bde3329796b3cdb3
+Author: Stefan Tauner <stefan.tauner@gmx.at>
+Date:   Thu Aug 23 16:37:30 2012 +0200
+
+    Fix key handling while drag and drop is active
+    
+    This is still not fixed "upstream" (i.e. in metacity) but many distributions
+    ship with this patch. The patch is from Matthias Clasen (Redhat).
+    See https://bugzilla.gnome.org/show_bug.cgi?id=135056#c33 and
+    https://bugs.launchpad.net/ubuntu/+source/metacity/+bug/111939
+    for details.
+
+ src/core/display.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d4b44167b9b14ee37479061ca3cd413ace1bd3ad
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Tue Aug 21 15:41:33 2012 -0400
+
+    Preparing for 1.4.1 release.
+
+ ChangeLog    |   60 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ configure.in |    2 +-
+ 2 files changed, 61 insertions(+), 1 deletion(-)
+
 commit eef48c40861ebe35c088adc80bdde1600acda22e
 Author: Perberos <perberos@gmail.com>
 Date:   Sun Aug 12 18:35:51 2012 -0300
