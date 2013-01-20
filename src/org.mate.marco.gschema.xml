@@ -31,7 +31,7 @@
     <value nick="last" value="8"/>
   </enum>
 
-  <schema id="org.mate.Marco" path="/apps/marco/">
+  <schema id="org.mate.Marco" path="/org/mate/marco/">
     <child name="general" schema="org.mate.Marco.general"/>
     <child name="workspace-names" schema="org.mate.Marco.workspace-names"/>
     <child name="global-keybindings" schema="org.mate.Marco.global-keybindings"/>
@@ -39,7 +39,7 @@
     <child name="window-keybindings" schema="org.mate.Marco.window-keybindings"/>
   </schema>
 
-  <schema id="org.mate.Marco.general" path="/apps/marco/general/">
+  <schema id="org.mate.Marco.general" path="/org/mate/marco/general/">
     <key name="mouse-button-modifier" type="s">
       <default>'&lt;Alt&gt;'</default>
       <summary>Modifier to use for modified window click actions</summary>
@@ -163,7 +163,7 @@
     </key>
   </schema>
 
-  <schema id="org.mate.Marco.workspace-names" path="/apps/marco/workspace-names/">
+  <schema id="org.mate.Marco.workspace-names" path="/org/mate/marco/workspace-names/">
     <key name="name-1" type="s">
       <default>''</default>
       <summary>Name of workspace</summary>
@@ -246,7 +246,7 @@
     </key>
   </schema>
 
-  <schema id="org.mate.Marco.global-keybindings" path="/apps/marco/global-keybindings/">
+  <schema id="org.mate.Marco.global-keybindings" path="/org/mate/marco/global-keybindings/">
     <key name="run-command-1" type="s">
       <default>'disabled'</default>
       <summary>Run a defined command</summary>
@@ -489,7 +489,7 @@
     </key>
   </schema>
 
-  <schema id="org.mate.Marco.keybinding-commands" path="/apps/marco/keybinding-commands/">
+  <schema id="org.mate.Marco.keybinding-commands" path="/org/mate/marco/keybinding-commands/">
     <key name="command-1" type="s">
       <default>' '</default>
       <summary>Commands to run in response to keybindings</summary>
@@ -507,7 +507,7 @@
     </key>
   </schema>
 
-  <schema id="org.mate.Marco.window-keybindings" path="/apps/marco/window-keybindings/">
+  <schema id="org.mate.Marco.window-keybindings" path="/org/mate/marco/window-keybindings/">
     <key name="activate-window-menu" type="s">
       <default>'&lt;Alt&gt;space'</default>
       <summary>Activate the window menu</summary>
