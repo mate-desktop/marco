@@ -487,6 +487,13 @@ center_tile_rect_in_area (MetaRectangle *rect,
   rect->y = work_area->y + fluff;
 }
 
+center_rect_in_area (MetaRectangle *rect,
+                     MetaRectangle *work_area)
+{
+  rect->x = (work_area->width - rect->width) / 2;
+  rect->y = (work_area->height - rect->height) / 2;
+}
+
 /* Find the leftmost, then topmost, empty area on the workspace
  * that can contain the new window.
  *
@@ -554,10 +561,14 @@ find_first_fit (MetaWindow *window,
 
     meta_window_get_work_area_for_xinerama (window, xinerama, &work_area);
 
-    center_tile_rect_in_area (&rect, &work_area);
+    if (meta_prefs_get_center_new_windows ())
+      center_rect_in_area (&rect, &work_area);
+    else
+      center_tile_rect_in_area (&rect, &work_area);
 
     if (meta_rectangle_contains_rect (&work_area, &rect) &&
-        !rectangle_overlaps_some_window (&rect, windows))
+        (meta_prefs_get_center_new_windows () ||
+         !rectangle_overlaps_some_window (&rect, windows)))
       {
         *new_x = rect.x;
         *new_y = rect.y;
@@ -874,7 +885,7 @@ meta_window_place (MetaWindow        *window,
   /* If no placement has been done, revert to cascade to avoid 
    * fully overlapping window (e.g. starting multiple terminals)
    * */
-  if (x == xi->rect.x && y == xi->rect.y)  
+  if (!meta_prefs_get_center_new_windows() && (x == xi->rect.x && y == xi->rect.y))
     find_next_cascade (window, fgeom, windows, x, y, &x, &y);
 
  done_check_denied_focus:
@@ -900,7 +911,7 @@ meta_window_place (MetaWindow        *window,
       /* Try to do a first fit again, this time only taking into account the
        * focus window.
        */
-      if (!found_fit)
+      if (!meta_prefs_get_center_new_windows() && !found_fit)
         {
           GList *focus_window_list;
           focus_window_list = g_list_prepend (NULL, focus_window);

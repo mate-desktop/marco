@@ -50,6 +50,7 @@
 #define KEY_GENERAL_NUM_WORKSPACES "num-workspaces"
 #define KEY_GENERAL_COMPOSITOR "compositing-manager"
 #define KEY_GENERAL_COMPOSITOR_FAST_ALT_TAB "compositing-fast-alt-tab"
+#define KEY_GENERAL_CENTER_NEW_WINDOWS "center-new-windows"
 
 #define KEY_COMMAND_SCHEMA "org.mate.Marco.keybinding-commands"
 #define KEY_COMMAND_PREFIX "command-"
@@ -114,6 +115,7 @@ static int   cursor_size = 24;
 static gboolean compositing_manager = FALSE;
 static gboolean compositing_fast_alt_tab = FALSE;
 static gboolean resize_with_right_button = FALSE;
+static gboolean center_new_windows = FALSE;
 static gboolean force_fullscreen = TRUE;
 
 static MetaVisualBellType visual_bell_type = META_VISUAL_BELL_FULLSCREEN_FLASH;
@@ -391,6 +393,12 @@ static MetaBoolPreference preferences_bool[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_RESIZE_WITH_RIGHT_BUTTON,
       &resize_with_right_button,
+      FALSE,
+    },
+    { "center-new-windows",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_CENTER_NEW_WINDOWS,
+      &center_new_windows,
       FALSE,
     },
     { NULL, NULL, 0, NULL, FALSE },
@@ -1529,6 +1537,9 @@ meta_preference_to_string (MetaPreference pref)
     case META_PREF_COMPOSITING_FAST_ALT_TAB:
       return "COMPOSITING_FAST_ALT_TAB";
 
+    case META_PREF_CENTER_NEW_WINDOWS:
+      return "CENTER_NEW_WINDOWS";
+
     case META_PREF_RESIZE_WITH_RIGHT_BUTTON:
       return "RESIZE_WITH_RIGHT_BUTTON";
 
@@ -2183,9 +2194,15 @@ meta_prefs_get_compositing_manager (void)
 }
 
 gboolean
-meta_prefs_get_compositing_fast_alt_tab(void)
+meta_prefs_get_compositing_fast_alt_tab (void)
 {
     return compositing_fast_alt_tab;
+}
+
+gboolean
+meta_prefs_get_center_new_windows (void)
+{
+    return center_new_windows;
 }
 
 guint
@@ -2216,10 +2233,18 @@ meta_prefs_set_compositing_manager (gboolean whether)
 }
 
 void
-meta_prefs_set_compositing_fast_alt_tab(gboolean whether)
+meta_prefs_set_compositing_fast_alt_tab (gboolean whether)
 {
     g_settings_set_boolean (settings_general,
                             KEY_GENERAL_COMPOSITOR_FAST_ALT_TAB,
+                            whether);
+}
+
+void
+meta_prefs_set_center_new_windows (gboolean whether)
+{
+    g_settings_set_boolean (settings_general,
+                            KEY_GENERAL_CENTER_NEW_WINDOWS,
                             whether);
 }
 

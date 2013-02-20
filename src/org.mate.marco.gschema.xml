@@ -161,6 +161,11 @@
       <summary>Disable misfeatures that are required by old or broken applications</summary>
       <description>Some applications disregard specifications in ways that result in window manager misfeatures. This option puts Marco in a rigorously correct mode, which gives a more consistent user interface, provided one does not need to run any misbehaving applications.</description>
     </key>
+    <key name="center-new-windows" type="b">
+      <default>false</default>
+      <summary>Determine if new windows are created on the center of the screen</summary>
+      <description>By default, marco open new windows on the top left of the screen. If this option is enabled, new windows are open on the center of the screen, instead.</description>
+    </key>
   </schema>
 
   <schema id="org.mate.Marco.workspace-names" path="/org/mate/marco/workspace-names/">

@@ -62,6 +62,7 @@ typedef enum
   META_PREF_COMPOSITING_MANAGER,
   META_PREF_COMPOSITING_FAST_ALT_TAB,
   META_PREF_RESIZE_WITH_RIGHT_BUTTON,
+  META_PREF_CENTER_NEW_WINDOWS,
   META_PREF_FORCE_FULLSCREEN
 } MetaPreference;
 
@@ -119,6 +120,7 @@ const char* meta_prefs_get_cursor_theme      (void);
 int         meta_prefs_get_cursor_size       (void);
 gboolean    meta_prefs_get_compositing_manager (void);
 gboolean    meta_prefs_get_compositing_fast_alt_tab (void);
+gboolean    meta_prefs_get_center_new_windows  (void);
 gboolean    meta_prefs_get_force_fullscreen  (void);
 
 /**
@@ -129,6 +131,8 @@ gboolean    meta_prefs_get_force_fullscreen  (void);
 void meta_prefs_set_compositing_manager (gboolean whether);
 
 void meta_prefs_set_compositing_fast_alt_tab (gboolean whether);
+
+void meta_prefs_set_center_new_windows (gboolean whether);
 
 void meta_prefs_set_force_fullscreen (gboolean whether);
 
