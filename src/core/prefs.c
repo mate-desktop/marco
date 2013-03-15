@@ -1804,11 +1804,11 @@ update_command (const char  *name,
   char *p;
   int i;
   
-  p = strrchr (name, '_');
+  p = strrchr (name, '-');
   if (p == NULL)
     {
       meta_topic (META_DEBUG_KEYBINDINGS,
-                  "Command %s has no underscore?\n", name);
+                  "Command %s has no dash?\n", name);
       return FALSE;
     }
   
@@ -1821,14 +1821,11 @@ update_command (const char  *name,
     }
   else
     {
-      p = strrchr (name, '/');
-      ++p;
-
-      if (strcmp (p, "command_screenshot") == 0)
+      if (strcmp (name, "command-screenshot") == 0)
         {
           i = SCREENSHOT_COMMAND_IDX;
         }
-      else if (strcmp (p, "command_window_screenshot") == 0)
+      else if (strcmp (name, "command-window-screenshot") == 0)
         {
           i = WIN_SCREENSHOT_COMMAND_IDX;
         }
