@@ -7,23 +7,263 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2011-12-28 10:53+0100\n"
-"PO-Revision-Date: 2011-12-28 10:49+0000\n"
+"POT-Creation-Date: 2013-02-10 13:01+0100\n"
+"PO-Revision-Date: 2013-02-10 12:02+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Bengali (India) (http://www.transifex.com/projects/p/MATE/language/bn_IN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: bn_IN\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
 msgstr "ডেস্কটপ"
 
-#: ../src/50-marco-key.xml.in.h:1
+#: ../src/50-marco-desktop-key.xml.in.h:2
+msgid "Show the panel's \"Run Application\" dialog box"
+msgstr "প্যানেলের \"অ্যাপ্লিকেশন সঞ্চালনা\"-র ডায়লগ বক্স প্রদর্শন করা হবে"
+
+#: ../src/50-marco-desktop-key.xml.in.h:3
+msgid "Show the panel's main menu"
+msgstr "প্যানেলের প্রধান মেনু প্রদর্শন করা হবে"
+
+#: ../src/50-marco-desktop-key.xml.in.h:4
+msgid "Take a screenshot"
+msgstr "পর্দার ছবি নিন"
+
+#: ../src/50-marco-desktop-key.xml.in.h:5
+msgid "Take a screenshot of a window"
+msgstr "উইন্ডোর ছবি নিন"
+
+#: ../src/50-marco-desktop-key.xml.in.h:6
+msgid "Run a terminal"
+msgstr "টার্মিনাল আরম্ভ করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
 msgstr "উইন্ডো পরিচালন ব্যবস্থা"
+
+#: ../src/50-marco-global-key.xml.in.h:2
+msgid "Move between windows, using a popup window"
+msgstr "উইন্ডোগুলির মধ্যে পপ-আপ উইন্ডো প্রয়োগ করে স্থান পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:3
+msgid "Move between windows of an application, using a popup window"
+msgstr "অ্যাপ্লিকেশনের উইন্ডোগুলির মধ্যে পপ-আপ উইন্ডো প্রয়োগ করে স্থান পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:4
+msgid "Move between panels and the desktop, using a popup window"
+msgstr "প্যানেল ও ডেস্কটপের মধ্যে পপ-আপ উইন্ডো প্রয়োগ করে স্থান পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:5
+msgid "Move between windows immediately"
+msgstr "উইন্ডোগুলির মধ্যে তৎক্ষনাৎ স্থান পরিবর্তন করা হবে"
+
+#: ../src/50-marco-global-key.xml.in.h:6
+msgid "Move between windows of an application immediately"
+msgstr "অ্যাপ্লিকেশনের উইন্ডোগুলির মধ্যে তৎক্ষনাৎ স্থান পরিবর্তন করা হবে"
+
+#: ../src/50-marco-global-key.xml.in.h:7
+msgid "Move between panels and the desktop immediately"
+msgstr "প্যানেল ও ডেস্কটপের মধ্যে তৎক্ষনাৎ স্থান পরিবর্তন করা হবে"
+
+#: ../src/50-marco-global-key.xml.in.h:8
+msgid "Hide all normal windows and set focus to the desktop"
+msgstr "সমস্ত সাধারণ উইন্ডো আড়াল করে ডেস্কটপ উজ্জ্বল করা হবে"
+
+#: ../src/50-marco-global-key.xml.in.h:9
+msgid "Switch to workspace 1"
+msgstr "কর্মক্ষেত্র ১'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:10
+msgid "Switch to workspace 2"
+msgstr "কর্মক্ষেত্র ১৩'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:11
+msgid "Switch to workspace 3"
+msgstr "কর্মক্ষেত্র ৩'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:12
+msgid "Switch to workspace 4"
+msgstr "কর্মক্ষেত্র ৪'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:13
+msgid "Switch to workspace 5"
+msgstr "কর্মক্ষেত্র ৫'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:14
+msgid "Switch to workspace 6"
+msgstr "কর্মক্ষেত্র ৬'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:15
+msgid "Switch to workspace 7"
+msgstr "কর্মক্ষেত্র ৭'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:16
+msgid "Switch to workspace 8"
+msgstr "কর্মক্ষেত্র ৮'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:17
+msgid "Switch to workspace 9"
+msgstr "কর্মক্ষেত্র ৯'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:18
+msgid "Switch to workspace 10"
+msgstr "কর্মক্ষেত্র ১'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:19
+msgid "Switch to workspace 11"
+msgstr "কর্মক্ষেত্র ১১'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:20
+msgid "Switch to workspace 12"
+msgstr "কর্মক্ষেত্র ১২'এ পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:21
+msgid "Switch to workspace on the left of the current workspace"
+msgstr "বাঁদিকের পার্শ্ববর্তী কর্মক্ষেত্রে পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:22
+msgid "Switch to workspace on the right of the current workspace"
+msgstr "ডানদিকের পার্শ্ববর্তী কর্মক্ষেত্রে পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:23
+msgid "Switch to workspace above the current workspace"
+msgstr "ঊর্ধস্থ কর্মক্ষেত্রে পরিবর্তন করুন"
+
+#: ../src/50-marco-global-key.xml.in.h:24
+msgid "Switch to workspace below the current workspace"
+msgstr "নিম্নস্থিত কর্মক্ষেত্রে পরিবর্তন করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:2
+msgid "Activate the window menu"
+msgstr "উইন্ডো মেনু সক্রিয় করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:3
+msgid "Toggle fullscreen mode"
+msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শনের মোড অদল-বদল করা হবে"
+
+#: ../src/50-marco-window-key.xml.in.h:4
+msgid "Toggle maximization state"
+msgstr "সর্বোচ্চ মাপে প্রদর্শনের অবস্থা অদল-বদল করা হবে"
+
+#: ../src/50-marco-window-key.xml.in.h:5
+msgid "Maximize window"
+msgstr "উইন্ডো বড় করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:6
+msgid "Restore window"
+msgstr "উইন্ডো প্রদর্শন করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:7
+msgid "Toggle shaded state"
+msgstr "ছায়াবৃত প্রদর্শনের অবস্থা অদল-বদল করা হবে"
+
+#: ../src/50-marco-window-key.xml.in.h:8
+msgid "Close window"
+msgstr "উইন্ডো বন্ধ করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:9
+msgid "Minimize window"
+msgstr "উইন্ডো আড়াল করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:10
+msgid "Move window"
+msgstr "উইন্ডো স্থানান্তরণ"
+
+#: ../src/50-marco-window-key.xml.in.h:11
+msgid "Resize window"
+msgstr "উইন্ডোর মাপ পরিবর্তন করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:12
+msgid "Toggle whether window is on all workspaces or just one"
+msgstr "সকল কর্মক্ষেত্র অথবা একটি কর্মক্ষেত্রে উইন্ডো প্রদর্শন করা হবে কি না তা টগল করে চিহ্নিত করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:13
+msgid "Raise window if it's covered by another window, otherwise lower it"
+msgstr "অন্য উইন্ডো দ্বারা ঢাকা থাকলে উইন্ডোটি উপরে উইন্ডো উত্থাপন করা হবে, অন্যথা সেটি নীচে নামানো হবে"
+
+#: ../src/50-marco-window-key.xml.in.h:14
+msgid "Raise window above other windows"
+msgstr "অন্যান্য উইন্ডোর উপরে উইন্ডো উত্থাপন করা হবে"
+
+#: ../src/50-marco-window-key.xml.in.h:15
+msgid "Lower window below other windows"
+msgstr "উইন্ডোটিকে অন্য উইন্ডোর নীচে নামানো হবে"
+
+#: ../src/50-marco-window-key.xml.in.h:16
+msgid "Maximize window vertically"
+msgstr "উইন্ডো উলম্ব দিশায় বড় করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:17
+msgid "Maximize window horizontally"
+msgstr "উইন্ডো অনুভূমিক দিশায় বড় করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:18
+msgid "Move window to workspace 1"
+msgstr "কর্মক্ষেত্র ১'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:19
+msgid "Move window to workspace 2"
+msgstr "কর্মক্ষেত্র ২'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:20
+msgid "Move window to workspace 3"
+msgstr "কর্মক্ষেত্র ৩'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:21
+msgid "Move window to workspace 4"
+msgstr "কর্মক্ষেত্র ৪'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:22
+msgid "Move window to workspace 5"
+msgstr "কর্মক্ষেত্র ৫'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:23
+msgid "Move window to workspace 6"
+msgstr "কর্মক্ষেত্র ৬'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:24
+msgid "Move window to workspace 7"
+msgstr "কর্মক্ষেত্র ৭'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:25
+msgid "Move window to workspace 8"
+msgstr "কর্মক্ষেত্র ৮'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:26
+msgid "Move window to workspace 9"
+msgstr "কর্মক্ষেত্র ৯'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:27
+msgid "Move window to workspace 10"
+msgstr "কর্মক্ষেত্র ১০'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:28
+msgid "Move window to workspace 11"
+msgstr "কর্মক্ষেত্র ১১'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:29
+msgid "Move window to workspace 12"
+msgstr "কর্মক্ষেত্র ১২'এ স্থানান্তর করুন"
+
+#: ../src/50-marco-window-key.xml.in.h:30
+msgid "Move window one workspace to the left"
+msgstr "উইন্ডো বাঁদিকের পার্শ্ববর্তী কর্মক্ষেত্রে স্থানান্তরণ করা হবে"
+
+#: ../src/50-marco-window-key.xml.in.h:31
+msgid "Move window one workspace to the right"
+msgstr "উইন্ডো ডানদিকের পার্শ্ববর্তী কর্মক্ষেত্রে স্থানান্তরণ করা হবে"
+
+#: ../src/50-marco-window-key.xml.in.h:32
+msgid "Move window one workspace up"
+msgstr "উইন্ডো একটি কর্মক্ষেত্র উপরে স্থানান্তরণ করা হবে"
+
+#: ../src/50-marco-window-key.xml.in.h:33
+msgid "Move window one workspace down"
+msgstr "উইন্ডো একটি কর্মক্ষেত্র নীচে স্থানান্তরণ করা হবে"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -59,17 +299,17 @@ msgstr "বলপূর্বক বন্ধ করুন (_F)"
 msgid "Failed to get hostname: %s\n"
 msgstr "হোস্ট-নেম প্রাপ্ত করতে ব্যর্থ: %s\n"
 
-#: ../src/core/display.c:266
+#: ../src/core/display.c:268
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "কম্পোসিটিং-র জন্য আবশ্যক %s এক্সটেনশন অনুপস্থিত"
 
-#: ../src/core/display.c:344
+#: ../src/core/display.c:346
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X উইন্ডো সিস্টেম প্রদর্শন খুলতে ব্যর্থ '%s'\n"
 
-#: ../src/core/errors.c:272
+#: ../src/core/errors.c:278
 #, c-format
 msgid ""
 "Lost connection to the display '%s';\n"
@@ -77,7 +317,7 @@ msgid ""
 "the window manager.\n"
 msgstr "ডিসপ্লে '%s'-র সাথে সংযোগ বিচ্ছিন্ন হয়েছে;\nসম্ভবত X সার্ভার বন্ধ করা হয়েছে অথবা উইন্ডো পরিচালন ব্যবস্থা kill/বন্ধ\nকরা হয়েছে।\n"
 
-#: ../src/core/errors.c:279
+#: ../src/core/errors.c:285
 #, c-format
 msgid "Fatal IO error %d (%s) on display '%s'.\n"
 msgstr "গুরুতর IO সমস্যা %d (%s) '%s' প্রদর্শনে।\n"
@@ -92,7 +332,7 @@ msgstr "একটি পৃথক প্রোগ্রাম দ্বারা
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
 #. 
-#: ../src/core/keybindings.c:2294
+#: ../src/core/keybindings.c:2303
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -100,17 +340,17 @@ msgid ""
 "%s"
 msgstr "<tt>%s</tt> সঞ্চালনে সমস্যা:\n\n%s"
 
-#: ../src/core/keybindings.c:2383
+#: ../src/core/keybindings.c:2392
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "%d কমান্ড ব্যাখ্যা করা হয়নি।\n"
 
-#: ../src/core/keybindings.c:3337
+#: ../src/core/keybindings.c:3352
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "টার্মিনালে ব্যবহারযোগ্য কোনো কমান্ড ব্যাখ্যা করা হয়নি।\n"
 
-#: ../src/core/main.c:131
+#: ../src/core/main.c:137
 #, c-format
 msgid ""
 "marco %s\n"
@@ -119,134 +359,100 @@ msgid ""
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 msgstr "marco %s\nস্বত্বাধিকার (C) 2001-%s হ্যাভক পেনিংটন, Red Hat, Inc., ও অন্যান্যদের\nএটি একটি মুক্ত সফ্টওয়্যার; পুনব্যবহারের নিয়মাবলীর জন্য সোর্সের মধ্যে উপলব্ধ নথিপত্র দেখুন।\nএর কোনো ওয়ারেন্টি উপলব্ধ নেই; বাণিজ্যিক ও কোনো সুনির্দিষ্ট কর্ম সাধনের জন্যও নয়।\n"
 
-#: ../src/core/main.c:269
+#: ../src/core/main.c:275
 msgid "Disable connection to session manager"
 msgstr "সেশান পরিচালন ব্যবস্থার সাথে সংযোগ বিচ্ছিন্ন করা হবে"
 
-#: ../src/core/main.c:275
+#: ../src/core/main.c:281
 msgid "Replace the running window manager with Marco"
 msgstr "বর্তমানে ব্যবহৃত উইন্ডো পরিচালন ব্যবস্থার পরিবর্তে Marco প্রয়োগ করা হবে"
 
-#: ../src/core/main.c:281
+#: ../src/core/main.c:287
 msgid "Specify session management ID"
 msgstr "সেশান পরিচালনার ID উল্লেখ করুন"
 
-#: ../src/core/main.c:286
+#: ../src/core/main.c:292
 msgid "X Display to use"
 msgstr "ব্যবহারের জন্য এক্স ডিসপ্লে"
 
-#: ../src/core/main.c:292
+#: ../src/core/main.c:298
 msgid "Initialize session from savefile"
 msgstr "সংরক্ষণ ফাইল থেকে সেশন চালু করো"
 
-#: ../src/core/main.c:298
+#: ../src/core/main.c:304
 msgid "Print version"
 msgstr "প্রিন্ট সংস্করণ"
 
-#: ../src/core/main.c:304
+#: ../src/core/main.c:310
 msgid "Make X calls synchronous"
 msgstr "X-র কল সিঙ্ক্রোনাস করা হবে"
 
-#: ../src/core/main.c:310
+#: ../src/core/main.c:316
 msgid "Turn compositing on"
 msgstr "কম্পোসিটিং ব্যবস্থা চালু করুন"
 
-#: ../src/core/main.c:316
+#: ../src/core/main.c:322
 msgid "Turn compositing off"
 msgstr "কম্পোসিটিং ব্যবস্থা বন্ধ করুন"
 
-#: ../src/core/main.c:322
+#: ../src/core/main.c:328
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "সর্বাধিক মাপে স্থাপিত সাজসজ্জাবিহীন উইন্ডোগুলির ক্ষেত্রে সম্পূর্ণ পর্দায় প্রদর্শন ব্যবস্থা প্রয়োগ করা হবে না"
 
-#: ../src/core/main.c:528
+#: ../src/core/main.c:537
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "থীম এর ডিরেক্টরি স্ক্যান করতে ব্যর্থ: %s\n"
 
-#: ../src/core/main.c:544
+#: ../src/core/main.c:553
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
 msgstr "কোনো থিম খুঁজে পাওয়া যায়নি! অনুগ্রহ করে পরীক্ষা করুন %s উপস্থিত আছে কি না ও এর মধ্যে সাধারণ থিমগুলি অন্তর্ভুক্ত কি না।\n"
 
-#: ../src/core/main.c:603
+#: ../src/core/main.c:612
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "আবার চালু করতে পারলাম না: %s\n"
 
-#. * We found it, but it was invalid.  Complain.
-#. *
-#. * FIXME: This replicates the original behaviour, but in the future
-#. * we might consider reverting invalid keys to their original values.
-#. * (We know the old value, so we can look up a suitable string in
-#. * the symtab.)
-#. *
-#. * (Empty comment follows so the translators don't see this.)
-#. 
-#. 
-#: ../src/core/prefs.c:508 ../src/core/prefs.c:663
+#. FIXME: check if this can be avoided by GSettings
+#. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
+#. * But some preferences depends on costants for minimum/maximum values
+#: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
-msgid "MateConf key '%s' is set to an invalid value\n"
-msgstr "MateConf-কি \"%s\"'র মান বৈধ নয়\n"
+msgid "%d stored in GSettings key %s is out of range %d to %d\n"
+msgstr ""
 
-#: ../src/core/prefs.c:589 ../src/core/prefs.c:832
-#, c-format
-msgid "%d stored in MateConf key %s is out of range %d to %d\n"
-msgstr "%d মান যা MateConf-কি %s-র মধ্যে সংরক্ষিত রয়েছে, %d থেকে %d-র সীমাবহির্ভূত\n"
-
-#: ../src/core/prefs.c:633 ../src/core/prefs.c:710 ../src/core/prefs.c:758
-#: ../src/core/prefs.c:822 ../src/core/prefs.c:1115 ../src/core/prefs.c:1131
-#: ../src/core/prefs.c:1148 ../src/core/prefs.c:1164
-#, c-format
-msgid "MateConf key \"%s\" is set to an invalid type\n"
-msgstr "MateConf-কি \"%s\"'র ধরন বৈধ নয়\n"
-
-#: ../src/core/prefs.c:1234
+#: ../src/core/prefs.c:1008
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr "ক্ষতিগ্রস্ত অ্যাপ্লিকেশনের ত্রুটি অগ্রাহ্য করার প্রণালী নিষ্ক্রিয় করা হয়েছে। কয়েকটি অ্যাপ্লিকেশন সম্ভবত সঠিকরূপে চালানো সম্ভব হবে না।\n"
 
-#: ../src/core/prefs.c:1305
+#: ../src/core/prefs.c:1075
 #, c-format
-msgid "Could not parse font description \"%s\" from MateConf key %s\n"
-msgstr "\"%s\" ফন্টের বিবরণ MateConf-কি %s থেকে পার্স করতে ব্যর্থ\n"
+msgid "Could not parse font description \"%s\" from GSettings key %s\n"
+msgstr ""
 
-#: ../src/core/prefs.c:1367
+#: ../src/core/prefs.c:1137
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "কনফিগারেশন ডাটাবেসের মধ্যে উপস্থিত \"%s\" মাউস বাটন পরিবর্তকের জন্য বৈধ মান নয়\n"
 
-#: ../src/core/prefs.c:1788
-#, c-format
-msgid "Error setting number of workspaces to %d: %s\n"
-msgstr "কর্মক্ষেত্রের সংখ্যা %d রূপে নির্ধারণ করতে ব্যর্থ: %s\n"
-
-#: ../src/core/prefs.c:1953 ../src/core/prefs.c:2456
-#, c-format
-msgid "Workspace %d"
-msgstr "কর্মক্ষেত্র %d"
-
-#: ../src/core/prefs.c:1983 ../src/core/prefs.c:2161
+#: ../src/core/prefs.c:1649
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "কনফিগারেশন ডাটাবেসের মধ্যে উপলব্ধ \"%s\", \"%s\" কি-বাইন্ডিং'র ক্ষেত্রে বৈধ মান নয়\n"
 
-#: ../src/core/prefs.c:2537
+#: ../src/core/prefs.c:1955
 #, c-format
-msgid "Error setting name for workspace %d to \"%s\": %s\n"
-msgstr "কর্মক্ষেত্র %d'র নাম \"%s\" রূপে নির্ধারণ করতে ব্যর্থ: %s\n"
-
-#: ../src/core/prefs.c:2741
-#, c-format
-msgid "Error setting compositor status: %s\n"
-msgstr "কম্পোসিটারের অবস্থা নির্ধারণ করতে ত্রুটি: %s\n"
+msgid "Workspace %d"
+msgstr "কর্মক্ষেত্র %d"
 
 #: ../src/core/screen.c:357
 #, c-format
@@ -275,74 +481,54 @@ msgstr "পর্দা %d'র ( \"%s\" ডিসপ্লে) ক্ষেত�
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "পর্দা %d (ডিসপ্লে \"%s\") মুক্ত করতে ব্যর্থ\n"
 
-#. Translators: Please don't translate "Control", "Shift", etc, since these
-#. * are hardcoded (in gtk/gtkaccelgroup.c; it's not marco's fault).
-#. * "disabled" must also stay as it is.
-#. 
-#: ../src/core/schema-bindings.c:169
-msgid ""
-"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
-"\n"
-"The parser is fairly liberal and allows lower or upper case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string \"disabled\", then there will be no keybinding for this action."
-msgstr "\"<Control>a\" অথবা <Shift><Alt>F1\"-র অনুরূপ বিন্যাস ব্যবহৃত হবে।\n\nপার্সার হরফের ছাঁদ সম্পর্কে সচেতন নয় এবং প্রয়োজনে \"<Ctl>\" ও \"<Ctrl>\"-র অনুরূপ সংক্ষিপ্ত রূপও ব্যবহার করা যাবে। বিকল্পের ক্ষেত্রে বিশেষ পংক্তি \"disabled\" প্রয়োগ করা হলে এই কর্মের জন্য কোনো কি-বাইন্ডিং ব্যবহার করা হবে না।"
-
-#: ../src/core/schema-bindings.c:177
-msgid ""
-"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
-"\n"
-"The parser is fairly liberal and allows lower or upper case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string \"disabled\", then there will be no keybinding for this action.\n"
-"\n"
-"This keybinding may be reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be one of the keys it uses."
-msgstr "\"<Control>a\" অথবা <Shift><Alt>F1\"-র অনুরূপ বিন্যাস ব্যবহৃত হবে।\n\nপার্সার হরফের ছাঁদ সম্পর্কে সচেতন নয় এবং প্রয়োজনে \"<Ctl>\" ও \"<Ctrl>\"-র অনুরূপ সংক্ষিপ্ত রূপও ব্যবহার করা যাবে। বিকল্পের ক্ষেত্রে বিশেষ পংক্তি \"disabled\" প্রয়োগ করা হলে এই কর্মের জন্য কোনো কি-বাইন্ডিং ব্যবহার করা হবে না।\n\n\"shift\" কি টেপা হলে কি-বাইন্ডিংগুলির বিপরীত ব্যবহার করা হবে; অর্থাৎ, \"shift\" কি এই ক্ষেত্রে ব্যবহার করা যাবে না।"
-
-#: ../src/core/session.c:850 ../src/core/session.c:857
+#: ../src/core/session.c:842 ../src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "ডিরেক্টরি '%s' নির্মাণ করতে ব্যর্থ: %s\n"
 
-#: ../src/core/session.c:867
+#: ../src/core/session.c:859
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "লেখার উদ্দেশ্যে সেশান ফাইল '%s' খুলতে ব্যর্থ: %s\n"
 
-#: ../src/core/session.c:1008
+#: ../src/core/session.c:1000
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "সেশান ফাইল '%s' লিখতে ব্যর্থ: %s\n"
 
-#: ../src/core/session.c:1013
+#: ../src/core/session.c:1005
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "সেশান ফাইল '%s' বন্ধ করতে ব্যর্থ: %s\n"
 
-#: ../src/core/session.c:1143
+#: ../src/core/session.c:1135
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "সংরক্ষিত সেশান ফাইল পার্স করতে ব্যর্থ: %s\n"
 
-#: ../src/core/session.c:1192
+#: ../src/core/session.c:1184
 #, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr "<marco_session> বৈশিষ্ট্য প্রদর্শিত কিন্তু সেশান ID বর্তমানে উপস্থিত রয়েছে"
 
-#: ../src/core/session.c:1205 ../src/core/session.c:1280
-#: ../src/core/session.c:1312 ../src/core/session.c:1384
-#: ../src/core/session.c:1444
+#: ../src/core/session.c:1197 ../src/core/session.c:1272
+#: ../src/core/session.c:1304 ../src/core/session.c:1376
+#: ../src/core/session.c:1436
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "অজানা বৈশিষ্ট্য %s, <%s> স্বত্বায় চিহ্নিত হয়েছে"
 
-#: ../src/core/session.c:1222
+#: ../src/core/session.c:1214
 #, c-format
 msgid "nested <window> tag"
 msgstr "নেস্টেড <window> ট্যাগ"
 
-#: ../src/core/session.c:1464
+#: ../src/core/session.c:1456
 #, c-format
 msgid "Unknown element %s"
 msgstr "অজানা স্বত্বা %s"
 
-#: ../src/core/session.c:1816
+#: ../src/core/session.c:1808
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
@@ -385,14 +571,13 @@ msgid "Window manager error: "
 msgstr "উইন্ডো পরিচালন ব্যবস্থা সংক্রান্ত ত্রুটি: "
 
 #. Translators: This is the title used on dialog boxes
-#. eof all-keybindings.h
 #: ../src/core/util.c:570 ../src/marco.desktop.in.h:1
 #: ../src/marco-wm.desktop.in.h:1
 msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5660
+#: ../src/core/window.c:5666
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -406,7 +591,7 @@ msgstr "উইন্ডো %s দ্বারা ICCCM'এ নির্ধার
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
 #. 
-#: ../src/core/window.c:6225
+#: ../src/core/window.c:6231
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -470,652 +655,6 @@ msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
 msgstr "%s বৈশিষ্ট্যটি 0x%lx উইন্ডোর উপর উপস্থিত ও এর তালিকায় %d সংখ্যক বস্তুর মধ্যে অবৈধ UTF-8 অক্ষর অন্তর্ভুক্ত রয়েছে\n"
-
-#: ../src/include/all-keybindings.h:88
-msgid "Switch to workspace 1"
-msgstr "কর্মক্ষেত্র ১'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:90
-msgid "Switch to workspace 2"
-msgstr "কর্মক্ষেত্র ১৩'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:92
-msgid "Switch to workspace 3"
-msgstr "কর্মক্ষেত্র ৩'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:94
-msgid "Switch to workspace 4"
-msgstr "কর্মক্ষেত্র ৪'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:96
-msgid "Switch to workspace 5"
-msgstr "কর্মক্ষেত্র ৫'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:98
-msgid "Switch to workspace 6"
-msgstr "কর্মক্ষেত্র ৬'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:100
-msgid "Switch to workspace 7"
-msgstr "কর্মক্ষেত্র ৭'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:102
-msgid "Switch to workspace 8"
-msgstr "কর্মক্ষেত্র ৮'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:104
-msgid "Switch to workspace 9"
-msgstr "কর্মক্ষেত্র ৯'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:106
-msgid "Switch to workspace 10"
-msgstr "কর্মক্ষেত্র ১'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:108
-msgid "Switch to workspace 11"
-msgstr "কর্মক্ষেত্র ১১'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:110
-msgid "Switch to workspace 12"
-msgstr "কর্মক্ষেত্র ১২'এ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:122
-msgid "Switch to workspace on the left of the current workspace"
-msgstr "বাঁদিকের পার্শ্ববর্তী কর্মক্ষেত্রে পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:126
-msgid "Switch to workspace on the right of the current workspace"
-msgstr "ডানদিকের পার্শ্ববর্তী কর্মক্ষেত্রে পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:130
-msgid "Switch to workspace above the current workspace"
-msgstr "ঊর্ধস্থ কর্মক্ষেত্রে পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:134
-msgid "Switch to workspace below the current workspace"
-msgstr "নিম্নস্থিত কর্মক্ষেত্রে পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:150
-msgid "Move between windows of an application, using a popup window"
-msgstr "অ্যাপ্লিকেশনের উইন্ডোগুলির মধ্যে পপ-আপ উইন্ডো প্রয়োগ করে স্থান পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:153
-msgid "Move backward between windows of an application, using a popup window"
-msgstr "অ্যাপ্লিকেশনের উইন্ডোগুলির মধ্যে পপ-আপ উইন্ডো প্রয়োগ করে বিপরীতদিকে স্থান পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:157
-msgid "Move between windows, using a popup window"
-msgstr "উইন্ডোগুলির মধ্যে পপ-আপ উইন্ডো প্রয়োগ করে স্থান পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:160
-msgid "Move backward between windows, using a popup window"
-msgstr "উইন্ডোগুলির মধ্যে পপ-আপ উইন্ডো প্রয়োগ করে বিপরীতদিকে স্থান পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:163
-msgid "Move between panels and the desktop, using a popup window"
-msgstr "প্যানেল ও ডেস্কটপের মধ্যে পপ-আপ উইন্ডো প্রয়োগ করে স্থান পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:166
-msgid "Move backward between panels and the desktop, using a popup window"
-msgstr "প্যানেল ও ডেস্কটপের মধ্যে পপ-আপ উইন্ডো প্রয়োগ করে বিপরীত দিশায় স্থান পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:171
-msgid "Move between windows of an application immediately"
-msgstr "অ্যাপ্লিকেশনের উইন্ডোগুলির মধ্যে তৎক্ষনাৎ স্থান পরিবর্তন করা হবে"
-
-#: ../src/include/all-keybindings.h:174
-msgid "Move backward between windows of an application immediately"
-msgstr "অ্যাপ্লিকেশনের উইন্ডোগুলির মধ্যে তৎক্ষনাৎ বিপরীতদিকে স্থান পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:177
-msgid "Move between windows immediately"
-msgstr "উইন্ডোগুলির মধ্যে তৎক্ষনাৎ স্থান পরিবর্তন করা হবে"
-
-#: ../src/include/all-keybindings.h:180
-msgid "Move backward between windows immediately"
-msgstr "উইন্ডোগুলির মধ্যে তৎক্ষনাৎ বিপরীতদিকে স্থান পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:183
-msgid "Move between panels and the desktop immediately"
-msgstr "প্যানেল ও ডেস্কটপের মধ্যে তৎক্ষনাৎ স্থান পরিবর্তন করা হবে"
-
-#: ../src/include/all-keybindings.h:186
-msgid "Move backward between panels and the desktop immediately"
-msgstr "প্যানেল ও ডেস্কটপের মধ্যে তৎক্ষনাৎ বিপরীত দিশায় স্থান পরিবর্তন করা হবে"
-
-#: ../src/include/all-keybindings.h:191
-msgid "Hide all normal windows and set focus to the desktop"
-msgstr "সমস্ত সাধারণ উইন্ডো আড়াল করে ডেস্কটপ উজ্জ্বল করা হবে"
-
-#: ../src/include/all-keybindings.h:194
-msgid "Show the panel's main menu"
-msgstr "প্যানেলের প্রধান মেনু প্রদর্শন করা হবে"
-
-#: ../src/include/all-keybindings.h:197
-msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "প্যানেলের \"অ্যাপ্লিকেশন সঞ্চালনা\"-র ডায়লগ বক্স প্রদর্শন করা হবে"
-
-#: ../src/include/all-keybindings.h:238
-msgid "Take a screenshot"
-msgstr "পর্দার ছবি নিন"
-
-#: ../src/include/all-keybindings.h:240
-msgid "Take a screenshot of a window"
-msgstr "উইন্ডোর ছবি নিন"
-
-#: ../src/include/all-keybindings.h:242
-msgid "Run a terminal"
-msgstr "টার্মিনাল আরম্ভ করুন"
-
-#: ../src/include/all-keybindings.h:257
-msgid "Activate the window menu"
-msgstr "উইন্ডো মেনু সক্রিয় করুন"
-
-#: ../src/include/all-keybindings.h:260
-msgid "Toggle fullscreen mode"
-msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শনের মোড অদল-বদল করা হবে"
-
-#: ../src/include/all-keybindings.h:262
-msgid "Toggle maximization state"
-msgstr "সর্বোচ্চ মাপে প্রদর্শনের অবস্থা অদল-বদল করা হবে"
-
-#: ../src/include/all-keybindings.h:264
-msgid "Toggle whether a window will always be visible over other windows"
-msgstr "উইন্ডোটি সর্বদা অন্য সকল উইন্ডোর উপর প্রদর্শিত হবে কিনা তা টগল করে চিহ্নিত করুন"
-
-#: ../src/include/all-keybindings.h:266
-msgid "Maximize window"
-msgstr "উইন্ডো বড় করুন"
-
-#: ../src/include/all-keybindings.h:268
-msgid "Restore window"
-msgstr "উইন্ডো প্রদর্শন করুন"
-
-#: ../src/include/all-keybindings.h:270
-msgid "Toggle shaded state"
-msgstr "ছায়াবৃত প্রদর্শনের অবস্থা অদল-বদল করা হবে"
-
-#: ../src/include/all-keybindings.h:272
-msgid "Minimize window"
-msgstr "উইন্ডো আড়াল করুন"
-
-#: ../src/include/all-keybindings.h:274
-msgid "Close window"
-msgstr "উইন্ডো বন্ধ করুন"
-
-#: ../src/include/all-keybindings.h:276
-msgid "Move window"
-msgstr "উইন্ডো স্থানান্তরণ"
-
-#: ../src/include/all-keybindings.h:278
-msgid "Resize window"
-msgstr "উইন্ডোর মাপ পরিবর্তন করুন"
-
-#: ../src/include/all-keybindings.h:281
-msgid "Toggle whether window is on all workspaces or just one"
-msgstr "সকল কর্মক্ষেত্র অথবা একটি কর্মক্ষেত্রে উইন্ডো প্রদর্শন করা হবে কি না তা টগল করে চিহ্নিত করুন"
-
-#: ../src/include/all-keybindings.h:285
-msgid "Move window to workspace 1"
-msgstr "কর্মক্ষেত্র ১'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:288
-msgid "Move window to workspace 2"
-msgstr "কর্মক্ষেত্র ২'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:291
-msgid "Move window to workspace 3"
-msgstr "কর্মক্ষেত্র ৩'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:294
-msgid "Move window to workspace 4"
-msgstr "কর্মক্ষেত্র ৪'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:297
-msgid "Move window to workspace 5"
-msgstr "কর্মক্ষেত্র ৫'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:300
-msgid "Move window to workspace 6"
-msgstr "কর্মক্ষেত্র ৬'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:303
-msgid "Move window to workspace 7"
-msgstr "কর্মক্ষেত্র ৭'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:306
-msgid "Move window to workspace 8"
-msgstr "কর্মক্ষেত্র ৮'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:309
-msgid "Move window to workspace 9"
-msgstr "কর্মক্ষেত্র ৯'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:312
-msgid "Move window to workspace 10"
-msgstr "কর্মক্ষেত্র ১০'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:315
-msgid "Move window to workspace 11"
-msgstr "কর্মক্ষেত্র ১১'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:318
-msgid "Move window to workspace 12"
-msgstr "কর্মক্ষেত্র ১২'এ স্থানান্তর করুন"
-
-#: ../src/include/all-keybindings.h:330
-msgid "Move window one workspace to the left"
-msgstr "উইন্ডো বাঁদিকের পার্শ্ববর্তী কর্মক্ষেত্রে স্থানান্তরণ করা হবে"
-
-#: ../src/include/all-keybindings.h:333
-msgid "Move window one workspace to the right"
-msgstr "উইন্ডো ডানদিকের পার্শ্ববর্তী কর্মক্ষেত্রে স্থানান্তরণ করা হবে"
-
-#: ../src/include/all-keybindings.h:336
-msgid "Move window one workspace up"
-msgstr "উইন্ডো একটি কর্মক্ষেত্র উপরে স্থানান্তরণ করা হবে"
-
-#: ../src/include/all-keybindings.h:339
-msgid "Move window one workspace down"
-msgstr "উইন্ডো একটি কর্মক্ষেত্র নীচে স্থানান্তরণ করা হবে"
-
-#: ../src/include/all-keybindings.h:342
-msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr "অন্য উইন্ডো দ্বারা ঢাকা থাকলে উইন্ডোটি উপরে উইন্ডো উত্থাপন করা হবে, অন্যথা সেটি নীচে নামানো হবে"
-
-#: ../src/include/all-keybindings.h:344
-msgid "Raise window above other windows"
-msgstr "অন্যান্য উইন্ডোর উপরে উইন্ডো উত্থাপন করা হবে"
-
-#: ../src/include/all-keybindings.h:346
-msgid "Lower window below other windows"
-msgstr "উইন্ডোটিকে অন্য উইন্ডোর নীচে নামানো হবে"
-
-#: ../src/include/all-keybindings.h:350
-msgid "Maximize window vertically"
-msgstr "উইন্ডো উলম্ব দিশায় বড় করুন"
-
-#: ../src/include/all-keybindings.h:354
-msgid "Maximize window horizontally"
-msgstr "উইন্ডো অনুভূমিক দিশায় বড় করুন"
-
-#: ../src/include/all-keybindings.h:358
-msgid "Move window to north-west (top left) corner"
-msgstr "পর্দার উপরে বাঁদিকের কোণে উইন্ডো স্থাপন করা হবে"
-
-#: ../src/include/all-keybindings.h:361
-msgid "Move window to north-east (top right) corner"
-msgstr "পর্দার উপরে ডানদিকের কোণে উইন্ডো স্থাপন করা হবে"
-
-#: ../src/include/all-keybindings.h:364
-msgid "Move window to south-west (bottom left) corner"
-msgstr "পর্দার নীচে বাঁদিকের কোণে উইন্ডো স্থাপন করা হবে"
-
-#: ../src/include/all-keybindings.h:367
-msgid "Move window to south-east (bottom right) corner"
-msgstr "পর্দার নীচে ডানদিকের কোণে উইন্ডো স্থাপন করা হবে"
-
-#: ../src/include/all-keybindings.h:371
-msgid "Move window to north (top) side of screen"
-msgstr "পর্দার উপরের অংশে উইন্ডো স্থাপন করা হবে"
-
-#: ../src/include/all-keybindings.h:374
-msgid "Move window to south (bottom) side of screen"
-msgstr "পর্দার নীচের অংশে উইন্ডো স্থাপন করা হবে"
-
-#: ../src/include/all-keybindings.h:377
-msgid "Move window to east (right) side of screen"
-msgstr "পর্দার ডানদিকের অংশে উইন্ডো স্থাপন করা হবে"
-
-#: ../src/include/all-keybindings.h:380
-msgid "Move window to west (left) side of screen"
-msgstr "পর্দার বাঁদিকের অংশে উইন্ডো স্থাপন করা হবে"
-
-#: ../src/include/all-keybindings.h:383
-msgid "Move window to center of screen"
-msgstr "পর্দার কেন্দ্রে উইন্ডো স্থাপন করা হবে"
-
-#: ../src/marco.schemas.in.in.h:1
-msgid ""
-"(Not implemented) Navigation works in terms of applications not windows"
-msgstr "(কার্যকরী নয়) উইন্ডোর পরিবর্তে অ্যাপ্লিকেশন অনুসারে চলাচল করা সম্ভব"
-
-#: ../src/marco.schemas.in.in.h:2
-msgid ""
-"A font description string describing a font for window titlebars. The size "
-"from the description will only be used if the titlebar_font_size option is "
-"set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
-"option is set to true."
-msgstr "উইন্ডোর শিরোনামে ব্যবহৃত ফন্টের ব্যাখ্যা রূপে একটি পংক্তি। titlebar_font_size বিকল্পের মান 0 রূপে ধার্য করা হলে ফন্টের ব্যাখ্যায় উল্লিখিত ফন্টের মাপ ব্যবহৃত হবে। titlebar_uses_desktop_font বিকল্পের মান true হলে এই বিকল্পের ব্যবহার নিষ্ক্রিয় করা হবে।"
-
-#: ../src/marco.schemas.in.in.h:3
-msgid "Action on title bar double-click"
-msgstr "শিরোনামের বারে দুইবার ক্লিক করা হলে করণীয় কর্ম"
-
-#: ../src/marco.schemas.in.in.h:4
-msgid "Action on title bar middle-click"
-msgstr "শিরোনামের বারে মাউসের মাঝের বাটন ক্লিক করা হলে সঞ্চালনযোগ্য কর্ম"
-
-#: ../src/marco.schemas.in.in.h:5
-msgid "Action on title bar right-click"
-msgstr "শিরোনামের বারে মাউসের ডানদিকের বাটন ক্লিক করা হলে সঞ্চালনযোগ্য কর্ম"
-
-#: ../src/marco.schemas.in.in.h:6
-msgid "Arrangement of buttons on the titlebar"
-msgstr "শিরোনাম বারে বাটনের বিন্যাস"
-
-#: ../src/marco.schemas.in.in.h:7
-msgid ""
-"Arrangement of buttons on the titlebar. The value should be a string, such "
-"as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
-"corner of the window from the right corner, and the button names are comma-"
-"separated. Duplicate buttons are not allowed. Unknown button names are "
-"silently ignored so that buttons can be added in future marco versions "
-"without breaking older versions. A special spacer tag can be used to insert "
-"some space between two adjacent buttons."
-msgstr "শিরোনাম বারের মধ্যে বাটনের বিন্যাস। চিহ্নিত মান একটি পংক্তি হওয়া আবশ্যক যেমন \"menu:minimize,maximize,spacer,close\"; কোলোন চিহ্ন দ্বারা উইন্ডোর বাঁদিকের কোণার ও ডানদিকের কোণার মান বিভাজিত করা হয় এবং বাটনের নামগুলি কমা-চিহ্ন দ্বারা বিভক্ত।দুটি বাটন অনুরূপ হওয়া সম্ভব নয়। অজানা বাটনের নাম সতর্কবাণী বিনা অগ্রাহ্য করা হয় যার ফলে ভবিষ্যতে প্রকাশিত marco-র সংস্করণের সাথে বিনা দ্বন্দ্বে বাটন যোগ করা সম্ভব হবে। পাশাপাশি স্থাপিত দুটি বাটনের মধ্যে ব্যবধান সৃষ্টি করার জন্য একটি বিশেষ spacer ট্যাগ যোগ করা যাবে।"
-
-#: ../src/marco.schemas.in.in.h:8
-msgid "Automatically raises the focused window"
-msgstr "ব্যবহৃত উইন্ডো স্বয়ংক্রিয়রূপে বড় করা হবে"
-
-#: ../src/marco.schemas.in.in.h:9
-msgid ""
-"Clicking a window while holding down this modifier key will move the window "
-"(left click), resize the window (middle click), or show the window menu "
-"(right click). The middle and right click operations may be swapped using "
-"the \"resize_with_right_button\" key. Modifier is expressed as "
-"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
-
-#: ../src/marco.schemas.in.in.h:10
-msgid "Commands to run in response to keybindings"
-msgstr "কি-বাইন্ডিং ব্যবহৃত হলে সঞ্চালনযোগ্য কমান্ড"
-
-#: ../src/marco.schemas.in.in.h:11
-msgid "Compositing Manager"
-msgstr "কম্পোসিটিং পরিচালন ব্যবস্থা"
-
-#: ../src/marco.schemas.in.in.h:12
-msgid "Control how new windows get focus"
-msgstr "নতুন উইন্ড উজ্জ্বল করার প্রণালী নিয়ন্ত্রণ করুন"
-
-#: ../src/marco.schemas.in.in.h:13
-msgid "Current theme"
-msgstr "বর্তমানে ব্যবহৃত থিম"
-
-#: ../src/marco.schemas.in.in.h:14
-msgid "Delay in milliseconds for the auto raise option"
-msgstr "স্বয়ংক্রিয়রূপে উইন্ডোর বড় করার পূর্বে বিলম্বক্ষণ, মিলিসেকেন্ডে ব্যক্ত"
-
-#: ../src/marco.schemas.in.in.h:15
-msgid "Determines whether Marco is a compositing manager."
-msgstr "কমপোসিটিং পরিচালন ব্যবস্থা রূপে Marco প্রয়োগ করা হবে কি না তা ধার্য করা হবে।"
-
-#: ../src/marco.schemas.in.in.h:16
-msgid ""
-"Determines whether applications or the system can generate audible 'beeps'; "
-"may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr "অ্যাপ্লিকেশন অথবা সিস্টেমের দ্বারা শ্রুতিগম্য 'beeps' শব্দ উৎপন্ন করা হবে কিনা তা নির্ধারণ করে; নিঃশব্দ 'beeps' শব্দের জন্য 'visual bell'-র সাথে ব্যবহারযোগ্য।"
-
-#: ../src/marco.schemas.in.in.h:17
-msgid "Disable misfeatures that are required by old or broken applications"
-msgstr "পুরোনো অথবা ক্ষতিগ্রস্ত অ্যাপ্লিকেশনের ক্ষেত্রে আবশ্যক ত্রুটিপূর্ণ বৈশিষ্ট্যের ব্যবহার নিষ্ক্রিয় করা হবে"
-
-#: ../src/marco.schemas.in.in.h:18
-msgid "Enable Visual Bell"
-msgstr "Visual Bell সক্রিয় করা হবে"
-
-#: ../src/marco.schemas.in.in.h:19
-msgid ""
-"If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
-"the focused window will be automatically raised after a delay specified by "
-"the auto_raise_delay key. This is not related to clicking on a window to "
-"raise it, nor to entering a window during drag-and-drop."
-msgstr "মান true ধার্য করা হলে ও উজ্জ্বল করার মোড \"sloppy\" অথবা \"mouse\" হয়ে থাকলে auto_raise_delay কি দ্বারা চিহ্নিত মিলিসেকেন্ড পরে উজ্জ্বলিত উইন্ডোটি স্বয়ংক্রিয়রূপে বড় করা হবে। উইন্ডোর উপর ক্লিক করে উইন্ডো বড় করার বৈশিষ্ট্য অথবা ড্র্যাগ-ড্রপ কর্ম সঞ্চালনকালে উইন্ডোর মধ্যে প্রবেশের সাথে এর কোনো সম্পর্ক নেই।"
-
-#: ../src/marco.schemas.in.in.h:20
-msgid ""
-"If true, ignore the titlebar_font option, and use the standard application "
-"font for window titles."
-msgstr "মান true হলে, titlebar_font বিকল্পটি অগ্রাহ্য করা হবে ও উইন্ডোর শিরোনামের জন্য অ্যাপ্লিকেশনের ক্ষেত্রে চিহ্নিত প্রমিত ফন্ট ব্যবহৃত হবে।"
-
-#: ../src/marco.schemas.in.in.h:21
-msgid ""
-"If true, marco will give the user less feedback by using wireframes, "
-"avoiding animations, or other means. This is a significant reduction in "
-"usability for many users, but may allow legacy applications to continue "
-"working, and may also be a useful tradeoff for terminal servers. However, "
-"the wireframe feature is disabled when accessibility is on."
-msgstr "মান true হলে, marco দ্বারা ব্যবহারকারীদের কম ফিড-ব্যাক প্রদান করা হবে এবং এর জন্য অ্যানিমেশন প্রভৃতি উপেক্ষা করে ওয়াইর-ফ্রেম ব্যবহার করা হবে। এর ফলে অনেক ব্যবহারকারীর ক্ষেত্রে ব্যবহারযোগ্যতা হ্রাস পেলেও লিগাসি অ্যাপ্লিকেশন সঞ্চালন করা যাবে এবং টারমিনাল সার্ভারের ক্ষেত্রে বিশেষ কর্মোপযোগিতা উপলব্ধ করবে। তথাপি সহায়ক প্রযুক্তির ব্যবহার সক্রিয় থাকাকালীন ওয়াইর-ফ্রেমের ব্যবহার নিষ্ক্রিয় করা হয়।"
-
-#: ../src/marco.schemas.in.in.h:22
-msgid ""
-"If true, then Marco works in terms of applications rather than windows. The "
-"concept is a bit abstract, but in general an application-based setup is more"
-" like the Mac and less like Windows. When you focus a window in application-"
-"based mode, all the windows in the application will be raised. Also, in "
-"application-based mode, focus clicks are not passed through to windows in "
-"other applications. Application-based mode is, however, largely "
-"unimplemented at the moment."
-msgstr "মান true হলে, উইন্ডোর পরিবর্তে Marco অ্যাপ্লিকেশন অনুযায়ী কর্ম সঞ্চালন করবে। অ্যাপ্লিকেশন-ভিত্তিক পরিবেশ Mac'র অনুরূপ ও Windows'র সাথে এর সাদৃশ্য কম। অ্যাপ্লিকেশন-ভিত্তিক মোডে কোনে উইন্ডো উজ্জ্বল করা হলে সংশ্লিষ্ট অ্যাপ্লিকেশনের সমস্ত উইন্ডো বড় করা হবে। উপরন্তু উজ্জ্বল করার সময় কৃত ক্লিক, উইন্ডোর মাধ্যমে অন্যান্য অ্যাপ্লিকেশনে প্রেরিত হয় না। বাস্তবে অ্যাপ্লিকেশন-ভিত্তিক মোড বর্তমানে বিশেষ প্রয়োগ করা হয় না।"
-
-#: ../src/marco.schemas.in.in.h:23
-msgid "If true, trade off usability for less resource usage"
-msgstr "মান true হলে, রিসোর্সের ব্যবহার হ্রাস করতে কর্মক্ষমতা হ্রাস করা হবে"
-
-#: ../src/marco.schemas.in.in.h:24
-msgid "Modifier to use for modified window click actions"
-msgstr "পরিবর্তিত উইন্ডো ক্লিক কর্মের ফলে ব্যবহারযোগ্য পরিবর্তক"
-
-#: ../src/marco.schemas.in.in.h:25
-msgid "Name of workspace"
-msgstr "কর্মক্ষেত্রের নাম"
-
-#: ../src/marco.schemas.in.in.h:26
-msgid "Number of workspaces"
-msgstr "কর্মক্ষেত্রের সংখ্যা"
-
-#: ../src/marco.schemas.in.in.h:27
-msgid ""
-"Number of workspaces. Must be more than zero, and has a fixed maximum to "
-"prevent making the desktop unusable by accidentally asking for too many "
-"workspaces."
-msgstr "কর্মক্ষেত্রের সংখ্যা। শূণ্যের অধিক হওয়া আবশ্যক ও সর্বোচ্চ অনুমোদিত কর্মক্ষেত্রের সংখ্যা চিহ্নিত হওয়া আবশ্যক যার ফলে ভুলবসত অত্যাধিক কর্মক্ষেত্রের উপস্থিতির ফলে ডেস্কটপ ক্ষতিগ্রস্ত না হয়।"
-
-#: ../src/marco.schemas.in.in.h:28
-msgid "Run a defined command"
-msgstr "একটি সুনির্দিষ্ট কমান্ড সঞ্চালন করুন"
-
-#: ../src/marco.schemas.in.in.h:29
-msgid ""
-"Set this to true to resize with the right button and show a menu with the "
-"middle button while holding down the key given in \"mouse_button_modifier\";"
-" set it to false to make it work the opposite way around."
-msgstr "\"mouse_button_modifier\"-এ চিহ্নিত কি টিপে ধরে, ডানদিকের বাটন সহযোগে মাপ পরিবর্তন ও মধ্যম বাটন সহযোগে মেনু প্রদর্শন করার জন্য এই মানটি true (সত্য) ধার্য করুন; বিপরীত বৈশিষ্ট্য সহযোগে কার্যকরী করার জন্য মান false (সত্য নয়) ধার্য করুন।"
-
-#: ../src/marco.schemas.in.in.h:30
-msgid ""
-"Setting this option to false can lead to buggy behavior, so users are "
-"strongly discouraged from changing it from the default of true. Many actions"
-" (e.g. clicking in the client area, moving or resizing the window) normally "
-"raise the window as a side-effect. Setting this option to false, which is "
-"strongly discouraged, will decouple raising from other user actions, and "
-"ignore raise requests generated by applications. See "
-"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Even when this option "
-"is false, windows can still be raised by an alt-left-click anywhere on the "
-"window, a normal click on the window decorations, or by special messages "
-"from pagers, such as activation requests from tasklist applets. This option "
-"is currently disabled in click-to-focus mode. Note that the list of ways to "
-"raise windows when raise_on_click is false does not include programmatic "
-"requests from applications to raise windows; such requests will be ignored "
-"regardless of the reason for the request. If you are an application "
-"developer and have a user complaining that your application does not work "
-"with this setting disabled, tell them it is _their_ fault for breaking their"
-" window manager and that they need to change this option back to true or "
-"live with the \"bug\" they requested."
-msgstr ""
-
-#: ../src/marco.schemas.in.in.h:31
-msgid ""
-"Some applications disregard specifications in ways that result in window "
-"manager misfeatures. This option puts Marco in a rigorously correct mode, "
-"which gives a more consistent user interface, provided one does not need to "
-"run any misbehaving applications."
-msgstr "কয়েকটি অ্যাপ্লিকেশন দ্বারা সুনির্দিষ্ট বৈশিষ্ট্যের মান অগ্রাহ্য করা হয় যার ফলে উইন্ডো পরিচালন ব্যবস্থা ক্ষতিগ্রস্ত হয়। এই বিকল্পের দ্বারা Marco সুস্পষ্টরূপে সঠিক চালনার মোডে স্থাপিত হবে যার ফলে ইউজার ইন্টারফেস তুলনামূলকরূপে স্থায়ী হবে যদি কোনো অ্যাপ্লিকেশনের গতিবিধি উশৃঙ্খল না হয়ে থাকে।"
-
-#: ../src/marco.schemas.in.in.h:32
-msgid "System Bell is Audible"
-msgstr "সিস্টেম ঘন্টি শোনা যাবে"
-
-#: ../src/marco.schemas.in.in.h:33
-msgid ""
-"Tells Marco how to implement the visual indication that the system bell or "
-"another application 'bell' indicator has been rung. Currently there are two "
-"valid values, \"fullscreen\", which causes a fullscreen white-black flash, "
-"and \"frame_flash\" which causes the titlebar of the application which sent "
-"the bell signal to flash. If the application which sent the bell is unknown "
-"(as is usually the case for the default \"system beep\"), the currently "
-"focused window's titlebar is flashed."
-msgstr "এর দ্বারা Marco'কে সিস্টেম ঘন্টি অথবা অন্য কোনো অ্যাপ্লিকেশনের 'ঘন্টি' থেকে উৎপন্ন শব্দের সংকেত প্রদর্শনের নির্দেশ প্রদান করা হয়। বর্তমানে দুটি বৈধ মান উপস্থিত রয়েছে, \"fullscreen\" যার ফলে সম্পূর্ণ পর্দা জুড়ে সাদা-কালো ঝলকানি হয় এবং \"frame_flash\" যার ফলে ঘন্টির শব্দ উৎপন্নকারী অ্যাপ্লিকেশনের শিরোনাম-বারে ঝলকানি সৃষ্টি করা হবে। শব্দ উৎপন্নকারী অ্যাপ্লিকেশনের পরিচয় জানতে পারা না গেলে (ডিফল্ট  \"system beep (সিস্টেম বিপ)\"'র ক্ষেত্রে) বর্তমানে উজ্জ্বলিত উইন্ডোর শিরোনামের বারে ঝলকানি সৃষ্টি করা হবে।"
-
-#: ../src/marco.schemas.in.in.h:34
-msgid ""
-"The /apps/marco/global_keybindings/run_command_N keys define keybindings "
-"that correspond to these commands. Pressing the keybinding for run_command_N"
-" will execute command_N."
-msgstr "/apps/marco/global_keybindings/run_command_N কিগুলি দ্বারা এই সমস্ত কমান্ডের ক্ষেত্রে সংশ্লিস্ট কি-বাইন্ডিং ব্যাখ্যা করা হয়।run_command_N'র কি-বাইন্ডিং প্রয়োগ করা হলে command_N সঞ্চালিত হবে।"
-
-#: ../src/marco.schemas.in.in.h:35
-msgid ""
-"The /apps/marco/global_keybindings/run_command_screenshot key defines a "
-"keybinding which causes the command specified by this setting to be invoked."
-msgstr "/apps/marco/global_keybindings/run_command_screenshot কি দ্বারা একটি কি-বাইন্ডিং ব্যাখ্যা করা হয় যার ফলে এই বৈশিষ্ট্য দ্বারা চিহ্নিত কমান্ড সঞ্চালিত হবে।"
-
-#: ../src/marco.schemas.in.in.h:36
-msgid ""
-"The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
-" a keybinding which causes the command specified by this setting to be "
-"invoked."
-msgstr "/apps/marco/global_keybindings/run_command_window_screenshot কি দ্বারা একটি কি-বাইন্ডিং ব্যাখ্যা করা হয় যার ফলে এই বৈশিষ্ট্য দ্বারা চিহ্নিত কমান্ড সঞ্চালিত হবে।"
-
-#: ../src/marco.schemas.in.in.h:37
-msgid ""
-"The keybinding that runs the correspondingly-numbered command in "
-"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
-"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action."
-msgstr "যে কি-বাইন্ডিং দ্বারা /apps/marco/keybinding_commands থেকে সংশ্লিষ্ট সংখ্যা দ্বারা চিহ্নিত কমান্ড সঞ্চালিত হবে। \"&lt;Control&gt;a\" অথবা \"&lt;Shift&gt;&lt;Alt&gt;F1\" বিন্যাস ব্যবহৃত হবে। পার্সার হরফের ছাঁদ সম্পর্কে সচেতন নয় এবং প্রয়োজনে \"&lt;Ctl&gt;\" ও \"&lt;Ctrl&gt;\"'র অনুরূপ সংক্ষিপ্ত রূপও ব্যবহার করা যাবে। বিকল্পের ক্ষেত্রে বিশেষ পংক্তি \"disabled\" প্রয়োগ করা হলে এই কর্মের জন্য কোনো কি-বাইন্ডিং ব্যবহার করা হবে না।"
-
-#: ../src/marco.schemas.in.in.h:38
-msgid "The name of a workspace."
-msgstr "কর্মক্ষেত্রের নাম"
-
-#: ../src/marco.schemas.in.in.h:39
-msgid "The screenshot command"
-msgstr "পর্দার ছবি নেওয়ার কমান্ড"
-
-#: ../src/marco.schemas.in.in.h:40
-msgid ""
-"The theme determines the appearance of window borders, titlebar, and so "
-"forth."
-msgstr "থিম দ্বারা উইন্ডোর প্রান্ত, শিরোনামের-বার প্রভৃতির বিন্যাস নির্ধারিত হবে।"
-
-#: ../src/marco.schemas.in.in.h:41
-msgid ""
-"The time delay before raising a window if auto_raise is set to true. The "
-"delay is given in thousandths of a second."
-msgstr "auto_raise-র মান true (সত্য) নির্ধারিত হলে, উইন্ডো পুনরায় প্রদর্শনের পূর্বে বিলম্বের সময়ের পরিমাণ। এক সেকেন্ডের হাজার ভাগ অনুসারে এই বিলম্বের পরিমাণ ধার্য করা হয়।"
-
-#: ../src/marco.schemas.in.in.h:42
-msgid ""
-"The window focus mode indicates how windows are activated. It has three "
-"possible values; \"click\" means windows must be clicked in order to focus "
-"them, \"sloppy\" means windows are focused when the mouse enters the window,"
-" and \"mouse\" means windows are focused when the mouse enters the window "
-"and unfocused when the mouse leaves the window."
-msgstr "উইন্ডো সক্রিয় করার প্রক্রিয়াটি উইন্ডোর ফোকাস মোড দ্বারা চিহ্নিত করা হয়। এই ক্ষেত্রে তিনটি সম্ভাব্য মান; ক্লিক করে উইন্ডোর উপর ফোকাস করার জন্য \"click\", উইন্ডোর মধ্যে মাউস প্রবেশ করলে উইন্ডো ফোকাস করার জন্য \"sloppy\", উইন্ডোর মধ্যে মাউস প্রবেশ করলে উইন্ডো ফোকাস করার জন্য ও মাউসটি প্রস্থান করলে উইন্ডো থেকে ফোকাস সরিয়ে নেওয়ার জন্য \"mouse\" ব্যবহার করা হবে।"
-
-#: ../src/marco.schemas.in.in.h:43
-msgid "The window screenshot command"
-msgstr "উইন্ডোর ছবি নেওয়ার জন্য ব্যবহৃত কমান্ড"
-
-#: ../src/marco.schemas.in.in.h:44
-msgid ""
-"This option determines the effects of double-clicking on the title bar. "
-"Current valid options are 'toggle_shade', which will shade/unshade the "
-"window, 'toggle_maximize' which will maximize/unmaximize the window, "
-"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will"
-" minimize the window, 'shade' which will roll the window up, 'menu' which "
-"will display the window menu, 'lower' which will put the window behind all "
-"the others, and 'none' which will not do anything."
-msgstr "শিরোনাম-বারের উপর দুইবার ক্লিক করার সম্ভাব্য ফলাফল এই বিকল্প দ্বারা নির্ধারিত হয়। বর্তমানে বৈধ বিকল্পগুলি হল: উইন্ডোকে ছায়াবৃত/ছায়ামুক্ত করার জন্য 'toggle_shade', সর্বাধিক মাপে উইন্ডো স্থাপন অথবা সর্বাধিক মাপ বাতিল করার জন্য 'toggle_maximize', চিহ্নিত দিশায় সর্বাধিক মাপে উইন্ডো স্থাপন অথবা সর্বাধিক মাপ বাতিল করার জন্য 'toggle_maximize_horizontally' ও 'toggle_maximize_vertically', সর্বনিম্ন মাপে উইন্ডো স্থাপন করার জন্য 'minimize', উইন্ডো গুটিয়ে ফেলার জন্য 'shade', উইন্ডোর মেনু প্রদর্শনের জন্য 'menu', অন্যান্য সকল উইন্ডোর নীচে উইন্ডোটি স্থাপন করার জন্য 'lower', ও 'none' ধার্য করা হলে কিছু করা হবে না।"
-
-#: ../src/marco.schemas.in.in.h:45
-msgid ""
-"This option determines the effects of middle-clicking on the title bar. "
-"Current valid options are 'toggle_shade', which will shade/unshade the "
-"window, 'toggle_maximize' which will maximize/unmaximize the window, "
-"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will"
-" minimize the window, 'shade' which will roll the window up, 'menu' which "
-"will display the window menu, 'lower' which will put the window behind all "
-"the others, and 'none' which will not do anything."
-msgstr "শিরোনাম-বারের উপর মাউসের মধ্যম বাটন সহযোগে ক্লিক করার সম্ভাব্য ফলাফল এই বিকল্প দ্বারা নির্ধারিত হয়। বর্তমানে বৈধ বিকল্পগুলি হল: উইন্ডোকে ছায়াবৃত/ছায়ামুক্ত করার জন্য 'toggle_shade', সর্বাধিক মাপে উইন্ডো স্থাপন অথবা সর্বাধিক মাপ বাতিল করার জন্য 'toggle_maximize', চিহ্নিত দিশায় সর্বাধিক মাপে উইন্ডো স্থাপন অথবা সর্বাধিক মাপ বাতিল করার জন্য 'toggle_maximize_horizontally' ও 'toggle_maximize_vertically', সর্বনিম্ন মাপে উইন্ডো স্থাপন করার জন্য 'minimize', উইন্ডো গুটিয়ে ফেলার জন্য 'shade', উইন্ডোর মেনু প্রদর্শনের জন্য 'menu', অন্যান্য সকল উইন্ডোর নীচে উইন্ডোটি স্থাপন করার জন্য 'lower', ও 'none' ধার্য করা হলে কিছু করা হবে না।"
-
-#: ../src/marco.schemas.in.in.h:46
-msgid ""
-"This option determines the effects of right-clicking on the title bar. "
-"Current valid options are 'toggle_shade', which will shade/unshade the "
-"window, 'toggle_maximize' which will maximize/unmaximize the window, "
-"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will"
-" minimize the window, 'shade' which will roll the window up, 'menu' which "
-"will display the window menu, 'lower' which will put the window behind all "
-"the others, and 'none' which will not do anything."
-msgstr "শিরোনাম-বারের উপর মাউসের ডানদিকের বাটন সহযোগে ক্লিক করার সম্ভাব্য ফলাফল এই বিকল্প দ্বারা নির্ধারিত হয়। বর্তমানে বৈধ বিকল্পগুলি হল: উইন্ডোকে ছায়াবৃত/ছায়ামুক্ত করার জন্য 'toggle_shade', সর্বাধিক মাপে উইন্ডো স্থাপন অথবা সর্বাধিক মাপ বাতিল করার জন্য 'toggle_maximize', চিহ্নিত দিশায় সর্বাধিক মাপে উইন্ডো স্থাপন অথবা সর্বাধিক মাপ বাতিল করার জন্য 'toggle_maximize_horizontally' ও 'toggle_maximize_vertically', সর্বনিম্ন মাপে উইন্ডো স্থাপন করার জন্য 'minimize', উইন্ডো গুটিয়ে ফেলার জন্য 'shade', উইন্ডোর মেনু প্রদর্শনের জন্য 'menu', অন্যান্য সকল উইন্ডোর নীচে উইন্ডোটি স্থাপন করার জন্য 'lower', ও 'none' ধার্য করা হলে কিছু করা হবে না।"
-
-#: ../src/marco.schemas.in.in.h:47
-msgid ""
-"This option provides additional control over how newly created windows get "
-"focus. It has two possible values; \"smart\" applies the user's normal focus"
-" mode, and \"strict\" results in windows started from a terminal not being "
-"given focus."
-msgstr "নতুন উইন্ডোর উপর ফোকাস করার জন্য বিভিন্ন অতিরিক্ত নিয়ন্ত্রণ ব্যবস্থা এই বিকল্প দ্বারা ধার্য করা হয়। এই ক্ষেত্রে দুটি সম্ভাব্য মান প্রয়োগ করা যাবে; ব্যবহারকারীর ক্ষেত্রে ধার্য স্বাভাবিক ফোকাস মোডের জন্য \"smart\", ও টার্মিন্যাল থেকে আরম্ভ করা উইন্ডোগুলির জন্য ফোকাস ধার্য না করার উদ্দেশ্যে \"strict\"।"
-
-#: ../src/marco.schemas.in.in.h:48
-msgid ""
-"Turns on a visual indication when an application or the system issues a "
-"'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
-"environments."
-msgstr "সিস্টেম অথবা কোনো অ্যাপ্লিকেশন দ্বারা 'ঘন্টা' অথবা 'বিপ' শব্দ করা হলে, একটি দৃশ্যমান সংকেত সক্রিয় করা হবে; কম শ্রবণশক্তি সহ ব্যক্তি অথবা কোলাহলপূর্ণ স্থানে এটি বিশেষ সহায়ক।"
-
-#: ../src/marco.schemas.in.in.h:49
-msgid "Use standard system font in window titles"
-msgstr "উইন্ডোর শিরোনামে সিস্টেমের প্রমিত মাপের ফন্ট ব্যবহার করা হবে"
-
-#: ../src/marco.schemas.in.in.h:50
-msgid "Visual Bell Type"
-msgstr "ভিসুয়্যল বেলের ধরন"
-
-#: ../src/marco.schemas.in.in.h:51
-msgid "Whether raising should be a side-effect of other user interactions"
-msgstr "ব্যবহারকারীদের দ্বারা সঞ্চালিত কর্মের ফলে উইন্ডো বড় করা হবে কি না"
-
-#: ../src/marco.schemas.in.in.h:52
-msgid "Whether to resize with the right button"
-msgstr "ডানদিকের বাটন প্রয়োগ করে মাপ পরিবর্তন করা হবে কি না"
-
-#: ../src/marco.schemas.in.in.h:53
-msgid "Window focus mode"
-msgstr "উইন্ডো উজ্জ্বল করার মোড"
-
-#: ../src/marco.schemas.in.in.h:54
-msgid "Window title font"
-msgstr "উইন্ডোর শিরোনামে ব্যবহৃত ফন্ট"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1401,201 +940,201 @@ msgstr "বাটনের অ্যাপেক্ট অনুপাত %g য
 msgid "Frame geometry does not specify size of buttons"
 msgstr "ফ্রেম জ্যামিতি দ্বারা বাটনের মাপ নির্ধারিত হয়নি"
 
-#: ../src/ui/theme.c:1021
+#: ../src/ui/theme.c:1023
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "গ্রেডিয়েন্টের ক্ষেত্রে দুটি রং নির্ধারিত হওয়া আবশ্যক"
 
-#: ../src/ui/theme.c:1147
+#: ../src/ui/theme.c:1149
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
 msgstr "GTK-র রং সংক্রান্ত মান ধার্য করা সময়, বন্ধনি চিহ্নের মধ্যে অবস্থা লেখা আবশ্যক। উদাহরণ: gtk:fg[NORMAL], এই ক্ষেত্রে NORMAL একটি অবস্থা চিহ্নিত করে; \"%s\" পার্স করতে ব্যর্থ"
 
-#: ../src/ui/theme.c:1161
+#: ../src/ui/theme.c:1163
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
 msgstr "GTK-র রং সংক্রান্ত মান ধার্য করা সময়, অবস্থা লেখার পরে বন্ধনি চিহ্ন লেখা আবশ্যক। উদাহরণ: gtk:fg[NORMAL], এই ক্ষেত্রে NORMAL একটি অবস্থা চিহ্নিত করে; \"%s\" পার্স করতে ব্যর্থ"
 
-#: ../src/ui/theme.c:1172
+#: ../src/ui/theme.c:1174
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "রং নির্ধারণের জন্য state \"%s\" বোধগম্য হয়নি"
 
-#: ../src/ui/theme.c:1185
+#: ../src/ui/theme.c:1187
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "রং নির্ধারণের জন্য রং'র বিষয়বস্তু \"%s\" বোধগম্য হয়নি"
 
-#: ../src/ui/theme.c:1215
+#: ../src/ui/theme.c:1217
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
 msgstr "ব্লেন্ড বিন্যাস \"blend/bg_color/fg_color/alpha\", \"%s\" বিন্যাসের সাথে সুসংগত নয়"
 
-#: ../src/ui/theme.c:1226
+#: ../src/ui/theme.c:1228
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "ব্লেন্ড করা রং'এ আল্ফা মান \"%s\" পার্স করতে ব্যর্থ"
 
-#: ../src/ui/theme.c:1236
+#: ../src/ui/theme.c:1238
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "ব্লেন্ড করা রং'এ আল্ফা মান \"%s\" 0.0 ও1.0 সীমারেখার মধ্যে নয়"
 
-#: ../src/ui/theme.c:1283
+#: ../src/ui/theme.c:1285
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "ছায়ার বিন্যাস \"shade/base_color/factor\", \"%s\" বিন্যাসের সাথে সুসংগত নয়"
 
-#: ../src/ui/theme.c:1294
+#: ../src/ui/theme.c:1296
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "ছায়াযুক্ত রং'র ক্ষেত্রে ছায়ার মাপ \"%s\" পার্স করতে ব্যর্থ"
 
-#: ../src/ui/theme.c:1304
+#: ../src/ui/theme.c:1306
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "ছায়াযুক্ত রং'র ক্ষেত্রে ছায়ার মান \"%s\" শূণ্যের কম"
 
-#: ../src/ui/theme.c:1333
+#: ../src/ui/theme.c:1335
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "\"%s\" রং পার্স করতে ব্যর্থ"
 
-#: ../src/ui/theme.c:1587
+#: ../src/ui/theme.c:1589
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "স্থানাঙ্কের এক্সপ্রেশনের মধ্যে '%s' অক্ষর উপস্থিত এবং এর ব্যবহার অনুমোদিত নয়"
 
-#: ../src/ui/theme.c:1614
+#: ../src/ui/theme.c:1616
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "স্থানাঙ্কের এক্সপ্রেশনের মধ্যে '%s' ফ্লোটিং পয়েন্ট সংখ্যা উপস্থিত যা পার্স করা সম্ভব হয়নি"
 
-#: ../src/ui/theme.c:1628
+#: ../src/ui/theme.c:1630
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "স্থানাঙ্কের এক্সপ্রেশনের মধ্যে পূর্ণসংখ্যা '%s' উপস্থিত রয়েছে যা পার্স করা সম্ভব হয়নি"
 
-#: ../src/ui/theme.c:1750
+#: ../src/ui/theme.c:1752
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে টেক্সটের প্রারম্ভিক স্থানে অজানা অপারেটর: \"%s\""
 
-#: ../src/ui/theme.c:1807
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশন ফাঁকা অথবা বোধগম্য নয়"
 
-#: ../src/ui/theme.c:1918 ../src/ui/theme.c:1928 ../src/ui/theme.c:1962
+#: ../src/ui/theme.c:1920 ../src/ui/theme.c:1930 ../src/ui/theme.c:1964
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের ফলাফলে শূণ্য দ্বারা ভাগ করার অবস্থা উৎপন্ন হয়"
 
-#: ../src/ui/theme.c:1970
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশন দ্বারা ফ্লোটিং পয়েন্ট সংখ্যার উপর mod অপারেটর ব্যবহারের প্রয়াস করা হয়েছে"
 
-#: ../src/ui/theme.c:2026
+#: ../src/ui/theme.c:2028
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে  \"%s\" অপারেটর উপস্থিত কিন্তু অপারেন্ড প্রত্যাশিত"
 
-#: ../src/ui/theme.c:2035
+#: ../src/ui/theme.c:2037
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে প্রত্যাশিত অপারেন্ডের পরিবর্তে অপারেটর উপস্থিত"
 
-#: ../src/ui/theme.c:2043
+#: ../src/ui/theme.c:2045
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের অন্তে প্রত্যাশিত অপারেন্ডের পরিবর্তে অপারেটর উপস্থিত"
 
-#: ../src/ui/theme.c:2053
+#: ../src/ui/theme.c:2055
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের ক্ষেত্রে \"%c\" অপারেটরের পরে \"%c\" অপারেটর উপস্থিত এবং দুটির মধ্যে কোনো অপারেন্ড উপস্থিত নেই"
 
-#: ../src/ui/theme.c:2200 ../src/ui/theme.c:2241
+#: ../src/ui/theme.c:2202 ../src/ui/theme.c:2243
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে অজানা ভেরিয়েবল অথবা কনস্ট্যান্ট \"%s\" উপস্থিত"
 
-#: ../src/ui/theme.c:2295
+#: ../src/ui/theme.c:2297
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের পার্সারের বাফারের সীমা অতিক্রান্ত হয়েছে।"
 
-#: ../src/ui/theme.c:2324
+#: ../src/ui/theme.c:2326
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে শেষের বন্ধনী চিহ্ন উপস্থিত, প্রারম্ভিক চিহ্ন অনুপস্থিত"
 
-#: ../src/ui/theme.c:2388
+#: ../src/ui/theme.c:2390
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে প্রারম্ভিক বন্ধনী চিহ্ন উপস্থিত শেষের বন্ধনী চিহ্ন অনুপস্থিত"
 
-#: ../src/ui/theme.c:2399
+#: ../src/ui/theme.c:2401
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে কোনো অপারেটর অথবা অপারেন্ড উপস্থিত নেই"
 
-#: ../src/ui/theme.c:2603 ../src/ui/theme.c:2623 ../src/ui/theme.c:2643
+#: ../src/ui/theme.c:2605 ../src/ui/theme.c:2625 ../src/ui/theme.c:2645
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "থিমের মধ্যে উপস্থিত এক্সপ্রেশনের ফলে সমস্যা উৎপন্ন হয়েছে: %s\n"
 
-#: ../src/ui/theme.c:4220
+#: ../src/ui/theme.c:4222
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "চিহ্নিত ফ্রেমের বিন্যাসের জন্য <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> উল্লেখ করা আবশ্যক"
 
-#: ../src/ui/theme.c:4728 ../src/ui/theme.c:4753
+#: ../src/ui/theme.c:4730 ../src/ui/theme.c:4755
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> অনুপস্থিত"
 
-#: ../src/ui/theme.c:4797
+#: ../src/ui/theme.c:4799
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" থিম লোড করতে ব্যর্থ: %s\n"
 
-#: ../src/ui/theme.c:4927 ../src/ui/theme.c:4934 ../src/ui/theme.c:4941
-#: ../src/ui/theme.c:4948 ../src/ui/theme.c:4955
+#: ../src/ui/theme.c:4929 ../src/ui/theme.c:4936 ../src/ui/theme.c:4943
+#: ../src/ui/theme.c:4950 ../src/ui/theme.c:4957
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "<%s> নির্ধারিত হয়নি \"%s\" থিমের জন্য"
 
-#: ../src/ui/theme.c:4963
+#: ../src/ui/theme.c:4965
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "\"%s\" ধরনের উইন্ডোর জন্য \"%s\" থিমের মধ্যে ফ্রেমের বিন্যাস নির্ধারিত হয়নি, একটি <window type=\"%s\" style_set=\"whatever\"/> স্বত্বা যোগ করুন"
 
-#: ../src/ui/theme.c:5406 ../src/ui/theme.c:5468 ../src/ui/theme.c:5531
+#: ../src/ui/theme.c:5408 ../src/ui/theme.c:5470 ../src/ui/theme.c:5533
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "ব্যবহারকারী দ্বারা নির্ধারিত কনস্ট্যান্টের ক্ষেত্রে প্রারম্ভে বড় ছাঁদের হরফ উপস্থিত থাকা আবশ্যক; \"%s\"'এ ক্ষেত্রে এটি উপস্থিত নেই"
 
-#: ../src/ui/theme.c:5414 ../src/ui/theme.c:5476 ../src/ui/theme.c:5539
+#: ../src/ui/theme.c:5416 ../src/ui/theme.c:5478 ../src/ui/theme.c:5541
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "কনস্ট্যান্ট \"%s\" পূর্বে নির্ধারিত হয়েছে"

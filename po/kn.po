@@ -7,23 +7,263 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2011-12-28 10:53+0100\n"
-"PO-Revision-Date: 2011-12-28 10:57+0000\n"
+"POT-Creation-Date: 2013-02-10 13:01+0100\n"
+"PO-Revision-Date: 2013-02-10 12:02+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Kannada (http://www.transifex.com/projects/p/MATE/language/kn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: kn\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
 msgstr "ಗಣಕತೆರೆ"
 
-#: ../src/50-marco-key.xml.in.h:1
+#: ../src/50-marco-desktop-key.xml.in.h:2
+msgid "Show the panel's \"Run Application\" dialog box"
+msgstr "ಫಲಕದಲ್ಲಿನ \"ಅನ್ವಯವನ್ನು ಚಲಾಯಿಸು\" ಸಂವಾದ ಚೌಕವನ್ನು ತೋರಿಸು"
+
+#: ../src/50-marco-desktop-key.xml.in.h:3
+msgid "Show the panel's main menu"
+msgstr "ಫಲಕ ಮುಖ್ಯ ಮೆನುವನ್ನು ತೋರಿಸು"
+
+#: ../src/50-marco-desktop-key.xml.in.h:4
+msgid "Take a screenshot"
+msgstr "ಒಂದು ತೆರೆಚಿತ್ರವನ್ನು ತೆಗೆ"
+
+#: ../src/50-marco-desktop-key.xml.in.h:5
+msgid "Take a screenshot of a window"
+msgstr "ಒಂದು ವಿಂಡೊದ ತೆರೆಚಿತ್ರವನ್ನು ತೆಗೆ"
+
+#: ../src/50-marco-desktop-key.xml.in.h:6
+msgid "Run a terminal"
+msgstr "ಟರ್ಮಿನಲ್‍ನಲ್ಲಿ ಚಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
 msgstr "ವಿಂಡೊ ನಿರ್ವಹಣೆ"
+
+#: ../src/50-marco-global-key.xml.in.h:2
+msgid "Move between windows, using a popup window"
+msgstr "ಪುಟಿಕೆ(ಪಾಪ್ಅಪ್) ವಿಂಡೋವನ್ನು ಬಳಸಿಕೊಂಡು ವಿಂಡೋಗಳ ನಡುವೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:3
+msgid "Move between windows of an application, using a popup window"
+msgstr "ಪುಟಿಕೆ(ಪಾಪ್ಅಪ್) ವಿಂಡೋವನ್ನು ಬಳಸಿಕೊಂಡು ಅನ್ವಯದ ವಿಂಡೋಗಳ ನಡುವೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:4
+msgid "Move between panels and the desktop, using a popup window"
+msgstr "ಪುಟಿಕೆ(ಪಾಪ್ಅಪ್) ವಿಂಡೋವನ್ನು ಬಳಸಿಕೊಂಡು ಫಲಕಗಳು ಹಾಗು ಗಣಕತೆರೆಯ ನಡುವೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:5
+msgid "Move between windows immediately"
+msgstr "ವಿಂಡೋಗಳ ನಡುವೆ ತಕ್ಷಣ ಜರುಗಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:6
+msgid "Move between windows of an application immediately"
+msgstr "ಒಂದು ಅನ್ವಯದ ವಿಂಡೋಗಳ ನಡುವೆ ತಕ್ಷಣ ಜರುಗಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:7
+msgid "Move between panels and the desktop immediately"
+msgstr "ಫಲಕ ಹಾಗು ಗಣಕತೆರೆಗಳ ನಡುವೆ ತಕ್ಷಣ ಜರುಗಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:8
+msgid "Hide all normal windows and set focus to the desktop"
+msgstr "ಎಲ್ಲಾ ಸಾಮಾನ್ಯವ ವಿಂಡೋಗಳನ್ನು ಅಡಗಿಸು ಹಾಗು ಗಮನವನ್ನು ಗಣಕತೆರೆಯ ಮೇಲೆ ಕೇಂದ್ರೀಕರಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:9
+msgid "Switch to workspace 1"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 1 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:10
+msgid "Switch to workspace 2"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 2 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:11
+msgid "Switch to workspace 3"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 3 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:12
+msgid "Switch to workspace 4"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 4 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:13
+msgid "Switch to workspace 5"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 5 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:14
+msgid "Switch to workspace 6"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 6 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:15
+msgid "Switch to workspace 7"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 7 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:16
+msgid "Switch to workspace 8"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 8 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:17
+msgid "Switch to workspace 9"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 9 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:18
+msgid "Switch to workspace 10"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 10 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:19
+msgid "Switch to workspace 11"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 11 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:20
+msgid "Switch to workspace 12"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 12 ಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:21
+msgid "Switch to workspace on the left of the current workspace"
+msgstr "ಪ್ರಸಕ್ತ ಕಾರ್ಯಕ್ಷೇತ್ರದ ಎಡಭಾಗದಲ್ಲಿನ ಕಾರ್ಯಕ್ಷೇತ್ರಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:22
+msgid "Switch to workspace on the right of the current workspace"
+msgstr "ಪ್ರಸಕ್ತ ಕಾರ್ಯಕ್ಷೇತ್ರದ ಬಲಭಾಗದಲ್ಲಿನ ಕಾರ್ಯಕ್ಷೇತ್ರಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:23
+msgid "Switch to workspace above the current workspace"
+msgstr "ಪ್ರಸಕ್ತ ಕಾರ್ಯಕ್ಷೇತ್ರದ ಮೇಲ್ಭಾಗದಲ್ಲಿನ ಕಾರ್ಯಕ್ಷೇತ್ರಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-global-key.xml.in.h:24
+msgid "Switch to workspace below the current workspace"
+msgstr "ಪ್ರಸಕ್ತ ಕಾರ್ಯಕ್ಷೇತ್ರದ ಕೆಳಭಾಗದಲ್ಲಿನ ಕಾರ್ಯಕ್ಷೇತ್ರಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:2
+msgid "Activate the window menu"
+msgstr "ವಿಂಡೊ ಮೆನುವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:3
+msgid "Toggle fullscreen mode"
+msgstr "ಪೂರ್ಣತೆರೆ ವಿಧಾನಕ್ಕೆ ಟಾಗಲ್ ಮಾಡು"
+
+#: ../src/50-marco-window-key.xml.in.h:4
+msgid "Toggle maximization state"
+msgstr "ಗರಿಷ್ಟಗೊಳಿಸುವ ಸ್ಥಿತಿಯನ್ನು ಟಾಗಲ್ ಮಾಡು"
+
+#: ../src/50-marco-window-key.xml.in.h:5
+msgid "Maximize window"
+msgstr "ವಿಂಡೊವನು ಹಿಗ್ಗಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:6
+msgid "Restore window"
+msgstr "ವಿಂಡೊವನ್ನು ಮರಳಿ ಪುನಶ್ಚೇತನಗೊಳಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:7
+msgid "Toggle shaded state"
+msgstr "ನೆರಳಿನ ಸ್ಥಿತಿಯನ್ನು ಟಾಗಲ್‌ ಮಾಡು"
+
+#: ../src/50-marco-window-key.xml.in.h:8
+msgid "Close window"
+msgstr "ವಿಂಡೊವನ್ನು ಮುಚ್ಚು"
+
+#: ../src/50-marco-window-key.xml.in.h:9
+msgid "Minimize window"
+msgstr "ವಿಂಡೊವನು ಕುಗ್ಗಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:10
+msgid "Move window"
+msgstr "ವಿಂಡೊವನ್ನು ಜರುಗಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:11
+msgid "Resize window"
+msgstr "ವಿಂಡೊದ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:12
+msgid "Toggle whether window is on all workspaces or just one"
+msgstr "ವಿಂಡೊವು ಎಲ್ಲಾ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳಲ್ಲಿರಬೇಕೆ ಅಥವ ಕೇವಲ ಒಂದರಲ್ಲಿ ಮಾತ್ರವೆ ಇರಬೇಕೆ ಎಂದು ಟಾಗಲ್ ಮಾಡು"
+
+#: ../src/50-marco-window-key.xml.in.h:13
+msgid "Raise window if it's covered by another window, otherwise lower it"
+msgstr "ವಿಂಡೊವು ಇನ್ನೊಂದು ವಿಂಡೋದಿಂದ ಆವರಿಸಲ್ಪಟ್ಟದಲ್ಲಿ ಅದನ್ನು ಮೇಲಕ್ಕೆ ಏರಿಸು, ಇಲ್ಲದೆ ಹೋದಲ್ಲಿ ಅದನ್ನು ಕೆಳಗಿಳಿಸಿ"
+
+#: ../src/50-marco-window-key.xml.in.h:14
+msgid "Raise window above other windows"
+msgstr "ವಿಂಡೊವನ್ನು ಇತರೆ ವಿಂಡೋಗಳಿಗಿಂತ ಎತ್ತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:15
+msgid "Lower window below other windows"
+msgstr "ವಿಂಡೊಗಳನ್ನು ಬೇರೆ ವಿಂಡೋದ ಕೆಳಗೆ ಇರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:16
+msgid "Maximize window vertically"
+msgstr "ವಿಂಡೊವನ್ನು ಲಂಬವಾಗಿ ಹಿಗ್ಗಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:17
+msgid "Maximize window horizontally"
+msgstr "ವಿಂಡೊವನ್ನು ಸಮತಲವಾಗಿ ಹಿಗ್ಗಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:18
+msgid "Move window to workspace 1"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 1 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:19
+msgid "Move window to workspace 2"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 2 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:20
+msgid "Move window to workspace 3"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 3 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:21
+msgid "Move window to workspace 4"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 4 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:22
+msgid "Move window to workspace 5"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 5 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:23
+msgid "Move window to workspace 6"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 6 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:24
+msgid "Move window to workspace 7"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 7 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:25
+msgid "Move window to workspace 8"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 8 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:26
+msgid "Move window to workspace 9"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 9 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:27
+msgid "Move window to workspace 10"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 10 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:28
+msgid "Move window to workspace 11"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 11 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:29
+msgid "Move window to workspace 12"
+msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 12 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:30
+msgid "Move window one workspace to the left"
+msgstr "ವಿಂಡೋವನ್ನು ಒಂದು ಕಾರ್ಯಕ್ಷೇತ್ರದ ಎಡಕ್ಕೆ ಜರುಗಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:31
+msgid "Move window one workspace to the right"
+msgstr "ವಿಂಡೋವನ್ನು ಒಂದು ಕಾರ್ಯಕ್ಷೇತ್ರದ ಬಲಕ್ಕೆ ಜರುಗಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:32
+msgid "Move window one workspace up"
+msgstr "ವಿಂಡೋವನ್ನು ಒಂದು ಕಾರ್ಯಕ್ಷೇತ್ರದ ಮೇಲಕ್ಕೆ ಜರುಗಿಸು"
+
+#: ../src/50-marco-window-key.xml.in.h:33
+msgid "Move window one workspace down"
+msgstr "ವಿಂಡೋವನ್ನು ಒಂದು ಕಾರ್ಯಕ್ಷೇತ್ರದ ಕೆಳಗೆ ಜರುಗಿಸು"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -59,17 +299,17 @@ msgstr "ಬಲವಂತವಾಗಿ ಮುಚ್ಚು(_F)"
 msgid "Failed to get hostname: %s\n"
 msgstr "ಅತಿಥೇಯದ ಹೆಸರನ್ನು ಪಡೆಯುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ: %s\n"
 
-#: ../src/core/display.c:266
+#: ../src/core/display.c:268
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "ಮಿಶ್ರಗೊಳಿಕೆಗಾಗಿ ಅಗತ್ಯವಿರುವ %s ವಿಸ್ತರಣೆಯು ಕಾಣೆಯಾಗಿದೆ"
 
-#: ../src/core/display.c:344
+#: ../src/core/display.c:346
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X ವಿಂಡೊ ಗಣಕ ಪ್ರದರ್ಶಕ '%s' ಅನ್ನು ತೆರೆಯುವಲ್ಲಿ ವಿಫಲತೆ\n"
 
-#: ../src/core/errors.c:272
+#: ../src/core/errors.c:278
 #, c-format
 msgid ""
 "Lost connection to the display '%s';\n"
@@ -77,7 +317,7 @@ msgid ""
 "the window manager.\n"
 msgstr "ಪ್ರದರ್ಶಕ '%s' ಕ್ಕಾಗಿನ ಸಂಪರ್ಕವು ಕಡಿದು ಹೋಗಿದೆ;\nಬಹುಷಃ X ಪರಿಚಾರಕವು ಮುಚ್ಚಲ್ಪಟ್ಟಿರಬಹುದು ಅಥವ ನೀವು ವಿಂಡೋ ವ್ಯವಸ್ಥಾಪಕನನ್ನು \nಕೊಂದಿದ್ದೀರಿ ಅಥವ ನಾಶಗೊಳಿಸಿದ್ದೀರಿ\n"
 
-#: ../src/core/errors.c:279
+#: ../src/core/errors.c:285
 #, c-format
 msgid "Fatal IO error %d (%s) on display '%s'.\n"
 msgstr "ಅಪಾಯಕಾರಿ IO ದೋಷ %d (%s), ಪ್ರದರ್ಶಕ '%s' ದಲ್ಲಿ.\n"
@@ -92,7 +332,7 @@ msgstr "ಬೇರೊಂದಿ ಪ್ರೊಗ್ರಾಂ, ಕೀಲಿ %s ಅ�
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
 #. 
-#: ../src/core/keybindings.c:2294
+#: ../src/core/keybindings.c:2303
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -100,17 +340,17 @@ msgid ""
 "%s"
 msgstr "ಒಂದು ಚಲಾವಣಾ ದೋಷ <tt>%s</tt> ಎದುರಾಗಿದೆ:\n\n%s"
 
-#: ../src/core/keybindings.c:2383
+#: ../src/core/keybindings.c:2392
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "ಯಾವುದೆ %d ಆಜ್ಞೆಯು ಸೂಚಿತಗೊಂಡಿಲ್ಲ.\n"
 
-#: ../src/core/keybindings.c:3337
+#: ../src/core/keybindings.c:3352
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "ಯಾವುದೆ ಟರ್ಮಿನಲ್ ಆಜ್ಞೆಯು ಸೂಚಿತಗೊಂಡಿಲ್ಲ.\n"
 
-#: ../src/core/main.c:131
+#: ../src/core/main.c:137
 #, c-format
 msgid ""
 "marco %s\n"
@@ -119,134 +359,100 @@ msgid ""
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 msgstr "ಮೆಟಾಸಿಟಿ %s\nಹಕ್ಕು (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\nThis is free software; see the source for copying conditions.\nThere is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 
-#: ../src/core/main.c:269
+#: ../src/core/main.c:275
 msgid "Disable connection to session manager"
 msgstr "ಅಧಿವೇಶನ ನಿರ್ವಾಹಕದೊಂದಿಗೆ ಸಂಪರ್ಕವನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
 
-#: ../src/core/main.c:275
+#: ../src/core/main.c:281
 msgid "Replace the running window manager with Marco"
 msgstr "ಚಲಾಯಿತಗೊಳ್ಳುತ್ತಿರುವ ವಿಂಡೊ ವ್ಯವಸ್ಥಾಪಕವನ್ನು Marco ಯೊಂದಿಗೆ ಬದಲಾಯಿಸಿ"
 
-#: ../src/core/main.c:281
+#: ../src/core/main.c:287
 msgid "Specify session management ID"
 msgstr "ಅಧಿವೇಶನ ವ್ಯವಸ್ಥಾಪನಾ ID ಯನ್ನು ಸೂಚಿಸಿ"
 
-#: ../src/core/main.c:286
+#: ../src/core/main.c:292
 msgid "X Display to use"
 msgstr "ಬಳಕೆಗಾಗಿ X ಪ್ರದರ್ಶಕ"
 
-#: ../src/core/main.c:292
+#: ../src/core/main.c:298
 msgid "Initialize session from savefile"
 msgstr "ಉಳಿಸಲಾದ ಕಡತದಿಂದ ಅಧಿವೇಶನವನ್ನು ಆರಂಭಿಸಿ"
 
-#: ../src/core/main.c:298
+#: ../src/core/main.c:304
 msgid "Print version"
 msgstr "ಮುದ್ರಿಸಬಹುದಾದ ಆವೃತ್ತಿ"
 
-#: ../src/core/main.c:304
+#: ../src/core/main.c:310
 msgid "Make X calls synchronous"
 msgstr "X ಕರೆಗಳನ್ನು ಮೇಳೈಸುವಂತೆ ಮಾಡು"
 
-#: ../src/core/main.c:310
+#: ../src/core/main.c:316
 msgid "Turn compositing on"
 msgstr "ಮಿಶ್ರಗೊಳಿಸುವುದನ್ನು ಆನ್‌ ಮಾಡು"
 
-#: ../src/core/main.c:316
+#: ../src/core/main.c:322
 msgid "Turn compositing off"
 msgstr "ಮಿಶ್ರಗೊಳಿಸುವುದನ್ನು ಆಫ್‌ ಮಾಡು"
 
-#: ../src/core/main.c:322
+#: ../src/core/main.c:328
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "ಹಿಗ್ಗಿಸಲಾದ ಹಾಗು ಯಾವುದೆ ಅಲಂಕಾರ ಮಾಡದೆ ಇರುವ ವಿಂಡೊಗಳನ್ನು ಪೂರ್ಣತೆರೆಯಾಗಿಸಬೇಡ"
 
-#: ../src/core/main.c:528
+#: ../src/core/main.c:537
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "ಥೀಮ್‍ಗಳನ್ನು ಶೋಧಿಸುವಲ್ಲಿ ಕೋಶವನ್ನು ವಿಫಲಗೊಂಡಿದೆ: %s\n"
 
-#: ../src/core/main.c:544
+#: ../src/core/main.c:553
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
 msgstr "ಥೀಮ್‍ಗಳನ್ನು ಪತ್ತೆ ಮಾಡಲಾಗಲಿಲ್ಲ! %s ವು ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ ಹಾಗು ರೂಢಿಯ ಥೀಮ್‍ಗಳನ್ನು ಹೊಂದಿದೆ ಎಂದು ಖಚಿತ ಪಡಿಸಿಕೊಳ್ಳಿ.\n"
 
-#: ../src/core/main.c:603
+#: ../src/core/main.c:612
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "ಪುನರ್ ಆರಂಭಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ: %s\n"
 
-#. * We found it, but it was invalid.  Complain.
-#. *
-#. * FIXME: This replicates the original behaviour, but in the future
-#. * we might consider reverting invalid keys to their original values.
-#. * (We know the old value, so we can look up a suitable string in
-#. * the symtab.)
-#. *
-#. * (Empty comment follows so the translators don't see this.)
-#. 
-#. 
-#: ../src/core/prefs.c:508 ../src/core/prefs.c:663
+#. FIXME: check if this can be avoided by GSettings
+#. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
+#. * But some preferences depends on costants for minimum/maximum values
+#: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
-msgid "MateConf key '%s' is set to an invalid value\n"
-msgstr "MateConf ಕೀಲಿ \"%s\" ಯು ಒಂದು ಮಾನ್ಯವಾದ ಮೌಲ್ಯಕ್ಕೆ ಹೊಂದಿಸಲ್ಪಟ್ಟಿಲ್ಲ\n"
+msgid "%d stored in GSettings key %s is out of range %d to %d\n"
+msgstr ""
 
-#: ../src/core/prefs.c:589 ../src/core/prefs.c:832
-#, c-format
-msgid "%d stored in MateConf key %s is out of range %d to %d\n"
-msgstr "%d MateConf ಕೀಲಿ %s ಯಲ್ಲಿ ಉಳಿಸಲಾಗಿದ್ದು %d ಇಂದ %d ವರೆಗಿನ ವ್ಯಾಪ್ತಿಯ ಹೊರಗಿದೆ\n"
-
-#: ../src/core/prefs.c:633 ../src/core/prefs.c:710 ../src/core/prefs.c:758
-#: ../src/core/prefs.c:822 ../src/core/prefs.c:1115 ../src/core/prefs.c:1131
-#: ../src/core/prefs.c:1148 ../src/core/prefs.c:1164
-#, c-format
-msgid "MateConf key \"%s\" is set to an invalid type\n"
-msgstr "MateConf ಕೀಲಿ \"%s\" ಯು ಒಂದು ಮಾನ್ಯವಾದ ಬಗೆಗೆ ಹೊಂದಿಸಲ್ಪಟ್ಟಿಲ್ಲ\n"
-
-#: ../src/core/prefs.c:1234
+#: ../src/core/prefs.c:1008
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr "ಹಾಳಾದ ಅನ್ವಯಗಳಿಗಾಗಿನ ಪರ್ಯಾಯ ಮಾರ್ಗಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ. ಕೆಲವು ಅನ್ವಯಗಳು ಸಮರ್ಪಕವಾಗಿ ಕೆಲಸ ಮಾಡದೆ ಇರಬಹುದು.\n"
 
-#: ../src/core/prefs.c:1305
+#: ../src/core/prefs.c:1075
 #, c-format
-msgid "Could not parse font description \"%s\" from MateConf key %s\n"
-msgstr "ಅಕ್ಷರಶೈಲಿ ವಿವರಣೆ \"%s\" ಅನ್ನು MateConf ಕೀಲಿ %s ಇಂದ ಪಾರ್ಸ್ ಮಾಡಲಾಗಿಲ್ಲ\n"
+msgid "Could not parse font description \"%s\" from GSettings key %s\n"
+msgstr ""
 
-#: ../src/core/prefs.c:1367
+#: ../src/core/prefs.c:1137
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "ಸಂರಚನಾ ದತ್ತಸಂಚಯದಲ್ಲಿ ಕಂಡು ಬಂದಂತಹ \"%s\" ಮೌಸ್‌ ಗುಂಡಿಗೆ ಮಾನ್ಯವಾದ ಮಾರ್ಪಡಕವಾಗಿಲ್ಲ\n"
 
-#: ../src/core/prefs.c:1788
-#, c-format
-msgid "Error setting number of workspaces to %d: %s\n"
-msgstr "%d ಗೆ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳ ಸಂಖ್ಯೆಯನ್ನು ಹೊಂದಿಸುವಲ್ಲಿ ದೋಷ: %s\n"
-
-#: ../src/core/prefs.c:1953 ../src/core/prefs.c:2456
-#, c-format
-msgid "Workspace %d"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ %d"
-
-#: ../src/core/prefs.c:1983 ../src/core/prefs.c:2161
+#: ../src/core/prefs.c:1649
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "ಸಂರಚನಾ ದತ್ತಸಂಚಯದಲ್ಲಿ ಕಂಡು ಬಂದಂತಹ \"%s\" ವು ಕೀಲಿ ಬೈಂಡಿಂಗ್ \"%s\" ಗೆ ಮಾನ್ಯವಾದ ಮಾರ್ಪಡಕವಾಗಿಲ್ಲ\n"
 
-#: ../src/core/prefs.c:2537
+#: ../src/core/prefs.c:1955
 #, c-format
-msgid "Error setting name for workspace %d to \"%s\": %s\n"
-msgstr "%d ಕಾರ್ಯಕ್ಷೇತ್ರದ ಹೆಸರನ್ನು \"%s\" ಗೆ ಬದಲಾಯಿಸುವಲ್ಲಿ ದೋಷ: %s\n"
-
-#: ../src/core/prefs.c:2741
-#, c-format
-msgid "Error setting compositor status: %s\n"
-msgstr "ಸಮ್ಮಿಶ್ರಕದ(ಕಂಪೋಸಿಟರ್) ಸ್ಥಿತಿಯನ್ನು ಸಿದ್ದಗೊಳಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ: %s\n"
+msgid "Workspace %d"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ %d"
 
 #: ../src/core/screen.c:357
 #, c-format
@@ -275,74 +481,54 @@ msgstr "ತೆರೆ %d ಯು (ಪ್ರದರ್ಶಕ \"%s\" ದಲ್ಲಿ�
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "ತೆರೆ %d ಯನ್ನು (ಪ್ರದರ್ಶಕ \"%s\" ದಲ್ಲಿನ) ಬಿಡುಗಡೆಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ\n"
 
-#. Translators: Please don't translate "Control", "Shift", etc, since these
-#. * are hardcoded (in gtk/gtkaccelgroup.c; it's not marco's fault).
-#. * "disabled" must also stay as it is.
-#. 
-#: ../src/core/schema-bindings.c:169
-msgid ""
-"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
-"\n"
-"The parser is fairly liberal and allows lower or upper case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string \"disabled\", then there will be no keybinding for this action."
-msgstr "ಇದರ ವಿನ್ಯಾಸವು ಹೀಗೆ ಕಾಣಿಸುತ್ತದೆ\"<Control>a\" ಅಥವ <Shift><Alt>F1\".\n\nಪಾರ್ಸರ್ ಬಹಳ ಉದಾರಿ ಹಾಗು ಕೆಳಗಿನ ಹಾಗು ಮೇಲಿನ ಕೇಸ್‍ಗಳನ್ನು ಅನುಮತಿಸುತ್ತದೆ, ಹಾಗು \"<Ctl>\" ಹಾಗು \"<Ctrl>\" ನಂತಹ ಸಂಕ್ಷಿಪ್ತ ರೂಪಗಳನ್ನೂ ಸಹ ಅನುಮತಿಸುತ್ತದೆ. ನೀವು ವಿಶೇಷ ವಾಕ್ಯದ ಆಯ್ಕೆಯನ್ನು \"disabled\"(ಅಶಕ್ತಗೊಂಡ) ಗೆ ಹೊಂದಿಸಿದಲ್ಲಿ, ಈ ಕ್ರಿಯೆಗೆ ಯಾವುದೆ ಕೀಬೈಂಡಿಂಗ್ ಇರುವುದಿಲ್ಲ."
-
-#: ../src/core/schema-bindings.c:177
-msgid ""
-"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\".\n"
-"\n"
-"The parser is fairly liberal and allows lower or upper case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string \"disabled\", then there will be no keybinding for this action.\n"
-"\n"
-"This keybinding may be reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be one of the keys it uses."
-msgstr "ಇದರ ವಿನ್ಯಾಸವು ಹೀಗೆ ಕಾಣಿಸುತ್ತದೆ\"<Control>a\" ಅಥವ <Shift><Alt>F1\".\n\nಪಾರ್ಸರ್ ಬಹಳ ಉದಾರಿ ಹಾಗು ಕೆಳಗಿನ ಹಾಗು ಮೇಲಿನ ಕೇಸ್‍ಗಳನ್ನು ಅನುಮತಿಸುತ್ತದೆ, ಹಾಗು \"<Ctl>\" ಹಾಗು \"<Ctrl>\" ನಂತಹ ಸಂಕ್ಷಿಪ್ತ ರೂಪಗಳನ್ನೂ ಸಹ ಅನುಮತಿಸುತ್ತದೆ. ನೀವು ವಿಶೇಷ ವಾಕ್ಯದ ಆಯ್ಕೆಯನ್ನು \"disabled\"(ಅಶಕ್ತಗೊಂಡ) ಗೆ ಹೊಂದಿಸಿದಲ್ಲಿ, ಈ ಕ್ರಿಯೆಗೆ ಯಾವುದೆ ಕೀಬೈಂಡಿಂಗ್ ಇರುವುದಿಲ್ಲ.\n\n\"shift\" ಕೀಲಿಯನ್ನು ಒತ್ತಿಹಿಡಿಯುವ ಮೂಲಕ ಈ ಕೀಲಿಬೈಂಡಿಂಗ್‌ ಅನ್ನು ವಿಲೋಮಗೊಳಿಸಬಹುದು; ಆದ್ದರಿಂದ, ಇದು ಬಳಸುವ ಒಂದು ಕೀಲಿಗಳಲ್ಲಿ \"shift\" ಇರುವುದಿಲ್ಲ."
-
-#: ../src/core/session.c:850 ../src/core/session.c:857
+#: ../src/core/session.c:842 ../src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "ಕೋಶ '%s' ಅನ್ನು ಸೃಜಿಸಲಾಗಲಿಲ್ಲ: %s\n"
 
-#: ../src/core/session.c:867
+#: ../src/core/session.c:859
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "ಅಧಿವೇಶನ ಕಡತ '%s' ಅನ್ನು ಬರೆಯಲು ತೆಗೆಯಲಾಗಿಲ್ಲ: %s\n"
 
-#: ../src/core/session.c:1008
+#: ../src/core/session.c:1000
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "ಅಧಿವೇಶನ ಕಡತ '%s' ಅನ್ನು ಬರೆಯುವಲ್ಲಿ ದೋಷ: %s\n"
 
-#: ../src/core/session.c:1013
+#: ../src/core/session.c:1005
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "ಅಧಿವೇಶನ ಕಡತ '%s' ಅನ್ನು ಮುಚ್ಚುವಲ್ಲಿ ದೋಷ: %s\n"
 
-#: ../src/core/session.c:1143
+#: ../src/core/session.c:1135
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "ಉಳಿಸಲಾದ ಅಧಿವೇಶನ ಕಡತವನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ವಿಫಲಗೊಂಡಿದೆ: %s\n"
 
-#: ../src/core/session.c:1192
+#: ../src/core/session.c:1184
 #, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr "<marco_session> ಗುಣ ವಿಶೇಷವು ಕಾಣಿಸಿಕೊಂಡಿದೆ ಆದರೆ ನಾವು ಅಧಿವೇಶನ ID ಅನ್ನು ಹೊಂದಿದ್ದೇನೆ"
 
-#: ../src/core/session.c:1205 ../src/core/session.c:1280
-#: ../src/core/session.c:1312 ../src/core/session.c:1384
-#: ../src/core/session.c:1444
+#: ../src/core/session.c:1197 ../src/core/session.c:1272
+#: ../src/core/session.c:1304 ../src/core/session.c:1376
+#: ../src/core/session.c:1436
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "ಗೊತ್ತಿರದ ಗುಣ ವಿಶೇಷ %s <%s> ಘಟಕದಲ್ಲಿ"
 
-#: ../src/core/session.c:1222
+#: ../src/core/session.c:1214
 #, c-format
 msgid "nested <window> tag"
 msgstr "ನೆಸ್ಟ್ ಮಾಡಲಾದ <window> ಟ್ಯಾಗ್"
 
-#: ../src/core/session.c:1464
+#: ../src/core/session.c:1456
 #, c-format
 msgid "Unknown element %s"
 msgstr "ಗೊತ್ತಿರದ %s ಘಟಕ"
 
-#: ../src/core/session.c:1816
+#: ../src/core/session.c:1808
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
@@ -385,14 +571,13 @@ msgid "Window manager error: "
 msgstr "ವಿಂಡೊ ವ್ಯವಸ್ಥಾಪಕ ದೋಷ: "
 
 #. Translators: This is the title used on dialog boxes
-#. eof all-keybindings.h
 #: ../src/core/util.c:570 ../src/marco.desktop.in.h:1
 #: ../src/marco-wm.desktop.in.h:1
 msgid "Marco"
 msgstr "ಮೆಟಾಸಿಟಿ"
 
 #. first time through
-#: ../src/core/window.c:5660
+#: ../src/core/window.c:5666
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -406,7 +591,7 @@ msgstr "ICCCM ಇಂದ ಸೂಚಿಸಲಾದ WM_CLIENT_LEADER ವಿಂಡ�
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
 #. 
-#: ../src/core/window.c:6225
+#: ../src/core/window.c:6231
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -470,652 +655,6 @@ msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
 msgstr "ಗುಣ %s ವು (ವಿಂಡೋ 0x%lx ದಲ್ಲಿನ) ಪಟ್ಟಿಯಲ್ಲಿನ ಅಂಶ %d ಕ್ಕಾಗಿ ಅಮಾನ್ಯವಾದ UTF-8 ಅನ್ನು ಹೊಂದಿದೆ\n"
-
-#: ../src/include/all-keybindings.h:88
-msgid "Switch to workspace 1"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 1 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:90
-msgid "Switch to workspace 2"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 2 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:92
-msgid "Switch to workspace 3"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 3 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:94
-msgid "Switch to workspace 4"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 4 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:96
-msgid "Switch to workspace 5"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 5 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:98
-msgid "Switch to workspace 6"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 6 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:100
-msgid "Switch to workspace 7"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 7 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:102
-msgid "Switch to workspace 8"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 8 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:104
-msgid "Switch to workspace 9"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 9 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:106
-msgid "Switch to workspace 10"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 10 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:108
-msgid "Switch to workspace 11"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 11 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:110
-msgid "Switch to workspace 12"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ 12 ಕ್ಕೆ ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:122
-msgid "Switch to workspace on the left of the current workspace"
-msgstr "ಪ್ರಸಕ್ತ ಕಾರ್ಯಕ್ಷೇತ್ರದ ಎಡಭಾಗದಲ್ಲಿನ ಕಾರ್ಯಕ್ಷೇತ್ರಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:126
-msgid "Switch to workspace on the right of the current workspace"
-msgstr "ಪ್ರಸಕ್ತ ಕಾರ್ಯಕ್ಷೇತ್ರದ ಬಲಭಾಗದಲ್ಲಿನ ಕಾರ್ಯಕ್ಷೇತ್ರಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:130
-msgid "Switch to workspace above the current workspace"
-msgstr "ಪ್ರಸಕ್ತ ಕಾರ್ಯಕ್ಷೇತ್ರದ ಮೇಲ್ಭಾಗದಲ್ಲಿನ ಕಾರ್ಯಕ್ಷೇತ್ರಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:134
-msgid "Switch to workspace below the current workspace"
-msgstr "ಪ್ರಸಕ್ತ ಕಾರ್ಯಕ್ಷೇತ್ರದ ಕೆಳಭಾಗದಲ್ಲಿನ ಕಾರ್ಯಕ್ಷೇತ್ರಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:150
-msgid "Move between windows of an application, using a popup window"
-msgstr "ಪುಟಿಕೆ(ಪಾಪ್ಅಪ್) ವಿಂಡೋವನ್ನು ಬಳಸಿಕೊಂಡು ಅನ್ವಯದ ವಿಂಡೋಗಳ ನಡುವೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:153
-msgid "Move backward between windows of an application, using a popup window"
-msgstr "ಪುಟಿಕೆ(ಪಾಪ್ಅಪ್) ವಿಂಡೋವನ್ನು ಬಳಸಿಕೊಂಡು ಅನ್ವಯದ ವಿಂಡೋಗಳ ನಡುವೆ ಹಿಂದಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:157
-msgid "Move between windows, using a popup window"
-msgstr "ಪುಟಿಕೆ(ಪಾಪ್ಅಪ್) ವಿಂಡೋವನ್ನು ಬಳಸಿಕೊಂಡು ವಿಂಡೋಗಳ ನಡುವೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:160
-msgid "Move backward between windows, using a popup window"
-msgstr "ಪುಟಿಕೆ(ಪಾಪ್ಅಪ್) ವಿಂಡೋವನ್ನು ಬಳಸಿಕೊಂಡು ವಿಂಡೋಗಳ ನಡುವೆ ಹಿಂದಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:163
-msgid "Move between panels and the desktop, using a popup window"
-msgstr "ಪುಟಿಕೆ(ಪಾಪ್ಅಪ್) ವಿಂಡೋವನ್ನು ಬಳಸಿಕೊಂಡು ಫಲಕಗಳು ಹಾಗು ಗಣಕತೆರೆಯ ನಡುವೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:166
-msgid "Move backward between panels and the desktop, using a popup window"
-msgstr "ಪುಟಿಕೆ(ಪಾಪ್ಅಪ್) ವಿಂಡೋವನ್ನು ಬಳಸಿಕೊಂಡು ಫಲಕಗಳು ಹಾಗು ಗಣಕತೆರೆಯ ನಡುವೆ ಹಿಂದಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:171
-msgid "Move between windows of an application immediately"
-msgstr "ಒಂದು ಅನ್ವಯದ ವಿಂಡೋಗಳ ನಡುವೆ ತಕ್ಷಣ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:174
-msgid "Move backward between windows of an application immediately"
-msgstr "ಒಂದು ಅನ್ವಯದ ವಿಂಡೋಗಳ ನಡುವೆ ತಕ್ಷಣ ಹಿಂದಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:177
-msgid "Move between windows immediately"
-msgstr "ವಿಂಡೋಗಳ ನಡುವೆ ತಕ್ಷಣ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:180
-msgid "Move backward between windows immediately"
-msgstr "ವಿಂಡೋಗಳ ನಡುವೆ ತಕ್ಷಣ ಹಿಂದಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:183
-msgid "Move between panels and the desktop immediately"
-msgstr "ಫಲಕ ಹಾಗು ಗಣಕತೆರೆಗಳ ನಡುವೆ ತಕ್ಷಣ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:186
-msgid "Move backward between panels and the desktop immediately"
-msgstr "ಫಲಕ ಹಾಗು ಗಣಕತೆರೆಗಳ ನಡುವೆ ತಕ್ಷಣ ಹಿಂದಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:191
-msgid "Hide all normal windows and set focus to the desktop"
-msgstr "ಎಲ್ಲಾ ಸಾಮಾನ್ಯವ ವಿಂಡೋಗಳನ್ನು ಅಡಗಿಸು ಹಾಗು ಗಮನವನ್ನು ಗಣಕತೆರೆಯ ಮೇಲೆ ಕೇಂದ್ರೀಕರಿಸು"
-
-#: ../src/include/all-keybindings.h:194
-msgid "Show the panel's main menu"
-msgstr "ಫಲಕ ಮುಖ್ಯ ಮೆನುವನ್ನು ತೋರಿಸು"
-
-#: ../src/include/all-keybindings.h:197
-msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "ಫಲಕದಲ್ಲಿನ \"ಅನ್ವಯವನ್ನು ಚಲಾಯಿಸು\" ಸಂವಾದ ಚೌಕವನ್ನು ತೋರಿಸು"
-
-#: ../src/include/all-keybindings.h:238
-msgid "Take a screenshot"
-msgstr "ಒಂದು ತೆರೆಚಿತ್ರವನ್ನು ತೆಗೆ"
-
-#: ../src/include/all-keybindings.h:240
-msgid "Take a screenshot of a window"
-msgstr "ಒಂದು ವಿಂಡೊದ ತೆರೆಚಿತ್ರವನ್ನು ತೆಗೆ"
-
-#: ../src/include/all-keybindings.h:242
-msgid "Run a terminal"
-msgstr "ಟರ್ಮಿನಲ್‍ನಲ್ಲಿ ಚಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:257
-msgid "Activate the window menu"
-msgstr "ವಿಂಡೊ ಮೆನುವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು"
-
-#: ../src/include/all-keybindings.h:260
-msgid "Toggle fullscreen mode"
-msgstr "ಪೂರ್ಣತೆರೆ ವಿಧಾನಕ್ಕೆ ಟಾಗಲ್ ಮಾಡು"
-
-#: ../src/include/all-keybindings.h:262
-msgid "Toggle maximization state"
-msgstr "ಗರಿಷ್ಟಗೊಳಿಸುವ ಸ್ಥಿತಿಯನ್ನು ಟಾಗಲ್ ಮಾಡು"
-
-#: ../src/include/all-keybindings.h:264
-msgid "Toggle whether a window will always be visible over other windows"
-msgstr "ವಿಂಡೊವು ಯಾವಾಗಲೂ ಇತರೆ ವಿಂಡೋಗಳ ಮೇಲೆ ಕಾಣಿಸಿಕೊಳ್ಳಬೇಕೆ ಎಂದು ಟಾಗಲ್ ಮಾಡು"
-
-#: ../src/include/all-keybindings.h:266
-msgid "Maximize window"
-msgstr "ವಿಂಡೊವನು ಹಿಗ್ಗಿಸು"
-
-#: ../src/include/all-keybindings.h:268
-msgid "Restore window"
-msgstr "ವಿಂಡೊವನ್ನು ಮರಳಿ ಪುನಶ್ಚೇತನಗೊಳಿಸು"
-
-#: ../src/include/all-keybindings.h:270
-msgid "Toggle shaded state"
-msgstr "ನೆರಳಿನ ಸ್ಥಿತಿಯನ್ನು ಟಾಗಲ್‌ ಮಾಡು"
-
-#: ../src/include/all-keybindings.h:272
-msgid "Minimize window"
-msgstr "ವಿಂಡೊವನು ಕುಗ್ಗಿಸು"
-
-#: ../src/include/all-keybindings.h:274
-msgid "Close window"
-msgstr "ವಿಂಡೊವನ್ನು ಮುಚ್ಚು"
-
-#: ../src/include/all-keybindings.h:276
-msgid "Move window"
-msgstr "ವಿಂಡೊವನ್ನು ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:278
-msgid "Resize window"
-msgstr "ವಿಂಡೊದ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು"
-
-#: ../src/include/all-keybindings.h:281
-msgid "Toggle whether window is on all workspaces or just one"
-msgstr "ವಿಂಡೊವು ಎಲ್ಲಾ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳಲ್ಲಿರಬೇಕೆ ಅಥವ ಕೇವಲ ಒಂದರಲ್ಲಿ ಮಾತ್ರವೆ ಇರಬೇಕೆ ಎಂದು ಟಾಗಲ್ ಮಾಡು"
-
-#: ../src/include/all-keybindings.h:285
-msgid "Move window to workspace 1"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 1 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:288
-msgid "Move window to workspace 2"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 2 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:291
-msgid "Move window to workspace 3"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 3 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:294
-msgid "Move window to workspace 4"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 4 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:297
-msgid "Move window to workspace 5"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 5 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:300
-msgid "Move window to workspace 6"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 6 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:303
-msgid "Move window to workspace 7"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 7 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:306
-msgid "Move window to workspace 8"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 8 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:309
-msgid "Move window to workspace 9"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 9 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:312
-msgid "Move window to workspace 10"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 10 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:315
-msgid "Move window to workspace 11"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 11 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:318
-msgid "Move window to workspace 12"
-msgstr "ವಿಂಡೊವನ್ನು ಕಾರ್ಯಕ್ಷೇತ್ರ 12 ಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸು"
-
-#: ../src/include/all-keybindings.h:330
-msgid "Move window one workspace to the left"
-msgstr "ವಿಂಡೋವನ್ನು ಒಂದು ಕಾರ್ಯಕ್ಷೇತ್ರದ ಎಡಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:333
-msgid "Move window one workspace to the right"
-msgstr "ವಿಂಡೋವನ್ನು ಒಂದು ಕಾರ್ಯಕ್ಷೇತ್ರದ ಬಲಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:336
-msgid "Move window one workspace up"
-msgstr "ವಿಂಡೋವನ್ನು ಒಂದು ಕಾರ್ಯಕ್ಷೇತ್ರದ ಮೇಲಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:339
-msgid "Move window one workspace down"
-msgstr "ವಿಂಡೋವನ್ನು ಒಂದು ಕಾರ್ಯಕ್ಷೇತ್ರದ ಕೆಳಗೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:342
-msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr "ವಿಂಡೊವು ಇನ್ನೊಂದು ವಿಂಡೋದಿಂದ ಆವರಿಸಲ್ಪಟ್ಟದಲ್ಲಿ ಅದನ್ನು ಮೇಲಕ್ಕೆ ಏರಿಸು, ಇಲ್ಲದೆ ಹೋದಲ್ಲಿ ಅದನ್ನು ಕೆಳಗಿಳಿಸಿ"
-
-#: ../src/include/all-keybindings.h:344
-msgid "Raise window above other windows"
-msgstr "ವಿಂಡೊವನ್ನು ಇತರೆ ವಿಂಡೋಗಳಿಗಿಂತ ಎತ್ತರಿಸು"
-
-#: ../src/include/all-keybindings.h:346
-msgid "Lower window below other windows"
-msgstr "ವಿಂಡೊಗಳನ್ನು ಬೇರೆ ವಿಂಡೋದ ಕೆಳಗೆ ಇರಿಸು"
-
-#: ../src/include/all-keybindings.h:350
-msgid "Maximize window vertically"
-msgstr "ವಿಂಡೊವನ್ನು ಲಂಬವಾಗಿ ಹಿಗ್ಗಿಸು"
-
-#: ../src/include/all-keybindings.h:354
-msgid "Maximize window horizontally"
-msgstr "ವಿಂಡೊವನ್ನು ಸಮತಲವಾಗಿ ಹಿಗ್ಗಿಸು"
-
-#: ../src/include/all-keybindings.h:358
-msgid "Move window to north-west (top left) corner"
-msgstr "ವಿಂಡೋವನ್ನು ತೆರೆಯ ಉತ್ತರ-ಪಶ್ಚಿಮ (ಮೇಲಿನ ಎಡಭಾಗ) ಮೂಲೆಗೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:361
-msgid "Move window to north-east (top right) corner"
-msgstr "ವಿಂಡೋವನ್ನು ತೆರೆಯ ಉತ್ತರ-ಪೂರ್ವ(ಮೇಲಿನ ಬಲಭಾಗ) ಮೂಲೆಗೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:364
-msgid "Move window to south-west (bottom left) corner"
-msgstr "ವಿಂಡೋವನ್ನು ತೆರೆಯ ದಕ್ಷಿಣ-ಪಶ್ಚಿಮ (ಕೆಳ ಎಡಭಾಗ) ಮೂಲೆಗೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:367
-msgid "Move window to south-east (bottom right) corner"
-msgstr "ವಿಂಡೋವನ್ನು ತೆರೆಯ ದಕ್ಷಿಣ-ಪೂರ್ವ(ಕೆಳ ಬಲಭಾಗ) ಮೂಲೆಗೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:371
-msgid "Move window to north (top) side of screen"
-msgstr "ವಿಂಡೋವನ್ನು ತೆರೆಯ ಉತ್ತರ (ಮೇಲೆ) ಭಾಗಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:374
-msgid "Move window to south (bottom) side of screen"
-msgstr "ವಿಂಡೋವನ್ನು ತೆರೆಯ ದಕ್ಷಿಣ (ಕೆಳಕ್ಕೆ) ಭಾಗಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:377
-msgid "Move window to east (right) side of screen"
-msgstr "ವಿಂಡೋವನ್ನು ತೆರೆಯ ಪೂರ್ವ (ಬಲಭಾಗ) ಭಾಗಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:380
-msgid "Move window to west (left) side of screen"
-msgstr "ವಿಂಡೋವನ್ನು ತೆರೆಯ ಪಶ್ಚಿಮ (ಎಡಭಾಗ) ಭಾಗಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/include/all-keybindings.h:383
-msgid "Move window to center of screen"
-msgstr "ವಿಂಡೋವನ್ನು ತೆರೆಯ ಮಧ್ಯ ಭಾಗಕ್ಕೆ ಜರುಗಿಸು"
-
-#: ../src/marco.schemas.in.in.h:1
-msgid ""
-"(Not implemented) Navigation works in terms of applications not windows"
-msgstr "(ಅನ್ವಯಿಸದೆ ಇರುವ) ನ್ಯಾವಿಗೇಶನ್ ಕೇವಲ ಅನ್ವಯಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಕೆಲಸ ಮಾಡುತ್ತದೆಯೆ ಹೊರತು ವಿಂಡೋಗಳೊಂದಿಗಲ್ಲ"
-
-#: ../src/marco.schemas.in.in.h:2
-msgid ""
-"A font description string describing a font for window titlebars. The size "
-"from the description will only be used if the titlebar_font_size option is "
-"set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
-"option is set to true."
-msgstr "ವಿಂಡೊ ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಗಳಿಗೆ ತೋರಿಸಲಾಗುವ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಸೂಚಿಸುವ ಒಂದು ಅಕ್ಷರಶೈಲಿ ವಿವರಣೆ. titlebar_font_size ಆಯ್ಕೆಯನ್ನು 0 ಗೆ ಹೊಂದಿಸಲಾಗಿದ್ದರೆ ವಿವರಣೆಯಿಂದ ಗಾತ್ರವನ್ನು ಬಳಸಲಾಗುತ್ತದೆ. ಅಲ್ಲದೆ, titlebar_uses_desktop_font ಆಯ್ಕೆಯನ್ನು true ಗೆ ಹೊಂದಿಸಲಾಗಿದ್ದಲ್ಲಿ ಇದನ್ನು ಅಶಕ್ತಗೊಳಿಸಲಾಗುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:3
-msgid "Action on title bar double-click"
-msgstr "ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಯ ಮೇಲೆ ಎರಡು-ಬಾರಿ ಕ್ಲಿಕ್‌ ಮಾಡಿದಾಗಿನ ಕ್ರಿಯೆ"
-
-#: ../src/marco.schemas.in.in.h:4
-msgid "Action on title bar middle-click"
-msgstr "ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಯ ಮೇಲೆ ಮಧ್ಯ-ಕ್ಲಿಕ್‌ ಮಾಡಿದಾಗಿನ ಕ್ರಿಯೆ"
-
-#: ../src/marco.schemas.in.in.h:5
-msgid "Action on title bar right-click"
-msgstr " "
-
-#: ../src/marco.schemas.in.in.h:6
-msgid "Arrangement of buttons on the titlebar"
-msgstr "ಶೀರ್ಷಿಕೆಯ ಪಟ್ಟಿಯಲ್ಲಿ ಗುಂಡಿಗಳ ವ್ಯವಸ್ಥೆಗೊಳಿಕೆ"
-
-#: ../src/marco.schemas.in.in.h:7
-msgid ""
-"Arrangement of buttons on the titlebar. The value should be a string, such "
-"as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
-"corner of the window from the right corner, and the button names are comma-"
-"separated. Duplicate buttons are not allowed. Unknown button names are "
-"silently ignored so that buttons can be added in future marco versions "
-"without breaking older versions. A special spacer tag can be used to insert "
-"some space between two adjacent buttons."
-msgstr "ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಯಲ್ಲಿ ಗುಂಡಿಗಳ ಜೋಡಣೆ. ಮೌಲ್ಯವು \"menu:minimize,maximize,spacer,close\"ನಂತಹ ಒಂದು ವಾಕ್ಯವಾಗಿರಬೇಕು; ಇಲ್ಲಿ ವಿವರಣಾ ಚಿಹ್ನೆಯು ವಿಂಡೋದ ಎಡ ಮೂಲೆಯನ್ನು ಬಲ ಮೂಲೆಯಿಂದ ಬದಲಾಯಿಸುತ್ತದೆ ಹಾಗು ಗುಂಡಿಯ ಹೆಸರುಗಳನ್ನು ವಿರಾಮ ಚಿಹ್ನೆಯು ಪ್ರತ್ಯೇಕಿಸುತ್ತದೆ. ನಕಲಿ ಗುಂಡಿಗಳಿಗೆ ಅನುಮತಿ ಇಲ್ಲ. ಗೊತ್ತಿರದ ಗುಂಡಿಗಳ ಹೆಸರುಗಳನ್ನು ಸುಮ್ಮನೆ ಆಲಕ್ಷಿಸಲಾಗುವುದು, ಆ ಮೂಲಕ ಆ ಗುಂಡಿಗಳನ್ನು marco ಹಳೆಯ ಆವೃತ್ತಿಗಳನ್ನು ತುಂಡರಿಸದೆ ಹೊಸ ಆವೃತ್ತಿಗಳಿಗೆ ಸೇರಸಬಹುದಾಗಿದೆ. ಅಕ್ಕಪಕ್ಕದ ಗುಂಡಿಗಳ ನಡುವೆ ಒಂದಿಷ್ಟು ಜಾಗವನ್ನು ಸೇರಿಸಲು ಇಂದು ವಿಶೇಷವಾದ ಸ್ಪೇಸರ್ ಟ್ಯಾಗ್ ಅನ್ನು ಸೇರಿಸಬಹುದಾಗಿದೆ."
-
-#: ../src/marco.schemas.in.in.h:8
-msgid "Automatically raises the focused window"
-msgstr "ಗಮನ ಕೇಂದ್ರೀಕರಿಸಲಾದ ವಿಂಡೋವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮೇಲಕ್ಕೆ ಏರಿಸು"
-
-#: ../src/marco.schemas.in.in.h:9
-msgid ""
-"Clicking a window while holding down this modifier key will move the window "
-"(left click), resize the window (middle click), or show the window menu "
-"(right click). The middle and right click operations may be swapped using "
-"the \"resize_with_right_button\" key. Modifier is expressed as "
-"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
-
-#: ../src/marco.schemas.in.in.h:10
-msgid "Commands to run in response to keybindings"
-msgstr "ಕೀಬೈಂಡೀಗ್‍ಗಳಿಗೆ ಪ್ರತ್ಯುತ್ತರವಾಗಿ ಚಲಾಯಿಸಬೇಕಿರುವ ಆಜ್ಞೆಗಳು"
-
-#: ../src/marco.schemas.in.in.h:11
-msgid "Compositing Manager"
-msgstr "ಸಮ್ಮಿಶ್ರಗೊಳಿಕೆಯ(ಕಾಂಪೋಸಿಟಿಂಗ್) ವ್ಯವಸ್ಥಾಪಕ"
-
-#: ../src/marco.schemas.in.in.h:12
-msgid "Control how new windows get focus"
-msgstr "ಹೇಗೆ ಹೊಸ ವಿಂಡೋಗಳತ್ತ ಗಮನ ಕೇಂದ್ರೀಕರಿಸಬೇಕು ಎಂಬುದನ್ನು ನಿಯಂತ್ರಿಸು"
-
-#: ../src/marco.schemas.in.in.h:13
-msgid "Current theme"
-msgstr "ಈಗಿರುವ ಥೀಮ್"
-
-#: ../src/marco.schemas.in.in.h:14
-msgid "Delay in milliseconds for the auto raise option"
-msgstr "ಸ್ವಯಂ ಏರಿಕೆ ಆಯ್ಕೆಗಾಗಿನ ವಿಳಂಬ, ಮಿಲಿ ಸೆಕೆಂಡುಗಳಲ್ಲಿ"
-
-#: ../src/marco.schemas.in.in.h:15
-msgid "Determines whether Marco is a compositing manager."
-msgstr "Marco ಯು ಒಂದು ಸಮ್ಮಿಶ್ರಗೊಳಿಕೆ(ಕಾಂಪೋಸಿಟಿಂಗ್) ವ್ಯವಸ್ಥಾಪಕವೆ ಎಂದು ನಿರ್ಧರಿಸುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:16
-msgid ""
-"Determines whether applications or the system can generate audible 'beeps'; "
-"may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr "ಅನ್ವಯಗಳು ಅಥವ ವ್ಯವಸ್ಥೆಯು ಕೇಳಬಹುದಾದ ಬೀಪ್‌ ಶಬ್ಧಗಳನ್ನು ಉತ್ಪಾದಿಸುತ್ತದೆಯೆ ಎಂದು ನಿರ್ಧರಿಸುತ್ತದೆ; 'visual bell' to allow silent 'beeps' ನಿಶ್ಯಬ್ಧ ಬೀಪ್‌ಗಳನ್ನು ಅನುಮತಿಸಲು 'ಗೋಚರ ಗಂಟೆ'ಯೊಂದಿಗೆ ಬಳಸಬಹುದಾಗಿದೆ."
-
-#: ../src/marco.schemas.in.in.h:17
-msgid "Disable misfeatures that are required by old or broken applications"
-msgstr "ಹಳೆಯ ಅಥವ ತುಂಡಾದ ಅನ್ವಯಗಳಿಗಾಗಿನ ಅಗತ್ಯವಿರುವ ತಪ್ಪು ಸವಲತ್ತುಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸುತ್ತದೆ"
-
-#: ../src/marco.schemas.in.in.h:18
-msgid "Enable Visual Bell"
-msgstr "ಗೋಚರ ಗಂಟೆಯನ್ನು ಶಕ್ತಗೊಳಿಸು"
-
-#: ../src/marco.schemas.in.in.h:19
-msgid ""
-"If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
-"the focused window will be automatically raised after a delay specified by "
-"the auto_raise_delay key. This is not related to clicking on a window to "
-"raise it, nor to entering a window during drag-and-drop."
-msgstr "true ಗೆ ಹೊಂದಿಸಲಾಗಿದ್ದರೆ, ಹಾಗು ಗಮನದ ಕ್ರಮವು \"sloppy\" ಅಥವ \"mouse\" ಆಗಿದ್ದಲ್ಲಿ auto_raise_delay ಕೀಲಿಯಲ್ಲಿ ಸೂಚಿಸಲಾದ ವಿಳಂಬದ ನಂತರ ಗಮನಕೇಂದ್ರೀಕರಿಸಲಾದ ವಿಂಡೋವು ತಾನಾಗಿಯೆ ಮೇಲಕ್ಕೆ ಬರುತ್ತದೆ. ಇದು ಒಂದು ವಿಂಡೊವನ್ನು ಮೇಲಕ್ಕೆ ಏರಿಸಲು ಕ್ಲಿಕ್‌ ಮಾಡವುದಾಗಲಿ, ಅಥವ ಎಳೆದು-ಸೇರಿಸುವ ಸಮಯದಲ್ಲಿ ವಿಂಡೋವನ್ನು ಪ್ರವೇಶಿಸುವುದಕ್ಕೆ ಸಂಬಂಧಿಸಿರುವುದಿಲ್ಲ."
-
-#: ../src/marco.schemas.in.in.h:20
-msgid ""
-"If true, ignore the titlebar_font option, and use the standard application "
-"font for window titles."
-msgstr "true ಆದಲ್ಲಿ, titlebar_font ಆಯ್ಕೆಯನ್ನು ಆಲಕ್ಷಿಸಿ, ಹಾಗು ವಿಂಡೋ ಶೀರ್ಷಿಕೆಗಳಿಗಾಗಿ ಶಿಷ್ಟ ಅನ್ವಯ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಬಳಸು."
-
-#: ../src/marco.schemas.in.in.h:21
-msgid ""
-"If true, marco will give the user less feedback by using wireframes, "
-"avoiding animations, or other means. This is a significant reduction in "
-"usability for many users, but may allow legacy applications to continue "
-"working, and may also be a useful tradeoff for terminal servers. However, "
-"the wireframe feature is disabled when accessibility is on."
-msgstr "true ಆದಲ್ಲಿ, marco ಯು ವೈರ್ಫ್ರೇಮ್‌ಗಳನ್ನು ಬಳಸಿಕೊಂಡು ಸಜೀವನ(ಎನಿಮೇಶನ್) ಅಥವ ಇತರೆಯನ್ನು ಬಳಸದೆ ಕಡಿಮೆ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಒದಗಿಸುತ್ತದೆ. ಇದರಿಂದಾಗಿ ಹಲವಾರು ಬಳಕೆದಾರರು ಬಳಸುವುದನ್ನು ಕಡಿಮೆಯಾಗುತ್ತದೆ, ಆದರೆ ಸಾಂಪ್ರದಾಯಿಕ ಅನ್ವಯಗಳು ಕೆಲಸಮಾಡುವುದು ಮುಂದುವರೆಯುತ್ತದೆ, ಹಾಗು ಟರ್ಮಿನಲ್ ಪರಿಚಾರಕಗಳಿಗಾಗಿ ಉಪಯುಕ್ತ ಟ್ರೇಡ್‌ಆಫ್‌ಗಳಾಗಿರುತ್ತದೆ. ಆದರೆ ನಿಲುಕಣೆಯು ಚಾಲಿತವಾಗಿದ್ದಾಗ ವೈರ್ಫ್ರೇಮ್ ಸವಲತ್ತು ಅಶಕ್ತಗೊಂಡಿರುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:22
-msgid ""
-"If true, then Marco works in terms of applications rather than windows. The "
-"concept is a bit abstract, but in general an application-based setup is more"
-" like the Mac and less like Windows. When you focus a window in application-"
-"based mode, all the windows in the application will be raised. Also, in "
-"application-based mode, focus clicks are not passed through to windows in "
-"other applications. Application-based mode is, however, largely "
-"unimplemented at the moment."
-msgstr "true ಆಗಿದ್ದಲ್ಲಿ, Marco ಯು ವಿಂಡೋಗಳನ್ನು ಅನುಸರಿಸದೆ ಅನ್ವಯಗಳಿಗನುಸಾರವಾಗಿ ಕೆಲಸ ಮಾಡುತ್ತದೆ. ಈ ವಿಚಾರವು ಒಂದಿಷ್ಟು ವಿಚಿತ್ರವೆನಿಸಿದರೂ ಸಹ ಸಾಮಾನ್ಯವಾಗಿ ಅನ್ವಯ-ಆಧರಿತವಾದ ಒಂದು ಸಿದ್ಧತೆಯು ಹೆಚ್ಚಿನ ಪಾಲು Mac ನಂತಹೆ ಇರುತ್ತದೆಯೆ ಹೊರತು Windows ನಂತಲ್ಲ. ಅನ್ವಯ-ಆಧರಿತವಾದ ಕ್ರಮದಲ್ಲಿ ನೀವು ಒಂದು ವಿಂಡೋದತ್ತ ಗಮನ ಕೇಂದ್ರೀಕರಿಸಿದಾಗ, ಅನ್ವಯದ ಎಲ್ಲಾ ವಿಂಡೋಗಳು ಮೇಲಕ್ಕೆ ತರಲ್ಪಡುತ್ತವೆ. ಅಲ್ಲದೆ, ಅನ್ವಯ-ಆಧರಿತವಾದ ಕ್ರಮದಲ್ಲಿ, ಗಮನ ಆಧರಿತವಾದ ಕ್ಲಿಕ್‌ಗಳು ಇತರೆ ಅನ್ವಯಗಳಲ್ಲಿ ವಿಂಡೋಗಳ ಮೂಲಕ ಕಳಿಸಲ್ಪಡುವುದಿಲ್ಲ.ಆದರೆ ಅನ್ವಯ-ಆಧರಿತವಾದ ಕ್ರಮವು ಈ ಕ್ಷಣದಲ್ಲಿ ಇನ್ನೂ ಸಹ ಸೂಕ್ತವಾಗಿ ಅನ್ವಯಿಸಲಾಗಿಲ್ಲ."
-
-#: ../src/marco.schemas.in.in.h:23
-msgid "If true, trade off usability for less resource usage"
-msgstr "true ಆದಲ್ಲಿ, ಕಡಿಮೆ ಸಂಪನ್ಮೂಲಗಳಿಗಾಗಿ ಟ್ರೇಡ್ ಆಫ್‌ ಬಳಕೆಯಾಗುತ್ತದೆ"
-
-#: ../src/marco.schemas.in.in.h:24
-msgid "Modifier to use for modified window click actions"
-msgstr "ಮಾರ್ಪಡಿಸಲಾದ ವಿಂಡೋ ಕ್ಲಿಕ್‌ ಕ್ರಿಯೆಗಳಿಗಾಗಿ ಬಳಸಬೇಕಿರುವ ಮಾರ್ಪಡಕ"
-
-#: ../src/marco.schemas.in.in.h:25
-msgid "Name of workspace"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರದ ಹೆಸರು"
-
-#: ../src/marco.schemas.in.in.h:26
-msgid "Number of workspaces"
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರಗಳ ಸಂಖ್ಯೆ"
-
-#: ../src/marco.schemas.in.in.h:27
-msgid ""
-"Number of workspaces. Must be more than zero, and has a fixed maximum to "
-"prevent making the desktop unusable by accidentally asking for too many "
-"workspaces."
-msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರಗಳ ಸಂಖ್ಯೆ. ಇದು ಸೊನ್ನೆಗಿಂತ ಹೆಚ್ಚಾಗಿರಬೇಕು, ಹಾಗು ಆಕಸ್ಮಿಕವಾಗಿ ಬಹಳಷ್ಟು ಕಾರ್ಯಕ್ಷೇತ್ರಗಳಿಗಾಗಿ ಕೇಳುವುದರಿಂದ ಗಣಕತೆರೆಯು ಬಳಸದೆ ಇರುವಂತಾಗುವುದನ್ನು ತಪ್ಪಿಸಲು ನಿಶ್ಚಿತವಾದ ಗರಿಷ್ಟ ಸಂಖ್ಯೆಯನ್ನು ಹೊಂದಿರುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:28
-msgid "Run a defined command"
-msgstr "ಸೂಚಿತವಾದ ಒಂದು ಆಜ್ಞೆಯನ್ನು ಚಲಾಯಿಸು"
-
-#: ../src/marco.schemas.in.in.h:29
-msgid ""
-"Set this to true to resize with the right button and show a menu with the "
-"middle button while holding down the key given in \"mouse_button_modifier\";"
-" set it to false to make it work the opposite way around."
-msgstr "ಬಲಗುಂಡಿಯನ್ನು ಬಳಸಿಕೊಂಡು ಗಾತ್ರಬದಲಾಯಿಸಲು ಹಾಗು \"mouse_button_modifier\" ನಲ್ಲಿ ನೀಡಲಾದ ಒಂದು ಕೀಲಿಯನ್ನು ಒತ್ತಿಹಿಡಿದಾಗ ಮಧ್ಯದ ಗುಂಡಿಯನ್ನು ಒತ್ತಿದಾಗ ಒಂದು ಮೆನುವನ್ನು ತೋರಿಸಲು ಇದನ್ನು true ಗೆ ಬದಲಾಯಿಸಿ; ಇದು ವಿರುದ್ಧ ದಿಕ್ಕಿನಲ್ಲಿ ಕೆಲಸ ಮಾಡಲು ಇದನ್ನು false ಗೆ ಬದಲಾಯಿಸಿ."
-
-#: ../src/marco.schemas.in.in.h:30
-msgid ""
-"Setting this option to false can lead to buggy behavior, so users are "
-"strongly discouraged from changing it from the default of true. Many actions"
-" (e.g. clicking in the client area, moving or resizing the window) normally "
-"raise the window as a side-effect. Setting this option to false, which is "
-"strongly discouraged, will decouple raising from other user actions, and "
-"ignore raise requests generated by applications. See "
-"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Even when this option "
-"is false, windows can still be raised by an alt-left-click anywhere on the "
-"window, a normal click on the window decorations, or by special messages "
-"from pagers, such as activation requests from tasklist applets. This option "
-"is currently disabled in click-to-focus mode. Note that the list of ways to "
-"raise windows when raise_on_click is false does not include programmatic "
-"requests from applications to raise windows; such requests will be ignored "
-"regardless of the reason for the request. If you are an application "
-"developer and have a user complaining that your application does not work "
-"with this setting disabled, tell them it is _their_ fault for breaking their"
-" window manager and that they need to change this option back to true or "
-"live with the \"bug\" they requested."
-msgstr ""
-
-#: ../src/marco.schemas.in.in.h:31
-msgid ""
-"Some applications disregard specifications in ways that result in window "
-"manager misfeatures. This option puts Marco in a rigorously correct mode, "
-"which gives a more consistent user interface, provided one does not need to "
-"run any misbehaving applications."
-msgstr "ಕೆಲವು ಅನ್ವಯಗಳು ವಿಂಡೋ ವ್ಯವಸ್ಥಾಪಕದ ತಪ್ಪುಸಲವಲತ್ತಿಗೆ ಕಾರಣವಾಗುವ ರೀತಿಯಲ್ಲಿ ವಿವರಗಳನ್ನು ಆಲಕ್ಷಿಸುತ್ತವೆ. ಈ ಆಯ್ಕೆಯಿಂದಾಗಿ Marco ಅತ್ಯಂತ ಕಟ್ಟುನಿಟ್ಟಿನ ಕ್ರಮದಲ್ಲಿ ಇರುತ್ತದೆ, ಹಾಗು ಬಳಕೆದಾರರು ಅನುಚಿತವಾಗಿ ವರ್ತಿಸುವ ಯಾವುದೆ ಅನ್ವಯಗಳನ್ನು ಚಲಾಯಿಸದೆ ಇದ್ದಲ್ಲಿ ಇದು ಹೆಚ್ಚು ಸ್ಥಿರವಾದ ಒಂದು ಬಳಕೆದಾರ ಸಂಪರ್ಕಸಾಧನವನ್ನು ನೀಡುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:32
-msgid "System Bell is Audible"
-msgstr "ಗಣಕಗ ಗಂಟೆಯು ಕೇಳಿಸಬಲ್ಲದು"
-
-#: ../src/marco.schemas.in.in.h:33
-msgid ""
-"Tells Marco how to implement the visual indication that the system bell or "
-"another application 'bell' indicator has been rung. Currently there are two "
-"valid values, \"fullscreen\", which causes a fullscreen white-black flash, "
-"and \"frame_flash\" which causes the titlebar of the application which sent "
-"the bell signal to flash. If the application which sent the bell is unknown "
-"(as is usually the case for the default \"system beep\"), the currently "
-"focused window's titlebar is flashed."
-msgstr "ಗಣಕದ ಗಂಟೆ ಅಥವ ಬೇರೆ ಅನ್ವಯದ 'ಗಂಟೆ' ಸೂಚಕವು ಧ್ವನಿ ಹೊರಡಿಸಿದಲ್ಲಿ ಗೋಚರ ಸೂಚನೆಯನ್ನು Marco ಯು ಹೇಗೆ ಅನ್ವಯಿಸಬೇಕು ಎನ್ನುವುದನ್ನು ಇದು ತಿಳಿಸುತ್ತದೆ. ಪ್ರಸಕ್ತ ಇದು ಎರಡು ಮಾನ್ಯವಾದ ಮೌಲ್ಯಗಳನ್ನು ಹೊಂದಿರಬಹುದು, \"fullscreen\"(ಪೂರ್ಣತೆರೆ), ಇದರಿಂದಾಗು ಸಂಪೂರ್ಣತೆರೆಯು ಕಪ್ಪು-ಬಿಳುಪಿನಲ್ಲಿ ಹೊಳೆಯುತ್ತದೆ, ಹಾಗು \"frame_flash\" (ಚೌಕಟ್ಟು ಹೊಳೆಯುವಿಕೆ), ಇದರಿಂದಾಗಿ ಗಂಟೆ ಸೂಚನೆಯನ್ನು ಕಳುಹಿಸಿದ ಅನ್ವಯದ ಶೀರ್ಷಿಕೆಪಟ್ಟಿಯು ಹೊಳೆಯುತ್ತದೆ. ಎಲ್ಲಿಯಾದರೂ ಗಂಟೆಯ ಸೂಚನೆಯನ್ನು ಕಳುಹಿಸಿದ ಅನ್ವಯ ಅಜ್ಞಾತವಾಗಿದ್ದರೆ (ಪೂರ್ವನಿಯೋಜಿತ \"ವ್ಯವಸ್ಥೆ ಬೀಪ್\"ನಲ್ಲಿದ್ದಂತೆ), ಪ್ರಸಕ್ತ ಗಮನದಲ್ಲಿರುವ ವಿಂಡೋದ ಶೀರ್ಷಿಕೆಯು ಹೊಳೆಯುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:34
-msgid ""
-"The /apps/marco/global_keybindings/run_command_N keys define keybindings "
-"that correspond to these commands. Pressing the keybinding for run_command_N"
-" will execute command_N."
-msgstr "/apps/marco/global_keybindings/run_command_N ಕೀಲಿಗಳು ಈ ಆಜ್ಞೆಗಳಿಗೆ ಸೂಕ್ತವಾದ ಕೀಲಿಬೈಂಡಿಂಗ್‌ಗಳನ್ನು ಸೂಚಿಸುತ್ತವೆ.  run_command_N ನಿಂದ ಕೀಲಿಬೈಂಡಿಂಗ್‌ ಅನ್ನು ಒತ್ತುವುದರಿಂದ command_N ಚಲಾಯಿಸಲ್ಪಡುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:35
-msgid ""
-"The /apps/marco/global_keybindings/run_command_screenshot key defines a "
-"keybinding which causes the command specified by this setting to be invoked."
-msgstr "/apps/marco/global_keybindings/run_command_screenshot ಕೀಲಿಯು ಈ ಸಿದ್ಧತೆಯಿಂದ ಸೂಚಿಸಲಾದ ಆಜ್ಞೆಯನ್ನು ಮನವಿ ಮಾಡಲು ಕಾರಣವಾಗುವ ಒಂದು ಕೀಲಿಬೈಂಡಿಂಗ್ ಅನ್ನು ಸೂಚಿಸುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:36
-msgid ""
-"The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
-" a keybinding which causes the command specified by this setting to be "
-"invoked."
-msgstr "/apps/marco/global_keybindings/run_command_window_screenshot ಕೀಲಿಯು ಈ ಸಿದ್ಧತೆಯಿಂದ ಸೂಚಿಸಲಾದ ಆಜ್ಞೆಗಾಗಿ ಮನವಿ ಸಲ್ಲಿಸಲು ಕಾರಣವಾಗುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:37
-msgid ""
-"The keybinding that runs the correspondingly-numbered command in "
-"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
-"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action."
-msgstr "/apps/marco/keybinding_commands ನಲ್ಲಿ ಸೂಕ್ತವಾದ ಸಂಖ್ಯೆಯನ್ನು ಹೊಂದಿರುವ ಆಜ್ಞೆಯನ್ನು ಚಲಾಯಿಸುವ ಕೀಲಿಬೈಂಡಿಂಗ್. ಇದರ ವಿನ್ಯಾಸವು \"&lt;Control&gt;a\" ಅಥವ \"&lt;Shift&gt;&lt;Alt&gt;F1\" ನಂತಿರುತ್ತದೆ. ಪಾರ್ಸರ್ ಬಹುಮಟ್ಟಿಗೆ ಉದಾರಿಯಾಗಿದುತ್ತದೆ ಹಾಗು ದೊಡ್ಡ ಹಾಗು ಸಣ್ಣಕ್ಷರಗಳನ್ನು ಅನುಮತಿಸುತ್ತದೆ, ಅಲ್ಲದೆ \"&lt;Ctl&gt;\" ಮತ್ತು \"&lt;Ctrl&gt;\" ನಂತಹ ಸಂಕ್ಷಿಪ್ತ ರೂಪಗಳನ್ನೂ ಸಹ ಒಪ್ಪಿಕೊಳ್ಳುತ್ತದೆ. ವಿಶೇಷ ವಾಕ್ಯವನ್ನು ನೀವು \"disabled\"(ಅಶಕ್ತಗೊಂಡಿದೆ) ಗೆ ಬದಲಾಯಿಸಿದಲ್ಲಿ, ಈ ಕ್ರಿಯೆಗೆ ಯಾವುದೆ ಕೀಲಿಬೈಂಡಿಂಗ್ ಇರುವುದಿಲ್ಲ."
-
-#: ../src/marco.schemas.in.in.h:38
-msgid "The name of a workspace."
-msgstr "ಒಂದು ಕಾರ್ಯಕ್ಷೇತ್ರದ ಹೆಸರು."
-
-#: ../src/marco.schemas.in.in.h:39
-msgid "The screenshot command"
-msgstr "ತೆರೆಚಿತ್ರದ ಆಜ್ಞೆ"
-
-#: ../src/marco.schemas.in.in.h:40
-msgid ""
-"The theme determines the appearance of window borders, titlebar, and so "
-"forth."
-msgstr "ಪರಿಸರವಿನ್ಯಾಸವು ವಿಂಡೋ ಅಂಚುಗಳ, ಶೀರ್ಷಿಕೆಯ ಹಾಗು ಇನ್ನಿತರೆಗಳ ಗೋಚರಿಕೆಯನ್ನು ನಿರ್ಧರಿಸುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:41
-msgid ""
-"The time delay before raising a window if auto_raise is set to true. The "
-"delay is given in thousandths of a second."
-msgstr "auto_raise ಅನ್ನು true ಗೆ ಬದಲಾಯಿಸಿದ್ದಲ್ಲಿ ವಿಂಡೋವನ್ನು ಏರಿಸುವ ಮೊದಲು ನೀಡಬೇಕಿರುವ ವಿಳಂಬ. ವಿಳಂಬವನ್ನು ಒಂದು ಸೆಕೆಂಡಿನಲ್ಲಿ ಸಾವಿರದ ಒಂದು ಭಾಗದಲ್ಲಿ ಸೂಚಿಸಲಾಗುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:42
-msgid ""
-"The window focus mode indicates how windows are activated. It has three "
-"possible values; \"click\" means windows must be clicked in order to focus "
-"them, \"sloppy\" means windows are focused when the mouse enters the window,"
-" and \"mouse\" means windows are focused when the mouse enters the window "
-"and unfocused when the mouse leaves the window."
-msgstr "ವಿಂಡೋಗಳು ಹೇಗೆ ಸಕ್ರಿಯಗೊಳಿಸಲ್ಪಡುತ್ತವೆ ಎನ್ನುವುದನ್ನು ವಿಂಡೋ ಗಮನ ಕ್ರಮವು ಸೂಚಿಸುತ್ತದೆ. ಇದು ಮೂರು ಸಾಧ್ಯವಿರುವ ಮೌಲ್ಯಗಳನ್ನು ಹೊಂದಿರುತ್ತದೆ; \"ಕ್ಲಿಕ್\" ಎಂದರೆ ವಿಂಡೋಗಳತ್ತ ಗಮನ ಹರಿಸಲು ಅವುಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ, \"sloppy\"(ಸ್ಲಾಪಿ) ಎಂದರೆ ಮೌಸ್‌ ವಿಂಡೋವನ್ನು ಪ್ರವೇಶಿಸಿದಾಗ ಅದು ಗಮನ ಹರಿಸಲ್ಪಡುತ್ತದೆ, ಹಾಗು \"ಮೌಸ್‌\" ಎಂದರೆ ಮೌಸ್‌ ವಿಂಡೋವನ್ನು ಪ್ರವೇಶಿಸಿದಾಗ ಅದು ಗಮನ ಹರಿಸಲ್ಪಡುತ್ತದೆ ಹಾಗು ಮೌಸ್‌ ವಿಂಡೋದಿಂದ ನಿರ್ಗಮಿಸಿದಾಗ ಗಮನ ತಪ್ಪಿಹೋಗುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:43
-msgid "The window screenshot command"
-msgstr "ವಿಂಡೊ ತೆರೆಚಿತ್ರದ ಆಜ್ಞೆ"
-
-#: ../src/marco.schemas.in.in.h:44
-msgid ""
-"This option determines the effects of double-clicking on the title bar. "
-"Current valid options are 'toggle_shade', which will shade/unshade the "
-"window, 'toggle_maximize' which will maximize/unmaximize the window, "
-"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will"
-" minimize the window, 'shade' which will roll the window up, 'menu' which "
-"will display the window menu, 'lower' which will put the window behind all "
-"the others, and 'none' which will not do anything."
-msgstr "ಈ ಆಯ್ಕೆಯು ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಯ ಮೇಲೆ ಎರಡು ಬಾರಿ ಕ್ಲಿಕ್‌ ಮಾಡುವದರ ಪರಿಣಾಮವನ್ನು ನಿರ್ಧರಿಸುತ್ತದೆ.ಈಗಿರುವ ಮಾನ್ಯವಾದ ಆಯ್ಕೆಗಳೆಂದರೆ 'toggle_shade'(ಮಬ್ಬನ್ನು ಬದಲಾಯಿಸು), ಇದು ವಿಂಡೊವನ್ನು ಮಬ್ಬಾಗಿಸುತ್ತದೆ/ಮಬ್ಬಾಗಿಸದೆ ಇರುತ್ತದೆ, 'toggle_maximize'(ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು), ಇದು ವಿಂಡೋವನ್ನು ಹಿಗ್ಗಿಸುತ್ತದೆ/ಕುಗ್ಗಿಸುತ್ತದೆ, 'toggle_maximize_horizontally'(ಅಡ್ಡವಾಗಿ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು) ಹಾಗು 'toggle_maximize_vertically' (ಲಂಬವಾಗಿ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು) ಇದು ಆಯಾಯ ದಿಕ್ಕಿನಲ್ಲಿ ವಿಂಡೋವನ್ನು ಹಿಗ್ಗಿಸುತ್ತದೆ/ಕುಗ್ಗಿಸುತ್ತದೆ, 'ಕುಗ್ಗಿಸು', ಇದು ವಿಂಡೋವನ್ನು ಕಿರಿದಾಗಿಸುತ್ತದೆ, 'ಮಬ್ಬಾಗಿಸು', ಇದು ವಿಂಡೊವನ್ನು ಮೇಲಕ್ಕೆ ಸುತ್ತುತ್ತದೆ, 'ಮೆನು', ಇದು ವಿಂಡೋ ಮೆನುವನ್ನು ತೋರಿಸುತ್ತದೆ, 'ಕೆಳಗೆ', ಇದು ವಿಂಡೊವನ್ನು ಎಲ್ಲಾ ಇತರೆ ವಿಂಡೊಗಳ ಹಿಂದೆ ಇರಿಸುತ್ತದೆ, ಹಾಗು 'ಏನೂ ಇಲ್ಲ', ಇದು ಏನನ್ನೂ ಮಾಡುವುದಿಲ್ಲ."
-
-#: ../src/marco.schemas.in.in.h:45
-msgid ""
-"This option determines the effects of middle-clicking on the title bar. "
-"Current valid options are 'toggle_shade', which will shade/unshade the "
-"window, 'toggle_maximize' which will maximize/unmaximize the window, "
-"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will"
-" minimize the window, 'shade' which will roll the window up, 'menu' which "
-"will display the window menu, 'lower' which will put the window behind all "
-"the others, and 'none' which will not do anything."
-msgstr "ಈ ಆಯ್ಕೆಯು ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಯ ಮೇಲೆ ಮೌಸ್‌ನ ಮಧ್ಯದ-ಗುಂಡಿಯನ್ನು ಕ್ಲಿಕ್‌ ಮಾಡುವದರ ಪರಿಣಾಮವನ್ನು ನಿರ್ಧರಿಸುತ್ತದೆ.ಈಗಿರುವ ಮಾನ್ಯವಾದ ಆಯ್ಕೆಗಳೆಂದರೆ 'toggle_shade'(ಮಬ್ಬನ್ನು ಬದಲಾಯಿಸು), ಇದು ವಿಂಡೊವನ್ನು ಮಬ್ಬಾಗಿಸುತ್ತದೆ/ಮಬ್ಬಾಗಿಸದೆ ಇರುತ್ತದೆ, 'toggle_maximize'(ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು), ಇದು ವಿಂಡೋವನ್ನು ಹಿಗ್ಗಿಸುತ್ತದೆ/ಕುಗ್ಗಿಸುತ್ತದೆ, 'toggle_maximize_horizontally'(ಅಡ್ಡವಾಗಿ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು) ಹಾಗು 'toggle_maximize_vertically' (ಲಂಬವಾಗಿ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು) ಇದು ಆಯಾಯ ದಿಕ್ಕಿನಲ್ಲಿ ವಿಂಡೋವನ್ನು ಹಿಗ್ಗಿಸುತ್ತದೆ/ಕುಗ್ಗಿಸುತ್ತದೆ, 'ಕುಗ್ಗಿಸು', ಇದು ವಿಂಡೋವನ್ನು ಕಿರಿದಾಗಿಸುತ್ತದೆ, 'ಮಬ್ಬಾಗಿಸು', ಇದು ವಿಂಡೊವನ್ನು ಮೇಲಕ್ಕೆ ಸುತ್ತುತ್ತದೆ, 'ಮೆನು', ಇದು ವಿಂಡೋ ಮೆನುವನ್ನು ತೋರಿಸುತ್ತದೆ, 'ಕೆಳಗೆ', ಇದು ವಿಂಡೊವನ್ನು ಎಲ್ಲಾ ಇತರೆ ವಿಂಡೊಗಳ ಹಿಂದೆ ಇರಿಸುತ್ತದೆ, ಹಾಗು 'ಏನೂ ಇಲ್ಲ', ಇದು ಏನನ್ನೂ ಮಾಡುವುದಿಲ್ಲ."
-
-#: ../src/marco.schemas.in.in.h:46
-msgid ""
-"This option determines the effects of right-clicking on the title bar. "
-"Current valid options are 'toggle_shade', which will shade/unshade the "
-"window, 'toggle_maximize' which will maximize/unmaximize the window, "
-"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
-"maximize/unmaximize the window in that direction only, 'minimize' which will"
-" minimize the window, 'shade' which will roll the window up, 'menu' which "
-"will display the window menu, 'lower' which will put the window behind all "
-"the others, and 'none' which will not do anything."
-msgstr "ಈ ಆಯ್ಕೆಯು ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಯ ಮೇಲೆ ಮೌಸ್‌ನ ಬಲ-ಗುಂಡಿಯನ್ನು ಕ್ಲಿಕ್‌ ಮಾಡುವದರ ಪರಿಣಾಮವನ್ನು ನಿರ್ಧರಿಸುತ್ತದೆ.ಈಗಿರುವ ಮಾನ್ಯವಾದ ಆಯ್ಕೆಗಳೆಂದರೆ 'toggle_shade'(ಮಬ್ಬನ್ನು ಬದಲಾಯಿಸು), ಇದು ವಿಂಡೊವನ್ನು ಮಬ್ಬಾಗಿಸುತ್ತದೆ/ಮಬ್ಬಾಗಿಸದೆ ಇರುತ್ತದೆ, 'toggle_maximize'(ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು), ಇದು ವಿಂಡೋವನ್ನು ಹಿಗ್ಗಿಸುತ್ತದೆ/ಕುಗ್ಗಿಸುತ್ತದೆ, 'toggle_maximize_horizontally'(ಅಡ್ಡವಾಗಿ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು) ಹಾಗು 'toggle_maximize_vertically' (ಲಂಬವಾಗಿ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸು) ಇದು ಆಯಾಯ ದಿಕ್ಕಿನಲ್ಲಿ ವಿಂಡೋವನ್ನು ಹಿಗ್ಗಿಸುತ್ತದೆ/ಕುಗ್ಗಿಸುತ್ತದೆ, 'ಕುಗ್ಗಿಸು', ಇದು ವಿಂಡೋವನ್ನು ಕಿರಿದಾಗಿಸುತ್ತದೆ, 'ಮಬ್ಬಾಗಿಸು', ಇದು ವಿಂಡೊವನ್ನು ಮೇಲಕ್ಕೆ ಸುತ್ತುತ್ತದೆ, 'ಮೆನು', ಇದು ವಿಂಡೋ ಮೆನುವನ್ನು ತೋರಿಸುತ್ತದೆ, 'ಕೆಳಗೆ', ಇದು ವಿಂಡೊವನ್ನು ಎಲ್ಲಾ ಇತರೆ ವಿಂಡೊಗಳ ಹಿಂದೆ ಇರಿಸುತ್ತದೆ, ಹಾಗು 'ಏನೂ ಇಲ್ಲ', ಇದು ಏನನ್ನೂ ಮಾಡುವುದಿಲ್ಲ."
-
-#: ../src/marco.schemas.in.in.h:47
-msgid ""
-"This option provides additional control over how newly created windows get "
-"focus. It has two possible values; \"smart\" applies the user's normal focus"
-" mode, and \"strict\" results in windows started from a terminal not being "
-"given focus."
-msgstr "ಹೊಸದಾಗಿ ನಿರ್ಮಿಸಲಾದ ವಿಂಡೊಗಳತ್ತ ಹೇಗೆ ಗಮನ ಕೇಂದ್ರಿಕರಿಸಲ್ಪಡಬೇಕು ಎನ್ನುವುದನ್ನು ಈ ಆಯ್ಕೆಯು ನಿರ್ಧರಿಸುತ್ತದೆ. ಇದಕ್ಕೆ ಎರಡು ಮೌಲ್ಯಗಳನ್ನು ಹೊಂದಿರುವ ಸಾಧ್ಯತೆ ಇದೆ; \"smart\"(ಚತುರ) ಎನ್ನುವುದು ಬಳಕೆದಾರರ ಸಾಮಾನ್ಯ ಗಮನ ಕೇಂದ್ರೀಕರಿಸುವ ಕ್ರಮವನ್ನು ಅನ್ವಯಿಸುತ್ತದೆ, ಹಾಗು \"strict\" (ಕಟ್ಟುನಿಟ್ಟಿನ) ಎನ್ನುವುದು ಟರ್ಮಿನಲ್‌ನಿಂದ ಆರಂಭಗೊಂಡ ವಿಂಡೋಗಳತ್ತ ಗಮನ ಹರಿಸಲಾಗದೆ ಇರುವಂತೆ ನೋಡಿಕೊಳ್ಳುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:48
-msgid ""
-"Turns on a visual indication when an application or the system issues a "
-"'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
-"environments."
-msgstr "ಒಂದು ಅನ್ವಯ ಅಥವ ವ್ಯವಸ್ಥೆಯು ಒಂದು 'ಗಂಟೆ' ಅಥವ 'ಬೀಪ್‌' ಶಬ್ಧವನ್ನು ಹೊರಡಿಸಿದಾಗ ಒಂದು ಗೋಚರ ಸೂಚನೆಯನ್ನು ಚಾಲಿಸುತ್ತದೆ; ಕೇಳಲು ತೊಂದರೆ ಇರುವವರಿಗೆ ಹಾಗು ಶಬ್ಧವು ಹೆಚ್ಚಾದ ಪರಿಸರದಲ್ಲಿ ಉಪಯುಕತ್ತವಾಗುತ್ತದೆ."
-
-#: ../src/marco.schemas.in.in.h:49
-msgid "Use standard system font in window titles"
-msgstr "ವಿಂಡೊ ಶೀರ್ಷಿಕೆಗಳಲ್ಲಿ ಗಣಕದ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಬಳಸು"
-
-#: ../src/marco.schemas.in.in.h:50
-msgid "Visual Bell Type"
-msgstr "ಗೋಚರಿಸು ಗಂಟೆಯ ಬಗೆ"
-
-#: ../src/marco.schemas.in.in.h:51
-msgid "Whether raising should be a side-effect of other user interactions"
-msgstr "ಏರಿಸುವಿಕೆಯು ಬೇರೆ ವ್ಯವಹಾರಗಳಿಗೆ ಅಡ್ಡ ಪರಿಣಾಮ ಬೀರಬೇಕೆ"
-
-#: ../src/marco.schemas.in.in.h:52
-msgid "Whether to resize with the right button"
-msgstr "ಬಲಗುಂಡಿಯಿಂದ ಗಾತ್ರವನ್ನು ಬದಲಿಸಬೇಕೆ"
-
-#: ../src/marco.schemas.in.in.h:53
-msgid "Window focus mode"
-msgstr "ವಿಂಡೊ ಗಮನ ಕೇಂದ್ರೀಕರಿಸುವ ಕ್ರಮ"
-
-#: ../src/marco.schemas.in.in.h:54
-msgid "Window title font"
-msgstr "ವಿಂಡೊದ ಶೀರ್ಷಿಕೆಯ ಅಕ್ಷರಶೈಲಿ"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1401,201 +940,201 @@ msgstr "ಗುಂಡಿಯ ಆಕಾರ ಅನುಪಾತ %g ಯು ಸೂಕ�
 msgid "Frame geometry does not specify size of buttons"
 msgstr "ಚೌಕಟ್ಟಿನ ಜ್ಯಾಮಿತಿಯು ಗುಂಡಿಗಳ ಗಾತ್ರವನ್ನು ಸೂಚಿಸುವುದಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1021
+#: ../src/ui/theme.c:1023
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "ಗ್ರೇಡಿಯಂಟ್‌ ಕನಿಷ್ಟ ಎರಡು ಬಣ್ಣಗಳನ್ನಾದರೂ ಹೊಂದಿರಬೇಕು"
 
-#: ../src/ui/theme.c:1147
+#: ../src/ui/theme.c:1149
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
 msgstr "GTK ಬಣ್ಣವನ್ನು ಸೂಚಿಸುವಿಕೆಗಾಗಿ ಸ್ಥಿತಿಯಲ್ಲಿ ಆವರಣ ಚಿಹ್ನೆಯು ಇರಬೇಕು, ಉದಾ. gtk:fg[NORMAL] ಆಗಿರುತ್ತದೆ, ಇಲ್ಲಿ NORMAL ಸ್ಥಿತಿಯನ್ನು ಸೂಚಿಸುತ್ತದೆ; \"%s\" ಅನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1161
+#: ../src/ui/theme.c:1163
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
 msgstr "GTK ಬಣ್ಣವನ್ನು ಸೂಚಿಸುವಿಕೆಗಾಗಿ ಸ್ಥಿತಿಯ ನಂತರ ಮುಚ್ಚಲಾದ ಒಂದು ಆವರಣ ಚಿಹ್ನೆಯನ್ನು ಸೂಚಿಸಬೇಕು, ಉದಾ. gtk:fg[NORMAL] ಆಗಿರುತ್ತದೆ, ಇಲ್ಲಿ NORMAL ಸ್ಥಿತಿಯನ್ನು ಸೂಚಿಸುತ್ತದೆ; \"%s\" ಅನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1172
+#: ../src/ui/theme.c:1174
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "ಬಣ್ಣ ವಿವರಣೆಯಲ್ಲಿನ ಸ್ಥಿತಿ \"%s\" ಅನ್ನು ಅರ್ಥ ಮಾಡಿಕೊಳ್ಳಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1185
+#: ../src/ui/theme.c:1187
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "ಬಣ್ಣ ವಿವರಣೆಯಲ್ಲಿನ ಬಣ್ಣದ ಘಟಕ \"%s\" ಅನ್ನು ಅರ್ಥ ಮಾಡಿಕೊಳ್ಳಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1215
+#: ../src/ui/theme.c:1217
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
 msgstr "ಮಿಶ್ರಗೊಳಿಕಾ ವಿನ್ಯಾಸ \"blend/bg_color/fg_color/alpha\", \"%s\" ವಿನ್ಯಾಸಕ್ಕೆ ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1226
+#: ../src/ui/theme.c:1228
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "ಮಿಶ್ರಗೊಳಿಸಲಾದ ಬಣ್ಣದಲ್ಲಿ ಆಲ್ಫಾ ಮೌಲ್ಯ \"%s\" ಅನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1236
+#: ../src/ui/theme.c:1238
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "ಮಿಶ್ರ ಮಾಡಲಾದ ಬಣ್ಣದ ಆಲ್ಫಾ ಮೌಲ್ಯವು \"%s\" ವು 0.0 ಹಾಗು 1.0 ಯ ನಡುವಿನಲ್ಲಿ ಇಲ್ಲ"
 
-#: ../src/ui/theme.c:1283
+#: ../src/ui/theme.c:1285
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "ಮಬ್ಬು ವಿನ್ಯಾಸ \"shade/base_color/factor\", \"%s\" ವಿನ್ಯಾಸಕ್ಕೆ ಸರಿಹೊಂದುತ್ತಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1294
+#: ../src/ui/theme.c:1296
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "ಮಬ್ಬುಗೊಳಿಸಲಾದ ಬಣ್ಣದ ಮಬ್ಬುಗೊಳಿಕಾ ಅಂಶ \"%s\" ಅನ್ನು ಪಾರ್ಸ್ ಮಾಡಲಾಗಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1304
+#: ../src/ui/theme.c:1306
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "ಮಬ್ಬುಗೊಳಿಸಲಾದ ಬಣ್ಣದಲ್ಲಿನ ಮಬ್ಬುಗೊಳಿಸುವ ಅಂಶ \"%s\" ಋಣಾತ್ಮಕವಾಗಿದೆ"
 
-#: ../src/ui/theme.c:1333
+#: ../src/ui/theme.c:1335
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "ಬಣ್ಣ \"%s\" ಅನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1587
+#: ../src/ui/theme.c:1589
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "ಅನುಮತಿ ಇರದೆ ಇರುವಂತಹ ಅಕ್ಷರವನ್ನು '%s' ಅನ್ನು ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ ಹೊಂದಿದೆ"
 
-#: ../src/ui/theme.c:1614
+#: ../src/ui/theme.c:1616
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗದೆ ಇರುವಂತಹ ತೇಲುವ ಬಿಂದು (ಫ್ಲೋಟಿಂಗ್ ಪಾಯಿಂಟ್‌) ಸಂಖ್ಯೆ '%s' ಅನ್ನು ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ ಹೊಂದಿದೆ"
 
-#: ../src/ui/theme.c:1628
+#: ../src/ui/theme.c:1630
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗದೆ ಇರುವಂತಹ ಪೂರ್ಣಾಂಕ '%s' ಅನ್ನು ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ ಹೊಂದಿದೆ"
 
-#: ../src/ui/theme.c:1750
+#: ../src/ui/theme.c:1752
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ನಲ್ಲಿನ ಪಠ್ಯದ ಆರಂಭದಲ್ಲಿ ಗೊತ್ತಿರದ ಆಪರೇಟರ್ ಅನ್ನು ಹೊಂದಿದೆ: \"%s\""
 
-#: ../src/ui/theme.c:1807
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ ಖಾಲಿ ಇದೆ ಅಥವ ಅರ್ಥ ಮಾಡಿಕೊಳ್ಳಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../src/ui/theme.c:1918 ../src/ui/theme.c:1928 ../src/ui/theme.c:1962
+#: ../src/ui/theme.c:1920 ../src/ui/theme.c:1930 ../src/ui/theme.c:1964
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್ ಶೂನ್ಯದಿಂದ ಭಾಗಾಕಾರಕ್ಕೆ ಕಾರಣವಾಗಿದೆ"
 
-#: ../src/ui/theme.c:1970
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ ಒಂದು ತೇಲುವ-ಬಿಂದು ಸಂಖ್ಯೆಯಲ್ಲಿ mod ಆಪರೇಟರ್ ಅನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿದೆ"
 
-#: ../src/ui/theme.c:2026
+#: ../src/ui/theme.c:2028
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ನಲ್ಲಿ ಎಲ್ಲಿ operand ಅನ್ನು ನಿರೀಕ್ಷಿಸಲಾಗಿತ್ತೊ ಅಲ್ಲಿ ಒಂದು ಆಪರೇಟರ್ \"%s\" ಇದೆ"
 
-#: ../src/ui/theme.c:2035
+#: ../src/ui/theme.c:2037
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ನಲ್ಲಿ ಎಲ್ಲಿ ಆಪರೇಟರ್ ಅನ್ನು ನಿರೀಕ್ಷಿಸಲಾಗಿತ್ತೊ ಅಲ್ಲಿ ಒಂದು operand ಇದೆ"
 
-#: ../src/ui/theme.c:2043
+#: ../src/ui/theme.c:2045
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್ ಒಂದು operand ಬದಲಿಗೆ ಆಪರೇಟರಿನೊಂದಿಗೆ ಅಂತ್ಯಗೊಂಡಿದೆ"
 
-#: ../src/ui/theme.c:2053
+#: ../src/ui/theme.c:2055
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ ಆಪೇರೇಟರ್ \"%c\" ಹಾಗು ಅಪರೇಟರ್ \"%c\" ಅನ್ನು ಹೊಂದಿದೆ ಆದರೆ ನಡುವೆ ಯಾವುದೆ operand ಅನ್ನು ಹೊಂದಿಲ್ಲ"
 
-#: ../src/ui/theme.c:2200 ../src/ui/theme.c:2241
+#: ../src/ui/theme.c:2202 ../src/ui/theme.c:2243
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್ ಯಾವುದೆ ಗೊತ್ತಿರದ ಚರ ಮೌಲ್ಯ ಅಥವ ಸ್ಥಿರ ಮೌಲ್ಯ \"%s\" ಅನ್ನು ಹೊಂದಿದೆ"
 
-#: ../src/ui/theme.c:2295
+#: ../src/ui/theme.c:2297
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್ ಪಾರ್ಸರ್ ತನ್ನ ಬಫರಿನ ಮಿತಿಯನ್ನು ಮೀರಿದೆ."
 
-#: ../src/ui/theme.c:2324
+#: ../src/ui/theme.c:2326
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ ಯಾವುದೆ ತೆರೆದ ಆವರಣ ಚಿಹ್ನೆ ಇರದೆ ಕೇವಲ ಮುಚ್ಚಲ್ಪಟ್ಟ ಆವರಣ ಚಿಹ್ನೆಯನ್ನು ಹೊಂದಿದೆ"
 
-#: ../src/ui/theme.c:2388
+#: ../src/ui/theme.c:2390
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ ಯಾವುದೆ ಮುಚ್ಚಲ್ಪಟ್ಟ ಆವರಣ ಚಿಹ್ನೆ ಇರದೆ ಕೇವಲ ತೆರೆದ ಆವರಣ ಚಿಹ್ನೆಯನ್ನು ಹೊಂದಿದೆ"
 
-#: ../src/ui/theme.c:2399
+#: ../src/ui/theme.c:2401
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "ಅಕ್ಷಾಂಶ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ ಯಾವುದೆ ಬಗೆಯ ಆಪರೇಟರುಗಳನ್ನು ಅಥವ ಆಪರಾಂಡ್‌ಗಳನ್ನು (operands) ಹೊಂದಿರುವಂತೆ ತೋರುತ್ತಿಲ್ಲ"
 
-#: ../src/ui/theme.c:2603 ../src/ui/theme.c:2623 ../src/ui/theme.c:2643
+#: ../src/ui/theme.c:2605 ../src/ui/theme.c:2625 ../src/ui/theme.c:2645
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "ಒಂದು ದೋಷಕ್ಕೆ ಕಾರಣವಾದಂತಹ ಒಂದು ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ ಪರಿಸರವಿನ್ಯಾಸದಲ್ಲಿ ಕಂಡುಬಂದಿದೆ: %s\n"
 
-#: ../src/ui/theme.c:4220
+#: ../src/ui/theme.c:4222
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> ವು ಈ ಚೌಕಟ್ಟಿನ ಶೈಲಿಗೆ ಸೂಚಿತಗೊಳ್ಳಬೇಕು"
 
-#: ../src/ui/theme.c:4728 ../src/ui/theme.c:4753
+#: ../src/ui/theme.c:4730 ../src/ui/theme.c:4755
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> ಕಾಣುತ್ತಿಲ್ಲ"
 
-#: ../src/ui/theme.c:4797
+#: ../src/ui/theme.c:4799
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" ಥೀಮನ್ನು ಲೋಡ್‍ ಮಾಡಲು ವಿಫಲಗೊಂಡಿದೆ: %s\n"
 
-#: ../src/ui/theme.c:4927 ../src/ui/theme.c:4934 ../src/ui/theme.c:4941
-#: ../src/ui/theme.c:4948 ../src/ui/theme.c:4955
+#: ../src/ui/theme.c:4929 ../src/ui/theme.c:4936 ../src/ui/theme.c:4943
+#: ../src/ui/theme.c:4950 ../src/ui/theme.c:4957
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "ಯಾವುದೆ <%s> ಅನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ (ಪರಿಸರವಿನ್ಯಾಸ \"%s\" ಕ್ಕಾಗಿ)"
 
-#: ../src/ui/theme.c:4963
+#: ../src/ui/theme.c:4965
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "ಬಗೆ \"%s\" ಗಾಗಿ \"%s\" ಪರಿಸರವಿನ್ಯಾಸದಲ್ಲಿ ಯಾವುದೆ ಚೌಕಟ್ಟು ಶೈಲಿ ಇಲ್ಲ, ಒಂದು <window type=\"%s\" style_set=\"whatever\"/> ಘಟಕವನ್ನು ಸೇರಿಸಿ"
 
-#: ../src/ui/theme.c:5406 ../src/ui/theme.c:5468 ../src/ui/theme.c:5531
+#: ../src/ui/theme.c:5408 ../src/ui/theme.c:5470 ../src/ui/theme.c:5533
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "ಬಳಕೆದಾರರಿಂದ ಸೂಚಿತಗೊಂಡ ಸ್ಥಿರಾಂಕಗಳು ಕ್ಯಾಪಿಟಲ್ ಅಕ್ಷರಗಳಿಂದ ಆರಂಭಗೊಳ್ಳಬೇಕು; ಆದರೆ \"%s\" ಹೊಂದಿಲ್ಲ"
 
-#: ../src/ui/theme.c:5414 ../src/ui/theme.c:5476 ../src/ui/theme.c:5539
+#: ../src/ui/theme.c:5416 ../src/ui/theme.c:5478 ../src/ui/theme.c:5541
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "\"%s\" ಸ್ತಿರಾಂಕವು ಈಗಾಗಲೆ ಸೂಚಿತಗೊಂಡಿದೆ"
