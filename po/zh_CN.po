@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Dianjin Wang <1132321739qq@gmail.com>, 2012.
+# Haonan Yu <rebuilty@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2013-03-26 14:30+0000\n"
+"Last-Translator: rebuilty <rebuilty@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/MATE/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -423,7 +424,7 @@ msgstr "无法重启动：%s\n"
 #: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "存储在 MateConf 中的 %2$s 中的值 %1$d 超出了 %3$d 到 %4$d 的范围\\n"
 
 #: ../src/core/prefs.c:1008
 msgid ""
@@ -434,7 +435,7 @@ msgstr "有缺陷的应用程序的工作区已禁用。某些应用程序可能
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "无法解析字体描述“%s\"在 GSettings %s 中\\n"
 
 #: ../src/core/prefs.c:1137
 #, c-format
@@ -1427,7 +1428,7 @@ msgstr "一个 <menu_icon> 元素不能有两个 draw_ops(主题指定了一个d
 #: ../src/ui/theme-parser.c:3350
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr ""
+msgstr "菜单文件中的最外层元素应该是 <mateconf> 而非 <%s>"
 
 #: ../src/ui/theme-parser.c:3370
 #, c-format
