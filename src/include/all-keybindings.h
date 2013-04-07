@@ -184,7 +184,7 @@ keybind (run-command-31, handle_run_command, 30, 0)
 keybind (run-command-32, handle_run_command, 31, 0)
 
 keybind (run-command-screenshot, handle_run_command, 32, 0)
-keybind (run-command-window_screenshot, handle_run_command, 33, 0)
+keybind (run-command-window-screenshot, handle_run_command, 33, 0)
 
 keybind (run-command-terminal, handle_run_terminal, 0, 0)
 
