@@ -111,7 +111,7 @@
       <description>A font description string describing a font for window titlebars. The size from the description will only be used if the titlebar_font_size option is set to 0. Also, this option is disabled if the titlebar_uses_desktop_font option is set to true.</description>
     </key>
     <key name="num-workspaces" type="i">
-      <range min="1" max="16"/>
+      <range min="1" max="36"/>
       <default>4</default>
       <summary>Number of workspaces</summary>
       <description>Number of workspaces. Must be more than zero, and has a fixed maximum to prevent making the desktop unusable by accidentally asking for too many workspaces.</description>
@@ -245,6 +245,106 @@
       <description>The name of a workspace.</description>
     </key>
     <key name="name-16" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-17" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-18" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-19" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-20" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-21" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-22" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-23" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-24" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-25" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-26" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-27" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-28" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-29" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-30" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-31" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-32" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-33" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-34" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-35" type="s">
+      <default>''</default>
+      <summary>Name of workspace</summary>
+      <description>The name of a workspace.</description>
+    </key>
+    <key name="name-36" type="s">
       <default>''</default>
       <summary>Name of workspace</summary>
       <description>The name of a workspace.</description>
