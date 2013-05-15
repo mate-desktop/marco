@@ -463,6 +463,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->maximize_horizontally_after_placement = FALSE;
   window->maximize_vertically_after_placement = FALSE;
   window->minimize_after_placement = FALSE;
+  window->fullscreen = FALSE;
   window->fullscreen_after_placement = FALSE;
   window->fullscreen_monitors[0] = -1;
   window->require_fully_onscreen = TRUE;
