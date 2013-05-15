@@ -4596,34 +4596,35 @@ meta_display_get_tab_list (MetaDisplay   *display,
           tmp = tmp->next;
         }
     }
-  
+
   for (l = workspace_list; l != NULL; l = l->next)
     {
       GList *tmp;
-      
+
       workspace = l->data;
-      
+
       tmp = workspace->mru_list;
       while (tmp != NULL)
         {
           MetaWindow *window = tmp->data;
-          
+
           if (window->minimized &&
               window->screen == screen &&
               IN_TAB_CHAIN (window, type))
             tab_list = g_list_prepend (tab_list, window);
-          
+
           tmp = tmp->next;
         }
     }
-  
+
   tab_list = g_list_reverse (tab_list);
-  
+
   {
-    GSList *tmp;
+    GSList *windows, *tmp;
     MetaWindow *l_window;
-    
-    tmp = meta_display_list_windows (display);
+
+    windows = meta_display_list_windows (display);
+    tmp = windows;
 
     /* Go through all windows */
     while (tmp != NULL)
@@ -4631,9 +4632,9 @@ meta_display_get_tab_list (MetaDisplay   *display,
         l_window=tmp->data;
 
         /* Check to see if it demands attention */
-        if (l_window->wm_state_demands_attention && 
+        if (l_window->wm_state_demands_attention &&
             l_window->workspace!=active_workspace &&
-            IN_TAB_CHAIN (l_window, type)) 
+            IN_TAB_CHAIN (l_window, type))
           {
             /* if it does, add it to the popup */
             tab_list = g_list_prepend (tab_list, l_window);
@@ -4641,8 +4642,9 @@ meta_display_get_tab_list (MetaDisplay   *display,
 
         tmp = tmp->next;
       } /* End while tmp!=NULL */
+      g_slist_free (windows);
   }
-  
+
   return tab_list;
 }
 
