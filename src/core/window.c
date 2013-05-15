@@ -4007,6 +4007,9 @@ meta_window_begin_wireframe (MetaWindow *window)
   MetaRectangle new_xor;
   int display_width, display_height;
 
+  display_width = 0;
+  display_height = 0;
+
   meta_window_get_client_root_coords (window,
                                       &window->display->grab_wireframe_rect);
 
@@ -4032,6 +4035,9 @@ meta_window_update_wireframe (MetaWindow *window,
 
   MetaRectangle new_xor;
   int display_width, display_height;
+
+  display_width = 0;
+  display_height = 0;
 
   window->display->grab_wireframe_rect.x = x;
   window->display->grab_wireframe_rect.y = y;
