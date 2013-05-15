@@ -2148,15 +2148,19 @@ generate_pixmap (MetaFrames *frames,
   GdkRegion *region;
   GdkPixmap *result;
 
+  /* do not create a pixmap for nonexisting areas */
+  if (rect.width <= 0 || rect.height <= 0)
+  	return NULL;
+
   rectangle.x = rect.x;
   rectangle.y = rect.y;
-  rectangle.width = MAX (rect.width, 1);
-  rectangle.height = MAX (rect.height, 1);
+  rectangle.width = rect.width;
+  rectangle.height = rect.height;
 
   result = gdk_pixmap_new (frame->window,
-                           rectangle.width, rectangle.height, -1);
+                           rect.width, rect.height, -1);
 
-  clear_backing (result, frame->window, rectangle.x, rectangle.y);
+  clear_backing (result, frame->window, rect.x, rect.y);
 
   region = gdk_region_rectangle (&rectangle);
 
