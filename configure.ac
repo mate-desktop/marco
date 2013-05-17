@@ -8,12 +8,12 @@ m4_define([marco_micro_version], [1])
 
 m4_define([marco_version],
           [marco_major_version.marco_minor_version.marco_micro_version])
-AC_INIT([marco], [marco_version], [https://github.com/mate-desktop/mate-desktop-environment])
+AC_INIT([mate-window-manager], [marco_version], [https://github.com/mate-desktop/mate-desktop-environment])
 
 AC_CONFIG_SRCDIR(src/core/display.c)
 AC_CONFIG_HEADERS(config.h)
 
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([no-dist-gzip dist-xz])
 AM_MAINTAINER_MODE
 
 # Honor aclocal flags

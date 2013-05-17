@@ -190,7 +190,8 @@ CLEANFILES = \
 	marco.desktop \
 	marco-wm.desktop \
 	50-marco-desktop-key.xml \
-	50-marco-key.xml
+	50-marco-global-key.xml \
+	50-marco-window-key.xml
 
 pkgconfigdir = $(libdir)/pkgconfig
 
