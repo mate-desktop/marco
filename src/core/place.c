@@ -491,8 +491,8 @@ static void
 center_rect_in_area (MetaRectangle *rect,
                      MetaRectangle *work_area)
 {
-  rect->x = (work_area->width - rect->width) / 2;
-  rect->y = (work_area->height - rect->height) / 2;
+  rect->x = work_area->x + ((work_area->width - rect->width) / 2);
+  rect->y = work_area->y + ((work_area->height - rect->height) / 2);
 }
 
 /* Find the leftmost, then topmost, empty area on the workspace
