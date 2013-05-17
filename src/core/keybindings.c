@@ -1273,11 +1273,7 @@ meta_display_process_key_event (MetaDisplay *display,
   
   /* window may be NULL */
   
-#ifdef HAVE_XKB
-  keysym = XkbKeycodeToKeysym (display->xdisplay, event->xkey.keycode, 0, 0);
-#else
   keysym = XKeycodeToKeysym (display->xdisplay, event->xkey.keycode, 0);
-#endif
 
   str = XKeysymToString (keysym);
   

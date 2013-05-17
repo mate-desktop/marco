@@ -2805,11 +2805,7 @@ key_event_description (Display *xdisplay,
   KeySym keysym;
   const char *str;
   
-#ifdef HAVE_XKB
-  keysym = XkbKeycodeToKeysym (xdisplay, event->xkey.keycode, 0, 0);  
-#else
   keysym = XKeycodeToKeysym (xdisplay, event->xkey.keycode, 0);  
-#endif
 
   str = XKeysymToString (keysym);
   
