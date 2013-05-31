@@ -63,6 +63,7 @@ typedef enum
   META_PREF_COMPOSITING_FAST_ALT_TAB,
   META_PREF_RESIZE_WITH_RIGHT_BUTTON,
   META_PREF_CENTER_NEW_WINDOWS,
+  META_PREF_SIDE_BY_SIDE_TILING,
   META_PREF_FORCE_FULLSCREEN
 } MetaPreference;
 
@@ -95,6 +96,7 @@ MetaWrapStyle               meta_prefs_get_wrap_style         (void);
 gboolean                    meta_prefs_get_reduced_resources  (void);
 gboolean                    meta_prefs_get_mate_accessibility (void);
 gboolean                    meta_prefs_get_mate_animations   (void);
+gboolean                    meta_prefs_get_side_by_side_tiling (void);
 
 const char*                 meta_prefs_get_command            (int i);
 

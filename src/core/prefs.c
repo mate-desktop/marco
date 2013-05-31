@@ -117,6 +117,7 @@ static gboolean compositing_fast_alt_tab = FALSE;
 static gboolean resize_with_right_button = FALSE;
 static gboolean center_new_windows = FALSE;
 static gboolean force_fullscreen = TRUE;
+static gboolean side_by_side_tiling = FALSE;
 
 static MetaVisualBellType visual_bell_type = META_VISUAL_BELL_FULLSCREEN_FLASH;
 static MetaButtonLayout button_layout;
@@ -399,6 +400,12 @@ static MetaBoolPreference preferences_bool[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_CENTER_NEW_WINDOWS,
       &center_new_windows,
+      FALSE,
+    },
+    { "side-by-side-tiling",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_SIDE_BY_SIDE_TILING,
+      &side_by_side_tiling,
       FALSE,
     },
     { NULL, NULL, 0, NULL, FALSE },
@@ -1545,6 +1552,9 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_FORCE_FULLSCREEN:
       return "FORCE_FULLSCREEN";
+
+    case META_PREF_SIDE_BY_SIDE_TILING:
+      return "SIDE_BY_SIDE_TILING";
     }
 
   return "(unknown)";
@@ -2200,6 +2210,12 @@ gboolean
 meta_prefs_get_center_new_windows (void)
 {
     return center_new_windows;
+}
+
+gboolean
+meta_prefs_get_side_by_side_tiling ()
+{
+  return side_by_side_tiling;
 }
 
 guint

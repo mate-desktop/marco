@@ -83,6 +83,12 @@ typedef enum {
 
 #define NUMBER_OF_QUEUES 3
 
+typedef enum {
+  META_TILE_NONE,
+  META_TILE_LEFT,
+  META_TILE_RIGHT
+} MetaTileMode;
+
 struct _MetaWindow
 {
   MetaDisplay *display;
@@ -137,6 +143,11 @@ struct _MetaWindow
   guint maximize_horizontally_after_placement : 1;
   guint maximize_vertically_after_placement : 1;
   guint minimize_after_placement : 1;
+
+  /* The current or requested tile mode. If maximized_vertically is true,
+   * this is the current mode. If not, it is the mode which will be
+   * requested after the window grab is released */
+  guint tile_mode : 2;
 
   /* Whether we're shaded */
   guint shaded : 1;
@@ -383,8 +394,11 @@ struct _MetaWindow
                                         (w)->maximized_vertically)
 #define META_WINDOW_MAXIMIZED_VERTICALLY(w)    ((w)->maximized_vertically)
 #define META_WINDOW_MAXIMIZED_HORIZONTALLY(w)  ((w)->maximized_horizontally)
+#define META_WINDOW_TILED(w)           ((w)->maximized_vertically && \
+                                        !(w)->maximized_horizontally && \
+                                        (w)->tile_mode != META_TILE_NONE)
 #define META_WINDOW_ALLOWS_MOVE(w)     ((w)->has_move_func && !(w)->fullscreen)
-#define META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS(w)   ((w)->has_resize_func && !META_WINDOW_MAXIMIZED (w) && !(w)->fullscreen && !(w)->shaded)
+#define META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS(w)   ((w)->has_resize_func && !META_WINDOW_MAXIMIZED (w) && !META_WINDOW_TILED(w) && !(w)->fullscreen && !(w)->shaded)
 #define META_WINDOW_ALLOWS_RESIZE(w)   (META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS (w) &&                \
                                         (((w)->size_hints.min_width < (w)->size_hints.max_width) ||  \
                                          ((w)->size_hints.min_height < (w)->size_hints.max_height)))
@@ -575,6 +589,8 @@ void meta_window_get_work_area_for_xinerama     (MetaWindow    *window,
 void meta_window_get_work_area_all_xineramas    (MetaWindow    *window,
                                                  MetaRectangle *area);
 
+void meta_window_get_current_tile_area         (MetaWindow    *window,
+                                                MetaRectangle *tile_area);
 
 gboolean meta_window_same_application (MetaWindow *window,
                                        MetaWindow *other_window);
