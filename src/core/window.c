@@ -6966,7 +6966,7 @@ update_move (MetaWindow  *window,
    * because it's about the right size
    */
 
-#define DRAG_THRESHOLD_TO_SHAKE_THRESHOLD_FACTOR 6
+#define DRAG_THRESHOLD_TO_SHAKE_THRESHOLD_FACTOR 2
   shake_threshold = meta_ui_get_drag_threshold (window->screen->ui) *
     DRAG_THRESHOLD_TO_SHAKE_THRESHOLD_FACTOR;
 
@@ -6995,6 +6995,8 @@ update_move (MetaWindow  *window,
           else if (x >= work_area.x + work_area.width - shake_threshold &&
                    x < (monitor->rect.x + monitor->rect.width))
             window->tile_mode = META_TILE_RIGHT;
+          else if ((y >= monitor->rect.y) && (y < work_area.y + shake_threshold))
+            window->tile_mode = META_TILE_MAXIMIZE;
           else
             window->tile_mode = META_TILE_NONE;
         }
@@ -7527,6 +7529,8 @@ meta_window_handle_mouse_grab_op_event (MetaWindow *window,
             {
               if (window->tile_mode != META_TILE_NONE)
                 meta_window_tile (window);
+              else if (window->tile_mode == META_TILE_MAXIMIZE)
+                meta_window_maximize (window, META_MAXIMIZE_HORIZONTAL | META_MAXIMIZE_VERTICAL);
               else if (event->xbutton.root == window->screen->xroot)
                 update_move (window, event->xbutton.state & ShiftMask,
                              event->xbutton.x_root, event->xbutton.y_root);
