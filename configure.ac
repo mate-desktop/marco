@@ -508,8 +508,8 @@ if test "x$GCC" = "xyes"; then
   fi
 fi
 
-# Use mate-doc-utils:
-MATE_DOC_INIT([0.8.0])
+# Use yelp-tools:
+YELP_HELP_INIT
 
 AC_CONFIG_FILES([
 Makefile
