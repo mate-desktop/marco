@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# manuel meixide <m.meixide@gmail.com>, 2012.
+# manuel meixide <m.meixide@gmail.com>, 2012
+# mbouzada <mbouzada@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2013-04-01 10:09+0000\n"
+"Last-Translator: mbouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/MATE/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,19 +25,19 @@ msgstr "Escritorio"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "Mostrar a caixa de diálogo \"Executar un aplicativo\" do panel"
+msgstr "Amosar a caixa de diálogo «Executar un aplicativo» do panel"
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
 msgid "Show the panel's main menu"
-msgstr "Mostrar o menú principal do panel"
+msgstr "Amosar o menú principal do panel"
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
 msgid "Take a screenshot"
-msgstr "Coller unha captura de pantalla"
+msgstr "Obter unha captura de pantalla"
 
 #: ../src/50-marco-desktop-key.xml.in.h:5
 msgid "Take a screenshot of a window"
-msgstr "Coller unha captura de pantalla dunha xanela"
+msgstr "Obter unha captura de pantalla dunha xanela"
 
 #: ../src/50-marco-desktop-key.xml.in.h:6
 msgid "Run a terminal"
@@ -72,7 +73,7 @@ msgstr "Moverse inmediatamente entre os paneis e o escritorio"
 
 #: ../src/50-marco-global-key.xml.in.h:8
 msgid "Hide all normal windows and set focus to the desktop"
-msgstr "Ocultar todas as xanelas normais e cambiar o foco ao escritorio"
+msgstr "Agochar todas as xanelas normais e cambiar o foco ao escritorio"
 
 #: ../src/50-marco-global-key.xml.in.h:9
 msgid "Switch to workspace 1"
@@ -285,11 +286,11 @@ msgstr "<tt>%s</tt> non está respondendo."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Elixa entre esperar un pouco a que continúe ou forzar a saída do aplicativo."
+msgstr "Escolla entre agardar un chisco a que continúe ou forzar a saída do aplicativo."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
-msgstr "Espe_rar"
+msgstr "Aga_rdar"
 
 #: ../src/core/delete.c:110
 msgid "_Force Quit"
@@ -298,7 +299,7 @@ msgstr "_Forzar a saída"
 #: ../src/core/delete.c:208
 #, c-format
 msgid "Failed to get hostname: %s\n"
-msgstr "Produciuse un fallo ao obter o nome do host: %s\n"
+msgstr "Produciuse un fallo ao obter o nome da máquina: %s\n"
 
 #: ../src/core/display.c:268
 #, c-format
@@ -321,7 +322,7 @@ msgstr "Perdeuse a conexión coa pantalla «%s»;\nprobabelmente saíu do servid
 #: ../src/core/errors.c:285
 #, c-format
 msgid "Fatal IO error %d (%s) on display '%s'.\n"
-msgstr "Erro moi grave de E/S %d (%s) na pantalla «%s».\n"
+msgstr "Produciuse un erro moi grave de E/S %d (%s) na pantalla «%s».\n"
 
 #: ../src/core/keybindings.c:680
 #, c-format
@@ -358,7 +359,7 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nDereitos de autor (C) 2001-%s Havoc Pennington, Red Hat, Inc., e outros\nIsto é software libre; vexa o código fonte para obter as condicións de copia.\nNon hai NINGUNHA GARANTÍA nin de VALOR COMERCIAL nin de ADECUACIÓN PARA UN FIN ESPECÍFICO.\n"
+msgstr "marco %s\nDereitos de autor (C) 2001-%s Havoc Pennington, Red Hat, Inc., e outros\nIsto é software libre; vexa o código fonte para obter as condicións de copia.\nNon hai NINGUNHA GARANTÍA nin de COMERCIALIZACIÓN nin de ADECUACIÓN PARA UN FIN ESPECÍFICO.\n"
 
 #: ../src/core/main.c:275
 msgid "Disable connection to session manager"
@@ -382,7 +383,7 @@ msgstr "Inicializar a sesión desde o ficheiro de salvagarda"
 
 #: ../src/core/main.c:304
 msgid "Print version"
-msgstr "Imprimir versión"
+msgstr "Imprimir a versión"
 
 #: ../src/core/main.c:310
 msgid "Make X calls synchronous"
@@ -410,7 +411,7 @@ msgstr "Produciuse un fallo ao analizar o directorio de temas: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Non foi posíbel encontrar ningún tema! Asegúrese de que %s existe e de que contén os temas habituais.\n"
+msgstr "Non foi posíbel atopar ningún tema! Asegúrese de que %s existe e de que contén os temas habituais.\n"
 
 #: ../src/core/main.c:612
 #, c-format
@@ -423,32 +424,32 @@ msgstr "Produciuse un fallo ao reiniciar: %s\n"
 #: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "%d almacenado na chave GSettings %s está fora do intervalo %d a %d\n"
 
 #: ../src/core/prefs.c:1008
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Desactiváronse os arranxos para aplicativos danados. Pode que algúns aplicativos non se comporten correctamente.\n"
+msgstr "Desactiváronse os arranxos para aplicativos danados. É probábel que algúns aplicativos non se comporten correctamente.\n"
 
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "Non foi posíbel analizar a descrición do tipo de letra «%s» da chave GSettings %s\n"
 
 #: ../src/core/prefs.c:1137
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "«%s» encontrado na base de datos de configuración non é un valor válido para o modificador do botón do rato\n"
+msgstr "«%s» atopado na base de datos de configuración non é un valor correcto para o modificador do botón do rato\n"
 
 #: ../src/core/prefs.c:1649
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "«%s» encontrado na base de datos de configuración non é un valor válido para a combinación de teclas «%s»\n"
+msgstr "«%s» atopado na base de datos de configuración non é un valor correcto para a combinación de teclas «%s»\n"
 
 #: ../src/core/prefs.c:1955
 #, c-format
@@ -458,7 +459,7 @@ msgstr "Espazo de traballo %d"
 #: ../src/core/screen.c:357
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
-msgstr "A pantalla %d na visualización «%s» non é válida\n"
+msgstr "A pantalla %d na visualización «%s» non é correcta\n"
 
 #: ../src/core/screen.c:373
 #, c-format
@@ -561,7 +562,7 @@ msgstr "Xestor de xanelas: "
 
 #: ../src/core/util.c:388
 msgid "Bug in window manager: "
-msgstr "Erro no xestor de xanelas: "
+msgstr "Fallo no xestor de xanelas: "
 
 #: ../src/core/util.c:421
 msgid "Window manager warning: "
@@ -633,7 +634,7 @@ msgstr "%s (como outro usuario)"
 #: ../src/core/window-props.c:1430
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
-msgstr "WM_TRANSIENT_FOR non válido para a xanela 0x%lx especificada para %s.\n"
+msgstr "WM_TRANSIENT_FOR non é correcto para a xanela 0x%lx especificada para %s.\n"
 
 #: ../src/core/xprops.c:155
 #, c-format
@@ -643,19 +644,19 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "A xanela 0x%lx ten a propiedade %s\nque se esperaba que tivese o tipo %s co formato %d\ne actualmente ten un tipo %s co formato %d e n_items %d.\nIsto non parece ser un erro do aplicativo nin do xestor de xanelas.\nA xanela ten título=«%s» a clase=«%s» e o nome=«%s»\n"
+msgstr "A xanela 0x%lx ten a propiedade %s\nque se agardaba que tivese o tipo %s co formato %d\ne actualmente ten un tipo %s co formato %d e n_items %d.\nIsto non parece ser un erro do aplicativo nin do xestor de xanelas.\nA xanela ten título=«%s» a clase=«%s» e o nome=«%s»\n"
 
 #: ../src/core/xprops.c:401
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
-msgstr "A propiedade %s na xanela 0x%lx contén UTF-8 non válido\n"
+msgstr "A propiedade %s na xanela 0x%lx contén UTF-8 incorrecto\n"
 
 #: ../src/core/xprops.c:484
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "A propiedade %s na xanela 0x%lx contén UTF-8 non válido para o elemento da lista %d\n"
+msgstr "A propiedade %s na xanela 0x%lx contén UTF-8 incorrecto para o elemento da lista %d\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -975,7 +976,7 @@ msgstr "Non se entende o compoñente de cor «%s» na especificación da cor"
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "O formato de blend é \"blend/bg_color/fg_color/alpha\", «%s»non coincide co formato"
+msgstr "O formato de blend é «blend/bg_color/fg_color/alpha», «%s»non coincide co formato"
 
 #: ../src/ui/theme.c:1228
 #, c-format
@@ -990,7 +991,7 @@ msgstr "O valor alfa «%s» na cor mesturada non está entre 0.0 e 1.0"
 #: ../src/ui/theme.c:1285
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "O formato de sombreado é \"shade/base_color/factor\", «%s» non coincide co formato"
+msgstr "O formato de sombreado é «shade/base_color/factor», «%s» non coincide co formato"
 
 #: ../src/ui/theme.c:1296
 #, c-format
@@ -1017,19 +1018,19 @@ msgstr "A expresión de coordenadas contén un carácter «%s» que non está pe
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "A expresión de coordenadas contén un número de coma flotante «%s» que non se puido analizar"
+msgstr "A expresión de coordenadas contén un número de coma flotante «%s» que non foi posíbel analizar"
 
 #: ../src/ui/theme.c:1630
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr "A expresión de coordenadas contén un enteiro «%s» que non se puido analizar"
+msgstr "A expresión de coordenadas contén un enteiro «%s» que non foi posíbel analizar"
 
 #: ../src/ui/theme.c:1752
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "A expresión de coordenadas contén un operador non válido ao inicio do seu texto: «%s»"
+msgstr "A expresión de coordenadas contén un operador incorrecto ao inicio do seu texto: «%s»"
 
 #: ../src/ui/theme.c:1809
 #, c-format
@@ -1050,12 +1051,12 @@ msgstr "A expresión de coordenadas tentou usar un operador mod cun número de c
 #: ../src/ui/theme.c:2028
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
-msgstr "A expresión de coordenadas ten un operador «%s» onde se esperaba un operando"
+msgstr "A expresión de coordenadas ten un operador «%s» onde se agardaba un operando"
 
 #: ../src/ui/theme.c:2037
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
-msgstr "A expresión de coordenadas ten un operando onde se esperaba un operador"
+msgstr "A expresión de coordenadas ten un operando onde se agardaba un operador"
 
 #: ../src/ui/theme.c:2045
 #, c-format
@@ -1067,7 +1068,7 @@ msgstr "A expresión de coordenadas remata cun operador en vez dun operando"
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "A expresión de coordenadas ten un operador \"%c\" seguido do operador \"%c\" sen un operando entre eles"
+msgstr "A expresión de coordenadas ten un operador «%c» seguido do operador «%c» sen un operando entre eles"
 
 #: ../src/ui/theme.c:2202 ../src/ui/theme.c:2243
 #, c-format
@@ -1161,7 +1162,7 @@ msgstr "O atributo «%s» repetiuse dúas veces no mesmo elemento <%s>"
 #: ../src/ui/theme-parser.c:461 ../src/ui/theme-parser.c:504
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "O atributo «%s» non é válido no elemento <%s> neste contexto"
+msgstr "O atributo «%s» non é correcto no elemento <%s> neste contexto"
 
 #: ../src/ui/theme-parser.c:546
 #, c-format
@@ -1191,7 +1192,7 @@ msgstr "Non foi posíbel analizar «%s» como un número de coma flotante"
 #: ../src/ui/theme-parser.c:632 ../src/ui/theme-parser.c:660
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
-msgstr "Os valores booleanos deben ser \"true\" ou \"false\", non «%s»"
+msgstr "Os valores booleanos deben ser «verdadeiro» ou «falso», non «%s»"
 
 #: ../src/ui/theme-parser.c:687
 #, c-format
@@ -1208,7 +1209,7 @@ msgstr "Alfa debe estar entre 0.0 (invisíbel) e 1.0 (completamente opaco), foi 
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "A escala de título non é válida «%s» (debe ser de xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr "A escala de título non é correcta «%s» (debe ser de xx-small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:971 ../src/ui/theme-parser.c:1034
 #: ../src/ui/theme-parser.c:1068 ../src/ui/theme-parser.c:1171
@@ -1266,7 +1267,7 @@ msgstr "Non se permite o elemento <%s> por baixo de <%s>"
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Non é posíbel especificar \"button_width\"/\"button_height\" e \"aspect_ratio\" ao mesmo tempo para os botóns"
+msgstr "Non é posíbel especificar «largo do botón/alto do botón» e «proporción do aspecto» ao mesmo tempo para os botóns"
 
 #: ../src/ui/theme-parser.c:1401
 #, c-format
@@ -1286,12 +1287,12 @@ msgstr "Descoñécese o bordo «%s»"
 #: ../src/ui/theme-parser.c:1819
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
-msgstr "Non hai ningún atributo \"start_angle\" nin \"from\" no elemento <%s>"
+msgstr "Non hai ningún atributo «ángulo de inicio» ou «desde» no elemento <%s>"
 
 #: ../src/ui/theme-parser.c:1826
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
-msgstr "Non hai ningún atributo \"extent_angle\" nin \"to\" no elemento <%s>"
+msgstr "Non hai ningún atributo «grao angular» ou «ata» no elemento <%s>"
 
 #: ../src/ui/theme-parser.c:2066
 #, c-format
@@ -1367,12 +1368,12 @@ msgstr "O estilo do marco xa ten un botón para a función %s estado %s"
 #: ../src/ui/theme-parser.c:3018
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
-msgstr "«%s» non é un valor válido para o atributo foco"
+msgstr "«%s» non é un valor correcto para o atributo foco"
 
 #: ../src/ui/theme-parser.c:3027
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
-msgstr "«%s» non é un valor válido para o atributo estado"
+msgstr "«%s» non é un valor correcto para o atributo estado"
 
 #: ../src/ui/theme-parser.c:3037
 #, c-format
@@ -1382,19 +1383,19 @@ msgstr "Non se definiu ningún estilo chamado «%s»"
 #: ../src/ui/theme-parser.c:3058 ../src/ui/theme-parser.c:3081
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
-msgstr "«%s» non é un valor válido para o atributo redimensionar"
+msgstr "«%s» non é un valor correcto para o atributo redimensionar"
 
 #: ../src/ui/theme-parser.c:3092
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Non debería ter o atributo \"resize\" no elemento <%s> para os estados maximizado/ensombrecido"
+msgstr "Non debería ter o atributo «cambiar tamaño» no elemento <%s> para os estados maximizado/ensombrecido"
 
 #: ../src/ui/theme-parser.c:3106
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Non debería ter o atributo \"resize\" no elemento <%s> para os estados maximizados"
+msgstr "Non debería ter o atributo «cambiar tamaño» no elemento <%s> para os estados maximizados"
 
 #: ../src/ui/theme-parser.c:3120 ../src/ui/theme-parser.c:3142
 #, c-format
@@ -1480,12 +1481,12 @@ msgstr "<%s> especificada dúas veces para este tema"
 #: ../src/ui/theme-parser.c:4149
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
-msgstr "Non se encontrou ningún ficheiro válido para o tema %s\n"
+msgstr "Non se atopou ningún ficheiro correcto para o tema %s\n"
 
 #: ../src/ui/theme-parser.c:4205
 #, c-format
 msgid "Theme file %s did not contain a root <metacity_theme> element"
-msgstr ""
+msgstr "O ficheiro de tema %s non contén ningún elemento raíz <metacity_theme>"
 
 #: ../src/ui/theme-viewer.c:75
 msgid "/_Windows"
@@ -1607,7 +1608,7 @@ msgstr "Tipo de letra de título normal"
 
 #: ../src/ui/theme-viewer.c:860
 msgid "Small Title Font"
-msgstr "Tipo de letra de título pequena"
+msgstr "Tipo de letra de título pequeno"
 
 #: ../src/ui/theme-viewer.c:866
 msgid "Large Title Font"
@@ -1643,27 +1644,27 @@ msgstr "a proba de expresión da posición devolveu FALSE mais estabeleceu un er
 
 #: ../src/ui/theme-viewer.c:1252
 msgid "Error was expected but none given"
-msgstr "Esperábase un erro, mais non se deu ningún"
+msgstr "Agardábase un erro, mais non se deu ningún"
 
 #: ../src/ui/theme-viewer.c:1254
 #, c-format
 msgid "Error %d was expected but %d given"
-msgstr "Esperábase un erro %d mais deuse %d"
+msgstr "Agardábase un erro %d mais deuse %d"
 
 #: ../src/ui/theme-viewer.c:1260
 #, c-format
 msgid "Error not expected but one was returned: %s"
-msgstr "Non se esperaba ningún erro mais devolveuse un: %s"
+msgstr "Non se agardaba ningún erro mais devolveuse un: %s"
 
 #: ../src/ui/theme-viewer.c:1264
 #, c-format
 msgid "x value was %d, %d was expected"
-msgstr "o valor x era %d, esperábase %d"
+msgstr "o valor x era %d, agardábase %d"
 
 #: ../src/ui/theme-viewer.c:1267
 #, c-format
 msgid "y value was %d, %d was expected"
-msgstr "o valor y era %d, esperábase %d"
+msgstr "o valor y era %d, agardábase %d"
 
 #: ../src/ui/theme-viewer.c:1332
 #, c-format

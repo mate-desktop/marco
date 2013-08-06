@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2013-04-24 18:56+0000\n"
+"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -422,7 +423,7 @@ msgstr "Nepodarilo znovu spustiť: %s\n"
 #: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "Hodnota %d uložená v GSettings kľúči %s nie je v rozsahu od %d do %d\n"
 
 #: ../src/core/prefs.c:1008
 msgid ""
@@ -433,7 +434,7 @@ msgstr "Náhradné riešenia pre chybné aplikácie nie sú povolené. Niektoré
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "Nepodarilo sa spracovať popis písma \\\"%s\\\" z GSettings kľúča %s\n"
 
 #: ../src/core/prefs.c:1137
 #, c-format
@@ -1426,7 +1427,7 @@ msgstr "Pre prvok <menu_icon> nie je možné mať dve draw_ops (téma obsahuje a
 #: ../src/ui/theme-parser.c:3350
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr ""
+msgstr "Najvyšším prvkom témy musí byť <metacity_theme>, nie <%s>"
 
 #: ../src/ui/theme-parser.c:3370
 #, c-format
@@ -1484,7 +1485,7 @@ msgstr "Nepodarilo sa nájsť platný súbor pre tému%s\n"
 #: ../src/ui/theme-parser.c:4205
 #, c-format
 msgid "Theme file %s did not contain a root <metacity_theme> element"
-msgstr ""
+msgstr "Súbor témy %s neobsahuje koreňový prvok <metacity_theme>"
 
 #: ../src/ui/theme-viewer.c:75
 msgid "/_Windows"

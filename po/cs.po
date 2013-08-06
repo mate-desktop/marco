@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# segfault <lukas.kvidera@seznam.cz>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2013-04-24 19:45+0000\n"
+"Last-Translator: segfault <lukas.kvidera@seznam.cz>\n"
 "Language-Team: Czech (http://www.transifex.com/projects/p/MATE/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -422,7 +423,7 @@ msgstr "Nezdařil se restart: %s\n"
 #: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "%d uloženo v klíči GSettings %s je mimo rozsah %d až %d\n"
 
 #: ../src/core/prefs.c:1008
 msgid ""
@@ -433,7 +434,7 @@ msgstr "Bylo zakázáno obcházení chyb aplikací. Některé aplikace se možn�
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "Nebylo možné zpracovat popis písma \"%s\" z klíče GSettings %s\n"
 
 #: ../src/core/prefs.c:1137
 #, c-format
@@ -1426,7 +1427,7 @@ msgstr "Nelze mít dvě draw_ops u prvku <menu_icon> (motiv definoval atribut dr
 #: ../src/ui/theme-parser.c:3350
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr ""
+msgstr "Vnější element tématu musí být <metacity_theme>, nikoliv <%s>"
 
 #: ../src/ui/theme-parser.c:3370
 #, c-format
@@ -1484,7 +1485,7 @@ msgstr "Nelze nalézt platný soubor motivu %s\n"
 #: ../src/ui/theme-parser.c:4205
 #, c-format
 msgid "Theme file %s did not contain a root <metacity_theme> element"
-msgstr ""
+msgstr "Soubor tématu %s neobsahuje kořenový element <metacity_theme> "
 
 #: ../src/ui/theme-viewer.c:75
 msgid "/_Windows"

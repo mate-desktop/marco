@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#  <translatorky@lavabit.com>, 2013.
+# chingis, 2013
+# chingis, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-03-26 02:21+0000\n"
-"Last-Translator: chingis <translatorky@lavabit.com>\n"
+"PO-Revision-Date: 2013-04-30 05:24+0000\n"
+"Last-Translator: chingis\n"
 "Language-Team: Kirgyz (http://www.transifex.com/projects/p/MATE/language/ky/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +29,7 @@ msgstr ""
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
 msgid "Show the panel's main menu"
-msgstr ""
+msgstr "Панелдин башкы менюсун көрсөтүү"
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
 msgid "Take a screenshot"
@@ -374,7 +375,7 @@ msgstr ""
 
 #: ../src/core/main.c:292
 msgid "X Display to use"
-msgstr ""
+msgstr "Колдонулуучу X-дисплей"
 
 #: ../src/core/main.c:298
 msgid "Initialize session from savefile"
@@ -453,7 +454,7 @@ msgstr ""
 #: ../src/core/prefs.c:1955
 #, c-format
 msgid "Workspace %d"
-msgstr ""
+msgstr "Иш орду %d"
 
 #: ../src/core/screen.c:357
 #, c-format
@@ -485,7 +486,7 @@ msgstr ""
 #: ../src/core/session.c:842 ../src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr ""
+msgstr "«%s» каталогун жаратуу мүмкүн эмес: %s\n"
 
 #: ../src/core/session.c:859
 #, c-format
@@ -495,7 +496,7 @@ msgstr ""
 #: ../src/core/session.c:1000
 #, c-format
 msgid "Error writing session file '%s': %s\n"
-msgstr ""
+msgstr "«%s» файл сеансын жаздыруу катасы: %s\n"
 
 #: ../src/core/session.c:1005
 #, c-format
@@ -561,7 +562,7 @@ msgstr "Терезе менеджери:"
 
 #: ../src/core/util.c:388
 msgid "Bug in window manager: "
-msgstr ""
+msgstr "Терезе менеджериндеги ката: "
 
 #: ../src/core/util.c:421
 msgid "Window manager warning: "
@@ -569,7 +570,7 @@ msgstr ""
 
 #: ../src/core/util.c:449
 msgid "Window manager error: "
-msgstr ""
+msgstr "Терезе менеджеринин катасы:"
 
 #. Translators: This is the title used on dialog boxes
 #: ../src/core/util.c:570 ../src/marco.desktop.in.h:1
@@ -608,27 +609,27 @@ msgstr ""
 #: ../src/core/window-props.c:388
 #, c-format
 msgid "%s (on %s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #. Simple case-- don't bother to look it up.  It's root.
 #: ../src/core/window-props.c:420
 #, c-format
 msgid "%s (as superuser)"
-msgstr ""
+msgstr "%s (суперколдонуучудан)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
 #: ../src/core/window-props.c:438
 #, c-format
 msgid "%s (as %s)"
-msgstr ""
+msgstr "%s (%s колдонуучудан)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
 #: ../src/core/window-props.c:444
 #, c-format
 msgid "%s (as another user)"
-msgstr ""
+msgstr "%s (башка колдонуучудан)"
 
 #: ../src/core/window-props.c:1430
 #, c-format
@@ -660,11 +661,11 @@ msgstr ""
 #: ../src/tools/marco-message.c:150
 #, c-format
 msgid "Usage: %s\n"
-msgstr ""
+msgstr "Колдонуу: %s\n"
 
 #: ../src/ui/frames.c:1124
 msgid "Close Window"
-msgstr ""
+msgstr "Терезени жабуу"
 
 #: ../src/ui/frames.c:1127
 msgid "Window Menu"
@@ -672,15 +673,15 @@ msgstr "Терезе менюсу"
 
 #: ../src/ui/frames.c:1130
 msgid "Minimize Window"
-msgstr ""
+msgstr "Терезени түрүү"
 
 #: ../src/ui/frames.c:1133
 msgid "Maximize Window"
-msgstr ""
+msgstr "Терезени бүтүн экранга жаюу"
 
 #: ../src/ui/frames.c:1136
 msgid "Restore Window"
-msgstr ""
+msgstr "Терезени калыбына келтирүү"
 
 #: ../src/ui/frames.c:1139
 msgid "Roll Up Window"
@@ -791,17 +792,17 @@ msgstr "_Жабуу"
 #: ../src/ui/menu.c:197
 #, c-format
 msgid "Workspace %d%n"
-msgstr ""
+msgstr "Иш орду %d%n"
 
 #: ../src/ui/menu.c:207
 #, c-format
 msgid "Workspace 1_0"
-msgstr ""
+msgstr "Иш орду 1_0"
 
 #: ../src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
-msgstr ""
+msgstr "Иш орду %s%d"
 
 #: ../src/ui/menu.c:387
 msgid "Move to Another _Workspace"
@@ -1497,7 +1498,7 @@ msgstr ""
 
 #: ../src/ui/theme-viewer.c:77
 msgid "/Windows/_Dialog"
-msgstr ""
+msgstr "/Терезелер/_Диалог терезеси"
 
 #: ../src/ui/theme-viewer.c:78
 msgid "/Windows/_Modal dialog"
@@ -1509,27 +1510,27 @@ msgstr "/Терезелер/_Утилита"
 
 #: ../src/ui/theme-viewer.c:80
 msgid "/Windows/_Splashscreen"
-msgstr ""
+msgstr "/Терезелер/_Ачылыш экраны"
 
 #: ../src/ui/theme-viewer.c:81
 msgid "/Windows/_Top dock"
-msgstr ""
+msgstr "/Терезелер/Ү_стүңкү док"
 
 #: ../src/ui/theme-viewer.c:82
 msgid "/Windows/_Bottom dock"
-msgstr ""
+msgstr "/Терезелер/_Астыңкы док"
 
 #: ../src/ui/theme-viewer.c:83
 msgid "/Windows/_Left dock"
-msgstr ""
+msgstr "/Терезелер/Со_л док"
 
 #: ../src/ui/theme-viewer.c:84
 msgid "/Windows/_Right dock"
-msgstr ""
+msgstr "/Терезелер/_Оң док"
 
 #: ../src/ui/theme-viewer.c:85
 msgid "/Windows/_All docks"
-msgstr ""
+msgstr "/Терезелер/_Бардык доктор"
 
 #: ../src/ui/theme-viewer.c:86
 msgid "/Windows/Des_ktop"
@@ -1574,7 +1575,7 @@ msgstr ""
 
 #: ../src/ui/theme-viewer.c:400
 msgid "Border"
-msgstr ""
+msgstr "Чек ара"
 
 #: ../src/ui/theme-viewer.c:728
 #, c-format
@@ -1589,12 +1590,12 @@ msgstr ""
 #: ../src/ui/theme-viewer.c:800
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
-msgstr ""
+msgstr "Колдонуу: marco-theme-viewer [ТЕМААТЫ]\n"
 
 #: ../src/ui/theme-viewer.c:807
 #, c-format
 msgid "Error loading theme: %s\n"
-msgstr ""
+msgstr "Теманы жүктөө катасы: %s\n"
 
 #: ../src/ui/theme-viewer.c:813
 #, c-format
@@ -1603,15 +1604,15 @@ msgstr ""
 
 #: ../src/ui/theme-viewer.c:854
 msgid "Normal Title Font"
-msgstr ""
+msgstr "Кадимкидей аталыш ариби"
 
 #: ../src/ui/theme-viewer.c:860
 msgid "Small Title Font"
-msgstr ""
+msgstr "Кичинекей аталыш ариби"
 
 #: ../src/ui/theme-viewer.c:866
 msgid "Large Title Font"
-msgstr ""
+msgstr "Чоң аталыш ариби"
 
 #: ../src/ui/theme-viewer.c:871
 msgid "Button Layouts"
