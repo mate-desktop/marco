@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Imants Liepiņš <imzzinator@gmail.com>, 2012.
+# Imants Liepiņš <imzzinator@gmail.com>, 2012
+# Rihards Priedītis <rprieditis@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2013-07-23 21:55+0000\n"
+"Last-Translator: Rihards Priedītis <rprieditis@gmail.com>\n"
 "Language-Team: Latvian (http://www.transifex.com/projects/p/MATE/language/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -423,7 +424,7 @@ msgstr "Neizdevās pārstartēt: %s\n"
 #: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "%d, kas saglabāts GSettings atslēgā %s, ir ārpus %d līdz %d diapazona\\n\n"
 
 #: ../src/core/prefs.c:1008
 msgid ""
@@ -434,7 +435,7 @@ msgstr "Apvedceļi bojātām lietotnēm atslēgti. Dažas lietotnes var neuzvest
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "Neizdevās parsēt fonta aprakstu \"%s\" no  GSettings atslēgas %s\\n\n"
 
 #: ../src/core/prefs.c:1137
 #, c-format
