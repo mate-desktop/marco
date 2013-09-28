@@ -185,13 +185,26 @@ xml_in_files = \
 	50-marco-global-key.xml.in
 xml_DATA = $(xml_in_files:.xml.in=.xml)
 
-BUILT_SOURCES =
+@INTLTOOL_SCHEMAS_RULE@
+
+IMAGES=stock_maximize.png stock_minimize.png stock_delete.png window.png mini-window.png
+VARIABLES=stock_maximize_data $(srcdir)/stock_maximize.png \
+          stock_minimize_data $(srcdir)/stock_minimize.png \
+          stock_delete_data $(srcdir)/stock_delete.png \
+          mini_window_data $(srcdir)/mini-window.png \
+          window_data $(srcdir)/window.png
+
+BUILT_SOURCES = inlinepixbufs.h
 CLEANFILES = \
+	inlinepixbufs.h \
 	marco.desktop \
 	marco-wm.desktop \
 	50-marco-desktop-key.xml \
 	50-marco-global-key.xml \
 	50-marco-window-key.xml
+
+inlinepixbufs.h: $(IMAGES)
+	$(AM_V_GEN)$(GDK_PIXBUF_CSOURCE) --raw --build-list $(VARIABLES) >$(srcdir)/inlinepixbufs.h
 
 pkgconfigdir = $(libdir)/pkgconfig
 
