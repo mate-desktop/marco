@@ -28,9 +28,12 @@
 #include "core.h"
 #include "theme.h"
 
+#include "inlinepixbufs.h"
+
 #include <string.h>
 #include <stdlib.h>
 
+static void meta_stock_icons_init (void);
 static void meta_ui_accelerator_parse(const char* accel, guint* keysym, guint* keycode, GdkModifierType* keymask);
 
 struct _MetaUI {
@@ -51,6 +54,7 @@ void meta_ui_init(int* argc, char*** argv)
 	if (!gtk_init_check (argc, argv))
 	{
 		meta_fatal ("Unable to open X display %s\n", XDisplayName (NULL));
+		meta_stock_icons_init ();
 	}
 }
 
@@ -547,6 +551,7 @@ meta_image_window_set (MetaImageWindow *iw,
                        int              x,
                        int              y)
 {
+  GdkWindow *window;
   cairo_t *cr;
 
   /* We use a back pixmap to avoid having to handle exposes, because
@@ -568,7 +573,8 @@ meta_image_window_set (MetaImageWindow *iw,
   cairo_paint (cr);
   cairo_destroy (cr);
 
-  gdk_window_set_back_pixmap (iw->window->window,
+  window = gtk_widget_get_window (iw->window);
+  gdk_window_set_back_pixmap (window,
                               iw->pixmap,
                               FALSE);
 
@@ -732,11 +738,9 @@ meta_ui_get_default_window_icon (MetaUI *ui)
                                                    0,
                                                    NULL);
       else
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "gtk-missing-image",
-                                                   META_ICON_WIDTH,
-                                                   0,
-                                                   NULL);
+          default_icon = gdk_pixbuf_new_from_inline (-1, window_data,
+                                                     FALSE,
+                                                     NULL);
 
       g_assert (default_icon);
     }
@@ -767,11 +771,9 @@ meta_ui_get_default_mini_icon (MetaUI *ui)
                                                    0,
                                                    NULL);
       else
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "gtk-missing-image",
-                                                   META_MINI_ICON_WIDTH,
-                                                   0,
-                                                   NULL);
+          default_icon = gdk_pixbuf_new_from_inline (-1, window_data,
+                                                     FALSE,
+                                                     NULL);
 
       g_assert (default_icon);
     }
@@ -1057,6 +1059,41 @@ typedef struct {
 	char* stock_id;
 	const guint8* icon_data;
 } MetaStockIcon;
+
+static void
+meta_stock_icons_init (void)
+{
+  GtkIconFactory *factory;
+  int i;
+
+  MetaStockIcon items[] =
+  {
+    { MARCO_STOCK_DELETE,   stock_delete_data   },
+    { MARCO_STOCK_MINIMIZE, stock_minimize_data },
+    { MARCO_STOCK_MAXIMIZE, stock_maximize_data }
+  };
+
+  factory = gtk_icon_factory_new ();
+  gtk_icon_factory_add_default (factory);
+
+  for (i = 0; i < (gint) G_N_ELEMENTS (items); i++)
+    {
+      GtkIconSet *icon_set;
+      GdkPixbuf *pixbuf;
+
+      pixbuf = gdk_pixbuf_new_from_inline (-1, items[i].icon_data,
+					   FALSE,
+					   NULL);
+
+      icon_set = gtk_icon_set_new_from_pixbuf (pixbuf);
+      gtk_icon_factory_add (factory, items[i].stock_id, icon_set);
+      gtk_icon_set_unref (icon_set);
+      
+      g_object_unref (G_OBJECT (pixbuf));
+    }
+
+  g_object_unref (G_OBJECT (factory));
+}
 
 int meta_ui_get_drag_threshold(MetaUI* ui)
 {
