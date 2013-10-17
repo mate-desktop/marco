@@ -52,8 +52,8 @@ Minimal Building/Testing Environment
   pkg-config, intltool, and libtool) and be ready to build and test
   Marco.  Steps to do so:
 
-  $ git clone https://github.com/mate-desktop/mate-window-manager.git
-  $ cd mate-window-manager
+  $ git clone https://github.com/mate-desktop/marco.git
+  $ cd marco
   $ ./autogen.sh --prefix /usr
   $ make
   $ ./src/marco --replace
