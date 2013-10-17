@@ -8,7 +8,7 @@ m4_define([marco_micro_version], [2])
 
 m4_define([marco_version],
           [marco_major_version.marco_minor_version.marco_micro_version])
-AC_INIT([mate-window-manager], [marco_version], [https://github.com/mate-desktop/mate-desktop-environment])
+AC_INIT([marco], [marco_version], [https://github.com/mate-desktop/marco])
 
 AC_CONFIG_SRCDIR(src/core/display.c)
 AC_CONFIG_HEADERS(config.h)
