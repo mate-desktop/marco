@@ -42,19 +42,30 @@ typedef void (* MetaAreaSizeFunc)   (MetaArea *area,
                                      int      *width,
                                      int      *height,
                                      void     *user_data);
-
+#if GTK_CHECK_VERSION(3, 0, 0)
+typedef void (* MetaAreaDrawFunc)   (MetaArea       *area,
+                                     cairo_t        *cr,
+                                     void           *user_data);
+#else
 typedef void (* MetaAreaExposeFunc) (MetaArea       *area,
                                      GdkEventExpose *event,
                                      int             x_offset,
                                      int             y_offset,
                                      void           *user_data);
+#endif
+
+#define parent_class meta_area_parent_class
 
 struct _MetaArea
 {
   GtkMisc misc;
 
   MetaAreaSizeFunc size_func;
+  #if GTK_CHECK_VERSION(3, 0, 0)
+  MetaAreaDrawFunc draw_func;
+  #else
   MetaAreaExposeFunc expose_func;
+  #endif
   void *user_data;
   GDestroyNotify dnotify;
 };
@@ -70,7 +81,11 @@ GtkWidget* meta_area_new	 (void);
 
 void meta_area_setup (MetaArea           *area,
                       MetaAreaSizeFunc    size_func,
+                      #if GTK_CHECK_VERSION(3, 0, 0)
+                      MetaAreaDrawFunc    draw_func,
+                      #else
                       MetaAreaExposeFunc  expose_func,
+                      #endif
                       void               *user_data,
                       GDestroyNotify      dnotify);
 

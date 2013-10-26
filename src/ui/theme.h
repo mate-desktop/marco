@@ -897,8 +897,12 @@ MetaDrawOp*    meta_draw_op_new  (MetaDrawType        type);
 void           meta_draw_op_free (MetaDrawOp          *op);
 void           meta_draw_op_draw (const MetaDrawOp    *op,
                                   GtkWidget           *widget,
+                                  #if GTK_CHECK_VERSION(3, 0, 0)
+                                  cairo_t             *cr,
+                                  #else
                                   GdkDrawable         *drawable,
                                   const GdkRectangle  *clip,
+                                  #endif
                                   const MetaDrawInfo  *info,
                                   /* logical region being drawn */
                                   MetaRectangle        logical_region);
@@ -906,8 +910,12 @@ void           meta_draw_op_draw (const MetaDrawOp    *op,
 void           meta_draw_op_draw_with_style (const MetaDrawOp    *op,
                                              GtkStyle            *style_gtk,
                                              GtkWidget           *widget,
+                                             #if GTK_CHECK_VERSION(3, 0, 0)
+                                             cairo_t             *cr,
+                                             #else
                                              GdkDrawable         *drawable,
                                              const GdkRectangle  *clip,
+                                             #endif
                                              const MetaDrawInfo  *info,
                                              /* logical region being drawn */
                                              MetaRectangle        logical_region);
@@ -917,15 +925,23 @@ void            meta_draw_op_list_ref   (MetaDrawOpList       *op_list);
 void            meta_draw_op_list_unref (MetaDrawOpList       *op_list);
 void            meta_draw_op_list_draw  (const MetaDrawOpList *op_list,
                                          GtkWidget            *widget,
+                                         #if GTK_CHECK_VERSION(3, 0, 0)
+                                         cairo_t              *cr,
+                                         #else
                                          GdkDrawable          *drawable,
                                          const GdkRectangle   *clip,
+                                         #endif
                                          const MetaDrawInfo   *info,
                                          MetaRectangle         rect);
 void            meta_draw_op_list_draw_with_style  (const MetaDrawOpList *op_list,
                                                     GtkStyle             *style_gtk,
                                                     GtkWidget            *widget,
+                                                    #if GTK_CHECK_VERSION(3, 0, 0)
+                                                    cairo_t              *cr,
+                                                    #else
                                                     GdkDrawable          *drawable,
                                                     const GdkRectangle   *clip,
+                                                    #endif
                                                     const MetaDrawInfo   *info,
                                                     MetaRectangle         rect);
 void           meta_draw_op_list_append (MetaDrawOpList       *op_list,
@@ -955,10 +971,14 @@ void            meta_frame_style_unref (MetaFrameStyle *style);
 
 void meta_frame_style_draw (MetaFrameStyle          *style,
                             GtkWidget               *widget,
+                            #if GTK_CHECK_VERSION(3, 0, 0)
+                            cairo_t                 *cr,
+                            #else
                             GdkDrawable             *drawable,
                             int                      x_offset,
                             int                      y_offset,
                             const GdkRectangle      *clip,
+                            #endif
                             const MetaFrameGeometry *fgeom,
                             int                      client_width,
                             int                      client_height,
@@ -972,10 +992,14 @@ void meta_frame_style_draw (MetaFrameStyle          *style,
 void meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                                        GtkStyle                *style_gtk,
                                        GtkWidget               *widget,
+                                       #if GTK_CHECK_VERSION(3, 0, 0)
+                                       cairo_t                 *cr,
+                                       #else
                                        GdkDrawable             *drawable,
                                        int                      x_offset,
                                        int                      y_offset,
                                        const GdkRectangle      *clip,
+                                       #endif
                                        const MetaFrameGeometry *fgeom,
                                        int                      client_width,
                                        int                      client_height,
@@ -1020,10 +1044,14 @@ double meta_theme_get_title_scale (MetaTheme     *theme,
 
 void meta_theme_draw_frame (MetaTheme              *theme,
                             GtkWidget              *widget,
+                            #if GTK_CHECK_VERSION(3, 0, 0)
+                            cairo_t                *cr,
+                            #else
                             GdkDrawable            *drawable,
                             const GdkRectangle     *clip,
                             int                     x_offset,
                             int                     y_offset,
+                            #endif
                             MetaFrameType           type,
                             MetaFrameFlags          flags,
                             int                     client_width,
@@ -1037,10 +1065,14 @@ void meta_theme_draw_frame (MetaTheme              *theme,
 
 void meta_theme_draw_frame_by_name (MetaTheme              *theme,
                                     GtkWidget              *widget,
+                                    #if GTK_CHECK_VERSION(3, 0, 0)
+                                    cairo_t                *cr,
+                                    #else
                                     GdkDrawable            *drawable,
                                     const GdkRectangle     *clip,
                                     int                     x_offset,
                                     int                     y_offset,
+                                    #endif
                                     const gchar             *style_name,
                                     MetaFrameFlags          flags,
                                     int                     client_width,
@@ -1055,10 +1087,14 @@ void meta_theme_draw_frame_by_name (MetaTheme              *theme,
 void meta_theme_draw_frame_with_style (MetaTheme              *theme,
                                        GtkStyle               *style_gtk,
                                        GtkWidget              *widget,
+                                       #if GTK_CHECK_VERSION(3, 0, 0)
+                                       cairo_t                *cr,
+                                       #else
                                        GdkDrawable            *drawable,
                                        const GdkRectangle     *clip,
                                        int                     x_offset,
                                        int                     y_offset,
+                                       #endif
                                        MetaFrameType           type,
                                        MetaFrameFlags          flags,
                                        int                     client_width,

@@ -24,6 +24,10 @@
 #include <X11/Xatom.h>
 #include <unistd.h>
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+ 	#define GDK_WINDOW_XWINDOW(w) GDK_WINDOW_XID(w)
+#endif
+
 static GtkWidget* do_appwindow (void);
 
 static gboolean aspect_on;
@@ -647,6 +651,25 @@ dock_cb (gpointer             callback_data,
     }
 }
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+
+static void top_dock_cb()
+	{ make_dock(DOCK_TOP); }
+
+static void bottom_dock_cb()
+	{ make_dock(DOCK_BOTTOM); }
+
+static void left_dock_cb()
+	{ make_dock(DOCK_LEFT); }
+
+static void right_dock_cb()
+	{ make_dock(DOCK_RIGHT); }
+
+static void all_dock_cb()
+	{ dock_cb(NULL, DOCK_ALL, NULL); }
+
+#endif
+
 static void
 desktop_cb (gpointer             callback_data,
             guint                callback_action,
@@ -676,6 +699,62 @@ desktop_cb (gpointer             callback_data,
   gtk_widget_show_all (window);
 }
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+
+static gchar ui_definition[] =
+"<ui>\
+	<menubar name=\"MainMenuBar\">\
+		<menu name=\"WindowsMenu\">\
+			<menuitem name=\"Dialog\" action=\"DialogAction\" />\
+			<menuitem name=\"ModalDialog\" action=\"ModalDialogAction\" />\
+			<menuitem name=\"ParentlessDialog\" action=\"ParentlessDialogAction\" />\
+			<menuitem name=\"Utility\" action=\"UtilityAction\" />\
+			<menuitem name=\"Splashscreen\" action=\"SplashscreenAction\" />\
+			<menuitem name=\"TopDock\" action=\"TopDockAction\" />\
+			<menuitem name=\"BottomDock\" action=\"BottomDockAction\" />\
+			<menuitem name=\"LeftDock\" action=\"LeftDockAction\" />\
+			<menuitem name=\"RightDock\" action=\"RightDockAction\" />\
+			<menuitem name=\"AllDocks\" action=\"AllDocksAction\" />\
+			<menuitem name=\"Desktop\" action=\"DesktopAction\" />\
+			<menuitem name=\"Menu\" action=\"MenuAction\" />\
+			<menuitem name=\"Toolbar\" action=\"ToolbarAction\" />\
+			<menuitem name=\"OverrideRedirect\" action=\"OverrideRedirectAction\" />\
+			<menuitem name=\"BorderOnly\" action=\"BorderOnlyAction\" />\
+		</menu>\
+	</menubar>\
+</ui>";
+
+static GtkActionEntry entries[] = 
+{
+	/*
+	struct GtkActionEntry {
+	  const gchar     *name;
+	  const gchar     *stock_id;
+	  const gchar     *label;
+	  const gchar     *accelerator;
+	  const gchar     *tooltip;
+	  GCallback  callback;
+	}; */
+
+	{"DialogAction"           , NULL , "_Dialog"            , "<control>d" , NULL , G_CALLBACK(dialog_cb)}            ,
+	{"ModalDialogAction"      , NULL , "_Modal dialog"      , NULL         , NULL , G_CALLBACK(modal_dialog_cb)}      ,
+	{"ParentlessDialogAction" , NULL , "_Parentless dialog" , NULL         , NULL , G_CALLBACK(no_parent_dialog_cb)} ,
+	{"UtilityAction"          , NULL , "_Utility"           , "<control>u" , NULL , G_CALLBACK(utility_cb)}           ,
+	{"SplashscreenAction"     , NULL , "_Splashscreen"      , "<control>s" , NULL , G_CALLBACK(splashscreen_cb)}      ,
+	{"TopDockAction"          , NULL , "_Top dock"          , NULL         , NULL , G_CALLBACK(top_dock_cb)}          ,
+	{"BottomDockAction"       , NULL , "_Bottom dock"       , NULL         , NULL , G_CALLBACK(bottom_dock_cb)}       ,
+	{"LeftDockAction"         , NULL , "_Left dock"         , NULL         , NULL , G_CALLBACK(left_dock_cb)}         ,
+	{"RightDockAction"        , NULL , "_Right dock"        , NULL         , NULL , G_CALLBACK(right_dock_cb)}        ,
+	{"AllDocksAction"         , NULL , "_All docks"         , NULL         , NULL , G_CALLBACK(all_dock_cb)}          ,
+	{"DesktopAction"          , NULL , "Des_ktop"           , NULL         , NULL , G_CALLBACK(desktop_cb)}           ,
+	{"MenuAction"             , NULL , "Me_nu"              , NULL         , NULL , G_CALLBACK(menu_cb)}              ,
+	{"ToolbarAction"          , NULL , "Tool_bar"           , NULL         , NULL , G_CALLBACK(toolbar_cb)}           ,
+	{"OverrideRedirectAction" , NULL , "Override Redirect"  , NULL         , NULL , G_CALLBACK(override_redirect_cb)} ,
+	{"BorderOnly"             , NULL , "Border Only"        , NULL         , NULL , G_CALLBACK(border_only_cb)}       ,
+};
+
+#else
+
 static GtkItemFactoryEntry menu_items[] =
 {
   { "/_Windows",              NULL,         NULL,                     0, "<Branch>" },
@@ -696,6 +775,8 @@ static GtkItemFactoryEntry menu_items[] =
   { "/Windows/Override Redirect",      NULL,          override_redirect_cb,              0, NULL },
   { "/Windows/Border Only",      NULL,          border_only_cb,              0, NULL }
 };
+
+#endif
 
 static void
 sleep_cb (GtkWidget *button,
@@ -823,8 +904,14 @@ do_appwindow (void)
   GtkWidget *contents;
   GtkWidget *sw;
   GtkTextBuffer *buffer;
+
+  #if GTK_CHECK_VERSION(3, 0, 0)
+  GtkActionGroup *action_group;
+  GtkUIManager *ui_manager;
+  #else
   GtkAccelGroup *accel_group;      
   GtkItemFactory *item_factory;
+  #endif
 
       
   /* Create the toplevel window
@@ -843,6 +930,26 @@ do_appwindow (void)
   table = gtk_table_new (1, 4, FALSE);
       
   gtk_container_add (GTK_CONTAINER (window), table);
+
+  #if GTK_CHECK_VERSION(3, 0, 0)
+
+  action_group = gtk_action_group_new("ActionGroups");
+  gtk_action_group_add_actions(action_group, entries, G_N_ELEMENTS(entries), NULL);
+
+  ui_manager = gtk_ui_manager_new();
+  gtk_ui_manager_insert_action_group(ui_manager, action_group, 0);
+  gtk_ui_manager_add_ui_from_string(ui_manager, ui_definition, -1, NULL);
+
+  gtk_table_attach (GTK_TABLE (table),
+					gtk_ui_manager_get_widget (ui_manager, "/MainMenuBar"),
+                    /* X direction */          /* Y direction */
+                    0, 1,                      0, 1,
+                    GTK_EXPAND | GTK_FILL,     0,
+                    0,                         0);
+
+  gtk_window_add_accel_group (GTK_WINDOW (window), gtk_ui_manager_get_accel_group (ui_manager));
+
+  #else
       
   /* Create the menubar
    */
@@ -872,6 +979,9 @@ do_appwindow (void)
                     0, 1,                      0, 1,
                     GTK_EXPAND | GTK_FILL,     0,
                     0,                         0);
+
+
+  #endif
 
   /* Create document
    */

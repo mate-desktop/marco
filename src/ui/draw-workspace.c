@@ -67,12 +67,19 @@ get_window_rect (const WnckWindowDisplayInfo *win,
 
 static void
 draw_window (GtkWidget                   *widget,
+             #if GTK_CHECK_VERSION(3, 0, 0)
+             cairo_t                     *cr,
+             #else
              GdkDrawable                 *drawable,
+             #endif
              const WnckWindowDisplayInfo *win,
              const GdkRectangle          *winrect,
              GtkStateType                state)
 {
+  #if !GTK_CHECK_VERSION(3, 0, 0)
   cairo_t *cr;
+  #endif
+
   GdkPixbuf *icon;
   int icon_x, icon_y, icon_w, icon_h;
   gboolean is_active;
@@ -80,8 +87,13 @@ draw_window (GtkWidget                   *widget,
   GtkStyle *style;
 
   is_active = win->is_active;
-  
+
+  #if GTK_CHECK_VERSION(3, 0, 0)
+  cairo_save(cr);
+  #else  
   cr = gdk_cairo_create (drawable);
+  #endif
+
   cairo_rectangle (cr, winrect->x, winrect->y, winrect->width, winrect->height);
   cairo_clip (cr);
 
@@ -159,12 +171,20 @@ draw_window (GtkWidget                   *widget,
                    MAX (0, winrect->width - 1), MAX (0, winrect->height - 1));
   cairo_stroke (cr);
   
+  #if GTK_CHECK_VERSION(3, 0, 0)
+  cairo_restore(cr);
+  #else
   cairo_destroy (cr);
+  #endif
 }
 
 void
 wnck_draw_workspace (GtkWidget                   *widget,
+                     #if GTK_CHECK_VERSION(3, 0, 0)
+                     cairo_t                     *cr,
+                     #else
                      GdkDrawable                 *drawable,
+                     #endif
                      int                          x,
                      int                          y,
                      int                          width,
@@ -179,7 +199,9 @@ wnck_draw_workspace (GtkWidget                   *widget,
   int i;
   GdkRectangle workspace_rect;
   GtkStateType state;
+  #if !GTK_CHECK_VERSION(3, 0, 0)
   cairo_t *cr;
+  #endif
 
   workspace_rect.x = x;
   workspace_rect.y = y;
@@ -193,7 +215,11 @@ wnck_draw_workspace (GtkWidget                   *widget,
   else
     state = GTK_STATE_NORMAL;
 
+  #if GTK_CHECK_VERSION(3, 0, 0)
+  cairo_save(cr);
+  #else
   cr = gdk_cairo_create (drawable);
+  #endif
   
   if (workspace_background)
     {
@@ -207,7 +233,9 @@ wnck_draw_workspace (GtkWidget                   *widget,
       cairo_fill (cr);
     }
 
+  #if !GTK_CHECK_VERSION(3, 0, 0)
   cairo_destroy (cr);
+  #endif
   
   i = 0;
   while (i < n_windows)
@@ -219,11 +247,19 @@ wnck_draw_workspace (GtkWidget                   *widget,
                        screen_height, &workspace_rect, &winrect);
       
       draw_window (widget,
+                   #if GTK_CHECK_VERSION(3, 0, 0)
+                   cr,
+                   #else
                    drawable,
+                   #endif
                    win,
                    &winrect,
                    state);
       
       ++i;
     }
+
+  #if GTK_CHECK_VERSION(3, 0, 0)
+  cairo_save(cr);
+  #endif
 }

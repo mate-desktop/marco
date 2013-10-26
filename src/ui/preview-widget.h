@@ -24,6 +24,15 @@
 #include "theme.h"
 #include <gtk/gtk.h>
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+ 	#include <cairo/cairo.h>
+ 	#define GdkRegion cairo_region_t
+ 	#define gdk_region_new cairo_region_create
+ 	#define gdk_region_subtract cairo_region_subtract
+ 	#define gdk_region_destroy cairo_region_destroy
+ 	#define gdk_region_union_with_rect cairo_region_union_rectangle
+#endif
+
 #ifndef META_PREVIEW_WIDGET_H
 #define META_PREVIEW_WIDGET_H
 

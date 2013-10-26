@@ -50,6 +50,24 @@ static int screen_right_edge = 0;
  */
 static int screen_bottom_edge = 0;
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+
+static gboolean
+draw_handler (GtkWidget *tooltips,
+              cairo_t   *cr,
+              gpointer   user_data)
+{
+  gtk_render_background (gtk_widget_get_style_context (tooltips),
+                         cr,
+                         0, 0,
+                         gtk_widget_get_allocated_width (tooltips),
+                         gtk_widget_get_allocated_height (tooltips));
+
+  return FALSE;
+}
+
+#else
+
 static gint
 expose_handler (GtkTooltips *tooltips)
 {
@@ -60,6 +78,7 @@ expose_handler (GtkTooltips *tooltips)
 
   return FALSE;
 }
+#endif
 
 void
 meta_fixed_tip_show (Display *xdisplay, int screen_number,
@@ -93,8 +112,13 @@ meta_fixed_tip_show (Display *xdisplay, int screen_number,
       gtk_widget_set_name (tip, "gtk-tooltips");
       gtk_container_set_border_width (GTK_CONTAINER (tip), 4);
 
+      #if GTK_CHECK_VERSION(3, 0, 0)
+      g_signal_connect (tip, "draw",
+                        G_CALLBACK (draw_handler), NULL);      
+      #else
       g_signal_connect_swapped (tip, "expose_event",
 				 G_CALLBACK (expose_handler), NULL);
+      #endif
 
       label = gtk_label_new (NULL);
       gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
