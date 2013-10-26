@@ -1,10 +1,8 @@
 AC_PREREQ(2.50)
 
 m4_define([marco_major_version], [1])
-m4_define([marco_minor_version], [6])
-# Fibonacci sequence for micro version numbering:
-# 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987
-m4_define([marco_micro_version], [2])
+m4_define([marco_minor_version], [7])
+m4_define([marco_micro_version], [0])
 
 m4_define([marco_version],
           [marco_major_version.marco_minor_version.marco_micro_version])
