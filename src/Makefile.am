@@ -2,7 +2,7 @@ lib_LTLIBRARIES = libmarco-private.la
 
 SUBDIRS=wm-tester tools themes
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-I$(srcdir)/include \
 	-DMARCO_LIBEXECDIR=\"$(libexecdir)\" \
 	-DHOST_ALIAS=\"@HOST_ALIAS@\" \
