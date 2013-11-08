@@ -3,7 +3,7 @@
 icondir=$(pkgdatadir)/icons
 icon_DATA=marco-window-demo.png
 
-INCLUDES=@MARCO_WINDOW_DEMO_CFLAGS@ @MARCO_MESSAGE_CFLAGS@ \
+AM_CPPFLAGS=@MARCO_WINDOW_DEMO_CFLAGS@ @MARCO_MESSAGE_CFLAGS@ \
 	-DMARCO_ICON_DIR=\"$(pkgdatadir)/icons\" \
 	-DMARCO_LOCALEDIR=\"$(prefix)/@DATADIRNAME@/locale\"
 
