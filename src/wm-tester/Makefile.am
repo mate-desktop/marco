@@ -1,5 +1,5 @@
 
-INCLUDES=@MARCO_CFLAGS@
+AM_CPPFLAGS=@MARCO_CFLAGS@
 
 wm_tester_SOURCES= 				\
 	main.c
