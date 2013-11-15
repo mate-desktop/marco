@@ -786,7 +786,7 @@ meta_select_image_expose_event (GtkWidget      *widget,
       cairo_t *cr;
       GtkAllocation allocation;
 
-      gtk_widgeT_get_allocation(widget, &allocation);
+      gtk_widget_get_allocation(widget, &allocation);
 
       misc = GTK_MISC (widget);
       
