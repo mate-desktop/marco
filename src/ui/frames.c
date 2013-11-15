@@ -2253,25 +2253,25 @@ generate_pixmap (MetaFrames            *frames,
 static GdkPixmap *
 generate_pixmap (MetaFrames *frames,
                  MetaUIFrame *frame,
-                 MetaRectangle rect)
+                 MetaRectangle *rect)
 {
   GdkRectangle rectangle;
   GdkRegion *region;
   GdkPixmap *result;
 
   /* do not create a pixmap for nonexisting areas */
-  if (rect.width <= 0 || rect.height <= 0)
+  if (rect->width <= 0 || rect->height <= 0)
   	return NULL;
 
-  rectangle.x = rect.x;
-  rectangle.y = rect.y;
-  rectangle.width = rect.width;
-  rectangle.height = rect.height;
+  rectangle.x = rect->x;
+  rectangle.y = rect->y;
+  rectangle.width = rect->width;
+  rectangle.height = rect->height;
 
   result = gdk_pixmap_new (frame->window,
-                           rect.width, rect.height, -1);
+                           rect->width, rect->height, -1);
 
-  clear_backing (result, frame->window, rect.x, rect.y);
+  clear_backing (result, frame->window, rect->x, rect->y);
 
   region = gdk_region_rectangle (&rectangle);
 
