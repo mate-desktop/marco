@@ -6,7 +6,7 @@ libmate_serverdir=@libexecdir@
 
 Name: libmarco-private
 Description: Marco internals shared 
-Requires: gtk+-2.0
+Requires: gtk+-@GTK_API_VERSION@
 Version: @VERSION@
 Libs: -L${libdir} -lmarco-private
 Cflags: -I${includedir}/marco-1
