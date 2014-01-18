@@ -304,7 +304,9 @@ meta_ui_create_frame_window (MetaUI *ui,
   gint attributes_mask;
   GdkWindow *window;
   GdkVisual *visual;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   GdkColormap *cmap = gdk_screen_get_default_colormap (screen);
+#endif
 
   /* Default depth/visual handles clients with weird visuals; they can
    * always be children of the root depth/visual obviously, but
@@ -317,7 +319,9 @@ meta_ui_create_frame_window (MetaUI *ui,
     {
       visual = gdk_x11_screen_lookup_visual (screen,
                                              XVisualIDFromVisual (xvisual));
+#if !GTK_CHECK_VERSION (3, 0, 0)
       cmap = gdk_colormap_new (visual, FALSE);
+#endif
     }
 
   attrs.title = NULL;
@@ -333,7 +337,9 @@ meta_ui_create_frame_window (MetaUI *ui,
   attrs.y = y;
   attrs.wclass = GDK_INPUT_OUTPUT;
   attrs.visual = visual;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   attrs.colormap = cmap;
+#endif
   attrs.window_type = GDK_WINDOW_CHILD;
   attrs.cursor = NULL;
   attrs.wmclass_name = NULL;
@@ -343,7 +349,11 @@ meta_ui_create_frame_window (MetaUI *ui,
   attrs.width  = width;
   attrs.height = height;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL;
+#else
   attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL | GDK_WA_COLORMAP;
+#endif
 
   window =
     gdk_window_new (gdk_screen_get_root_window(screen),
@@ -580,6 +590,7 @@ meta_image_window_set (MetaImageWindow *iw,
   gdk_window_clear (iw->window->window);
 }
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 static GdkColormap*
 get_cmap (GdkPixmap *pixmap)
 {
@@ -616,6 +627,7 @@ get_cmap (GdkPixmap *pixmap)
 
   return cmap;
 }
+#endif
 
 GdkPixbuf*
 meta_gdk_pixbuf_get_from_window (GdkPixbuf   *dest,
@@ -629,7 +641,9 @@ meta_gdk_pixbuf_get_from_window (GdkPixbuf   *dest,
 {
   GdkDrawable *drawable;
   GdkPixbuf *retval;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   GdkColormap *cmap;
+#endif
 
   retval = NULL;
 
@@ -640,7 +654,9 @@ meta_gdk_pixbuf_get_from_window (GdkPixbuf   *dest,
   else
     drawable = gdk_window_foreign_new (xwindow);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cmap = get_cmap (drawable);
+#endif
 
   retval = gdk_pixbuf_get_from_drawable (dest,
                                          drawable,
@@ -649,8 +665,10 @@ meta_gdk_pixbuf_get_from_window (GdkPixbuf   *dest,
                                          dest_x, dest_y,
                                          width, height);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   if (cmap)
     g_object_unref (G_OBJECT (cmap));
+#endif
   g_object_unref (G_OBJECT (drawable));
 
   return retval;
@@ -668,10 +686,14 @@ meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
 {
   GdkDrawable *drawable;
   GdkPixbuf *retval;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   GdkColormap *cmap;
+#endif
 
   retval = NULL;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cmap = NULL;
+#endif
 
   drawable = gdk_xid_table_lookup (xpixmap);
 
@@ -691,8 +713,10 @@ meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
                                              dest_x, dest_y,
                                              width, height);
     }
+#if !GTK_CHECK_VERSION (3, 0, 0)
   if (cmap)
     g_object_unref (G_OBJECT (cmap));
+#endif
   if (drawable)
     g_object_unref (G_OBJECT (drawable));
 
@@ -1083,7 +1107,9 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 	GdkPixmap* gpmap;
 	GdkScreen* screen;
 	GdkPixbuf* pixbuf;
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	GdkColormap* cmap;
+#endif
 	int width;
 	int height;
 	int depth;
@@ -1091,15 +1117,16 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 	gpmap = gdk_pixmap_foreign_new(pmap);
 	screen = gdk_drawable_get_screen(gpmap);
 
-	#if GTK_CHECK_VERSION(3, 0, 0)
-		width = gdk_window_get_width(GDK_WINDOW(gpmap));
-		height = gdk_window_get_height(GDK_WINDOW(gpmap));
-	#else
-		gdk_drawable_get_size(GDK_DRAWABLE(gpmap), &width, &height);
-	#endif
+#if GTK_CHECK_VERSION(3, 0, 0)
+	width = gdk_window_get_width(GDK_WINDOW(gpmap));
+	height = gdk_window_get_height(GDK_WINDOW(gpmap));
+#else
+	gdk_drawable_get_size(GDK_DRAWABLE(gpmap), &width, &height);
+#endif
 
 	depth = gdk_drawable_get_depth(GDK_DRAWABLE(gpmap));
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	if (depth <= 24)
 	{
 		cmap = gdk_screen_get_system_colormap(screen);
@@ -1108,6 +1135,7 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 	{
 		cmap = gdk_screen_get_rgba_colormap(screen);
 	}
+#endif
 
 	pixbuf = gdk_pixbuf_get_from_drawable(NULL, gpmap, cmap, 0, 0, 0, 0, width, height);
 
