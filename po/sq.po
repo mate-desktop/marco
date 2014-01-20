@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# ard1t <ardit.dani@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2014-01-16 14:40+0000\n"
+"Last-Translator: ard1t <ardit.dani@gmail.com>\n"
 "Language-Team: Albanian (http://www.transifex.com/projects/p/MATE/language/sq/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,11 +24,11 @@ msgstr "Ambienti grafik"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 msgid "Show the panel's \"Run Application\" dialog box"
-msgstr ""
+msgstr "Shfaq panelin dialog box \"fillo aplikacionet\" "
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
 msgid "Show the panel's main menu"
-msgstr ""
+msgstr "Shfaq panelin e menuse kryesore"
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
 msgid "Take a screenshot"
@@ -47,15 +48,15 @@ msgstr "Administrimi i dritareve"
 
 #: ../src/50-marco-global-key.xml.in.h:2
 msgid "Move between windows, using a popup window"
-msgstr ""
+msgstr "Leviz midis dritareve, duke përdorur një dritare popup"
 
 #: ../src/50-marco-global-key.xml.in.h:3
 msgid "Move between windows of an application, using a popup window"
-msgstr ""
+msgstr "Leviz midis dritareve të një aplikimi, duke përdorur një dritare popup"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 msgid "Move between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Leviz mes të paneleve dhe desktop, duke përdorur një dritare popup"
 
 #: ../src/50-marco-global-key.xml.in.h:5
 msgid "Move between windows immediately"
@@ -71,7 +72,7 @@ msgstr "Zhvendos menjëherë fokusin midis panelëve dhe desktop-it"
 
 #: ../src/50-marco-global-key.xml.in.h:8
 msgid "Hide all normal windows and set focus to the desktop"
-msgstr ""
+msgstr "Fsheh të gjitha dritaret normale dhe të vendos fokusin të përqëndrohet në desktop"
 
 #: ../src/50-marco-global-key.xml.in.h:9
 msgid "Switch to workspace 1"
@@ -123,23 +124,23 @@ msgstr "Kalo tek hapësira e punës 12"
 
 #: ../src/50-marco-global-key.xml.in.h:21
 msgid "Switch to workspace on the left of the current workspace"
-msgstr ""
+msgstr "Kaloni në hapësirën e punës në të majtë të hapësirave aktuale e punës"
 
 #: ../src/50-marco-global-key.xml.in.h:22
 msgid "Switch to workspace on the right of the current workspace"
-msgstr ""
+msgstr "Kaloni në hapësirën e punës në të djathtë të hapësirave aktuale e punës"
 
 #: ../src/50-marco-global-key.xml.in.h:23
 msgid "Switch to workspace above the current workspace"
-msgstr ""
+msgstr "Kaloni në hapësirën e punës mbi hapësiren aktuale e punës"
 
 #: ../src/50-marco-global-key.xml.in.h:24
 msgid "Switch to workspace below the current workspace"
-msgstr ""
+msgstr "Kaloni në hapësirën e punës poshtë hapësires aktuale e punës"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 msgid "Activate the window menu"
-msgstr ""
+msgstr "Aktivizo menunë e dritares"
 
 #: ../src/50-marco-window-key.xml.in.h:3
 msgid "Toggle fullscreen mode"
@@ -155,7 +156,7 @@ msgstr "Maksimizo dritaren"
 
 #: ../src/50-marco-window-key.xml.in.h:6
 msgid "Restore window"
-msgstr ""
+msgstr "Rikthe dritaret"
 
 #: ../src/50-marco-window-key.xml.in.h:7
 msgid "Toggle shaded state"
@@ -179,7 +180,7 @@ msgstr "Ndrysho përmasat e dritares"
 
 #: ../src/50-marco-window-key.xml.in.h:12
 msgid "Toggle whether window is on all workspaces or just one"
-msgstr ""
+msgstr "Kontrollo nëse dritarja është në të gjitha hapësirat e punës apo vetëm një"
 
 #: ../src/50-marco-window-key.xml.in.h:13
 msgid "Raise window if it's covered by another window, otherwise lower it"
@@ -267,7 +268,7 @@ msgstr "Zhvendos dritaren tek hapësira e poshtme e punës"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
-msgstr ""
+msgstr "Aksion Bell"
 
 #: ../src/core/core.c:206
 #, c-format
@@ -278,7 +279,7 @@ msgstr "Kërkesë informacioni dritare e panjohur: %d"
 #: ../src/core/delete.c:96
 #, c-format
 msgid "<tt>%s</tt> is not responding."
-msgstr ""
+msgstr "<tt>%s</tt> nuk përgjigjet"
 
 #: ../src/core/delete.c:101
 msgid ""
@@ -331,14 +332,13 @@ msgstr "Ndonjë program tjetër është duke përdorur si shoqërim tastin %s me
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#. 
 #: ../src/core/keybindings.c:2303
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr ""
+msgstr "Ka një gabim në funksion <tt>%s<.tt>:\n\n%s"
 
 #: ../src/core/keybindings.c:2392
 #, c-format
@@ -357,7 +357,7 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
+msgstr "makro %s\nCopyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\nKy është software falas, shihni burimin për kushtet e kopjimit.\nNuk ka asnjë garanci; as për SHITJES apo PËRDORIM PËR NJË QËLLIM TË CAKTUAR.\n"
 
 #: ../src/core/main.c:275
 msgid "Disable connection to session manager"
@@ -389,16 +389,16 @@ msgstr "Bën thirrjet X të sinkronizuara"
 
 #: ../src/core/main.c:316
 msgid "Turn compositing on"
-msgstr ""
+msgstr "Ndizni kompozimin"
 
 #: ../src/core/main.c:322
 msgid "Turn compositing off"
-msgstr ""
+msgstr "Fikni kompozimin"
 
 #: ../src/core/main.c:328
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr ""
+msgstr "Mos bëj dritare me ekran të plotë që janë maksimizuar dhe nuk kanë dekorata"
 
 #: ../src/core/main.c:537
 #, c-format
@@ -516,7 +516,7 @@ msgstr "U gjet një karakteristikë në <marco_session> por ekziston një ID pë
 #: ../src/core/session.c:1436
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
-msgstr ""
+msgstr "Asnjë atribut \"%s\" tek elementi <%s>"
 
 #: ../src/core/session.c:1214
 #, c-format
@@ -532,7 +532,7 @@ msgstr "Element %s i panjohur"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr ""
+msgstr "Këto dritare nuk e mbështesin \"ruani konfigurimin aktual\" dhe do të duhet të riniset manualisht herën tjetër që hyni."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -590,7 +590,6 @@ msgstr "Dritarja %s ja ka dhënë SM_CLIENT_ID vetvetes, në vend që t'a vendos
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#. 
 #: ../src/core/window.c:6231
 #, c-format
 msgid ""
@@ -613,21 +612,21 @@ msgstr "%s (në %s)"
 #: ../src/core/window-props.c:420
 #, c-format
 msgid "%s (as superuser)"
-msgstr ""
+msgstr "%s (si super-përdorues)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
 #: ../src/core/window-props.c:438
 #, c-format
 msgid "%s (as %s)"
-msgstr ""
+msgstr "%s (si %s)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
 #: ../src/core/window-props.c:444
 #, c-format
 msgid "%s (as another user)"
-msgstr ""
+msgstr "%s (si përdorues tjetër)"
 
 #: ../src/core/window-props.c:1430
 #, c-format
@@ -810,7 +809,6 @@ msgstr "Zhvendose tek një tjetër hap_ësirë pune"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:104
 msgid "Shift"
 msgstr "Shift"
@@ -819,7 +817,6 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:110
 msgid "Ctrl"
 msgstr "Ctrl"
@@ -828,7 +825,6 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:116
 msgid "Alt"
 msgstr "Alt"
@@ -837,7 +833,6 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:122
 msgid "Meta"
 msgstr "Meta"
@@ -846,7 +841,6 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:128
 msgid "Super"
 msgstr "Super"
@@ -855,7 +849,6 @@ msgstr "Super"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:134
 msgid "Hyper"
 msgstr "Hyper"
@@ -864,7 +857,6 @@ msgstr "Hyper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:140
 msgid "Mod2"
 msgstr "Mod2"
@@ -873,7 +865,6 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:146
 msgid "Mod3"
 msgstr "Mod3"
@@ -882,7 +873,6 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:152
 msgid "Mod4"
 msgstr "Mod4"
@@ -891,14 +881,12 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:158
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#. 
 #: ../src/ui/resizepopup.c:113
 #, c-format
 msgid "%d x %d"
@@ -1141,7 +1129,6 @@ msgstr "Konstantja \"%s\" është përcaktuar një herë"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#. 
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"

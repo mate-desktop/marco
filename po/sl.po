@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Marko Šterman <marko.chamillionaire@gmail.com>, 2012.
+# jierro <jierro@windowslive.com>, 2013
+# Marko Šterman <marko.chamillionaire@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2013-11-20 13:15+0000\n"
+"Last-Translator: jierro <jierro@windowslive.com>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/MATE/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +25,7 @@ msgstr "Namizje"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "Pokaži pogovorno okno pulta za zagon programov"
+msgstr "Pokaži pogovorno okno pulta \"Zaženi program\""
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
 msgid "Show the panel's main menu"
@@ -36,7 +37,7 @@ msgstr "Zajemi zaslonsko sliko"
 
 #: ../src/50-marco-desktop-key.xml.in.h:5
 msgid "Take a screenshot of a window"
-msgstr "Zajemi okna na zaslonu"
+msgstr "Zajemi zaslonsko sliko okna"
 
 #: ../src/50-marco-desktop-key.xml.in.h:6
 msgid "Run a terminal"
@@ -44,27 +45,27 @@ msgstr "Zaženi terminal"
 
 #: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
-msgstr "Upravljanje oken"
+msgstr "Upravljanje z okni"
 
 #: ../src/50-marco-global-key.xml.in.h:2
 msgid "Move between windows, using a popup window"
-msgstr "Premikanje med okni s pojavnim oknom"
+msgstr "Premikaj med okni s pojavnim oknom"
 
 #: ../src/50-marco-global-key.xml.in.h:3
 msgid "Move between windows of an application, using a popup window"
-msgstr "Premikanje med okni programa s pojavnim oknom"
+msgstr "Premikaj med okni programa s pojavnim oknom"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 msgid "Move between panels and the desktop, using a popup window"
-msgstr "Premikanje med pulti in namizjem s pojavnim oknom"
+msgstr "Premikaj med pulti in namizjem s pojavnim oknom"
 
 #: ../src/50-marco-global-key.xml.in.h:5
 msgid "Move between windows immediately"
-msgstr "Med okni se takoj premakni"
+msgstr "Premikaj se takoj med okni"
 
 #: ../src/50-marco-global-key.xml.in.h:6
 msgid "Move between windows of an application immediately"
-msgstr "Takoj se premikaj med okni programa"
+msgstr "Premikaj se takoj med okni programa"
 
 #: ../src/50-marco-global-key.xml.in.h:7
 msgid "Move between panels and the desktop immediately"
@@ -72,7 +73,7 @@ msgstr "Premakni se takoj med pulti in namizjem"
 
 #: ../src/50-marco-global-key.xml.in.h:8
 msgid "Hide all normal windows and set focus to the desktop"
-msgstr "Skrij vsa običajna okna in postavi v žarišče ozadje namizja"
+msgstr "Skrij vsa običajna okna in postavi namizje v žarišče"
 
 #: ../src/50-marco-global-key.xml.in.h:9
 msgid "Switch to workspace 1"
@@ -180,7 +181,7 @@ msgstr "Spremeni velikost okna"
 
 #: ../src/50-marco-window-key.xml.in.h:12
 msgid "Toggle whether window is on all workspaces or just one"
-msgstr "Preklopi ali je okno na vseh delovnih površinah oziroma le na eni"
+msgstr "Preklopi način okna na vseh delovnih površinah oziroma le na eni"
 
 #: ../src/50-marco-window-key.xml.in.h:13
 msgid "Raise window if it's covered by another window, otherwise lower it"
@@ -252,11 +253,11 @@ msgstr "Premakni okno na delovno površino 12"
 
 #: ../src/50-marco-window-key.xml.in.h:30
 msgid "Move window one workspace to the left"
-msgstr "Premakni okno eno delovno površino levo"
+msgstr "Premakni okno eno delovno površino v levo"
 
 #: ../src/50-marco-window-key.xml.in.h:31
 msgid "Move window one workspace to the right"
-msgstr "Premakni okno eno delovno površino desno"
+msgstr "Premakni okno eno delovno površino v desno"
 
 #: ../src/50-marco-window-key.xml.in.h:32
 msgid "Move window one workspace up"
@@ -279,13 +280,13 @@ msgstr "Zahteva izpisa podrobnosti neznanega okna: %d"
 #: ../src/core/delete.c:96
 #, c-format
 msgid "<tt>%s</tt> is not responding."
-msgstr "<tt>%s</tt> okno je neodzivno."
+msgstr "Okno <tt>%s</tt> je neodzivno."
 
 #: ../src/core/delete.c:101
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Lahko malo počakate, če se program morda zbudi, ali pa vsiljeno končate njegovo delovanje."
+msgstr "Lahko malo počakate, če se program morda zbudi, ali pa vsilite končanje njegovega delovanja."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -303,7 +304,7 @@ msgstr "Ni mogoče pridobiti gostitelja z imenom: %s\n"
 #: ../src/core/display.c:268
 #, c-format
 msgid "Missing %s extension required for compositing"
-msgstr "Manjka razširitev %s, ki je ključna za sestavljanje"
+msgstr "Manjka razširitev %s, ki je zahtevana za skladnjo 3D"
 
 #: ../src/core/display.c:346
 #, c-format
@@ -316,7 +317,7 @@ msgid ""
 "Lost connection to the display '%s';\n"
 "most likely the X server was shut down or you killed/destroyed\n"
 "the window manager.\n"
-msgstr "Izgubljena povezava z zaslonom '%s';\nnajverjetneje se je strežnik X ugasnil ali pa je vsiljeno izklopljen\nupravljalnik oken.\n"
+msgstr "Izgubljena povezava z zaslonom '%s';\nnajverjetneje se je strežnik X ugasnil oz. je bil upravljalnik oken vsiljeno uničen/izklopljen.\n"
 
 #: ../src/core/errors.c:285
 #, c-format
@@ -328,11 +329,10 @@ msgstr "Usodna napaka IO %d (%s) na zaslonu '%s'.\n"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Tipko %s s spremenilnikom %x uporablja že nek drug program\n"
+msgstr "Tipko %s s spremenilniki %x kot bližnjico uporablja že nek drug program\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#. 
 #: ../src/core/keybindings.c:2303
 #, c-format
 msgid ""
@@ -358,7 +358,7 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nAvtorske pravice pridržane (C) 2001-%s Havoc Pennington, Red Hat in drugi\nTo je prosto programje; za pogoje kopiranja si poglejte izvorno kodo.\nProgram prihaja BREZ KAKRŠNIHKOLI ZAGOTOVIL delovanja.\n"
+msgstr "marco %s\nAvtorske pravice (C) 2001-%s Havoc Pennington, Red Hat in drugi\nTo je prosto programje; za pogoje kopiranja si poglejte izvorno kodo.\nProgram prihaja BREZ KAKRŠNIHKOLI ZAGOTOVIL delovanja.\n"
 
 #: ../src/core/main.c:275
 msgid "Disable connection to session manager"
@@ -378,7 +378,7 @@ msgstr "Zaslon X, ki naj se uporabi"
 
 #: ../src/core/main.c:298
 msgid "Initialize session from savefile"
-msgstr "Začni sejo iz shranjene datoteke"
+msgstr "Začenjaj sejo iz shranjene datoteke"
 
 #: ../src/core/main.c:304
 msgid "Print version"
@@ -390,21 +390,21 @@ msgstr "Naredi klice X usklajene"
 
 #: ../src/core/main.c:316
 msgid "Turn compositing on"
-msgstr "Vključi skladanje"
+msgstr "Vključi skladnjo 3D"
 
 #: ../src/core/main.c:322
 msgid "Turn compositing off"
-msgstr "Izključi skladanje"
+msgstr "Izključi skladnjo 3D"
 
 #: ../src/core/main.c:328
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Ne ustvari celozaslonskih oken, ki so razpeta in nimajo oblikovanja"
+msgstr "Ne ustvari celozaslonskih oken, ki so razpeta in nimajo okraskov"
 
 #: ../src/core/main.c:537
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
-msgstr "Ni mogoče preiskati mape tem: %s\n"
+msgstr "Ni mogoče preiskati mape s temami: %s\n"
 
 #: ../src/core/main.c:553
 #, c-format
@@ -423,7 +423,7 @@ msgstr "Ni mogoče znova začeti: %s\n"
 #: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "%d, shranjen v ključu MateConf %s, je izven meja med %d in %d\n"
 
 #: ../src/core/prefs.c:1008
 msgid ""
@@ -434,21 +434,21 @@ msgstr "Obhodi za pokvarjene programe so izključeni. Nekateri programi se morda
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "Ni mogoče razčleniti opisa pisave \"%s\" iz ključa GSettings %s\n"
 
 #: ../src/core/prefs.c:1137
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "\"%s\", ki je bil najden v podatkovni zbirki nastavitev ni veljaven spremenilnik za miškine gumbe.\n"
+msgstr "\"%s\", najden v podatkovni zbirki nastavitev, ni veljavna vrednost za spremenilnik miškinega gumba.\n"
 
 #: ../src/core/prefs.c:1649
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "\"%s\" najden v podatkovni zbirki nastavitev ni veljaven ključ za tipkovno vez \"%s\"\n"
+msgstr "\"%s\", najden v podatkovni zbirki nastavitev, ni veljaven ključ za tipkovno bližnjico \"%s\"\n"
 
 #: ../src/core/prefs.c:1955
 #, c-format
@@ -475,7 +475,7 @@ msgstr "Ni mogoče dobiti izbire upravljalnika oken na zaslonu %d prikaz \"%s\"\
 #: ../src/core/screen.c:458
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
-msgstr "Zaslon %d na prikazu \"%s\" že ima določen upravljalnik oken\n"
+msgstr "Zaslon %d na prikazu \"%s\" že ima določenega upravljalnika oken\n"
 
 #: ../src/core/screen.c:668
 #, c-format
@@ -510,7 +510,7 @@ msgstr "Ni mogoče razčleniti datoteke shranjene seje: %s\n"
 #: ../src/core/session.c:1184
 #, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
-msgstr "atribut <marco_session> je bil viden, a mi že imamo ID seje"
+msgstr "atribut <marco_session> je bil viden, toda ID seje je že pridobljen"
 
 #: ../src/core/session.c:1197 ../src/core/session.c:1272
 #: ../src/core/session.c:1304 ../src/core/session.c:1376
@@ -522,7 +522,7 @@ msgstr "Neznan atribut %s predmeta <%s>"
 #: ../src/core/session.c:1214
 #, c-format
 msgid "nested <window> tag"
-msgstr "gnezdena oznaka <window>"
+msgstr "gnezdena oznaka\n<window>"
 
 #: ../src/core/session.c:1456
 #, c-format
@@ -533,12 +533,12 @@ msgstr "Neznan predmet %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Ta okna ne podpirajo možnosti &quot;shranjevanja trenutnih nastavitev&quot;, zato bodo morala biti ob vaši naslednji prijavi znova začeta ročno."
+msgstr "Ta okna ne podpirajo možnosti &quot;Shrani trenutno nastavitev&quot;, zato bodo morala biti ob vaši naslednji prijavi znova začeta ročno."
 
 #: ../src/core/util.c:101
 #, c-format
 msgid "Failed to open debug log: %s\n"
-msgstr "Odpiranje razhroščevalnega dnevnika je spodletelo: %s\n"
+msgstr "Odpiranje dnevnika razhroščevanja je spodletelo: %s\n"
 
 #: ../src/core/util.c:111
 #, c-format
@@ -583,7 +583,7 @@ msgstr "Marco"
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Okno %s nastavi svoj SM_CLIENT_ID, namesto, da bi nastavilo WM_CLIENT_LEADER kot je zavedeno v ICCCM.\n"
+msgstr "Okno %s nastavi SM_CLIENT_ID na sebe, namesto da bi nastavilo WM_CLIENT_LEADER, kot je navedeno v ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -591,7 +591,6 @@ msgstr "Okno %s nastavi svoj SM_CLIENT_ID, namesto, da bi nastavilo WM_CLIENT_LE
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#. 
 #: ../src/core/window.c:6231
 #, c-format
 msgid ""
@@ -602,7 +601,7 @@ msgstr "Okno %s določi namig MWM, ki pove, da ni mogoče spremeniti velikosti, 
 #: ../src/core/window-props.c:244
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
-msgstr "Program je nastavil pokvarjen _NET_WM_PID %lu\n"
+msgstr "Program je nastavil lažen _NET_WM_PID %lu\n"
 
 #. Translators: the title of a window from another machine
 #: ../src/core/window-props.c:388
@@ -633,7 +632,7 @@ msgstr "%s (kot drug uporabnik)"
 #: ../src/core/window-props.c:1430
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
-msgstr "Neveljaven WM_TRANSIENT_FOR za okno 0x%lx naveden za %s.\n"
+msgstr "Neveljavno WM_TRANSIENT_FOR okno 0x%lx, navedeno za %s.\n"
 
 #: ../src/core/xprops.c:155
 #, c-format
@@ -655,7 +654,7 @@ msgstr "Lastnost %s okna 0x%lx vsebuje neveljaven znak UTF-8\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Lastnost %s okna 0x%lx vsebuje neveljaven znak UTF-8 za %d. predmet na seznamu\n"
+msgstr "Lastnost %s okna 0x%lx vsebuje neveljaven znak UTF-8 za predmet %d. na seznamu\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -811,7 +810,6 @@ msgstr "Premakni na dru_go delovno površino"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:104
 msgid "Shift"
 msgstr "Shift"
@@ -820,7 +818,6 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:110
 msgid "Ctrl"
 msgstr "Ctrl"
@@ -829,7 +826,6 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:116
 msgid "Alt"
 msgstr "Alt"
@@ -838,7 +834,6 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:122
 msgid "Meta"
 msgstr "Meta"
@@ -847,7 +842,6 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:128
 msgid "Super"
 msgstr "Super"
@@ -856,16 +850,14 @@ msgstr "Super"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:134
 msgid "Hyper"
-msgstr "Hiper"
+msgstr "Hyper"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:140
 msgid "Mod2"
 msgstr "Mod2"
@@ -874,7 +866,6 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:146
 msgid "Mod3"
 msgstr "Mod3"
@@ -883,7 +874,6 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:152
 msgid "Mod4"
 msgstr "Mod4"
@@ -892,14 +882,12 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:158
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#. 
 #: ../src/ui/resizepopup.c:113
 #, c-format
 msgid "%d x %d"
@@ -980,12 +968,12 @@ msgstr "Oblika zapisa preliva je \"blend/bg_color/fg_color/alpha\", \"%s\" ne us
 #: ../src/ui/theme.c:1228
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
-msgstr "V prelivni barvi ni mogoče razčleniti vrednosti alfa \"%s\""
+msgstr "V mešani barvi ni mogoče razčleniti vrednosti alfa \"%s\""
 
 #: ../src/ui/theme.c:1238
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
-msgstr "V prelivni barvi alfa vrednost \"%s\" ni med 0.0 in 1.0"
+msgstr "V mešani barvi alfa vrednost \"%s\" ni med 0.0 in 1.0"
 
 #: ../src/ui/theme.c:1285
 #, c-format
@@ -1034,12 +1022,12 @@ msgstr "Izraz koordinat vsebuje neznan operator na začetku besedila: \"%s\""
 #: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression was empty or not understood"
-msgstr "Izraz koordinat je prazen ali pa ga ni mogoče razumleti"
+msgstr "Izraz koordinat je prazen ali pa ga ni mogoče razumeti"
 
 #: ../src/ui/theme.c:1920 ../src/ui/theme.c:1930 ../src/ui/theme.c:1964
 #, c-format
 msgid "Coordinate expression results in division by zero"
-msgstr "Izraz koordinat se povzroči deljenje z ničlo"
+msgstr "Izraz koordinat povzroči deljenje z ničlo"
 
 #: ../src/ui/theme.c:1972
 #, c-format
@@ -1082,7 +1070,7 @@ msgstr "Razčlenjevalnik izrazov koordinat je preplavil medpomnilnik."
 #: ../src/ui/theme.c:2326
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr "Izraz koordinat vsebuje zaklepaj, a ne oklepaja"
+msgstr "Izraz koordinat vsebuje zaklepaj, a ne uklepaja"
 
 #: ../src/ui/theme.c:2390
 #, c-format
@@ -1142,7 +1130,6 @@ msgstr "Konstanta \"%s\" je bila že določena"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#. 
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
@@ -1234,7 +1221,7 @@ msgstr "<%s> mora navesti ali geometrijo ali nadrejeni predmet, ki ima geometrij
 
 #: ../src/ui/theme-parser.c:1148
 msgid "You must specify a background for an alpha value to be meaningful"
-msgstr "Določiti je treba ozadje, če želite, da ima alfa vrednost pomen."
+msgstr "Določiti je treba ozadje, če želite, da ima alfa vrednost pomen"
 
 #: ../src/ui/theme-parser.c:1215
 #, c-format
@@ -1249,7 +1236,7 @@ msgstr "Neznan style_set \"%s\" v predmetu <%s>"
 #: ../src/ui/theme-parser.c:1234
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
-msgstr "Vrsti okna \"%s\" je nabor sloga že določen"
+msgstr "Za vrsto okna \"%s\" je nabor sloga že določen"
 
 #: ../src/ui/theme-parser.c:1264 ../src/ui/theme-parser.c:1328
 #: ../src/ui/theme-parser.c:1554 ../src/ui/theme-parser.c:2775
@@ -1301,7 +1288,7 @@ msgstr "Ni mogoče razumeti vrednost za vrsto preliva \"%s\""
 #: ../src/ui/theme-parser.c:2144 ../src/ui/theme-parser.c:2519
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
-msgstr "Nerazpoznavna vrsta polnjenja \"%s\" za predmet <%s>"
+msgstr "Ni mogoče razumeti vrste polnjenja \"%s\" za predmet <%s>"
 
 #: ../src/ui/theme-parser.c:2311 ../src/ui/theme-parser.c:2394
 #: ../src/ui/theme-parser.c:2457
@@ -1327,7 +1314,7 @@ msgstr "<draw_ops> imenovan \"%s\" ni naveden"
 #: ../src/ui/theme-parser.c:2643 ../src/ui/theme-parser.c:2739
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
-msgstr "Vključevanje draw_ops \"%s\" na tem mestu, bi ustvarilo krožno sklicevanje"
+msgstr "Vključevanje draw_ops \"%s\" na tem mestu bi ustvarilo krožno sklicevanje"
 
 #: ../src/ui/theme-parser.c:2854
 #, c-format
@@ -1399,12 +1386,12 @@ msgstr "Predmet <%s> ne sme imeti atributa \"resize\" za razpeta stanja"
 #: ../src/ui/theme-parser.c:3120 ../src/ui/theme-parser.c:3142
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
-msgstr "Slog za stanje %s velikost %s žarišče %s je bil že naveden"
+msgstr "Slog za stanje %s velikost %s žarišče %s je že bil naveden"
 
 #: ../src/ui/theme-parser.c:3131 ../src/ui/theme-parser.c:3153
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
-msgstr "Slog za stanje %s žarišče %s je bil že naveden"
+msgstr "Slog za stanje %s žarišče %s je že bil naveden"
 
 #: ../src/ui/theme-parser.c:3192
 msgid ""
@@ -1427,7 +1414,7 @@ msgstr "Za predmet <menu_icon> ni mogoče določiti dveh možnosti draw_ops (tem
 #: ../src/ui/theme-parser.c:3350
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr "Najbolj oddaljen element teme mora biti <metacity_theme> ne <%s>"
+msgstr "Najbolj oddaljen element teme mora biti <metacity_theme>, ne <%s>"
 
 #: ../src/ui/theme-parser.c:3370
 #, c-format
@@ -1444,7 +1431,7 @@ msgstr "Predmet <%s> ni dovoljen znotraj predmeta <constant>"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "Predmet <%s> ni dovoljen znotraj predmetov distance/border/aspect_ration"
+msgstr "Predmet <%s> ni dovoljen znotraj predmetov distance, border, aspect_ratio"
 
 #: ../src/ui/theme-parser.c:3409
 #, c-format
@@ -1485,7 +1472,7 @@ msgstr "Ni mogoče najti veljavne datoteke za temo %s\n"
 #: ../src/ui/theme-parser.c:4205
 #, c-format
 msgid "Theme file %s did not contain a root <metacity_theme> element"
-msgstr "Datoteka teme %s ni vsebovala korenskega <metacity_theme> elementa"
+msgstr "Datoteka teme %s ni vsebovala korenskega elementa <metacity_theme>"
 
 #: ../src/ui/theme-viewer.c:75
 msgid "/_Windows"
@@ -1501,7 +1488,7 @@ msgstr "/Okna/_Pogovorno okno"
 
 #: ../src/ui/theme-viewer.c:78
 msgid "/Windows/_Modal dialog"
-msgstr "/Okna/_Modalno okno"
+msgstr "/Okna/_Modalno pogovorno okno"
 
 #: ../src/ui/theme-viewer.c:79
 msgid "/Windows/_Utility"
@@ -1537,7 +1524,7 @@ msgstr "/Okna/_Namizje"
 
 #: ../src/ui/theme-viewer.c:244
 msgid "This is a sample message in a sample dialog"
-msgstr "To je preizkusno sporočilo v pogovornem oknu"
+msgstr "To je vzorčno sporočilo v vzorčnem pogovornem oknu"
 
 #: ../src/ui/theme-viewer.c:327
 #, c-format
@@ -1546,7 +1533,7 @@ msgstr "Lažni predmet menija %d\n"
 
 #: ../src/ui/theme-viewer.c:361
 msgid "Border-only window"
-msgstr "Okno le z okvirjem"
+msgstr "Okno le z obrobo"
 
 #: ../src/ui/theme-viewer.c:363
 msgid "Bar"
@@ -1579,7 +1566,7 @@ msgstr "Obroba"
 #: ../src/ui/theme-viewer.c:728
 #, c-format
 msgid "Button layout test %d"
-msgstr "Preizkus razporeditve gumbov %d"
+msgstr "Preizkus razporeditve tipk %d"
 
 #: ../src/ui/theme-viewer.c:757
 #, c-format
@@ -1589,7 +1576,7 @@ msgstr "%g milisekund za izris ene sličice okna"
 #: ../src/ui/theme-viewer.c:800
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
-msgstr "Uporaba: marco-theme-viewer [IMETEME]\n"
+msgstr "Uporaba: marco-theme-viewer [IME_TEME]\n"
 
 #: ../src/ui/theme-viewer.c:807
 #, c-format
@@ -1615,11 +1602,11 @@ msgstr "Velika pisava naziva"
 
 #: ../src/ui/theme-viewer.c:871
 msgid "Button Layouts"
-msgstr "Razpored gumbov"
+msgstr "Razporeditev tipk"
 
 #: ../src/ui/theme-viewer.c:876
 msgid "Benchmark"
-msgstr "Meritev"
+msgstr "Primerjalni preizkus"
 
 #: ../src/ui/theme-viewer.c:923
 msgid "Window Title Goes Here"
@@ -1643,7 +1630,7 @@ msgstr "preizkus izjave položaja je vrnil logični NAPAK, vendar ni nastavil na
 
 #: ../src/ui/theme-viewer.c:1252
 msgid "Error was expected but none given"
-msgstr "Pričakovana je bila napaka, vendar do nje ni prišlo"
+msgstr "Pričakovana je bila napaka, vendar ni bila vrnjena"
 
 #: ../src/ui/theme-viewer.c:1254
 #, c-format
@@ -1668,4 +1655,4 @@ msgstr "vrednost y je %d, pričakovana pa je vrednost %d"
 #: ../src/ui/theme-viewer.c:1332
 #, c-format
 msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
-msgstr "%d izjav koordinat razčlenjenih v %g sekundah (%g sekund v povprečju)\n"
+msgstr "%d izrazov koordinat, razčlenjenih v %g sekundah (%g sekund v povprečju)\n"

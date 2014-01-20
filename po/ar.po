@@ -3,15 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# moceap <moceap@hotmail.com>, 2013
 # noureddin <noureddin@barid.com>, 2012
+# noureddin <noureddin@barid.com>, 2012
+# sarhantn <sarhanaissi@gmail.com>, 2013
 # sarhantn <sarhanaissi@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-05-31 14:52+0000\n"
-"Last-Translator: sarhantn <sarhanaissi@gmail.com>\n"
+"PO-Revision-Date: 2013-11-20 13:15+0000\n"
+"Last-Translator: mauron\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/MATE/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -197,11 +200,11 @@ msgstr "اخفض النافذة تحت النوافذ الأخرى"
 
 #: ../src/50-marco-window-key.xml.in.h:16
 msgid "Maximize window vertically"
-msgstr "كبّر النافذة عموديا"
+msgstr "كبّر النافذة عموديًا"
 
 #: ../src/50-marco-window-key.xml.in.h:17
 msgid "Maximize window horizontally"
-msgstr "كبّر النافذة أفقيا"
+msgstr "كبّر النافذة أفقيًا"
 
 #: ../src/50-marco-window-key.xml.in.h:18
 msgid "Move window to workspace 1"
@@ -286,7 +289,7 @@ msgstr "<tt>%s</tt> لا يستجيب"
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "ربما ترغب في الانتظار قليلا ليُكمِل أو إجبار التطبيق على الإنهاء كُلّية."
+msgstr "ربما ترغب في الانتظار قليلًا ليُكمِل أو إجبار التطبيق على الإنهاء كُلّية."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -333,7 +336,6 @@ msgstr "يستعمل برنامج آخر المفتاح %s بالفعل مع ا�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#. 
 #: ../src/core/keybindings.c:2303
 #, c-format
 msgid ""
@@ -359,7 +361,7 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "مِتسِتي %s\nحقوق النشر © 2001-%s هاڤوك بِنَِنجتون، شركة ردهات، وآخرون\nهذا برنامج حر، راجع المصدر لشروط النسخ.\nلا يوجد أي ضمان: و لا حتى ضمان قابلية التسويق أو المناسبة لأي هدف.\n"
+msgstr "ماركو %s\nحقوق النشر © 2001-%s هاڤوك بِنَِنجتون، شركة ردهات، وآخرون\nهذا برنامج حر، راجع المصدر لشروط النسخ.\nلا يوجد أي ضمان: و لا حتى ضمان قابلية التسويق أو المناسبة لأي هدف.\n"
 
 #: ../src/core/main.c:275
 msgid "Disable connection to session manager"
@@ -367,7 +369,7 @@ msgstr "عطّل الاتصال بمدير الجلسة"
 
 #: ../src/core/main.c:281
 msgid "Replace the running window manager with Marco"
-msgstr "استبدل مدير النوافذ الذي يعمل بمِتسِتي"
+msgstr "استبدل مدير النوافذ الذي يعمل بماركو"
 
 #: ../src/core/main.c:287
 msgid "Specify session management ID"
@@ -554,7 +556,7 @@ msgstr "فُتِح ملف السِّجِل %s\n"
 #: ../src/core/util.c:136 ../src/tools/marco-message.c:176
 #, c-format
 msgid "Marco was compiled without support for verbose mode\n"
-msgstr "جُمِّع مِتسِتي دون دعم للنمط المطنب\n"
+msgstr "جُمِّع ماركو دون دعم للنمط المطنب\n"
 
 #: ../src/core/util.c:236
 msgid "Window manager: "
@@ -576,7 +578,7 @@ msgstr "خطأ مدير النوافذ: "
 #: ../src/core/util.c:570 ../src/marco.desktop.in.h:1
 #: ../src/marco-wm.desktop.in.h:1
 msgid "Marco"
-msgstr "مِتسِتي"
+msgstr "ماركو"
 
 #. first time through
 #: ../src/core/window.c:5666
@@ -592,7 +594,6 @@ msgstr "ضبطت النافذة %s SM_CLIENT_ID على نفسه، عوض ضبط�
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#. 
 #: ../src/core/window.c:6231
 #, c-format
 msgid ""
@@ -730,7 +731,7 @@ msgstr "لف إلى ال_أعلى"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:73
 msgid "_Unroll"
-msgstr "ال_غي اللف"
+msgstr "ال_غِ اللف"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:75
@@ -812,7 +813,6 @@ msgstr "انقل ل_مساحة عمل أخرى"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:104
 msgid "Shift"
 msgstr "Shift"
@@ -821,7 +821,6 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:110
 msgid "Ctrl"
 msgstr "Ctrl"
@@ -830,7 +829,6 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:116
 msgid "Alt"
 msgstr "Alt"
@@ -839,7 +837,6 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:122
 msgid "Meta"
 msgstr "Meta"
@@ -848,7 +845,6 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:128
 msgid "Super"
 msgstr "Super"
@@ -857,7 +853,6 @@ msgstr "Super"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:134
 msgid "Hyper"
 msgstr "Hyper"
@@ -866,7 +861,6 @@ msgstr "Hyper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:140
 msgid "Mod2"
 msgstr "Mod2"
@@ -875,7 +869,6 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:146
 msgid "Mod3"
 msgstr "Mod3"
@@ -884,7 +877,6 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:152
 msgid "Mod4"
 msgstr "Mod4"
@@ -893,14 +885,12 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#. 
 #: ../src/ui/metaaccellabel.c:158
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#. 
 #: ../src/ui/resizepopup.c:113
 #, c-format
 msgid "%d x %d"
@@ -1143,7 +1133,6 @@ msgstr "عُرِّف الثابت \"%s\" بالفعل"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#. 
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
