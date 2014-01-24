@@ -44,16 +44,23 @@ struct _MetaTilePreview {
 };
 
 static gboolean
+#if GTK_CHECK_VERSION (3, 0, 0)
+meta_tile_preview_expose (GtkWidget      *widget,
+                          cairo_t        *cr,
+#else
 meta_tile_preview_expose (GtkWidget      *widget,
                           GdkEventExpose *event,
                           gpointer        user_data)
+#endif
 {
   MetaTilePreview *preview = user_data;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   GdkWindow *window;
   cairo_t *cr;
 
   window = gtk_widget_get_window (widget);
   cr = gdk_cairo_create (window);
+#endif
 
   cairo_set_line_width (cr, 1.0);
 
@@ -92,7 +99,9 @@ meta_tile_preview_expose (GtkWidget      *widget,
                    preview->tile_rect.height - 1);
   cairo_stroke (cr);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cairo_destroy (cr);
+#endif
 
   return FALSE;
 }
@@ -133,11 +142,15 @@ meta_tile_preview_new (int      screen_number,
                        gboolean composited)
 {
   MetaTilePreview *preview;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   GdkColormap *rgba_colormap;
+#endif
   GdkScreen *screen;
 
   screen = gdk_display_get_screen (gdk_display_get_default (), screen_number);
+#if !GTK_CHECK_VERSION (3, 0, 0)
   rgba_colormap = gdk_screen_get_rgba_colormap (screen);
+#endif
 
   preview = g_new (MetaTilePreview, 1);
 
@@ -152,11 +165,20 @@ meta_tile_preview_new (int      screen_number,
   preview->tile_rect.x = preview->tile_rect.y = 0;
   preview->tile_rect.width = preview->tile_rect.height = 0;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  preview->has_alpha = composited && (gdk_screen_get_rgba_visual (screen) != NULL);
+#else
   preview->has_alpha = rgba_colormap && composited;
+#endif
 
   if (preview->has_alpha)
     {
+#if GTK_CHECK_VERSION (3, 0, 0)
+      gtk_window_set_visual (GTK_WINDOW (preview->preview_window),
+                             gdk_screen_get_rgba_visual (screen));
+#else
       gtk_widget_set_colormap (preview->preview_window, rgba_colormap);
+#endif
 
       g_signal_connect (preview->preview_window, "style-set",
                         G_CALLBACK (on_preview_window_style_set), preview);
@@ -166,8 +188,13 @@ meta_tile_preview_new (int      screen_number,
   gdk_window_set_back_pixmap (gtk_widget_get_window (preview->preview_window),
                               NULL, FALSE);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  g_signal_connect (preview->preview_window, "draw",
+                    G_CALLBACK (meta_tile_preview_draw), preview);
+#else
   g_signal_connect (preview->preview_window, "expose-event",
                     G_CALLBACK (meta_tile_preview_expose), preview);
+#endif
 
   return preview;
 }
