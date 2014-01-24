@@ -28,6 +28,7 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <gdk/gdk.h>
+#include <gtk/gtk.h>
 
 #ifdef __GNUC__
 #define UNUSED_VARIABLE __attribute__ ((unused))
@@ -35,16 +36,50 @@
 #define UNUSED_VARIABLE
 #endif
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 static int x_error_handler    (Display     *display,
                                XErrorEvent *error);
 static int x_io_error_handler (Display     *display);
+#endif
 
 void
 meta_errors_init (void)
 {
+#if !GTK_CHECK_VERSION (3, 0, 0)
   XSetErrorHandler (x_error_handler);
   XSetIOErrorHandler (x_io_error_handler);
+#endif
 }
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+
+void
+meta_error_trap_push (MetaDisplay *display)
+{
+  gdk_error_trap_push ();
+}
+
+void
+meta_error_trap_pop (MetaDisplay *display,
+                     gboolean     last_request_was_roundtrip)
+{
+  gdk_error_trap_pop_ignored ();
+}
+
+void
+meta_error_trap_push_with_return (MetaDisplay *display)
+{
+  gdk_error_trap_push ();
+}
+
+int
+meta_error_trap_pop_with_return  (MetaDisplay *display,
+                                  gboolean     last_request_was_roundtrip)
+{
+  return gdk_error_trap_pop ();
+}
+
+#else
 
 typedef struct ForeignDisplay ForeignDisplay;
 
@@ -292,3 +327,5 @@ x_io_error_handler (Display *xdisplay)
   
   return 0;
 }
+
+#endif

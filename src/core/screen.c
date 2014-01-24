@@ -1197,6 +1197,7 @@ meta_screen_update_cursor (MetaScreen *screen)
   XFreeCursor (screen->display->xdisplay, xcursor);
 }
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 #define MAX_PREVIEW_SIZE 150.0
 
 static GdkPixbuf *
@@ -1239,7 +1240,8 @@ get_window_pixbuf (MetaWindow *window,
   g_object_unref (pixbuf);
   return scaled;
 }
-                                         
+#endif
+
 void
 meta_screen_ensure_tab_popup (MetaScreen      *screen,
                               MetaTabList      list_type,
@@ -1272,14 +1274,17 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
     {
       MetaWindow *window;
       MetaRectangle r;
+#if !GTK_CHECK_VERSION (3, 0, 0)
       GdkPixbuf *win_pixbuf = NULL;
       int width = 0, height = 0;
+#endif
 
       window = tmp->data;
       
       entries[i].key = (MetaTabEntryKey) window->xwindow;
       entries[i].title = window->title;
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
       /* Only get the pixbuf if the user does NOT have 
          compositing-fast-alt-tab-set to true 
          in GSettings. There is an obvious lag when the pixbuf is
@@ -1312,7 +1317,11 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
                                 t_width - icon_width, t_height - icon_height, 
                                 1.0, 1.0, GDK_INTERP_BILINEAR, 255);
         }
-                                
+#else
+      /* at the moment, thumbnails are disabled for GTK3 */
+      entries[i].icon = g_object_ref (window->icon);
+#endif
+
       entries[i].blank = FALSE;
       entries[i].hidden = !meta_window_showing_on_its_workspace (window);
       entries[i].demands_attention = window->wm_state_demands_attention;

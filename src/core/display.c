@@ -1454,7 +1454,11 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 			return FALSE;
 	}
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gdk_window = gdk_x11_window_lookup_for_display(gdk_display, window);
+#else
 	gdk_window = gdk_window_lookup_for_display(gdk_display, window);
+#endif
 
 	if (gdk_window == NULL)
 	{
