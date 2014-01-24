@@ -29,6 +29,10 @@
 #include "tile-preview.h"
 #include "core.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define GDK_WINDOW_XWINDOW GDK_WINDOW_XID
+#endif
+
 #define OUTLINE_WIDTH 5  /* frame width in non-composite case */
 
 
@@ -45,7 +49,7 @@ struct _MetaTilePreview {
 
 static gboolean
 #if GTK_CHECK_VERSION (3, 0, 0)
-meta_tile_preview_expose (GtkWidget      *widget,
+meta_tile_preview_draw   (GtkWidget      *widget,
                           cairo_t        *cr,
 #else
 meta_tile_preview_expose (GtkWidget      *widget,
@@ -185,8 +189,10 @@ meta_tile_preview_new (int      screen_number,
     }
 
   gtk_widget_realize (preview->preview_window);
+#if !GTK_CHECK_VERSION (3, 0, 0)
   gdk_window_set_back_pixmap (gtk_widget_get_window (preview->preview_window),
                               NULL, FALSE);
+#endif
 
 #if GTK_CHECK_VERSION (3, 0, 0)
   g_signal_connect (preview->preview_window, "draw",
@@ -226,7 +232,11 @@ meta_tile_preview_show (MetaTilePreview *preview,
 
   gtk_widget_show (preview->preview_window);
   window = gtk_widget_get_window (preview->preview_window);
+#if GTK_CHECK_VERSION (3, 0, 0)
+  meta_core_lower_beneath_focus_window (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+#else
   meta_core_lower_beneath_focus_window (gdk_display,
+#endif
                                         GDK_WINDOW_XWINDOW (window),
                                         gtk_get_current_event_time ());
 
@@ -245,7 +255,7 @@ meta_tile_preview_show (MetaTilePreview *preview,
   if (!preview->has_alpha)
     {
       GdkRectangle outer_rect, inner_rect;
-      GdkRegion *outer_region, *inner_region;
+      cairo_region_t *outer_region, *inner_region;
       GdkColor black;
 
       black = gtk_widget_get_style (preview->preview_window)->black;
@@ -260,14 +270,14 @@ meta_tile_preview_show (MetaTilePreview *preview,
       inner_rect.width = outer_rect.width - 2 * OUTLINE_WIDTH;
       inner_rect.height = outer_rect.height - 2 * OUTLINE_WIDTH;
 
-      outer_region = gdk_region_rectangle (&outer_rect);
-      inner_region = gdk_region_rectangle (&inner_rect);
+      outer_region = cairo_region_create_rectangle (&outer_rect);
+      inner_region = cairo_region_create_rectangle (&inner_rect);
 
-      gdk_region_subtract (outer_region, inner_region);
-      gdk_region_destroy (inner_region);
+      cairo_region_subtract (outer_region, inner_region);
+      cairo_region_destroy (inner_region);
 
       gdk_window_shape_combine_region (window, outer_region, 0, 0);
-      gdk_region_destroy (outer_region);
+      cairo_region_destroy (outer_region);
     }
 }
 
