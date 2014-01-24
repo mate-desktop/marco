@@ -50,8 +50,8 @@ meta_tile_preview_expose (GtkWidget      *widget,
 #else
 meta_tile_preview_expose (GtkWidget      *widget,
                           GdkEventExpose *event,
-                          gpointer        user_data)
 #endif
+                          gpointer        user_data)
 {
   MetaTilePreview *preview = user_data;
 #if !GTK_CHECK_VERSION (3, 0, 0)
