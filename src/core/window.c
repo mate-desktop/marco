@@ -470,6 +470,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->require_on_single_xinerama = TRUE;
   window->require_titlebar_visible = TRUE;
   window->on_all_workspaces = FALSE;
+  window->tile_mode = META_TILE_NONE;
   window->shaded = FALSE;
   window->initially_iconic = FALSE;
   window->minimized = FALSE;
@@ -2489,7 +2490,7 @@ ensure_size_hints_satisfied (MetaRectangle    *rect,
 static void
 meta_window_save_rect (MetaWindow *window)
 {
-  if (!(META_WINDOW_MAXIMIZED (window) || window->fullscreen))
+  if (!(META_WINDOW_MAXIMIZED (window) || META_WINDOW_TILED (window) || window->fullscreen))
     {
       /* save size/pos as appropriate args for move_resize */
       if (!window->maximized_horizontally)
@@ -2531,7 +2532,7 @@ force_save_user_window_placement (MetaWindow *window)
 static void
 save_user_window_placement (MetaWindow *window)
 {
-  if (!(META_WINDOW_MAXIMIZED (window) || window->fullscreen))
+  if (!(META_WINDOW_MAXIMIZED (window) || META_WINDOW_TILED (window) || window->fullscreen))
     {
       MetaRectangle user_rect;
 
@@ -2596,6 +2597,7 @@ void
 meta_window_maximize (MetaWindow        *window,
                       MetaMaximizeFlags  directions)
 {
+  MetaRectangle *saved_rect = NULL;
   /* At least one of the two directions ought to be set */
   gboolean maximize_horizontally, maximize_vertically;
   maximize_horizontally = directions & META_MAXIMIZE_HORIZONTAL;
@@ -2631,9 +2633,16 @@ meta_window_maximize (MetaWindow        *window,
 	  return;
 	}
 
+      if (window->tile_mode != META_TILE_NONE)
+        {
+          saved_rect = &window->saved_rect;
+
+          window->maximized_vertically = FALSE;
+        }
+
       meta_window_maximize_internal (window,
                                      directions,
-                                     NULL);
+                                     saved_rect);
 
       /* move_resize with new maximization constraints
        */
@@ -2673,12 +2682,64 @@ unmaximize_window_before_freeing (MetaWindow        *window)
     }
 }
 
+static void
+meta_window_tile (MetaWindow *window)
+{
+  /* Don't do anything if no tiling is requested */
+  if (window->tile_mode == META_TILE_NONE)
+    return;
+
+  meta_window_maximize_internal (window, META_MAXIMIZE_VERTICAL, NULL);
+  meta_screen_tile_preview_update (window->screen, FALSE);
+
+  /* move_resize with new tiling constraints
+   */
+  meta_window_queue (window, META_QUEUE_MOVE_RESIZE);
+}
+
+static gboolean
+meta_window_can_tile (MetaWindow *window)
+{
+  const MetaXineramaScreenInfo *monitor;
+  MetaRectangle tile_area;
+
+  if (!META_WINDOW_ALLOWS_RESIZE (window))
+    return FALSE;
+
+  monitor = meta_screen_get_current_xinerama (window->screen);
+  meta_window_get_work_area_for_xinerama (window, monitor->number, &tile_area);
+
+  tile_area.width /= 2;
+
+  if (window->frame)
+    {
+      MetaFrameGeometry fgeom;
+
+      meta_frame_calc_geometry (window->frame, &fgeom);
+
+      tile_area.width  -= (fgeom.left_width + fgeom.right_width);
+      tile_area.height -= (fgeom.top_height + fgeom.bottom_height);
+    }
+
+  return tile_area.width >= window->size_hints.min_width &&
+         tile_area.height >= window->size_hints.min_height;
+}
+
 void
 meta_window_unmaximize (MetaWindow        *window,
                         MetaMaximizeFlags  directions)
 {
   /* At least one of the two directions ought to be set */
   gboolean unmaximize_horizontally, unmaximize_vertically;
+
+  /* Restore tiling if necessary */
+  if (window->tile_mode != META_TILE_NONE)
+    {
+      window->maximized_horizontally = FALSE;
+      meta_window_tile (window);
+      return;
+    }
+
   unmaximize_horizontally = directions & META_MAXIMIZE_HORIZONTAL;
   unmaximize_vertically   = directions & META_MAXIMIZE_VERTICAL;
   g_assert (unmaximize_horizontally || unmaximize_vertically);
@@ -2723,17 +2784,6 @@ meta_window_unmaximize (MetaWindow        *window,
        */
       ensure_size_hints_satisfied (&target_rect, &window->size_hints);
 
-      /* When we unmaximize, if we're doing a mouse move also we could
-       * get the window suddenly jumping to the upper left corner of
-       * the workspace, since that's where it was when the grab op
-       * started.  So we need to update the grab state.
-       */
-      if (meta_grab_op_is_moving (window->display->grab_op) &&
-          window->display->grab_window == window)
-        {
-          window->display->grab_anchor_window_pos = target_rect;
-        }
-
       meta_window_move_resize (window,
                                FALSE,
                                target_rect.x,
@@ -2744,6 +2794,19 @@ meta_window_unmaximize (MetaWindow        *window,
       /* Make sure user_rect is current.
        */
       force_save_user_window_placement (window);
+
+      /* When we unmaximize, if we're doing a mouse move also we could
+       * get the window suddenly jumping to the upper left corner of
+       * the workspace, since that's where it was when the grab op
+       * started.  So we need to update the grab state. We have to do
+       * it after the actual operation, as the window may have been moved
+       * by constraints.
+       */
+      if (meta_grab_op_is_moving (window->display->grab_op) &&
+          window->display->grab_window == window)
+        {
+          window->display->grab_anchor_window_pos = window->user_rect;
+        }
 
       if (window->display->grab_wireframe_active)
         {
@@ -6898,20 +6961,60 @@ update_move (MetaWindow  *window,
   if (dx == 0 && dy == 0)
     return;
 
-  /* shake loose (unmaximize) maximized window if dragged beyond the threshold
-   * in the Y direction. You can't pull a window loose via X motion.
+  /* Originally for detaching maximized windows, but we use this
+   * for the zones at the sides of the monitor where trigger tiling
+   * because it's about the right size
    */
 
-#define DRAG_THRESHOLD_TO_SHAKE_THRESHOLD_FACTOR 6
+#define DRAG_THRESHOLD_TO_SHAKE_THRESHOLD_FACTOR 2
   shake_threshold = meta_ui_get_drag_threshold (window->screen->ui) *
     DRAG_THRESHOLD_TO_SHAKE_THRESHOLD_FACTOR;
 
-  if (META_WINDOW_MAXIMIZED (window) && ABS (dy) >= shake_threshold)
+
+  if (meta_prefs_get_side_by_side_tiling () &&
+      meta_window_can_tile (window))
+    {
+      const MetaXineramaScreenInfo *monitor;
+      MetaRectangle work_area;
+
+      /* For tiling we are interested in the work area of the monitor where
+       * the pointer is located.
+       * Also see comment in meta_window_get_current_tile_area()
+       */
+      monitor = meta_screen_get_current_xinerama (window->screen);
+      meta_window_get_work_area_for_xinerama (window,
+                                              monitor->number,
+                                              &work_area);
+
+      if (y >= monitor->rect.y &&
+          y < (monitor->rect.y + monitor->rect.height))
+        {
+          /* check if cursor is near an edge of the work area */
+          if (x >= monitor->rect.x && x < (work_area.x + shake_threshold))
+            window->tile_mode = META_TILE_LEFT;
+          else if (x >= work_area.x + work_area.width - shake_threshold &&
+                   x < (monitor->rect.x + monitor->rect.width))
+            window->tile_mode = META_TILE_RIGHT;
+          else if ((y >= monitor->rect.y) && (y < work_area.y + shake_threshold))
+            window->tile_mode = META_TILE_MAXIMIZE;
+          else
+            window->tile_mode = META_TILE_NONE;
+        }
+    }
+
+  /* shake loose (unmaximize) maximized or tiled window if dragged beyond
+   * the threshold in the Y direction. Tiled windows can also be pulled
+   * loose via X motion.
+   */
+
+  if ((META_WINDOW_MAXIMIZED (window) && ABS (dy) >= shake_threshold) ||
+      (META_WINDOW_TILED (window) && (MAX (ABS (dx), ABS (dy)) >= shake_threshold)))
     {
       double prop;
 
       /* Shake loose */
-      window->shaken_loose = TRUE;
+      window->shaken_loose = META_WINDOW_MAXIMIZED (window);
+      window->tile_mode = META_TILE_NONE;
 
       /* move the unmaximized window to the cursor */
       prop =
@@ -6995,13 +7098,20 @@ update_move (MetaWindow  *window,
         }
     }
 
+  /* Delay showing the tile preview slightly to make it more unlikely to
+   * trigger it unwittingly, e.g. when shaking loose the window or moving
+   * it to another monitor.
+   */
+  meta_screen_tile_preview_update (window->screen,
+                                   window->tile_mode != META_TILE_NONE);
+
   if (display->grab_wireframe_active)
     old = display->grab_wireframe_rect;
   else
     meta_window_get_client_root_coords (window, &old);
 
-  /* Don't allow movement in the maximized directions */
-  if (window->maximized_horizontally)
+  /* Don't allow movement in the maximized directions or while tiled */
+  if (window->maximized_horizontally || META_WINDOW_TILED (window))
     new_x = old.x;
   if (window->maximized_vertically)
     new_y = old.y;
@@ -7417,7 +7527,11 @@ meta_window_handle_mouse_grab_op_event (MetaWindow *window,
         {
           if (meta_grab_op_is_moving (window->display->grab_op))
             {
-              if (event->xbutton.root == window->screen->xroot)
+              if (window->tile_mode != META_TILE_NONE)
+                meta_window_tile (window);
+              else if (window->tile_mode == META_TILE_MAXIMIZE)
+                meta_window_maximize (window, META_MAXIMIZE_HORIZONTAL | META_MAXIMIZE_VERTICAL);
+              else if (event->xbutton.root == window->screen->xroot)
                 update_move (window, event->xbutton.state & ShiftMask,
                              event->xbutton.x_root, event->xbutton.y_root);
             }
@@ -7575,6 +7689,29 @@ meta_window_get_work_area_all_xineramas (MetaWindow    *window,
               window->desc, area->x, area->y, area->width, area->height);
 }
 
+void
+meta_window_get_current_tile_area (MetaWindow    *window,
+                                   MetaRectangle *tile_area)
+{
+  const MetaXineramaScreenInfo *monitor;
+
+  g_return_if_fail (window->tile_mode != META_TILE_NONE);
+
+  /* The definition of "current" of meta_window_get_work_area_current_xinerama()
+   * and meta_screen_get_current_xinerama() is slightly different: the former
+   * refers to the monitor which contains the largest part of the window, the
+   * latter to the one where the pointer is located.
+   */
+  monitor = meta_screen_get_current_xinerama (window->screen);
+  meta_window_get_work_area_for_xinerama (window, monitor->number, tile_area);
+
+  if (window->tile_mode == META_TILE_LEFT  ||
+      window->tile_mode == META_TILE_RIGHT)
+    tile_area->width /= 2;
+
+  if (window->tile_mode == META_TILE_RIGHT)
+    tile_area->x += tile_area->width;
+}
 
 gboolean
 meta_window_same_application (MetaWindow *window,

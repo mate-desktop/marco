@@ -199,5 +199,6 @@ GdkPixbuf *meta_ui_get_pixbuf_from_pixmap (Pixmap   pmap);
 #endif
 
 #include "tabpopup.h"
+#include "tile-preview.h"
 
 #endif

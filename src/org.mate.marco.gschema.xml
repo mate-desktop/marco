@@ -166,6 +166,11 @@
       <summary>Determine if new windows are created on the center of the screen</summary>
       <description>By default, marco open new windows on the top left of the screen. If this option is enabled, new windows are open on the center of the screen, instead.</description>
     </key>
+    <key name="side-by-side-tiling" type="b">
+      <default>false</default>
+      <summary>Whether to enable side-by-side tiling</summary>
+      <description>If enabled, dropping windows on screen edges maximizes them vertically and resizes them horizontally to cover half of the available area. Drag-dropping to the top maximizes the window.</description>
+    </key>
   </schema>
 
   <schema id="org.mate.Marco.workspace-names" path="/org/mate/marco/workspace-names/">
