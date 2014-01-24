@@ -144,7 +144,11 @@ libmarcoinclude_HEADERS = \
 marco_theme_viewer_SOURCES= \
 	ui/theme-viewer.c
 
-bin_PROGRAMS=marco marco-theme-viewer
+bin_PROGRAMS=marco
+
+if HAVE_GTK2
+bin_PROGRAMS += marco-theme-viewer
+endif
 
 EFENCE=
 marco_LDADD=@MARCO_LIBS@ $(EFENCE)

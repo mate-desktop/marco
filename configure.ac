@@ -126,6 +126,8 @@ case "$with_gtk" in
        CANBERRA_GTK=libcanberra-gtk3
        ;;
 esac
+AM_CONDITIONAL([HAVE_GTK2], [test "x$with_gtk" = "x2.0"])
+AM_CONDITIONAL([HAVE_GTK3], [test "x$with_gtk" = "x3.0"])
 GIO_MIN_VERSION=2.25.10
 
 MARCO_PC_MODULES="gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION gio-2.0 >= $GIO_MIN_VERSION pango >= 1.2.0 $CANBERRA_GTK"
