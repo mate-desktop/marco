@@ -3387,6 +3387,31 @@ fill_env (MetaPositionExprEnv *env,
   env->theme = meta_current_theme;
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static GtkStateFlags
+state_flags_from_gtk_state (GtkStateType state)
+{
+  switch (state)
+    {
+    case GTK_STATE_NORMAL:
+      return 0;
+    case GTK_STATE_PRELIGHT:
+      return GTK_STATE_FLAG_PRELIGHT;
+    case GTK_STATE_ACTIVE:
+      return GTK_STATE_FLAG_ACTIVE;
+    case GTK_STATE_SELECTED:
+      return GTK_STATE_FLAG_SELECTED;
+    case GTK_STATE_INSENSITIVE:
+      return GTK_STATE_FLAG_INSENSITIVE;
+    case GTK_STATE_INCONSISTENT:
+      return GTK_STATE_FLAG_INCONSISTENT;
+    case GTK_STATE_FOCUSED:
+      return GTK_STATE_FLAG_FOCUSED;
+    }
+  return 0;
+}
+#endif
+
 /* This code was originally rendering anti-aliased using X primitives, and
  * now has been switched to draw anti-aliased using cairo. In general, the
  * closest correspondence between X rendering and cairo rendering is given
@@ -4728,13 +4753,10 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
           j = 0;
           while (j < META_BUTTON_TYPE_LAST)
             {
-              MetaButtonState button_state;
 
               button_rect (j, fgeom, middle_bg_offset, &rect);
-              
-              button_state = map_button_state (j, fgeom, middle_bg_offset, button_states);
 
-              op_list = get_button (style, j, button_state);
+              op_list = get_button (style, j, button_states[j]);
               
               if (op_list)
                 {

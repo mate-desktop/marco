@@ -31,6 +31,10 @@
 #include <string.h>
 #include <stdlib.h>
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#include <cairo-xlib.h>
+#endif
+
 static void meta_ui_accelerator_parse(const char* accel, guint* keysym, guint* keycode, GdkModifierType* keymask);
 
 struct _MetaUI {
@@ -79,7 +83,12 @@ maybe_redirect_mouse_event (XEvent *xevent)
 {
   GdkDisplay *gdisplay;
   MetaUI *ui;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkDeviceManager *gmanager;
+  GdkEvent *gevent;
+#else
   GdkEvent gevent;
+#endif
   GdkWindow *gdk_window;
   Window window;
 
@@ -105,7 +114,11 @@ maybe_redirect_mouse_event (XEvent *xevent)
   if (!ui)
     return FALSE;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gdk_window = gdk_x11_window_lookup_for_display (gdisplay, window);
+#else
   gdk_window = gdk_window_lookup_for_display (gdisplay, window);
+#endif
   if (gdk_window == NULL)
     return FALSE;
 
@@ -116,7 +129,9 @@ maybe_redirect_mouse_event (XEvent *xevent)
   if (gdk_display_pointer_is_grabbed (gdisplay))
     return FALSE;
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   memset (&gevent, 0, sizeof (gevent));
+#endif
 
   switch (xevent->type)
     {
@@ -139,13 +154,21 @@ maybe_redirect_mouse_event (XEvent *xevent)
               ABS (xevent->xbutton.x - ui->button_click_x) <= double_click_distance &&
               ABS (xevent->xbutton.y - ui->button_click_y) <= double_click_distance)
             {
+#if GTK_CHECK_VERSION (3, 0, 0)
+              gevent = gdk_event_new (GDK_2BUTTON_PRESS);
+#else
               gevent.button.type = GDK_2BUTTON_PRESS;
+#endif
 
               ui->button_click_number = 0;
             }
           else
             {
+#if GTK_CHECK_VERSION (3, 0, 0)
+              gevent = gdk_event_new (GDK_BUTTON_PRESS);
+#else
               gevent.button.type = GDK_BUTTON_PRESS;
+#endif
               ui->button_click_number = xevent->xbutton.button;
               ui->button_click_window = xevent->xbutton.window;
               ui->button_click_time = xevent->xbutton.time;
@@ -155,9 +178,22 @@ maybe_redirect_mouse_event (XEvent *xevent)
         }
       else
         {
+#if GTK_CHECK_VERSION (3, 0, 0)
+          gevent = gdk_event_new (GDK_BUTTON_RELEASE);
+#else
           gevent.button.type = GDK_BUTTON_RELEASE;
+#endif
         }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+      gevent->button.window = g_object_ref (gdk_window);
+      gevent->button.button = xevent->xbutton.button;
+      gevent->button.time = xevent->xbutton.time;
+      gevent->button.x = xevent->xbutton.x;
+      gevent->button.y = xevent->xbutton.y;
+      gevent->button.x_root = xevent->xbutton.x_root;
+      gevent->button.y_root = xevent->xbutton.y_root;
+#else
       gevent.button.window = gdk_window;
       gevent.button.button = xevent->xbutton.button;
       gevent.button.time = xevent->xbutton.time;
@@ -165,18 +201,32 @@ maybe_redirect_mouse_event (XEvent *xevent)
       gevent.button.y = xevent->xbutton.y;
       gevent.button.x_root = xevent->xbutton.x_root;
       gevent.button.y_root = xevent->xbutton.y_root;
+#endif
 
       break;
     case MotionNotify:
+#if GTK_CHECK_VERSION (3, 0, 0)
+      gevent = gdk_event_new (GDK_MOTION_NOTIFY);
+      gevent->motion.type = GDK_MOTION_NOTIFY;
+      gevent->motion.window = g_object_ref (gdk_window);
+#else
       gevent.motion.type = GDK_MOTION_NOTIFY;
       gevent.motion.window = gdk_window;
+#endif
       break;
     case EnterNotify:
     case LeaveNotify:
+#if GTK_CHECK_VERSION (3, 0, 0)
+      gevent = gdk_event_new (xevent->type == EnterNotify ? GDK_ENTER_NOTIFY : GDK_LEAVE_NOTIFY);
+      gevent->crossing.window = g_object_ref (gdk_window);
+      gevent->crossing.x = xevent->xcrossing.x;
+      gevent->crossing.y = xevent->xcrossing.y;
+#else
       gevent.crossing.type = xevent->type == EnterNotify ? GDK_ENTER_NOTIFY : GDK_LEAVE_NOTIFY;
       gevent.crossing.window = gdk_window;
       gevent.crossing.x = xevent->xcrossing.x;
       gevent.crossing.y = xevent->xcrossing.y;
+#endif
       break;
     default:
       g_assert_not_reached ();
@@ -184,7 +234,13 @@ maybe_redirect_mouse_event (XEvent *xevent)
     }
 
   /* If we've gotten here, we've filled in the gdk_event and should send it on */
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gmanager = gdk_display_get_device_manager (gdisplay);
+  gdk_event_set_device (gevent, gdk_device_manager_get_client_pointer (gmanager));  gtk_main_do_event (gevent);
+  gdk_event_free (gevent);
+#else
   gtk_main_do_event (&gevent);
+#endif
 
   return TRUE;
 }
@@ -390,7 +446,13 @@ meta_ui_map_frame   (MetaUI *ui,
 {
   GdkWindow *window;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkDisplay *display;
+  display = gdk_x11_lookup_xdisplay (ui->xdisplay);
+  window = gdk_x11_window_lookup_for_display (display, xwindow);
+#else
   window = gdk_xid_table_lookup (xwindow);
+#endif
 
   if (window)
     gdk_window_show_unraised (window);
@@ -402,7 +464,13 @@ meta_ui_unmap_frame (MetaUI *ui,
 {
   GdkWindow *window;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkDisplay *display;
+  display = gdk_x11_lookup_xdisplay (ui->xdisplay);
+  window = gdk_x11_window_lookup_for_display (display, xwindow);
+#else
   window = gdk_xid_table_lookup (xwindow);
+#endif
 
   if (window)
     gdk_window_hide (window);
@@ -494,6 +562,7 @@ meta_ui_window_menu_free (MetaWindowMenu *menu)
   meta_window_menu_free (menu);
 }
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 struct _MetaImageWindow
 {
   GtkWidget *window;
@@ -519,7 +588,7 @@ meta_image_window_new (Display *xdisplay,
   gtk_window_set_screen (GTK_WINDOW (iw->window), gscreen);
 
   gtk_widget_realize (iw->window);
-  iw->pixmap = gdk_pixmap_new (iw->window->window,
+  iw->pixmap = gdk_pixmap_new (gtk_widget_get_window (iw->window),
                                max_width, max_height,
                                -1);
 
@@ -557,38 +626,44 @@ meta_image_window_set (MetaImageWindow *iw,
                        int              x,
                        int              y)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
   cairo_t *cr;
+#endif
 
   /* We use a back pixmap to avoid having to handle exposes, because
    * it's really too slow for large clients being minimized, etc.
    * and this way flicker is genuinely zero.
    */
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   gdk_draw_pixbuf (iw->pixmap,
-                   iw->window->style->black_gc,
-		   pixbuf,
+                   gtk_widget_get_style (iw->window)->black_gc,
+                   pixbuf,
                    0, 0,
                    0, 0,
                    gdk_pixbuf_get_width (pixbuf),
                    gdk_pixbuf_get_height (pixbuf),
                    GDK_RGB_DITHER_NORMAL,
                    0, 0);
+#else
   cr = gdk_cairo_create (iw->pixmap);
   gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
   cairo_paint (cr);
   cairo_destroy (cr);
+#endif
 
-  gdk_window_set_back_pixmap (iw->window->window,
+  gdk_window_set_back_pixmap (gtk_widget_get_window (iw->window),
                               iw->pixmap,
                               FALSE);
 
-  gdk_window_move_resize (iw->window->window,
+  gdk_window_move_resize (gtk_widget_get_window (iw->window),
                           x, y,
                           gdk_pixbuf_get_width (pixbuf),
                           gdk_pixbuf_get_height (pixbuf));
 
-  gdk_window_clear (iw->window->window);
+  gdk_window_clear (gtk_widget_get_window (iw->window));
 }
+#endif
 
 #if !GTK_CHECK_VERSION (3, 0, 0)
 static GdkColormap*
@@ -629,9 +704,10 @@ get_cmap (GdkPixmap *pixmap)
 }
 #endif
 
+#if GTK_CHECK_VERSION (3, 0, 0)
 GdkPixbuf*
-meta_gdk_pixbuf_get_from_window (GdkPixbuf   *dest,
-                                 Window       xwindow,
+meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
+                                 Pixmap       xpixmap,
                                  int          src_x,
                                  int          src_y,
                                  int          dest_x,
@@ -639,41 +715,49 @@ meta_gdk_pixbuf_get_from_window (GdkPixbuf   *dest,
                                  int          width,
                                  int          height)
 {
-  GdkDrawable *drawable;
+  cairo_surface_t *surface;
+  Display *display;
+  Window root_return;
+  int x_ret, y_ret;
+  unsigned int w_ret, h_ret, bw_ret, depth_ret;
+  XWindowAttributes attrs;
   GdkPixbuf *retval;
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  GdkColormap *cmap;
-#endif
 
-  retval = NULL;
+  display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
 
-  drawable = gdk_xid_table_lookup (xwindow);
+  if (!XGetGeometry (display, xpixmap, &root_return,
+                     &x_ret, &y_ret, &w_ret, &h_ret, &bw_ret, &depth_ret))
+    return NULL;
 
-  if (drawable)
-    g_object_ref (G_OBJECT (drawable));
+  if (depth_ret == 1)
+    {
+      surface = cairo_xlib_surface_create_for_bitmap (display,
+                                                      xpixmap,
+                                                      GDK_SCREEN_XSCREEN (gdk_screen_get_default ()),
+                                                      w_ret,
+                                                      h_ret);
+    }
   else
-    drawable = gdk_window_foreign_new (xwindow);
+    {
+      if (!XGetWindowAttributes (display, root_return, &attrs))
+        return NULL;
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  cmap = get_cmap (drawable);
-#endif
+      surface = cairo_xlib_surface_create (display,
+                                           xpixmap,
+                                           attrs.visual,
+                                           w_ret, h_ret);
+    }
 
-  retval = gdk_pixbuf_get_from_drawable (dest,
-                                         drawable,
-                                         cmap,
-                                         src_x, src_y,
-                                         dest_x, dest_y,
-                                         width, height);
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  if (cmap)
-    g_object_unref (G_OBJECT (cmap));
-#endif
-  g_object_unref (G_OBJECT (drawable));
+  retval = gdk_pixbuf_get_from_surface (surface,
+                                        src_x,
+                                        src_y,
+                                        width,
+                                        height);
+  cairo_surface_destroy (surface);
 
   return retval;
 }
-
+#else
 GdkPixbuf*
 meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
                                  Pixmap       xpixmap,
@@ -695,7 +779,11 @@ meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
   cmap = NULL;
 #endif
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  drawable = gdk_x11_window_lookup_for_display (gdk_display_get_default (), xpixmap);
+#else
   drawable = gdk_xid_table_lookup (xpixmap);
+#endif
 
   if (drawable)
     g_object_ref (G_OBJECT (drawable));
@@ -722,6 +810,7 @@ meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
 
   return retval;
 }
+#endif
 
 void
 meta_ui_push_delay_exposes (MetaUI *ui)
@@ -811,7 +900,11 @@ meta_ui_window_should_not_cause_focus (Display *xdisplay,
 {
   GdkWindow *window;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  window = gdk_x11_window_lookup_for_display (gdk_display_get_default (), xwindow);
+#else
   window = gdk_xid_table_lookup (xwindow);
+#endif
 
   /* we shouldn't cause focus if we're an override redirect
    * toplevel which is not foreign
@@ -826,17 +919,30 @@ char*
 meta_text_property_to_utf8 (Display             *xdisplay,
                             const XTextProperty *prop)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkDisplay *display;
+#endif
   char **list;
   int count;
   char *retval;
 
   list = NULL;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  display = gdk_x11_lookup_xdisplay (xdisplay);
+  count = gdk_text_property_to_utf8_list_for_display (display,
+                                                      gdk_x11_xatom_to_atom_for_display (display, prop->encoding),
+                                                      prop->format,
+                                                      prop->value,
+                                                      prop->nitems,
+                                                      &list);
+#else
   count = gdk_text_property_to_utf8_list (gdk_x11_xatom_to_atom (prop->encoding),
                                           prop->format,
                                           prop->value,
                                           prop->nitems,
                                           &list);
+#endif
 
   if (count == 0)
     retval = NULL;
@@ -933,7 +1039,7 @@ meta_ui_parse_accelerator (const char          *accel,
   *keycode = 0;
   *mask = 0;
 
-  if (strcmp (accel, "disabled") == 0)
+  if (!accel[0] || strcmp (accel, "disabled") == 0)
     return TRUE;
 
   meta_ui_accelerator_parse (accel, &gdk_sym, &gdk_code, &gdk_mask);
@@ -1020,7 +1126,7 @@ meta_ui_parse_modifier (const char          *accel,
 
   *mask = 0;
 
-  if (accel == NULL || strcmp (accel, "disabled") == 0)
+  if (accel == NULL || !accel[0] || strcmp (accel, "disabled") == 0)
     return TRUE;
 
   meta_ui_accelerator_parse (accel, &gdk_sym, &gdk_code, &gdk_mask);
@@ -1063,7 +1169,13 @@ meta_ui_window_is_widget (MetaUI *ui,
 {
   GdkWindow *window;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkDisplay *display;
+  
+  window = gdk_x11_window_lookup_for_display (display, xwindow);
+#else
   window = gdk_xid_table_lookup (xwindow);
+#endif
 
   if (window)
     {
@@ -1102,6 +1214,7 @@ MetaUIDirection meta_ui_get_direction(void)
 	return META_UI_DIRECTION_LTR;
 }
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 {
 	GdkPixmap* gpmap;
@@ -1143,3 +1256,4 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 
 	return pixbuf;
 }
+#endif

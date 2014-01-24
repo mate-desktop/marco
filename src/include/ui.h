@@ -29,6 +29,7 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <glib.h>
+#include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 /* This is between GTK_PRIORITY_RESIZE (+10) and GDK_PRIORITY_REDRAW (+20) */
@@ -133,7 +134,7 @@ void            meta_ui_window_menu_popup (MetaWindowMenu     *menu,
                                            guint32             timestamp);
 void            meta_ui_window_menu_free  (MetaWindowMenu     *menu);
 
-
+#if !GTK_CHECK_VERSION (3, 0, 0)
 MetaImageWindow* meta_image_window_new          (Display         *xdisplay,
                                                  int              screen_number,
                                                  int              max_width,
@@ -145,16 +146,7 @@ void             meta_image_window_set          (MetaImageWindow *iw,
                                                  GdkPixbuf       *pixbuf,
                                                  int              x,
                                                  int              y);
-
-/* FIXME these lack a display arg */
-GdkPixbuf* meta_gdk_pixbuf_get_from_window (GdkPixbuf   *dest,
-                                            Window       xwindow,
-                                            int          src_x,
-                                            int          src_y,
-                                            int          dest_x,
-                                            int          dest_y,
-                                            int          width,
-                                            int          height);
+#endif
 
 GdkPixbuf* meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
                                             Pixmap       xpixmap,
@@ -202,7 +194,9 @@ int      meta_ui_get_drag_threshold       (MetaUI *ui);
 
 MetaUIDirection meta_ui_get_direction (void);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 GdkPixbuf *meta_ui_get_pixbuf_from_pixmap (Pixmap   pmap);
+#endif
 
 #include "tabpopup.h"
 

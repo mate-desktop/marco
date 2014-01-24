@@ -29,19 +29,28 @@
 #define UNUSED_VARIABLE
 #endif
 
-typedef void (* RenderGradientFunc) (GdkDrawable *drawable,
+typedef void (* RenderGradientFunc) (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+                                     GdkDrawable *drawable,
+#endif
                                      cairo_t     *cr,
                                      int          width,
                                      int          height);
 
 static void
+#if GTK_CHECK_VERSION (3, 0, 0)
+draw_checkerboard (cairo_t *cr,
+#else
 draw_checkerboard (GdkDrawable *drawable,
+#endif
                    int          width,
                    int          height)
 {
   gint i, j, xcount, ycount;
   GdkColor color1, color2;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cairo_t *cr;
+#endif
   
 #define CHECK_SIZE 10
 #define SPACING 2  
@@ -54,7 +63,9 @@ draw_checkerboard (GdkDrawable *drawable,
   color2.green = 50000;
   color2.blue = 50000;
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cr = gdk_cairo_create (drawable);
+#endif
 
   xcount = 0;
   i = SPACING;
@@ -83,12 +94,17 @@ draw_checkerboard (GdkDrawable *drawable,
       i += CHECK_SIZE + SPACING;
       ++xcount;
     }
-  
+
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cairo_destroy (cr);
+#endif
 }
 
 static void
-render_simple (GdkDrawable *drawable,
+render_simple (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+               GdkDrawable *drawable,
+#endif
                cairo_t     *cr,
                int width, int height,
                MetaGradientType type,
@@ -120,8 +136,12 @@ render_simple (GdkDrawable *drawable,
       meta_gradient_add_alpha (pixbuf,
                                alphas, G_N_ELEMENTS (alphas),
                                META_GRADIENT_HORIZONTAL);
-      
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+      draw_checkerboard (cr , width, height);
+#else
       draw_checkerboard (drawable, width, height);
+#endif
     }
     
   gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
@@ -132,39 +152,70 @@ render_simple (GdkDrawable *drawable,
 }
 
 static void
-render_vertical_func (GdkDrawable *drawable,
+render_vertical_func (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+                      GdkDrawable *drawable,
+#endif
                       cairo_t *cr,
                       int width, int height)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  render_simple (cr, width, height, META_GRADIENT_VERTICAL, FALSE);
+#else
   render_simple (drawable, cr, width, height, META_GRADIENT_VERTICAL, FALSE);
+#endif
 }
 
 static void
-render_horizontal_func (GdkDrawable *drawable,
+render_horizontal_func (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+                        GdkDrawable *drawable,
+#endif
                         cairo_t *cr,
                         int width, int height)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  render_simple (cr, width, height, META_GRADIENT_HORIZONTAL, FALSE);
+#else
   render_simple (drawable, cr, width, height, META_GRADIENT_HORIZONTAL, FALSE);
+#endif
 }
 
 static void
-render_diagonal_func (GdkDrawable *drawable,
+render_diagonal_func (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+                      GdkDrawable *drawable,
+#endif
                       cairo_t *cr,
                       int width, int height)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  render_simple (cr, width, height, META_GRADIENT_DIAGONAL, FALSE);
+#else
   render_simple (drawable, cr, width, height, META_GRADIENT_DIAGONAL, FALSE);
+#endif
 }
 
 static void
-render_diagonal_alpha_func (GdkDrawable *drawable,
+render_diagonal_alpha_func (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+                            GdkDrawable *drawable,
+#endif
                             cairo_t *cr,
                             int width, int height)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  render_simple (cr, width, height, META_GRADIENT_DIAGONAL, TRUE);
+#else
   render_simple (drawable, cr, width, height, META_GRADIENT_DIAGONAL, TRUE);
+#endif
 }
 
 static void
-render_multi (GdkDrawable *drawable,
+render_multi (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+              GdkDrawable *drawable,
+#endif
               cairo_t     *cr,
               int width, int height,
               MetaGradientType type)
@@ -192,31 +243,55 @@ render_multi (GdkDrawable *drawable,
 }
 
 static void
-render_vertical_multi_func (GdkDrawable *drawable,
+render_vertical_multi_func (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+                            GdkDrawable *drawable,
+#endif
                             cairo_t *cr,
                             int width, int height)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  render_multi (cr, width, height, META_GRADIENT_VERTICAL);
+#else
   render_multi (drawable, cr, width, height, META_GRADIENT_VERTICAL);
+#endif
 }
 
 static void
-render_horizontal_multi_func (GdkDrawable *drawable,
+render_horizontal_multi_func (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+                              GdkDrawable *drawable,
+#endif
                               cairo_t *cr,
                               int width, int height)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  render_multi (cr, width, height, META_GRADIENT_HORIZONTAL);
+#else
   render_multi (drawable, cr, width, height, META_GRADIENT_HORIZONTAL);
+#endif
 }
 
 static void
-render_diagonal_multi_func (GdkDrawable *drawable,
+render_diagonal_multi_func (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+                            GdkDrawable *drawable,
+#endif
                             cairo_t *cr,
                             int width, int height)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  render_multi (cr, width, height, META_GRADIENT_DIAGONAL);
+#else
   render_multi (drawable, cr, width, height, META_GRADIENT_DIAGONAL);
+#endif
 }
 
 static void
-render_interwoven_func (GdkDrawable *drawable,
+render_interwoven_func (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+                        GdkDrawable *drawable,
+#endif
                         cairo_t     *cr,
                         int width, int height)
 {
@@ -241,31 +316,50 @@ render_interwoven_func (GdkDrawable *drawable,
 }
 
 static gboolean
+#if GTK_CHECK_VERSION (3, 0, 0)
+draw_callback (GtkWidget *widget,
+               cairo_t *cr,
+               gpointer data)
+#else
 expose_callback (GtkWidget *widget,
                  GdkEventExpose *event,
                  gpointer data)
+#endif
 {
   RenderGradientFunc func = data;
   GdkWindow *window;
   GtkAllocation allocation;
   GtkStyle *style;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cairo_t *cr;
+#endif
 
   style = gtk_widget_get_style (widget);
   gtk_widget_get_allocation (widget, &allocation);
 
   window = gtk_widget_get_window (widget);
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cr = gdk_cairo_create (window);
+#endif
   gdk_cairo_set_source_color (cr, &style->fg[gtk_widget_get_state (widget)]);
 
-  (* func) (window,
+  (* func) (
+#if !GTK_CHECK_VERSION (3, 0, 0)
+            window,
+#endif
             cr,
             allocation.width,
             allocation.height);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cairo_destroy (cr);
+#endif
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  return FALSE;
+#else
   return TRUE;
+#endif
 }
 
 static GtkWidget*
@@ -286,8 +380,13 @@ create_gradient_window (const char *title,
   gtk_window_set_default_size (GTK_WINDOW (window), 175, 175);
   
   g_signal_connect (G_OBJECT (drawing_area),
+#if GTK_CHECK_VERSION (3, 0, 0)
+                    "draw",
+                    G_CALLBACK (draw_callback),
+#else
                     "expose_event",
                     G_CALLBACK (expose_callback),
+#endif
                     func);
 
   gtk_container_add (GTK_CONTAINER (window), drawing_area);

@@ -667,7 +667,8 @@ meta_frames_attach_style (MetaFrames  *frames,
 
   /* Weirdly, gtk_style_attach() steals a reference count from the style passed in */
   #if GTK_CHECK_VERSION(3, 0, 0)
-  frame->style = g_object_ref (gtk_widget_get_style_context (GTK_WIDGET (frames)));
+  g_object_ref (gtk_widget_get_style (GTK_WIDGET (frames)));
+  frame->style = gtk_style_attach (gtk_widget_get_style (GTK_WIDGET (frames)), frame->window);
   #else
   g_object_ref (GTK_WIDGET (frames)->style);
   frame->style = gtk_style_attach (GTK_WIDGET (frames)->style, frame->window);
@@ -2479,6 +2480,32 @@ cached_pixels_draw (CachedPixels *pixels,
 #endif
 
 #if GTK_CHECK_VERSION(3, 0, 0)
+
+static void
+subtract_client_area (cairo_region_t *region, MetaUIFrame *frame)
+{
+  GdkRectangle area;
+  MetaFrameFlags flags;
+  MetaFrameType type;
+  cairo_region_t *tmp_region;
+  Display *display;
+  
+  display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+
+  meta_core_get (display, frame->xwindow,
+                 META_CORE_GET_FRAME_FLAGS, &flags,
+                 META_CORE_GET_FRAME_TYPE, &type,
+                 META_CORE_GET_CLIENT_WIDTH, &area.width,
+                 META_CORE_GET_CLIENT_HEIGHT, &area.height,
+                 META_CORE_GET_END);
+  meta_theme_get_frame_borders (meta_theme_get_current (),
+                         type, frame->text_height, flags, 
+                         &area.x, NULL, &area.y, NULL);
+
+  tmp_region = cairo_region_create_rectangle (&area);
+  cairo_region_subtract (region, tmp_region);
+  cairo_region_destroy (tmp_region);
+}
 
 static gboolean
 meta_frames_draw (GtkWidget *widget,
