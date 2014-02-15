@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2014-01-16 14:40+0000\n"
+"PO-Revision-Date: 2014-02-15 10:36+0000\n"
 "Last-Translator: ard1t <ardit.dani@gmail.com>\n"
 "Language-Team: Albanian (http://www.transifex.com/projects/p/MATE/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -184,7 +184,7 @@ msgstr "Kontrollo nëse dritarja është në të gjitha hapësirat e punës apo 
 
 #: ../src/50-marco-window-key.xml.in.h:13
 msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr ""
+msgstr "Ngre dritaren në qoftë se është i mbuluar nga një tjetër dritare, ndryshe ule atë"
 
 #: ../src/50-marco-window-key.xml.in.h:14
 msgid "Raise window above other windows"
@@ -422,7 +422,7 @@ msgstr "Rinisja dështoi: %s\n"
 #: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "%d të ruajtura në çelës GSettings  %s janë jashtë diapazonit %d të %d\n"
 
 #: ../src/core/prefs.c:1008
 msgid ""
@@ -433,7 +433,7 @@ msgstr "Veprimtari mirëmbajtje për administrimin e programeve difektozë të �
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "I pamundur analizimi i përshkrimin e shkronjave \"%s\" nga çelësi GSettings %s\n"
 
 #: ../src/core/prefs.c:1137
 #, c-format
@@ -678,7 +678,7 @@ msgstr "Maksimizo dritaren"
 
 #: ../src/ui/frames.c:1136
 msgid "Restore Window"
-msgstr ""
+msgstr "Rikthe Dritaren"
 
 #: ../src/ui/frames.c:1139
 msgid "Roll Up Window"
@@ -1132,7 +1132,7 @@ msgstr "Konstantja \"%s\" është përcaktuar një herë"
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr ""
+msgstr "Asnjë atribut \"%s\" tek elementi <%s>"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
@@ -1252,7 +1252,7 @@ msgstr "Nuk lejohet përdorimi i elementit <%s> mbas <%s>"
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr ""
+msgstr "Nuk mund të specifikojë \"gjerësi_butoni\"/\"gjatësi_butoni\" dhe \"aspekt_proporcioni\" për butonat"
 
 #: ../src/ui/theme-parser.c:1401
 #, c-format
@@ -1413,7 +1413,7 @@ msgstr "Nuk ka mundësi të ketë dy due draw_ops për një element <menu_icon> 
 #: ../src/ui/theme-parser.c:3350
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr ""
+msgstr "Element i jashtëm në temë duhet të <metacity_theme> jo <%s>"
 
 #: ../src/ui/theme-parser.c:3370
 #, c-format
@@ -1461,7 +1461,7 @@ msgstr "Nuk lejohet teksti në brendësi të elementit <%s>"
 #: ../src/ui/theme-parser.c:3873
 #, c-format
 msgid "<%s> specified twice for this theme"
-msgstr ""
+msgstr "<%s> është specifikuar dy herë për këtë temë"
 
 #: ../src/ui/theme-parser.c:4149
 #, c-format
@@ -1471,7 +1471,7 @@ msgstr "Dështoi gjetja e një file të vlefshëm për temën %s\n"
 #: ../src/ui/theme-parser.c:4205
 #, c-format
 msgid "Theme file %s did not contain a root <metacity_theme> element"
-msgstr ""
+msgstr "Dokumenti Temës %s nuk përmban një element të <metacity_theme> root"
 
 #: ../src/ui/theme-viewer.c:75
 msgid "/_Windows"

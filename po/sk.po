@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Ján Ďanovský <dagsoftware@yahoo.com>, 2013
+# tibbi <tibbbi2@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-11-20 13:15+0000\n"
-"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
+"PO-Revision-Date: 2014-02-13 19:51+0000\n"
+"Last-Translator: tibbi <tibbbi2@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,11 +25,11 @@ msgstr "Pracovná plocha"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "Zobraziť dialógové okno \"Spustiť aplikáciu\" z panelu"
+msgstr "Zobraziť dialógové okno „Spustiť aplikáciu“ z panela"
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
 msgid "Show the panel's main menu"
-msgstr "Zobraziť hlavnú ponuku panelu"
+msgstr "Zobraziť hlavnú ponuku panela"
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
 msgid "Take a screenshot"
@@ -260,11 +261,11 @@ msgstr "Presunúť okno o jednu pracovnú plochu vpravo"
 
 #: ../src/50-marco-window-key.xml.in.h:32
 msgid "Move window one workspace up"
-msgstr "Presunúť okno o jednu pracovnú plochu hore"
+msgstr "Presunúť okno o jednu pracovnú plochu nahor"
 
 #: ../src/50-marco-window-key.xml.in.h:33
 msgid "Move window one workspace down"
-msgstr "Presunúť okno o jednu pracovnú plochu dolu"
+msgstr "Presunúť okno o jednu pracovnú plochu nadol"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -285,7 +286,7 @@ msgstr "<tt>%s</tt> neodpovedá."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Môžete chvíľu počkať na pokračovanie aplikácie, alebo ju môžete ukončiť."
+msgstr "Môžete chvíľu počkať na pokračovanie aplikácie, alebo ju môžete vynútene ukončiť."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -338,7 +339,7 @@ msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Pri spustení <tt>%s</tt> nastala chyba:\n\n%s"
+msgstr "Pri spúšťaní <tt>%s</tt> nastala chyba:\n\n%s"
 
 #: ../src/core/keybindings.c:2392
 #, c-format
@@ -357,11 +358,11 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nAutorské práva (C) 2001-%s Havoc Pennington, Red Hat, Inc., a ostatní\nToto je slobodný softvér; pozrite podmienky kopírovania v zdrojových kódoch.\nZáruka sa NEPOSKYTUJE; ani na PREDAJNOSŤ alebo VHODNOSŤ PRE URČITÝ ÚČEL.\n"
+msgstr "marco %s\nCopyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., a ostatní\nToto je slobodný softvér; pozrite si podmienky kopírovania v zdrojových kódoch.\nZáruka sa NEPOSKYTUJE; ani na PREDAJNOSŤ alebo VHODNOSŤ PRE KONKRÉTNY ÚČEL.\n"
 
 #: ../src/core/main.c:275
 msgid "Disable connection to session manager"
-msgstr "Zakázať spojenia na správcu relácií"
+msgstr "Vypnúť pripojenie na správcu relácií"
 
 #: ../src/core/main.c:281
 msgid "Replace the running window manager with Marco"
@@ -381,7 +382,7 @@ msgstr "Inicializovať reláciu z uloženého súboru"
 
 #: ../src/core/main.c:304
 msgid "Print version"
-msgstr "Vypísať verziu"
+msgstr "Vytlačiť verziu"
 
 #: ../src/core/main.c:310
 msgid "Make X calls synchronous"
@@ -428,26 +429,26 @@ msgstr "Hodnota %d uložená v GSettings kľúči %s nie je v rozsahu od %d do %
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Náhradné riešenia pre chybné aplikácie nie sú povolené. Niektoré aplikácie sa nemusia správať slušne.\n"
+msgstr "Náhradné riešenia pre chybné aplikácie nie sú povolené. Niektoré aplikácie sa nemusia správať správne.\n"
 
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr "Nepodarilo sa spracovať popis písma \\\"%s\\\" z GSettings kľúča %s\n"
+msgstr "Nepodarilo sa spracovať popis písma „%s“ z GSettings kľúča %s\n"
 
 #: ../src/core/prefs.c:1137
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "V konfiguračnej databáze sa našlo \"%s\", čo nie je platná hodnota pre modifikátor tlačidla myši.\n"
+msgstr "V konfiguračnej databáze sa našlo „%s“, čo nie je platná hodnota pre modifikátor tlačidla myši.\n"
 
 #: ../src/core/prefs.c:1649
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "V konfiguračnej databáze sa našlo \"%s\", čo nie je platná hodnota pre klávesovú skratku \"%s\".\n"
+msgstr "V konfiguračnej databáze sa našlo „%s“, čo nie je platná hodnota pre klávesovú skratku \"%s\".\n"
 
 #: ../src/core/prefs.c:1955
 #, c-format
@@ -464,27 +465,27 @@ msgstr "Obrazovka %d na displeji '%s' nie je platná\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Obrazovka %d na displeji \"%s\" už má správcu okien. Skúste použiť prepínač --replace, aby sa aktuálny správca predefinoval.\n"
+msgstr "Obrazovka %d na displeji „%s“ už má správcu okien. Skúste použiť možnosť --replace, aby sa aktuálny správca predefinoval.\n"
 
 #: ../src/core/screen.c:400
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr "Nepodarilo sa získať výber správcu okien pre obrazovku %d na displeji \"%s\".\n"
+msgstr "Nepodarilo sa získať výber správcu okien pre obrazovku %d na displeji „%s“.\n"
 
 #: ../src/core/screen.c:458
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
-msgstr "Obrazovka %d na displeji \"%s\" už má správcu okien\n"
+msgstr "Obrazovka %d na displeji „%s“ už má správcu okien\n"
 
 #: ../src/core/screen.c:668
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
-msgstr "Nepodarilo sa uvoľniť obrazovku %d na displeji \"%s\"\n"
+msgstr "Nepodarilo sa uvoľniť obrazovku %d na displeji „%s“\n"
 
 #: ../src/core/session.c:842 ../src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr "Nepodarilo sa vytvoriť priečinok '%s': %s\n"
+msgstr "Nepodarilo sa vytvoriť adresár '%s': %s\n"
 
 #: ../src/core/session.c:859
 #, c-format
@@ -521,7 +522,7 @@ msgstr "Neznámy atribút %s v prvku <%s>"
 #: ../src/core/session.c:1214
 #, c-format
 msgid "nested <window> tag"
-msgstr "vnorená značka <window>"
+msgstr "vnorený štítok <window>"
 
 #: ../src/core/session.c:1456
 #, c-format
@@ -556,19 +557,19 @@ msgstr "Marco bol skompilovaný bez podpory zobrazovania informácií\n"
 
 #: ../src/core/util.c:236
 msgid "Window manager: "
-msgstr "Správca okien:"
+msgstr "Správca okien: "
 
 #: ../src/core/util.c:388
 msgid "Bug in window manager: "
-msgstr "Chyba v správcovi okien:"
+msgstr "Chyba v správcovi okien: "
 
 #: ../src/core/util.c:421
 msgid "Window manager warning: "
-msgstr "Varovanie správcu okien:"
+msgstr "Varovanie správcu okien: "
 
 #: ../src/core/util.c:449
 msgid "Window manager error: "
-msgstr "Chyba správcu okien:"
+msgstr "Chyba správcu okien: "
 
 #. Translators: This is the title used on dialog boxes
 #: ../src/core/util.c:570 ../src/marco.desktop.in.h:1
@@ -641,7 +642,7 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Okno 0x%lx má vlastnosť %s,\nktorá by mala mať typ %s, formát %d,\na v skutočnosti má typ %s a formát %d, počet položiek %d.\nAsi sa jedná o chybu aplikácie, a nie správcu okien.\nOkno má titulok \"%s\", triedu \"%s\" a názov \"%s\"\n"
+msgstr "Okno 0x%lx má vlastnosť %s,\nktorá by mala mať typ %s, formát %d,\na v skutočnosti má typ %s a formát %d, počet položiek %d.\nAsi sa jedná o chybu aplikácie, a nie správcu okien.\nOkno má titulok „%s“, triedu „%s“ a názov „%s“\n"
 
 #: ../src/core/xprops.c:401
 #, c-format
@@ -742,7 +743,7 @@ msgstr "Zmeniť veľko_sť"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:79
 msgid "Move Titlebar On_screen"
-msgstr "Presunúť titulok na _obrazovku"
+msgstr "Presunúť panel titulku na _obrazovku"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
@@ -758,7 +759,7 @@ msgstr "Vž_dy na viditeľnej pracovnej ploche"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
-msgstr "_Len na tejto pracovnej ploche"
+msgstr "_Iba na tejto pracovnej ploche"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
@@ -911,12 +912,12 @@ msgstr "vpravo"
 #: ../src/ui/theme.c:288
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
-msgstr "geometria rámca neurčuje rozmer \"%s\""
+msgstr "geometria rámca neurčuje rozmer „%s“"
 
 #: ../src/ui/theme.c:307
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
-msgstr "geometria rámca neurčuje rozmer \"%s\" pre okraj \"%s\""
+msgstr "geometria rámca neurčuje rozmer „%s“ pre okraj „%s“"
 
 #: ../src/ui/theme.c:344
 #, c-format
@@ -938,61 +939,61 @@ msgstr "Prechody by mali mať aspoň dve farby"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "Špecifikácia farby GTK musí mať stav v hranatých zátvorkách, napr. gtk:fg[NORMAL], kde NORMAL je stav. Nepodarilo sa spracovať \"%s\""
+msgstr "Špecifikácia farby GTK musí mať stav v hranatých zátvorkách, napr. gtk:fg[NORMAL], kde NORMAL je stav. Nepodarilo sa spracovať „%s“"
 
 #: ../src/ui/theme.c:1163
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "Špecifikácia farby GTK musí mať stav uzavretý v hranatých zátvorkách, napr. gtk:fg[NORMAL], kde NORMAL je stav. Nepodarilo sa spracovať \"%s\""
+msgstr "Špecifikácia farby GTK musí mať stav uzavretý v hranatých zátvorkách, napr. gtk:fg[NORMAL], kde NORMAL je stav. Nepodarilo sa spracovať „%s“"
 
 #: ../src/ui/theme.c:1174
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
-msgstr "V špecifikácii farby je nerozpoznaný stav \"%s\""
+msgstr "V špecifikácii farby je nerozpoznaný stav „%s“"
 
 #: ../src/ui/theme.c:1187
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
-msgstr "V špecifikácii farby je nerozpoznaný komponent \"%s\""
+msgstr "V špecifikácii farby je nerozpoznaný komponent „%s“"
 
 #: ../src/ui/theme.c:1217
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Formát miešania je \"blend/bg_color/fg_color/alpha\", \"%s\" tomu neodpovedá"
+msgstr "Formát miešania je „blend/bg_color/fg_color/alpha“, „%s“ tomu neodpovedá"
 
 #: ../src/ui/theme.c:1228
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
-msgstr "Nepodarilo sa spracovať hodnotu alfa \"%s\" v miešanej farbe"
+msgstr "Nepodarilo sa spracovať hodnotu alfa „%s“ v miešanej farbe"
 
 #: ../src/ui/theme.c:1238
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
-msgstr "Hodnota alfa \"%s\" v miešanej farbe nie je medzi 0.0 a 1.0"
+msgstr "Hodnota alfa „%s“ v miešanej farbe nie je medzi 0.0 a 1.0"
 
 #: ../src/ui/theme.c:1285
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "Formát tieňa je \"shade/base_color/factor\", \"%s\" tomu neodpovedá"
+msgstr "Formát tieňa je „shade/base_color/factor“, „%s“ tomu neodpovedá"
 
 #: ../src/ui/theme.c:1296
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
-msgstr "Nepodarilo sa spracovať hodnotu tieňa \"%s\" v tieňovanej farbe"
+msgstr "Nepodarilo sa spracovať hodnotu tieňa „%s“ v tieňovanej farbe"
 
 #: ../src/ui/theme.c:1306
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
-msgstr "Faktor tieňa \"%s\" v tieňovanej farbe je záporný."
+msgstr "Faktor tieňa „%s“ v tieňovanej farbe je záporný."
 
 #: ../src/ui/theme.c:1335
 #, c-format
 msgid "Could not parse color \"%s\""
-msgstr "Nepodarilo sa spracovať farbu \"%s\""
+msgstr "Nepodarilo sa spracovať farbu „%s“"
 
 #: ../src/ui/theme.c:1589
 #, c-format
@@ -1016,7 +1017,7 @@ msgstr "Výraz umiestnenia obsahuje celé číslo '%s', ktoré nie je možné sp
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Výraz umiestnenia obsahuje neznámy operátor na začiatku tohto textu: \"%s\""
+msgstr "Výraz umiestnenia obsahuje neznámy operátor na začiatku tohto textu: „%s“"
 
 #: ../src/ui/theme.c:1809
 #, c-format
@@ -1037,7 +1038,7 @@ msgstr "Výraz umiestnenia sa snaží použiť operátor modulo na číslo s des
 #: ../src/ui/theme.c:2028
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
-msgstr "Výraz umiestnenia obsahuje operátor \"%s\" tam, kde sa očakáva operand"
+msgstr "Výraz umiestnenia obsahuje operátor „%s“ tam, kde sa očakáva operand"
 
 #: ../src/ui/theme.c:2037
 #, c-format
@@ -1054,12 +1055,12 @@ msgstr "Výraz umiestnenia skončil operátorom namiesto operandom"
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Výraz umiestnenia obsahuje operátor \"%c\" za operátorom \"%c\" bez operandov medzi nimi."
+msgstr "Výraz umiestnenia obsahuje operátor „%c“ za operátorom „%c“ bez operandov medzi nimi."
 
 #: ../src/ui/theme.c:2202 ../src/ui/theme.c:2243
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
-msgstr "Výraz umiestnenia obsahuje neznámu premennú alebo konštantu \"%s\""
+msgstr "Výraz umiestnenia obsahuje neznámu premennú alebo konštantu „%s“"
 
 #: ../src/ui/theme.c:2297
 #, c-format
@@ -1092,47 +1093,47 @@ msgstr "Téma obsahuje výraz, ktorý spôsobil chybu: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "Pre tento štýl rámca musí byť uvedené <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/>"
+msgstr "Pre tento štýl rámca musí byť uvedené <button function=„%s“ state=„%s“ draw_ops=„whatever“/>"
 
 #: ../src/ui/theme.c:4730 ../src/ui/theme.c:4755
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
-msgstr "Chýbajúce <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
+msgstr "Chýbajúce <frame state=„%s“ resize=„%s“ focus=„%s“ style=„whatever“/>"
 
 #: ../src/ui/theme.c:4799
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
-msgstr "Nepodarilo sa prečítať tému \"%s\": %s\n"
+msgstr "Nepodarilo sa načítať tému „%s“: %s\n"
 
 #: ../src/ui/theme.c:4929 ../src/ui/theme.c:4936 ../src/ui/theme.c:4943
 #: ../src/ui/theme.c:4950 ../src/ui/theme.c:4957
 #, c-format
 msgid "No <%s> set for theme \"%s\""
-msgstr "Pre tému \"%s\" nie je nastavené <%s>"
+msgstr "Pre tému „%s“ nie je nastavené <%s>"
 
 #: ../src/ui/theme.c:4965
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Pre typ okna \"%s\" nie je sada štýlov v téme \"%s\", pridajte prvok <window type=\"%s\" style_set=\"whatever\"/>"
+msgstr "Pre typ okna „%s“ nie je sada štýlov v téme „%s“, pridajte prvok <window type=„%s“ style_set=„whatever“/>"
 
 #: ../src/ui/theme.c:5408 ../src/ui/theme.c:5470 ../src/ui/theme.c:5533
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Používateľské konštanty musia začínať veľkým písmenom, \"%s\" nezačína"
+msgstr "Používateľské konštanty musia začínať veľkým písmenom, „%s“ nezačína"
 
 #: ../src/ui/theme.c:5416 ../src/ui/theme.c:5478 ../src/ui/theme.c:5541
 #, c-format
 msgid "Constant \"%s\" has already been defined"
-msgstr "Konštanta \"%s\" už je definovaná"
+msgstr "Konštanta „%s“ už je definovaná"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "Chýbajúci atribút \"%s\" v prvku <%s>"
+msgstr "Chýbajúci atribút „%s“ v prvku <%s>"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
@@ -1142,22 +1143,22 @@ msgstr "Riadok %d znak %d: %s"
 #: ../src/ui/theme-parser.c:437
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
-msgstr "Atribút \"%s\" je uvedený dvakrát v jednom prvku <%s>"
+msgstr "Atribút „%s“ je uvedený dvakrát v jednom prvku <%s>"
 
 #: ../src/ui/theme-parser.c:461 ../src/ui/theme-parser.c:504
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Atribút \"%s\" je neplatný v tomto kontexte v prvku <%s>"
+msgstr "Atribút „%s“ je neplatný v tomto kontexte v prvku <%s>"
 
 #: ../src/ui/theme-parser.c:546
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
-msgstr "Nepodarilo sa spracovať \"%s\" ako celé číslo"
+msgstr "Nepodarilo sa spracovať „%s“ ako celé číslo"
 
 #: ../src/ui/theme-parser.c:555 ../src/ui/theme-parser.c:610
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
-msgstr "Nerozpoznané znaky na konci \"%s\" v reťazci \"%s\""
+msgstr "Nerozpoznané znaky na konci „%s“ v reťazci „%s“"
 
 #: ../src/ui/theme-parser.c:565
 #, c-format
@@ -1172,12 +1173,12 @@ msgstr "Celé číslo %ld je príliš veľké, maximum je %d"
 #: ../src/ui/theme-parser.c:601 ../src/ui/theme-parser.c:717
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
-msgstr "Nepodarilo sa spracovať \"%s\" ako číslo s plávajúcou desatinnou čiarkou"
+msgstr "Nepodarilo sa spracovať „%s“ ako číslo s plávajúcou desatinnou čiarkou"
 
 #: ../src/ui/theme-parser.c:632 ../src/ui/theme-parser.c:660
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
-msgstr "Pravdivostná hodnota musí byť \"true\" alebo \"false\", nie \"%s\""
+msgstr "Pravdivostná hodnota musí byť „true“ alebo „false“, nie „%s“"
 
 #: ../src/ui/theme-parser.c:687
 #, c-format
@@ -1187,31 +1188,31 @@ msgstr "Uhol musí byť medzi 0.0 a 360.0, a teraz je %g\n"
 #: ../src/ui/theme-parser.c:750
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Alfa musí byť medzi 0.0 (neviditeľné) a 1.0 (úplne nakreslené), a je %g\n"
+msgstr "Alfa musí byť medzi 0.0 (neviditeľné) a 1.0 (nepriehľadné), a je %g\n"
 
 #: ../src/ui/theme-parser.c:815
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Neplatná mierka titulku \"%s\" (musí byť xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr "Neplatná mierka titulku „%s“ (musí byť xx-small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:971 ../src/ui/theme-parser.c:1034
 #: ../src/ui/theme-parser.c:1068 ../src/ui/theme-parser.c:1171
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
-msgstr "Názov <%s> pre \"%s\" použitý dvakrát"
+msgstr "Názov <%s> pre „%s“ použitý dvakrát"
 
 #: ../src/ui/theme-parser.c:983 ../src/ui/theme-parser.c:1080
 #: ../src/ui/theme-parser.c:1183
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
-msgstr "Nedefinovaný rodič <%s> pre \"%s\""
+msgstr "Nedefinovaný rodič <%s> pre „%s“"
 
 #: ../src/ui/theme-parser.c:1093
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
-msgstr "Nedefinovaná geometria <%s> pre \"%s\""
+msgstr "Nedefinovaná geometria <%s> pre „%s“"
 
 #: ../src/ui/theme-parser.c:1106
 #, c-format
@@ -1225,17 +1226,17 @@ msgstr "Ak má byť hodnota alpha zmysluplná, tak musíte vybrať nejaké pozad
 #: ../src/ui/theme-parser.c:1215
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
-msgstr "Neznámy typ \"%s\" v prvku <%s>"
+msgstr "Neznámy typ „%s“ v prvku <%s>"
 
 #: ../src/ui/theme-parser.c:1226
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
-msgstr "Neznámy style_set \"%s\" v prvku <%s>"
+msgstr "Neznámy style_set „%s“ v prvku <%s>"
 
 #: ../src/ui/theme-parser.c:1234
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
-msgstr "Typ okna \"%s\" už má priradenú sadu štýlov"
+msgstr "Typ okna „%s“ už má priradenú sadu štýlov"
 
 #: ../src/ui/theme-parser.c:1264 ../src/ui/theme-parser.c:1328
 #: ../src/ui/theme-parser.c:1554 ../src/ui/theme-parser.c:2775
@@ -1252,73 +1253,73 @@ msgstr "Prvok <%s> nie je povolený v <%s>"
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Pre tlačidlá nie je možné zadať zároveň \"button_width\"/\"button_height\" spolu s \"aspect_ratio\""
+msgstr "Pre tlačidlá nie je možné zadať zároveň „button_width“/„button_height“ spolu s „aspect_ratio“"
 
 #: ../src/ui/theme-parser.c:1401
 #, c-format
 msgid "Distance \"%s\" is unknown"
-msgstr "Vzdialenosť \"%s\" je neznáma"
+msgstr "Vzdialenosť „%s“ je neznáma"
 
 #: ../src/ui/theme-parser.c:1446
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
-msgstr "Pomer strán \"%s\" je neznámy"
+msgstr "Pomer strán „%s“ je neznámy"
 
 #: ../src/ui/theme-parser.c:1508
 #, c-format
 msgid "Border \"%s\" is unknown"
-msgstr "Okraj \"%s\" je neznámy"
+msgstr "Okraj „%s“ je neznámy"
 
 #: ../src/ui/theme-parser.c:1819
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
-msgstr "Chýba atribút \"start_angle\" alebo \"from\" v prvku <%s>"
+msgstr "Chýba atribút „start_angle“ alebo „from“ v prvku <%s>"
 
 #: ../src/ui/theme-parser.c:1826
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
-msgstr "Chýba atribút \"extent_angle\" alebo \"to\" v prvku <%s>"
+msgstr "Chýba atribút „extent_angle“ alebo „to“ v prvku <%s>"
 
 #: ../src/ui/theme-parser.c:2066
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
-msgstr "Nerozpoznaná hodnota \"%s\" pre typ prechodu"
+msgstr "Nerozpoznaná hodnota „%s“ pre typ prechodu"
 
 #: ../src/ui/theme-parser.c:2144 ../src/ui/theme-parser.c:2519
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
-msgstr "Nerozpoznaný typ výplne \"%s\" pre prvok <%s>"
+msgstr "Nerozpoznaný typ výplne „%s“ pre prvok <%s>"
 
 #: ../src/ui/theme-parser.c:2311 ../src/ui/theme-parser.c:2394
 #: ../src/ui/theme-parser.c:2457
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
-msgstr "Nerozpoznaný stav \"%s\" pre prvok <%s>"
+msgstr "Nerozpoznaný stav „%s“ pre prvok <%s>"
 
 #: ../src/ui/theme-parser.c:2321 ../src/ui/theme-parser.c:2404
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
-msgstr "Nerozpoznaný tieň \"%s\" pre prvok <%s>"
+msgstr "Nerozpoznaný tieň „%s“ pre prvok <%s>"
 
 #: ../src/ui/theme-parser.c:2331
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
-msgstr "Nerozpoznaná šípka \"%s\" pre prvok <%s>"
+msgstr "Nerozpoznaná šípka „%s“ pre prvok <%s>"
 
 #: ../src/ui/theme-parser.c:2631 ../src/ui/theme-parser.c:2727
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
-msgstr "Nebola definovaná <draw_ops> nazvaná \"%s\""
+msgstr "Nebola definovaná <draw_ops> nazvaná „%s“"
 
 #: ../src/ui/theme-parser.c:2643 ../src/ui/theme-parser.c:2739
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
-msgstr "Pridaním draw_ops \"%s\" na tomto mieste vznikne cyklická referencia"
+msgstr "Pridaním draw_ops „%s“ na tomto mieste vznikne cyklická referencia"
 
 #: ../src/ui/theme-parser.c:2854
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
-msgstr "Neznáma pozícia \"%s\" pre časť rámca"
+msgstr "Neznáma pozícia „%s“ pre časť rámca"
 
 #: ../src/ui/theme-parser.c:2862
 #, c-format
@@ -1328,22 +1329,22 @@ msgstr "Štýl rámca už má časť na pozícii %s"
 #: ../src/ui/theme-parser.c:2879 ../src/ui/theme-parser.c:2954
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
-msgstr "Nebola definovaná <draw_ops> nazvaná \"%s\""
+msgstr "Nebola definovaná <draw_ops> nazvaná „%s“"
 
 #: ../src/ui/theme-parser.c:2908
 #, c-format
 msgid "Unknown function \"%s\" for button"
-msgstr "Neznáma funkcia  \"%s\" pre tlačidlo"
+msgstr "Neznáma funkcia „%s“ pre tlačidlo"
 
 #: ../src/ui/theme-parser.c:2917
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
-msgstr "Funkcia tlačidla \"%s\" v tejto verzii neexistuje (%d, potrebná %d)"
+msgstr "Funkcia tlačidla „%s“ v tejto verzii neexistuje (%d, potrebná %d)"
 
 #: ../src/ui/theme-parser.c:2929
 #, c-format
 msgid "Unknown state \"%s\" for button"
-msgstr "Neznámy stav \"%s\" pre tlačidlo"
+msgstr "Neznámy stav „%s“ pre tlačidlo"
 
 #: ../src/ui/theme-parser.c:2937
 #, c-format
@@ -1353,34 +1354,34 @@ msgstr "Štýl rámca už má tlačidlo pre funkciu %s stav %s"
 #: ../src/ui/theme-parser.c:3018
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
-msgstr "\"%s\" nie je platná hodnota pre atribút fokusu"
+msgstr "„%s“ nie je platná hodnota pre atribút zamerania"
 
 #: ../src/ui/theme-parser.c:3027
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
-msgstr "\"%s\" nie je platná hodnota pre atribút stavu"
+msgstr "„%s“ nie je platná hodnota pre atribút stavu"
 
 #: ../src/ui/theme-parser.c:3037
 #, c-format
 msgid "A style called \"%s\" has not been defined"
-msgstr "Štýl \"%s\" nie je definovaný"
+msgstr "Štýl „%s“ nie je definovaný"
 
 #: ../src/ui/theme-parser.c:3058 ../src/ui/theme-parser.c:3081
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
-msgstr "\"%s\" nie je platná hodnota pre atribút zmeny veľkosti"
+msgstr "„%s“ nie je platná hodnota pre atribút zmeny veľkosti"
 
 #: ../src/ui/theme-parser.c:3092
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Pre prvok <%s> by nemal byť atribút \"resize\" pre stavy maximalizované/zabalené"
+msgstr "Pre prvok <%s> by nemal byť atribút „resize“ pre stavy maximalizované/zabalené"
 
 #: ../src/ui/theme-parser.c:3106
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Pre prvok <%s> by nemal byť atribút \"resize\" pre maximalizované stavy"
+msgstr "Pre prvok <%s> by nemal byť atribút „resize“ pre maximalizované stavy"
 
 #: ../src/ui/theme-parser.c:3120 ../src/ui/theme-parser.c:3142
 #, c-format
@@ -1528,7 +1529,7 @@ msgstr "Toto je ukážková správa v ukážkovom dialógovom okne"
 #: ../src/ui/theme-viewer.c:327
 #, c-format
 msgid "Fake menu item %d\n"
-msgstr "Vymyslená položka ponuky %d\n"
+msgstr "Falošná položka ponuky %d\n"
 
 #: ../src/ui/theme-viewer.c:361
 msgid "Border-only window"
@@ -1536,7 +1537,7 @@ msgstr "Okno len s okrajom"
 
 #: ../src/ui/theme-viewer.c:363
 msgid "Bar"
-msgstr "Lišta"
+msgstr "Panel"
 
 #: ../src/ui/theme-viewer.c:380
 msgid "Normal Application Window"
@@ -1585,19 +1586,19 @@ msgstr "Chyba pri načítavaní témy: %s\n"
 #: ../src/ui/theme-viewer.c:813
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
-msgstr "Téma \"%s\" načítaná za %g sekúnd\n"
+msgstr "Téma „%s“ načítaná za %g sekúnd\n"
 
 #: ../src/ui/theme-viewer.c:854
 msgid "Normal Title Font"
-msgstr "Obyčajné písmo nadpisu"
+msgstr "Obyčajné písmo titulku"
 
 #: ../src/ui/theme-viewer.c:860
 msgid "Small Title Font"
-msgstr "Malé písmo nadpisu"
+msgstr "Malé písmo titulku"
 
 #: ../src/ui/theme-viewer.c:866
 msgid "Large Title Font"
-msgstr "Veľké písmo nadpisu"
+msgstr "Veľké písmo titulku"
 
 #: ../src/ui/theme-viewer.c:871
 msgid "Button Layouts"
