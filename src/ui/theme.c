@@ -3850,6 +3850,33 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
           rx = parse_x_position_unchecked (op->data.title.x, env);
           ry = parse_y_position_unchecked (op->data.title.y, env);
 
+          if (rx - env->rect.x + env->title_width >= env->rect.width)
+          {
+            const double alpha_margin = 30.0;
+            int text_space = env->rect.x + env->rect.width -
+                             (rx - env->rect.x) - env->right_width;
+
+            double startalpha = 1.0 - (alpha_margin/((double)text_space));
+
+            cairo_pattern_t *linpat;
+            linpat = cairo_pattern_create_linear (rx, ry, text_space,
+                                                  env->title_height);
+            cairo_pattern_add_color_stop_rgb (linpat, 0, color.red/65535.0,
+                                                         color.green/65535.0,
+                                                         color.blue/65535.0);
+            cairo_pattern_add_color_stop_rgb (linpat, startalpha,
+                                                      color.red/65535.0,
+                                                      color.green/65535.0,
+                                                      color.blue/65535.0);
+            cairo_pattern_add_color_stop_rgba (linpat, 1, color.red/65535.0,
+                                                          color.green/65535.0,
+                                                          color.blue/65535.0, 0);
+            cairo_set_source(cr, linpat);
+            cairo_pattern_destroy(linpat);
+          } else {
+            gdk_cairo_set_source_color (cr, &color);
+          }
+
           cairo_move_to (cr, rx, ry);
           pango_cairo_show_layout (cr, info->title_layout);
         }
