@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2013
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2013-2014
 # tibbi <tibbbi2@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2014-02-13 19:51+0000\n"
-"Last-Translator: tibbi <tibbbi2@gmail.com>\n"
+"PO-Revision-Date: 2014-02-16 23:33+0000\n"
+"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +25,11 @@ msgstr "Pracovná plocha"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "Zobraziť dialógové okno „Spustiť aplikáciu“ z panela"
+msgstr "Zobraziť dialógové okno „Spustiť program“ z panela"
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
 msgid "Show the panel's main menu"
-msgstr "Zobraziť hlavnú ponuku panela"
+msgstr "Zobraziť hlavné menu panela"
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
 msgid "Take a screenshot"
@@ -53,7 +53,7 @@ msgstr "Presúvať medzi oknami pomocou vyskakovacieho okna"
 
 #: ../src/50-marco-global-key.xml.in.h:3
 msgid "Move between windows of an application, using a popup window"
-msgstr "Presúvať medzi oknami aplikácie pomocou vyskakovacieho okna"
+msgstr "Presúvať medzi oknami programu pomocou vyskakovacieho okna"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 msgid "Move between panels and the desktop, using a popup window"
@@ -65,7 +65,7 @@ msgstr "Presúvať medzi oknami okamžite"
 
 #: ../src/50-marco-global-key.xml.in.h:6
 msgid "Move between windows of an application immediately"
-msgstr "Presúvať medzi oknami aplikácie okamžite"
+msgstr "Presúvať medzi oknami programu okamžite"
 
 #: ../src/50-marco-global-key.xml.in.h:7
 msgid "Move between panels and the desktop immediately"
@@ -286,7 +286,7 @@ msgstr "<tt>%s</tt> neodpovedá."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Môžete chvíľu počkať na pokračovanie aplikácie, alebo ju môžete vynútene ukončiť."
+msgstr "Môžete chvíľu počkať na pokračovanie programu, alebo ho môžete vynútene ukončiť."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -382,7 +382,7 @@ msgstr "Inicializovať reláciu z uloženého súboru"
 
 #: ../src/core/main.c:304
 msgid "Print version"
-msgstr "Vytlačiť verziu"
+msgstr "Vypísať verziu"
 
 #: ../src/core/main.c:310
 msgid "Make X calls synchronous"
@@ -404,7 +404,7 @@ msgstr "Nevytvárať celoobrazovkové okná, ktoré sú maximalizované a bez de
 #: ../src/core/main.c:537
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
-msgstr "Nepodarilo sa prehľadať adresár s témami: %s\n"
+msgstr "Zlyhalo prehľadanie priečinku s témami: %s\n"
 
 #: ../src/core/main.c:553
 #, c-format
@@ -429,7 +429,7 @@ msgstr "Hodnota %d uložená v GSettings kľúči %s nie je v rozsahu od %d do %
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Náhradné riešenia pre chybné aplikácie nie sú povolené. Niektoré aplikácie sa nemusia správať správne.\n"
+msgstr "Náhradné riešenia pre chybné programy nie sú povolené. Niektoré programy sa nemusia správať správne.\n"
 
 #: ../src/core/prefs.c:1075
 #, c-format
@@ -485,7 +485,7 @@ msgstr "Nepodarilo sa uvoľniť obrazovku %d na displeji „%s“\n"
 #: ../src/core/session.c:842 ../src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr "Nepodarilo sa vytvoriť adresár '%s': %s\n"
+msgstr "Nepodarilo sa vytvoriť priečinok '%s': %s\n"
 
 #: ../src/core/session.c:859
 #, c-format
@@ -601,7 +601,7 @@ msgstr "Okno %s nastavuje radu MWM že nie je možné zmeniť jeho veľkosť, al
 #: ../src/core/window-props.c:244
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
-msgstr "Aplikácia nastavila neplatné _NET_WM_PID %lu\n"
+msgstr "Program nastavil neplatné _NET_WM_PID %lu\n"
 
 #. Translators: the title of a window from another machine
 #: ../src/core/window-props.c:388
@@ -642,7 +642,7 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Okno 0x%lx má vlastnosť %s,\nktorá by mala mať typ %s, formát %d,\na v skutočnosti má typ %s a formát %d, počet položiek %d.\nAsi sa jedná o chybu aplikácie, a nie správcu okien.\nOkno má titulok „%s“, triedu „%s“ a názov „%s“\n"
+msgstr "Okno 0x%lx má vlastnosť %s,\nktorá by mala mať typ %s, formát %d,\na v skutočnosti má typ %s a formát %d, počet položiek %d.\nAsi sa jedná o chybu programu, a nie správcu okien.\nOkno má titulok „%s“, triedu „%s“ a názov „%s“\n"
 
 #: ../src/core/xprops.c:401
 #, c-format
@@ -1093,12 +1093,12 @@ msgstr "Téma obsahuje výraz, ktorý spôsobil chybu: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "Pre tento štýl rámca musí byť uvedené <button function=„%s“ state=„%s“ draw_ops=„whatever“/>"
+msgstr "Pre tento štýl rámca musí byť uvedené <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/>"
 
 #: ../src/ui/theme.c:4730 ../src/ui/theme.c:4755
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
-msgstr "Chýbajúce <frame state=„%s“ resize=„%s“ focus=„%s“ style=„whatever“/>"
+msgstr "Chýbajúce <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
 #: ../src/ui/theme.c:4799
 #, c-format
@@ -1116,7 +1116,7 @@ msgstr "Pre tému „%s“ nie je nastavené <%s>"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Pre typ okna „%s“ nie je sada štýlov v téme „%s“, pridajte prvok <window type=„%s“ style_set=„whatever“/>"
+msgstr "Pre typ okna „%s“ nie je sada štýlov v téme „%s“, pridajte prvok <window type=\"%s\" style_set=\"whatever\"/>"
 
 #: ../src/ui/theme.c:5408 ../src/ui/theme.c:5470 ../src/ui/theme.c:5533
 #, c-format
@@ -1529,7 +1529,7 @@ msgstr "Toto je ukážková správa v ukážkovom dialógovom okne"
 #: ../src/ui/theme-viewer.c:327
 #, c-format
 msgid "Fake menu item %d\n"
-msgstr "Falošná položka ponuky %d\n"
+msgstr "Falošná položka menu %d\n"
 
 #: ../src/ui/theme-viewer.c:361
 msgid "Border-only window"
@@ -1541,7 +1541,7 @@ msgstr "Panel"
 
 #: ../src/ui/theme-viewer.c:380
 msgid "Normal Application Window"
-msgstr "Normálne aplikačné okno"
+msgstr "Normálne okno programu"
 
 #: ../src/ui/theme-viewer.c:384
 msgid "Dialog Box"

@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Sveinn í Felli <sv1@fellsnet.is>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-11-20 13:15+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2014-02-16 06:32+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/projects/p/MATE/language/is/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
-msgstr ""
+msgstr "Skjáborð"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 msgid "Show the panel's \"Run Application\" dialog box"
@@ -43,7 +44,7 @@ msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
-msgstr ""
+msgstr "Gluggastjórnun"
 
 #: ../src/50-marco-global-key.xml.in.h:2
 msgid "Move between windows, using a popup window"
@@ -272,27 +273,27 @@ msgstr ""
 #: ../src/core/core.c:206
 #, c-format
 msgid "Unknown window information request: %d"
-msgstr ""
+msgstr "Óþekkt beiðni um upplýsingar glugga: %d"
 
 #. Translators: %s is a window title
 #: ../src/core/delete.c:96
 #, c-format
 msgid "<tt>%s</tt> is not responding."
-msgstr ""
+msgstr "<tt>%s</tt> svarar ekki."
 
 #: ../src/core/delete.c:101
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr ""
+msgstr "Þú getur annað hvort hinkrað augnablik og leyft forritinu að halda áfram eða þú getur neytt forritið til að slökkva algjörlega á sér."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
-msgstr ""
+msgstr "_Bíða"
 
 #: ../src/core/delete.c:110
 msgid "_Force Quit"
-msgstr "_þvinga til að hætta"
+msgstr "_Þvinga til að hætta"
 
 #: ../src/core/delete.c:208
 #, c-format
@@ -302,12 +303,12 @@ msgstr "Ekki tókst að ná í nafn hýsils: %s\n"
 #: ../src/core/display.c:268
 #, c-format
 msgid "Missing %s extension required for compositing"
-msgstr ""
+msgstr "Viðbótina %s þarf til skjásamsetningar"
 
 #: ../src/core/display.c:346
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
-msgstr ""
+msgstr "Mistókst að opna X-gluggakerfisskjá '%s'\n"
 
 #: ../src/core/errors.c:278
 #, c-format
@@ -315,7 +316,7 @@ msgid ""
 "Lost connection to the display '%s';\n"
 "most likely the X server was shut down or you killed/destroyed\n"
 "the window manager.\n"
-msgstr ""
+msgstr "Missti tengingu við skjáinn '%s';\nliklega var slökkt á X þjóninum eða að þú hafir slökkt á eða skemmt\ngluggastjórann.\n"
 
 #: ../src/core/errors.c:285
 #, c-format
@@ -337,7 +338,7 @@ msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr ""
+msgstr "Villa kom upp við keyrslu <tt>%s</tt>:\n\n%s"
 
 #: ../src/core/keybindings.c:2392
 #, c-format
@@ -360,7 +361,7 @@ msgstr ""
 
 #: ../src/core/main.c:275
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Afvirkja tengingu við setustjóra"
 
 #: ../src/core/main.c:281
 msgid "Replace the running window manager with Marco"
@@ -372,7 +373,7 @@ msgstr ""
 
 #: ../src/core/main.c:292
 msgid "X Display to use"
-msgstr ""
+msgstr "X skjár sem á að nota"
 
 #: ../src/core/main.c:298
 msgid "Initialize session from savefile"
@@ -380,7 +381,7 @@ msgstr ""
 
 #: ../src/core/main.c:304
 msgid "Print version"
-msgstr ""
+msgstr "Prenta útgáfunúmer"
 
 #: ../src/core/main.c:310
 msgid "Make X calls synchronous"
@@ -388,11 +389,11 @@ msgstr ""
 
 #: ../src/core/main.c:316
 msgid "Turn compositing on"
-msgstr ""
+msgstr "Virkja skjásamsetningu"
 
 #: ../src/core/main.c:322
 msgid "Turn compositing off"
-msgstr ""
+msgstr "Slökkva á skjásamsetningu"
 
 #: ../src/core/main.c:328
 msgid ""
@@ -456,14 +457,14 @@ msgstr "Vinnusvæði %d"
 #: ../src/core/screen.c:357
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
-msgstr ""
+msgstr "Skjáglugginn %d á skjá '%s' er ógildur\n"
 
 #: ../src/core/screen.c:373
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr ""
+msgstr "Skjáglugginn %d á skjá '%s'  hefur nú þegar með gluggastjóra; reyndu að nota --replace valkostinn til þess að skipta út núverandi gluggastjóra.\n"
 
 #: ../src/core/screen.c:400
 #, c-format
@@ -605,27 +606,27 @@ msgstr ""
 #: ../src/core/window-props.c:388
 #, c-format
 msgid "%s (on %s)"
-msgstr ""
+msgstr "%s (á %s)"
 
 #. Simple case-- don't bother to look it up.  It's root.
 #: ../src/core/window-props.c:420
 #, c-format
 msgid "%s (as superuser)"
-msgstr ""
+msgstr "%s (sem stjórnandi)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
 #: ../src/core/window-props.c:438
 #, c-format
 msgid "%s (as %s)"
-msgstr ""
+msgstr "%s (sem %s)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
 #: ../src/core/window-props.c:444
 #, c-format
 msgid "%s (as another user)"
-msgstr ""
+msgstr "%s (sem annar notandi)"
 
 #: ../src/core/window-props.c:1430
 #, c-format
