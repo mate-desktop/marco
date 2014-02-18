@@ -1,4 +1,10 @@
-1.5.x
+1.7.0
+    * Implement side-by-side tiling
+    * Use yelp-tools instead of mate-doc-utils
+    * Cut with fading the bar title when it's longer than the decoration
+      bar
+
+1.6.0
     * Migration to GSettings and dropped MateConf
     * Fix key handling while drag and drop is active
     * Add option to open new windows on the center of the screen
