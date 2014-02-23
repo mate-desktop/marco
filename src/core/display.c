@@ -1429,7 +1429,7 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 {
 	/* We're always using the default display */
 	GdkDisplay* gdk_display = gdk_display_get_default();
-	GdkEvent gdk_event;
+	GdkEvent* gdk_event = NULL;
 	GdkWindow* gdk_window;
 	Window window;
 
@@ -1475,7 +1475,10 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 		return FALSE;
 	}
 
-	memset(&gdk_event, 0, sizeof(gdk_event));
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GdkDeviceManager *device_manager = gdk_display_get_device_manager (gdk_display);
+	GdkDevice *device = gdk_device_manager_get_client_pointer (device_manager);
+#endif
 
 	switch (xevent->type)
 	{
@@ -1502,13 +1505,12 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 					ABS(xevent->xbutton.x - display->button_click_x) <= double_click_distance &&
 					ABS (xevent->xbutton.y - display->button_click_y) <= double_click_distance)
 				{
-
-					gdk_event.button.type = GDK_2BUTTON_PRESS;
+					gdk_event = gdk_event_new(GDK_2BUTTON_PRESS);
 					display->button_click_number = 0;
 				}
 				else
 				{
-					gdk_event.button.type = GDK_BUTTON_PRESS;
+					gdk_event = gdk_event_new(GDK_BUTTON_PRESS);
 					display->button_click_number = xevent->xbutton.button;
 					display->button_click_window = xevent->xbutton.window;
 					display->button_click_time = xevent->xbutton.time;
@@ -1518,40 +1520,80 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 			}
 			else
 			{
-				gdk_event.button.type = GDK_BUTTON_RELEASE;
+				gdk_event = gdk_event_new(GDK_BUTTON_RELEASE);
 			}
 
-			gdk_event.button.window = gdk_window;
-			gdk_event.button.button = xevent->xbutton.button;
-			gdk_event.button.time = xevent->xbutton.time;
-			gdk_event.button.x = xevent->xbutton.x;
-			gdk_event.button.y = xevent->xbutton.y;
-			gdk_event.button.x_root = xevent->xbutton.x_root;
-			gdk_event.button.y_root = xevent->xbutton.y_root;
+#if GTK_CHECK_VERSION (3, 0, 0)
+			gdk_event->button.window = g_object_ref(gdk_window);
+#else
+			gdk_event->button.window = gdk_window;
+#endif
+			gdk_event->button.send_event = 0;
+			gdk_event->button.axes = NULL;
+			gdk_event->button.state = 0;
+			gdk_event->button.device = NULL;
+			gdk_event->button.button = xevent->xbutton.button;
+			gdk_event->button.time = xevent->xbutton.time;
+			gdk_event->button.x = xevent->xbutton.x;
+			gdk_event->button.y = xevent->xbutton.y;
+			gdk_event->button.x_root = xevent->xbutton.x_root;
+			gdk_event->button.y_root = xevent->xbutton.y_root;
 
 			break;
 
 		case MotionNotify:
-			gdk_event.motion.type = GDK_MOTION_NOTIFY;
-			gdk_event.motion.window = gdk_window;
+			gdk_event = gdk_event_new(GDK_MOTION_NOTIFY);
+#if GTK_CHECK_VERSION (3, 0, 0)
+			gdk_event->motion.window = g_object_ref(gdk_window);
+#else
+			gdk_event->motion.window = gdk_window;
+#endif
+			gdk_event->motion.send_event = FALSE;
+			gdk_event->motion.time = 0;
+			gdk_event->motion.x = 0;
+			gdk_event->motion.y = 0;
+			gdk_event->motion.axes = NULL;
+			gdk_event->motion.state = 0;
+			gdk_event->motion.is_hint = 0;
+			gdk_event->motion.device = NULL;
+			gdk_event->motion.x_root = 0;
+			gdk_event->motion.y_root = 0;
 			break;
 
 		case EnterNotify:
 
 		case LeaveNotify:
-			gdk_event.crossing.type = xevent->type == EnterNotify ? GDK_ENTER_NOTIFY : GDK_LEAVE_NOTIFY;
-			gdk_event.crossing.window = gdk_window;
-			gdk_event.crossing.x = xevent->xcrossing.x;
-			gdk_event.crossing.y = xevent->xcrossing.y;
+			gdk_event = gdk_event_new(xevent->type == EnterNotify ? GDK_ENTER_NOTIFY : GDK_LEAVE_NOTIFY);
+#if GTK_CHECK_VERSION(3, 0, 0)
+			gdk_event->crossing.window = g_object_ref(gdk_window);
+#else
+			gdk_event->crossing.window = gdk_window;
+#endif
+			gdk_event->crossing.send_event = 0;
+			gdk_event->crossing.subwindow = NULL;
+			gdk_event->crossing.time = 0;
+			gdk_event->crossing.x = xevent->xcrossing.x;
+			gdk_event->crossing.y = xevent->xcrossing.y;
+			gdk_event->crossing.x_root = 0;
+			gdk_event->crossing.y_root = 0;
+			gdk_event->crossing.mode = 0;
+			gdk_event->crossing.detail = 0;
+			gdk_event->crossing.focus = FALSE;
+			gdk_event->crossing.state = 0;
 			break;
 
 		default:
 			g_assert_not_reached();
 			break;
 	}
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gdk_event_set_device (gdk_event, device);
+#endif
 
 	/* If we've gotten here, we've filled in the gdk_event and should send it on */
-	gtk_main_do_event(&gdk_event);
+	gtk_main_do_event(gdk_event);
+
+	gdk_event_free(gdk_event);
 	return TRUE;
 }
 
