@@ -41,19 +41,12 @@
 
 #if GTK_CHECK_VERSION(3, 0, 0)
     #include <cairo-xlib.h>
-    #define GtkObject GtkWidget
-    #define GTK_OBJECT_CLASS GTK_WIDGET_CLASS
     #define GdkRegion cairo_region_t
-    #define GdkRegion cairo_region_t
-    #define gdk_region_new cairo_region_create
-    #define gdk_region_subtract cairo_region_subtract
     #define gdk_region_destroy cairo_region_destroy
-    #define gdk_region_union_with_rect cairo_region_union_rectangle
     #define gdk_region_rectangle cairo_region_create_rectangle
     #define gdk_region_offset cairo_region_translate
     #define gdk_region_intersect cairo_region_intersect
-    #define gdk_region_copy cairo_region_copy
-    G_DEFINE_TYPE (MetaFrames, meta_frames, GTK_TYPE_WINDOW);
+    G_DEFINE_TYPE (MetaFrames, meta_frames, GTK_TYPE_INVISIBLE);
     #define parent_class meta_frames_parent_class
     #define GTK_WIDGET_REALIZED gtk_widget_get_realized
 #endif
@@ -62,7 +55,11 @@
 
 static void meta_frames_class_init (MetaFramesClass *klass);
 static void meta_frames_init       (MetaFrames      *frames);
+#if GTK_CHECK_VERSION(3, 0, 0)
+static void meta_frames_destroy    (GtkWidget       *object);
+#else
 static void meta_frames_destroy    (GtkObject       *object);
+#endif
 static void meta_frames_finalize   (GObject         *object);
 static void meta_frames_style_set  (GtkWidget       *widget,
                                     GtkStyle        *prev_style);
@@ -134,27 +131,7 @@ static void invalidate_all_caches (MetaFrames *frames);
 static void invalidate_whole_window (MetaFrames *frames,
                                      MetaUIFrame *frame);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-
-static GObject *
-meta_frames_constructor (GType                  gtype,
-                         guint                  n_properties,
-                         GObjectConstructParam *properties)
-{
-  GObject *object;
-  GObjectClass *gobject_class;
-
-  gobject_class = G_OBJECT_CLASS (meta_frames_parent_class);
-  object = gobject_class->constructor (gtype, n_properties, properties);
-
-  g_object_set (object,
-                "type", GTK_WINDOW_POPUP,
-                NULL);
-
-  return object;
-}
-
-#else
+#if !GTK_CHECK_VERSION(3, 0, 0)
 
 static GtkWidgetClass *parent_class = NULL;
 
@@ -200,11 +177,15 @@ meta_frames_class_init (MetaFramesClass *class)
   #endif
   widget_class = (GtkWidgetClass*) class;
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   parent_class = g_type_class_peek_parent (class);
+#endif
 
   gobject_class->finalize = meta_frames_finalize;
   #if !GTK_CHECK_VERSION(3, 0, 0)
   object_class->destroy = meta_frames_destroy;
+  #else
+  widget_class->destroy = meta_frames_destroy;
   #endif
 
   widget_class->style_set = meta_frames_style_set;
@@ -295,8 +276,13 @@ listify_func (gpointer key, gpointer value, gpointer data)
   *listp = g_slist_prepend (*listp, value);
 }
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+static void
+meta_frames_destroy (GtkWidget *object)
+#else
 static void
 meta_frames_destroy (GtkObject *object)
+#endif
 {
   GSList *winlist;
   GSList *tmp;
@@ -320,7 +306,11 @@ meta_frames_destroy (GtkObject *object)
     }
   g_slist_free (winlist);
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+  GTK_WIDGET_CLASS (parent_class)->destroy (object);
+#else
   GTK_OBJECT_CLASS (parent_class)->destroy (object);
+#endif
 }
 
 static void
