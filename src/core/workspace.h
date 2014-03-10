@@ -43,7 +43,8 @@ typedef enum
   META_MOTION_UP = -1,
   META_MOTION_DOWN = -2,
   META_MOTION_LEFT = -3,
-  META_MOTION_RIGHT = -4
+  META_MOTION_RIGHT = -4,
+  META_MOTION_PREV = -5
 } MetaMotionDirection;
 
 struct _MetaWorkspace
