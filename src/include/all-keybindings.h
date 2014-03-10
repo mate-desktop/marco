@@ -111,6 +111,9 @@ keybind (switch-to-workspace-up, handle_switch_to_workspace,
 keybind (switch-to-workspace-down, handle_switch_to_workspace,
          META_MOTION_DOWN, 0)
 
+keybind (switch-to-workspace-prev, handle_switch_to_workspace,
+         META_MOTION_PREV, 0)
+
 /***********************************/
 
 /* The ones which have inverses.  These can't be bound to any keystroke
