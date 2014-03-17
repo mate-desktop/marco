@@ -489,9 +489,9 @@ fi
 
 AC_SUBST(GDK_PIXBUF_CSOURCE)
 
-AC_PATH_PROG(MATEDIALOG, matedialog, no)
-if test x"$MATEDIALOG" = xno; then
-  AC_MSG_ERROR([matedialog not found in your path - needed for dialogs])
+AC_PATH_PROG(ZENITY, matedialog, no)
+if test x"$ZENITY" = xno; then
+  AC_MSG_ERROR([zenity not found in your path - needed for dialogs])
 fi
 
 AC_ARG_ENABLE(debug,
