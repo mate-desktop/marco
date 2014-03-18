@@ -489,7 +489,7 @@ fi
 
 AC_SUBST(GDK_PIXBUF_CSOURCE)
 
-AC_PATH_PROG(ZENITY, matedialog, no)
+AC_PATH_PROG(ZENITY, zenity, no)
 if test x"$ZENITY" = xno; then
   AC_MSG_ERROR([zenity not found in your path - needed for dialogs])
 fi
