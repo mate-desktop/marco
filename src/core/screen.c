@@ -102,6 +102,7 @@ set_supported_hint (MetaScreen *screen)
 #include "atomnames.h"
 #undef item
 #undef EWMH_ATOMS_ONLY
+    screen->display->atom__GTK_FRAME_EXTENTS,
   };
 
   XChangeProperty (screen->display->xdisplay, screen->xroot,
