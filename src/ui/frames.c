@@ -736,7 +736,11 @@ meta_frames_unmanage_window (MetaFrames *frames,
 
       g_hash_table_remove (frames->frames, &frame->xwindow);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+      g_object_unref (frame->style);
+#else
       gtk_style_detach (frame->style);
+#endif
 
       gdk_window_destroy (frame->window);
 
