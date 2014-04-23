@@ -52,6 +52,16 @@ struct _MetaUI {
 
 void meta_ui_init(int* argc, char*** argv)
 {
+  /* As of 2.91.7, Gdk uses XI2 by default, which conflicts with the
+   * direct X calls we use - in particular, events caused by calls to
+   * XGrabPointer/XGrabKeyboard are no longer understood by GDK, while
+   * GDK will no longer generate the core XEvents we process.
+   * So at least for now, enforce the previous behavior.
+   */
+#if GTK_CHECK_VERSION(2, 91, 7)
+  gdk_disable_multidevice ();
+#endif
+
 	if (!gtk_init_check (argc, argv))
 	{
 		meta_fatal ("Unable to open X display %s\n", XDisplayName (NULL));
@@ -313,7 +323,14 @@ meta_ui_new (Display *xdisplay,
 
   g_assert (xdisplay == GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
   ui->frames = meta_frames_new (XScreenNumberOfScreen (screen));
+#if GTK_CHECK_VERSION (3, 0, 0)
+  /* This does not actually show any widget. MetaFrames has been hacked so
+   * that showing it doesn't actually do anything. But we need the flags
+   * set for GTK to deliver events properly. */
+  gtk_widget_show (GTK_WIDGET (ui->frames));
+#else
   gtk_widget_realize (GTK_WIDGET (ui->frames));
+#endif
 
   g_object_set_data (G_OBJECT (gdisplay), "meta-ui", ui);
 
@@ -901,7 +918,10 @@ meta_ui_window_should_not_cause_focus (Display *xdisplay,
   GdkWindow *window;
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-  window = gdk_x11_window_lookup_for_display (gdk_display_get_default (), xwindow);
+  GdkDisplay *display;
+
+  display = gdk_x11_lookup_xdisplay (xdisplay);
+  window = gdk_x11_window_lookup_for_display (display, xwindow);
 #else
   window = gdk_xid_table_lookup (xwindow);
 #endif
@@ -967,6 +987,10 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
                                  int               *right_width)
 {
   int text_height;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GtkStyleContext *style = NULL;
+  PangoFontDescription *free_font_desc = NULL;
+#endif
   PangoContext *context;
   const PangoFontDescription *font_desc;
   GtkStyle *default_style;
@@ -978,8 +1002,24 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
 
       if (!font_desc)
         {
+#if GTK_CHECK_VERSION (3, 0, 0)
+          GdkDisplay *display = gdk_x11_lookup_xdisplay (ui->xdisplay);
+          GdkScreen *screen = gdk_display_get_screen (display, XScreenNumberOfScreen (ui->xscreen));
+          GtkWidgetPath *widget_path;
+
+          style = gtk_style_context_new ();
+          gtk_style_context_set_screen (style, screen);
+          widget_path = gtk_widget_path_new ();
+          gtk_widget_path_append_type (widget_path, GTK_TYPE_WINDOW);
+          gtk_style_context_set_path (style, widget_path);
+          gtk_widget_path_free (widget_path);
+
+          gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL, "font", &free_font_desc, NULL);
+          font_desc = (const PangoFontDescription *) free_font_desc;
+#else
           default_style = gtk_widget_get_default_style ();
           font_desc = default_style->font_desc;
+#endif
         }
 
       text_height = meta_pango_font_desc_get_text_height (font_desc, context);
@@ -988,11 +1028,21 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
                                     type, text_height, flags,
                                     top_height, bottom_height,
                                     left_width, right_width);
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+      if (free_font_desc)
+        pango_font_description_free (free_font_desc);
+#endif
     }
   else
     {
       *top_height = *bottom_height = *left_width = *right_width = 0;
     }
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+  if (style != NULL)
+    g_object_unref (style);
+#endif
 }
 
 void
@@ -1171,7 +1221,7 @@ meta_ui_window_is_widget (MetaUI *ui,
 
 #if GTK_CHECK_VERSION (3, 0, 0)
   GdkDisplay *display;
-  
+  display = gdk_x11_lookup_xdisplay (ui->xdisplay);
   window = gdk_x11_window_lookup_for_display (display, xwindow);
 #else
   window = gdk_xid_table_lookup (xwindow);

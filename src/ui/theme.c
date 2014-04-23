@@ -3425,7 +3425,11 @@ state_flags_from_gtk_state (GtkStateType state)
  */
 static void
 meta_draw_op_draw_with_env (const MetaDrawOp    *op,
+                            #if GTK_CHECK_VERSION(3, 0, 0)
+                            GtkStyleContext     *style_gtk,
+                            #else
                             GtkStyle            *style_gtk,
+                            #endif
                             GtkWidget           *widget,
                             #if GTK_CHECK_VERSION(3, 0, 0)
                             cairo_t             *cr,
@@ -3990,7 +3994,12 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
       break;
     }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  cairo_restore (cr);
+  gtk_style_context_restore (style_gtk);
+#else
   cairo_destroy (cr);
+#endif
 }
 
 void
@@ -4532,7 +4541,11 @@ button_rect (MetaButtonType           type,
 
 void
 meta_frame_style_draw_with_style (MetaFrameStyle          *style,
+                                  #if GTK_CHECK_VERSION(3, 0, 0)
+                                  GtkStyleContext         *style_gtk,
+                                  #else
                                   GtkStyle                *style_gtk,
+                                  #endif
                                   GtkWidget               *widget,
                                   #if GTK_CHECK_VERSION(3, 0, 0)
                                   cairo_t                 *cr,
@@ -4908,7 +4921,13 @@ meta_frame_style_draw (MetaFrameStyle          *style,
                        GdkPixbuf               *mini_icon,
                        GdkPixbuf               *icon)
 {
-  meta_frame_style_draw_with_style (style, gtk_widget_get_style (widget), widget,
+  meta_frame_style_draw_with_style (style,
+                                    #if GTK_CHECK_VERSION(3, 0, 0)
+                                    gtk_widget_get_style_context (widget),
+                                    #else
+                                    gtk_widget_get_style (widget),
+                                    #endif
+                                    widget,
                                     #if GTK_CHECK_VERSION(3, 0, 0)
                                     cr,
                                     #else
@@ -5467,7 +5486,11 @@ meta_theme_get_title_scale (MetaTheme     *theme,
 
 void
 meta_theme_draw_frame_with_style (MetaTheme              *theme,
+                                  #if GTK_CHECK_VERSION(3, 0, 0)
+                                  GtkStyleContext        *style_gtk,
+                                  #else
                                   GtkStyle               *style_gtk,
+                                  #endif
                                   GtkWidget              *widget,
                                   #if GTK_CHECK_VERSION(3, 0, 0)
                                   cairo_t                *cr,
@@ -5545,7 +5568,13 @@ meta_theme_draw_frame (MetaTheme              *theme,
                        GdkPixbuf              *mini_icon,
                        GdkPixbuf              *icon)
 {
-  meta_theme_draw_frame_with_style (theme, gtk_widget_get_style (widget), widget,
+  meta_theme_draw_frame_with_style (theme,
+                                    #if GTK_CHECK_VERSION(3, 0, 0)
+                                    gtk_widget_get_style_context (widget),
+                                    #else
+                                    gtk_widget_get_style (widget),
+                                    #endif
+                                    widget,
                                     #if GTK_CHECK_VERSION(3, 0, 0)
                                     cr,
                                     #else

@@ -52,16 +52,19 @@ static int screen_bottom_edge = 0;
 
 #if GTK_CHECK_VERSION(3, 0, 0)
 
-static gboolean
+static gint
 draw_handler (GtkWidget *tooltips,
               cairo_t   *cr,
               gpointer   user_data)
 {
-  gtk_render_background (gtk_widget_get_style_context (tooltips),
-                         cr,
-                         0, 0,
-                         gtk_widget_get_allocated_width (tooltips),
-                         gtk_widget_get_allocated_height (tooltips));
+  if (tooltips != NULL)
+    {
+      gtk_render_background (gtk_widget_get_style_context (tooltips),
+                             cr,
+                             0, 0,
+                             gtk_widget_get_allocated_width (tooltips),
+                             gtk_widget_get_allocated_height (tooltips));
+    }
 
   return FALSE;
 }
