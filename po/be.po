@@ -4,12 +4,14 @@
 # 
 # Translators:
 # , 2014
+# meequz <meequz@gmail.com>, 2014
+# meequz <meequz@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2014-02-27 12:06+0000\n"
+"PO-Revision-Date: 2014-03-20 11:16+0000\n"
 "Last-Translator: meequz <meequz@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/projects/p/MATE/language/be/)\n"
 "MIME-Version: 1.0\n"
@@ -24,11 +26,11 @@ msgstr "Стол"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 msgid "Show the panel's \"Run Application\" dialog box"
-msgstr ""
+msgstr "Паказаць вакенца панэлі \"Выканаць праграму\""
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
 msgid "Show the panel's main menu"
-msgstr ""
+msgstr "Паказаць галоўнае меню панэлі"
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
 msgid "Take a screenshot"
@@ -48,15 +50,15 @@ msgstr "Кіраванне вокнамі"
 
 #: ../src/50-marco-global-key.xml.in.h:2
 msgid "Move between windows, using a popup window"
-msgstr ""
+msgstr "Пераключыцца паміж вокнамі праз выплыўнае вакно"
 
 #: ../src/50-marco-global-key.xml.in.h:3
 msgid "Move between windows of an application, using a popup window"
-msgstr ""
+msgstr "Пераключыцца паміж вокнамі адной праграмы праз выплыўнае вакно"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 msgid "Move between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Пераключыцца паміж панэлямі і сталом праз выплыўнае вакно"
 
 #: ../src/50-marco-global-key.xml.in.h:5
 msgid "Move between windows immediately"
@@ -72,7 +74,7 @@ msgstr "Пераключыцца паміж панэлямі і сталом"
 
 #: ../src/50-marco-global-key.xml.in.h:8
 msgid "Hide all normal windows and set focus to the desktop"
-msgstr ""
+msgstr "Схаваць усе нармальныя вокны і паказаць стол"
 
 #: ../src/50-marco-global-key.xml.in.h:9
 msgid "Switch to workspace 1"
@@ -124,23 +126,23 @@ msgstr "Пераключыцца на працоўную прастору 12"
 
 #: ../src/50-marco-global-key.xml.in.h:21
 msgid "Switch to workspace on the left of the current workspace"
-msgstr ""
+msgstr "Пераключыцца на лявейшую працоўную прастору"
 
 #: ../src/50-marco-global-key.xml.in.h:22
 msgid "Switch to workspace on the right of the current workspace"
-msgstr ""
+msgstr "Пераключыцца на правейшую працоўную прастору"
 
 #: ../src/50-marco-global-key.xml.in.h:23
 msgid "Switch to workspace above the current workspace"
-msgstr ""
+msgstr "Пераключыцца на вышэйшую працоўную прастору"
 
 #: ../src/50-marco-global-key.xml.in.h:24
 msgid "Switch to workspace below the current workspace"
-msgstr ""
+msgstr "Пераключыцца на ніжэйшую працоўную прастору"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 msgid "Activate the window menu"
-msgstr ""
+msgstr "Паказаць меню вакна"
 
 #: ../src/50-marco-window-key.xml.in.h:3
 msgid "Toggle fullscreen mode"
@@ -156,7 +158,7 @@ msgstr "Найбольшыць вакно"
 
 #: ../src/50-marco-window-key.xml.in.h:6
 msgid "Restore window"
-msgstr ""
+msgstr "Аднавіць вакно"
 
 #: ../src/50-marco-window-key.xml.in.h:7
 msgid "Toggle shaded state"
@@ -180,11 +182,11 @@ msgstr "Змяніць памер вакна"
 
 #: ../src/50-marco-window-key.xml.in.h:12
 msgid "Toggle whether window is on all workspaces or just one"
-msgstr ""
+msgstr "Пераключыць, ці вакно відаць на адной прасторы або на ўсіх"
 
 #: ../src/50-marco-window-key.xml.in.h:13
 msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr ""
+msgstr "Узняць вакно, калі яно перакрыта іншым, інакш апусціць"
 
 #: ../src/50-marco-window-key.xml.in.h:14
 msgid "Raise window above other windows"
@@ -279,17 +281,17 @@ msgstr ""
 #: ../src/core/delete.c:96
 #, c-format
 msgid "<tt>%s</tt> is not responding."
-msgstr ""
+msgstr "<tt>%s</tt> не адказвае."
 
 #: ../src/core/delete.c:101
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr ""
+msgstr "Можна трошкі пачакаць, пакуль праграма працягне працу, або прымусіць яе завяршыцца."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
-msgstr ""
+msgstr "_Чакаць"
 
 #: ../src/core/delete.c:110
 msgid "_Force Quit"
@@ -308,7 +310,7 @@ msgstr ""
 #: ../src/core/display.c:346
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
-msgstr "Не выйшла адкрыць сістэмнае вакно \"%s\" асяродздзя X Window\n"
+msgstr "Не выйшла адкрыць сістэмнае вакно \"%s\" асяроддзя X Window\n"
 
 #: ../src/core/errors.c:278
 #, c-format
@@ -389,11 +391,11 @@ msgstr ""
 
 #: ../src/core/main.c:316
 msgid "Turn compositing on"
-msgstr ""
+msgstr "Уключыць кампазітынг"
 
 #: ../src/core/main.c:322
 msgid "Turn compositing off"
-msgstr ""
+msgstr "Адключыць кампазітынг"
 
 #: ../src/core/main.c:328
 msgid ""
@@ -612,21 +614,21 @@ msgstr "%s (на %s)"
 #: ../src/core/window-props.c:420
 #, c-format
 msgid "%s (as superuser)"
-msgstr ""
+msgstr "%s (як суперкарыстальнік)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
 #: ../src/core/window-props.c:438
 #, c-format
 msgid "%s (as %s)"
-msgstr ""
+msgstr "%s (як %s)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
 #: ../src/core/window-props.c:444
 #, c-format
 msgid "%s (as another user)"
-msgstr ""
+msgstr "%s (як іншы карыстальнік)"
 
 #: ../src/core/window-props.c:1430
 #, c-format
@@ -678,7 +680,7 @@ msgstr "Найбольшыць вакно"
 
 #: ../src/ui/frames.c:1136
 msgid "Restore Window"
-msgstr ""
+msgstr "Аднавіць вакно"
 
 #: ../src/ui/frames.c:1139
 msgid "Roll Up Window"
@@ -690,11 +692,11 @@ msgstr ""
 
 #: ../src/ui/frames.c:1145
 msgid "Keep Window On Top"
-msgstr ""
+msgstr "Трымаць вакно на версе"
 
 #: ../src/ui/frames.c:1148
 msgid "Remove Window From Top"
-msgstr ""
+msgstr "Зняць вакно з верху"
 
 #: ../src/ui/frames.c:1151
 msgid "Always On Visible Workspace"
@@ -702,7 +704,7 @@ msgstr "Заўсёды на бачнай працоўнай прасторы"
 
 #: ../src/ui/frames.c:1154
 msgid "Put Window On Only One Workspace"
-msgstr ""
+msgstr "Пакласці вакно толькі на адну працоўную прастору"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:65
@@ -1515,7 +1517,7 @@ msgstr "/Вокны/_Правая панэль"
 
 #: ../src/ui/theme-viewer.c:85
 msgid "/Windows/_All docks"
-msgstr ""
+msgstr "/Вокны/_Усе панэлі"
 
 #: ../src/ui/theme-viewer.c:86
 msgid "/Windows/Des_ktop"
