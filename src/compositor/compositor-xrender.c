@@ -1821,6 +1821,10 @@ add_win (MetaScreen *screen,
 
   if (xwindow == info->output)
     return;
+    
+  /* If already added, ignore */
+  if (find_window_for_screen (screen, xwindow) != NULL)
+    return;
 
   cw = g_new0 (MetaCompWindow, 1);
   cw->screen = screen;
