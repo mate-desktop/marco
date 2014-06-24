@@ -990,7 +990,11 @@ void meta_frame_style_draw (MetaFrameStyle          *style,
 
 
 void meta_frame_style_draw_with_style (MetaFrameStyle          *style,
+                                       #if GTK_CHECK_VERSION(3, 0, 0)
+                                       GtkStyleContext         *style_gtk,
+                                       #else
                                        GtkStyle                *style_gtk,
+                                       #endif
                                        GtkWidget               *widget,
                                        #if GTK_CHECK_VERSION(3, 0, 0)
                                        cairo_t                 *cr,
@@ -1085,7 +1089,11 @@ void meta_theme_draw_frame_by_name (MetaTheme              *theme,
                                     GdkPixbuf              *icon);
 
 void meta_theme_draw_frame_with_style (MetaTheme              *theme,
+                                       #if GTK_CHECK_VERSION(3, 0, 0)
+                                       GtkStyleContext        *style_gtk,
+                                       #else
                                        GtkStyle               *style_gtk,
+                                       #endif
                                        GtkWidget              *widget,
                                        #if GTK_CHECK_VERSION(3, 0, 0)
                                        cairo_t                *cr,

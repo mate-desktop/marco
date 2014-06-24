@@ -1523,11 +1523,7 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 				gdk_event = gdk_event_new(GDK_BUTTON_RELEASE);
 			}
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 			gdk_event->button.window = g_object_ref(gdk_window);
-#else
-			gdk_event->button.window = gdk_window;
-#endif
 			gdk_event->button.send_event = 0;
 			gdk_event->button.axes = NULL;
 			gdk_event->button.state = 0;
@@ -1543,11 +1539,7 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 
 		case MotionNotify:
 			gdk_event = gdk_event_new(GDK_MOTION_NOTIFY);
-#if GTK_CHECK_VERSION (3, 0, 0)
 			gdk_event->motion.window = g_object_ref(gdk_window);
-#else
-			gdk_event->motion.window = gdk_window;
-#endif
 			gdk_event->motion.send_event = FALSE;
 			gdk_event->motion.time = 0;
 			gdk_event->motion.x = 0;
@@ -1564,11 +1556,7 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 
 		case LeaveNotify:
 			gdk_event = gdk_event_new(xevent->type == EnterNotify ? GDK_ENTER_NOTIFY : GDK_LEAVE_NOTIFY);
-#if GTK_CHECK_VERSION(3, 0, 0)
 			gdk_event->crossing.window = g_object_ref(gdk_window);
-#else
-			gdk_event->crossing.window = gdk_window;
-#endif
 			gdk_event->crossing.send_event = 0;
 			gdk_event->crossing.subwindow = NULL;
 			gdk_event->crossing.time = 0;

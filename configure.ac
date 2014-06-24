@@ -1,7 +1,7 @@
 AC_PREREQ(2.50)
 
 m4_define([marco_major_version], [1])
-m4_define([marco_minor_version], [8])
+m4_define([marco_minor_version], [9])
 m4_define([marco_micro_version], [0])
 
 m4_define([marco_version],
@@ -489,9 +489,9 @@ fi
 
 AC_SUBST(GDK_PIXBUF_CSOURCE)
 
-AC_PATH_PROG(MATEDIALOG, matedialog, no)
-if test x"$MATEDIALOG" = xno; then
-  AC_MSG_ERROR([matedialog not found in your path - needed for dialogs])
+AC_PATH_PROG(ZENITY, zenity, no)
+if test x"$ZENITY" = xno; then
+  AC_MSG_ERROR([zenity not found in your path - needed for dialogs])
 fi
 
 AC_ARG_ENABLE(debug,

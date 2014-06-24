@@ -216,6 +216,14 @@ reload_kwm_win_icon (MetaWindow    *window,
 }
 
 static void
+reload_gtk_frame_extents (MetaWindow    *window,
+                          MetaPropValue *value,
+                          gboolean       initial)
+{
+  return;
+}
+
+static void
 reload_struts (MetaWindow    *window,
                MetaPropValue *value,
                gboolean       initial)
@@ -1507,6 +1515,7 @@ meta_display_init_window_prop_hooks (MetaDisplay *display)
     { XA_WM_HINTS,                     META_PROP_VALUE_WM_HINTS,  reload_wm_hints },
     { XA_WM_TRANSIENT_FOR,             META_PROP_VALUE_WINDOW,    reload_transient_for },
     { display->atom__NET_WM_USER_TIME_WINDOW, META_PROP_VALUE_WINDOW, reload_net_wm_user_time_window },
+    { display->atom__GTK_FRAME_EXTENTS, META_PROP_VALUE_CARDINAL_LIST, reload_gtk_frame_extents },
     { 0 },
   };
 

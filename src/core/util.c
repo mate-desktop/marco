@@ -559,7 +559,7 @@ meta_show_dialog (const char *type,
                                  g_slist_length (columns)*2 +
                                  g_slist_length (entries)));
 
-  argvl[i++] = "matedialog";
+  argvl[i++] = "zenity";
   argvl[i++] = type;
   argvl[i++] = "--screen";
   argvl[i++] = screen_number_text;

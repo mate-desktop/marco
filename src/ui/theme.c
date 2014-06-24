@@ -410,10 +410,14 @@ meta_frame_layout_get_borders (const MetaFrameLayout *layout,
 {
   int buttons_height, title_height;
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+  g_return_if_fail (layout != NULL);
+#else
   g_return_if_fail (top_height != NULL);
   g_return_if_fail (bottom_height != NULL);
   g_return_if_fail (left_width != NULL);
   g_return_if_fail (right_width != NULL);
+#endif
 
   if (!layout->has_title)
     text_height = 0;
@@ -3425,7 +3429,11 @@ state_flags_from_gtk_state (GtkStateType state)
  */
 static void
 meta_draw_op_draw_with_env (const MetaDrawOp    *op,
+                            #if GTK_CHECK_VERSION(3, 0, 0)
+                            GtkStyleContext     *style_gtk,
+                            #else
                             GtkStyle            *style_gtk,
+                            #endif
                             GtkWidget           *widget,
                             #if GTK_CHECK_VERSION(3, 0, 0)
                             cairo_t             *cr,
@@ -3990,7 +3998,12 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
       break;
     }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  cairo_restore (cr);
+  gtk_style_context_restore (style_gtk);
+#else
   cairo_destroy (cr);
+#endif
 }
 
 void
@@ -4532,7 +4545,11 @@ button_rect (MetaButtonType           type,
 
 void
 meta_frame_style_draw_with_style (MetaFrameStyle          *style,
+                                  #if GTK_CHECK_VERSION(3, 0, 0)
+                                  GtkStyleContext         *style_gtk,
+                                  #else
                                   GtkStyle                *style_gtk,
+                                  #endif
                                   GtkWidget               *widget,
                                   #if GTK_CHECK_VERSION(3, 0, 0)
                                   cairo_t                 *cr,
@@ -4908,7 +4925,13 @@ meta_frame_style_draw (MetaFrameStyle          *style,
                        GdkPixbuf               *mini_icon,
                        GdkPixbuf               *icon)
 {
-  meta_frame_style_draw_with_style (style, gtk_widget_get_style (widget), widget,
+  meta_frame_style_draw_with_style (style,
+                                    #if GTK_CHECK_VERSION(3, 0, 0)
+                                    gtk_widget_get_style_context (widget),
+                                    #else
+                                    gtk_widget_get_style (widget),
+                                    #endif
+                                    widget,
                                     #if GTK_CHECK_VERSION(3, 0, 0)
                                     cr,
                                     #else
@@ -5467,7 +5490,11 @@ meta_theme_get_title_scale (MetaTheme     *theme,
 
 void
 meta_theme_draw_frame_with_style (MetaTheme              *theme,
+                                  #if GTK_CHECK_VERSION(3, 0, 0)
+                                  GtkStyleContext        *style_gtk,
+                                  #else
                                   GtkStyle               *style_gtk,
+                                  #endif
                                   GtkWidget              *widget,
                                   #if GTK_CHECK_VERSION(3, 0, 0)
                                   cairo_t                *cr,
@@ -5545,7 +5572,13 @@ meta_theme_draw_frame (MetaTheme              *theme,
                        GdkPixbuf              *mini_icon,
                        GdkPixbuf              *icon)
 {
-  meta_theme_draw_frame_with_style (theme, gtk_widget_get_style (widget), widget,
+  meta_theme_draw_frame_with_style (theme,
+                                    #if GTK_CHECK_VERSION(3, 0, 0)
+                                    gtk_widget_get_style_context (widget),
+                                    #else
+                                    gtk_widget_get_style (widget),
+                                    #endif
+                                    widget,
                                     #if GTK_CHECK_VERSION(3, 0, 0)
                                     cr,
                                     #else

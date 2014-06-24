@@ -653,16 +653,19 @@ meta_frames_attach_style (MetaFrames  *frames,
                           MetaUIFrame *frame)
 {
   if (frame->style != NULL)
+#if GTK_CHECK_VERSION(3, 0, 0)
+    g_object_unref (frame->style);
+#else
     gtk_style_detach (frame->style);
+#endif
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+  frame->style = g_object_ref (gtk_widget_get_style_context (GTK_WIDGET (frames)));
+#else
   /* Weirdly, gtk_style_attach() steals a reference count from the style passed in */
-  #if GTK_CHECK_VERSION(3, 0, 0)
-  g_object_ref (gtk_widget_get_style (GTK_WIDGET (frames)));
-  frame->style = gtk_style_attach (gtk_widget_get_style (GTK_WIDGET (frames)), frame->window);
-  #else
   g_object_ref (GTK_WIDGET (frames)->style);
   frame->style = gtk_style_attach (GTK_WIDGET (frames)->style, frame->window);
-  #endif
+#endif
 }
 
 void
@@ -733,7 +736,11 @@ meta_frames_unmanage_window (MetaFrames *frames,
 
       g_hash_table_remove (frames->frames, &frame->xwindow);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+      g_object_unref (frame->style);
+#else
       gtk_style_detach (frame->style);
+#endif
 
       gdk_window_destroy (frame->window);
 
@@ -2916,8 +2923,12 @@ meta_frames_set_window_background (MetaFrames   *frames,
     }
   else
     {
+#if GTK_CHECK_VERSION (3, 0, 0)
+      gtk_style_context_set_background (frame->style, frame->window);
+#else
       gtk_style_set_background (frame->style,
                                 frame->window, GTK_STATE_NORMAL);
+#endif
     }
  }
 
