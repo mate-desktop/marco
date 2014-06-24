@@ -187,7 +187,7 @@ struct _MetaWindow
   guint tab_unminimized : 1;
 
   /* Whether there is a pending effect */
-  MetaEffectType effect_pending : 1;
+  MetaEffectType effect_pending;
 
   /* Whether the window is mapped; actual server-side state
    * see also unmaps_pending

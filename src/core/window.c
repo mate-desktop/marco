@@ -1454,7 +1454,74 @@ finish_minimize (gpointer data)
 {
   MetaWindow *window = data;
 
-  meta_window_hide (window);
+  window->effect_pending = META_EFFECT_NONE;
+}
+
+static void
+finish_unminimize (gpointer data)
+{
+  MetaWindow *window = data;
+
+  meta_window_show (window);
+  window->effect_pending = META_EFFECT_NONE;
+}
+
+static void
+meta_window_animate_minimize (MetaWindow *window)
+{
+  MetaRectangle icon_rect, window_rect;
+  gboolean result;
+
+  /* Check if the window has an icon geometry */
+  result = meta_window_get_icon_geometry (window, &icon_rect);
+
+  if (!result)
+    {
+      /* just animate into the corner somehow - maybe
+       * not a good idea...
+       */
+      icon_rect.x = window->screen->rect.width;
+      icon_rect.y = window->screen->rect.height;
+      icon_rect.width = 1;
+      icon_rect.height = 1;
+    }
+
+  meta_window_get_outer_rect (window, &window_rect);
+
+  meta_effect_run_minimize (window,
+                            &window_rect,
+                            &icon_rect,
+                            finish_minimize,
+                            window);
+}
+
+static void
+meta_window_animate_unminimize (MetaWindow *window)
+{
+  MetaRectangle icon_rect, window_rect;
+  gboolean result;
+
+  /* Check if the window has an icon geometry */
+  result = meta_window_get_icon_geometry (window, &icon_rect);
+
+  if (!result)
+    {
+      /* just animate into the corner somehow - maybe
+       * not a good idea...
+       */
+      icon_rect.x = window->screen->rect.width;
+      icon_rect.y = window->screen->rect.height;
+      icon_rect.width = 1;
+      icon_rect.height = 1;
+    }
+
+  meta_window_get_outer_rect (window, &window_rect);
+
+  meta_effect_run_unminimize (window,
+                            &window_rect,
+                            &icon_rect,
+                            finish_unminimize,
+                            window);
 }
 
 static void
@@ -1462,16 +1529,42 @@ implement_showing (MetaWindow *window,
                    gboolean    showing)
 {
   /* Actually show/hide the window */
-  meta_verbose ("Implement showing = %d for window %s\n",
-                showing, window->desc);
+  meta_verbose ("Implement showing = %d for window %s with effect pending %i\n",
+                showing, window->desc, window->effect_pending);
 
   if (!showing)
     {
-      meta_window_hide(window);
+      /* Handle pending effects */
+      switch(window->effect_pending)
+      {
+      case META_EFFECT_MINIMIZE:
+        /* First hide the window and then animate */
+        meta_window_hide(window);
+        meta_window_animate_minimize (window);
+        break;
+      case META_EFFECT_UNMINIMIZE:
+      case META_EFFECT_NONE:
+      default:
+        meta_window_hide(window);
+        break;
+      }
     }
   else
     {
-      meta_window_show (window);
+      /* Handle pending effects */
+      switch(window->effect_pending)
+      {
+      case META_EFFECT_MINIMIZE:
+        break;
+      case META_EFFECT_UNMINIMIZE:
+        /* First animate then show the window */
+        meta_window_animate_unminimize (window);
+        break;
+      case META_EFFECT_NONE:
+      default:
+        meta_window_show (window);
+        break;
+      }
     }
 }
 
@@ -2346,6 +2439,8 @@ meta_window_minimize (MetaWindow  *window)
   if (!window->minimized)
     {
       window->minimized = TRUE;
+      /* Flag minimize effect pending */
+      window->effect_pending = META_EFFECT_MINIMIZE;
       meta_window_queue(window, META_QUEUE_CALC_SHOWING);
 
       meta_window_foreach_transient (window,
@@ -2376,6 +2471,7 @@ meta_window_unminimize (MetaWindow  *window)
     {
       window->minimized = FALSE;
       window->was_minimized = TRUE;
+      window->effect_pending = META_EFFECT_UNMINIMIZE;
       meta_window_queue(window, META_QUEUE_CALC_SHOWING);
 
       meta_window_foreach_transient (window,
