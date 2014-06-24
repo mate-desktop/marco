@@ -1453,21 +1453,8 @@ static void
 finish_minimize (gpointer data)
 {
   MetaWindow *window = data;
-  /* FIXME: It really sucks to put timestamp pinging here; it'd
-   * probably make more sense in implement_showing() so that it's at
-   * least not duplicated in meta_window_show; but since
-   * finish_minimize is a callback making things just slightly icky, I
-   * haven't done that yet.
-   */
-  guint32 timestamp = meta_display_get_current_time_roundtrip (window->display);
 
   meta_window_hide (window);
-  if (window->has_focus)
-    {
-      meta_workspace_focus_default_window (window->screen->active_workspace,
-                                           window,
-                                           timestamp);
-    }
 }
 
 static void
