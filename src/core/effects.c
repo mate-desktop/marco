@@ -751,8 +751,15 @@ run_default_effect_handler (MetaEffect *effect)
 static void
 run_handler (MetaEffect *effect)
 {
+  /* If effects are disabled just run the finished function */
   if (meta_prefs_get_mate_animations ())
+  {
     run_default_effect_handler (effect);
+  }
+  else
+  {
+    effect->priv->finished(effect->priv->finished_data);
+  }
 
   effect_free (effect);
 }
