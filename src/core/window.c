@@ -1479,49 +1479,7 @@ implement_showing (MetaWindow *window,
 
   if (!showing)
     {
-      gboolean on_workspace;
-
-      on_workspace = meta_window_located_on_workspace (window,
-                                                       window->screen->active_workspace);
-
-      /* Really this effects code should probably
-       * be in meta_window_hide so the window->mapped
-       * test isn't duplicated here. Anyhow, we animate
-       * if we are mapped now, we are supposed to
-       * be minimized, and we are on the current workspace.
-       */
-      if (on_workspace && window->minimized && window->mapped &&
-          !meta_prefs_get_reduced_resources ())
-        {
-          MetaRectangle icon_rect, window_rect;
-          gboolean result;
-
-          /* Check if the window has an icon geometry */
-          result = meta_window_get_icon_geometry (window, &icon_rect);
-
-          if (!result)
-            {
-              /* just animate into the corner somehow - maybe
-               * not a good idea...
-               */
-              icon_rect.x = window->screen->rect.width;
-              icon_rect.y = window->screen->rect.height;
-              icon_rect.width = 1;
-              icon_rect.height = 1;
-            }
-
-          meta_window_get_outer_rect (window, &window_rect);
-
-          meta_effect_run_minimize (window,
-                                    &window_rect,
-                                    &icon_rect,
-                                    finish_minimize,
-                                    window);
-        }
-      else
-        {
-          finish_minimize (window);
-        }
+      meta_window_hide(window);
     }
   else
     {
@@ -2283,24 +2241,6 @@ meta_window_show (MetaWindow *window)
           XMapWindow (window->display->xdisplay, window->xwindow);
           meta_error_trap_pop (window->display, FALSE);
           did_show = TRUE;
-
-          if (window->was_minimized)
-            {
-              MetaRectangle window_rect;
-              MetaRectangle icon_rect;
-
-              window->was_minimized = FALSE;
-
-              if (meta_window_get_icon_geometry (window, &icon_rect))
-                {
-                  meta_window_get_outer_rect (window, &window_rect);
-
-                  meta_effect_run_unminimize (window,
-                                              &window_rect,
-                                              &icon_rect,
-                                              NULL, NULL);
-                }
-            }
         }
 
       if (window->iconic)
@@ -2437,6 +2377,8 @@ meta_window_minimize (MetaWindow  *window)
                       window->desc);
         }
     }
+
+  /* Should insert minimize effect here? */
 }
 
 void
@@ -2452,6 +2394,8 @@ meta_window_unminimize (MetaWindow  *window)
                                      queue_calc_showing_func,
                                      NULL);
     }
+
+  /* Should insert unminimize effect here? */
 }
 
 static void
