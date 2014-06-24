@@ -476,6 +476,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->minimized = FALSE;
   window->was_minimized = FALSE;
   window->tab_unminimized = FALSE;
+  window->effect_pending = META_EFFECT_NONE;
   window->iconic = FALSE;
   window->mapped = attrs->map_state != IsUnmapped;
   /* if already mapped, no need to worry about focus-on-first-time-showing */
