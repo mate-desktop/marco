@@ -2353,6 +2353,11 @@ meta_window_show (MetaWindow *window)
           meta_display_increment_focus_sentinel (window->display);
         }
     }
+  else if (window->was_minimized)
+    {
+      window->was_minimized = FALSE;
+      meta_window_focus(window, timestamp);
+    }
 
   set_net_wm_state (window);
 
