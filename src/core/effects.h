@@ -2,7 +2,7 @@
 
 /**
  * \file effects.h "Special effects" other than compositor effects.
- * 
+ *
  * Before we had a serious compositor, we supported swooping
  * rectangles for minimising and so on.  These are still supported
  * today, even when the compositor is enabled.  The file contains two
@@ -23,9 +23,9 @@
  * it can be found in svn r3769.
  */
 
-/* 
+/*
  * Copyright (C) 2001 Anders Carlsson, Havoc Pennington
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -35,7 +35,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -50,6 +50,7 @@
 
 typedef enum
 {
+  META_EFFECT_NONE = 0,
   META_EFFECT_MINIMIZE,
   META_EFFECT_UNMINIMIZE,
   META_EFFECT_FOCUS,
