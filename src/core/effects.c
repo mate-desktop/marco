@@ -719,6 +719,12 @@ run_default_effect_handler (MetaEffect *effect)
                      &(effect->u.minimize.icon_rect),
                      META_MINIMIZE_ANIMATION_LENGTH);
        break;
+    case META_EFFECT_UNMINIMIZE:
+       draw_box_animation (effect->window->screen,
+                     &(effect->u.minimize.icon_rect),
+                     &(effect->u.minimize.window_rect),
+                     META_MINIMIZE_ANIMATION_LENGTH);
+       break;
 
     default:
        break;
