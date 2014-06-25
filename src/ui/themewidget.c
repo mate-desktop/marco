@@ -2,9 +2,9 @@
 
 /* Marco theme widget (displays themed draw operations) */
 
-/* 
+/*
  * Copyright (C) 2002 Havoc Pennington
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -14,7 +14,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -123,10 +123,10 @@ meta_area_new (void)
 
   #if GTK_CHECK_VERSION(3, 0, 0)
   area = g_object_new (META_TYPE_AREA, NULL);
-  #else  
+  #else
   area = gtk_type_new (META_TYPE_AREA);
   #endif
-  
+
   return GTK_WIDGET (area);
 }
 
@@ -136,10 +136,10 @@ meta_area_finalize (GObject *object)
   MetaArea *area;
 
   area = META_AREA (object);
-  
+
   if (area->dnotify)
     (* area->dnotify) (area->user_data);
-  
+
   G_OBJECT_CLASS (parent_class)->finalize (object);
 }
 
@@ -177,21 +177,21 @@ meta_area_draw (GtkWidget       *widget,
 
       gtk_misc_get_padding(misc, &xpad, &ypad);
 
-  
+
       x = floor (allocation.x + xpad
          + ((allocation.width - req.width) * xalign)
          + 0.5);
-      y = floor (allocation.y + ypad 
+      y = floor (allocation.y + ypad
          + ((allocation.height - req.height) * yalign)
          + 0.5);
-      
+
       if (area->draw_func)
         {
           (* area->draw_func) (area, cr,
                                  area->user_data);
         }
     }
-  
+
   return FALSE;
 }
 
@@ -218,21 +218,21 @@ meta_area_expose (GtkWidget      *widget,
 	xalign = misc->xalign;
       else
 	xalign = 1.0 - misc->xalign;
-  
+
       x = floor (widget->allocation.x + misc->xpad
 		 + ((widget->allocation.width - widget->requisition.width) * xalign)
 		 + 0.5);
-      y = floor (widget->allocation.y + misc->ypad 
+      y = floor (widget->allocation.y + misc->ypad
 		 + ((widget->allocation.height - widget->requisition.height) * misc->yalign)
 		 + 0.5);
-      
+
       if (area->expose_func)
         {
           (* area->expose_func) (area, event, x, y,
                                  area->user_data);
         }
     }
-  
+
   return FALSE;
 }
 
@@ -245,10 +245,10 @@ meta_area_size_request (GtkWidget      *widget,
   MetaArea *area;
 
   area = META_AREA (widget);
-  
+
   req->width = 0;
   req->height = 0;
-  
+
   if (area->size_func)
     {
       (* area->size_func) (area, &req->width, &req->height,
@@ -258,7 +258,7 @@ meta_area_size_request (GtkWidget      *widget,
 
 #if GTK_CHECK_VERSION(3, 0, 0)
 
-static void 
+static void
 meta_area_get_preferred_width (GtkWidget *widget,
                                gint      *minimal,
                                gint      *natural)
@@ -270,7 +270,7 @@ meta_area_get_preferred_width (GtkWidget *widget,
   *minimal = *natural = requisition.width;
 }
 
-static void 
+static void
 meta_area_get_preferred_height (GtkWidget *widget,
                                gint      *minimal,
                                gint      *natural)
@@ -297,7 +297,7 @@ meta_area_setup (MetaArea           *area,
 {
   if (area->dnotify)
     (* area->dnotify) (area->user_data);
-  
+
   area->size_func = size_func;
   #if GTK_CHECK_VERSION(3, 0, 0)
   area->draw_func = draw_func;

@@ -2,9 +2,9 @@
 
 /* Marco fixed tooltip routine */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -14,7 +14,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -75,7 +75,7 @@ static gint
 expose_handler (GtkTooltips *tooltips)
 {
   gtk_paint_flat_box (gtk_widget_get_style (tip), gtk_widget_get_window (tip),
-                      GTK_STATE_NORMAL, GTK_SHADOW_OUT, 
+                      GTK_STATE_NORMAL, GTK_SHADOW_OUT,
                       NULL, tip, "tooltip",
                       0, 0, -1, -1);
 
@@ -89,9 +89,9 @@ meta_fixed_tip_show (Display *xdisplay, int screen_number,
                      const char *markup_text)
 {
   int w, h;
-  
+
   if (tip == NULL)
-    {      
+    {
       tip = gtk_window_new (GTK_WINDOW_POPUP);
       gtk_window_set_type_hint (GTK_WINDOW(tip), GDK_WINDOW_TYPE_HINT_TOOLTIP);
 
@@ -109,7 +109,7 @@ meta_fixed_tip_show (Display *xdisplay, int screen_number,
 	screen_right_edge = monitor.x + monitor.width;
 	screen_bottom_edge = monitor.y + monitor.height;
       }
-      
+
       gtk_widget_set_app_paintable (tip, TRUE);
       gtk_window_set_resizable (GTK_WINDOW (tip), FALSE);
       gtk_widget_set_name (tip, "gtk-tooltips");
@@ -117,7 +117,7 @@ meta_fixed_tip_show (Display *xdisplay, int screen_number,
 
       #if GTK_CHECK_VERSION(3, 0, 0)
       g_signal_connect (tip, "draw",
-                        G_CALLBACK (draw_handler), NULL);      
+                        G_CALLBACK (draw_handler), NULL);
       #else
       g_signal_connect_swapped (tip, "expose_event",
 				 G_CALLBACK (expose_handler), NULL);
@@ -127,7 +127,7 @@ meta_fixed_tip_show (Display *xdisplay, int screen_number,
       gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
       gtk_misc_set_alignment (GTK_MISC (label), 0.5, 0.5);
       gtk_widget_show (label);
-      
+
       gtk_container_add (GTK_CONTAINER (tip), label);
 
       g_signal_connect (tip, "destroy",
@@ -135,7 +135,7 @@ meta_fixed_tip_show (Display *xdisplay, int screen_number,
     }
 
   gtk_label_set_markup (GTK_LABEL (label), markup_text);
-  
+
   gtk_window_get_size (GTK_WINDOW (tip), &w, &h);
 
   if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
@@ -143,7 +143,7 @@ meta_fixed_tip_show (Display *xdisplay, int screen_number,
 
   if ((root_x + w) > screen_right_edge)
     root_x -= (root_x + w) - screen_right_edge;
-  
+
   gtk_window_move (GTK_WINDOW (tip), root_x, root_y);
 
   gtk_widget_show (tip);

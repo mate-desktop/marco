@@ -2,14 +2,14 @@
 
 /* Marco X screen handler */
 
-/* 
+/*
  * Copyright (C) 2001, 2002 Havoc Pennington
  * Copyright (C) 2002, 2003 Red Hat Inc.
  * Some ICCCM manager selection code derived from fvwm2,
  * Copyright (C) 2001 Dominik Vogt, Matthias Clasen, and fvwm2 team
  * Copyright (C) 2003 Rob Adams
  * Copyright (C) 2004-2006 Elijah Newren
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -19,7 +19,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -75,7 +75,7 @@ set_wm_check_hint (MetaScreen *screen)
   unsigned long data[1];
 
   g_return_val_if_fail (screen->display->leader_window != None, 0);
-  
+
   data[0] = screen->display->leader_window;
 
   XChangeProperty (screen->display->xdisplay, screen->xroot,
@@ -89,7 +89,7 @@ set_wm_check_hint (MetaScreen *screen)
 static void
 unset_wm_check_hint (MetaScreen *screen)
 {
-  XDeleteProperty (screen->display->xdisplay, screen->xroot, 
+  XDeleteProperty (screen->display->xdisplay, screen->xroot,
                    screen->display->atom__NET_SUPPORTING_WM_CHECK);
 }
 
@@ -110,7 +110,7 @@ set_supported_hint (MetaScreen *screen)
                    XA_ATOM,
                    32, PropModeReplace,
                    (guchar*) atoms, G_N_ELEMENTS(atoms));
-  
+
   return Success;
 }
 
@@ -127,12 +127,12 @@ set_wm_icon_size_hint (MetaScreen *screen)
   vals[3] = META_ICON_HEIGHT;
   vals[4] = 0;
   vals[5] = 0;
-  
+
   XChangeProperty (screen->display->xdisplay, screen->xroot,
                    screen->display->atom_WM_ICON_SIZE,
                    XA_CARDINAL,
                    32, PropModeReplace, (guchar*) vals, N_VALS);
-  
+
   return Success;
 #undef N_VALS
 }
@@ -151,29 +151,29 @@ reload_xinerama_infos (MetaScreen *screen)
         MetaWorkspace *space = tmp->data;
 
         meta_workspace_invalidate_work_area (space);
-        
+
         tmp = tmp->next;
       }
   }
 
   display = screen->display;
-  
+
   if (screen->xinerama_infos)
     g_free (screen->xinerama_infos);
-  
+
   screen->xinerama_infos = NULL;
   screen->n_xinerama_infos = 0;
   screen->last_xinerama_index = 0;
 
   screen->display->xinerama_cache_invalidated = TRUE;
-  
+
 #ifdef HAVE_XFREE_XINERAMA
   if (XineramaIsActive (display->xdisplay))
     {
       XineramaScreenInfo *infos;
       int n_infos;
       int i;
-      
+
       n_infos = 0;
       infos = XineramaQueryScreens (display->xdisplay, &n_infos);
 
@@ -185,7 +185,7 @@ reload_xinerama_infos (MetaScreen *screen)
         {
           screen->xinerama_infos = g_new (MetaXineramaScreenInfo, n_infos);
           screen->n_xinerama_infos = n_infos;
-          
+
           i = 0;
           while (i < n_infos)
             {
@@ -202,11 +202,11 @@ reload_xinerama_infos (MetaScreen *screen)
                           screen->xinerama_infos[i].rect.y,
                           screen->xinerama_infos[i].rect.width,
                           screen->xinerama_infos[i].rect.height);
-              
+
               ++i;
             }
         }
-      
+
       meta_XFree (infos);
     }
   else
@@ -237,16 +237,16 @@ reload_xinerama_infos (MetaScreen *screen)
                                 screen->number,
 				monitors, hints,
                                 &n_monitors);
-      /* Yes I know it should be Success but the current implementation 
+      /* Yes I know it should be Success but the current implementation
        * returns the num of monitor
        */
       if (result > 0)
 	{
           g_assert (n_monitors > 0);
-          
+
           screen->xinerama_infos = g_new (MetaXineramaScreenInfo, n_monitors);
           screen->n_xinerama_infos = n_monitors;
-          
+
           i = 0;
           while (i < n_monitors)
             {
@@ -262,8 +262,8 @@ reload_xinerama_infos (MetaScreen *screen)
                           screen->xinerama_infos[i].rect.x,
                           screen->xinerama_infos[i].rect.y,
                           screen->xinerama_infos[i].rect.width,
-                          screen->xinerama_infos[i].rect.height);              
-              
+                          screen->xinerama_infos[i].rect.height);
+
               ++i;
             }
 	}
@@ -279,7 +279,7 @@ reload_xinerama_infos (MetaScreen *screen)
               "Marco compiled without Solaris Xinerama support\n");
 #endif /* HAVE_SOLARIS_XINERAMA */
 
-  
+
   /* If no Xinerama, fill in the single screen info so
    * we can use the field unconditionally
    */
@@ -289,10 +289,10 @@ reload_xinerama_infos (MetaScreen *screen)
         {
           meta_topic (META_DEBUG_XINERAMA,
                       "Pretending a single monitor has two Xinerama screens\n");
-          
+
           screen->xinerama_infos = g_new (MetaXineramaScreenInfo, 2);
           screen->n_xinerama_infos = 2;
-          
+
           screen->xinerama_infos[0].number = 0;
           screen->xinerama_infos[0].rect = screen->rect;
           screen->xinerama_infos[0].rect.width = screen->rect.width / 2;
@@ -306,10 +306,10 @@ reload_xinerama_infos (MetaScreen *screen)
         {
           meta_topic (META_DEBUG_XINERAMA,
                       "No Xinerama screens, using default screen info\n");
-          
+
           screen->xinerama_infos = g_new (MetaXineramaScreenInfo, 1);
           screen->n_xinerama_infos = 1;
-          
+
           screen->xinerama_infos[0].number = 0;
           screen->xinerama_infos[0].rect = screen->rect;
         }
@@ -335,16 +335,16 @@ meta_screen_new (MetaDisplay *display,
   char buf[128];
   guint32 manager_timestamp;
   gulong current_workspace;
-  
+
   replace_current_wm = meta_get_replace_current_wm ();
-  
+
   /* Only display->name, display->xdisplay, and display->error_traps
    * can really be used in this function, since normally screens are
    * created from the MetaDisplay constructor
    */
-  
+
   xdisplay = display->xdisplay;
-  
+
   meta_verbose ("Trying screen %d on display '%s'\n",
                 number, display->name);
 
@@ -361,14 +361,14 @@ meta_screen_new (MetaDisplay *display,
     }
 
   sprintf (buf, "WM_S%d", number);
-  wm_sn_atom = XInternAtom (xdisplay, buf, False);  
-  
+  wm_sn_atom = XInternAtom (xdisplay, buf, False);
+
   current_wm_sn_owner = XGetSelectionOwner (xdisplay, wm_sn_atom);
 
   if (current_wm_sn_owner != None)
     {
       XSetWindowAttributes attrs;
-      
+
       if (!replace_current_wm)
         {
           meta_warning (_("Screen %d on display \"%s\" already has a window manager; try using the --replace option to replace the current window manager.\n"),
@@ -392,7 +392,7 @@ meta_screen_new (MetaDisplay *display,
   new_wm_sn_owner = meta_create_offscreen_window (xdisplay, xroot, NoEventMask);
 
   manager_timestamp = timestamp;
-  
+
   XSetSelectionOwner (xdisplay, wm_sn_atom, new_wm_sn_owner,
                       manager_timestamp);
 
@@ -402,14 +402,14 @@ meta_screen_new (MetaDisplay *display,
                     number, display->name);
 
       XDestroyWindow (xdisplay, new_wm_sn_owner);
-      
+
       return NULL;
     }
-  
+
   {
     /* Send client message indicating that we are now the WM */
     XClientMessageEvent ev;
-    
+
     ev.type = ClientMessage;
     ev.window = xroot;
     ev.message_type = display->atom_MANAGER;
@@ -426,7 +426,7 @@ meta_screen_new (MetaDisplay *display,
       XEvent event;
 
       /* We sort of block infinitely here which is probably lame. */
-      
+
       meta_verbose ("Waiting for old window manager to exit\n");
       do
         {
@@ -435,7 +435,7 @@ meta_screen_new (MetaDisplay *display,
         }
       while (event.type != DestroyNotify);
     }
-  
+
   /* select our root window events */
   meta_error_trap_push_with_return (display);
 
@@ -460,13 +460,13 @@ meta_screen_new (MetaDisplay *display,
                     number, display->name);
 
       XDestroyWindow (xdisplay, new_wm_sn_owner);
-      
+
       return NULL;
     }
-  
+
   screen = g_new (MetaScreen, 1);
   screen->closing = 0;
-  
+
   screen->display = display;
   screen->number = number;
   screen->screen_name = get_screen_name (display, number);
@@ -485,8 +485,8 @@ meta_screen_new (MetaDisplay *display,
   screen->wm_sn_timestamp = manager_timestamp;
 
 #ifdef HAVE_COMPOSITE_EXTENSIONS
-  screen->wm_cm_selection_window = meta_create_offscreen_window (xdisplay, 
-                                                                 xroot, 
+  screen->wm_cm_selection_window = meta_create_offscreen_window (xdisplay,
+                                                                 xroot,
                                                                  NoEventMask);
 #endif
   screen->work_area_idle = 0;
@@ -503,7 +503,7 @@ meta_screen_new (MetaDisplay *display,
     XFontStruct *font_info;
     XGCValues gc_values;
     gulong value_mask = 0;
-    
+
     gc_values.subwindow_mode = IncludeInferiors;
     value_mask |= GCSubwindowMode;
     gc_values.function = GXinvert;
@@ -527,27 +527,27 @@ meta_screen_new (MetaDisplay *display,
                                      value_mask,
                                      &gc_values);
   }
-  
+
   screen->xinerama_infos = NULL;
   screen->n_xinerama_infos = 0;
-  screen->last_xinerama_index = 0;  
-  
+  screen->last_xinerama_index = 0;
+
   reload_xinerama_infos (screen);
-  
+
   meta_screen_set_cursor (screen, META_CURSOR_DEFAULT);
 
-  /* Handle creating a no_focus_window for this screen */  
+  /* Handle creating a no_focus_window for this screen */
   screen->no_focus_window =
     meta_create_offscreen_window (display->xdisplay,
                                   screen->xroot,
                                   FocusChangeMask|KeyPressMask|KeyReleaseMask);
   XMapWindow (display->xdisplay, screen->no_focus_window);
   /* Done with no_focus_window stuff */
-  
+
   set_wm_icon_size_hint (screen);
-  
+
   set_supported_hint (screen);
-  
+
   set_wm_check_hint (screen);
 
   set_desktop_viewport_hint (screen);
@@ -566,13 +566,13 @@ meta_screen_new (MetaDisplay *display,
                   (int) current_workspace);
   else
     meta_verbose ("No _NET_CURRENT_DESKTOP present\n");
-  
+
   /* Screens must have at least one workspace at all times,
    * so create that required workspace.
    */
   meta_workspace_activate (meta_workspace_new (screen), timestamp);
   update_num_workspaces (screen, timestamp);
-  
+
   set_workspace_names (screen);
 
   screen->all_keys_grabbed = FALSE;
@@ -605,17 +605,17 @@ meta_screen_new (MetaDisplay *display,
   /* Switch to the _NET_CURRENT_DESKTOP workspace */
   {
     MetaWorkspace *space;
-    
+
     space = meta_screen_get_workspace_by_index (screen,
                                                 current_workspace);
-    
+
     if (space != NULL)
       meta_workspace_activate (space, timestamp);
   }
 
   meta_verbose ("Added screen %d ('%s') root 0x%lx\n",
                 screen->number, screen->screen_name, screen->xroot);
-  
+
   return screen;
 }
 
@@ -629,7 +629,7 @@ meta_screen_free (MetaScreen *screen,
   display = screen->display;
 
   screen->closing += 1;
-  
+
   meta_display_grab (display);
 
   if (screen->display->compositor)
@@ -637,11 +637,11 @@ meta_screen_free (MetaScreen *screen,
       meta_compositor_unmanage_screen (screen->display->compositor,
 				       screen);
     }
-  
+
   meta_display_unmanage_windows_for_screen (display, screen, timestamp);
-  
+
   meta_prefs_remove_listener (prefs_changed_callback, screen);
-  
+
   meta_screen_ungrab_keys (screen);
 
 #ifdef HAVE_STARTUP_NOTIFICATION
@@ -661,7 +661,7 @@ meta_screen_free (MetaScreen *screen,
       screen->sn_context = NULL;
     }
 #endif
-  
+
   meta_ui_free (screen->ui);
 
   meta_stack_free (screen->stack);
@@ -676,7 +676,7 @@ meta_screen_free (MetaScreen *screen,
 
   XDestroyWindow (screen->display->xdisplay,
                   screen->wm_sn_selection_window);
-  
+
   if (screen->work_area_idle != 0)
     g_source_remove (screen->work_area_idle);
 
@@ -692,7 +692,7 @@ meta_screen_free (MetaScreen *screen,
 
   XFreeGC (screen->display->xdisplay,
            screen->root_xor_gc);
-  
+
   if (screen->xinerama_infos)
     g_free (screen->xinerama_infos);
 
@@ -733,7 +733,7 @@ list_windows (MetaScreen *screen)
       WindowInfo *info = g_new0 (WindowInfo, 1);
 
       meta_error_trap_push_with_return (screen->display);
-      
+
       XGetWindowAttributes (screen->display->xdisplay,
                             children[i], &info->attrs);
 
@@ -764,7 +764,7 @@ meta_screen_manage_all_windows (MetaScreen *screen)
   GList *list;
 
   meta_display_grab (screen->display);
-  
+
   windows = list_windows (screen);
 
   meta_stack_freeze (screen->stack);
@@ -841,12 +841,12 @@ MetaScreen*
 meta_screen_for_x_screen (Screen *xscreen)
 {
   MetaDisplay *display;
-  
+
   display = meta_display_for_x_display (DisplayOfScreen (xscreen));
 
   if (display == NULL)
     return NULL;
-  
+
   return meta_display_screen_for_x_screen (display, xscreen);
 }
 
@@ -855,13 +855,13 @@ prefs_changed_callback (MetaPreference pref,
                         gpointer       data)
 {
   MetaScreen *screen = data;
-  
+
   if (pref == META_PREF_NUM_WORKSPACES)
     {
       /* GSettings doesn't provide timestamps, but luckily update_num_workspaces
        * often doesn't need it...
        */
-      guint32 timestamp = 
+      guint32 timestamp =
         meta_display_get_current_time_roundtrip (screen->display);
       update_num_workspaces (screen, timestamp);
     }
@@ -883,7 +883,7 @@ get_screen_name (MetaDisplay *display,
   char *p;
   char *dname;
   char *scr;
-  
+
   /* DisplayString gives us a sort of canonical display,
    * vs. the user-entered name from XDisplayName()
    */
@@ -898,7 +898,7 @@ get_screen_name (MetaDisplay *display,
       if (p)
         *p = '\0';
     }
-  
+
   scr = g_strdup_printf ("%s.%d", dname, number);
 
   g_free (dname);
@@ -921,7 +921,7 @@ static void
 listify_func (gpointer key, gpointer value, gpointer data)
 {
   GSList **listp;
-  
+
   listp = data;
 
   *listp = g_slist_prepend (*listp, value);
@@ -938,14 +938,14 @@ meta_screen_foreach_window (MetaScreen *screen,
   /* If we end up doing this often, just keeping a list
    * of windows might be sensible.
    */
-  
+
   winlist = NULL;
   g_hash_table_foreach (screen->display->window_ids,
                         listify_func,
                         &winlist);
-  
+
   winlist = g_slist_sort (winlist, ptrcmp);
-  
+
   tmp = winlist;
   while (tmp != NULL)
     {
@@ -960,7 +960,7 @@ meta_screen_foreach_window (MetaScreen *screen,
           if (window->screen == screen)
             (* func) (screen, window, data);
         }
-      
+
       tmp = tmp->next;
     }
   g_slist_free (winlist);
@@ -1007,7 +1007,7 @@ meta_screen_get_workspace_by_index (MetaScreen  *screen,
   /* should be robust, idx is maybe from an app */
   if (idx < 0)
     return NULL;
-  
+
   i = 0;
   tmp = screen->workspaces;
   while (tmp != NULL)
@@ -1100,7 +1100,7 @@ update_num_workspaces (MetaScreen *screen,
   GList *extras;
   MetaWorkspace *last_remaining;
   gboolean need_change_space;
-  
+
   new_num = meta_prefs_get_num_workspaces ();
 
   g_assert (new_num > 0);
@@ -1117,13 +1117,13 @@ update_num_workspaces (MetaScreen *screen,
         extras = g_list_prepend (extras, w);
       else
         last_remaining = w;
-          
+
       ++i;
       tmp = tmp->next;
     }
 
   g_assert (last_remaining);
-  
+
   /* Get rid of the extra workspaces by moving all their windows
    * to last_remaining, then activating last_remaining if
    * one of the removed workspaces was active. This will be a bit
@@ -1136,11 +1136,11 @@ update_num_workspaces (MetaScreen *screen,
     {
       MetaWorkspace *w = tmp->data;
 
-      meta_workspace_relocate_windows (w, last_remaining);      
+      meta_workspace_relocate_windows (w, last_remaining);
 
       if (w == screen->active_workspace)
         need_change_space = TRUE;
-      
+
       tmp = tmp->next;
     }
 
@@ -1155,12 +1155,12 @@ update_num_workspaces (MetaScreen *screen,
 
       g_assert (w->windows == NULL);
       meta_workspace_free (w);
-      
+
       tmp = tmp->next;
     }
-  
+
   g_list_free (extras);
-  
+
   while (i < new_num)
     {
       meta_workspace_new (screen);
@@ -1188,7 +1188,7 @@ meta_screen_set_cursor (MetaScreen *screen,
     return;
 
   screen->current_cursor = cursor;
-  
+
   xcursor = meta_display_create_x_cursor (screen->display, cursor);
   XDefineCursor (screen->display->xdisplay, screen->xroot, xcursor);
   XFlush (screen->display->xdisplay);
@@ -1200,7 +1200,7 @@ meta_screen_update_cursor (MetaScreen *screen)
 {
   Cursor xcursor;
 
-  xcursor = meta_display_create_x_cursor (screen->display, 
+  xcursor = meta_display_create_x_cursor (screen->display,
 					  screen->current_cursor);
   XDefineCursor (screen->display->xdisplay, screen->xroot, xcursor);
   XFlush (screen->display->xdisplay);
@@ -1225,7 +1225,7 @@ get_window_pixbuf (MetaWindow *window,
     return NULL;
 
   pixbuf = meta_ui_get_pixbuf_from_pixmap (pmap);
-  if (pixbuf == NULL) 
+  if (pixbuf == NULL)
     return NULL;
 
   *width = gdk_pixbuf_get_width (pixbuf);
@@ -1270,14 +1270,14 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
                                         list_type,
                                         screen,
                                         screen->active_workspace);
-  
+
   len = g_list_length (tab_list);
 
   entries = g_new (MetaTabEntry, len + 1);
   entries[len].key = NULL;
   entries[len].title = NULL;
   entries[len].icon = NULL;
-  
+
   i = 0;
   tmp = tab_list;
   while (i < len)
@@ -1290,13 +1290,13 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
 #endif
 
       window = tmp->data;
-      
+
       entries[i].key = (MetaTabEntryKey) window->xwindow;
       entries[i].title = window->title;
 
 #if !GTK_CHECK_VERSION (3, 0, 0)
-      /* Only get the pixbuf if the user does NOT have 
-         compositing-fast-alt-tab-set to true 
+      /* Only get the pixbuf if the user does NOT have
+         compositing-fast-alt-tab-set to true
          in GSettings. There is an obvious lag when the pixbuf is
          retrieved. */
       if (!meta_prefs_get_compositing_fast_alt_tab())
@@ -1321,10 +1321,10 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
           gdk_pixbuf_copy_area (win_pixbuf, 0, 0, width, height,
                                 entries[i].icon, 0, 0);
           g_object_unref (win_pixbuf);
-          gdk_pixbuf_composite (window->icon, entries[i].icon, 
+          gdk_pixbuf_composite (window->icon, entries[i].icon,
                                 t_width - icon_width, t_height - icon_height,
                                 icon_width, icon_height,
-                                t_width - icon_width, t_height - icon_height, 
+                                t_width - icon_width, t_height - icon_height,
                                 1.0, 1.0, GDK_INTERP_BILINEAR, 255);
         }
 #else
@@ -1335,12 +1335,12 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
       entries[i].blank = FALSE;
       entries[i].hidden = !meta_window_showing_on_its_workspace (window);
       entries[i].demands_attention = window->wm_state_demands_attention;
-      
+
       if (show_type == META_TAB_SHOW_INSTANTLY ||
           !entries[i].hidden                   ||
           !meta_window_get_icon_geometry (window, &r))
         meta_window_get_outer_rect (window, &r);
-      
+
       entries[i].rect = r;
 
       /* Find inside of highlight rectangle to be used when window is
@@ -1381,24 +1381,24 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
       else
         entries[i].inner_rect.width = r.width
           - entries[i].inner_rect.x - OUTLINE_WIDTH;
-      
+
       ++i;
       tmp = tmp->next;
     }
 
-  screen->tab_popup = meta_ui_tab_popup_new (entries, 
+  screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              screen->number,
                                              len,
                                              5, /* FIXME */
                                              TRUE);
 
-  for (i = 0; i < len; i++) 
+  for (i = 0; i < len; i++)
     g_object_unref (entries[i].icon);
 
   g_free (entries);
 
   g_list_free (tab_list);
-  
+
   /* don't show tab popup, since proper window isn't selected yet */
 }
 
@@ -1411,7 +1411,7 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
   MetaWorkspaceLayout layout;
   int n_workspaces;
   int current_workspace;
-  
+
   if (screen->tab_popup)
     return;
 
@@ -1422,7 +1422,7 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
                                      current_workspace, &layout);
 
   len = layout.grid_area;
-  
+
   entries = g_new (MetaTabEntry, len + 1);
   entries[len].key = NULL;
   entries[len].title = NULL;
@@ -1434,15 +1434,15 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
       if (layout.grid[i] >= 0)
         {
           MetaWorkspace *workspace;
-          
+
           workspace = meta_screen_get_workspace_by_index (screen,
                                                           layout.grid[i]);
-          
+
           entries[i].key = (MetaTabEntryKey) workspace;
           entries[i].title = meta_workspace_get_name (workspace);
           entries[i].icon = NULL;
           entries[i].blank = FALSE;
-          
+
           g_assert (entries[i].title != NULL);
         }
       else
@@ -1458,11 +1458,11 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
       ++i;
     }
 
-  screen->tab_popup = meta_ui_tab_popup_new (entries, 
+  screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              screen->number,
                                              len,
                                              layout.cols,
-                                             FALSE);      
+                                             FALSE);
 
   g_free (entries);
   meta_screen_free_workspace_layout (&layout);
@@ -1532,7 +1532,7 @@ meta_screen_get_mouse_window (MetaScreen  *screen,
   int root_x_return, root_y_return;
   int win_x_return, win_y_return;
   unsigned int mask_return;
-  
+
   if (not_this_one)
     meta_topic (META_DEBUG_FOCUS,
                 "Focusing mouse window excluding %s\n", not_this_one->desc);
@@ -1595,13 +1595,13 @@ meta_screen_get_xinerama_for_window (MetaScreen *screen,
 				     MetaWindow *window)
 {
   MetaRectangle window_rect;
-  
+
   meta_window_get_outer_rect (window, &window_rect);
 
   return meta_screen_get_xinerama_for_rect (screen, &window_rect);
 }
 
-const MetaXineramaScreenInfo* 
+const MetaXineramaScreenInfo*
 meta_screen_get_xinerama_neighbor (MetaScreen         *screen,
                                    int                 which_xinerama,
                                    MetaScreenDirection direction)
@@ -1614,23 +1614,23 @@ meta_screen_get_xinerama_neighbor (MetaScreen         *screen,
     {
       current = screen->xinerama_infos + i;
 
-      if ((direction == META_SCREEN_RIGHT && 
+      if ((direction == META_SCREEN_RIGHT &&
            current->rect.x == input->rect.x + input->rect.width &&
            meta_rectangle_vert_overlap(&current->rect, &input->rect)) ||
-          (direction == META_SCREEN_LEFT && 
+          (direction == META_SCREEN_LEFT &&
            input->rect.x == current->rect.x + current->rect.width &&
            meta_rectangle_vert_overlap(&current->rect, &input->rect)) ||
-          (direction == META_SCREEN_UP && 
+          (direction == META_SCREEN_UP &&
            input->rect.y == current->rect.y + current->rect.height &&
            meta_rectangle_horiz_overlap(&current->rect, &input->rect)) ||
-          (direction == META_SCREEN_DOWN && 
+          (direction == META_SCREEN_DOWN &&
            current->rect.y == input->rect.y + input->rect.height &&
            meta_rectangle_horiz_overlap(&current->rect, &input->rect)))
         {
           return current;
         }
     }
-  
+
   return NULL;
 }
 
@@ -1670,7 +1670,7 @@ meta_screen_get_natural_xinerama_list (MetaScreen *screen,
 
   while (!g_queue_is_empty (xinerama_queue))
     {
-      current = (const MetaXineramaScreenInfo*) 
+      current = (const MetaXineramaScreenInfo*)
         g_queue_pop_head (xinerama_queue);
 
       (*xineramas_list)[cur++] = current->number;
@@ -1734,10 +1734,10 @@ meta_screen_get_current_xinerama (MetaScreen *screen)
 {
   if (screen->n_xinerama_infos == 1)
     return &screen->xinerama_infos[0];
-  
+
   /* Sadly, we have to do it this way. Yuck.
    */
-  
+
   if (screen->display->xinerama_cache_invalidated)
     {
       Window root_return, child_return;
@@ -1745,9 +1745,9 @@ meta_screen_get_current_xinerama (MetaScreen *screen)
       unsigned int mask_return;
       int i;
       MetaRectangle pointer_position;
-      
+
       screen->display->xinerama_cache_invalidated = FALSE;
-      
+
       pointer_position.width = pointer_position.height = 1;
       XQueryPointer (screen->display->xdisplay,
                      screen->xroot,
@@ -1769,7 +1769,7 @@ meta_screen_get_current_xinerama (MetaScreen *screen)
               break;
             }
         }
-      
+
       meta_topic (META_DEBUG_XINERAMA,
                   "Rechecked current Xinerama, now %d\n",
                   screen->last_xinerama_index);
@@ -1791,7 +1791,7 @@ meta_screen_update_workspace_layout (MetaScreen *screen)
 {
   gulong *list;
   int n_items;
-  
+
   list = NULL;
   n_items = 0;
 
@@ -1803,7 +1803,7 @@ meta_screen_update_workspace_layout (MetaScreen *screen)
       if (n_items == 3 || n_items == 4)
         {
           int cols, rows;
-          
+
           switch (list[0])
             {
             case _NET_WM_ORIENTATION_HORZ:
@@ -1830,7 +1830,7 @@ meta_screen_update_workspace_layout (MetaScreen *screen)
                 screen->rows_of_workspaces = rows;
               else
                 screen->rows_of_workspaces = -1;
-              
+
               if (cols > 0)
                 screen->columns_of_workspaces = cols;
               else
@@ -1903,10 +1903,10 @@ set_workspace_names (MetaScreen *screen)
                              strlen (name) + 1);
       else
         g_string_append_len (flattened, "", 1);
-      
+
       ++i;
     }
-  
+
   meta_error_trap_push (screen->display);
   XChangeProperty (screen->display->xdisplay,
                    screen->xroot,
@@ -1915,7 +1915,7 @@ set_workspace_names (MetaScreen *screen)
                    8, PropModeReplace,
 		   (unsigned char *)flattened->str, flattened->len);
   meta_error_trap_pop (screen->display, FALSE);
-  
+
   g_string_free (flattened, TRUE);
 }
 
@@ -1929,7 +1929,7 @@ meta_screen_update_workspace_names (MetaScreen *screen)
   /* this updates names in prefs when the root window property changes,
    * iff the new property contents don't match what's already in prefs
    */
-  
+
   names = NULL;
   n_names = 0;
   if (!meta_prop_get_utf8_list (screen->display,
@@ -1949,10 +1949,10 @@ meta_screen_update_workspace_names (MetaScreen *screen)
                   "Setting workspace %d name to \"%s\" due to _NET_DESKTOP_NAMES change\n",
                   i, names[i] ? names[i] : "null");
       meta_prefs_change_workspace_name (i, names[i]);
-      
+
       ++i;
     }
-  
+
   g_strfreev (names);
 }
 
@@ -1969,7 +1969,7 @@ meta_create_offscreen_window (Display *xdisplay,
    */
   attrs.override_redirect = True;
   attrs.event_mask = valuemask;
-  
+
   return XCreateWindow (xdisplay,
                         parent,
                         -100, -100, 1, 1,
@@ -1988,12 +1988,12 @@ set_work_area_hint (MetaScreen *screen)
   GList *tmp_list;
   unsigned long *data, *tmp;
   MetaRectangle area;
-  
+
   num_workspaces = meta_screen_get_n_workspaces (screen);
   data = g_new (unsigned long, num_workspaces * 4);
   tmp_list = screen->workspaces;
   tmp = data;
-  
+
   while (tmp_list != NULL)
     {
       MetaWorkspace *workspace = tmp_list->data;
@@ -2008,10 +2008,10 @@ set_work_area_hint (MetaScreen *screen)
 
 	  tmp += 4;
         }
-      
+
       tmp_list = tmp_list->next;
     }
-  
+
   meta_error_trap_push (screen->display);
   XChangeProperty (screen->display->xdisplay, screen->xroot,
 		   screen->display->atom__NET_WORKAREA,
@@ -2026,11 +2026,11 @@ set_work_area_idle_func (MetaScreen *screen)
 {
   meta_topic (META_DEBUG_WORKAREA,
               "Running work area idle function\n");
-  
+
   screen->work_area_idle = 0;
-  
+
   set_work_area_hint (screen);
-  
+
   return FALSE;
 }
 
@@ -2082,7 +2082,7 @@ meta_screen_calc_workspace_layout (MetaScreen          *screen,
   int *grid;
   int i, r, c;
   int current_row, current_col;
-  
+
   rows = screen->rows_of_workspaces;
   cols = screen->columns_of_workspaces;
   if (rows <= 0 && cols <= 0)
@@ -2100,58 +2100,58 @@ meta_screen_calc_workspace_layout (MetaScreen          *screen,
     cols = 1;
 
   g_assert (rows != 0 && cols != 0);
-  
+
   grid_area = rows * cols;
-  
+
   meta_verbose ("Getting layout rows = %d cols = %d current = %d "
                 "num_spaces = %d vertical = %s corner = %s\n",
                 rows, cols, current_space, num_workspaces,
                 screen->vertical_workspaces ? "(true)" : "(false)",
                 meta_screen_corner_to_string (screen->starting_corner));
-  
-  /* ok, we want to setup the distances in the workspace array to go     
-   * in each direction. Remember, there are many ways that a workspace   
-   * array can be setup.                                                 
-   * see http://www.freedesktop.org/standards/wm-spec/1.2/html/x109.html 
-   * and look at the _NET_DESKTOP_LAYOUT section for details.            
+
+  /* ok, we want to setup the distances in the workspace array to go
+   * in each direction. Remember, there are many ways that a workspace
+   * array can be setup.
+   * see http://www.freedesktop.org/standards/wm-spec/1.2/html/x109.html
+   * and look at the _NET_DESKTOP_LAYOUT section for details.
    * For instance:
    */
-  /* starting_corner = META_SCREEN_TOPLEFT                         
+  /* starting_corner = META_SCREEN_TOPLEFT
    *  vertical_workspaces = 0                 vertical_workspaces=1
-   *       1234                                    1357            
-   *       5678                                    2468            
-   *                                                               
-   * starting_corner = META_SCREEN_TOPRIGHT                        
+   *       1234                                    1357
+   *       5678                                    2468
+   *
+   * starting_corner = META_SCREEN_TOPRIGHT
    *  vertical_workspaces = 0                 vertical_workspaces=1
-   *       4321                                    7531            
-   *       8765                                    8642            
-   *                                                               
-   * starting_corner = META_SCREEN_BOTTOMLEFT                      
+   *       4321                                    7531
+   *       8765                                    8642
+   *
+   * starting_corner = META_SCREEN_BOTTOMLEFT
    *  vertical_workspaces = 0                 vertical_workspaces=1
-   *       5678                                    2468            
-   *       1234                                    1357            
-   *                                                               
-   * starting_corner = META_SCREEN_BOTTOMRIGHT                     
+   *       5678                                    2468
+   *       1234                                    1357
+   *
+   * starting_corner = META_SCREEN_BOTTOMRIGHT
    *  vertical_workspaces = 0                 vertical_workspaces=1
-   *       8765                                    8642            
-   *       4321                                    7531            
+   *       8765                                    8642
+   *       4321                                    7531
    *
    */
   /* keep in mind that we could have a ragged layout, e.g. the "8"
    * in the above grids could be missing
    */
 
-  
+
   grid = g_new (int, grid_area);
 
   current_row = -1;
   current_col = -1;
   i = 0;
-  
-  switch (screen->starting_corner) 
+
+  switch (screen->starting_corner)
     {
     case META_SCREEN_TOPLEFT:
-      if (screen->vertical_workspaces) 
+      if (screen->vertical_workspaces)
         {
           c = 0;
           while (c < cols)
@@ -2183,7 +2183,7 @@ meta_screen_calc_workspace_layout (MetaScreen          *screen,
         }
       break;
     case META_SCREEN_TOPRIGHT:
-      if (screen->vertical_workspaces) 
+      if (screen->vertical_workspaces)
         {
           c = cols - 1;
           while (c >= 0)
@@ -2215,7 +2215,7 @@ meta_screen_calc_workspace_layout (MetaScreen          *screen,
         }
       break;
     case META_SCREEN_BOTTOMLEFT:
-      if (screen->vertical_workspaces) 
+      if (screen->vertical_workspaces)
         {
           c = 0;
           while (c < cols)
@@ -2247,7 +2247,7 @@ meta_screen_calc_workspace_layout (MetaScreen          *screen,
         }
       break;
     case META_SCREEN_BOTTOMRIGHT:
-      if (screen->vertical_workspaces) 
+      if (screen->vertical_workspaces)
         {
           c = cols - 1;
           while (c >= 0)
@@ -2278,12 +2278,12 @@ meta_screen_calc_workspace_layout (MetaScreen          *screen,
             }
         }
       break;
-    }  
+    }
 
   if (i != grid_area)
     meta_bug ("did not fill in the whole workspace grid in %s (%d filled)\n",
               G_STRFUNC, i);
-  
+
   current_row = 0;
   current_col = 0;
   r = 0;
@@ -2364,13 +2364,13 @@ void
 meta_screen_resize (MetaScreen *screen,
                     int         width,
                     int         height)
-{  
+{
   screen->rect.width = width;
   screen->rect.height = height;
 
   reload_xinerama_infos (screen);
   set_desktop_geometry_hint (screen);
-  
+
   /* Queue a resize on all the windows */
   meta_screen_foreach_window (screen, meta_screen_resize_func, 0);
 }
@@ -2381,7 +2381,7 @@ meta_screen_update_showing_desktop_hint (MetaScreen *screen)
   unsigned long data[1];
 
   data[0] = screen->active_workspace->showing_desktop ? 1 : 0;
-      
+
   meta_error_trap_push (screen->display);
   XChangeProperty (screen->display->xdisplay, screen->xroot,
                    screen->display->atom__NET_SHOWING_DESKTOP,
@@ -2409,7 +2409,7 @@ queue_windows_showing (MetaScreen *screen)
 
       if (w->screen == screen)
         meta_window_queue (w, META_QUEUE_CALC_SHOWING);
-      
+
       tmp = tmp->next;
     }
 
@@ -2424,32 +2424,32 @@ meta_screen_minimize_all_on_active_workspace_except (MetaScreen *screen,
   GList *tmp;
 
   windows = screen->active_workspace->windows;
-  
+
   tmp = windows;
   while (tmp != NULL)
     {
       MetaWindow *w = tmp->data;
-      
+
       if (w->screen == screen  &&
           w->has_minimize_func &&
 	  w != keep)
 	meta_window_minimize (w);
-      
+
       tmp = tmp->next;
     }
 }
 
 void
-meta_screen_show_desktop (MetaScreen *screen, 
+meta_screen_show_desktop (MetaScreen *screen,
                           guint32     timestamp)
 {
   GList *windows;
 
   if (screen->active_workspace->showing_desktop)
     return;
-  
+
   screen->active_workspace->showing_desktop = TRUE;
-  
+
   queue_windows_showing (screen);
 
   /* Focus the most recently used META_WINDOW_DESKTOP window, if there is one;
@@ -2459,18 +2459,18 @@ meta_screen_show_desktop (MetaScreen *screen,
   while (windows != NULL)
     {
       MetaWindow *w = windows->data;
-      
-      if (w->screen == screen  && 
+
+      if (w->screen == screen  &&
           w->type == META_WINDOW_DESKTOP)
         {
           meta_window_focus (w, timestamp);
           break;
         }
-      
+
       windows = windows->next;
     }
 
-  
+
   meta_screen_update_showing_desktop_hint (screen);
 }
 
@@ -2537,11 +2537,11 @@ remove_sequence (MetaScreen        *screen,
   meta_topic (META_DEBUG_STARTUP,
               "Removing sequence %s\n",
               sn_startup_sequence_get_id (sequence));
-  
+
   screen->startup_sequences = g_slist_remove (screen->startup_sequences,
                                               sequence);
   sn_startup_sequence_unref (sequence);
-  
+
   if (screen->startup_sequences == NULL &&
       screen->startup_sequence_timeout != 0)
     {
@@ -2573,7 +2573,7 @@ collect_timed_out_foreach (void *element,
   SnStartupSequence *sequence = element;
   long tv_sec, tv_usec;
   double elapsed;
-  
+
   sn_startup_sequence_get_last_active_time (sequence, &tv_sec, &tv_usec);
 
   elapsed =
@@ -2584,7 +2584,7 @@ collect_timed_out_foreach (void *element,
               "Sequence used %g seconds vs. %g max: %s\n",
               elapsed, (double) STARTUP_TIMEOUT,
               sn_startup_sequence_get_id (sequence));
-  
+
   if (elapsed > STARTUP_TIMEOUT)
     ctod->list = g_slist_prepend (ctod->list, sequence);
 }
@@ -2595,7 +2595,7 @@ startup_sequence_timeout (void *data)
   MetaScreen *screen = data;
   CollectTimedOutData ctod;
   GSList *tmp;
-  
+
   ctod.list = NULL;
   g_get_current_time (&ctod.now);
   g_slist_foreach (screen->startup_sequences,
@@ -2610,14 +2610,14 @@ startup_sequence_timeout (void *data)
       meta_topic (META_DEBUG_STARTUP,
                   "Timed out sequence %s\n",
                   sn_startup_sequence_get_id (sequence));
-      
+
       sn_startup_sequence_complete (sequence);
-      
+
       tmp = tmp->next;
     }
 
   g_slist_free (ctod.list);
-  
+
   if (screen->startup_sequences != NULL)
     {
       return TRUE;
@@ -2636,11 +2636,11 @@ meta_screen_sn_event (SnMonitorEvent *event,
 {
   MetaScreen *screen;
   SnStartupSequence *sequence;
-  
+
   screen = user_data;
 
   sequence = sn_monitor_event_get_startup_sequence (event);
-  
+
   switch (sn_monitor_event_get_type (event))
     {
     case SN_MONITOR_EVENT_INITIATED:
@@ -2648,7 +2648,7 @@ meta_screen_sn_event (SnMonitorEvent *event,
         const char *wmclass;
 
         wmclass = sn_startup_sequence_get_wmclass (sequence);
-        
+
         meta_topic (META_DEBUG_STARTUP,
                     "Received startup initiated for %s wmclass %s\n",
                     sn_startup_sequence_get_id (sequence),
@@ -2698,7 +2698,7 @@ meta_screen_apply_startup_properties (MetaScreen *screen,
   const char *startup_id;
   GSList *tmp;
   SnStartupSequence *sequence;
-  
+
   /* Does the window have a startup ID stored? */
   startup_id = meta_window_get_startup_id (window);
 
@@ -2706,7 +2706,7 @@ meta_screen_apply_startup_properties (MetaScreen *screen,
               "Applying startup props to %s id \"%s\"\n",
               window->desc,
               startup_id ? startup_id : "(none)");
-  
+
   sequence = NULL;
   if (startup_id == NULL)
     {
@@ -2737,11 +2737,11 @@ meta_screen_apply_startup_properties (MetaScreen *screen,
                           "Ending legacy sequence %s due to window %s\n",
                           sn_startup_sequence_get_id (sequence),
                           window->desc);
-              
+
               sn_startup_sequence_complete (sequence);
               break;
             }
-          
+
           tmp = tmp->next;
         }
     }
@@ -2749,7 +2749,7 @@ meta_screen_apply_startup_properties (MetaScreen *screen,
   /* Still no startup ID? Bail. */
   if (startup_id == NULL)
     return FALSE;
-  
+
   /* We might get this far and not know the sequence ID (if the window
    * already had a startup ID stored), so let's look for one if we don't
    * already know it.
@@ -2760,15 +2760,15 @@ meta_screen_apply_startup_properties (MetaScreen *screen,
       while (tmp != NULL)
         {
           const char *id;
-          
+
           id = sn_startup_sequence_get_id (tmp->data);
-          
+
           if (strcmp (id, startup_id) == 0)
             {
               sequence = tmp->data;
               break;
             }
-          
+
           tmp = tmp->next;
         }
     }
@@ -2776,7 +2776,7 @@ meta_screen_apply_startup_properties (MetaScreen *screen,
   if (sequence != NULL)
     {
       gboolean changed_something = FALSE;
-          
+
       meta_topic (META_DEBUG_STARTUP,
                   "Found startup sequence for window %s ID \"%s\"\n",
                   window->desc, startup_id);
@@ -2789,7 +2789,7 @@ meta_screen_apply_startup_properties (MetaScreen *screen,
               meta_topic (META_DEBUG_STARTUP,
                           "Setting initial window workspace to %d based on startup info\n",
                           space);
-              
+
               window->initial_workspace_set = TRUE;
               window->initial_workspace = space;
               changed_something = TRUE;
@@ -2802,7 +2802,7 @@ meta_screen_apply_startup_properties (MetaScreen *screen,
           meta_topic (META_DEBUG_STARTUP,
                       "Setting initial window timestamp to %u based on startup info\n",
                       timestamp);
-              
+
           window->initial_timestamp_set = TRUE;
           window->initial_timestamp = timestamp;
           changed_something = TRUE;
@@ -2816,7 +2816,7 @@ meta_screen_apply_startup_properties (MetaScreen *screen,
                   "Did not find startup sequence for window %s ID \"%s\"\n",
                   window->desc, startup_id);
     }
-  
+
 #endif /* HAVE_STARTUP_NOTIFICATION */
 
   return FALSE;
@@ -2840,7 +2840,7 @@ meta_screen_get_xroot (MetaScreen *screen)
   return screen->xroot;
 }
 
-void 
+void
 meta_screen_get_size (MetaScreen *screen,
                       int        *width,
                       int        *height)
@@ -2875,7 +2875,7 @@ meta_screen_set_cm_selection (MetaScreen *screen)
   g_snprintf (selection, sizeof(selection), "_NET_WM_CM_S%d", screen->number);
   meta_verbose ("Setting selection: %s\n", selection);
   a = XInternAtom (screen->display->xdisplay, selection, FALSE);
-  XSetSelectionOwner (screen->display->xdisplay, a, 
+  XSetSelectionOwner (screen->display->xdisplay, a,
                       screen->wm_cm_selection_window, screen->wm_cm_timestamp);
 }
 

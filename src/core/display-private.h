@@ -1,11 +1,11 @@
 /* Marco X display handler */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington
  * Copyright (C) 2002 Red Hat, Inc.
  * Copyright (C) 2003 Rob Adams
  * Copyright (C) 2004-2006 Elijah Newren
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -15,7 +15,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -124,7 +124,7 @@ struct _MetaDisplay {
 	MetaScreen* active_screen;
 	GHashTable* window_ids;
 	int error_traps;
-	int (*error_trap_handler) (Display* display, XErrorEvent* error);  
+	int (*error_trap_handler) (Display* display, XErrorEvent* error);
 	int server_grab_count;
 
 	/* serials of leave/unmap events that may
@@ -133,7 +133,7 @@ struct _MetaDisplay {
 	 */
 	unsigned long ignored_serials[N_IGNORED_SERIALS];
 	Window ungrab_should_not_cause_focus_window;
-  
+
 	guint32 current_time;
 
 	/* Pings which we're waiting for a reply from */
@@ -186,12 +186,12 @@ struct _MetaDisplay {
 		int         xkb_base_event_type;
 		guint32     last_bell_time;
 	#endif
-	
+
 	#ifdef HAVE_XSYNC
 		/* alarm monitoring client's _NET_WM_SYNC_REQUEST_COUNTER */
 		XSyncAlarm  grab_sync_request_alarm;
 	#endif
-	
+
 	int       grab_resize_timeout_id;
 
 	/* Keybindings stuff */
@@ -244,26 +244,26 @@ struct _MetaDisplay {
 
 	/* Managed by compositor.c */
 	MetaCompositor* compositor;
-  
+
 	#ifdef HAVE_STARTUP_NOTIFICATION
 		SnDisplay* sn_display;
 	#endif
-	
+
 	#ifdef HAVE_XSYNC
 		int xsync_event_base;
 		int xsync_error_base;
 	#endif
-	
+
 	#ifdef HAVE_SHAPE
 		int shape_event_base;
 		int shape_error_base;
 	#endif
-	
+
 	#ifdef HAVE_RENDER
 		int render_event_base;
 		int render_error_base;
 	#endif
-	
+
 	#ifdef HAVE_COMPOSITE_EXTENSIONS
 		int composite_event_base;
 		int composite_error_base;
@@ -274,28 +274,28 @@ struct _MetaDisplay {
 		int xfixes_event_base;
 		int xfixes_error_base;
 	#endif
-	
+
 	#ifdef HAVE_XSYNC
 		unsigned int have_xsync : 1;
 		#define META_DISPLAY_HAS_XSYNC(display) ((display)->have_xsync)
 	#else
 		#define META_DISPLAY_HAS_XSYNC(display) FALSE
 	#endif
-	
+
 	#ifdef HAVE_SHAPE
 		unsigned int have_shape : 1;
 		#define META_DISPLAY_HAS_SHAPE(display) ((display)->have_shape)
 	#else
 		#define META_DISPLAY_HAS_SHAPE(display) FALSE
 	#endif
-	
+
 	#ifdef HAVE_RENDER
 		unsigned int have_render : 1;
 		#define META_DISPLAY_HAS_RENDER(display) ((display)->have_render)
 	#else
 		#define META_DISPLAY_HAS_RENDER(display) FALSE
 	#endif
-	
+
 	#ifdef HAVE_COMPOSITE_EXTENSIONS
 		unsigned int have_composite : 1;
 		unsigned int have_damage : 1;
@@ -316,7 +316,7 @@ struct _MetaDisplay {
  *   time1 < time2
  * Of course, the rest of the ugliness of this macro comes from accounting
  * for the fact that wraparound can occur and the fact that a timestamp of
- * 0 must be special-cased since it means older than anything else. 
+ * 0 must be special-cased since it means older than anything else.
  *
  * Note that this is NOT an equivalent for time1 <= time2; if that's what
  * you need then you'll need to swap the order of the arguments and negate
@@ -429,7 +429,7 @@ const char* meta_event_detail_to_string (int d);
 void meta_display_queue_retheme_all_windows (MetaDisplay *display);
 void meta_display_retheme_all (void);
 
-void meta_display_set_cursor_theme (const char *theme, 
+void meta_display_set_cursor_theme (const char *theme,
 				    int         size);
 
 void meta_display_ping_window      (MetaDisplay        *display,
@@ -494,7 +494,7 @@ gboolean meta_display_focus_sentinel_clear (MetaDisplay *display);
  * whether a window should be allowed to be focused should depend
  * on user_time events (see bug 167358, comment 15 in particular)
  */
-void meta_display_set_input_focus_window   (MetaDisplay *display, 
+void meta_display_set_input_focus_window   (MetaDisplay *display,
                                             MetaWindow  *window,
                                             gboolean     focus_frame,
                                             guint32      timestamp);
@@ -503,7 +503,7 @@ void meta_display_set_input_focus_window   (MetaDisplay *display,
  * designated no_focus_window should be focused, but is otherwise the
  * same as meta_display_set_input_focus_window
  */
-void meta_display_focus_the_no_focus_window (MetaDisplay *display, 
+void meta_display_focus_the_no_focus_window (MetaDisplay *display,
                                              MetaScreen  *screen,
                                              guint32      timestamp);
 

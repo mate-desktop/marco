@@ -1,8 +1,8 @@
 /* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 
-/* 
+/*
  * Copyright (C) 2008 Thomas Thurman
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -12,7 +12,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -143,7 +143,7 @@ keybind (cycle-panels, handle_cycle, META_TAB_LIST_DOCKS, BINDING_REVERSES)
 keybind (cycle-panels-backward, handle_cycle, META_TAB_LIST_DOCKS, REVERSES_AND_REVERSED)
 
 /***********************************/
-     
+
 keybind (show-desktop, handle_show_desktop, 0, 0)
 keybind (panel-main-menu, handle_panel, META_KEYBINDING_ACTION_PANEL_MAIN_MENU, 0)
 keybind (panel-run-dialog, handle_panel, META_KEYBINDING_ACTION_PANEL_RUN_DIALOG, 0)
@@ -201,7 +201,7 @@ keybind (set-spew-mark, handle_set_spew_mark, 0, 0)
 /* These take a window as an extra parameter; they have no effect
  * if no window is active.
  */
- 
+
 keybind (activate-window-menu, handle_activate_window_menu, 0, BINDING_PER_WINDOW)
 keybind (toggle-fullscreen, handle_toggle_fullscreen, 0, BINDING_PER_WINDOW)
 keybind (toggle-maximized, handle_toggle_maximized, 0, BINDING_PER_WINDOW)

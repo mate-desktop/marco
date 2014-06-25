@@ -4,7 +4,7 @@
  * \file stack.h  Which windows cover which other windows
  *
  * There are two factors that determine window position.
- * 
+ *
  * One is window->stack_position, which is a unique integer
  * indicating how windows are ordered with respect to one
  * another. The ordering here transcends layers; it isn't changed
@@ -12,16 +12,16 @@
  * windows from one layer to another, while preserving the relative
  * order of the moved windows. Also, it allows us to restore
  * the stacking order from a saved session.
- * 
+ *
  * However when actually stacking windows on the screen, the
  * layer overrides the stack_position; windows are first sorted
  * by layer, then by stack_position within each layer.
  */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington
  * Copyright (C) 2005 Elijah Newren
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -31,7 +31,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -99,7 +99,7 @@ struct _MetaStack
    * The order of the elements in this list is not important.
    */
   GList *removed;
-  
+
   /**
    * If this is zero, the local stack oughtn't to be brought up to date with
    * the X server's stack, because it is in the middle of being updated.
@@ -299,7 +299,7 @@ MetaWindow* meta_stack_get_below  (MetaStack  *stack,
  * \param not_this_one  Window to ignore because it's being unfocussed or
  *                      going away.
  * \return The window matching all these constraints or NULL if none does.
- * 
+ *
  * \bug Never called!
   */
 MetaWindow* meta_stack_get_default_focus_window          (MetaStack     *stack,

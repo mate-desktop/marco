@@ -63,7 +63,7 @@ single_stanza (gboolean is_window, const char *name,
   escaped_description = g_markup_escape_text (description, -1);
   escaped_default_value = default_value==NULL? "disabled":
         g_markup_escape_text (default_value, -1);
-  
+
   fprintf (target_file, "    <schema>\n");
   fprintf (target_file, "      <key>/schemas/apps/marco/%s_keybindings/%s</key>\n",
             keybinding_type, name);
@@ -72,7 +72,7 @@ single_stanza (gboolean is_window, const char *name,
   fprintf (target_file, "      <owner>marco</owner>\n");
   fprintf (target_file, "      <type>string</type>\n");
   fprintf (target_file, "      <default>%s</default>\n", escaped_default_value);
-  
+
   fprintf (target_file, "      <locale name=\"C\">\n");
   fprintf (target_file, "        <short>%s</short>\n", description);
   fprintf (target_file, "        <long>%s</long>\n",
@@ -117,7 +117,7 @@ produce_bindings ()
     {
       if (strstr (buffer, "<!-- GENERATED -->"))
          break;
-         
+
       fprintf (target_file, "%s", buffer);
     }
 
@@ -157,7 +157,7 @@ main (int argc, char **argv)
     {
       g_error ("Syntax: %s <source.in.in> <target.in>\n", argv[0]);
     }
-  
+
   source_filename = argv[1];
   target_filename = argv[2];
 
@@ -187,7 +187,7 @@ main (int argc, char **argv)
 
   g_free (about_keybindings);
   g_free (about_reversible_keybindings);
-  
+
   return 0;
 }
 

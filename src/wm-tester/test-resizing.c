@@ -17,7 +17,7 @@ calc_rects (XRectangle *rects, int width, int height)
       rects[i].height = h;
       ++i;
     }
-  
+
   /* NW */
   rects[0].x = 0;
   rects[0].y = 0;
@@ -70,7 +70,7 @@ get_size (Display *d, Drawable draw,
   int x, y;
   unsigned int width=0, height=0, border=0, depth=0;
   Window root;
-  
+
   XGetGeometry (d, draw, &root, &x, &y, &width, &height, &border, &depth);
 
   if (xp)
@@ -93,20 +93,20 @@ main (int argc, char **argv)
   XEvent ev;
   int x, y, width, height;
   Pixmap pix;
-  GC gc;  
+  GC gc;
   XGCValues gc_vals;
   XSetWindowAttributes set_attrs;
   XWindowChanges changes;
   XRectangle rects[9];
   gboolean redraw_pending;
   unsigned int mask;
-  
+
   d = XOpenDisplay (NULL);
 
   screen = DefaultScreen (d);
 
-  /* Print some debug spew to show how StaticGravity works */     
-  w = XCreateSimpleWindow (d, RootWindow (d, screen), 
+  /* Print some debug spew to show how StaticGravity works */
+  w = XCreateSimpleWindow (d, RootWindow (d, screen),
                            0, 0, 100, 100, 0,
                            WhitePixel (d, screen),
                            WhitePixel (d, screen));
@@ -115,21 +115,21 @@ main (int argc, char **argv)
                             WhitePixel (d, screen),
                             WhitePixel (d, screen));
   set_attrs.win_gravity = StaticGravity;
-      
+
   XChangeWindowAttributes (d, cw,
                            CWWinGravity,
                            &set_attrs);
-  
+
   get_size (d, w, &x, &y, &width, &height);
-  
+
   g_print ("Parent is %d,%d  %d x %d before configuring parent\n",
            x, y, width, height);
-  
+
   get_size (d, cw, &x, &y, &width, &height);
 
   g_print ("Child is %d,%d  %d x %d before configuring parent\n",
            x, y, width, height);
-  
+
   changes.x = 10;
   changes.y = 10;
   changes.width = 110;
@@ -138,7 +138,7 @@ main (int argc, char **argv)
   mask = CWX | CWY;
   mask = CWWidth | CWHeight;
   mask = CWX | CWY | CWWidth | CWHeight;
-  
+
   XConfigureWindow (d, w, mask, &changes);
   XSync (d, False);
 
@@ -146,42 +146,42 @@ main (int argc, char **argv)
 
   g_print ("Parent is %d,%d  %d x %d after configuring parent\n",
            x, y, width, height);
-  
+
   get_size (d, cw, &x, &y, &width, &height);
 
   g_print ("Child is %d,%d  %d x %d after configuring parent\n",
-           x, y, width, height);  
+           x, y, width, height);
 
   XDestroyWindow (d, w);
-  
+
   /* The window that gets displayed */
-  
+
   x = 20;
   y = 20;
   width = 100;
   height = 100;
 
   calc_rects (rects, width, height);
-  
-  w = XCreateSimpleWindow (d, RootWindow (d, screen), 
+
+  w = XCreateSimpleWindow (d, RootWindow (d, screen),
                            x, y, width, height, 0,
                            WhitePixel (d, screen),
                            WhitePixel (d, screen));
-  
+
   set_attrs.bit_gravity = StaticGravity;
-      
+
   XChangeWindowAttributes (d, w,
                            CWBitGravity,
                            &set_attrs);
-  
+
   XSelectInput (d, w,
                 ButtonPressMask | ExposureMask | StructureNotifyMask);
-  
+
   hints.flags = PMinSize;
-  
+
   hints.min_width = 100;
   hints.min_height = 100;
-  
+
   XSetWMNormalHints (d, w, &hints);
   XMapWindow (d, w);
 
@@ -189,7 +189,7 @@ main (int argc, char **argv)
   while (1)
     {
       XNextEvent (d, &ev);
-      
+
       switch (ev.xany.type)
         {
         case ButtonPress:
@@ -208,11 +208,11 @@ main (int argc, char **argv)
 
           redraw_pending = TRUE;
           break;
-          
+
         case Expose:
           redraw_pending = TRUE;
           break;
-          
+
         default:
           break;
         }
@@ -225,24 +225,24 @@ main (int argc, char **argv)
       else if (redraw_pending)
         {
           calc_rects (rects, width, height);
-          
+
           pix = XCreatePixmap (d, w, width, height,
                                DefaultDepth (d, screen));
-          
+
           gc_vals.foreground = WhitePixel (d, screen);
-          
+
           gc = XCreateGC (d, pix, GCForeground, &gc_vals);
-          
+
           XFillRectangle (d, pix, gc, 0, 0, width, height);
-              
+
           /* Draw rectangles at each gravity point */
           gc_vals.foreground = BlackPixel (d, screen);
           XChangeGC (d, gc, GCForeground, &gc_vals);
-          
+
           XFillRectangles (d, pix, gc, rects, G_N_ELEMENTS (rects));
-          
+
           XCopyArea (d, pix, w, gc, 0, 0, width, height, 0, 0);
-          
+
           XFreePixmap (d, pix);
           XFreeGC (d, gc);
 

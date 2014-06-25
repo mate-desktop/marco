@@ -100,14 +100,14 @@ x_error_handler (Display     *xdisplay,
   if (error_trap_depth == 0)
     {
       print_backtrace ();
-      
+
       fprintf (stderr, "Unexpected X error: %s serial %ld error_code %d request_code %d minor_code %d)\n",
                buf,
                error->serial,
                error->error_code,
                error->request_code,
                error->minor_code);
-      
+
       exit (1);
     }
 
@@ -128,7 +128,7 @@ error_trap_pop (Display   *xdisplay)
       fprintf (stderr, "Error trap underflow!\n");
       exit (1);
     }
-  
+
   XSync (xdisplay, False); /* get all errors out of the queue */
   --error_trap_depth;
 }
@@ -198,11 +198,11 @@ try_get_reply (Display           *xdisplay,
       struct timeval current_time;
 
       gettimeofday (&current_time, NULL);
-      
+
       printf (" %gms (we have a reply for property %ld)\n",
               ELAPSED (program_start_time, current_time),
               ag_task_get_property (task));
-      
+
       data = NULL;
 
       name = atom_name (xdisplay,
@@ -210,7 +210,7 @@ try_get_reply (Display           *xdisplay,
       printf (" %s on 0x%lx:\n", name,
               ag_task_get_window (task));
       free (name);
-      
+
       result = ag_task_get_reply_and_free (task,
                                            &actual_type,
                                            &actual_format,
@@ -228,12 +228,12 @@ try_get_reply (Display           *xdisplay,
           name = atom_name (xdisplay, actual_type);
           printf ("  actual_type = %s\n", name);
           free (name);
-          
+
           printf ("  actual_format = %d\n", actual_format);
-          
+
           printf ("  n_items = %lu\n", n_items);
           printf ("  bytes_after = %lu\n", bytes_after);
-          
+
           printf ("  data = \"%s\"\n", data ? (char*) data : "NULL");
         }
 
@@ -258,13 +258,13 @@ main (int argc, char **argv)
   char *end;
   Atom *props;
   struct timeval current_time;
-  
+
   if (argc < 2)
     {
       fprintf (stderr, "specify window ID\n");
       return 1;
     }
-  
+
   window_str = argv[1];
 
   end = NULL;
@@ -286,7 +286,7 @@ main (int argc, char **argv)
     XSynchronize (xdisplay, True);
 
   XSetErrorHandler (x_error_handler);
-  
+
   n_props = 0;
   props = XListProperties (xdisplay, window, &n_props);
   if (n_props == 0 || props == NULL)
@@ -296,7 +296,7 @@ main (int argc, char **argv)
     }
 
   gettimeofday (&program_start_time, NULL);
-  
+
   i = 0;
   while (i < n_props)
     {
@@ -313,7 +313,7 @@ main (int argc, char **argv)
           fprintf (stderr, "Failed to send request\n");
           return 1;
         }
-      
+
       ++i;
     }
 
@@ -321,24 +321,24 @@ main (int argc, char **argv)
   props = NULL;
 
   n_left = n_props;
-  
+
   while (TRUE)
     {
       XEvent xevent;
       int connection;
       fd_set set;
       AgGetPropertyTask *task;
-      
+
       /* Mop up event queue */
       while (XPending (xdisplay) > 0)
-        {                  
+        {
           XNextEvent (xdisplay, &xevent);
           gettimeofday (&current_time, NULL);
           printf (" %gms (processing event type %d)\n",
                   ELAPSED (program_start_time, current_time),
                   xevent.xany.type);
         }
-      
+
       while ((task = ag_get_next_completed_task (xdisplay)))
         {
           try_get_reply (xdisplay, task);
@@ -364,7 +364,7 @@ main (int argc, char **argv)
     }
 
   run_speed_comparison (xdisplay, window);
-  
+
   return 0;
 }
 
@@ -379,7 +379,7 @@ run_speed_comparison (Display *xdisplay,
   int n_props;
   struct timeval start, end;
   int n_left;
-  
+
   /* We just use atom values (0 to n_props) % 200, many are probably
    * BadAtom, that's fine, but the %200 keeps most of them valid. The
    * async case is about twice as advantageous when using valid atoms
@@ -388,9 +388,9 @@ run_speed_comparison (Display *xdisplay,
    */
   n_props = 4000;
   printf ("Timing with %d property requests\n", n_props);
-  
+
   gettimeofday (&start, NULL);
-  
+
   i = 0;
   while (i < n_props)
     {
@@ -403,23 +403,23 @@ run_speed_comparison (Display *xdisplay,
           fprintf (stderr, "Failed to send request\n");
           exit (1);
         }
-      
+
       ++i;
     }
 
   n_left = n_props;
-  
+
   while (TRUE)
     {
       int connection;
       fd_set set;
       XEvent xevent;
       AgGetPropertyTask *task;
-      
+
       /* Mop up event queue */
       while (XPending (xdisplay) > 0)
         XNextEvent (xdisplay, &xevent);
-      
+
       while ((task = ag_get_next_completed_task (xdisplay)))
         {
           int UNUSED_VARIABLE result;
@@ -430,7 +430,7 @@ run_speed_comparison (Display *xdisplay,
           unsigned char *data;
 
           assert (ag_task_have_reply (task));
-          
+
           data = NULL;
           result = ag_task_get_reply_and_free (task,
                                                &actual_type,
@@ -438,13 +438,13 @@ run_speed_comparison (Display *xdisplay,
                                                &n_items,
                                                &bytes_after,
                                                &data);
-          
+
           if (data)
             XFree (data);
-          
+
           n_left -= 1;
         }
-      
+
       if (n_left == 0)
         break;
 
@@ -456,16 +456,16 @@ run_speed_comparison (Display *xdisplay,
 
       select (connection + 1, &set, NULL, NULL, NULL);
     }
-  
+
   gettimeofday (&end, NULL);
-  
+
   printf ("Async time: %gms\n",
           ELAPSED (start, end));
-  
+
   gettimeofday (&start, NULL);
 
   error_trap_push (xdisplay);
-  
+
   i = 0;
   while (i < n_props)
     {
@@ -474,7 +474,7 @@ run_speed_comparison (Display *xdisplay,
       unsigned long n_items;
       unsigned long bytes_after;
       unsigned char *data;
-      
+
       data = NULL;
       if (XGetWindowProperty (xdisplay, window,
                               (Atom) i % 200,
@@ -490,14 +490,14 @@ run_speed_comparison (Display *xdisplay,
           if (data)
             XFree (data);
         }
-      
+
       ++i;
     }
 
   error_trap_pop (xdisplay);
-  
+
   gettimeofday (&end, NULL);
-  
+
   printf ("Sync time:  %gms\n",
           ELAPSED (start, end));
 }

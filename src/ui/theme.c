@@ -3464,7 +3464,7 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
       cairo_clip (cr);
     }
   #endif
-  
+
   switch (op->type)
     {
     case META_DRAW_LINE:
@@ -3935,12 +3935,12 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
         /* tile offset should not include x/y */
         tile_xoffset -= rect.x;
         tile_yoffset -= rect.y;
-        
+
         tile.width = parse_size_unchecked (op->data.tile.tile_width, env);
         tile.height = parse_size_unchecked (op->data.tile.tile_height, env);
 
         tile.x = rx - tile_xoffset;
-    
+
         while (tile.x < (rx + rwidth))
           {
             tile.y = ry - tile_yoffset;
@@ -4148,7 +4148,7 @@ meta_draw_op_list_draw_with_style  (const MetaDrawOpList *op_list,
    * evaluated), we make an array of those, and then fold
    * adjacent items when possible.
    */
-  
+
   #if GTK_CHECK_VERSION(3, 0, 0)
   cairo_save(cr);
   #else
@@ -4176,13 +4176,13 @@ meta_draw_op_list_draw_with_style  (const MetaDrawOpList *op_list,
         {
           cairo_restore (cr);
 
-          cairo_rectangle (cr, 
+          cairo_rectangle (cr,
                            parse_x_position_unchecked (op->data.clip.x, &env),
                            parse_y_position_unchecked (op->data.clip.y, &env),
                            parse_size_unchecked (op->data.clip.width, &env),
                            parse_size_unchecked (op->data.clip.height, &env));
           cairo_clip (cr);
-          
+
           cairo_save (cr);
         }
       else if (gdk_cairo_get_clip_rectangle (cr, NULL))
@@ -4801,7 +4801,7 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
               button_rect (j, fgeom, middle_bg_offset, &rect);
 
               op_list = get_button (style, j, button_states[j]);
-              
+
               if (op_list)
                 {
                   cairo_save (cr);

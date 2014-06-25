@@ -19,7 +19,7 @@ get_size (Display *d, Drawable draw,
   int x, y;
   unsigned int width, height, border, depth;
   Window root;
-  
+
   XGetGeometry (d, draw, &root, &x, &y, &width, &height, &border, &depth);
 
   if (xp)
@@ -43,10 +43,10 @@ main (int argc, char **argv)
   XEvent ev;
   int x, y, width, height;
   Pixmap pix;
-  GC gc;  
+  GC gc;
   XGCValues gc_vals;
   gboolean redraw_pending;
-  
+
   d = XOpenDisplay (NULL);
 
   screen = DefaultScreen (d);
@@ -55,20 +55,20 @@ main (int argc, char **argv)
   y = 0;
   width = 100;
   height = 100;
-  
-  zero_min_size = XCreateSimpleWindow (d, RootWindow (d, screen), 
+
+  zero_min_size = XCreateSimpleWindow (d, RootWindow (d, screen),
                                        x, y, width, height, 0,
                                        WhitePixel (d, screen),
-                                       WhitePixel (d, screen));  
-  
+                                       WhitePixel (d, screen));
+
   XSelectInput (d, zero_min_size,
                 ButtonPressMask | ExposureMask | StructureNotifyMask);
-  
+
   hints.flags = PMinSize;
-  
+
   hints.min_width = 0;
   hints.min_height = 0;
-  
+
   XSetWMNormalHints (d, zero_min_size, &hints);
   XMapWindow (d, zero_min_size);
 
@@ -76,7 +76,7 @@ main (int argc, char **argv)
   while (1)
     {
       XNextEvent (d, &ev);
-      
+
       switch (ev.xany.type)
         {
         case ButtonPress:
@@ -95,11 +95,11 @@ main (int argc, char **argv)
 
           redraw_pending = TRUE;
           break;
-          
+
         case Expose:
           redraw_pending = TRUE;
           break;
-          
+
         default:
           break;
         }
@@ -113,15 +113,15 @@ main (int argc, char **argv)
         {
           pix = XCreatePixmap (d, zero_min_size, width, height,
                                DefaultDepth (d, screen));
-          
+
           gc_vals.foreground = WhitePixel (d, screen);
-          
+
           gc = XCreateGC (d, pix, GCForeground, &gc_vals);
-          
+
           XFillRectangle (d, pix, gc, 0, 0, width, height);
-          
+
           XCopyArea (d, pix, zero_min_size, gc, 0, 0, width, height, 0, 0);
-          
+
           XFreePixmap (d, pix);
           XFreeGC (d, gc);
 

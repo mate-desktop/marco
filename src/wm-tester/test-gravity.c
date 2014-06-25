@@ -4,11 +4,11 @@
 #include <string.h>
 
 static int gravities[10] = {
-  NorthWestGravity, 
-  NorthGravity,  
+  NorthWestGravity,
+  NorthGravity,
   NorthEastGravity,
-  WestGravity,      
-  CenterGravity, 
+  WestGravity,
+  CenterGravity,
   EastGravity,
   SouthWestGravity,
   SouthGravity,
@@ -73,7 +73,7 @@ calculate_position (int i, int doubled, int *x, int *y)
       *x = 150;
       *y = 150;
     }
-  else 
+  else
     {
       int xoff = x_offset[i % 3];
       int yoff = y_offset[i / 3];
@@ -82,7 +82,7 @@ calculate_position (int i, int doubled, int *x, int *y)
           xoff *= 2;
           yoff *= 2;
         }
-      
+
       *x = screen_x_fraction[i % 3] * screen_width + xoff;
       *y = screen_y_fraction[i / 3] * screen_height + yoff;
     }
@@ -123,12 +123,12 @@ int main (int argc, char **argv)
   int screen;
   XEvent ev;
   int noframes;
-  
+
   if (argc > 1 && strcmp (argv[1], "--noframes") == 0)
     noframes = 1;
   else
     noframes = 0;
-  
+
   d = XOpenDisplay (NULL);
 
   screen = DefaultScreen (d);
@@ -138,11 +138,11 @@ int main (int argc, char **argv)
   for (i=0; i<10; i++)
     {
       int x, y;
-      
+
       calculate_position (i, doubled[i], &x, &y);
 
-      w = XCreateSimpleWindow (d, RootWindow (d, screen), 
-                               x, y, WINDOW_WIDTH, WINDOW_HEIGHT, 0, 
+      w = XCreateSimpleWindow (d, RootWindow (d, screen),
+                               x, y, WINDOW_WIDTH, WINDOW_HEIGHT, 0,
                                WhitePixel (d, screen), WhitePixel (d, screen));
 
       windows[i] = w;
@@ -150,11 +150,11 @@ int main (int argc, char **argv)
       window_rects[i].y = y;
       window_rects[i].width = WINDOW_WIDTH;
       window_rects[i].height = WINDOW_HEIGHT;
-      
+
       XSelectInput (d, w, ButtonPressMask | ExposureMask | StructureNotifyMask);
-      
+
       hints.flags = USPosition | PMinSize | PMaxSize | PWinGravity;
-      
+
       hints.min_width = WINDOW_WIDTH / 2;
       hints.min_height = WINDOW_HEIGHT / 2;
 
@@ -170,7 +170,7 @@ int main (int argc, char **argv)
       hints.max_height = WINDOW_HEIGHT * 2 + WINDOW_HEIGHT / 2;
 #endif
       hints.win_gravity = gravities[i];
-      
+
       XSetWMNormalHints (d, w, &hints);
 
       XStoreName (d, w, window_gravity_to_string (hints.win_gravity));
@@ -179,10 +179,10 @@ int main (int argc, char **argv)
         {
           MotifWmHints mwm;
           Atom mwm_atom;
-          
+
           mwm.decorations = 0;
           mwm.flags = MWM_HINTS_DECORATIONS;
-          
+
           mwm_atom = XInternAtom (d, "_MOTIF_WM_HINTS", False);
 
           XChangeProperty (d, w, mwm_atom, mwm_atom,
@@ -190,7 +190,7 @@ int main (int argc, char **argv)
                            (unsigned char *)&mwm,
                            sizeof (MotifWmHints)/sizeof (long));
         }
-      
+
       XMapWindow (d, w);
     }
 
@@ -201,14 +201,14 @@ int main (int argc, char **argv)
       if (ev.xany.type == ConfigureNotify)
         {
           i = find_window (ev.xconfigure.window);
-          
+
           if (i >= 0)
             {
               Window ignored;
-              
+
               window_rects[i].width = ev.xconfigure.width;
               window_rects[i].height = ev.xconfigure.height;
-              
+
               XClearArea (d, windows[i], 0, 0,
                           ev.xconfigure.width,
                           ev.xconfigure.height,
@@ -227,17 +227,17 @@ int main (int argc, char **argv)
             }
         }
       else if (ev.xany.type == Expose)
-        {          
+        {
           i = find_window (ev.xexpose.window);
-          
+
           if (i >= 0)
             {
               GC gc;
               XGCValues values;
               char buf[256];
-              
+
               values.foreground = BlackPixel (d, screen);
-              
+
               gc = XCreateGC (d, windows[i],
                               GCForeground, &values);
 
@@ -245,7 +245,7 @@ int main (int argc, char **argv)
                        "%d,%d",
                        window_rects[i].x,
                        window_rects[i].y);
-              
+
               XDrawString (d, windows[i], gc, 10, 15,
                            buf, strlen (buf));
 
@@ -253,10 +253,10 @@ int main (int argc, char **argv)
                        "%dx%d",
                        window_rects[i].width,
                        window_rects[i].height);
-              
+
               XDrawString (d, windows[i], gc, 10, 35,
                            buf, strlen (buf));
-              
+
               XFreeGC (d, gc);
             }
         }
@@ -267,13 +267,13 @@ int main (int argc, char **argv)
           if (i >= 0)
             {
               /* Button 1 = move, 2 = resize, 3 = both at once */
-                  
-              if (ev.xbutton.button == Button1) 
-                { 
+
+              if (ev.xbutton.button == Button1)
+                {
                   int x, y;
-		      
+
                   calculate_position (i, doubled[i], &x, &y);
-                  XMoveWindow (d, windows[i], x, y); 
+                  XMoveWindow (d, windows[i], x, y);
                 }
               else if (ev.xbutton.button == Button2)
                 {
@@ -287,7 +287,7 @@ int main (int argc, char **argv)
               else if (ev.xbutton.button == Button3)
                 {
                   int x, y;
-		      
+
                   calculate_position (i, !doubled[i], &x, &y);
 
                   if (doubled[i])

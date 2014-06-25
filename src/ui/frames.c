@@ -2232,7 +2232,7 @@ generate_pixmap (MetaFrames            *frames,
   result = gdk_window_create_similar_surface (frame->window,
                                               CAIRO_CONTENT_COLOR,
                                               rect->width, rect->height);
-  
+
   cr = cairo_create (result);
   cairo_translate (cr, -rect->x, -rect->y);
 
@@ -2430,13 +2430,13 @@ cached_pixels_draw (CachedPixels   *pixels,
     {
       CachedFramePiece *piece;
       piece = &pixels->piece[i];
-      
+
       if (piece->pixmap)
         {
           cairo_set_source_surface (cr, piece->pixmap,
                                     piece->rect.x, piece->rect.y);
           cairo_paint (cr);
-          
+
           region_piece = cairo_region_create_rectangle (&piece->rect);
           cairo_region_subtract (region, region_piece);
           cairo_region_destroy (region_piece);
@@ -2486,7 +2486,7 @@ subtract_client_area (cairo_region_t *region, MetaUIFrame *frame)
   MetaFrameType type;
   cairo_region_t *tmp_region;
   Display *display;
-  
+
   display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
 
   meta_core_get (display, frame->xwindow,
@@ -2496,7 +2496,7 @@ subtract_client_area (cairo_region_t *region, MetaUIFrame *frame)
                  META_CORE_GET_CLIENT_HEIGHT, &area.height,
                  META_CORE_GET_END);
   meta_theme_get_frame_borders (meta_theme_get_current (),
-                         type, frame->text_height, flags, 
+                         type, frame->text_height, flags,
                          &area.x, NULL, &area.y, NULL);
 
   tmp_region = cairo_region_create_rectangle (&area);
@@ -2535,11 +2535,11 @@ meta_frames_draw (GtkWidget *widget,
   populate_cache (frames, frame);
 
   region = cairo_region_create_rectangle (&clip);
-  
+
   pixels = get_cache (frames, frame);
 
   cached_pixels_draw (pixels, cr, region);
-  
+
   clip_to_screen (region, frame);
   subtract_client_area (region, frame);
 
@@ -2567,7 +2567,7 @@ meta_frames_draw (GtkWidget *widget,
     }
 
   cairo_region_destroy (region);
-  
+
   return TRUE;
 }
 
