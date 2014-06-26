@@ -1463,6 +1463,7 @@ finish_unminimize (gpointer data)
   MetaWindow *window = data;
 
   meta_window_show (window);
+  window->was_minimized = FALSE;
   window->effect_pending = META_EFFECT_NONE;
 }
 
@@ -2355,7 +2356,6 @@ meta_window_show (MetaWindow *window)
     }
   else if (window->was_minimized)
     {
-      window->was_minimized = FALSE;
       meta_window_focus(window, timestamp);
     }
 
