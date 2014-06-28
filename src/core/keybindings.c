@@ -2031,7 +2031,8 @@ process_tab_grab (MetaDisplay *display,
                       target_window->desc);
           display->mouse_mode = FALSE;
           meta_window_activate (target_window, event->xkey.time);
-          meta_workspace_activate (target_window->workspace, event->xkey.time);
+          if (!target_window->on_all_workspaces)
+            meta_workspace_activate (target_window->workspace, event->xkey.time);
 
           meta_topic (META_DEBUG_KEYBINDINGS,
                       "Ending grab early so we can focus the target window\n");
@@ -2905,7 +2906,8 @@ do_choose_window (MetaDisplay    *display,
                       initial_selection->desc);
           display->mouse_mode = FALSE;
           meta_window_activate (initial_selection, event->xkey.time);
-          meta_workspace_activate (initial_selection->workspace, event->xkey.time);
+          if (!initial_selection->on_all_workspaces)
+            meta_workspace_activate (initial_selection->workspace, event->xkey.time);
         }
       else if (meta_display_begin_grab_op (display,
                                            screen,
@@ -2935,7 +2937,8 @@ do_choose_window (MetaDisplay    *display,
               meta_display_end_grab_op (display, event->xkey.time);
               display->mouse_mode = FALSE;
               meta_window_activate (initial_selection, event->xkey.time);
-              meta_workspace_activate (initial_selection->workspace, event->xkey.time);
+              if (!initial_selection->on_all_workspaces)
+                meta_workspace_activate (initial_selection->workspace, event->xkey.time);
             }
           else
             {
