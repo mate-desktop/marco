@@ -2,10 +2,10 @@
 
 /* Marco main() */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington
  * Copyright (C) 2006 Elijah Newren
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -15,7 +15,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -23,7 +23,7 @@
  */
 
 /**
- * \file 
+ * \file
  * Program startup.
  * Functions which parse the command-line arguments, create the display,
  * kick everything off and then close down Marco when it's time to go.
@@ -214,7 +214,7 @@ meta_print_self_identity (void)
   g_date_strftime (buf, sizeof (buf), "%x", &d);
   meta_verbose ("Marco version %s running on %s\n",
     VERSION, buf);
-  
+
   /* Locale and encoding. */
   g_get_charset (&charset);
   meta_verbose ("Running in locale \"%s\" with encoding \"%s\"\n",
@@ -427,12 +427,12 @@ main (int argc, char **argv)
   if (!g_thread_supported ())
     g_thread_init (NULL);
 #endif
-  
+
   if (setlocale (LC_ALL, "") == NULL)
     meta_warning ("Locale not understood by C library, internationalization will not work\n");
 
   g_type_init ();
-  
+
   sigemptyset (&empty_mask);
   act.sa_handler = SIG_IGN;
   act.sa_mask    = empty_mask;
@@ -472,7 +472,7 @@ main (int argc, char **argv)
                     g_get_home_dir ());
 
   meta_print_self_identity ();
-  
+
   bindtextdomain (GETTEXT_PACKAGE, MARCO_LOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
@@ -486,16 +486,16 @@ main (int argc, char **argv)
     version ();
 
   meta_select_display (meta_args.display_name);
-  
+
   if (meta_args.replace_wm)
     meta_set_replace_current_wm (TRUE);
 
   if (meta_args.save_file && meta_args.client_id)
     meta_fatal ("Can't specify both SM save file and SM client id\n");
-  
+
   meta_main_loop = g_main_loop_new (NULL, FALSE);
-  
-  meta_ui_init (&argc, &argv);  
+
+  meta_ui_init (&argc, &argv);
 
   /* must be after UI init so we can override GDK handlers */
   meta_errors_init ();
@@ -516,7 +516,7 @@ main (int argc, char **argv)
 
   if (g_getenv ("MARCO_G_FATAL_WARNINGS") != NULL)
     g_log_set_always_fatal (G_LOG_LEVEL_MASK);
-  
+
   meta_ui_set_current_theme (meta_prefs_get_theme (), FALSE);
 
   /* Try to find some theme that'll work if the theme preference
@@ -525,34 +525,34 @@ main (int argc, char **argv)
    */
   if (!meta_ui_have_a_theme ())
     meta_ui_set_current_theme ("Simple", FALSE);
-  
+
   if (!meta_ui_have_a_theme ())
     {
       const char *dir_entry = NULL;
       GError *err = NULL;
       GDir   *themes_dir = NULL;
-      
+
       if (!(themes_dir = g_dir_open (MARCO_DATADIR"/themes", 0, &err)))
         {
           meta_fatal (_("Failed to scan themes directory: %s\n"), err->message);
           g_error_free (err);
-        } 
-      else 
+        }
+      else
         {
-          while (((dir_entry = g_dir_read_name (themes_dir)) != NULL) && 
+          while (((dir_entry = g_dir_read_name (themes_dir)) != NULL) &&
                  (!meta_ui_have_a_theme ()))
             {
               meta_ui_set_current_theme (dir_entry, FALSE);
             }
-          
+
           g_dir_close (themes_dir);
         }
     }
-  
+
   if (!meta_ui_have_a_theme ())
     meta_fatal (_("Could not find a theme! Be sure %s exists and contains the usual themes.\n"),
                 MARCO_DATADIR"/themes");
-  
+
   /* Connect to SM as late as possible - but before managing display,
    * or we might try to manage a window before we have the session
    * info
@@ -562,9 +562,9 @@ main (int argc, char **argv)
       if (meta_args.client_id == NULL)
         {
           const gchar *desktop_autostart_id;
-  
+
           desktop_autostart_id = g_getenv ("DESKTOP_AUTOSTART_ID");
- 
+
           if (desktop_autostart_id != NULL)
             meta_args.client_id = g_strdup (desktop_autostart_id);
         }
@@ -590,7 +590,7 @@ main (int argc, char **argv)
 
   if (!meta_display_open ())
     meta_exit (META_EXIT_ERROR);
-  
+
   g_main_loop_run (meta_main_loop);
 
   meta_finalize ();
@@ -615,7 +615,7 @@ main (int argc, char **argv)
           meta_exit_code = META_EXIT_ERROR;
         }
     }
-  
+
   return meta_exit_code;
 }
 

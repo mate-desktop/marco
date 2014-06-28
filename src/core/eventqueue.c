@@ -2,10 +2,10 @@
 
 /* Marco X event source for main loop */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington (based on GDK code (C) Owen
  * Taylor, Red Hat Inc.)
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -15,7 +15,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -57,7 +57,7 @@ meta_event_queue_new (Display *display, MetaEventQueueFunc func, gpointer data)
 
   source = g_source_new (&eq_funcs, sizeof (MetaEventQueue));
   eq = (MetaEventQueue*) source;
-  
+
   eq->connection_fd = ConnectionNumber (display);
   eq->poll_fd.fd = eq->connection_fd;
   eq->poll_fd.events = G_IO_IN;
@@ -65,13 +65,13 @@ meta_event_queue_new (Display *display, MetaEventQueueFunc func, gpointer data)
   eq->events = g_queue_new ();
 
   eq->display = display;
-  
+
   g_source_set_priority (source, G_PRIORITY_DEFAULT);
   g_source_add_poll (source, &eq->poll_fd);
   g_source_set_can_recurse (source, TRUE);
 
   g_source_set_callback (source, (GSourceFunc) func, data, NULL);
-  
+
   g_source_attach (source, NULL);
   g_source_unref (source);
 
@@ -84,7 +84,7 @@ meta_event_queue_free (MetaEventQueue *eq)
   GSource *source;
 
   source = (GSource*) eq;
-  
+
   g_source_destroy (source);
 }
 
@@ -102,7 +102,7 @@ eq_queue_events (MetaEventQueue *eq)
   while (XPending (eq->display))
     {
       XEvent *copy;
-      
+
       XNextEvent (eq->display, &xevent);
 
       copy = g_new (XEvent, 1);
@@ -112,20 +112,20 @@ eq_queue_events (MetaEventQueue *eq)
     }
 }
 
-static gboolean  
+static gboolean
 eq_prepare (GSource *source, gint *timeout)
 {
   MetaEventQueue *eq;
 
   eq = (MetaEventQueue*) source;
-  
+
   *timeout = -1;
 
   return eq_events_pending (eq);
 }
 
-static gboolean  
-eq_check (GSource  *source) 
+static gboolean
+eq_check (GSource  *source)
 {
   MetaEventQueue *eq;
 
@@ -137,13 +137,13 @@ eq_check (GSource  *source)
     return FALSE;
 }
 
-static gboolean  
+static gboolean
 eq_dispatch (GSource *source, GSourceFunc callback, gpointer user_data)
 {
   MetaEventQueue *eq;
 
   eq = (MetaEventQueue*) source;
-  
+
   eq_queue_events (eq);
 
   if (eq->events->length > 0)
@@ -153,12 +153,12 @@ eq_dispatch (GSource *source, GSourceFunc callback, gpointer user_data)
 
       event = g_queue_pop_head (eq->events);
       func = (MetaEventQueueFunc) callback;
-      
+
       (* func) (event, user_data);
 
       g_free (event);
     }
-  
+
   return TRUE;
 }
 
@@ -172,7 +172,7 @@ eq_destroy (GSource *source)
   while (eq->events->length > 0)
     {
       XEvent *event;
-      
+
       event = g_queue_pop_head (eq->events);
 
       g_free (event);

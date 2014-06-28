@@ -2,10 +2,10 @@
 
 /* Marco X error handling */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington, error trapping inspired by GDK
  * code copyrighted by the GTK team.
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -15,7 +15,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -118,14 +118,14 @@ meta_error_trap_push_internal (MetaDisplay *display,
     {
       XSync (display->xdisplay, False);
     }
-  
+
   gdk_error_trap_push ();
 
   /* old_error_handler will just be equal to x_error_handler
    * for nested traps
    */
   old_error_handler = XSetErrorHandler (x_error_handler);
-  
+
   /* Replace GDK handler, but save it so we can chain up */
   if (display->error_trap_handler == NULL)
     {
@@ -155,13 +155,13 @@ meta_error_trap_pop_internal  (MetaDisplay *display,
   result = gdk_error_trap_pop ();
 
   display->error_traps -= 1;
-  
+
   if (display->error_traps == 0)
     {
       /* check that GDK put our handler back; this
        * assumes that there are no pending GDK traps from GDK itself
        */
-      
+
       int UNUSED_VARIABLE (* restored_error_handler) (Display     *,
                                       XErrorEvent *);
 
@@ -172,7 +172,7 @@ meta_error_trap_pop_internal  (MetaDisplay *display,
     }
 
   meta_topic (META_DEBUG_ERRORS, "%d traps\n", display->error_traps);
-  
+
   return result;
 }
 
@@ -196,7 +196,7 @@ meta_error_trap_pop (MetaDisplay *display,
                 display->error_traps, last_request_was_roundtrip);
 
   display->error_trap_synced_at_last_pop = need_sync || last_request_was_roundtrip;
-  
+
   meta_error_trap_pop_internal (display, need_sync);
 }
 
@@ -222,7 +222,7 @@ meta_error_trap_push_with_return (MetaDisplay *display)
   if (need_sync)
     meta_topic (META_DEBUG_SYNC, "Syncing on error_trap_push_with_return, traps = %d\n",
                 display->error_traps);
-  
+
   meta_error_trap_push_internal (display, FALSE);
 }
 
@@ -235,7 +235,7 @@ meta_error_trap_pop_with_return  (MetaDisplay *display,
                 display->error_traps, last_request_was_roundtrip);
 
   display->error_trap_synced_at_last_pop = TRUE;
-  
+
   return meta_error_trap_pop_internal (display,
                                        !last_request_was_roundtrip);
 }
@@ -258,8 +258,8 @@ x_error_handler (Display     *xdisplay,
 	  return 0;
       }
   }
-  
-  XGetErrorText (xdisplay, error->error_code, buf, 63);  
+
+  XGetErrorText (xdisplay, error->error_code, buf, 63);
 
   display = meta_display_for_x_display (xdisplay);
 
@@ -273,22 +273,22 @@ x_error_handler (Display     *xdisplay,
        */
       meta_verbose ("X error: %s serial %ld error_code %d request_code %d minor_code %d)\n",
                     buf,
-                    error->serial, 
-                    error->error_code, 
+                    error->serial,
+                    error->error_code,
                     error->request_code,
                     error->minor_code);
 
       g_assert (display->error_trap_handler != NULL);
       g_assert (display->error_trap_handler != x_error_handler);
-      
+
       retval = (* display->error_trap_handler) (xdisplay, error);
     }
   else
     {
       meta_bug ("Unexpected X error: %s serial %ld error_code %d request_code %d minor_code %d)\n",
                 buf,
-                error->serial, 
-                error->error_code, 
+                error->serial,
+                error->error_code,
                 error->request_code,
                 error->minor_code);
 
@@ -307,7 +307,7 @@ x_io_error_handler (Display *xdisplay)
 
   if (display == NULL)
     meta_bug ("IO error received for unknown display?\n");
-  
+
   if (errno == EPIPE)
     {
       meta_warning (_("Lost connection to the display '%s';\n"
@@ -324,7 +324,7 @@ x_io_error_handler (Display *xdisplay)
 
   /* Xlib would force an exit anyhow */
   exit (1);
-  
+
   return 0;
 }
 

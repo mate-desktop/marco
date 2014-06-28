@@ -1,8 +1,8 @@
 /* Hack for use instead of xmag */
 
-/* 
+/*
  * Copyright (C) 2002 Red Hat Inc.
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -12,7 +12,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -55,10 +55,10 @@ get_pixbuf (void)
   g_print ("Size %d x %d\n",
            last_grab_width, last_grab_height);
 #endif
-  
+
 
   #if GTK_CHECK_VERSION(3, 0, 0)
-  screenshot = gdk_pixbuf_get_from_window(gdk_get_default_root_window(), last_grab_x, last_grab_y, last_grab_width, last_grab_height); 
+  screenshot = gdk_pixbuf_get_from_window(gdk_get_default_root_window(), last_grab_x, last_grab_y, last_grab_width, last_grab_height);
   #else
   screenshot = gdk_pixbuf_get_from_drawable (NULL, gdk_get_default_root_window (),
                                              NULL,
@@ -89,14 +89,14 @@ regrab_idle (GtkWidget *image)
   GtkAllocation allocation;
 
   gtk_widget_get_allocation (image, &allocation);
-  
+
   if (allocation.width != last_grab_allocation.width ||
       allocation.height != last_grab_allocation.height)
     {
       last_grab_width = rint (allocation.width / width_factor);
       last_grab_height = rint (allocation.height / height_factor);
       last_grab_allocation = allocation;
-      
+
       magnified = get_pixbuf ();
 
       gtk_image_set_from_pixbuf (GTK_IMAGE (image), magnified);
@@ -105,7 +105,7 @@ regrab_idle (GtkWidget *image)
     }
 
   regrab_idle_id = 0;
-  
+
   return FALSE;
 }
 
@@ -125,7 +125,7 @@ grab_area_at_mouse (GtkWidget *invisible,
   GdkPixbuf *magnified;
   int width, height;
   GtkWidget *widget;
-  
+
   width = last_grab_width;
   height = last_grab_height;
 
@@ -133,9 +133,9 @@ grab_area_at_mouse (GtkWidget *invisible,
   last_grab_y = y_root;
   last_grab_width = width;
   last_grab_height = height;
-  
+
   magnified = get_pixbuf ();
-  
+
   display_window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_default_size (GTK_WINDOW (display_window),
                                last_grab_width, last_grab_height);
@@ -151,7 +151,7 @@ grab_area_at_mouse (GtkWidget *invisible,
                     G_CALLBACK (gtk_main_quit), NULL);
 
   g_signal_connect_after (G_OBJECT (widget), "size_allocate", G_CALLBACK (image_resized), NULL);
-  
+
   gtk_widget_show_all (display_window);
 }
 
@@ -168,7 +168,7 @@ mouse_motion (GtkWidget      *invisible,
 	      GdkEventMotion *event,
 	      gpointer        data)
 {
-  
+
 }
 
 static gboolean
@@ -182,7 +182,7 @@ mouse_release (GtkWidget      *invisible,
   grab_area_at_mouse (invisible, event->x_root, event->y_root);
 
   shutdown_grab ();
-  
+
   g_signal_handlers_disconnect_by_func (invisible, mouse_motion, NULL);
   g_signal_handlers_disconnect_by_func (invisible, mouse_release, NULL);
 
@@ -199,14 +199,14 @@ static gboolean
 key_press (GtkWidget   *invisible,
            GdkEventKey *event,
            gpointer     data)
-{  
+{
   if (event->keyval == GDK_Escape)
     {
       shutdown_grab ();
 
       g_signal_handlers_disconnect_by_func (invisible, mouse_press, NULL);
       g_signal_handlers_disconnect_by_func (invisible, key_press, NULL);
-      
+
       return TRUE;
     }
 
@@ -217,7 +217,7 @@ static gboolean
 mouse_press (GtkWidget      *invisible,
 	     GdkEventButton *event,
 	     gpointer        data)
-{  
+{
   if (event->type == GDK_BUTTON_PRESS &&
       event->button == 1)
     {
@@ -242,7 +242,7 @@ begin_area_grab (void)
 
       gtk_widget_add_events (grab_widget,
                              GDK_BUTTON_RELEASE_MASK | GDK_BUTTON_PRESS_MASK | GDK_POINTER_MOTION_MASK);
-      
+
       gtk_widget_show (grab_widget);
     }
 
@@ -253,7 +253,7 @@ begin_area_grab (void)
       g_warning ("Failed to grab keyboard to do eyedropper");
       return;
     }
-  
+
   if (gdk_pointer_grab (gtk_widget_get_window (grab_widget),
                         FALSE,
                         GDK_BUTTON_RELEASE_MASK | GDK_BUTTON_PRESS_MASK | GDK_POINTER_MOTION_MASK,
@@ -267,7 +267,7 @@ begin_area_grab (void)
     }
 
   gtk_grab_add (grab_widget);
-  
+
   g_signal_connect (grab_widget, "button_press_event",
                     G_CALLBACK (mouse_press), NULL);
   g_signal_connect (grab_widget, "key_press_event",
@@ -280,8 +280,8 @@ main (int argc, char **argv)
   gtk_init (&argc, &argv);
 
   begin_area_grab ();
-  
+
   gtk_main ();
-  
+
   return 0;
 }

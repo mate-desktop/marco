@@ -2,11 +2,11 @@
 
 /* Marco Session Management */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington (some code in here from
  * libmateui, (C) Tom Tromey, Carsten Schaar)
  * Copyright (C) 2004, 2005 Elijah Newren
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -16,7 +16,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -76,7 +76,7 @@ meta_window_release_saved_state (const MetaWindowSessionInfo *info)
 
 static void ice_io_error_handler (IceConn connection);
 
-static void new_ice_connection (IceConn connection, IcePointer client_data, 
+static void new_ice_connection (IceConn connection, IcePointer client_data,
 				Bool opening, IcePointer *watch_data);
 
 static void        save_state         (void);
@@ -106,7 +106,7 @@ process_ice_messages (GIOChannel *channel,
 #if 0
       IcePointer context = IceGetConnectionContext (connection);
 #endif
-      
+
       /* We were disconnected; close our connection to the
        * session manager, this will result in the ICE connection
        * being cleaned up, since it is owned by libSM.
@@ -116,7 +116,7 @@ process_ice_messages (GIOChannel *channel,
 
       return FALSE;
     }
-  
+
   return TRUE;
 }
 
@@ -134,22 +134,22 @@ new_ice_connection (IceConn connection, IcePointer client_data, Bool opening,
        * exec'ed children
        */
       GIOChannel *channel;
-      
+
       fcntl (IceConnectionNumber (connection), F_SETFD,
              fcntl (IceConnectionNumber (connection), F_GETFD, 0) | FD_CLOEXEC);
 
       channel = g_io_channel_unix_new (IceConnectionNumber (connection));
-      
+
       input_id = g_io_add_watch (channel,
                                  G_IO_IN | G_IO_ERR,
                                  process_ice_messages,
                                  connection);
 
       g_io_channel_unref (channel);
-      
+
       *watch_data = (IcePointer) GUINT_TO_POINTER (input_id);
     }
-  else 
+  else
     {
       input_id = GPOINTER_TO_UINT ((gpointer) *watch_data);
 
@@ -159,14 +159,14 @@ new_ice_connection (IceConn connection, IcePointer client_data, Bool opening,
 
 static IceIOErrorHandler ice_installed_handler;
 
-/* We call any handler installed before (or after) mate_ice_init but 
+/* We call any handler installed before (or after) mate_ice_init but
    avoid calling the default libICE handler which does an exit() */
 static void
 ice_io_error_handler (IceConn connection)
 {
     if (ice_installed_handler)
       (*ice_installed_handler) (connection);
-}    
+}
 
 static void
 ice_init (void)
@@ -235,7 +235,7 @@ meta_session_init (const char *previous_client_id,
   unsigned long mask;
   SmcCallbacks callbacks;
   char *saved_client_id;
-  
+
   meta_topic (META_DEBUG_SM, "Initializing session with save file '%s'\n",
               previous_save_file ? previous_save_file : "(none)");
 
@@ -254,24 +254,24 @@ meta_session_init (const char *previous_client_id,
     {
       saved_client_id = NULL;
     }
-  
+
   ice_init ();
-  
+
   mask = SmcSaveYourselfProcMask | SmcDieProcMask |
     SmcSaveCompleteProcMask | SmcShutdownCancelledProcMask;
-  
+
   callbacks.save_yourself.callback = save_yourself_callback;
   callbacks.save_yourself.client_data = NULL;
-  
+
   callbacks.die.callback = die_callback;
   callbacks.die.client_data = NULL;
-  
+
   callbacks.save_complete.callback = save_complete_callback;
   callbacks.save_complete.client_data = NULL;
-  
+
   callbacks.shutdown_cancelled.callback = shutdown_cancelled_callback;
   callbacks.shutdown_cancelled.client_data = NULL;
-  
+
   session_connection =
     SmcOpenConnection (NULL, /* use SESSION_MANAGER env */
                        NULL, /* means use existing ICE connection */
@@ -282,10 +282,10 @@ meta_session_init (const char *previous_client_id,
                        (char*) previous_client_id,
                        &client_id,
                        255, buf);
-  
+
   if (session_connection == NULL)
     {
-      meta_topic (META_DEBUG_SM, 
+      meta_topic (META_DEBUG_SM,
                   "Failed to a open connection to a session manager, so window positions will not be saved: %s\n",
                   buf);
 
@@ -302,14 +302,14 @@ meta_session_init (const char *previous_client_id,
     current_state = STATE_IDLE;
   else
     current_state = STATE_REGISTERING;
-  
+
   {
     SmProp prop1, prop2, prop3, prop4, prop5, prop6, *props[6];
     SmPropValue prop1val, prop2val, prop3val, prop4val, prop5val, prop6val;
     char pid[32];
     char hint = SmRestartImmediately;
     char priority = 20; /* low to run before other apps */
-    
+
     prop1.name = SmProgram;
     prop1.type = SmARRAY8;
     prop1.num_vals = 1;
@@ -326,7 +326,7 @@ meta_session_init (const char *previous_client_id,
     prop2.vals = &prop2val;
     prop2val.value = (char*) g_get_user_name ();
     prop2val.length = strlen (prop2val.value);
-	
+
     prop3.name = SmRestartStyleHint;
     prop3.type = SmCARD8;
     prop3.num_vals = 1;
@@ -340,7 +340,7 @@ meta_session_init (const char *previous_client_id,
     prop4.num_vals = 1;
     prop4.vals = &prop4val;
     prop4val.value = pid;
-    prop4val.length = strlen (prop4val.value);    
+    prop4val.length = strlen (prop4val.value);
 
     /* Always start in home directory */
     prop5.name = SmCurrentDirectory;
@@ -356,14 +356,14 @@ meta_session_init (const char *previous_client_id,
     prop6.vals = &prop6val;
     prop6val.value = &priority;
     prop6val.length = 1;
-    
+
     props[0] = &prop1;
     props[1] = &prop2;
     props[2] = &prop3;
     props[3] = &prop4;
     props[4] = &prop5;
     props[5] = &prop6;
-    
+
     SmcSetProperties (session_connection, 6, props);
   }
 
@@ -375,7 +375,7 @@ void
 meta_session_shutdown (void)
 {
   /* Change our restart mode to IfRunning */
-  
+
   SmProp prop1;
   SmPropValue prop1val;
   SmProp *props[1];
@@ -383,16 +383,16 @@ meta_session_shutdown (void)
 
   if (session_connection == NULL)
     return;
-  
+
   prop1.name = SmRestartStyleHint;
   prop1.type = SmCARD8;
   prop1.num_vals = 1;
   prop1.vals = &prop1val;
   prop1val.value = &hint;
   prop1val.length = 1;
-    
+
   props[0] = &prop1;
-  
+
   SmcSetProperties (session_connection, 1, props);
 }
 
@@ -411,11 +411,11 @@ save_yourself_possibly_done (gboolean shutdown,
   meta_topic (META_DEBUG_SM,
               "save possibly done shutdown = %d success = %d\n",
               shutdown, successful);
-  
+
   if (current_state == STATE_SAVING_PHASE_1)
     {
       Status status;
-      
+
       status = SmcRequestSaveYourselfPhase2 (session_connection,
                                              save_phase_2_callback,
                                              GINT_TO_POINTER (shutdown));
@@ -446,17 +446,17 @@ save_yourself_possibly_done (gboolean shutdown,
       meta_topic (META_DEBUG_SM,
                   "Requested interact, status = %d\n", status);
     }
-  
+
   if (current_state == STATE_SAVING_PHASE_1 ||
       current_state == STATE_SAVING_PHASE_2 ||
       current_state == STATE_DONE_WITH_INTERACT ||
       current_state == STATE_SKIPPING_GLOBAL_SAVE)
     {
       meta_topic (META_DEBUG_SM, "Sending SaveYourselfDone\n");
-      
+
       SmcSaveYourselfDone (session_connection,
                            successful);
-      
+
       if (shutdown)
         current_state = STATE_FROZEN;
       else
@@ -464,19 +464,19 @@ save_yourself_possibly_done (gboolean shutdown,
     }
 }
 
-static void 
+static void
 save_phase_2_callback (SmcConn smc_conn, SmPointer client_data)
 {
   gboolean shutdown;
 
   meta_topic (META_DEBUG_SM, "Phase 2 save");
-  
+
   shutdown = GPOINTER_TO_INT (client_data);
-  
+
   current_state = STATE_SAVING_PHASE_2;
 
   save_state ();
-  
+
   save_yourself_possibly_done (shutdown, TRUE);
 }
 
@@ -491,9 +491,9 @@ save_yourself_callback (SmcConn   smc_conn,
   gboolean successful;
 
   meta_topic (META_DEBUG_SM, "SaveYourself received");
-  
+
   successful = TRUE;
-  
+
   /* The first SaveYourself after registering for the first time
    * is a special case (SM specs 7.2).
    */
@@ -503,8 +503,8 @@ save_yourself_callback (SmcConn   smc_conn,
     {
       current_state = STATE_IDLE;
       /* Double check that this is a section 7.2 SaveYourself: */
-      
-      if (save_style == SmSaveLocal && 
+
+      if (save_style == SmSaveLocal &&
 	  interact_style == SmInteractStyleNone &&
 	  !shutdown && !fast)
 	{
@@ -516,7 +516,7 @@ save_yourself_callback (SmcConn   smc_conn,
 #endif
 
   /* ignore Global style saves
-   * 
+   *
    * This interpretaion of the Local/Global/Both styles
    * was discussed extensively on the xdg-list. See:
    *
@@ -530,11 +530,11 @@ save_yourself_callback (SmcConn   smc_conn,
     }
 
   interaction_allowed = interact_style != SmInteractStyleNone;
-  
+
   current_state = STATE_SAVING_PHASE_1;
 
   regenerate_save_file ();
-  
+
   set_clone_restart_commands ();
 
   save_yourself_possibly_done (shutdown, successful);
@@ -560,7 +560,7 @@ static void
 shutdown_cancelled_callback (SmcConn smc_conn, SmPointer client_data)
 {
   meta_topic (META_DEBUG_SM, "Shutdown cancelled received\n");
-  
+
   if (session_connection != NULL &&
       (current_state != STATE_IDLE && current_state != STATE_FROZEN))
     {
@@ -569,14 +569,14 @@ shutdown_cancelled_callback (SmcConn smc_conn, SmPointer client_data)
     }
 }
 
-static void 
+static void
 interact_callback (SmcConn smc_conn, SmPointer client_data)
 {
   /* nothing */
   gboolean shutdown;
 
   meta_topic (META_DEBUG_SM, "Interaction permission received\n");
-  
+
   shutdown = GPOINTER_TO_INT (client_data);
 
   current_state = STATE_DONE_WITH_INTERACT;
@@ -592,14 +592,14 @@ set_clone_restart_commands (void)
   char *discardv[10];
   int i;
   SmProp prop1, prop2, prop3, *props[3];
-  
+
   /* Restart (use same client ID) */
-  
+
   prop1.name = SmRestartCommand;
   prop1.type = SmLISTofARRAY8;
-  
+
   g_return_if_fail (client_id);
-  
+
   i = 0;
   restartv[i] = "marco";
   ++i;
@@ -620,7 +620,7 @@ set_clone_restart_commands (void)
   prop1.num_vals = i;
 
   /* Clone (no client ID) */
-  
+
   i = 0;
   clonev[i] = "marco";
   ++i;
@@ -628,7 +628,7 @@ set_clone_restart_commands (void)
 
   prop2.name = SmCloneCommand;
   prop2.type = SmLISTofARRAY8;
-  
+
   prop2.vals = g_new (SmPropValue, i);
   i = 0;
   while (clonev[i])
@@ -640,7 +640,7 @@ set_clone_restart_commands (void)
   prop2.num_vals = i;
 
   /* Discard */
-  
+
   i = 0;
   discardv[i] = "rm";
   ++i;
@@ -649,10 +649,10 @@ set_clone_restart_commands (void)
   discardv[i] = (char*) full_save_file ();
   ++i;
   discardv[i] = NULL;
-  
+
   prop3.name = SmDiscardCommand;
   prop3.type = SmLISTofARRAY8;
-  
+
   prop3.vals = g_new (SmPropValue, i);
   i = 0;
   while (discardv[i])
@@ -663,11 +663,11 @@ set_clone_restart_commands (void)
     }
   prop3.num_vals = i;
 
-  
+
   props[0] = &prop1;
   props[1] = &prop2;
   props[2] = &prop3;
-  
+
   SmcSetProperties (session_connection, 3, props);
 
   g_free (prop1.vals);
@@ -706,7 +706,7 @@ window_type_to_string (MetaWindowType type)
     }
 
   return "";
-} 
+}
 
 static MetaWindowType
 window_type_from_string (const char *str)
@@ -769,7 +769,7 @@ encode_text_as_utf8_markup (const char *text)
   GString *str;
   const char *p;
   char *escaped;
-  
+
   str = g_string_new ("");
 
   p = text;
@@ -781,7 +781,7 @@ encode_text_as_utf8_markup (const char *text)
 
   escaped = g_markup_escape_text (str->str, str->len);
   g_string_free (str, TRUE);
-  
+
   return escaped;
 }
 
@@ -793,7 +793,7 @@ decode_text_from_utf8 (const char *text)
   const char *p;
 
   str = g_string_new ("");
-  
+
   p = text;
   while (*p)
     {
@@ -815,11 +815,11 @@ save_state (void)
   GSList *windows;
   GSList *tmp;
   int stack_position;
-  
+
   g_assert (client_id);
 
   outfile = NULL;
-  
+
   /*
    * g_get_user_config_dir() is guaranteed to return an existing directory.
    * Eventually, if SM stays with the WM, I'd like to make this
@@ -831,7 +831,7 @@ save_state (void)
   marco_dir = g_strconcat (g_get_user_config_dir (),
                               G_DIR_SEPARATOR_S "marco",
                               NULL);
-  
+
   session_dir = g_strconcat (marco_dir,
                              G_DIR_SEPARATOR_S "sessions",
                              NULL);
@@ -851,7 +851,7 @@ save_state (void)
     }
 
   meta_topic (META_DEBUG_SM, "Saving session to '%s'\n", full_save_file ());
-  
+
   outfile = fopen (full_save_file (), "w");
 
   if (outfile == NULL)
@@ -874,9 +874,9 @@ save_state (void)
    * Note that attributes on <window> are the match info we use to
    * see if the saved state applies to a restored window, and
    * child elements are the saved state to be applied.
-   * 
+   *
    */
-  
+
   fprintf (outfile, "<marco_session id=\"%s\">\n",
            client_id);
 
@@ -905,7 +905,7 @@ save_state (void)
            * in UTF-8 (I think they are in XPCS which is Latin-1?
            * in practice they are always ascii though.)
            */
-              
+
           sm_client_id = encode_text_as_utf8_markup (window->sm_client_id);
           res_class = window->res_class ?
             encode_text_as_utf8_markup (window->res_class) : NULL;
@@ -917,7 +917,7 @@ save_state (void)
             title = g_markup_escape_text (window->title, -1);
           else
             title = NULL;
-              
+
           meta_topic (META_DEBUG_SM, "Saving session managed window %s, client ID '%s'\n",
                       window->desc, window->sm_client_id);
 
@@ -936,7 +936,7 @@ save_state (void)
           g_free (res_name);
           g_free (role);
           g_free (title);
-              
+
           /* Sticky */
           if (window->on_all_workspaces)
             fputs ("    <sticky/>\n", outfile);
@@ -949,13 +949,13 @@ save_state (void)
           if (META_WINDOW_MAXIMIZED (window))
             {
               fprintf (outfile,
-                       "    <maximized saved_x=\"%d\" saved_y=\"%d\" saved_width=\"%d\" saved_height=\"%d\"/>\n", 
+                       "    <maximized saved_x=\"%d\" saved_y=\"%d\" saved_width=\"%d\" saved_height=\"%d\"/>\n",
                        window->saved_rect.x,
                        window->saved_rect.y,
                        window->saved_rect.width,
                        window->saved_rect.height);
             }
-              
+
           /* Workspaces we're on */
           {
             int n;
@@ -968,13 +968,13 @@ save_state (void)
           {
             int x, y, w, h;
             meta_window_get_geometry (window, &x, &y, &w, &h);
-            
+
             fprintf (outfile,
                      "    <geometry x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" gravity=\"%s\"/>\n",
                      x, y, w, h,
                      meta_gravity_to_string (window->size_hints.win_gravity));
           }
-              
+
           fputs ("  </window>\n", outfile);
         }
       else
@@ -982,15 +982,15 @@ save_state (void)
           meta_topic (META_DEBUG_SM, "Not saving window '%s', not session managed\n",
                       window->desc);
         }
-          
+
       tmp = tmp->next;
       ++stack_position;
     }
-      
+
   g_slist_free (windows);
 
   fputs ("</marco_session>\n", outfile);
-  
+
  out:
   if (outfile)
     {
@@ -1006,7 +1006,7 @@ save_state (void)
                         full_save_file (), g_strerror (errno));
         }
     }
-  
+
   g_free (marco_dir);
   g_free (session_dir);
 }
@@ -1087,7 +1087,7 @@ load_state (const char *previous_save_file)
                                   G_DIR_SEPARATOR_S,
                                   previous_save_file,
                                   NULL);
-      
+
       if (!g_file_get_contents (session_file,
                                 &text,
                                 &length,
@@ -1107,10 +1107,10 @@ load_state (const char *previous_save_file)
   meta_topic (META_DEBUG_SM, "Parsing saved session file %s\n", session_file);
   g_free (session_file);
   session_file = NULL;
-  
+
   parse_data.info = NULL;
   parse_data.previous_id = NULL;
-  
+
   context = g_markup_parse_context_new (&marco_session_parser,
                                         0, &parse_data, NULL);
 
@@ -1120,8 +1120,8 @@ load_state (const char *previous_save_file)
                                      length,
                                      &error))
     goto error;
-  
-  
+
+
   error = NULL;
   if (!g_markup_parse_context_end_parse (context, &error))
     goto error;
@@ -1131,7 +1131,7 @@ load_state (const char *previous_save_file)
   goto out;
 
  error:
-  
+
   meta_warning (_("Failed to parse saved session file: %s\n"),
                 error->message);
   g_error_free (error);
@@ -1141,9 +1141,9 @@ load_state (const char *previous_save_file)
 
   g_free (parse_data.previous_id);
   parse_data.previous_id = NULL;
-  
+
  out:
-  
+
   g_free (text);
 
   return parse_data.previous_id;
@@ -1165,14 +1165,14 @@ start_element_handler  (GMarkupParseContext *context,
   if (strcmp (element_name, "marco_session") == 0)
     {
       /* Get previous ID */
-      int i;      
+      int i;
 
       i = 0;
       while (attribute_names[i])
         {
           const char *name;
           const char *val;
-          
+
           name = attribute_names[i];
           val = attribute_values[i];
 
@@ -1184,7 +1184,7 @@ start_element_handler  (GMarkupParseContext *context,
                            _("<marco_session> attribute seen but we already have the session ID"));
               return;
             }
-          
+
           if (strcmp (name, "id") == 0)
             {
               pd->previous_id = decode_text_from_utf8 (val);
@@ -1198,14 +1198,14 @@ start_element_handler  (GMarkupParseContext *context,
                            name, "marco_session");
               return;
             }
-          
+
           ++i;
         }
     }
   else if (strcmp (element_name, "window") == 0)
     {
       int i;
-      
+
       if (pd->info)
         {
           g_set_error (error,
@@ -1214,7 +1214,7 @@ start_element_handler  (GMarkupParseContext *context,
                        _("nested <window> tag"));
           return;
         }
-      
+
       pd->info = session_info_new ();
 
       i = 0;
@@ -1222,10 +1222,10 @@ start_element_handler  (GMarkupParseContext *context,
         {
           const char *name;
           const char *val;
-          
+
           name = attribute_names[i];
           val = attribute_values[i];
-          
+
           if (strcmp (name, "id") == 0)
             {
               if (*val)
@@ -1275,7 +1275,7 @@ start_element_handler  (GMarkupParseContext *context,
               pd->info = NULL;
               return;
             }
-          
+
           ++i;
         }
     }
@@ -1289,7 +1289,7 @@ start_element_handler  (GMarkupParseContext *context,
           const char *name;
 
           name = attribute_names[i];
-          
+
           if (strcmp (name, "index") == 0)
             {
               pd->info->workspace_indices =
@@ -1307,7 +1307,7 @@ start_element_handler  (GMarkupParseContext *context,
               pd->info = NULL;
               return;
             }
-          
+
           ++i;
         }
     }
@@ -1387,22 +1387,22 @@ start_element_handler  (GMarkupParseContext *context,
                     pd->info->saved_rect.y,
                     pd->info->saved_rect.width,
                     pd->info->saved_rect.height);
-    }  
+    }
   else if (strcmp (element_name, "geometry") == 0)
     {
       int i;
 
       pd->info->geometry_set = TRUE;
-      
+
       i = 0;
       while (attribute_names[i])
         {
           const char *name;
           const char *val;
-          
+
           name = attribute_names[i];
           val = attribute_values[i];
-          
+
           if (strcmp (name, "x") == 0)
             {
               if (*val)
@@ -1437,7 +1437,7 @@ start_element_handler  (GMarkupParseContext *context,
                            name, "geometry");
               return;
             }
-          
+
           ++i;
         }
 
@@ -1475,12 +1475,12 @@ end_element_handler    (GMarkupParseContext *context,
 
       window_info_list = g_slist_prepend (window_info_list,
                                           pd->info);
-      
+
       meta_topic (META_DEBUG_SM, "Loaded window info from session with class: %s name: %s role: %s\n",
                   pd->info->res_class ? pd->info->res_class : "(none)",
                   pd->info->res_name ? pd->info->res_name : "(none)",
                   pd->info->role ? pd->info->role : "(none)");
-      
+
       pd->info = NULL;
     }
 }
@@ -1516,20 +1516,20 @@ get_possible_matches (MetaWindow *window)
   GSList *retval;
   GSList *tmp;
   gboolean ignore_client_id;
-  
+
   retval = NULL;
 
   ignore_client_id = g_getenv ("MARCO_DEBUG_SM") != NULL;
-  
+
   tmp = window_info_list;
   while (tmp != NULL)
     {
       MetaWindowSessionInfo *info;
 
       info = tmp->data;
-      
+
       if ((ignore_client_id ||
-           both_null_or_matching (info->id, window->sm_client_id)) && 
+           both_null_or_matching (info->id, window->sm_client_id)) &&
           both_null_or_matching (info->res_class, window->res_class) &&
           both_null_or_matching (info->res_name, window->res_name) &&
           both_null_or_matching (info->role, window->role))
@@ -1556,7 +1556,7 @@ get_possible_matches (MetaWindow *window)
                             window->desc,
                             window->res_class ? window->res_class : "(none)",
                             info->res_class ? info->res_class : "(none)");
-              
+
               else if (!both_null_or_matching (info->res_name, window->res_name))
                 meta_topic (META_DEBUG_SM, "Window %s has name %s doesn't match saved name %s, no match\n",
                             window->desc,
@@ -1572,7 +1572,7 @@ get_possible_matches (MetaWindow *window)
                             window->desc, info->id);
             }
         }
-      
+
       tmp = tmp->next;
     }
 
@@ -1586,10 +1586,10 @@ find_best_match (GSList     *infos,
   GSList *tmp;
   const MetaWindowSessionInfo *matching_title;
   const MetaWindowSessionInfo *matching_type;
-  
+
   matching_title = NULL;
   matching_type = NULL;
-  
+
   tmp = infos;
   while (tmp != NULL)
     {
@@ -1604,7 +1604,7 @@ find_best_match (GSList     *infos,
       if (matching_type == NULL &&
           info->type == window->type)
         matching_type = info;
-      
+
       tmp = tmp->next;
     }
 
@@ -1613,7 +1613,7 @@ find_best_match (GSList     *infos,
    * to e.g. break ties by geometry hint similarity,
    * or other window features.
    */
-  
+
   if (matching_title)
     return matching_title;
   else if (matching_type)
@@ -1627,7 +1627,7 @@ meta_window_lookup_saved_state (MetaWindow *window)
 {
   GSList *possibles;
   const MetaWindowSessionInfo *info;
-  
+
   /* Window is not session managed.
    * I haven't yet figured out how to deal with these
    * in a way that doesn't cause broken side effects in
@@ -1651,9 +1651,9 @@ meta_window_lookup_saved_state (MetaWindow *window)
     }
 
   info = find_best_match (possibles, window);
-  
+
   g_slist_free (possibles);
-  
+
   return info;
 }
 
@@ -1678,7 +1678,7 @@ session_info_free (MetaWindowSessionInfo *info)
   g_free (info->role);
 
   g_slist_free (info->workspace_indices);
-  
+
   g_free (info);
 }
 
@@ -1691,7 +1691,7 @@ session_info_new (void)
 
   info->type = META_WINDOW_NORMAL;
   info->gravity = NorthWestGravity;
-  
+
   return info;
 }
 
@@ -1732,7 +1732,7 @@ finish_interact (gboolean shutdown)
   if (current_state == STATE_DONE_WITH_INTERACT) /* paranoia */
     {
       SmcInteractDone (session_connection, False /* don't cancel logout */);
-      
+
       save_yourself_possibly_done (shutdown, TRUE);
     }
 }
@@ -1757,13 +1757,13 @@ warn_about_lame_clients_and_finish_interact (gboolean shutdown)
   GSList *tmp;
   GSList *columns = NULL;
   GPid pid;
-  
+
   windows = meta_display_list_windows (meta_get_display ());
   tmp = windows;
   while (tmp != NULL)
     {
       MetaWindow *window;
-          
+
       window = tmp->data;
 
       /* only complain about normal windows, the others
@@ -1772,12 +1772,12 @@ warn_about_lame_clients_and_finish_interact (gboolean shutdown)
       if (window->sm_client_id == NULL &&
           window->type == META_WINDOW_NORMAL)
         lame = g_slist_prepend (lame, window);
-          
+
       tmp = tmp->next;
     }
-      
+
   g_slist_free (windows);
-  
+
   if (lame == NULL)
     {
       /* No lame apps. */

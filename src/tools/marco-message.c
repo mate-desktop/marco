@@ -156,7 +156,7 @@ int
 main (int argc, char **argv)
 {
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-  
+
   gtk_init (&argc, &argv);
 
   if (argc < 2)
@@ -175,13 +175,13 @@ main (int argc, char **argv)
 #ifndef WITH_VERBOSE_MODE
       g_printerr (_("Marco was compiled without support for verbose mode\n"));
       return 1;
-#else      
+#else
       send_toggle_verbose ();
 #endif
     }
   else
     usage ();
-  
+
   return 0;
 }
 

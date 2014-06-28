@@ -2,12 +2,12 @@
 
 /* Marco window placement */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington
  * Copyright (C) 2002, 2003 Red Hat, Inc.
  * Copyright (C) 2003 Rob Adams
  * Copyright (C) 2005 Elijah Newren
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -17,7 +17,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -74,11 +74,11 @@ northwestcmp (gconstpointer a, gconstpointer b)
       bx = bw->rect.x;
       by = bw->rect.y;
     }
-  
+
   /* probably there's a fast good-enough-guess we could use here. */
   from_origin_a = sqrt (ax * ax + ay * ay);
   from_origin_b = sqrt (bx * bx + by * by);
-    
+
   if (from_origin_a < from_origin_b)
     return -1;
   else if (from_origin_a > from_origin_b)
@@ -105,16 +105,16 @@ find_next_cascade (MetaWindow *window,
   int cascade_stage;
   MetaRectangle work_area;
   const MetaXineramaScreenInfo* current;
-  
+
   sorted = g_list_copy (windows);
   sorted = g_list_sort (sorted, northwestcmp);
 
-  /* This is a "fuzzy" cascade algorithm. 
+  /* This is a "fuzzy" cascade algorithm.
    * For each window in the list, we find where we'd cascade a
    * new window after it. If a window is already nearly at that
    * position, we move on.
    */
-  
+
   /* arbitrary-ish threshold, honors user attempts to
    * manually cascade.
    */
@@ -129,7 +129,7 @@ find_next_cascade (MetaWindow *window,
       x_threshold = CASCADE_FUZZ;
       y_threshold = CASCADE_FUZZ;
     }
-  
+
   /* Find furthest-SE origin of all workspaces.
    * cascade_x, cascade_y are the target position
    * of NW corner of window frame.
@@ -140,19 +140,19 @@ find_next_cascade (MetaWindow *window,
 
   cascade_x = MAX (0, work_area.x);
   cascade_y = MAX (0, work_area.y);
-  
+
   /* Find first cascade position that's not used. */
-  
+
   window_width = window->frame ? window->frame->rect.width : window->rect.width;
   window_height = window->frame ? window->frame->rect.height : window->rect.height;
-  
+
   cascade_stage = 0;
   tmp = sorted;
   while (tmp != NULL)
     {
       MetaWindow *w;
       int wx, wy;
-      
+
       w = tmp->data;
 
       /* we want frame position, not window position */
@@ -166,7 +166,7 @@ find_next_cascade (MetaWindow *window,
           wx = w->rect.x;
           wy = w->rect.y;
         }
-      
+
       if (ABS (wx - cascade_x) < x_threshold &&
           ABS (wy - cascade_y) < y_threshold)
         {
@@ -177,7 +177,7 @@ find_next_cascade (MetaWindow *window,
           meta_window_get_position (w, &wx, &wy);
           cascade_x = wx;
           cascade_y = wy;
-          
+
           /* If we go off the screen, start over with a new cascade */
 	  if (((cascade_x + window_width) >
                (work_area.x + work_area.width)) ||
@@ -186,11 +186,11 @@ find_next_cascade (MetaWindow *window,
 	    {
 	      cascade_x = MAX (0, work_area.x);
 	      cascade_y = MAX (0, work_area.y);
-              
+
 #define CASCADE_INTERVAL 50 /* space between top-left corners of cascades */
               cascade_stage += 1;
 	      cascade_x += CASCADE_INTERVAL * cascade_stage;
-              
+
 	      /* start over with a new cascade translated to the right, unless
                * we are out of space
                */
@@ -212,14 +212,14 @@ find_next_cascade (MetaWindow *window,
         {
           /* Keep searching for a further-down-the-diagonal window. */
         }
-        
+
       tmp = tmp->next;
     }
 
   /* cascade_x and cascade_y will match the last window in the list
    * that was "in the way" (in the approximate cascade diagonal)
    */
-  
+
   g_list_free (sorted);
 
   /* Convert coords to position of window, not position of frame. */
@@ -380,12 +380,12 @@ rectangle_overlaps_some_window (MetaRectangle *rect,
 {
   GList *tmp;
   MetaRectangle dest;
-  
+
   tmp = windows;
   while (tmp != NULL)
     {
       MetaWindow *other = tmp->data;
-      MetaRectangle other_rect;      
+      MetaRectangle other_rect;
 
       switch (other->type)
         {
@@ -401,12 +401,12 @@ rectangle_overlaps_some_window (MetaRectangle *rect,
         case META_WINDOW_TOOLBAR:
         case META_WINDOW_MENU:
           meta_window_get_outer_rect (other, &other_rect);
-          
+
           if (meta_rectangle_intersect (rect, &other_rect, &dest))
             return TRUE;
           break;
         }
-      
+
       tmp = tmp->next;
     }
 
@@ -520,29 +520,29 @@ find_first_fit (MetaWindow *window,
    * the bottom of each existing window, and then to the right
    * of each existing window, aligned with the left/top of the
    * existing window in each of those cases.
-   */  
+   */
   int retval;
   GList *below_sorted;
   GList *right_sorted;
   GList *tmp;
   MetaRectangle rect;
   MetaRectangle work_area;
-  
+
   retval = FALSE;
 
   /* Below each window */
   below_sorted = g_list_copy (windows);
   below_sorted = g_list_sort (below_sorted, leftmost_cmp);
-  below_sorted = g_list_sort (below_sorted, topmost_cmp);  
+  below_sorted = g_list_sort (below_sorted, topmost_cmp);
 
   /* To the right of each window */
   right_sorted = g_list_copy (windows);
   right_sorted = g_list_sort (right_sorted, topmost_cmp);
   right_sorted = g_list_sort (right_sorted, leftmost_cmp);
-  
+
   rect.width = window->rect.width;
   rect.height = window->rect.height;
-  
+
   if (fgeom)
     {
       rect.width += fgeom->left_width + fgeom->right_width;
@@ -578,9 +578,9 @@ find_first_fit (MetaWindow *window,
             *new_x += fgeom->left_width;
             *new_y += fgeom->top_height;
           }
-    
+
         retval = TRUE;
-       
+
         goto out;
       }
 
@@ -592,10 +592,10 @@ find_first_fit (MetaWindow *window,
         MetaRectangle outer_rect;
 
         meta_window_get_outer_rect (w, &outer_rect);
-      
+
         rect.x = outer_rect.x;
         rect.y = outer_rect.y + outer_rect.height;
-      
+
         if (meta_rectangle_contains_rect (&work_area, &rect) &&
             !rectangle_overlaps_some_window (&rect, below_sorted))
           {
@@ -606,9 +606,9 @@ find_first_fit (MetaWindow *window,
                 *new_x += fgeom->left_width;
                 *new_y += fgeom->top_height;
               }
-          
+
             retval = TRUE;
-          
+
             goto out;
           }
 
@@ -621,12 +621,12 @@ find_first_fit (MetaWindow *window,
       {
         MetaWindow *w = tmp->data;
         MetaRectangle outer_rect;
-   
+
         meta_window_get_outer_rect (w, &outer_rect);
-     
+
         rect.x = outer_rect.x + outer_rect.width;
         rect.y = outer_rect.y;
-   
+
         if (meta_rectangle_contains_rect (&work_area, &rect) &&
             !rectangle_overlaps_some_window (&rect, right_sorted))
           {
@@ -637,15 +637,15 @@ find_first_fit (MetaWindow *window,
                 *new_x += fgeom->left_width;
                 *new_y += fgeom->top_height;
               }
-        
+
             retval = TRUE;
-       
+
             goto out;
           }
 
         tmp = tmp->next;
       }
-      
+
  out:
 
   g_list_free (below_sorted);
@@ -670,11 +670,11 @@ meta_window_place (MetaWindow        *window,
    * NEVER have side effects other than computing the
    * placement coordinates.
    */
-  
+
   meta_topic (META_DEBUG_PLACEMENT, "Placing window %s\n", window->desc);
 
   windows = NULL;
-  
+
   switch (window->type)
     {
       /* Run placement algorithm on these. */
@@ -683,7 +683,7 @@ meta_window_place (MetaWindow        *window,
     case META_WINDOW_MODAL_DIALOG:
     case META_WINDOW_SPLASHSCREEN:
       break;
-          
+
       /* Assume the app knows best how to place these, no placement
        * algorithm ever (other than "leave them as-is")
        */
@@ -694,7 +694,7 @@ meta_window_place (MetaWindow        *window,
     case META_WINDOW_UTILITY:
       goto done_no_constraints;
     }
-  
+
   if (meta_prefs_get_disable_workarounds ())
     {
       switch (window->type)
@@ -718,7 +718,7 @@ meta_window_place (MetaWindow        *window,
         case META_WINDOW_MODAL_DIALOG:
         case META_WINDOW_SPLASHSCREEN:
           break;
-          
+
           /* Assume the app knows best how to place these. */
         case META_WINDOW_DESKTOP:
         case META_WINDOW_DOCK:
@@ -737,7 +737,7 @@ meta_window_place (MetaWindow        *window,
   else
     {
       /* workarounds enabled */
-      
+
       if ((window->size_hints.flags & PPosition) ||
           (window->size_hints.flags & USPosition))
         {
@@ -747,7 +747,7 @@ meta_window_place (MetaWindow        *window,
           goto done_no_constraints;
         }
     }
-  
+
   if ((window->type == META_WINDOW_DIALOG ||
        window->type == META_WINDOW_MODAL_DIALOG) &&
       window->xtransient_for != None)
@@ -755,7 +755,7 @@ meta_window_place (MetaWindow        *window,
       /* Center horizontally, at top of parent vertically */
 
       MetaWindow *parent;
-          
+
       parent =
         meta_display_lookup_x_window (window->display,
                                       window->xtransient_for);
@@ -783,17 +783,17 @@ meta_window_place (MetaWindow        *window,
 
           meta_topic (META_DEBUG_PLACEMENT, "Centered window %s over transient parent\n",
                       window->desc);
-          
+
           avoid_being_obscured_as_second_modal_dialog (window, fgeom, &x, &y);
 
           goto done;
         }
     }
-  
+
   /* FIXME UTILITY with transient set should be stacked up
    * on the sides of the parent window or something.
    */
-  
+
   if (window->type == META_WINDOW_DIALOG ||
       window->type == META_WINDOW_MODAL_DIALOG ||
       window->type == META_WINDOW_SPLASHSCREEN)
@@ -812,13 +812,13 @@ meta_window_place (MetaWindow        *window,
 
       x += xi->rect.x;
       y += xi->rect.y;
-      
+
       meta_topic (META_DEBUG_PLACEMENT, "Centered window %s on screen %d xinerama %d\n",
                   window->desc, window->screen->number, xi->number);
 
       goto done_check_denied_focus;
     }
-  
+
   /* Find windows that matter (not minimized, on same workspace
    * as placed window, may be shaded - if shaded we pretend it isn't
    * for placement purposes)
@@ -826,7 +826,7 @@ meta_window_place (MetaWindow        *window,
   {
     GSList *all_windows;
     GSList *tmp;
-    
+
     all_windows = meta_display_list_windows (window->display);
 
     tmp = all_windows;
@@ -835,7 +835,7 @@ meta_window_place (MetaWindow        *window,
         MetaWindow *w = tmp->data;
 
         if (meta_window_showing_on_its_workspace (w) &&
-            w != window && 
+            w != window &&
             (window->workspace == w->workspace ||
              window->on_all_workspaces || w->on_all_workspaces))
           windows = g_list_prepend (windows, w);
@@ -848,7 +848,7 @@ meta_window_place (MetaWindow        *window,
 
   /* Warning, this is a round trip! */
   xi = meta_screen_get_current_xinerama (window->screen);
-  
+
   /* "Origin" placement algorithm */
   x = xi->rect.x;
   y = xi->rect.y;
@@ -860,7 +860,7 @@ meta_window_place (MetaWindow        *window,
 
   /* Maximize windows if they are too big for their work area (bit of
    * a hack here). Assume undecorated windows probably don't intend to
-   * be maximized.  
+   * be maximized.
    */
   if (window->has_maximize_func && window->decorated &&
       !window->fullscreen)
@@ -870,9 +870,9 @@ meta_window_place (MetaWindow        *window,
 
       meta_window_get_work_area_for_xinerama (window,
                                               xi->number,
-                                              &workarea);      
+                                              &workarea);
       meta_window_get_outer_rect (window, &outer);
-      
+
       /* If the window is bigger than the screen, then automaximize.  Do NOT
        * auto-maximize the directions independently.  See #419810.
        */
@@ -883,7 +883,7 @@ meta_window_place (MetaWindow        *window,
         }
     }
 
-  /* If no placement has been done, revert to cascade to avoid 
+  /* If no placement has been done, revert to cascade to avoid
    * fully overlapping window (e.g. starting multiple terminals)
    * */
   if (!meta_prefs_get_center_new_windows() && (x == xi->rect.x && y == xi->rect.y))
@@ -933,10 +933,10 @@ meta_window_place (MetaWindow        *window,
       if (!found_fit)
         find_most_freespace (window, fgeom, focus_window, x, y, &x, &y);
     }
-  
+
  done:
   g_list_free (windows);
-  
+
  done_no_constraints:
 
   *new_x = x;

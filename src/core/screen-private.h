@@ -9,11 +9,11 @@
  * which the rest of the world is allowed to use.)
  */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington
  * Copyright (C) 2003 Rob Adams
  * Copyright (C) 2004-2006 Elijah Newren
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -23,7 +23,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -80,16 +80,19 @@ struct _MetaScreen
   MetaUI *ui;
   MetaTabPopup *tab_popup;
   MetaTilePreview *tile_preview;
-  
+
   guint tile_preview_timeout_id;
-  
+
   MetaWorkspace *active_workspace;
+
+  /* Previous active workspace */
+  MetaWorkspace *prev_workspace;
 
   /* This window holds the focus when we don't want to focus
    * any actual clients
    */
   Window no_focus_window;
-  
+
   GList *workspaces;
 
   MetaStack *stack;
@@ -101,7 +104,7 @@ struct _MetaScreen
   Window wm_sn_selection_window;
   Atom wm_sn_atom;
   guint32 wm_sn_timestamp;
-  
+
   MetaXineramaScreenInfo *xinerama_infos;
   int n_xinerama_infos;
 
@@ -125,10 +128,10 @@ struct _MetaScreen
   int columns_of_workspaces;
   MetaScreenCorner starting_corner;
   guint vertical_workspaces : 1;
-  
+
   guint keys_grabbed : 1;
   guint all_keys_grabbed : 1;
-  
+
   int closing;
 
   /* gc for XOR on root window */

@@ -2,9 +2,9 @@
 
 /* Marco window frame manager widget */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -14,7 +14,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -86,7 +86,7 @@ struct _MetaUIFrame
   char *title; /* NULL once we have a layout */
   guint expose_delayed : 1;
   guint shape_applied : 1;
-  
+
   /* FIXME get rid of this, it can just be in the MetaFrames struct */
   MetaFrameControl prelit_control;
 };
@@ -98,7 +98,7 @@ struct _MetaFrames
 #else
   GtkWindow parent_instance;
 #endif
-  
+
   GHashTable *text_heights;
 
   GHashTable *frames;

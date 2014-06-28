@@ -114,7 +114,7 @@ meta_compositor_get_window_pixmap (MetaCompositor *compositor,
 #ifdef HAVE_COMPOSITE_EXTENSIONS
   if (compositor && compositor->get_window_pixmap)
     return compositor->get_window_pixmap (compositor, window);
-  else 
+  else
     return None;
 #else
   return None;
@@ -127,7 +127,7 @@ meta_compositor_set_active_window (MetaCompositor *compositor,
                                    MetaWindow     *window)
 {
 #ifdef HAVE_COMPOSITE_EXTENSIONS
-  if (compositor && compositor->set_active_window) 
+  if (compositor && compositor->set_active_window)
     compositor->set_active_window (compositor, screen, window);
 #endif
 }
@@ -136,14 +136,14 @@ meta_compositor_set_active_window (MetaCompositor *compositor,
 void meta_compositor_begin_move (MetaCompositor *compositor,
                                  MetaWindow     *window,
                                  MetaRectangle  *initial,
-                                 int             grab_x, 
+                                 int             grab_x,
                                  int             grab_y)
 {
 }
 
 void meta_compositor_update_move (MetaCompositor *compositor,
                                   MetaWindow     *window,
-                                  int             x, 
+                                  int             x,
                                   int             y)
 {
 }

@@ -2,11 +2,11 @@
 
 /* Marco preferences */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington, Copyright (C) 2002 Red Hat Inc.
  * Copyright (C) 2006 Elijah Newren
  * Copyright (C) 2008 Thomas Thurman
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -16,7 +16,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -559,7 +559,7 @@ handle_preference_init_int (void)
 {
   MetaIntPreference *cursor = preferences_int;
 
-  
+
   while (cursor->key!=NULL)
     {
       gint value;
@@ -608,7 +608,7 @@ handle_preference_update_enum (const gchar *key, GSettings *settings)
    */
 
   old_value = * ((gint *) cursor->target);
-  
+
   /* Now look it up... */
   *cursor->target = g_settings_get_enum (settings, key);
 
@@ -642,7 +642,7 @@ handle_preference_update_bool (const gchar *key, GSettings *settings)
    */
 
   old_value = * ((gboolean *) cursor->target);
-  
+
   /* Now look it up... */
 
   *((gboolean *) cursor->target) = g_settings_get_boolean (settings, key);
@@ -738,7 +738,7 @@ handle_preference_update_int (const gchar *key, GSettings *settings)
     }
 
   return TRUE;
-  
+
 }
 
 
@@ -778,7 +778,7 @@ meta_prefs_remove_listener (MetaPrefsChangedFunc func,
 
           return;
         }
-      
+
       tmp = tmp->next;
     }
 
@@ -793,9 +793,9 @@ emit_changed (MetaPreference pref)
 
   meta_topic (META_DEBUG_PREFS, "Notifying listeners that pref %s changed\n",
               meta_preference_to_string (pref));
-  
+
   copy = g_list_copy (listeners);
-  
+
   tmp = copy;
 
   while (tmp != NULL)
@@ -817,24 +817,24 @@ changed_idle_handler (gpointer data)
   GList *copy;
 
   changed_idle = 0;
-  
+
   copy = g_list_copy (changes); /* reentrancy paranoia */
 
   g_list_free (changes);
   changes = NULL;
-  
+
   tmp = copy;
   while (tmp != NULL)
     {
       MetaPreference pref = GPOINTER_TO_INT (tmp->data);
 
       emit_changed (pref);
-      
+
       tmp = tmp->next;
     }
 
   g_list_free (copy);
-  
+
   return FALSE;
 }
 
@@ -842,7 +842,7 @@ static void
 queue_changed (MetaPreference pref)
 {
   meta_topic (META_DEBUG_PREFS, "Queueing change of pref %s\n",
-              meta_preference_to_string (pref));  
+              meta_preference_to_string (pref));
 
   if (g_list_find (changes, GINT_TO_POINTER (pref)) == NULL)
     changes = g_list_prepend (changes, GINT_TO_POINTER (pref));
@@ -867,7 +867,7 @@ meta_prefs_init (void)
 {
   if (settings_general != NULL)
     return;
-  
+
   /* returns references which we hold forever */
   settings_general = g_settings_new (KEY_GENERAL_SCHEMA);
   settings_command = g_settings_new (KEY_COMMAND_SCHEMA);
@@ -930,7 +930,7 @@ change_notify (GSettings *settings,
                gpointer user_data)
 {
   gint i=0;
-  
+
   /* First, search for a handler that might know what to do. */
 
   /* FIXME: When this is all working, since the first item in every
@@ -961,7 +961,7 @@ change_notify (GSettings *settings,
 
       if (update_key_binding (key, str))
         queue_changed (META_PREF_KEYBINDINGS);
-    
+
       g_free(str);
     }
   else if (g_strcmp0 (schema_name, KEY_COMMAND_SCHEMA) == 0)
@@ -971,7 +971,7 @@ change_notify (GSettings *settings,
 
       if (update_command (key, str))
         queue_changed (META_PREF_COMMANDS);
-      
+
       g_free(str);
     }
   else if (g_strcmp0 (schema_name, KEY_WORKSPACE_NAME_SCHEMA))
@@ -981,7 +981,7 @@ change_notify (GSettings *settings,
 
       if (update_workspace_name (key, str))
         queue_changed (META_PREF_WORKSPACE_NAMES);
-      
+
       g_free(str);
     }
   else
@@ -1000,7 +1000,7 @@ cleanup_error (GError **error)
   if (*error)
     {
       meta_warning ("%s\n", (*error)->message);
-      
+
       g_error_free (*error);
       *error = NULL;
     }
@@ -1015,7 +1015,7 @@ static void
 maybe_give_disable_workarounds_warning (void)
 {
   static gboolean first_disable = TRUE;
-    
+
   if (first_disable && disable_workarounds)
     {
       first_disable = FALSE;
@@ -1148,7 +1148,7 @@ mouse_button_mods_handler (MetaPreference pref,
     {
       meta_topic (META_DEBUG_KEYBINDINGS,
                   "Failed to parse new GSettings value\n");
-          
+
       meta_warning (_("\"%s\" found in configuration database is "
                       "not a valid value for mouse button modifier\n"),
                     string_value);
@@ -1160,7 +1160,7 @@ mouse_button_mods_handler (MetaPreference pref,
 static gboolean
 button_layout_equal (const MetaButtonLayout *a,
                      const MetaButtonLayout *b)
-{  
+{
   int i;
 
   i = 0;
@@ -1199,7 +1199,7 @@ button_function_from_string (const char *str)
     return META_BUTTON_FUNCTION_ABOVE;
   else if (strcmp (str, "stick") == 0)
     return META_BUTTON_FUNCTION_STICK;
-  else 
+  else
     /* don't know; give up */
     return META_BUTTON_FUNCTION_LAST;
 }
@@ -1237,11 +1237,11 @@ button_layout_handler (MetaPreference pref,
   MetaButtonLayout new_layout;
   char **sides = NULL;
   int i;
-  
+
   /* We need to ignore unknown button functions, for
    * compat with future versions
    */
-  
+
   if (string_value)
     sides = g_strsplit (string_value, ":", 2);
 
@@ -1258,7 +1258,7 @@ button_layout_handler (MetaPreference pref,
           new_layout.left_buttons_has_spacer[i] = FALSE;
           ++i;
         }
-      
+
       buttons = g_strsplit (sides[0], ",", -1);
       i = 0;
       b = 0;
@@ -1295,13 +1295,13 @@ button_layout_handler (MetaPreference pref,
                               buttons[b]);
                 }
             }
-          
+
           ++b;
         }
 
       new_layout.left_buttons[i] = META_BUTTON_FUNCTION_LAST;
       new_layout.left_buttons_has_spacer[i] = FALSE;
-      
+
       g_strfreev (buttons);
     }
 
@@ -1318,7 +1318,7 @@ button_layout_handler (MetaPreference pref,
           new_layout.right_buttons_has_spacer[i] = FALSE;
           ++i;
         }
-      
+
       buttons = g_strsplit (sides[1], ",", -1);
       i = 0;
       b = 0;
@@ -1354,24 +1354,24 @@ button_layout_handler (MetaPreference pref,
                               buttons[b]);
                 }
             }
-          
+
           ++b;
         }
 
       new_layout.right_buttons[i] = META_BUTTON_FUNCTION_LAST;
       new_layout.right_buttons_has_spacer[i] = FALSE;
-      
+
       g_strfreev (buttons);
     }
 
   g_strfreev (sides);
-  
+
   /* Invert the button layout for RTL languages */
   if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
   {
     MetaButtonLayout rtl_layout;
     int j;
-    
+
     for (i = 0; new_layout.left_buttons[i] != META_BUTTON_FUNCTION_LAST; i++);
     for (j = 0; j < i; j++)
       {
@@ -1383,7 +1383,7 @@ button_layout_handler (MetaPreference pref,
       }
     rtl_layout.right_buttons[j] = META_BUTTON_FUNCTION_LAST;
     rtl_layout.right_buttons_has_spacer[j] = FALSE;
-      
+
     for (i = 0; new_layout.right_buttons[i] != META_BUTTON_FUNCTION_LAST; i++);
     for (j = 0; j < i; j++)
       {
@@ -1398,7 +1398,7 @@ button_layout_handler (MetaPreference pref,
 
     new_layout = rtl_layout;
   }
-  
+
   if (button_layout_equal (&button_layout, &new_layout))
     {
       /* Same as before, so duck out */
@@ -1435,7 +1435,7 @@ gboolean
 meta_prefs_get_application_based (void)
 {
   return FALSE; /* For now, we never want this to do anything */
-  
+
   return application_based;
 }
 
@@ -1498,7 +1498,7 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_AUTO_RAISE:
       return "AUTO_RAISE";
-      
+
     case META_PREF_AUTO_RAISE_DELAY:
       return "AUTO_RAISE_DELAY";
 
@@ -1568,7 +1568,7 @@ meta_prefs_set_num_workspaces (int n_workspaces)
     n_workspaces = 1;
   if (n_workspaces > MAX_REASONABLE_WORKSPACES)
     n_workspaces = MAX_REASONABLE_WORKSPACES;
-  
+
   g_settings_set_int (settings_general,
                       KEY_GENERAL_NUM_WORKSPACES,
                       n_workspaces);
@@ -1657,7 +1657,7 @@ update_binding (MetaKeyPref *binding,
   meta_topic (META_DEBUG_KEYBINDINGS,
               "Binding \"%s\" has new GSettings value \"%s\"\n",
               binding->name, value ? value : "none");
-  
+
   keysym = 0;
   keycode = 0;
   mods = 0;
@@ -1681,7 +1681,7 @@ update_binding (MetaKeyPref *binding,
       binding->bindings = g_slist_alloc();
       binding->bindings->data = blank;
     }
-  
+
    combo = binding->bindings->data;
 
    /* Bug 329676: Bindings which can be shifted must not have no modifiers,
@@ -1693,7 +1693,7 @@ update_binding (MetaKeyPref *binding,
       (META_VIRTUAL_SHIFT_MASK == mods || 0 == mods))
     {
       gchar *old_setting;
-      
+
       meta_warning ("Cannot bind \"%s\" to %s: it needs a modifier "
                     "such as Ctrl or Alt.\n",
                     binding->name,
@@ -1735,18 +1735,18 @@ update_binding (MetaKeyPref *binding,
        */
       return TRUE;
     }
-  
+
   changed = FALSE;
   if (keysym != combo->keysym ||
       keycode != combo->keycode ||
       mods != combo->modifiers)
     {
       changed = TRUE;
-      
+
       combo->keysym = keysym;
       combo->keycode = keycode;
       combo->modifiers = mods;
-      
+
       meta_topic (META_DEBUG_KEYBINDINGS,
                   "New keybinding for \"%s\" is keysym = 0x%x keycode = 0x%x mods = 0x%x\n",
                   binding->name, combo->keysym, combo->keycode,
@@ -1757,7 +1757,7 @@ update_binding (MetaKeyPref *binding,
       meta_topic (META_DEBUG_KEYBINDINGS,
                   "Keybinding for \"%s\" is unchanged\n", binding->name);
     }
-  
+
   return changed;
 }
 
@@ -1765,7 +1765,7 @@ static const gchar*
 relative_key (const gchar* key)
 {
   const gchar* end;
-  
+
   end = strrchr (key, '/');
 
   ++end;
@@ -1777,13 +1777,13 @@ relative_key (const gchar* key)
  * notify
  */
 static gboolean
-find_and_update_binding (MetaKeyPref *bindings, 
+find_and_update_binding (MetaKeyPref *bindings,
                          const char  *name,
                          gchar  *value)
 {
   const char *key;
   int i;
-  
+
   if (*name == '/')
     key = relative_key (name);
   else
@@ -1813,7 +1813,7 @@ update_command (const char  *name,
 {
   char *p;
   int i;
-  
+
   p = strrchr (name, '-');
   if (p == NULL)
     {
@@ -1821,7 +1821,7 @@ update_command (const char  *name,
                   "Command %s has no dash?\n", name);
       return FALSE;
     }
-  
+
   ++p;
 
   if (g_ascii_isdigit (*p))
@@ -1846,7 +1846,7 @@ update_command (const char  *name,
           return FALSE;
         }
     }
-  
+
   if (i >= MAX_COMMANDS)
     {
       meta_topic (META_DEBUG_KEYBINDINGS,
@@ -1861,14 +1861,14 @@ update_command (const char  *name,
                   "Command %d is unchanged\n", i);
       return FALSE;
     }
-  
+
   g_free (commands[i]);
   commands[i] = g_strdup (value);
 
   meta_topic (META_DEBUG_KEYBINDINGS,
               "Updated command %d to \"%s\"\n",
               i, commands[i] ? commands[i] : "none");
-  
+
   return TRUE;
 }
 
@@ -1876,7 +1876,7 @@ const char*
 meta_prefs_get_command (int i)
 {
   g_return_val_if_fail (i >= 0 && i < MAX_COMMANDS, NULL);
-  
+
   return commands[i];
 }
 
@@ -1897,7 +1897,7 @@ meta_prefs_get_settings_key_for_command (int i)
       key = g_strdup_printf (KEY_COMMAND_PREFIX"%d", i + 1);
       break;
     }
-  
+
   return key;
 }
 
@@ -1919,7 +1919,7 @@ update_workspace_name (const char  *name,
 {
   char *p;
   int i;
-  
+
   p = strrchr (name, '-');
   if (p == NULL)
     {
@@ -1927,7 +1927,7 @@ update_workspace_name (const char  *name,
                   "Workspace name %s has no dash?\n", name);
       return FALSE;
     }
-  
+
   ++p;
 
   if (!g_ascii_isdigit (*p))
@@ -1936,10 +1936,10 @@ update_workspace_name (const char  *name,
                   "Workspace name %s doesn't end in number?\n", name);
       return FALSE;
     }
-  
+
   i = atoi (p);
   i -= 1; /* count from 0 not 1 */
-  
+
   if (i >= MAX_REASONABLE_WORKSPACES)
     {
       meta_topic (META_DEBUG_PREFS,
@@ -1952,7 +1952,7 @@ update_workspace_name (const char  *name,
       meta_topic (META_DEBUG_PREFS,
                   "Workspace name %d is unchanged\n", i);
       return FALSE;
-    }  
+    }
 
   /* This is a bad hack. We have to treat empty string as
    * "unset" because the root window property can't contain
@@ -1982,11 +1982,11 @@ update_workspace_name (const char  *name,
           workspace_names[i] = d;
         }
     }
-  
+
   meta_topic (META_DEBUG_PREFS,
               "Updated workspace name %d to \"%s\"\n",
               i, workspace_names[i] ? workspace_names[i] : "none");
-  
+
   return TRUE;
 }
 
@@ -2000,7 +2000,7 @@ meta_prefs_get_workspace_name (int i)
   meta_topic (META_DEBUG_PREFS,
               "Getting workspace name for %d: \"%s\"\n",
               i, workspace_names[i]);
-  
+
   return workspace_names[i];
 }
 
@@ -2009,7 +2009,7 @@ meta_prefs_change_workspace_name (int         i,
                                   const char *name)
 {
   char *key;
-  
+
   g_return_if_fail (i >= 0 && i < MAX_REASONABLE_WORKSPACES);
 
   meta_topic (META_DEBUG_PREFS,
@@ -2018,7 +2018,7 @@ meta_prefs_change_workspace_name (int         i,
 
   if (name && *name == '\0')
     name = NULL;
-  
+
   if ((name == NULL && workspace_names[i] == NULL) ||
       (name && workspace_names[i] && strcmp (name, workspace_names[i]) == 0))
     {
@@ -2027,7 +2027,7 @@ meta_prefs_change_workspace_name (int         i,
                   i, name ? name : "none");
       return;
     }
-  
+
   key = settings_key_for_workspace_name (i);
 
   if (name != NULL)
@@ -2046,9 +2046,9 @@ static char*
 settings_key_for_workspace_name (int i)
 {
   char *key;
-  
+
   key = g_strdup_printf (KEY_WORKSPACE_NAME_PREFIX"%d", i + 1);
-  
+
   return key;
 }
 
@@ -2080,7 +2080,7 @@ void
 meta_prefs_get_key_bindings (const MetaKeyPref **bindings,
                                 int                *n_bindings)
 {
-  
+
   *bindings = key_bindings;
   *n_bindings = (int) G_N_ELEMENTS (key_bindings) - 1;
 }
@@ -2143,7 +2143,7 @@ meta_prefs_get_keybinding_action (const char *name)
     {
       if (strcmp (key_bindings[i].name, name) == 0)
         return (MetaKeyBindingAction) i;
-      
+
       --i;
     }
 
@@ -2187,7 +2187,7 @@ meta_prefs_get_window_binding (const char          *name,
           *keysym = *modifiers = 0;
           return;
         }
-      
+
       --i;
     }
 

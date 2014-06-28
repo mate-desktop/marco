@@ -2,11 +2,11 @@
 
 /* Marco gradient rendering */
 
-/* 
+/*
  * Copyright (C) 2001 Havoc Pennington, 99% copied from wrlib in
  * WindowMaker, Copyright (C) 1997-2000 Dan Pascu and Alfredo Kojima
  * Copyright (C) 2005 Elijah Newren
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -16,7 +16,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -74,7 +74,7 @@ blank_pixbuf (int width, int height, gboolean no_padding)
   if (no_padding)
     rowstride = width * 3;
   else
-    /* Always align rows to 32-bit boundaries */  
+    /* Always align rows to 32-bit boundaries */
     rowstride = 4 * ((3 * width + 3) / 4);
 
   buf = g_try_malloc (height * rowstride);
@@ -163,7 +163,7 @@ meta_gradient_create_interwoven (int            width,
                                  const GdkColor colors2[2],
                                  int            thickness2)
 {
-  
+
   int i, j, k, l, ll;
   long r1, g1, b1, dr1, dg1, db1;
   long r2, g2, b2, dr2, dg2, db2;
@@ -171,14 +171,14 @@ meta_gradient_create_interwoven (int            width,
   unsigned char *ptr;
   unsigned char *pixels;
   int rowstride;
-  
+
   pixbuf = blank_pixbuf (width, height, FALSE);
   if (pixbuf == NULL)
     return NULL;
-    
+
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
-  
+
   r1 = colors1[0].red<<8;
   g1 = colors1[0].green<<8;
   b1 = colors1[0].blue<<8;
@@ -198,7 +198,7 @@ meta_gradient_create_interwoven (int            width,
   for (i=0,k=0,l=0,ll=thickness1; i<height; i++)
     {
       ptr = pixels + i * rowstride;
-      
+
       if (k == 0)
         {
           ptr[0] = (unsigned char) (r1>>16);
@@ -233,7 +233,7 @@ meta_gradient_create_interwoven (int            width,
       r1+=dr1;
       g1+=dg1;
       b1+=db1;
-	
+
       r2+=dr2;
       g2+=dg2;
       b2+=db2;
@@ -246,20 +246,20 @@ meta_gradient_create_interwoven (int            width,
  *----------------------------------------------------------------------
  * meta_gradient_create_horizontal--
  * 	Renders a horizontal linear gradient of the specified size in the
- * GdkPixbuf format with a border of the specified type. 
- * 
+ * GdkPixbuf format with a border of the specified type.
+ *
  * Returns:
  * 	A 24bit GdkPixbuf with the gradient (no alpha channel).
- * 
+ *
  * Side effects:
  * 	None
- *---------------------------------------------------------------------- 
+ *----------------------------------------------------------------------
  */
 static GdkPixbuf*
 meta_gradient_create_horizontal (int width, int height,
                                  const GdkColor *from,
                                  const GdkColor *to)
-{    
+{
   int i;
   long r, g, b, dr, dg, db;
   GdkPixbuf *pixbuf;
@@ -272,22 +272,22 @@ meta_gradient_create_horizontal (int width, int height,
   pixbuf = blank_pixbuf (width, height, FALSE);
   if (pixbuf == NULL)
     return NULL;
-    
+
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   ptr = pixels;
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
-  
+
   r0 = (guchar) (from->red / 256.0);
   g0 = (guchar) (from->green / 256.0);
   b0 = (guchar) (from->blue / 256.0);
   rf = (guchar) (to->red / 256.0);
   gf = (guchar) (to->green / 256.0);
-  bf = (guchar) (to->blue / 256.0);  
-  
+  bf = (guchar) (to->blue / 256.0);
+
   r = r0 << 16;
   g = g0 << 16;
   b = b0 << 16;
-    
+
   dr = ((rf-r0)<<16)/(int)width;
   dg = ((gf-g0)<<16)/(int)width;
   db = ((bf-b0)<<16)/(int)width;
@@ -336,21 +336,21 @@ meta_gradient_create_vertical (int width, int height,
   int rf, gf, bf;
   int rowstride;
   unsigned char *pixels;
-  
+
   pixbuf = blank_pixbuf (width, height, FALSE);
   if (pixbuf == NULL)
     return NULL;
-    
+
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
-  
+
   r0 = (guchar) (from->red / 256.0);
   g0 = (guchar) (from->green / 256.0);
   b0 = (guchar) (from->blue / 256.0);
   rf = (guchar) (to->red / 256.0);
   gf = (guchar) (to->green / 256.0);
   bf = (guchar) (to->blue / 256.0);
-  
+
   r = r0<<16;
   g = g0<<16;
   b = b0<<16;
@@ -362,7 +362,7 @@ meta_gradient_create_vertical (int width, int height,
   for (i=0; i<height; i++)
     {
       ptr = pixels + i * rowstride;
-      
+
       ptr[0] = (unsigned char)(r>>16);
       ptr[1] = (unsigned char)(g>>16);
       ptr[2] = (unsigned char)(b>>16);
@@ -405,7 +405,7 @@ meta_gradient_create_diagonal (int width, int height,
   unsigned char *ptr;
   unsigned char *pixels;
   int rowstride;
-  
+
   if (width == 1)
     return meta_gradient_create_vertical (width, height, from, to);
   else if (height == 1)
@@ -414,7 +414,7 @@ meta_gradient_create_diagonal (int width, int height,
   pixbuf = blank_pixbuf (width, height, FALSE);
   if (pixbuf == NULL)
     return NULL;
-    
+
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
 
@@ -452,27 +452,27 @@ meta_gradient_create_multi_horizontal (int width, int height,
   GdkPixbuf *pixbuf;
   unsigned char *ptr;
   unsigned char *pixels;
-  int width2;  
+  int width2;
   int rowstride;
-  
+
   g_return_val_if_fail (count > 2, NULL);
 
   pixbuf = blank_pixbuf (width, height, FALSE);
   if (pixbuf == NULL)
     return NULL;
-    
+
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
   ptr = pixels;
-    
+
   if (count > width)
     count = width;
-    
+
   if (count > 1)
     width2 = width/(count-1);
   else
     width2 = width;
-    
+
   k = 0;
 
   r = colors[0].red << 8;
@@ -505,7 +505,7 @@ meta_gradient_create_multi_horizontal (int width, int height,
       *ptr++ = (unsigned char)(g>>16);
       *ptr++ = (unsigned char)(b>>16);
     }
-    
+
   /* copy the first line to the other lines */
   for (i=1; i<height; i++)
     {
@@ -526,25 +526,25 @@ meta_gradient_create_multi_vertical (int width, int height,
   int height2;
   int x;
   int rowstride;
-  
+
   g_return_val_if_fail (count > 2, NULL);
 
   pixbuf = blank_pixbuf (width, height, FALSE);
   if (pixbuf == NULL)
     return NULL;
-    
+
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
   ptr = pixels;
-    
+
   if (count > height)
     count = height;
-    
+
   if (count > 1)
     height2 = height/(count-1);
   else
     height2 = height;
-    
+
   k = 0;
 
   r = colors[0].red << 8;
@@ -568,7 +568,7 @@ meta_gradient_create_multi_vertical (int width, int height,
           memcpy (&(ptr[x*3]), ptr, (width - x)*3);
 
           ptr += rowstride;
-          
+
           r += dr;
           g += dg;
           b += db;
@@ -592,14 +592,14 @@ meta_gradient_create_multi_vertical (int width, int height,
       memcpy (&(ptr[x*3]), ptr, (width - x)*3);
 
       ptr += rowstride;
-      
+
       for (j=k+1; j<height; j++)
         {
           memcpy (ptr, tmp, rowstride);
           ptr += rowstride;
         }
     }
-    
+
   return pixbuf;
 }
 
@@ -615,7 +615,7 @@ meta_gradient_create_multi_diagonal (int width, int height,
   unsigned char *ptr;
   unsigned char *pixels;
   int rowstride;
-  
+
   g_return_val_if_fail (count > 2, NULL);
 
   if (width == 1)
@@ -627,10 +627,10 @@ meta_gradient_create_multi_diagonal (int width, int height,
                            width, height);
   if (pixbuf == NULL)
     return NULL;
-    
+
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
-  
+
   if (count > width)
     count = width;
   if (count > height)
@@ -677,12 +677,12 @@ simple_multiply_alpha (GdkPixbuf *pixbuf,
   int row;
 
   g_return_if_fail (GDK_IS_PIXBUF (pixbuf));
-  
+
   if (alpha == 255)
     return;
-  
+
   g_assert (gdk_pixbuf_get_has_alpha (pixbuf));
-  
+
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
   height = gdk_pixbuf_get_height (pixbuf);
@@ -707,7 +707,7 @@ simple_multiply_alpha (GdkPixbuf *pixbuf,
            */
           /* ((*p / 255.0) * (alpha / 255.0)) * 255; */
           *p = (guchar) (((int) *p * (int) alpha) / (int) 255);
-          
+
           ++p; /* skip A */
         }
 
@@ -724,13 +724,13 @@ meta_gradient_add_alpha_horizontal (GdkPixbuf           *pixbuf,
   long a, da;
   unsigned char *p;
   unsigned char *pixels;
-  int width2;  
+  int width2;
   int rowstride;
   int width, height;
   unsigned char *gradient;
   unsigned char *gradient_p;
   unsigned char *gradient_end;
-  
+
   g_return_if_fail (n_alphas > 0);
 
   if (n_alphas == 1)
@@ -739,24 +739,24 @@ meta_gradient_add_alpha_horizontal (GdkPixbuf           *pixbuf,
       simple_multiply_alpha (pixbuf, alphas[0]);
       return;
     }
-  
+
   width = gdk_pixbuf_get_width (pixbuf);
   height = gdk_pixbuf_get_height (pixbuf);
 
   gradient = g_new (unsigned char, width);
   gradient_end = gradient + width;
-  
+
   if (n_alphas > width)
     n_alphas = width;
-    
+
   if (n_alphas > 1)
     width2 = width / (n_alphas - 1);
   else
     width2 = width;
-    
+
   a = alphas[0] << 8;
   gradient_p = gradient;
-  
+
   /* render the gradient into an array */
   for (i = 1; i < n_alphas; i++)
     {
@@ -765,7 +765,7 @@ meta_gradient_add_alpha_horizontal (GdkPixbuf           *pixbuf,
       for (j = 0; j < width2; j++)
         {
           *gradient_p++ = (a >> 8);
-          
+
           a += da;
 	}
 
@@ -777,11 +777,11 @@ meta_gradient_add_alpha_horizontal (GdkPixbuf           *pixbuf,
     {
       *gradient_p++ = a >> 8;
     }
-    
+
   /* Now for each line of the pixbuf, fill in with the gradient */
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
-  
+
   p = pixels;
   i = 0;
   while (i < height)
@@ -807,7 +807,7 @@ meta_gradient_add_alpha_horizontal (GdkPixbuf           *pixbuf,
       p = row_end;
       ++i;
     }
-  
+
   g_free (gradient);
 }
 
@@ -820,21 +820,21 @@ meta_gradient_add_alpha (GdkPixbuf       *pixbuf,
   g_return_if_fail (GDK_IS_PIXBUF (pixbuf));
   g_return_if_fail (gdk_pixbuf_get_has_alpha (pixbuf));
   g_return_if_fail (n_alphas > 0);
-  
+
   switch (type)
     {
     case META_GRADIENT_HORIZONTAL:
       meta_gradient_add_alpha_horizontal (pixbuf, alphas, n_alphas);
       break;
-      
+
     case META_GRADIENT_VERTICAL:
       g_printerr ("marco: vertical alpha channel gradient not implemented yet\n");
       break;
-      
+
     case META_GRADIENT_DIAGONAL:
       g_printerr ("marco: diagonal alpha channel gradient not implemented yet\n");
       break;
-      
+
     case META_GRADIENT_LAST:
       g_assert_not_reached ();
       break;
