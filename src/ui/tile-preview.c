@@ -255,7 +255,7 @@ meta_tile_preview_show (MetaTilePreview *preview,
   if (!preview->has_alpha)
     {
       GdkRectangle outer_rect, inner_rect;
-      cairo_region_t *outer_region, *inner_region;
+      GdkRegion *outer_region, *inner_region;
       GdkColor black;
 
       black = gtk_widget_get_style (preview->preview_window)->black;
@@ -270,14 +270,14 @@ meta_tile_preview_show (MetaTilePreview *preview,
       inner_rect.width = outer_rect.width - 2 * OUTLINE_WIDTH;
       inner_rect.height = outer_rect.height - 2 * OUTLINE_WIDTH;
 
-      outer_region = cairo_region_create_rectangle (&outer_rect);
-      inner_region = cairo_region_create_rectangle (&inner_rect);
+      outer_region = gdk_region_rectangle (&outer_rect);
+      inner_region = gdk_region_rectangle (&inner_rect);
 
-      cairo_region_subtract (outer_region, inner_region);
-      cairo_region_destroy (inner_region);
+      gdk_region_subtract (outer_region, inner_region);
+      gdk_region_destroy (inner_region);
 
       gdk_window_shape_combine_region (window, outer_region, 0, 0);
-      cairo_region_destroy (outer_region);
+      gdk_region_destroy (outer_region);
     }
 }
 
