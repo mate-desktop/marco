@@ -36,6 +36,7 @@
 
 #include <config.h>
 #include "window.h"
+#include "effects.h"
 #include "screen-private.h"
 #include "util.h"
 #include "stack.h"
@@ -184,6 +185,9 @@ struct _MetaWindow
   guint minimized : 1;
   guint was_minimized : 1;
   guint tab_unminimized : 1;
+
+  /* Whether there is a pending effect */
+  MetaEffectType effect_pending;
 
   /* Whether the window is mapped; actual server-side state
    * see also unmaps_pending
