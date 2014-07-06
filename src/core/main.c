@@ -581,7 +581,7 @@ main (int argc, char **argv)
   g_free (meta_args.client_id);
 
   if (meta_args.composite || meta_args.no_composite)
-    meta_prefs_set_compositing_manager (meta_args.composite);
+    meta_prefs_set_force_compositing_manager (meta_args.composite);
 
   if (meta_args.no_force_fullscreen)
     meta_prefs_set_force_fullscreen (FALSE);
