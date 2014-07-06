@@ -112,6 +112,8 @@ static gboolean mate_accessibility = FALSE;
 static gboolean mate_animations = TRUE;
 static char *cursor_theme = NULL;
 static int   cursor_size = 24;
+static gboolean use_force_compositor_manager = FALSE;
+static gboolean force_compositor_manager = FALSE;
 static gboolean compositing_manager = FALSE;
 static gboolean compositing_fast_alt_tab = FALSE;
 static gboolean resize_with_right_button = FALSE;
@@ -378,7 +380,7 @@ static MetaBoolPreference preferences_bool[] =
       &mate_animations,
       TRUE,
     },
-    { "compositing-manager",
+    { KEY_GENERAL_COMPOSITOR,
       KEY_GENERAL_SCHEMA,
       META_PREF_COMPOSITING_MANAGER,
       &compositing_manager,
@@ -2197,6 +2199,8 @@ meta_prefs_get_window_binding (const char          *name,
 gboolean
 meta_prefs_get_compositing_manager (void)
 {
+  if (use_force_compositor_manager)
+    return force_compositor_manager;
   return compositing_manager;
 }
 
@@ -2237,12 +2241,10 @@ meta_prefs_get_force_fullscreen (void)
 }
 
 void
-meta_prefs_set_compositing_manager (gboolean whether)
+meta_prefs_set_force_compositing_manager (gboolean whether)
 {
-  g_settings_set_boolean (settings_general,
-                          KEY_GENERAL_COMPOSITOR,
-                          whether);
-
+  use_force_compositor_manager = TRUE;
+  force_compositor_manager = whether;
 }
 
 void

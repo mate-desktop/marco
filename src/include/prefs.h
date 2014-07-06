@@ -130,7 +130,7 @@ gboolean    meta_prefs_get_force_fullscreen  (void);
  *
  * \param whether   TRUE to turn on, FALSE to turn off
  */
-void meta_prefs_set_compositing_manager (gboolean whether);
+void meta_prefs_set_force_compositing_manager (gboolean whether);
 
 void meta_prefs_set_compositing_fast_alt_tab (gboolean whether);
 
