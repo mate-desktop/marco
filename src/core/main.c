@@ -69,12 +69,6 @@
 #include <time.h>
 #include <unistd.h>
 
-#ifdef __GNUC__
-#define UNUSED_VARIABLE __attribute__ ((unused))
-#else
-#define UNUSED_VARIABLE
-#endif
-
 /**
  * The exit code we'll return to our parent process when we eventually die.
  */
@@ -382,7 +376,7 @@ sigterm_handler (int signum)
 {
   if (sigterm_pipe_fds[1] >= 0)
     {
-      int UNUSED_VARIABLE dummy;
+      G_GNUC_UNUSED int dummy;
 
       dummy = write (sigterm_pipe_fds[1], "", 1);
       close (sigterm_pipe_fds[1]);

@@ -53,12 +53,6 @@
 #include <X11/extensions/shape.h>
 #endif
 
-#ifdef __GNUC__
-#define UNUSED_VARIABLE __attribute__ ((unused))
-#else
-#define UNUSED_VARIABLE
-#endif
-
 static int destroying_windows_disallowed = 0;
 
 
@@ -5310,12 +5304,11 @@ meta_window_client_message (MetaWindow *window,
   else if (event->xclient.message_type ==
            display->atom__NET_MOVERESIZE_WINDOW)
     {
-      int gravity, UNUSED_VARIABLE source;
+      int gravity;
       guint value_mask;
 
       gravity = (event->xclient.data.l[0] & 0xff);
       value_mask = (event->xclient.data.l[0] & 0xf00) >> 8;
-      source = (event->xclient.data.l[0] & 0xf000) >> 12;
 
       if (gravity == 0)
         gravity = window->size_hints.win_gravity;
@@ -5358,7 +5351,6 @@ meta_window_client_message (MetaWindow *window,
   else if (event->xclient.message_type ==
            display->atom__NET_WM_FULLSCREEN_MONITORS)
     {
-      MetaClientType UNUSED_VARIABLE source_indication;
       gulong top, bottom, left, right;
 
       meta_verbose ("_NET_WM_FULLSCREEN_MONITORS request for window '%s'\n",
@@ -5368,7 +5360,7 @@ meta_window_client_message (MetaWindow *window,
       bottom = event->xclient.data.l[1];
       left = event->xclient.data.l[2];
       right = event->xclient.data.l[3];
-      source_indication = event->xclient.data.l[4];
+      /* source_indication = event->xclient.data.l[4]; */
 
       meta_window_update_fullscreen_monitors (window, top, bottom, left, right);
     }
@@ -5569,8 +5561,6 @@ static gboolean
 process_property_notify (MetaWindow     *window,
                          XPropertyEvent *event)
 {
-  Window UNUSED_VARIABLE xid = window->xwindow;
-
   if (meta_is_verbose ()) /* avoid looking up the name if we don't have to */
     {
       char *property_name = XGetAtomName (window->display->xdisplay,
@@ -5579,12 +5569,6 @@ process_property_notify (MetaWindow     *window,
       meta_verbose ("Property notify on %s for %s\n",
                     window->desc, property_name);
       XFree (property_name);
-    }
-
-  if (event->atom == window->display->atom__NET_WM_USER_TIME &&
-      window->user_time_window)
-    {
-      xid = window->user_time_window;
     }
 
   meta_window_reload_property (window, event->atom, FALSE);
@@ -6811,7 +6795,6 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
 {
   MetaRectangle  titlebar_rect;
   GList         *onscreen_region;
-  int            UNUSED_VARIABLE titlebar_size;
   gboolean       is_onscreen;
 
   const int min_height_needed  = 8;
@@ -6825,7 +6808,6 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
   /* Get the rectangle corresponding to the titlebar */
   meta_window_get_outer_rect (window, &titlebar_rect);
   titlebar_rect.height = window->frame->child_y;
-  titlebar_size = meta_rectangle_area (&titlebar_rect);
 
   /* Run through the spanning rectangles for the screen and see if one of
    * them overlaps with the titlebar sufficiently to consider it onscreen.
