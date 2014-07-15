@@ -27,6 +27,11 @@
 
 #include "draw-workspace.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define MATE_DESKTOP_USE_UNSTABLE_API
+#include <libmate-desktop/mate-desktop-utils.h>
+#endif
+
 
 static void
 get_window_rect (const WnckWindowDisplayInfo *win,
@@ -105,7 +110,7 @@ draw_window (GtkWidget                   *widget,
 #if GTK_CHECK_VERSION (3, 0, 0)
   style = gtk_widget_get_style_context (widget);
   if (is_active)
-    meta_gtk_style_get_light_color (style, state, &color);
+    mate_desktop_gtk_style_get_light_color (style, state, &color);
   else
     gtk_style_context_get_background_color (style, state, &color);
   gdk_cairo_set_source_rgba (cr, &color);
@@ -263,7 +268,7 @@ wnck_draw_workspace (GtkWidget                   *widget,
 #if GTK_CHECK_VERSION (3, 0, 0)
       GdkRGBA color;
 
-      meta_gtk_style_get_dark_color (style,state, &color);
+      mate_desktop_gtk_style_get_dark_color (style,state, &color);
       gdk_cairo_set_source_rgba (cr, &color);
 #else
       gdk_cairo_set_source_color (cr, &gtk_widget_get_style (widget)->dark[state]);
