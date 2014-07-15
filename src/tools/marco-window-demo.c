@@ -339,7 +339,11 @@ utility_cb (gpointer             callback_data,
 
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (callback_data));
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -373,7 +377,11 @@ toolbar_cb (gpointer             callback_data,
 
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (callback_data));
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -398,7 +406,11 @@ menu_cb (gpointer             callback_data,
 
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (callback_data));
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -420,7 +432,11 @@ override_redirect_cb (gpointer             callback_data,
   window = gtk_window_new (GTK_WINDOW_POPUP);
   gtk_window_set_title (GTK_WINDOW (window), "Override Redirect");
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -445,7 +461,11 @@ border_only_cb (gpointer             callback_data,
 
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (callback_data));
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -537,9 +557,17 @@ splashscreen_cb (gpointer             callback_data,
   set_gtk_window_type (GTK_WINDOW (window), "_NET_WM_WINDOW_TYPE_SPLASHSCREEN");
   gtk_window_set_title (GTK_WINDOW (window), "Splashscreen");
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
+#if GTK_CHECK_VERSION (3, 10, 0)
+  image = gtk_image_new_from_icon_name ("dialog-information", GTK_ICON_SIZE_DIALOG);
+#else
   image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_DIALOG);
+#endif
   gtk_box_pack_start (GTK_BOX (vbox), image, FALSE, FALSE, 0);
 
   gtk_box_pack_start (GTK_BOX (vbox), focus_label (window), FALSE, FALSE, 0);
@@ -573,11 +601,19 @@ make_dock (int type)
     {
     case DOCK_LEFT:
     case DOCK_RIGHT:
+#if GTK_CHECK_VERSION (3, 0, 0)
+      box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
       box = gtk_vbox_new (FALSE, 0);
+#endif
       break;
     case DOCK_TOP:
     case DOCK_BOTTOM:
+#if GTK_CHECK_VERSION (3, 0, 0)
+      box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
       box = gtk_hbox_new (FALSE, 0);
+#endif
       break;
     case DOCK_ALL:
       break;
@@ -586,7 +622,11 @@ make_dock (int type)
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   set_gtk_window_type (GTK_WINDOW (window), "_NET_WM_WINDOW_TYPE_DOCK");
 
+#if GTK_CHECK_VERSION (3, 10, 0)
+  image = gtk_image_new_from_icon_name ("dialog-information", GTK_ICON_SIZE_DIALOG);
+#else
   image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_DIALOG);
+#endif
   gtk_box_pack_start (GTK_BOX (box), image, FALSE, FALSE, 0);
 
   gtk_box_pack_start (GTK_BOX (box), focus_label (window), FALSE, FALSE, 0);
@@ -677,7 +717,11 @@ desktop_cb (gpointer             callback_data,
 {
   GtkWidget *window;
   GtkWidget *label;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkRGBA    desktop_color;
+#else
   GdkColor desktop_color;
+#endif
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   set_gtk_window_type (GTK_WINDOW (window), "_NET_WM_WINDOW_TYPE_DESKTOP");
@@ -686,11 +730,20 @@ desktop_cb (gpointer             callback_data,
                                gdk_screen_width (), gdk_screen_height ());
   gtk_window_move (GTK_WINDOW (window), 0, 0);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  desktop_color.red = 0.32;
+  desktop_color.green = 0.46;
+  desktop_color.blue = 0.65;
+  desktop_color.alpha = 1.0;
+
+  gtk_widget_override_background_color (window, 0, &desktop_color);
+#else
   desktop_color.red = 0x5144;
   desktop_color.green = 0x75D6;
   desktop_color.blue = 0xA699;
 
   gtk_widget_modify_bg (window, GTK_STATE_NORMAL, &desktop_color);
+#endif
 
   label = focus_label (window);
 
