@@ -41,14 +41,27 @@ draw_checkerboard (GdkDrawable *drawable,
                    int          height)
 {
   gint i, j, xcount, ycount;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkRGBA color1, color2;
+#else
   GdkColor color1, color2;
-#if !GTK_CHECK_VERSION (3, 0, 0)
   cairo_t *cr;
 #endif
 
 #define CHECK_SIZE 10
 #define SPACING 2
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  color1.red = 30000. / 65535.;
+  color1.green = 30000. / 65535.;
+  color1.blue = 30000. / 65535.;
+  color1.alpha = 1.0;
+
+  color2.red = 50000. / 65535.;
+  color2.green = 50000. / 65535.;
+  color2.blue = 50000. / 65535.;
+  color2.alpha = 1.0;
+#else
   color1.red = 30000;
   color1.green = 30000;
   color1.blue = 30000;
@@ -57,7 +70,6 @@ draw_checkerboard (GdkDrawable *drawable,
   color2.green = 50000;
   color2.blue = 50000;
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
   cr = gdk_cairo_create (drawable);
 #endif
 
@@ -70,9 +82,17 @@ draw_checkerboard (GdkDrawable *drawable,
       while (j < height)
 	{
 	  if (ycount % 2)
+#if GTK_CHECK_VERSION (3, 0, 0)
+	    gdk_cairo_set_source_rgba (cr, &color1);
+#else
 	    gdk_cairo_set_source_color (cr, &color1);
+#endif
 	  else
+#if GTK_CHECK_VERSION (3, 0, 0)
+	    gdk_cairo_set_source_rgba (cr, &color2);
+#else
 	    gdk_cairo_set_source_color (cr, &color2);
+#endif
 
 	  /* If we're outside event->area, this will do nothing.
 	   * It might be mildly more efficient if we handled
@@ -105,10 +125,17 @@ render_simple (
                gboolean    with_alpha)
 {
   GdkPixbuf *pixbuf;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkRGBA from, to;
+
+  gdk_rgba_parse (&from, "blue");
+  gdk_rgba_parse (&to, "green");
+#else
   GdkColor from, to;
 
   gdk_color_parse ("blue", &from);
   gdk_color_parse ("green", &to);
+#endif
 
   pixbuf = meta_gradient_create_simple (width, height,
                                         &from, &to,
@@ -132,7 +159,7 @@ render_simple (
                                META_GRADIENT_HORIZONTAL);
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-      draw_checkerboard (cr , width, height);
+      draw_checkerboard (cr, width, height);
 #else
       draw_checkerboard (drawable, width, height);
 #endif
@@ -216,6 +243,16 @@ render_multi (
 {
   GdkPixbuf *pixbuf;
 #define N_COLORS 5
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkRGBA colors[N_COLORS];
+
+  gdk_rgba_parse (&colors[0], "red");
+  gdk_rgba_parse (&colors[1], "blue");
+  gdk_rgba_parse (&colors[2], "orange");
+  gdk_rgba_parse (&colors[3], "pink");
+  gdk_rgba_parse (&colors[4], "green");
+#else
   GdkColor colors[N_COLORS];
 
   gdk_color_parse ("red", &colors[0]);
@@ -223,6 +260,7 @@ render_multi (
   gdk_color_parse ("orange", &colors[2]);
   gdk_color_parse ("pink", &colors[3]);
   gdk_color_parse ("green", &colors[4]);
+#endif
 
   pixbuf = meta_gradient_create_multi (width, height,
                                        colors, N_COLORS,
@@ -291,12 +329,22 @@ render_interwoven_func (
 {
   GdkPixbuf *pixbuf;
 #define N_COLORS 4
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkRGBA colors[N_COLORS];
+
+  gdk_rgba_parse (&colors[0], "red");
+  gdk_rgba_parse (&colors[1], "blue");
+  gdk_rgba_parse (&colors[2], "pink");
+  gdk_rgba_parse (&colors[3], "green");
+#else
   GdkColor colors[N_COLORS];
 
   gdk_color_parse ("red", &colors[0]);
   gdk_color_parse ("blue", &colors[1]);
   gdk_color_parse ("pink", &colors[2]);
   gdk_color_parse ("green", &colors[3]);
+#endif
 
   pixbuf = meta_gradient_create_interwoven (width, height,
                                             colors, height / 10,
@@ -321,21 +369,34 @@ expose_callback (GtkWidget *widget,
 #endif
 {
   RenderGradientFunc func = data;
-  GdkWindow *window;
   GtkAllocation allocation;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GtkStyleContext *style;
+  GdkRGBA color;
+
+  style = gtk_widget_get_style_context (widget);
+
+  gtk_style_context_save (style);
+  gtk_style_context_set_state (style, gtk_widget_get_state_flags (widget));
+  gtk_style_context_lookup_color (style, "foreground-color", &color);
+  gtk_style_context_restore (style);
+#else
+  GdkWindow *window;
   GtkStyle *style;
-#if !GTK_CHECK_VERSION (3, 0, 0)
   cairo_t *cr;
-#endif
 
   style = gtk_widget_get_style (widget);
+#endif
+
   gtk_widget_get_allocation (widget, &allocation);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  cairo_set_source_rgba (cr, color.red, color.green, color.blue, color.alpha);
+#else
   window = gtk_widget_get_window (widget);
-#if !GTK_CHECK_VERSION (3, 0, 0)
   cr = gdk_cairo_create (window);
-#endif
   gdk_cairo_set_source_color (cr, &style->fg[gtk_widget_get_state (widget)]);
+#endif
 
   (* func) (
 #if !GTK_CHECK_VERSION (3, 0, 0)

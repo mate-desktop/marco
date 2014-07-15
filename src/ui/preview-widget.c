@@ -253,6 +253,66 @@ ensure_info (MetaPreview *preview)
 }
 #if GTK_CHECK_VERSION(3, 0, 0)
 
+static gboolean
+meta_preview_draw (GtkWidget *widget,
+                   cairo_t   *cr)
+{
+  MetaPreview *preview;
+  GtkAllocation allocation;
+  int border_width;
+  int client_width;
+  int client_height;
+  MetaButtonState button_states[META_BUTTON_TYPE_LAST] =
+  {
+    META_BUTTON_STATE_NORMAL,
+    META_BUTTON_STATE_NORMAL,
+    META_BUTTON_STATE_NORMAL,
+    META_BUTTON_STATE_NORMAL
+  };
+
+  g_return_val_if_fail (META_IS_PREVIEW (widget), FALSE);
+
+  preview = META_PREVIEW (widget);
+
+  ensure_info (preview);
+
+  cairo_save (cr);
+
+  border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
+
+  gtk_widget_get_allocation (widget, &allocation);
+  client_width = allocation.width - preview->left_width - preview->right_width - border_width * 2;
+  client_height = allocation.height - preview->top_height - preview->bottom_height - border_width * 2;
+
+  if (client_width < 0)
+    client_width = 1;
+  if (client_height < 0)
+    client_height = 1;
+
+  if (preview->theme)
+    {
+      border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
+
+      meta_theme_draw_frame (preview->theme,
+                             widget,
+                             cr,
+                             preview->type,
+                             preview->flags,
+                             client_width, client_height,
+                             preview->layout,
+                             preview->text_height,
+                             &preview->button_layout,
+                             button_states,
+                             meta_preview_get_mini_icon (),
+                             meta_preview_get_icon ());
+    }
+
+  cairo_restore (cr);
+
+  /* draw child */
+  return GTK_WIDGET_CLASS (meta_preview_parent_class)->draw (widget, cr);
+}
+
 static void
 meta_preview_get_preferred_width (GtkWidget *widget,
                                   gint      *minimum,
@@ -323,66 +383,6 @@ meta_preview_get_preferred_height (GtkWidget *widget,
   border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
   *minimum += border_width * 2;
   *natural += border_width * 2;
-}
-
-static gboolean
-meta_preview_draw(GtkWidget   *widget,
-				  cairo_t     *cr)
-{
-  MetaPreview *preview;
-  GtkAllocation allocation;
-  int border_width;
-  int client_width;
-  int client_height;
-  MetaButtonState button_states[META_BUTTON_TYPE_LAST] =
-  {
-    META_BUTTON_STATE_NORMAL,
-    META_BUTTON_STATE_NORMAL,
-    META_BUTTON_STATE_NORMAL,
-    META_BUTTON_STATE_NORMAL
-  };
-
-  g_return_val_if_fail (META_IS_PREVIEW (widget), FALSE);
-
-  preview = META_PREVIEW (widget);
-
-  ensure_info (preview);
-
-  cairo_save (cr);
-
-  border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
-
-  gtk_widget_get_allocation (widget, &allocation);
-  client_width = allocation.width - preview->left_width - preview->right_width - border_width * 2;
-  client_height = allocation.height - preview->top_height - preview->bottom_height - border_width * 2;
-
-  if (client_width < 0)
-    client_width = 1;
-  if (client_height < 0)
-    client_height = 1;
-
-  if (preview->theme)
-    {
-      border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
-
-      meta_theme_draw_frame (preview->theme,
-                             widget,
-                             cr,
-                             preview->type,
-                             preview->flags,
-                             client_width, client_height,
-                             preview->layout,
-                             preview->text_height,
-                             &preview->button_layout,
-                             button_states,
-                             meta_preview_get_mini_icon (),
-                             meta_preview_get_icon ());
-    }
-
-  cairo_restore (cr);
-
-  /* draw child */
-  return GTK_WIDGET_CLASS (meta_preview_parent_class)->draw (widget, cr);
 }
 
 #else

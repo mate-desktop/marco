@@ -250,24 +250,40 @@ struct _MetaColorSpec
   union
   {
     struct {
+#if GTK_CHECK_VERSION (3, 0, 0)
+      GdkRGBA color;
+#else
       GdkColor color;
+#endif
     } basic;
     struct {
       MetaGtkColorComponent component;
+#if GTK_CHECK_VERSION (3, 0, 0)
+      GtkStateFlags state;
+#else
       GtkStateType state;
+#endif
     } gtk;
     struct {
       MetaColorSpec *foreground;
       MetaColorSpec *background;
       double alpha;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+      GdkRGBA color;
+#else
       GdkColor color;
+#endif
     } blend;
     struct {
       MetaColorSpec *base;
       double factor;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+      GdkRGBA color;
+#else
       GdkColor color;
+#endif
     } shade;
   } data;
 };
@@ -496,7 +512,11 @@ struct _MetaDrawOp
     } image;
 
     struct {
+#if GTK_CHECK_VERSION (3, 0, 0)
+      GtkStateFlags state;
+#else
       GtkStateType state;
+#endif
       GtkShadowType shadow;
       GtkArrowType arrow;
       gboolean filled;
@@ -508,7 +528,11 @@ struct _MetaDrawOp
     } gtk_arrow;
 
     struct {
+#if GTK_CHECK_VERSION (3, 0, 0)
+      GtkStateFlags state;
+#else
       GtkStateType state;
+#endif
       GtkShadowType shadow;
       MetaDrawSpec *x;
       MetaDrawSpec *y;
@@ -517,7 +541,11 @@ struct _MetaDrawOp
     } gtk_box;
 
     struct {
+#if GTK_CHECK_VERSION (3, 0, 0)
+      GtkStateFlags state;
+#else
       GtkStateType state;
+#endif
       MetaDrawSpec *x;
       MetaDrawSpec *y1;
       MetaDrawSpec *y2;
@@ -885,12 +913,23 @@ void          meta_draw_spec_free (MetaDrawSpec *spec);
 MetaColorSpec* meta_color_spec_new             (MetaColorSpecType  type);
 MetaColorSpec* meta_color_spec_new_from_string (const char        *str,
                                                 GError           **err);
+#if GTK_CHECK_VERSION (3, 0, 0)
+MetaColorSpec* meta_color_spec_new_gtk         (MetaGtkColorComponent component,
+                                                GtkStateFlags         state);
+#else
 MetaColorSpec* meta_color_spec_new_gtk         (MetaGtkColorComponent component,
                                                 GtkStateType          state);
+#endif
 void           meta_color_spec_free            (MetaColorSpec     *spec);
+#if GTK_CHECK_VERSION (3, 0, 0)
+void           meta_color_spec_render          (MetaColorSpec     *spec,
+                                                GtkStyleContext   *style_gtk,
+                                                GdkRGBA           *color);
+#else
 void           meta_color_spec_render          (MetaColorSpec     *spec,
                                                 GtkWidget         *widget,
                                                 GdkColor          *color);
+#endif
 
 
 MetaDrawOp*    meta_draw_op_new  (MetaDrawType        type);
@@ -908,11 +947,11 @@ void           meta_draw_op_draw (const MetaDrawOp    *op,
                                   MetaRectangle        logical_region);
 
 void           meta_draw_op_draw_with_style (const MetaDrawOp    *op,
-                                             GtkStyle            *style_gtk,
-                                             GtkWidget           *widget,
                                              #if GTK_CHECK_VERSION(3, 0, 0)
+                                             GtkStyleContext     *style_gtk,
                                              cairo_t             *cr,
                                              #else
+                                             GtkStyle            *style_gtk,
                                              GdkDrawable         *drawable,
                                              const GdkRectangle  *clip,
                                              #endif
@@ -934,11 +973,11 @@ void            meta_draw_op_list_draw  (const MetaDrawOpList *op_list,
                                          const MetaDrawInfo   *info,
                                          MetaRectangle         rect);
 void            meta_draw_op_list_draw_with_style  (const MetaDrawOpList *op_list,
-                                                    GtkStyle             *style_gtk,
-                                                    GtkWidget            *widget,
                                                     #if GTK_CHECK_VERSION(3, 0, 0)
+                                                    GtkStyleContext      *style_gtk,
                                                     cairo_t              *cr,
                                                     #else
+                                                    GtkStyle             *style_gtk,
                                                     GdkDrawable          *drawable,
                                                     const GdkRectangle   *clip,
                                                     #endif
@@ -953,10 +992,17 @@ gboolean       meta_draw_op_list_contains (MetaDrawOpList    *op_list,
 
 MetaGradientSpec* meta_gradient_spec_new    (MetaGradientType        type);
 void              meta_gradient_spec_free   (MetaGradientSpec       *desc);
+#if GTK_CHECK_VERSION (3, 0, 0)
+GdkPixbuf*        meta_gradient_spec_render (const MetaGradientSpec *desc,
+                                             GtkStyleContext        *style_gtk,
+                                             int                     width,
+                                             int                     height);
+#else
 GdkPixbuf*        meta_gradient_spec_render (const MetaGradientSpec *desc,
                                              GtkWidget              *widget,
                                              int                     width,
                                              int                     height);
+#endif
 gboolean          meta_gradient_spec_validate (MetaGradientSpec     *spec,
                                                GError              **error);
 
@@ -992,13 +1038,9 @@ void meta_frame_style_draw (MetaFrameStyle          *style,
 void meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                                        #if GTK_CHECK_VERSION(3, 0, 0)
                                        GtkStyleContext         *style_gtk,
-                                       #else
-                                       GtkStyle                *style_gtk,
-                                       #endif
-                                       GtkWidget               *widget,
-                                       #if GTK_CHECK_VERSION(3, 0, 0)
                                        cairo_t                 *cr,
                                        #else
+                                       GtkStyle                *style_gtk,
                                        GdkDrawable             *drawable,
                                        int                      x_offset,
                                        int                      y_offset,
@@ -1091,13 +1133,9 @@ void meta_theme_draw_frame_by_name (MetaTheme              *theme,
 void meta_theme_draw_frame_with_style (MetaTheme              *theme,
                                        #if GTK_CHECK_VERSION(3, 0, 0)
                                        GtkStyleContext        *style_gtk,
-                                       #else
-                                       GtkStyle               *style_gtk,
-                                       #endif
-                                       GtkWidget              *widget,
-                                       #if GTK_CHECK_VERSION(3, 0, 0)
                                        cairo_t                *cr,
                                        #else
+                                       GtkStyle               *style_gtk,
                                        GdkDrawable            *drawable,
                                        const GdkRectangle     *clip,
                                        int                     x_offset,

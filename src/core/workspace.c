@@ -802,6 +802,8 @@ meta_motion_direction_to_string (MetaMotionDirection direction)
       return "Left";
     case META_MOTION_RIGHT:
       return "Right";
+    case META_MOTION_PREV:
+      return "Prev";
     }
 
   return "Unknown";
