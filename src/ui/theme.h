@@ -1246,8 +1246,12 @@ MetaFrameType         meta_frame_type_from_string      (const char            *s
 const char*           meta_frame_type_to_string        (MetaFrameType          type);
 MetaGradientType      meta_gradient_type_from_string   (const char            *str);
 const char*           meta_gradient_type_to_string     (MetaGradientType       type);
+#if GTK_CHECK_VERSION (3, 0, 0)
+GtkStateFlags         meta_gtk_state_from_string       (const char            *str);
+#else
 GtkStateType          meta_gtk_state_from_string       (const char            *str);
 const char*           meta_gtk_state_to_string         (GtkStateType           state);
+#endif
 GtkShadowType         meta_gtk_shadow_from_string      (const char            *str);
 const char*           meta_gtk_shadow_to_string        (GtkShadowType          shadow);
 GtkArrowType          meta_gtk_arrow_from_string       (const char            *str);

@@ -6568,6 +6568,30 @@ meta_gradient_type_to_string (MetaGradientType type)
   return "<unknown>";
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+GtkStateFlags
+meta_gtk_state_from_string (const char *str)
+{
+  if (g_ascii_strcasecmp ("normal", str) == 0)
+    return GTK_STATE_FLAG_NORMAL;
+  else if (g_ascii_strcasecmp ("prelight", str) == 0)
+    return GTK_STATE_FLAG_PRELIGHT;
+  else if (g_ascii_strcasecmp ("active", str) == 0)
+    return GTK_STATE_FLAG_ACTIVE;
+  else if (g_ascii_strcasecmp ("selected", str) == 0)
+    return GTK_STATE_FLAG_SELECTED;
+  else if (g_ascii_strcasecmp ("insensitive", str) == 0)
+    return GTK_STATE_FLAG_INSENSITIVE;
+  else if (g_ascii_strcasecmp ("inconsistent", str) == 0)
+    return GTK_STATE_FLAG_INCONSISTENT;
+  else if (g_ascii_strcasecmp ("focused", str) == 0)
+    return GTK_STATE_FLAG_FOCUSED;
+  else if (g_ascii_strcasecmp ("backdrop", str) == 0)
+    return GTK_STATE_FLAG_BACKDROP;
+  else
+    return -1; /* hack */
+}
+#else
 GtkStateType
 meta_gtk_state_from_string (const char *str)
 {
@@ -6604,6 +6628,7 @@ meta_gtk_state_to_string (GtkStateType state)
 
   return "<unknown>";
 }
+#endif
 
 GtkShadowType
 meta_gtk_shadow_from_string (const char *str)
