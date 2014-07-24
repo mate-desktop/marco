@@ -84,7 +84,7 @@ expose_handler (GtkTooltips *tooltips)
 #endif
 
 void
-meta_fixed_tip_show (Display *xdisplay, int screen_number,
+meta_fixed_tip_show (int screen_number,
                      int root_x, int root_y,
                      const char *markup_text)
 {

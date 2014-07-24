@@ -24,12 +24,6 @@
 #include "themewidget.h"
 #include <math.h>
 
-#ifdef __GNUC__
-#define UNUSED_VARIABLE __attribute__ ((unused))
-#else
-#define UNUSED_VARIABLE
-#endif
-
 static void meta_area_class_init   (MetaAreaClass  *klass);
 static void meta_area_init         (MetaArea       *area);
 static void meta_area_size_request (GtkWidget      *widget,
@@ -151,7 +145,6 @@ meta_area_draw (GtkWidget       *widget,
 {
   MetaArea *area;
   GtkMisc *misc;
-  gint x, y;
   gfloat xalign, yalign;
   gint xpad, ypad;
   GtkAllocation allocation;
@@ -165,7 +158,7 @@ meta_area_draw (GtkWidget       *widget,
       misc = GTK_MISC (widget);
 
       gtk_widget_get_allocation(widget, &allocation);
-      gtk_widget_get_requisition(widget, &req);
+      gtk_widget_get_preferred_size(widget, &req, NULL);
 
       if (gtk_widget_get_direction (widget) == GTK_TEXT_DIR_LTR)
         gtk_misc_get_alignment(misc, &xalign, &yalign);
@@ -176,14 +169,6 @@ meta_area_draw (GtkWidget       *widget,
       }
 
       gtk_misc_get_padding(misc, &xpad, &ypad);
-
-
-      x = floor (allocation.x + xpad
-         + ((allocation.width - req.width) * xalign)
-         + 0.5);
-      y = floor (allocation.y + ypad
-         + ((allocation.height - req.height) * yalign)
-         + 0.5);
 
       if (area->draw_func)
         {
