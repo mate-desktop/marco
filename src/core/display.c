@@ -84,6 +84,8 @@
 	#include <gtk/gtk.h>
 #endif
 
+#include <gdk/gdkx.h>
+
 #include <string.h>
 
 #define GRAB_OP_IS_WINDOW_SWITCH(g)                     \
@@ -1470,15 +1472,19 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 	 * (client-side) subwindow for individual menu items.
 	 */
 
-	if (gdk_display_pointer_is_grabbed(gdk_display))
-	{
-		return FALSE;
-	}
-
 #if GTK_CHECK_VERSION (3, 0, 0)
 	GdkDeviceManager *device_manager = gdk_display_get_device_manager (gdk_display);
 	GdkDevice *device = gdk_device_manager_get_client_pointer (device_manager);
 #endif
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+	if (gdk_display_device_is_grabbed(gdk_display, device))
+#else
+	if (gdk_display_pointer_is_grabbed(gdk_display))
+#endif
+	{
+		return FALSE;
+	}
 
 	switch (xevent->type)
 	{
