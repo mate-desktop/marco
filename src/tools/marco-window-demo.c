@@ -29,7 +29,14 @@
 #define gtk_hbox_new(X, Y) gtk_box_new (GTK_ORIENTATION_HORIZONTAL, Y)
 #endif
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+do_appwindow (GSimpleAction *action,
+              GVariant      *parameter,
+              gpointer       user_data);
+#else
 static GtkWidget* do_appwindow (void);
+#endif
 
 static gboolean aspect_on;
 
@@ -223,7 +230,11 @@ main (int argc, char **argv)
       g_error_free (err);
     }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  do_appwindow (NULL, NULL, NULL);
+#else
   do_appwindow ();
+#endif
 
   gtk_main ();
 
@@ -289,18 +300,32 @@ response_cb (GtkDialog *dialog,
     }
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+dialog_cb (GSimpleAction *action,
+           GVariant      *parameter,
+           gpointer       callback_data)
+#else
 static void
 dialog_cb (gpointer             callback_data,
            guint                callback_action,
            GtkWidget           *widget)
+#endif
 {
   make_dialog (GTK_WIDGET (callback_data), 1);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+modal_dialog_cb (GSimpleAction *action,
+                 GVariant      *parameter,
+                 gpointer       callback_data)
+#else
 static void
 modal_dialog_cb (gpointer             callback_data,
                  guint                callback_action,
                  GtkWidget           *widget)
+#endif
 {
   GtkWidget *dialog;
 
@@ -317,18 +342,32 @@ modal_dialog_cb (gpointer             callback_data,
   gtk_widget_destroy (dialog);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+no_parent_dialog_cb (GSimpleAction *action,
+                     GVariant      *parameter,
+                     gpointer       callback_data)
+#else
 static void
 no_parent_dialog_cb (gpointer             callback_data,
                      guint                callback_action,
                      GtkWidget           *widget)
+#endif
 {
   make_dialog (NULL, 1);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+utility_cb (GSimpleAction *action,
+            GVariant      *parameter,
+            gpointer       callback_data)
+#else
 static void
 utility_cb (gpointer             callback_data,
             guint                callback_action,
             GtkWidget           *widget)
+#endif
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -359,10 +398,17 @@ utility_cb (gpointer             callback_data,
   gtk_widget_show_all (window);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+toolbar_cb (GSimpleAction *action,
+            GVariant      *parameter,
+            gpointer       callback_data)
+#else
 static void
 toolbar_cb (gpointer             callback_data,
             guint                callback_action,
             GtkWidget           *widget)
+#endif
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -384,10 +430,17 @@ toolbar_cb (gpointer             callback_data,
   gtk_widget_show_all (window);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+menu_cb (GSimpleAction *action,
+         GVariant      *parameter,
+         gpointer       callback_data)
+#else
 static void
 menu_cb (gpointer             callback_data,
          guint                callback_action,
          GtkWidget           *widget)
+#endif
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -409,10 +462,17 @@ menu_cb (gpointer             callback_data,
   gtk_widget_show_all (window);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+override_redirect_cb (GSimpleAction *action,
+                      GVariant      *parameter,
+                      gpointer       callback_data)
+#else
 static void
 override_redirect_cb (gpointer             callback_data,
                       guint                callback_action,
                       GtkWidget           *widget)
+#endif
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -431,10 +491,17 @@ override_redirect_cb (gpointer             callback_data,
   gtk_widget_show_all (window);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+border_only_cb (GSimpleAction *action,
+                GVariant      *parameter,
+                gpointer       callback_data)
+#else
 static void
 border_only_cb (gpointer             callback_data,
                 guint                callback_action,
                 GtkWidget           *widget)
+#endif
 {
   GtkWidget *window;
   GtkWidget *vbox;
@@ -501,10 +568,17 @@ focus_label (GtkWidget *window)
   return label;
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+splashscreen_cb (GSimpleAction *action,
+                 GVariant      *parameter,
+                 gpointer       callback_data)
+#else
 static void
 splashscreen_cb (gpointer             callback_data,
                  guint                callback_action,
                  GtkWidget           *widget)
+#endif
 {
   GtkWidget *window;
   GtkWidget *image;
@@ -610,11 +684,37 @@ make_dock (int type)
   gtk_widget_show_all (window);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+dock_cb (GSimpleAction *action,
+         GVariant      *parameter,
+         gpointer       callback_data)
+#else
 static void
 dock_cb (gpointer             callback_data,
          guint                callback_action,
          GtkWidget           *widget)
+#endif
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  guint callback_action;
+  const gchar *name;
+
+  g_object_get (G_OBJECT (action), "name", &name, NULL);
+
+  if (!g_strcmp0 (name, "top-dock"))
+    callback_action = DOCK_TOP;
+  else if (!g_strcmp0 (name, "bottom-dock"))
+    callback_action = DOCK_BOTTOM;
+  else if (!g_strcmp0 (name, "left-dock"))
+    callback_action = DOCK_LEFT;
+  else if (!g_strcmp0 (name, "right-dock"))
+    callback_action = DOCK_RIGHT;
+  else if (!g_strcmp0 (name, "all-docks"))
+    callback_action = DOCK_ALL;
+  else
+    return;
+#endif
   if (callback_action == DOCK_ALL)
     {
       make_dock (DOCK_TOP);
@@ -628,33 +728,25 @@ dock_cb (gpointer             callback_data,
     }
 }
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-
-static void top_dock_cb()
-	{ make_dock(DOCK_TOP); }
-
-static void bottom_dock_cb()
-	{ make_dock(DOCK_BOTTOM); }
-
-static void left_dock_cb()
-	{ make_dock(DOCK_LEFT); }
-
-static void right_dock_cb()
-	{ make_dock(DOCK_RIGHT); }
-
-static void all_dock_cb()
-	{ dock_cb(NULL, DOCK_ALL, NULL); }
-
-#endif
-
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+desktop_cb (GSimpleAction *action,
+            GVariant      *parameter,
+            gpointer       callback_data)
+#else
 static void
 desktop_cb (gpointer             callback_data,
             guint                callback_action,
             GtkWidget           *widget)
+#endif
 {
   GtkWidget *window;
   GtkWidget *label;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkRGBA    desktop_color;
+#else
   GdkColor desktop_color;
+#endif
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   set_gtk_window_type (GTK_WINDOW (window), "_NET_WM_WINDOW_TYPE_DESKTOP");
@@ -663,11 +755,20 @@ desktop_cb (gpointer             callback_data,
                                gdk_screen_width (), gdk_screen_height ());
   gtk_window_move (GTK_WINDOW (window), 0, 0);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  desktop_color.red = 0.32;
+  desktop_color.green = 0.46;
+  desktop_color.blue = 0.65;
+  desktop_color.alpha = 1.0;
+
+  gtk_widget_override_background_color (window, 0, &desktop_color);
+#else
   desktop_color.red = 0x5144;
   desktop_color.green = 0x75D6;
   desktop_color.blue = 0xA699;
 
   gtk_widget_modify_bg (window, GTK_STATE_NORMAL, &desktop_color);
+#endif
 
   label = focus_label (window);
 
@@ -676,62 +777,7 @@ desktop_cb (gpointer             callback_data,
   gtk_widget_show_all (window);
 }
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-
-static gchar ui_definition[] =
-"<ui>\
-	<menubar name=\"MainMenuBar\">\
-		<menu name=\"WindowsMenu\">\
-			<menuitem name=\"Dialog\" action=\"DialogAction\" />\
-			<menuitem name=\"ModalDialog\" action=\"ModalDialogAction\" />\
-			<menuitem name=\"ParentlessDialog\" action=\"ParentlessDialogAction\" />\
-			<menuitem name=\"Utility\" action=\"UtilityAction\" />\
-			<menuitem name=\"Splashscreen\" action=\"SplashscreenAction\" />\
-			<menuitem name=\"TopDock\" action=\"TopDockAction\" />\
-			<menuitem name=\"BottomDock\" action=\"BottomDockAction\" />\
-			<menuitem name=\"LeftDock\" action=\"LeftDockAction\" />\
-			<menuitem name=\"RightDock\" action=\"RightDockAction\" />\
-			<menuitem name=\"AllDocks\" action=\"AllDocksAction\" />\
-			<menuitem name=\"Desktop\" action=\"DesktopAction\" />\
-			<menuitem name=\"Menu\" action=\"MenuAction\" />\
-			<menuitem name=\"Toolbar\" action=\"ToolbarAction\" />\
-			<menuitem name=\"OverrideRedirect\" action=\"OverrideRedirectAction\" />\
-			<menuitem name=\"BorderOnly\" action=\"BorderOnlyAction\" />\
-		</menu>\
-	</menubar>\
-</ui>";
-
-static GtkActionEntry entries[] =
-{
-	/*
-	struct GtkActionEntry {
-	  const gchar     *name;
-	  const gchar     *stock_id;
-	  const gchar     *label;
-	  const gchar     *accelerator;
-	  const gchar     *tooltip;
-	  GCallback  callback;
-	}; */
-
-	{"DialogAction"           , NULL , "_Dialog"            , "<control>d" , NULL , G_CALLBACK(dialog_cb)}            ,
-	{"ModalDialogAction"      , NULL , "_Modal dialog"      , NULL         , NULL , G_CALLBACK(modal_dialog_cb)}      ,
-	{"ParentlessDialogAction" , NULL , "_Parentless dialog" , NULL         , NULL , G_CALLBACK(no_parent_dialog_cb)} ,
-	{"UtilityAction"          , NULL , "_Utility"           , "<control>u" , NULL , G_CALLBACK(utility_cb)}           ,
-	{"SplashscreenAction"     , NULL , "_Splashscreen"      , "<control>s" , NULL , G_CALLBACK(splashscreen_cb)}      ,
-	{"TopDockAction"          , NULL , "_Top dock"          , NULL         , NULL , G_CALLBACK(top_dock_cb)}          ,
-	{"BottomDockAction"       , NULL , "_Bottom dock"       , NULL         , NULL , G_CALLBACK(bottom_dock_cb)}       ,
-	{"LeftDockAction"         , NULL , "_Left dock"         , NULL         , NULL , G_CALLBACK(left_dock_cb)}         ,
-	{"RightDockAction"        , NULL , "_Right dock"        , NULL         , NULL , G_CALLBACK(right_dock_cb)}        ,
-	{"AllDocksAction"         , NULL , "_All docks"         , NULL         , NULL , G_CALLBACK(all_dock_cb)}          ,
-	{"DesktopAction"          , NULL , "Des_ktop"           , NULL         , NULL , G_CALLBACK(desktop_cb)}           ,
-	{"MenuAction"             , NULL , "Me_nu"              , NULL         , NULL , G_CALLBACK(menu_cb)}              ,
-	{"ToolbarAction"          , NULL , "Tool_bar"           , NULL         , NULL , G_CALLBACK(toolbar_cb)}           ,
-	{"OverrideRedirectAction" , NULL , "Override Redirect"  , NULL         , NULL , G_CALLBACK(override_redirect_cb)} ,
-	{"BorderOnly"             , NULL , "Border Only"        , NULL         , NULL , G_CALLBACK(border_only_cb)}       ,
-};
-
-#else
-
+#if !GTK_CHECK_VERSION(3, 0, 0)
 static GtkItemFactoryEntry menu_items[] =
 {
   { "/_Windows",              NULL,         NULL,                     0, "<Branch>" },
@@ -755,16 +801,30 @@ static GtkItemFactoryEntry menu_items[] =
 
 #endif
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+sleep_cb (GSimpleAction *action,
+          GVariant      *parameter,
+          gpointer       data)
+#else
 static void
 sleep_cb (GtkWidget *button,
           gpointer   data)
+#endif
 {
   sleep (1000);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+toggle_aspect_ratio (GSimpleAction *action,
+                     GVariant      *parameter,
+                     gpointer       data)
+#else
 static void
 toggle_aspect_ratio (GtkWidget *button,
                      gpointer   data)
+#endif
 {
   GtkWidget *window;
   GdkGeometry geom;
@@ -782,7 +842,11 @@ toggle_aspect_ratio (GtkWidget *button,
 
   aspect_on = !aspect_on;
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+  window = gtk_widget_get_ancestor (GTK_WIDGET(data), GTK_TYPE_WINDOW);
+#else
   window = gtk_widget_get_ancestor (button, GTK_TYPE_WINDOW);
+#endif
   if (window)
     gtk_window_set_geometry_hints (GTK_WINDOW (window),
 				   GTK_WIDGET (data),
@@ -791,20 +855,38 @@ toggle_aspect_ratio (GtkWidget *button,
 
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+toggle_decorated_cb (GSimpleAction *action,
+                     GVariant      *parameter,
+                     gpointer       data)
+#else
 static void
 toggle_decorated_cb (GtkWidget *button,
                      gpointer   data)
+#endif
 {
   GtkWidget *window;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  window = gtk_widget_get_ancestor (data, GTK_TYPE_WINDOW);
+#else
   window = gtk_widget_get_ancestor (button, GTK_TYPE_WINDOW);
+#endif
   if (window)
     gtk_window_set_decorated (GTK_WINDOW (window),
                               !gtk_window_get_decorated (GTK_WINDOW (window)));
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+clicked_toolbar_cb (GSimpleAction *action,
+                    GVariant      *parameter,
+                    gpointer       data)
+#else
 static void
 clicked_toolbar_cb (GtkWidget *button,
                     gpointer   data)
+#endif
 {
   GtkWidget *dialog;
 
@@ -870,21 +952,172 @@ destroy_cb (GtkWidget *w, gpointer data)
     gtk_main_quit ();
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static const gchar *xml =
+  "<interface>"
+    "<menu id='menubar'>"
+      "<submenu>"
+        "<attribute name='label'>Windows</attribute>"
+        "<section>"
+          "<item>"
+            "<attribute name='label'>Dialog</attribute>"
+            "<attribute name='action'>demo.dialog1</attribute>"
+            "<attribute name='accel'>&lt;control&gt;d</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Modal dialog</attribute>"
+            "<attribute name='action'>demo.dialog2</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Parentless dialog</attribute>"
+            "<attribute name='action'>demo.dialog3</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Utility</attribute>"
+            "<attribute name='action'>demo.utility</attribute>"
+            "<attribute name='accel'>&lt;control&gt;u</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Splashscreen</attribute>"
+            "<attribute name='action'>demo.splashscreen</attribute>"
+            "<attribute name='accel'>&lt;control&gt;s</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Top dock</attribute>"
+            "<attribute name='action'>demo.top-dock</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Bottom dock</attribute>"
+            "<attribute name='action'>demo.bottom-dock</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Left dock</attribute>"
+            "<attribute name='action'>demo.left-dock</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Right dock</attribute>"
+            "<attribute name='action'>demo.right-dock</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>All docks</attribute>"
+            "<attribute name='action'>demo.all-docks</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Desktop</attribute>"
+            "<attribute name='action'>demo.desktop</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Menu</attribute>"
+            "<attribute name='action'>demo.menu</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Toolbar</attribute>"
+            "<attribute name='action'>demo.toolbar</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Override Redirect</attribute>"
+            "<attribute name='action'>demo.override-redirect</attribute>"
+          "</item>"
+          "<item>"
+            "<attribute name='label'>Border Only</attribute>"
+            "<attribute name='action'>demo.border-only</attribute>"
+          "</item>"
+        "</section>"
+      "</submenu>"
+    "</menu>"
+  "</interface>";
+
+static GActionEntry demo_entries[] =
+{
+  /* menubar */
+  { "dialog1",           dialog_cb,            NULL, NULL, NULL, {} },
+  { "dialog2",           modal_dialog_cb,      NULL, NULL, NULL, {} },
+  { "dialog3",           no_parent_dialog_cb,  NULL, NULL, NULL, {} },
+  { "utility",           utility_cb,           NULL, NULL, NULL, {} },
+  { "splashscreen",      splashscreen_cb,      NULL, NULL, NULL, {} },
+  { "top-dock",          dock_cb,              NULL, NULL, NULL, {} },
+  { "bottom-dock",       dock_cb,              NULL, NULL, NULL, {} },
+  { "left-dock",         dock_cb,              NULL, NULL, NULL, {} },
+  { "right-dock",        dock_cb,              NULL, NULL, NULL, {} },
+  { "all-docks",         dock_cb,              NULL, NULL, NULL, {} },
+  { "desktop",           desktop_cb,           NULL, NULL, NULL, {} },
+  { "menu",              menu_cb,              NULL, NULL, NULL, {} },
+  { "toolbar",           toolbar_cb,           NULL, NULL, NULL, {} },
+  { "override-redirect", override_redirect_cb, NULL, NULL, NULL, {} },
+  { "border-only",       border_only_cb,       NULL, NULL, NULL, {} },
+  /* toolbar */
+  { "new",               do_appwindow,         NULL, NULL, NULL, {} },
+  { "lock",              sleep_cb,             NULL, NULL, NULL, {} },
+  { "decorations",       toggle_decorated_cb,  NULL, NULL, NULL, {} },
+  { "quit",              clicked_toolbar_cb,   NULL, NULL, NULL, {} },
+  { "ratio",             toggle_aspect_ratio,  NULL, NULL, NULL, {} },
+};
+
+static GtkWidget *
+create_toolbar (void)
+{
+  GtkWidget *toolbar;
+  GtkToolItem *item;
+
+  toolbar = gtk_toolbar_new ();
+
+  item = gtk_tool_button_new (gtk_image_new_from_icon_name ("document-new", GTK_ICON_SIZE_SMALL_TOOLBAR), NULL);
+  gtk_tool_item_set_tooltip_markup (item, "Open another one of these windows");
+  gtk_actionable_set_action_name (GTK_ACTIONABLE (item), "demo.new");
+  gtk_toolbar_insert (GTK_TOOLBAR (toolbar), item, -1);
+
+  item = gtk_tool_button_new (gtk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_SMALL_TOOLBAR), NULL);
+  gtk_tool_item_set_tooltip_markup (item, "This is a demo button that locks up the demo");
+  gtk_actionable_set_action_name (GTK_ACTIONABLE (item), "demo.lock");
+  gtk_toolbar_insert (GTK_TOOLBAR (toolbar), item, -1);
+
+  item = gtk_tool_button_new (gtk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_SMALL_TOOLBAR), NULL);
+  gtk_tool_item_set_tooltip_markup (item, "This is a demo button that toggles window decorations");
+  gtk_actionable_set_action_name (GTK_ACTIONABLE (item), "demo.decorations");
+  gtk_toolbar_insert (GTK_TOOLBAR (toolbar), item, -1);
+
+  item = gtk_tool_button_new (gtk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_SMALL_TOOLBAR), NULL);
+  gtk_tool_item_set_tooltip_markup (item, "This is a demo button that locks the aspect ratio using a hint");
+  gtk_actionable_set_action_name (GTK_ACTIONABLE (item), "demo.ratio");
+  gtk_toolbar_insert (GTK_TOOLBAR (toolbar), item, -1);
+
+  item = gtk_tool_button_new (gtk_image_new_from_icon_name ("gtk-quit", GTK_ICON_SIZE_SMALL_TOOLBAR), NULL);
+  gtk_tool_item_set_tooltip_markup (item, "This is a demo button with a 'quit' icon");
+  gtk_actionable_set_action_name (GTK_ACTIONABLE (item), "demo.quit");
+  gtk_toolbar_insert (GTK_TOOLBAR (toolbar), item, -1);
+
+  return toolbar;
+}
+#endif
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+do_appwindow (GSimpleAction *action,
+              GVariant      *parameter,
+              gpointer       user_data)
+#else
 static GtkWidget *
 do_appwindow (void)
+#endif
 {
   GtkWidget *window;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GtkWidget *grid;
+#else
   GtkWidget *table;
+#endif
   GtkWidget *toolbar;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   GtkWidget *handlebox;
+#endif
   GtkWidget *statusbar;
   GtkWidget *contents;
   GtkWidget *sw;
   GtkTextBuffer *buffer;
 
   #if GTK_CHECK_VERSION(3, 0, 0)
-  GtkActionGroup *action_group;
-  GtkUIManager *ui_manager;
+  GSimpleActionGroup *action_group;
+  GtkBuilder *builder;
   #else
   GtkAccelGroup *accel_group;
   GtkItemFactory *item_factory;
@@ -904,29 +1137,44 @@ do_appwindow (void)
   g_signal_connect (G_OBJECT (window), "destroy",
                     G_CALLBACK (destroy_cb), NULL);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  grid = gtk_grid_new ();
+
+  gtk_widget_set_vexpand (grid, TRUE);
+  gtk_widget_set_hexpand (grid, TRUE);
+
+  gtk_container_add (GTK_CONTAINER (window), grid);
+#else
   table = gtk_table_new (1, 4, FALSE);
 
   gtk_container_add (GTK_CONTAINER (window), table);
+#endif
 
-  #if GTK_CHECK_VERSION(3, 0, 0)
+#if GTK_CHECK_VERSION(3, 0, 0)
+  action_group = g_simple_action_group_new ();
+  builder = gtk_builder_new_from_string (xml, -1);
 
-  action_group = gtk_action_group_new("ActionGroups");
-  gtk_action_group_add_actions(action_group, entries, G_N_ELEMENTS(entries), NULL);
+  g_action_map_add_action_entries (G_ACTION_MAP (action_group),
+                                   demo_entries,
+                                   G_N_ELEMENTS (demo_entries),
+                                   window);
+  gtk_widget_insert_action_group (window, "demo", G_ACTION_GROUP (action_group));
 
-  ui_manager = gtk_ui_manager_new();
-  gtk_ui_manager_insert_action_group(ui_manager, action_group, 0);
-  gtk_ui_manager_add_ui_from_string(ui_manager, ui_definition, -1, NULL);
+  /* Create the menubar
+   */
 
-  gtk_table_attach (GTK_TABLE (table),
-					gtk_ui_manager_get_widget (ui_manager, "/MainMenuBar"),
-                    /* X direction */          /* Y direction */
-                    0, 1,                      0, 1,
-                    GTK_EXPAND | GTK_FILL,     0,
-                    0,                         0);
+  GMenuModel *model = G_MENU_MODEL (gtk_builder_get_object (builder, "menubar"));
+  GtkWidget *menubar = gtk_menu_bar_new_from_model (model);
+  gtk_grid_attach (GTK_GRID (grid), menubar, 0, 0, 1, 1);
+  gtk_widget_set_hexpand (menubar, TRUE);
 
-  gtk_window_add_accel_group (GTK_WINDOW (window), gtk_ui_manager_get_accel_group (ui_manager));
+  /* Create the toolbar
+   */
 
-  #else
+  toolbar = create_toolbar ();
+  gtk_grid_attach (GTK_GRID (grid), toolbar, 0, 1, 1, 1);
+  gtk_widget_set_hexpand (toolbar, TRUE);
+#else
 
   /* Create the menubar
    */
@@ -958,7 +1206,7 @@ do_appwindow (void)
                     0,                         0);
 
 
-  #endif
+#endif
 
   /* Create document
    */
@@ -972,12 +1220,19 @@ do_appwindow (void)
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (sw),
                                        GTK_SHADOW_IN);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gtk_grid_attach (GTK_GRID (grid), sw, 0, 2, 1, 1);
+
+  gtk_widget_set_hexpand (sw, TRUE);
+  gtk_widget_set_vexpand (sw, TRUE);
+#else
   gtk_table_attach (GTK_TABLE (table),
                     sw,
                     /* X direction */       /* Y direction */
                     0, 1,                   2, 3,
                     GTK_EXPAND | GTK_FILL,  GTK_EXPAND | GTK_FILL,
                     0,                      0);
+#endif
 
   gtk_window_set_default_size (GTK_WINDOW (window),
                                200, 200);
@@ -989,6 +1244,7 @@ do_appwindow (void)
   gtk_container_add (GTK_CONTAINER (sw),
                      contents);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   /* Create the toolbar
    */
   toolbar = gtk_toolbar_new ();
@@ -1060,16 +1316,21 @@ do_appwindow (void)
                     0, 1,                   1, 2,
                     GTK_EXPAND | GTK_FILL,  0,
                     0,                      0);
-
+#endif
   /* Create statusbar */
 
   statusbar = gtk_statusbar_new ();
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gtk_grid_attach (GTK_GRID (grid), statusbar, 0, 3, 1, 1);
+  gtk_widget_set_hexpand (statusbar, TRUE);
+#else
   gtk_table_attach (GTK_TABLE (table),
                     statusbar,
                     /* X direction */       /* Y direction */
                     0, 1,                   3, 4,
                     GTK_EXPAND | GTK_FILL,  0,
                     0,                      0);
+#endif
 
   /* Show text widget info in the statusbar */
   buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (contents));
@@ -1097,7 +1358,12 @@ do_appwindow (void)
 
   gtk_widget_show_all (window);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  g_object_unref (action_group);
+  g_object_unref (builder);
+#else
   return window;
+#endif
 }
 
 

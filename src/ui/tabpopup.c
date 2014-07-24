@@ -81,15 +81,23 @@ static void       select_workspace         (GtkWidget *widget);
 static void       unselect_workspace       (GtkWidget *widget);
 
 static gboolean
+#if GTK_CHECK_VERSION (3, 0, 0)
+outline_window_draw (GtkWidget *widget,
+                     cairo_t   *cr,
+                     gpointer   data)
+#else
 outline_window_expose (GtkWidget      *widget,
                        GdkEventExpose *event,
                        gpointer        data)
+#endif
 {
   MetaTabPopup *popup;
   TabEntry *te;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   GtkStyle *style;
   GdkWindow *window;
   cairo_t *cr;
+#endif
 
   popup = data;
 
@@ -97,12 +105,18 @@ outline_window_expose (GtkWidget      *widget,
     return FALSE;
 
   te = popup->current_selected_entry;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   window = gtk_widget_get_window (widget);
   style = gtk_widget_get_style (widget);
   cr = gdk_cairo_create (window);
+#endif
 
   cairo_set_line_width (cr, 1.0);
+#if GTK_CHECK_VERSION (3, 0, 0)
+  cairo_set_source_rgb (cr, 1.0, 1.0, 1.0);
+#else
   gdk_cairo_set_source_color (cr, &style->white);
+#endif
 
   cairo_rectangle (cr,
                    0.5, 0.5,
@@ -116,7 +130,9 @@ outline_window_expose (GtkWidget      *widget,
                    te->inner_rect.height + 1);
   cairo_stroke (cr);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cairo_destroy (cr);
+#endif
 
   return FALSE;
 }
@@ -236,7 +252,11 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   MetaTabPopup *popup;
   int i, left, right, top, bottom;
   int height;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GtkWidget *grid;
+#else
   GtkWidget *table;
+#endif
   GtkWidget *vbox;
   GtkWidget *align;
   GList *tmp;
@@ -258,8 +278,13 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   gtk_widget_set_app_paintable (popup->outline_window, TRUE);
   gtk_widget_realize (popup->outline_window);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  g_signal_connect (G_OBJECT (popup->outline_window), "draw",
+                    G_CALLBACK (outline_window_draw), popup);
+#else
   g_signal_connect (G_OBJECT (popup->outline_window), "expose_event",
                     G_CALLBACK (outline_window_expose), popup);
+#endif
 
   popup->window = gtk_window_new (GTK_WINDOW_POPUP);
 
@@ -290,12 +315,21 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   if (i % width)
     height += 1;
 
-  table = gtk_table_new (height, width, FALSE);
   vbox = gtk_vbox_new (FALSE, 0);
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+  grid = gtk_grid_new ();
+#else
+  table = gtk_table_new (height, width, FALSE);
+#endif
 
   frame = gtk_frame_new (NULL);
   gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_OUT);
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gtk_container_set_border_width (GTK_CONTAINER (grid), 1);
+#else
   gtk_container_set_border_width (GTK_CONTAINER (table), 1);
+#endif
   gtk_container_add (GTK_CONTAINER (popup->window),
                      frame);
   gtk_container_add (GTK_CONTAINER (frame),
@@ -305,8 +339,13 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
   gtk_box_pack_start (GTK_BOX (vbox), align, TRUE, TRUE, 0);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gtk_container_add (GTK_CONTAINER (align),
+                     grid);
+#else
   gtk_container_add (GTK_CONTAINER (align),
                      table);
+#endif
 
   popup->label = gtk_label_new ("");
 
@@ -368,16 +407,24 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
           te->widget = image;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+          gtk_grid_attach (GTK_GRID (grid), te->widget, left, top, 1, 1);
+#else
           gtk_table_attach (GTK_TABLE (table),
                             te->widget,
                             left, right,           top, bottom,
                             0,                     0,
                             0,                     0);
+#endif
 
           /* Efficiency rules! */
           gtk_label_set_markup (GTK_LABEL (popup->label),
                               te->title);
+#if GTK_CHECK_VERSION (3, 0, 0)
+          gtk_widget_get_preferred_size (popup->label, &req, NULL);
+#else
           gtk_widget_size_request (popup->label, &req);
+#endif
           max_label_width = MAX (max_label_width, req.width);
 
           tmp = tmp->next;
@@ -431,7 +478,8 @@ meta_ui_tab_popup_free (MetaTabPopup *popup)
 {
   meta_verbose ("Destroying tab popup window\n");
 
-  gtk_widget_destroy (popup->outline_window);
+  if (popup->outline_window != NULL)
+    gtk_widget_destroy (popup->outline_window);
   gtk_widget_destroy (popup->window);
 
   g_list_foreach (popup->entries, free_tab_entry, NULL);
@@ -736,7 +784,11 @@ meta_select_image_draw (GtkWidget *widget,
 
       misc = GTK_MISC (widget);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+      gtk_widget_get_preferred_size (widget, &requisition, NULL);
+#else
       gtk_widget_get_requisition (widget, &requisition);
+#endif
       gtk_misc_get_alignment (misc, &xalign, &yalign);
       gtk_misc_get_padding (misc, &xpad, &ypad);
 
@@ -895,8 +947,8 @@ unselect_workspace (GtkWidget *widget)
 static void meta_select_workspace_class_init (MetaSelectWorkspaceClass *klass);
 
 #if GTK_CHECK_VERSION(3, 0, 0)
-static gboolean meta_select_workspace_draw         (GtkWidget      *widget,
-                                                    cairo_t        *cr);
+static gboolean meta_select_workspace_draw (GtkWidget *widget,
+                                            cairo_t   *cr);
 #else
 static gboolean meta_select_workspace_expose_event (GtkWidget      *widget,
                                                     GdkEventExpose *event);

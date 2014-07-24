@@ -163,8 +163,8 @@ shutdown_grab (void)
 #else
   gdk_keyboard_ungrab (gtk_get_current_event_time ());
   gdk_pointer_ungrab (gtk_get_current_event_time ());
-  gtk_grab_remove (grab_widget);
 #endif
+  gtk_grab_remove (grab_widget);
 }
 
 static void
@@ -245,6 +245,7 @@ begin_area_grab (void)
   GdkDeviceManager *manager;
   GdkDevice *device;
 #endif
+
   if (grab_widget == NULL)
     {
       grab_widget = gtk_invisible_new ();
@@ -267,7 +268,6 @@ begin_area_grab (void)
                        GDK_BUTTON_RELEASE_MASK | GDK_BUTTON_PRESS_MASK | GDK_POINTER_MOTION_MASK,
                        NULL,
                        gtk_get_current_event_time ()) != GDK_GRAB_SUCCESS)
-
     {
       g_warning ("Failed to grab pointer to do eyedropper");
       return;

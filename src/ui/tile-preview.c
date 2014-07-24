@@ -35,8 +35,12 @@
 struct _MetaTilePreview {
   GtkWidget     *preview_window;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkRGBA       *preview_color;
+#else
   GdkColor      *preview_color;
   guchar         preview_alpha;
+#endif
 
   MetaRectangle  tile_rect;
 
@@ -45,13 +49,14 @@ struct _MetaTilePreview {
 
 static gboolean
 #if GTK_CHECK_VERSION (3, 0, 0)
-meta_tile_preview_draw   (GtkWidget      *widget,
-                          cairo_t        *cr,
+meta_tile_preview_draw (GtkWidget *widget,
+                        cairo_t   *cr,
+                        gpointer   user_data)
 #else
 meta_tile_preview_expose (GtkWidget      *widget,
                           GdkEventExpose *event,
-#endif
                           gpointer        user_data)
+#endif
 {
   MetaTilePreview *preview = user_data;
 #if !GTK_CHECK_VERSION (3, 0, 0)
@@ -66,25 +71,42 @@ meta_tile_preview_expose (GtkWidget      *widget,
 
   if (preview->has_alpha)
     {
+#if GTK_CHECK_VERSION (3, 0, 0)
+      GdkRGBA preview_color = *preview->preview_color;
+#endif
 
       /* Fill the preview area with a transparent color */
+#if GTK_CHECK_VERSION (3, 0, 0)
+      gdk_cairo_set_source_rgba (cr, &preview_color);
+#else
       cairo_set_source_rgba (cr,
                              (double)preview->preview_color->red   / 0xFFFF,
                              (double)preview->preview_color->green / 0xFFFF,
                              (double)preview->preview_color->blue  / 0xFFFF,
                              (double)preview->preview_alpha / 0xFF);
+#endif
 
       cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
       cairo_paint (cr);
 
       /* Use the opaque color for the border */
+#if GTK_CHECK_VERSION (3, 0, 0)
+      gdk_cairo_set_source_rgba (cr, &preview_color);
+#else
       gdk_cairo_set_source_color (cr, preview->preview_color);
+#endif
     }
   else
     {
+#if GTK_CHECK_VERSION (3, 0, 0)
+      GdkRGBA white = {1.0, 1.0, 1.0, 1.0};
+
+      gdk_cairo_set_source_rgba (cr, &white);
+#else
       GtkStyle *style = gtk_widget_get_style (preview->preview_window);
 
       gdk_cairo_set_source_color (cr, &style->white);
+#endif
 
       cairo_rectangle (cr,
                        OUTLINE_WIDTH - 0.5, OUTLINE_WIDTH - 0.5,
@@ -112,6 +134,22 @@ on_preview_window_style_set (GtkWidget *widget,
                              gpointer   user_data)
 {
   MetaTilePreview *preview = user_data;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GtkStyleContext *context = gtk_style_context_new ();
+  GtkWidgetPath *path = gtk_widget_path_new ();
+  guchar alpha = 0xFF;
+
+  gtk_widget_path_append_type (path, GTK_TYPE_ICON_VIEW);
+  gtk_style_context_set_path (context, path);
+
+  gtk_style_context_get (context, GTK_STATE_FLAG_SELECTED, "background-color", &preview->preview_color, NULL);
+  gtk_style_context_get_style (context, "selection-box-alpha", &alpha, NULL);
+
+  preview->preview_color->alpha = (double)alpha / 0xFF;
+
+  gtk_widget_path_free (path);
+  g_object_unref (context);
+#else
   GtkStyle *style;
 
   style = gtk_rc_get_style_by_paths (gtk_widget_get_settings (widget),
@@ -135,6 +173,7 @@ on_preview_window_style_set (GtkWidget *widget,
     }
 
   g_object_unref (style);
+#endif
 }
 
 MetaTilePreview *
@@ -160,7 +199,9 @@ meta_tile_preview_new (int      screen_number,
   gtk_widget_set_app_paintable (preview->preview_window, TRUE);
 
   preview->preview_color = NULL;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   preview->preview_alpha = 0xFF;
+#endif
 
   preview->tile_rect.x = preview->tile_rect.y = 0;
   preview->tile_rect.width = preview->tile_rect.height = 0;
@@ -207,7 +248,11 @@ meta_tile_preview_free (MetaTilePreview *preview)
   gtk_widget_destroy (preview->preview_window);
 
   if (preview->preview_color)
+#if GTK_CHECK_VERSION (3, 0, 0)
+    gdk_rgba_free (preview->preview_color);
+#else
     gdk_color_free (preview->preview_color);
+#endif
 
   g_free (preview);
 }
@@ -250,12 +295,20 @@ meta_tile_preview_show (MetaTilePreview *preview,
 
   if (!preview->has_alpha)
     {
-      GdkRectangle outer_rect, inner_rect;
+#if GTK_CHECK_VERSION (3, 0, 0)
+      cairo_rectangle_int_t outer_rect, inner_rect;
       cairo_region_t *outer_region, *inner_region;
+      GdkRGBA black = {.0, .0, .0, 1.0};
+
+      gdk_window_set_background_rgba (window, &black);
+#else
+      GdkRectangle outer_rect, inner_rect;
+      GdkRegion *outer_region, *inner_region;
       GdkColor black;
 
       black = gtk_widget_get_style (preview->preview_window)->black;
       gdk_window_set_background (window, &black);
+#endif
 
       outer_rect.x = outer_rect.y = 0;
       outer_rect.width = preview->tile_rect.width;
@@ -266,14 +319,25 @@ meta_tile_preview_show (MetaTilePreview *preview,
       inner_rect.width = outer_rect.width - 2 * OUTLINE_WIDTH;
       inner_rect.height = outer_rect.height - 2 * OUTLINE_WIDTH;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
       outer_region = cairo_region_create_rectangle (&outer_rect);
       inner_region = cairo_region_create_rectangle (&inner_rect);
 
       cairo_region_subtract (outer_region, inner_region);
       cairo_region_destroy (inner_region);
 
-      gdk_window_shape_combine_region (window, outer_region, 0, 0);
+      gtk_widget_shape_combine_region (preview->preview_window, outer_region);
       cairo_region_destroy (outer_region);
+#else
+      outer_region = gdk_region_rectangle (&outer_rect);
+      inner_region = gdk_region_rectangle (&inner_rect);
+
+      gdk_region_subtract (outer_region, inner_region);
+      gdk_region_destroy (inner_region);
+
+      gdk_window_shape_combine_region (window, outer_region, 0, 0);
+      gdk_region_destroy (outer_region);
+#endif
     }
 }
 

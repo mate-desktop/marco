@@ -124,6 +124,7 @@ case "$with_gtk" in
   3.0) GTK_API_VERSION=3.0
        GTK_MIN_VERSION=2.90.0
        CANBERRA_GTK=libcanberra-gtk3
+       MATE_DESKTOP_VERSION=1.9.3
        ;;
 esac
 AM_CONDITIONAL([HAVE_GTK2], [test "x$with_gtk" = "x2.0"])
@@ -132,6 +133,10 @@ GIO_MIN_VERSION=2.25.10
 
 MARCO_PC_MODULES="gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION gio-2.0 >= $GIO_MIN_VERSION pango >= 1.2.0 $CANBERRA_GTK"
 AC_SUBST(GTK_API_VERSION)
+
+if test x$GTK_API_VERSION = x3.0; then
+    MARCO_PC_MODULES="$MARCO_PC_MODULES mate-desktop-2.0 >= $MATE_DESKTOP_VERSION"
+fi
 
 GLIB_GSETTINGS
 

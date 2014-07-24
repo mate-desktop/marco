@@ -190,12 +190,12 @@ static void parse_shadow_element    (GMarkupParseContext  *context,
                                      ParseInfo            *info,
                                      GError              **error);
 
-static void parse_padding_element    (GMarkupParseContext  *context,
-                                      const gchar          *element_name,
-                                      const gchar         **attribute_names,
-                                      const gchar         **attribute_values,
-                                      ParseInfo            *info,
-                                      GError              **error);
+static void parse_padding_element   (GMarkupParseContext  *context,
+                                     const gchar          *element_name,
+                                     const gchar         **attribute_names,
+                                     const gchar         **attribute_values,
+                                     ParseInfo            *info,
+                                     GError              **error);
 #endif
 static void parse_menu_icon_element (GMarkupParseContext  *context,
                                      const gchar          *element_name,

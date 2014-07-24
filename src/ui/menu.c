@@ -106,7 +106,11 @@ static void popup_position_func(GtkMenu* menu, gint* x, gint* y, gboolean* push_
 
 	pos = user_data;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
+#else
 	gtk_widget_size_request(GTK_WIDGET(menu), &req);
+#endif
 
 	*x = pos->x;
 	*y = pos->y;
@@ -148,7 +152,7 @@ static void activate_cb(GtkWidget* menuitem, gpointer data)
 
   md = data;
 
-	meta_frames_notify_menu_hide(md->menu->frames);
+  meta_frames_notify_menu_hide (md->menu->frames);
 
 	(*md->menu->func)(
 		md->menu,
@@ -159,7 +163,7 @@ static void activate_cb(GtkWidget* menuitem, gpointer data)
 		GPOINTER_TO_INT(g_object_get_data(G_OBJECT(menuitem), "workspace")),
 		md->menu->data);
 
-	/* menu may now be freed */
+  /* menu may now be freed */
 }
 
 /*
@@ -389,7 +393,7 @@ meta_window_menu_new   (MetaFrames         *frames,
                   meta_verbose ("Creating %d-workspace menu current space %lu\n",
                       n_workspaces, active_workspace);
 
-                  GdkWindow* window = gtk_widget_get_window(GTK_WIDGET(frames));
+                  GdkWindow* window = gtk_widget_get_window (GTK_WIDGET (frames));
 
                   display = GDK_WINDOW_XDISPLAY (window);
 
@@ -497,9 +501,10 @@ meta_window_menu_new   (MetaFrames         *frames,
         }
     }
 
-	g_signal_connect (menu->menu, "selection_done", G_CALLBACK(menu_closed), menu);
+  g_signal_connect (menu->menu, "selection_done",
+                    G_CALLBACK (menu_closed), menu);
 
-	return menu;
+  return menu;
 }
 
 void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int button, guint32 timestamp)

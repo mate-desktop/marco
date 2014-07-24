@@ -1311,6 +1311,7 @@ meta_display_process_key_event (MetaDisplay *display,
 
 #ifdef HAVE_XKB
   keysym = XkbKeycodeToKeysym (display->xdisplay, event->xkey.keycode, 0, 0);
+
   str = XKeysymToString (keysym);
 #else
   str = NULL;

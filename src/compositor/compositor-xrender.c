@@ -62,12 +62,6 @@
 
 #define USE_IDLE_REPAINT 1
 
-#ifdef __GNUC__
-#define UNUSED_VARIABLE __attribute__ ((unused))
-#else
-#define UNUSED_VARIABLE
-#endif
-
 #ifdef HAVE_COMPOSITE_EXTENSIONS
 static inline gboolean
 composite_at_least_version (MetaDisplay *display,
@@ -1150,8 +1144,7 @@ paint_windows (MetaScreen   *screen,
   MetaCompScreen *info = meta_screen_get_compositor_data (screen);
   Display *xdisplay = meta_display_get_xdisplay (display);
   GList *index, *last;
-  int screen_width, screen_height, UNUSED_VARIABLE screen_number;
-  Window UNUSED_VARIABLE xroot;
+  int screen_width, screen_height;
   MetaCompWindow *cw;
   XserverRegion paint_region, desktop_region;
 
@@ -1161,8 +1154,6 @@ paint_windows (MetaScreen   *screen,
     }
 
   meta_screen_get_size (screen, &screen_width, &screen_height);
-  screen_number = meta_screen_get_screen_number (screen);
-  xroot = meta_screen_get_xroot (screen);
 
   if (region == None)
     {
