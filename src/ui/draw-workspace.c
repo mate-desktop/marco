@@ -260,6 +260,6 @@ wnck_draw_workspace (GtkWidget                   *widget,
     }
 
   #if GTK_CHECK_VERSION(3, 0, 0)
-  cairo_save(cr);
+  cairo_restore(cr);
   #endif
 }
