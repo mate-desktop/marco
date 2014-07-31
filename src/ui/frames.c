@@ -79,9 +79,6 @@ static void meta_frames_paint_to_drawable (MetaFrames   *frames,
                                            MetaUIFrame  *frame,
                                            cairo_t      *cr);
 
-static void meta_frames_set_window_background (MetaFrames   *frames,
-                                               MetaUIFrame  *frame);
-
 static void meta_frames_calc_geometry (MetaFrames        *frames,
                                        MetaUIFrame         *frame,
                                        MetaFrameGeometry *fgeom);
@@ -343,12 +340,6 @@ queue_recalc_func (gpointer key, gpointer value, gpointer data)
   frames = META_FRAMES (data);
   frame = value;
 
-  /* If a resize occurs it will cause a redraw, but the
-   * resize may not actually be needed so we always redraw
-   * in case of color change.
-   */
-  meta_frames_set_window_background (frames, frame);
-
   invalidate_whole_window (frames, frame);
   meta_core_queue_frame_resize (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
                                 frame->xwindow);
@@ -387,12 +378,6 @@ queue_draw_func (gpointer key, gpointer value, gpointer data)
 
   frames = META_FRAMES (data);
   frame = value;
-
-  /* If a resize occurs it will cause a redraw, but the
-   * resize may not actually be needed so we always redraw
-   * in case of color change.
-   */
-  meta_frames_set_window_background (frames, frame);
 
   invalidate_whole_window (frames, frame);
 }
@@ -609,11 +594,6 @@ meta_frames_manage_window (MetaFrames *frames,
   frame->shape_applied = FALSE;
   frame->prelit_control = META_FRAME_CONTROL_NONE;
 
-  /* Don't set the window background yet; we need frame->xwindow to be
-   * registered with its MetaWindow, which happens after this function
-   * and meta_ui_create_frame_window() return to meta_window_ensure_frame().
-   */
-
   meta_core_grab_buttons (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
 
   g_hash_table_replace (frames->frames, &frame->xwindow, frame);
@@ -732,52 +712,6 @@ meta_frames_get_geometry (MetaFrames *frames,
   *bottom_height *= scale;
   *left_width *= scale;
   *right_width *= scale;
-}
-
-void
-meta_frames_reset_bg (MetaFrames *frames,
-                      Window  xwindow)
-{
-  MetaUIFrame *frame;
-
-  frame = meta_frames_lookup_window (frames, xwindow);
-
-  meta_frames_set_window_background (frames, frame);
-}
-
-static void
-set_background_none (Display *xdisplay,
-                     Window   xwindow)
-{
-  XSetWindowAttributes attrs;
-
-  attrs.background_pixmap = None;
-  XChangeWindowAttributes (xdisplay, xwindow,
-                           CWBackPixmap, &attrs);
-}
-
-void
-meta_frames_unflicker_bg (MetaFrames *frames,
-                          Window      xwindow,
-                          int         target_width,
-                          int         target_height)
-{
-  MetaUIFrame *frame;
-
-  frame = meta_frames_lookup_window (frames, xwindow);
-  g_return_if_fail (frame != NULL);
-
-#if 0
-  pixmap = gdk_pixmap_new (frame->window,
-                           width, height,
-                           -1);
-
-  /* Oops, no way to get the background here */
-
-  meta_frames_paint_to_drawable (frames, frame, pixmap);
-#endif
-
-  set_background_none (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
 }
 
 #ifdef HAVE_SHAPE
@@ -2496,52 +2430,6 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
                                     button_states,
                                     mini_icon, icon);
 }
-
-static void
-meta_frames_set_window_background (MetaFrames   *frames,
-                                   MetaUIFrame  *frame)
-{
-  MetaFrameFlags flags;
-  MetaFrameType type;
-  MetaFrameStyle *style;
-  gboolean frame_exists;
-
-  meta_core_get (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow,
-                 META_CORE_WINDOW_HAS_FRAME, &frame_exists,
-                 META_CORE_GET_FRAME_FLAGS, &flags,
-                 META_CORE_GET_FRAME_TYPE, &type,
-                 META_CORE_GET_END);
-
-  if (frame_exists)
-    {
-      style = meta_theme_get_frame_style (meta_theme_get_current (),
-                                          type, flags);
-    }
-
-  if (frame_exists && style->window_background_color != NULL)
-    {
-      GdkRGBA color;
-      GdkVisual *visual;
-
-      meta_color_spec_render (style->window_background_color,
-                              frame->style,
-                              &color);
-
-      /* Set A in ARGB to window_background_alpha, if we have ARGB */
-
-      visual = gtk_widget_get_visual (GTK_WIDGET (frames));
-      if (gdk_visual_get_depth (visual) == 32) /* we have ARGB */
-        {
-          color.alpha = style->window_background_alpha / 255.0;
-        }
-
-      gdk_window_set_background_rgba (frame->window, &color);
-    }
-  else
-    {
-      gtk_style_context_set_background (frame->style, frame->window);
-    }
- }
 
 static gboolean
 meta_frames_enter_notify_event      (GtkWidget           *widget,
