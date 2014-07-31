@@ -95,13 +95,6 @@ void meta_ui_map_frame   (MetaUI *ui,
 void meta_ui_unmap_frame (MetaUI *ui,
                           Window  xwindow);
 
-void meta_ui_unflicker_frame_bg (MetaUI *ui,
-                                 Window  xwindow,
-                                 int     target_width,
-                                 int     target_height);
-void meta_ui_reset_frame_bg     (MetaUI *ui,
-                                 Window  xwindow);
-
 void meta_ui_apply_frame_shape  (MetaUI  *ui,
                                  Window   xwindow,
                                  int      new_window_width,
