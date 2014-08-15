@@ -933,10 +933,11 @@ void           meta_color_spec_render          (MetaColorSpec     *spec,
 MetaDrawOp*    meta_draw_op_new  (MetaDrawType        type);
 void           meta_draw_op_free (MetaDrawOp          *op);
 void           meta_draw_op_draw (const MetaDrawOp    *op,
-                                  GtkWidget           *widget,
                                   #if GTK_CHECK_VERSION(3, 0, 0)
+                                  GtkStyleContext     *style_gtk,
                                   cairo_t             *cr,
                                   #else
+                                  GtkWidget           *widget,
                                   GdkDrawable         *drawable,
                                   const GdkRectangle  *clip,
                                   #endif
@@ -961,10 +962,11 @@ MetaDrawOpList* meta_draw_op_list_new   (int                   n_preallocs);
 void            meta_draw_op_list_ref   (MetaDrawOpList       *op_list);
 void            meta_draw_op_list_unref (MetaDrawOpList       *op_list);
 void            meta_draw_op_list_draw  (const MetaDrawOpList *op_list,
-                                         GtkWidget            *widget,
                                          #if GTK_CHECK_VERSION(3, 0, 0)
+                                         GtkStyleContext      *style_gtk,
                                          cairo_t              *cr,
                                          #else
+                                         GtkWidget            *widget,
                                          GdkDrawable          *drawable,
                                          const GdkRectangle   *clip,
                                          #endif
@@ -1014,10 +1016,11 @@ void            meta_frame_style_ref   (MetaFrameStyle *style);
 void            meta_frame_style_unref (MetaFrameStyle *style);
 
 void meta_frame_style_draw (MetaFrameStyle          *style,
-                            GtkWidget               *widget,
                             #if GTK_CHECK_VERSION(3, 0, 0)
+                            GtkStyleContext         *style_gtk,
                             cairo_t                 *cr,
                             #else
+                            GtkWidget               *widget,
                             GdkDrawable             *drawable,
                             int                      x_offset,
                             int                      y_offset,
@@ -1087,10 +1090,11 @@ double meta_theme_get_title_scale (MetaTheme     *theme,
                                    MetaFrameFlags flags);
 
 void meta_theme_draw_frame (MetaTheme              *theme,
-                            GtkWidget              *widget,
                             #if GTK_CHECK_VERSION(3, 0, 0)
+                            GtkStyleContext        *style_gtk,
                             cairo_t                *cr,
                             #else
+                            GtkWidget              *widget,
                             GdkDrawable            *drawable,
                             const GdkRectangle     *clip,
                             int                     x_offset,
@@ -1108,10 +1112,11 @@ void meta_theme_draw_frame (MetaTheme              *theme,
                             GdkPixbuf              *icon);
 
 void meta_theme_draw_frame_by_name (MetaTheme              *theme,
-                                    GtkWidget              *widget,
                                     #if GTK_CHECK_VERSION(3, 0, 0)
+                                    GtkStyleContext        *style_gtk,
                                     cairo_t                *cr,
                                     #else
+                                    GtkWidget              *widget,
                                     GdkDrawable            *drawable,
                                     const GdkRectangle     *clip,
                                     int                     x_offset,
