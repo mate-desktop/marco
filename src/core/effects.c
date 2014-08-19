@@ -754,7 +754,8 @@ run_handler (MetaEffect *effect)
   }
   else
   {
-    effect->priv->finished(effect->priv->finished_data);
+    if (effect->priv->finished)
+      effect->priv->finished(effect->priv->finished_data);
   }
 
   effect_free (effect);
