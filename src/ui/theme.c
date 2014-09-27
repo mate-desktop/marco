@@ -3010,6 +3010,8 @@ meta_draw_op_free (MetaDrawOp *op)
 
       meta_draw_spec_free (op->data.title.x);
       meta_draw_spec_free (op->data.title.y);
+      if (op->data.title.ellipsize_width)
+        meta_draw_spec_free (op->data.title.ellipsize_width);
       break;
 
     case META_DRAW_OP_LIST:
@@ -3875,6 +3877,7 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
       if (info->title_layout)
         {
           int rx, ry;
+          PangoRectangle ink_rect, logical_rect;
 
           meta_color_spec_render (op->data.title.color_spec, style_gtk, &color);
           gdk_cairo_set_source_rgba (cr, &color);
@@ -3882,7 +3885,39 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
           rx = parse_x_position_unchecked (op->data.title.x, env);
           ry = parse_y_position_unchecked (op->data.title.y, env);
 
-          if (rx - env->rect.x + env->title_width >= env->rect.width)
+          if (op->data.title.ellipsize_width)
+            {
+              int ellipsize_width;
+              int right_bearing;
+
+              ellipsize_width = parse_x_position_unchecked (op->data.title.ellipsize_width, env);
+              /* HACK: parse_x_position_unchecked adds in env->rect.x, subtract out again */
+              ellipsize_width -= env->rect.x;
+
+              pango_layout_set_width (info->title_layout, -1);
+              pango_layout_get_pixel_extents (info->title_layout,
+                                              &ink_rect, &logical_rect);
+
+              /* Pango's idea of ellipsization is with respect to the logical rect.
+               * correct for this, by reducing the ellipsization width by the overflow
+               * of the un-ellipsized text on the right... it's always the visual
+               * right we want regardless of bidi, since since the X we pass in to
+               * cairo_move_to() is always the left edge of the line.
+               */
+              right_bearing = (ink_rect.x + ink_rect.width) - (logical_rect.x + logical_rect.width);
+              right_bearing = MAX (right_bearing, 0);
+
+              ellipsize_width -= right_bearing;
+              ellipsize_width = MAX (ellipsize_width, 0);
+
+              /* Only ellipsizing when necessary is a performance optimization -
+               * pango_layout_set_width() will force a relayout if it isn't the
+               * same as the current width of -1.
+               */
+              if (ellipsize_width < logical_rect.width)
+                pango_layout_set_width (info->title_layout, PANGO_SCALE * ellipsize_width);
+            }
+          else if (rx - env->rect.x + env->title_width >= env->rect.width)
           {
             const double alpha_margin = 30.0;
             int text_space = env->rect.x + env->rect.width -
@@ -3907,12 +3942,14 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
                                                           color.blue, 0);
             cairo_set_source(cr, linpat);
             cairo_pattern_destroy(linpat);
-          } else {
-            gdk_cairo_set_source_rgba (cr, &color);
           }
 
           cairo_move_to (cr, rx, ry);
           pango_cairo_show_layout (cr, info->title_layout);
+
+          /* Remove any ellipsization we might have set; will short-circuit
+           * if the width is already -1 */
+          pango_layout_set_width (info->title_layout, -1);
         }
       break;
 

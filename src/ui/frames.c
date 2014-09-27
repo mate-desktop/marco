@@ -482,6 +482,7 @@ meta_frames_ensure_layout (MetaFrames  *frames,
 
       frame->layout = gtk_widget_create_pango_layout (widget, frame->title);
 
+      pango_layout_set_ellipsize (frame->layout, PANGO_ELLIPSIZE_END);
       pango_layout_set_auto_dir (frame->layout, FALSE);
 
       pango_layout_set_single_paragraph_mode (frame->layout, TRUE);
