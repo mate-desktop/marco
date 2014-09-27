@@ -427,6 +427,10 @@ get_window_contents (MetaFrameType  type,
       *title = _("Border");
       return border_only_contents ();
 
+    case META_FRAME_TYPE_ATTACHED:
+      *title = _("Attached Modal Dialog");
+      return dialog_contents ();
+
     case META_FRAME_TYPE_LAST:
       g_assert_not_reached ();
       break;
@@ -472,6 +476,9 @@ get_window_flags (MetaFrameType type)
       break;
 
     case META_FRAME_TYPE_BORDER:
+      break;
+
+    case META_FRAME_TYPE_ATTACHED:
       break;
 
     case META_FRAME_TYPE_LAST:
