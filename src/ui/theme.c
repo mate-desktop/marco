@@ -4792,10 +4792,10 @@ meta_frame_style_validate (MetaFrameStyle    *style,
 }
 
 static void
-button_rect (MetaButtonType           type,
-             const MetaFrameGeometry *fgeom,
-             int                      middle_background_offset,
-             GdkRectangle            *rect)
+get_button_rect (MetaButtonType           type,
+                 const MetaFrameGeometry *fgeom,
+                 int                      middle_background_offset,
+                 GdkRectangle            *rect)
 {
   switch (type)
     {
@@ -5115,7 +5115,7 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
             {
               MetaButtonState button_state;
 
-              button_rect (j, fgeom, middle_bg_offset, &rect);
+              get_button_rect (j, fgeom, middle_bg_offset, &rect);
 
               button_state = map_button_state (j, fgeom, middle_bg_offset, button_states);
               op_list = get_button (style, j, button_state);
@@ -5170,7 +5170,7 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
             {
               MetaButtonState button_state;
 
-              button_rect (j, fgeom, middle_bg_offset, &rect);
+              get_button_rect (j, fgeom, middle_bg_offset, &rect);
 
               rect.x += x_offset;
               rect.y += y_offset;
