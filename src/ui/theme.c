@@ -731,14 +731,10 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
 
   for (i = 0; i < n_left; i++)
     {
-      if (i == 0) /* For the first button (From left to right) */
-        {
-          if (n_left > 1) /* Set left_left_background
-                             if we have more than one button */
-            left_bg_rects[i] = &fgeom->left_left_background;
-          else /* No background if we have only one single button */
-            left_bg_rects[i] = &fgeom->left_single_background;
-        }
+      if (n_left == 1)
+        left_bg_rects[i] = &fgeom->left_single_background;
+      else if (i == 0)
+        left_bg_rects[i] = &fgeom->left_left_background;
       else if (i == (n_left - 1))
         left_bg_rects[i] = &fgeom->left_right_background;
       else
@@ -747,14 +743,10 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
 
   for (i = 0; i < n_right; i++)
     {
-      if (i == (n_right - 1)) /* For the first button (From right to left) */
-        {
-          if (n_right > 1) /* Set right_right_background
-                              if we have more than one button */
-            right_bg_rects[i] = &fgeom->right_right_background;
-          else /* No background if we have only one single button */
-            right_bg_rects[i] = &fgeom->right_single_background;
-        }
+      if (n_right == 1)
+        right_bg_rects[i] = &fgeom->right_single_background;
+      else if (i == (n_right - 1))
+        right_bg_rects[i] = &fgeom->right_right_background;
       else if (i == 0)
         right_bg_rects[i] = &fgeom->right_left_background;
       else
@@ -4342,6 +4334,7 @@ map_button_state (MetaButtonType           button_type,
 
     /* Map position buttons to the corresponding function */
     case META_BUTTON_TYPE_RIGHT_LEFT_BACKGROUND:
+    case META_BUTTON_TYPE_RIGHT_SINGLE_BACKGROUND:
       if (fgeom->n_right_buttons > 0)
         function = fgeom->button_layout.right_buttons[0];
       break;
@@ -4354,6 +4347,7 @@ map_button_state (MetaButtonType           button_type,
         function = fgeom->button_layout.right_buttons[middle_bg_offset + 1];
       break;
     case META_BUTTON_TYPE_LEFT_LEFT_BACKGROUND:
+    case META_BUTTON_TYPE_LEFT_SINGLE_BACKGROUND:
       if (fgeom->n_left_buttons > 0)
         function = fgeom->button_layout.left_buttons[0];
       break;
@@ -4391,9 +4385,18 @@ get_button (MetaFrameStyle *style,
       parent = parent->parent;
     }
 
-  /* We fall back to middle button backgrounds if we don't
-   * have the ones on the sides
+  /* We fall back to the side buttons if we don't have
+   * single button backgrounds, and to middle button
+   * backgrounds if we don't have the ones on the sides
    */
+
+  if (op_list == NULL &&
+      type == META_BUTTON_TYPE_LEFT_SINGLE_BACKGROUND)
+    return get_button (style, META_BUTTON_TYPE_LEFT_LEFT_BACKGROUND, state);
+
+  if (op_list == NULL &&
+      type == META_BUTTON_TYPE_RIGHT_SINGLE_BACKGROUND)
+    return get_button (style, META_BUTTON_TYPE_RIGHT_RIGHT_BACKGROUND, state);
 
   if (op_list == NULL &&
       (type == META_BUTTON_TYPE_LEFT_LEFT_BACKGROUND ||
@@ -4470,6 +4473,10 @@ get_button_rect (MetaButtonType           type,
       *rect = fgeom->left_right_background;
       break;
 
+    case META_BUTTON_TYPE_LEFT_SINGLE_BACKGROUND:
+      *rect = fgeom->left_single_background;
+      break;
+
     case META_BUTTON_TYPE_RIGHT_LEFT_BACKGROUND:
       *rect = fgeom->right_left_background;
       break;
@@ -4480,6 +4487,10 @@ get_button_rect (MetaButtonType           type,
 
     case META_BUTTON_TYPE_RIGHT_RIGHT_BACKGROUND:
       *rect = fgeom->right_right_background;
+      break;
+
+    case META_BUTTON_TYPE_RIGHT_SINGLE_BACKGROUND:
+      *rect = fgeom->right_single_background;
       break;
 
     case META_BUTTON_TYPE_CLOSE:
@@ -5983,12 +5994,16 @@ meta_button_type_from_string (const char *str, MetaTheme *theme)
     return META_BUTTON_TYPE_LEFT_MIDDLE_BACKGROUND;
   else if (strcmp ("left_right_background", str) == 0)
     return META_BUTTON_TYPE_LEFT_RIGHT_BACKGROUND;
+  else if (strcmp ("left_single_background", str) == 0)
+    return META_BUTTON_TYPE_LEFT_SINGLE_BACKGROUND;
   else if (strcmp ("right_left_background", str) == 0)
     return META_BUTTON_TYPE_RIGHT_LEFT_BACKGROUND;
   else if (strcmp ("right_middle_background", str) == 0)
     return META_BUTTON_TYPE_RIGHT_MIDDLE_BACKGROUND;
   else if (strcmp ("right_right_background", str) == 0)
     return META_BUTTON_TYPE_RIGHT_RIGHT_BACKGROUND;
+  else if (strcmp ("right_single_background", str) == 0)
+    return META_BUTTON_TYPE_RIGHT_SINGLE_BACKGROUND;
   else
     return META_BUTTON_TYPE_LAST;
 }
@@ -6024,12 +6039,16 @@ meta_button_type_to_string (MetaButtonType type)
       return "left_middle_background";
     case META_BUTTON_TYPE_LEFT_RIGHT_BACKGROUND:
       return "left_right_background";
+    case META_BUTTON_TYPE_LEFT_SINGLE_BACKGROUND:
+      return "left_single_background";
     case META_BUTTON_TYPE_RIGHT_LEFT_BACKGROUND:
       return "right_left_background";
     case META_BUTTON_TYPE_RIGHT_MIDDLE_BACKGROUND:
       return "right_middle_background";
     case META_BUTTON_TYPE_RIGHT_RIGHT_BACKGROUND:
       return "right_right_background";
+    case META_BUTTON_TYPE_RIGHT_SINGLE_BACKGROUND:
+      return "right_single_background";
     case META_BUTTON_TYPE_LAST:
       break;
     }
@@ -6888,6 +6907,10 @@ meta_theme_earliest_version_with_button (MetaButtonType type)
     case META_BUTTON_TYPE_UNABOVE:
     case META_BUTTON_TYPE_UNSTICK:
       return 2000;
+
+    case META_BUTTON_TYPE_LEFT_SINGLE_BACKGROUND:
+    case META_BUTTON_TYPE_RIGHT_SINGLE_BACKGROUND:
+      return 3003;
 
     default:
       meta_warning("Unknown button %d\n", type);
