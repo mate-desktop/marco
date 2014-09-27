@@ -8630,6 +8630,29 @@ meta_window_get_xwindow (MetaWindow *window)
   return window->xwindow;
 }
 
+/**
+ * meta_window_get_transient_for:
+ * @window: a #MetaWindow
+ *
+ * Returns the #MetaWindow for the window that is pointed to by the
+ * WM_TRANSIENT_FOR hint on this window (see XGetTransientForHint()
+ * or XSetTransientForHint()). Metacity keeps transient windows above their
+ * parents. A typical usage of this hint is for a dialog that wants to stay
+ * above its associated window.
+ *
+ * Return value: (transfer none): the window this window is transient for, or
+ * %NULL if the WM_TRANSIENT_FOR hint is unset or does not point to a toplevel
+ * window that Metacity knows about.
+ */
+MetaWindow *
+meta_window_get_transient_for (MetaWindow *window)
+{
+  if (window->xtransient_for)
+    return meta_display_lookup_x_window (window->display, window->xtransient_for);
+  else
+    return NULL;
+}
+
 gboolean
 meta_window_is_maximized (MetaWindow *window)
 {
