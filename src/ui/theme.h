@@ -192,6 +192,7 @@ struct _MetaFrameGeometry
   MetaButtonSpace max_rect;
   MetaButtonSpace min_rect;
   MetaButtonSpace menu_rect;
+  MetaButtonSpace appmenu_rect;
   MetaButtonSpace shade_rect;
   MetaButtonSpace above_rect;
   MetaButtonSpace stick_rect;
@@ -609,6 +610,7 @@ typedef enum
   META_BUTTON_TYPE_MAXIMIZE,
   META_BUTTON_TYPE_MINIMIZE,
   META_BUTTON_TYPE_MENU,
+  META_BUTTON_TYPE_APPMENU,
   META_BUTTON_TYPE_SHADE,
   META_BUTTON_TYPE_ABOVE,
   META_BUTTON_TYPE_STICK,
