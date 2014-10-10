@@ -477,6 +477,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->tile_mode = META_TILE_NONE;
   window->tile_monitor_number = -1;
   window->shaded = FALSE;
+  window->fullscreen = FALSE;
   window->initially_iconic = FALSE;
   window->minimized = FALSE;
   window->was_minimized = FALSE;
