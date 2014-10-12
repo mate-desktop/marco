@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-11-20 13:15+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"POT-Creation-Date: 2014-10-09 10:14+0200\n"
+"PO-Revision-Date: 2014-10-09 13:49+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/MATE/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -139,6 +139,10 @@ msgstr "Skift til arbejdsområdet over det aktuelle arbejdsområde"
 msgid "Switch to workspace below the current workspace"
 msgstr "Skift til arbejdsområdet under det aktuelle arbejdsområde"
 
+#: ../src/50-marco-global-key.xml.in.h:25
+msgid "Switch to previously selected workspace"
+msgstr ""
+
 #: ../src/50-marco-window-key.xml.in.h:2
 msgid "Activate the window menu"
 msgstr "Aktivér vinduesmenuen"
@@ -204,66 +208,102 @@ msgid "Maximize window horizontally"
 msgstr "Maksimér et vindue vandret"
 
 #: ../src/50-marco-window-key.xml.in.h:18
+msgid "Move window to north-west (top left) corner"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:19
+msgid "Move window to north-east (top right) cornerl"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:20
+msgid "Move window to south-west (bottom left) corner"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:21
+msgid "Move window to south-east (bottom right) corner"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:22
+msgid "Move window to north (top) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:23
+msgid "Move window to south (bottom) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:24
+msgid "Move window to east (right) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:25
+msgid "Move window to west (left) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:26
+msgid "Move window to center of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:27
 msgid "Move window to workspace 1"
 msgstr "Flyt vindue til arbejdsområde 1"
 
-#: ../src/50-marco-window-key.xml.in.h:19
+#: ../src/50-marco-window-key.xml.in.h:28
 msgid "Move window to workspace 2"
 msgstr "Flyt vindue til arbejdsområde 2"
 
-#: ../src/50-marco-window-key.xml.in.h:20
+#: ../src/50-marco-window-key.xml.in.h:29
 msgid "Move window to workspace 3"
 msgstr "Flyt vindue til arbejdsområde 3"
 
-#: ../src/50-marco-window-key.xml.in.h:21
+#: ../src/50-marco-window-key.xml.in.h:30
 msgid "Move window to workspace 4"
 msgstr "Flyt vindue til arbejdsområde 4"
 
-#: ../src/50-marco-window-key.xml.in.h:22
+#: ../src/50-marco-window-key.xml.in.h:31
 msgid "Move window to workspace 5"
 msgstr "Flyt vindue til arbejdsområde 5"
 
-#: ../src/50-marco-window-key.xml.in.h:23
+#: ../src/50-marco-window-key.xml.in.h:32
 msgid "Move window to workspace 6"
 msgstr "Flyt vindue til arbejdsområde 6"
 
-#: ../src/50-marco-window-key.xml.in.h:24
+#: ../src/50-marco-window-key.xml.in.h:33
 msgid "Move window to workspace 7"
 msgstr "Flyt vindue til arbejdsområde 7"
 
-#: ../src/50-marco-window-key.xml.in.h:25
+#: ../src/50-marco-window-key.xml.in.h:34
 msgid "Move window to workspace 8"
 msgstr "Flyt vindue til arbejdsområde 8"
 
-#: ../src/50-marco-window-key.xml.in.h:26
+#: ../src/50-marco-window-key.xml.in.h:35
 msgid "Move window to workspace 9"
 msgstr "Flyt vindue til arbejdsområde 9"
 
-#: ../src/50-marco-window-key.xml.in.h:27
+#: ../src/50-marco-window-key.xml.in.h:36
 msgid "Move window to workspace 10"
 msgstr "Flyt vindue til arbejdsområde 10"
 
-#: ../src/50-marco-window-key.xml.in.h:28
+#: ../src/50-marco-window-key.xml.in.h:37
 msgid "Move window to workspace 11"
 msgstr "Flyt vindue til arbejdsområde 11"
 
-#: ../src/50-marco-window-key.xml.in.h:29
+#: ../src/50-marco-window-key.xml.in.h:38
 msgid "Move window to workspace 12"
 msgstr "Flyt vindue til arbejdsområde 12"
 
-#: ../src/50-marco-window-key.xml.in.h:30
+#: ../src/50-marco-window-key.xml.in.h:39
 msgid "Move window one workspace to the left"
 msgstr "Flyt vindue et arbejdsområde til venstre"
 
-#: ../src/50-marco-window-key.xml.in.h:31
+#: ../src/50-marco-window-key.xml.in.h:40
 msgid "Move window one workspace to the right"
 msgstr "Flyt vindue et arbejdsområde til højre"
 
-#: ../src/50-marco-window-key.xml.in.h:32
+#: ../src/50-marco-window-key.xml.in.h:41
 msgid "Move window one workspace up"
 msgstr "Flyt vindue et arbejdsområde op"
 
-#: ../src/50-marco-window-key.xml.in.h:33
+#: ../src/50-marco-window-key.xml.in.h:42
 msgid "Move window one workspace down"
 msgstr "Flyt vindue et arbejdsområde ned"
 
@@ -271,7 +311,7 @@ msgstr "Flyt vindue et arbejdsområde ned"
 msgid "Bell event"
 msgstr "Klokkebegivenhed"
 
-#: ../src/core/core.c:206
+#: ../src/core/core.c:207
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Ukendt forespørgsel efter vinduesinformation: %d"
@@ -311,7 +351,7 @@ msgstr "Manglende %s-udvidelse som kræves til komposition"
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Kunne ikke åbne X Window System-terminalen \"%s\"\n"
 
-#: ../src/core/errors.c:278
+#: ../src/core/errors.c:313
 #, c-format
 msgid ""
 "Lost connection to the display '%s';\n"
@@ -319,7 +359,7 @@ msgid ""
 "the window manager.\n"
 msgstr "Mistede forbindelsen til terminalen \"%s\";\nsandsynligvis blev X-serveren lukket ned eller du afsluttede\nvindueshåndteringen.\n"
 
-#: ../src/core/errors.c:285
+#: ../src/core/errors.c:320
 #, c-format
 msgid "Fatal IO error %d (%s) on display '%s'.\n"
 msgstr "Fatal IO-fejl %d (%s) på terminal \"%s\".\n"
@@ -333,7 +373,7 @@ msgstr "Et andet program bruger allerede nøglen %s med modifikatorer %x som bin
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2303
+#: ../src/core/keybindings.c:2307
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -341,12 +381,12 @@ msgid ""
 "%s"
 msgstr "Der opstod en fejl ved kørsel af <tt>%s</tt>:\n\n%s"
 
-#: ../src/core/keybindings.c:2392
+#: ../src/core/keybindings.c:2396
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Ingen kommando %d er blevet defineret.\n"
 
-#: ../src/core/keybindings.c:3352
+#: ../src/core/keybindings.c:3356
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Ingen terminal-kommando er blevet defineret.\n"
@@ -420,64 +460,64 @@ msgstr "Kunne ikke genstarte: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:558 ../src/core/prefs.c:711
+#: ../src/core/prefs.c:573 ../src/core/prefs.c:726
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr "%d lagret i GSettings-nøgle %s er uden for intervallet %d til %d\n"
 
-#: ../src/core/prefs.c:1008
+#: ../src/core/prefs.c:1023
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr "Omgåelser for ødelagte programmer deaktiveret. Nogle programmer opfører sig måske ikke korrekt.\n"
 
-#: ../src/core/prefs.c:1075
+#: ../src/core/prefs.c:1090
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "Kunne ikke fortolke skrifttypebeskrivelsen »%s« fra GSettings-nøglen %s\n"
 
-#: ../src/core/prefs.c:1137
+#: ../src/core/prefs.c:1152
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "\"%s\" fundet i konfigurationsdatabasen er ikke en gyldig værdi som museknapsmodifikation\n"
 
-#: ../src/core/prefs.c:1649
+#: ../src/core/prefs.c:1670
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "\"%s\" fundet i konfigurationsdatabasen er ikke en gyldig værdi for tastebindingen \"%s\"\n"
 
-#: ../src/core/prefs.c:1955
+#: ../src/core/prefs.c:1973
 #, c-format
 msgid "Workspace %d"
 msgstr "Arbejdsområde %d"
 
-#: ../src/core/screen.c:357
+#: ../src/core/screen.c:358
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "Skærm %d på terminal \"%s\" er ugyldig\n"
 
-#: ../src/core/screen.c:373
+#: ../src/core/screen.c:374
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
 msgstr "Skærm %d på terminal \"%s\" har allerede en vindueshåndtering; prøv tilvalget --replace for at erstatte den aktuelle vindueshåndtering.\n"
 
-#: ../src/core/screen.c:400
+#: ../src/core/screen.c:401
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr "Kunne ikke fremskaffe vindueshåndteringvælgeren på skærm %d på terminal \"%s\"\n"
 
-#: ../src/core/screen.c:458
+#: ../src/core/screen.c:459
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "Skærm %d på terminal \"%s\" har allerede en vindueshåndtering\n"
 
-#: ../src/core/screen.c:668
+#: ../src/core/screen.c:672
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Kunne ikke frigive skærm %d på terminal \"%s\"\n"
@@ -578,7 +618,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5666
+#: ../src/core/window.c:5766
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -591,45 +631,45 @@ msgstr "Vinduet %s angiver SM_CLIENT_ID for det selv i stedet for WM_CLIENT_LEAD
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6231
+#: ../src/core/window.c:6331
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
 msgstr "Vinduet %s angiver et MWM-hint for at indikere at dets størrelse ikke kan ændres, men angiver den mindste størrelse %d x %d og den maksimale størrelse %d x %d; dette giver ikke mening.\n"
 
-#: ../src/core/window-props.c:244
+#: ../src/core/window-props.c:252
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "Program angav en ugyldig _NET_WM_PID %lu\n"
 
 #. Translators: the title of a window from another machine
-#: ../src/core/window-props.c:388
+#: ../src/core/window-props.c:396
 #, c-format
 msgid "%s (on %s)"
 msgstr "%s (på %s)"
 
 #. Simple case-- don't bother to look it up.  It's root.
-#: ../src/core/window-props.c:420
+#: ../src/core/window-props.c:428
 #, c-format
 msgid "%s (as superuser)"
 msgstr "%s (som superbruger)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
-#: ../src/core/window-props.c:438
+#: ../src/core/window-props.c:446
 #, c-format
 msgid "%s (as %s)"
 msgstr "%s (som %s)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
-#: ../src/core/window-props.c:444
+#: ../src/core/window-props.c:452
 #, c-format
 msgid "%s (as another user)"
 msgstr "%s (som en anden bruger)"
 
-#: ../src/core/window-props.c:1430
+#: ../src/core/window-props.c:1438
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "Ugyldig WM_TRANSIENT_FOR vindue 0x%lx specificeret for %s.\n"
@@ -661,47 +701,47 @@ msgstr "Egenskaben %s for vinduet 0x%lx indeholdt ugyldig UTF-8 for element %d i
 msgid "Usage: %s\n"
 msgstr "Brug: %s\n"
 
-#: ../src/ui/frames.c:1124
+#: ../src/ui/frames.c:1199
 msgid "Close Window"
 msgstr "Luk vindue"
 
-#: ../src/ui/frames.c:1127
+#: ../src/ui/frames.c:1202
 msgid "Window Menu"
 msgstr "Vinduesmenu"
 
-#: ../src/ui/frames.c:1130
+#: ../src/ui/frames.c:1205
 msgid "Minimize Window"
 msgstr "Minimér vindue"
 
-#: ../src/ui/frames.c:1133
+#: ../src/ui/frames.c:1208
 msgid "Maximize Window"
 msgstr "Maksimér vindue"
 
-#: ../src/ui/frames.c:1136
+#: ../src/ui/frames.c:1211
 msgid "Restore Window"
 msgstr "Gendan vindue"
 
-#: ../src/ui/frames.c:1139
+#: ../src/ui/frames.c:1214
 msgid "Roll Up Window"
 msgstr "Rul vinduet op"
 
-#: ../src/ui/frames.c:1142
+#: ../src/ui/frames.c:1217
 msgid "Unroll Window"
 msgstr "Rul vinduet ned"
 
-#: ../src/ui/frames.c:1145
+#: ../src/ui/frames.c:1220
 msgid "Keep Window On Top"
 msgstr "Behold vinduet øverst"
 
-#: ../src/ui/frames.c:1148
+#: ../src/ui/frames.c:1223
 msgid "Remove Window From Top"
 msgstr "Fjern vinduet fra toppen"
 
-#: ../src/ui/frames.c:1151
+#: ../src/ui/frames.c:1226
 msgid "Always On Visible Workspace"
 msgstr "Altid på synligt arbejdsområde"
 
-#: ../src/ui/frames.c:1154
+#: ../src/ui/frames.c:1229
 msgid "Put Window On Only One Workspace"
 msgstr "Vis vindue på kun ét arbejdsområde"
 
@@ -810,7 +850,7 @@ msgstr "Flyt til andet _arbejdsområde"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:104
+#: ../src/ui/metaaccellabel.c:143
 msgid "Shift"
 msgstr "Skift"
 
@@ -818,7 +858,7 @@ msgstr "Skift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:110
+#: ../src/ui/metaaccellabel.c:149
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -826,7 +866,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:116
+#: ../src/ui/metaaccellabel.c:155
 msgid "Alt"
 msgstr "Alt"
 
@@ -834,7 +874,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:122
+#: ../src/ui/metaaccellabel.c:161
 msgid "Meta"
 msgstr "Meta"
 
@@ -842,7 +882,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:128
+#: ../src/ui/metaaccellabel.c:167
 msgid "Super"
 msgstr "Super"
 
@@ -850,7 +890,7 @@ msgstr "Super"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:134
+#: ../src/ui/metaaccellabel.c:173
 msgid "Hyper"
 msgstr "Hyper"
 
@@ -858,7 +898,7 @@ msgstr "Hyper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:140
+#: ../src/ui/metaaccellabel.c:179
 msgid "Mod2"
 msgstr "Mod2"
 
@@ -866,7 +906,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:146
+#: ../src/ui/metaaccellabel.c:185
 msgid "Mod3"
 msgstr "Mod3"
 
@@ -874,7 +914,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:152
+#: ../src/ui/metaaccellabel.c:191
 msgid "Mod4"
 msgstr "Mod4"
 
@@ -882,13 +922,13 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:158
+#: ../src/ui/metaaccellabel.c:197
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:113
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -929,201 +969,201 @@ msgstr "Knapformatforholdet %g er ikke fornuftigt"
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Rammegeometri angiver ikke størrelsen af knapper"
 
-#: ../src/ui/theme.c:1023
+#: ../src/ui/theme.c:1027
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Farveovergange skal mindst have to farver"
 
-#: ../src/ui/theme.c:1149
+#: ../src/ui/theme.c:1153
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
 msgstr "GTK-farvespecifikation skal have tilstanden i firkantede klammer, f.eks. gtk:fg[NORMAL] hvor NORMAL er tilstanden; kunne ikke fortolke \"%s\""
 
-#: ../src/ui/theme.c:1163
+#: ../src/ui/theme.c:1167
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
 msgstr "GTK-farvespecifikation skal have en afsluttende klamme efter tilstanden, f.eks. gtk:fg[NORMAL] hvor NORMAL er tilstanden; kunne ikke fortolke \"%s\""
 
-#: ../src/ui/theme.c:1174
+#: ../src/ui/theme.c:1178
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Forstod ikke tilstanden \"%s\" i farvespecifikationen"
 
-#: ../src/ui/theme.c:1187
+#: ../src/ui/theme.c:1191
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Forstod ikke farvekomponenten \"%s\" i farvespecifikationen"
 
-#: ../src/ui/theme.c:1217
+#: ../src/ui/theme.c:1221
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
 msgstr "Blandingsformat er \"blend/bg_color/fg_color/alpha\", \"%s\" passer ikke med formatet"
 
-#: ../src/ui/theme.c:1228
+#: ../src/ui/theme.c:1232
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Kunne ikke fortolke alfaværdien \"%s\" i blandet farve"
 
-#: ../src/ui/theme.c:1238
+#: ../src/ui/theme.c:1242
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "Alfaværdien \"%s\" i blandet farve er ikke mellem 0,0 og 1,0"
 
-#: ../src/ui/theme.c:1285
+#: ../src/ui/theme.c:1289
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "Skyggeformat er \"shade/base_color/factor\", \"%s\" passer ikke med formatet"
 
-#: ../src/ui/theme.c:1296
+#: ../src/ui/theme.c:1300
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Kunne ikke fortolke skyggeværdien \"%s\" i skygget farve"
 
-#: ../src/ui/theme.c:1306
+#: ../src/ui/theme.c:1310
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Skyggefaktoren \"%s\" i skygget farve er negativ"
 
-#: ../src/ui/theme.c:1335
+#: ../src/ui/theme.c:1339
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "Kunne ikke fortolke farven \"%s\""
 
-#: ../src/ui/theme.c:1589
+#: ../src/ui/theme.c:1593
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Koordinatudtryk indeholder tegnet \"%s\" som ikke er tilladt"
 
-#: ../src/ui/theme.c:1616
+#: ../src/ui/theme.c:1620
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "Koordinatudtryk indeholder kommatallet \"%s\" som ikke kunne tolkes"
 
-#: ../src/ui/theme.c:1630
+#: ../src/ui/theme.c:1634
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Koordinatudtryk indeholder heltallet \"%s\" som ikke kunne tolkes"
 
-#: ../src/ui/theme.c:1752
+#: ../src/ui/theme.c:1756
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "Koordinatudtryk indeholdt en ukendt operator i begyndelsen af teksten: \"%s\""
 
-#: ../src/ui/theme.c:1809
+#: ../src/ui/theme.c:1813
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Koordinatudtrykket var tomt eller blev ikke forstået"
 
-#: ../src/ui/theme.c:1920 ../src/ui/theme.c:1930 ../src/ui/theme.c:1964
+#: ../src/ui/theme.c:1924 ../src/ui/theme.c:1934 ../src/ui/theme.c:1968
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Koordinatudtrykket resulterer i division med nul"
 
-#: ../src/ui/theme.c:1972
+#: ../src/ui/theme.c:1976
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "Koordinatudtrykket prøver at bruge modulo-operator på et kommatal"
 
-#: ../src/ui/theme.c:2028
+#: ../src/ui/theme.c:2032
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Koordinatudtrykket har en operator \"%s\" hvor en operand var ventet"
 
-#: ../src/ui/theme.c:2037
+#: ../src/ui/theme.c:2041
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Koordinatudtrykket havde en operand hvor en operator var ventet"
 
-#: ../src/ui/theme.c:2045
+#: ../src/ui/theme.c:2049
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Koordinatudtrykket sluttede med en operator i stedet for en operand"
 
-#: ../src/ui/theme.c:2055
+#: ../src/ui/theme.c:2059
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "Koordinatudtrykket har en operator \"%c\" efter en operator \"%c\" og ingen operand mellem dem"
 
-#: ../src/ui/theme.c:2202 ../src/ui/theme.c:2243
+#: ../src/ui/theme.c:2206 ../src/ui/theme.c:2247
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "Koordinatudtrykket havde en ukendt variabel eller konstant \"%s\""
 
-#: ../src/ui/theme.c:2297
+#: ../src/ui/theme.c:2301
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Koordinatudtryksfortolkeren har fået bufferoverløb."
 
-#: ../src/ui/theme.c:2326
+#: ../src/ui/theme.c:2330
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Koordinatudtrykket havde en slutparantes uden startparantes"
 
-#: ../src/ui/theme.c:2390
+#: ../src/ui/theme.c:2394
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Koordinatudtrykket havde en startparantes uden en slutparantes"
 
-#: ../src/ui/theme.c:2401
+#: ../src/ui/theme.c:2405
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Koordinatudtrykket ser ikke ud til at have nogen operatorer eller operander"
 
-#: ../src/ui/theme.c:2605 ../src/ui/theme.c:2625 ../src/ui/theme.c:2645
+#: ../src/ui/theme.c:2609 ../src/ui/theme.c:2629 ../src/ui/theme.c:2649
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Tema indeholdt et udtryk som resulterede i en fejl: %s\n"
 
-#: ../src/ui/theme.c:4222
+#: ../src/ui/theme.c:4456
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"et-eller-andet\"/> skal angives for denne rammestil"
 
-#: ../src/ui/theme.c:4730 ../src/ui/theme.c:4755
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Manglende <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"et-eller-andet\"/>"
 
-#: ../src/ui/theme.c:4799
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Kunne ikke indlæse temaet \"%s\": %s\n"
 
-#: ../src/ui/theme.c:4929 ../src/ui/theme.c:4936 ../src/ui/theme.c:4943
-#: ../src/ui/theme.c:4950 ../src/ui/theme.c:4957
+#: ../src/ui/theme.c:5288 ../src/ui/theme.c:5295 ../src/ui/theme.c:5302
+#: ../src/ui/theme.c:5309 ../src/ui/theme.c:5316
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Ingen <%s> angivet for temaet \"%s\""
 
-#: ../src/ui/theme.c:4965
+#: ../src/ui/theme.c:5324
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "Ingen rammestil angivet for vinduestypen \"%s\" i temaet \"%s\", tilføj et <window type=\"%s\" style_set=\"et-eller-andet\"/>-element"
 
-#: ../src/ui/theme.c:5408 ../src/ui/theme.c:5470 ../src/ui/theme.c:5533
+#: ../src/ui/theme.c:5797 ../src/ui/theme.c:5859 ../src/ui/theme.c:5922
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "Brugerdefinerede konstanter skal begynde med et stort bogstav; det gør \"%s\" ikke"
 
-#: ../src/ui/theme.c:5416 ../src/ui/theme.c:5478 ../src/ui/theme.c:5541
+#: ../src/ui/theme.c:5805 ../src/ui/theme.c:5867 ../src/ui/theme.c:5930
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Konstanten \"%s\" er allerede defineret"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-11-20 13:15+0000\n"
+"POT-Creation-Date: 2014-10-09 10:14+0200\n"
+"PO-Revision-Date: 2014-10-09 13:49+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
 "Language-Team: Mongolian (http://www.transifex.com/projects/p/MATE/language/mn/)\n"
 "MIME-Version: 1.0\n"
@@ -137,6 +137,10 @@ msgstr ""
 msgid "Switch to workspace below the current workspace"
 msgstr ""
 
+#: ../src/50-marco-global-key.xml.in.h:25
+msgid "Switch to previously selected workspace"
+msgstr ""
+
 #: ../src/50-marco-window-key.xml.in.h:2
 msgid "Activate the window menu"
 msgstr ""
@@ -202,66 +206,102 @@ msgid "Maximize window horizontally"
 msgstr "Цонхыг хэвтээ чигт томсгох "
 
 #: ../src/50-marco-window-key.xml.in.h:18
+msgid "Move window to north-west (top left) corner"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:19
+msgid "Move window to north-east (top right) cornerl"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:20
+msgid "Move window to south-west (bottom left) corner"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:21
+msgid "Move window to south-east (bottom right) corner"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:22
+msgid "Move window to north (top) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:23
+msgid "Move window to south (bottom) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:24
+msgid "Move window to east (right) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:25
+msgid "Move window to west (left) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:26
+msgid "Move window to center of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:27
 msgid "Move window to workspace 1"
 msgstr "Цонхыг нэг ажлын талбар 1 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:19
+#: ../src/50-marco-window-key.xml.in.h:28
 msgid "Move window to workspace 2"
 msgstr "Цонхыг нэг ажлын талбар 2 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:20
+#: ../src/50-marco-window-key.xml.in.h:29
 msgid "Move window to workspace 3"
 msgstr "Цонхыг нэг ажлын талбар 3 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:21
+#: ../src/50-marco-window-key.xml.in.h:30
 msgid "Move window to workspace 4"
 msgstr "Цонхыг нэг ажлын талбар 4 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:22
+#: ../src/50-marco-window-key.xml.in.h:31
 msgid "Move window to workspace 5"
 msgstr "Цонхыг нэг ажлын талбар 5 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:23
+#: ../src/50-marco-window-key.xml.in.h:32
 msgid "Move window to workspace 6"
 msgstr "Цонхыг нэг ажлын талбар 6 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:24
+#: ../src/50-marco-window-key.xml.in.h:33
 msgid "Move window to workspace 7"
 msgstr "Цонхыг нэг ажлын талбар 7 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:25
+#: ../src/50-marco-window-key.xml.in.h:34
 msgid "Move window to workspace 8"
 msgstr "Цонхыг нэг ажлын талбар 8 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:26
+#: ../src/50-marco-window-key.xml.in.h:35
 msgid "Move window to workspace 9"
 msgstr "Цонхыг нэг ажлын талбар 9 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:27
+#: ../src/50-marco-window-key.xml.in.h:36
 msgid "Move window to workspace 10"
 msgstr "Цонхыг нэг ажлын талбар 10 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:28
+#: ../src/50-marco-window-key.xml.in.h:37
 msgid "Move window to workspace 11"
 msgstr "Цонхыг нэг ажлын талбар 11 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:29
+#: ../src/50-marco-window-key.xml.in.h:38
 msgid "Move window to workspace 12"
 msgstr "Цонхыг нэг ажлын талбар 12 дээр гаргах"
 
-#: ../src/50-marco-window-key.xml.in.h:30
+#: ../src/50-marco-window-key.xml.in.h:39
 msgid "Move window one workspace to the left"
 msgstr "Цонхыг нэг ажлын талбараар зүүн гар тийш шилжүүлэх"
 
-#: ../src/50-marco-window-key.xml.in.h:31
+#: ../src/50-marco-window-key.xml.in.h:40
 msgid "Move window one workspace to the right"
 msgstr "Цонхыг нэг ажлын талбараар баруун гар тийш шилжүүлэх"
 
-#: ../src/50-marco-window-key.xml.in.h:32
+#: ../src/50-marco-window-key.xml.in.h:41
 msgid "Move window one workspace up"
 msgstr "Цонхыг ажлын талбараар дээш нь шилжүүлэх"
 
-#: ../src/50-marco-window-key.xml.in.h:33
+#: ../src/50-marco-window-key.xml.in.h:42
 msgid "Move window one workspace down"
 msgstr "Цонхыг нэг ажлын талбараар ухраах"
 
@@ -269,7 +309,7 @@ msgstr "Цонхыг нэг ажлын талбараар ухраах"
 msgid "Bell event"
 msgstr ""
 
-#: ../src/core/core.c:206
+#: ../src/core/core.c:207
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr ""
@@ -309,7 +349,7 @@ msgstr ""
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X-Цонхны системийн дэлгэц »%s« нээгдсэнгүй\n"
 
-#: ../src/core/errors.c:278
+#: ../src/core/errors.c:313
 #, c-format
 msgid ""
 "Lost connection to the display '%s';\n"
@@ -317,7 +357,7 @@ msgid ""
 "the window manager.\n"
 msgstr "»%s« дэлгэцтэй холбоо тасарлаа;\nМагадгүй сервер унтарсан эсвэл та цонхны менежерийг хүчээр унтраасан байна.\n"
 
-#: ../src/core/errors.c:285
+#: ../src/core/errors.c:320
 #, c-format
 msgid "Fatal IO error %d (%s) on display '%s'.\n"
 msgstr "%d (%s) төрлийн алдаа »%s«.дэлгэцэн дээр гарлаа \n"
@@ -331,7 +371,7 @@ msgstr "Өөр нэг программ %s товчийг %x modifier-ын хам
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2303
+#: ../src/core/keybindings.c:2307
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -339,12 +379,12 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/core/keybindings.c:2392
+#: ../src/core/keybindings.c:2396
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Ямар ч %d команд тодорхойлогдоогүй байна.\n"
 
-#: ../src/core/keybindings.c:3352
+#: ../src/core/keybindings.c:3356
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr ""
@@ -418,64 +458,64 @@ msgstr "Шинэ эхлэл амжилтүй боллоо: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:558 ../src/core/prefs.c:711
+#: ../src/core/prefs.c:573 ../src/core/prefs.c:726
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1008
+#: ../src/core/prefs.c:1023
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr "Эвдрэлтэй х.программын Workarounds-ийг идэвхгүйжүүллээ. Магадгүй зарим х.программууд буруу ажиллаж магадгүй.\n"
 
-#: ../src/core/prefs.c:1075
+#: ../src/core/prefs.c:1090
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1137
+#: ../src/core/prefs.c:1152
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "Конфигурацийн сангаас олдсон »%s« утга нь хулганын товчлуурын сэлгүүрт тохирох утга биш\n"
 
-#: ../src/core/prefs.c:1649
+#: ../src/core/prefs.c:1670
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "Тохируулгын сангаас олдсон »%s« нь »%s«-товчлуурын комбинацид үл тохирно\n"
 
-#: ../src/core/prefs.c:1955
+#: ../src/core/prefs.c:1973
 #, c-format
 msgid "Workspace %d"
 msgstr "Ажлын талбар %d"
 
-#: ../src/core/screen.c:357
+#: ../src/core/screen.c:358
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "%d дэлгэц Display »%s« дээрх байгаа ба хүчингүй байна\n"
 
-#: ../src/core/screen.c:373
+#: ../src/core/screen.c:374
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
 msgstr "%d дэлгэц нь Display »%s« дээр байгаа ба хэдийн цонхны менежер олгогдсон байна; »--replace«-ийг сонгож одоо актуаль байгаа цонхны менежерийг сольж туршина уу\n"
 
-#: ../src/core/screen.c:400
+#: ../src/core/screen.c:401
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr "дэлгэц %d-ийн (Display »%s« дээрх ) цонхны менежерийн тэмдэглэл хүлээж авахад алдаа гарлаа\n"
 
-#: ../src/core/screen.c:458
+#: ../src/core/screen.c:459
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "%d » (%s« джжрхи) цонхны менежертэй байна\n"
 
-#: ../src/core/screen.c:668
+#: ../src/core/screen.c:672
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "%d нь »%s« дэлгэцэн дээр гаргагдаж чадсангүй\n"
@@ -576,7 +616,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5666
+#: ../src/core/window.c:5766
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -589,45 +629,45 @@ msgstr "Цонх %s ICCCM-д заасанчлан WM_CLIENT_LEADER цонхон 
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6231
+#: ../src/core/window.c:6331
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
 msgstr "Цонх %s MWM дохиогоор хэмжээг нь өөрчилж болохгүй гэдгийг анхааруулсан боловч хамгийн бага хэмжээ %d x %d-дээр эсвэл максимум %d x %d -дээр тавьсан; энэ үйлдэл утга учиргүй.\n"
 
-#: ../src/core/window-props.c:244
+#: ../src/core/window-props.c:252
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr ""
 
 #. Translators: the title of a window from another machine
-#: ../src/core/window-props.c:388
+#: ../src/core/window-props.c:396
 #, c-format
 msgid "%s (on %s)"
 msgstr ""
 
 #. Simple case-- don't bother to look it up.  It's root.
-#: ../src/core/window-props.c:420
+#: ../src/core/window-props.c:428
 #, c-format
 msgid "%s (as superuser)"
 msgstr ""
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
-#: ../src/core/window-props.c:438
+#: ../src/core/window-props.c:446
 #, c-format
 msgid "%s (as %s)"
 msgstr ""
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
-#: ../src/core/window-props.c:444
+#: ../src/core/window-props.c:452
 #, c-format
 msgid "%s (as another user)"
 msgstr ""
 
-#: ../src/core/window-props.c:1430
+#: ../src/core/window-props.c:1438
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr ""
@@ -659,47 +699,47 @@ msgstr "Онцлог %s. 0x%lx цонхон дээр объект %d -ийн б�
 msgid "Usage: %s\n"
 msgstr "Хэрэглээ: %s\n"
 
-#: ../src/ui/frames.c:1124
+#: ../src/ui/frames.c:1199
 msgid "Close Window"
 msgstr "Цонх хаах"
 
-#: ../src/ui/frames.c:1127
+#: ../src/ui/frames.c:1202
 msgid "Window Menu"
 msgstr "Цонхны цэс"
 
-#: ../src/ui/frames.c:1130
+#: ../src/ui/frames.c:1205
 msgid "Minimize Window"
 msgstr "Цонх агшаах"
 
-#: ../src/ui/frames.c:1133
+#: ../src/ui/frames.c:1208
 msgid "Maximize Window"
 msgstr "Цонх томсгох"
 
-#: ../src/ui/frames.c:1136
+#: ../src/ui/frames.c:1211
 msgid "Restore Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1139
+#: ../src/ui/frames.c:1214
 msgid "Roll Up Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1142
+#: ../src/ui/frames.c:1217
 msgid "Unroll Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1145
+#: ../src/ui/frames.c:1220
 msgid "Keep Window On Top"
 msgstr ""
 
-#: ../src/ui/frames.c:1148
+#: ../src/ui/frames.c:1223
 msgid "Remove Window From Top"
 msgstr ""
 
-#: ../src/ui/frames.c:1151
+#: ../src/ui/frames.c:1226
 msgid "Always On Visible Workspace"
 msgstr ""
 
-#: ../src/ui/frames.c:1154
+#: ../src/ui/frames.c:1229
 msgid "Put Window On Only One Workspace"
 msgstr ""
 
@@ -808,7 +848,7 @@ msgstr "Өөр _ажлын талбар руу зөө"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:104
+#: ../src/ui/metaaccellabel.c:143
 msgid "Shift"
 msgstr "Shift"
 
@@ -816,7 +856,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:110
+#: ../src/ui/metaaccellabel.c:149
 msgid "Ctrl"
 msgstr "Strg"
 
@@ -824,7 +864,7 @@ msgstr "Strg"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:116
+#: ../src/ui/metaaccellabel.c:155
 msgid "Alt"
 msgstr "Alt"
 
@@ -832,7 +872,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:122
+#: ../src/ui/metaaccellabel.c:161
 msgid "Meta"
 msgstr "Meta"
 
@@ -840,7 +880,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:128
+#: ../src/ui/metaaccellabel.c:167
 msgid "Super"
 msgstr "Супер"
 
@@ -848,7 +888,7 @@ msgstr "Супер"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:134
+#: ../src/ui/metaaccellabel.c:173
 msgid "Hyper"
 msgstr "Гипер"
 
@@ -856,7 +896,7 @@ msgstr "Гипер"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:140
+#: ../src/ui/metaaccellabel.c:179
 msgid "Mod2"
 msgstr "Горим2"
 
@@ -864,7 +904,7 @@ msgstr "Горим2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:146
+#: ../src/ui/metaaccellabel.c:185
 msgid "Mod3"
 msgstr "Горим3"
 
@@ -872,7 +912,7 @@ msgstr "Горим3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:152
+#: ../src/ui/metaaccellabel.c:191
 msgid "Mod4"
 msgstr "Горим4"
 
@@ -880,13 +920,13 @@ msgstr "Горим4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:158
+#: ../src/ui/metaaccellabel.c:197
 msgid "Mod5"
 msgstr "Горим5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:113
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -927,201 +967,201 @@ msgstr "Товчлуурны талуудын харьцаа %g утгагүй �
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Жаазны хэлбэр хэмжээ товчлуурны хэмжээг тодорхойлохгүй"
 
-#: ../src/ui/theme.c:1023
+#: ../src/ui/theme.c:1027
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Өнгөний тунаралт дор хаяж хоёр өнгөтэй байх ёстой"
 
-#: ../src/ui/theme.c:1149
+#: ../src/ui/theme.c:1153
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
 msgstr "Өнгөний GTK-өгөгдөл нь дөрвөлжин хаалтанд байх ёстой. Ж-нЬ: gtk:fg[NORMAL], энд NORMAL гэдэг нь байгаа нөхцөл; »%s« боловсруулагдсангүй"
 
-#: ../src/ui/theme.c:1163
+#: ../src/ui/theme.c:1167
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
 msgstr "Өнгөний GTK-өгөгдөл нь дөрвөлжин хаалтанд байх ёстой. Ж-нЬ: gtk:fg[NORMAL], энд NORMAL гэдэг нь байгаа байдал; »%s«-г боловсруулж чадсангүй"
 
-#: ../src/ui/theme.c:1174
+#: ../src/ui/theme.c:1178
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Өнгөний »%s« нөхцлийг ойлгосонгүй"
 
-#: ../src/ui/theme.c:1187
+#: ../src/ui/theme.c:1191
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Өнгөний өгөгдөл дэх бүрэлдэхүүн хэсгүүд »%s« ойлгосонгүй"
 
-#: ../src/ui/theme.c:1217
+#: ../src/ui/theme.c:1221
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
 msgstr "Холих формат : »холих/суурь өнгө/нүүрэн өнгө/alpha«; »%s« энэ форматанд тохирохгүй байна"
 
-#: ../src/ui/theme.c:1228
+#: ../src/ui/theme.c:1232
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Хосолсон өнгөний альфа тоо »%s« боловсруулагдсангүй"
 
-#: ../src/ui/theme.c:1238
+#: ../src/ui/theme.c:1242
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "Хосолсон өнгөний альфа тоо »%s« 0.0-1.0 тооны хооронд оршихгүй байна"
 
-#: ../src/ui/theme.c:1285
+#: ../src/ui/theme.c:1289
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "Өнгө холих формат нь »холих/үндсэн өнгө/фактор«; »%s« энэ форматанд тохирохгүй"
 
-#: ../src/ui/theme.c:1296
+#: ../src/ui/theme.c:1300
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Өнгө хослуулах фактор »%s« нь хосолсон өнгө дотор боловсруулагдаж чадсангүй"
 
-#: ../src/ui/theme.c:1306
+#: ../src/ui/theme.c:1310
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Өнгө хослуулах фактор »%s« нь хосолсон өнгө дотор негатив байна"
 
-#: ../src/ui/theme.c:1335
+#: ../src/ui/theme.c:1339
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "»%s« өнгө боловсруулж чадсангүй"
 
-#: ../src/ui/theme.c:1589
+#: ../src/ui/theme.c:1593
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Координатын илэрхийлэлд хориотой тэмдэг »%s« байна "
 
-#: ../src/ui/theme.c:1616
+#: ../src/ui/theme.c:1620
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "Координатын илэрхийлэлд болоьсруулах бололцоогүй хөвөгч таслалтай »%s« тоо байна"
 
-#: ../src/ui/theme.c:1630
+#: ../src/ui/theme.c:1634
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Координатын илэрхийлэл боловсруулах бололцоогүй »%s« бүхэл тоо агуулж байна"
 
-#: ../src/ui/theme.c:1752
+#: ../src/ui/theme.c:1756
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "Координатын илэрхийлэл дараахи текстийн эхэнд үл мэдэгдэх оператор агуулж байна: »%s«"
 
-#: ../src/ui/theme.c:1809
+#: ../src/ui/theme.c:1813
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Координатын илэрхийлэл хоосон эсвэл ойлгомжгүй байна"
 
-#: ../src/ui/theme.c:1920 ../src/ui/theme.c:1930 ../src/ui/theme.c:1964
+#: ../src/ui/theme.c:1924 ../src/ui/theme.c:1934 ../src/ui/theme.c:1968
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Координатын илэрхийллийн хариуны хуваарь нь  \"тэг\" тоо байна"
 
-#: ../src/ui/theme.c:1972
+#: ../src/ui/theme.c:1976
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "Координатын илэрхийлэл хөвөгч таслалтай тоонд модулийн операторыг хэрэглэж үзэж байна."
 
-#: ../src/ui/theme.c:2028
+#: ../src/ui/theme.c:2032
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Координатын илэрхийлэл дотор операнд байх ёстой байранд опеоатор »%s« байна"
 
-#: ../src/ui/theme.c:2037
+#: ../src/ui/theme.c:2041
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Координатын илэрхийлэл дотор операторын оронд операнд байна"
 
-#: ../src/ui/theme.c:2045
+#: ../src/ui/theme.c:2049
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Координатын илэрхийллийн төгсгөлд операнд байх ёстой атал Оператор байна"
 
-#: ../src/ui/theme.c:2055
+#: ../src/ui/theme.c:2059
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "Координатын илэрхийлэл дотор »%c« ба »%c« операторууд байна, гэхдээ ямар ч операнд энэ дунд алга"
 
-#: ../src/ui/theme.c:2202 ../src/ui/theme.c:2243
+#: ../src/ui/theme.c:2206 ../src/ui/theme.c:2247
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "Координатын илэрхийлэл нь үл мэдэгдэх хувьсагч эсвэл тогтмол агуулсан байна »%s«"
 
-#: ../src/ui/theme.c:2297
+#: ../src/ui/theme.c:2301
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr ""
 
-#: ../src/ui/theme.c:2326
+#: ../src/ui/theme.c:2330
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Координатын илэрхийлэлд зөвхөн хаасан хаалтын тэмдэг л байна"
 
-#: ../src/ui/theme.c:2390
+#: ../src/ui/theme.c:2394
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Координатын илэрхийлэл дотор зөвхөн нээсэн хаалтын тэмдэг байна"
 
-#: ../src/ui/theme.c:2401
+#: ../src/ui/theme.c:2405
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Координатын илэрхийлэл нь оператор болон операндын аль алийг нь агуулаагүй байна"
 
-#: ../src/ui/theme.c:2605 ../src/ui/theme.c:2625 ../src/ui/theme.c:2645
+#: ../src/ui/theme.c:2609 ../src/ui/theme.c:2629 ../src/ui/theme.c:2649
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr ""
 
-#: ../src/ui/theme.c:4222
+#: ../src/ui/theme.c:4456
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "Энэ төрлийн хүрээнд зориулж <button function=\"%s\" state=\"%s\" draw_ops=\"юу ч хамаагүй\"/> өгөгдсөн байх ёстой"
 
-#: ../src/ui/theme.c:4730 ../src/ui/theme.c:4755
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"юу ч хамаагүй\"/> дутаж байна"
 
-#: ../src/ui/theme.c:4799
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "»%s« сэдвийг ачаалж болсонгүй: %s\n"
 
-#: ../src/ui/theme.c:4929 ../src/ui/theme.c:4936 ../src/ui/theme.c:4943
-#: ../src/ui/theme.c:4950 ../src/ui/theme.c:4957
+#: ../src/ui/theme.c:5288 ../src/ui/theme.c:5295 ../src/ui/theme.c:5302
+#: ../src/ui/theme.c:5309 ../src/ui/theme.c:5316
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "»%s« -сэдвээр ямар ч <%s> өгөгдөөгүй байна"
 
-#: ../src/ui/theme.c:4965
+#: ../src/ui/theme.c:5324
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "Цонхны төрөлд хүрээнийх нь стиль »%s«-сэдвийн дотор өгөгдөөгүй байна »%s«; <window type=\"%s\" style_set=\"юу ч хамаагүй\"/> элементийг оруулна уу"
 
-#: ../src/ui/theme.c:5408 ../src/ui/theme.c:5470 ../src/ui/theme.c:5533
+#: ../src/ui/theme.c:5797 ../src/ui/theme.c:5859 ../src/ui/theme.c:5922
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "Хэрэглэгчийн оруулсан тогтмол нь том үсгээр эхлэх ёстой; »%s« хийхгүй"
 
-#: ../src/ui/theme.c:5416 ../src/ui/theme.c:5478 ../src/ui/theme.c:5541
+#: ../src/ui/theme.c:5805 ../src/ui/theme.c:5867 ../src/ui/theme.c:5930
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Тогтмол »%s« хэдийнэ сонгогдсон байна"
