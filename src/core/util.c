@@ -542,7 +542,7 @@ GPid
 meta_show_dialog (const char *type,
                   const char *message,
                   const char *timeout,
-                  const gint screen_number,
+                  const char *display,
                   const char *ok_text,
                   const char *cancel_text,
                   const int transient_for,
@@ -550,7 +550,6 @@ meta_show_dialog (const char *type,
                   GSList *entries)
 {
   GError *error = NULL;
-  char *screen_number_text = g_strdup_printf("%d", screen_number);
   GSList *tmp;
   int i=0;
   GPid child_pid;
@@ -561,8 +560,8 @@ meta_show_dialog (const char *type,
 
   argvl[i++] = "zenity";
   argvl[i++] = type;
-  argvl[i++] = "--screen";
-  argvl[i++] = screen_number_text;
+  argvl[i++] = "--display";
+  argvl[i++] = display;
   argvl[i++] = "--class";
   argvl[i++] = "marco-dialog";
   argvl[i++] = "--title";
@@ -627,7 +626,6 @@ meta_show_dialog (const char *type,
     unsetenv ("WINDOWID");
 
   g_free (argvl);
-  g_free (screen_number_text);
 
   if (error)
     {
