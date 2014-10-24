@@ -157,3 +157,23 @@ void meta_compositor_free_window (MetaCompositor *compositor,
                                   MetaWindow     *window)
 {
 }
+
+void
+meta_compositor_maximize_window (MetaCompositor *compositor,
+                                 MetaWindow     *window)
+{
+#ifdef HAVE_COMPOSITE_EXTENSIONS
+  if (compositor && compositor->maximize_window)
+    compositor->maximize_window (compositor, window);
+#endif
+}
+
+void
+meta_compositor_unmaximize_window (MetaCompositor *compositor,
+                                   MetaWindow     *window)
+{
+#ifdef HAVE_COMPOSITE_EXTENSIONS
+  if (compositor && compositor->unmaximize_window)
+    compositor->unmaximize_window (compositor, window);
+#endif
+}

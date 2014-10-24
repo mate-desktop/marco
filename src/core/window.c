@@ -2680,6 +2680,8 @@ meta_window_maximize (MetaWindow        *window,
       /* move_resize with new maximization constraints
        */
       meta_window_queue(window, META_QUEUE_MOVE_RESIZE);
+
+      meta_compositor_maximize_window (window->display->compositor, window);
     }
 }
 
@@ -2848,6 +2850,8 @@ meta_window_unmaximize (MetaWindow        *window,
 
       recalc_window_features (window);
       set_net_wm_state (window);
+
+      meta_compositor_unmaximize_window (window->display->compositor, window);
     }
 }
 
@@ -8366,6 +8370,12 @@ Window
 meta_window_get_xwindow (MetaWindow *window)
 {
   return window->xwindow;
+}
+
+gboolean
+meta_window_is_maximized (MetaWindow *window)
+{
+  return META_WINDOW_MAXIMIZED (window);
 }
 
 /**
