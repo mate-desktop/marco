@@ -399,8 +399,15 @@ owner_of_process (pid_t process, uid_t *result)
 
   glibtop_get_proc_uid (&process_details, process);
 
-  *result = process_details.uid;
-  return TRUE;
+  if (process_details.flags & (1L << GLIBTOP_PROC_UID_UID))
+    {
+      *result = process_details.uid;
+      return TRUE;
+    }
+  else
+    {
+      return FALSE;
+    }
 #else
   /* I don't know, maybe we could do something hairy like see whether
    * /proc/$PID exists and who owns it, in case they have procfs.
