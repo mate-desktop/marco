@@ -84,13 +84,6 @@ typedef enum {
 
 #define NUMBER_OF_QUEUES 3
 
-typedef enum {
-  META_TILE_NONE,
-  META_TILE_LEFT,
-  META_TILE_RIGHT,
-  META_TILE_MAXIMIZE
-} MetaTileMode;
-
 struct _MetaWindow
 {
   MetaDisplay *display;
@@ -150,6 +143,11 @@ struct _MetaWindow
    * this is the current mode. If not, it is the mode which will be
    * requested after the window grab is released */
   guint tile_mode : 2;
+
+  /* The last "full" maximized/unmaximized state. We need to keep track of
+   * that to toggle between normal/tiled or maximized/tiled states. */
+  guint saved_maximize : 1;
+  int tile_monitor_number;
 
   /* Whether we're shaded */
   guint shaded : 1;
@@ -405,6 +403,10 @@ struct _MetaWindow
 #define META_WINDOW_TILED(w)           ((w)->maximized_vertically && \
                                         !(w)->maximized_horizontally && \
                                         (w)->tile_mode != META_TILE_NONE)
+#define META_WINDOW_TILED_LEFT(w) (META_WINDOW_TILED(w) && \
+                                   (w)->tile_mode == META_TILE_LEFT)
+#define META_WINDOW_TILED_RIGHT(w) (META_WINDOW_TILED(w) && \
+                                    (w)->tile_mode == META_TILE_RIGHT)
 #define META_WINDOW_ALLOWS_MOVE(w)     ((w)->has_move_func && !(w)->fullscreen)
 #define META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS(w)   ((w)->has_resize_func && !META_WINDOW_MAXIMIZED (w) && !META_WINDOW_TILED(w) && !(w)->fullscreen && !(w)->shaded)
 #define META_WINDOW_ALLOWS_RESIZE(w)   (META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS (w) &&                \
@@ -425,6 +427,7 @@ void        meta_window_free               (MetaWindow  *window,
 void        meta_window_calc_showing       (MetaWindow  *window);
 void        meta_window_queue              (MetaWindow  *window,
                                             guint queuebits);
+void        meta_window_tile               (MetaWindow  *window);
 void        meta_window_minimize           (MetaWindow  *window);
 void        meta_window_unminimize         (MetaWindow  *window);
 void        meta_window_maximize           (MetaWindow        *window,
@@ -662,5 +665,7 @@ gboolean meta_window_is_client_decorated (MetaWindow *window);
 
 void meta_window_update_role (MetaWindow *window);
 void meta_window_update_net_wm_type (MetaWindow *window);
+
+gboolean meta_window_can_tile (MetaWindow *window);
 
 #endif

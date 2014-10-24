@@ -1791,6 +1791,7 @@ meta_rectangle_find_onscreen_edges (const MetaRectangle *basic_rect,
 
 GList*
 meta_rectangle_find_nonintersected_xinerama_edges (
+                                    const MetaRectangle *screen_rect,
                                     const GList         *xinerama_rects,
                                     const GSList        *all_struts)
 {
@@ -1813,98 +1814,38 @@ meta_rectangle_find_nonintersected_xinerama_edges (
   while (cur)
     {
       MetaRectangle *cur_rect = cur->data;
-      const GList *compare = xinerama_rects;
-      while (compare)
+      MetaEdge *new_edge;
+      if (BOX_LEFT(*cur_rect) != BOX_LEFT(*screen_rect))
         {
-          MetaRectangle *compare_rect = compare->data;
-
-          /* Check if cur might be horizontally adjacent to compare */
-          if (meta_rectangle_vert_overlap(cur_rect, compare_rect))
-            {
-              MetaSide side_type;
-              int y      = MAX (cur_rect->y, compare_rect->y);
-              int height = MIN (BOX_BOTTOM (*cur_rect) - y,
-                                BOX_BOTTOM (*compare_rect) - y);
-              int width  = 0;
-              int x;
-
-              if (BOX_LEFT (*cur_rect)  == BOX_RIGHT (*compare_rect))
-                {
-                  /* compare_rect is to the left of cur_rect */
-                  x = BOX_LEFT (*cur_rect);
-                  side_type = META_SIDE_LEFT;
-                }
-              else if (BOX_RIGHT (*cur_rect) == BOX_LEFT (*compare_rect))
-                {
-                  /* compare_rect is to the right of cur_rect */
-                  x = BOX_RIGHT (*cur_rect);
-                  side_type = META_SIDE_RIGHT;
-                }
-              else
-                /* These rectangles aren't adjacent after all */
-                x = INT_MIN;
-
-              /* If the rectangles really are adjacent */
-              if (x != INT_MIN)
-                {
-                  /* We need a left edge for the xinerama on the right, and
-                   * a right edge for the xinerama on the left.  Just fill
-                   * up the edges and stick 'em on the list.
-                   */
-                  MetaEdge *new_edge  = g_new (MetaEdge, 1);
-
-                  new_edge->rect = meta_rect (x, y, width, height);
-                  new_edge->side_type = side_type;
-                  new_edge->edge_type = META_EDGE_XINERAMA;
-
-                  ret = g_list_prepend (ret, new_edge);
-                }
-            }
-
-          /* Check if cur might be vertically adjacent to compare */
-          if (meta_rectangle_horiz_overlap(cur_rect, compare_rect))
-            {
-              MetaSide side_type;
-              int x      = MAX (cur_rect->x, compare_rect->x);
-              int width  = MIN (BOX_RIGHT (*cur_rect) - x,
-                                BOX_RIGHT (*compare_rect) - x);
-              int height = 0;
-              int y;
-
-              if (BOX_TOP (*cur_rect)  == BOX_BOTTOM (*compare_rect))
-                {
-                  /* compare_rect is to the top of cur_rect */
-                  y = BOX_TOP (*cur_rect);
-                  side_type = META_SIDE_TOP;
-                }
-              else if (BOX_BOTTOM (*cur_rect) == BOX_TOP (*compare_rect))
-                {
-                  /* compare_rect is to the bottom of cur_rect */
-                  y = BOX_BOTTOM (*cur_rect);
-                  side_type = META_SIDE_BOTTOM;
-                }
-              else
-                /* These rectangles aren't adjacent after all */
-                y = INT_MIN;
-
-              /* If the rectangles really are adjacent */
-              if (y != INT_MIN)
-                {
-                  /* We need a top edge for the xinerama on the bottom, and
-                   * a bottom edge for the xinerama on the top.  Just fill
-                   * up the edges and stick 'em on the list.
-                   */
-                  MetaEdge *new_edge = g_new (MetaEdge, 1);
-
-                  new_edge->rect = meta_rect (x, y, width, height);
-                  new_edge->side_type = side_type;
-                  new_edge->edge_type = META_EDGE_XINERAMA;
-
-                  ret = g_list_prepend (ret, new_edge);
-                }
-            }
-
-          compare = compare->next;
+          new_edge  = g_new (MetaEdge, 1);
+          new_edge->rect = meta_rect (BOX_LEFT (*cur_rect), BOX_TOP (*cur_rect), 0, cur_rect->height);
+          new_edge->side_type = META_SIDE_LEFT;
+          new_edge->edge_type = META_EDGE_XINERAMA;
+          ret = g_list_prepend (ret, new_edge);
+        }
+      if (BOX_RIGHT(*cur_rect) != BOX_RIGHT(*screen_rect))
+        {
+          new_edge  = g_new (MetaEdge, 1);
+          new_edge->rect = meta_rect (BOX_RIGHT (*cur_rect), BOX_TOP (*cur_rect), 0, cur_rect->height);
+          new_edge->side_type = META_SIDE_RIGHT;
+          new_edge->edge_type = META_EDGE_XINERAMA;
+          ret = g_list_prepend (ret, new_edge);
+        }
+      if (BOX_TOP(*cur_rect) != BOX_TOP(*screen_rect))
+        {
+          new_edge  = g_new (MetaEdge, 1);
+          new_edge->rect = meta_rect (BOX_LEFT (*cur_rect), BOX_TOP (*cur_rect), cur_rect->width, 0);
+          new_edge->side_type = META_SIDE_TOP;
+          new_edge->edge_type = META_EDGE_XINERAMA;
+          ret = g_list_prepend (ret, new_edge);
+        }
+      if (BOX_BOTTOM(*cur_rect) != BOX_BOTTOM(*screen_rect))
+        {
+          new_edge  = g_new (MetaEdge, 1);
+          new_edge->rect = meta_rect (BOX_LEFT (*cur_rect), BOX_BOTTOM (*cur_rect), cur_rect->width, 0);
+          new_edge->side_type = META_SIDE_BOTTOM;
+          new_edge->edge_type = META_EDGE_XINERAMA;
+          ret = g_list_prepend (ret, new_edge);
         }
       cur = cur->next;
     }
