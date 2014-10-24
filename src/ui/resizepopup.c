@@ -131,7 +131,7 @@ update_size_window (MetaResizePopup *popup)
     {
       /* using move_resize to avoid jumpiness */
       #if GTK_CHECK_VERSION(3, 0, 0)
-      gdk_window_move_resize (gtk_widget_get_window(GTK_WIDGET(popup->size_window)),
+      gdk_window_move_resize (gtk_widget_get_window (popup->size_window),
                               x, y,
                               width, height);
       #else

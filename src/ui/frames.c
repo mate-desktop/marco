@@ -1100,16 +1100,14 @@ meta_frames_move_resize_frame (MetaFrames *frames,
                                int         height)
 {
   MetaUIFrame *frame = meta_frames_lookup_window (frames, xwindow);
-  int old_x, old_y, old_width, old_height;
+  int old_width, old_height;
 
-	#if GTK_CHECK_VERSION(3, 0, 0)
-		old_width = gdk_window_get_width(GDK_WINDOW(frame->window));
-		old_height = gdk_window_get_height(GDK_WINDOW(frame->window));
-	#else
-		gdk_drawable_get_size(frame->window, &old_width, &old_height);
-	#endif
-
-  gdk_window_get_position (frame->window, &old_x, &old_y);
+#if GTK_CHECK_VERSION(3, 0, 0)
+  old_width = gdk_window_get_width (frame->window);
+  old_height = gdk_window_get_height (frame->window);
+#else
+  gdk_drawable_get_size(frame->window, &old_width, &old_height);
+#endif
 
   gdk_window_move_resize (frame->window, x, y, width, height);
 
@@ -1271,8 +1269,7 @@ show_tip_now (MetaFrames *frames)
 
       screen_number = gdk_screen_get_number (gtk_widget_get_screen (GTK_WIDGET (frames)));
 
-      meta_fixed_tip_show (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
-                           screen_number,
+      meta_fixed_tip_show (screen_number,
                            rect->x + dx,
                            rect->y + rect->height + 2 + dy,
                            tiptext);
@@ -2039,7 +2036,12 @@ meta_frames_motion_notify_event     (GtkWidget           *widget,
         MetaFrameControl control;
         int x, y;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+        gdk_window_get_device_position (frame->window, event->device,
+                                        &x, &y, NULL);
+#else
         gdk_window_get_pointer (frame->window, &x, &y, NULL);
+#endif
 
         /* Control is set to none unless it matches
          * the current grab
@@ -2084,7 +2086,12 @@ meta_frames_motion_notify_event     (GtkWidget           *widget,
         MetaFrameControl control;
         int x, y;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+        gdk_window_get_device_position (frame->window, event->device,
+                                        &x, &y, NULL);
+#else
         gdk_window_get_pointer (frame->window, &x, &y, NULL);
+#endif
 
         control = get_control (frames, frame, x, y);
 
@@ -2117,54 +2124,6 @@ meta_frames_destroy_event           (GtkWidget           *widget,
 
   return TRUE;
 }
-
-#if !GTK_CHECK_VERSION(2,21,6)
-/* Copied from GDK */
-static cairo_surface_t *
-_gdk_drawable_ref_cairo_surface (GdkDrawable *drawable)
-{
-  g_return_val_if_fail (GDK_IS_DRAWABLE (drawable), NULL);
-
-  return GDK_DRAWABLE_GET_CLASS (drawable)->ref_cairo_surface (drawable);
-}
-
-static cairo_pattern_t *
-gdk_window_get_background_pattern (GdkWindow *window)
-{
-  GdkWindowObject *private = (GdkWindowObject *) window;
-  cairo_pattern_t *pattern;
-
-  g_return_val_if_fail (GDK_IS_WINDOW (window), NULL);
-
-  if (private->bg_pixmap == GDK_PARENT_RELATIVE_BG)
-    pattern = NULL;
-  else if (private->bg_pixmap != GDK_NO_BG &&
-           private->bg_pixmap != NULL)
-    {
-      static cairo_user_data_key_t key;
-      cairo_surface_t *surface;
-
-      surface = _gdk_drawable_ref_cairo_surface (private->bg_pixmap);
-      pattern = cairo_pattern_create_for_surface (surface);
-      cairo_surface_destroy (surface);
-
-      cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
-      cairo_pattern_set_user_data (pattern,
-                                   &key,
-                                   g_object_ref (private->bg_pixmap),
-                                   g_object_unref);
-    }
-  else
-    {
-      pattern =
-        cairo_pattern_create_rgb (private->bg_color.red   / 65535.,
-                                  private->bg_color.green / 65535.,
-                                  private->bg_color.blue / 65535.);
-    }
-
-  return pattern;
-}
-#endif
 
 static void
 setup_bg_cr (cairo_t *cr, GdkWindow *window, int x_offset, int y_offset)
@@ -2630,7 +2589,6 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
                                int           y_offset)
                                #endif
 {
-  GtkWidget *widget;
   MetaFrameFlags flags;
   MetaFrameType type;
   GdkPixbuf *mini_icon;
@@ -2641,8 +2599,6 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
   int i;
   MetaButtonLayout button_layout;
   MetaGrabOp grab_op;
-
-  widget = GTK_WIDGET (frames);
 
   for (i = 0; i < META_BUTTON_TYPE_LAST; i++)
     button_states[i] = META_BUTTON_STATE_NORMAL;
@@ -2758,7 +2714,6 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
 
   meta_theme_draw_frame_with_style (meta_theme_get_current (),
                                     frame->style,
-                                    widget,
                                     cr,
                                     type,
                                     flags,
@@ -2832,7 +2787,6 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
 
           meta_theme_draw_frame_with_style (meta_theme_get_current (),
             frame->style,
-            widget,
             drawable,
             NULL, /* &areas[i], */
             x_offset, y_offset,
@@ -2858,7 +2812,6 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
 
       meta_theme_draw_frame_with_style (meta_theme_get_current (),
                                         frame->style,
-                                        widget,
                                         drawable,
                                         NULL,
                                         x_offset, y_offset,
@@ -2899,27 +2852,36 @@ meta_frames_set_window_background (MetaFrames   *frames,
 
   if (frame_exists && style->window_background_color != NULL)
     {
+#if GTK_CHECK_VERSION (3, 0, 0)
+      GdkRGBA color;
+#else
       GdkColor color;
+#endif
       GdkVisual *visual;
 
       meta_color_spec_render (style->window_background_color,
-                              GTK_WIDGET (frames),
+                              frame->style,
                               &color);
 
       /* Set A in ARGB to window_background_alpha, if we have ARGB */
 
       visual = gtk_widget_get_visual (GTK_WIDGET (frames));
       #if GTK_CHECK_VERSION(3, 0, 0)
-      if (gdk_visual_get_depth(visual) == 32) /* we have ARGB */
+      if (gdk_visual_get_depth (visual) == 32) /* we have ARGB */
+        {
+          color.alpha = style->window_background_alpha / 255.0;
+        }
+
+      gdk_window_set_background_rgba (frame->window, &color);
       #else
       if (visual->depth == 32) /* we have ARGB */
-      #endif
         {
           color.pixel = (color.pixel & 0xffffff) &
             style->window_background_alpha << 24;
         }
 
       gdk_window_set_background (frame->window, &color);
+      #endif
     }
   else
     {

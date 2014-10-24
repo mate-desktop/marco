@@ -158,8 +158,16 @@ grab_area_at_mouse (GtkWidget *invisible,
 static void
 shutdown_grab (void)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkDeviceManager *manager = gdk_display_get_device_manager (gdk_display_get_default ());
+  GdkDevice *device = gdk_device_manager_get_client_pointer (manager);
+
+  gdk_device_ungrab (device, gtk_get_current_event_time ());
+  gdk_device_ungrab (gdk_device_get_associated_device (device), gtk_get_current_event_time ());
+#else
   gdk_keyboard_ungrab (gtk_get_current_event_time ());
   gdk_pointer_ungrab (gtk_get_current_event_time ());
+#endif
   gtk_grab_remove (grab_widget);
 }
 
@@ -236,6 +244,12 @@ mouse_press (GtkWidget      *invisible,
 static void
 begin_area_grab (void)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkWindow *window;
+  GdkDeviceManager *manager;
+  GdkDevice *device;
+#endif
+
   if (grab_widget == NULL)
     {
       grab_widget = gtk_invisible_new ();
@@ -246,6 +260,36 @@ begin_area_grab (void)
       gtk_widget_show (grab_widget);
     }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  window = gtk_widget_get_window (grab_widget);
+  manager = gdk_display_get_device_manager (gdk_display_get_default ());
+  device = gdk_device_manager_get_client_pointer (manager);
+
+  if (gdk_device_grab (device,
+                       window,
+                       GDK_OWNERSHIP_NONE,
+                       FALSE,
+                       GDK_BUTTON_RELEASE_MASK | GDK_BUTTON_PRESS_MASK | GDK_POINTER_MOTION_MASK,
+                       NULL,
+                       gtk_get_current_event_time ()) != GDK_GRAB_SUCCESS)
+    {
+      g_warning ("Failed to grab pointer to do eyedropper");
+      return;
+    }
+
+  if (gdk_device_grab (gdk_device_get_associated_device (device),
+                       window,
+                       GDK_OWNERSHIP_NONE,
+                       FALSE,
+                       GDK_KEY_PRESS_MASK | GDK_KEY_RELEASE_MASK,
+                       NULL,
+                       gtk_get_current_event_time ()) != GDK_GRAB_SUCCESS)
+    {
+      gdk_device_ungrab (device, gtk_get_current_event_time ());
+      g_warning ("Failed to grab keyboard to do eyedropper");
+      return;
+    }
+#else
   if (gdk_keyboard_grab (gtk_widget_get_window (grab_widget),
                          FALSE,
                          gtk_get_current_event_time ()) != GDK_GRAB_SUCCESS)
@@ -265,6 +309,7 @@ begin_area_grab (void)
       g_warning ("Failed to grab pointer to do eyedropper");
       return;
     }
+#endif
 
   gtk_grab_add (grab_widget);
 

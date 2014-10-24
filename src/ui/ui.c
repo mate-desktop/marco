@@ -95,6 +95,7 @@ maybe_redirect_mouse_event (XEvent *xevent)
   MetaUI *ui;
 #if GTK_CHECK_VERSION (3, 0, 0)
   GdkDeviceManager *gmanager;
+  GdkDevice *gdevice;
   GdkEvent *gevent;
 #else
   GdkEvent gevent;
@@ -132,12 +133,22 @@ maybe_redirect_mouse_event (XEvent *xevent)
   if (gdk_window == NULL)
     return FALSE;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gmanager = gdk_display_get_device_manager (gdisplay);
+  gdevice = gdk_device_manager_get_client_pointer (gmanager);
+#endif
+
   /* If GDK already thinks it has a grab, we better let it see events; this
    * is the menu-navigation case and events need to get sent to the appropriate
    * (client-side) subwindow for individual menu items.
    */
+#if GTK_CHECK_VERSION (3, 0, 0)
+  if (gdk_display_device_is_grabbed (gdisplay, gdevice))
+    return FALSE;
+#else
   if (gdk_display_pointer_is_grabbed (gdisplay))
     return FALSE;
+#endif
 
 #if !GTK_CHECK_VERSION (3, 0, 0)
   memset (&gevent, 0, sizeof (gevent));
@@ -245,8 +256,8 @@ maybe_redirect_mouse_event (XEvent *xevent)
 
   /* If we've gotten here, we've filled in the gdk_event and should send it on */
 #if GTK_CHECK_VERSION (3, 0, 0)
-  gmanager = gdk_display_get_device_manager (gdisplay);
-  gdk_event_set_device (gevent, gdk_device_manager_get_client_pointer (gmanager));  gtk_main_do_event (gevent);
+  gdk_event_set_device (gevent, gdevice);
+  gtk_main_do_event (gevent);
   gdk_event_free (gevent);
 #else
   gtk_main_do_event (&gevent);
@@ -465,6 +476,7 @@ meta_ui_map_frame   (MetaUI *ui,
 
 #if GTK_CHECK_VERSION (3, 0, 0)
   GdkDisplay *display;
+
   display = gdk_x11_lookup_xdisplay (ui->xdisplay);
   window = gdk_x11_window_lookup_for_display (display, xwindow);
 #else
@@ -483,6 +495,7 @@ meta_ui_unmap_frame (MetaUI *ui,
 
 #if GTK_CHECK_VERSION (3, 0, 0)
   GdkDisplay *display;
+
   display = gdk_x11_lookup_xdisplay (ui->xdisplay);
   window = gdk_x11_window_lookup_for_display (display, xwindow);
 #else
@@ -993,7 +1006,6 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
 #endif
   PangoContext *context;
   const PangoFontDescription *font_desc;
-  GtkStyle *default_style;
 
   if (meta_ui_have_a_theme ())
     {
@@ -1017,6 +1029,8 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
           gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL, "font", &free_font_desc, NULL);
           font_desc = (const PangoFontDescription *) free_font_desc;
 #else
+          GtkStyle *default_style;
+
           default_style = gtk_widget_get_default_style ();
           font_desc = default_style->font_desc;
 #endif

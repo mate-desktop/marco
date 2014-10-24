@@ -30,12 +30,6 @@
 #include <gdk/gdk.h>
 #include <gtk/gtk.h>
 
-#ifdef __GNUC__
-#define UNUSED_VARIABLE __attribute__ ((unused))
-#else
-#define UNUSED_VARIABLE
-#endif
-
 #if !GTK_CHECK_VERSION (3, 0, 0)
 static int x_error_handler    (Display     *display,
                                XErrorEvent *error);
@@ -162,10 +156,7 @@ meta_error_trap_pop_internal  (MetaDisplay *display,
        * assumes that there are no pending GDK traps from GDK itself
        */
 
-      int UNUSED_VARIABLE (* restored_error_handler) (Display     *,
-                                      XErrorEvent *);
-
-      restored_error_handler = XSetErrorHandler (x_error_handler);
+      XSetErrorHandler (x_error_handler);
 
       /* remove this */
       display->error_trap_handler = NULL;
