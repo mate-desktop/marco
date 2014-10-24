@@ -28,7 +28,6 @@
 #include "main.h"
 #include "util.h"
 #include "core.h"
-#include "themewidget.h"
 #include "metaaccellabel.h"
 #include "ui.h"
 
