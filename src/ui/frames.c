@@ -1630,7 +1630,6 @@ meta_frames_button_press_event (GtkWidget      *widget,
             control == META_FRAME_CONTROL_RESIZE_W))
     {
       MetaGrabOp op;
-      gboolean titlebar_is_onscreen;
 
       op = META_GRAB_OP_NONE;
 
@@ -1665,28 +1664,16 @@ meta_frames_button_press_event (GtkWidget      *widget,
           break;
         }
 
-      meta_core_get (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow,
-                     META_CORE_IS_TITLEBAR_ONSCREEN, &titlebar_is_onscreen,
-                     META_CORE_GET_END);
-
-      if (!titlebar_is_onscreen)
-        meta_core_show_window_menu (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
-                                    frame->xwindow,
-                                    event->x_root,
-                                    event->y_root,
-                                    event->button,
-                                    event->time);
-      else
-        meta_core_begin_grab_op (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
-                                 frame->xwindow,
-                                 op,
-                                 TRUE,
-                                 TRUE,
-                                 event->button,
-                                 0,
-                                 event->time,
-                                 event->x_root,
-                                 event->y_root);
+      meta_core_begin_grab_op (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+                               frame->xwindow,
+                               op,
+                               TRUE,
+                               TRUE,
+                               event->button,
+                               0,
+                               event->time,
+                               event->x_root,
+                               event->y_root);
     }
   else if (control == META_FRAME_CONTROL_TITLE &&
            event->button == 1)
