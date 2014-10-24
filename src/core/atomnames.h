@@ -58,6 +58,7 @@ item(_MARCO_RESTART_MESSAGE)
 item(_MARCO_RELOAD_THEME_MESSAGE)
 item(_MARCO_SET_KEYBINDINGS_MESSAGE)
 item(_MARCO_TOGGLE_VERBOSE)
+item(_GTK_FRAME_EXTENTS)
 item(_MATE_PANEL_ACTION)
 item(_MATE_PANEL_ACTION_MAIN_MENU)
 item(_MATE_PANEL_ACTION_RUN_DIALOG)
@@ -70,7 +71,6 @@ item(MULTIPLE)
 item(TIMESTAMP)
 item(VERSION)
 item(ATOM_PAIR)
-item(_GTK_FRAME_EXTENTS)
 
 /* Oddities: These are used, and we need atoms for them,
  * but when we need all _NET_WM hints (i.e. when we're making
