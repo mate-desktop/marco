@@ -1288,6 +1288,8 @@ tip_timeout_func (gpointer data)
 
   show_tip_now (frames);
 
+  frames->tooltip_timeout = 0;
+
   return FALSE;
 }
 
