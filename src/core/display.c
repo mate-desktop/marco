@@ -2836,15 +2836,13 @@ static char*
 key_event_description (Display *xdisplay,
                        XEvent  *event)
 {
-  KeySym keysym;
-  const char *str;
-
-  keysym = XKeycodeToKeysym (xdisplay, event->xkey.keycode, 0);
-
-  str = XKeysymToString (keysym);
-
-  return g_strdup_printf ("Key '%s' state 0x%x",
-                          str ? str : "none", event->xkey.state);
+#ifdef HAVE_XKB
+  KeySym keysym   = XkbKeycodeToKeysym(xdisplay, event->xkey.keycode, 0, 0);
+  const char *str = XKeysymToString (keysym);
+  return g_strdup_printf ("Key '%s' state 0x%x", str ? str : "none", event->xkey.state);
+#else
+  return "none";
+#endif
 }
 #endif /* WITH_VERBOSE_MODE */
 

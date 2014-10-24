@@ -1273,9 +1273,12 @@ meta_display_process_key_event (MetaDisplay *display,
 
   /* window may be NULL */
 
+#ifdef HAVE_XKB
   keysym = XKeycodeToKeysym (display->xdisplay, event->xkey.keycode, 0);
-
   str = XKeysymToString (keysym);
+#else
+  str = NULL;
+#endif
 
   /* was topic */
   meta_topic (META_DEBUG_KEYBINDINGS,
