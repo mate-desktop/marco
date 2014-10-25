@@ -48,7 +48,6 @@
     #define gdk_region_intersect cairo_region_intersect
     G_DEFINE_TYPE (MetaFrames, meta_frames, GTK_TYPE_INVISIBLE);
     #define parent_class meta_frames_parent_class
-    #define GTK_WIDGET_REALIZED gtk_widget_get_realized
 #endif
 
 #define DEFAULT_INNER_BUTTON_BORDER 3
@@ -523,7 +522,7 @@ meta_frames_ensure_layout (MetaFrames  *frames,
   MetaFrameType type;
   MetaFrameStyle *style;
 
-  g_return_if_fail (GTK_WIDGET_REALIZED (GTK_WIDGET(frames)));
+  g_return_if_fail (gtk_widget_get_realized (GTK_WIDGET(frames)));
 
   widget = GTK_WIDGET (frames);
 
@@ -2898,11 +2897,7 @@ meta_frames_set_window_background (MetaFrames   *frames,
       /* Set A in ARGB to window_background_alpha, if we have ARGB */
 
       visual = gtk_widget_get_visual (GTK_WIDGET (frames));
-      #if GTK_CHECK_VERSION(3, 0, 0)
       if (gdk_visual_get_depth(visual) == 32) /* we have ARGB */
-      #else
-      if (visual->depth == 32) /* we have ARGB */
-      #endif
         {
           color.pixel = (color.pixel & 0xffffff) &
             style->window_background_alpha << 24;

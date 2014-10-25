@@ -389,19 +389,12 @@ meta_window_menu_new   (MetaFrames         *frames,
                   meta_verbose ("Creating %d-workspace menu current space %lu\n",
                       n_workspaces, active_workspace);
 
-                  #if GTK_CHECK_VERSION(3, 0, 0)
                   GdkWindow* window = gtk_widget_get_window(GTK_WIDGET(frames));
 
                   display = GDK_WINDOW_XDISPLAY (window);
 
                   screen = gdk_window_get_screen (window);
                   xroot = GDK_WINDOW_XID (gdk_screen_get_root_window (screen));
-                  #else
-                  display = gdk_x11_drawable_get_xdisplay (GTK_WIDGET (frames)->window);
-
-                  screen = gdk_drawable_get_screen (GTK_WIDGET (frames)->window);
-                  xroot = GDK_DRAWABLE_XID (gdk_screen_get_root_window (screen));
-                  #endif
 
                   submenu = gtk_menu_new ();
 

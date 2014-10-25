@@ -24,10 +24,6 @@
 #include <X11/Xatom.h>
 #include <unistd.h>
 
-#if GTK_CHECK_VERSION(3, 0, 0)
- 	#define GDK_WINDOW_XWINDOW(w) GDK_WINDOW_XID(w)
-#endif
-
 static GtkWidget* do_appwindow (void);
 
 static gboolean aspect_on;
@@ -55,7 +51,7 @@ set_gdk_window_struts (GdkWindow *window,
   vals[11] = 800;
 
   XChangeProperty (GDK_WINDOW_XDISPLAY (window),
-                   GDK_WINDOW_XWINDOW (window),
+                   GDK_WINDOW_XID (window),
                    XInternAtom (GDK_WINDOW_XDISPLAY (window),
                                 "_NET_WM_STRUT_PARTIAL", False),
                    XA_CARDINAL, 32, PropModeReplace,
@@ -122,7 +118,7 @@ set_gdk_window_type (GdkWindow  *window,
                           type, False);
 
   XChangeProperty (GDK_WINDOW_XDISPLAY (window),
-                   GDK_WINDOW_XWINDOW (window),
+                   GDK_WINDOW_XID (window),
                    XInternAtom (GDK_WINDOW_XDISPLAY (window), "_NET_WM_WINDOW_TYPE", False),
                    XA_ATOM, 32, PropModeReplace,
                    (guchar *)atoms,
