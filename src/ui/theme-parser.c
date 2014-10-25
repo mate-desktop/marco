@@ -392,7 +392,11 @@ locate_attributes (GMarkupParseContext *context,
 
   while (name != NULL)
     {
-      g_return_val_if_fail (retloc != NULL, FALSE);
+      if (retloc == NULL)
+        {
+	  retval = FALSE;
+	  goto out;
+	}
 
       g_assert (n_attrs < MAX_ATTRS);
 
