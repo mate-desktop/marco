@@ -131,7 +131,7 @@ typedef struct _MetaCompositorXRender
   Atom atom_net_wm_window_type_dropdown_menu;
   Atom atom_net_wm_window_type_tooltip;
 
-  Atom atom_metacity_window_have_shadow;
+  Atom atom_marco_window_have_shadow;
 
 #ifdef USE_IDLE_REPAINT
   guint repaint_id;
@@ -2264,7 +2264,7 @@ process_property_notify (MetaCompositorXRender *compositor,
     }
 
     /* Check for have_shadow changing */
-  if (event->atom == compositor->atom_metacity_window_have_shadow)
+  if (event->atom == compositor->atom_marco_window_have_shadow)
     {
       MetaCompWindow *cw = find_window_in_display (display, event->window);
       gulong value;
@@ -2281,7 +2281,7 @@ process_property_notify (MetaCompositorXRender *compositor,
         return;
 
       if (meta_prop_get_cardinal (display, event->window,
-                                  compositor->atom_metacity_window_have_shadow,
+                                  compositor->atom_marco_window_have_shadow,
                                   &value) == FALSE)
         value = 1;
 
@@ -3137,7 +3137,7 @@ meta_compositor_xrender_new (MetaDisplay *display)
     "_NET_WM_WINDOW_TYPE_TOOLBAR",
     "_NET_WM_WINDOW_TYPE_DROPDOWN_MENU",
     "_NET_WM_WINDOW_TYPE_TOOLTIP",
-    "METACITY_WINDOW_HAVE_SHADOW",
+    "MARCO_WINDOW_HAVE_SHADOW",
   };
   Atom atoms[G_N_ELEMENTS(atom_names)];
   MetaCompositorXRender *xrc;
@@ -3170,7 +3170,7 @@ meta_compositor_xrender_new (MetaDisplay *display)
   xrc->atom_net_wm_window_type_toolbar = atoms[12];
   xrc->atom_net_wm_window_type_dropdown_menu = atoms[13];
   xrc->atom_net_wm_window_type_tooltip = atoms[14];
-  xrc->atom_metacity_window_have_shadow = atoms[15];
+  xrc->atom_marco_window_have_shadow = atoms[15];
   xrc->show_redraw = FALSE;
   xrc->debug = FALSE;
 
