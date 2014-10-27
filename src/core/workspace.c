@@ -741,8 +741,7 @@ ensure_work_areas_validated (MetaWorkspace *workspace)
   for (i = 0; i < workspace->screen->n_xinerama_infos; i++)
     tmp = g_list_prepend (tmp, &workspace->screen->xinerama_infos[i].rect);
   workspace->xinerama_edges =
-    meta_rectangle_find_nonintersected_xinerama_edges (tmp,
-                                                       workspace->all_struts);
+    meta_rectangle_find_nonintersected_xinerama_edges (&workspace->screen->rect, tmp, workspace->all_struts);
   g_list_free (tmp);
 
   /* We're all done, YAAY!  Record that everything has been validated. */

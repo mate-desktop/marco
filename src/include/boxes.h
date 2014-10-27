@@ -284,7 +284,8 @@ GList* meta_rectangle_find_onscreen_edges (const MetaRectangle *basic_rect,
  * struts.
  */
 GList* meta_rectangle_find_nonintersected_xinerama_edges (
-                                           const GList         *xinerama_rects,
+                                           const MetaRectangle *screen_rect,
+					   const GList         *xinerama_rects,
                                            const GSList        *all_struts);
 
 #endif /* META_BOXES_H */

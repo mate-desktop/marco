@@ -347,8 +347,14 @@ get_xinerama_edges (int which_xinerama_set, int which_strut_set)
 
   ret = NULL;
 
+  MetaRectangle screenrect;
+  screenrect.x = 0;
+  screenrect.y = 0;
+  screenrect.width = 1600;
+  screenrect.height = 1200;
+
   struts = get_strut_list (which_strut_set);
-  ret = meta_rectangle_find_nonintersected_xinerama_edges (xins, struts);
+  ret = meta_rectangle_find_nonintersected_xinerama_edges (&screenrect, xins, struts);
 
   free_strut_list (struts);
   meta_rectangle_free_list_and_elements (xins);

@@ -67,6 +67,13 @@ typedef void (*MetaWindowPingFunc) (MetaDisplay* display, Window xwindow, guint3
  */
 #define N_IGNORED_SERIALS           4
 
+typedef enum {
+  META_TILE_NONE,
+  META_TILE_LEFT,
+  META_TILE_RIGHT,
+  META_TILE_MAXIMIZED /* only used for previews */
+} MetaTileMode;
+
 struct _MetaDisplay {
 	char* name;
 	Display* xdisplay;
@@ -155,6 +162,8 @@ struct _MetaDisplay {
 	int         grab_anchor_root_x;
 	int         grab_anchor_root_y;
 	MetaRectangle grab_anchor_window_pos;
+	MetaTileMode  grab_tile_mode;
+	int           grab_tile_monitor_number;
 	int         grab_latest_motion_x;
 	int         grab_latest_motion_y;
 	gulong      grab_mask;
