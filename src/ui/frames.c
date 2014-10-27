@@ -1302,8 +1302,7 @@ show_tip_now (MetaFrames *frames)
 
       screen_number = gdk_screen_get_number (gtk_widget_get_screen (GTK_WIDGET (frames)));
 
-      meta_fixed_tip_show (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
-                           screen_number,
+      meta_fixed_tip_show (screen_number,
                            rect->x + dx,
                            rect->y + rect->height + 2 + dy,
                            tiptext);
@@ -2891,11 +2890,19 @@ meta_frames_set_window_background (MetaFrames   *frames,
       visual = gtk_widget_get_visual (GTK_WIDGET (frames));
       if (gdk_visual_get_depth(visual) == 32) /* we have ARGB */
         {
+#if GTK_CHECK_VERSION (3, 0, 0)
+          color.alpha = style->window_background_alpha / 255.0;
+#else
           color.pixel = (color.pixel & 0xffffff) &
             style->window_background_alpha << 24;
+#endif
         }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+      gdk_window_set_background_rgba (frame->window, &color);
+#else
       gdk_window_set_background (frame->window, &color);
+#endif
     }
   else
     {
