@@ -2027,7 +2027,12 @@ meta_frames_motion_notify_event     (GtkWidget           *widget,
         MetaFrameControl control;
         int x, y;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+        gdk_window_get_device_position (frame->window, event->device,
+                                        &x, &y, NULL);
+#else
         gdk_window_get_pointer (frame->window, &x, &y, NULL);
+#endif
 
         /* Control is set to none unless it matches
          * the current grab
@@ -2072,7 +2077,12 @@ meta_frames_motion_notify_event     (GtkWidget           *widget,
         MetaFrameControl control;
         int x, y;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+        gdk_window_get_device_position (frame->window, event->device,
+                                        &x, &y, NULL);
+#else
         gdk_window_get_pointer (frame->window, &x, &y, NULL);
+#endif
 
         control = get_control (frames, frame, x, y);
 
