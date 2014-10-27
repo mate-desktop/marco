@@ -27,10 +27,6 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-    #define GTK_WIDGET_REALIZED gtk_widget_get_realized
-#endif
-
 struct _MetaResizePopup
 {
   GtkWidget *size_window;
@@ -127,18 +123,12 @@ update_size_window (MetaResizePopup *popup)
   x = popup->rect.x + (popup->rect.width - width) / 2;
   y = popup->rect.y + (popup->rect.height - height) / 2;
 
-  if (GTK_WIDGET_REALIZED (popup->size_window))
+  if (gtk_widget_get_realized (popup->size_window))
     {
       /* using move_resize to avoid jumpiness */
-      #if GTK_CHECK_VERSION(3, 0, 0)
-      gdk_window_move_resize (gtk_widget_get_window (popup->size_window),
+      gdk_window_move_resize (gtk_widget_get_window(GTK_WIDGET(popup->size_window)),
                               x, y,
                               width, height);
-      #else
-      gdk_window_move_resize (popup->size_window->window,
-                              x, y,
-                              width, height);
-      #endif
     }
   else
     {
@@ -155,12 +145,8 @@ sync_showing (MetaResizePopup *popup)
       if (popup->size_window)
         gtk_widget_show (popup->size_window);
 
-      if (popup->size_window && GTK_WIDGET_REALIZED (popup->size_window))
-        #if GTK_CHECK_VERSION(3, 0, 0)
+      if (popup->size_window && gtk_widget_get_realized (popup->size_window))
         gdk_window_raise (gtk_widget_get_window(GTK_WIDGET(popup->size_window)));
-        #else
-        gdk_window_raise (popup->size_window->window);
-        #endif
     }
   else
     {

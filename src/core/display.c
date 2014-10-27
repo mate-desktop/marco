@@ -82,9 +82,8 @@
 	#include <X11/extensions/Xdamage.h>
 	#include <X11/extensions/Xfixes.h>
 	#include <gtk/gtk.h>
+	#include <gdk/gdkx.h>
 #endif
-
-#include <gdk/gdkx.h>
 
 #include <string.h>
 
@@ -664,7 +663,7 @@ meta_display_open (void)
     meta_prop_set_utf8_string_hint (the_display,
                                     the_display->leader_window,
                                     the_display->atom__NET_WM_NAME,
-                                    "Marco");
+                                    "Metacity (Marco)");
 
     meta_prop_set_utf8_string_hint (the_display,
                                     the_display->leader_window,
@@ -1456,11 +1455,7 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 			return FALSE;
 	}
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gdk_window = gdk_x11_window_lookup_for_display(gdk_display, window);
-#else
-	gdk_window = gdk_window_lookup_for_display(gdk_display, window);
-#endif
 
 	if (gdk_window == NULL)
 	{
@@ -2842,15 +2837,13 @@ static char*
 key_event_description (Display *xdisplay,
                        XEvent  *event)
 {
-  KeySym keysym;
-  const char *str;
-
-  keysym = XkbKeycodeToKeysym (xdisplay, event->xkey.keycode, 0, 0);
-
-  str = XKeysymToString (keysym);
-
-  return g_strdup_printf ("Key '%s' state 0x%x",
-                          str ? str : "none", event->xkey.state);
+#ifdef HAVE_XKB
+  KeySym keysym   = XkbKeycodeToKeysym(xdisplay, event->xkey.keycode, 0, 0);
+  const char *str = XKeysymToString (keysym);
+  return g_strdup_printf ("Key '%s' state 0x%x", str ? str : "none", event->xkey.state);
+#else
+  return "none";
+#endif
 }
 #endif /* WITH_VERBOSE_MODE */
 

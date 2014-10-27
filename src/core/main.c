@@ -415,13 +415,6 @@ main (int argc, char **argv)
   guint i;
   GIOChannel *channel;
 
-#if GLIB_CHECK_VERSION (2, 32, 0)
-  /* g_thread_init () deprecated */
-#else
-  if (!g_thread_supported ())
-    g_thread_init (NULL);
-#endif
-
   if (setlocale (LC_ALL, "") == NULL)
     meta_warning ("Locale not understood by C library, internationalization will not work\n");
 

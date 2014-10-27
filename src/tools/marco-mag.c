@@ -29,10 +29,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-#if GTK_CHECK_VERSION(3, 0, 0)
- 	#include <gdk/gdkkeysyms-compat.h>
-#endif
-
 static GtkWidget *grab_widget = NULL;
 static GtkWidget *display_window = NULL;
 static int last_grab_x = 0;
@@ -208,7 +204,7 @@ key_press (GtkWidget   *invisible,
            GdkEventKey *event,
            gpointer     data)
 {
-  if (event->keyval == GDK_Escape)
+  if (event->keyval == GDK_KEY_Escape)
     {
       shutdown_grab ();
 

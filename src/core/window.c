@@ -2079,6 +2079,9 @@ window_state_on_map (MetaWindow *window,
 static gboolean
 windows_overlap (const MetaWindow *w1, const MetaWindow *w2)
 {
+  if (w1->minimized || w2->minimized)
+    return FALSE;
+
   MetaRectangle w1rect, w2rect;
   meta_window_get_outer_rect (w1, &w1rect);
   meta_window_get_outer_rect (w2, &w2rect);
@@ -2134,6 +2137,7 @@ meta_window_show (MetaWindow *window)
   gboolean takes_focus_on_map;
   gboolean place_on_top_on_map;
   gboolean needs_stacking_adjustment;
+  gboolean will_be_covered;
   MetaWindow *focus_window;
   guint32     timestamp;
 
@@ -2151,6 +2155,7 @@ meta_window_show (MetaWindow *window)
   did_show = FALSE;
   window_state_on_map (window, &takes_focus_on_map, &place_on_top_on_map);
   needs_stacking_adjustment = FALSE;
+  will_be_covered = window_would_be_covered (window);
 
   meta_topic (META_DEBUG_WINDOW_STATE,
               "Window %s %s focus on map, and %s place on top on map.\n",
@@ -2171,7 +2176,7 @@ meta_window_show (MetaWindow *window)
 
   if ( focus_window != NULL && window->showing_for_first_time &&
       ( (!place_on_top_on_map && !takes_focus_on_map) ||
-      window_would_be_covered (window) )
+      will_be_covered )
     ) {
       if (meta_window_is_ancestor_of_transient (focus_window, window))
         {
@@ -2255,21 +2260,21 @@ meta_window_show (MetaWindow *window)
        * in the stack when it doesn't overlap it confusingly places
        * that new window below a lot of other windows.
        */
-      if (overlap ||
+      if (!will_be_covered && (overlap ||
           (meta_prefs_get_focus_mode () == META_FOCUS_MODE_CLICK &&
-           meta_prefs_get_raise_on_click ()))
+           meta_prefs_get_raise_on_click ())))
         meta_window_stack_just_below (window, focus_window);
 
-      /* If the window will be obscured by the focus window, then the
-       * user might not notice the window appearing so set the
-       * demands attention hint.
+      /* If the window will be obscured by the focus window or a window set to
+       * always on top, then the user might not notice the window appearing so
+       * set the demands attention hint.
        *
        * We set the hint ourselves rather than calling
        * meta_window_set_demands_attention() because that would cause
        * a recalculation of overlap, and a call to set_net_wm_state()
        * which we are going to call ourselves here a few lines down.
        */
-      if (overlap)
+      if (overlap || will_be_covered)
         window->wm_state_demands_attention = TRUE;
     }
 
@@ -2605,8 +2610,6 @@ meta_window_maximize_internal (MetaWindow        *window,
     window->maximized_horizontally || maximize_horizontally;
   window->maximized_vertically =
     window->maximized_vertically   || maximize_vertically;
-  if (maximize_horizontally || maximize_vertically)
-    window->force_save_user_rect = FALSE;
 
   /* Fix for #336850: If the frame shape isn't reapplied, it is
    * possible that the frame will retains its rounded corners. That
@@ -2674,6 +2677,8 @@ meta_window_maximize (MetaWindow        *window,
       /* move_resize with new maximization constraints
        */
       meta_window_queue(window, META_QUEUE_MOVE_RESIZE);
+
+      meta_compositor_maximize_window (window->display->compositor, window);
     }
 }
 
@@ -2842,6 +2847,8 @@ meta_window_unmaximize (MetaWindow        *window,
 
       recalc_window_features (window);
       set_net_wm_state (window);
+
+      meta_compositor_unmaximize_window (window->display->compositor, window);
     }
 }
 
@@ -4036,7 +4043,18 @@ meta_window_get_outer_rect (const MetaWindow *window,
   if (window->frame)
     *rect = window->frame->rect;
   else
-    *rect = window->rect;
+    {
+        *rect = window->rect;
+
+	if (window->has_custom_frame_extents)
+	  {
+	    const GtkBorder *extents = &window->custom_frame_extents;
+	    rect->x += extents->left;
+	    rect->y += extents->top;
+	    rect->width -= extents->left + extents->right;
+	    rect->height -= extents->top + extents->bottom;
+	  }
+    }
 }
 
 void
@@ -8337,4 +8355,28 @@ Window
 meta_window_get_xwindow (MetaWindow *window)
 {
   return window->xwindow;
+}
+
+gboolean
+meta_window_is_maximized (MetaWindow *window)
+{
+  return META_WINDOW_MAXIMIZED (window);
+}
+
+/**
+ * meta_window_is_client_decorated:
+ *
+ * Check if if the window has decorations drawn by the client.
+ * (window->decorated refers only to whether we should add decorations)
+ */
+gboolean
+meta_window_is_client_decorated (MetaWindow *window)
+{
+  /* Currently the implementation here is hackish -
+   * has_custom_frame_extents() is set if _GTK_FRAME_EXTENTS is set
+   * to any value even 0. GTK+ always sets _GTK_FRAME_EXTENTS for
+   * client-side-decorated window, even if the value is 0 because
+   * the window is maxized and has no invisible borders or shadows.
+   */
+  return window->has_custom_frame_extents;
 }

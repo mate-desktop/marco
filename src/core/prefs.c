@@ -949,11 +949,7 @@ change_notify (GSettings *settings,
     }
 
   gchar *schema_name = NULL;
-#if GLIB_CHECK_VERSION (2, 32, 0)
   g_object_get (settings, "schema-id", &schema_name, NULL);
-#else
-  g_object_get (settings, "schema", &schema_name, NULL);
-#endif
 
   if (g_strcmp0 (schema_name, KEY_WINDOW_BINDINGS_SCHEMA) == 0 ||
       g_strcmp0 (schema_name, KEY_SCREEN_BINDINGS_SCHEMA) == 0)

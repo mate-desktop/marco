@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<KeyListEntries _name="Window Management" wm_name="Marco" package="marco" schema="org.mate.Marco.window-keybindings">
+<KeyListEntries _name="Window Management" wm_name="Metacity (Marco)" package="marco" schema="org.mate.Marco.window-keybindings">
 
 	<KeyListEntry
 	name="activate-window-menu"
@@ -68,6 +68,42 @@
 	<KeyListEntry
 	name="maximize-horizontally"
 	_description="Maximize window horizontally" />
+
+	<KeyListEntry
+	name="move-to-corner-nw"
+	_description="Move window to north-west (top left) corner" />
+
+	<KeyListEntry
+	name="move-to-corner-ne"
+	_description="Move window to north-east (top right) corner" />
+
+	<KeyListEntry
+	name="move-to-corner-sw"
+	_description="Move window to south-west (bottom left) corner" />
+
+	<KeyListEntry
+	name="move-to-corner-se"
+	_description="Move window to south-east (bottom right) corner" />
+
+	<KeyListEntry
+	name="move-to-side-n"
+	_description="Move window to north (top) side of screen" />
+
+	<KeyListEntry
+	name="move-to-side-s"
+	_description="Move window to south (bottom) side of screen" />
+
+	<KeyListEntry
+	name="move-to-side-e"
+	_description="Move window to east (right) side of screen" />
+
+	<KeyListEntry
+	name="move-to-side-w"
+	_description="Move window to west (left) side of screen" />
+
+	<KeyListEntry
+	name="move-to-center"
+	_description="Move window to center of screen" />
 
 	<KeyListEntry
 	name="move-to-workspace-1"

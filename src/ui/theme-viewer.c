@@ -244,7 +244,12 @@ dialog_contents (void)
   label = gtk_label_new (_("This is a sample message in a sample dialog"));
   image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO,
                                     GTK_ICON_SIZE_DIALOG);
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
+  gtk_widget_set_valign (image, GTK_ALIGN_START);
+#else
   gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
+#endif
 
   gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);

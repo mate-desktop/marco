@@ -29,10 +29,6 @@
 #include "tile-preview.h"
 #include "core.h"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define GDK_WINDOW_XWINDOW GDK_WINDOW_XID
-#endif
-
 #define OUTLINE_WIDTH 5  /* frame width in non-composite case */
 
 
@@ -282,7 +278,7 @@ meta_tile_preview_show (MetaTilePreview *preview,
 #else
   meta_core_lower_beneath_focus_window (gdk_display,
 #endif
-                                        GDK_WINDOW_XWINDOW (window),
+                                        GDK_WINDOW_XID (window),
                                         gtk_get_current_event_time ());
 
   old_rect.x = old_rect.y = 0;

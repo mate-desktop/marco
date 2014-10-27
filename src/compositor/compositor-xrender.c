@@ -899,11 +899,24 @@ window_has_shadow (MetaCompWindow *cw)
      as the frame might be the reason the window is shaped */
   if (cw->window)
     {
+      /* Do not add shadows for maximized windows */
+      if (meta_window_is_maximized (cw->window))
+        {
+          meta_verbose ("Window has no shadow because it is maximized\n");
+          return FALSE;
+        }
+
       if (meta_window_get_frame (cw->window)) {
         meta_verbose ("Window has shadow because it has a frame\n");
         return TRUE;
       }
     }
+
+  /* Do not add shadows to ARGB windows */
+  if (cw->mode == WINDOW_ARGB) {
+    meta_verbose ("Window has no shadow as it is ARGB\n");
+    return FALSE;
+  }
 
   /* Never put a shadow around shaped windows */
   if (cw->shaped) {
@@ -2996,6 +3009,38 @@ xrender_set_active_window (MetaCompositor *compositor,
 #endif
 }
 
+static void
+xrender_maximize_window (MetaCompositor *compositor,
+                         MetaWindow     *window)
+{
+#ifdef HAVE_COMPOSITE_EXTENSIONS
+  MetaFrame *frame = meta_window_get_frame (window);
+  Window xid = frame ? meta_frame_get_xwindow (frame) : meta_window_get_xwindow (window);
+  MetaCompWindow *cw = find_window_in_display (meta_window_get_display (window), xid);
+
+  if (!cw)
+    return;
+
+  cw->needs_shadow = window_has_shadow (cw);
+#endif
+}
+
+static void
+xrender_unmaximize_window (MetaCompositor *compositor,
+                           MetaWindow     *window)
+{
+#ifdef HAVE_COMPOSITE_EXTENSIONS
+  MetaFrame *frame = meta_window_get_frame (window);
+  Window xid = frame ? meta_frame_get_xwindow (frame) : meta_window_get_xwindow (window);
+  MetaCompWindow *cw = find_window_in_display (meta_window_get_display (window), xid);
+
+  if (!cw)
+    return;
+
+  cw->needs_shadow = window_has_shadow (cw);
+#endif
+}
+
 static MetaCompositor comp_info = {
   xrender_destroy,
   xrender_manage_screen,
@@ -3005,7 +3050,9 @@ static MetaCompositor comp_info = {
   xrender_set_updates,
   xrender_process_event,
   xrender_get_window_pixmap,
-  xrender_set_active_window
+  xrender_set_active_window,
+  xrender_maximize_window,
+  xrender_unmaximize_window,
 };
 
 MetaCompositor *

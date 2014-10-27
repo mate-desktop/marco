@@ -215,12 +215,66 @@ reload_kwm_win_icon (MetaWindow    *window,
   reload_icon (window, window->display->atom__KWM_WIN_ICON);
 }
 
+static gboolean
+gtk_border_equal (GtkBorder *a,
+                  GtkBorder *b)
+{
+  return (a->left == b->left &&
+          a->right == b->right &&
+          a->top == b->top &&
+          a->bottom == b->bottom);
+}
+
+static void
+meta_window_set_custom_frame_extents (MetaWindow *window,
+                                      GtkBorder  *extents)
+{
+  if (extents)
+    {
+      if (window->has_custom_frame_extents && gtk_border_equal (&window->custom_frame_extents, extents))
+        return;
+
+      window->has_custom_frame_extents = TRUE;
+      window->custom_frame_extents = *extents;
+    }
+  else
+    {
+      if (!window->has_custom_frame_extents)
+        return;
+
+      window->has_custom_frame_extents = FALSE;
+      memset (&window->custom_frame_extents, 0, sizeof (window->custom_frame_extents));
+    }
+
+  meta_window_queue (window, META_QUEUE_MOVE_RESIZE);
+}
+
 static void
 reload_gtk_frame_extents (MetaWindow    *window,
                           MetaPropValue *value,
                           gboolean       initial)
 {
-  return;
+  if (value->type != META_PROP_VALUE_INVALID)
+    {
+      if (value->v.cardinal_list.n_cardinals != 4)
+        {
+          meta_verbose ("_GTK_FRAME_EXTENTS on %s has %d values instead of 4\n",
+                        window->desc, value->v.cardinal_list.n_cardinals);
+        }
+      else
+        {
+          GtkBorder extents;
+          extents.left   = (int)value->v.cardinal_list.cardinals[0];
+          extents.right  = (int)value->v.cardinal_list.cardinals[1];
+          extents.top    = (int)value->v.cardinal_list.cardinals[2];
+          extents.bottom = (int)value->v.cardinal_list.cardinals[3];
+          meta_window_set_custom_frame_extents (window, &extents);
+        }
+    }
+  else
+    {
+      meta_window_set_custom_frame_extents (window, NULL);
+    }
 }
 
 static void
@@ -345,8 +399,15 @@ owner_of_process (pid_t process, uid_t *result)
 
   glibtop_get_proc_uid (&process_details, process);
 
-  *result = process_details.uid;
-  return TRUE;
+  if (process_details.flags & (1L << GLIBTOP_PROC_UID_UID))
+    {
+      *result = process_details.uid;
+      return TRUE;
+    }
+  else
+    {
+      return FALSE;
+    }
 #else
   /* I don't know, maybe we could do something hairy like see whether
    * /proc/$PID exists and who owns it, in case they have procfs.

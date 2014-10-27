@@ -2,7 +2,7 @@ AC_PREREQ(2.50)
 
 m4_define([marco_major_version], [1])
 m4_define([marco_minor_version], [9])
-m4_define([marco_micro_version], [1])
+m4_define([marco_micro_version], [2])
 
 m4_define([marco_version],
           [marco_major_version.marco_minor_version.marco_micro_version])
@@ -118,7 +118,7 @@ AC_MSG_RESULT([$with_gtk])
 
 case "$with_gtk" in
   2.0) GTK_API_VERSION=2.0
-       GTK_MIN_VERSION=2.20.0
+       GTK_MIN_VERSION=2.24.0
        CANBERRA_GTK=libcanberra-gtk
        ;;
   3.0) GTK_API_VERSION=3.0
@@ -186,7 +186,7 @@ AM_GLIB_GNU_GETTEXT
 
 ## here we get the flags we'll actually use
 # GOptionEntry requires         glib-2.6.0
-PKG_CHECK_MODULES(ALL, glib-2.0 >= 2.6.0)
+PKG_CHECK_MODULES(ALL, glib-2.0 >= 2.32.0)
 # gtk_window_set_icon_name requires gtk2+-2.60
 PKG_CHECK_MODULES(MARCO_MESSAGE, gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION)
 PKG_CHECK_MODULES(MARCO_WINDOW_DEMO, gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION)

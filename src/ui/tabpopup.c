@@ -37,7 +37,6 @@
 #include <math.h>
 
 #if GTK_CHECK_VERSION(3, 0, 0)
-    #define GTK_WIDGET_VISIBLE gtk_widget_get_visible
     #define GdkRegion cairo_region_t
     #define gdk_region_subtract cairo_region_subtract
     #define gdk_region_destroy cairo_region_destroy
@@ -498,7 +497,7 @@ meta_ui_tab_popup_set_showing (MetaTabPopup *popup,
     }
   else
     {
-      if (GTK_WIDGET_VISIBLE (popup->window))
+      if (gtk_widget_get_visible (popup->window))
         {
           meta_verbose ("Hiding tab popup window\n");
           gtk_widget_hide (popup->window);
@@ -572,11 +571,7 @@ display_entry (MetaTabPopup *popup,
        * we manually set the window as mapped and then manually map it
        * with gdk functions.
        */
-      #if GTK_CHECK_VERSION(3, 0, 0)
       gtk_widget_set_mapped (popup->outline_window, TRUE);
-      #else
-      GTK_WIDGET_SET_FLAGS (popup->outline_window, GTK_MAPPED);
-      #endif
       gdk_window_show_unraised (window);
     }
 
