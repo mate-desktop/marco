@@ -2786,7 +2786,11 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
           gdk_window_begin_paint_rect (drawable, &areas[i]);
 
           meta_theme_draw_frame_with_style (meta_theme_get_current (),
+#if GTK_CHECK_VERSION (3, 0, 0)
             frame->style,
+#else
+            GTK_WIDGET(frames),
+#endif
             drawable,
             NULL, /* &areas[i], */
             x_offset, y_offset,
@@ -2811,7 +2815,11 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
       /* Not a window; happens about 1/3 of the time */
 
       meta_theme_draw_frame_with_style (meta_theme_get_current (),
+#if GTK_CHECK_VERSION (3, 0, 0)
                                         frame->style,
+#else
+                                        GTK_WIDGET(frames),
+#endif
                                         drawable,
                                         NULL,
                                         x_offset, y_offset,

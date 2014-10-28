@@ -927,7 +927,7 @@ void           meta_color_spec_render          (MetaColorSpec     *spec,
                                                 GdkRGBA           *color);
 #else
 void           meta_color_spec_render          (MetaColorSpec     *spec,
-                                                GtkWidget         *widget,
+                                                GtkStyle          *style_gtk,
                                                 GdkColor          *color);
 #endif
 
@@ -951,7 +951,7 @@ void           meta_draw_op_draw_with_style (const MetaDrawOp    *op,
                                              GtkStyleContext     *style_gtk,
                                              cairo_t             *cr,
                                              #else
-                                             GtkStyle            *style_gtk,
+                                             GtkWidget           *widget,
                                              GdkDrawable         *drawable,
                                              const GdkRectangle  *clip,
                                              #endif
@@ -977,7 +977,7 @@ void            meta_draw_op_list_draw_with_style  (const MetaDrawOpList *op_lis
                                                     GtkStyleContext      *style_gtk,
                                                     cairo_t              *cr,
                                                     #else
-                                                    GtkStyle             *style_gtk,
+                                                    GtkWidget            *widget,
                                                     GdkDrawable          *drawable,
                                                     const GdkRectangle   *clip,
                                                     #endif
@@ -999,7 +999,7 @@ GdkPixbuf*        meta_gradient_spec_render (const MetaGradientSpec *desc,
                                              int                     height);
 #else
 GdkPixbuf*        meta_gradient_spec_render (const MetaGradientSpec *desc,
-                                             GtkWidget              *widget,
+                                             GtkStyle               *style_gtk,
                                              int                     width,
                                              int                     height);
 #endif
@@ -1040,7 +1040,7 @@ void meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                                        GtkStyleContext         *style_gtk,
                                        cairo_t                 *cr,
                                        #else
-                                       GtkStyle                *style_gtk,
+                                       GtkWidget               *widget,
                                        GdkDrawable             *drawable,
                                        int                      x_offset,
                                        int                      y_offset,
@@ -1135,7 +1135,7 @@ void meta_theme_draw_frame_with_style (MetaTheme              *theme,
                                        GtkStyleContext        *style_gtk,
                                        cairo_t                *cr,
                                        #else
-                                       GtkStyle               *style_gtk,
+                                       GtkWidget              *widget,
                                        GdkDrawable            *drawable,
                                        const GdkRectangle     *clip,
                                        int                     x_offset,
