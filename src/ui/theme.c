@@ -1496,6 +1496,44 @@ meta_set_color_from_style (GdkRGBA               *color,
       break;
     }
 }
+#else
+static void
+meta_set_color_from_style (GdkColor              *color,
+                           GtkStyle              *widget_style,
+                           GtkStateType          state,
+                           MetaGtkColorComponent  component)
+{
+	 switch (component)
+	 {
+		 case META_GTK_COLOR_BG:
+			 *color = widget_style->bg[state];
+			 break;
+		 case META_GTK_COLOR_FG:
+			 *color = widget_style->fg[state];
+			 break;
+		 case META_GTK_COLOR_BASE:
+			 *color = widget_style->base[state];
+			 break;
+		 case META_GTK_COLOR_TEXT:
+			 *color = widget_style->text[state];
+			 break;
+		 case META_GTK_COLOR_LIGHT:
+			 *color = widget_style->light[state];
+			 break;
+		 case META_GTK_COLOR_DARK:
+			 *color = widget_style->dark[state];
+			 break;
+		 case META_GTK_COLOR_MID:
+			 *color = widget_style->mid[state];
+			 break;
+		 case META_GTK_COLOR_TEXT_AA:
+			 *color = widget_style->text_aa[state];
+			 break;
+		 case META_GTK_COLOR_LAST:
+			 g_assert_not_reached ();
+			 break;
+	 }
+}
 #endif
 
 #if GTK_CHECK_VERSION (3, 0, 0)
@@ -3545,7 +3583,7 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
                             GtkStyleContext     *style_gtk,
                             cairo_t             *cr,
                             #else
-                            GtkStyle            *style_gtk,
+                            GtkWidget           *widget,
                             GdkDrawable         *drawable,
                             const GdkRectangle  *clip,
                             #endif
@@ -3560,6 +3598,7 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
   gtk_style_context_save (style_gtk);
   #else
   GdkColor color;
+  GtkStyle *style_gtk = gtk_widget_get_style (widget);
 
   cairo_t *cr;
   cr = gdk_cairo_create (drawable);
@@ -4046,10 +4085,11 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
         d_rect.height = parse_size_unchecked (op->data.op_list.height, env);
 
         meta_draw_op_list_draw_with_style (op->data.op_list.op_list,
-                                           style_gtk,
                                            #if GTK_CHECK_VERSION(3, 0, 0)
+                                           style_gtk,
                                            cr,
                                            #else
+                                           widget,
                                            drawable, clip,
                                            #endif
                                            info, d_rect);
@@ -4130,7 +4170,11 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
                 while (tile.y < (ry + rheight))
                   {
                     meta_draw_op_list_draw_with_style (op->data.tile.op_list,
+#if GTK_CHECK_VERSION (3, 0, 0)
                                                        style_gtk, drawable, &new_clip, info,
+#else
+                                                       widget, drawable, &new_clip, info,
+#endif
                                                        tile);
 
                     tile.y += tile.height;
@@ -4158,7 +4202,7 @@ meta_draw_op_draw_with_style (const MetaDrawOp    *op,
                               GtkStyleContext     *style_gtk,
                               cairo_t             *cr,
                               #else
-                              GtkStyle            *style_gtk,
+                              GtkWidget           *widget,
                               GdkDrawable         *drawable,
                               const GdkRectangle  *clip,
                               #endif
@@ -4167,16 +4211,14 @@ meta_draw_op_draw_with_style (const MetaDrawOp    *op,
 {
   MetaPositionExprEnv env;
 
-  #if !GTK_CHECK_VERSION(3, 0, 0)
-  g_return_if_fail (style_gtk->colormap == gdk_drawable_get_colormap (drawable));
-  #endif
-
   fill_env (&env, info, logical_region);
 
-  meta_draw_op_draw_with_env (op, style_gtk,
+  meta_draw_op_draw_with_env (op,
                               #if GTK_CHECK_VERSION(3, 0, 0)
+                              style_gtk,
                               cr,
                               #else
+                              widget,
                               drawable, clip,
                               #endif
                               info, logical_region,
@@ -4202,7 +4244,7 @@ meta_draw_op_draw (const MetaDrawOp    *op,
                                 style_gtk,
                                 cr,
                                 #else
-                                gtk_widget_get_style (widget),
+                                widget,
                                 drawable, clip,
                                 #endif
                                 info, logical_region);
@@ -4261,7 +4303,7 @@ meta_draw_op_list_draw_with_style  (const MetaDrawOpList *op_list,
                                     GtkStyleContext      *style_gtk,
                                     cairo_t              *cr,
                                     #else
-                                    GtkStyle             *style_gtk,
+                                    GtkWidget            *widget,
                                     GdkDrawable          *drawable,
                                     const GdkRectangle   *clip,
                                     #endif
@@ -4276,10 +4318,6 @@ meta_draw_op_list_draw_with_style  (const MetaDrawOpList *op_list,
   GdkRectangle orig_clip;
   #endif
   MetaPositionExprEnv env;
-
-  #if !GTK_CHECK_VERSION(3, 0, 0)
-  g_return_if_fail (style_gtk->colormap == gdk_drawable_get_colormap (drawable));
-  #endif
 
   if (op_list->n_ops == 0)
     return;
@@ -4354,7 +4392,7 @@ meta_draw_op_list_draw_with_style  (const MetaDrawOpList *op_list,
                active_clip.height > 0)
         {
           meta_draw_op_draw_with_env (op,
-                                      style_gtk, widget, drawable, &active_clip, info,
+                                      widget, drawable, &active_clip, info,
                                       rect,
                                       &env);
         }
@@ -4385,7 +4423,7 @@ meta_draw_op_list_draw  (const MetaDrawOpList *op_list,
                                      style_gtk,
                                      cr,
                                      #else
-                                     gtk_widget_get_style (widget),
+                                     widget,
                                      drawable, clip,
                                      #endif
                                      info, rect);
@@ -4698,7 +4736,7 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                                   GtkStyleContext         *style_gtk,
                                   cairo_t                 *cr,
                                   #else
-                                  GtkStyle                *style_gtk,
+                                  GtkWidget               *widget,
                                   GdkDrawable             *drawable,
                                   int                      x_offset,
                                   int                      y_offset,
@@ -4723,10 +4761,6 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
   GdkRectangle left_edge, right_edge, bottom_edge;
   PangoRectangle extents;
   MetaDrawInfo draw_info;
-
-  #if !GTK_CHECK_VERSION(3, 0, 0)
-  g_return_if_fail (style_gtk->colormap == gdk_drawable_get_colormap (drawable));
-  #endif
 
   titlebar_rect.x = 0;
   titlebar_rect.y = 0;
@@ -4917,7 +4951,6 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
               MetaRectangle m_rect;
               m_rect = meta_rect (rect.x, rect.y, rect.width, rect.height);
               meta_draw_op_list_draw_with_style (op_list,
-                                                 style_gtk,
                                                  widget,
                                                  drawable,
                                                  &combined_clip,
@@ -5018,7 +5051,6 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                       m_rect = meta_rect (rect.x, rect.y,
                                           rect.width, rect.height);
                       meta_draw_op_list_draw_with_style (op_list,
-                                                         style_gtk,
                                                          widget,
                                                          drawable,
                                                          &combined_clip,
@@ -5074,7 +5106,7 @@ meta_frame_style_draw (MetaFrameStyle          *style,
                                     style_gtk,
                                     cr,
                                     #else
-                                    gtk_widget_get_style (widget),
+                                    widget,
                                     drawable, x_offset, y_offset, clip,
                                     #endif
                                     fgeom, client_width, client_height,
@@ -5675,7 +5707,7 @@ meta_theme_draw_frame_with_style (MetaTheme              *theme,
                                   GtkStyleContext        *style_gtk,
                                   cairo_t                *cr,
                                   #else
-                                  GtkStyle               *style_gtk,
+                                  GtkWidget              *widget,
                                   GdkDrawable            *drawable,
                                   const GdkRectangle     *clip,
                                   int                     x_offset,
@@ -5712,10 +5744,11 @@ meta_theme_draw_frame_with_style (MetaTheme              *theme,
                                    theme);
 
   meta_frame_style_draw_with_style (style,
-                                    style_gtk,
                                     #if GTK_CHECK_VERSION(3, 0, 0)
+                                    style_gtk,
                                     cr,
                                     #else
+                                    widget,
                                     drawable, x_offset, y_offset, clip,
                                     #endif
                                     &fgeom,
@@ -5754,7 +5787,7 @@ meta_theme_draw_frame (MetaTheme              *theme,
                                     style_gtk,
                                     cr,
                                     #else
-                                    gtk_widget_get_style (widget),
+                                    widget,
                                     drawable, clip, x_offset, y_offset,
                                     #endif
                                     type, flags, client_width, client_height,
