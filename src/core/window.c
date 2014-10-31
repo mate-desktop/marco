@@ -433,6 +433,12 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   /* initialize the remaining size_hints as if size_hints.flags were zero */
   meta_set_normal_hints (window, NULL);
 
+  window->has_custom_frame_extents = FALSE;
+  window->custom_frame_extents.left = 0;
+  window->custom_frame_extents.right = 0;
+  window->custom_frame_extents.top = 0;
+  window->custom_frame_extents.bottom = 0;
+
   /* And this is our unmaximized size */
   window->saved_rect = window->rect;
   window->user_rect = window->rect;
