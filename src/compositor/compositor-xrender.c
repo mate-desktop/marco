@@ -1478,13 +1478,18 @@ add_damage (MetaScreen     *screen,
 
   /*  dump_xserver_region ("add_damage", display, damage); */
 
-  if (info != NULL && info->all_damage)
+  if (info != NULL)
     {
-      XFixesUnionRegion (xdisplay, info->all_damage, info->all_damage, damage);
-      XFixesDestroyRegion (xdisplay, damage);
+      if (info->all_damage)
+        {
+          XFixesUnionRegion (xdisplay, info->all_damage, info->all_damage, damage);
+          XFixesDestroyRegion (xdisplay, damage);
+        }
+      else
+        {
+          info->all_damage = damage;
+        }
     }
-  else
-    info->all_damage = damage;
 
 #ifdef USE_IDLE_REPAINT
   add_repair (display);
