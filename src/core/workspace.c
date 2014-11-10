@@ -798,8 +798,6 @@ meta_motion_direction_to_string (MetaMotionDirection direction)
       return "Left";
     case META_MOTION_RIGHT:
       return "Right";
-    case META_MOTION_PREV:
-      return "Prev";
     }
 
   return "Unknown";
@@ -839,9 +837,6 @@ meta_workspace_get_neighbor (MetaWorkspace      *workspace,
       break;
     case META_MOTION_DOWN:
       layout.current_row += 1;
-      break;
-    case META_MOTION_PREV:
-      g_assert_not_reached();
       break;
     }
 
@@ -918,9 +913,6 @@ meta_workspace_get_neighbor (MetaWorkspace      *workspace,
         layout.current_row = 0;
         if (wrap == META_WRAP_TOROIDAL)
 	  layout.current_col = layout.current_col < layout.cols - 1 ? layout.current_col + 1 : 0;
-        break;
-      case META_MOTION_PREV:
-        g_assert_not_reached();
         break;
       }
 
