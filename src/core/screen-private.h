@@ -85,9 +85,6 @@ struct _MetaScreen
 
   MetaWorkspace *active_workspace;
 
-  /* Previous active workspace */
-  MetaWorkspace *prev_workspace;
-
   /* This window holds the focus when we don't want to focus
    * any actual clients
    */
