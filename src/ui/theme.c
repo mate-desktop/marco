@@ -459,6 +459,38 @@ meta_frame_layout_get_borders (const MetaFrameLayout *layout,
     }
 }
 
+static MetaButtonType
+map_button_function_to_type (MetaButtonFunction  function)
+{
+  switch (function)
+    {
+    case META_BUTTON_FUNCTION_SHADE:
+      return META_BUTTON_TYPE_SHADE;
+    case META_BUTTON_FUNCTION_ABOVE:
+      return META_BUTTON_TYPE_ABOVE;
+    case META_BUTTON_FUNCTION_STICK:
+      return META_BUTTON_TYPE_STICK;
+    case META_BUTTON_FUNCTION_UNSHADE:
+      return META_BUTTON_TYPE_UNSHADE;
+    case META_BUTTON_FUNCTION_UNABOVE:
+      return META_BUTTON_TYPE_UNABOVE;
+    case META_BUTTON_FUNCTION_UNSTICK:
+      return META_BUTTON_TYPE_UNSTICK;
+    case META_BUTTON_FUNCTION_MENU:
+      return META_BUTTON_TYPE_MENU;
+    case META_BUTTON_FUNCTION_MINIMIZE:
+      return META_BUTTON_TYPE_MINIMIZE;
+    case META_BUTTON_FUNCTION_MAXIMIZE:
+      return META_BUTTON_TYPE_MAXIMIZE;
+    case META_BUTTON_FUNCTION_CLOSE:
+      return META_BUTTON_TYPE_CLOSE;
+    case META_BUTTON_FUNCTION_LAST:
+      return META_BUTTON_TYPE_LAST;
+    }
+
+  return META_BUTTON_TYPE_LAST;
+}
+
 static MetaButtonSpace*
 rect_for_function (MetaFrameGeometry *fgeom,
                    MetaFrameFlags     flags,
@@ -826,6 +858,11 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
                     n_left, n_right);
         }
     }
+
+  /* Save the button layout */
+  fgeom->button_layout = *button_layout;
+  fgeom->n_left_buttons = n_left;
+  fgeom->n_right_buttons = n_right;
 
   /* center buttons vertically */
   button_y = (fgeom->top_height -
@@ -4392,6 +4429,64 @@ meta_frame_style_unref (MetaFrameStyle *style)
     }
 }
 
+static MetaButtonState
+map_button_state (MetaButtonType           button_type,
+                  const MetaFrameGeometry *fgeom,
+                  int                      middle_bg_offset,
+                  MetaButtonState          button_states[META_BUTTON_TYPE_LAST])
+{
+  MetaButtonFunction function = META_BUTTON_FUNCTION_LAST;
+
+  switch (button_type)
+    {
+    /* First hande functions, which map directly */
+    case META_BUTTON_TYPE_SHADE:
+    case META_BUTTON_TYPE_ABOVE:
+    case META_BUTTON_TYPE_STICK:
+    case META_BUTTON_TYPE_UNSHADE:
+    case META_BUTTON_TYPE_UNABOVE:
+    case META_BUTTON_TYPE_UNSTICK:
+    case META_BUTTON_TYPE_MENU:
+    case META_BUTTON_TYPE_MINIMIZE:
+    case META_BUTTON_TYPE_MAXIMIZE:
+    case META_BUTTON_TYPE_CLOSE:
+      return button_states[button_type];
+
+    /* Map position buttons to the corresponding function */
+    case META_BUTTON_TYPE_RIGHT_LEFT_BACKGROUND:
+      if (fgeom->n_right_buttons > 0)
+        function = fgeom->button_layout.right_buttons[0];
+      break;
+    case META_BUTTON_TYPE_RIGHT_RIGHT_BACKGROUND:
+      if (fgeom->n_right_buttons > 0)
+        function = fgeom->button_layout.right_buttons[fgeom->n_right_buttons - 1];
+      break;
+    case META_BUTTON_TYPE_RIGHT_MIDDLE_BACKGROUND:
+      if (middle_bg_offset + 1 < fgeom->n_right_buttons)
+        function = fgeom->button_layout.right_buttons[middle_bg_offset + 1];
+      break;
+    case META_BUTTON_TYPE_LEFT_LEFT_BACKGROUND:
+      if (fgeom->n_left_buttons > 0)
+        function = fgeom->button_layout.left_buttons[0];
+      break;
+    case META_BUTTON_TYPE_LEFT_RIGHT_BACKGROUND:
+      if (fgeom->n_left_buttons > 0)
+        function = fgeom->button_layout.left_buttons[fgeom->n_left_buttons - 1];
+      break;
+    case META_BUTTON_TYPE_LEFT_MIDDLE_BACKGROUND:
+      if (middle_bg_offset + 1 < fgeom->n_left_buttons)
+        function = fgeom->button_layout.left_buttons[middle_bg_offset + 1];
+      break;
+    case META_BUTTON_TYPE_LAST:
+      break;
+    }
+
+  if (function != META_BUTTON_FUNCTION_LAST)
+    return button_states[map_button_function_to_type (function)];
+
+  return META_BUTTON_STATE_LAST;
+}
+
 static MetaDrawOpList*
 get_button (MetaFrameStyle *style,
             MetaButtonType  type,
@@ -4799,10 +4894,12 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
           j = 0;
           while (j < META_BUTTON_TYPE_LAST)
             {
+              MetaButtonState button_state;
 
               button_rect (j, fgeom, middle_bg_offset, &rect);
 
-              op_list = get_button (style, j, button_states[j]);
+              button_state = map_button_state (j, fgeom, middle_bg_offset, button_states)
+              op_list = get_button (style, j, button_state);
 
               if (op_list)
                 {
@@ -4853,6 +4950,8 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
           j = 0;
           while (j < META_BUTTON_TYPE_LAST)
             {
+              MetaButtonState button_state;
+
               button_rect (j, fgeom, middle_bg_offset, &rect);
 
               rect.x += x_offset;
@@ -4869,7 +4968,9 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                 {
                   MetaDrawOpList *op_list;
 
-                  op_list = get_button (style, j, button_states[j]);
+                  button_state = map_button_state (j, fgeom, middle_bg_offset, button_states);
+
+                  op_list = get_button (style, j, button_state);
 
                   if (op_list)
                     {
