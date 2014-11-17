@@ -2705,20 +2705,6 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
       break;
     }
 
-  /* Map button function states to button position states */
-  button_states[META_BUTTON_TYPE_LEFT_LEFT_BACKGROUND] =
-    button_states[META_BUTTON_TYPE_MENU];
-  button_states[META_BUTTON_TYPE_LEFT_MIDDLE_BACKGROUND] =
-    META_BUTTON_STATE_NORMAL;
-  button_states[META_BUTTON_TYPE_LEFT_RIGHT_BACKGROUND] =
-    META_BUTTON_STATE_NORMAL;
-  button_states[META_BUTTON_TYPE_RIGHT_LEFT_BACKGROUND] =
-    button_states[META_BUTTON_TYPE_MINIMIZE];
-  button_states[META_BUTTON_TYPE_RIGHT_MIDDLE_BACKGROUND] =
-    button_states[META_BUTTON_TYPE_MAXIMIZE];
-  button_states[META_BUTTON_TYPE_RIGHT_RIGHT_BACKGROUND] =
-    button_states[META_BUTTON_TYPE_CLOSE];
-
   meta_core_get (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow,
                  META_CORE_GET_FRAME_FLAGS, &flags,
                  META_CORE_GET_FRAME_TYPE, &type,

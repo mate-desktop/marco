@@ -582,11 +582,10 @@ place_window_if_needed(MetaWindow     *window,
           window->maximize_vertically_after_placement = FALSE;
         }
       if (window->minimize_after_placement)
-        {
           meta_window_minimize (window);
-          window->minimize_after_placement = FALSE;
-        }
     }
+
+    window->minimize_after_placement = FALSE;
 }
 
 static void
