@@ -4898,7 +4898,7 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
 
               button_rect (j, fgeom, middle_bg_offset, &rect);
 
-              button_state = map_button_state (j, fgeom, middle_bg_offset, button_states)
+              button_state = map_button_state (j, fgeom, middle_bg_offset, button_states);
               op_list = get_button (style, j, button_state);
 
               if (op_list)
