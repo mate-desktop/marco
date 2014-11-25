@@ -35,6 +35,12 @@
 #define _(x) dgettext (GETTEXT_PACKAGE, x)
 #define N_(x) x
 
+/* Silence Gtk{V,H}Box deprecations warnings */
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
+#define gtk_hbox_new(X, Y) gtk_box_new (GTK_ORIENTATION_HORIZONTAL, Y)
+#endif
+
 /* We need to compute all different button arrangements
  * in terms of button location. We don't care about
  * different arrangements in terms of button function.

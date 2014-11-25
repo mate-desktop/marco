@@ -41,6 +41,8 @@
     #define gdk_region_subtract cairo_region_subtract
     #define gdk_region_destroy cairo_region_destroy
     #define gdk_region_rectangle cairo_region_create_rectangle
+    /* Silence Gtk{V,H}Box deprecations warnings */
+    #define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
 #endif
 
 #define OUTSIDE_SELECT_RECT 2
