@@ -35,6 +35,12 @@
 #define _(x) dgettext (GETTEXT_PACKAGE, x)
 #define N_(x) x
 
+/* Silence Gtk{V,H}Box deprecations warnings */
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
+#define gtk_hbox_new(X, Y) gtk_box_new (GTK_ORIENTATION_HORIZONTAL, Y)
+#endif
+
 /* We need to compute all different button arrangements
  * in terms of button location. We don't care about
  * different arrangements in terms of button function.
@@ -242,8 +248,8 @@ dialog_contents (void)
   update_spacings (vbox, action_area);
 
   label = gtk_label_new (_("This is a sample message in a sample dialog"));
-  image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO,
-                                    GTK_ICON_SIZE_DIALOG);
+  image = gtk_image_new_from_icon_name ("dialog-information",
+                                        GTK_ICON_SIZE_DIALOG);
 #if GTK_CHECK_VERSION (3, 0, 0)
   gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
   gtk_widget_set_valign (image, GTK_ALIGN_START);

@@ -4455,7 +4455,7 @@ meta_draw_op_list_draw  (const MetaDrawOpList *op_list,
                          MetaRectangle         rect)
 
 {
-  meta_draw_op_list_draw_with_style (op_list, 
+  meta_draw_op_list_draw_with_style (op_list,
                                      #if GTK_CHECK_VERSION(3, 0, 0)
                                      style_gtk,
                                      cr,
@@ -5073,7 +5073,7 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
 
               button_rect (j, fgeom, middle_bg_offset, &rect);
 
-              button_state = map_button_state (j, fgeom, middle_bg_offset, button_states)
+              button_state = map_button_state (j, fgeom, middle_bg_offset, button_states);
               op_list = get_button (style, j, button_state);
 
               if (op_list)

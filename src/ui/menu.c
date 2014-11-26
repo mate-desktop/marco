@@ -393,7 +393,7 @@ meta_window_menu_new   (MetaFrames         *frames,
                   meta_verbose ("Creating %d-workspace menu current space %lu\n",
                       n_workspaces, active_workspace);
 
-                  GdkWindow* window = gtk_widget_get_window(GTK_WIDGET(frames));
+                  GdkWindow* window = gtk_widget_get_window (GTK_WIDGET (frames));
 
                   display = GDK_WINDOW_XDISPLAY (window);
 
@@ -501,9 +501,10 @@ meta_window_menu_new   (MetaFrames         *frames,
         }
     }
 
-	g_signal_connect (menu->menu, "selection_done", G_CALLBACK(menu_closed), menu);
+  g_signal_connect (menu->menu, "selection_done",
+                    G_CALLBACK (menu_closed), menu);
 
-	return menu;
+  return menu;
 }
 
 void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int button, guint32 timestamp)

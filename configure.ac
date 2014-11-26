@@ -2,7 +2,7 @@ AC_PREREQ(2.50)
 
 m4_define([marco_major_version], [1])
 m4_define([marco_minor_version], [9])
-m4_define([marco_micro_version], [2])
+m4_define([marco_micro_version], [3])
 
 m4_define([marco_version],
           [marco_major_version.marco_minor_version.marco_micro_version])
@@ -124,7 +124,7 @@ case "$with_gtk" in
   3.0) GTK_API_VERSION=3.0
        GTK_MIN_VERSION=2.90.0
        CANBERRA_GTK=libcanberra-gtk3
-       MATE_DESKTOP_VERSION=1.9.2
+       MATE_DESKTOP_VERSION=1.9.3
        ;;
 esac
 AM_CONDITIONAL([HAVE_GTK2], [test "x$with_gtk" = "x2.0"])
@@ -135,7 +135,7 @@ MARCO_PC_MODULES="gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION gio-2.0 >= $GIO_MIN_
 AC_SUBST(GTK_API_VERSION)
 
 if test x$GTK_API_VERSION = x3.0; then
-    MARCO_PC_MODULES="$MARCO_PC_MODULES mate-desktop-3.0 >= $MATE_DESKTOP_VERSION"
+    MARCO_PC_MODULES="$MARCO_PC_MODULES mate-desktop-$GTK_API_VERSION >= $MATE_DESKTOP_VERSION"
 fi
 
 GLIB_GSETTINGS

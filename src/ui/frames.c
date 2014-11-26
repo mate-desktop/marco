@@ -1131,16 +1131,14 @@ meta_frames_move_resize_frame (MetaFrames *frames,
                                int         height)
 {
   MetaUIFrame *frame = meta_frames_lookup_window (frames, xwindow);
-  int old_x, old_y, old_width, old_height;
+  int old_width, old_height;
 
-	#if GTK_CHECK_VERSION(3, 0, 0)
-		old_width = gdk_window_get_width(GDK_WINDOW(frame->window));
-		old_height = gdk_window_get_height(GDK_WINDOW(frame->window));
-	#else
-		gdk_drawable_get_size(frame->window, &old_width, &old_height);
-	#endif
-
-  gdk_window_get_position (frame->window, &old_x, &old_y);
+#if GTK_CHECK_VERSION(3, 0, 0)
+  old_width = gdk_window_get_width (frame->window);
+  old_height = gdk_window_get_height (frame->window);
+#else
+  gdk_drawable_get_size(frame->window, &old_width, &old_height);
+#endif
 
   gdk_window_move_resize (frame->window, x, y, width, height);
 
@@ -2882,21 +2880,21 @@ meta_frames_set_window_background (MetaFrames   *frames,
       /* Set A in ARGB to window_background_alpha, if we have ARGB */
 
       visual = gtk_widget_get_visual (GTK_WIDGET (frames));
-      if (gdk_visual_get_depth(visual) == 32) /* we have ARGB */
+      if (gdk_visual_get_depth (visual) == 32) /* we have ARGB */
+      #if GTK_CHECK_VERSION(3, 0, 0)
         {
-#if GTK_CHECK_VERSION (3, 0, 0)
           color.alpha = style->window_background_alpha / 255.0;
-#else
-          color.pixel = (color.pixel & 0xffffff) &
-            style->window_background_alpha << 24;
-#endif
         }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
       gdk_window_set_background_rgba (frame->window, &color);
-#else
+      #else
+        {
+          color.pixel = (color.pixel & 0xffffff) &
+            style->window_background_alpha << 24;
+        }
+
       gdk_window_set_background (frame->window, &color);
-#endif
+      #endif
     }
   else
     {

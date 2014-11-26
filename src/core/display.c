@@ -2852,9 +2852,15 @@ key_event_description (Display *xdisplay,
                        XEvent  *event)
 {
 #ifdef HAVE_XKB
-  KeySym keysym   = XkbKeycodeToKeysym(xdisplay, event->xkey.keycode, 0, 0);
-  const char *str = XKeysymToString (keysym);
-  return g_strdup_printf ("Key '%s' state 0x%x", str ? str : "none", event->xkey.state);
+  KeySym keysym;
+  const char *str;
+
+  keysym = XkbKeycodeToKeysym (xdisplay, event->xkey.keycode, 0, 0);
+
+  str = XKeysymToString (keysym);
+
+  return g_strdup_printf ("Key '%s' state 0x%x",
+                          str ? str : "none", event->xkey.state);
 #else
   return "none";
 #endif

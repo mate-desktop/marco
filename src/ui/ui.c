@@ -134,8 +134,8 @@ maybe_redirect_mouse_event (XEvent *xevent)
     return FALSE;
 
 #if GTK_CHECK_VERSION (3, 0, 0)
- gmanager = gdk_display_get_device_manager (gdisplay);
- gdevice = gdk_device_manager_get_client_pointer (gmanager);
+  gmanager = gdk_display_get_device_manager (gdisplay);
+  gdevice = gdk_device_manager_get_client_pointer (gmanager);
 #endif
 
   /* If GDK already thinks it has a grab, we better let it see events; this
