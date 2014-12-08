@@ -1203,7 +1203,6 @@ process_event (MetaKeyBinding       *bindings,
                MetaScreen           *screen,
                MetaWindow           *window,
                XEvent               *event,
-               KeySym                keysym,
                gboolean              on_window)
 {
   int i;
@@ -1311,9 +1310,9 @@ meta_display_process_key_event (MetaDisplay *display,
 
 #ifdef HAVE_XKB
   keysym = XkbKeycodeToKeysym (display->xdisplay, event->xkey.keycode, 0, 0);
-
   str = XKeysymToString (keysym);
 #else
+  keysym = 0;
   str = NULL;
 #endif
 
@@ -1414,7 +1413,7 @@ meta_display_process_key_event (MetaDisplay *display,
   /* Do the normal keybindings */
   process_event (display->key_bindings,
                  display->n_key_bindings,
-                 display, screen, window, event, keysym,
+                 display, screen, window, event,
                  !all_keys_grabbed && window);
 }
 
