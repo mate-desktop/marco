@@ -2670,14 +2670,9 @@ meta_window_maximize (MetaWindow        *window,
       if (window->tile_mode != META_TILE_NONE)
         {
           saved_rect = &window->saved_rect;
-          window->maximized_vertically = FALSE;
-	}
-
-      if (window->tile_mode != META_TILE_NONE)
-        {
-          saved_rect = &window->saved_rect;
 
           window->maximized_vertically = FALSE;
+          window->tile_mode = META_TILE_NONE;
         }
 
       meta_window_maximize_internal (window,
@@ -2779,15 +2774,6 @@ meta_window_unmaximize (MetaWindow        *window,
 {
   /* At least one of the two directions ought to be set */
   gboolean unmaximize_horizontally, unmaximize_vertically;
-
-  /* Restore tiling if necessary */
-  if (window->tile_mode == META_TILE_LEFT ||
-      window->tile_mode == META_TILE_RIGHT)
-    {
-      window->maximized_horizontally = FALSE;
-      meta_window_tile (window);
-      return;
-    }
 
   unmaximize_horizontally = directions & META_MAXIMIZE_HORIZONTAL;
   unmaximize_vertically   = directions & META_MAXIMIZE_VERTICAL;
