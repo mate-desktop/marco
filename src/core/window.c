@@ -2746,7 +2746,7 @@ meta_window_can_tile (MetaWindow *window)
   MetaRectangle tile_area;
 
   /*if (!META_WINDOW_ALLOWS_RESIZE (window))*/
-  if (!META_WINDOW_ALLOWS_RESIZE (window))
+  if (!meta_window_can_tile_maximized (window) || window->shaded)
     return FALSE;
 
   monitor = meta_screen_get_current_xinerama (window->screen);
