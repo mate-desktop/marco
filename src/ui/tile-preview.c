@@ -177,8 +177,7 @@ on_preview_window_style_set (GtkWidget *widget,
 }
 
 MetaTilePreview *
-meta_tile_preview_new (int      screen_number,
-                       gboolean composited)
+meta_tile_preview_new (int      screen_number)
 {
   MetaTilePreview *preview;
 #if !GTK_CHECK_VERSION (3, 0, 0)
@@ -207,9 +206,9 @@ meta_tile_preview_new (int      screen_number,
   preview->tile_rect.width = preview->tile_rect.height = 0;
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-  preview->has_alpha = composited && (gdk_screen_get_rgba_visual (screen) != NULL);
+  preview->has_alpha = gdk_screen_is_composited (screen) && (gdk_screen_get_rgba_visual (screen) != NULL);
 #else
-  preview->has_alpha = rgba_colormap && composited;
+  preview->has_alpha = rgba_colormap && gdk_screen_is_composited (screen);
 #endif
 
   if (preview->has_alpha)
