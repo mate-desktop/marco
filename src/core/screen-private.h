@@ -115,6 +115,7 @@ struct _MetaScreen
 #endif
 
 #ifdef HAVE_COMPOSITE_EXTENSIONS
+  Atom wm_cm_atom;
   Window wm_cm_selection_window;
   guint32 wm_cm_timestamp;
 #endif

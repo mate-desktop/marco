@@ -28,6 +28,8 @@
 
 #include "tile-preview.h"
 #include "core.h"
+#include "types.h"
+#include "core/screen-private.h"
 
 #define OUTLINE_WIDTH 5  /* frame width in non-composite case */
 
@@ -206,23 +208,14 @@ meta_tile_preview_new (int      screen_number)
   preview->tile_rect.width = preview->tile_rect.height = 0;
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-  preview->has_alpha = gdk_screen_is_composited (screen) && (gdk_screen_get_rgba_visual (screen) != NULL);
+  gtk_widget_set_visual (preview->preview_window,
+                         gdk_screen_get_rgba_visual (screen));
 #else
-  preview->has_alpha = rgba_colormap && gdk_screen_is_composited (screen);
+  gtk_widget_set_colormap (preview->preview_window, rgba_colormap);
 #endif
 
-  if (preview->has_alpha)
-    {
-#if GTK_CHECK_VERSION (3, 0, 0)
-      gtk_widget_set_visual (preview->preview_window,
-                             gdk_screen_get_rgba_visual (screen));
-#else
-      gtk_widget_set_colormap (preview->preview_window, rgba_colormap);
-#endif
-
-      g_signal_connect (preview->preview_window, "style-set",
-                        G_CALLBACK (on_preview_window_style_set), preview);
-    }
+  g_signal_connect (preview->preview_window, "style-set",
+                    G_CALLBACK (on_preview_window_style_set), preview);
 
   gtk_widget_realize (preview->preview_window);
 #if !GTK_CHECK_VERSION (3, 0, 0)
@@ -258,7 +251,8 @@ meta_tile_preview_free (MetaTilePreview *preview)
 
 void
 meta_tile_preview_show (MetaTilePreview *preview,
-                        MetaRectangle   *tile_rect)
+                        MetaRectangle   *tile_rect,
+                        MetaScreen      *screen)
 {
   GdkWindow *window;
   GdkRectangle old_rect;
@@ -291,6 +285,11 @@ meta_tile_preview_show (MetaTilePreview *preview,
   gdk_window_move_resize (window,
                           preview->tile_rect.x, preview->tile_rect.y,
                           preview->tile_rect.width, preview->tile_rect.height);
+#if HAVE_COMPOSITE_EXTENSIONS
+  preview->has_alpha = meta_screen_is_cm_selected (screen);
+#else
+  preview->has_alpha = FALSE;
+#endif
 
   if (!preview->has_alpha)
     {
@@ -337,6 +336,8 @@ meta_tile_preview_show (MetaTilePreview *preview,
       gdk_window_shape_combine_region (window, outer_region, 0, 0);
       gdk_region_destroy (outer_region);
 #endif
+    } else {
+      gdk_window_shape_combine_region (window, NULL, 0, 0);
     }
 }
 

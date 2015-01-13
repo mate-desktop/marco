@@ -43,6 +43,7 @@ MetaScreen *meta_screen_for_x_screen (Screen *xscreen);
 #ifdef HAVE_COMPOSITE_EXTENSIONS
 void meta_screen_set_cm_selection (MetaScreen *screen);
 void meta_screen_unset_cm_selection (MetaScreen *screen);
+gboolean meta_screen_is_cm_selected (MetaScreen *screen);
 #endif
 
 #endif

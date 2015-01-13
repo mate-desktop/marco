@@ -24,13 +24,15 @@
 #define META_TILE_PREVIEW_H
 
 #include "boxes.h"
+#include "types.h"
 
 typedef struct _MetaTilePreview MetaTilePreview;
 
 MetaTilePreview   *meta_tile_preview_new    (int                screen_number);
 void               meta_tile_preview_free   (MetaTilePreview   *preview);
 void               meta_tile_preview_show   (MetaTilePreview   *preview,
-                                             MetaRectangle     *rect);
+                                             MetaRectangle     *rect,
+                                             MetaScreen        *screen);
 void               meta_tile_preview_hide   (MetaTilePreview   *preview);
 
 #endif /* META_TILE_PREVIEW_H */
