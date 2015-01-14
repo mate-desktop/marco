@@ -271,7 +271,6 @@ meta_tile_preview_show (MetaTilePreview *preview,
       && preview->tile_rect.height == tile_rect->height)
     return; /* nothing to do */
 
-  gtk_widget_show (preview->preview_window);
   window = gtk_widget_get_window (preview->preview_window);
 #if GTK_CHECK_VERSION (3, 0, 0)
   meta_core_lower_beneath_focus_window (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
@@ -286,6 +285,8 @@ meta_tile_preview_show (MetaTilePreview *preview,
   old_rect.height = preview->tile_rect.height;
 
   gdk_window_invalidate_rect (window, &old_rect, FALSE);
+
+  gtk_widget_show (preview->preview_window);
 
   preview->tile_rect = *tile_rect;
 
