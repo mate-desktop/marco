@@ -92,6 +92,9 @@ struct _MetaFrameLayout
   /** Size of bottom side */
   int bottom_height;
 
+  /** Invisible border */
+  GtkBorder invisible_border;
+
   /** Border of blue title region
    * \bug (blue?!)
    **/
