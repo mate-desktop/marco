@@ -4,15 +4,17 @@
 # 
 # Translators:
 # Adolfo Jayme Barrientos <fito@libreoffice.org>, 2014
+# difusion, 2014
+# Emiliano Fascetti, 2014-2015
 # Lluís Tusquellas <lutusq@gmail.com>, 2013
 # Lluís Tusquellas <lutusq@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-09 10:14+0200\n"
-"PO-Revision-Date: 2014-10-09 13:49+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"POT-Creation-Date: 2014-10-12 18:09+0200\n"
+"PO-Revision-Date: 2015-01-05 21:04+0000\n"
+"Last-Translator: Emiliano Fascetti\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/MATE/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -142,7 +144,7 @@ msgstr "Cambiar al área de trabajo debajo del área de trabajo actual"
 
 #: ../src/50-marco-global-key.xml.in.h:25
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Volver al espacio de trabajo seleccionado anteriormente"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 msgid "Activate the window menu"
@@ -210,39 +212,39 @@ msgstr "Maximizar la ventana horizontalmente"
 
 #: ../src/50-marco-window-key.xml.in.h:18
 msgid "Move window to north-west (top left) corner"
-msgstr ""
+msgstr "Mover la ventana a la esquina noroeste (arriba a la izquierda)"
 
 #: ../src/50-marco-window-key.xml.in.h:19
-msgid "Move window to north-east (top right) cornerl"
-msgstr ""
+msgid "Move window to north-east (top right) corner"
+msgstr "Mover la ventana a la esquina noreste (arriba a la derecha)"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Move window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Mover la ventana a la esquina sureste (abajo a la izquierda)"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Move window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Mover la ventana a la esquina suroeste (abajo a la derecha)"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Move window to north (top) side of screen"
-msgstr ""
+msgstr "Mover la ventana al lado norte (arriba) de la pantalla"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Move window to south (bottom) side of screen"
-msgstr ""
+msgstr "Mover la ventana al lado sur (abajo) de la pantalla"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 msgid "Move window to east (right) side of screen"
-msgstr ""
+msgstr "Mover la ventana al lado este (derecha) de la pantalla"
 
 #: ../src/50-marco-window-key.xml.in.h:25
 msgid "Move window to west (left) side of screen"
-msgstr ""
+msgstr "Mover la ventana al lado oeste (izquierda) de la pantalla"
 
 #: ../src/50-marco-window-key.xml.in.h:26
 msgid "Move window to center of screen"
-msgstr ""
+msgstr "Mover ventana al centro de la pantalla"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 msgid "Move window to workspace 1"
@@ -385,12 +387,12 @@ msgstr "Hubo un error al ejecutar <tt>%s</tt>:\n\n%s"
 #: ../src/core/keybindings.c:2396
 #, c-format
 msgid "No command %d has been defined.\n"
-msgstr "No se ha definido ninguna orden %d.\n"
+msgstr "No ha sido definido ningún comando %d.\n"
 
 #: ../src/core/keybindings.c:3356
 #, c-format
 msgid "No terminal command has been defined.\n"
-msgstr "No se ha definido ninguna orden de terminal.\n"
+msgstr "No ha sido definido ningún comando de terminal.\n"
 
 #: ../src/core/main.c:137
 #, c-format
@@ -598,7 +600,7 @@ msgstr "Marco fue compilado sin soporte para modo prolijo\n"
 
 #: ../src/core/util.c:236
 msgid "Window manager: "
-msgstr "Administrador de ventanas: "
+msgstr "Gestor de ventanas: "
 
 #: ../src/core/util.c:388
 msgid "Bug in window manager: "

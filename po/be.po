@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-09 10:14+0200\n"
-"PO-Revision-Date: 2014-10-09 13:49+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"POT-Creation-Date: 2014-10-12 18:09+0200\n"
+"PO-Revision-Date: 2014-11-08 11:21+0000\n"
+"Last-Translator: Mihail Varantsou <meequz@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/projects/p/MATE/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -142,7 +142,7 @@ msgstr "Пераключыцца на ніжэйшую працоўную пра
 
 #: ../src/50-marco-global-key.xml.in.h:25
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Пераключыцца на раней вылучаную прастору"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 msgid "Activate the window menu"
@@ -210,39 +210,39 @@ msgstr "Найбольшыць вакно па гарызанталі"
 
 #: ../src/50-marco-window-key.xml.in.h:18
 msgid "Move window to north-west (top left) corner"
-msgstr ""
+msgstr "Перасунуць вакно ў паўночна-заходні (верхні левы) вугал"
 
 #: ../src/50-marco-window-key.xml.in.h:19
-msgid "Move window to north-east (top right) cornerl"
-msgstr ""
+msgid "Move window to north-east (top right) corner"
+msgstr "Перасунуць вакно ў паўночна-усходні (верхні правы) вугал"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Move window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Перасунуць вакно ў паўднёва-заходні (ніжні левы) вугал"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Move window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Перасунуць вакно ў паўднёва-усходні (ніжні правы) вугал"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Move window to north (top) side of screen"
-msgstr ""
+msgstr "Перасунуць вакно да паўночнага (верхняга) краю экрана"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Move window to south (bottom) side of screen"
-msgstr ""
+msgstr "Перасунуць вакно да паўднёвага (ніжняга) краю экрана"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 msgid "Move window to east (right) side of screen"
-msgstr ""
+msgstr "Перасунуць вакно да усходняга (правага) краю экрана"
 
 #: ../src/50-marco-window-key.xml.in.h:25
 msgid "Move window to west (left) side of screen"
-msgstr ""
+msgstr "Перасунуць вакно да заходняга (левага) краю экрана"
 
 #: ../src/50-marco-window-key.xml.in.h:26
 msgid "Move window to center of screen"
-msgstr ""
+msgstr "Перасунуць вакно ў цэнтр экрана"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 msgid "Move window to workspace 1"
@@ -345,7 +345,7 @@ msgstr "Не выйшла атрымаць назву вузла: %s\n"
 #: ../src/core/display.c:268
 #, c-format
 msgid "Missing %s extension required for compositing"
-msgstr ""
+msgstr "Не стае пашырэння %s, якое патрабуецца для кампазітынгу"
 
 #: ../src/core/display.c:346
 #, c-format
@@ -380,7 +380,7 @@ msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr ""
+msgstr "Здарылася памылка ў працы <tt>%s</tt>:\n\n%s"
 
 #: ../src/core/keybindings.c:2396
 #, c-format
@@ -399,7 +399,7 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
+msgstr "marco %s\nАўтарскае права (C) 2001-%s Havoc Pennington, Red Hat, Inc., і іншыя\nГэта свабодная праграма; глядзіце ўмовы распаўсюдвжання ў выточным кодзе.\nАНІЯКІХ ГАРАНТЫЙ не прадастаўляецца; нават відавочных гарантый прыдатнасці да КАМЕРЦЫЙНАГА ПРОДАЖУ ці ПЭЎНАЙ МЭТЫ.\n"
 
 #: ../src/core/main.c:275
 msgid "Disable connection to session manager"
@@ -558,7 +558,7 @@ msgstr "Выстаўлены атрыбут <marco_session>, але ID сеан�
 #: ../src/core/session.c:1436
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
-msgstr ""
+msgstr "Невядомы атрыбут %s элемента <%s>"
 
 #: ../src/core/session.c:1214
 #, c-format
@@ -724,11 +724,11 @@ msgstr "Аднавіць вакно"
 
 #: ../src/ui/frames.c:1214
 msgid "Roll Up Window"
-msgstr ""
+msgstr "Скатаць вакно"
 
 #: ../src/ui/frames.c:1217
 msgid "Unroll Window"
-msgstr ""
+msgstr "Раскатаць вакно"
 
 #: ../src/ui/frames.c:1220
 msgid "Keep Window On Top"
@@ -1174,7 +1174,7 @@ msgstr "Канстанта \"%s\" ужо вызначаная"
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr ""
+msgstr "Няма атрыбута \"%s\" у элемента <%s>"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
@@ -1380,7 +1380,7 @@ msgstr "Невядомая функцыя \"%s\" для кнопкі"
 #: ../src/ui/theme-parser.c:2917
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
-msgstr ""
+msgstr "Функцыя кнопкі \"%s\" не існуе ў гэтай версіі (%d, трэба %d)"
 
 #: ../src/ui/theme-parser.c:2929
 #, c-format
@@ -1503,12 +1503,12 @@ msgstr "Выкарыстанне тэксту ўнутры элемента <%s>
 #: ../src/ui/theme-parser.c:3873
 #, c-format
 msgid "<%s> specified twice for this theme"
-msgstr ""
+msgstr "<%s> зададзена двойчы для гэтай тэмы"
 
 #: ../src/ui/theme-parser.c:4149
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
-msgstr ""
+msgstr "Не выйшла знайсці слушны файл для тэмы %s\n"
 
 #: ../src/ui/theme-parser.c:4205
 #, c-format
