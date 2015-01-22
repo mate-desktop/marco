@@ -2288,6 +2288,14 @@ handle_switch_to_workspace (MetaDisplay    *display,
 {
   gint which = binding->handler->data;
   MetaWorkspace *workspace;
+
+  if (which == META_MOTION_PREV)
+    {
+      workspace = screen->prev_workspace;
+      if (workspace)
+          meta_workspace_activate (workspace, event->xkey.time);
+      return;
+    }
   
   if (which < 0)
     {
