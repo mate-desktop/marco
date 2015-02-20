@@ -846,7 +846,7 @@ meta_ui_get_default_window_icon (MetaUI *ui)
                                                    NULL);
       else
           default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "gtk-missing-image",
+                                                   "image-missing",
                                                    META_ICON_WIDTH,
                                                    0,
                                                    NULL);
@@ -881,7 +881,7 @@ meta_ui_get_default_mini_icon (MetaUI *ui)
                                                    NULL);
       else
           default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "gtk-missing-image",
+                                                   "image-missing",
                                                    META_MINI_ICON_WIDTH,
                                                    0,
                                                    NULL);
