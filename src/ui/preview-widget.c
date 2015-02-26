@@ -620,7 +620,7 @@ meta_preview_get_icon (void)
                                                    NULL);
       else
           default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "gtk-missing-image",
+                                                   "image-missing",
                                                    META_ICON_WIDTH,
                                                    0,
                                                    NULL);
@@ -653,7 +653,7 @@ meta_preview_get_mini_icon (void)
                                                    NULL);
       else
           default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "gtk-missing-image",
+                                                   "image-missing",
                                                    META_MINI_ICON_WIDTH,
                                                    0,
                                                    NULL);
