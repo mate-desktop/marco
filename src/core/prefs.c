@@ -890,13 +890,6 @@ meta_prefs_init (void)
   g_hash_table_insert (settings_schemas, KEY_MATE_TERMINAL_SCHEMA, settings_mate_terminal);
   g_hash_table_insert (settings_schemas, KEY_MATE_MOUSE_SCHEMA, settings_mate_mouse);
 
-  /* Pick up initial values. */
-
-  handle_preference_init_enum ();
-  handle_preference_init_bool ();
-  handle_preference_init_string ();
-  handle_preference_init_int ();
-
   g_signal_connect (settings_general, "changed", G_CALLBACK (change_notify), NULL);
   g_signal_connect (settings_command, "changed", G_CALLBACK (change_notify), NULL);
   g_signal_connect (settings_screen_bindings, "changed", G_CALLBACK (change_notify), NULL);
@@ -908,6 +901,13 @@ meta_prefs_init (void)
   g_signal_connect (settings_mate_terminal, "changed::" KEY_MATE_TERMINAL_COMMAND, G_CALLBACK (change_notify), NULL);
   g_signal_connect (settings_mate_mouse, "changed::" KEY_MATE_MOUSE_CURSOR_THEME, G_CALLBACK (change_notify), NULL);
   g_signal_connect (settings_mate_mouse, "changed::" KEY_MATE_MOUSE_CURSOR_SIZE, G_CALLBACK (change_notify), NULL);
+
+  /* Pick up initial values. */
+
+  handle_preference_init_enum ();
+  handle_preference_init_bool ();
+  handle_preference_init_string ();
+  handle_preference_init_int ();
 
   init_bindings ();
   init_commands ();

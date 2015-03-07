@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-09 10:14+0200\n"
-"PO-Revision-Date: 2014-10-09 13:49+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"POT-Creation-Date: 2014-10-12 18:09+0200\n"
+"PO-Revision-Date: 2014-12-20 21:28+0000\n"
+"Last-Translator: Carlos Moreira <crolidge@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/projects/p/MATE/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -142,7 +142,7 @@ msgstr "Mudar para a área de trabalho abaixo da atual"
 
 #: ../src/50-marco-global-key.xml.in.h:25
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Mudar para a área de trabalho previamente selecionada"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 msgid "Activate the window menu"
@@ -210,39 +210,39 @@ msgstr "Maximizar janela horizontalmente"
 
 #: ../src/50-marco-window-key.xml.in.h:18
 msgid "Move window to north-west (top left) corner"
-msgstr ""
+msgstr "Mover a janela para o canto noroeste (superior esquerdo)"
 
 #: ../src/50-marco-window-key.xml.in.h:19
-msgid "Move window to north-east (top right) cornerl"
-msgstr ""
+msgid "Move window to north-east (top right) corner"
+msgstr "Mover a janela para o canto nordeste (superior direito)"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Move window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Mover a janela para o canto sudoeste (inferior esquerdo)"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Move window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Mover a janela para o canto sudeste (inferior direito)"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Move window to north (top) side of screen"
-msgstr ""
+msgstr "Mover a janela para o lado norte (topo) do ecrã"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Move window to south (bottom) side of screen"
-msgstr ""
+msgstr "Mover a janela para o lado sul (inferior) do ecrã"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 msgid "Move window to east (right) side of screen"
-msgstr ""
+msgstr "Mover a janela para o lado leste (direito) do ecrã"
 
 #: ../src/50-marco-window-key.xml.in.h:25
 msgid "Move window to west (left) side of screen"
-msgstr ""
+msgstr "Mover a janela para o lado oeste (esquerdo) do ecrã"
 
 #: ../src/50-marco-window-key.xml.in.h:26
 msgid "Move window to center of screen"
-msgstr ""
+msgstr "Mover janela para o centro do ecrã"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 msgid "Move window to workspace 1"
@@ -574,7 +574,7 @@ msgstr "Elemento %s desconhecido"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Estas janelas não suportam &quot;gravar configuração actual&quot; e terão de ser reiniciadas manualmente da próxima vez que iniciar sessão."
+msgstr "Estas janelas não suportam &quot;gravar configuração atual&quot; e terão de ser reiniciadas manualmente da próxima vez que iniciar sessão."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -968,7 +968,7 @@ msgstr "Rácio de aparência de botão %g não é um valor razoável"
 #: ../src/ui/theme.c:356
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
-msgstr "Geometria de moldura não especifica dimensão dos botões"
+msgstr "Geometria da moldura não especifica o tamanho dos botões"
 
 #: ../src/ui/theme.c:1027
 #, c-format
@@ -980,14 +980,14 @@ msgstr "Gradientes deverão ter pelo menos duas cores"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "Especificação de cor GTK tem de ter o estado entre parentesis rectos, por ex. gtk:fg[NORMAL] em que NORMAL é o estado; incapaz de processar \"%s\""
+msgstr "Especificação de cor GTK tem de ter o estado entre parentesis retos, por ex. gtk:fg[NORMAL] em que NORMAL é o estado; incapaz de processar \"%s\""
 
 #: ../src/ui/theme.c:1167
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "Especificação de cor GTK tem de ter um parentesis recto de fecho após o estado, por ex. gtk:fg[NORMAL] em que NORMAL é o estado; incapaz de processar \"%s\""
+msgstr "Especificação de cor GTK deve ter um parentesis reto de fecho após o estado, por ex. gtk:fg[NORMAL] em que NORMAL é o estado; incapaz de processar \"%s\""
 
 #: ../src/ui/theme.c:1178
 #, c-format
@@ -1024,12 +1024,12 @@ msgstr "Formato de sombra é \"shade/base_color/factor\", \"%s\" não cumpre o f
 #: ../src/ui/theme.c:1300
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
-msgstr "Incapaz de processar o valor de factor de sombra \"%s\" na cor sombreada"
+msgstr "Incapaz de processar o fator de sombra \"%s\" na cor sombreada"
 
 #: ../src/ui/theme.c:1310
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
-msgstr "Factor de sombreado \"%s\" na cor sombreada é negativo"
+msgstr "Fator de sombra \"%s\" na cor sombreada é negativo"
 
 #: ../src/ui/theme.c:1339
 #, c-format
@@ -1106,18 +1106,18 @@ msgstr "Expressão de coordenada tem uma variável ou constante \"%s\" desconhec
 #: ../src/ui/theme.c:2301
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
-msgstr "O processador de expressão de coordenada transbordou o seu buffer."
+msgstr "O processador de expressão de coordenada transbordou o seu limiar."
 
 #: ../src/ui/theme.c:2330
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr "Expressão de coordenada tem um fecho de parentesis sem a respectiva abertura"
+msgstr "Expressão de coordenada tem um fecho de parentesis sem a respetiva abertura"
 
 #: ../src/ui/theme.c:2394
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
-msgstr "Expressão de coordenada tem uma abertura de parentesis sem o respectivo fecho"
+msgstr "Expressão de coordenada tem uma abertura de parentesis sem o respetivo fecho"
 
 #: ../src/ui/theme.c:2405
 #, c-format
@@ -1224,19 +1224,19 @@ msgstr "Valores boleanos têm de ser \"true\" ou \"false\" não \"%s\""
 #: ../src/ui/theme-parser.c:687
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
-msgstr "Ângulo tem de ser entre 0.0 e 360.0, era %g\n"
+msgstr "Ângulo tem de ser entre 0,0 e 360,0, era %g\n"
 
 #: ../src/ui/theme-parser.c:750
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Alfa tem de ser entre 0.0 (invisível) e 1.0 (completamente opaco), era %g\n"
+msgstr "Alfa deve estar entre 0,0 (invisível) e 1,0 (completamente opaco), era %g\n"
 
 #: ../src/ui/theme-parser.c:815
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Título de escala \"%s\" inválido (tem de ser um de xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr "Título de escala \"%s\" inválido (deve ser um de xx-small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:971 ../src/ui/theme-parser.c:1034
 #: ../src/ui/theme-parser.c:1068 ../src/ui/theme-parser.c:1171
@@ -1272,7 +1272,7 @@ msgstr "Tipo \"%s\" desconhecido no elemento <%s>"
 #: ../src/ui/theme-parser.c:1226
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
-msgstr "Style_set \"%s\" desconhecido no elemento <%s>"
+msgstr "Tipo de estilo \"%s\" desconhecido no elemento <%s>"
 
 #: ../src/ui/theme-parser.c:1234
 #, c-format
@@ -1287,14 +1287,14 @@ msgstr "Tipo de janela \"%s\" já tem um tipo de estilo atribuido"
 #: ../src/ui/theme-parser.c:3281 ../src/ui/theme-parser.c:3319
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "Elemento <%s> no é permitido abaixo de <%s>"
+msgstr "Elemento <%s> não é permitido abaixo de <%s>"
 
 #: ../src/ui/theme-parser.c:1378 ../src/ui/theme-parser.c:1392
 #: ../src/ui/theme-parser.c:1437
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Impossível especificar ambos \"button_width\"/\"button_height\" e \"aspect_ratio\" para botões"
+msgstr "Não pode especificar ambos \"button_width\"/\"button_height\" e \"aspect_ratio\" em botões"
 
 #: ../src/ui/theme-parser.c:1401
 #, c-format
@@ -1329,18 +1329,18 @@ msgstr "Incapaz de compreender valor \"%s\" para tipo de gradiente"
 #: ../src/ui/theme-parser.c:2144 ../src/ui/theme-parser.c:2519
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
-msgstr "Incapaz de compreender tipo de enchimento \"%s\" para elemento <%s>"
+msgstr "Incapaz de compreender tipo de enchimento \"%s\" do elemento <%s>"
 
 #: ../src/ui/theme-parser.c:2311 ../src/ui/theme-parser.c:2394
 #: ../src/ui/theme-parser.c:2457
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
-msgstr "Incapaz de compreender estado \"%s\" para elemento <%s>"
+msgstr "Incapaz de compreender estado \"%s\" do elemento <%s>"
 
 #: ../src/ui/theme-parser.c:2321 ../src/ui/theme-parser.c:2404
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
-msgstr "Incapaz de compreender sombra \"%s\" para elemento <%s>"
+msgstr "Incapaz de compreender sombra \"%s\" do elemento <%s>"
 
 #: ../src/ui/theme-parser.c:2331
 #, c-format
@@ -1375,17 +1375,17 @@ msgstr "Não foi definido nenhum <draw_ops> com o nome \"%s\""
 #: ../src/ui/theme-parser.c:2908
 #, c-format
 msgid "Unknown function \"%s\" for button"
-msgstr "Função \"%s\" desconhecida para botão"
+msgstr "Função \"%s\" desconhecida do botão"
 
 #: ../src/ui/theme-parser.c:2917
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
-msgstr "Função do botão \"%s\" não existe nesta versão (%d, necessita %d)"
+msgstr "Função \"%s\" do botão não existe nesta versão (%d, necessita %d)"
 
 #: ../src/ui/theme-parser.c:2929
 #, c-format
 msgid "Unknown state \"%s\" for button"
-msgstr "Estado \"%s\" desconhecido para botão"
+msgstr "Estado \"%s\" desconhecido do botão"
 
 #: ../src/ui/theme-parser.c:2937
 #, c-format
@@ -1417,7 +1417,7 @@ msgstr "\"%s\" não é um valor válido para o atributo redimensionar"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Não deveria ter atributo \"resize\" no elemento <%s> para os estados maximizado/sombreado"
+msgstr "Não deveria ter atributo \"resize\" no elemento <%s> nos estados maximizado/sombreado"
 
 #: ../src/ui/theme-parser.c:3106
 #, c-format
@@ -1444,7 +1444,7 @@ msgstr "Impossível ter dois draw_ops num elemento <piece> (tema especificou um 
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Impossível ter dois draw_ops num elemento <button> (tema especificou um atributo draw_ops e também um elemento <draw_ops>, ou especificou dois elementos)"
+msgstr "Não pode ter dois draw_ops num elemento <button> (tema especificou um atributo draw_ops e também um elemento <draw_ops>, ou especificou dois elementos)"
 
 #: ../src/ui/theme-parser.c:3302
 msgid ""
@@ -1487,7 +1487,7 @@ msgstr "Elemento <%s> não é permitido dentro de um elemento <%s>"
 
 #: ../src/ui/theme-parser.c:3693
 msgid "No draw_ops provided for frame piece"
-msgstr "Nenhum draw_ops indicado para peça de moldura"
+msgstr "Nenhum draw_ops indicado na peça de moldura"
 
 #: ../src/ui/theme-parser.c:3708
 msgid "No draw_ops provided for button"
@@ -1503,7 +1503,7 @@ msgstr "Não é permitido texto dentro do elemento <%s>"
 #: ../src/ui/theme-parser.c:3873
 #, c-format
 msgid "<%s> specified twice for this theme"
-msgstr "<%s> especificado duas vezes para este tema"
+msgstr "<%s> especificado duas vezes neste tema"
 
 #: ../src/ui/theme-parser.c:4149
 #, c-format
@@ -1635,11 +1635,11 @@ msgstr "Letra Normal de Título"
 
 #: ../src/ui/theme-viewer.c:860
 msgid "Small Title Font"
-msgstr "Fonte Pequena de Título"
+msgstr "Letra Pequena de Título"
 
 #: ../src/ui/theme-viewer.c:866
 msgid "Large Title Font"
-msgstr "Fonte Grande de Título"
+msgstr "Letra Grande de Título"
 
 #: ../src/ui/theme-viewer.c:871
 msgid "Button Layouts"
