@@ -974,7 +974,7 @@ change_notify (GSettings *settings,
       
       g_free(str);
     }
-  else if (g_strcmp0 (schema_name, KEY_WORKSPACE_NAME_SCHEMA))
+  else if (g_strcmp0 (schema_name, KEY_WORKSPACE_NAME_SCHEMA) == 0)
     {
       gchar *str;
         str = g_settings_get_string (settings, key);
