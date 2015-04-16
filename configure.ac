@@ -1,8 +1,8 @@
 AC_PREREQ(2.50)
 
 m4_define([marco_major_version], [1])
-m4_define([marco_minor_version], [9])
-m4_define([marco_micro_version], [90])
+m4_define([marco_minor_version], [10])
+m4_define([marco_micro_version], [0])
 
 m4_define([marco_version],
           [marco_major_version.marco_minor_version.marco_micro_version])
@@ -12,7 +12,7 @@ AC_CONFIG_SRCDIR(src/core/display.c)
 AC_CONFIG_HEADERS(config.h)
 AC_CONFIG_MACRO_DIR([m4])
 
-AM_INIT_AUTOMAKE([no-dist-gzip dist-xz check-news])
+AM_INIT_AUTOMAKE([subdir-objects no-dist-gzip dist-xz check-news])
 AM_MAINTAINER_MODE
 
 # Honor aclocal flags

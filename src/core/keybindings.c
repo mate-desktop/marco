@@ -2321,7 +2321,7 @@ static void
 error_on_command (int         command_index,
                   const char *command,
                   const char *message,
-                  const char *display,
+                  const char *screen_name,
                   guint32     timestamp)
 {
   if (command_index < 0)
@@ -2346,12 +2346,14 @@ error_on_command (int         command_index,
                                       "<tt>%s</tt>:\n\n%s"),
                                     command,
                                     message);
+
       meta_show_dialog ("--error",
                         text,
                         NULL,
-                        display,
+                        screen_name,
                         NULL, NULL, 0,
                         NULL, NULL);
+
       g_free (text);
 
     }
@@ -2360,7 +2362,7 @@ error_on_command (int         command_index,
       meta_show_dialog ("--error",
                         message,
                         NULL,
-                        display,
+                        screen_name,
                         NULL, NULL, 0,
                         NULL, NULL);
     }
