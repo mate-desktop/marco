@@ -194,16 +194,6 @@ Debugging information
 
   Testing Utilities
 
-  src/run-marco.sh
-    The script src/run-marco.sh is useful to hack on the window manager.
-    It runs marco in an Xnest. e.g.:
-      CLIENTS=3 ./run-marco.sh
-    or
-      DEBUG=memprof ./run-marco.sh
-    or
-      DEBUG_TEST=1 ./run-marco-sh
-    or whatever.
-
   marco-message
     The tool marco-message can be used as follows:
       marco-message reload-theme
