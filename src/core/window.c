@@ -3333,6 +3333,7 @@ send_sync_request (MetaWindow *window)
   ev.data.l[1] = meta_display_get_current_time (window->display);
   ev.data.l[2] = XSyncValueLow32 (value);
   ev.data.l[3] = XSyncValueHigh32 (value);
+  ev.data.l[4] = 0;
 
   /* We don't need to trap errors here as we are already
    * inside an error_trap_push()/pop() pair.
