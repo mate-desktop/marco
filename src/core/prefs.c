@@ -162,7 +162,9 @@ static void button_layout_handler (MetaPreference, const gchar*, gboolean*);
 static gboolean update_binding            (MetaKeyPref *binding,
                                            gchar  *value);
 
-static void     init_bindings             (void);
+static void     init_bindings             (GSettings *);
+static void     init_screen_bindings      (void);
+static void     init_window_bindings      (void);
 static void     init_commands             (void);
 static void     init_workspace_names      (void);
 
@@ -909,7 +911,8 @@ meta_prefs_init (void)
   handle_preference_init_string ();
   handle_preference_init_int ();
 
-  init_bindings ();
+  init_screen_bindings ();
+  init_window_bindings ();
   init_commands ();
   init_workspace_names ();
 }
@@ -1582,32 +1585,32 @@ static MetaKeyPref key_bindings[] = {
 #undef keybind
 
 static void
-init_bindings (void)
+init_bindings (GSettings *settings)
 {
-  const char *prefix[] = {
-    KEY_WINDOW_BINDINGS_SCHEMA,
-    KEY_SCREEN_BINDINGS_SCHEMA,
-    NULL
-  };
-  int i;
   gchar **list = NULL;
   gchar *str_val = NULL;
-  GSettings *bindings_settings = NULL;
 
-  for (i = 0; prefix[i]; i++)
+  list = g_settings_list_keys (settings);
+  while (*list != NULL)
     {
-      bindings_settings = g_settings_new (prefix [i]);
-      list = g_settings_list_keys (bindings_settings);
-      while (*list != NULL)
-        {
-          str_val = g_settings_get_string (bindings_settings, *list);
-          update_key_binding (*list, str_val);
-          list++;
-        }
+      str_val = g_settings_get_string (settings, *list);
+      update_key_binding (*list, str_val);
+      list++;
     }
-  g_free (str_val);
-  g_object_unref (bindings_settings);
 
+  g_free (str_val);
+}
+
+static void
+init_screen_bindings (void)
+{
+  init_bindings (settings_screen_bindings);
+}
+
+static void
+init_window_bindings (void)
+{
+  init_bindings (settings_window_bindings);
 }
 
 static void
@@ -1623,6 +1626,7 @@ init_commands (void)
       update_command (*list, str_val);
       list++;
     }
+
   g_free (str_val);
 }
 
@@ -1639,6 +1643,7 @@ init_workspace_names (void)
       update_workspace_name (*list, str_val);
       list++;
     }
+
   g_free (str_val);
 }
 
