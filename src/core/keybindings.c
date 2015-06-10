@@ -3050,7 +3050,6 @@ handle_toggle_above       (MetaDisplay    *display,
     meta_window_make_above (window);
 }
 
-/* TODO: actually use this keybinding, without messing up the existing keybinding schema */
 static void
 handle_toggle_tiled (MetaDisplay *display,
                      MetaScreen *screen,
@@ -3063,14 +3062,20 @@ handle_toggle_tiled (MetaDisplay *display,
   if ((META_WINDOW_TILED_LEFT (window) && mode == META_TILE_LEFT) ||
       (META_WINDOW_TILED_RIGHT (window) && mode == META_TILE_RIGHT))
     {
-      window->tile_mode = META_TILE_NONE;
-
       if (window->saved_maximize)
-        meta_window_maximize (window, META_MAXIMIZE_VERTICAL |
-                                      META_MAXIMIZE_HORIZONTAL);
-      else
-        meta_window_unmaximize (window, META_MAXIMIZE_VERTICAL |
+        {
+          window->tile_mode = META_TILE_MAXIMIZED;
+          window->tile_monitor_number = meta_screen_get_xinerama_for_window (window->screen, window)->number;
+          meta_window_maximize (window, META_MAXIMIZE_VERTICAL |
                                         META_MAXIMIZE_HORIZONTAL);
+        }
+      else
+        {
+          window->tile_mode = META_TILE_NONE;
+          window->tile_monitor_number = -1;
+          meta_window_unmaximize (window, META_MAXIMIZE_VERTICAL |
+                                          META_MAXIMIZE_HORIZONTAL);
+        }
     }
   else if (meta_window_can_tile (window))
     {
@@ -3082,6 +3087,13 @@ handle_toggle_tiled (MetaDisplay *display,
        * we just set the flag and rely on meta_window_tile() syncing it to
        * save an additional roundtrip.
        */
+
+      /* If we skip meta_window_unmaximize we have to manually reset the
+       * window->saved_maximize flag.
+       */
+      if (!META_WINDOW_MAXIMIZED (window))
+        window->saved_maximize = FALSE;
+
       window->maximized_horizontally = FALSE;
       meta_window_tile (window);
     }

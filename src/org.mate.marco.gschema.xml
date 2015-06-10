@@ -838,6 +838,16 @@
       <summary>Maximize window horizontally</summary>
       <description>The format looks like "&lt;Control&gt;a" or "&lt;Shift&gt;&lt;Alt&gt;F1". The parser is fairly liberal and allows lower or upper case, and also abbreviations such as "&lt;Ctl&gt;" and "&lt;Ctrl&gt;". If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
     </key>
+    <key name="tile-to-side-e" type="s">
+      <default>'disabled'</default>
+      <summary>Tile window to east (right) side of screen</summary>
+      <description>The format looks like "&lt;Control&gt;a" or "&lt;Shift&gt;&lt;Alt&gt;F1". The parser is fairly liberal and allows lower or upper case, and also abbreviations such as "&lt;Ctl&gt;" and "&lt;Ctrl&gt;". If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
+    </key>
+    <key name="tile-to-side-w" type="s">
+      <default>'disabled'</default>
+      <summary>Tile window to west (left) side of screen</summary>
+      <description>The format looks like "&lt;Control&gt;a" or "&lt;Shift&gt;&lt;Alt&gt;F1". The parser is fairly liberal and allows lower or upper case, and also abbreviations such as "&lt;Ctl&gt;" and "&lt;Ctrl&gt;". If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
+    </key>
     <key name="move-to-corner-nw" type="s">
       <default>'disabled'</default>
       <summary>Move window to north-west (top left) corner</summary>

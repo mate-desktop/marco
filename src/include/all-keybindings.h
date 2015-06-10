@@ -252,6 +252,11 @@ keybind (maximize-vertically, handle_maximize_vertically, 0,
 keybind (maximize-horizontally, handle_maximize_horizontally, 0,
         BINDING_PER_WINDOW)
 
+keybind (tile-to-side-e, handle_toggle_tiled, META_TILE_RIGHT,
+        BINDING_PER_WINDOW)
+keybind (tile-to-side-w, handle_toggle_tiled, META_TILE_LEFT,
+        BINDING_PER_WINDOW)
+
 keybind (move-to-corner-nw, handle_move_to_corner_nw, 0,
         BINDING_PER_WINDOW)
 keybind (move-to-corner-ne, handle_move_to_corner_ne, 0,
