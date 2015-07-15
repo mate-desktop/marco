@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ciaran, 2014
+# ciaran, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-12 18:09+0200\n"
-"PO-Revision-Date: 2014-12-20 18:34+0000\n"
+"PO-Revision-Date: 2015-05-26 18:43+0000\n"
 "Last-Translator: ciaran\n"
 "Language-Team: Welsh (http://www.transifex.com/projects/p/MATE/language/cy/)\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "Tynnu sgrinlun"
 
 #: ../src/50-marco-desktop-key.xml.in.h:5
 msgid "Take a screenshot of a window"
-msgstr "Tynnu sgrinlun o ffenest"
+msgstr "Tynnu sgrinlun o ffenestr"
 
 #: ../src/50-marco-desktop-key.xml.in.h:6
 msgid "Run a terminal"
@@ -438,7 +438,7 @@ msgstr "DIffodd cyfansoddi"
 #: ../src/core/main.c:328
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr ""
+msgstr "Peidio â mynd i'r sgrin lawn os yw ffenestr heb addurniadau wedi'i hehangu "
 
 #: ../src/core/main.c:537
 #, c-format
@@ -659,7 +659,7 @@ msgstr ""
 #: ../src/core/window-props.c:446
 #, c-format
 msgid "%s (as %s)"
-msgstr ""
+msgstr "%s (fel %s)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
@@ -714,7 +714,7 @@ msgstr "Lleihau'r Ffenest"
 
 #: ../src/ui/frames.c:1208
 msgid "Maximize Window"
-msgstr "Ehangu'r Ffenest"
+msgstr "Ehangu'r ffenest"
 
 #: ../src/ui/frames.c:1211
 msgid "Restore Window"
@@ -1172,7 +1172,7 @@ msgstr "Diffiniwyd y cysonyn \"%s\" eisoes"
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr ""
+msgstr "Dim priodoledd \"%s\" ar yr elfen <%s>"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
@@ -1415,12 +1415,12 @@ msgstr "Nid yw \"%s\" yn werth dilys ar gyfer y briodwedd \"resize\""
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Ni ddylid cael priodwedd \"resize\" ar elfen <%s> ar gyfer cyflyrau ehangu/wedi cysgodi"
+msgstr "Ni ddylid cael priodwedd \"ailfientio\" ar elfen <%s> ar gyfer cyflyrau ehangu/wedi cysgodi"
 
 #: ../src/ui/theme-parser.c:3106
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Ni ddylid cael priodwedd \"resize\" ar elfen <%s> mewn cyflwr wedi'i ehangu"
+msgstr "Ni ddylid cael priodwedd \"ailfeintio\" ar elfen <%s> mewn cyflwr wedi'i ehangu"
 
 #: ../src/ui/theme-parser.c:3120 ../src/ui/theme-parser.c:3142
 #, c-format
