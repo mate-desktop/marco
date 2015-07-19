@@ -5182,7 +5182,7 @@ meta_window_client_message (MetaWindow *window,
       meta_verbose ("WM_CHANGE_STATE client message, state: %ld\n",
                     event->xclient.data.l[0]);
       if (event->xclient.data.l[0] == IconicState &&
-          window->has_minimize_func)
+          ( window->has_minimize_func || window->fullscreen ))
         meta_window_minimize (window);
 
       return TRUE;
