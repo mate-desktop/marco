@@ -2324,7 +2324,7 @@ clip_to_screen (GdkRegion *region, MetaUIFrame *frame)
                  META_CORE_GET_FRAME_Y, &frame_area.y,
                  META_CORE_GET_FRAME_WIDTH, &frame_area.width,
                  META_CORE_GET_FRAME_HEIGHT, &frame_area.height,
-                 META_CORE_GET_SCREEN_WIDTH, &screen_area.height,
+                 META_CORE_GET_SCREEN_WIDTH, &screen_area.width,
                  META_CORE_GET_SCREEN_HEIGHT, &screen_area.height,
                  META_CORE_GET_END);
 
