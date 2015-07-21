@@ -423,7 +423,7 @@ meta_accel_label_expose_event (GtkWidget      *widget,
   GtkMisc *misc = GTK_MISC (accel_label);
   PangoLayout *layout;
 
-  if (GTK_WIDGET_DRAWABLE (accel_label))
+  if (gtk_widget_is_drawable (GTK_WIDGET (accel_label)))
     {
       int ac_width;
 
@@ -468,7 +468,7 @@ meta_accel_label_expose_event (GtkWidget      *widget,
 
           gtk_paint_layout (widget->style,
                             widget->window,
-                            GTK_WIDGET_STATE (widget),
+                            gtk_widget_get_state (widget),
 			    FALSE,
                             &event->area,
                             widget,
