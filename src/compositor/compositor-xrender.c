@@ -1029,6 +1029,7 @@ get_window_picture (MetaCompWindow *cw)
   XRenderPictureAttributes pa;
   XRenderPictFormat *format;
   Drawable draw;
+  int error_code;
 
   draw = cw->id;
 
@@ -1036,6 +1037,10 @@ get_window_picture (MetaCompWindow *cw)
 
   if (cw->back_pixmap == None)
     cw->back_pixmap = XCompositeNameWindowPixmap (xdisplay, cw->id);
+
+  error_code = meta_error_trap_pop_with_return (display, FALSE);
+  if (error_code != 0)
+    cw->back_pixmap = None;
 
   if (cw->back_pixmap != None)
     draw = cw->back_pixmap;
@@ -1047,13 +1052,13 @@ get_window_picture (MetaCompWindow *cw)
 
       pa.subwindow_mode = IncludeInferiors;
 
+      meta_error_trap_push (display);
       pict = XRenderCreatePicture (xdisplay, draw, format, CPSubwindowMode, &pa);
       meta_error_trap_pop (display, FALSE);
 
       return pict;
     }
 
-  meta_error_trap_pop (display, FALSE);
   return None;
 }
 
