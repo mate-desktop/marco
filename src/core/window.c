@@ -5585,6 +5585,8 @@ static gboolean
 process_property_notify (MetaWindow     *window,
                          XPropertyEvent *event)
 {
+  Window xid = window->xwindow;
+
   if (meta_is_verbose ()) /* avoid looking up the name if we don't have to */
     {
       char *property_name = XGetAtomName (window->display->xdisplay,
@@ -5595,7 +5597,13 @@ process_property_notify (MetaWindow     *window,
       XFree (property_name);
     }
 
-  meta_window_reload_property (window, event->atom, FALSE);
+  if (event->atom == window->display->atom__NET_WM_USER_TIME &&
+      window->user_time_window)
+    {
+      xid = window->user_time_window;
+    }
+
+  meta_window_reload_property_from_xwindow (window, xid, event->atom, FALSE);
 
   return TRUE;
 }
