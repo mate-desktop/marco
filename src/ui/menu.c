@@ -440,20 +440,11 @@ meta_window_menu_new   (MetaFrames         *frames,
                           "workspace",
                           GINT_TO_POINTER (j));
 
-                      #if GTK_CHECK_VERSION(3, 0, 0)
                       g_signal_connect_data (G_OBJECT (submi),
                           "activate",
                           G_CALLBACK (activate_cb),
                           md,
                           (GClosureNotify) g_free, 0);
-                      #else
-                      gtk_signal_connect_full (GTK_OBJECT (submi),
-                          "activate",
-                          G_CALLBACK (activate_cb),
-                          NULL,
-                          md,
-                          g_free, FALSE, FALSE);
-                      #endif
 
                       gtk_menu_shell_append (GTK_MENU_SHELL (submenu), submi);
 
@@ -476,20 +467,11 @@ meta_window_menu_new   (MetaFrames         *frames,
               md->menu = menu;
               md->op = menuitem.op;
 
-              #if GTK_CHECK_VERSION(3, 0, 0)
               g_signal_connect_data (G_OBJECT (mi),
                                      "activate",
                                      G_CALLBACK (activate_cb),
                                      md,
                                      (GClosureNotify) g_free, 0);
-              #else
-              gtk_signal_connect_full (GTK_OBJECT (mi),
-                                       "activate",
-                                       G_CALLBACK (activate_cb),
-                                       NULL,
-                                       md,
-                                       g_free, FALSE, FALSE);
-              #endif
             }
 
           if (mi)
