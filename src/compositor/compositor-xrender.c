@@ -2681,23 +2681,38 @@ xrender_end_move (MetaCompositor *compositor,
 #ifdef HAVE_COMPOSITE_EXTENSIONS
 #endif
 }
+#endif /* 0 */
 
 static void
 xrender_free_window (MetaCompositor *compositor,
                      MetaWindow     *window)
 {
 #ifdef HAVE_COMPOSITE_EXTENSIONS
-  /* FIXME: When an undecorated window is hidden this is called,
-     but the window does not get readded if it is subsequentally shown again
-     See http://bugzilla.gnome.org/show_bug.cgi?id=504876
+  MetaCompositorXRender *xrc;
+  MetaFrame *frame;
+  Window xwindow;
 
-     I don't *think* theres any need for this call anyway, leaving it out
-     does not seem to cause any side effects so far, but I should check with
-     someone who understands more. */
-  /* destroy_win (compositor->display, window->xwindow, FALSE); */
+  xrc = (MetaCompositorXRender *) compositor;
+  frame = meta_window_get_frame (window);
+  xwindow = None;
+
+  if (frame)
+    {
+      xwindow = meta_frame_get_xwindow (frame);
+    }
+  else
+    {
+      /* FIXME: When an undecorated window is hidden this is called, but the
+       * window does not get readded if it is subsequentally shown again. See:
+       * http://bugzilla.gnome.org/show_bug.cgi?id=504876
+       */
+      /* xwindow = meta_window_get_xwindow (window); */
+    }
+
+  if (xwindow != None)
+    destroy_win (xrc->display, xwindow, FALSE);
 #endif
 }
-#endif /* 0 */
 
 static void
 xrender_process_event (MetaCompositor *compositor,
@@ -2979,6 +2994,7 @@ static MetaCompositor comp_info = {
   xrender_process_event,
   xrender_get_window_pixmap,
   xrender_set_active_window,
+  xrender_free_window,
   xrender_maximize_window,
   xrender_unmaximize_window,
 };
