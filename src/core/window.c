@@ -6722,8 +6722,8 @@ meta_window_show_menu (MetaWindow *window,
   if (!window->has_maximize_func)
     insensitive |= META_MENU_OP_UNMAXIMIZE | META_MENU_OP_MAXIMIZE;
 
-  /*if (!window->has_minimize_func)
-    insensitive |= META_MENU_OP_MINIMIZE;*/
+  if (!window->has_minimize_func)
+    insensitive |= META_MENU_OP_MINIMIZE;
 
   /*if (!window->has_close_func)
     insensitive |= META_MENU_OP_DELETE;*/
