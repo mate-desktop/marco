@@ -5181,8 +5181,7 @@ meta_window_client_message (MetaWindow *window,
     {
       meta_verbose ("WM_CHANGE_STATE client message, state: %ld\n",
                     event->xclient.data.l[0]);
-      if (event->xclient.data.l[0] == IconicState &&
-          window->has_minimize_func)
+      if (event->xclient.data.l[0] == IconicState)
         meta_window_minimize (window);
 
       return TRUE;
@@ -6722,8 +6721,8 @@ meta_window_show_menu (MetaWindow *window,
   if (!window->has_maximize_func)
     insensitive |= META_MENU_OP_UNMAXIMIZE | META_MENU_OP_MAXIMIZE;
 
-  /*if (!window->has_minimize_func)
-    insensitive |= META_MENU_OP_MINIMIZE;*/
+  if (!window->has_minimize_func)
+    insensitive |= META_MENU_OP_MINIMIZE;
 
   /*if (!window->has_close_func)
     insensitive |= META_MENU_OP_DELETE;*/
