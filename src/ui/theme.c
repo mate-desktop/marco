@@ -64,11 +64,6 @@
 #include <math.h>
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-#define MATE_DESKTOP_USE_UNSTABLE_API
-#include <libmate-desktop/mate-desktop-utils.h>
-#endif
-
-#if GTK_CHECK_VERSION (3, 0, 0)
 #define GDK_COLOR_RGBA(color)                                           \
                          ((guint32) (0xff                         |     \
                                      ((int)((color).red * 255) << 24)   |    \
@@ -1487,6 +1482,72 @@ meta_color_spec_new_gtk (MetaGtkColorComponent component,
 
 #if GTK_CHECK_VERSION (3, 0, 0)
 static void
+get_background_color_real (GtkStyleContext *context,
+                           GtkStateFlags    state,
+                           GdkRGBA         *color)
+{
+  GdkRGBA *c;
+
+  g_return_if_fail (color != NULL);
+  g_return_if_fail (GTK_IS_STYLE_CONTEXT (context));
+
+  gtk_style_context_get (context,
+                         state,
+                         "background-color", &c,
+                         NULL);
+
+  *color = *c;
+  gdk_rgba_free (c);
+}
+
+static void
+get_background_color (GtkStyleContext *context,
+                      GtkStateFlags    state,
+                      GdkRGBA         *color)
+{
+  GdkRGBA empty = { 0.0, 0.0, 0.0, 0.0 };
+  GdkRGBA rgba;
+
+  get_background_color_real (context, state, &rgba);
+
+  if (gdk_rgba_equal (&rgba, &empty))
+    {
+      GtkWidget *toplevel;
+      GtkStyleContext *tmp;
+
+      toplevel = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+      tmp = gtk_widget_get_style_context (toplevel);
+
+      get_background_color_real (tmp, state, &rgba);
+
+      gtk_widget_destroy (toplevel);
+    }
+
+  *color = rgba;
+}
+
+/* Based on set_color() in gtkstyle.c */
+#define LIGHTNESS_MULT 1.3
+#define DARKNESS_MULT  0.7
+void
+meta_gtk_style_get_light_color (GtkStyleContext *style,
+                                GtkStateFlags    state,
+                                GdkRGBA         *color)
+{
+  get_background_color (style, state, color);
+  gtk_style_shade (color, color, LIGHTNESS_MULT);
+}
+
+void
+meta_gtk_style_get_dark_color (GtkStyleContext *style,
+                               GtkStateFlags    state,
+                               GdkRGBA         *color)
+{
+  get_background_color (style, state, color);
+  gtk_style_shade (color, color, DARKNESS_MULT);
+}
+
+static void
 meta_set_color_from_style (GdkRGBA               *color,
                            GtkStyleContext       *context,
                            GtkStateFlags          state,
@@ -1498,7 +1559,7 @@ meta_set_color_from_style (GdkRGBA               *color,
     {
     case META_GTK_COLOR_BG:
     case META_GTK_COLOR_BASE:
-      gtk_style_context_get_background_color (context, state, color);
+      get_background_color (context, state, color);
       break;
     case META_GTK_COLOR_FG:
     case META_GTK_COLOR_TEXT:
@@ -1513,18 +1574,18 @@ meta_set_color_from_style (GdkRGBA               *color,
       color->blue = (color->blue + other.blue) / 2;
       break;
     case META_GTK_COLOR_MID:
-      mate_desktop_gtk_style_get_light_color (context, state, color);
-      mate_desktop_gtk_style_get_dark_color (context, state, &other);
+      meta_gtk_style_get_light_color (context, state, color);
+      meta_gtk_style_get_dark_color (context, state, &other);
 
       color->red = (color->red + other.red) / 2;
       color->green = (color->green + other.green) / 2;
       color->blue = (color->blue + other.blue) / 2;
       break;
     case META_GTK_COLOR_LIGHT:
-      mate_desktop_gtk_style_get_light_color (context, state, color);
+      meta_gtk_style_get_light_color (context, state, color);
       break;
     case META_GTK_COLOR_DARK:
-      mate_desktop_gtk_style_get_dark_color (context, state, color);
+      meta_gtk_style_get_dark_color (context, state, color);
       break;
     case META_GTK_COLOR_LAST:
       g_assert_not_reached ();
