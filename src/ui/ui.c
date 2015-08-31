@@ -58,7 +58,7 @@ void meta_ui_init(int* argc, char*** argv)
    * GDK will no longer generate the core XEvents we process.
    * So at least for now, enforce the previous behavior.
    */
-#if GTK_CHECK_VERSION(2, 91, 7)
+#if GTK_CHECK_VERSION(3, 0, 0)
   gdk_disable_multidevice ();
 #endif
 
