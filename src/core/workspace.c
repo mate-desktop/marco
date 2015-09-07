@@ -382,6 +382,10 @@ meta_workspace_activate_with_focus (MetaWorkspace *workspace,
   if (workspace->screen->active_workspace)
     workspace_switch_sound(workspace->screen->active_workspace, workspace);
 
+  /* Free any cached pointers to the workspaces's edges from
+   * a current resize or move operation */
+  meta_display_cleanup_edges (workspace->screen->display);
+
   /* Note that old can be NULL; e.g. when starting up */
   old = workspace->screen->active_workspace;
   
@@ -541,6 +545,11 @@ meta_workspace_invalidate_work_area (MetaWorkspace *workspace)
   meta_topic (META_DEBUG_WORKAREA,
               "Invalidating work area for workspace %d\n",
               meta_workspace_index (workspace));
+
+  /* If we are in the middle of a resize or move operation, we
+   * might have cached pointers to the workspace's edges */
+  if (workspace == workspace->screen->active_workspace)
+    meta_display_cleanup_edges (workspace->screen->display);
 
   g_free (workspace->work_area_xinerama);
   workspace->work_area_xinerama = NULL;
