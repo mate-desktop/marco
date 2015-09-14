@@ -458,14 +458,7 @@ meta_frame_layout_get_borders (const MetaFrameLayout *layout,
 {
   int buttons_height, title_height;
 
-#if GTK_CHECK_VERSION(3, 0, 0)
   g_return_if_fail (layout != NULL);
-#else
-  g_return_if_fail (borders->visible.top != NULL);
-  g_return_if_fail (borders->visible.bottom != NULL);
-  g_return_if_fail (borders->visible.left != NULL);
-  g_return_if_fail (borders->visible.right != NULL);
-#endif
 
   if (!layout->has_title)
     text_height = 0;
