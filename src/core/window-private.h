@@ -666,9 +666,6 @@ void meta_window_update_icon_now (MetaWindow *window);
 
 gboolean meta_window_is_client_decorated (MetaWindow *window);
 
-void meta_window_update_role (MetaWindow *window);
-void meta_window_update_net_wm_type (MetaWindow *window);
-
 gboolean meta_window_can_tile (MetaWindow *window);
 
 #endif

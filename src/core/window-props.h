@@ -46,21 +46,6 @@ void meta_window_reload_property   (MetaWindow *window,
                                     Atom        property,
                                     gboolean    initial);
 
-
-/**
- * Requests the current values of a set of properties for a given
- * window from the server, and deals with them appropriately.
- * Does not return them to the caller (they've been dealt with!)
- *
- * \param window      The window.
- * \param properties  A pointer to a list of X atoms, "n_properties" long.
- * \param n_properties  The length of the properties list.
- */
-void meta_window_reload_properties (MetaWindow *window,
-                                    const Atom *properties,
-                                    int         n_properties,
-                                    gboolean    initial);
-
 /**
  * Requests the current values of a single property for a given
  * window from the server, and deals with it appropriately.
@@ -71,29 +56,19 @@ void meta_window_reload_properties (MetaWindow *window,
  * \param xwindow    The X handle for the window.
  * \param property   A single X atom.
  */
-void meta_window_reload_property_from_xwindow
-                                   (MetaWindow *window,
-                                    Window      xwindow,
-                                    Atom        property,
-                                    gboolean    initial);
+void meta_window_reload_property_from_xwindow (MetaWindow *window,
+                                               Window      xwindow,
+                                               Atom        property,
+                                               gboolean    initial);
 
 /**
- * Requests the current values of a set of properties for a given
+ * Requests the current values for standard properties for a given
  * window from the server, and deals with them appropriately.
  * Does not return them to the caller (they've been dealt with!)
  *
- * \param window     A window on the same display as the one we're
- *                   investigating (only used to find the display)
- * \param xwindow     The X handle for the window.
- * \param properties  A pointer to a list of X atoms, "n_properties" long.
- * \param n_properties  The length of the properties list.
+ * \param window The window.
  */
-void meta_window_reload_properties_from_xwindow
-                                   (MetaWindow *window,
-                                    Window      xwindow,
-                                    const Atom *properties,
-                                    int         n_properties,
-                                    gboolean    initial);
+void meta_window_load_initial_properties (MetaWindow *window);
 
 /**
  * Initialises the hooks used for the reload_propert* functions

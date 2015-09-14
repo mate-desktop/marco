@@ -251,13 +251,9 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   gulong existing_wm_state;
   gulong event_mask;
   MetaMoveResizeFlags flags;
-#define N_INITIAL_PROPS 19
-  Atom initial_props[N_INITIAL_PROPS];
-  int i;
   gboolean has_shape;
 
   g_assert (attrs != NULL);
-  g_assert (N_INITIAL_PROPS == (int) G_N_ELEMENTS (initial_props));
 
   meta_verbose ("Attempting to manage 0x%lx\n", xwindow);
 
@@ -575,38 +571,9 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->xgroup_leader = None;
   meta_window_compute_group (window);
 
-  /* Fill these in the order we want them to be gotten.  we want to
-   * get window name and class first so we can use them in error
-   * messages and such.  However, name is modified depending on
-   * wm_client_machine, so push it slightly sooner.
-   */
-  i = 0;
-  initial_props[i++] = display->atom_WM_CLIENT_MACHINE;
-  initial_props[i++] = display->atom__NET_WM_PID;
-  initial_props[i++] = display->atom__NET_WM_NAME;
-  initial_props[i++] = XA_WM_CLASS;
-  initial_props[i++] = XA_WM_NAME;
-  initial_props[i++] = display->atom__NET_WM_ICON_NAME;
-  initial_props[i++] = XA_WM_ICON_NAME;
-  initial_props[i++] = display->atom__NET_WM_DESKTOP;
-  initial_props[i++] = display->atom__NET_STARTUP_ID;
-  initial_props[i++] = display->atom__NET_WM_SYNC_REQUEST_COUNTER;
-  initial_props[i++] = XA_WM_NORMAL_HINTS;
-  initial_props[i++] = display->atom_WM_PROTOCOLS;
-  initial_props[i++] = XA_WM_HINTS;
-  initial_props[i++] = display->atom__NET_WM_USER_TIME;
-  initial_props[i++] = display->atom__NET_WM_STATE;
-  initial_props[i++] = display->atom__MOTIF_WM_HINTS;
-  initial_props[i++] = XA_WM_TRANSIENT_FOR;
-  initial_props[i++] = display->atom__NET_WM_USER_TIME_WINDOW;
-  initial_props[i++] = display->atom__NET_WM_FULLSCREEN_MONITORS;
-  g_assert (N_INITIAL_PROPS == i);
-
-  meta_window_reload_properties (window, initial_props, N_INITIAL_PROPS, TRUE);
+  meta_window_load_initial_properties (window);
 
   update_sm_hints (window); /* must come after transient_for */
-  meta_window_update_role (window);
-  meta_window_update_net_wm_type (window);
   meta_window_update_icon_now (window);
 
   if (window->initially_iconic)
@@ -5798,88 +5765,6 @@ update_sm_hints (MetaWindow *window)
   meta_verbose ("Window %s client leader: 0x%lx SM_CLIENT_ID: '%s'\n",
                 window->desc, window->xclient_leader,
                 window->sm_client_id ? window->sm_client_id : "none");
-}
-
-void
-meta_window_update_role (MetaWindow *window)
-{
-  char *str;
-
-  if (window->role)
-    g_free (window->role);
-  window->role = NULL;
-
-  if (meta_prop_get_latin1_string (window->display, window->xwindow,
-                                   window->display->atom_WM_WINDOW_ROLE,
-                                   &str))
-    {
-      window->role = g_strdup (str);
-      meta_XFree (str);
-    }
-
-  meta_verbose ("Updated role of %s to '%s'\n",
-                window->desc, window->role ? window->role : "null");
-}
-
-void
-meta_window_update_net_wm_type (MetaWindow *window)
-{
-  int n_atoms;
-  Atom *atoms;
-  int i;
-
-  window->type_atom = None;
-  n_atoms = 0;
-  atoms = NULL;
-
-  meta_prop_get_atom_list (window->display, window->xwindow,
-                           window->display->atom__NET_WM_WINDOW_TYPE,
-                           &atoms, &n_atoms);
-
-  i = 0;
-  while (i < n_atoms)
-    {
-      /* We break as soon as we find one we recognize,
-       * supposed to prefer those near the front of the list
-       */
-      if (atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_DESKTOP ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_DOCK ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_TOOLBAR ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_MENU ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_DIALOG ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_NORMAL ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_UTILITY ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_SPLASH)
-        {
-          window->type_atom = atoms[i];
-          break;
-        }
-
-      ++i;
-    }
-
-  meta_XFree (atoms);
-
-  if (meta_is_verbose ())
-    {
-      char *str;
-
-      str = NULL;
-      if (window->type_atom != None)
-        {
-          meta_error_trap_push (window->display);
-          str = XGetAtomName (window->display->xdisplay, window->type_atom);
-          meta_error_trap_pop (window->display, TRUE);
-        }
-
-      meta_verbose ("Window %s type atom %s\n", window->desc,
-                    str ? str : "(none)");
-
-      if (str)
-        meta_XFree (str);
-    }
-
-  meta_window_recalc_window_type (window);
 }
 
 static void
