@@ -162,11 +162,7 @@ meta_preview_new (void)
 {
   MetaPreview *preview;
 
-  #if GTK_CHECK_VERSION(3, 0, 0)
   preview = g_object_new (META_TYPE_PREVIEW, NULL);
-  #else
-  preview = gtk_type_new (META_TYPE_PREVIEW);
-  #endif
 
   return GTK_WIDGET (preview);
 }

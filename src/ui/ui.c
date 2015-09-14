@@ -647,6 +647,7 @@ meta_image_window_set (MetaImageWindow *iw,
                        int              x,
                        int              y)
 {
+  GdkWindow *window;
 #if GTK_CHECK_VERSION (3, 0, 0)
   cairo_t *cr;
 #endif
@@ -673,16 +674,17 @@ meta_image_window_set (MetaImageWindow *iw,
   cairo_destroy (cr);
 #endif
 
-  gdk_window_set_back_pixmap (gtk_widget_get_window (iw->window),
+  window = gtk_widget_get_window (iw->window);
+  gdk_window_set_back_pixmap (window,
                               iw->pixmap,
                               FALSE);
 
-  gdk_window_move_resize (gtk_widget_get_window (iw->window),
+  gdk_window_move_resize (window,
                           x, y,
                           gdk_pixbuf_get_width (pixbuf),
                           gdk_pixbuf_get_height (pixbuf));
 
-  gdk_window_clear (gtk_widget_get_window (iw->window));
+  gdk_window_clear (window);
 }
 #endif
 
@@ -714,7 +716,7 @@ get_cmap (GdkPixmap *pixmap)
 
   /* Be sure we aren't going to blow up due to visual mismatch */
   if (cmap &&
-      (gdk_colormap_get_visual (cmap)->depth !=
+      (gdk_visual_get_depth (gdk_colormap_get_visual (cmap)) !=
        gdk_drawable_get_depth (pixmap)))
     {
       cmap = NULL;
