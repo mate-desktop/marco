@@ -461,6 +461,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->maximize_horizontally_after_placement = FALSE;
   window->maximize_vertically_after_placement = FALSE;
   window->minimize_after_placement = FALSE;
+  window->move_after_placement = FALSE;
   window->fullscreen = FALSE;
   window->fullscreen_after_placement = FALSE;
   window->fullscreen_monitors[0] = -1;
@@ -2346,6 +2347,13 @@ meta_window_show (MetaWindow *window)
       if (takes_focus_on_map)
         {
           meta_window_focus (window, timestamp);
+
+          if (window->move_after_placement)
+            {
+              meta_window_begin_grab_op(window, META_GRAB_OP_KEYBOARD_MOVING,
+                                        FALSE, timestamp);
+              window->move_after_placement = FALSE;
+            }
         }
       else
         {

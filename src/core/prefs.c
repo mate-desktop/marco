@@ -168,6 +168,8 @@ static void     init_window_bindings      (void);
 static void     init_commands             (void);
 static void     init_workspace_names      (void);
 
+static MetaPlacementMode placement_mode = META_PLACEMENT_MODE_AUTOMATIC;
+
 typedef struct
 {
   MetaPrefsChangedFunc func;
@@ -316,6 +318,11 @@ static MetaEnumPreference preferences_enum[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_ACTION_RIGHT_CLICK_TITLEBAR,
       (gint *) &action_right_click_titlebar,
+    },
+    { "placement-mode",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_PLACEMENT_MODE,
+      (gint *) &placement_mode,
     },
     { NULL, NULL, 0, NULL },
   };
@@ -1556,6 +1563,9 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_SIDE_BY_SIDE_TILING:
       return "SIDE_BY_SIDE_TILING";
+
+    case META_PREF_PLACEMENT_MODE:
+      return "PLACEMENT_MODE";
     }
 
   return "(unknown)";
@@ -2239,6 +2249,12 @@ gboolean
 meta_prefs_get_force_fullscreen (void)
 {
   return force_fullscreen;
+}
+
+MetaPlacementMode
+meta_prefs_get_placement_mode (void)
+{
+  return placement_mode;
 }
 
 void

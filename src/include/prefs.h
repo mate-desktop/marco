@@ -64,7 +64,8 @@ typedef enum
   META_PREF_RESIZE_WITH_RIGHT_BUTTON,
   META_PREF_CENTER_NEW_WINDOWS,
   META_PREF_SIDE_BY_SIDE_TILING,
-  META_PREF_FORCE_FULLSCREEN
+  META_PREF_FORCE_FULLSCREEN,
+  META_PREF_PLACEMENT_MODE
 } MetaPreference;
 
 typedef void (* MetaPrefsChangedFunc) (MetaPreference pref,
@@ -111,6 +112,8 @@ void                        meta_prefs_get_button_layout (MetaButtonLayout *butt
 MetaActionTitlebar          meta_prefs_get_action_double_click_titlebar (void);
 MetaActionTitlebar          meta_prefs_get_action_middle_click_titlebar (void);
 MetaActionTitlebar          meta_prefs_get_action_right_click_titlebar (void);
+
+MetaPlacementMode           meta_prefs_get_placement_mode (void);
 
 void meta_prefs_set_num_workspaces (int n_workspaces);
 
