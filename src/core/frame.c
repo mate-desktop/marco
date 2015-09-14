@@ -300,6 +300,17 @@ meta_frame_get_flags (MetaFrame *frame)
   return flags;
 }
 
+#if 0
+void
+meta_frame_borders_clear (MetaFrameBorders *self)
+{
+  self->visible.top = 0;
+  self->visible.bottom = 0;
+  self->visible.left = 0;
+  self->visible.right = 0;
+}
+#endif
+
 void
 meta_frame_calc_borders (MetaFrame        *frame,
                          MetaFrameBorders *borders)

@@ -59,6 +59,8 @@ struct _MetaPreview
   int text_height;
 
   MetaFrameBorders borders;
+  guint            borders_cached : 1;
+
   MetaButtonLayout button_layout;
 };
 

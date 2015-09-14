@@ -866,10 +866,7 @@ meta_ui_theme_get_frame_borders (MetaUI           *ui,
     }
   else
     {
-      borders->visible.top = 0;
-      borders->visible.bottom = 0;
-      borders->visible.left = 0;
-      borders->visible.right = 0;
+      meta_frame_borders_clear (borders);
     }
 
 #if GTK_CHECK_VERSION (3, 0, 0)
