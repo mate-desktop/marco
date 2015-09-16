@@ -103,19 +103,17 @@ meta_preview_class_init (MetaPreviewClass *class)
 
   gobject_class->finalize = meta_preview_finalize;
 
-  #if GTK_CHECK_VERSION(3, 0, 0)
+#if GTK_CHECK_VERSION(3, 0, 0)
   widget_class->draw = meta_preview_draw;
   widget_class->get_preferred_width = meta_preview_get_preferred_width;
   widget_class->get_preferred_height = meta_preview_get_preferred_height;
-  #else
+
+  gtk_container_class_handle_border_width (GTK_CONTAINER_CLASS (class));
+#else
   widget_class->expose_event = meta_preview_expose;
   widget_class->size_request = meta_preview_size_request;
-  #endif
-  widget_class->size_allocate = meta_preview_size_allocate;
-
-#if GTK_CHECK_VERSION(3, 0, 0)
-  gtk_container_class_handle_border_width (GTK_CONTAINER_CLASS (class));
 #endif
+  widget_class->size_allocate = meta_preview_size_allocate;
 }
 
 static void
@@ -443,9 +441,6 @@ meta_preview_expose (GtkWidget      *widget,
   return GTK_WIDGET_CLASS (parent_class)->expose_event (widget, event);
 }
 
-#endif
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
 static void
 meta_preview_size_request (GtkWidget      *widget,
                            GtkRequisition *req)
