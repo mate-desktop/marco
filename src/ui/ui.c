@@ -125,11 +125,7 @@ maybe_redirect_mouse_event (XEvent *xevent)
   if (!ui)
     return FALSE;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   gdk_window = gdk_x11_window_lookup_for_display (gdisplay, window);
-#else
-  gdk_window = gdk_window_lookup_for_display (gdisplay, window);
-#endif
   if (gdk_window == NULL)
     return FALSE;
 
@@ -688,14 +684,10 @@ meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
 {
   GdkDrawable *drawable;
   GdkPixbuf *retval;
-#if !GTK_CHECK_VERSION (3, 0, 0)
   GdkColormap *cmap;
-#endif
 
   retval = NULL;
-#if !GTK_CHECK_VERSION (3, 0, 0)
   cmap = NULL;
-#endif
 
   drawable = gdk_x11_window_lookup_for_display (gdk_display_get_default (), xpixmap);
 
@@ -715,10 +707,8 @@ meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
                                              dest_x, dest_y,
                                              width, height);
     }
-#if !GTK_CHECK_VERSION (3, 0, 0)
   if (cmap)
     g_object_unref (G_OBJECT (cmap));
-#endif
   if (drawable)
     g_object_unref (G_OBJECT (drawable));
 
@@ -1113,9 +1103,7 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 	GdkPixmap* gpmap;
 	GdkScreen* screen;
 	GdkPixbuf* pixbuf;
-#if !GTK_CHECK_VERSION (3, 0, 0)
 	GdkColormap* cmap;
-#endif
 	int width;
 	int height;
 	int depth;
@@ -1123,16 +1111,10 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 	gpmap = gdk_pixmap_foreign_new(pmap);
 	screen = gdk_drawable_get_screen(gpmap);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-	width = gdk_window_get_width(GDK_WINDOW(gpmap));
-	height = gdk_window_get_height(GDK_WINDOW(gpmap));
-#else
 	gdk_drawable_get_size(GDK_DRAWABLE(gpmap), &width, &height);
-#endif
 
 	depth = gdk_drawable_get_depth(GDK_DRAWABLE(gpmap));
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
 	if (depth <= 24)
 	{
 		cmap = gdk_screen_get_system_colormap(screen);
@@ -1141,7 +1123,6 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 	{
 		cmap = gdk_screen_get_rgba_colormap(screen);
 	}
-#endif
 
 	pixbuf = gdk_pixbuf_get_from_drawable(NULL, gpmap, cmap, 0, 0, 0, 0, width, height);
 
