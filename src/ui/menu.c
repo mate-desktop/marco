@@ -381,6 +381,7 @@ meta_window_menu_new   (MetaFrames         *frames,
                   Display *display;
                   Window xroot;
                   GdkScreen *screen;
+                  GdkWindow *window;
                   GtkWidget *submenu;
                   int j;
 
@@ -393,7 +394,7 @@ meta_window_menu_new   (MetaFrames         *frames,
                   meta_verbose ("Creating %d-workspace menu current space %lu\n",
                       n_workspaces, active_workspace);
 
-                  GdkWindow* window = gtk_widget_get_window (GTK_WIDGET (frames));
+                  window = gtk_widget_get_window (GTK_WIDGET (frames));
 
                   display = GDK_WINDOW_XDISPLAY (window);
 
@@ -440,20 +441,11 @@ meta_window_menu_new   (MetaFrames         *frames,
                           "workspace",
                           GINT_TO_POINTER (j));
 
-                      #if GTK_CHECK_VERSION(3, 0, 0)
                       g_signal_connect_data (G_OBJECT (submi),
                           "activate",
                           G_CALLBACK (activate_cb),
                           md,
                           (GClosureNotify) g_free, 0);
-                      #else
-                      gtk_signal_connect_full (GTK_OBJECT (submi),
-                          "activate",
-                          G_CALLBACK (activate_cb),
-                          NULL,
-                          md,
-                          g_free, FALSE, FALSE);
-                      #endif
 
                       gtk_menu_shell_append (GTK_MENU_SHELL (submenu), submi);
 
@@ -476,20 +468,11 @@ meta_window_menu_new   (MetaFrames         *frames,
               md->menu = menu;
               md->op = menuitem.op;
 
-              #if GTK_CHECK_VERSION(3, 0, 0)
               g_signal_connect_data (G_OBJECT (mi),
                                      "activate",
                                      G_CALLBACK (activate_cb),
                                      md,
                                      (GClosureNotify) g_free, 0);
-              #else
-              gtk_signal_connect_full (GTK_OBJECT (mi),
-                                       "activate",
-                                       G_CALLBACK (activate_cb),
-                                       NULL,
-                                       md,
-                                       g_free, FALSE, FALSE);
-              #endif
             }
 
           if (mi)
@@ -518,14 +501,8 @@ void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int bu
 
 	gtk_menu_popup(GTK_MENU (menu->menu), NULL, NULL, popup_position_func, pt, button, timestamp);
 
-    #if GTK_CHECK_VERSION(3, 0, 0)
     if (!gtk_widget_get_visible (menu->menu))
-    #else
-	if (!GTK_MENU_SHELL(menu->menu)->have_xgrab)
-    #endif
-	{
-		meta_warning("GtkMenu failed to grab the pointer\n");
-	}
+      meta_warning("GtkMenu failed to grab the pointer\n");
 }
 
 void meta_window_menu_free(MetaWindowMenu* menu)

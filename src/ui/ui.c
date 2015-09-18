@@ -125,11 +125,7 @@ maybe_redirect_mouse_event (XEvent *xevent)
   if (!ui)
     return FALSE;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   gdk_window = gdk_x11_window_lookup_for_display (gdisplay, window);
-#else
-  gdk_window = gdk_window_lookup_for_display (gdisplay, window);
-#endif
   if (gdk_window == NULL)
     return FALSE;
 
@@ -584,109 +580,6 @@ meta_ui_window_menu_free (MetaWindowMenu *menu)
 }
 
 #if !GTK_CHECK_VERSION (3, 0, 0)
-struct _MetaImageWindow
-{
-  GtkWidget *window;
-  GdkPixmap *pixmap;
-};
-
-MetaImageWindow*
-meta_image_window_new (Display *xdisplay,
-                       int      screen_number,
-                       int      max_width,
-                       int      max_height)
-{
-  MetaImageWindow *iw;
-  GdkDisplay *gdisplay;
-  GdkScreen *gscreen;
-
-  iw = g_new (MetaImageWindow, 1);
-  iw->window = gtk_window_new (GTK_WINDOW_POPUP);
-
-  gdisplay = gdk_x11_lookup_xdisplay (xdisplay);
-  gscreen = gdk_display_get_screen (gdisplay, screen_number);
-
-  gtk_window_set_screen (GTK_WINDOW (iw->window), gscreen);
-
-  gtk_widget_realize (iw->window);
-  iw->pixmap = gdk_pixmap_new (gtk_widget_get_window (iw->window),
-                               max_width, max_height,
-                               -1);
-
-  gtk_widget_set_size_request (iw->window, 1, 1);
-  gtk_widget_set_double_buffered (iw->window, FALSE);
-  gtk_widget_set_app_paintable (iw->window, TRUE);
-
-  return iw;
-}
-
-void
-meta_image_window_free (MetaImageWindow *iw)
-{
-  gtk_widget_destroy (iw->window);
-  g_object_unref (G_OBJECT (iw->pixmap));
-  g_free (iw);
-}
-
-void
-meta_image_window_set_showing  (MetaImageWindow *iw,
-                                gboolean         showing)
-{
-  if (showing)
-    gtk_widget_show_all (iw->window);
-  else
-    {
-      gtk_widget_hide (iw->window);
-      meta_core_increment_event_serial (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
-    }
-}
-
-void
-meta_image_window_set (MetaImageWindow *iw,
-                       GdkPixbuf       *pixbuf,
-                       int              x,
-                       int              y)
-{
-#if GTK_CHECK_VERSION (3, 0, 0)
-  cairo_t *cr;
-#endif
-
-  /* We use a back pixmap to avoid having to handle exposes, because
-   * it's really too slow for large clients being minimized, etc.
-   * and this way flicker is genuinely zero.
-   */
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  gdk_draw_pixbuf (iw->pixmap,
-                   gtk_widget_get_style (iw->window)->black_gc,
-                   pixbuf,
-                   0, 0,
-                   0, 0,
-                   gdk_pixbuf_get_width (pixbuf),
-                   gdk_pixbuf_get_height (pixbuf),
-                   GDK_RGB_DITHER_NORMAL,
-                   0, 0);
-#else
-  cr = gdk_cairo_create (iw->pixmap);
-  gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
-  cairo_paint (cr);
-  cairo_destroy (cr);
-#endif
-
-  gdk_window_set_back_pixmap (gtk_widget_get_window (iw->window),
-                              iw->pixmap,
-                              FALSE);
-
-  gdk_window_move_resize (gtk_widget_get_window (iw->window),
-                          x, y,
-                          gdk_pixbuf_get_width (pixbuf),
-                          gdk_pixbuf_get_height (pixbuf));
-
-  gdk_window_clear (gtk_widget_get_window (iw->window));
-}
-#endif
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
 static GdkColormap*
 get_cmap (GdkPixmap *pixmap)
 {
@@ -714,7 +607,7 @@ get_cmap (GdkPixmap *pixmap)
 
   /* Be sure we aren't going to blow up due to visual mismatch */
   if (cmap &&
-      (gdk_colormap_get_visual (cmap)->depth !=
+      (gdk_visual_get_depth (gdk_colormap_get_visual (cmap)) !=
        gdk_drawable_get_depth (pixmap)))
     {
       cmap = NULL;
@@ -791,14 +684,10 @@ meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
 {
   GdkDrawable *drawable;
   GdkPixbuf *retval;
-#if !GTK_CHECK_VERSION (3, 0, 0)
   GdkColormap *cmap;
-#endif
 
   retval = NULL;
-#if !GTK_CHECK_VERSION (3, 0, 0)
   cmap = NULL;
-#endif
 
   drawable = gdk_x11_window_lookup_for_display (gdk_display_get_default (), xpixmap);
 
@@ -818,10 +707,8 @@ meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
                                              dest_x, dest_y,
                                              width, height);
     }
-#if !GTK_CHECK_VERSION (3, 0, 0)
   if (cmap)
     g_object_unref (G_OBJECT (cmap));
-#endif
   if (drawable)
     g_object_unref (G_OBJECT (drawable));
 
@@ -841,6 +728,20 @@ meta_ui_pop_delay_exposes  (MetaUI *ui)
   meta_frames_pop_delay_exposes (ui->frames);
 }
 
+static GdkPixbuf *
+load_default_window_icon (int size)
+{
+  GtkIconTheme *theme = gtk_icon_theme_get_default ();
+  const char *icon_name;
+
+  if (gtk_icon_theme_has_icon (theme, META_DEFAULT_ICON_NAME))
+    icon_name = META_DEFAULT_ICON_NAME;
+  else
+    icon_name = "image-missing";
+
+  return gtk_icon_theme_load_icon (theme, icon_name, size, 0, NULL);
+}
+
 GdkPixbuf*
 meta_ui_get_default_window_icon (MetaUI *ui)
 {
@@ -848,26 +749,7 @@ meta_ui_get_default_window_icon (MetaUI *ui)
 
   if (default_icon == NULL)
     {
-      GtkIconTheme *theme;
-      gboolean icon_exists;
-
-      theme = gtk_icon_theme_get_default ();
-
-      icon_exists = gtk_icon_theme_has_icon (theme, META_DEFAULT_ICON_NAME);
-
-      if (icon_exists)
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   META_DEFAULT_ICON_NAME,
-                                                   META_ICON_WIDTH,
-                                                   0,
-                                                   NULL);
-      else
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "image-missing",
-                                                   META_ICON_WIDTH,
-                                                   0,
-                                                   NULL);
-
+      default_icon = load_default_window_icon (META_ICON_WIDTH);
       g_assert (default_icon);
     }
 
@@ -929,38 +811,6 @@ meta_ui_window_should_not_cause_focus (Display *xdisplay,
     return TRUE;
   else
     return FALSE;
-}
-
-char*
-meta_text_property_to_utf8 (Display             *xdisplay,
-                            const XTextProperty *prop)
-{
-  GdkDisplay *display;
-  char **list;
-  int count;
-  char *retval;
-
-  list = NULL;
-
-  display = gdk_x11_lookup_xdisplay (xdisplay);
-  count = gdk_text_property_to_utf8_list_for_display (display,
-                                                      gdk_x11_xatom_to_atom_for_display (display, prop->encoding),
-                                                      prop->format,
-                                                      prop->value,
-                                                      prop->nitems,
-                                                      &list);
-
-  if (count == 0)
-    retval = NULL;
-  else
-    {
-      retval = list[0];
-      list[0] = g_strdup (""); /* something to free */
-    }
-
-  g_strfreev (list);
-
-  return retval;
 }
 
 void
@@ -1253,9 +1103,7 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 	GdkPixmap* gpmap;
 	GdkScreen* screen;
 	GdkPixbuf* pixbuf;
-#if !GTK_CHECK_VERSION (3, 0, 0)
 	GdkColormap* cmap;
-#endif
 	int width;
 	int height;
 	int depth;
@@ -1263,16 +1111,10 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 	gpmap = gdk_pixmap_foreign_new(pmap);
 	screen = gdk_drawable_get_screen(gpmap);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-	width = gdk_window_get_width(GDK_WINDOW(gpmap));
-	height = gdk_window_get_height(GDK_WINDOW(gpmap));
-#else
 	gdk_drawable_get_size(GDK_DRAWABLE(gpmap), &width, &height);
-#endif
 
 	depth = gdk_drawable_get_depth(GDK_DRAWABLE(gpmap));
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
 	if (depth <= 24)
 	{
 		cmap = gdk_screen_get_system_colormap(screen);
@@ -1281,7 +1123,6 @@ GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 	{
 		cmap = gdk_screen_get_rgba_colormap(screen);
 	}
-#endif
 
 	pixbuf = gdk_pixbuf_get_from_drawable(NULL, gpmap, cmap, 0, 0, 0, 0, width, height);
 

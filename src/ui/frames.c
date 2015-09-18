@@ -167,6 +167,24 @@ meta_frames_get_type (void)
 
 #endif
 
+static GObject *
+meta_frames_constructor (GType                  gtype,
+                         guint                  n_properties,
+                         GObjectConstructParam *properties)
+{
+  GObject *object;
+  GObjectClass *gobject_class;
+
+  gobject_class = G_OBJECT_CLASS (parent_class);
+  object = gobject_class->constructor (gtype, n_properties, properties);
+
+  g_object_set (object,
+                "type", GTK_WINDOW_POPUP,
+                NULL);
+
+  return object;
+}
+
 static void
 meta_frames_class_init (MetaFramesClass *class)
 {
@@ -186,6 +204,7 @@ meta_frames_class_init (MetaFramesClass *class)
   parent_class = g_type_class_peek_parent (class);
 #endif
 
+  gobject_class->constructor = meta_frames_constructor;
   gobject_class->finalize = meta_frames_finalize;
   #if !GTK_CHECK_VERSION(3, 0, 0)
   object_class->destroy = meta_frames_destroy;
@@ -254,10 +273,6 @@ prefs_changed_callback (MetaPreference pref,
 static void
 meta_frames_init (MetaFrames *frames)
 {
-  #if !GTK_CHECK_VERSION(3, 0, 0)
-  GTK_WINDOW (frames)->type = GTK_WINDOW_POPUP;
-  #endif
-
   frames->text_heights = g_hash_table_new (NULL, NULL);
 
   frames->frames = g_hash_table_new (unsigned_long_hash, unsigned_long_equal);
@@ -583,6 +598,8 @@ meta_frames_ensure_layout (MetaFrames  *frames,
 
       pango_layout_set_auto_dir (frame->layout, FALSE);
 
+      pango_layout_set_single_paragraph_mode (frame->layout, TRUE);
+
       font_desc = meta_gtk_widget_get_font_desc (widget, scale,
                                                  meta_prefs_get_titlebar_font ());
 
@@ -680,8 +697,9 @@ meta_frames_attach_style (MetaFrames  *frames,
   frame->style = g_object_ref (gtk_widget_get_style_context (GTK_WIDGET (frames)));
 #else
   /* Weirdly, gtk_style_attach() steals a reference count from the style passed in */
-  g_object_ref (GTK_WIDGET (frames)->style);
-  frame->style = gtk_style_attach (GTK_WIDGET (frames)->style, frame->window);
+  g_object_ref (gtk_widget_get_style (GTK_WIDGET (frames)));
+  frame->style = gtk_style_attach (gtk_widget_get_style (GTK_WIDGET (frames)),
+                                   frame->window);
 #endif
 }
 
@@ -2356,7 +2374,7 @@ clip_to_screen (GdkRegion *region, MetaUIFrame *frame)
                  META_CORE_GET_FRAME_Y, &frame_area.y,
                  META_CORE_GET_FRAME_WIDTH, &frame_area.width,
                  META_CORE_GET_FRAME_HEIGHT, &frame_area.height,
-                 META_CORE_GET_SCREEN_WIDTH, &screen_area.height,
+                 META_CORE_GET_SCREEN_WIDTH, &screen_area.width,
                  META_CORE_GET_SCREEN_HEIGHT, &screen_area.height,
                  META_CORE_GET_END);
 

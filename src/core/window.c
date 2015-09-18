@@ -461,6 +461,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->maximize_horizontally_after_placement = FALSE;
   window->maximize_vertically_after_placement = FALSE;
   window->minimize_after_placement = FALSE;
+  window->move_after_placement = FALSE;
   window->fullscreen = FALSE;
   window->fullscreen_after_placement = FALSE;
   window->fullscreen_monitors[0] = -1;
@@ -2346,6 +2347,13 @@ meta_window_show (MetaWindow *window)
       if (takes_focus_on_map)
         {
           meta_window_focus (window, timestamp);
+
+          if (window->move_after_placement)
+            {
+              meta_window_begin_grab_op(window, META_GRAB_OP_KEYBOARD_MOVING,
+                                        FALSE, timestamp);
+              window->move_after_placement = FALSE;
+            }
         }
       else
         {
@@ -5585,6 +5593,8 @@ static gboolean
 process_property_notify (MetaWindow     *window,
                          XPropertyEvent *event)
 {
+  Window xid = window->xwindow;
+
   if (meta_is_verbose ()) /* avoid looking up the name if we don't have to */
     {
       char *property_name = XGetAtomName (window->display->xdisplay,
@@ -5595,7 +5605,13 @@ process_property_notify (MetaWindow     *window,
       XFree (property_name);
     }
 
-  meta_window_reload_property (window, event->atom, FALSE);
+  if (event->atom == window->display->atom__NET_WM_USER_TIME &&
+      window->user_time_window)
+    {
+      xid = window->user_time_window;
+    }
+
+  meta_window_reload_property_from_xwindow (window, xid, event->atom, FALSE);
 
   return TRUE;
 }

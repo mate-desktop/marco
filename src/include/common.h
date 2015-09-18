@@ -312,4 +312,14 @@ struct _MetaButtonLayout
   (ycoord) >= (rect).y &&                   \
   (ycoord) <  ((rect).y + (rect).height))
 
+/*
+ * Placement mode
+ */
+typedef enum
+{
+  META_PLACEMENT_MODE_AUTOMATIC,
+  META_PLACEMENT_MODE_POINTER,
+  META_PLACEMENT_MODE_MANUAL
+} MetaPlacementMode;
+
 #endif

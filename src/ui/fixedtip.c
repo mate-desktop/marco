@@ -72,7 +72,7 @@ draw_handler (GtkWidget *tooltips,
 #else
 
 static gint
-expose_handler (GtkTooltips *tooltips)
+expose_handler (GtkTooltip *tooltips)
 {
   gtk_paint_flat_box (gtk_widget_get_style (tip), gtk_widget_get_window (tip),
                       GTK_STATE_NORMAL, GTK_SHADOW_OUT,

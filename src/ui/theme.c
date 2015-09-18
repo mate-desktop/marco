@@ -3760,44 +3760,31 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
               y2 = y1;
 
             /* This is one of the cases where we are matching the exact
-             * pixel aligned rectangle produced by X.
+             * pixel aligned rectangle produced by X; for zero-width lines
+             * the generic algorithm produces the right result so we don't
+             * need to handle them here.
              */
-            if (y1 == y2 || x1 == x2)
+            if ((y1 == y2 || x1 == x2) && op->data.line.width != 0)
               {
-                double offset = (op->data.line.width == 0 ||
-                                 op->data.line.width % 2) ? .5 : 0;
-                /* X includes end points for lines of width 0 */
-                double line_extend = op->data.line.width == 0 ? 1. : 0.;
+                double offset = op->data.line.width % 2 ? .5 : 0;
 
                 if (y1 == y2)
                   {
-                    if (x2 < x1)
-                    {
-                       x1 ^= x2;
-                       x2 ^= x1;
-                       x1 ^= x2;
-                    }
                     cairo_move_to (cr, x1, y1 + offset);
-                    cairo_line_to (cr, x2 + line_extend, y2 + offset);
+                    cairo_line_to (cr, x2, y2 + offset);
                   }
                 else
                   {
-                    if (y2 < y1)
-                    {
-                      y1 ^= y2;
-                      y2 ^= y1;
-                      y1 ^= y2;
-                    }
                     cairo_move_to (cr, x1 + offset, y1);
-                    cairo_line_to (cr, x2 + offset, y2 + line_extend);
+                    cairo_line_to (cr, x2 + offset, y2);
                   }
               }
             else
               {
-                if (op->data.line.width <= 0)
-                  {
-                    cairo_set_line_cap (cr, CAIRO_LINE_CAP_SQUARE);
-                  }
+                /* zero-width lines include both end-points in X, unlike wide lines */
+                if (op->data.line.width == 0)
+                  cairo_set_line_cap (cr, CAIRO_LINE_CAP_SQUARE);
+
                 cairo_move_to (cr, x1 + .5, y1 + .5);
                 cairo_line_to (cr, x2 + .5, y2 + .5);
               }
@@ -4809,10 +4796,10 @@ meta_frame_style_validate (MetaFrameStyle    *style,
 }
 
 static void
-button_rect (MetaButtonType           type,
-             const MetaFrameGeometry *fgeom,
-             int                      middle_background_offset,
-             GdkRectangle            *rect)
+get_button_rect (MetaButtonType           type,
+                 const MetaFrameGeometry *fgeom,
+                 int                      middle_background_offset,
+                 GdkRectangle            *rect)
 {
   switch (type)
     {
@@ -5132,7 +5119,7 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
             {
               MetaButtonState button_state;
 
-              button_rect (j, fgeom, middle_bg_offset, &rect);
+              get_button_rect (j, fgeom, middle_bg_offset, &rect);
 
               button_state = map_button_state (j, fgeom, middle_bg_offset, button_states);
               op_list = get_button (style, j, button_state);
@@ -5187,7 +5174,7 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
             {
               MetaButtonState button_state;
 
-              button_rect (j, fgeom, middle_bg_offset, &rect);
+              get_button_rect (j, fgeom, middle_bg_offset, &rect);
 
               rect.x += x_offset;
               rect.y += y_offset;

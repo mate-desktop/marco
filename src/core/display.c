@@ -558,6 +558,9 @@ meta_display_open (void)
 
 #ifdef HAVE_COMPOSITE_EXTENSIONS
   {
+    int composite_major_version = 0;
+    int composite_minor_version = 0;
+
     the_display->have_composite = FALSE;
 
     the_display->composite_error_base = 0;
@@ -572,18 +575,16 @@ meta_display_open (void)
       }
     else
       {
-        the_display->composite_major_version = 0;
-        the_display->composite_minor_version = 0;
         if (XCompositeQueryVersion (the_display->xdisplay,
-                                    &the_display->composite_major_version,
-                                    &the_display->composite_minor_version))
+                                    &composite_major_version,
+                                    &composite_minor_version))
           {
             the_display->have_composite = TRUE;
           }
         else
           {
-            the_display->composite_major_version = 0;
-            the_display->composite_minor_version = 0;
+            composite_major_version = 0;
+            composite_minor_version = 0;
           }
       }
 
@@ -591,8 +592,8 @@ meta_display_open (void)
                   "extn ver %d %d\n",
                   the_display->composite_error_base,
                   the_display->composite_event_base,
-                  the_display->composite_major_version,
-                  the_display->composite_minor_version);
+                  composite_major_version,
+                  composite_minor_version);
 
     the_display->have_damage = FALSE;
 
@@ -5388,17 +5389,6 @@ meta_display_remove_autoraise_callback (MetaDisplay *display)
       display->autoraise_window = NULL;
     }
 }
-
-#ifdef HAVE_COMPOSITE_EXTENSIONS
-void
-meta_display_get_compositor_version (MetaDisplay *display,
-                                     int         *major,
-                                     int         *minor)
-{
-  *major = display->composite_major_version;
-  *minor = display->composite_minor_version;
-}
-#endif
 
 Display *
 meta_display_get_xdisplay (MetaDisplay *display)

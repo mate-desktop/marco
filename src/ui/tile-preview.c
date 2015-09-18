@@ -62,11 +62,7 @@ meta_tile_preview_expose (GtkWidget      *widget,
 {
   MetaTilePreview *preview = user_data;
 #if !GTK_CHECK_VERSION (3, 0, 0)
-  GdkWindow *window;
-  cairo_t *cr;
-
-  window = gtk_widget_get_window (widget);
-  cr = gdk_cairo_create (window);
+  cairo_t *cr = gdk_cairo_create (event->window);
 #endif
 
   cairo_set_line_width (cr, 1.0);
@@ -265,11 +261,7 @@ meta_tile_preview_show (MetaTilePreview *preview,
     return; /* nothing to do */
 
   window = gtk_widget_get_window (preview->preview_window);
-#if GTK_CHECK_VERSION (3, 0, 0)
   meta_core_lower_beneath_focus_window (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
-#else
-  meta_core_lower_beneath_focus_window (gdk_display,
-#endif
                                         GDK_WINDOW_XID (window),
                                         gtk_get_current_event_time ());
 

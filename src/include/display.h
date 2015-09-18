@@ -29,9 +29,6 @@
 
 #define meta_XFree(p) do { if ((p)) XFree ((p)); } while (0)
 
-void meta_display_get_compositor_version (MetaDisplay *display,
-                                          int         *major,
-                                          int         *minor);
 Display *meta_display_get_xdisplay (MetaDisplay *display);
 MetaCompositor *meta_display_get_compositor (MetaDisplay *display);
 GSList *meta_display_get_screens (MetaDisplay *display);

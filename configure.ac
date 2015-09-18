@@ -224,7 +224,7 @@ fi
 ## or the render-specific check later
 have_xrender=no
 
-XCOMPOSITE_VERSION=0.2
+XCOMPOSITE_VERSION=0.3
 if test x$enable_compositor = xyes; then
    have_xcomposite=yes
 elif test x$enable_compositor = xauto; then

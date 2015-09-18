@@ -30,6 +30,11 @@
     <value nick="menu" value="7"/>
     <value nick="last" value="8"/>
   </enum>
+  <enum id="org.mate.Marco.placement_type">
+    <value value="0" nick="automatic"/>
+    <value value="1" nick="pointer"/>
+    <value value="2" nick="manual"/>
+  </enum>
 
   <schema id="org.mate.Marco" path="/org/mate/marco/">
     <child name="general" schema="org.mate.Marco.general"/>
@@ -170,6 +175,11 @@
       <default>true</default>
       <summary>Whether to enable side-by-side tiling</summary>
       <description>If enabled, dropping windows on screen edges maximizes them vertically and resizes them horizontally to cover half of the available area. Drag-dropping to the top maximizes the window.</description>
+    </key>
+    <key name="placement-mode" enum="org.mate.Marco.placement_type">
+      <default>'automatic'</default>
+      <summary>Window placement mode</summary>
+      <description>The window placement mode indicates how new windows are positioned. "automatic" means the system chooses a location automatically based on the space available on the desktop, or by a simple cascade if there is no space; "pointer" means that new windows are placed according to the mouse pointer position; "manual" means that the user must manually place the new window with the mouse or keyboard.</description>
     </key>
   </schema>
 

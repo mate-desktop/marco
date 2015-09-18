@@ -134,20 +134,6 @@ void            meta_ui_window_menu_popup (MetaWindowMenu     *menu,
                                            guint32             timestamp);
 void            meta_ui_window_menu_free  (MetaWindowMenu     *menu);
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-MetaImageWindow* meta_image_window_new          (Display         *xdisplay,
-                                                 int              screen_number,
-                                                 int              max_width,
-                                                 int              max_height);
-void             meta_image_window_free         (MetaImageWindow *iw);
-void             meta_image_window_set_showing  (MetaImageWindow *iw,
-                                                 gboolean         showing);
-void             meta_image_window_set          (MetaImageWindow *iw,
-                                                 GdkPixbuf       *pixbuf,
-                                                 int              x,
-                                                 int              y);
-#endif
-
 GdkPixbuf* meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
                                             Pixmap       xpixmap,
                                             int          src_x,
@@ -169,9 +155,6 @@ GdkPixbuf* meta_ui_get_default_mini_icon (MetaUI *ui);
 
 gboolean  meta_ui_window_should_not_cause_focus (Display *xdisplay,
                                                  Window   xwindow);
-
-char*     meta_text_property_to_utf8 (Display             *xdisplay,
-                                      const XTextProperty *prop);
 
 void     meta_ui_set_current_theme (const char *name,
                                     gboolean    force_reload);
