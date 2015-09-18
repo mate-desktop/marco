@@ -73,13 +73,9 @@ meta_tile_preview_expose (GtkWidget      *widget,
 
   if (preview->has_alpha)
     {
-#if GTK_CHECK_VERSION (3, 0, 0)
-      GdkRGBA preview_color = *preview->preview_color;
-#endif
-
       /* Fill the preview area with a transparent color */
 #if GTK_CHECK_VERSION (3, 0, 0)
-      gdk_cairo_set_source_rgba (cr, &preview_color);
+      gdk_cairo_set_source_rgba (cr, preview->preview_color);
 #else
       cairo_set_source_rgba (cr,
                              (double)preview->preview_color->red   / 0xFFFF,
@@ -93,7 +89,7 @@ meta_tile_preview_expose (GtkWidget      *widget,
 
       /* Use the opaque color for the border */
 #if GTK_CHECK_VERSION (3, 0, 0)
-      gdk_cairo_set_source_rgba (cr, &preview_color);
+      gdk_cairo_set_source_rgba (cr, preview->preview_color);
 #else
       gdk_cairo_set_source_color (cr, preview->preview_color);
 #endif
@@ -121,6 +117,13 @@ meta_tile_preview_expose (GtkWidget      *widget,
                    0.5, 0.5,
                    preview->tile_rect.width - 1,
                    preview->tile_rect.height - 1);
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+  if (preview->has_alpha) {
+    cairo_fill_preserve (cr);
+    cairo_set_source_rgba (cr, preview->preview_color->red, preview->preview_color->green, preview->preview_color->blue, 1.0);
+  }
+#endif
   cairo_stroke (cr);
 
 #if !GTK_CHECK_VERSION (3, 0, 0)
