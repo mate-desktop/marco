@@ -186,6 +186,8 @@ keybind (run-command-32, handle_run_command, 31, 0)
 keybind (run-command-screenshot, handle_run_command, 32, 0)
 keybind (run-command-window-screenshot, handle_run_command, 33, 0)
 
+keybind (run-command-terminal, handle_run_terminal, 0, 0)
+
 /* No description because this is undocumented */
 keybind (set-spew-mark, handle_set_spew_mark, 0, 0)
 
