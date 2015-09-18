@@ -251,13 +251,9 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   gulong existing_wm_state;
   gulong event_mask;
   MetaMoveResizeFlags flags;
-#define N_INITIAL_PROPS 19
-  Atom initial_props[N_INITIAL_PROPS];
-  int i;
   gboolean has_shape;
 
   g_assert (attrs != NULL);
-  g_assert (N_INITIAL_PROPS == (int) G_N_ELEMENTS (initial_props));
 
   meta_verbose ("Attempting to manage 0x%lx\n", xwindow);
 
@@ -437,6 +433,12 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   /* initialize the remaining size_hints as if size_hints.flags were zero */
   meta_set_normal_hints (window, NULL);
 
+  window->has_custom_frame_extents = FALSE;
+  window->custom_frame_extents.left = 0;
+  window->custom_frame_extents.right = 0;
+  window->custom_frame_extents.top = 0;
+  window->custom_frame_extents.bottom = 0;
+
   /* And this is our unmaximized size */
   window->saved_rect = window->rect;
   window->user_rect = window->rect;
@@ -499,6 +501,8 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->initial_timestamp_set = FALSE;
   window->net_wm_user_time_set = FALSE;
   window->user_time_window = None;
+  window->take_focus = FALSE;
+  window->input = TRUE;
   window->calc_placement = FALSE;
   window->shaken_loose = FALSE;
   window->have_focus_click_grab = FALSE;
@@ -575,38 +579,9 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->xgroup_leader = None;
   meta_window_compute_group (window);
 
-  /* Fill these in the order we want them to be gotten.  we want to
-   * get window name and class first so we can use them in error
-   * messages and such.  However, name is modified depending on
-   * wm_client_machine, so push it slightly sooner.
-   */
-  i = 0;
-  initial_props[i++] = display->atom_WM_CLIENT_MACHINE;
-  initial_props[i++] = display->atom__NET_WM_PID;
-  initial_props[i++] = display->atom__NET_WM_NAME;
-  initial_props[i++] = XA_WM_CLASS;
-  initial_props[i++] = XA_WM_NAME;
-  initial_props[i++] = display->atom__NET_WM_ICON_NAME;
-  initial_props[i++] = XA_WM_ICON_NAME;
-  initial_props[i++] = display->atom__NET_WM_DESKTOP;
-  initial_props[i++] = display->atom__NET_STARTUP_ID;
-  initial_props[i++] = display->atom__NET_WM_SYNC_REQUEST_COUNTER;
-  initial_props[i++] = XA_WM_NORMAL_HINTS;
-  initial_props[i++] = display->atom_WM_PROTOCOLS;
-  initial_props[i++] = XA_WM_HINTS;
-  initial_props[i++] = display->atom__NET_WM_USER_TIME;
-  initial_props[i++] = display->atom__NET_WM_STATE;
-  initial_props[i++] = display->atom__MOTIF_WM_HINTS;
-  initial_props[i++] = XA_WM_TRANSIENT_FOR;
-  initial_props[i++] = display->atom__NET_WM_USER_TIME_WINDOW;
-  initial_props[i++] = display->atom__NET_WM_FULLSCREEN_MONITORS;
-  g_assert (N_INITIAL_PROPS == i);
-
-  meta_window_reload_properties (window, initial_props, N_INITIAL_PROPS, TRUE);
+  meta_window_load_initial_properties (window);
 
   update_sm_hints (window); /* must come after transient_for */
-  meta_window_update_role (window);
-  meta_window_update_net_wm_type (window);
   meta_window_update_icon_now (window);
 
   if (window->initially_iconic)
@@ -2764,12 +2739,12 @@ meta_window_can_tile (MetaWindow *window)
 
   if (window->frame)
     {
-      MetaFrameGeometry fgeom;
+      MetaFrameBorders borders;
 
-      meta_frame_calc_geometry (window->frame, &fgeom);
+      meta_frame_calc_borders (window->frame, &borders);
 
-      tile_area.width  -= (fgeom.left_width + fgeom.right_width);
-      tile_area.height -= (fgeom.top_height + fgeom.bottom_height);
+      tile_area.width -= (borders.visible.left + borders.visible.right);
+      tile_area.height -= (borders.visible.top + borders.visible.bottom);
     }
 
   return tile_area.width >= window->size_hints.min_width &&
@@ -3169,7 +3144,7 @@ meta_window_activate_with_workspace (MetaWindow     *window,
  */
 static void
 adjust_for_gravity (MetaWindow        *window,
-                    MetaFrameGeometry *fgeom,
+                    MetaFrameBorders  *borders,
                     gboolean           coords_assume_border,
                     int                gravity,
                     MetaRectangle     *rect)
@@ -3184,12 +3159,12 @@ adjust_for_gravity (MetaWindow        *window,
   else
     bw = 0;
 
-  if (fgeom)
+  if (borders)
     {
-      child_x = fgeom->left_width;
-      child_y = fgeom->top_height;
-      frame_width = child_x + rect->width + fgeom->right_width;
-      frame_height = child_y + rect->height + fgeom->bottom_height;
+      child_x = borders->visible.left;
+      child_y = borders->visible.top;
+      frame_width = child_x + rect->width + borders->visible.right;
+      frame_height = child_y + rect->height + borders->visible.bottom;
     }
   else
     {
@@ -3384,7 +3359,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
   XWindowChanges values;
   unsigned int mask;
   gboolean need_configure_notify;
-  MetaFrameGeometry fgeom;
+  MetaFrameBorders borders;
   gboolean need_move_client = FALSE;
   gboolean need_move_frame = FALSE;
   gboolean need_resize_client = FALSE;
@@ -3426,8 +3401,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
               old_rect.x, old_rect.y, old_rect.width, old_rect.height);
 
   if (window->frame)
-    meta_frame_calc_geometry (window->frame,
-                              &fgeom);
+    meta_frame_calc_borders (window->frame, &borders);
 
   new_rect.x = root_x_nw;
   new_rect.y = root_y_nw;
@@ -3454,7 +3428,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
   else if (is_configure_request || do_gravity_adjust)
     {
       adjust_for_gravity (window,
-                          window->frame ? &fgeom : NULL,
+                          window->frame ? &borders : NULL,
                           /* configure request coords assume
                            * the border width existed
                            */
@@ -3469,7 +3443,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
     }
 
   meta_window_constrain (window,
-                         window->frame ? &fgeom : NULL,
+                         window->frame ? &borders : NULL,
                          flags,
                          gravity,
                          &old_rect,
@@ -3491,12 +3465,12 @@ meta_window_move_resize_internal (MetaWindow          *window,
     {
       int new_w, new_h;
 
-      new_w = window->rect.width + fgeom.left_width + fgeom.right_width;
+      new_w = window->rect.width + borders.visible.left + borders.visible.right;
 
       if (window->shaded)
-        new_h = fgeom.top_height;
+        new_h = borders.visible.top;
       else
-        new_h = window->rect.height + fgeom.top_height + fgeom.bottom_height;
+        new_h = window->rect.height + borders.visible.top + borders.visible.bottom;
 
       frame_size_dx = new_w - window->frame->rect.width;
       frame_size_dy = new_h - window->frame->rect.height;
@@ -3538,8 +3512,8 @@ meta_window_move_resize_internal (MetaWindow          *window,
       int frame_pos_dx, frame_pos_dy;
 
       /* Compute new frame coords */
-      new_x = root_x_nw - fgeom.left_width;
-      new_y = root_y_nw - fgeom.top_height;
+      new_x = root_x_nw - borders.visible.left;
+      new_y = root_y_nw - borders.visible.top;
 
       frame_pos_dx = new_x - window->frame->rect.x;
       frame_pos_dy = new_y - window->frame->rect.y;
@@ -3562,8 +3536,8 @@ meta_window_move_resize_internal (MetaWindow          *window,
        * remember they are the server coords
        */
 
-      new_x = fgeom.left_width;
-      new_y = fgeom.top_height;
+      new_x = borders.visible.left;
+      new_y = borders.visible.top;
 
       if (need_resize_frame && need_move_frame &&
           static_gravity_works (window->display))
@@ -3634,15 +3608,15 @@ meta_window_move_resize_internal (MetaWindow          *window,
   /* If frame extents have changed, fill in other frame fields and
      change frame's extents property. */
   if (window->frame &&
-      (window->frame->child_x != fgeom.left_width ||
-       window->frame->child_y != fgeom.top_height ||
-       window->frame->right_width != fgeom.right_width ||
-       window->frame->bottom_height != fgeom.bottom_height))
+      (window->frame->child_x != borders.visible.left ||
+       window->frame->child_y != borders.visible.top ||
+       window->frame->right_width != borders.visible.right ||
+       window->frame->bottom_height != borders.visible.bottom))
     {
-      window->frame->child_x = fgeom.left_width;
-      window->frame->child_y = fgeom.top_height;
-      window->frame->right_width = fgeom.right_width;
-      window->frame->bottom_height = fgeom.bottom_height;
+      window->frame->child_x = borders.visible.left;
+      window->frame->child_y = borders.visible.top;
+      window->frame->right_width = borders.visible.right;
+      window->frame->bottom_height = borders.visible.bottom;
 
       update_net_frame_extents (window);
     }
@@ -4504,14 +4478,17 @@ update_net_frame_extents (MetaWindow *window)
 
   if (window->frame)
     {
+      MetaFrameBorders borders;
+
+      meta_frame_calc_borders (window->frame, &borders);
       /* Left */
-      data[0] = window->frame->child_x;
+      data[0] = borders.visible.left;
       /* Right */
-      data[1] = window->frame->right_width;
+      data[1] = borders.visible.right;
       /* Top */
-      data[2] = window->frame->child_y;
+      data[2] = borders.visible.top;
       /* Bottom */
-      data[3] = window->frame->bottom_height;
+      data[3] = borders.visible.bottom;
     }
 
   meta_topic (META_DEBUG_GEOMETRY,
@@ -5799,88 +5776,6 @@ update_sm_hints (MetaWindow *window)
   meta_verbose ("Window %s client leader: 0x%lx SM_CLIENT_ID: '%s'\n",
                 window->desc, window->xclient_leader,
                 window->sm_client_id ? window->sm_client_id : "none");
-}
-
-void
-meta_window_update_role (MetaWindow *window)
-{
-  char *str;
-
-  if (window->role)
-    g_free (window->role);
-  window->role = NULL;
-
-  if (meta_prop_get_latin1_string (window->display, window->xwindow,
-                                   window->display->atom_WM_WINDOW_ROLE,
-                                   &str))
-    {
-      window->role = g_strdup (str);
-      meta_XFree (str);
-    }
-
-  meta_verbose ("Updated role of %s to '%s'\n",
-                window->desc, window->role ? window->role : "null");
-}
-
-void
-meta_window_update_net_wm_type (MetaWindow *window)
-{
-  int n_atoms;
-  Atom *atoms;
-  int i;
-
-  window->type_atom = None;
-  n_atoms = 0;
-  atoms = NULL;
-
-  meta_prop_get_atom_list (window->display, window->xwindow,
-                           window->display->atom__NET_WM_WINDOW_TYPE,
-                           &atoms, &n_atoms);
-
-  i = 0;
-  while (i < n_atoms)
-    {
-      /* We break as soon as we find one we recognize,
-       * supposed to prefer those near the front of the list
-       */
-      if (atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_DESKTOP ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_DOCK ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_TOOLBAR ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_MENU ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_DIALOG ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_NORMAL ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_UTILITY ||
-          atoms[i] == window->display->atom__NET_WM_WINDOW_TYPE_SPLASH)
-        {
-          window->type_atom = atoms[i];
-          break;
-        }
-
-      ++i;
-    }
-
-  meta_XFree (atoms);
-
-  if (meta_is_verbose ())
-    {
-      char *str;
-
-      str = NULL;
-      if (window->type_atom != None)
-        {
-          meta_error_trap_push (window->display);
-          str = XGetAtomName (window->display->xdisplay, window->type_atom);
-          meta_error_trap_pop (window->display, TRUE);
-        }
-
-      meta_verbose ("Window %s type atom %s\n", window->desc,
-                    str ? str : "(none)");
-
-      if (str)
-        meta_XFree (str);
-    }
-
-  meta_window_recalc_window_type (window);
 }
 
 static void

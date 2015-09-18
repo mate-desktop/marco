@@ -26,7 +26,7 @@
 #define META_DISPLAY_PRIVATE_H
 
 #ifndef PACKAGE
-	#error "config.h not included"
+#error "config.h not included"
 #endif
 
 #include <glib.h>
@@ -37,11 +37,11 @@
 #include "display.h"
 
 #ifdef HAVE_STARTUP_NOTIFICATION
-	#include <libsn/sn.h>
+#include <libsn/sn.h>
 #endif
 
 #ifdef HAVE_XSYNC
-	#include <X11/extensions/sync.h>
+#include <X11/extensions/sync.h>
 #endif
 
 typedef struct _MetaKeyBinding MetaKeyBinding;
@@ -50,6 +50,7 @@ typedef struct _MetaUISlave    MetaUISlave;
 typedef struct _MetaWorkspace  MetaWorkspace;
 
 typedef struct _MetaGroupPropHooks  MetaGroupPropHooks;
+typedef struct _MetaWindowPropHooks MetaWindowPropHooks;
 
 typedef struct MetaEdgeResistanceData MetaEdgeResistanceData;
 
@@ -75,246 +76,247 @@ typedef enum {
 } MetaTileMode;
 
 struct _MetaDisplay {
-	char* name;
-	Display* xdisplay;
+  char* name;
+  Display* xdisplay;
 
-	Window leader_window;
-	Window timestamp_pinging_window;
+  Window leader_window;
+  Window timestamp_pinging_window;
 
-	/* Pull in all the names of atoms as fields; we will intern them when the
-	 * class is constructed.
-	 */
-	#define item(x)  Atom atom_##x;
-		#include "atomnames.h"
-	#undef item
+  /* Pull in all the names of atoms as fields; we will intern them when the
+   * class is constructed.
+   */
+  #define item(x)  Atom atom_##x;
+    #include "atomnames.h"
+  #undef item
 
-	/* This is the actual window from focus events,
-	 * not the one we last set
-	 */
-	MetaWindow* focus_window;
+  /* This is the actual window from focus events,
+   * not the one we last set
+   */
+  MetaWindow* focus_window;
 
-	/* window we are expecting a FocusIn event for or the current focus
-	 * window if we are not expecting any FocusIn/FocusOut events; not
-	 * perfect because applications can call XSetInputFocus directly.
-	 * (It could also be messed up if a timestamp later than current
-	 * time is sent to meta_display_set_input_focus_window, though that
-	 * would be a programming error).  See bug 154598 for more info.
-	 */
-	MetaWindow* expected_focus_window;
+  /* window we are expecting a FocusIn event for or the current focus
+   * window if we are not expecting any FocusIn/FocusOut events; not
+   * perfect because applications can call XSetInputFocus directly.
+   * (It could also be messed up if a timestamp later than current
+   * time is sent to meta_display_set_input_focus_window, though that
+   * would be a programming error).  See bug 154598 for more info.
+   */
+  MetaWindow* expected_focus_window;
 
-	/* last timestamp passed to XSetInputFocus */
-	guint32 last_focus_time;
+  /* last timestamp passed to XSetInputFocus */
+  guint32 last_focus_time;
 
-	/* last user interaction time in any app */
-	guint32 last_user_time;
+  /* last user interaction time in any app */
+  guint32 last_user_time;
 
-	/* whether we're using mousenav (only relevant for sloppy&mouse focus modes;
-	 * !mouse_mode means "keynav mode")
-	 */
-	guint mouse_mode: 1;
+  /* whether we're using mousenav (only relevant for sloppy&mouse focus modes;
+   * !mouse_mode means "keynav mode")
+   */
+  guint mouse_mode: 1;
 
-	/* Helper var used when focus_new_windows setting is 'strict'; only
-	 * relevant in 'strict' mode and if the focus window is a terminal.
-	 * In that case, we don't allow new windows to take focus away from
-	 * a terminal, but if the user explicitly did something that should
-	 * allow a different window to gain focus (e.g. global keybinding or
-	 * clicking on a dock), then we will allow the transfer.
-	 */
-	guint allow_terminal_deactivation: 1;
+  /* Helper var used when focus_new_windows setting is 'strict'; only
+   * relevant in 'strict' mode and if the focus window is a terminal.
+   * In that case, we don't allow new windows to take focus away from
+   * a terminal, but if the user explicitly did something that should
+   * allow a different window to gain focus (e.g. global keybinding or
+   * clicking on a dock), then we will allow the transfer.
+   */
+  guint allow_terminal_deactivation: 1;
 
-	guint static_gravity_works: 1;
+  guint static_gravity_works: 1;
 
-	/*< private-ish >*/
-	guint error_trap_synced_at_last_pop: 1;
-	MetaEventQueue* events;
-	GSList* screens;
-	MetaScreen* active_screen;
-	GHashTable* window_ids;
-	int error_traps;
-	int (*error_trap_handler) (Display* display, XErrorEvent* error);
-	int server_grab_count;
+  /*< private-ish >*/
+  guint error_trap_synced_at_last_pop: 1;
+  MetaEventQueue* events;
+  GSList* screens;
+  MetaScreen* active_screen;
+  GHashTable* window_ids;
+  int error_traps;
+  int (*error_trap_handler) (Display* display, XErrorEvent* error);
+  int server_grab_count;
 
-	/* serials of leave/unmap events that may
-	 * correspond to an enter event we should
-	 * ignore
-	 */
-	unsigned long ignored_serials[N_IGNORED_SERIALS];
-	Window ungrab_should_not_cause_focus_window;
+  /* serials of leave/unmap events that may
+   * correspond to an enter event we should
+   * ignore
+   */
+  unsigned long ignored_serials[N_IGNORED_SERIALS];
+  Window ungrab_should_not_cause_focus_window;
 
-	guint32 current_time;
+  guint32 current_time;
 
-	/* Pings which we're waiting for a reply from */
-	GSList* pending_pings;
+  /* Pings which we're waiting for a reply from */
+  GSList* pending_pings;
 
-	/* Pending autoraise */
-	guint       autoraise_timeout_id;
-	MetaWindow* autoraise_window;
+  /* Pending autoraise */
+  guint       autoraise_timeout_id;
+  MetaWindow* autoraise_window;
 
-	/* Alt+click button grabs */
-	unsigned int window_grab_modifiers;
+  /* Alt+click button grabs */
+  unsigned int window_grab_modifiers;
 
-	/* current window operation */
-	MetaGrabOp  grab_op;
-	MetaScreen* grab_screen;
-	MetaWindow* grab_window;
-	Window      grab_xwindow;
-	int         grab_button;
-	int         grab_anchor_root_x;
-	int         grab_anchor_root_y;
-	MetaRectangle grab_anchor_window_pos;
-	MetaTileMode  grab_tile_mode;
-	int           grab_tile_monitor_number;
-	int         grab_latest_motion_x;
-	int         grab_latest_motion_y;
-	gulong      grab_mask;
-	guint       grab_have_pointer : 1;
-	guint       grab_have_keyboard : 1;
-	guint       grab_wireframe_active : 1;
-	guint       grab_was_cancelled : 1;    /* Only used in wireframe mode */
-	guint       grab_frame_action : 1;
-	MetaRectangle grab_wireframe_rect;
-	MetaRectangle grab_wireframe_last_xor_rect;
-	MetaRectangle grab_initial_window_pos;
-	int         grab_initial_x, grab_initial_y;  /* These are only relevant for */
-	gboolean    grab_threshold_movement_reached; /* raise_on_click == FALSE.    */
-	MetaResizePopup* grab_resize_popup;
-	GTimeVal    grab_last_moveresize_time;
-	guint32     grab_motion_notify_time;
-	int         grab_wireframe_last_display_width;
-	int         grab_wireframe_last_display_height;
-	GList*      grab_old_window_stacking;
-	MetaEdgeResistanceData* grab_edge_resistance_data;
-	unsigned int grab_last_user_action_was_snap;
+  /* current window operation */
+  MetaGrabOp  grab_op;
+  MetaScreen* grab_screen;
+  MetaWindow* grab_window;
+  Window      grab_xwindow;
+  int         grab_button;
+  int         grab_anchor_root_x;
+  int         grab_anchor_root_y;
+  MetaRectangle grab_anchor_window_pos;
+  MetaTileMode  grab_tile_mode;
+  int           grab_tile_monitor_number;
+  int         grab_latest_motion_x;
+  int         grab_latest_motion_y;
+  gulong      grab_mask;
+  guint       grab_have_pointer : 1;
+  guint       grab_have_keyboard : 1;
+  guint       grab_wireframe_active : 1;
+  guint       grab_was_cancelled : 1;    /* Only used in wireframe mode */
+  guint       grab_frame_action : 1;
+  MetaRectangle grab_wireframe_rect;
+  MetaRectangle grab_wireframe_last_xor_rect;
+  MetaRectangle grab_initial_window_pos;
+  int         grab_initial_x, grab_initial_y;  /* These are only relevant for */
+  gboolean    grab_threshold_movement_reached; /* raise_on_click == FALSE.    */
+  MetaResizePopup* grab_resize_popup;
+  GTimeVal    grab_last_moveresize_time;
+  guint32     grab_motion_notify_time;
+  int         grab_wireframe_last_display_width;
+  int         grab_wireframe_last_display_height;
+  GList*      grab_old_window_stacking;
+  MetaEdgeResistanceData* grab_edge_resistance_data;
+  unsigned int grab_last_user_action_was_snap;
 
-	/* we use property updates as sentinels for certain window focus events
-	 * to avoid some race conditions on EnterNotify events
-	 */
-	int         sentinel_counter;
+  /* we use property updates as sentinels for certain window focus events
+   * to avoid some race conditions on EnterNotify events
+   */
+  int         sentinel_counter;
 
-	#ifdef HAVE_XKB
-		int         xkb_base_event_type;
-		guint32     last_bell_time;
-	#endif
+  #ifdef HAVE_XKB
+    int         xkb_base_event_type;
+    guint32     last_bell_time;
+  #endif
 
-	#ifdef HAVE_XSYNC
-		/* alarm monitoring client's _NET_WM_SYNC_REQUEST_COUNTER */
-		XSyncAlarm  grab_sync_request_alarm;
-	#endif
+  #ifdef HAVE_XSYNC
+    /* alarm monitoring client's _NET_WM_SYNC_REQUEST_COUNTER */
+    XSyncAlarm  grab_sync_request_alarm;
+  #endif
 
-	int       grab_resize_timeout_id;
+  int       grab_resize_timeout_id;
 
-	/* Keybindings stuff */
-	MetaKeyBinding* key_bindings;
-	int             n_key_bindings;
-	int             min_keycode;
-	int             max_keycode;
-	KeySym* keymap;
-	int keysyms_per_keycode;
-	XModifierKeymap* modmap;
-	unsigned int ignored_modifier_mask;
-	unsigned int num_lock_mask;
-	unsigned int scroll_lock_mask;
-	unsigned int hyper_mask;
-	unsigned int super_mask;
-	unsigned int meta_mask;
+  /* Keybindings stuff */
+  MetaKeyBinding* key_bindings;
+  int             n_key_bindings;
+  int             min_keycode;
+  int             max_keycode;
+  KeySym* keymap;
+  int keysyms_per_keycode;
+  XModifierKeymap* modmap;
+  unsigned int ignored_modifier_mask;
+  unsigned int num_lock_mask;
+  unsigned int scroll_lock_mask;
+  unsigned int hyper_mask;
+  unsigned int super_mask;
+  unsigned int meta_mask;
 
-	/* Xinerama cache */
-	unsigned int xinerama_cache_invalidated: 1;
+  /* Xinerama cache */
+  unsigned int xinerama_cache_invalidated: 1;
 
-	/* Opening the display */
-	unsigned int display_opening: 1;
+  /* Opening the display */
+  unsigned int display_opening: 1;
 
-	/* Closing down the display */
-	int closing;
+  /* Closing down the display */
+  int closing;
 
-	/* To detect double clicks
-	 *
-	 * https://github.com/stefano-k/Mate-Desktop-Environment/commit/b0e5fb03eb21dae8f02692f11ef391bfc5ccba33
-	 */
-	guint button_click_number;
-	Window button_click_window;
-	int button_click_x;
-	int button_click_y;
-	guint32 button_click_time;
+  /* To detect double clicks
+   *
+   * https://github.com/stefano-k/Mate-Desktop-Environment/commit/b0e5fb03eb21dae8f02692f11ef391bfc5ccba33
+   */
+  guint button_click_number;
+  Window button_click_window;
+  int button_click_x;
+  int button_click_y;
+  guint32 button_click_time;
 
-	/* Managed by group.c */
-	GHashTable* groups_by_leader;
+  /* Managed by group.c */
+  GHashTable* groups_by_leader;
 
-	/* currently-active window menu if any */
-	MetaWindowMenu* window_menu;
-	MetaWindow* window_with_menu;
+  /* currently-active window menu if any */
+  MetaWindowMenu* window_menu;
+  MetaWindow* window_with_menu;
 
-	/* Managed by window-props.c */
-	gpointer* prop_hooks_table;
-	GHashTable* prop_hooks;
+  /* Managed by window-props.c */
+  MetaWindowPropHooks *prop_hooks_table;
+  GHashTable* prop_hooks;
+  int n_prop_hooks;
 
-	/* Managed by group-props.c */
-	MetaGroupPropHooks* group_prop_hooks;
+  /* Managed by group-props.c */
+  MetaGroupPropHooks* group_prop_hooks;
 
-	/* Managed by compositor.c */
-	MetaCompositor* compositor;
+  /* Managed by compositor.c */
+  MetaCompositor* compositor;
 
-	#ifdef HAVE_STARTUP_NOTIFICATION
-		SnDisplay* sn_display;
-	#endif
+  #ifdef HAVE_STARTUP_NOTIFICATION
+    SnDisplay* sn_display;
+  #endif
 
-	#ifdef HAVE_XSYNC
-		int xsync_event_base;
-		int xsync_error_base;
-	#endif
+  #ifdef HAVE_XSYNC
+    int xsync_event_base;
+    int xsync_error_base;
+  #endif
 
-	#ifdef HAVE_SHAPE
-		int shape_event_base;
-		int shape_error_base;
-	#endif
+  #ifdef HAVE_SHAPE
+    int shape_event_base;
+    int shape_error_base;
+  #endif
 
-	#ifdef HAVE_RENDER
-		int render_event_base;
-		int render_error_base;
-	#endif
+  #ifdef HAVE_RENDER
+    int render_event_base;
+    int render_error_base;
+  #endif
 
-	#ifdef HAVE_COMPOSITE_EXTENSIONS
-		int composite_event_base;
-		int composite_error_base;
-		int damage_event_base;
-		int damage_error_base;
-		int xfixes_event_base;
-		int xfixes_error_base;
-	#endif
+  #ifdef HAVE_COMPOSITE_EXTENSIONS
+    int composite_event_base;
+    int composite_error_base;
+    int damage_event_base;
+    int damage_error_base;
+    int xfixes_event_base;
+    int xfixes_error_base;
+  #endif
 
-	#ifdef HAVE_XSYNC
-		unsigned int have_xsync : 1;
-		#define META_DISPLAY_HAS_XSYNC(display) ((display)->have_xsync)
-	#else
-		#define META_DISPLAY_HAS_XSYNC(display) FALSE
-	#endif
+  #ifdef HAVE_XSYNC
+    unsigned int have_xsync : 1;
+    #define META_DISPLAY_HAS_XSYNC(display) ((display)->have_xsync)
+  #else
+    #define META_DISPLAY_HAS_XSYNC(display) FALSE
+  #endif
 
-	#ifdef HAVE_SHAPE
-		unsigned int have_shape : 1;
-		#define META_DISPLAY_HAS_SHAPE(display) ((display)->have_shape)
-	#else
-		#define META_DISPLAY_HAS_SHAPE(display) FALSE
-	#endif
+  #ifdef HAVE_SHAPE
+    unsigned int have_shape : 1;
+    #define META_DISPLAY_HAS_SHAPE(display) ((display)->have_shape)
+  #else
+    #define META_DISPLAY_HAS_SHAPE(display) FALSE
+  #endif
 
-	#ifdef HAVE_RENDER
-		unsigned int have_render : 1;
-		#define META_DISPLAY_HAS_RENDER(display) ((display)->have_render)
-	#else
-		#define META_DISPLAY_HAS_RENDER(display) FALSE
-	#endif
+  #ifdef HAVE_RENDER
+    unsigned int have_render : 1;
+    #define META_DISPLAY_HAS_RENDER(display) ((display)->have_render)
+  #else
+    #define META_DISPLAY_HAS_RENDER(display) FALSE
+  #endif
 
-	#ifdef HAVE_COMPOSITE_EXTENSIONS
-		unsigned int have_composite : 1;
-		unsigned int have_damage : 1;
-		unsigned int have_xfixes : 1;
-		#define META_DISPLAY_HAS_COMPOSITE(display) ((display)->have_composite)
-		#define META_DISPLAY_HAS_DAMAGE(display) ((display)->have_damage)
-		#define META_DISPLAY_HAS_XFIXES(display) ((display)->have_xfixes)
-	#else
-		#define META_DISPLAY_HAS_COMPOSITE(display) FALSE
-		#define META_DISPLAY_HAS_DAMAGE(display) FALSE
-		#define META_DISPLAY_HAS_XFIXES(display) FALSE
-	#endif
+  #ifdef HAVE_COMPOSITE_EXTENSIONS
+    unsigned int have_composite : 1;
+    unsigned int have_damage : 1;
+    unsigned int have_xfixes : 1;
+    #define META_DISPLAY_HAS_COMPOSITE(display) ((display)->have_composite)
+    #define META_DISPLAY_HAS_DAMAGE(display) ((display)->have_damage)
+    #define META_DISPLAY_HAS_XFIXES(display) ((display)->have_xfixes)
+  #else
+    #define META_DISPLAY_HAS_COMPOSITE(display) FALSE
+    #define META_DISPLAY_HAS_DAMAGE(display) FALSE
+    #define META_DISPLAY_HAS_XFIXES(display) FALSE
+  #endif
 };
 
 /* Xserver time can wraparound, thus comparing two timestamps needs to take
@@ -330,14 +332,14 @@ struct _MetaDisplay {
  * the result.
  */
 #define XSERVER_TIME_IS_BEFORE_ASSUMING_REAL_TIMESTAMPS(time1, time2) \
-	( (( (time1) < (time2) ) && ( (time2) - (time1) < ((guint32)-1)/2 )) || \
-		(( (time1) > (time2) ) && ( (time1) - (time2) > ((guint32)-1)/2 )) \
-	)
+  ( (( (time1) < (time2) ) && ( (time2) - (time1) < ((guint32)-1)/2 )) || \
+    (( (time1) > (time2) ) && ( (time1) - (time2) > ((guint32)-1)/2 )) \
+  )
 #define XSERVER_TIME_IS_BEFORE(time1, time2) \
-	( (time1) == 0 || \
-		(XSERVER_TIME_IS_BEFORE_ASSUMING_REAL_TIMESTAMPS(time1, time2) && \
-		(time2) != 0) \
-	)
+  ( (time1) == 0 || \
+    (XSERVER_TIME_IS_BEFORE_ASSUMING_REAL_TIMESTAMPS(time1, time2) && \
+    (time2) != 0) \
+  )
 
 gboolean      meta_display_open                (void);
 void          meta_display_close               (MetaDisplay *display,
@@ -436,7 +438,7 @@ void meta_display_queue_retheme_all_windows (MetaDisplay *display);
 void meta_display_retheme_all (void);
 
 void meta_display_set_cursor_theme (const char *theme,
-				    int         size);
+                                    int         size);
 
 void meta_display_ping_window      (MetaDisplay        *display,
                                     MetaWindow         *window,
@@ -445,7 +447,7 @@ void meta_display_ping_window      (MetaDisplay        *display,
                                     MetaWindowPingFunc  ping_timeout_func,
                                     void               *user_data);
 gboolean meta_display_window_has_pending_pings (MetaDisplay        *display,
-						MetaWindow         *window);
+                                                MetaWindow         *window);
 
 typedef enum
 {
@@ -468,7 +470,7 @@ GList* meta_display_get_tab_list (MetaDisplay   *display,
 
 MetaWindow* meta_display_get_tab_next (MetaDisplay   *display,
                                        MetaTabList    type,
-				       MetaScreen    *screen,
+                                       MetaScreen    *screen,
                                        MetaWorkspace *workspace,
                                        MetaWindow    *window,
                                        gboolean       backward);

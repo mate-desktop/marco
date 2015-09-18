@@ -953,7 +953,7 @@ run_theme_benchmark (void)
 {
   GtkWidget* widget;
   GdkPixmap *pixmap;
-  int top_height, bottom_height, left_width, right_width;
+  MetaFrameBorders borders;
   MetaButtonState button_states[META_BUTTON_TYPE_LAST] =
   {
     META_BUTTON_STATE_NORMAL,
@@ -979,10 +979,7 @@ run_theme_benchmark (void)
                                 META_FRAME_TYPE_NORMAL,
                                 get_text_height (widget),
                                 get_flags (widget),
-                                &top_height,
-                                &bottom_height,
-                                &left_width,
-                                &right_width);
+                                &borders);
 
   layout = create_title_layout (widget);
 
@@ -1016,8 +1013,8 @@ run_theme_benchmark (void)
        * GDK does the same with its double buffering.
        */
       pixmap = gdk_pixmap_new (gtk_widget_get_window (widget),
-                               client_width + left_width + right_width,
-                               client_height + top_height + bottom_height,
+                               client_width + borders.visible.left + borders.visible.right,
+                               client_height + borders.visible.top + borders.visible.bottom,
                                -1);
 
       meta_theme_draw_frame (global_theme,

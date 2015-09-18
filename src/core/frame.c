@@ -114,11 +114,6 @@ meta_window_ensure_frame (MetaWindow *window)
 
   meta_display_register_x_window (window->display, &frame->xwindow, window);
 
-  /* Now that frame->xwindow is registered with window, we can set its
-   * background.
-   */
-  meta_ui_reset_frame_bg (window->screen->ui, frame->xwindow);
-
   /* Reparent the client window; it may be destroyed,
    * thus the error trap. We'll get a destroy notify later
    * and free everything. Comment in FVWM source code says
@@ -151,6 +146,11 @@ meta_window_ensure_frame (MetaWindow *window)
 
   /* stick frame to the window */
   window->frame = frame;
+
+  /* Now that frame->xwindow is registered with window, we can set its
+   * background.
+   */
+  meta_ui_reset_frame_bg (window->screen->ui, frame->xwindow);
 
   if (window->title)
     meta_ui_set_frame_title (window->screen->ui,
@@ -300,23 +300,24 @@ meta_frame_get_flags (MetaFrame *frame)
   return flags;
 }
 
+#if 0
 void
-meta_frame_calc_geometry (MetaFrame         *frame,
-                          MetaFrameGeometry *geomp)
+meta_frame_borders_clear (MetaFrameBorders *self)
 {
-  MetaFrameGeometry geom;
-  MetaWindow *window;
+  self->visible.top = 0;
+  self->visible.bottom = 0;
+  self->visible.left = 0;
+  self->visible.right = 0;
+}
+#endif
 
-  window = frame->window;
-
-  meta_ui_get_frame_geometry (window->screen->ui,
-                              frame->xwindow,
-                              &geom.top_height,
-                              &geom.bottom_height,
-                              &geom.left_width,
-                              &geom.right_width);
-
-  *geomp = geom;
+void
+meta_frame_calc_borders (MetaFrame        *frame,
+                         MetaFrameBorders *borders)
+{
+  meta_ui_get_frame_borders (frame->window->screen->ui,
+                             frame->xwindow,
+                             borders);
 }
 
 static void

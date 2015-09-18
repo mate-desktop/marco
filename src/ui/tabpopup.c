@@ -258,7 +258,6 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   GtkWidget *table;
 #endif
   GtkWidget *vbox;
-  GtkWidget *align;
   GList *tmp;
   GtkWidget *frame;
   int max_label_width; /* the actual max width of the labels we create */
@@ -335,16 +334,10 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   gtk_container_add (GTK_CONTAINER (frame),
                      vbox);
 
-  align = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
-
-  gtk_box_pack_start (GTK_BOX (vbox), align, TRUE, TRUE, 0);
-
 #if GTK_CHECK_VERSION (3, 0, 0)
-  gtk_container_add (GTK_CONTAINER (align),
-                     grid);
+  gtk_box_pack_start (GTK_BOX (vbox), grid, TRUE, TRUE, 0);
 #else
-  gtk_container_add (GTK_CONTAINER (align),
-                     table);
+  gtk_box_pack_start (GTK_BOX (vbox), table, TRUE, TRUE, 0);
 #endif
 
   popup->label = gtk_label_new ("");
@@ -382,7 +375,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
           if (te->blank)
             {
               /* just stick a widget here to avoid special cases */
-              image = gtk_alignment_new (0.0, 0.0, 0.0, 0.0);
+              image = gtk_label_new ("");
             }
           else if (outline)
             {

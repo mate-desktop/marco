@@ -1,9 +1,11 @@
 /* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 
-/* Marco window placement */
+/* Metacity X window decorations */
 
 /*
  * Copyright (C) 2001 Havoc Pennington
+ * Copyright (C) 2003, 2004 Red Hat, Inc.
+ * Copyright (C) 2005 Elijah Newren
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -16,22 +18,17 @@
  * General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
- * 02110-1301, USA.
+ * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef META_PLACE_H
-#define META_PLACE_H
+#include <config.h>
+#include "common.h"
 
-#include "window-private.h"
-#include "frame-private.h"
-
-void meta_window_place (MetaWindow *window,
-                        MetaFrameBorders *borders,
-                        int         x,
-                        int         y,
-                        int        *new_x,
-                        int        *new_y);
-
-#endif
+void
+meta_frame_borders_clear (MetaFrameBorders *self)
+{
+  self->visible.top = 0;
+  self->visible.bottom = 0;
+  self->visible.left = 0;
+  self->visible.right = 0;
+}
