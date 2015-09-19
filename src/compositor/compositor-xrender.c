@@ -162,6 +162,8 @@ typedef struct _MetaCompWindow
   gboolean damaged;
   gboolean shaped;
 
+  XRectangle shape_bounds;
+
   MetaCompWindowType type;
 
   Damage damage;
@@ -1796,6 +1798,11 @@ add_win (MetaScreen *screen,
   cw->damaged = FALSE;
   cw->shaped = is_shaped (display, xwindow);
 
+  cw->shape_bounds.x = cw->attrs.x;
+  cw->shape_bounds.y = cw->attrs.y;
+  cw->shape_bounds.width = cw->attrs.width;
+  cw->shape_bounds.height = cw->attrs.height;
+
   if (cw->attrs.class == InputOnly)
     cw->damage = None;
   else
@@ -1940,6 +1947,7 @@ resize_win (MetaCompWindow *cw,
   Display *xdisplay = meta_display_get_xdisplay (display);
   MetaCompScreen *info = meta_screen_get_compositor_data (screen);
   XserverRegion damage;
+  XserverRegion shape;
   gboolean debug;
 
   debug = DISPLAY_COMPOSITOR (display)->debug;
@@ -2030,6 +2038,10 @@ resize_win (MetaCompWindow *cw,
       damage = XFixesCreateRegion (xdisplay, NULL, 0);
       XFixesCopyRegion (xdisplay, damage, cw->extents);
     }
+
+  shape = XFixesCreateRegion (xdisplay, &cw->shape_bounds, 1);
+  XFixesUnionRegion (xdisplay, damage, damage, shape);
+  XFixesDestroyRegion (xdisplay, shape);
 
   dump_xserver_region ("resize_win", display, damage);
   add_damage (screen, damage);
@@ -2389,6 +2401,21 @@ process_shape (MetaCompositorXRender *compositor,
 
       if (event->shaped && !cw->shaped)
         cw->shaped = TRUE;
+
+      if (event->shaped == True)
+        {
+          cw->shape_bounds.x = cw->attrs.x + event->x;
+          cw->shape_bounds.y = cw->attrs.y + event->y;
+          cw->shape_bounds.width = event->width;
+          cw->shape_bounds.height = event->height;
+        }
+      else
+        {
+          cw->shape_bounds.x = cw->attrs.x;
+          cw->shape_bounds.y = cw->attrs.y;
+          cw->shape_bounds.width = cw->attrs.width;
+          cw->shape_bounds.height = cw->attrs.height;
+        }
     }
 }
 
