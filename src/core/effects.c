@@ -316,23 +316,6 @@ update_wireframe_window (MetaDisplay         *display,
 }
 #endif
 
-/**
- * A hack to force the X server to synchronize with the
- * graphics hardware.
- */
-static void
-graphics_sync (BoxAnimationContext *context)
-{
-  XImage *image;
-
-  image = XGetImage (context->screen->display->xdisplay,
-                     context->screen->xroot,
-                     0, 0, 1, 1,
-                     AllPlanes, ZPixmap);
-
-  XDestroyImage (image);
-}
-
 static gboolean
 effects_draw_box_animation_timeout (BoxAnimationContext *context)
 {
@@ -383,8 +366,6 @@ effects_draw_box_animation_timeout (BoxAnimationContext *context)
                  context->gc);
 #endif /* !HAVE_SHAPE */
 
-      graphics_sync (context);
-
       context->finished(context->finished_data);
 
       g_free (context);
@@ -425,7 +406,7 @@ effects_draw_box_animation_timeout (BoxAnimationContext *context)
 #endif /* !HAVE_SHAPE */
 
   /* kick changes onto the server */
-  graphics_sync (context);
+  XFlush (context->screen->display->xdisplay);
 
   return TRUE;
 }
