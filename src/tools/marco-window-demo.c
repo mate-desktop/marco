@@ -1248,8 +1248,6 @@ do_appwindow (void)
   /* Create the menubar
    */
 
-  contents = gtk_text_view_new ();
-
   action_group = gtk_action_group_new ("mainmenu");
   gtk_action_group_add_actions (action_group,
                                 menu_items,
@@ -1306,6 +1304,7 @@ do_appwindow (void)
   gtk_window_set_default_size (GTK_WINDOW (window),
                                200, 200);
 
+  contents = gtk_text_view_new ();
   gtk_text_view_set_wrap_mode (GTK_TEXT_VIEW (contents),
                                PANGO_WRAP_WORD);
 
