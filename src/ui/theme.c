@@ -6331,7 +6331,9 @@ meta_gtk_widget_get_font_desc (GtkWidget *widget,
 {
   PangoFontDescription *font_desc;
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   g_return_val_if_fail (gtk_widget_get_realized (widget), NULL);
+#endif
 
 #if GTK_CHECK_VERSION (3, 0, 0)
   GtkStyleContext *style = gtk_widget_get_style_context (widget);
