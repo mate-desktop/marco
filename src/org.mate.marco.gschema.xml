@@ -507,6 +507,11 @@
       <summary>Switch to workspace below the current workspace</summary>
       <description>The format looks like "&lt;Control&gt;a" or "&lt;Shift&gt;&lt;Alt&gt;F1". The parser is fairly liberal and allows lower or upper case, and also abbreviations such as "&lt;Ctl&gt;" and "&lt;Ctrl&gt;". If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
     </key>
+    <key name="switch-to-workspace-prev" type="s">
+      <default>'disabled'</default>
+      <summary>Switch to previously selected workspace</summary>
+      <description>The format looks like "&lt;Control&gt;a" or "&lt;Shift&gt;&lt;Alt&gt;F1". The parser is fairly liberal and allows lower or upper case, and also abbreviations such as "&lt;Ctl&gt;" and "&lt;Ctrl&gt;". If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
+    </key>
     <key name="switch-group" type="s">
       <default>'disabled'</default>
       <summary>Move between windows of an application, using a popup window</summary>

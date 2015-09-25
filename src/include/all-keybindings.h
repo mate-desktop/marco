@@ -277,5 +277,8 @@ keybind (move-to-side-w, handle_move_to_side_w, 0,
 keybind (move-to-center, handle_move_to_center, 0,
         BINDING_PER_WINDOW)
 
+keybind (switch-to-workspace-prev, handle_switch_to_workspace,
+         META_MOTION_PREV, 0)
+
 /* eof all-keybindings.h */
 
