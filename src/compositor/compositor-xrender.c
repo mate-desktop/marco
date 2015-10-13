@@ -1497,25 +1497,6 @@ free_win (MetaCompWindow *cw,
   MetaDisplay *display = meta_screen_get_display (cw->screen);
   Display *xdisplay = meta_display_get_xdisplay (display);
   MetaCompScreen *info = meta_screen_get_compositor_data (cw->screen);
-  XRectangle r;
-  XserverRegion region;
-
-  /*
-   * If we are deleting a window with a compositor shadow,
-   * trigger a repaint of the area it was covering.
-   * This fixes an issue where the shadow beneath a
-   * (GTK3) tooltip was not being erased after the tooltip
-   * disappeared.
-   */
-  if (cw->shadow) {
-          r.x = cw->attrs.x + cw->shadow_dx;
-          r.y = cw->attrs.y + cw->shadow_dy;
-          r.width = cw->attrs.width + cw->shadow_width;
-          r.height = cw->attrs.height + cw->shadow_height;
-          region = XFixesCreateRegion (xdisplay, &r, 1);
-          add_damage(cw->screen, region);
-  }
-
 
   /* See comment in map_win */
   if (cw->back_pixmap && destroy)
