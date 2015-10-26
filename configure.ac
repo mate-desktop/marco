@@ -120,7 +120,7 @@ case "$with_gtk" in
        CANBERRA_GTK=libcanberra-gtk
        ;;
   3.0) GTK_API_VERSION=3.0
-       GTK_MIN_VERSION=2.90.0
+       GTK_MIN_VERSION=3.0.0
        CANBERRA_GTK=libcanberra-gtk3
        ;;
 esac
@@ -177,10 +177,7 @@ AC_CHECK_HEADERS(execinfo.h, [AC_CHECK_FUNCS(backtrace)])
 
 AM_GLIB_GNU_GETTEXT
 
-## here we get the flags we'll actually use
-# GOptionEntry requires         glib-2.6.0
 PKG_CHECK_MODULES(ALL, glib-2.0 >= 2.32.0)
-# gtk_window_set_icon_name requires gtk2+-2.60
 PKG_CHECK_MODULES(MARCO_MESSAGE, gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION)
 PKG_CHECK_MODULES(MARCO_WINDOW_DEMO, gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION)
 
