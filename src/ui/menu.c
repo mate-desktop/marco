@@ -304,7 +304,11 @@ static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 	meta_core_get_menu_accelerator (menuitem->op, workspace_id, &key, &mods);
 
 	accel_label = meta_accel_label_new_with_mnemonic (i18n_label);
+#if GTK_CHECK_VERSION (3, 14, 0)
+	gtk_label_set_xalign (GTK_LABEL (accel_label), 0.0);
+#else
 	gtk_misc_set_alignment (GTK_MISC (accel_label), 0.0, 0.5);
+#endif
 
 	gtk_container_add (GTK_CONTAINER (mi), accel_label);
 	gtk_widget_show (accel_label);

@@ -330,7 +330,9 @@ meta_accel_label_draw (GtkWidget *widget,
                        cairo_t   *cr)
 {
   MetaAccelLabel *accel_label = META_ACCEL_LABEL (widget);
+#if !GTK_CHECK_VERSION (3, 14, 0)
   GtkMisc *misc = GTK_MISC (accel_label);
+#endif
   GtkTextDirection direction;
   int ac_width;
   GtkAllocation allocation;
@@ -349,10 +351,19 @@ meta_accel_label_draw (GtkWidget *widget,
       PangoLayout *accel_layout;
       GtkLabel *label = GTK_LABEL (widget);
       gint x, y, xpad, ypad;
+#if GTK_CHECK_VERSION (3, 14, 0)
+      gint margin_start, margin_end, margin_top, margin_bottom;
+      gfloat yalign;
+#else
       gfloat xalign, yalign;
+#endif
 
       label_layout = gtk_label_get_layout (GTK_LABEL (accel_label));
+#if GTK_CHECK_VERSION (3, 14, 0)
+      yalign = gtk_label_get_yalign (GTK_LABEL (accel_label));
+#else
       gtk_misc_get_alignment (misc, &xalign, &yalign);
+#endif
 
       cairo_save (cr);
 
@@ -379,7 +390,17 @@ meta_accel_label_draw (GtkWidget *widget,
 
       cairo_restore (cr);
 
+#if GTK_CHECK_VERSION (3, 14, 0)
+      margin_start = gtk_widget_get_margin_start (widget);
+      margin_end = gtk_widget_get_margin_end (widget);
+      margin_top = gtk_widget_get_margin_top (widget);
+      margin_bottom = gtk_widget_get_margin_bottom (widget);
+
+      xpad = margin_start + margin_end;
+      ypad = margin_top + margin_bottom;
+#else
       gtk_misc_get_padding (misc, &xpad, &ypad);
+#endif
 
       if (direction == GTK_TEXT_DIR_RTL)
         x = xpad;
