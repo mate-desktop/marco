@@ -91,7 +91,14 @@ ensure_size_window (MetaResizePopup *popup)
   gtk_container_add (GTK_CONTAINER (popup->size_window), frame);
 
   popup->size_label = gtk_label_new ("");
+#if GTK_CHECK_VERSION (3, 14, 0)
+  gtk_widget_set_margin_start (popup->size_label, 3);
+  gtk_widget_set_margin_end (popup->size_label, 3);
+  gtk_widget_set_margin_top (popup->size_label, 3);
+  gtk_widget_set_margin_bottom (popup->size_label, 3);
+#else
   gtk_misc_set_padding (GTK_MISC (popup->size_label), 3, 3);
+#endif
 
   gtk_container_add (GTK_CONTAINER (frame), popup->size_label);
 
