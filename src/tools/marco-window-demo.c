@@ -752,6 +752,28 @@ dock_cb (GtkAction *action,
     }
 }
 
+#if GTK_CHECK_VERSION (3, 16, 0)
+static void
+override_background_color (GtkWidget *widget,
+                           GdkRGBA   *rgba)
+{
+  gchar          *css;
+  GtkCssProvider *provider;
+
+  provider = gtk_css_provider_new ();
+
+  css = g_strdup_printf ("* { background-color: %s; }",
+                         gdk_rgba_to_string (rgba));
+  gtk_css_provider_load_from_data (provider, css, -1, NULL);
+  g_free (css);
+
+  gtk_style_context_add_provider (gtk_widget_get_style_context (widget),
+                                  GTK_STYLE_PROVIDER (provider),
+                                  GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  g_object_unref (provider);
+}
+#endif
+
 #if GTK_CHECK_VERSION (3, 0, 0)
 static void
 desktop_cb (GSimpleAction *action,
@@ -784,7 +806,11 @@ desktop_cb (GtkAction *action,
   desktop_color.blue = 0.65;
   desktop_color.alpha = 1.0;
 
+#if GTK_CHECK_VERSION (3, 16, 0)
+  override_background_color (window, &desktop_color);
+#else
   gtk_widget_override_background_color (window, 0, &desktop_color);
+#endif
 #else
   desktop_color.red = 0x5144;
   desktop_color.green = 0x75D6;
