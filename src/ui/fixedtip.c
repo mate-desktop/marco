@@ -35,6 +35,31 @@ static GtkWidget *tip = NULL;
  * The actual text that gets displayed.
  */
 static GtkWidget *label = NULL;
+
+#if GTK_CHECK_VERSION(3, 0, 0)
+static GdkScreen *screen = NULL;
+
+static gboolean
+draw_handler (GtkWidget *widget,
+              cairo_t   *cr)
+{
+  GtkStyleContext *context;
+  gint width;
+  gint height;
+
+  if (widget == NULL)
+    return FALSE;
+
+  context = gtk_widget_get_style_context (widget);
+  width = gtk_widget_get_allocated_width (widget);
+  height = gtk_widget_get_allocated_height (widget);
+
+  gtk_render_background (context, cr, 0, 0, width, height);
+  gtk_render_frame (context, cr, 0, 0, width, height);
+
+  return FALSE;
+}
+#else
 /*
  * X coordinate of the right-hand edge of the screen.
  *
@@ -49,27 +74,6 @@ static int screen_right_edge = 0;
  * \bug  As with screen_right_edge.
  */
 static int screen_bottom_edge = 0;
-
-#if GTK_CHECK_VERSION(3, 0, 0)
-
-static gint
-draw_handler (GtkWidget *tooltips,
-              cairo_t   *cr,
-              gpointer   user_data)
-{
-  if (tooltips != NULL)
-    {
-      gtk_render_background (gtk_widget_get_style_context (tooltips),
-                             cr,
-                             0, 0,
-                             gtk_widget_get_allocated_width (tooltips),
-                             gtk_widget_get_allocated_height (tooltips));
-    }
-
-  return FALSE;
-}
-
-#else
 
 static gint
 expose_handler (GtkTooltip *tooltips)
@@ -88,51 +92,85 @@ meta_fixed_tip_show (int screen_number,
                      int root_x, int root_y,
                      const char *markup_text)
 {
+#if GTK_CHECK_VERSION(3, 0, 0)
+  gint w;
+  gint h;
+  gint mon_num;
+  GdkRectangle monitor;
+  gint screen_right_edge;
+#else
   int w, h;
+#endif
 
   if (tip == NULL)
     {
+#if GTK_CHECK_VERSION(3, 0, 0)
+      GdkVisual *visual;
+
+      tip = gtk_window_new (GTK_WINDOW_POPUP);
+
+      gtk_window_set_type_hint (GTK_WINDOW(tip), GDK_WINDOW_TYPE_HINT_TOOLTIP);
+      gtk_style_context_add_class (gtk_widget_get_style_context (tip),
+                                   GTK_STYLE_CLASS_TOOLTIP);
+
+      screen = gdk_display_get_screen (gdk_display_get_default (), screen_number);
+      visual = gdk_screen_get_rgba_visual (screen);
+
+      gtk_window_set_screen (GTK_WINDOW (tip), screen);
+
+      if (visual != NULL)
+        gtk_widget_set_visual (tip, visual);
+#else
       tip = gtk_window_new (GTK_WINDOW_POPUP);
       gtk_window_set_type_hint (GTK_WINDOW(tip), GDK_WINDOW_TYPE_HINT_TOOLTIP);
 
       {
         GdkScreen *gdk_screen;
-	GdkRectangle monitor;
-	gint mon_num;
+        GdkRectangle monitor;
+        gint mon_num;
 
         gdk_screen = gdk_display_get_screen (gdk_display_get_default (),
                                              screen_number);
         gtk_window_set_screen (GTK_WINDOW (tip),
                                gdk_screen);
-	mon_num = gdk_screen_get_monitor_at_point (gdk_screen, root_x, root_y);
-	gdk_screen_get_monitor_geometry (gdk_screen, mon_num, &monitor);
-	screen_right_edge = monitor.x + monitor.width;
-	screen_bottom_edge = monitor.y + monitor.height;
+        mon_num = gdk_screen_get_monitor_at_point (gdk_screen, root_x, root_y);
+        gdk_screen_get_monitor_geometry (gdk_screen, mon_num, &monitor);
+        screen_right_edge = monitor.x + monitor.width;
+        screen_bottom_edge = monitor.y + monitor.height;
       }
+#endif
 
       gtk_widget_set_app_paintable (tip, TRUE);
       gtk_window_set_resizable (GTK_WINDOW (tip), FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+      g_signal_connect (tip, "draw", G_CALLBACK (draw_handler), NULL);
+#else
       gtk_widget_set_name (tip, "gtk-tooltips");
       gtk_container_set_border_width (GTK_CONTAINER (tip), 4);
 
-      #if GTK_CHECK_VERSION(3, 0, 0)
-      g_signal_connect (tip, "draw",
-                        G_CALLBACK (draw_handler), NULL);
-      #else
       g_signal_connect_swapped (tip, "expose_event",
 				 G_CALLBACK (expose_handler), NULL);
-      #endif
+#endif
 
       label = gtk_label_new (NULL);
       gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
       gtk_misc_set_alignment (GTK_MISC (label), 0.5, 0.5);
       gtk_widget_show (label);
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+      gtk_container_set_border_width (GTK_CONTAINER (tip), 4);
+#endif
       gtk_container_add (GTK_CONTAINER (tip), label);
 
       g_signal_connect (tip, "destroy",
 			G_CALLBACK (gtk_widget_destroyed), &tip);
     }
+
+#if GTK_CHECK_VERSION(3, 0, 0)
+  mon_num = gdk_screen_get_monitor_at_point (screen, root_x, root_y);
+  gdk_screen_get_monitor_geometry (screen, mon_num, &monitor);
+  screen_right_edge = monitor.x + monitor.width;
+#endif
 
   gtk_label_set_markup (GTK_LABEL (label), markup_text);
 
