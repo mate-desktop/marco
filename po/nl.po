@@ -4,15 +4,19 @@
 # 
 # Translators:
 # Falco Langeveld <falcolangeveld@gmail.com>, 2014
+# infirit <inactive+infirit@transifex.com>, 2015
 # Michael Steenbeek <m.o.steenbeek@gmail.com>, 2012-2013
+# René Devers <rene.devers@gmail.com>, 2015
+# Tom van den Brink <tomracing79@hotmail.com>, 2015
+# Volluta <volluta@tutanota.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-12 18:09+0200\n"
-"PO-Revision-Date: 2014-12-03 11:47+0000\n"
-"Last-Translator: Falco Langeveld <falcolangeveld@gmail.com>\n"
-"Language-Team: Dutch (http://www.transifex.com/projects/p/MATE/language/nl/)\n"
+"POT-Creation-Date: 2015-11-06 14:50+0300\n"
+"PO-Revision-Date: 2015-11-17 18:15+0000\n"
+"Last-Translator: Volluta <volluta@tutanota.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/mate/MATE/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,22 +28,27 @@ msgid "Desktop"
 msgstr "Werkblad"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
+#: ../src/org.mate.marco.gschema.xml.h:94
 msgid "Show the panel's \"Run Application\" dialog box"
 msgstr "Het paneeldialoogvenster ‘Toepassing uitvoeren’ tonen"
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
+#: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Show the panel's main menu"
 msgstr "Het paneelmenu tonen"
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
+#: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Take a screenshot"
 msgstr "Een schermafdruk maken"
 
 #: ../src/50-marco-desktop-key.xml.in.h:5
+#: ../src/org.mate.marco.gschema.xml.h:96
 msgid "Take a screenshot of a window"
 msgstr "Een schermafdruk van een venster maken"
 
 #: ../src/50-marco-desktop-key.xml.in.h:6
+#: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Run a terminal"
 msgstr "Een terminal opstarten"
 
@@ -48,264 +57,798 @@ msgid "Window Management"
 msgstr "Vensterbeheer"
 
 #: ../src/50-marco-global-key.xml.in.h:2
+#: ../src/org.mate.marco.gschema.xml.h:80
 msgid "Move between windows, using a popup window"
 msgstr "Wisselen van venster met een opduikvenster"
 
 #: ../src/50-marco-global-key.xml.in.h:3
+#: ../src/org.mate.marco.gschema.xml.h:77
 msgid "Move between windows of an application, using a popup window"
 msgstr "Wisselen van venster binnen een toepassing met een opduikvenster"
 
 #: ../src/50-marco-global-key.xml.in.h:4
+#: ../src/org.mate.marco.gschema.xml.h:84
 msgid "Move between panels and the desktop, using a popup window"
 msgstr "Wisselen tussen panelen en het bureaublad met een opduikvenster"
 
 #: ../src/50-marco-global-key.xml.in.h:5
+#: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows immediately"
 msgstr "Direct wisselen van venster"
 
 #: ../src/50-marco-global-key.xml.in.h:6
+#: ../src/org.mate.marco.gschema.xml.h:86
 msgid "Move between windows of an application immediately"
 msgstr "Direct wisselen van venster binnen een toepassing"
 
 #: ../src/50-marco-global-key.xml.in.h:7
+#: ../src/org.mate.marco.gschema.xml.h:90
 msgid "Move between panels and the desktop immediately"
 msgstr "Direct wisselen tussen panelen en het bureaublad"
 
 #: ../src/50-marco-global-key.xml.in.h:8
+#: ../src/org.mate.marco.gschema.xml.h:92
 msgid "Hide all normal windows and set focus to the desktop"
 msgstr "Alle normale vensters verbergen en het bureaublad de aandacht geven"
 
 #: ../src/50-marco-global-key.xml.in.h:9
+#: ../src/org.mate.marco.gschema.xml.h:59
 msgid "Switch to workspace 1"
 msgstr "Schakelen naar werkblad 1"
 
 #: ../src/50-marco-global-key.xml.in.h:10
+#: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Switch to workspace 2"
 msgstr "Schakelen naar werkblad 2"
 
 #: ../src/50-marco-global-key.xml.in.h:11
+#: ../src/org.mate.marco.gschema.xml.h:62
 msgid "Switch to workspace 3"
 msgstr "Schakelen naar werkblad 3"
 
 #: ../src/50-marco-global-key.xml.in.h:12
+#: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Switch to workspace 4"
 msgstr "Schakelen naar werkblad 4"
 
 #: ../src/50-marco-global-key.xml.in.h:13
+#: ../src/org.mate.marco.gschema.xml.h:64
 msgid "Switch to workspace 5"
 msgstr "Schakelen naar werkblad 5"
 
 #: ../src/50-marco-global-key.xml.in.h:14
+#: ../src/org.mate.marco.gschema.xml.h:65
 msgid "Switch to workspace 6"
 msgstr "Schakelen naar werkblad 6"
 
 #: ../src/50-marco-global-key.xml.in.h:15
+#: ../src/org.mate.marco.gschema.xml.h:66
 msgid "Switch to workspace 7"
 msgstr "Schakelen naar werkblad 7"
 
 #: ../src/50-marco-global-key.xml.in.h:16
+#: ../src/org.mate.marco.gschema.xml.h:67
 msgid "Switch to workspace 8"
 msgstr "Schakelen naar werkblad 8"
 
 #: ../src/50-marco-global-key.xml.in.h:17
+#: ../src/org.mate.marco.gschema.xml.h:68
 msgid "Switch to workspace 9"
 msgstr "Schakelen naar werkblad 9"
 
 #: ../src/50-marco-global-key.xml.in.h:18
+#: ../src/org.mate.marco.gschema.xml.h:69
 msgid "Switch to workspace 10"
 msgstr "Schakelen naar werkblad 10"
 
 #: ../src/50-marco-global-key.xml.in.h:19
+#: ../src/org.mate.marco.gschema.xml.h:70
 msgid "Switch to workspace 11"
 msgstr "Schakelen naar werkblad 11"
 
 #: ../src/50-marco-global-key.xml.in.h:20
+#: ../src/org.mate.marco.gschema.xml.h:71
 msgid "Switch to workspace 12"
 msgstr "Schakelen naar werkblad 12"
 
 #: ../src/50-marco-global-key.xml.in.h:21
+#: ../src/org.mate.marco.gschema.xml.h:72
 msgid "Switch to workspace on the left of the current workspace"
 msgstr "Schakelen naar werkblad links van het huidige werkblad"
 
 #: ../src/50-marco-global-key.xml.in.h:22
+#: ../src/org.mate.marco.gschema.xml.h:73
 msgid "Switch to workspace on the right of the current workspace"
 msgstr "Schakelen naar werkblad rechts van het huidige werkblad"
 
 #: ../src/50-marco-global-key.xml.in.h:23
+#: ../src/org.mate.marco.gschema.xml.h:74
 msgid "Switch to workspace above the current workspace"
 msgstr "Schakelen naar werkblad boven van het huidige werkblad"
 
 #: ../src/50-marco-global-key.xml.in.h:24
+#: ../src/org.mate.marco.gschema.xml.h:75
 msgid "Switch to workspace below the current workspace"
 msgstr "Schakelen naar werkblad onder van het huidige werkblad"
 
 #: ../src/50-marco-global-key.xml.in.h:25
+#: ../src/org.mate.marco.gschema.xml.h:76
 msgid "Switch to previously selected workspace"
 msgstr "Schakelen naar vorig geselecteerde werkblad"
 
 #: ../src/50-marco-window-key.xml.in.h:2
+#: ../src/org.mate.marco.gschema.xml.h:104
 msgid "Activate the window menu"
 msgstr "Venstermenu activeren"
 
 #: ../src/50-marco-window-key.xml.in.h:3
+#: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Toggle fullscreen mode"
 msgstr "Volledig scherm-modus omschakelen"
 
 #: ../src/50-marco-window-key.xml.in.h:4
+#: ../src/org.mate.marco.gschema.xml.h:106
 msgid "Toggle maximization state"
 msgstr "Maximalisatiestaat omschakelen"
 
 #: ../src/50-marco-window-key.xml.in.h:5
+#: ../src/org.mate.marco.gschema.xml.h:108
 msgid "Maximize window"
 msgstr "Venster maximaliseren"
 
 #: ../src/50-marco-window-key.xml.in.h:6
+#: ../src/org.mate.marco.gschema.xml.h:109
 msgid "Restore window"
 msgstr "Venster herstellen"
 
 #: ../src/50-marco-window-key.xml.in.h:7
+#: ../src/org.mate.marco.gschema.xml.h:110
 msgid "Toggle shaded state"
 msgstr "Opgerold-staat omschakelen"
 
 #: ../src/50-marco-window-key.xml.in.h:8
+#: ../src/org.mate.marco.gschema.xml.h:112
 msgid "Close window"
 msgstr "Venster sluiten"
 
 #: ../src/50-marco-window-key.xml.in.h:9
+#: ../src/org.mate.marco.gschema.xml.h:111
 msgid "Minimize window"
 msgstr "Venster minimaliseren"
 
 #: ../src/50-marco-window-key.xml.in.h:10
+#: ../src/org.mate.marco.gschema.xml.h:113
 msgid "Move window"
 msgstr "Venster verplaatsen"
 
 #: ../src/50-marco-window-key.xml.in.h:11
+#: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Resize window"
 msgstr "Venstergrootte veranderen"
 
 #: ../src/50-marco-window-key.xml.in.h:12
+#: ../src/org.mate.marco.gschema.xml.h:115
 msgid "Toggle whether window is on all workspaces or just one"
 msgstr "‘Venster is op alle werkbladen zichtbaar’ omschakelen"
 
 #: ../src/50-marco-window-key.xml.in.h:13
+#: ../src/org.mate.marco.gschema.xml.h:132
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr "Venster naar boven halen indien overlapt door een ander venster, anders naar beneden halen"
 
 #: ../src/50-marco-window-key.xml.in.h:14
+#: ../src/org.mate.marco.gschema.xml.h:133
 msgid "Raise window above other windows"
 msgstr "Venster naar boven brengen boven andere vensters"
 
 #: ../src/50-marco-window-key.xml.in.h:15
+#: ../src/org.mate.marco.gschema.xml.h:134
 msgid "Lower window below other windows"
 msgstr "Venster naar beneden halen onder andere vensters"
 
 #: ../src/50-marco-window-key.xml.in.h:16
+#: ../src/org.mate.marco.gschema.xml.h:135
 msgid "Maximize window vertically"
 msgstr "Een venster verticaal maximaliseren"
 
 #: ../src/50-marco-window-key.xml.in.h:17
+#: ../src/org.mate.marco.gschema.xml.h:136
 msgid "Maximize window horizontally"
 msgstr "Een venster horizontaal maximaliseren"
 
 #: ../src/50-marco-window-key.xml.in.h:18
+#: ../src/org.mate.marco.gschema.xml.h:137
+msgid "Tile window to east (right) side of screen"
+msgstr "Tegel venster aan de oostkant van het scherm (rechterzijde)"
+
+#: ../src/50-marco-window-key.xml.in.h:19
+#: ../src/org.mate.marco.gschema.xml.h:138
+msgid "Tile window to west (left) side of screen"
+msgstr "Tegel venster aan de westkant van het scherm (linkerzijde)"
+
+#: ../src/50-marco-window-key.xml.in.h:20
+#: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Move window to north-west (top left) corner"
 msgstr "Venster verplaatsen naar de noordwest-hoek (linksboven)"
 
-#: ../src/50-marco-window-key.xml.in.h:19
+#: ../src/50-marco-window-key.xml.in.h:21
+#: ../src/org.mate.marco.gschema.xml.h:140
 msgid "Move window to north-east (top right) corner"
 msgstr "Venster verplaatsen naar de noordoost-hoek (rechtsboven)"
 
-#: ../src/50-marco-window-key.xml.in.h:20
+#: ../src/50-marco-window-key.xml.in.h:22
+#: ../src/org.mate.marco.gschema.xml.h:141
 msgid "Move window to south-west (bottom left) corner"
 msgstr "Venster verplaatsen naar de zuidwest-hoek (linksonder)"
 
-#: ../src/50-marco-window-key.xml.in.h:21
+#: ../src/50-marco-window-key.xml.in.h:23
+#: ../src/org.mate.marco.gschema.xml.h:142
 msgid "Move window to south-east (bottom right) corner"
 msgstr "Venster verplaatsen naar de zuidoost-hoek (rechtsonder)"
 
-#: ../src/50-marco-window-key.xml.in.h:22
+#: ../src/50-marco-window-key.xml.in.h:24
+#: ../src/org.mate.marco.gschema.xml.h:143
 msgid "Move window to north (top) side of screen"
 msgstr "Venster verplaatsen naar de noordkant van het scherm (bovenzijde)"
 
-#: ../src/50-marco-window-key.xml.in.h:23
+#: ../src/50-marco-window-key.xml.in.h:25
+#: ../src/org.mate.marco.gschema.xml.h:144
 msgid "Move window to south (bottom) side of screen"
 msgstr "Venster verplaatsen naar de zuidkant van het scherm (onderzijde)"
 
-#: ../src/50-marco-window-key.xml.in.h:24
+#: ../src/50-marco-window-key.xml.in.h:26
+#: ../src/org.mate.marco.gschema.xml.h:145
 msgid "Move window to east (right) side of screen"
 msgstr "Venster verplaatsen naar de oostkant van het scherm (rechterzijde)"
 
-#: ../src/50-marco-window-key.xml.in.h:25
+#: ../src/50-marco-window-key.xml.in.h:27
+#: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Move window to west (left) side of screen"
 msgstr "Venster verplaatsen naar de westkant van het scherm (linkerzijde)"
 
-#: ../src/50-marco-window-key.xml.in.h:26
+#: ../src/50-marco-window-key.xml.in.h:28
+#: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Move window to center of screen"
 msgstr "Venster verplaatsen naar het midden van het scherm"
 
-#: ../src/50-marco-window-key.xml.in.h:27
+#: ../src/50-marco-window-key.xml.in.h:29
+#: ../src/org.mate.marco.gschema.xml.h:116
 msgid "Move window to workspace 1"
 msgstr "Venster verplaatsen naar werkblad 1"
 
-#: ../src/50-marco-window-key.xml.in.h:28
+#: ../src/50-marco-window-key.xml.in.h:30
+#: ../src/org.mate.marco.gschema.xml.h:117
 msgid "Move window to workspace 2"
 msgstr "Venster verplaatsen naar werkblad 2"
 
-#: ../src/50-marco-window-key.xml.in.h:29
+#: ../src/50-marco-window-key.xml.in.h:31
+#: ../src/org.mate.marco.gschema.xml.h:118
 msgid "Move window to workspace 3"
 msgstr "Venster verplaatsen naar werkblad 3"
 
-#: ../src/50-marco-window-key.xml.in.h:30
+#: ../src/50-marco-window-key.xml.in.h:32
+#: ../src/org.mate.marco.gschema.xml.h:119
 msgid "Move window to workspace 4"
 msgstr "Venster verplaatsen naar werkblad 4"
 
-#: ../src/50-marco-window-key.xml.in.h:31
+#: ../src/50-marco-window-key.xml.in.h:33
+#: ../src/org.mate.marco.gschema.xml.h:120
 msgid "Move window to workspace 5"
 msgstr "Venster verplaatsen naar werkblad 5"
 
-#: ../src/50-marco-window-key.xml.in.h:32
+#: ../src/50-marco-window-key.xml.in.h:34
+#: ../src/org.mate.marco.gschema.xml.h:121
 msgid "Move window to workspace 6"
 msgstr "Venster verplaatsen naar werkblad 6"
 
-#: ../src/50-marco-window-key.xml.in.h:33
+#: ../src/50-marco-window-key.xml.in.h:35
+#: ../src/org.mate.marco.gschema.xml.h:122
 msgid "Move window to workspace 7"
 msgstr "Venster verplaatsen naar werkblad 7"
 
-#: ../src/50-marco-window-key.xml.in.h:34
+#: ../src/50-marco-window-key.xml.in.h:36
+#: ../src/org.mate.marco.gschema.xml.h:123
 msgid "Move window to workspace 8"
 msgstr "Venster verplaatsen naar werkblad 8"
 
-#: ../src/50-marco-window-key.xml.in.h:35
+#: ../src/50-marco-window-key.xml.in.h:37
+#: ../src/org.mate.marco.gschema.xml.h:124
 msgid "Move window to workspace 9"
 msgstr "Venster verplaatsen naar werkblad 9"
 
-#: ../src/50-marco-window-key.xml.in.h:36
+#: ../src/50-marco-window-key.xml.in.h:38
+#: ../src/org.mate.marco.gschema.xml.h:125
 msgid "Move window to workspace 10"
 msgstr "Venster verplaatsen naar werkblad 10"
 
-#: ../src/50-marco-window-key.xml.in.h:37
+#: ../src/50-marco-window-key.xml.in.h:39
+#: ../src/org.mate.marco.gschema.xml.h:126
 msgid "Move window to workspace 11"
 msgstr "Venster verplaatsen naar werkblad 11"
 
-#: ../src/50-marco-window-key.xml.in.h:38
+#: ../src/50-marco-window-key.xml.in.h:40
+#: ../src/org.mate.marco.gschema.xml.h:127
 msgid "Move window to workspace 12"
 msgstr "Venster verplaatsen naar werkblad 12"
 
-#: ../src/50-marco-window-key.xml.in.h:39
+#: ../src/50-marco-window-key.xml.in.h:41
+#: ../src/org.mate.marco.gschema.xml.h:128
 msgid "Move window one workspace to the left"
 msgstr "Venster één werkblad naar links verplaatsen"
 
-#: ../src/50-marco-window-key.xml.in.h:40
+#: ../src/50-marco-window-key.xml.in.h:42
+#: ../src/org.mate.marco.gschema.xml.h:129
 msgid "Move window one workspace to the right"
 msgstr "Venster één werkblad naar rechts verplaatsen"
 
-#: ../src/50-marco-window-key.xml.in.h:41
+#: ../src/50-marco-window-key.xml.in.h:43
+#: ../src/org.mate.marco.gschema.xml.h:130
 msgid "Move window one workspace up"
 msgstr "Venster één werkblad naar boven verplaatsen"
 
-#: ../src/50-marco-window-key.xml.in.h:42
+#: ../src/50-marco-window-key.xml.in.h:44
+#: ../src/org.mate.marco.gschema.xml.h:131
 msgid "Move window one workspace down"
 msgstr "Venster één werkblad naar beneden verplaatsen"
+
+#: ../src/org.mate.marco.gschema.xml.h:1
+msgid "Modifier to use for modified window click actions"
+msgstr "Controletoets voor aangepaste venster-klik acties"
+
+#: ../src/org.mate.marco.gschema.xml.h:2
+msgid ""
+"Clicking a window while holding down this modifier key will move the window "
+"(left click), resize the window (middle click), or show the window menu "
+"(right click). The middle and right click operations may be swapped using "
+"the \"resize_with_right_button\" key. Modifier is expressed as "
+"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
+msgstr "Klikken op een venster tijdens het inhouden van deze toets zal dit venster verplaatsen (linker muisknop), de grootte van het venster aanpassen (middelste muisknop), of het venstermenu tonen (rechter muisknop). De acties van de middelste en rechtermuisknop kunnen omgewisseld worden met de sleutel ‘resize_with_right_button’. De Modifier-toets kan opgegeven worden met bijvoorbeeld ‘<Alt>’ of ‘<Super>’."
+
+#: ../src/org.mate.marco.gschema.xml.h:3
+msgid "Whether to resize with the right button"
+msgstr "Of de rechtermuisknop gebruikt wordt het wijzigen van vensterafmetingen"
+
+#: ../src/org.mate.marco.gschema.xml.h:4
+msgid ""
+"Set this to true to resize with the right button and show a menu with the "
+"middle button while holding down the key given in \"mouse_button_modifier\";"
+" set it to false to make it work the opposite way around."
+msgstr "Indien ingeschakeld vensters met de rechtermuisknop van grootte veranderd worden en verschijnt met de middelste muisknop het venstermenu (deze functies werken alleen als de toets opgegeven in ‘mouse_button_modifier’ ingehouden wordt). Indien uitgeschakeld werkt het andersom: rechtermuisknop geeft een menu, middelste muisknop voor afmetingen wijzigen."
+
+#: ../src/org.mate.marco.gschema.xml.h:5
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Schikking van de knoppen op de titelbalk"
+
+#: ../src/org.mate.marco.gschema.xml.h:6
+msgid ""
+"Arrangement of buttons on the titlebar. The value should be a string, such "
+"as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
+"corner of the window from the right corner, and the button names are comma-"
+"separated. Duplicate buttons are not allowed. Unknown button names are "
+"silently ignored so that buttons can be added in future marco versions "
+"without breaking older versions. A special spacer tag can be used to insert "
+"some space between two adjacent buttons."
+msgstr "Schikking van de knoppen op de titelbalk. De waarde moet een tekenreeks zijn zoals: ‘menu:minimize,maximize,spacer,close’; de punt-komma scheidt de linkerhoek van het venster met de rechterhoek, de knop-namen zijn gescheiden door komma's. Dubbele knoppen zijn niet toegestaan. Onbekende knop-namen worden genegeerd zodat in toekomstige versies van marco, knoppen kunnen worden toegevoegd zonder oudere versies te breken. De waarde ‘spacer’ kan gebruikt worden om ruimte tussen twee naastgelegen knoppen te creëren."
+
+#: ../src/org.mate.marco.gschema.xml.h:7
+msgid "Window focus mode"
+msgstr "Vensteraandacht-modus"
+
+#: ../src/org.mate.marco.gschema.xml.h:8
+msgid ""
+"The window focus mode indicates how windows are activated. It has three "
+"possible values; \"click\" means windows must be clicked in order to focus "
+"them, \"sloppy\" means windows are focused when the mouse enters the window,"
+" and \"mouse\" means windows are focused when the mouse enters the window "
+"and unfocused when the mouse leaves the window."
+msgstr "De vesteraandachtmodus geeft de wijze van vensteractivatie aan. Er zijn drie mogelijke waarden; ‘click’ betekent dat vensters moeten worden aangeklikt om ze aandacht te geven, ‘sloppy’ betekent dat vensters aandacht krijgen wanneer de muisaanwijzer het venster binnenkomt, en ‘mouse’ betekent dat vensters aandacht krijgen wanneer de muisaanwijzer het venster binnenkomt en aandacht verliezen wanneer de muisaanwijzer het venster verlaat."
+
+#: ../src/org.mate.marco.gschema.xml.h:9
+msgid "Control how new windows get focus"
+msgstr "Beheren hoe nieuwe vensters aandacht krijgen"
+
+#: ../src/org.mate.marco.gschema.xml.h:10
+msgid ""
+"This option provides additional control over how newly created windows get "
+"focus. It has two possible values; \"smart\" applies the user's normal focus"
+" mode, and \"strict\" results in windows started from a terminal not being "
+"given focus."
+msgstr "Deze optie geeft aanvullende beheermogelijkheden over de methode waarmee nieuwe vensters aandacht krijgen. Er zijn twee mogelijke waarden: ‘smart’ zorgt ervoor dat de normale methode wordt gebruikt; ‘strict’ zorgt ervoor dat vensters die vanuit een terminalvenster gestart worden geen aandacht krijgen."
+
+#: ../src/org.mate.marco.gschema.xml.h:11
+msgid "Whether raising should be a side-effect of other user interactions"
+msgstr "Of het naar voren brengen een bijeffect is van andere gebruikersinteracties"
+
+#: ../src/org.mate.marco.gschema.xml.h:12
+msgid ""
+"Setting this option to false can lead to buggy behavior, so users are "
+"strongly discouraged from changing it from the default of true. Many actions"
+" (e.g. clicking in the client area, moving or resizing the window) normally "
+"raise the window as a side-effect. Setting this option to false, which is "
+"strongly discouraged, will decouple raising from other user actions, and "
+"ignore raise requests generated by applications. See "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Even when this option "
+"is false, windows can still be raised by an alt-left-click anywhere on the "
+"window, a normal click on the window decorations, or by special messages "
+"from pagers, such as activation requests from tasklist applets. This option "
+"is currently disabled in click-to-focus mode. Note that the list of ways to "
+"raise windows when raise_on_click is false does not include programmatic "
+"requests from applications to raise windows; such requests will be ignored "
+"regardless of the reason for the request. If you are an application "
+"developer and have a user complaining that your application does not work "
+"with this setting disabled, tell them it is _their_ fault for breaking their"
+" window manager and that they need to change this option back to true or "
+"live with the \"bug\" they requested."
+msgstr "Het uitschakelen van deze optie kan tot foutief gedrag leiden, dus wordt gebruikers aangeraden het ingeschakeld te laten. Veel acties (zoals klikken in de client area, het verplaatsen van een venster of het aanpassen van de venstergrootte) halen normaal gesproken het venster omhoog als neveneffect. Het uitschakelen van deze optie, hetgeen sterk wordt afgeraden, zal het omhoog halen ontkoppelen van andere gebruikersacties en verzoeken van programma's om omhoog te komen negeren. Zie http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Zelfs wanneer deze optie uitgeschakeld is kunnen vensters nog omhoog worden gehaald met Alt+Linkerklik op het venster, een normale klik op de vensterdecoratie, of door speciale pagerberichten, zoals activatieverzoeken van applets uit de takenlijst. Deze optie is momentaal uitgeschakeld in de click-to-focus-modus. Let erop dat de lijst met manieren om vensters omhoog te halen wanneer raise_on_click uitgeschakeld is geen programmatische verzoeken van applicaties om vensters omhoog te halen bevat; zulke verzoeken zullen worden genegeerd, ongeacht de reden hiervoor. Als u een applicatieontwikkelaar bent en een klacht ontvangt van een gebruiker dat uw applicatie niet werkt met deze instelling uitgeschakeld, leg hem/haar dan uit dat het zijn/haar fout is dat hun vensterbeheerder niet goed werkt en dat ze deze optie opnieuw moeten activeren of moeten leven met de 'bug'. "
+
+#: ../src/org.mate.marco.gschema.xml.h:13
+msgid "Action on title bar double-click"
+msgstr "Actie bij titelbalk-dubbelklik"
+
+#: ../src/org.mate.marco.gschema.xml.h:14
+msgid ""
+"This option determines the effects of double-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr "Deze optie bepaalt het effect van dubbelklikken op de titelbalk. Geldige waardes zijn ‘toggle_shade’, die het venster laat oprollen/afrollen, ‘toggle_maximize’ die het venster maximaliseert/herstelt, ‘toggle_maximize_horizontally' en ‘toggle_maximize_vertically’ die het venster alleen horizontaal of verticaal maximaliseren/herstellen, ‘minimize’ die het venster minimaliseert, ‘shade’ die het venster oprolt, ‘menu’ die het venstermenu toont, ‘lower’ die het venster achter alle andere vensters zet,  en ‘none’ om niets te doen."
+
+#: ../src/org.mate.marco.gschema.xml.h:15
+msgid "Action on title bar middle-click"
+msgstr "Actie bij titelbalk-klik met middelste muisknop"
+
+#: ../src/org.mate.marco.gschema.xml.h:16
+msgid ""
+"This option determines the effects of middle-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr "Deze optie bepaalt het effect van klikken op de titelbalk met de middelste muisknop. Geldige waardes zijn ‘toggle_shade’, die het venster laat oprollen/afrollen, ‘toggle_maximize’ die het venster maximaliseert/herstelt, ‘toggle_maximize_horizontally' en ‘toggle_maximize_vertically’ die het venster alleen horizontaal of verticaal maximaliseren/herstellen, ‘minimize’ die het venster minimaliseert, ‘shade’ die het venster oprolt, ‘menu’ die het venstermenu toont, ‘lower’ die het venster achter alle andere vensters zet,  en ‘none’ om niets te doen."
+
+#: ../src/org.mate.marco.gschema.xml.h:17
+msgid "Action on title bar right-click"
+msgstr "Actie bij titelbalk-klik met rechter muisknop"
+
+#: ../src/org.mate.marco.gschema.xml.h:18
+msgid ""
+"This option determines the effects of right-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr "Deze optie bepaalt het effect van klikken op de titelbalk met de rechter muisknop. Geldige waardes zijn ‘toggle_shade’, die het venster laat oprollen/afrollen, ‘toggle_maximize’ die het venster maximaliseert/herstelt, ‘toggle_maximize_horizontally' en ‘toggle_maximize_vertically’ die het venster alleen horizontaal of verticaal maximaliseren/herstellen, ‘minimize’ die het venster minimaliseert, ‘shade’ die het venster oprolt, ‘menu’ die het venstermenu toont, ‘lower’ die het venster achter alle andere vensters zet,  en ‘none’ om niets te doen."
+
+#: ../src/org.mate.marco.gschema.xml.h:19
+msgid "Automatically raises the focused window"
+msgstr "Verhoogt automatisch het aandachtsvenster"
+
+#: ../src/org.mate.marco.gschema.xml.h:20
+msgid ""
+"If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
+"the focused window will be automatically raised after a delay specified by "
+"the auto_raise_delay key. This is not related to clicking on a window to "
+"raise it, nor to entering a window during drag-and-drop."
+msgstr "Indien waar, en de aandachtsmodus is ofwel ‘sloppy’ of ‘mouse’, dan zal het venster met aandacht na een bepaalde tijd, die ingesteld kan worden met de ‘auto_raise_delay’-sleutel. Dit heeft geen invloed bij het aanklikken van een venster om het naar boven te halen en heeft ook geen invloed bij het slepen en loslaten van items op het venster."
+
+#: ../src/org.mate.marco.gschema.xml.h:21
+msgid "Delay in milliseconds for the auto raise option"
+msgstr "Vertraging in milliseconden alvorens automatisch naar boven te halen"
+
+#: ../src/org.mate.marco.gschema.xml.h:22
+msgid ""
+"The time delay before raising a window if auto_raise is set to true. The "
+"delay is given in thousandths of a second."
+msgstr "De wachttijd alvorens een venster naar boven te halen als ‘auto_raise’ op 'true' staat. De wachttijd is gegeven in duizendsten van seconden."
+
+#: ../src/org.mate.marco.gschema.xml.h:23
+msgid "Current theme"
+msgstr "Huidig thema"
+
+#: ../src/org.mate.marco.gschema.xml.h:24
+msgid ""
+"The theme determines the appearance of window borders, titlebar, and so "
+"forth."
+msgstr "Het thema bepaalt het uiterlijk van vensterranden, titelbalk, enzovoort."
+
+#: ../src/org.mate.marco.gschema.xml.h:25
+msgid "Use standard system font in window titles"
+msgstr "Standaard systeemlettertype gebruiken in venstertitels"
+
+#: ../src/org.mate.marco.gschema.xml.h:26
+msgid ""
+"If true, ignore the titlebar_font option, and use the standard application "
+"font for window titles."
+msgstr "Indien waar, de ‘titlebar_font’-optie negeren, en het standaard toepassings-font gebruiken voor venstertitels."
+
+#: ../src/org.mate.marco.gschema.xml.h:27
+msgid "Window title font"
+msgstr "Venstertitellettertype"
+
+#: ../src/org.mate.marco.gschema.xml.h:28
+msgid ""
+"A font description string describing a font for window titlebars. The size "
+"from the description will only be used if the titlebar_font_size option is "
+"set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
+"option is set to true."
+msgstr "Een lettertypebeschrijving voor het lettertype van de venstertitels. De grootte uit de beschrijving zal echter alleen worden gebruikt als ‘titlebar_font_size’ op 0 is gezet. Tevens is deze optie uitgezet als ‘titlebar_uses_desktop_font’ is ingeschakeld."
+
+#: ../src/org.mate.marco.gschema.xml.h:29
+msgid "Number of workspaces"
+msgstr "Aantal werkbladen"
+
+#: ../src/org.mate.marco.gschema.xml.h:30
+msgid ""
+"Number of workspaces. Must be more than zero, and has a fixed maximum to "
+"prevent making the desktop unusable by accidentally asking for too many "
+"workspaces."
+msgstr "Aantal werkbladen. Moet groter zijn dan nul, en heeft een vast maximum om te voorkomen dat u per ongeluk uw werkomgeving vernietigt, door te vragen om te veel werkbladen."
+
+#: ../src/org.mate.marco.gschema.xml.h:31
+msgid "Workspace wrap style"
+msgstr "Werkblad wikkel stijl"
+
+#: ../src/org.mate.marco.gschema.xml.h:32
+msgid ""
+"The wrap style is used to determine how to switch from one workspace to "
+"another at the border of the workspace switcher. When set to \"no wrap\", "
+"nothing will happen if you try to switch to a workspace past the border of "
+"the workspace switcher. If set to \"classic\", the old marco behavior is "
+"used: the end of one row leads to the beginning of the next and the end of a"
+" column leads to the beginning of the next. If set to \"toroidal\", "
+"workspaces are connected like a doughnut: the end of each row leads to its "
+"own beginning and the end of each column leads to its own beginning."
+msgstr "De wrap-style wordt gebruikt om te bepalen hoe er geschakeld moet worden tussen werkruimten via de randen van de werkruimte-switcher. Als deze ingesteld is als \"no-wrap\", zal er niets gebeuren als u probeert over te schakelen naar een werkruimte langs de rand van de werkruimte switcher. Indien ingesteld op \"classic\", wordt het oude Marco gedrag gebruikt: het einde van een rij leidt tot het begin van het volgende en het einde van een kolom leidt tot het begin van de volgende. Indien ingesteld op \"toroïdale\" zijn werkruimten verbonden als een donut: het einde van elke rij leidt naar zijn eigen begin en einde van elke kolom leidt tot een eigen begin."
+
+#: ../src/org.mate.marco.gschema.xml.h:33
+msgid "Enable Visual Bell"
+msgstr "Visuele bel gebruiken"
+
+#: ../src/org.mate.marco.gschema.xml.h:34
+msgid ""
+"Turns on a visual indication when an application or the system issues a "
+"'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
+"environments."
+msgstr "Geeft een zichtbare indicatie wanneer een toepassing of het systeem een 'bel' of 'piep' geeft; handig voor slechthorenden of voor gebruik in omgevingen met veel lawaai."
+
+#: ../src/org.mate.marco.gschema.xml.h:35
+msgid "System Bell is Audible"
+msgstr "Systeembel is hoorbaar"
+
+#: ../src/org.mate.marco.gschema.xml.h:36
+msgid ""
+"Determines whether applications or the system can generate audible 'beeps'; "
+"may be used in conjunction with 'visual bell' to allow silent 'beeps'."
+msgstr "Bepaalt of toepassingen of het systeem hoorbare 'piepjes' kan genereren; kan samen met 'visuele bel' gebruikt worden om geluidloze 'piepjes' mogelijk te maken."
+
+#: ../src/org.mate.marco.gschema.xml.h:37
+msgid "Visual Bell Type"
+msgstr "Visuele bel type"
+
+#: ../src/org.mate.marco.gschema.xml.h:38
+msgid ""
+"Tells Marco how to implement the visual indication that the system bell or "
+"another application 'bell' indicator has been rung. Currently there are two "
+"valid values, \"fullscreen\", which causes a fullscreen white-black flash, "
+"and \"frame_flash\" which causes the titlebar of the application which sent "
+"the bell signal to flash. If the application which sent the bell is unknown "
+"(as is usually the case for the default \"system beep\"), the currently "
+"focused window's titlebar is flashed."
+msgstr "Vertelt Marco hoe de de visuele indicatie dat de systeembel of een andere toepassings-bel is afgegaan, moet worden geimplementeerd. Momenteel zijn er twee geldige waardes, ‘fullscreen’, wat een zwart-witte flits over hele beelscherm geeft, of ‘frame_flash’ waarbij de titelbalk opflitst van de toepassing die het belsignaal gaf. Als de toepassing die het belletje gaf onbekend is (wat meestal het geval is bij de standaard ‘systeem-piep’), zal de titelbalk van het huidige scherm dat de focus heeft opflitsen."
+
+#: ../src/org.mate.marco.gschema.xml.h:39
+msgid "Compositing Manager"
+msgstr "Compositing Manager"
+
+#: ../src/org.mate.marco.gschema.xml.h:40
+msgid "Determines whether Marco is a compositing manager."
+msgstr "Bepaalt of Marco een 'compositing manager' is"
+
+#: ../src/org.mate.marco.gschema.xml.h:41
+msgid "Fast Alt-Tab Enabled"
+msgstr "Snelle Alt-tab Actief"
+
+#: ../src/org.mate.marco.gschema.xml.h:42
+msgid ""
+"Whether or not fast alt-tabbing is used when the compositing manager is "
+"enabled."
+msgstr "Of het snel alt-tabben wel/niet wordt gebruikt wanneer de compositing manager is ingeschakeld."
+
+#: ../src/org.mate.marco.gschema.xml.h:43
+msgid "If true, trade off usability for less resource usage"
+msgstr "Indien waar, bruikbaarheid inwisselen voor efficiënt bronnengebruik"
+
+#: ../src/org.mate.marco.gschema.xml.h:44
+msgid ""
+"If true, marco will give the user less feedback by using wireframes, "
+"avoiding animations, or other means. This is a significant reduction in "
+"usability for many users, but may allow legacy applications to continue "
+"working, and may also be a useful tradeoff for terminal servers. However, "
+"the wireframe feature is disabled when accessibility is on."
+msgstr "Indien waar, geeft marco de gebruiker minder directe terugkoppeling door raamwerken te gebruiken en animaties te minimaliseren. Dit is een behoorlijke vermindering van bruikbaarheid, maar kan ervoor zorgen dat oudere toepassingen blijven werken. Ook kan dit een voordeel zijn als er met terminal servers gewerkt wordt. Echter, de raamwerk functie is gedeactiveerd indien toegankelijkheid geactiveerd is."
+
+#: ../src/org.mate.marco.gschema.xml.h:45
+msgid ""
+"(Not implemented) Navigation works in terms of applications not windows"
+msgstr "(Niet geïmplementeerd) Navigatie werkt in termen van toepassingen, niet vensters"
+
+#: ../src/org.mate.marco.gschema.xml.h:46
+msgid ""
+"If true, then Marco works in terms of applications rather than windows. The "
+"concept is a bit abstract, but in general an application-based setup is more"
+" like the Mac and less like Windows. When you focus a window in application-"
+"based mode, all the windows in the application will be raised. Also, in "
+"application-based mode, focus clicks are not passed through to windows in "
+"other applications. Application-based mode is, however, largely "
+"unimplemented at the moment."
+msgstr "Indien waar, werkt Marco in termen van toepassingen in plaats van vensters. Het concept is ietwat abstract, maar een toepassing-gebaseerde opstelling lijkt meer op een Macintosch dan op Windows. Als u een venster aandacht geeft in toepassing-gebaseerde modus, zullen alle vensters van de toepassing verhoogd worden. Tevens geldt dat aandachts-klikken niet worden doorgegeven naar vensters in andere toepassingen. De toepassing-gebaseerde modus is echter voor een groot deel nog niet geïmplementeerd."
+
+#: ../src/org.mate.marco.gschema.xml.h:47
+msgid "Disable misfeatures that are required by old or broken applications"
+msgstr "Misfeatures uitzetten die vereist zijn voor oude of gebroken toepassingen"
+
+#: ../src/org.mate.marco.gschema.xml.h:48
+msgid ""
+"Some applications disregard specifications in ways that result in window "
+"manager misfeatures. This option puts Marco in a rigorously correct mode, "
+"which gives a more consistent user interface, provided one does not need to "
+"run any misbehaving applications."
+msgstr "Sommige toepassingen houden geen rekening met specificaties die als resultaat hebben dat de vensterbeheerder niet met deze toepassingen om kan gaan. Deze optie zorgt ervoor dat Marco in een streng correctie modus  werkt, die ervoor zorgt dat er een consistentere gebruiksomgeving ontstaat. Deze optie heeft echter alleen resultaat als er geen applicaties worden gedraaid die zich niet aan de specificaties houden."
+
+#: ../src/org.mate.marco.gschema.xml.h:49
+msgid "Determines if new windows are created on the center of the screen"
+msgstr "Bepalen of nieuwe vensters in het midden van het scherm worden gecreëerd"
+
+#: ../src/org.mate.marco.gschema.xml.h:50
+msgid ""
+"If set to true, new windows are opened in the center of the screen. "
+"Otherwise, they are opened at the top left of the screen."
+msgstr "Wanneer ingesteld als waar worden nieuwe vensters geopend in het midden van het scherm. Anders worden deze geopend linksboven van het scherm. "
+
+#: ../src/org.mate.marco.gschema.xml.h:51
+msgid "Whether to enable side-by-side tiling"
+msgstr "Kiezen of naast elkaar vastklikken actief moet zijn"
+
+#: ../src/org.mate.marco.gschema.xml.h:52
+msgid ""
+"If enabled, dropping windows on screen edges maximizes them vertically and "
+"resizes them horizontally to cover half of the available area. Drag-dropping"
+" to the top maximizes the window."
+msgstr "Indien ingeschakeld, zullen vensters die tot de schermrand gesleept worden, verticaal gemaximaliseerd en horizontaal tot de helft van het werkgebied herleid worden. Slepen naar de top zal het venster maximaliseren."
+
+#: ../src/org.mate.marco.gschema.xml.h:53
+msgid "Window placement mode"
+msgstr "Vensterplaatsingsmodus"
+
+#: ../src/org.mate.marco.gschema.xml.h:54
+msgid ""
+"The window placement mode indicates how new windows are positioned. "
+"\"automatic\" means the system chooses a location automatically based on the"
+" space available on the desktop, or by a simple cascade if there is no "
+"space; \"pointer\" means that new windows are placed according to the mouse "
+"pointer position; \"manual\" means that the user must manually place the new"
+" window with the mouse or keyboard."
+msgstr "Het vensterplaatsingsmodus geeft aan hoe nieuwe vensters gepositioneerd zijn. \"automatisch\" betekent dat het systeem een locatie automatisch kiest gebaseerd op de hoeveelheid ruimte op het bureaublad, of door een eenvoudige cascade als er geen ruimte is; \"pointer\" betekent dat nieuwe vensters zijn geplaatst volgens de muisaanwijzer positie; \"manual\" betekent dat de gebruiker handmatig het nieuwe venster moeten plaatsen met de muis of het toetsenbord."
+
+#: ../src/org.mate.marco.gschema.xml.h:55
+msgid "Name of workspace"
+msgstr "Werkbladnaam"
+
+#: ../src/org.mate.marco.gschema.xml.h:56
+msgid "The name of a workspace."
+msgstr "De naam van een werkblad."
+
+#: ../src/org.mate.marco.gschema.xml.h:57
+msgid "Run a defined command"
+msgstr "Voorgedefineerde opdracht uitvoeren"
+
+#: ../src/org.mate.marco.gschema.xml.h:58
+msgid ""
+"The keybinding that runs the correspondingly-numbered command in "
+"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
+"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
+"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
+"then there will be no keybinding for this action."
+msgstr "De toetskoppeling die de overeenkomstig genummerde opdracht in ‘/apps/marco/keybinding_commands’ uitvoert. Het formaat ziet eruit als ‘<Control>a’ of ‘<Shift><Alt>F1’. Hierbij zijn kleine- en hoofdletters toegestaan, evenals afkortingen zoals ‘<Ctl>’ en ‘<Ctrl>’. Indien u de optie instelt op de speciale waarde ‘disabled’, dan zal deze actie geen toetskoppeling kennen."
+
+#: ../src/org.mate.marco.gschema.xml.h:60
+msgid ""
+"The format looks like \"&lt;Control&gt;a\" or "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
+"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
+"then there will be no keybinding for this action."
+msgstr "Het formaat ziet eruit als \"&lt;Control&gt;a\" of \"&lt;Shift&gt;&lt;Alt&gt;F1\". Het ontledingsprogramma is vrij onbevangen en staat hoofdletters als kleine letters toe, zelfs afkortingen zoals \"&lt;Ctl&gt;\" en \"&lt;Ctrl&gt;\". Indien u de optie instelt op de speciale waarde ‘disabled’, dan zal deze actie geen toetskoppeling hebben."
+
+#: ../src/org.mate.marco.gschema.xml.h:78
+msgid ""
+"The format looks like \"&lt;Control&gt;a\" or "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
+"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
+"then there will be no keybinding for this action. This keybinding may be "
+"reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
+"one of the keys it uses."
+msgstr "Het formaat ziet eruit als \"&lt;Control&gt;a\" of \"&lt;Shift&gt;&lt;Alt&gt;F1\". Het ontledingsprogramma is vrij onbevangen en staat hoofdletters als kleine letters toe, zelfs afkortingen zoals \"&lt;Ctl&gt;\" en \"&lt;Ctrl&gt;\". Deze sneltoets kan verhinderd worden door de \"shift\" toets ingedrukt te houden; hiervoor kan \"shift\" niet een toets zijn die ingesteld wordt."
+
+#: ../src/org.mate.marco.gschema.xml.h:79
+msgid "Move backward between windows of an application, using a popup window"
+msgstr "Achterwaarts wisselen van venster binnen een toepassing met een opduikvenster"
+
+#: ../src/org.mate.marco.gschema.xml.h:81
+msgid "Move backward between windows, using a popup window"
+msgstr "Achterwaarts wisselen van venster met een opduikvenster"
+
+#: ../src/org.mate.marco.gschema.xml.h:82
+msgid "Move between windows on all workspaces, using a popup window"
+msgstr "Wisselen van venster in alle werkruimten via een pop-up venster"
+
+#: ../src/org.mate.marco.gschema.xml.h:83
+msgid "Move backward between windows on all workspaces, using a popup window"
+msgstr "Heen en weer wisselen van venster in alle werkruimten via een pop-up venster"
+
+#: ../src/org.mate.marco.gschema.xml.h:85
+msgid "Move backward between panels and the desktop, using a popup window"
+msgstr "Achterwaarts wisselen tussen panelen en het bureaublad met een opduikvenster"
+
+#: ../src/org.mate.marco.gschema.xml.h:87
+msgid "Move backward between windows of an application immediately"
+msgstr "Direct achterwaarts wisselen van venster binnen een toepassing"
+
+#: ../src/org.mate.marco.gschema.xml.h:89
+msgid "Move backward between windows immediately"
+msgstr "Direct achterwaarts wisselen van venster"
+
+#: ../src/org.mate.marco.gschema.xml.h:91
+msgid "Move backward between panels and the desktop immediately"
+msgstr "Direct heen en weer wisselen tussen panelen en het bureaublad"
+
+#: ../src/org.mate.marco.gschema.xml.h:98
+msgid "Commands to run in response to keybindings"
+msgstr "Opdrachten die worden uitgevoerd bij toetsbindingen"
+
+#: ../src/org.mate.marco.gschema.xml.h:99
+msgid ""
+"The /apps/marco/global_keybindings/run_command_N keys define keybindings "
+"that correspond to these commands. Pressing the keybinding for run_command_N"
+" will execute command_N."
+msgstr "De sleutels: /apps/marco/global_keybindings/run_command_N definiëren toetskoppelingen die corresponderen met deze opdrachten. Het intoetsen van de toetskoppeling voor ‘run_command_N’ zal de opdracht ‘command_N’ uitvoeren."
+
+#: ../src/org.mate.marco.gschema.xml.h:100
+msgid "The screenshot command"
+msgstr "De opdracht voor schermafdruk"
+
+#: ../src/org.mate.marco.gschema.xml.h:101
+msgid ""
+"The /apps/marco/global_keybindings/run_command_screenshot key defines a "
+"keybinding which causes the command specified by this setting to be invoked."
+msgstr "De sleutel ‘/apps/marco/global_keybindings/run_command_screenshot’ definieert een toetskoppeling waardoor de opdracht in deze instelling wordt uitgevoerd."
+
+#: ../src/org.mate.marco.gschema.xml.h:102
+msgid "The window screenshot command"
+msgstr "De opdracht voor venster-schermafdruk"
+
+#: ../src/org.mate.marco.gschema.xml.h:103
+msgid ""
+"The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
+" a keybinding which causes the command specified by this setting to be "
+"invoked."
+msgstr "De sleutel ‘/apps/marco/global_keybindings/run_command_window_screenshot’ definieert een toetskoppeling waardoor de opdracht in deze instelling wordt uitgevoerd."
+
+#: ../src/org.mate.marco.gschema.xml.h:107
+msgid "Toggle whether a window will always be visible over other windows"
+msgstr "‘Altijd bovenop’-instelling omschakelen"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -341,17 +884,17 @@ msgstr "Ge_forceerd afsluiten"
 msgid "Failed to get hostname: %s\n"
 msgstr "Ophalen hostnaam mislukt: %s\n"
 
-#: ../src/core/display.c:268
+#: ../src/core/display.c:270
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "Benodige extensie ‘%s’ voor ‘compositing’ ontbreekt"
 
-#: ../src/core/display.c:346
+#: ../src/core/display.c:348
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Openen van X Window System display ‘%s’ mislukt\n"
 
-#: ../src/core/errors.c:313
+#: ../src/core/errors.c:304
 #, c-format
 msgid ""
 "Lost connection to the display '%s';\n"
@@ -359,12 +902,12 @@ msgid ""
 "the window manager.\n"
 msgstr "Verbinding is verbroken met display '%s';\nwaarschijnlijk is de X-server uitgezet of heeft u de window-manager vernietigd.\n"
 
-#: ../src/core/errors.c:320
+#: ../src/core/errors.c:311
 #, c-format
 msgid "Fatal IO error %d (%s) on display '%s'.\n"
 msgstr "Fatale IO-fout %d (%s) op display ‘%s’.\n"
 
-#: ../src/core/keybindings.c:680
+#: ../src/core/keybindings.c:716
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -373,7 +916,7 @@ msgstr "Een ander programma gebruikt reeds de %s-toets met controletoets %x als 
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2307
+#: ../src/core/keybindings.c:2353
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -381,17 +924,17 @@ msgid ""
 "%s"
 msgstr "Er trad een fout op bij het uitvoeren van <tt>%s</tt>:\n\n%s."
 
-#: ../src/core/keybindings.c:2396
+#: ../src/core/keybindings.c:2442
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Er is geen opdracht %d gedefinieerd.\n"
 
-#: ../src/core/keybindings.c:3356
+#: ../src/core/keybindings.c:3453
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Er is geen opdracht voor de terminal gedefinieerd.\n"
 
-#: ../src/core/main.c:137
+#: ../src/core/main.c:131
 #, c-format
 msgid ""
 "marco %s\n"
@@ -400,59 +943,59 @@ msgid ""
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 msgstr "marco %s\nCopyright © 2001-%s Havoc Pennington, Red Hat, Inc., en anderen\nDit is vrije software; zie de broncode voor de kopieervoorwaarden.\nEr is GEEN garantie; zelfs niet voor VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.\n"
 
-#: ../src/core/main.c:275
+#: ../src/core/main.c:269
 msgid "Disable connection to session manager"
 msgstr "Schakel de verbinding met het sessiebeheer uit"
 
-#: ../src/core/main.c:281
+#: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
 msgstr "Vervang 't huidige schermbeheerprogramma door Marco"
 
-#: ../src/core/main.c:287
+#: ../src/core/main.c:281
 msgid "Specify session management ID"
 msgstr "Specificeer de ID van het sessiebeheer"
 
-#: ../src/core/main.c:292
+#: ../src/core/main.c:286
 msgid "X Display to use"
 msgstr "De te gebruiken X-weergave"
 
-#: ../src/core/main.c:298
+#: ../src/core/main.c:292
 msgid "Initialize session from savefile"
 msgstr "Initialiseer de sessie middels een opslagbestand"
 
-#: ../src/core/main.c:304
+#: ../src/core/main.c:298
 msgid "Print version"
 msgstr "Toon versie-informatie"
 
-#: ../src/core/main.c:310
+#: ../src/core/main.c:304
 msgid "Make X calls synchronous"
 msgstr "Zorg dat X-aanroepen synchroon zijn"
 
-#: ../src/core/main.c:316
+#: ../src/core/main.c:310
 msgid "Turn compositing on"
 msgstr "‘Compositing’ inschakelen"
 
-#: ../src/core/main.c:322
+#: ../src/core/main.c:316
 msgid "Turn compositing off"
 msgstr "‘Compositing’ uitschakelen"
 
-#: ../src/core/main.c:328
+#: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "Geen gemaximaliseerde vensters op het volledige scherm maken zonder vensterdecoratie"
 
-#: ../src/core/main.c:537
+#: ../src/core/main.c:522
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Kon themamap niet scannen: %s\n"
 
-#: ../src/core/main.c:553
+#: ../src/core/main.c:538
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
 msgstr "Kon geen thema vinden! Zorg ervoor dat %s bestaat en de gebruikelijke thema's bevat.\n"
 
-#: ../src/core/main.c:612
+#: ../src/core/main.c:597
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Herstarten mislukt: %s\n"
@@ -460,37 +1003,37 @@ msgstr "Herstarten mislukt: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:573 ../src/core/prefs.c:726
+#: ../src/core/prefs.c:584 ../src/core/prefs.c:737
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr "%d opgeslagen in GSettings-sleutel %s valt buiten het bereik %d tot %d\n"
 
-#: ../src/core/prefs.c:1023
+#: ../src/core/prefs.c:1031
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr "Werkoplossing voor gebroken toepassingen uitgezet. Bepaalde toepassingen zullen niet naar behoren functioneren.\n"
 
-#: ../src/core/prefs.c:1090
+#: ../src/core/prefs.c:1098
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "Kon lettertypebeschrijving ‘%s’ niet lezen uit GSettings-sleutel %s\n"
 
-#: ../src/core/prefs.c:1152
+#: ../src/core/prefs.c:1160
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "‘%s’, gevonden in de configuratiedatabase, is geen geldige waarde voor de muisknop-optietoets\n"
 
-#: ../src/core/prefs.c:1670
+#: ../src/core/prefs.c:1683
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "‘%s’ in de configuratiedatabase is geen geldige waarde voor toetsbinding ‘%s’\n"
 
-#: ../src/core/prefs.c:1973
+#: ../src/core/prefs.c:1986
 #, c-format
 msgid "Workspace %d"
 msgstr "Werkblad %d"
@@ -517,7 +1060,7 @@ msgstr "Kon windowmanager-selectie niet verkrijgen op scherm %d display ‘%s’
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "Scherm %d op display ‘%s’ heeft al een windowmanager\n"
 
-#: ../src/core/screen.c:672
+#: ../src/core/screen.c:674
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Kon scherm %d op display ‘%s’ niet vrijmaken\n"
@@ -612,13 +1155,13 @@ msgid "Window manager error: "
 msgstr "Windowmanager fout:"
 
 #. Translators: This is the title used on dialog boxes
-#: ../src/core/util.c:570 ../src/marco.desktop.in.h:1
+#: ../src/core/util.c:569 ../src/marco.desktop.in.h:1
 #: ../src/marco-wm.desktop.in.h:1
 msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5766
+#: ../src/core/window.c:5797
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -631,45 +1174,45 @@ msgstr "Venster %s stelt zelf SM_CLIENT_ID in, in plaats van bij het WM_CLIENT_L
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6331
+#: ../src/core/window.c:6362
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
 msgstr "Venster %s geeft een MWM-hint dat de grootte niet kan worden aangepast, maar stelt wel min-grootte %d x %d en max-grootte %d x %d in; dit is niet logisch.\n"
 
-#: ../src/core/window-props.c:252
+#: ../src/core/window-props.c:306
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "Toepassing heeft een overbodige _NET_WM_PID %lu ingesteld\n"
 
 #. Translators: the title of a window from another machine
-#: ../src/core/window-props.c:396
+#: ../src/core/window-props.c:457
 #, c-format
 msgid "%s (on %s)"
 msgstr "%s (op %s)"
 
 #. Simple case-- don't bother to look it up.  It's root.
-#: ../src/core/window-props.c:428
+#: ../src/core/window-props.c:489
 #, c-format
 msgid "%s (as superuser)"
 msgstr "%s (als beheerder)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
-#: ../src/core/window-props.c:446
+#: ../src/core/window-props.c:507
 #, c-format
 msgid "%s (as %s)"
 msgstr "%s (als %s)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
-#: ../src/core/window-props.c:452
+#: ../src/core/window-props.c:513
 #, c-format
 msgid "%s (as another user)"
 msgstr "%s (als een andere gebruiker)"
 
-#: ../src/core/window-props.c:1438
+#: ../src/core/window-props.c:1499
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "Ongeldig WM_TRANSIENT_FOR venster 0x%lx opgegeven voor %s.\n"
@@ -684,12 +1227,12 @@ msgid ""
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
 msgstr "Venster 0x%lx heeft eigenschap %s\nwelke zou moeten hebben: type %s en formaat %d\nmaar in feite heeft: type %s formaat %d n_items %d.\nDit is waarschijnlijk een fout van de toepassing, niet van de windowmanager.\nHet venster heeft title=‘%s’ class=‘%s’ naam=‘%s’\n"
 
-#: ../src/core/xprops.c:401
+#: ../src/core/xprops.c:411
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgstr "Eigenschap %s bij venster 0x%lx bevat ongeldige UTF-8\n"
 
-#: ../src/core/xprops.c:484
+#: ../src/core/xprops.c:494
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
@@ -701,148 +1244,148 @@ msgstr "Eigenschap %s bij venster 0x%lx bevat ongeldige UTF-8 voor item %d van d
 msgid "Usage: %s\n"
 msgstr "Gebruik: %s\n"
 
-#: ../src/ui/frames.c:1199
+#: ../src/ui/frames.c:1214
 msgid "Close Window"
 msgstr "Venster sluiten"
 
-#: ../src/ui/frames.c:1202
+#: ../src/ui/frames.c:1217
 msgid "Window Menu"
 msgstr "Venstermenu"
 
-#: ../src/ui/frames.c:1205
+#: ../src/ui/frames.c:1220
 msgid "Minimize Window"
 msgstr "Venster minimaliseren"
 
-#: ../src/ui/frames.c:1208
+#: ../src/ui/frames.c:1223
 msgid "Maximize Window"
 msgstr "Venster maximaliseren"
 
-#: ../src/ui/frames.c:1211
+#: ../src/ui/frames.c:1226
 msgid "Restore Window"
 msgstr "Venster herstellen"
 
-#: ../src/ui/frames.c:1214
+#: ../src/ui/frames.c:1229
 msgid "Roll Up Window"
 msgstr "Venster oprollen"
 
-#: ../src/ui/frames.c:1217
+#: ../src/ui/frames.c:1232
 msgid "Unroll Window"
 msgstr "Venster afrollen"
 
-#: ../src/ui/frames.c:1220
+#: ../src/ui/frames.c:1235
 msgid "Keep Window On Top"
 msgstr "Venster bovenop houden"
 
-#: ../src/ui/frames.c:1223
+#: ../src/ui/frames.c:1238
 msgid "Remove Window From Top"
 msgstr "Venster van boven weghalen"
 
-#: ../src/ui/frames.c:1226
+#: ../src/ui/frames.c:1241
 msgid "Always On Visible Workspace"
 msgstr "Altijd op zichtbaar werkblad"
 
-#: ../src/ui/frames.c:1229
+#: ../src/ui/frames.c:1244
 msgid "Put Window On Only One Workspace"
 msgstr "Venster op slechts één werkblad zetten"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:65
+#: ../src/ui/menu.c:64
 msgid "Mi_nimize"
 msgstr "_Minimaliseren"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:67
+#: ../src/ui/menu.c:66
 msgid "Ma_ximize"
 msgstr "Ma_ximaliseren"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:69
+#: ../src/ui/menu.c:68
 msgid "Unma_ximize"
 msgstr "_Herstellen"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:71
+#: ../src/ui/menu.c:70
 msgid "Roll _Up"
 msgstr "_Oprollen"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:73
+#: ../src/ui/menu.c:72
 msgid "_Unroll"
 msgstr "_Uitrollen"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:75
+#: ../src/ui/menu.c:74
 msgid "_Move"
 msgstr "_Verplaatsen"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:77
+#: ../src/ui/menu.c:76
 msgid "_Resize"
 msgstr "Afmetingen _wijzigen"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:79
+#: ../src/ui/menu.c:78
 msgid "Move Titlebar On_screen"
 msgstr "_Titelbalk op scherm plaatsen"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:82 ../src/ui/menu.c:84
+#: ../src/ui/menu.c:81 ../src/ui/menu.c:83
 msgid "Always on _Top"
 msgstr "Altijd _bovenop"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:86
+#: ../src/ui/menu.c:85
 msgid "_Always on Visible Workspace"
 msgstr "Op _alle werkbladen zichtbaar"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:88
+#: ../src/ui/menu.c:87
 msgid "_Only on This Workspace"
 msgstr "Alleen op _dit werkblad"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:90
+#: ../src/ui/menu.c:89
 msgid "Move to Workspace _Left"
 msgstr "Verplaatsen naar werkblad lin_ks"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:92
+#: ../src/ui/menu.c:91
 msgid "Move to Workspace R_ight"
 msgstr "Verplaatsen naar werkblad _rechts"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:94
+#: ../src/ui/menu.c:93
 msgid "Move to Workspace _Up"
 msgstr "Verplaatsen naar werkblad hierbov_en"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:96
+#: ../src/ui/menu.c:95
 msgid "Move to Workspace _Down"
 msgstr "Verplaatsen naar werkblad hier_onder"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:100
+#: ../src/ui/menu.c:99
 msgid "_Close"
 msgstr "Sl_uiten"
 
-#: ../src/ui/menu.c:197
+#: ../src/ui/menu.c:200
 #, c-format
 msgid "Workspace %d%n"
 msgstr "Werkblad %d%n"
 
-#: ../src/ui/menu.c:207
+#: ../src/ui/menu.c:210
 #, c-format
 msgid "Workspace 1_0"
 msgstr "Werkblad 1_0"
 
-#: ../src/ui/menu.c:209
+#: ../src/ui/menu.c:212
 #, c-format
 msgid "Workspace %s%d"
 msgstr "Werkblad %s%d"
 
-#: ../src/ui/menu.c:387
+#: ../src/ui/menu.c:391
 msgid "Move to Another _Workspace"
 msgstr "Naar ander werkblad ver_plaatsen"
 
@@ -928,242 +1471,242 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:117
+#: ../src/ui/resizepopup.c:113
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:255
+#: ../src/ui/theme.c:306
 msgid "top"
 msgstr "boven"
 
-#: ../src/ui/theme.c:257
+#: ../src/ui/theme.c:308
 msgid "bottom"
 msgstr "onder"
 
-#: ../src/ui/theme.c:259
+#: ../src/ui/theme.c:310
 msgid "left"
 msgstr "links"
 
-#: ../src/ui/theme.c:261
+#: ../src/ui/theme.c:312
 msgid "right"
 msgstr "rechts"
 
-#: ../src/ui/theme.c:288
+#: ../src/ui/theme.c:339
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "kader-afmetingen geeft geen ‘%s’ dimensie"
 
-#: ../src/ui/theme.c:307
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "kader-afmetingen geeft geen dimensie ‘%s’ voor rand ‘%s’"
 
-#: ../src/ui/theme.c:344
+#: ../src/ui/theme.c:395
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "Knopverhouding %g is onredelijk"
 
-#: ../src/ui/theme.c:356
+#: ../src/ui/theme.c:407
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Kader-afmetingen geeft geen afmeting van knoppen"
 
-#: ../src/ui/theme.c:1027
+#: ../src/ui/theme.c:1132
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Kleurverloop moet tenminste twee kleuren hebben"
 
-#: ../src/ui/theme.c:1153
+#: ../src/ui/theme.c:1262
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
 msgstr "GTK-kleurspecificatie moet de toestand in rechte haken hebben, bijv. gtk:fg[NORMAL] waarbij NORMAL de toestand is; kon ‘%s’ niet verwerken"
 
-#: ../src/ui/theme.c:1167
+#: ../src/ui/theme.c:1276
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
 msgstr "GTK-kleurspecificatie moet een sluithaakje hebben na de status, dus: gtk: fg[NORMAL] waarbij NORMAL de stutus is; kon ‘%s’ niet verwerken"
 
-#: ../src/ui/theme.c:1178
+#: ../src/ui/theme.c:1287
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Niet begrepen: status ‘%s’ in kleurspecificatie"
 
-#: ../src/ui/theme.c:1191
+#: ../src/ui/theme.c:1300
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Niet begrepen: kleurcomponent ‘%s’ in kleurspecificatie"
 
-#: ../src/ui/theme.c:1221
+#: ../src/ui/theme.c:1329
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
 msgstr "Mengformaat is ‘meng/vg_kleur/ag_kleur/alpha’, ‘%s’ voldoet niet aan dit formaat"
 
-#: ../src/ui/theme.c:1232
+#: ../src/ui/theme.c:1340
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Kon alpha-waarde ‘%s’ niet verwerken in gemengde kleur"
 
-#: ../src/ui/theme.c:1242
+#: ../src/ui/theme.c:1350
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "Alpha-waarde ‘%s’ in gemengde kleur zit niet tussen 0.0 en 1.0"
 
-#: ../src/ui/theme.c:1289
+#: ../src/ui/theme.c:1397
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "Schaduwformaat is ‘schaduw/basiskleur/factor’, ‘%s’ voldoet niet aan dit formaat"
 
-#: ../src/ui/theme.c:1300
+#: ../src/ui/theme.c:1408
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Kon schaduwfactor ‘%s’ in schaduwkleur niet verwerken"
 
-#: ../src/ui/theme.c:1310
+#: ../src/ui/theme.c:1418
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Schaduwfactor ‘%s’ in schaduwkleur is negatief"
 
-#: ../src/ui/theme.c:1339
+#: ../src/ui/theme.c:1451
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "Kon kleur ‘%s’ niet verwerken"
 
-#: ../src/ui/theme.c:1593
+#: ../src/ui/theme.c:1848
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Coördinaatuitdrukking bevat letterteken '%s' wat niet is toegestaan"
 
-#: ../src/ui/theme.c:1620
+#: ../src/ui/theme.c:1875
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "Coördinaatuitdrukking bevat floating-point getal '%s' wat niet kon worden verwerkt"
 
-#: ../src/ui/theme.c:1634
+#: ../src/ui/theme.c:1889
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Coördinaatuitdrukking bevat geheel getal '%s' wat niet kon worden verwerkt"
 
-#: ../src/ui/theme.c:1756
+#: ../src/ui/theme.c:2011
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "Coördinaatuitdrukking bevat een onbekende functie aan het begin van deze tekst: ‘%s’"
 
-#: ../src/ui/theme.c:1813
+#: ../src/ui/theme.c:2068
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Coördinaatuitdrukking was leeg of was niet begrepen"
 
-#: ../src/ui/theme.c:1924 ../src/ui/theme.c:1934 ../src/ui/theme.c:1968
+#: ../src/ui/theme.c:2179 ../src/ui/theme.c:2189 ../src/ui/theme.c:2223
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Coördinaatuitdrukking resulteert in een deling door nul"
 
-#: ../src/ui/theme.c:1976
+#: ../src/ui/theme.c:2231
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "Coördinaatuitdrukking probeert een mod-functie te gebruiken op een floating-point getal"
 
-#: ../src/ui/theme.c:2032
+#: ../src/ui/theme.c:2287
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Coördinaatuitdrukking bevat een functie ‘%s’ waar een argument werd verwacht"
 
-#: ../src/ui/theme.c:2041
+#: ../src/ui/theme.c:2296
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Coördinaatuitdrukking bevat een argument waar een functie werd verwacht"
 
-#: ../src/ui/theme.c:2049
+#: ../src/ui/theme.c:2304
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Coördinaatuitdrukking eindigde met een functie in plaats van een argument"
 
-#: ../src/ui/theme.c:2059
+#: ../src/ui/theme.c:2314
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "Coördinaatuitdrukking bevat functie ‘%c’ volgend op functie ‘%c’ zonder argument in het midden"
 
-#: ../src/ui/theme.c:2206 ../src/ui/theme.c:2247
+#: ../src/ui/theme.c:2461 ../src/ui/theme.c:2502
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "Coördinaatuitdrukking bevat een onbekende variabele of constante ‘%s’"
 
-#: ../src/ui/theme.c:2301
+#: ../src/ui/theme.c:2556
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Coordinate experssion parser overflowed its buffer."
 
-#: ../src/ui/theme.c:2330
+#: ../src/ui/theme.c:2585
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Coördinaatuitdrukking bevat een sluithaakje zonder openingshaakje"
 
-#: ../src/ui/theme.c:2394
+#: ../src/ui/theme.c:2649
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Coördinaatuitdrukking bevat een openingshaakje zonder sluithaakje"
 
-#: ../src/ui/theme.c:2405
+#: ../src/ui/theme.c:2660
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Coördinaatuitdrukking bevat schijnbaar geen functies of argumenten"
 
-#: ../src/ui/theme.c:2609 ../src/ui/theme.c:2629 ../src/ui/theme.c:2649
+#: ../src/ui/theme.c:2864 ../src/ui/theme.c:2884 ../src/ui/theme.c:2904
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Expressie in thema resulteerde in een foutmelding: %s\n"
 
-#: ../src/ui/theme.c:4456
+#: ../src/ui/theme.c:4782
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"iets\"/> moet voor deze kader-stijl gespecificeerd worden"
 
-#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
+#: ../src/ui/theme.c:5434 ../src/ui/theme.c:5459
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Ontbrekende <frame state=\"%s\" resize=\"%s\" docus=\"%s\" style=\"iets\"/>"
 
-#: ../src/ui/theme.c:5158
+#: ../src/ui/theme.c:5503
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Laden thema ‘%s’ mislukt: %s\n"
 
-#: ../src/ui/theme.c:5288 ../src/ui/theme.c:5295 ../src/ui/theme.c:5302
-#: ../src/ui/theme.c:5309 ../src/ui/theme.c:5316
+#: ../src/ui/theme.c:5633 ../src/ui/theme.c:5640 ../src/ui/theme.c:5647
+#: ../src/ui/theme.c:5654 ../src/ui/theme.c:5661
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Geen <%s> ingesteld voor thema ‘%s’ "
 
-#: ../src/ui/theme.c:5324
+#: ../src/ui/theme.c:5669
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "Geen kader-stijl ingesteld voor venstertype ‘%s’ in thema ‘%s’, voeg een <window type=\"%s\" style_set=\"iets\"/> element toe"
 
-#: ../src/ui/theme.c:5797 ../src/ui/theme.c:5859 ../src/ui/theme.c:5922
+#: ../src/ui/theme.c:6146 ../src/ui/theme.c:6208 ../src/ui/theme.c:6271
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "Door de gebruiker gedefinieerde constanten moeten met een hoofdletter beginnen; ‘%s’ doet dat niet"
 
-#: ../src/ui/theme.c:5805 ../src/ui/theme.c:5867 ../src/ui/theme.c:5930
+#: ../src/ui/theme.c:6154 ../src/ui/theme.c:6216 ../src/ui/theme.c:6279
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Constante ‘%s’ is reeds gedefinieerd"
@@ -1180,479 +1723,484 @@ msgstr "Geen ‘%s’-attribuut op element <%s>"
 msgid "Line %d character %d: %s"
 msgstr "Regel %d teken %d: %s"
 
-#: ../src/ui/theme-parser.c:437
+#: ../src/ui/theme-parser.c:438
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "Attribuut ‘%s’ twee keer herhaald op hetzelfde <%s>-element"
 
-#: ../src/ui/theme-parser.c:461 ../src/ui/theme-parser.c:504
+#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "Attribuut ‘%s’ is ongeldig op een <%s>-element in deze context"
 
-#: ../src/ui/theme-parser.c:546
+#: ../src/ui/theme-parser.c:547
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "Kon ‘%s’ niet verwerken als geheel getal"
 
-#: ../src/ui/theme-parser.c:555 ../src/ui/theme-parser.c:610
+#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "Niet begrepen: de laatste tekens ‘%s’ in ‘%s’"
 
-#: ../src/ui/theme-parser.c:565
+#: ../src/ui/theme-parser.c:566
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "Geheel getal %ld moet positief zijn"
 
-#: ../src/ui/theme-parser.c:573
+#: ../src/ui/theme-parser.c:574
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "Geheel getal %ld is te groot, huidige maximum is %d"
 
-#: ../src/ui/theme-parser.c:601 ../src/ui/theme-parser.c:717
+#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "Kon ‘%s’ niet als 'floating-point'-getal verwerken"
 
-#: ../src/ui/theme-parser.c:632 ../src/ui/theme-parser.c:660
+#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "Boolese waarde moet ‘true’ of ‘false’ zijn, niet ‘%s’"
 
-#: ../src/ui/theme-parser.c:687
+#: ../src/ui/theme-parser.c:688
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Hoek moet liggen tussen 0.0 en 360.0, maar was %g\n"
 
-#: ../src/ui/theme-parser.c:750
+#: ../src/ui/theme-parser.c:751
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr "Alpha moet liggen tussen 0.0 (onzichtbaar) en 1.0 (volledig ondoorzichtig), maar was %g\n"
 
-#: ../src/ui/theme-parser.c:815
+#: ../src/ui/theme-parser.c:816
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
 msgstr "Ongeldige titel-schaal ‘%s’ (u kunt kiezen uit: xx-small, x-small, small, medium, large, x-large, xx-large)\n"
 
-#: ../src/ui/theme-parser.c:971 ../src/ui/theme-parser.c:1034
-#: ../src/ui/theme-parser.c:1068 ../src/ui/theme-parser.c:1171
+#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
+#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s>-naam ‘%s’ een tweede keer gebruikt"
 
-#: ../src/ui/theme-parser.c:983 ../src/ui/theme-parser.c:1080
-#: ../src/ui/theme-parser.c:1183
+#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
+#: ../src/ui/theme-parser.c:1184
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s>-ouder ‘%s’ is niet gedefinieerd"
 
-#: ../src/ui/theme-parser.c:1093
+#: ../src/ui/theme-parser.c:1094
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s>-afmetingen ‘%s’ is niet gedefinieerd"
 
-#: ../src/ui/theme-parser.c:1106
+#: ../src/ui/theme-parser.c:1107
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> moet ofwel afmetingen specificeren, of een ouder met afmetingen"
 
-#: ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1149
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "U dient een achtergrond te specificeren voordat een alpha-waarde betekenis heeft"
 
-#: ../src/ui/theme-parser.c:1215
+#: ../src/ui/theme-parser.c:1216
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "Onbekend type ‘%s’ op <%s>-element"
 
-#: ../src/ui/theme-parser.c:1226
+#: ../src/ui/theme-parser.c:1227
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "Onbekende style_set ‘%s’ op <%s>-element"
 
-#: ../src/ui/theme-parser.c:1234
+#: ../src/ui/theme-parser.c:1235
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "Venstertype ‘%s’ heeft reeds een stijlset toegewezen gekregen"
 
-#: ../src/ui/theme-parser.c:1264 ../src/ui/theme-parser.c:1328
-#: ../src/ui/theme-parser.c:1554 ../src/ui/theme-parser.c:2775
-#: ../src/ui/theme-parser.c:2821 ../src/ui/theme-parser.c:2979
-#: ../src/ui/theme-parser.c:3171 ../src/ui/theme-parser.c:3209
-#: ../src/ui/theme-parser.c:3247 ../src/ui/theme-parser.c:3265
-#: ../src/ui/theme-parser.c:3281 ../src/ui/theme-parser.c:3319
+#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
+#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
+#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
+#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
+#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
+#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "Element <%s> is niet toegestaan onder <%s>"
 
-#: ../src/ui/theme-parser.c:1378 ../src/ui/theme-parser.c:1392
-#: ../src/ui/theme-parser.c:1437
+#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
+#: ../src/ui/theme-parser.c:1438
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
 msgstr "Kan niet tegelijk ‘button_width’/‘button_height’ en ‘aspect_ratio’ voor knoppen opgeven."
 
-#: ../src/ui/theme-parser.c:1401
+#: ../src/ui/theme-parser.c:1402
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "Afstand ‘%s’ is onbekend"
 
-#: ../src/ui/theme-parser.c:1446
+#: ../src/ui/theme-parser.c:1447
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "Verhouding ‘%s’ is onbekend"
 
-#: ../src/ui/theme-parser.c:1508
+#: ../src/ui/theme-parser.c:1509
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "Rand ‘%s’ is onbekend"
 
-#: ../src/ui/theme-parser.c:1819
+#: ../src/ui/theme-parser.c:1820
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "Geen ‘start_angle’- of ‘from’-attribuut op element <%s>"
 
-#: ../src/ui/theme-parser.c:1826
+#: ../src/ui/theme-parser.c:1827
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "Geen ‘extent_angle’- of ‘to’-attribuut op element <%s>"
 
-#: ../src/ui/theme-parser.c:2066
+#: ../src/ui/theme-parser.c:2067
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Niet begrepen: de waarde ‘%s’ voor type kleurverloop"
 
-#: ../src/ui/theme-parser.c:2144 ../src/ui/theme-parser.c:2519
+#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "Niet begrepen: vul-type ‘%s’ voor <%s>-element"
 
-#: ../src/ui/theme-parser.c:2311 ../src/ui/theme-parser.c:2394
-#: ../src/ui/theme-parser.c:2457
+#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
+#: ../src/ui/theme-parser.c:2458
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "Niet begrepen: status ‘%s’ voor <%s>-element"
 
-#: ../src/ui/theme-parser.c:2321 ../src/ui/theme-parser.c:2404
+#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "Niet begrepen: schaduw ‘%s’ voor <%s>-element"
 
-#: ../src/ui/theme-parser.c:2331
+#: ../src/ui/theme-parser.c:2332
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "Niet begrepen: pijl ‘%s’ voor <%s>-element"
 
-#: ../src/ui/theme-parser.c:2631 ../src/ui/theme-parser.c:2727
+#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "Er zijn geen <draw_ops> genaamd ‘%s’ gedefinieerd"
 
-#: ../src/ui/theme-parser.c:2643 ../src/ui/theme-parser.c:2739
+#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Hier ‘draw_ops’ ‘%s’ meenemen zou een circulaire verwijzing creëren"
 
-#: ../src/ui/theme-parser.c:2854
+#: ../src/ui/theme-parser.c:2855
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Onbekende positie ‘%s’ voor kader-onderdeel"
 
-#: ../src/ui/theme-parser.c:2862
+#: ../src/ui/theme-parser.c:2863
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Kader-stijl heeft al een onderdeel op positie %s"
 
-#: ../src/ui/theme-parser.c:2879 ../src/ui/theme-parser.c:2954
+#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "Er zijn geen <draw_ops> met naam ‘%s’ gedefinieerd"
 
-#: ../src/ui/theme-parser.c:2908
+#: ../src/ui/theme-parser.c:2909
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Onbekende functie ‘%s’ voor knop"
 
-#: ../src/ui/theme-parser.c:2917
+#: ../src/ui/theme-parser.c:2918
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "Knopfunctie ‘%s’ bestaat niet in deze versie (%d, %d benodigd)"
 
-#: ../src/ui/theme-parser.c:2929
+#: ../src/ui/theme-parser.c:2930
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Onbekende status ‘%s’ voor knop"
 
-#: ../src/ui/theme-parser.c:2937
+#: ../src/ui/theme-parser.c:2938
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Kader-stijl heeft reeds een knop voor functie %s status %s"
 
-#: ../src/ui/theme-parser.c:3018
+#: ../src/ui/theme-parser.c:3019
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "‘%s’ is geen geldige waarde voor ‘focus’-attribuut"
 
-#: ../src/ui/theme-parser.c:3027
+#: ../src/ui/theme-parser.c:3028
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "‘%s’ is geen geldige waarde voor ‘state’-attribuut"
 
-#: ../src/ui/theme-parser.c:3037
+#: ../src/ui/theme-parser.c:3038
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "Een stijl genaamd ‘%s’ is niet gedefinieerd"
 
-#: ../src/ui/theme-parser.c:3058 ../src/ui/theme-parser.c:3081
+#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "‘%s’ is geen geldige waarde voor ‘resize’-attribuut"
 
-#: ../src/ui/theme-parser.c:3092
+#: ../src/ui/theme-parser.c:3093
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
 msgstr "Behoort geen ‘resize’-attribuut te hebben op <%s>-element voor gemaximaliseerde/opgerolde toestanden"
 
-#: ../src/ui/theme-parser.c:3106
+#: ../src/ui/theme-parser.c:3107
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr "Behoort geen ‘resize’-attribuut te hebben op <%s>-element voor gemaximaliseerde toestand"
 
-#: ../src/ui/theme-parser.c:3120 ../src/ui/theme-parser.c:3142
+#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr "Stijl is reeds gespecificeerd voor status %s grootte aanpassen %s aandacht %s"
 
-#: ../src/ui/theme-parser.c:3131 ../src/ui/theme-parser.c:3153
+#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
+#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
+#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "Stijl is reeds gespecificeerd voor status %s aandacht %s"
 
-#: ../src/ui/theme-parser.c:3192
+#: ../src/ui/theme-parser.c:3237
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
 msgstr "Kan niet twee ‘draw_ops’ voor een <piece>-element hebben (thema specificeerde een ‘draw_ops’-attribuut en tevens een <draw_ops>-element, of specificeerde twee elementen)"
 
-#: ../src/ui/theme-parser.c:3230
+#: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
 msgstr "Kan niet twee ‘draw_ops’ voor een <button>-element hebben (thema specificeerde een ‘draw_ops’-attribuut en tevens een <draw_ops>-element, of specificeerde twee elementen)"
 
-#: ../src/ui/theme-parser.c:3302
+#: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
 msgstr "Kan niet twee ‘draw_ops’ voor een <menu_icon>-element hebben (thema specificeerde een ‘draw_ops’-attribuut en tevens een <draw_ops>-element, of specificeerde twee elementen)"
 
-#: ../src/ui/theme-parser.c:3350
+#: ../src/ui/theme-parser.c:3395
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr "Het buitenste element in het thema moet <metacity_theme> zijn, niet <%s>"
 
-#: ../src/ui/theme-parser.c:3370
+#: ../src/ui/theme-parser.c:3415
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr "Element <%s> is niet toegestaan binnen een naam/auteur/datum/beschrijving element"
 
-#: ../src/ui/theme-parser.c:3375
+#: ../src/ui/theme-parser.c:3420
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "Element <%s> is niet toegestaan binnen een <constant>-element"
 
-#: ../src/ui/theme-parser.c:3387
+#: ../src/ui/theme-parser.c:3432
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr "Element <%s> is niet toegestaan binnen de elementen distance/border/aspect_ratio"
 
-#: ../src/ui/theme-parser.c:3409
+#: ../src/ui/theme-parser.c:3454
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "Element <%s> is niet toegestaan binnen een ‘draw operation’-element"
 
-#: ../src/ui/theme-parser.c:3419 ../src/ui/theme-parser.c:3461
-#: ../src/ui/theme-parser.c:3466 ../src/ui/theme-parser.c:3471
+#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
+#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "Element <%s> is niet toegestaan binnen een <%s>-element"
 
-#: ../src/ui/theme-parser.c:3693
+#: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"
 msgstr "Geen ‘draw_ops’ gegeven voor kader-onderdeel"
 
-#: ../src/ui/theme-parser.c:3708
+#: ../src/ui/theme-parser.c:3753
 msgid "No draw_ops provided for button"
 msgstr "Geen ‘draw_ops’ gegeven voor knop"
 
-#: ../src/ui/theme-parser.c:3770
+#: ../src/ui/theme-parser.c:3815
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "Geen tekst toegestaan binnen element <%s>"
 
-#: ../src/ui/theme-parser.c:3825 ../src/ui/theme-parser.c:3837
-#: ../src/ui/theme-parser.c:3849 ../src/ui/theme-parser.c:3861
-#: ../src/ui/theme-parser.c:3873
+#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
+#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
+#: ../src/ui/theme-parser.c:3918
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "<%s> twee keer gegeven voor dit thema"
 
-#: ../src/ui/theme-parser.c:4149
+#: ../src/ui/theme-parser.c:4211
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Geen geldig bestand gevonden voor thema %s\n"
 
-#: ../src/ui/theme-parser.c:4205
-#, c-format
-msgid "Theme file %s did not contain a root <metacity_theme> element"
-msgstr "Het themabestand %s bevatte geen <metacity_theme>-hoofdelement"
+#: ../src/ui/theme-viewer.c:105
+msgid "_Windows"
+msgstr "_Vensters"
 
-#: ../src/ui/theme-viewer.c:75
-msgid "/_Windows"
-msgstr "/_Vensters"
+#: ../src/ui/theme-viewer.c:106
+msgid "_Dialog"
+msgstr "_Dialoog"
 
-#: ../src/ui/theme-viewer.c:76
-msgid "/Windows/tearoff"
-msgstr "/Vensters/tearoff"
+#: ../src/ui/theme-viewer.c:107
+msgid "_Modal dialog"
+msgstr "_Modaal dialoog"
 
-#: ../src/ui/theme-viewer.c:77
-msgid "/Windows/_Dialog"
-msgstr "/Vensters/_Dialoogvenster"
+#: ../src/ui/theme-viewer.c:108
+msgid "_Utility"
+msgstr "_Gereedschap"
 
-#: ../src/ui/theme-viewer.c:78
-msgid "/Windows/_Modal dialog"
-msgstr "/Vensters/_Modaal dialoogvenster"
+#: ../src/ui/theme-viewer.c:109
+msgid "_Splashscreen"
+msgstr "_Introvenster"
 
-#: ../src/ui/theme-viewer.c:79
-msgid "/Windows/_Utility"
-msgstr "/Vensters/_Gereedschap"
+#: ../src/ui/theme-viewer.c:110
+msgid "_Top dock"
+msgstr "_Bovenpaneel"
 
-#: ../src/ui/theme-viewer.c:80
-msgid "/Windows/_Splashscreen"
-msgstr "/Vensters/_Introvenster"
+#: ../src/ui/theme-viewer.c:111
+msgid "_Bottom dock"
+msgstr "_Onderpaneel"
 
-#: ../src/ui/theme-viewer.c:81
-msgid "/Windows/_Top dock"
-msgstr "/Vensters/_Bovenpaneel"
+#: ../src/ui/theme-viewer.c:112
+msgid "_Left dock"
+msgstr "_Linkerpaneel"
 
-#: ../src/ui/theme-viewer.c:82
-msgid "/Windows/_Bottom dock"
-msgstr "/Vensters/_Onderpaneel"
+#: ../src/ui/theme-viewer.c:113
+msgid "_Right dock"
+msgstr "_Rechterpaneel"
 
-#: ../src/ui/theme-viewer.c:83
-msgid "/Windows/_Left dock"
-msgstr "/Vensters/_Linker paneel"
+#: ../src/ui/theme-viewer.c:114
+msgid "_All docks"
+msgstr "_Alle panelen"
 
-#: ../src/ui/theme-viewer.c:84
-msgid "/Windows/_Right dock"
-msgstr "/Vensters/_Rechter paneel"
+#: ../src/ui/theme-viewer.c:115
+msgid "Des_ktop"
+msgstr "Des_ktop"
 
-#: ../src/ui/theme-viewer.c:85
-msgid "/Windows/_All docks"
-msgstr "/Vensters/Alle panelen"
+#: ../src/ui/theme-viewer.c:121
+msgid "Open another one of these windows"
+msgstr "Open nog een van deze vensters"
 
-#: ../src/ui/theme-viewer.c:86
-msgid "/Windows/Des_ktop"
-msgstr "/Vensters/_Bureaublad"
+#: ../src/ui/theme-viewer.c:123
+msgid "This is a demo button with an 'open' icon"
+msgstr "Dit is een demo knop met een 'open' icoon"
 
-#: ../src/ui/theme-viewer.c:244
+#: ../src/ui/theme-viewer.c:125
+msgid "This is a demo button with a 'quit' icon"
+msgstr "Dit is een demo knop met een 'sluit' icoon"
+
+#: ../src/ui/theme-viewer.c:259
 msgid "This is a sample message in a sample dialog"
 msgstr "Dit is een voorbeeldbericht in een voorbeelddialoogvenster"
 
-#: ../src/ui/theme-viewer.c:327
+#: ../src/ui/theme-viewer.c:347
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Nepmenu-item %d\n"
 
-#: ../src/ui/theme-viewer.c:361
+#: ../src/ui/theme-viewer.c:381
 msgid "Border-only window"
 msgstr "Venster met alleen randen"
 
-#: ../src/ui/theme-viewer.c:363
+#: ../src/ui/theme-viewer.c:383
 msgid "Bar"
 msgstr "Balk"
 
-#: ../src/ui/theme-viewer.c:380
+#: ../src/ui/theme-viewer.c:400
 msgid "Normal Application Window"
 msgstr "Normaal programmavenster"
 
-#: ../src/ui/theme-viewer.c:384
+#: ../src/ui/theme-viewer.c:404
 msgid "Dialog Box"
 msgstr "Dialoogvenster"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:408
 msgid "Modal Dialog Box"
 msgstr "Blokkerend dialoogvenster"
 
-#: ../src/ui/theme-viewer.c:392
+#: ../src/ui/theme-viewer.c:412
 msgid "Utility Palette"
 msgstr "Gereedschapskist"
 
-#: ../src/ui/theme-viewer.c:396
+#: ../src/ui/theme-viewer.c:416
 msgid "Torn-off Menu"
 msgstr "Losgescheurd menu"
 
-#: ../src/ui/theme-viewer.c:400
+#: ../src/ui/theme-viewer.c:420
 msgid "Border"
 msgstr "Rand"
 
-#: ../src/ui/theme-viewer.c:728
+#: ../src/ui/theme-viewer.c:748
 #, c-format
 msgid "Button layout test %d"
 msgstr "Knoppenopmaaktest %d"
 
-#: ../src/ui/theme-viewer.c:757
+#: ../src/ui/theme-viewer.c:777
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g milliseconden om een vensterraamwerk te tekenen"
 
-#: ../src/ui/theme-viewer.c:800
+#: ../src/ui/theme-viewer.c:821
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Gebruik: marco-theme-viewer [THEMANAAM]\n"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:828
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Fout bij laden van thema: %s\n"
 
-#: ../src/ui/theme-viewer.c:813
+#: ../src/ui/theme-viewer.c:834
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Thema ‘%s’ in %g seconden geladen\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:877
 msgid "Normal Title Font"
 msgstr "Lettertype voor normale titel"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:883
 msgid "Small Title Font"
 msgstr "Lettertype voor kleine titel"
 
-#: ../src/ui/theme-viewer.c:866
+#: ../src/ui/theme-viewer.c:889
 msgid "Large Title Font"
 msgstr "Lettertype voor grote titel"
 
-#: ../src/ui/theme-viewer.c:871
+#: ../src/ui/theme-viewer.c:894
 msgid "Button Layouts"
 msgstr "Knoppenopmaak"
 
-#: ../src/ui/theme-viewer.c:876
+#: ../src/ui/theme-viewer.c:899
 msgid "Benchmark"
 msgstr "Benchmark"
 
-#: ../src/ui/theme-viewer.c:923
+#: ../src/ui/theme-viewer.c:946
 msgid "Window Title Goes Here"
 msgstr "Hier komt de titel"
 
-#: ../src/ui/theme-viewer.c:1027
+#: ../src/ui/theme-viewer.c:1050
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
@@ -1660,39 +2208,39 @@ msgid ""
 "frame)\n"
 msgstr "%d frames getekend in %g seconden voor client (%g milliseconden per frame) en %g seconden op wandklok inclusief X serverbronnen (%g milliseconden per frame)\n"
 
-#: ../src/ui/theme-viewer.c:1246
+#: ../src/ui/theme-viewer.c:1269
 msgid "position expression test returned TRUE but set error"
 msgstr "positie-expressietest gaf WAAR terug, maar gaf wel een fout"
 
-#: ../src/ui/theme-viewer.c:1248
+#: ../src/ui/theme-viewer.c:1271
 msgid "position expression test returned FALSE but didn't set error"
 msgstr "positie-expressietest gaf ONWAAR terug, maar gaf geen fout"
 
-#: ../src/ui/theme-viewer.c:1252
+#: ../src/ui/theme-viewer.c:1275
 msgid "Error was expected but none given"
 msgstr "Fout verwacht maar niet ontvangen"
 
-#: ../src/ui/theme-viewer.c:1254
+#: ../src/ui/theme-viewer.c:1277
 #, c-format
 msgid "Error %d was expected but %d given"
 msgstr "Fout %d verwacht maar %d gekregen"
 
-#: ../src/ui/theme-viewer.c:1260
+#: ../src/ui/theme-viewer.c:1283
 #, c-format
 msgid "Error not expected but one was returned: %s"
 msgstr "Geen fout verwacht maar kreeg wel een fout: %s"
 
-#: ../src/ui/theme-viewer.c:1264
+#: ../src/ui/theme-viewer.c:1287
 #, c-format
 msgid "x value was %d, %d was expected"
 msgstr "x-waarde is %d, %d verwacht"
 
-#: ../src/ui/theme-viewer.c:1267
+#: ../src/ui/theme-viewer.c:1290
 #, c-format
 msgid "y value was %d, %d was expected"
 msgstr "y-waarde is %d, %d verwacht"
 
-#: ../src/ui/theme-viewer.c:1332
+#: ../src/ui/theme-viewer.c:1355
 #, c-format
 msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
 msgstr "%d coördinatenexpressies verwerkt in %g seconden (gemiddelde van %g seconden)\n"

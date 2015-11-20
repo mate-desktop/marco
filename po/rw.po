@@ -1,3206 +1,1166 @@
-# translation of marco to Kinyarwanda.
-# Copyright (C) 2005 Free Software Foundation, Inc.
-# This file is distributed under the same license as the marco package.
-# Steve Murphy <murf@e-tools.com>, 2005
-# Steve performed initial rough translation from compendium built from translations provided by the following translators:
-# Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
-# Viateur MUGENZI <muvia1@yahoo.fr>, 2005.
-# Noëlla Mupole <s24211045@tuks.co.za>, 2005.
-# Carole Karema <karemacarole@hotmail.com>, 2005.
-# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005.
-# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005.
-# Donatien NSENGIYUMVA <ndonatienuk@yahoo.co.uk>, 2005..
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 2.12\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-19 12:30+0200\n"
-"PO-Revision-Date: 2005-03-28 19:35-0700\n"
-"Last-Translator: Steve Murphy <murf@e-tools.com>\n"
-"Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2015-11-06 14:50+0300\n"
+"PO-Revision-Date: 2015-11-06 11:58+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"Language-Team: Kinyarwanda (http://www.transifex.com/mate/MATE/language/rw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: rw\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# crashrep/source\all\crashrep.lng:%MSG_CMDLINE_USAGE%.text
-#: ../src/tools/marco-message.c:150
-#, fuzzy, c-format
-msgid "Usage: %s\n"
-msgstr "Ikoresha:"
-
-#: ../src/tools/marco-message.c:176 ../src/util.c:128
-#, fuzzy
-msgid "Marco was compiled without support for verbose mode\n"
-msgstr "Gushigikira kugirango"
-
-#: ../src/delete.c:63 ../src/delete.c:90 ../src/marco-dialog.c:70
-#: ../src/theme-parser.c:467
-#, fuzzy, c-format
-msgid "Could not parse \"%s\" as an integer"
-msgstr "OYA Nka Umubare wuzuye"
-
-#: ../src/delete.c:70 ../src/delete.c:97 ../src/marco-dialog.c:77
-#: ../src/theme-parser.c:476 ../src/theme-parser.c:530
-#, fuzzy, c-format
-msgid "Did not understand trailing characters \"%s\" in string \"%s\""
-msgstr "OYA Inyuguti in Ikurikiranyanyuguti"
-
-#: ../src/delete.c:128
-#, fuzzy, c-format
-msgid "Failed to parse message \"%s\" from dialog process\n"
-msgstr "Kuri Ubutumwa Bivuye Ikiganiro"
-
-#: ../src/delete.c:263
-#, fuzzy, c-format
-msgid "Error reading from dialog display process: %s\n"
-msgstr "Bivuye Ikiganiro Kugaragaza"
-
-#: ../src/delete.c:344
-#, fuzzy, c-format
-msgid ""
-"Error launching marco-dialog to ask about killing an application: %s\n"
-msgstr "Ikiganiro Kuri Ibyerekeye Porogaramu"
-
-#: ../src/delete.c:452
-#, fuzzy, c-format
-msgid "Failed to get hostname: %s\n"
-msgstr "Kuri Kubona Izina ry'inturo:"
-
-#: ../src/display.c:319
-#, fuzzy, c-format
-msgid "Failed to open X Window System display '%s'\n"
-msgstr "Kuri Gufungura Kugaragaza"
-
-#: ../src/errors.c:231
-#, fuzzy, c-format
-msgid ""
-"Lost connection to the display '%s';\n"
-"most likely the X server was shut down or you killed/destroyed\n"
-"the window manager.\n"
-msgstr "Ukwihuza Kuri Kugaragaza Seriveri Hasi Cyangwa Idirishya Muyobozi"
-
-#: ../src/errors.c:238
-#, fuzzy, c-format
-msgid "Fatal IO error %d (%s) on display '%s'.\n"
-msgstr "Ikosa ku Kugaragaza"
-
-# sfx2/sdi\sfxslots.src:SID_CLOSEWIN.text
-#: ../src/frames.c:1125
-msgid "Close Window"
-msgstr "Gufunga Idirishya"
-
-#: ../src/frames.c:1128
-msgid "Window Menu"
+#: ../src/50-marco-desktop-key.xml.in.h:1
+msgid "Desktop"
 msgstr ""
 
-# 3850
-#: ../src/frames.c:1131
-msgid "Minimize Window"
-msgstr "gira idirishya rito"
-
-# 3784
-#: ../src/frames.c:1134
-msgid "Maximize Window"
-msgstr "heza idirishya"
-
-#: ../src/frames.c:1137
-msgid "Unmaximize Window"
+#: ../src/50-marco-desktop-key.xml.in.h:2
+#: ../src/org.mate.marco.gschema.xml.h:94
+msgid "Show the panel's \"Run Application\" dialog box"
 msgstr ""
 
-#: ../src/keybindings.c:994
-#, fuzzy, c-format
-msgid ""
-"Some other program is already using the key %s with modifiers %x as a "
-"binding\n"
-msgstr "Ikindi Porogaramu ni ikoresha Urufunguzo Na: Nka a"
-
-#: ../src/keybindings.c:2620
-#, fuzzy, c-format
-msgid "Error launching marco-dialog to print an error about a command: %s\n"
-msgstr "Ikiganiro Kuri Gucapa Ikosa Ibyerekeye a Komandi:"
-
-#: ../src/keybindings.c:2725
-#, fuzzy, c-format
-msgid "No command %d has been defined.\n"
-msgstr "Komandi:"
-
-#: ../src/keybindings.c:3570
-#, fuzzy
-msgid "No terminal command has been defined.\n"
-msgstr "Komandi:"
-
-#: ../src/main.c:69
-#, fuzzy, c-format
-msgid ""
-"marco %s\n"
-"Copyright (C) 2001-2002 Havoc Pennington, Red Hat, Inc., and others\n"
-"This is free software; see the source for copying conditions.\n"
-"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A "
-"PARTICULAR PURPOSE.\n"
-msgstr ""
-"C Na ni Kigenga Inkomoko kugirango ni OYA ATARIIGIHARWE kugirango Cyangwa A"
-
-#: ../src/main.c:257
-msgid "Disable connection to session manager"
+#: ../src/50-marco-desktop-key.xml.in.h:3
+#: ../src/org.mate.marco.gschema.xml.h:93
+msgid "Show the panel's main menu"
 msgstr ""
 
-#: ../src/main.c:263
-msgid "Replace the running window manager with Marco"
+#: ../src/50-marco-desktop-key.xml.in.h:4
+#: ../src/org.mate.marco.gschema.xml.h:95
+msgid "Take a screenshot"
 msgstr ""
 
-#: ../src/main.c:269
-msgid "Specify session management ID"
+#: ../src/50-marco-desktop-key.xml.in.h:5
+#: ../src/org.mate.marco.gschema.xml.h:96
+msgid "Take a screenshot of a window"
 msgstr ""
 
-#: ../src/main.c:274
-msgid "X Display to use"
+#: ../src/50-marco-desktop-key.xml.in.h:6
+#: ../src/org.mate.marco.gschema.xml.h:97
+msgid "Run a terminal"
 msgstr ""
 
-#: ../src/main.c:280
-msgid "Initialize session from savefile"
+#: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
+msgid "Window Management"
 msgstr ""
 
-#: ../src/main.c:286
-msgid "Print version"
+#: ../src/50-marco-global-key.xml.in.h:2
+#: ../src/org.mate.marco.gschema.xml.h:80
+msgid "Move between windows, using a popup window"
 msgstr ""
 
-#: ../src/main.c:440
-#, fuzzy, c-format
-msgid "Failed to scan themes directory: %s\n"
-msgstr "Kuri Gusikana Insanganyamatsiko bushyinguro"
-
-#: ../src/main.c:456
-#, fuzzy, c-format
-msgid ""
-"Could not find a theme! Be sure %s exists and contains the usual themes."
-msgstr "OYA Gushaka a Na Kirimo Insanganyamatsiko"
-
-#: ../src/main.c:518
-#, fuzzy, c-format
-msgid "Failed to restart: %s\n"
-msgstr "Kuri Ongera utangire"
-
-# vcl/source\src\helptext.src:SV_HELPTEXT_MINIMIZE.text
-#: ../src/menu.c:54
-#, fuzzy
-msgid "Mi_nimize"
-msgstr "Kugabanya ingano"
-
-# sc/source\ui\formdlg\formdlgs.src:RID_SCDLG_FORMULA.RB_REF.quickhelptext
-#: ../src/menu.c:55
-#, fuzzy
-msgid "Ma_ximize"
-msgstr "Kugira kinini"
-
-#: ../src/menu.c:56
-msgid "Unma_ximize"
+#: ../src/50-marco-global-key.xml.in.h:3
+#: ../src/org.mate.marco.gschema.xml.h:77
+msgid "Move between windows of an application, using a popup window"
 msgstr ""
 
-# vcl/source\src\helptext.src:SV_HELPTEXT_ROLLUP.text
-#: ../src/menu.c:57
-#, fuzzy
-msgid "Roll _Up"
-msgstr "Kuzamura"
-
-#: ../src/menu.c:58
-msgid "_Unroll"
+#: ../src/50-marco-global-key.xml.in.h:4
+#: ../src/org.mate.marco.gschema.xml.h:84
+msgid "Move between panels and the desktop, using a popup window"
 msgstr ""
 
-#: ../src/menu.c:59 ../src/menu.c:60
-msgid "On _Top"
+#: ../src/50-marco-global-key.xml.in.h:5
+#: ../src/org.mate.marco.gschema.xml.h:88
+msgid "Move between windows immediately"
 msgstr ""
 
-# sc/source\ui\src\globstr.src:RID_GLOBSTR.STR_UNDO_MOVE.text
-#: ../src/menu.c:61
-#, fuzzy
-msgid "_Move"
-msgstr "Kwimura"
-
-# starmath/source\smres.src:RID_TOOLBOXWINDOW.6.RID_SIZEXY.text
-#: ../src/menu.c:62
-#, fuzzy
-msgid "_Resize"
-msgstr "Kuringaniza"
-
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\macrodlg.src:RID_MACROCHOOSER.RID_PB_CLOSE.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\macrodlg.src:RID_STR_CLOSE.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\moduldlg.src:RID_TP_MODULS.RID_PB_CLOSE.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\moduldlg.src:RID_TP_LIBS.RID_PB_CLOSE.text
-#. separator
-#: ../src/menu.c:64
-#, fuzzy
-msgid "_Close"
-msgstr "Gufunga"
-
-#. separator
-#: ../src/menu.c:66
-#, fuzzy
-msgid "_Always on Visible Workspace"
-msgstr "ku"
-
-#: ../src/menu.c:67
-#, fuzzy
-msgid "_Only on This Workspace"
-msgstr "ku"
-
-#: ../src/menu.c:68
-#, fuzzy
-msgid "Move to Workspace _Left"
-msgstr "Kuri"
-
-#: ../src/menu.c:69
-#, fuzzy
-msgid "Move to Workspace R_ight"
-msgstr "Kuri"
-
-#: ../src/menu.c:70
-#, fuzzy
-msgid "Move to Workspace _Up"
-msgstr "Kuri"
-
-#: ../src/menu.c:71
-#, fuzzy
-msgid "Move to Workspace _Down"
-msgstr "Kuri"
-
-#: ../src/menu.c:162 ../src/prefs.c:2106
-#, fuzzy, c-format
-msgid "Workspace %d"
-msgstr "Umwanya- nkenerwa"
-
-#: ../src/menu.c:171
-msgid "Workspace 1_0"
+#: ../src/50-marco-global-key.xml.in.h:6
+#: ../src/org.mate.marco.gschema.xml.h:86
+msgid "Move between windows of an application immediately"
 msgstr ""
 
-#: ../src/menu.c:173
-#, fuzzy, c-format
-msgid "Workspace %s%d"
-msgstr "Umwanya- nkenerwa"
-
-#: ../src/menu.c:368
-#, fuzzy
-msgid "Move to Another _Workspace"
-msgstr "Kuri"
-
-#. This is the text that should appear next to menu accelerators
-#. * that use the shift key. If the text on this key isn't typically
-#. * translated on keyboards used for your language, don't translate
-#. * this.
-#.
-#: ../src/metaaccellabel.c:105
-msgid "Shift"
-msgstr "Gusunika"
-
-# the control key
-#. This is the text that should appear next to menu accelerators
-#. * that use the control key. If the text on this key isn't typically
-#. * translated on keyboards used for your language, don't translate
-#. * this.
-#.
-#: ../src/metaaccellabel.c:111
-msgid "Ctrl"
-msgstr "Ctrl"
-
-#. This is the text that should appear next to menu accelerators
-#. * that use the alt key. If the text on this key isn't typically
-#. * translated on keyboards used for your language, don't translate
-#. * this.
-#.
-#: ../src/metaaccellabel.c:117
-msgid "Alt"
-msgstr "Alt"
-
-# the command key
-#. This is the text that should appear next to menu accelerators
-#. * that use the meta key. If the text on this key isn't typically
-#. * translated on keyboards used for your language, don't translate
-#. * this.
-#.
-#: ../src/metaaccellabel.c:123
-msgid "Meta"
-msgstr "Meta"
-
-# 6040
-#. This is the text that should appear next to menu accelerators
-#. * that use the super key. If the text on this key isn't typically
-#. * translated on keyboards used for your language, don't translate
-#. * this.
-#.
-#: ../src/metaaccellabel.c:129
-msgid "Super"
-msgstr "hejuru"
-
-#. This is the text that should appear next to menu accelerators
-#. * that use the hyper key. If the text on this key isn't typically
-#. * translated on keyboards used for your language, don't translate
-#. * this.
-#.
-#: ../src/metaaccellabel.c:135
-msgid "Hyper"
+#: ../src/50-marco-global-key.xml.in.h:7
+#: ../src/org.mate.marco.gschema.xml.h:90
+msgid "Move between panels and the desktop immediately"
 msgstr ""
 
-#. This is the text that should appear next to menu accelerators
-#. * that use the mod2 key. If the text on this key isn't typically
-#. * translated on keyboards used for your language, don't translate
-#. * this.
-#.
-#: ../src/metaaccellabel.c:141
-msgid "Mod2"
+#: ../src/50-marco-global-key.xml.in.h:8
+#: ../src/org.mate.marco.gschema.xml.h:92
+msgid "Hide all normal windows and set focus to the desktop"
 msgstr ""
 
-#. This is the text that should appear next to menu accelerators
-#. * that use the mod3 key. If the text on this key isn't typically
-#. * translated on keyboards used for your language, don't translate
-#. * this.
-#.
-#: ../src/metaaccellabel.c:147
-msgid "Mod3"
+#: ../src/50-marco-global-key.xml.in.h:9
+#: ../src/org.mate.marco.gschema.xml.h:59
+msgid "Switch to workspace 1"
 msgstr ""
 
-#. This is the text that should appear next to menu accelerators
-#. * that use the mod4 key. If the text on this key isn't typically
-#. * translated on keyboards used for your language, don't translate
-#. * this.
-#.
-#: ../src/metaaccellabel.c:153
-msgid "Mod4"
+#: ../src/50-marco-global-key.xml.in.h:10
+#: ../src/org.mate.marco.gschema.xml.h:61
+msgid "Switch to workspace 2"
 msgstr ""
 
-#. This is the text that should appear next to menu accelerators
-#. * that use the mod5 key. If the text on this key isn't typically
-#. * translated on keyboards used for your language, don't translate
-#. * this.
-#.
-#: ../src/metaaccellabel.c:159
-msgid "Mod5"
+#: ../src/50-marco-global-key.xml.in.h:11
+#: ../src/org.mate.marco.gschema.xml.h:62
+msgid "Switch to workspace 3"
 msgstr ""
 
-#: ../src/marco-dialog.c:110
-#, fuzzy, c-format
-msgid "The window \"%s\" is not responding."
-msgstr "Idirishya ni OYA"
-
-#: ../src/marco-dialog.c:118
-#, fuzzy
-msgid ""
-"Forcing this application to quit will cause you to lose any unsaved changes."
-msgstr "iyi Porogaramu Kuri Kuvamo Kuri Amahinduka"
-
-#: ../src/marco-dialog.c:129
-msgid "_Force Quit"
+#: ../src/50-marco-global-key.xml.in.h:12
+#: ../src/org.mate.marco.gschema.xml.h:63
+msgid "Switch to workspace 4"
 msgstr ""
 
-#: ../src/marco-dialog.c:226
-msgid "Title"
-msgstr "Umutwe"
-
-#: ../src/marco-dialog.c:238
-msgid "Class"
-msgstr "ishuri,urwego"
-
-#: ../src/marco-dialog.c:264
-#, fuzzy
-msgid ""
-"These windows do not support \"save current setup\" and will have to be "
-"restarted manually next time you log in."
-msgstr ""
-"OYA Gushigikira Kubika KIGEZWEHO Imikorere Na Kuri Komeza>> Igihe LOG in"
-
-#: ../src/marco-dialog.c:330
-#, fuzzy, c-format
-msgid ""
-"There was an error running \"%s\":\n"
-"%s."
-msgstr "Ikosa"
-
-#: ../src/marco.desktop.in.h:1
-msgid "Marco"
+#: ../src/50-marco-global-key.xml.in.h:13
+#: ../src/org.mate.marco.gschema.xml.h:64
+msgid "Switch to workspace 5"
 msgstr ""
 
-#: ../src/marco.schemas.in.h:1
-#, fuzzy
-msgid "(Not implemented) Navigation works in terms of applications not windows"
-msgstr "(in Bya Porogaramu OYA"
-
-#: ../src/marco.schemas.in.h:2
-#, fuzzy
-msgid ""
-"A font description string describing a font for window titlebars. The size "
-"from the description will only be used if the titlebar_font_size option is "
-"set to 0, however. Also, this option is disabled if the "
-"titlebar_uses_desktop_font option is set to true. By default, titlebar_font "
-"is unset, causing Marco to fall back to the desktop font even if "
-"titlebar_uses_desktop_font is false."
+#: ../src/50-marco-global-key.xml.in.h:14
+#: ../src/org.mate.marco.gschema.xml.h:65
+msgid "Switch to workspace 6"
 msgstr ""
-"A Intego- nyuguti Isobanuramiterere Ikurikiranyanyuguti a Intego- nyuguti "
-"kugirango Idirishya Ingano Bivuye Isobanuramiterere NIBA Ihitamo ni "
-"Gushyiraho Kuri 0 iyi Ihitamo ni Yahagaritswe NIBA Ihitamo ni Gushyiraho "
-"Kuri NIBYO Mburabuzi ni Kuri Inyuma Kuri Ibiro Intego- nyuguti ATARIIGIHARWE "
-"NIBA ni SIBYO"
 
-#: ../src/marco.schemas.in.h:3
-#, fuzzy
-msgid "Action on title bar double-click"
-msgstr "ku Umutwe MAHARAKUBIRI Kanda"
-
-#: ../src/marco.schemas.in.h:4
-#, fuzzy
-msgid "Activate window menu"
-msgstr "Idirishya Ibikubiyemo"
-
-#: ../src/marco.schemas.in.h:5
-#, fuzzy
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Bya Utubuto ku"
-
-#: ../src/marco.schemas.in.h:6
-#, fuzzy
-msgid ""
-"Arrangement of buttons on the titlebar. The value should be a string, such "
-"as \"menu:minimize,maximize,close\"; the colon separates the left corner of "
-"the window from the right corner, and the button names are comma-separated. "
-"Duplicate buttons are not allowed. Unknown button names are silently ignored "
-"so that buttons can be added in future marco versions without breaking "
-"older versions."
+#: ../src/50-marco-global-key.xml.in.h:15
+#: ../src/org.mate.marco.gschema.xml.h:66
+msgid "Switch to workspace 7"
 msgstr ""
-"Bya Utubuto ku Agaciro a Ikurikiranyanyuguti Nka Ibikubiyemo Kugabanya "
-"ingano Kugira kinini Gufunga Ibumoso: Inguni Bya Idirishya Bivuye Iburyo: "
-"Inguni Na Akabuto Amazina Akitso Utubuto OYA Akabuto Amazina Utubuto "
-"Kyongewe in Uburyo Uburyo"
 
-#: ../src/marco.schemas.in.h:7
-#, fuzzy
-msgid "Automatically raises the focused window"
-msgstr "Idirishya"
+#: ../src/50-marco-global-key.xml.in.h:16
+#: ../src/org.mate.marco.gschema.xml.h:67
+msgid "Switch to workspace 8"
+msgstr ""
 
-#: ../src/marco.schemas.in.h:8
-#, fuzzy
+#: ../src/50-marco-global-key.xml.in.h:17
+#: ../src/org.mate.marco.gschema.xml.h:68
+msgid "Switch to workspace 9"
+msgstr ""
+
+#: ../src/50-marco-global-key.xml.in.h:18
+#: ../src/org.mate.marco.gschema.xml.h:69
+msgid "Switch to workspace 10"
+msgstr ""
+
+#: ../src/50-marco-global-key.xml.in.h:19
+#: ../src/org.mate.marco.gschema.xml.h:70
+msgid "Switch to workspace 11"
+msgstr ""
+
+#: ../src/50-marco-global-key.xml.in.h:20
+#: ../src/org.mate.marco.gschema.xml.h:71
+msgid "Switch to workspace 12"
+msgstr ""
+
+#: ../src/50-marco-global-key.xml.in.h:21
+#: ../src/org.mate.marco.gschema.xml.h:72
+msgid "Switch to workspace on the left of the current workspace"
+msgstr ""
+
+#: ../src/50-marco-global-key.xml.in.h:22
+#: ../src/org.mate.marco.gschema.xml.h:73
+msgid "Switch to workspace on the right of the current workspace"
+msgstr ""
+
+#: ../src/50-marco-global-key.xml.in.h:23
+#: ../src/org.mate.marco.gschema.xml.h:74
+msgid "Switch to workspace above the current workspace"
+msgstr ""
+
+#: ../src/50-marco-global-key.xml.in.h:24
+#: ../src/org.mate.marco.gschema.xml.h:75
+msgid "Switch to workspace below the current workspace"
+msgstr ""
+
+#: ../src/50-marco-global-key.xml.in.h:25
+#: ../src/org.mate.marco.gschema.xml.h:76
+msgid "Switch to previously selected workspace"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:2
+#: ../src/org.mate.marco.gschema.xml.h:104
+msgid "Activate the window menu"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:3
+#: ../src/org.mate.marco.gschema.xml.h:105
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:4
+#: ../src/org.mate.marco.gschema.xml.h:106
+msgid "Toggle maximization state"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:5
+#: ../src/org.mate.marco.gschema.xml.h:108
+msgid "Maximize window"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:6
+#: ../src/org.mate.marco.gschema.xml.h:109
+msgid "Restore window"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:7
+#: ../src/org.mate.marco.gschema.xml.h:110
+msgid "Toggle shaded state"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:8
+#: ../src/org.mate.marco.gschema.xml.h:112
+msgid "Close window"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:9
+#: ../src/org.mate.marco.gschema.xml.h:111
+msgid "Minimize window"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:10
+#: ../src/org.mate.marco.gschema.xml.h:113
+msgid "Move window"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:11
+#: ../src/org.mate.marco.gschema.xml.h:114
+msgid "Resize window"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:12
+#: ../src/org.mate.marco.gschema.xml.h:115
+msgid "Toggle whether window is on all workspaces or just one"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:13
+#: ../src/org.mate.marco.gschema.xml.h:132
+msgid "Raise window if it's covered by another window, otherwise lower it"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:14
+#: ../src/org.mate.marco.gschema.xml.h:133
+msgid "Raise window above other windows"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:15
+#: ../src/org.mate.marco.gschema.xml.h:134
+msgid "Lower window below other windows"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:16
+#: ../src/org.mate.marco.gschema.xml.h:135
+msgid "Maximize window vertically"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:17
+#: ../src/org.mate.marco.gschema.xml.h:136
+msgid "Maximize window horizontally"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:18
+#: ../src/org.mate.marco.gschema.xml.h:137
+msgid "Tile window to east (right) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:19
+#: ../src/org.mate.marco.gschema.xml.h:138
+msgid "Tile window to west (left) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:20
+#: ../src/org.mate.marco.gschema.xml.h:139
+msgid "Move window to north-west (top left) corner"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:21
+#: ../src/org.mate.marco.gschema.xml.h:140
+msgid "Move window to north-east (top right) corner"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:22
+#: ../src/org.mate.marco.gschema.xml.h:141
+msgid "Move window to south-west (bottom left) corner"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:23
+#: ../src/org.mate.marco.gschema.xml.h:142
+msgid "Move window to south-east (bottom right) corner"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:24
+#: ../src/org.mate.marco.gschema.xml.h:143
+msgid "Move window to north (top) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:25
+#: ../src/org.mate.marco.gschema.xml.h:144
+msgid "Move window to south (bottom) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:26
+#: ../src/org.mate.marco.gschema.xml.h:145
+msgid "Move window to east (right) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:27
+#: ../src/org.mate.marco.gschema.xml.h:146
+msgid "Move window to west (left) side of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:28
+#: ../src/org.mate.marco.gschema.xml.h:147
+msgid "Move window to center of screen"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:29
+#: ../src/org.mate.marco.gschema.xml.h:116
+msgid "Move window to workspace 1"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:30
+#: ../src/org.mate.marco.gschema.xml.h:117
+msgid "Move window to workspace 2"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:31
+#: ../src/org.mate.marco.gschema.xml.h:118
+msgid "Move window to workspace 3"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:32
+#: ../src/org.mate.marco.gschema.xml.h:119
+msgid "Move window to workspace 4"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:33
+#: ../src/org.mate.marco.gschema.xml.h:120
+msgid "Move window to workspace 5"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:34
+#: ../src/org.mate.marco.gschema.xml.h:121
+msgid "Move window to workspace 6"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:35
+#: ../src/org.mate.marco.gschema.xml.h:122
+msgid "Move window to workspace 7"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:36
+#: ../src/org.mate.marco.gschema.xml.h:123
+msgid "Move window to workspace 8"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:37
+#: ../src/org.mate.marco.gschema.xml.h:124
+msgid "Move window to workspace 9"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:38
+#: ../src/org.mate.marco.gschema.xml.h:125
+msgid "Move window to workspace 10"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:39
+#: ../src/org.mate.marco.gschema.xml.h:126
+msgid "Move window to workspace 11"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:40
+#: ../src/org.mate.marco.gschema.xml.h:127
+msgid "Move window to workspace 12"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:41
+#: ../src/org.mate.marco.gschema.xml.h:128
+msgid "Move window one workspace to the left"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:42
+#: ../src/org.mate.marco.gschema.xml.h:129
+msgid "Move window one workspace to the right"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:43
+#: ../src/org.mate.marco.gschema.xml.h:130
+msgid "Move window one workspace up"
+msgstr ""
+
+#: ../src/50-marco-window-key.xml.in.h:44
+#: ../src/org.mate.marco.gschema.xml.h:131
+msgid "Move window one workspace down"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:1
+msgid "Modifier to use for modified window click actions"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
 "Clicking a window while holding down this modifier key will move the window "
 "(left click), resize the window (middle click), or show the window menu "
-"(right click). Modifier is expressed as \"&lt;Alt&gt;\" or \"&lt;Super&gt;\" "
-"for example."
+"(right click). The middle and right click operations may be swapped using "
+"the \"resize_with_right_button\" key. Modifier is expressed as "
+"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
 msgstr ""
-"a Idirishya Hasi iyi Urufunguzo Kwimura Idirishya Ibumoso: Kanda "
-"Ihindurangero Idirishya Hagati Kanda Cyangwa Garagaza Idirishya Ibikubiyemo "
-"Iburyo: Kanda ni Nka Cyangwa kugirango Urugero"
 
-# sfx2/sdi\sfxslots.src:SID_CLOSEWIN.text
-#: ../src/marco.schemas.in.h:9
-#, fuzzy
-msgid "Close window"
-msgstr "Gufunga Idirishya"
+#: ../src/org.mate.marco.gschema.xml.h:3
+msgid "Whether to resize with the right button"
+msgstr ""
 
-#: ../src/marco.schemas.in.h:10
-#, fuzzy
-msgid "Commands to run in response to keybindings"
-msgstr "Kuri Gukoresha in Kuri"
+#: ../src/org.mate.marco.gschema.xml.h:4
+msgid ""
+"Set this to true to resize with the right button and show a menu with the "
+"middle button while holding down the key given in \"mouse_button_modifier\";"
+" set it to false to make it work the opposite way around."
+msgstr ""
 
-#: ../src/marco.schemas.in.h:11
+#: ../src/org.mate.marco.gschema.xml.h:5
+msgid "Arrangement of buttons on the titlebar"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:6
+msgid ""
+"Arrangement of buttons on the titlebar. The value should be a string, such "
+"as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
+"corner of the window from the right corner, and the button names are comma-"
+"separated. Duplicate buttons are not allowed. Unknown button names are "
+"silently ignored so that buttons can be added in future marco versions "
+"without breaking older versions. A special spacer tag can be used to insert "
+"some space between two adjacent buttons."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:7
+msgid "Window focus mode"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:8
+msgid ""
+"The window focus mode indicates how windows are activated. It has three "
+"possible values; \"click\" means windows must be clicked in order to focus "
+"them, \"sloppy\" means windows are focused when the mouse enters the window,"
+" and \"mouse\" means windows are focused when the mouse enters the window "
+"and unfocused when the mouse leaves the window."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:9
+msgid "Control how new windows get focus"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:10
+msgid ""
+"This option provides additional control over how newly created windows get "
+"focus. It has two possible values; \"smart\" applies the user's normal focus"
+" mode, and \"strict\" results in windows started from a terminal not being "
+"given focus."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:11
+msgid "Whether raising should be a side-effect of other user interactions"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:12
+msgid ""
+"Setting this option to false can lead to buggy behavior, so users are "
+"strongly discouraged from changing it from the default of true. Many actions"
+" (e.g. clicking in the client area, moving or resizing the window) normally "
+"raise the window as a side-effect. Setting this option to false, which is "
+"strongly discouraged, will decouple raising from other user actions, and "
+"ignore raise requests generated by applications. See "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Even when this option "
+"is false, windows can still be raised by an alt-left-click anywhere on the "
+"window, a normal click on the window decorations, or by special messages "
+"from pagers, such as activation requests from tasklist applets. This option "
+"is currently disabled in click-to-focus mode. Note that the list of ways to "
+"raise windows when raise_on_click is false does not include programmatic "
+"requests from applications to raise windows; such requests will be ignored "
+"regardless of the reason for the request. If you are an application "
+"developer and have a user complaining that your application does not work "
+"with this setting disabled, tell them it is _their_ fault for breaking their"
+" window manager and that they need to change this option back to true or "
+"live with the \"bug\" they requested."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:13
+msgid "Action on title bar double-click"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:14
+msgid ""
+"This option determines the effects of double-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:15
+msgid "Action on title bar middle-click"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:16
+msgid ""
+"This option determines the effects of middle-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:17
+msgid "Action on title bar right-click"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:18
+msgid ""
+"This option determines the effects of right-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:19
+msgid "Automatically raises the focused window"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:20
+msgid ""
+"If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
+"the focused window will be automatically raised after a delay specified by "
+"the auto_raise_delay key. This is not related to clicking on a window to "
+"raise it, nor to entering a window during drag-and-drop."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:21
+msgid "Delay in milliseconds for the auto raise option"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:22
+msgid ""
+"The time delay before raising a window if auto_raise is set to true. The "
+"delay is given in thousandths of a second."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Current theme"
 msgstr ""
 
-#: ../src/marco.schemas.in.h:12
-#, fuzzy
-msgid "Delay in milliseconds for the auto raise option"
-msgstr "in kugirango Ikiyega Ihitamo"
-
-#: ../src/marco.schemas.in.h:13
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
-"Determines whether applications or the system can generate audible 'beeps'; "
-"may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr "Porogaramu Cyangwa Sisitemu Gicurasi in Na: Kigaragara Kuri Kwemerera"
-
-#: ../src/marco.schemas.in.h:14
-#, fuzzy
-msgid "Disable misfeatures that are required by old or broken applications"
-msgstr "Bya ngombwa ku ki/ bishaje Cyangwa Porogaramu"
-
-#: ../src/marco.schemas.in.h:15
-msgid "Enable Visual Bell"
+"The theme determines the appearance of window borders, titlebar, and so "
+"forth."
 msgstr ""
 
-#: ../src/marco.schemas.in.h:16
-#, fuzzy
-msgid "Hide all windows and focus desktop"
-msgstr "Byose Na Ibiro"
-
-#: ../src/marco.schemas.in.h:17
-#, fuzzy
-msgid ""
-"If true, and the focus mode is either \"sloppy\" or \"mouse\" then the "
-"focused window will be automatically raised after a delay (the delay is "
-"specified by the auto_raise_delay key)."
+#: ../src/org.mate.marco.gschema.xml.h:25
+msgid "Use standard system font in window titles"
 msgstr ""
-"NIBYO Na Ubwoko ni Cyangwa Imbeba Hanyuma Idirishya ku buryo bwikora Nyuma a "
-"Gutinda Gutinda ni ku Urufunguzo"
 
-#: ../src/marco.schemas.in.h:18
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
-"NIBYO Kwirengagiza Ihitamo Na Gukoresha Bisanzwe Porogaramu Intego- nyuguti "
-"kugirango Idirishya Imitwe"
 
-#: ../src/marco.schemas.in.h:19
-#, fuzzy
-msgid ""
-"If true, marco will give the user less feedback and less sense of "
-"\"direct manipulation\", by using wireframes, avoiding animations, or other "
-"means. This is a significant reduction in usability for many users, but may "
-"allow legacy applications and terminal servers to function when they would "
-"otherwise be impractical. However, the wireframe feature is disabled when "
-"accessibility is on to avoid weird desktop breakages."
+#: ../src/org.mate.marco.gschema.xml.h:27
+msgid "Window title font"
 msgstr ""
-"NIBYO Ukoresha: Birutwa Na Birutwa Bya ku ikoresha Amayega Cyangwa Ikindi ni "
-"a in kugirango Gicurasi Kwemerera Porogaramu Na Kuri Umumaro Ryari: ni "
-"Yahagaritswe Ryari: Ubushobozi bwo gukoreshwa ni ku Kuri Ibiro"
 
-#: ../src/marco.schemas.in.h:20
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
-"If true, then Marco works in terms of applications rather than windows. "
-"The concept is a bit abstract, but in general an application-based setup is "
-"more like the Mac and less like Windows. When you focus a window in "
-"application-based mode, all the windows in the application will be raised. "
-"Also, in application-based mode, focus clicks are not passed through to "
-"windows in other applications. The existence of this setting is somewhat "
-"questionable. But it's better than having settings for all the specific "
-"details of application-based vs. window-based, e.g. whether to pass through "
-"clicks. Also, application-based mode is largely unimplemented at the moment."
-msgstr "g."
+"A font description string describing a font for window titlebars. The size "
+"from the description will only be used if the titlebar_font_size option is "
+"set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
+"option is set to true."
+msgstr ""
 
-#: ../src/marco.schemas.in.h:21
-#, fuzzy
-msgid "If true, trade off usability for less resource usage"
-msgstr "NIBYO Bidakora kugirango Birutwa Ikoresha:"
-
-#: ../src/marco.schemas.in.h:22
-#, fuzzy
-msgid "Lower window below other windows"
-msgstr "Idirishya munsi Ikindi"
-
-# 3784
-#: ../src/marco.schemas.in.h:23
-#, fuzzy
-msgid "Maximize window"
-msgstr "heza idirishya"
-
-#: ../src/marco.schemas.in.h:24
-#, fuzzy
-msgid "Maximize window horizontally"
-msgstr "Idirishya Mu buryo Butambitse"
-
-#: ../src/marco.schemas.in.h:25
-#, fuzzy
-msgid "Maximize window vertically"
-msgstr "Idirishya Mu buryo buhagaze"
-
-# 3850
-#: ../src/marco.schemas.in.h:26
-#, fuzzy
-msgid "Minimize window"
-msgstr "gira idirishya rito"
-
-#: ../src/marco.schemas.in.h:27
-#, fuzzy
-msgid "Modifier to use for modified window click actions"
-msgstr "Kuri Gukoresha kugirango Byahinduwe Idirishya Kanda"
-
-#: ../src/marco.schemas.in.h:28
-#, fuzzy
-msgid "Move backward between panels and the desktop immediately"
-msgstr "subira inyuma hagati Na Ibiro Ako kanya"
-
-#: ../src/marco.schemas.in.h:29
-#, fuzzy
-msgid "Move backwards between panels and the desktop with popup"
-msgstr "Inyuma hagati Na Ibiro Na:"
-
-#: ../src/marco.schemas.in.h:30
-#, fuzzy
-msgid "Move backwards between windows immediately"
-msgstr "Inyuma hagati Ako kanya"
-
-#: ../src/marco.schemas.in.h:31
-#, fuzzy
-msgid "Move between panels and the desktop immediately"
-msgstr "hagati Na Ibiro Ako kanya"
-
-#: ../src/marco.schemas.in.h:32
-#, fuzzy
-msgid "Move between panels and the desktop with popup"
-msgstr "hagati Na Ibiro Na:"
-
-#: ../src/marco.schemas.in.h:33
-#, fuzzy
-msgid "Move between windows immediately"
-msgstr "hagati Ako kanya"
-
-#: ../src/marco.schemas.in.h:34
-#, fuzzy
-msgid "Move between windows with popup"
-msgstr "hagati Na:"
-
-#: ../src/marco.schemas.in.h:35
-#, fuzzy
-msgid "Move focus backwards between windows using popup display"
-msgstr "Inyuma hagati ikoresha Kugaragaza"
-
-#: ../src/marco.schemas.in.h:36
-#, fuzzy
-msgid "Move window"
-msgstr "Idirishya"
-
-#: ../src/marco.schemas.in.h:37
-#, fuzzy
-msgid "Move window one workspace down"
-msgstr "Idirishya Umwanya- nkenerwa Hasi"
-
-#: ../src/marco.schemas.in.h:38
-#, fuzzy
-msgid "Move window one workspace to the left"
-msgstr "Idirishya Umwanya- nkenerwa Kuri Ibumoso:"
-
-#: ../src/marco.schemas.in.h:39
-#, fuzzy
-msgid "Move window one workspace to the right"
-msgstr "Idirishya Umwanya- nkenerwa Kuri Iburyo:"
-
-#: ../src/marco.schemas.in.h:40
-#, fuzzy
-msgid "Move window one workspace up"
-msgstr "Idirishya Umwanya- nkenerwa Hejuru"
-
-#: ../src/marco.schemas.in.h:41
-#, fuzzy
-msgid "Move window to workspace 1"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 1."
-
-#: ../src/marco.schemas.in.h:42
-#, fuzzy
-msgid "Move window to workspace 10"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 10"
-
-#: ../src/marco.schemas.in.h:43
-#, fuzzy
-msgid "Move window to workspace 11"
-msgstr "Idirishya Kuri Umwanya- nkenerwa"
-
-#: ../src/marco.schemas.in.h:44
-#, fuzzy
-msgid "Move window to workspace 12"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 12"
-
-#: ../src/marco.schemas.in.h:45
-#, fuzzy
-msgid "Move window to workspace 2"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 2."
-
-#: ../src/marco.schemas.in.h:46
-#, fuzzy
-msgid "Move window to workspace 3"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 3."
-
-#: ../src/marco.schemas.in.h:47
-#, fuzzy
-msgid "Move window to workspace 4"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 4."
-
-#: ../src/marco.schemas.in.h:48
-#, fuzzy
-msgid "Move window to workspace 5"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 5"
-
-#: ../src/marco.schemas.in.h:49
-#, fuzzy
-msgid "Move window to workspace 6"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 6"
-
-#: ../src/marco.schemas.in.h:50
-#, fuzzy
-msgid "Move window to workspace 7"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 7"
-
-#: ../src/marco.schemas.in.h:51
-#, fuzzy
-msgid "Move window to workspace 8"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 8"
-
-#: ../src/marco.schemas.in.h:52
-#, fuzzy
-msgid "Move window to workspace 9"
-msgstr "Idirishya Kuri Umwanya- nkenerwa 9"
-
-#: ../src/marco.schemas.in.h:53
-#, fuzzy
-msgid "Name of workspace"
-msgstr "Bya Umwanya- nkenerwa"
-
-#: ../src/marco.schemas.in.h:54
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Number of workspaces"
-msgstr "Bya"
-
-#: ../src/marco.schemas.in.h:55
-#, fuzzy
-msgid ""
-"Number of workspaces. Must be more than zero, and has a fixed maximum (to "
-"prevent accidentally destroying your desktop by asking for 34 million "
-"workspaces)."
-msgstr "Bya Birenzeho Zeru Na a BIHAMYE Kinini Kuri Ibiro ku kugirango"
-
-#: ../src/marco.schemas.in.h:56
-#, fuzzy
-msgid "Raise obscured window, otherwise lower"
-msgstr "Idirishya Ntoya"
-
-#: ../src/marco.schemas.in.h:57
-#, fuzzy
-msgid "Raise window above other windows"
-msgstr "Idirishya hejuru Ikindi"
-
-#: ../src/marco.schemas.in.h:58
-#, fuzzy
-msgid "Resize window"
-msgstr "Idirishya"
-
-#: ../src/marco.schemas.in.h:59
-#, fuzzy
-msgid "Run a defined command"
-msgstr "a Komandi:"
-
-#: ../src/marco.schemas.in.h:60
-#, fuzzy
-msgid "Run a terminal"
-msgstr "a"
-
-#: ../src/marco.schemas.in.h:61
-#, fuzzy
-msgid "Show the panel menu"
-msgstr "Ibikubiyemo"
-
-#: ../src/marco.schemas.in.h:62
-#, fuzzy
-msgid "Show the panel run application dialog"
-msgstr "Gukoresha Porogaramu Ikiganiro"
-
-#: ../src/marco.schemas.in.h:63
-#, fuzzy
-msgid ""
-"Some applications break specifications in ways that result in window manager "
-"misfeatures. For example, ideally Marco would place all dialogs in a "
-"consistent position with respect to their parent window. This requires "
-"ignoring application-specified positions for dialogs. But some versions of "
-"Java/Swing mark their popup menus as dialogs, so Marco has to disable "
-"dialog positioning to allow menus to work in broken Java applications. There "
-"are several other examples like this. This option puts Marco in full-on "
-"Correct mode, which perhaps gives a moderately nicer UI if you don't need to "
-"run any broken apps. Sadly, workarounds must be enabled by default; the real "
-"world is an ugly place. Some of the workarounds are workarounds for "
-"limitations in the specifications themselves, so sometimes a bug in no-"
-"workarounds mode won't be fixable without amending a spec."
 msgstr ""
-"Porogaramu itandukanya in Igisubizo in Idirishya Muyobozi Urugero Byose "
-"Ibiganiro in a Ibirindiro Na: Kuri Idirishya Porogaramu imyanya kugirango "
-"Ibiganiro Uburyo Bya Ikimenyetso Ibikubiyemo Nka Ibiganiro Kuri Ikiganiro "
-"Kuri Kwemerera Ibikubiyemo Kuri Akazi in Porogaramu Ikindi nka iyi Ihitamo "
-"in ku Ubwoko a NIBA Kuri Gukoresha Bikora ku Mburabuzi ni Bya kugirango in a "
-"in Oya Ubwoko a"
 
-#: ../src/marco.schemas.in.h:64
-#, fuzzy
-msgid "Switch to workspace 1"
-msgstr "Kuri Umwanya- nkenerwa 1."
+#: ../src/org.mate.marco.gschema.xml.h:30
+msgid ""
+"Number of workspaces. Must be more than zero, and has a fixed maximum to "
+"prevent making the desktop unusable by accidentally asking for too many "
+"workspaces."
+msgstr ""
 
-#: ../src/marco.schemas.in.h:65
-#, fuzzy
-msgid "Switch to workspace 10"
-msgstr "Kuri Umwanya- nkenerwa 10"
+#: ../src/org.mate.marco.gschema.xml.h:31
+msgid "Workspace wrap style"
+msgstr ""
 
-#: ../src/marco.schemas.in.h:66
-#, fuzzy
-msgid "Switch to workspace 11"
-msgstr "Kuri Umwanya- nkenerwa"
+#: ../src/org.mate.marco.gschema.xml.h:32
+msgid ""
+"The wrap style is used to determine how to switch from one workspace to "
+"another at the border of the workspace switcher. When set to \"no wrap\", "
+"nothing will happen if you try to switch to a workspace past the border of "
+"the workspace switcher. If set to \"classic\", the old marco behavior is "
+"used: the end of one row leads to the beginning of the next and the end of a"
+" column leads to the beginning of the next. If set to \"toroidal\", "
+"workspaces are connected like a doughnut: the end of each row leads to its "
+"own beginning and the end of each column leads to its own beginning."
+msgstr ""
 
-#: ../src/marco.schemas.in.h:67
-#, fuzzy
-msgid "Switch to workspace 12"
-msgstr "Kuri Umwanya- nkenerwa 12"
+#: ../src/org.mate.marco.gschema.xml.h:33
+msgid "Enable Visual Bell"
+msgstr ""
 
-#: ../src/marco.schemas.in.h:68
-#, fuzzy
-msgid "Switch to workspace 2"
-msgstr "Kuri Umwanya- nkenerwa 2."
+#: ../src/org.mate.marco.gschema.xml.h:34
+msgid ""
+"Turns on a visual indication when an application or the system issues a "
+"'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
+"environments."
+msgstr ""
 
-#: ../src/marco.schemas.in.h:69
-#, fuzzy
-msgid "Switch to workspace 3"
-msgstr "Kuri Umwanya- nkenerwa 3."
-
-#: ../src/marco.schemas.in.h:70
-#, fuzzy
-msgid "Switch to workspace 4"
-msgstr "Kuri Umwanya- nkenerwa 4."
-
-#: ../src/marco.schemas.in.h:71
-#, fuzzy
-msgid "Switch to workspace 5"
-msgstr "Kuri Umwanya- nkenerwa 5"
-
-#: ../src/marco.schemas.in.h:72
-#, fuzzy
-msgid "Switch to workspace 6"
-msgstr "Kuri Umwanya- nkenerwa 6"
-
-#: ../src/marco.schemas.in.h:73
-#, fuzzy
-msgid "Switch to workspace 7"
-msgstr "Kuri Umwanya- nkenerwa 7"
-
-#: ../src/marco.schemas.in.h:74
-#, fuzzy
-msgid "Switch to workspace 8"
-msgstr "Kuri Umwanya- nkenerwa 8"
-
-#: ../src/marco.schemas.in.h:75
-#, fuzzy
-msgid "Switch to workspace 9"
-msgstr "Kuri Umwanya- nkenerwa 9"
-
-#: ../src/marco.schemas.in.h:76
-#, fuzzy
-msgid "Switch to workspace above this one"
-msgstr "Kuri Umwanya- nkenerwa hejuru iyi"
-
-#: ../src/marco.schemas.in.h:77
-#, fuzzy
-msgid "Switch to workspace below this one"
-msgstr "Kuri Umwanya- nkenerwa munsi iyi"
-
-#: ../src/marco.schemas.in.h:78
-#, fuzzy
-msgid "Switch to workspace on the left"
-msgstr "Kuri Umwanya- nkenerwa ku Ibumoso:"
-
-#: ../src/marco.schemas.in.h:79
-#, fuzzy
-msgid "Switch to workspace on the right"
-msgstr "Kuri Umwanya- nkenerwa ku Iburyo:"
-
-#: ../src/marco.schemas.in.h:80
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:35
 msgid "System Bell is Audible"
-msgstr "ni"
-
-#: ../src/marco.schemas.in.h:81
-#, fuzzy
-msgid "Take a screenshot"
-msgstr "a"
-
-#: ../src/marco.schemas.in.h:82
-#, fuzzy
-msgid "Take a screenshot of a window"
-msgstr "a Bya a Idirishya"
-
-#: ../src/marco.schemas.in.h:83
-#, fuzzy
-msgid ""
-"Tells Marco how to implement the visual indication that the system bell "
-"or another application 'bell' indicator has been rung. Currently there are "
-"two valid values, \"fullscreen\", which causes a fullscreen white-black "
-"flash, and \"frame_flash\" which causes the titlebar of the application "
-"which sent the bell signal to flash. If the application which sent the bell "
-"is unknown (as is usually the case for the default \"system beep\"), the "
-"currently focused window's titlebar is flashed."
 msgstr ""
-"Kuri Kigaragara Sisitemu Cyangwa Porogaramu Byemewe Uduciro a Umweru umukara "
-"Umurabyo Na Bya Porogaramu Yoherejwe: Kuri Umurabyo Porogaramu Yoherejwe: ni "
-"Kitazwi Nka ni kugirango Mburabuzi Sisitemu ni"
 
-#: ../src/marco.schemas.in.h:84
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
-"The /apps/marco/global_keybindings/run_command_N keys define keybindings "
-"that correspond to these commands. Pressing the keybinding for run_command_N "
-"will execute command_N."
-msgstr "Utubuto Kugaragaza... Kuri Amabwiriza kugirango Gukora"
+"Determines whether applications or the system can generate audible 'beeps'; "
+"may be used in conjunction with 'visual bell' to allow silent 'beeps'."
+msgstr ""
 
-#: ../src/marco.schemas.in.h:85
-#, fuzzy
-msgid ""
-"The /apps/marco/global_keybindings/run_command_screenshot key defines a "
-"keybinding which causes the command specified by this setting to be invoked."
-msgstr "Urufunguzo a Komandi: ku iyi Igenamiterere Kuri"
+#: ../src/org.mate.marco.gschema.xml.h:37
+msgid "Visual Bell Type"
+msgstr ""
 
-#: ../src/marco.schemas.in.h:86
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
-"The /apps/marco/global_keybindings/run_command_window_screenshot key "
-"defines a keybinding which causes the command specified by this setting to "
-"be invoked."
-msgstr "Urufunguzo a Komandi: ku iyi Igenamiterere Kuri"
+"Tells Marco how to implement the visual indication that the system bell or "
+"another application 'bell' indicator has been rung. Currently there are two "
+"valid values, \"fullscreen\", which causes a fullscreen white-black flash, "
+"and \"frame_flash\" which causes the titlebar of the application which sent "
+"the bell signal to flash. If the application which sent the bell is unknown "
+"(as is usually the case for the default \"system beep\"), the currently "
+"focused window's titlebar is flashed."
+msgstr ""
 
-#: ../src/marco.schemas.in.h:87
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:39
+msgid "Compositing Manager"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:40
+msgid "Determines whether Marco is a compositing manager."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:41
+msgid "Fast Alt-Tab Enabled"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
-"The keybinding that runs the correspondingly-numbered command in /apps/"
-"marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" or "
+"Whether or not fast alt-tabbing is used when the compositing manager is "
+"enabled."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:43
+msgid "If true, trade off usability for less resource usage"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:44
+msgid ""
+"If true, marco will give the user less feedback by using wireframes, "
+"avoiding animations, or other means. This is a significant reduction in "
+"usability for many users, but may allow legacy applications to continue "
+"working, and may also be a useful tradeoff for terminal servers. However, "
+"the wireframe feature is disabled when accessibility is on."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:45
+msgid ""
+"(Not implemented) Navigation works in terms of applications not windows"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:46
+msgid ""
+"If true, then Marco works in terms of applications rather than windows. The "
+"concept is a bit abstract, but in general an application-based setup is more"
+" like the Mac and less like Windows. When you focus a window in application-"
+"based mode, all the windows in the application will be raised. Also, in "
+"application-based mode, focus clicks are not passed through to windows in "
+"other applications. Application-based mode is, however, largely "
+"unimplemented at the moment."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:47
+msgid "Disable misfeatures that are required by old or broken applications"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:48
+msgid ""
+"Some applications disregard specifications in ways that result in window "
+"manager misfeatures. This option puts Marco in a rigorously correct mode, "
+"which gives a more consistent user interface, provided one does not need to "
+"run any misbehaving applications."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:49
+msgid "Determines if new windows are created on the center of the screen"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:50
+msgid ""
+"If set to true, new windows are opened in the center of the screen. "
+"Otherwise, they are opened at the top left of the screen."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:51
+msgid "Whether to enable side-by-side tiling"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:52
+msgid ""
+"If enabled, dropping windows on screen edges maximizes them vertically and "
+"resizes them horizontally to cover half of the available area. Drag-dropping"
+" to the top maximizes the window."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:53
+msgid "Window placement mode"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:54
+msgid ""
+"The window placement mode indicates how new windows are positioned. "
+"\"automatic\" means the system chooses a location automatically based on the"
+" space available on the desktop, or by a simple cascade if there is no "
+"space; \"pointer\" means that new windows are placed according to the mouse "
+"pointer position; \"manual\" means that the user must manually place the new"
+" window with the mouse or keyboard."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:55
+msgid "Name of workspace"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:56
+msgid "The name of a workspace."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:57
+msgid "Run a defined command"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:58
+msgid ""
+"The keybinding that runs the correspondingly-numbered command in "
+"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
+"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
+"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
+"then there will be no keybinding for this action."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:60
+msgid ""
+"The format looks like \"&lt;Control&gt;a\" or "
 "\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
-"Iriho Imibare Komandi: in Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
 
-#: ../src/marco.schemas.in.h:88
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:78
 msgid ""
-"The keybinding that switches to the workspace above the current workspace. "
-"The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1"
-"\". The parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the "
-"option to the special string \"disabled\", then there will be no keybinding "
-"for this action."
+"The format looks like \"&lt;Control&gt;a\" or "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
+"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
+"then there will be no keybinding for this action. This keybinding may be "
+"reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
+"one of the keys it uses."
 msgstr ""
-"Kuri Umwanya- nkenerwa hejuru KIGEZWEHO Umwanya- nkenerwa Imiterere nka a "
-"Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri "
-"Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi "
-"Igikorwa"
 
-#: ../src/marco.schemas.in.h:89
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:79
+msgid "Move backward between windows of an application, using a popup window"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:81
+msgid "Move backward between windows, using a popup window"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:82
+msgid "Move between windows on all workspaces, using a popup window"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:83
+msgid "Move backward between windows on all workspaces, using a popup window"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:85
+msgid "Move backward between panels and the desktop, using a popup window"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:87
+msgid "Move backward between windows of an application immediately"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:89
+msgid "Move backward between windows immediately"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:91
+msgid "Move backward between panels and the desktop immediately"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:98
+msgid "Commands to run in response to keybindings"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:99
 msgid ""
-"The keybinding that switches to the workspace below the current workspace. "
-"The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1"
-"\". The parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the "
-"option to the special string \"disabled\", then there will be no keybinding "
-"for this action."
+"The /apps/marco/global_keybindings/run_command_N keys define keybindings "
+"that correspond to these commands. Pressing the keybinding for run_command_N"
+" will execute command_N."
 msgstr ""
-"Kuri Umwanya- nkenerwa munsi KIGEZWEHO Umwanya- nkenerwa Imiterere nka a "
-"Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri "
-"Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi "
-"Igikorwa"
 
-#: ../src/marco.schemas.in.h:90
-#, fuzzy
-msgid ""
-"The keybinding that switches to the workspace on the left of the current "
-"workspace. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;"
-"Alt&gt;F1\". The parser is fairly liberal and allows lower or upper case, "
-"and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you "
-"set the option to the special string \"disabled\", then there will be no "
-"keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa ku Ibumoso: Bya KIGEZWEHO Umwanya- nkenerwa Imiterere "
-"nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri "
-"Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi "
-"Igikorwa"
-
-#: ../src/marco.schemas.in.h:91
-#, fuzzy
-msgid ""
-"The keybinding that switches to the workspace on the right of the current "
-"workspace. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;"
-"Alt&gt;F1\". The parser is fairly liberal and allows lower or upper case, "
-"and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you "
-"set the option to the special string \"disabled\", then there will be no "
-"keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa ku Iburyo: Bya KIGEZWEHO Umwanya- nkenerwa Imiterere "
-"nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri "
-"Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi "
-"Igikorwa"
-
-#: ../src/marco.schemas.in.h:92
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 1. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 1. Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:93
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 10. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 10 Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:94
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 11. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na "
-"Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe "
-"Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:95
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 12. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 12 Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:96
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 2. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 2. Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:97
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 3. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 3. Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:98
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 4. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 4. Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:99
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 5. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 5 Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:100
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 6. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 6 Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:101
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 7. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 7 Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:102
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 8. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 8 Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:103
-#, fuzzy
-msgid ""
-"The keybinding that switches to workspace 9. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Umwanya- nkenerwa 9 Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:104
-#, fuzzy
-msgid ""
-"The keybinding used to activate the window menu. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kureka bigakora Idirishya Ibikubiyemo Imiterere nka a Cyangwa ni Na "
-"Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:105
-#, fuzzy
-msgid ""
-"The keybinding used to close a window. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Gufunga a Idirishya Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:106
-#, fuzzy
-msgid ""
-"The keybinding used to enter \"move mode\" and begin moving a window using "
-"the keyboard. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-"&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-"case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". "
-"If you set the option to the special string \"disabled\", then there will be "
-"no keybinding for this action."
-msgstr ""
-"Kuri Injiza Kwimura Ubwoko Na a Idirishya ikoresha Mwandikisho Imiterere nka "
-"a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri "
-"Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi "
-"Igikorwa"
-
-#: ../src/marco.schemas.in.h:107
-#, fuzzy
-msgid ""
-"The keybinding used to enter \"resize mode\" and begin resizing a window "
-"using the keyboard. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-"Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or "
-"upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-"\". If you set the option to the special string \"disabled\", then there "
-"will be no keybinding for this action."
-msgstr ""
-"Kuri Injiza Ihindurangero Ubwoko Na a Idirishya ikoresha Mwandikisho "
-"Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho "
-"Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya "
-"kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:108
-#, fuzzy
-msgid ""
-"The keybinding used to hide all normal windows and set the focus to the "
-"desktop background. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-"Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or "
-"upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-"\". If you set the option to the special string \"disabled\", then there "
-"will be no keybinding for this action."
-msgstr ""
-"Kuri Gushisha Byose Bisanzwe Na Gushyiraho Kuri Ibiro Mbuganyuma Imiterere "
-"nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri "
-"Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi "
-"Igikorwa"
-
-#: ../src/marco.schemas.in.h:109
-#, fuzzy
-msgid ""
-"The keybinding used to maximize a window. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kugira kinini a Idirishya Imiterere nka a Cyangwa ni Na Ntoya Cyangwa "
-"Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:110
-#, fuzzy
-msgid ""
-"The keybinding used to minimize a window. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kugabanya ingano a Idirishya Imiterere nka a Cyangwa ni Na Ntoya "
-"Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:111
-#, fuzzy
-msgid ""
-"The keybinding used to move a window one workspace down. The format looks "
-"like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is "
-"fairly liberal and allows lower or upper case, and also abbreviations such "
-"as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the "
-"special string \"disabled\", then there will be no keybinding for this "
-"action."
-msgstr ""
-"Kuri Kwimura a Idirishya Umwanya- nkenerwa Hasi Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:112
-#, fuzzy
-msgid ""
-"The keybinding used to move a window one workspace to the left. The format "
-"looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The "
-"parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the "
-"option to the special string \"disabled\", then there will be no keybinding "
-"for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Umwanya- nkenerwa Kuri Ibumoso: Imiterere nka a "
-"Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri "
-"Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi "
-"Igikorwa"
-
-#: ../src/marco.schemas.in.h:113
-#, fuzzy
-msgid ""
-"The keybinding used to move a window one workspace to the right. The format "
-"looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The "
-"parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the "
-"option to the special string \"disabled\", then there will be no keybinding "
-"for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Umwanya- nkenerwa Kuri Iburyo: Imiterere nka a "
-"Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri "
-"Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi "
-"Igikorwa"
-
-#: ../src/marco.schemas.in.h:114
-#, fuzzy
-msgid ""
-"The keybinding used to move a window one workspace up. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Umwanya- nkenerwa Hejuru Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:115
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 1. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 1. Imiterere nka a Cyangwa "
-"ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:116
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 10. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 10 Imiterere nka a Cyangwa "
-"ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:117
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 11. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:118
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 12. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 12 Imiterere nka a Cyangwa "
-"ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:119
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 2. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 2. Imiterere nka a Cyangwa "
-"ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:120
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 3. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 3. Imiterere nka a Cyangwa "
-"ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:121
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 4. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 4. Imiterere nka a Cyangwa "
-"ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:122
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 5. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 5 Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:123
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 6. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 6 Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:124
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 7. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 7 Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:125
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 8. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 8 Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:126
-#, fuzzy
-msgid ""
-"The keybinding used to move a window to workspace 9. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura a Idirishya Kuri Umwanya- nkenerwa 9 Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:127
-#, fuzzy
-msgid ""
-"The keybinding used to move focus backwards between panels and the desktop, "
-"using a popup window. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-"Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or "
-"upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-"\". If you set the option to the special string \"disabled\", then there "
-"will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura Inyuma hagati Na Ibiro ikoresha a Idirishya Imiterere nka a "
-"Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri "
-"Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi "
-"Igikorwa"
-
-#: ../src/marco.schemas.in.h:128
-#, fuzzy
-msgid ""
-"The keybinding used to move focus backwards between panels and the desktop, "
-"without a popup window. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-"Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or "
-"upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-"\". If you set the option to the special string \"disabled\", then there "
-"will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura Inyuma hagati Na Ibiro a Idirishya Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:129
-#, fuzzy
-msgid ""
-"The keybinding used to move focus backwards between windows without a popup "
-"window. Holding \"shift\" together with this binding makes the direction go "
-"forward again. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-"&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-"case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". "
-"If you set the option to the special string \"disabled\", then there will be "
-"no keybinding for this action."
-msgstr ""
-"Kuri Kwimura Inyuma hagati a Idirishya Gusunika Na: iyi Bifatanya Icyerekezo "
-"Gyayo Imbere Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na "
-"Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma "
-"Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:130
-#, fuzzy
-msgid ""
-"The keybinding used to move focus backwards between windows, using a popup "
-"window. Holding \"shift\" together with this binding makes the direction go "
-"forward again. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-"&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-"case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". "
-"If you set the option to the special string \"disabled\", then there will be "
-"no keybinding for this action."
-msgstr ""
-"Kuri Kwimura Inyuma hagati ikoresha a Idirishya Gusunika Na: iyi Bifatanya "
-"Icyerekezo Gyayo Imbere Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na "
-"Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe "
-"Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:131
-#, fuzzy
-msgid ""
-"The keybinding used to move focus between panels and the desktop, using a "
-"popup window. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-"&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-"case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". "
-"If you set the option to the special string \"disabled\", then there will be "
-"no keybinding for this action."
-msgstr ""
-"Kuri Kwimura hagati Na Ibiro ikoresha a Idirishya Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:132
-#, fuzzy
-msgid ""
-"The keybinding used to move focus between panels and the desktop, without a "
-"popup window. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-"&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-"case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". "
-"If you set the option to the special string \"disabled\", then there will be "
-"no keybinding for this action."
-msgstr ""
-"Kuri Kwimura hagati Na Ibiro a Idirishya Imiterere nka a Cyangwa ni Na Ntoya "
-"Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:133
-#, fuzzy
-msgid ""
-"The keybinding used to move focus between windows without a popup window. "
-"(Traditionally &lt;Alt&gt;Escape) Holding the \"shift\" key while using this "
-"binding reverses the direction of movement. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura hagati a Idirishya Gusunika Urufunguzo ikoresha iyi Bifatanya "
-"Icyerekezo Bya Igenda Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na "
-"Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe "
-"Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:134
-#, fuzzy
-msgid ""
-"The keybinding used to move focus between windows, using a popup window. "
-"(Traditionally &lt;Alt&gt;Tab) Holding the \"shift\" key while using this "
-"binding reverses the direction of movement. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Kwimura hagati ikoresha a Idirishya Gusunika Urufunguzo ikoresha iyi "
-"Bifatanya Icyerekezo Bya Igenda Imiterere nka a Cyangwa ni Na Ntoya Cyangwa "
-"Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:135
-#, fuzzy
-msgid ""
-"The keybinding used to toggle always on top. A window that is always on top "
-"will always be visible over other overlapping windows. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Mukomatanya Buri gihe ku Hejuru: A Idirishya ni Buri gihe ku Hejuru: "
-"Buri gihe Kigaragara KURI Ikindi iyorosa Imiterere nka a Cyangwa ni Na Ntoya "
-"Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:136
-#, fuzzy
-msgid ""
-"The keybinding used to toggle fullscreen mode. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Mukomatanya Ubwoko Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na "
-"Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe "
-"Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:137
-#, fuzzy
-msgid ""
-"The keybinding used to toggle maximization. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Mukomatanya Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na "
-"Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma "
-"Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:138
-#, fuzzy
-msgid ""
-"The keybinding used to toggle shaded/unshaded state. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri Mukomatanya Leta Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na "
-"Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe "
-"Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:139
-#, fuzzy
-msgid ""
-"The keybinding used to toggle whether the window is on all workspaces or "
-"just one. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;"
-"Alt&gt;F1\". The parser is fairly liberal and allows lower or upper case, "
-"and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you "
-"set the option to the special string \"disabled\", then there will be no "
-"keybinding for this action."
-msgstr ""
-"Kuri Mukomatanya Idirishya ni ku Byose Cyangwa Imiterere nka a Cyangwa ni Na "
-"Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:140
-#, fuzzy
-msgid ""
-"The keybinding used to unmaximize a window. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Kuri a Idirishya Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na "
-"Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma "
-"Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:141
-#, fuzzy
-msgid ""
-"The keybinding which display's the panel's \"Run Application\" dialog box. "
-"The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1"
-"\". The parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the "
-"option to the special string \"disabled\", then there will be no keybinding "
-"for this action."
-msgstr ""
-"Ikiganiro Agasanduku Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na "
-"Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe "
-"Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:142
-#, fuzzy
-msgid ""
-"The keybinding which invokes a terminal. The format looks like \"&lt;"
-"Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"a Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho "
-"Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya "
-"kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:143
-#, fuzzy
-msgid ""
-"The keybinding which invokes the panel's screenshot utility to take a "
-"screenshot of a window. The format looks like \"&lt;Control&gt;a\" or \"&lt;"
-"Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or "
-"upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;"
-"\". If you set the option to the special string \"disabled\", then there "
-"will be no keybinding for this action."
-msgstr ""
-"Kuri a Bya a Idirishya Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na "
-"Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe "
-"Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:144
-#, fuzzy
-msgid ""
-"The keybinding which invokes the panel's screenshot utility. The format "
-"looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The "
-"parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the "
-"option to the special string \"disabled\", then there will be no keybinding "
-"for this action."
-msgstr ""
-"Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho "
-"Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya "
-"kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:145
-#, fuzzy
-msgid ""
-"The keybinding which shows the panel's main menu. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Ibikubiyemo Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na "
-"Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma "
-"Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:146
-#, fuzzy
-msgid "The name of a workspace."
-msgstr "Izina: Bya a Umwanya- nkenerwa"
-
-#: ../src/marco.schemas.in.h:147
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:100
 msgid "The screenshot command"
-msgstr "Komandi:"
-
-#: ../src/marco.schemas.in.h:148
-#, fuzzy
-msgid ""
-"The theme determines the appearance of window borders, titlebar, and so "
-"forth."
-msgstr "Imigaragarire Bya Idirishya Impera Na"
-
-#: ../src/marco.schemas.in.h:149
-#, fuzzy
-msgid ""
-"The time delay before raising a window if auto_raise is set to true. The "
-"delay is given in thousandths of a second."
 msgstr ""
-"Igihe Gutinda Mbere a Idirishya NIBA ni Gushyiraho Kuri NIBYO Gutinda ni in "
-"Bya a ISEGONDA"
 
-#: ../src/marco.schemas.in.h:150
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:101
 msgid ""
-"The window focus mode indicates how windows are activated. It has three "
-"possible values; \"click\" means windows must be clicked in order to focus "
-"them, \"sloppy\" means windows are focused when the mouse enters the window, "
-"and \"mouse\" means windows are focused when the mouse enters the window and "
-"unfocused when the mouse leaves the window."
+"The /apps/marco/global_keybindings/run_command_screenshot key defines a "
+"keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
-"Idirishya Ubwoko Uduciro Kanda in Itondekanya Kuri Ryari: Imbeba Idirishya "
-"Na Imbeba Ryari: Imbeba Idirishya Na Ryari: Imbeba Ibibabi Idirishya"
 
-#: ../src/marco.schemas.in.h:151
-#, fuzzy
+#: ../src/org.mate.marco.gschema.xml.h:102
 msgid "The window screenshot command"
-msgstr "Idirishya Komandi:"
-
-#: ../src/marco.schemas.in.h:152
-#, fuzzy
-msgid ""
-"This keybinding changes whether a window is above or below other windows. If "
-"the window is covered by another window, it raises the window above other "
-"windows. If the window is already fully visible, it lowers the window below "
-"other windows. The format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;"
-"&lt;Alt&gt;F1\". The parser is fairly liberal and allows lower or upper "
-"case, and also abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". "
-"If you set the option to the special string \"disabled\", then there will be "
-"no keybinding for this action."
-msgstr ""
-"Amahinduka a Idirishya ni hejuru Cyangwa munsi Ikindi Idirishya ni ku "
-"Idirishya Idirishya hejuru Ikindi Idirishya ni Kigaragara Idirishya munsi "
-"Ikindi Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na Nka Na "
-"Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe Hanyuma "
-"Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:153
-#, fuzzy
-msgid ""
-"This keybinding lowers a window below other windows. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"a Idirishya munsi Ikindi Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru "
-"Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti "
-"Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:154
-#, fuzzy
-msgid ""
-"This keybinding raises the window above other windows. The format looks like "
-"\"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly "
-"liberal and allows lower or upper case, and also abbreviations such as \"&lt;"
-"Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the option to the special string "
-"\"disabled\", then there will be no keybinding for this action."
-msgstr ""
-"Idirishya hejuru Ikindi Imiterere nka a Cyangwa ni Na Ntoya Cyangwa Nkuru Na "
-"Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe Ikurikiranyanyuguti Yahagaritswe "
-"Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:155
-#, fuzzy
-msgid ""
-"This keybinding resizes a window to fill available horizontal space. The "
-"format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-"The parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the "
-"option to the special string \"disabled\", then there will be no keybinding "
-"for this action."
-msgstr ""
-"a Idirishya Kuri Kuzuza Bihari Gitambitse Umwanya Imiterere nka a Cyangwa ni "
-"Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:156
-#, fuzzy
-msgid ""
-"This keybinding resizes a window to fill available vertical space. The "
-"format looks like \"&lt;Control&gt;a\" or \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
-"The parser is fairly liberal and allows lower or upper case, and also "
-"abbreviations such as \"&lt;Ctl&gt;\" and \"&lt;Ctrl&gt;\". If you set the "
-"option to the special string \"disabled\", then there will be no keybinding "
-"for this action."
-msgstr ""
-"a Idirishya Kuri Kuzuza Bihari Bihagaritse Umwanya Imiterere nka a Cyangwa "
-"ni Na Ntoya Cyangwa Nkuru Na Nka Na Gushyiraho Ihitamo Kuri Bidasanzwe "
-"Ikurikiranyanyuguti Yahagaritswe Hanyuma Oya kugirango iyi Igikorwa"
-
-#: ../src/marco.schemas.in.h:157
-#, fuzzy
-msgid ""
-"This option determines the effects of double-clicking on the title bar. "
-"Current valid options are 'toggle_shade', which will shade/unshade the "
-"window, and 'toggle_maximize' which will maximize/unmaximize the window."
-msgstr ""
-"Ihitamo Ingaruka Bya MAHARAKUBIRI ku Umutwe Byemewe Amahitamo Idirishya Na "
-"Kugira kinini Idirishya"
-
-#: ../src/marco.schemas.in.h:158
-#, fuzzy
-msgid "Toggle always on top state"
-msgstr "Buri gihe ku Hejuru: Leta"
-
-#: ../src/marco.schemas.in.h:159
-#, fuzzy
-msgid "Toggle fullscreen mode"
-msgstr "Ubwoko"
-
-#: ../src/marco.schemas.in.h:160
-#, fuzzy
-msgid "Toggle maximization state"
-msgstr "Leta"
-
-#: ../src/marco.schemas.in.h:161
-#, fuzzy
-msgid "Toggle shaded state"
-msgstr "Leta"
-
-#: ../src/marco.schemas.in.h:162
-#, fuzzy
-msgid "Toggle window on all workspaces"
-msgstr "Idirishya ku Byose"
-
-#: ../src/marco.schemas.in.h:163
-#, fuzzy
-msgid ""
-"Turns on a visual indication when an application or the system issues a "
-"'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
-"environments, or when 'audible bell' is off."
-msgstr ""
-"ku a Kigaragara Ryari: Porogaramu Cyangwa Sisitemu a Cyangwa kugirango "
-"Ikomeye Bya Na kugirango Gukoresha in Cyangwa Ryari: ni Bidakora"
-
-#: ../src/marco.schemas.in.h:164
-#, fuzzy
-msgid "Unmaximize window"
-msgstr "Idirishya"
-
-#: ../src/marco.schemas.in.h:165
-#, fuzzy
-msgid "Use standard system font in window titles"
-msgstr "Bisanzwe Sisitemu Intego- nyuguti in Idirishya Imitwe"
-
-#: ../src/marco.schemas.in.h:166
-msgid "Visual Bell Type"
 msgstr ""
 
-#: ../src/marco.schemas.in.h:167
-#, fuzzy
-msgid "Window focus mode"
-msgstr "Ubwoko"
-
-#: ../src/marco.schemas.in.h:168
-#, fuzzy
-msgid "Window title font"
-msgstr "Umutwe Intego- nyuguti"
-
-#: ../src/prefs.c:528 ../src/prefs.c:544 ../src/prefs.c:560 ../src/prefs.c:576
-#: ../src/prefs.c:592 ../src/prefs.c:612 ../src/prefs.c:628 ../src/prefs.c:644
-#: ../src/prefs.c:660 ../src/prefs.c:676 ../src/prefs.c:692 ../src/prefs.c:708
-#: ../src/prefs.c:724 ../src/prefs.c:741 ../src/prefs.c:757 ../src/prefs.c:773
-#: ../src/prefs.c:789 ../src/prefs.c:805 ../src/prefs.c:820 ../src/prefs.c:835
-#: ../src/prefs.c:850 ../src/prefs.c:866 ../src/prefs.c:882 ../src/prefs.c:898
-#, fuzzy, c-format
-msgid "MateConf key \"%s\" is set to an invalid type\n"
-msgstr "Urufunguzo ni Gushyiraho Kuri Sibyo"
-
-#: ../src/prefs.c:943
-#, fuzzy, c-format
+#: ../src/org.mate.marco.gschema.xml.h:103
 msgid ""
-"\"%s\" found in configuration database is not a valid value for mouse button "
-"modifier\n"
+"The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
+" a keybinding which causes the command specified by this setting to be "
+"invoked."
 msgstr ""
-"\"%s\"Byabonetse in Iboneza Ububikoshingiro ni OYA a Byemewe Agaciro "
-"kugirango Imbeba Akabuto"
 
-#: ../src/prefs.c:967 ../src/prefs.c:1428
-#, fuzzy, c-format
-msgid "MateConf key '%s' is set to an invalid value\n"
-msgstr "Urufunguzo ni Gushyiraho Kuri Sibyo"
+#: ../src/org.mate.marco.gschema.xml.h:107
+msgid "Toggle whether a window will always be visible over other windows"
+msgstr ""
 
-#: ../src/prefs.c:1145
-#, fuzzy, c-format
-msgid "Could not parse font description \"%s\" from MateConf key %s\n"
-msgstr "OYA Intego- nyuguti Isobanuramiterere Bivuye Urufunguzo"
+#: ../src/core/bell.c:294
+msgid "Bell event"
+msgstr ""
 
-#: ../src/prefs.c:1330
-#, fuzzy, c-format
+#: ../src/core/core.c:207
+#, c-format
+msgid "Unknown window information request: %d"
+msgstr ""
+
+#. Translators: %s is a window title
+#: ../src/core/delete.c:96
+#, c-format
+msgid "<tt>%s</tt> is not responding."
+msgstr ""
+
+#: ../src/core/delete.c:101
 msgid ""
-"%d stored in MateConf key %s is not a reasonable number of workspaces, current "
-"maximum is %d\n"
-msgstr "%din Urufunguzo ni OYA a Umubare Bya KIGEZWEHO Kinini ni"
+"You may choose to wait a short while for it to continue or force the "
+"application to quit entirely."
+msgstr ""
 
-#: ../src/prefs.c:1390
-#, fuzzy
+#: ../src/core/delete.c:110
+msgid "_Wait"
+msgstr ""
+
+#: ../src/core/delete.c:110
+msgid "_Force Quit"
+msgstr ""
+
+#: ../src/core/delete.c:208
+#, c-format
+msgid "Failed to get hostname: %s\n"
+msgstr ""
+
+#: ../src/core/display.c:270
+#, c-format
+msgid "Missing %s extension required for compositing"
+msgstr ""
+
+#: ../src/core/display.c:348
+#, c-format
+msgid "Failed to open X Window System display '%s'\n"
+msgstr ""
+
+#: ../src/core/errors.c:304
+#, c-format
+msgid ""
+"Lost connection to the display '%s';\n"
+"most likely the X server was shut down or you killed/destroyed\n"
+"the window manager.\n"
+msgstr ""
+
+#: ../src/core/errors.c:311
+#, c-format
+msgid "Fatal IO error %d (%s) on display '%s'.\n"
+msgstr ""
+
+#: ../src/core/keybindings.c:716
+#, c-format
+msgid ""
+"Some other program is already using the key %s with modifiers %x as a "
+"binding\n"
+msgstr ""
+
+#. Displayed when a keybinding which is
+#. * supposed to launch a program fails.
+#: ../src/core/keybindings.c:2353
+#, c-format
+msgid ""
+"There was an error running <tt>%s</tt>:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/core/keybindings.c:2442
+#, c-format
+msgid "No command %d has been defined.\n"
+msgstr ""
+
+#: ../src/core/keybindings.c:3453
+#, c-format
+msgid "No terminal command has been defined.\n"
+msgstr ""
+
+#: ../src/core/main.c:131
+#, c-format
+msgid ""
+"marco %s\n"
+"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
+"This is free software; see the source for copying conditions.\n"
+"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+
+#: ../src/core/main.c:269
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: ../src/core/main.c:275
+msgid "Replace the running window manager with Marco"
+msgstr ""
+
+#: ../src/core/main.c:281
+msgid "Specify session management ID"
+msgstr ""
+
+#: ../src/core/main.c:286
+msgid "X Display to use"
+msgstr ""
+
+#: ../src/core/main.c:292
+msgid "Initialize session from savefile"
+msgstr ""
+
+#: ../src/core/main.c:298
+msgid "Print version"
+msgstr ""
+
+#: ../src/core/main.c:304
+msgid "Make X calls synchronous"
+msgstr ""
+
+#: ../src/core/main.c:310
+msgid "Turn compositing on"
+msgstr ""
+
+#: ../src/core/main.c:316
+msgid "Turn compositing off"
+msgstr ""
+
+#: ../src/core/main.c:322
+msgid ""
+"Don't make fullscreen windows that are maximized and have no decorations"
+msgstr ""
+
+#: ../src/core/main.c:522
+#, c-format
+msgid "Failed to scan themes directory: %s\n"
+msgstr ""
+
+#: ../src/core/main.c:538
+#, c-format
+msgid ""
+"Could not find a theme! Be sure %s exists and contains the usual themes.\n"
+msgstr ""
+
+#: ../src/core/main.c:597
+#, c-format
+msgid "Failed to restart: %s\n"
+msgstr ""
+
+#. FIXME: check if this can be avoided by GSettings
+#. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
+#. * But some preferences depends on costants for minimum/maximum values
+#: ../src/core/prefs.c:584 ../src/core/prefs.c:737
+#, c-format
+msgid "%d stored in GSettings key %s is out of range %d to %d\n"
+msgstr ""
+
+#: ../src/core/prefs.c:1031
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "kugirango Porogaramu Yahagaritswe Porogaramu Gicurasi OYA"
+msgstr ""
 
-#: ../src/prefs.c:1455
-#, fuzzy, c-format
-msgid "%d stored in MateConf key %s is out of range 0 to %d\n"
-msgstr "%din Urufunguzo ni Inyuma Bya Urutonde 0 Kuri"
+#: ../src/core/prefs.c:1098
+#, c-format
+msgid "Could not parse font description \"%s\" from GSettings key %s\n"
+msgstr ""
 
-#: ../src/prefs.c:1589
-#, fuzzy, c-format
-msgid "Error setting number of workspaces to %d: %s\n"
-msgstr "Igenamiterere Umubare Bya Kuri"
+#: ../src/core/prefs.c:1160
+#, c-format
+msgid ""
+"\"%s\" found in configuration database is not a valid value for mouse button"
+" modifier\n"
+msgstr ""
 
-#: ../src/prefs.c:1833
-#, fuzzy, c-format
+#: ../src/core/prefs.c:1683
+#, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr ""
-"\"%s\"Byabonetse in Iboneza Ububikoshingiro ni OYA a Byemewe Agaciro "
-"kugirango"
 
-#: ../src/prefs.c:2187
-#, fuzzy, c-format
-msgid "Error setting name for workspace %d to \"%s\": %s\n"
-msgstr "Igenamiterere Izina: kugirango Umwanya- nkenerwa Kuri"
+#: ../src/core/prefs.c:1986
+#, c-format
+msgid "Workspace %d"
+msgstr ""
 
-#: ../src/resizepopup.c:126
-#, fuzzy, c-format
-msgid "%d x %d"
-msgstr "%dX"
-
-#: ../src/screen.c:408
-#, fuzzy, c-format
+#: ../src/core/screen.c:358
+#, c-format
 msgid "Screen %d on display '%s' is invalid\n"
-msgstr "ku Kugaragaza ni"
-
-#: ../src/screen.c:424
-#, fuzzy, c-format
-msgid ""
-"Screen %d on display \"%s\" already has a window manager; try using the --"
-"replace option to replace the current window manager.\n"
 msgstr ""
-"ku Kugaragaza a Idirishya Muyobozi ikoresha Gusimbura Ihitamo Kuri Gusimbura "
-"KIGEZWEHO Idirishya Muyobozi"
 
-#: ../src/screen.c:448
-#, fuzzy, c-format
+#: ../src/core/screen.c:374
+#, c-format
 msgid ""
-"Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr "OYA Idirishya Muyobozi Ihitamo ku Mugaragaza Kugaragaza"
+"Screen %d on display \"%s\" already has a window manager; try using the "
+"--replace option to replace the current window manager.\n"
+msgstr ""
 
-#: ../src/screen.c:506
-#, fuzzy, c-format
+#: ../src/core/screen.c:401
+#, c-format
+msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
+msgstr ""
+
+#: ../src/core/screen.c:459
+#, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
-msgstr "ku Kugaragaza a Idirishya"
+msgstr ""
 
-#: ../src/screen.c:716
-#, fuzzy, c-format
+#: ../src/core/screen.c:674
+#, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
-msgstr "OYA Mugaragaza ku Kugaragaza"
+msgstr ""
 
-#: ../src/session.c:884 ../src/session.c:891
-#, fuzzy, c-format
+#: ../src/core/session.c:842 ../src/core/session.c:849
+#, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr "OYA Kurema bushyinguro"
+msgstr ""
 
-#: ../src/session.c:901
-#, fuzzy, c-format
+#: ../src/core/session.c:859
+#, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
-msgstr "OYA Gufungura Umukoro IDOSIYE kugirango"
+msgstr ""
 
-#: ../src/session.c:1053
-#, fuzzy, c-format
+#: ../src/core/session.c:1000
+#, c-format
 msgid "Error writing session file '%s': %s\n"
-msgstr "Umukoro IDOSIYE"
+msgstr ""
 
-#: ../src/session.c:1058
-#, fuzzy, c-format
+#: ../src/core/session.c:1005
+#, c-format
 msgid "Error closing session file '%s': %s\n"
-msgstr "Umukoro IDOSIYE"
+msgstr ""
 
-#: ../src/session.c:1133
-#, fuzzy, c-format
-msgid "Failed to read saved session file %s: %s\n"
-msgstr "Kuri Gusoma Umukoro IDOSIYE"
-
-#: ../src/session.c:1168
-#, fuzzy, c-format
+#: ../src/core/session.c:1135
+#, c-format
 msgid "Failed to parse saved session file: %s\n"
-msgstr "Kuri Umukoro IDOSIYE"
+msgstr ""
 
-#: ../src/session.c:1217
-#, fuzzy
+#: ../src/core/session.c:1184
+#, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
-msgstr "<Ikiranga Twebwe Umukoro"
+msgstr ""
 
-#: ../src/session.c:1230
-#, fuzzy, c-format
-msgid "Unknown attribute %s on <marco_session> element"
-msgstr "Ikiranga ku Ikigize:"
+#: ../src/core/session.c:1197 ../src/core/session.c:1272
+#: ../src/core/session.c:1304 ../src/core/session.c:1376
+#: ../src/core/session.c:1436
+#, c-format
+msgid "Unknown attribute %s on <%s> element"
+msgstr ""
 
-#: ../src/session.c:1247
-#, fuzzy
+#: ../src/core/session.c:1214
+#, c-format
 msgid "nested <window> tag"
-msgstr "Idirishya Itagi:"
+msgstr ""
 
-#: ../src/session.c:1305 ../src/session.c:1337
-#, fuzzy, c-format
-msgid "Unknown attribute %s on <window> element"
-msgstr "Ikiranga ku Idirishya Ikigize:"
-
-#: ../src/session.c:1409
-#, fuzzy, c-format
-msgid "Unknown attribute %s on <maximized> element"
-msgstr "Ikiranga ku Ikigize:"
-
-#: ../src/session.c:1469
-#, fuzzy, c-format
-msgid "Unknown attribute %s on <geometry> element"
-msgstr "Ikiranga ku Iyigamashusho Ikigize:"
-
-#: ../src/session.c:1489
-#, fuzzy, c-format
+#: ../src/core/session.c:1456
+#, c-format
 msgid "Unknown element %s"
-msgstr "Ikigize:"
+msgstr ""
 
-#: ../src/session.c:1961
-#, fuzzy, c-format
+#: ../src/core/session.c:1808
 msgid ""
-"Error launching marco-dialog to warn about apps that don't support "
-"session management: %s\n"
-msgstr "Ikiganiro Kuri Ibyerekeye Gushigikira Umukoro"
+"These windows do not support &quot;save current setup&quot; and will have to"
+" be restarted manually next time you log in."
+msgstr ""
 
-#: ../src/theme-parser.c:224 ../src/theme-parser.c:242
-#, fuzzy, c-format
-msgid "Line %d character %d: %s"
-msgstr "Inyuguti"
-
-#: ../src/theme-parser.c:396
-#, fuzzy, c-format
-msgid "Attribute \"%s\" repeated twice on the same <%s> element"
-msgstr "byasubiyemo ku Ikigize:"
-
-#: ../src/theme-parser.c:414 ../src/theme-parser.c:439
-#, fuzzy, c-format
-msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "ni Sibyo ku Ikigize: in iyi Imvugiro"
-
-#: ../src/theme-parser.c:485
+#: ../src/core/util.c:101
 #, c-format
-msgid "Integer %ld must be positive"
-msgstr ""
-
-#: ../src/theme-parser.c:493
-#, fuzzy, c-format
-msgid "Integer %ld is too large, current max is %d"
-msgstr "ni Binini KIGEZWEHO KININI ni"
-
-#: ../src/theme-parser.c:521 ../src/theme-parser.c:602
-#: ../src/theme-parser.c:626
-#, fuzzy, c-format
-msgid "Could not parse \"%s\" as a floating point number"
-msgstr "OYA Nka a Bihindagurika Akadomo Umubare"
-
-#: ../src/theme-parser.c:552
-#, fuzzy, c-format
-msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
-msgstr "Uduciro NIBYO Cyangwa SIBYO OYA"
-
-#: ../src/theme-parser.c:572
-#, fuzzy, c-format
-msgid "Angle must be between 0.0 and 360.0, was %g\n"
-msgstr "hagati 0 0 Na 0"
-
-#: ../src/theme-parser.c:638
-#, fuzzy, c-format
-msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "hagati 0 0 Kitagaragara Na 1. 0 Kijimye"
-
-#: ../src/theme-parser.c:684
-#, fuzzy, c-format
-msgid ""
-"Invalid title scale \"%s\" (must be one of xx-small,x-small,small,medium,"
-"large,x-large,xx-large)\n"
-msgstr ""
-"Umutwe Gupima Bya Gitoya X Gitoya Gitoya biringaniye Binini X Binini Binini"
-
-#: ../src/theme-parser.c:729 ../src/theme-parser.c:737
-#: ../src/theme-parser.c:807 ../src/theme-parser.c:897
-#: ../src/theme-parser.c:935 ../src/theme-parser.c:1012
-#: ../src/theme-parser.c:1062 ../src/theme-parser.c:1070
-#: ../src/theme-parser.c:1126 ../src/theme-parser.c:1134
-#: ../src/theme-parser.c:2936 ../src/theme-parser.c:3025
-#: ../src/theme-parser.c:3032 ../src/theme-parser.c:3039
-#, fuzzy, c-format
-msgid "No \"%s\" attribute on <%s> element"
-msgstr "Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:837 ../src/theme-parser.c:905
-#: ../src/theme-parser.c:943 ../src/theme-parser.c:1020
-#, fuzzy, c-format
-msgid "<%s> name \"%s\" used a second time"
-msgstr "<%s>Izina: a ISEGONDA Igihe"
-
-#: ../src/theme-parser.c:849 ../src/theme-parser.c:955
-#: ../src/theme-parser.c:1032
-#, fuzzy, c-format
-msgid "<%s> parent \"%s\" has not been defined"
-msgstr "<%s>OYA"
-
-#: ../src/theme-parser.c:968
-#, fuzzy, c-format
-msgid "<%s> geometry \"%s\" has not been defined"
-msgstr "<%s>Iyigamashusho OYA"
-
-#: ../src/theme-parser.c:981
-#, fuzzy, c-format
-msgid "<%s> must specify either a geometry or a parent that has a geometry"
-msgstr "<%s>a Iyigamashusho Cyangwa a a Iyigamashusho"
-
-#: ../src/theme-parser.c:1080
-#, fuzzy, c-format
-msgid "Unknown type \"%s\" on <%s> element"
-msgstr "Ubwoko ku Ikigize:"
-
-#: ../src/theme-parser.c:1091
-#, fuzzy, c-format
-msgid "Unknown style_set \"%s\" on <%s> element"
-msgstr "ku Ikigize:"
-
-#: ../src/theme-parser.c:1099
-#, fuzzy, c-format
-msgid "Window type \"%s\" has already been assigned a style set"
-msgstr "Ubwoko a IMISUSIRE Gushyiraho"
-
-#: ../src/theme-parser.c:1143
-#, fuzzy, c-format
-msgid "Unknown function \"%s\" for menu icon"
-msgstr "Umumaro kugirango Ibikubiyemo Agashushondanga"
-
-#: ../src/theme-parser.c:1152
-#, fuzzy, c-format
-msgid "Unknown state \"%s\" for menu icon"
-msgstr "Leta kugirango Ibikubiyemo Agashushondanga"
-
-#: ../src/theme-parser.c:1160
-#, fuzzy, c-format
-msgid "Theme already has a menu icon for function %s state %s"
-msgstr "a Ibikubiyemo Agashushondanga kugirango Umumaro Leta"
-
-#: ../src/theme-parser.c:1177 ../src/theme-parser.c:3244
-#: ../src/theme-parser.c:3323
-#, fuzzy, c-format
-msgid "No <draw_ops> with the name \"%s\" has been defined"
-msgstr "Na: Izina:"
-
-#: ../src/theme-parser.c:1192 ../src/theme-parser.c:1256
-#: ../src/theme-parser.c:1545 ../src/theme-parser.c:3124
-#: ../src/theme-parser.c:3178 ../src/theme-parser.c:3338
-#: ../src/theme-parser.c:3515 ../src/theme-parser.c:3553
-#: ../src/theme-parser.c:3591 ../src/theme-parser.c:3629
-#, fuzzy, c-format
-msgid "Element <%s> is not allowed below <%s>"
-msgstr "ni OYA munsi"
-
-#: ../src/theme-parser.c:1282 ../src/theme-parser.c:1369
-#: ../src/theme-parser.c:1439
-#, fuzzy, c-format
-msgid "No \"name\" attribute on element <%s>"
-msgstr "Izina: Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1289 ../src/theme-parser.c:1376
-#, fuzzy, c-format
-msgid "No \"value\" attribute on element <%s>"
-msgstr "Agaciro Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1320 ../src/theme-parser.c:1334
-#: ../src/theme-parser.c:1393
-#, fuzzy
-msgid ""
-"Cannot specify both button_width/button_height and aspect ratio for buttons"
-msgstr "Byombi Na kugirango Utubuto"
-
-#: ../src/theme-parser.c:1343
-#, fuzzy, c-format
-msgid "Distance \"%s\" is unknown"
-msgstr "ni Kitazwi"
-
-#: ../src/theme-parser.c:1402
-#, fuzzy, c-format
-msgid "Aspect ratio \"%s\" is unknown"
-msgstr "ni Kitazwi"
-
-#: ../src/theme-parser.c:1446
-#, fuzzy, c-format
-msgid "No \"top\" attribute on element <%s>"
-msgstr "Hejuru: Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1453
-#, fuzzy, c-format
-msgid "No \"bottom\" attribute on element <%s>"
-msgstr "Hasi: Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1460
-#, fuzzy, c-format
-msgid "No \"left\" attribute on element <%s>"
-msgstr "Ibumoso: Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1467
-#, fuzzy, c-format
-msgid "No \"right\" attribute on element <%s>"
-msgstr "Iburyo: Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1499
-#, fuzzy, c-format
-msgid "Border \"%s\" is unknown"
-msgstr "ni Kitazwi"
-
-#: ../src/theme-parser.c:1655 ../src/theme-parser.c:1765
-#: ../src/theme-parser.c:1868 ../src/theme-parser.c:2055
-#: ../src/theme-parser.c:2869
-#, fuzzy, c-format
-msgid "No \"color\" attribute on element <%s>"
-msgstr "Ibara Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1662
-#, fuzzy, c-format
-msgid "No \"x1\" attribute on element <%s>"
-msgstr "Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1669 ../src/theme-parser.c:2714
-#, fuzzy, c-format
-msgid "No \"y1\" attribute on element <%s>"
-msgstr "Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1676
-#, fuzzy, c-format
-msgid "No \"x2\" attribute on element <%s>"
-msgstr "Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1683 ../src/theme-parser.c:2721
-#, fuzzy, c-format
-msgid "No \"y2\" attribute on element <%s>"
-msgstr "Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1772 ../src/theme-parser.c:1875
-#: ../src/theme-parser.c:1981 ../src/theme-parser.c:2062
-#: ../src/theme-parser.c:2168 ../src/theme-parser.c:2266
-#: ../src/theme-parser.c:2483 ../src/theme-parser.c:2609
-#: ../src/theme-parser.c:2707 ../src/theme-parser.c:2781
-#: ../src/theme-parser.c:2876
-#, fuzzy, c-format
-msgid "No \"x\" attribute on element <%s>"
-msgstr "X Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1779 ../src/theme-parser.c:1882
-#: ../src/theme-parser.c:1988 ../src/theme-parser.c:2069
-#: ../src/theme-parser.c:2175 ../src/theme-parser.c:2273
-#: ../src/theme-parser.c:2490 ../src/theme-parser.c:2616
-#: ../src/theme-parser.c:2788 ../src/theme-parser.c:2883
-#, fuzzy, c-format
-msgid "No \"y\" attribute on element <%s>"
-msgstr "Y Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1786 ../src/theme-parser.c:1889
-#: ../src/theme-parser.c:1995 ../src/theme-parser.c:2076
-#: ../src/theme-parser.c:2182 ../src/theme-parser.c:2280
-#: ../src/theme-parser.c:2497 ../src/theme-parser.c:2623
-#: ../src/theme-parser.c:2795
-#, fuzzy, c-format
-msgid "No \"width\" attribute on element <%s>"
-msgstr "Ubugari Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1793 ../src/theme-parser.c:1896
-#: ../src/theme-parser.c:2002 ../src/theme-parser.c:2083
-#: ../src/theme-parser.c:2189 ../src/theme-parser.c:2287
-#: ../src/theme-parser.c:2504 ../src/theme-parser.c:2630
-#: ../src/theme-parser.c:2802
-#, fuzzy, c-format
-msgid "No \"height\" attribute on element <%s>"
-msgstr "Ubuhagarike Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1903
-#, fuzzy, c-format
-msgid "No \"start_angle\" attribute on element <%s>"
-msgstr "Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:1910
-#, fuzzy, c-format
-msgid "No \"extent_angle\" attribute on element <%s>"
-msgstr "Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:2090
-#, fuzzy, c-format
-msgid "No \"alpha\" attribute on element <%s>"
-msgstr "Alufa Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:2161
-#, fuzzy, c-format
-msgid "No \"type\" attribute on element <%s>"
-msgstr "Ubwoko Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:2209
-#, fuzzy, c-format
-msgid "Did not understand value \"%s\" for type of gradient"
-msgstr "OYA Agaciro kugirango Ubwoko Bya Ikizamuko"
-
-#: ../src/theme-parser.c:2294
-#, fuzzy, c-format
-msgid "No \"filename\" attribute on element <%s>"
-msgstr "Izina ry'idosiye: Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:2319 ../src/theme-parser.c:2827
-#, fuzzy, c-format
-msgid "Did not understand fill type \"%s\" for <%s> element"
-msgstr "OYA Kuzuza Ubwoko kugirango Ikigize:"
-
-#: ../src/theme-parser.c:2462 ../src/theme-parser.c:2595
-#: ../src/theme-parser.c:2700
-#, fuzzy, c-format
-msgid "No \"state\" attribute on element <%s>"
-msgstr "Leta Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:2469 ../src/theme-parser.c:2602
-#, fuzzy, c-format
-msgid "No \"shadow\" attribute on element <%s>"
-msgstr "Igicucu Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:2476
-#, fuzzy, c-format
-msgid "No \"arrow\" attribute on element <%s>"
-msgstr "Akambi Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:2529 ../src/theme-parser.c:2651
-#: ../src/theme-parser.c:2739
-#, fuzzy, c-format
-msgid "Did not understand state \"%s\" for <%s> element"
-msgstr "OYA Leta kugirango Ikigize:"
-
-#: ../src/theme-parser.c:2539 ../src/theme-parser.c:2661
-#, fuzzy, c-format
-msgid "Did not understand shadow \"%s\" for <%s> element"
-msgstr "OYA Igicucu kugirango Ikigize:"
-
-#: ../src/theme-parser.c:2549
-#, fuzzy, c-format
-msgid "Did not understand arrow \"%s\" for <%s> element"
-msgstr "OYA Akambi kugirango Ikigize:"
-
-#: ../src/theme-parser.c:2962 ../src/theme-parser.c:3078
-#, c-format
-msgid "No <draw_ops> called \"%s\" has been defined"
-msgstr ""
-
-#: ../src/theme-parser.c:2974 ../src/theme-parser.c:3090
-#, fuzzy, c-format
-msgid "Including draw_ops \"%s\" here would create a circular reference"
-msgstr "Kurema a Cy'uruziga Indango"
-
-#: ../src/theme-parser.c:3153
-#, fuzzy, c-format
-msgid "No \"value\" attribute on <%s> element"
-msgstr "Agaciro Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:3210
-#, fuzzy, c-format
-msgid "No \"position\" attribute on <%s> element"
-msgstr "Ibirindiro Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:3219
-#, fuzzy, c-format
-msgid "Unknown position \"%s\" for frame piece"
-msgstr "Ibirindiro kugirango Ikadiri"
-
-#: ../src/theme-parser.c:3227
-#, fuzzy, c-format
-msgid "Frame style already has a piece at position %s"
-msgstr "IMISUSIRE a ku Ibirindiro"
-
-#: ../src/theme-parser.c:3272
-#, fuzzy, c-format
-msgid "No \"function\" attribute on <%s> element"
-msgstr "Umumaro Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:3280 ../src/theme-parser.c:3384
-#, fuzzy, c-format
-msgid "No \"state\" attribute on <%s> element"
-msgstr "Leta Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:3289
-#, fuzzy, c-format
-msgid "Unknown function \"%s\" for button"
-msgstr "Umumaro kugirango Akabuto"
-
-#: ../src/theme-parser.c:3298
-#, fuzzy, c-format
-msgid "Unknown state \"%s\" for button"
-msgstr "Leta kugirango Akabuto"
-
-#: ../src/theme-parser.c:3306
-#, fuzzy, c-format
-msgid "Frame style already has a button for function %s state %s"
-msgstr "IMISUSIRE a Akabuto kugirango Umumaro Leta"
-
-#: ../src/theme-parser.c:3376
-#, fuzzy, c-format
-msgid "No \"focus\" attribute on <%s> element"
-msgstr "Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:3392
-#, fuzzy, c-format
-msgid "No \"style\" attribute on <%s> element"
-msgstr "IMISUSIRE Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:3401
-#, fuzzy, c-format
-msgid "\"%s\" is not a valid value for focus attribute"
-msgstr "\"%s\"ni OYA a Byemewe Agaciro kugirango Ikiranga"
-
-#: ../src/theme-parser.c:3410
-#, fuzzy, c-format
-msgid "\"%s\" is not a valid value for state attribute"
-msgstr "\"%s\"ni OYA a Byemewe Agaciro kugirango Leta Ikiranga"
-
-#: ../src/theme-parser.c:3420
-#, fuzzy, c-format
-msgid "A style called \"%s\" has not been defined"
-msgstr "A IMISUSIRE OYA"
-
-#: ../src/theme-parser.c:3430
-#, fuzzy, c-format
-msgid "No \"resize\" attribute on <%s> element"
-msgstr "Ihindurangero Ikiranga ku Ikigize:"
-
-#: ../src/theme-parser.c:3440
-#, fuzzy, c-format
-msgid "\"%s\" is not a valid value for resize attribute"
-msgstr "\"%s\"ni OYA a Byemewe Agaciro kugirango Ihindurangero Ikiranga"
-
-#: ../src/theme-parser.c:3450
-#, fuzzy, c-format
-msgid ""
-"Should not have \"resize\" attribute on <%s> element for maximized/shaded "
-"states"
-msgstr "OYA Ihindurangero Ikiranga ku Ikigize: kugirango"
-
-#: ../src/theme-parser.c:3464
-#, fuzzy, c-format
-msgid "Style has already been specified for state %s resize %s focus %s"
-msgstr "kugirango Leta Ihindurangero"
-
-#: ../src/theme-parser.c:3475 ../src/theme-parser.c:3486
-#: ../src/theme-parser.c:3497
-#, fuzzy, c-format
-msgid "Style has already been specified for state %s focus %s"
-msgstr "kugirango Leta"
-
-#: ../src/theme-parser.c:3536
-#, fuzzy
-msgid ""
-"Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
-"attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "a kugirango a Ikigize: a Ikiranga Na a Ikigize: Cyangwa Ibintu"
-
-#: ../src/theme-parser.c:3574
-#, fuzzy
-msgid ""
-"Can't have a two draw_ops for a <button> element (theme specified a draw_ops "
-"attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "a kugirango a Akabuto Ikigize: a Ikiranga Na a Ikigize: Cyangwa Ibintu"
-
-#: ../src/theme-parser.c:3612
-#, fuzzy
-msgid ""
-"Can't have a two draw_ops for a <menu_icon> element (theme specified a "
-"draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "a kugirango a Ikigize: a Ikiranga Na a Ikigize: Cyangwa Ibintu"
-
-#: ../src/theme-parser.c:3659
-#, fuzzy, c-format
-msgid "Outermost element in theme must be <marco_theme> not <%s>"
-msgstr "Ikigize: in OYA"
-
-#: ../src/theme-parser.c:3679
-#, fuzzy, c-format
-msgid ""
-"Element <%s> is not allowed inside a name/author/date/description element"
-msgstr ""
-"ni OYA Mo Imbere a Izina: Umwanditsi Itariki Isobanuramiterere Ikigize:"
-
-#: ../src/theme-parser.c:3684
-#, fuzzy, c-format
-msgid "Element <%s> is not allowed inside a <constant> element"
-msgstr "ni OYA Mo Imbere a Ikigize:"
-
-#: ../src/theme-parser.c:3696
-#, fuzzy, c-format
-msgid ""
-"Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "ni OYA Mo Imbere a Intera Imbibi Ikigize:"
-
-#: ../src/theme-parser.c:3718
-#, fuzzy, c-format
-msgid "Element <%s> is not allowed inside a draw operation element"
-msgstr "ni OYA Mo Imbere a Gushushanya Ikigize:"
-
-#: ../src/theme-parser.c:3728 ../src/theme-parser.c:3758
-#: ../src/theme-parser.c:3763
-#, fuzzy, c-format
-msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "ni OYA Mo Imbere a Ikigize:"
-
-#: ../src/theme-parser.c:3984
-#, fuzzy
-msgid "No draw_ops provided for frame piece"
-msgstr "kugirango Ikadiri"
-
-#: ../src/theme-parser.c:3999
-#, fuzzy
-msgid "No draw_ops provided for button"
-msgstr "kugirango Akabuto"
-
-#: ../src/theme-parser.c:4014
-#, fuzzy
-msgid "No draw_ops provided for menu icon"
-msgstr "kugirango Ibikubiyemo Agashushondanga"
-
-#: ../src/theme-parser.c:4054
-#, fuzzy, c-format
-msgid "No text is allowed inside element <%s>"
-msgstr "Umwandiko ni Mo Imbere Ikigize:"
-
-#: ../src/theme-parser.c:4109
-#, fuzzy
-msgid "<name> specified twice for this theme"
-msgstr "<Izina: kugirango iyi"
-
-#: ../src/theme-parser.c:4120
-#, fuzzy
-msgid "<author> specified twice for this theme"
-msgstr "<Umwanditsi kugirango iyi"
-
-#: ../src/theme-parser.c:4131
-#, fuzzy
-msgid "<copyright> specified twice for this theme"
-msgstr "<Uburenganzira bw'umuhimbyi kugirango iyi"
-
-#: ../src/theme-parser.c:4142
-#, fuzzy
-msgid "<date> specified twice for this theme"
-msgstr "<Itariki kugirango iyi"
-
-#: ../src/theme-parser.c:4153
-#, fuzzy
-msgid "<description> specified twice for this theme"
-msgstr "<Isobanuramiterere kugirango iyi"
-
-#: ../src/theme-parser.c:4348
-#, fuzzy, c-format
-msgid "Failed to read theme from file %s: %s\n"
-msgstr "Kuri Gusoma Bivuye IDOSIYE"
-
-#: ../src/theme-parser.c:4403
-#, fuzzy, c-format
-msgid "Theme file %s did not contain a root <marco_theme> element"
-msgstr "IDOSIYE OYA a Imizi Ikigize:"
-
-# ***** BEGIN LICENSE BLOCK *****
-# Version: MPL 1.1/GPL 2.0/LGPL 2.1
-# 
-# The contents of this file are subject to the Mozilla Public License Version
-# 1.1 (the "License"); you may not use this file except in compliance with
-# the License. You may obtain a copy of the License at
-# http://www.mozilla.org/MPL/
-# 
-# Software distributed under the License is distributed on an "AS IS" basis,
-# WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-# for the specific language governing rights and limitations under the
-# License.
-# 
-# The Original Code is Mozilla Communicator client code, released
-# March 31, 1998.
-# 
-# The Initial Developer of the Original Code is
-# Netscape Communications Corporation.
-# Portions created by the Initial Developer are Copyright (C) 1998-1999
-# the Initial Developer. All Rights Reserved.
-# 
-# Contributor(s):
-# 
-# Alternatively, the contents of this file may be used under the terms of
-# either of the GNU General Public License Version 2 or later (the "GPL"),
-# or the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-# in which case the provisions of the GPL or the LGPL are applicable instead
-# of those above. If you wish to allow use of your version of this file only
-# under the terms of either the GPL or the LGPL, and not to allow others to
-# use your version of this file under the terms of the MPL, indicate your
-# decision by deleting the provisions above and replace them with the notice
-# and other provisions required by the GPL or the LGPL. If you do not delete
-# the provisions above, a recipient may use your version of this file under
-# the terms of any one of the MPL, the GPL or the LGPL.
-# 
-# ***** END LICENSE BLOCK *****
-#: ../src/theme-viewer.c:70
-#, fuzzy
-msgid "/_Windows"
-msgstr "/Amadirishya"
-
-#: ../src/theme-viewer.c:71
-msgid "/Windows/tearoff"
-msgstr ""
-
-#: ../src/theme-viewer.c:72
-msgid "/Windows/_Dialog"
-msgstr ""
-
-#: ../src/theme-viewer.c:73
-#, fuzzy
-msgid "/Windows/_Modal dialog"
-msgstr "/Ikiganiro"
-
-#: ../src/theme-viewer.c:74
-msgid "/Windows/_Utility"
-msgstr ""
-
-#: ../src/theme-viewer.c:75
-msgid "/Windows/_Splashscreen"
-msgstr ""
-
-#: ../src/theme-viewer.c:76
-msgid "/Windows/_Top dock"
-msgstr ""
-
-#: ../src/theme-viewer.c:77
-msgid "/Windows/_Bottom dock"
-msgstr ""
-
-#: ../src/theme-viewer.c:78
-msgid "/Windows/_Left dock"
-msgstr ""
-
-#: ../src/theme-viewer.c:79
-msgid "/Windows/_Right dock"
-msgstr ""
-
-#: ../src/theme-viewer.c:80
-msgid "/Windows/_All docks"
-msgstr ""
-
-#: ../src/theme-viewer.c:81
-msgid "/Windows/Des_ktop"
-msgstr ""
-
-#: ../src/theme-viewer.c:131
-#, fuzzy
-msgid "Open another one of these windows"
-msgstr "Bya"
-
-#: ../src/theme-viewer.c:138
-#, fuzzy
-msgid "This is a demo button with an 'open' icon"
-msgstr "ni a Akabuto Na: Agashushondanga"
-
-#: ../src/theme-viewer.c:145
-#, fuzzy
-msgid "This is a demo button with a 'quit' icon"
-msgstr "ni a Akabuto Na: a Agashushondanga"
-
-#: ../src/theme-viewer.c:241
-#, fuzzy
-msgid "This is a sample message in a sample dialog"
-msgstr "ni a Urugero Ubutumwa in a Urugero Ikiganiro"
-
-#: ../src/theme-viewer.c:324
-#, fuzzy, c-format
-msgid "Fake menu item %d\n"
-msgstr "Ibikubiyemo Ikintu"
-
-#: ../src/theme-viewer.c:358
-#, fuzzy
-msgid "Border-only window"
-msgstr "Idirishya"
-
-#: ../src/theme-viewer.c:360
-msgid "Bar"
-msgstr ""
-
-#: ../src/theme-viewer.c:377
-msgid "Normal Application Window"
-msgstr ""
-
-#: ../src/theme-viewer.c:382
-msgid "Dialog Box"
-msgstr ""
-
-#: ../src/theme-viewer.c:387
-msgid "Modal Dialog Box"
-msgstr ""
-
-#: ../src/theme-viewer.c:392
-msgid "Utility Palette"
-msgstr ""
-
-#: ../src/theme-viewer.c:397
-#, fuzzy
-msgid "Torn-off Menu"
-msgstr "Bidakora"
-
-#: ../src/theme-viewer.c:402
-msgid "Border"
-msgstr "Imbibi"
-
-#: ../src/theme-viewer.c:731
-#, fuzzy, c-format
-msgid "Button layout test %d"
-msgstr "Imigaragarire Igerageza"
-
-#: ../src/theme-viewer.c:760
-#, fuzzy, c-format
-msgid "%g milliseconds to draw one window frame"
-msgstr "%gKuri Gushushanya Idirishya Ikadiri"
-
-#: ../src/theme-viewer.c:803
-msgid "Usage: marco-theme-viewer [THEMENAME]\n"
-msgstr ""
-
-#: ../src/theme-viewer.c:810
-#, fuzzy, c-format
-msgid "Error loading theme: %s\n"
-msgstr "Itangira..."
-
-#: ../src/theme-viewer.c:816
-#, fuzzy, c-format
-msgid "Loaded theme \"%s\" in %g seconds\n"
-msgstr "in"
-
-#: ../src/theme-viewer.c:839
-msgid "Normal Title Font"
-msgstr ""
-
-#: ../src/theme-viewer.c:845
-msgid "Small Title Font"
-msgstr ""
-
-#: ../src/theme-viewer.c:851
-msgid "Large Title Font"
-msgstr ""
-
-#: ../src/theme-viewer.c:856
-msgid "Button Layouts"
-msgstr ""
-
-#: ../src/theme-viewer.c:861
-msgid "Benchmark"
-msgstr ""
-
-#: ../src/theme-viewer.c:908
-msgid "Window Title Goes Here"
-msgstr ""
-
-#: ../src/theme-viewer.c:1012
-#, fuzzy, c-format
-msgid ""
-"Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
-"seconds wall clock time including X server resources (%g milliseconds per "
-"frame)\n"
-msgstr ""
-"Amakadiri in Umukiriya amasogonda Ikadiri Na amasogonda Urukuta Igihe "
-"Seriveri Ikadiri"
-
-#: ../src/theme-viewer.c:1227
-#, fuzzy
-msgid "position expression test returned TRUE but set error"
-msgstr "Ibirindiro imvugo Igerageza Gushyiraho Ikosa"
-
-#: ../src/theme-viewer.c:1229
-#, fuzzy
-msgid "position expression test returned FALSE but didn't set error"
-msgstr "Ibirindiro imvugo Igerageza Gushyiraho Ikosa"
-
-#: ../src/theme-viewer.c:1233
-#, fuzzy
-msgid "Error was expected but none given"
-msgstr "Ikitezwe: Ntacyo"
-
-#: ../src/theme-viewer.c:1235
-#, fuzzy, c-format
-msgid "Error %d was expected but %d given"
-msgstr "Ikitezwe:"
-
-#: ../src/theme-viewer.c:1241
-#, fuzzy, c-format
-msgid "Error not expected but one was returned: %s"
-msgstr "OYA Ikitezwe:"
-
-#: ../src/theme-viewer.c:1245
-#, fuzzy, c-format
-msgid "x value was %d, %d was expected"
-msgstr "X Agaciro Ikitezwe:"
-
-#: ../src/theme-viewer.c:1248
-#, fuzzy, c-format
-msgid "y value was %d, %d was expected"
-msgstr "Y Agaciro Ikitezwe:"
-
-#: ../src/theme-viewer.c:1310
-#, fuzzy, c-format
-msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
-msgstr "%din amasogonda amasogonda Impuzandengo"
-
-# scaddins/source\analysis\analysis.src:RID_ANALYSIS_FUNCTION_DESCRIPTIONS.ANALYSIS_Randbetween.4.text
-#: ../src/theme.c:202
-#, fuzzy
-msgid "top"
-msgstr "Hejuru"
-
-# 640
-#: ../src/theme.c:204
-msgid "bottom"
-msgstr "hasi"
-
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\DataAccess.xcs:....Column.Align..0.text
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\Math.xcs:....StandardFormat.HorizontalAlignment..0.text
-#: ../src/theme.c:206
-msgid "left"
-msgstr "ibumoso"
-
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\DataAccess.xcs:....Column.Align..2.text
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\Math.xcs:....StandardFormat.HorizontalAlignment..2.text
-#: ../src/theme.c:208
-msgid "right"
-msgstr "iburyo"
-
-#: ../src/theme.c:222
-#, fuzzy, c-format
-msgid "frame geometry does not specify \"%s\" dimension"
-msgstr "Ikadiri Iyigamashusho OYA"
-
-#: ../src/theme.c:241
-#, fuzzy, c-format
-msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
-msgstr "Ikadiri Iyigamashusho OYA kugirango Imbibi"
-
-#: ../src/theme.c:278
-#, fuzzy, c-format
-msgid "Button aspect ratio %g is not reasonable"
-msgstr "ni OYA"
-
-#: ../src/theme.c:290
-#, fuzzy
-msgid "Frame geometry does not specify size of buttons"
-msgstr "Iyigamashusho OYA Ingano Bya Utubuto"
-
-#: ../src/theme.c:843
-#, fuzzy
-msgid "Gradients should have at least two colors"
-msgstr "ku Amabara"
-
-#: ../src/theme.c:969
-#, fuzzy, c-format
-msgid ""
-"GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL] "
-"where NORMAL is the state; could not parse \"%s\""
-msgstr "g."
-
-#: ../src/theme.c:983
-#, fuzzy, c-format
-msgid ""
-"GTK color specification must have a close bracket after the state, e.g. gtk:"
-"fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "g."
-
-#: ../src/theme.c:994
-#, fuzzy, c-format
-msgid "Did not understand state \"%s\" in color specification"
-msgstr "OYA Leta in Ibara"
-
-#: ../src/theme.c:1007
-#, fuzzy, c-format
-msgid "Did not understand color component \"%s\" in color specification"
-msgstr "OYA Ibara in Ibara"
-
-#: ../src/theme.c:1037
-#, fuzzy, c-format
-msgid ""
-"Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
-"format"
-msgstr "Imiterere ni Alufa OYA Imiterere"
-
-#: ../src/theme.c:1048
-#, fuzzy, c-format
-msgid "Could not parse alpha value \"%s\" in blended color"
-msgstr "OYA Alufa Agaciro in Ibara"
-
-#: ../src/theme.c:1058
-#, fuzzy, c-format
-msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
-msgstr "Agaciro in Ibara ni OYA hagati 0 0 Na 1. 0"
-
-#: ../src/theme.c:1105
-#, fuzzy, c-format
-msgid ""
-"Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "Imiterere ni Umubarwa OYA Imiterere"
-
-#: ../src/theme.c:1116
-#, fuzzy, c-format
-msgid "Could not parse shade factor \"%s\" in shaded color"
-msgstr "OYA Umubarwa in Ibara"
-
-#: ../src/theme.c:1126
-#, fuzzy, c-format
-msgid "Shade factor \"%s\" in shaded color is negative"
-msgstr "Umubarwa in Ibara ni"
-
-#: ../src/theme.c:1155
-#, fuzzy, c-format
-msgid "Could not parse color \"%s\""
-msgstr "OYA Ibara"
-
-#: ../src/theme.c:1417
-#, fuzzy, c-format
-msgid "Coordinate expression contains character '%s' which is not allowed"
-msgstr "imvugo Kirimo Inyuguti ni OYA"
-
-#: ../src/theme.c:1444
-#, fuzzy, c-format
-msgid ""
-"Coordinate expression contains floating point number '%s' which could not be "
-"parsed"
-msgstr "imvugo Kirimo Bihindagurika Akadomo Umubare OYA"
-
-#: ../src/theme.c:1458
-#, fuzzy, c-format
-msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr "imvugo Kirimo Umubare wuzuye OYA"
-
-#: ../src/theme.c:1525
-#, fuzzy, c-format
-msgid ""
-"Coordinate expression contained unknown operator at the start of this text: "
-"\"%s\""
-msgstr "imvugo Kitazwi Mukoresha ku Gutangira Bya iyi Umwandiko"
-
-#: ../src/theme.c:1582
-#, fuzzy
-msgid "Coordinate expression was empty or not understood"
-msgstr "imvugo ubusa Cyangwa OYA"
-
-#: ../src/theme.c:1725 ../src/theme.c:1735 ../src/theme.c:1769
-#, fuzzy
-msgid "Coordinate expression results in division by zero"
-msgstr "imvugo Ibisubizo ku in ku Zeru"
-
-#: ../src/theme.c:1777
-#, fuzzy
-msgid ""
-"Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "imvugo Kuri Gukoresha MOD Mukoresha ku a Bihindagurika Akadomo Umubare"
-
-#: ../src/theme.c:1834
-#, fuzzy, c-format
-msgid ""
-"Coordinate expression has an operator \"%s\" where an operand was expected"
-msgstr "imvugo Mukoresha Ikitezwe:"
-
-#: ../src/theme.c:1843
-#, fuzzy
-msgid "Coordinate expression had an operand where an operator was expected"
-msgstr "imvugo Mukoresha Ikitezwe:"
-
-#: ../src/theme.c:1851
-#, fuzzy
-msgid "Coordinate expression ended with an operator instead of an operand"
-msgstr "imvugo Na: Mukoresha Bya"
-
-#: ../src/theme.c:1861
-#, fuzzy, c-format
-msgid ""
-"Coordinate expression has operator \"%c\" following operator \"%c\" with no "
-"operand in between"
-msgstr "imvugo Mukoresha Mukoresha Na: Oya in hagati"
-
-#: ../src/theme.c:1980
-#, fuzzy
-msgid ""
-"Coordinate expression parser overflowed its buffer, this is really a "
-"Marco bug, but are you sure you need a huge expression like that?"
-msgstr "imvugo iyi ni a a imvugo nka"
-
-#: ../src/theme.c:2009
-#, fuzzy
-msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr "imvugo a Gufunga Na: Oya Gufungura"
-
-#: ../src/theme.c:2072
-#, fuzzy, c-format
-msgid "Coordinate expression had unknown variable or constant \"%s\""
-msgstr "imvugo Kitazwi IMPINDURAGACIRO Cyangwa"
-
-#: ../src/theme.c:2129
-#, fuzzy
-msgid "Coordinate expression had an open parenthesis with no close parenthesis"
-msgstr "imvugo Gufungura Na: Oya Gufunga"
-
-#: ../src/theme.c:2140
-#, fuzzy
-msgid "Coordinate expression doesn't seem to have any operators or operands"
-msgstr "imvugo Kuri Mukoresha Cyangwa"
-
-#: ../src/theme.c:2384 ../src/theme.c:2406 ../src/theme.c:2427
-#, fuzzy, c-format
-msgid "Theme contained an expression \"%s\" that resulted in an error: %s\n"
-msgstr "imvugo in Ikosa"
-
-#: ../src/theme.c:3913
-#, fuzzy, c-format
-msgid ""
-"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
-"specified for this frame style"
-msgstr "<Akabuto Umumaro Leta kugirango iyi Ikadiri IMISUSIRE"
-
-#: ../src/theme.c:4363 ../src/theme.c:4395
-#, fuzzy, c-format
-msgid ""
-"Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
-msgstr "Ikadiri Leta Ihindurangero IMISUSIRE"
-
-#: ../src/theme.c:4446
-#, fuzzy, c-format
-msgid "Failed to load theme \"%s\": %s\n"
-msgstr "Kuri Ibirimo"
-
-#: ../src/theme.c:4592 ../src/theme.c:4599 ../src/theme.c:4606
-#: ../src/theme.c:4613 ../src/theme.c:4620
-#, fuzzy, c-format
-msgid "No <%s> set for theme \"%s\""
-msgstr "Gushyiraho kugirango"
-
-#: ../src/theme.c:4630
-#, fuzzy, c-format
-msgid ""
-"No frame style set for window type \"%s\" in theme \"%s\", add a <window "
-"type=\"%s\" style_set=\"whatever\"/> element"
-msgstr ""
-"Ikadiri IMISUSIRE Gushyiraho kugirango Idirishya Ubwoko in Kongeramo a "
-"Idirishya Ubwoko Ikigize:"
-
-#: ../src/theme.c:4652
-#, fuzzy, c-format
-msgid ""
-"<menu_icon function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
-"specified for this theme"
-msgstr "<Umumaro Leta kugirango iyi"
-
-#: ../src/theme.c:5041 ../src/theme.c:5103
-#, fuzzy, c-format
-msgid ""
-"User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Na: a Ibaruwa... OYA"
-
-#: ../src/theme.c:5049 ../src/theme.c:5111
-#, c-format
-msgid "Constant \"%s\" has already been defined"
-msgstr ""
-
-#: ../src/util.c:93
-#, fuzzy, c-format
 msgid "Failed to open debug log: %s\n"
-msgstr "Kuri Gufungura Kosora amakosa LOG"
+msgstr ""
 
-#: ../src/util.c:103
-#, fuzzy, c-format
+#: ../src/core/util.c:111
+#, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
-msgstr "Kuri LOG IDOSIYE"
+msgstr ""
 
-#: ../src/util.c:109
-#, fuzzy, c-format
+#: ../src/core/util.c:117
+#, c-format
 msgid "Opened log file %s\n"
-msgstr "LOG IDOSIYE"
+msgstr ""
 
-#: ../src/util.c:203
-#, fuzzy
+#: ../src/core/util.c:136 ../src/tools/marco-message.c:176
+#, c-format
+msgid "Marco was compiled without support for verbose mode\n"
+msgstr ""
+
+#: ../src/core/util.c:236
 msgid "Window manager: "
-msgstr "Umuyobozi w'idirishya"
+msgstr ""
 
-#: ../src/util.c:349
-#, fuzzy
+#: ../src/core/util.c:388
 msgid "Bug in window manager: "
-msgstr "in Idirishya Muyobozi"
+msgstr ""
 
-#: ../src/util.c:378
-#, fuzzy
+#: ../src/core/util.c:421
 msgid "Window manager warning: "
-msgstr "Muyobozi Iburira"
+msgstr ""
 
-#: ../src/util.c:402
-#, fuzzy
+#: ../src/core/util.c:449
 msgid "Window manager error: "
-msgstr "Muyobozi Ikosa"
+msgstr ""
 
-#: ../src/window-props.c:162
-#, fuzzy, c-format
-msgid "Application set a bogus _NET_WM_PID %ld\n"
-msgstr "Gushyiraho a"
+#. Translators: This is the title used on dialog boxes
+#: ../src/core/util.c:569 ../src/marco.desktop.in.h:1
+#: ../src/marco-wm.desktop.in.h:1
+msgid "Marco"
+msgstr ""
 
 #. first time through
-#: ../src/window.c:5205
-#, fuzzy, c-format
+#: ../src/core/window.c:5797
+#, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "ku Bya ku Idirishya Nka in"
+msgstr ""
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -3208,16 +1168,51 @@ msgstr "ku Bya ku Idirishya Nka in"
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#.
-#: ../src/window.c:5876
-#, fuzzy, c-format
+#: ../src/core/window.c:6362
+#, c-format
 msgid ""
-"Window %s sets an MWM hint indicating it isn't resizable, but sets min size %"
-"d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "GITO Ingano X Na KININI Ingano X iyi Ubwoko"
+"Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
+"%d x %d and max size %d x %d; this doesn't make much sense.\n"
+msgstr ""
 
-#: ../src/xprops.c:153
-#, fuzzy, c-format
+#: ../src/core/window-props.c:306
+#, c-format
+msgid "Application set a bogus _NET_WM_PID %lu\n"
+msgstr ""
+
+#. Translators: the title of a window from another machine
+#: ../src/core/window-props.c:457
+#, c-format
+msgid "%s (on %s)"
+msgstr ""
+
+#. Simple case-- don't bother to look it up.  It's root.
+#: ../src/core/window-props.c:489
+#, c-format
+msgid "%s (as superuser)"
+msgstr ""
+
+#. Translators: the title of a window owned by another user
+#. * on this machine
+#: ../src/core/window-props.c:507
+#, c-format
+msgid "%s (as %s)"
+msgstr ""
+
+#. Translators: the title of a window owned by another user
+#. * on this machine, whose name we don't know
+#: ../src/core/window-props.c:513
+#, c-format
+msgid "%s (as another user)"
+msgstr ""
+
+#: ../src/core/window-props.c:1499
+#, c-format
+msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
+msgstr ""
+
+#: ../src/core/xprops.c:155
+#, c-format
 msgid ""
 "Window 0x%lx has property %s\n"
 "that was expected to have type %s format %d\n"
@@ -3225,16 +1220,1021 @@ msgid ""
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
 msgstr ""
-"indangakintu Ikitezwe: Kuri Ubwoko Imiterere Na Ubwoko Imiterere ni "
-"Porogaramu OYA a Idirishya Muyobozi Idirishya Umutwe ishuri Izina:"
 
-#: ../src/xprops.c:399
-#, fuzzy, c-format
+#: ../src/core/xprops.c:411
+#, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
-msgstr "ku Idirishya Sibyo"
+msgstr ""
 
-#: ../src/xprops.c:482
-#, fuzzy, c-format
+#: ../src/core/xprops.c:494
+#, c-format
 msgid ""
-"Property %s on window 0x%lx contained invalid UTF-8 for item %d in the list\n"
-msgstr "ku Idirishya Sibyo 8 kugirango Ikintu in"
+"Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
+"list\n"
+msgstr ""
+
+#: ../src/tools/marco-message.c:150
+#, c-format
+msgid "Usage: %s\n"
+msgstr ""
+
+#: ../src/ui/frames.c:1214
+msgid "Close Window"
+msgstr "Gufunga Idirishya"
+
+#: ../src/ui/frames.c:1217
+msgid "Window Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1220
+msgid "Minimize Window"
+msgstr "gira idirishya rito"
+
+#: ../src/ui/frames.c:1223
+msgid "Maximize Window"
+msgstr "heza idirishya"
+
+#: ../src/ui/frames.c:1226
+msgid "Restore Window"
+msgstr ""
+
+#: ../src/ui/frames.c:1229
+msgid "Roll Up Window"
+msgstr ""
+
+#: ../src/ui/frames.c:1232
+msgid "Unroll Window"
+msgstr ""
+
+#: ../src/ui/frames.c:1235
+msgid "Keep Window On Top"
+msgstr ""
+
+#: ../src/ui/frames.c:1238
+msgid "Remove Window From Top"
+msgstr ""
+
+#: ../src/ui/frames.c:1241
+msgid "Always On Visible Workspace"
+msgstr ""
+
+#: ../src/ui/frames.c:1244
+msgid "Put Window On Only One Workspace"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:64
+msgid "Mi_nimize"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:66
+msgid "Ma_ximize"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:68
+msgid "Unma_ximize"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:70
+msgid "Roll _Up"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:72
+msgid "_Unroll"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:74
+msgid "_Move"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:76
+msgid "_Resize"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:78
+msgid "Move Titlebar On_screen"
+msgstr ""
+
+#. separator
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:81 ../src/ui/menu.c:83
+msgid "Always on _Top"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:85
+msgid "_Always on Visible Workspace"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:87
+msgid "_Only on This Workspace"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:89
+msgid "Move to Workspace _Left"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:91
+msgid "Move to Workspace R_ight"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:93
+msgid "Move to Workspace _Up"
+msgstr ""
+
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:95
+msgid "Move to Workspace _Down"
+msgstr ""
+
+#. separator
+#. Translators: Translate this string the same way as you do in libwnck!
+#: ../src/ui/menu.c:99
+msgid "_Close"
+msgstr ""
+
+#: ../src/ui/menu.c:200
+#, c-format
+msgid "Workspace %d%n"
+msgstr ""
+
+#: ../src/ui/menu.c:210
+#, c-format
+msgid "Workspace 1_0"
+msgstr ""
+
+#: ../src/ui/menu.c:212
+#, c-format
+msgid "Workspace %s%d"
+msgstr ""
+
+#: ../src/ui/menu.c:391
+msgid "Move to Another _Workspace"
+msgstr ""
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the shift key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#: ../src/ui/metaaccellabel.c:143
+msgid "Shift"
+msgstr "Gusunika"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the control key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#: ../src/ui/metaaccellabel.c:149
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the alt key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#: ../src/ui/metaaccellabel.c:155
+msgid "Alt"
+msgstr "Alt"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the meta key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#: ../src/ui/metaaccellabel.c:161
+msgid "Meta"
+msgstr "Meta"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the super key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#: ../src/ui/metaaccellabel.c:167
+msgid "Super"
+msgstr "hejuru"
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the hyper key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#: ../src/ui/metaaccellabel.c:173
+msgid "Hyper"
+msgstr ""
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod2 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#: ../src/ui/metaaccellabel.c:179
+msgid "Mod2"
+msgstr ""
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod3 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#: ../src/ui/metaaccellabel.c:185
+msgid "Mod3"
+msgstr ""
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod4 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#: ../src/ui/metaaccellabel.c:191
+msgid "Mod4"
+msgstr ""
+
+#. This is the text that should appear next to menu accelerators
+#. * that use the mod5 key. If the text on this key isn't typically
+#. * translated on keyboards used for your language, don't translate
+#. * this.
+#: ../src/ui/metaaccellabel.c:197
+msgid "Mod5"
+msgstr ""
+
+#. Translators: This represents the size of a window.  The first number is
+#. * the width of the window and the second is the height.
+#: ../src/ui/resizepopup.c:113
+#, c-format
+msgid "%d x %d"
+msgstr ""
+
+#: ../src/ui/theme.c:306
+msgid "top"
+msgstr ""
+
+#: ../src/ui/theme.c:308
+msgid "bottom"
+msgstr "hasi"
+
+#: ../src/ui/theme.c:310
+msgid "left"
+msgstr "ibumoso"
+
+#: ../src/ui/theme.c:312
+msgid "right"
+msgstr "iburyo"
+
+#: ../src/ui/theme.c:339
+#, c-format
+msgid "frame geometry does not specify \"%s\" dimension"
+msgstr ""
+
+#: ../src/ui/theme.c:358
+#, c-format
+msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:395
+#, c-format
+msgid "Button aspect ratio %g is not reasonable"
+msgstr ""
+
+#: ../src/ui/theme.c:407
+#, c-format
+msgid "Frame geometry does not specify size of buttons"
+msgstr ""
+
+#: ../src/ui/theme.c:1132
+#, c-format
+msgid "Gradients should have at least two colors"
+msgstr ""
+
+#: ../src/ui/theme.c:1262
+#, c-format
+msgid ""
+"GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
+" where NORMAL is the state; could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1276
+#, c-format
+msgid ""
+"GTK color specification must have a close bracket after the state, e.g. "
+"gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1287
+#, c-format
+msgid "Did not understand state \"%s\" in color specification"
+msgstr ""
+
+#: ../src/ui/theme.c:1300
+#, c-format
+msgid "Did not understand color component \"%s\" in color specification"
+msgstr ""
+
+#: ../src/ui/theme.c:1329
+#, c-format
+msgid ""
+"Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
+"format"
+msgstr ""
+
+#: ../src/ui/theme.c:1340
+#, c-format
+msgid "Could not parse alpha value \"%s\" in blended color"
+msgstr ""
+
+#: ../src/ui/theme.c:1350
+#, c-format
+msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
+msgstr ""
+
+#: ../src/ui/theme.c:1397
+#, c-format
+msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1408
+#, c-format
+msgid "Could not parse shade factor \"%s\" in shaded color"
+msgstr ""
+
+#: ../src/ui/theme.c:1418
+#, c-format
+msgid "Shade factor \"%s\" in shaded color is negative"
+msgstr ""
+
+#: ../src/ui/theme.c:1451
+#, c-format
+msgid "Could not parse color \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1848
+#, c-format
+msgid "Coordinate expression contains character '%s' which is not allowed"
+msgstr ""
+
+#: ../src/ui/theme.c:1875
+#, c-format
+msgid ""
+"Coordinate expression contains floating point number '%s' which could not be"
+" parsed"
+msgstr ""
+
+#: ../src/ui/theme.c:1889
+#, c-format
+msgid "Coordinate expression contains integer '%s' which could not be parsed"
+msgstr ""
+
+#: ../src/ui/theme.c:2011
+#, c-format
+msgid ""
+"Coordinate expression contained unknown operator at the start of this text: "
+"\"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:2068
+#, c-format
+msgid "Coordinate expression was empty or not understood"
+msgstr ""
+
+#: ../src/ui/theme.c:2179 ../src/ui/theme.c:2189 ../src/ui/theme.c:2223
+#, c-format
+msgid "Coordinate expression results in division by zero"
+msgstr ""
+
+#: ../src/ui/theme.c:2231
+#, c-format
+msgid ""
+"Coordinate expression tries to use mod operator on a floating-point number"
+msgstr ""
+
+#: ../src/ui/theme.c:2287
+#, c-format
+msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
+msgstr ""
+
+#: ../src/ui/theme.c:2296
+#, c-format
+msgid "Coordinate expression had an operand where an operator was expected"
+msgstr ""
+
+#: ../src/ui/theme.c:2304
+#, c-format
+msgid "Coordinate expression ended with an operator instead of an operand"
+msgstr ""
+
+#: ../src/ui/theme.c:2314
+#, c-format
+msgid ""
+"Coordinate expression has operator \"%c\" following operator \"%c\" with no "
+"operand in between"
+msgstr ""
+
+#: ../src/ui/theme.c:2461 ../src/ui/theme.c:2502
+#, c-format
+msgid "Coordinate expression had unknown variable or constant \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:2556
+#, c-format
+msgid "Coordinate expression parser overflowed its buffer."
+msgstr ""
+
+#: ../src/ui/theme.c:2585
+#, c-format
+msgid "Coordinate expression had a close parenthesis with no open parenthesis"
+msgstr ""
+
+#: ../src/ui/theme.c:2649
+#, c-format
+msgid ""
+"Coordinate expression had an open parenthesis with no close parenthesis"
+msgstr ""
+
+#: ../src/ui/theme.c:2660
+#, c-format
+msgid "Coordinate expression doesn't seem to have any operators or operands"
+msgstr ""
+
+#: ../src/ui/theme.c:2864 ../src/ui/theme.c:2884 ../src/ui/theme.c:2904
+#, c-format
+msgid "Theme contained an expression that resulted in an error: %s\n"
+msgstr ""
+
+#: ../src/ui/theme.c:4782
+#, c-format
+msgid ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
+"specified for this frame style"
+msgstr ""
+
+#: ../src/ui/theme.c:5434 ../src/ui/theme.c:5459
+#, c-format
+msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
+msgstr ""
+
+#: ../src/ui/theme.c:5503
+#, c-format
+msgid "Failed to load theme \"%s\": %s\n"
+msgstr ""
+
+#: ../src/ui/theme.c:5633 ../src/ui/theme.c:5640 ../src/ui/theme.c:5647
+#: ../src/ui/theme.c:5654 ../src/ui/theme.c:5661
+#, c-format
+msgid "No <%s> set for theme \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:5669
+#, c-format
+msgid ""
+"No frame style set for window type \"%s\" in theme \"%s\", add a <window "
+"type=\"%s\" style_set=\"whatever\"/> element"
+msgstr ""
+
+#: ../src/ui/theme.c:6146 ../src/ui/theme.c:6208 ../src/ui/theme.c:6271
+#, c-format
+msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
+msgstr ""
+
+#: ../src/ui/theme.c:6154 ../src/ui/theme.c:6216 ../src/ui/theme.c:6279
+#, c-format
+msgid "Constant \"%s\" has already been defined"
+msgstr ""
+
+#. Translators: This means that an attribute which should have been found
+#. * on an XML element was not in fact found.
+#: ../src/ui/theme-parser.c:226
+#, c-format
+msgid "No \"%s\" attribute on element <%s>"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#, c-format
+msgid "Line %d character %d: %s"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:438
+#, c-format
+msgid "Attribute \"%s\" repeated twice on the same <%s> element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#, c-format
+msgid "Attribute \"%s\" is invalid on <%s> element in this context"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:547
+#, c-format
+msgid "Could not parse \"%s\" as an integer"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#, c-format
+msgid "Did not understand trailing characters \"%s\" in string \"%s\""
+msgstr ""
+
+#: ../src/ui/theme-parser.c:566
+#, c-format
+msgid "Integer %ld must be positive"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:574
+#, c-format
+msgid "Integer %ld is too large, current max is %d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#, c-format
+msgid "Could not parse \"%s\" as a floating point number"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#, c-format
+msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
+msgstr ""
+
+#: ../src/ui/theme-parser.c:688
+#, c-format
+msgid "Angle must be between 0.0 and 360.0, was %g\n"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:751
+#, c-format
+msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:816
+#, c-format
+msgid ""
+"Invalid title scale \"%s\" (must be one of xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
+#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#, c-format
+msgid "<%s> name \"%s\" used a second time"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
+#: ../src/ui/theme-parser.c:1184
+#, c-format
+msgid "<%s> parent \"%s\" has not been defined"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1094
+#, c-format
+msgid "<%s> geometry \"%s\" has not been defined"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1107
+#, c-format
+msgid "<%s> must specify either a geometry or a parent that has a geometry"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1149
+msgid "You must specify a background for an alpha value to be meaningful"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1216
+#, c-format
+msgid "Unknown type \"%s\" on <%s> element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1227
+#, c-format
+msgid "Unknown style_set \"%s\" on <%s> element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1235
+#, c-format
+msgid "Window type \"%s\" has already been assigned a style set"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
+#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
+#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
+#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
+#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
+#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#, c-format
+msgid "Element <%s> is not allowed below <%s>"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
+#: ../src/ui/theme-parser.c:1438
+msgid ""
+"Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
+"for buttons"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1402
+#, c-format
+msgid "Distance \"%s\" is unknown"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1447
+#, c-format
+msgid "Aspect ratio \"%s\" is unknown"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1509
+#, c-format
+msgid "Border \"%s\" is unknown"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1820
+#, c-format
+msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:1827
+#, c-format
+msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2067
+#, c-format
+msgid "Did not understand value \"%s\" for type of gradient"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#, c-format
+msgid "Did not understand fill type \"%s\" for <%s> element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
+#: ../src/ui/theme-parser.c:2458
+#, c-format
+msgid "Did not understand state \"%s\" for <%s> element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#, c-format
+msgid "Did not understand shadow \"%s\" for <%s> element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2332
+#, c-format
+msgid "Did not understand arrow \"%s\" for <%s> element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#, c-format
+msgid "No <draw_ops> called \"%s\" has been defined"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#, c-format
+msgid "Including draw_ops \"%s\" here would create a circular reference"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2855
+#, c-format
+msgid "Unknown position \"%s\" for frame piece"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2863
+#, c-format
+msgid "Frame style already has a piece at position %s"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#, c-format
+msgid "No <draw_ops> with the name \"%s\" has been defined"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2909
+#, c-format
+msgid "Unknown function \"%s\" for button"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2918
+#, c-format
+msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2930
+#, c-format
+msgid "Unknown state \"%s\" for button"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:2938
+#, c-format
+msgid "Frame style already has a button for function %s state %s"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3019
+#, c-format
+msgid "\"%s\" is not a valid value for focus attribute"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3028
+#, c-format
+msgid "\"%s\" is not a valid value for state attribute"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3038
+#, c-format
+msgid "A style called \"%s\" has not been defined"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#, c-format
+msgid "\"%s\" is not a valid value for resize attribute"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3093
+#, c-format
+msgid ""
+"Should not have \"resize\" attribute on <%s> element for maximized/shaded "
+"states"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3107
+#, c-format
+msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#, c-format
+msgid "Style has already been specified for state %s resize %s focus %s"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
+#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
+#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#, c-format
+msgid "Style has already been specified for state %s focus %s"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3237
+msgid ""
+"Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
+"attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3275
+msgid ""
+"Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
+" attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3347
+msgid ""
+"Can't have a two draw_ops for a <menu_icon> element (theme specified a "
+"draw_ops attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3395
+#, c-format
+msgid "Outermost element in theme must be <metacity_theme> not <%s>"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3415
+#, c-format
+msgid ""
+"Element <%s> is not allowed inside a name/author/date/description element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3420
+#, c-format
+msgid "Element <%s> is not allowed inside a <constant> element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3432
+#, c-format
+msgid ""
+"Element <%s> is not allowed inside a distance/border/aspect_ratio element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3454
+#, c-format
+msgid "Element <%s> is not allowed inside a draw operation element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
+#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#, c-format
+msgid "Element <%s> is not allowed inside a <%s> element"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3738
+msgid "No draw_ops provided for frame piece"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3753
+msgid "No draw_ops provided for button"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3815
+#, c-format
+msgid "No text is allowed inside element <%s>"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
+#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
+#: ../src/ui/theme-parser.c:3918
+#, c-format
+msgid "<%s> specified twice for this theme"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:4211
+#, c-format
+msgid "Failed to find a valid file for theme %s\n"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:105
+msgid "_Windows"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:106
+msgid "_Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:107
+msgid "_Modal dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:108
+msgid "_Utility"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:109
+msgid "_Splashscreen"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:110
+msgid "_Top dock"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:111
+msgid "_Bottom dock"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:112
+msgid "_Left dock"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:113
+msgid "_Right dock"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:114
+msgid "_All docks"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:115
+msgid "Des_ktop"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:121
+msgid "Open another one of these windows"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:123
+msgid "This is a demo button with an 'open' icon"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:125
+msgid "This is a demo button with a 'quit' icon"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:259
+msgid "This is a sample message in a sample dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:347
+#, c-format
+msgid "Fake menu item %d\n"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:381
+msgid "Border-only window"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:383
+msgid "Bar"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:400
+msgid "Normal Application Window"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:404
+msgid "Dialog Box"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:408
+msgid "Modal Dialog Box"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:412
+msgid "Utility Palette"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:416
+msgid "Torn-off Menu"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:420
+msgid "Border"
+msgstr "Imbibi"
+
+#: ../src/ui/theme-viewer.c:748
+#, c-format
+msgid "Button layout test %d"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:777
+#, c-format
+msgid "%g milliseconds to draw one window frame"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:821
+#, c-format
+msgid "Usage: marco-theme-viewer [THEMENAME]\n"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:828
+#, c-format
+msgid "Error loading theme: %s\n"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:834
+#, c-format
+msgid "Loaded theme \"%s\" in %g seconds\n"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:877
+msgid "Normal Title Font"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:883
+msgid "Small Title Font"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:889
+msgid "Large Title Font"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:894
+msgid "Button Layouts"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:899
+msgid "Benchmark"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:946
+msgid "Window Title Goes Here"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:1050
+#, c-format
+msgid ""
+"Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
+"seconds wall clock time including X server resources (%g milliseconds per "
+"frame)\n"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:1269
+msgid "position expression test returned TRUE but set error"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:1271
+msgid "position expression test returned FALSE but didn't set error"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:1275
+msgid "Error was expected but none given"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:1277
+#, c-format
+msgid "Error %d was expected but %d given"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:1283
+#, c-format
+msgid "Error not expected but one was returned: %s"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:1287
+#, c-format
+msgid "x value was %d, %d was expected"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:1290
+#, c-format
+msgid "y value was %d, %d was expected"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:1355
+#, c-format
+msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
+msgstr ""
