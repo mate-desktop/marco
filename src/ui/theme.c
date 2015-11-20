@@ -1555,6 +1555,10 @@ meta_set_color_from_style (GdkRGBA               *color,
 {
   GdkRGBA other;
 
+  /* Add background class to context to get the correct colors from the GTK+
+     theme instead of white text over black background. */
+  gtk_style_context_add_class (context, GTK_STYLE_CLASS_BACKGROUND);
+
   switch (component)
     {
     case META_GTK_COLOR_BG:
