@@ -364,7 +364,14 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   obj = gtk_widget_get_accessible (popup->label);
   atk_object_set_role (obj, ATK_ROLE_STATUSBAR);
 
+#if GTK_CHECK_VERSION (3, 14, 0)
+  gtk_widget_set_margin_start (popup->label, 3);
+  gtk_widget_set_margin_end (popup->label, 3);
+  gtk_widget_set_margin_top (popup->label, 3);
+  gtk_widget_set_margin_bottom (popup->label, 3);
+#else
   gtk_misc_set_padding (GTK_MISC (popup->label), 3, 3);
+#endif
 
   gtk_box_pack_end (GTK_BOX (vbox), popup->label, FALSE, FALSE, 0);
 
