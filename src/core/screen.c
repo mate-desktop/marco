@@ -774,15 +774,19 @@ meta_screen_manage_all_windows (MetaScreen *screen)
     {
       WindowInfo *info = list->data;
       MetaWindow *window;
+      gboolean test_window_owner;
 
       window = meta_window_new_with_attrs (screen->display, info->xwindow, TRUE,
                                            &info->attrs);
-      if (info->xwindow == screen->no_focus_window ||
-          info->xwindow == screen->flash_window ||
+      test_window_owner = info->xwindow == screen->no_focus_window ||
+       info->xwindow == screen->flash_window ||
+       info->xwindow == screen->wm_sn_selection_window;
+
 #ifdef HAVE_COMPOSITE_EXTENSIONS
-          info->xwindow == screen->wm_cm_selection_window ||
+      test_window_owner = test_window_owner ||  info->xwindow == screen->wm_cm_selection_window;
 #endif
-          info->xwindow == screen->wm_sn_selection_window) {
+      if (test_window_owner)
+      {
         meta_verbose ("Not managing our own windows\n");
         continue;
       }
