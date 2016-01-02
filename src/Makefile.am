@@ -179,9 +179,6 @@ gsettings_SCHEMAS = org.mate.marco.gschema.xml
 
 @INTLTOOL_XML_NOMERGE_RULE@
 
-convertdir = $(datadir)/MateConf/gsettings
-convert_DATA = marco.convert
-
 xmldir = @MATE_KEYBINDINGS_KEYSDIR@
 xml_in_files = \
 	50-marco-desktop-key.xml.in \
@@ -205,7 +202,6 @@ EXTRA_DIST=$(desktopfiles_files) \
 	$(wmproperties_files) \
 	$(IMAGES) \
 	$(gsettings_SCHEMAS) \
-	$(convert_DATA) \
 	$(desktopfiles_in_files) \
 	$(wmproperties_in_files) \
 	$(xml_in_files) \
