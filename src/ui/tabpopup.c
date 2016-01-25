@@ -417,7 +417,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
               gtk_misc_set_padding (GTK_MISC (image),
                                     INSIDE_SELECT_RECT + OUTSIDE_SELECT_RECT + 1,
                                     INSIDE_SELECT_RECT + OUTSIDE_SELECT_RECT + 1);
-#if GTK_CHECK_VERSION (3, 14, 0)
+#if GTK_CHECK_VERSION (3, 0, 0)
               gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
               gtk_widget_set_valign (image, GTK_ALIGN_CENTER);
 #else

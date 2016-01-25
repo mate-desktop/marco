@@ -154,9 +154,9 @@ meta_fixed_tip_show (int screen_number,
 
       label = gtk_label_new (NULL);
       gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
-#if GTK_CHECK_VERSION (3, 14, 0)
-      gtk_widget_set_halign (label, GTK_ALIGN_CENTER);
-      gtk_widget_set_valign (label, GTK_ALIGN_CENTER);
+#if GTK_CHECK_VERSION (3, 16, 0)
+      gtk_label_set_xalign (GTK_LABEL (label), 0.5);
+      gtk_label_set_yalign (GTK_LABEL (label), 0.5);
 #else
       gtk_misc_set_alignment (GTK_MISC (label), 0.5, 0.5);
 #endif
