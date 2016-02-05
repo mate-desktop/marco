@@ -125,7 +125,11 @@ libmarco_private_la_SOURCES = \
 	ui/theme.c \
 	ui/theme.h
 
-libmarco_private_la_LDFLAGS = -no-undefined
+if HAVE_GTK3
+libmarco_private_la_LDFLAGS = -no-undefined -version-info 1:0:0
+else
+libmarco_private_la_LDFLAGS = -no-undefined -version-info 0:0:0
+endif
 libmarco_private_la_LIBADD = @MARCO_LIBS@
 
 libmarcoincludedir = $(includedir)/marco-1/marco-private
