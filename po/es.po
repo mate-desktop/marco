@@ -5,9 +5,11 @@
 # Translators:
 # Adolfo Jayme Barrientos, 2015
 # Adolfo Jayme Barrientos, 2014
+# Andres Sanchez <blackatze93@gmail.com>, 2016
 # Arcenio Cid <gusty.miliki@gmail.com>, 2015
 # Benjamin Perez Carrillo <benperezc@gmail.com>, 2015
 # difusion, 2014
+# ebray187 <ebray187@gmail.com>, 2016
 # Emiliano Fascetti, 2014-2015
 # Juan Sánchez <jsrmadrid@gmail.com>, 2015
 # Lluís Tusquellas <lutusq@gmail.com>, 2013
@@ -18,8 +20,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-06 11:58+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-02-13 04:39+0000\n"
+"Last-Translator: ebray187 <ebray187@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/mate/MATE/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -178,7 +180,7 @@ msgstr "Cambiar al área de trabajo debajo del área de trabajo actual"
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:76
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Volver al espacio de trabajo seleccionado anteriormente"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:104
@@ -461,7 +463,7 @@ msgstr "Esta opción proporciona control adicional sobre cómo las ventanas reci
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Indica si elevar debe ser un efecto colateral de otras interacciones del usuario"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -483,7 +485,7 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Poner esta opción a falso puede conducir a un comportamiemto erróneo, por lo que se recomienda fervientemente a los usuarios que no lo hagan. Muchas acciones (por ejemplo hacer click en el área de clientes, mover o redimensionar la ventana) elevan la ventana como un efecto secundario. Poner esta opción a falso, lo que se desaconseja completamente, desacoplará la elevación de otras acciones de usuario e ignorará las peticiones de elevación generadas por aplicaciones. Véase http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Incluso cuando esta opción está puesta como falso, las ventanas aún pueden ser elevadas mediante un click con el botón izquierdo al pulsar la tecla Alt en cualquier sitio de la ventana, mediante un click normal en las decoraciones de la ventana, o mediante mensajes especiales de los paginadores tales como las peticiones de una miniaplicación de lista de tareas. Esta opción está normalmente desactivada con el modo click-to-focus (click-para-enfocar). Nótese que la lista de formas de levantar la ventana cuando raise_on_click (levantar_con_el_click) es falsa no incluye peticiones programáticas de aplicaciones para levantar ventanas; tales peticiones serán ignoradas sin importar la razón de la petición. Si usted es un desarrollador y tiene algún usuario quejándose que su aplicación no funciona con esta configuración desactivada, señale entonces que la culpa es de _él_ por romper el manejador de ventanas y que deben revertir esta opción a true (verdadero) o vivir con el «bug» que señalan."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
@@ -563,7 +565,7 @@ msgstr "Tema actual"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "El tema determina la apariencia de los bordes de la ventana, la barra de títulos y demás."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Use standard system font in window titles"
@@ -573,7 +575,7 @@ msgstr "Usar tipografía estándar del sistema en los títulos de la ventana"
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
+msgstr "Si es verdadero, ignora la opción titlebar_font y usa la tipografía estándar de la aplicación para los títulos de ventana."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Window title font"
@@ -711,7 +713,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Determina si las nuevas ventanas son creadas en el centro de la pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -732,7 +734,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
-msgstr ""
+msgstr "Modo de colocación de ventana"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -2060,51 +2062,51 @@ msgstr "Falló al encontrar un archivo válido para el tema%s\n"
 
 #: ../src/ui/theme-viewer.c:105
 msgid "_Windows"
-msgstr ""
+msgstr "_Ventanas"
 
 #: ../src/ui/theme-viewer.c:106
 msgid "_Dialog"
-msgstr ""
+msgstr "_Diálogo"
 
 #: ../src/ui/theme-viewer.c:107
 msgid "_Modal dialog"
-msgstr ""
+msgstr "Diálogo _modal"
 
 #: ../src/ui/theme-viewer.c:108
 msgid "_Utility"
-msgstr ""
+msgstr "_Utilidad"
 
 #: ../src/ui/theme-viewer.c:109
 msgid "_Splashscreen"
-msgstr ""
+msgstr "_Pantalla de inicio"
 
 #: ../src/ui/theme-viewer.c:110
 msgid "_Top dock"
-msgstr ""
+msgstr "Empotrable _superior"
 
 #: ../src/ui/theme-viewer.c:111
 msgid "_Bottom dock"
-msgstr ""
+msgstr "Empotrable _inferior"
 
 #: ../src/ui/theme-viewer.c:112
 msgid "_Left dock"
-msgstr ""
+msgstr "Empotrable _izquierdo"
 
 #: ../src/ui/theme-viewer.c:113
 msgid "_Right dock"
-msgstr ""
+msgstr "Empotrable de_recho"
 
 #: ../src/ui/theme-viewer.c:114
 msgid "_All docks"
-msgstr ""
+msgstr "_Todos los empotrables"
 
 #: ../src/ui/theme-viewer.c:115
 msgid "Des_ktop"
-msgstr ""
+msgstr "_Escritorio"
 
 #: ../src/ui/theme-viewer.c:121
 msgid "Open another one of these windows"
-msgstr ""
+msgstr "Abrir otra de estas ventanas"
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"

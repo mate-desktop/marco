@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014
-# Moo, 2015
+# Moo, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-06 22:42+0000\n"
+"PO-Revision-Date: 2016-02-16 22:08+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -55,17 +55,17 @@ msgstr "Langų valdymas"
 #: ../src/50-marco-global-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:80
 msgid "Move between windows, using a popup window"
-msgstr "Persijunginėti tarp langų su iššokančiu langu"
+msgstr "Persijunginėti tarp langų, naudojant iškylantįjį langą"
 
 #: ../src/50-marco-global-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:77
 msgid "Move between windows of an application, using a popup window"
-msgstr "Perjungti tarp programos langų su iššokančiu langu"
+msgstr "Perjungti tarp programos langų, naudojant iškylantįjį langą"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid "Move between panels and the desktop, using a popup window"
-msgstr "Judėti tarp skydelių ir darbalaukio su iššokančiu langu"
+msgstr "Judėti tarp skydelių ir darbalaukio, naudojant iškylantįjį langą"
 
 #: ../src/50-marco-global-key.xml.in.h:5
 #: ../src/org.mate.marco.gschema.xml.h:88
@@ -475,7 +475,7 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Šio parametro nustatymas į neigiamą gali privesti prie klaidingos elgsenos, taigi, naudotojai primygtinai raginami jo nekeisti ir palikti numatytąjį teigiamą. Daugelis veiksmų (pvz., spustelėjimas kliento srityje, langų perkėlimas ar dydžio keitimas) įprastai, sąlygojami šalutinio poveikio, iškelia langą. Šio parametro nustatymas į neigiamą, ko yra skatinama vengti, atskirs iškėlimą nuo kitų naudotojo veiksmų ir prives prie to, kad programos užklausų iškelti langą bus nepaisoma. Žiūrėkite http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Netgi kai ši reikšmė neigiama, langai vis tiek gali būti iškelti, spustelėjus bet kur ant lango alt-kairysis-spustelėjimas, normaliu spustelėjimu ant lango dekoracijų arba specialiais pranešimais iš pranešimų gaviklių, tokiais kaip aktyvavimo užklausos iš užduočių sąrašo įtaisų. Šis parametras šiuo metu yra išjungtas veiksenoje spustelėti-norint-sufokusuoti. Turėkite omenyje, kad langų iškėlimo būduose, kai raise_on_click yra neigiamas, nėra programinių užklausų iš programų iškelti langus; tokių užklausų bus nepaisoma, nepriklausomai nuo užklausos priežasties. Jeigu jūs esate programos kūrėjai ir naudotojai jums skundžiasi, kad jūsų programa neveikia, kai šis parametras yra išjungtas, tuomet pasakykite jiems, kad tai yra_jų_kaltė, kad jie sulaužė savo langų tvarkytuvę ir, kad jie turi pakeisti šį parametrą atgal į teigiamą arba gyventi su \"klaida\", kurios jie paprašė."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
@@ -592,7 +592,7 @@ msgstr "Darbo sričių kiekis. Turi būti didesnis už nulį. Be to, nustatyta m
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Workspace wrap style"
-msgstr ""
+msgstr "Darbo sričių perjungimo stilius"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -604,7 +604,7 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr ""
+msgstr "Perjungimo stilius yra naudojamas nustatyti kaip darbo sričių keitiklio krašte bus perjunginėjama iš vienos darbo srities į kitą. Jei yra nustatyta \"no wrap\" ir bandysite perjungti į darbo sritį už darbo sričių keitiklio ribų, nieko neįvyks. Jei yra nustatyta \"classic\", bus naudojama sena marco elgsena: vienos eilutės pabaiga veda į kitos eilutės pradžią, o stulpelio pabaiga veda į kito stulpelio pradžią. Jei yra nustatyta \"toroidal\", darbo sritys bus sujungtos kaip spurga: kiekvienos eilutės pabaiga veda prie tos pačios eilutės pradžios, o kiekvieno stulpelio pabaiga veda prie to pačio stulpelio pradžios."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
@@ -644,7 +644,7 @@ msgstr "Nustato kaip langų tvarkytuvė vykdo vaizdinį signalą suveikus sistem
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Compositing Manager"
-msgstr "Kompozicijos tvarkytuvė"
+msgstr "Komponavimo tvarkytuvė"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid "Determines whether Marco is a compositing manager."
@@ -652,13 +652,13 @@ msgstr "Nurodo ar Marco yra komponuojanti tvarkytuvė."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Fast Alt-Tab Enabled"
-msgstr ""
+msgstr "Greitasis Alt-Tab įjungtas"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
 "Whether or not fast alt-tabbing is used when the compositing manager is "
 "enabled."
-msgstr ""
+msgstr "Ar greitasis alt-tab turėtų būti įjungtas, kai yra įjungta komponavimo tvarkytuvė."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
@@ -703,13 +703,13 @@ msgstr "Kai kurios programos nevykdo nurodymų specifikacijose, todėl kyla smul
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Nustato ar nauji langai turėtų būti kuriami ekrano centre"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Jei reikšmė teigiama, nauji langai bus atveriami ekrano centre. Kitu atveju, jie bus atveriami viršutinėje kairioje ekrano dalyje."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
@@ -720,11 +720,11 @@ msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window."
-msgstr ""
+msgstr "Jei įjungta, langų numetimas ekrano krašte išdidins juos vertikaliai ir pakeis jų dydį horizontaliai taip, kad jie užimtų pusę prieinamos ploto. Lango vilkimas į viršų išdidins langą."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
-msgstr ""
+msgstr "Langų išdėstymo veiksena"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -756,7 +756,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "Klavišų kombinacija, kuri paleidžia atitinkamą sunumeruotą komandą iš /apps/marco/keybinding_commands raktų. Klavišų kombinacijos formatas gali būti panašus į \"<Control>a\" arba \"<Shift><Alt>F1. Sistema apdorojanti aprašymą yra gana laisva ir leidžia maišyti didžiąsias bei mažąsias raides ir naudoti tokius sutrumpinimus kaip \"<Ctl>\" ir \"<Ctrl>\". Nustačius specialų požymį \"disabled\", su šiuo veiksmu nebus susieta jokia klavišų kombinacija."
+msgstr "Klavišų susiejimas, kuris paleidžia atitinkamą sunumeruotą komandą iš /apps/marco/keybinding_commands raktų. Klavišų susiejimo formatas gali būti panašus į \"<Control>a\" arba \"<Shift><Alt>F1. Sistema apdorojanti aprašymą yra gana laisva ir leidžia maišyti didžiąsias bei mažąsias raides ir naudoti tokius sutrumpinimus kaip \"<Ctl>\" ir \"<Ctrl>\". Nustačius specialų požymį \"disabled\", su šiuo veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
@@ -765,7 +765,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Formatas yra panašus į \"&lt;Control&gt;a\" arba \"&lt;Shift&gt;&lt;Alt&gt;F1\". Sistema apdorojanti aprašymą yra gana laisva ir leidžia maišyti didžiąsias ir mažąsias raides ir naudoti tokius sutrumpinimus kaip \"&lt;Ctl&gt;\" ir \"&lt;Ctrl&gt;\". Nustačius specialų požymį \"disabled\", su šiuo veiksmu nebus susietas joks klavišų susiejimas."
 
 #: ../src/org.mate.marco.gschema.xml.h:78
 msgid ""
@@ -780,23 +780,23 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Move backward between windows of an application, using a popup window"
-msgstr "Perjungti atgal tarp programos langų su iššokančiu langu"
+msgstr "Perjungti atgal tarp programos langų, naudojant iškylantįjį langą"
 
 #: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move backward between windows, using a popup window"
-msgstr "Perjungti tarp langų atgal kartu su iššokančiu langu"
+msgstr "Perjungti tarp langų atgal, naudojant iškylantįjį langą"
 
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr "Persijungti tarp langų visose darbo srityse su iššokančiu langu"
+msgstr "Persijungti tarp langų visose darbo srityse, naudojant iškylantįjį langą"
 
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr "Persijungti atgal tarp langų visose darbo srityse su iššokančiu langu"
+msgstr "Persijungti atgal tarp langų visose darbo srityse, naudojant iškylantįjį langą"
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr "Judėti atgal tarp skydelių ir darbalaukio su iššokančiu langu"
+msgstr "Judėti atgal tarp skydelių ir darbalaukio, naudojant iškylantįjį langą"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows of an application immediately"
@@ -812,14 +812,14 @@ msgstr "Nedelsiant judėti atgal tarp skydelių ir darbalaukio"
 
 #: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Commands to run in response to keybindings"
-msgstr "Komandos, kurios turi būti paleistos, suveikus nustatytoms klavišų kombinacijoms"
+msgstr "Komandos, kurios turi būti paleistos, suveikus nustatytiems klavišų susiejimams"
 
 #: ../src/org.mate.marco.gschema.xml.h:99
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr "/apps/marco/global_keybindings/run_command_N raktai nustato specialias klavišų kombinacijas, kurios atitinka nurodytas komandas. Paspaudus klavišo kombinaciją, priskirtą run_command_N, bus įvykdyta komanda command_N."
+msgstr "/apps/marco/global_keybindings/run_command_N raktai nustato specialius klavišų susiejimus, kurie atitinka nurodytas komandas. Paspaudus klavišo susiejimą, priskirtą run_command_N, bus įvykdyta komanda command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "The screenshot command"
@@ -829,7 +829,7 @@ msgstr "Ekrano fotografavimo komanda"
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr "/apps/marco/global_keybindings/run_command_screenshot raktas nustato klavišų kombinaciją, kuri iškviečia šiame nustatyme nurodytą komandą."
+msgstr "/apps/marco/global_keybindings/run_command_screenshot raktas nustato klavišų susiejimą, kuris iškviečia šiame nustatyme nurodytą komandą."
 
 #: ../src/org.mate.marco.gschema.xml.h:102
 msgid "The window screenshot command"
@@ -840,7 +840,7 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr "/apps/marco/global_keybindings/run_command_window_screenshot raktas nustato klavišų kombinaciją, kuri iškviečia šiame nustatyme nurodytą komandą."
+msgstr "/apps/marco/global_keybindings/run_command_window_screenshot raktas nustato klavišų susiejimą, kuris iškviečia šiame nustatyme nurodytą komandą."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "Toggle whether a window will always be visible over other windows"
@@ -1027,7 +1027,7 @@ msgstr "„%s“ reikšmė rasta nustatymų duomenų bazėje yra netinkama pelė
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "„%s“ reikšmė rasta konfiguracijos duomenų bazė yra netinkama klavišų kombinacijai „%s“\n"
+msgstr "„%s“ reikšmė rasta konfiguracijos duomenų bazėje yra netinkama klavišų susiejimui „%s“\n"
 
 #: ../src/core/prefs.c:1986
 #, c-format
@@ -2052,15 +2052,15 @@ msgstr "Nepavyko rasti tinkamo temos %s failo\n"
 
 #: ../src/ui/theme-viewer.c:105
 msgid "_Windows"
-msgstr ""
+msgstr "_Langai"
 
 #: ../src/ui/theme-viewer.c:106
 msgid "_Dialog"
-msgstr ""
+msgstr "_Dialogas"
 
 #: ../src/ui/theme-viewer.c:107
 msgid "_Modal dialog"
-msgstr ""
+msgstr "_Modalinis dialogas"
 
 #: ../src/ui/theme-viewer.c:108
 msgid "_Utility"
@@ -2068,43 +2068,43 @@ msgstr ""
 
 #: ../src/ui/theme-viewer.c:109
 msgid "_Splashscreen"
-msgstr ""
+msgstr "Pri_sistatymo langas"
 
 #: ../src/ui/theme-viewer.c:110
 msgid "_Top dock"
-msgstr ""
+msgstr "Viršu_tinis dokas"
 
 #: ../src/ui/theme-viewer.c:111
 msgid "_Bottom dock"
-msgstr ""
+msgstr "A_patinis dokas"
 
 #: ../src/ui/theme-viewer.c:112
 msgid "_Left dock"
-msgstr ""
+msgstr "Kair_ysis dokas"
 
 #: ../src/ui/theme-viewer.c:113
 msgid "_Right dock"
-msgstr ""
+msgstr "_Dešinysis dokas"
 
 #: ../src/ui/theme-viewer.c:114
 msgid "_All docks"
-msgstr ""
+msgstr "_Visi dokai"
 
 #: ../src/ui/theme-viewer.c:115
 msgid "Des_ktop"
-msgstr ""
+msgstr "Darbalau_kis"
 
 #: ../src/ui/theme-viewer.c:121
 msgid "Open another one of these windows"
-msgstr ""
+msgstr "Atverti dar vieną tokį langą"
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"
-msgstr ""
+msgstr "Tai yra demonstracinis mygtukas su piktograma \"atverti\""
 
 #: ../src/ui/theme-viewer.c:125
 msgid "This is a demo button with a 'quit' icon"
-msgstr ""
+msgstr "Tai yra demonstracinis mygtukas su piktograma \"išeiti\""
 
 #: ../src/ui/theme-viewer.c:259
 msgid "This is a sample message in a sample dialog"

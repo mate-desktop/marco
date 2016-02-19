@@ -3,17 +3,27 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Adrian Guniš <andygun@seznam.cz>, 2008-2010
+# huskyviking <husky.viking@seznam.cz>, 2014
 # huskyviking <husky.viking@seznam.cz>, 2015
-# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2013
-# Martin Kříž <slovanworks.czech@gmail.com>, 2015
+# Jakub Friedl <jfriedl@suse.cz>, 2006
+# Kamil Páral <ripper42@gmail.com>, 2008
+# Lucas Lommer <drom@kdyne.net>, 2016
+# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2013-2014
+# Martin Kříž <liberte.czech@gmail.com>, 2016
+# Martin Kříž <liberte.czech@gmail.com>, 2015
+# Michal <sinope@seznam.cz>, 2014
+# Miloslav Trmač <mitr@volny.cz>, 2002-2005
+# Petr Kovar <pmkovar@gmail.com>, 2008,2010
+# Petr Tomeš <ptomes@gmail.com>, 2006
 # Stanislav Kučera <kacernator@quick.cz>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-17 09:36+0000\n"
-"Last-Translator: Martin Kříž <slovanworks.czech@gmail.com>\n"
+"PO-Revision-Date: 2016-02-15 10:10+0000\n"
+"Last-Translator: Lucas Lommer <drom@kdyne.net>\n"
 "Language-Team: Czech (http://www.transifex.com/mate/MATE/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -257,12 +267,12 @@ msgstr "Maximalizovat okno vodorovně"
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:137
 msgid "Tile window to east (right) side of screen"
-msgstr ""
+msgstr "Dlaždice okna na východní (pravé) straně obrazovky"
 
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:138
 msgid "Tile window to west (left) side of screen"
-msgstr ""
+msgstr "Dlaždice okna na západní (levé) straně obrazovky"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 #: ../src/org.mate.marco.gschema.xml.h:139
@@ -726,7 +736,7 @@ msgstr "Pokud zapnuto, přetažením okna na okraj obrazovky, bude okno vertiká
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
-msgstr ""
+msgstr "Režim umístění okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -790,11 +800,11 @@ msgstr "Přepínat zpět mezi okny pomocí automaticky otevíraného okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Přepínat mezi okny na všech pracovních plochách, pomocí automaticky otevíraného okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Přepínat zpět mezi okny na všech pracovních plochách, pomocí automaticky otevíraného okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between panels and the desktop, using a popup window"
@@ -943,7 +953,7 @@ msgstr "marco %s\nCopyright (C) 2001-%s Havoc Pennington, Red Hat, Inc. a dalš�
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "Zakáže připojení ke správci sezení"
+msgstr "Vypnout spojení se správcem sezení"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -951,7 +961,7 @@ msgstr "Nahradí běžícího správce oken správcem Marco"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Určení ID správy sezení"
+msgstr "Stanovit ID Správy sezení"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"

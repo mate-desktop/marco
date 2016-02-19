@@ -7,15 +7,15 @@
 # Микола Ткач <Stuartlittle1970@gmail.com>, 2013
 # Stefano Karapetsas <stefano@karapetsas.com>, 2012
 # Yarema aka Knedlyk <yupadmin@gmail.com>, 2012
-# Микола Ткач <Stuartlittle1970@gmail.com>, 2014-2015
+# Микола Ткач <Stuartlittle1970@gmail.com>, 2014-2016
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-12 21:50+0000\n"
-"Last-Translator: Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>\n"
+"PO-Revision-Date: 2016-02-05 08:42+0000\n"
+"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -393,7 +393,7 @@ msgstr "Перемістити вікно на робочий простір н�
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Модифікатор для дій клацом миші"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -402,7 +402,7 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
+msgstr "Клацнувши по вікні при натисканні цієї клавіші-модифікатора, Ви зможете пересунути вікно (ліва кнопка), змінити його розмір(середня кнопка), або показати меню вікна (права кнопка). Функції лівої і правої кнопок змінюються, якщо увімкнено параметр «resize_with_right_button» Модифікатор визначається, наприклад, як «<Alt>» або «<Super>»."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -413,7 +413,7 @@ msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr ""
+msgstr "Якщо ключ встановлено, розмір вікна змінюється правою кнопкою миші, а меню показується середньою, якщо втримується клавіша, вказана у «mouse_button_modifier». Якщо ключ не встановлено, функцииії кнопок миші міняються місцями."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Arrangement of buttons on the titlebar"
@@ -428,7 +428,7 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr ""
+msgstr "Розташування кнопок у заголовку вікна. Значення має бути рядком, наприклад, «menu:minimize,maximize,spacer,close». Двокрапка розділює лівий та правий кути вікна, імена кнопок розділюються комами. Дублювання кнопок не допускається. Невідомі імена кнопок завжди нехтуються без сповіщення, тож кнопки можуть бути додані у майбутніх версіях, не порушуючи попередніх. Спеціяльний елемент spacer може використовуватися для вставки пробілу між двома кнопками."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Window focus mode"
@@ -441,7 +441,7 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr ""
+msgstr "Режим передавання фокусу у вікнокно визначає, як активуються вікна. В цього режиму три можливих значення; «click» — означає, що для активації вікна на ньому потрібно клацнути; «sloppy» — означає, що вікно активується, коли на нього потрапляє вказівник миші; «mouse» — означає, що вікно активується, коли у нього потрапляє вказівник миші, й припиняє бути активним, коли вказівник миші виходить з нього."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Control how new windows get focus"
@@ -453,11 +453,11 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr ""
+msgstr "Цей параметр надає додаткове керування тим, як нові вікна отримують фокус. Він має два можливих значення. Значення «smart» застосовує звичайний режим фокусу користувача, а «strict» призводить до того, що вікна, запущені з терміналу, не отримують фокус."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Чи повинне підняття вікна бути побічним ефектом інших дій користувача"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -479,7 +479,7 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Встановлення цього параметру на «неправду» може призвести до неправильної поведінки, тому користувачам настійно не радиться змінювати його з типового «істина». Багато дій (як натискання на клієнтську область, пересування або зміна розміру вікна) зазвичай піднімають вікно як побічний ефект. Встановлення цього параметру на «неправда», що дуже не радиться, буде відокремлювати підняття від інших користувацьких дій та нехтувати запити на підвищення від додатків. Дивіться http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Навіть коли параметр на «неправда», вікна можуть усе ще бути піднятими з Alt+ЛКМ у області вікна, нормальним клацом на декорації вікна або спеціяльними повідомленнями від пейджерів як запити активації від аплетів трею. Ця опція на цей час відімкнена у режимі click-to-focus. Врахуй, що перелік шляхів для підняття вікон, коли raise_on_click - «неправда», не включає проґрамні запити від застосунків для підняття вікон; такі запити будуть нехтуватися незалежно від причин запиту. Якщо Ви - розробник додатків та маєте користувача, що скаржиться на те, що Ваш застосунок не працює з відімкненим цим параметром, скажіть йому, що це _його_ проблема за псування його віконного менеджера й що він повинен змінити цей параметр на «істина» або жити з «помилкою»."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
@@ -495,7 +495,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Цей ключ визначає дію подвійного клацу на заголовку вікна. На даний час припустимими значеннями є «toggle_shade» (згортає вікно у смужку або розгортає назад), «toggle_maximize» (розгортає вікно або відновлює початковий розмір), «toggle_maximize_vertically» й «toggle_maximize_horizontally» (розгортає вікно лише у одному напрямку або відновлює звичайний розмір), «minimize» (згортає вікно), «shade» (згортає вікно вгору), «menu» (показує меню вікна), «lower» (розташовує вікно під іншими) і «none» (не робить нічого)."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar middle-click"
@@ -511,7 +511,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Цей ключ визначає дію клацу середньою кнопкою миші по заголовку вікна. На цей час припустимими значеннями є «toggle_shade» (згортає вікно у смужку або розгортає назад), «toggle_maximize» (розгортає вікно або відновлює початковий розмір), «toggle_maximize_vertically» й «toggle_maximize_horizontally» (розгортає вікно лише у одному напрямку або відновлює звичайний розмір), «minimize» (згортає вікно), «shade» (згортає вікно вгору), «menu» (показує меню вікна), «lower» (розташовує вікно під іншими) і «none» (не робить нічого)."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar right-click"
@@ -527,7 +527,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Цей ключ визначає дію клацу правою кнопкою миші по заголовку вікна. На цей час припустимими значеннями є «toggle_shade» (згортає вікно у смужку або розгортає назад), «toggle_maximize» (розгортає вікно або відновлює початковий розмір), «toggle_maximize_vertically» й «toggle_maximize_horizontally» (розгортає вікно лише у одному напрямку або відновлює звичайний розмір), «minimize» (згортає вікно), «shade» (згортає вікно вгору), «menu» (показує меню вікна), «lower» (розташовує вікно під іншими) і «none» (не робить нічого)."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Automatically raises the focused window"
@@ -539,7 +539,7 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
+msgstr "Якщо цей ключ встановлено у значення true, й режим фокусу або «sloppy», чи «mouse», тоді вікно, що знаходиться у фокусі, буде автоматично піднято по завершенні затримки, вказаній у ключі auto_raise_delay. Це не стосується ні клацу по вікну для його підняття, ні переходу у вікно шляхом перетягування у нього."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Delay in milliseconds for the auto raise option"
@@ -549,7 +549,7 @@ msgstr "Затримка у мілісекундах для параметру �
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr ""
+msgstr "Час затримки підняття вікна, якщо увімкнено ключ auto_raise. Затримка вказується у тисячних долях секунди."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Current theme"
@@ -573,7 +573,7 @@ msgstr "Якщо встановлено, параметр titlebar_font ігно
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Window title font"
-msgstr "Шрифт заголовка вікна"
+msgstr "Шрифт заголовку вікна"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
@@ -581,7 +581,7 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr ""
+msgstr "Рядок опису шрифту для заголовку вікна. Розмір з опису буде використовуватися, лише якщо для параметру titlebar_font_size обрано значення 0. Цей параметр також вимкнено, якщо для параметру titlebar_uses_desktop_font обрано значення «істина»."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Number of workspaces"
@@ -592,7 +592,7 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
+msgstr "Число робочих просторів. Повинне бути більшим нуля. Має фіксований максимум, щоб неможна було зробити середовище непридатним до використання, запитавши забагато робочих просторів."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Workspace wrap style"
@@ -608,7 +608,7 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr ""
+msgstr "Стиль прокручування визначає, яким чином гортати від одного робочого простору до іншого на межі перемикача робочих просторів. Якщо вказано \"no wrap\", то при спробі прогорнути робочий простір за межу перемикача нічого не станеться. Якщо вказано \"classic\", то використовується стара поведінка marco: кінець одного рядка веде на початок наступного і кінець одного стовпчика веде до початку наступного. Якщо вказано \"toroidal\", то робочі простори з’єднані як бублик: кінець кожного рядка веде до його ж початку й кінець кожного стовпчика веде до його ж початку."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
@@ -619,7 +619,7 @@ msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
+msgstr "Вмикає візуальну індикацію системного звукового сигналу. Це корисно для тих хто погано чує й при роботі у шумному оточенні."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "System Bell is Audible"
@@ -629,7 +629,7 @@ msgstr "Системний гудок озвучується"
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
+msgstr "Визначає, чи можуть додатки або система подавати чутні звукові сигнали. Може бути використаний разом з ключем «видимий сигнал», щоб подавати безшумні «гудки»."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "Visual Bell Type"
@@ -644,7 +644,7 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr ""
+msgstr "Вказує Marco, як зреалізувати індикацію звукового сигналу. Наразі існують два значення цього ключа: «fullscreen» викликає мерехтіння екрану у відтінках сірого, «frame_flash» викликає мерехтіння рядка заголовку того вікна, застосунок у якому подав звуковий сигнал. Якщо невідомо, який додаток подав сигнал, мерехтіти буде заголовок активного вікна."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Compositing Manager"
@@ -662,7 +662,7 @@ msgstr "Увімкнено швидкий Alt-Tab"
 msgid ""
 "Whether or not fast alt-tabbing is used when the compositing manager is "
 "enabled."
-msgstr ""
+msgstr "Чи використовувати швидке перемикання по Alt-Tab, коли увімкнено композитний менеджер."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
@@ -675,7 +675,7 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr ""
+msgstr "Якщо цей ключ встановлено, Marco надає користувачу менше зворотнього зв’язку за рахунок використання контурних рамок, вимикання анімації та у інші способи. Це суттєво знижує зручність для багатьох користувачів, але дозволяє подовжити термін служби старих застосунків, а також може бути корисно для термінальних серверів. Варто зауважити, що відображення контурної рамки вимикається при увімкненні спеціяльних можливостей."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid ""
@@ -691,7 +691,7 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
+msgstr "Якщо цей ключ встановлено, Marco працює з додатками, а не з вікнами. Архітектура, заснована на застосуках, більше схожа на системи Mac, ніж на Windows. При активуванні вікна у режимі, заснованому на додаках, підіймаються усі вікна застосунку. Окрім того, у режимі, заснованому на додатках, клаци мишею для перемикання фокусу не передаються у вікна інших застосунків. Реалізація режиму, заснованного на додатках, на сьогодні ще вельми далека від завершення."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -703,7 +703,7 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr ""
+msgstr "Деякі застосунки нехтують специфікації, тому у менеджер вікон вбудовані можливости для оминання помилок у цих додатках. Цей ключ переводить Marco у режим суворої відповідности специфікаціям, що дає усім вікнам послідовніший зовнішній вигляд, але при цьому застосунки з помилками можуть працювати неправильно."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Determines if new windows are created on the center of the screen"
@@ -713,22 +713,22 @@ msgstr "Визначає чи створювати нові вікна по це
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Якщо значення встановлено вірно, нові вікна будуть відкриватися у центрі екрану. У протилежному випадку, вони будуть відкриті у лівому горішньому куту екрану."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
-msgstr ""
+msgstr "Чи вмикати тайлінговий режим"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window."
-msgstr ""
+msgstr "Якщо увімкнено, перетягування вікна на межу екрану розгортає вікно вертикально й змінює розмір горизонтально для покриття половини доступного простору. Перетягування вікна наверх розгортає вікно."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
-msgstr ""
+msgstr "Режим розташування вікна"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -738,7 +738,7 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "Режим розташування вікна вказує, як розташовувати нові вікна. 'Автоматично' означає, що система вибирає розташування нового вікна автоматично використовуючи вільний простір на стільниці, або просто каскадом якщо немає місця; 'Вказівником' означає, що нові вікна розташовуються згідно положення вказівника миші; 'Вручну' означає, що користувач повинен вручну розташувати нове вікно за допомогою миші або клавіятури."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
@@ -760,7 +760,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Комбінація клавіш, яка запускає відповідну номеру команду в /apps/marco/keybinding_commands. Формат виглядає як \"&lt;Control&gt;a\" або \"&lt;Shift&gt;&lt;Alt&gt;F1\". Парсер досить ліберальний й допускає нижній або верхній регістр, а також такі скорочення як \"&lt;Ctl&gt;\" та \"&lt;Ctrl&gt;\". Якщо Ви вкажете цей параметр спеціяльним рядком\"disabled\", то для цієї дії не буде призначено комбінацій клавіш."
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
@@ -769,7 +769,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Формат виглядає як \"&lt;Control&gt;a\" або \"&lt;Shift&gt;&lt;Alt&gt;F1\". Парсер досить ліберальний й допускає нижній або верхній регістр, а також такі скорочення як \"&lt;Ctl&gt;\" та \"&lt;Ctrl&gt;\". Якщо Ви вкажете цей параметр спеціяльним рядком \"disabled\", то для цієї дії не буде призначено комбінацій клавіш."
 
 #: ../src/org.mate.marco.gschema.xml.h:78
 msgid ""
@@ -780,11 +780,11 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr ""
+msgstr "Формат виглядає як \"&lt;Control&gt;a\" або \"&lt;Shift&gt;&lt;Alt&gt;F1\". Парсер досить ліберальний й допускає нижній або верхній регістр, а також такі скорочення як \"&lt;Ctl&gt;\" та \"&lt;Ctrl&gt;\". Якщо Ви вкажете цей параметр спеціяльним рядком \"disabled\", то для цієї дії не буде призначено комбінацій клавіш. Комбінації клавіш можуть бути обернені втримуванням клавіш \"shift\"; тому клавіша \"shift\" не може бути клавішею що використовується."
 
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Move backward between windows of an application, using a popup window"
-msgstr "Перемикати фокус у зворотному порядку між вікнами програми через контекстне вікно"
+msgstr "Перемикати фокус у зворотному порядку між вікнами проґрами через контекстне вікно"
 
 #: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move backward between windows, using a popup window"
@@ -823,32 +823,32 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr ""
+msgstr "Ключі /apps/marco/global_keybindings/run_command_N визначають комбінації клавіш, які відповідають цим командам. Натискання комбінації run_command_N запустить на виконання command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "The screenshot command"
-msgstr "Команда створення знімку екрану"
+msgstr "Команда створення знятку екрану"
 
 #: ../src/org.mate.marco.gschema.xml.h:101
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr ""
+msgstr "Комбінація клавіш, яка викликає запуск команди для створення знятку екрану."
 
 #: ../src/org.mate.marco.gschema.xml.h:102
 msgid "The window screenshot command"
-msgstr "Команда створення знімку вікна"
+msgstr "Команда створення знятку вікна"
 
 #: ../src/org.mate.marco.gschema.xml.h:103
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr ""
+msgstr "Комбінація клавіш, яка викликає запуск команди для створення знятку вікна."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Чи буде вікно завжди розташоване поверх інших вікон"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -961,7 +961,7 @@ msgstr "X дисплей"
 
 #: ../src/core/main.c:292
 msgid "Initialize session from savefile"
-msgstr "Ініціалізувати сеанс із збереженого файлу"
+msgstr "Ініціялізувати сеанс із збереженого файлу"
 
 #: ../src/core/main.c:298
 msgid "Print version"
@@ -1006,7 +1006,7 @@ msgstr "Збій перезапуску: %s\n"
 #: ../src/core/prefs.c:584 ../src/core/prefs.c:737
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr "Значення %d ключа GSettings «%s» не входить у діапазон значень від %d до %d\n"
+msgstr "Значення %d ключа GSettings «%s» не входить у діяпазон значень від %d до %d\n"
 
 #: ../src/core/prefs.c:1031
 msgid ""
@@ -2060,15 +2060,15 @@ msgstr "_Вікна"
 
 #: ../src/ui/theme-viewer.c:106
 msgid "_Dialog"
-msgstr "_Діалог"
+msgstr "_Діялоґ"
 
 #: ../src/ui/theme-viewer.c:107
 msgid "_Modal dialog"
-msgstr "Модальний діалог"
+msgstr "Модальний діялоґ"
 
 #: ../src/ui/theme-viewer.c:108
 msgid "_Utility"
-msgstr "_Утиліта"
+msgstr "_Засіб"
 
 #: ../src/ui/theme-viewer.c:109
 msgid "_Splashscreen"
@@ -2108,7 +2108,7 @@ msgstr "Це демо кнопрка з піктограмою 'відкрити
 
 #: ../src/ui/theme-viewer.c:125
 msgid "This is a demo button with a 'quit' icon"
-msgstr "Це демо кнопрка з піктограмою 'вийти'"
+msgstr "Це демо кнопка з піктограмою 'вийти'"
 
 #: ../src/ui/theme-viewer.c:259
 msgid "This is a sample message in a sample dialog"

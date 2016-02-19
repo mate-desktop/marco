@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ciaran, 2014-2015
+# ciaran, 2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-06 11:58+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-02-12 19:18+0000\n"
+"Last-Translator: ciaran\n"
 "Language-Team: Welsh (http://www.transifex.com/mate/MATE/language/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -254,12 +254,12 @@ msgstr "Ehangu'r ffenestr yn llorweddol"
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:137
 msgid "Tile window to east (right) side of screen"
-msgstr ""
+msgstr "Teilio'r ffenestr i ochr ddwyreiniol (dde) y sgrin"
 
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:138
 msgid "Tile window to west (left) side of screen"
-msgstr ""
+msgstr "Teilio'r ffenestr i ochr orllewinol (chwith) y sgrin"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 #: ../src/org.mate.marco.gschema.xml.h:139
@@ -269,7 +269,7 @@ msgstr "Symud y ffenestr i'r gogledd-orllewin (chwith uchaf)"
 #: ../src/50-marco-window-key.xml.in.h:21
 #: ../src/org.mate.marco.gschema.xml.h:140
 msgid "Move window to north-east (top right) corner"
-msgstr "Symud y ffenestr i'r gogledd-ddwyrain (de uchaf)"
+msgstr "Symud y ffenestr i'r gogledd-ddwyrain (dde uchaf)"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 #: ../src/org.mate.marco.gschema.xml.h:141
@@ -279,7 +279,7 @@ msgstr "Symud y ffenestr i'r de-orllewin (chwith isaf)"
 #: ../src/50-marco-window-key.xml.in.h:23
 #: ../src/org.mate.marco.gschema.xml.h:142
 msgid "Move window to south-east (bottom right) corner"
-msgstr "Symud y ffenestr i'r de-ddwyrain (de isaf)"
+msgstr "Symud y ffenestr i'r de-ddwyrain (dde isaf)"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:143
@@ -294,7 +294,7 @@ msgstr "Symud y ffenestr i ochr ddeheuol (gwaelod) y sgrin"
 #: ../src/50-marco-window-key.xml.in.h:26
 #: ../src/org.mate.marco.gschema.xml.h:145
 msgid "Move window to east (right) side of screen"
-msgstr "Symud y ffenestr i ochr ddwyreiniol (de) y sgrin"
+msgstr "Symud y ffenestr i ochr ddwyreiniol (dde) y sgrin"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 #: ../src/org.mate.marco.gschema.xml.h:146
@@ -548,7 +548,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Current theme"
-msgstr ""
+msgstr "Y thema gyfredol"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
@@ -568,7 +568,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Window title font"
-msgstr ""
+msgstr "Ffont teitlau ffenestri"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
@@ -607,7 +607,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Galluogi cloch weledol"
 
 #: ../src/org.mate.marco.gschema.xml.h:34
 msgid ""
@@ -628,7 +628,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Math o gloch weledol"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
@@ -651,7 +651,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Fast Alt-Tab Enabled"
-msgstr ""
+msgstr "Alt-tab cyflym ymlaen"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
@@ -1241,7 +1241,7 @@ msgstr "Defnydd: %s\n"
 
 #: ../src/ui/frames.c:1214
 msgid "Close Window"
-msgstr "Cau'r Ffenest"
+msgstr "Cau'r ffenestr"
 
 #: ../src/ui/frames.c:1217
 msgid "Window Menu"
@@ -1249,11 +1249,11 @@ msgstr "Dewislen Ffenest"
 
 #: ../src/ui/frames.c:1220
 msgid "Minimize Window"
-msgstr "Lleihau'r Ffenest"
+msgstr "Lleihau'r ffenestr"
 
 #: ../src/ui/frames.c:1223
 msgid "Maximize Window"
-msgstr "Ehangu'r ffenest"
+msgstr "Ehangu'r ffenestr"
 
 #: ../src/ui/frames.c:1226
 msgid "Restore Window"
@@ -1269,11 +1269,11 @@ msgstr "Dadrolio Ffenestr"
 
 #: ../src/ui/frames.c:1235
 msgid "Keep Window On Top"
-msgstr "Cadw'r Ffenestr ar y Blaen"
+msgstr "Cadw'r ffenestr ar y blaen"
 
 #: ../src/ui/frames.c:1238
 msgid "Remove Window From Top"
-msgstr "Tynnu'r Ffenestr o'r Blaen"
+msgstr "Tynnu'r ffenestr o'r blaen"
 
 #: ../src/ui/frames.c:1241
 msgid "Always On Visible Workspace"
@@ -2099,11 +2099,11 @@ msgstr ""
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"
-msgstr ""
+msgstr "Dyma fotwm enghreifftiol gydag eicon 'agor'"
 
 #: ../src/ui/theme-viewer.c:125
 msgid "This is a demo button with a 'quit' icon"
-msgstr ""
+msgstr "Dyma fotwm enghreifftiol gydag eicon 'cau'"
 
 #: ../src/ui/theme-viewer.c:259
 msgid "This is a sample message in a sample dialog"

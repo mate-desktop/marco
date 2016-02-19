@@ -4,14 +4,17 @@
 # 
 # Translators:
 # Falu.Me, 2015
+# Faludi Zoltán, 2015
+# kami911 <kami911@gmail.com>, 2015
+# kami911 <kami911@gmail.com>, 2016
 # Rezső Páder <rezso@rezso.net>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-06 12:21+0000\n"
-"Last-Translator: Rezső Páder <rezso@rezso.net>\n"
+"PO-Revision-Date: 2016-01-23 21:39+0000\n"
+"Last-Translator: kami911 <kami911@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/mate/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -398,18 +401,18 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
+msgstr "Ezen billentyű nyomva tartása mellett az ablakra kattintva az ablak mozgatható (bal gomb) átméretezhető (középső gomb) vagy megjeleníthető az ablakmenü (jobb gomb). A bal és jobb műveletek felcserélhetők a „resize_with_right_button” kulcs segítségével. A módosítót például a következő módon lehet megadni: \"&lt;Alt&gt;\" vagy \"&lt;Super&gt;\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "Átméretezés a jobb egérgombbal"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr ""
+msgstr "Állítsa igazra a „mouse_button_modifier” kulcsban megadott billentyű lenyomva tartása közben a jobb gombbal való átméretezéshez és a középső gombbal a menü megjelenítéséhez, állítsa hamisra az ellentétes működéshez."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Arrangement of buttons on the titlebar"
@@ -424,7 +427,7 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr ""
+msgstr "A címsor gombjainak igazítása. Az értéknek szövegnek kell lennie, mint például „menu:minimize,maximize,spacer,close”; a kettőspont választja el az ablak jobb és bal sarkát, a gombneveket pedig vesszők. Kettőzött gombok nem megengedettek. Az ismeretlen gombnevek jelzés nélkül figyelmen kívül lesznek hagyva, így a jövőbeli marco verziókkal készült gombsorok visszafelé kompatibilisek maradnak. A speciális spacer címkével némi hely szúrható két szomszédos gomb közé."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Window focus mode"
@@ -437,7 +440,7 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr ""
+msgstr "Az ablakfókusz módja jelzi, hogy az ablakokat hogyan tehetőek aktívvá. Három lehetséges értéke van; „click” azt jelenti, hogy rá kell kattintani az adott ablakra hogy aktív legyen, „sloppy” azt jelenti, hogy az ablak aktív lesz, amint az egér az ablak fölé ér és a „mouse” azt jelenti, hogy az ablak aktív lesz, amint az egér az ablak fölé ér és nem lesz az, ha az egér elhagyja az ablakot."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Control how new windows get focus"
@@ -449,11 +452,11 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr ""
+msgstr "Ez a beállítás az újonnan létrehozott ablakok fókuszba kerülésének irányítására biztosít további lehetőséget. Két lehetséges értéke van: a „smart” (intelligens) a felhasználó normál fókuszmódját alkalmazza, a „strict” (korlátozott) hatására pedig a terminálból indított ablakok nem kapnak fókuszt."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Az előtérbe hozás más felhasználói tevékenységek mellékhatása legyen-e"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -475,7 +478,7 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Ezen érték hamisra állítása hibás viselkedést eredményezhet, ezért nem javasolt az alapértelmezett igaz érték módosítása. Számos művelet (például a kattintás a kliens területén, az ablak mozgatása vagy átméretezése) mellékhatásként előtérbe hozzák az ablakot. Ezen beállítás – nem javasolt – hamisra állításával az előtérbe hozást elválaszthatja más felhasználói műveletektől és figyelmen kívül hagyhatja az alkalmazások által generált előtérbe hozási kéréseket. Ha ez az érték hamis, az ablakok akkor is előtérbe hozhatók az Alt+bal gombbal kattintással az ablakban bárhová, normál kattintással az ablak díszítésein vagy a lapozók speciális üzeneteivel, például aktiválási kérésekkel a feladatlista kisalkalmazásoktól. Ez a beállítás jelenleg le van tiltva a „kattintás fókuszhoz” módban. Ne feledje, hogy az ablakok előtérbe hozási módjainak listája a „raise_on_click” kulcs hamis értéke esetén nem tartalmazza az alkalmazások ablak-előtérbe hozási programkéréseit, az ilyen kérések a kérés okától függetlenül figyelmen kívül maradnak. Ha alkalmazásfejlesztőként a felhasználói arra panaszkodnak, hogy az alkalmazás nem működik ezen beállítás letiltásakor, akkor vissza kell állítaniuk ezen beállítás igaz értékét. További információkért nézze meg a http://bugzilla.gnome.org/show_bug.cgi.id=445447#c6 oldalt."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
@@ -491,7 +494,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Ez az opció határozza meg, hogy mi történjen a címsoron való dupla kattintás esetén. Jelenleg érvényes opciók a „toggle_shade”, amely hatására az ablak felgördül/legördül, a „toggle_maximize”, amely hatására teljes képernyős/eredeti méretű lesz, „toggle_maximize_horizontally” és „toggle_maximize_vertically”, amelyek hatására az ablak csak vízszintesen/függőlegesen lesz maximalizálva, „minimize”, amely hatására kis méretű lesz az ablak, „shade”, amely hatására az ablak felgördül, „menu”, amely megjeleníti az ablak menüt, „lower”, amely az ablakot a többi ablak mögé viszi és „none”, amely nem hajt végre semmit."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar middle-click"
@@ -507,7 +510,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Ez az opció határozza meg, hogy mi történjen a címsoron való középső gombos kattintás esetén. Jelenleg érvényes opciók a „toggle_shade”, amely hatására az ablak felgördül/legördül, a „toggle_maximize”, amely hatására teljes képernyős/eredeti méretű lesz, „toggle_maximize_horizontally” és „toggle_maximize_vertically”, amelyek hatására az ablak csak vízszintesen/függőlegesen lesz maximalizálva, „minimize”, amely hatására kis méretű lesz az ablak, „shade”, amely hatására az ablak felgördül, „menu”, amely megjeleníti az ablak menüt, „lower”, amely az ablakot a többi ablak mögé viszi és „none”, amely nem hajt végre semmit."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar right-click"
@@ -523,7 +526,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Ez az opció határozza meg, hogy mi történjen a címsoron való jobb gombos kattintás esetén. Jelenleg érvényes opciók a „toggle_shade”, amely hatására az ablak felgördül/legördül, a „toggle_maximize”, amely hatására teljes képernyős/eredeti méretű lesz, „toggle_maximize_horizontally” és „toggle_maximize_vertically”, amelyek hatására az ablak csak vízszintesen/függőlegesen lesz maximalizálva, „minimize”, amely hatására kis méretű lesz az ablak, „shade”, amely hatására az ablak felgördül, „menu”, amely megjeleníti az ablak menüt, „lower”, amely az ablakot a többi ablak mögé viszi és „none”, amely nem hajt végre semmit."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Automatically raises the focused window"
@@ -535,7 +538,7 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
+msgstr "Ha igazra van állítva és a fókuszmód a „sloppy” vagy „mouse” egyike, akkor a fókuszba került ablak automatikusan az előtérbe lesz hozva az auto_raise_delay kulcsban megadott késleltetés letelte után. Ez nem kapcsolódik az ablakra kattintáshoz annak előtérbe hozása érdekében, sem az ablakra mutatáshoz fogd és ejtsd művelet során."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Delay in milliseconds for the auto raise option"
@@ -545,7 +548,7 @@ msgstr "Az automatikus előtérbe hozás opció késleltetése ezredmásodpercbe
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr ""
+msgstr "Késleltetés (ezredmásodpercben) az ablak automatikus előtérbe hozása előtt, ha az auto_raise kulcs engedélyezett."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Current theme"
@@ -555,17 +558,17 @@ msgstr "Jelenlegi téma"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "A téma meghatározza az ablakkeretek, a címsor és sok más kinézetét."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "A rendszer szabvány betűkészletének használata az ablak címsorában"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
+msgstr "Ha igazra van állítva, a titlebar_font kulcs figyelmen kívül marad, és a szabvány alkalmazás betűkészletet használja az ablakok címsoraihoz."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Window title font"
@@ -577,7 +580,7 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr ""
+msgstr "Betűkészlet-leíró karakterlánc, amely meghatározza az ablak címsorának betűkészletét. A leírás méret része csak akkor érvényesül, ha a titlebar_font_size kulcs értéke 0. Ez az opció le van tiltva, ha a titlebar_uses_desktop_font értéke igaz."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Number of workspaces"
@@ -588,11 +591,11 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
+msgstr "A munkaterületek száma. Az értéknek nullánál nagyobbnak kell lennie, és maximális értéke rögzített, megakadályozandó az asztali környezet használhatatlanná tételét túl sok munkaterület véletlen beállításával."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Workspace wrap style"
-msgstr ""
+msgstr "Munkaterület-váltás stílusa"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -615,7 +618,7 @@ msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
+msgstr "Látható jelzést ad, amikor egy alkalmazás vagy a rendszer „hangjelzést” adna ki; ez hasznos lehet a nagyothallók számára vagy zajos környezetben."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "System Bell is Audible"
@@ -625,7 +628,7 @@ msgstr "A rendszercsengő hallható"
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
+msgstr "Meghatározza, hogy az alkalmazások vagy a rendszer kiadhatnak-e hallható hangjelzéseket, hasznos lehet a „látható rendszercsengővel” együtt alkalmazni, mert ennek segítségével lehetségesek a „néma hangjelzések” is."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "Visual Bell Type"
@@ -640,7 +643,7 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr ""
+msgstr "Meghatározza, hogy a Marco ablakkezelő hogyan jelenítse meg látható módon, ha a rendszer hangjelzése (esetleg másik alkalmazás „hangjelzése”) megszólal. Jelenleg két érvényes értéke van: a „fullscreen”, amely a teljes képernyő fekete-fehér villanását okozza, illetve a „frame_flash”, amely a címsor villanását okozza a jelzést kiváltó alkalmazásnál. Ha ez az alkalmazás ismeretlen (amely általános a rendszer alapértelmezett „hangjelzése” esetén), akkor a jelenleg aktív ablak címsora fog felvillanni."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Compositing Manager"
@@ -648,21 +651,21 @@ msgstr "Kompozíciókezelő"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Meghatározza, hogy a Marco kompozíciókezelő-e."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Fast Alt-Tab Enabled"
-msgstr ""
+msgstr "Gyors alkalmazásváltás engedélyezve"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
 "Whether or not fast alt-tabbing is used when the compositing manager is "
 "enabled."
-msgstr ""
+msgstr "Engedélyezve legyen-e a a gyors alkalmazásváltás a kompozíciókezelő használatakor."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "Ha ez be van állítva, a kisebb erőforrásigény érdekében a könnyű használhatóságból áldoz fel"
 
 #: ../src/org.mate.marco.gschema.xml.h:44
 msgid ""
@@ -671,12 +674,12 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr ""
+msgstr "Ha ez be van állítva, akkor a marco a felhasználónak kevesebb visszajelzést ad drótvázak használatával, animációk kikapcsolásával, vagy egyéb módon. Ez a használhatóság jelentős csökkentése sok felhasználó számára, de lehetővé teszi az örökölt alkalmazásoknak a működés folytatását és terminál kiszolgálóknak is hasznos engedmény lehet. Azonban a drótváz szolgáltatás ki van kapcsolva, ha az akadálymentesítés be van kapcsolva."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "(Nincs megvalósítva) A navigáció az alkalmazások és nem az ablakok szintjén működik"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -687,11 +690,11 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
+msgstr "Ha ez be van állítva, akkor a Marco ablakkezelő inkább az alkalmazások és nem az ablakok szintjén működik. A koncepció egy kicsit elvont, de összességében az alkalmazás alapú beállítás inkább mac-es és kevésbé windowsos. Ha fókuszba kerül valamelyik ablak az alkalmazás alapú módban, akkor az alkalmazás minden ablaka előtérbe kerül. Szintén ebben az üzemmódban a kattintások nem jutnak át más alkalmazások ablakain. Az alkalmazás alapú üzemmód azonban jelenleg nagyrészt nincs megvalósítva."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "Azon hibás funkciók letiltása, amelyeket régi vagy hibás alkalmazások használnak"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -699,32 +702,32 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr ""
+msgstr "Néhány alkalmazás a szabványokat olyan módon veszi semmibe, hogy aza Marco ablakkezelő hibás viselkedését okozza. Ez a lehetőség az ablakkezelőt kérlelhetetlenül helyes módba kapcsolja, amely sokkal konzisztensebb felhasználói felületet eredményez, feltéve hogy nem kell hibásan működő alkalmazásokat futtatnia."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Új ablakok középre helyezése"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Ha ez be van állítva, akkor az újonnan megnyíló ablakok a képernyő közepén jelenik meg. Ellenkező esetben az ablakok a bal felső sarokban jelennek meg."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
-msgstr ""
+msgstr "Oldalsó igazítás engedélyezése"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window."
-msgstr ""
+msgstr "Ha engedélyezett, akkor a képernyőélekre húzott ablakok függőlegesen maximalizálva lesznek, vízszintesen pedig az elérhető terület felét fogják elfoglalni. Az ablakok felső képernyőszélre húzása teljesen maximalizálja azokat."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
-msgstr ""
+msgstr "Ablak elhelyezése üzemmód"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -756,7 +759,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Az a billentyűkombináció, amely futtatja a megfelelő számú parancsot az /apps/marco/keybinding_commands kulcsból. Formátuma ehhez hasonló: „<Control>a” vagy „<Shift><Alt>F1”. Az elemző elég megengedő, nem érzékeny a kis- és nagybetűkre, valamint rövidítéseket (mint „<Ctl>” és „<Ctrl>”) is megenged. Ha az opciót a speciális „disabled” karakterláncra állítja be, akkor nem lesz billentyűkombináció társítva ehhez a művelethez."
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
@@ -765,7 +768,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Formátuma ehhez hasonló: „<Control>a” vagy „<Shift><Alt>F1”.\n\nAz elemző elég megengedő, nem érzékeny a kis- és nagybetűkre, valamint rövidítéseket (mint „<Ctl>” és „<Ctrl>”) is megenged. Az opciót a speciális „disabled” karakterláncra állítva nem lesz billentyűkombináció társítva ehhez a művelethez."
 
 #: ../src/org.mate.marco.gschema.xml.h:78
 msgid ""
@@ -776,50 +779,50 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr ""
+msgstr "Formátuma ehhez hasonló: „<Control>a” vagy „<Shift><Alt>F1”.\n\nAz elemző elég engedékeny, nem érzékeny a kis- és nagybetűkre, valamint rövidítéseket (mint „<Ctl>” és „<Ctrl>”) is megenged. Az opciót a speciális „disabled” karakterláncra állítva nem lesz billentyűkombináció társítva ehhez a művelethez.\n\nEz a billentyűtársítás megfordítható a „Shift” billentyű lenyomásával, így a „Shift” itt nem használható."
 
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Váltás visszafelé egy alkalmazás ablakai között felugró ablakkal"
 
 #: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Váltás visszafelé az ablakok között felugró ablakkal"
 
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Váltás az összes munkaterület ablakai között felugró ablakkal"
 
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Váltás visszafelé az összes munkaterület ablakai között felugró ablakkal"
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Váltás visszafelé a panelek és az asztal között felugró ablakkal"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Váltás visszafelé egy alkalmazás ablakai között azonnal"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Váltás visszafelé az ablakok között azonnal"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Váltás visszafelé a panelek és az asztal között azonnal"
 
 #: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Billentyű összerendelések hatására futtatandó parancsok"
 
 #: ../src/org.mate.marco.gschema.xml.h:99
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr ""
+msgstr "Az /apps/marco/global_keybindings/run_command_N határozza meg a billentyűkombinációkat, amelyek ezekhez a parancsokhoz tartoznak. A run_command_N-hez tartozó billentyűkombináció lenyomásakor végre lesz hajtva a command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "The screenshot command"
@@ -829,22 +832,22 @@ msgstr "A képernyőkép-készítő parancs"
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr ""
+msgstr "Az /apps/marco/global_keybindings/run_command_screenshot kulcs definiálja azt a billentyűkombinációt, amely ezen beállítások által meghatározott parancsot hívja meg."
 
 #: ../src/org.mate.marco.gschema.xml.h:102
 msgid "The window screenshot command"
-msgstr ""
+msgstr "A ablak képernyőkép-készítő parancs"
 
 #: ../src/org.mate.marco.gschema.xml.h:103
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr ""
+msgstr "Az /apps/marco/global_keybindings/run_command_window_screenshot kulcs definiálja azt a billentyűkombinációt, amely ezen beállítások által meghatározott parancsot hívja meg."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Az ablak mindig látható lesz más ablakok fölött"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -2096,15 +2099,15 @@ msgstr "A_sztal"
 
 #: ../src/ui/theme-viewer.c:121
 msgid "Open another one of these windows"
-msgstr ""
+msgstr "Egy újabb példány megnyitása ezekből az ablakokból"
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"
-msgstr ""
+msgstr "Ez egy mintagomb a „Megnyitás” ikonnal"
 
 #: ../src/ui/theme-viewer.c:125
 msgid "This is a demo button with a 'quit' icon"
-msgstr ""
+msgstr "Ez egy mintagomb a „Kilépés” ikonnal"
 
 #: ../src/ui/theme-viewer.c:259
 msgid "This is a sample message in a sample dialog"

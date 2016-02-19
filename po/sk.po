@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2013-2015
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2013-2016
 # Tibor Kaputa <tibbbi2@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-06 11:58+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-02-13 19:27+0000\n"
+"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/mate/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -170,7 +170,7 @@ msgstr "Prepnúť na pracovnú plochu pod aktuálnou pracovnou plochou"
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:76
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Prepnúť na naposledy vybratú pracovnú plochu"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:104
@@ -255,12 +255,12 @@ msgstr "Maximalizovať okno vodorovne"
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:137
 msgid "Tile window to east (right) side of screen"
-msgstr ""
+msgstr "Dlaždice okna na východnej (pravej) strane obrazovky"
 
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:138
 msgid "Tile window to west (left) side of screen"
-msgstr ""
+msgstr "Dlaždice okna na západnej (ľavej) strane obrazovky"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 #: ../src/org.mate.marco.gschema.xml.h:139
@@ -389,7 +389,7 @@ msgstr "Presunúť okno o jednu pracovnú plochu nadol"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Modifikátor pre upravené činnosti pri kliknutí na okno"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -398,22 +398,22 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
+msgstr "Kliknutím na okno pri podržaní tohto modifikátora sa okno presunie (ľavé kliknutie), zmení jeho veľkosť (stredné kliknutie) alebo sa zobrazí ponuka okna (pravé kliknutie). Operácie stredného a pravého kliknutia sa dajú vymeniť pomocou nastavenia kľúča „resize_with_right_button“. Modifikátor je vyjadrený napr. ako „<Alt>“ alebo „<Super>“."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "Určuje, či sa bude meniť veľkosť okna pravým tlačidlom"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr ""
+msgstr "Vyberte túto možnosť, na povolenie zmeny veľkosti okna pravým tlačidlom a zobrazenie menu okna stredným tlačidlom pri súčasnom podržaní klávesu určeného v „mouse_button_modifier“; nevybraním tejto možnosti to bude fungovať presne naopak."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Usporiadanie tlačidiel v titulku okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
@@ -424,11 +424,11 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr ""
+msgstr "Usporiadanie tlačidiel v titulku okna. Hodnota je reťazec, napríklad „menu:minimize,maximize,spacer,close“. Dvojbodka oddeľuje ľavý roh okna od pravého a názvy tlačidiel sú oddelené čiarkami. Viacnásobné použitie tlačidiel nie je povolené. Neznáme názvy tlačidiel sú potichu ignorované, takže tlačidlá pridané v budúcich verziách marco nespôsobia nefunkčnosť starších verzií. Špeciálny štítok „spacer“ môže byť použitý na vloženie medzery medzi dve susedná tlačidlá."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Window focus mode"
-msgstr ""
+msgstr "Režim aktivácie okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -437,7 +437,7 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr ""
+msgstr "Režim aktivizácie okna má tri možné hodnoty: „click“ znamená, že na okno sa musí kliknúť, „sloppy“ znamená, že okno sa stane aktívnym, keď sa okno myšou zameria, a „mouse“ znamená, že sa okno stane aktívnym pri zameraní myšou a pri presune kurzoru myši mimo okno, prestane byť okno aktívne."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Control how new windows get focus"
@@ -453,7 +453,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Určuje, či vyvolanie má byť vedľajší efekt iných interakcí s používateľom"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -535,7 +535,7 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
+msgstr "Ak je táto možnosť vybraná, a režim aktivizácie okien je buď „sloppy“ alebo „myš“, potom okno v zábere sa automaticky zobudí po čase zadanom v kľúči auto_raise_delay. Toto sa nevzťahuje na prebúdzanie okna klikaním, ani na vstup do okna pomocou ťahaj-a-pusť."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Delay in milliseconds for the auto raise option"
@@ -565,11 +565,11 @@ msgstr ""
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
+msgstr "Ak je táto možnosť vybraná, ignoruje sa titlebar_font a použije sa štandardné písmo aplikácie pre titulky okien."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Window title font"
-msgstr ""
+msgstr "Písmo titulku okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
@@ -581,14 +581,14 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Počet pracovných plôch"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
+msgstr "Počet pracovných plôch. Musí byť väčší ako nula a musí mať pevne určené maximum na zabráneniu vytvorenia pracovnej plochy nepoužiteľnej vypýtaním si príliš veľkého počtu pracovných plôch."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Workspace wrap style"
@@ -625,7 +625,7 @@ msgstr ""
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
+msgstr "Určuje, či majú aplikácie alebo systém generovať zvukové pípnutia. Spolu s vizuálnym zvončekom umožňuje „tiché pípanie“."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "Visual Bell Type"
@@ -640,7 +640,7 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr ""
+msgstr "Určuje, ako má Marco implementovať vizuálne zobrazenie pípnutia programom alebo systémom. Momentálne existujú dve platné hodnoty, „fullscreen“, ktorá čiernobielo blikne celou obrazovkou a „frame_flash“, kde blikne titulok okna, v ktorom je pípajúci program. Ak nie je možné určiť pípajúci program (napr. pri „pípnutí systému“), blikne titulok momentálne aktívneho okna."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Compositing Manager"
@@ -648,7 +648,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Určuje, či je Marco kompozitný správca okien."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Fast Alt-Tab Enabled"
@@ -658,11 +658,11 @@ msgstr ""
 msgid ""
 "Whether or not fast alt-tabbing is used when the compositing manager is "
 "enabled."
-msgstr ""
+msgstr "Určuje, či je zapnuté rýchle prepínane programov pomocou Alt-Tab, keď je povolený kompozitný správca okien."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "Ak je táto možnosť vybraná, zhorší sa použiteľnosť, ale klesne spotreba zdrojov"
 
 #: ../src/org.mate.marco.gschema.xml.h:44
 msgid ""
@@ -671,7 +671,7 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr ""
+msgstr "Ak je táto možnosť vybraná, Marco bude poskytovať používateľovi menej spätnej väzby pomocou obrysov, vynechaním animácií, a pod. Toto pre mnohých používateľov znamená výrazné zníženie použiteľnosti, ale môže umožniť pracovať starým aplikáciam a terminálovým serverom, ktoré by inak boli prakticky nepoužiteľné. Avšak obrysy nebudú povolené pri zapnutej použiteľnosti."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid ""
@@ -687,7 +687,7 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
+msgstr "Ak je táto možnosť vybraná, Marco funguje v rámci programov, a nie okien. Je to trochu abstraktnejšie, ale všeobecne sa dá povedať, že nastavenie vzhľadom k aplikáciám sa podobá viac systému Mac a menej systému Windows. Ak urobíte okno aktívnym v režime programov, všetky okná tohto programu sa presunú dopredu. Kliknutie kvôli aktivácii sa oknám iných programov neodovzdáva. Na druhú stranu, máloktorá aplikácia je napísaná pre režim založený na aplikáciách."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -713,7 +713,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
-msgstr ""
+msgstr "Určuje, či povoliť dlaždicové usporiadanie okien"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
@@ -738,15 +738,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
-msgstr ""
+msgstr "Názov pracovnej plochy"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Názov pracovnej plochy."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Run a defined command"
-msgstr ""
+msgstr "Spustiť definovaný príkaz"
 
 #: ../src/org.mate.marco.gschema.xml.h:58
 msgid ""
@@ -823,7 +823,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "The screenshot command"
-msgstr ""
+msgstr "Príkaz na vykonanie snímky obrazovky"
 
 #: ../src/org.mate.marco.gschema.xml.h:101
 msgid ""
@@ -844,7 +844,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Určuje, či bude okno vždy viditeľné nad ostatnými oknami"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -888,7 +888,7 @@ msgstr "Rozšírenie %s chýba a je potrebné pre kompozitné prostredie"
 #: ../src/core/display.c:348
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
-msgstr "Nepodarilo sa otvoriť displej X Window System '%s'\n"
+msgstr "Nepodarilo sa otvoriť displej X Window System „%s“\n"
 
 #: ../src/core/errors.c:304
 #, c-format
@@ -896,12 +896,12 @@ msgid ""
 "Lost connection to the display '%s';\n"
 "most likely the X server was shut down or you killed/destroyed\n"
 "the window manager.\n"
-msgstr "Stratilo sa spojenie s displejom '%s'.\nAsi sa X server vypol alebo ste ukončili/zničili\nsprávcu okien.\n"
+msgstr "Stratilo sa spojenie s displejom „%s“.\nAsi sa X server vypol alebo ste ukončili/zničili\nsprávcu okien.\n"
 
 #: ../src/core/errors.c:311
 #, c-format
 msgid "Fatal IO error %d (%s) on display '%s'.\n"
-msgstr "Kritická chyba V/V %d (%s) na displeji '%s'\n"
+msgstr "Kritická chyba V/V %d (%s) na displeji „%s“\n"
 
 #: ../src/core/keybindings.c:716
 #, c-format
@@ -1027,7 +1027,7 @@ msgstr "V konfiguračnej databáze sa našlo „%s“, čo nie je platná hodnot
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "V konfiguračnej databáze sa našlo „%s“, čo nie je platná hodnota pre klávesovú skratku \"%s\".\n"
+msgstr "V konfiguračnej databáze sa našlo „%s“, čo nie je platná hodnota pre klávesovú skratku „%s“.\n"
 
 #: ../src/core/prefs.c:1986
 #, c-format
@@ -1037,7 +1037,7 @@ msgstr "Pracovná plocha %d"
 #: ../src/core/screen.c:358
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
-msgstr "Obrazovka %d na displeji '%s' nie je platná\n"
+msgstr "Obrazovka %d na displeji „%s“ nie je platná\n"
 
 #: ../src/core/screen.c:374
 #, c-format
@@ -1064,22 +1064,22 @@ msgstr "Nepodarilo sa uvoľniť obrazovku %d na displeji „%s“\n"
 #: ../src/core/session.c:842 ../src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr "Nepodarilo sa vytvoriť priečinok '%s': %s\n"
+msgstr "Nepodarilo sa vytvoriť priečinok „%s“: %s\n"
 
 #: ../src/core/session.c:859
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
-msgstr "Nepodarilo sa otvoriť súbor relácie '%s' pre zápis: %s\n"
+msgstr "Nepodarilo sa otvoriť súbor relácie „%s“ pre zápis: %s\n"
 
 #: ../src/core/session.c:1000
 #, c-format
 msgid "Error writing session file '%s': %s\n"
-msgstr "Chyba pri zápise súboru relácie '%s': %s\n"
+msgstr "Chyba pri zápise súboru relácie „%s“: %s\n"
 
 #: ../src/core/session.c:1005
 #, c-format
 msgid "Error closing session file '%s': %s\n"
-msgstr "Chyba pri zatváraní súboru relácie '%s': %s\n"
+msgstr "Chyba pri zatváraní súboru relácie „%s“: %s\n"
 
 #: ../src/core/session.c:1135
 #, c-format
@@ -1577,19 +1577,19 @@ msgstr "Nepodarilo sa spracovať farbu „%s“"
 #: ../src/ui/theme.c:1848
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
-msgstr "Výraz umiestnenia obsahuje znak '%s', ktorý nie je povolený"
+msgstr "Výraz umiestnenia obsahuje znak „%s“, ktorý nie je povolený"
 
 #: ../src/ui/theme.c:1875
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "Výraz umiestnenia obsahuje reálne číslo '%s', ktoré nie je možné spracovať."
+msgstr "Výraz umiestnenia obsahuje reálne číslo „%s“, ktoré nie je možné spracovať."
 
 #: ../src/ui/theme.c:1889
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr "Výraz umiestnenia obsahuje celé číslo '%s', ktoré nie je možné spracovať."
+msgstr "Výraz umiestnenia obsahuje celé číslo „%s“, ktoré nie je možné spracovať."
 
 #: ../src/ui/theme.c:2011
 #, c-format
@@ -2052,19 +2052,19 @@ msgstr "Nepodarilo sa nájsť platný súbor pre tému%s\n"
 
 #: ../src/ui/theme-viewer.c:105
 msgid "_Windows"
-msgstr ""
+msgstr "O_kná"
 
 #: ../src/ui/theme-viewer.c:106
 msgid "_Dialog"
-msgstr ""
+msgstr "_Dialógové okno"
 
 #: ../src/ui/theme-viewer.c:107
 msgid "_Modal dialog"
-msgstr ""
+msgstr "_Modálne dialógové okno"
 
 #: ../src/ui/theme-viewer.c:108
 msgid "_Utility"
-msgstr ""
+msgstr "_Nástroj"
 
 #: ../src/ui/theme-viewer.c:109
 msgid "_Splashscreen"
@@ -2092,11 +2092,11 @@ msgstr ""
 
 #: ../src/ui/theme-viewer.c:115
 msgid "Des_ktop"
-msgstr ""
+msgstr "Pracovná _plocha"
 
 #: ../src/ui/theme-viewer.c:121
 msgid "Open another one of these windows"
-msgstr ""
+msgstr "Otvoriť iné z týchto okien"
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"

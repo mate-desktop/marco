@@ -4,8 +4,11 @@
 # 
 # Translators:
 # Alexei Sorokin <sor.alexei@meowr.ru>, 2012-2013
+# AlexL <loginov.alex.valer@gmail.com>, 2015
 # bizdelnick <bizdelnick@gmail.com>, 2015
+# Dmitry Kireev <dinimito@mail.ru>, 2015
 # Evolve32 <evolve32@yandex.ru>, 2014
+# Olee boy <boyoldboyold@gmail.com>, 2016
 # theirix <theirix@gmail.com>, 2015
 # Vlad Orlov <monsta@inbox.ru>, 2015
 msgid ""
@@ -13,8 +16,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-06 12:01+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-02-02 15:01+0000\n"
+"Last-Translator: Olee boy <boyoldboyold@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/mate/MATE/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -712,7 +715,7 @@ msgstr "Определяет, создавать ли новые окна в с�
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Если значение установлено верно, новые окна будут открываться в центре экрана. В противном случае, они будут открыты в левом верхнем углу экрана."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
@@ -727,7 +730,7 @@ msgstr "Если включено, перетаскивание окна на г
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
-msgstr ""
+msgstr "Режим размещения окна"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -737,7 +740,7 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "Режим размещения окна указывает как будут позиционироваться новые окна. \"автоматический\" означает, что система выбирает местоположение автоматом на основе доступного пространства на рабочем столе, или с помощью простого каскада, если нет места; \"указатель\" означает, что новые окна размещаются в соответствии с положением указателя мыши; \"ручной\" означает, что пользователь должен вручную расположить новое окно с помощью мыши или клавиатуры."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
@@ -2059,55 +2062,55 @@ msgstr "_Окна"
 
 #: ../src/ui/theme-viewer.c:106
 msgid "_Dialog"
-msgstr ""
+msgstr "_Диалоговое окно"
 
 #: ../src/ui/theme-viewer.c:107
 msgid "_Modal dialog"
-msgstr ""
+msgstr "_Модальное диалоговое окно"
 
 #: ../src/ui/theme-viewer.c:108
 msgid "_Utility"
-msgstr ""
+msgstr "_Утилита"
 
 #: ../src/ui/theme-viewer.c:109
 msgid "_Splashscreen"
-msgstr ""
+msgstr "_Экран-заставка"
 
 #: ../src/ui/theme-viewer.c:110
 msgid "_Top dock"
-msgstr ""
+msgstr "_Верхний док"
 
 #: ../src/ui/theme-viewer.c:111
 msgid "_Bottom dock"
-msgstr ""
+msgstr "_Нижний док"
 
 #: ../src/ui/theme-viewer.c:112
 msgid "_Left dock"
-msgstr ""
+msgstr "_Левый док"
 
 #: ../src/ui/theme-viewer.c:113
 msgid "_Right dock"
-msgstr ""
+msgstr "_Правый док"
 
 #: ../src/ui/theme-viewer.c:114
 msgid "_All docks"
-msgstr ""
+msgstr "_Все доки"
 
 #: ../src/ui/theme-viewer.c:115
 msgid "Des_ktop"
-msgstr ""
+msgstr "_Рабочий стол"
 
 #: ../src/ui/theme-viewer.c:121
 msgid "Open another one of these windows"
-msgstr ""
+msgstr "Открыть еще раз это окно"
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"
-msgstr ""
+msgstr "Показывать кнопку со значком «открыть»"
 
 #: ../src/ui/theme-viewer.c:125
 msgid "This is a demo button with a 'quit' icon"
-msgstr ""
+msgstr "Показывать кнопку со значком \"закрыть\""
 
 #: ../src/ui/theme-viewer.c:259
 msgid "This is a sample message in a sample dialog"

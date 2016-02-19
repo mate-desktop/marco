@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Siranush <ss.m.95@mail.ru>, 2015
+# Siranush <ss.m.95@mail.ru>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-14 12:06+0000\n"
+"PO-Revision-Date: 2016-01-30 10:27+0000\n"
 "Last-Translator: Siranush <ss.m.95@mail.ru>\n"
 "Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
 "MIME-Version: 1.0\n"
@@ -59,12 +59,12 @@ msgstr "Տեղափոխել պատուհանների միջև, օգտագործե
 #: ../src/50-marco-global-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:77
 msgid "Move between windows of an application, using a popup window"
-msgstr ""
+msgstr "Դիմումը տեղափոխել պատուհանների միջև, օգտագործելով թռուցիկ պատուհան"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid "Move between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Վահանակները տեղափոխել պատուհանների միջև, օգտագործելով թռուցիկ պատուհան"
 
 #: ../src/50-marco-global-key.xml.in.h:5
 #: ../src/org.mate.marco.gschema.xml.h:88
@@ -74,7 +74,7 @@ msgstr "Պատուհանների միջև ակտիվ կարգավիճակը վե
 #: ../src/50-marco-global-key.xml.in.h:6
 #: ../src/org.mate.marco.gschema.xml.h:86
 msgid "Move between windows of an application immediately"
-msgstr ""
+msgstr "Դիմումը անմիջապես տեղափոխել պատուհանների միջև"
 
 #: ../src/50-marco-global-key.xml.in.h:7
 #: ../src/org.mate.marco.gschema.xml.h:90
@@ -149,22 +149,22 @@ msgstr "Տեղափոխվել աշխատանքային տարածք 12"
 #: ../src/50-marco-global-key.xml.in.h:21
 #: ../src/org.mate.marco.gschema.xml.h:72
 msgid "Switch to workspace on the left of the current workspace"
-msgstr ""
+msgstr "Ընթացիկ աշխատանքային տարածքից անցնել ձախ աշխատանքային տարածք"
 
 #: ../src/50-marco-global-key.xml.in.h:22
 #: ../src/org.mate.marco.gschema.xml.h:73
 msgid "Switch to workspace on the right of the current workspace"
-msgstr ""
+msgstr "Ընթացիկ աշխատանքային տարածքից անցնել աջ աշխատանքային տարածք"
 
 #: ../src/50-marco-global-key.xml.in.h:23
 #: ../src/org.mate.marco.gschema.xml.h:74
 msgid "Switch to workspace above the current workspace"
-msgstr ""
+msgstr "Անցնել ընթացիկ աշխատանքային տարածքից վերև աշխատանքային տարածք"
 
 #: ../src/50-marco-global-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:75
 msgid "Switch to workspace below the current workspace"
-msgstr ""
+msgstr "Անցնել ընթացիկ աշխատանքային տարածքից ներքև աշխատանքային տարածք"
 
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:76
@@ -224,7 +224,7 @@ msgstr "Պատուհանիչափսերը փոխել"
 #: ../src/50-marco-window-key.xml.in.h:12
 #: ../src/org.mate.marco.gschema.xml.h:115
 msgid "Toggle whether window is on all workspaces or just one"
-msgstr ""
+msgstr "Արդյոք փոխանջատել պատուհանը բոլոր աշխատատիրույթներից կամ կամ պարզապես մեկից"
 
 #: ../src/50-marco-window-key.xml.in.h:13
 #: ../src/org.mate.marco.gschema.xml.h:132
@@ -388,7 +388,7 @@ msgstr "Պատուհանը տեղափոխել մեկ աշխատանքային տ
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Մոդիֆիկացված պատուհանի հետ կտտոցով գործողությունների համար օգտագործվող մոդիֆիկատոր"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -397,22 +397,22 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
+msgstr "Սեղմելով պատուհանը, մինչ իջեցնելը այս կերպափոխիչ ստեղնը կտեղափոխի պատուհանը (ձախ կտտոց), չափափոխել պատուհանը (մեջտեղի կտտոց), կամ ցույց տալ, պատուհանի մենյուն (աջ կտտոց)։ Մեջտեղի և աջ կտտոցի գործողությունները կարող են տեղերեվ փոխվել \"resize_with_right_button\" ստեղնով։ Կերպափոխիչը արտահայտվում է որպես \"&lt;Alt&gt;\" or \"&lt;Super&gt;\" օրինակի համար։"
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "Արդյոք չափափոխել աջ կոճակի հետ"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr ""
+msgstr "Սահմանել այս ճշմարիտ չափափոխելու համար աջ կոճակի հետ միասին և ցեւյց տալ մենյուն մեջտեղի կոճակի հետ միասին մինչև տրված ստեղնի իջեցումը \"mouse_button_modifier\" մեջ; սահմանել այն կեղծ է, որպեսզի այն աշխատի հակառակ ճանապարհով։"
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Վերնագրի տողի վրա կոճակների դասավորություն"
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
@@ -423,11 +423,11 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr ""
+msgstr "Կոճակների դասավորությունը տիտղոսային բարի մեջ։ Արժեքը պետք է լինի տող, ինչպես օրինակ \"menu:minimize,maximize,spacer,close\"; ստորակետը բաժանում է ձախ անկյունը աջ անկյունից պատուհանի մեջ և կոճակների անունները ստորակետով առանձնացված են։ Կրկնակի կոճակներ չեն թույլատրվում: Անհայտ կոճակների անունները լռությամբ բաց են թողնվում, այնպես որ այդ կոճակները կարող է ավելացվել marco ապագա տարբերակներում առանց հին տարբերակները կոտրելու։ Հատուկ անջատիչ թեգը կարող է օգտագործվել երկու հարակից կոճակների միջև բացատ ներմուծելու համար։"
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Window focus mode"
-msgstr ""
+msgstr "Պատուհանների կենտրոնացման ռեժիմ"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -436,11 +436,11 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr ""
+msgstr "Պատուհանի կենտրոնացման ռեժիմը ցույց է տալիս, թե ինչպես է պատուհանը ակտիվացված։ Այն ունի երեք հնարավոր արժեք՝ \"click\" նշանակում է պատուհանները պետք է սեղմել, որպեսզի ուշադրությունը կենտրոնանա նրանց վրա, \"sloppy\" նշանակում է, պատուհանները կենտրոնացած են, երբ մկնիկը մուտքագրում է պատուհանը և \"mouse\" նշանակում է, պատուհանները կենտրոնացած են, երբ մկնիկը մուտքագրում է պատուհանը և ապակենտրոնացվում, երբ մկնիկը թողնում է պատուհանը։"
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Վերահսկել, թե ինչպես պատուհանները կենտրոնացնել"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -448,11 +448,11 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr ""
+msgstr "Այս տարբերակը ապահովում է լրացուցիչ վերահսկողություն, թե ինչպես նորաստեղծ պատուհանները ստանան կոնտրոնացում։ Այն ունի երկու հնարավոր արժեք՝ \"smart\" կիրառում է գործածողի նորմալ կենտրոնացման ռեժիմը և \"strict\" պատուհանների մեջ արդյունքները սկսված են տերմինալից չի տրվում կենտրոնացում։"
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Արդյոք բարձրացումը պետք է լինի այլ օգտագործողի փոխազդեցության կողմնակի էֆեկտ "
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -474,11 +474,11 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Պարամետրի այս տարբերակը սխալ է, կարող է հանգեցնել ծրագրային սխալ վարքի, այնպես որ օգտագործողները կսրող են շատ չվհահատվել փոխելով այն նախնականից ճիշտ։  Շատ գործողություններ (օրինակ սեղմել հաճախորդի դաշտի վրա, տեղափոխել և չափափոխել պատուհանները) նորմալ բարձրացնում են պատուհանը, որպես կողմնակի ազդեցություն։ Պարամետրի այս տարբերակը կեղծ է, որը խրախուսվում է, կմասնատի բարձրացնելով այլ օգտագործողների գործողություններից և կանտեսի հարցումների բարձրացումը ծրագրի կողմից։ Տես http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6։ Նույնիսկ երբ այս տարբերակը կեղծ է, ապա պատուհանները դեռևս կարող է բարձրացվել alt-left-click պատուհանի վրա որևէ տեղ, նորմալ սեղմել պատուհանի դեկորացիայի վրա կամ հատուկ հաղորդագրությունների կողմից էջերից, ինչպիսիք են ակտիվացման խնդրանքները հարցումների ցուցակի ենթածրագրից։ Այս տարբերակը ներկայումս անջատված է click-to-focus ռեժիմում։ Նշենք որ պատուհանները բարձրացնելու ուղիների ցանկը, երբ raise_on_click կեղծ է , չի ներառում ծրագրային հարցումներ ծրագրերից պատուհանները բարձրացնելու համար, այդպիսի հարցումները կլինեն անտեսված, անկախ հարցման պատճառից։ Եթե դուք ծրագիր մշակող եք և ունեք օգտագործողի բողոք, որ ձեր ծրագիրը չի աշխատում այդ անջատված պարամետրի հետ, ասեք որ դա _their_ fault է պատուհանային մենեջեռի պատճառով, որ նրանք պետք է փոխեն այս տարբերակը դարձնեն ճիշտ կամ պահել \"bug\" նրանց հարցման հետ։"
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Տիտղոսային բարի վրա կրկնակի սեղմելու գործողությունը"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -490,11 +490,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Այս տարբերակը սահմանում է տիտղոսային բարի վրա կրկնակի սեղմելու ազդեցությունները։ Ընթացիկ հնարավոր տարբերակներն են՝ 'toggle_shade', որը կստվերապատի/չիստվերապատի պատուհանը, 'toggle_maximize', որը կմաքսիմացնի/չի մաքսիմացնի պատուհանը, 'toggle_maximize_horizontally' և  'toggle_maximize_vertically', որը կմաքսիմացնի/չի մաքսիմացնի պատուհանը միայն այդ ուղղությամբ, 'minimize', որը կմինիմացնի պատուհանը, 'shade', որը կպտտի պատուհանը վերև, 'menu', որը ցույց կտա պատուհանի ընտրացանկը, 'lower', որը կտեղադրի պատուհանը բոլոր այլ պատուհանների հետևում և 'none', որը ոչինչ իչ անի։"
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Տիտղոսային բարի վրա մեջտեղի կտտոցի գործողությունը"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -506,11 +506,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Այս տարբերակը սահմանում է տիտղոսային բարի վրա մեջտեղի կտտոցիազդեցությունները։ Ընթացիկ հնարավոր տարբերակներն են՝ 'toggle_shade', որը կստվերապատի/չիստվերապատի պատուհանը, 'toggle_maximize', որը կմաքսիմացնի/չի մաքսիմացնի պատուհանը, 'toggle_maximize_horizontally' և  'toggle_maximize_vertically', որը կմաքսիմացնի/չի մաքսիմացնի պատուհանը միայն այդ ուղղությամբ, 'minimize', որը կմինիմացնի պատուհանը, 'shade', որը կպտտի պատուհանը վերև, 'menu', որը ցույց կտա պատուհանի ընտրացանկը, 'lower', որը կտեղադրի պատուհանը բոլոր այլ պատուհանների հետևում և 'none', որը ոչինչ իչ անի։"
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Տիտղոսային բարի վրա աջ կտտոցի գործողությունը"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -522,11 +522,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Այս տարբերակը սահմանում է տիտղոսային բարի վրա աջ կտտոցի ազդեցությունները։ Ընթացիկ հնարավոր տարբերակներն են՝ 'toggle_shade', որը կստվերապատի/չիստվերապատի պատուհանը, 'toggle_maximize', որը կմաքսիմացնի/չի մաքսիմացնի պատուհանը, 'toggle_maximize_horizontally' և  'toggle_maximize_vertically', որը կմաքսիմացնի/չի մաքսիմացնի պատուհանը միայն այդ ուղղությամբ, 'minimize', որը կմինիմացնի պատուհանը, 'shade', որը կպտտի պատուհանը վերև, 'menu', որը ցույց կտա պատուհանի ընտրացանկը, 'lower', որը կտեղադրի պատուհանը բոլոր այլ պատուհանների հետևում և 'none', որը ոչինչ իչ անի։"
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Ավտոմատ կերպով բարձրացնել կենտրոնացված պատուհանը"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -534,17 +534,17 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
+msgstr "Եթե ճշգրիտ է և կետրոնացման ռեժիմը նաև \"sloppy\" կամ \"mouse\", ապա կենտրոնացված պատուհանը կարող է ավտոմատ կերպով բարձրացել այն բանից հետո, երբ ուշացումով նշված է  auto_raise_delay ստեղնը։ Սա չի առնչվում սեղմելով պատուհանի վրա բարձրացնել այն, ոչ էլ մուտքագրում է պատուհանը drag-and-drop ընթացքում։"
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Պատուհանի ավտոմատ տեղափոխման համար հետաձգումը միլիվարկյաններով"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr ""
+msgstr "Ժամանակի բարձրացումը մինչև պատուհանի բարձրացումը, եթե auto_raise սահմանված է ճիշտ։"
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Current theme"
@@ -554,17 +554,17 @@ msgstr "Ընթացիկ թեմա"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "Թեման որոշում է պատուհանի սահմանների, տիտղոսային բարի և այլնի տեսքը։"
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Օգտագործել ստանդարտ համակարգի տառատեսակը պատուհանի վերնագրի մեջ"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
+msgstr "Եթե ճիշտ է, անտեսել է տիտղոսային բար տառատեսակի տարբերակը և օգտագործել ստանդարտ դիմումի տառատեսակը տիտղոսների պատուհանի համար։"
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Window title font"
@@ -576,7 +576,7 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr ""
+msgstr "Տառատեսակի նկարագրությունը նկարագրում է տողը տիտղոսային բարի պատուհանի տառատեսակի համար։ Չափը նկարագրությունից կօգտագործվի միայն այն դեպքում, եթե titlebar_font_size option սահմանված է 0։ Նաև, այս տարբերակը անջատված է, եթե titlebar_uses_desktop_font տարբերակը սահմանվում է ճիշտ։"
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Number of workspaces"
@@ -587,7 +587,7 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
+msgstr "Աշխատանքային տիրույթների քանակը։ Պետք է լինի ավելի քան զրոն և ունենա ֆիքսված առավելագույնը աշխատանքային սեղանը անօգտագործելի դարձնելը կանխելու համար պատահական հարցումների կողմից չափազանց շատ աշխատանքային տիրույթների համար։"
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Workspace wrap style"
@@ -603,7 +603,7 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr ""
+msgstr "Սահմանի թճը, որը որոշում է ինչպես անցնել մեկ աշխատանքային տիրույթից մեկին աշխատանքային տիրույթների փոխանջատիչի սահմանով։ Երբ սահմանվում է \"no wrap\", ոչնի չի պատահի, եթե դուք փորձեք անցնել նախկին աշխատանքային տարածք աշխատանքային տիրույթի փախարկիչի սահմանով։ Եթե սահմանված է \"classic\", ապա հին marco վարքագիծը օգտագործվում է՝ մեկ տողի վերջը տանում է դեպի մյուսի սկիզբ և մի սյունակի վերջը տանում է դեպի մյուսի սկիզբ։ Եթե սահմանված է \"toroidal\", ապա աշխատանքային տիրույթները միացված են ինչպես շրջանը՝ յուրաքանչյուր տողի վերջը տանում է դեպի սեփական սկիզբը և յուրաքանչյու սյունակ տանում է դեպի իր սկիզբը։"
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
@@ -614,7 +614,7 @@ msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
+msgstr "Միացնել տեսաողական ցուցումը, երբ ծրագիրը կամ համակարգը տրամադրում է 'bell' կամ 'beep', hard-of-hearing օգտակար լինելու համար և աղմկոտ միջավայրի օգտագործման համար։"
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "System Bell is Audible"
@@ -624,11 +624,11 @@ msgstr "Համակարգի ազդանշանը լսելի է"
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
+msgstr "Որոշում է արդյոք կիրառական ծրագրերը կամ համակարգը կարող են լսելի ձայնային ազդանշաններ արձակել։ Կարող է օգտագործվել տեսանելի ազդանշանի հետ՝ անաղմուկ ձայնային ազդանշաններ արձակելու համար։"
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Վիրտուալ Ազդանշանի Տեսակ"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
@@ -639,7 +639,7 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr ""
+msgstr "Marco տեղեկացնում է ինչպես իրականացնել ձայնային ազդանշանի մասին տեղեկացումը, կամ որ մեկ այլ կիրառական ծրագրի զանգը հնչել է։Այժմ կան երկու արժեքներ \"fullscreen\", որն ամբողջ էկրանի վրա առաջ է բերում սև–սպիտակ առկայծում, և \"frame_flash\", որը ակտիվացնում է այն պատուհանի վերնագրի տողերը, որում կիրառական ծրագիրը ձայնային ազդանը առկայծում է հարուցել։ Եթե ծրագիրը, որն ազդանշան է ուղարկել հայտնի չէ (ինչպես է սովորաբար լինում է նախնական \"system beep\" համար), առկայծում է ակտիվ պատուհանի վերնագիրը։"
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Compositing Manager"
@@ -647,17 +647,17 @@ msgstr "Կազմավորման Կառավարիչ"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Որոշում է , արդյոք Marco֊ն կաղմավորվող կառավարիչ է։"
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Fast Alt-Tab Enabled"
-msgstr ""
+msgstr "Արագ Alt-Tab Միացնել"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
 "Whether or not fast alt-tabbing is used when the compositing manager is "
 "enabled."
-msgstr ""
+msgstr "Արդյոք alt-tabbing արագ է, թե ոչ, օգտագործվում է երբ կազմավորման կառավարիչը միացված է։"
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
@@ -670,7 +670,7 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr ""
+msgstr "Եթե ճիշտ է, ապա Marco֊ն օգտագործողին կտա ավելի քիչ հետադարձ կապ, օգտագործելով մետաղալարերի շրջանակները, խուսափելով անիմացիաներից կամ այլ միջոցներից։ Սա էական կրճատում է բազմաթիվ օգտվողների համար հարմարավետությունը, բայց կարող է թույլ տալիս ժառանգության դիմումներ աշխատանքը շարունակելու համար, և կարող է նաև օգտագործվել տերմինալի սերվերի անջատման համար։ Այնուամենայնիվ մետաղալարերի շրջանակը առանձնահատկությունը անջատվում է, երբ հասանելիություն չկա։"
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid ""
@@ -686,7 +686,7 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
+msgstr "Եթե ճիշտ է ապա, Marco֊ն աշխատում է ծրագրերի պայմաններով, այլ ոչ թե պատուհանների։ Հայեցակարգը մի քիչ աբստրակտ է, բայց ընդհանուր առմամբ ծրագիրը տեղակայված է ավելի շատ նման Mac֊ին և ավելի քիչ նման Windows֊ին։ Եթե դուք կենտրոնացնում եք պատուհանը ծրագրիր հիմնված ռեժիմում ծրագրի մեջ բոլոր պատուհանները բարձրացված են։ Նաև ծրագրի հիմնավորված ռեժիմի մեջ կտտոցների ֆոկուսացումը չեն անցնում այլ ծրագրերի միջանցիկ պատուհանների համար։ Ծրագրի հիմնավորված ռեժիմը, այնուամենայնիվ հիմնականում չի իրականացվում այս պահին:"
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -698,28 +698,28 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr ""
+msgstr "Որոշ ծրագրեր արհամարում են որոշակիացումները ճանապարհով, որը հանգեցնում է պատուհանային կառավարիչի առանձնահատկությունների մեջ։ Այս տարբերակը դնում Marco֊ն խստորեն ճիշտ ռեժիմում, որը տալիս է շատ ավելի հետևողական ինտերֆեյս։"
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Սահմանում է, եթե նոր պատուհանները ստեղծվել են էկրանի կենտրոնում"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Եթե ճշգրիտ է, ապա նոր պատուհանները բացվում են էկրանի կենտրոնում։ Հակառակ դեպքում, նրանք բացեում են էկրանի վերին ձախ մասում։"
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
-msgstr ""
+msgstr "Արդյոք ակտիվացնել կողք կողկի կցաշարումը"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window."
-msgstr ""
+msgstr "Եթե ակտիվացված է, ապա պատուհանների գցումը էկրանի եզրին առավելագույնի է հասցնում նրանց ուղղահայաց ուղղությունը և չափափոխում նրանց հորիզոնական ուղղությունը հասանելի տարածքի կեսը ծածկելու համար։ Քաշել֊գցել վերևում պատուհանը մաքսիմացնելու համար։"
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
@@ -733,7 +733,7 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "Պատուհանի տեղաբաշխում ռեժիմը ցույց է տալիս, թե ինչպես են նոր պատուհանները տեղավորված։ \"automatic\" նշանակում է, որ համակարգը ընտրում է գտնվելու դիրքի ավտոմատ կերպով հիմնված տարածության հասանելիությունը աշխատանքային սեղանի վրա, կամ պարզ կասկադով, եթե չկա տարածք, \"pointer\" նշանակում է, որ նոր պատուհանները տեղադրված են ըստ մկնիկը ցուցիչի դիրքորոշմամբ, \"manual\" նշանակում է, որ օգտագործողը ձեռքով պետք է տեղադրի նոր պատուհանը մկնիկկամ ստեղնաշարի միջոցով։"
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
@@ -764,7 +764,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Ձևաչափը դիտում է ինչպես \"&lt;Control&gt;a\" կամ \"&lt;Shift&gt;&lt;Alt&gt;F1\"։Անալիզատորը բավականին ոչ խիստ է, կարելի է օգտագործել վերին և ներքևի ռեգիստրները և նաև կրճատումները, ինչպես \"&lt;Ctrl&gt;\" և \"&lt;Ctrl&gt;\"։ Եթե այս պարամետրի համար տեղադրվի \"disabled\" ստեղների կոմբինացիան, ապա այս գործողության համար ստեղների կոմբինացիան չի ակտիվանա։"
 
 #: ../src/org.mate.marco.gschema.xml.h:78
 msgid ""
@@ -775,39 +775,39 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr ""
+msgstr "Ձևաչափը դիտում է ինչպես \"&lt;Control&gt;a\" կամ \"&lt;Shift&gt;&lt;Alt&gt;F1\"։ Անալիզատորը բավականին ոչ խիստ է, կարելի է օգտագործել վերին և ներքևի ռեգիստրները և նաև կրճատումները, ինչպես \"&lt;Ctrl&gt;\" և \"&lt;Ctrl&gt;\".Եթե այս պարամետրի համար տեղադրվի \"disabled\"  ստեղների կոմբինացիան, ապա այս գործողության համար ստեղների կոմբինացիան չի ակտիվանա։ Այս ստեղբերի կոնբինացիան կարող է հետադարձվել իջեցնելով ներքև \"shift\" ստեղնը; հետևաբար \"shift\" չի կարող օգտագործվող ստեղներից մեկը լինել։"
 
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Հետ տեղափոխել դիմումը պատուհանների միջև, օգտագործելով թռուցիկ պատուհան"
 
 #: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Հետ տեղափոխել պատուհանների միջև, օգտագործելով թռուցիկ պատուհան"
 
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Տեղափոխել պատուհանների միջև բոլոր աշխատատիրույթներում, օգտագործելով թռուցիկ պատուհան"
 
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Հտե տեղափոխել պատուհանների միջև բոլոր աշխատատիրույթներում, օգտագործելով թռուցիկ պատուհան"
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Հետ տեղափոխել վահանակների և աշխատասեղանի միջև, օգտագործելով թռուցիկ պատուհան"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Հետ տեղափոխել դիմումը պատուհանների միջև անմիջապես"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Հետ տեղափոխել պատուհանների միջև ամնիջապես"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Հետ տեղափոխել վահանակների և աշխատասեղանի միջև անմիջապես"
 
 #: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Commands to run in response to keybindings"
@@ -818,32 +818,32 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr ""
+msgstr " /apps/marco/global_keybindings/run_command_N keys ստեղնը սահմանում է ստեղների կոմբինացիաները, որոնք համապատասխանում են այդ հրամաններին։ Սեղմելով run_command_N կոմբինացիան կգործարկի command_N–ը։"
 
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "The screenshot command"
-msgstr ""
+msgstr "Էկրանի նկարահանման հրաման"
 
 #: ../src/org.mate.marco.gschema.xml.h:101
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr ""
+msgstr "/apps/marco/global_keybindings/run_command_screenshot ստեղնը սահմանում է ստեղների կոմբինացիան, որը թույլատրում է տվյալ դասավորությամբ սահմանված հրահանգի կատարումը։"
 
 #: ../src/org.mate.marco.gschema.xml.h:102
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Պատուհանի Էկրանի նկարահանման հրաման"
 
 #: ../src/org.mate.marco.gschema.xml.h:103
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr ""
+msgstr " /apps/marco/global_keybindings/run_ command_window_screenshot ստեղնը սահմանում է ստեղների կոմբինացիան, որը և ստեղծում է պատուհանի պատկերը։ "
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Փոխանջատել, թե արդյոք պատուհանը միշտ պետք է տեսանելի ավելի քան մյուս պատուհանները"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -864,7 +864,7 @@ msgstr "<tt>%s</tt> չի արձագանքում։"
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr ""
+msgstr "Դուք կարող եք ընտրել է սպասել մի որոշ ժամանակ այն շարունակելու համար կամ ստիպել ծրագրին դուրս գալ ամբողջությամբ։"
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -882,7 +882,7 @@ msgstr "Խափանվեց ստանալ գլխավոր հանգույցի անու
 #: ../src/core/display.c:270
 #, c-format
 msgid "Missing %s extension required for compositing"
-msgstr ""
+msgstr "Բացակայում է %s ընդլայնման համար պահանջվող կազմավորումը"
 
 #: ../src/core/display.c:348
 #, c-format
@@ -917,7 +917,7 @@ msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr ""
+msgstr "Տեղի է ունեցել գործարկման սխալ <tt>%s</tt>․\n\n%s"
 
 #: ../src/core/keybindings.c:2442
 #, c-format
@@ -936,7 +936,7 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
+msgstr "marco %s\nՀեղինակային իրավունք (C) 2001-%s Havoc Pennington, Red Hat, Inc., և ուրիշներ\nՍա անվճար ծրագրային ապահովում է; տեսնել աղբյուրը պատճենահանման պայմանների համար։\nՉԿԱ երաշխիք; նույինիսկ ՎԱՃԱՌՔԻ կամ ՊԻՏԱՆԵԼԻՈՒԹՅՈՒՆ ՀԱՏՈՒԿ ՆՊԱՏԱԿԻ ՀԱՄԱՐ։\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -964,20 +964,20 @@ msgstr "Տպման տարբերակ"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr ""
+msgstr "Կատարել X համաժամանակյա կանչեր"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
-msgstr ""
+msgstr "Միացնել կազմավորումը"
 
 #: ../src/core/main.c:316
 msgid "Turn compositing off"
-msgstr ""
+msgstr "Անջատել կազմավորումը"
 
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr ""
+msgstr "Չդարձնել պատուհանները ամբողջաէկրան, որոնք մաքսիմացված են և չունեն դեկորացիա"
 
 #: ../src/core/main.c:522
 #, c-format
@@ -988,7 +988,7 @@ msgstr "Թեմայի թղթապանակի ստուգումը չհաջողվեց�
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr ""
+msgstr "Չհաջողվեց գտնել թեման.։Համոզվեք, որ %s գոյություն ունի և պարունակում է սովորական թեմաներ։\n"
 
 #: ../src/core/main.c:597
 #, c-format
@@ -1001,32 +1001,32 @@ msgstr "Վերագործարկումը խափանվեց։%s\n"
 #: ../src/core/prefs.c:584 ../src/core/prefs.c:737
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "%d պահվում է GSettings ստեղն %s %d ֊ից %d միջակայքից դուրս\n"
 
 #: ../src/core/prefs.c:1031
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr ""
+msgstr "Աշխատանքային փուլը ընդհատած ծրագրի անջատման համար։ Որոշ դիմումները չեն կարող վարվեն ինչպես հարկն է:\n"
 
 #: ../src/core/prefs.c:1098
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "Չհաջողվեց վերլուծել տառատեսակի նկարագրությունը \"%s\" GSettings ստեղնից %s\n"
 
 #: ../src/core/prefs.c:1160
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr ""
+msgstr "\"%s\" հայտնաբերված կոնֆիգորացիոն տվյալների բազայում անվավեր արժեքը մկնիկը կոճակի ձեւափոխիչի համար\n"
 
 #: ../src/core/prefs.c:1683
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr ""
+msgstr "\"%s\" հայտնաբերված կոնֆիգորացիոն տվյալների բազայում անվավեր արժեքը ստեղնաշարի համար \"%s\"\n"
 
 #: ../src/core/prefs.c:1986
 #, c-format
@@ -1036,71 +1036,71 @@ msgstr "Աշխատանքային տարածք %d"
 #: ../src/core/screen.c:358
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
-msgstr ""
+msgstr "Էկրանի %d ցուցադրվում է '%s' անվավեր\n"
 
 #: ../src/core/screen.c:374
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr ""
+msgstr "Էկրանի վրա %d ցուցադրվում է \"%s\" արդեն պատուհանի կառավարիչը. փորձել կիրառել --replace տարբերակը ներկայիս պատուհանի կառավարչը փոխարինելու համար։\n"
 
 #: ../src/core/screen.c:401
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr ""
+msgstr "Հնարավոր չէ պատուհանի կառավարիչի ընտրություն էկրանի վրա %d ցուցադրվում  է \"%s\"\n"
 
 #: ../src/core/screen.c:459
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
-msgstr ""
+msgstr "Էկրանի վրա %d ցուցադրվում է \"%s\" արդեն պատուհանի կառավարիչը\n"
 
 #: ../src/core/screen.c:674
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
-msgstr ""
+msgstr "Չհաջողվեց ազատ արձակել էկրանը %d ցուցադրվում է \"%s\"\n"
 
 #: ../src/core/session.c:842 ../src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr ""
+msgstr "Չհաջողվեց ստեղծել ֆայլապանակ '%s': %s\n"
 
 #: ../src/core/session.c:859
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
-msgstr ""
+msgstr "Չհաջողվեց բացել նիստ ֆայլը '%s' գրելու համար: %s\n"
 
 #: ../src/core/session.c:1000
 #, c-format
 msgid "Error writing session file '%s': %s\n"
-msgstr ""
+msgstr "Սխալ՝ սեսիոն ֆայլում գրելիս '%s': %s\n"
 
 #: ../src/core/session.c:1005
 #, c-format
 msgid "Error closing session file '%s': %s\n"
-msgstr ""
+msgstr "Սխալ՝ սեսիոն ֆայլը փակելիս '%s': %s\n"
 
 #: ../src/core/session.c:1135
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
-msgstr ""
+msgstr "Չհաջողվեց վերլուծել պահպանված նիստի ֆայլը․ %s\n"
 
 #: ../src/core/session.c:1184
 #, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
-msgstr ""
+msgstr "<marco_session> հատկանիշը տեսել, բայց մենք արդեն ունենք նիստի ID"
 
 #: ../src/core/session.c:1197 ../src/core/session.c:1272
 #: ../src/core/session.c:1304 ../src/core/session.c:1376
 #: ../src/core/session.c:1436
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
-msgstr ""
+msgstr "Անհայտ հատկանիշ %s <%s> էլեմեմտի մեջ"
 
 #: ../src/core/session.c:1214
 #, c-format
 msgid "nested <window> tag"
-msgstr ""
+msgstr "դրված <window> թեգ"
 
 #: ../src/core/session.c:1456
 #, c-format
@@ -1111,22 +1111,22 @@ msgstr "Անհայտ էլենետ %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr ""
+msgstr "Այս պատուհանները չեն աջակցում&quot; պահպանել ընթացիկ setup&quot; և պետք է վերսկսվել ձեռքով հաջորդ անգամ, երբ դուք մուտք գործեք:"
 
 #: ../src/core/util.c:101
 #, c-format
 msgid "Failed to open debug log: %s\n"
-msgstr ""
+msgstr "Չհաջողվեց բացել վրիպակազերծ մուտքը․%s\n"
 
 #: ../src/core/util.c:111
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
-msgstr ""
+msgstr "Չհաջողվեց fdopen() log ֆայլը  %s: %s\n"
 
 #: ../src/core/util.c:117
 #, c-format
 msgid "Opened log file %s\n"
-msgstr ""
+msgstr "Բացված log Ֆայլ %s\n"
 
 #: ../src/core/util.c:136 ../src/tools/marco-message.c:176
 #, c-format
@@ -1139,7 +1139,7 @@ msgstr "Պատուհանի կառավարիչ․"
 
 #: ../src/core/util.c:388
 msgid "Bug in window manager: "
-msgstr ""
+msgstr "Ծրագրային սխալ պատուհանի կառավարիչի մեջ․"
 
 #: ../src/core/util.c:421
 msgid "Window manager warning: "
@@ -1161,7 +1161,7 @@ msgstr "Մետասիթի"
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr ""
+msgstr "Պատուհանը  %s սահմանում է SM_CLIENT_ID  իր փոխարեն WM_CLIENT_LEADER պատուհանի, որպես նշված ICCCM։\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1174,18 +1174,18 @@ msgstr ""
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr ""
+msgstr "%s պատուհանը սահմանում է MWM նշելով, որ դա չի փափափոխվում, բայց սահմանում է min չափը %d x %d և max չափը %d x %d; Սա շատ չի իմաստավորում:\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
-msgstr ""
+msgstr "Դիմահմը սահմանվեց կեղծ _NET_WM_PID %lu\n"
 
 #. Translators: the title of a window from another machine
 #: ../src/core/window-props.c:457
 #, c-format
 msgid "%s (on %s)"
-msgstr ""
+msgstr "%s (%s վրա)"
 
 #. Simple case-- don't bother to look it up.  It's root.
 #: ../src/core/window-props.c:489
@@ -1210,7 +1210,7 @@ msgstr "%s (ինչպես այլ օգտագործող)"
 #: ../src/core/window-props.c:1499
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
-msgstr ""
+msgstr "Անավավեր WM_TRANSIENT_FOR պատուհան 0x%lx նշված %s համար։\n"
 
 #: ../src/core/xprops.c:155
 #, c-format
@@ -1220,19 +1220,19 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr ""
+msgstr "0x%lx պատուհանը ունի %s հատկություն\nորը ակնկալում է ունենալ %s տիպ %d ձևաչափ\nև ըստ էության ունի %s տիպ %d ձևաչափ n_items %d։\nՍա ամենայն հավանականությամբ դիմումի ծրագրային սխալ է, ոչ թե պատուհանային կառավարիչի սխալ։\nԱյս պատուհանը ունի վերնագիր=\"%s\" դաս=\"%s\" անուն=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
-msgstr ""
+msgstr "Պատուհանի 0x%lx մեջ %s հատկությունը պարունակում է անվավեր UTF-8 \n"
 
 #: ../src/core/xprops.c:494
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr ""
+msgstr "Պատուհանի 0x%lx մեջ %s հատկությունը պարունակում է անվավեր UTF-8 %d տարրի համար ցանկում\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1261,15 +1261,15 @@ msgstr "Վերականգնել Պատուհան"
 
 #: ../src/ui/frames.c:1229
 msgid "Roll Up Window"
-msgstr ""
+msgstr "Պտտել Պատուհանը"
 
 #: ../src/ui/frames.c:1232
 msgid "Unroll Window"
-msgstr ""
+msgstr "Չպտտել Պատուհանը"
 
 #: ../src/ui/frames.c:1235
 msgid "Keep Window On Top"
-msgstr ""
+msgstr "Պահպանել պատուհանը վերևում"
 
 #: ../src/ui/frames.c:1238
 msgid "Remove Window From Top"
@@ -1277,11 +1277,11 @@ msgstr "Ջնջել պատուհանը Վերևից"
 
 #: ../src/ui/frames.c:1241
 msgid "Always On Visible Workspace"
-msgstr ""
+msgstr "Միշտ տեսանելի աշխատատարածքի վրա"
 
 #: ../src/ui/frames.c:1244
 msgid "Put Window On Only One Workspace"
-msgstr ""
+msgstr "Ներդրեք Պատուհան Միայն Մեկ Աշխատատարածքի վրա"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:64
@@ -1321,13 +1321,13 @@ msgstr "_ Չափը փոխել"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:78
 msgid "Move Titlebar On_screen"
-msgstr ""
+msgstr "Տեղափոխել Տիտղոսային բարը էկրանին"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:81 ../src/ui/menu.c:83
 msgid "Always on _Top"
-msgstr ""
+msgstr "Միշտ _Վերևում"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:85
@@ -1490,41 +1490,41 @@ msgstr "աջ"
 #: ../src/ui/theme.c:339
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
-msgstr ""
+msgstr "շրջանակի երկրաչափությունը չի նշում \"%s\" չափայնությունը "
 
 #: ../src/ui/theme.c:358
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
-msgstr ""
+msgstr "շրջանակի երկրաչափությունը չի նշում չափայնությունը \"%s\" սահմանի համար  \"%s\""
 
 #: ../src/ui/theme.c:395
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
-msgstr ""
+msgstr "Կոճակի չափերի հարաբերությունը %g նպատակային չէ"
 
 #: ../src/ui/theme.c:407
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
-msgstr ""
+msgstr "Երկրաչափության շրջանը չունի կոճակների նշված չափ"
 
 #: ../src/ui/theme.c:1132
 #, c-format
 msgid "Gradients should have at least two colors"
-msgstr ""
+msgstr "Գրադիենտը պետք է ունենա առնվազն երկու գույներ"
 
 #: ../src/ui/theme.c:1262
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr ""
+msgstr "GTK գույնի բնորոշումները պետք է ունենա վիճակիը փակագծերի մեջ e.g. gtk:fg[NORMAL]  , որտեղ ՆՈՐՄԱԼ վիճակն է, չի կարող վերլուծվել \"%s\""
 
 #: ../src/ui/theme.c:1276
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr ""
+msgstr "GTK գույնի բնորոշումները պետք է ունենա փակվող փակագիծ վիճակից հետո, e.g. gtk:fg[ՆՈՐՄԱԼ] , որտեղ ՆՈՐՄԱԼ վիճակն է, չի կարող վերլուծվել \"%s\""
 
 #: ../src/ui/theme.c:1287
 #, c-format
@@ -1534,39 +1534,39 @@ msgstr "Չհասկացված \"%s\" վիճակ գույների որոշակիա
 #: ../src/ui/theme.c:1300
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
-msgstr ""
+msgstr "Չի հասկանում գույնի բաղադրիչը \"%s\" գույնի ճշգրտման մեջ"
 
 #: ../src/ui/theme.c:1329
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr ""
+msgstr "Խառնուրդ ձևաչափն է \"blend/bg_color/fg_color/alpha\", \"%s\" չի համապատասխանեցնում ձևաչափը"
 
 #: ../src/ui/theme.c:1340
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
-msgstr ""
+msgstr "Չի կարող վերլուծել ալֆա արժեք \"%s\" խառնված գույների մեջ"
 
 #: ../src/ui/theme.c:1350
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
-msgstr ""
+msgstr "Ալֆա արժեքը \"%s\" խառնված գույների մեջ 0.0 և 1.0 միջև չէ"
 
 #: ../src/ui/theme.c:1397
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr ""
+msgstr "Երանգ ձև աչափը\"shade/base_color/factor\" է, \"%s\" չի համապատասխանում ձևաչափին"
 
 #: ../src/ui/theme.c:1408
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
-msgstr ""
+msgstr "Չհաջողվեց վերլուծել երանգ գործոնը \"%s\" ստվերային գույնի մեջ"
 
 #: ../src/ui/theme.c:1418
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
-msgstr ""
+msgstr "Երանգ գործոնը \"%s\" ստվերային գույնի մեջ բացասական է"
 
 #: ../src/ui/theme.c:1451
 #, c-format
@@ -1576,95 +1576,95 @@ msgstr "Չհաջողվեց վերլուծել գույնը \"%s\""
 #: ../src/ui/theme.c:1848
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը պարունակում է սիմվոլներ '%s', որը չի թույլատրվում"
 
 #: ../src/ui/theme.c:1875
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը պարունակում է լողացող ստորակետով թիվ '%s' , որոնք չեն կարող վերլուծվել"
 
 #: ../src/ui/theme.c:1889
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը պարունակում է ամբողջ թիվ '%s' , որոնք չեն կարող վերլուծվել"
 
 #: ../src/ui/theme.c:2011
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը պարունակում է անհայտ օպերատոր այս տեքստի սկզբում : \"%s\""
 
 #: ../src/ui/theme.c:2068
 #, c-format
 msgid "Coordinate expression was empty or not understood"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը դատարկ է կամ անհասկանալի"
 
 #: ../src/ui/theme.c:2179 ../src/ui/theme.c:2189 ../src/ui/theme.c:2223
 #, c-format
 msgid "Coordinate expression results in division by zero"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը բաժանվում է զրոյի վրա"
 
 #: ../src/ui/theme.c:2231
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը փորձում է օգտագործել mod օպերատորը լողացող կետով թվի համար"
 
 #: ../src/ui/theme.c:2287
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը ունի օպերատորը \"%s\" , որտեղ օպերանդը ակնկալվում էր"
 
 #: ../src/ui/theme.c:2296
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը ունի օպերանդ, որտեղ օպերատորը ակնկալվում էր"
 
 #: ../src/ui/theme.c:2304
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը ավարտվում է օպերատրով օպերանդի փոխարեն"
 
 #: ../src/ui/theme.c:2314
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը ունի օպերատոր \"%c\" հետևյալ օպերատորը \"%c\" առանց օպերանդի արանքում"
 
 #: ../src/ui/theme.c:2461 ../src/ui/theme.c:2502
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը ուներ անհայտ փոփոխական կամ հաստատուն \"%s\""
 
 #: ../src/ui/theme.c:2556
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
-msgstr ""
+msgstr "Կոորդինատային արտահայտության վերլուծիչ ծրագիրը գերլցրել է նրա բուֆերը։"
 
 #: ../src/ui/theme.c:2585
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը ուներ փակվող փակագիծ առանց բաց փակագծերի"
 
 #: ../src/ui/theme.c:2649
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը ունի բացված փակագծեր առանց փակվող փակագծերի"
 
 #: ../src/ui/theme.c:2660
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
-msgstr ""
+msgstr "Կոորդինատային արտահայտությունը կարծես թե չունի որևէ օպերատոր կամ օպերանդ"
 
 #: ../src/ui/theme.c:2864 ../src/ui/theme.c:2884 ../src/ui/theme.c:2904
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
-msgstr ""
+msgstr "Թեման պարունակում է արտահայտությունը, որը հանգեցրել է սխալի: %s\n"
 
 #: ../src/ui/theme.c:4782
 #, c-format
@@ -1694,12 +1694,12 @@ msgstr "<%s> չի սահմանվել \"%s\" թեմայի համար"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr ""
+msgstr "Ոչ շրջանակ ոճը սահմանվել է պատուհանի տեսակի համար \"%s\" թեմայի մեջ \"%s\", ավելացնել <window type=\"%s\" style_set=\"whatever\"/> էլեմենտը"
 
 #: ../src/ui/theme.c:6146 ../src/ui/theme.c:6208 ../src/ui/theme.c:6271
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr ""
+msgstr "Օգտագործողի սահմանած հաստատաունները պետք է սկսել մեծատառով, \"%s\""
 
 #: ../src/ui/theme.c:6154 ../src/ui/theme.c:6216 ../src/ui/theme.c:6279
 #, c-format
@@ -1773,7 +1773,7 @@ msgstr "Ալֆան պետք է լինի 0.0 (անտեսանելի) և 1.0 (լր�
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr ""
+msgstr "Անվավեր տիտղոսի սանդղակ \"%s\" (պետք է լինի մեկը, xx-փոքր, x-փոքր, փոքր, միջին, մեծ, x֊մեծ, xx-մեծ)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1795,11 +1795,11 @@ msgstr "<%s> երկրաչափությունը \"%s\" չի սահմանվել"
 #: ../src/ui/theme-parser.c:1107
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
-msgstr ""
+msgstr "<%s> պետք է նշեք կամ երկրաչափություն, կամ ծնող, որը ունի երկրաչափություն"
 
 #: ../src/ui/theme-parser.c:1149
 msgid "You must specify a background for an alpha value to be meaningful"
-msgstr ""
+msgstr "Դուք պետք է նշեք ֆոն ալֆա արժեքի համար, որը պետք է լինի իմաստալից"
 
 #: ../src/ui/theme-parser.c:1216
 #, c-format
@@ -1814,7 +1814,7 @@ msgstr "Անհայտ սահմանված ոճ \"%s\" <%s> տարրի վրա"
 #: ../src/ui/theme-parser.c:1235
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
-msgstr ""
+msgstr "Պատուհանի տեսակը \"%s\" արդեն նշանակված է ոճ շարքում"
 
 #: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
 #: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
@@ -1831,7 +1831,7 @@ msgstr "Տարրը <%s> չի թույլատրվում ներքևում <%s>"
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr ""
+msgstr "Հնարավոր չէ նշեք \"button_width\"/\"button_height\" and \"aspect_ratio\" կոճակների համար"
 
 #: ../src/ui/theme-parser.c:1402
 #, c-format
@@ -1841,7 +1841,7 @@ msgstr "Հեռավորությունը \"%s\" անհայտ է"
 #: ../src/ui/theme-parser.c:1447
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
-msgstr ""
+msgstr "Չափերի հարաբերությունը \"%s\" անհայտ է"
 
 #: ../src/ui/theme-parser.c:1509
 #, c-format
@@ -1851,12 +1851,12 @@ msgstr "Եզրակալը \"%s\" անհայտ է"
 #: ../src/ui/theme-parser.c:1820
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
-msgstr ""
+msgstr "Չկա \"start_angle\" կամ \"from\" հատկանիշ էլեմենտի վրա <%s>"
 
 #: ../src/ui/theme-parser.c:1827
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
-msgstr ""
+msgstr "Չկա \"extent_angle\" կամ \"to\" հատկանիշ էլեմենտի վրա <%s>"
 
 #: ../src/ui/theme-parser.c:2067
 #, c-format
@@ -1887,12 +1887,12 @@ msgstr "Չհասկացված սլաք \"%s\" <%s> տարրի համար"
 #: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
-msgstr ""
+msgstr "Չկա <draw_ops> կանչված \"%s\" սահմանված չէ"
 
 #: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
-msgstr ""
+msgstr "Ներառյալ draw_ops \"%s\" այստեղ պետք է ստեղծել շրջանաձև հղում"
 
 #: ../src/ui/theme-parser.c:2855
 #, c-format
@@ -1902,12 +1902,12 @@ msgstr "Անհայտ դիրք\"%s\" շրջանակի կտորի համար"
 #: ../src/ui/theme-parser.c:2863
 #, c-format
 msgid "Frame style already has a piece at position %s"
-msgstr ""
+msgstr "Շրջանակ ոճը արդեն ունի մի դիրք %s"
 
 #: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
-msgstr ""
+msgstr "Չկա <draw_ops> անունով \"%s\" սահմանված չէ"
 
 #: ../src/ui/theme-parser.c:2909
 #, c-format
@@ -1917,7 +1917,7 @@ msgstr "Անհայտ ֆունկցիա \"%s\" կոճակի համար"
 #: ../src/ui/theme-parser.c:2918
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
-msgstr ""
+msgstr "Կոճակի գործառույթը \"%s\" գոյություն չունի, այս տարբերակով (%d, need %d)"
 
 #: ../src/ui/theme-parser.c:2930
 #, c-format
@@ -1927,22 +1927,22 @@ msgstr "Անհայտ վիճակ \"%s\" կոճակի համար"
 #: ../src/ui/theme-parser.c:2938
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
-msgstr ""
+msgstr "Շրջանակ ոճը արդեն ունի կոճակ ֆունկցիայի համար %s կարգավիճակ %s"
 
 #: ../src/ui/theme-parser.c:3019
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
-msgstr ""
+msgstr "\"%s\" անվավեր արժեք է կիզակետի ատրիբուտի համար"
 
 #: ../src/ui/theme-parser.c:3028
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
-msgstr ""
+msgstr "\"%s\" անվավեր արժեք է կարգավիճակի ատրիբուտի համար"
 
 #: ../src/ui/theme-parser.c:3038
 #, c-format
 msgid "A style called \"%s\" has not been defined"
-msgstr ""
+msgstr "\"%s\" կանչված ոճը սահմանված չէ"
 
 #: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
 #, c-format
@@ -1954,47 +1954,47 @@ msgstr "\"%s\" անվավեր արժեք է չափափոխման հատկանի�
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr ""
+msgstr "Պետք չէ ունենալ \"resize\" հատկանիշը <%s> տարրի վրա մաքսիմացված/ստվերային կարգավիճակների համար"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr ""
+msgstr "Պետք չէ ունենալ \"resize\" հատկանիշը <%s> տարրի վրա մաքսիմացված կարգավիճակների համար"
 
 #: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
-msgstr ""
+msgstr "Ոճը արդեն հստակեցվել է կարգավիճակի %s չափափոխելու %s կենտրոնանալու %s համար"
 
 #: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
 #: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
 #: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
-msgstr ""
+msgstr "Ոճը արդեն հստակեցվել է կարգավիճակի  %s կենտրոնանալու %s համար"
 
 #: ../src/ui/theme-parser.c:3237
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr ""
+msgstr "Չի կարող ունենալ երկու draw_ops <piece> տարրի համար  (թման նշում է draw_ops ատրիբուտը և նաև  <draw_ops> տարրը, կամ նշված երկու տարրերը)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr ""
+msgstr "Չի կարող ունենալ երկու draw_ops  <button> տարրի համար  (թման նշում է draw_ops ատրիբուտը և նաև  <draw_ops> տարրը, կամ նշված երկու տարրերը)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr ""
+msgstr "Չի կարող ունենալ երկու draw_ops <menu_icon> տարրի համար  (թման նշում է draw_ops ատրիբուտը և նաև  <draw_ops> տարրը, կամ նշված երկու տարրերը)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr ""
+msgstr "Ամենահեռու տարր թեմայի մեջ պետք է լինի <metacity_theme> ոչ <%s>"
 
 #: ../src/ui/theme-parser.c:3415
 #, c-format
@@ -2011,12 +2011,12 @@ msgstr "Տարր <%s> չի թույլատրվում ներսում <constant> տ
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr ""
+msgstr "Տարր <%s> չի թույլատրվում ներսում պատկերել distance/border/aspect_ratio տարր"
 
 #: ../src/ui/theme-parser.c:3454
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
-msgstr ""
+msgstr "Տարր <%s> չի թույլատրվում ներսում պատկերել օպերացիոն տարր"
 
 #: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
@@ -2026,11 +2026,11 @@ msgstr "Տարր <%s> չի թույլատրվում ներսում <%s> տարր
 
 #: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"
-msgstr ""
+msgstr "Ոչ մի draw_ops չապահովվեց շրջանակի կտորի համար"
 
 #: ../src/ui/theme-parser.c:3753
 msgid "No draw_ops provided for button"
-msgstr ""
+msgstr "Ոչ մի draw_ops չապահովվեց կոճակի համար"
 
 #: ../src/ui/theme-parser.c:3815
 #, c-format
@@ -2047,7 +2047,7 @@ msgstr "<%s> կրկնակի որոշակիացնել այս թեմայի համ�
 #: ../src/ui/theme-parser.c:4211
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
-msgstr ""
+msgstr "Ձախողվեց գտնել վավեր ֆայլ տեմայի համար %s\n"
 
 #: ../src/ui/theme-viewer.c:105
 msgid "_Windows"
@@ -2067,27 +2067,27 @@ msgstr "_Օժանդակ"
 
 #: ../src/ui/theme-viewer.c:109
 msgid "_Splashscreen"
-msgstr ""
+msgstr "_Սփլեշ Էկրան"
 
 #: ../src/ui/theme-viewer.c:110
 msgid "_Top dock"
-msgstr ""
+msgstr "_Վերևը կցվում է"
 
 #: ../src/ui/theme-viewer.c:111
 msgid "_Bottom dock"
-msgstr ""
+msgstr "_Ներքևը կցվում է"
 
 #: ../src/ui/theme-viewer.c:112
 msgid "_Left dock"
-msgstr ""
+msgstr "_Ձախ կցվում է"
 
 #: ../src/ui/theme-viewer.c:113
 msgid "_Right dock"
-msgstr ""
+msgstr "_Աջ կցվում է"
 
 #: ../src/ui/theme-viewer.c:114
 msgid "_All docks"
-msgstr ""
+msgstr "_Բոլորը կցվում են"
 
 #: ../src/ui/theme-viewer.c:115
 msgid "Des_ktop"
@@ -2140,7 +2140,7 @@ msgstr "Օժանդակ Ներկապնակ"
 
 #: ../src/ui/theme-viewer.c:416
 msgid "Torn-off Menu"
-msgstr ""
+msgstr "Անջատել Ընտրացանկը"
 
 #: ../src/ui/theme-viewer.c:420
 msgid "Border"
@@ -2159,7 +2159,7 @@ msgstr "%g միլիվարկյաններ մեկ պատուհանի շրջանակ
 #: ../src/ui/theme-viewer.c:821
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
-msgstr ""
+msgstr "Օգտագործում: marco-theme-viewer [THEMENAME]\n"
 
 #: ../src/ui/theme-viewer.c:828
 #, c-format
@@ -2169,7 +2169,7 @@ msgstr "Թեմայի բեռնելու սխալ: %s\n"
 #: ../src/ui/theme-viewer.c:834
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
-msgstr ""
+msgstr "Բեռնված թեման \"%s\"  %g վարկյաններում\n"
 
 #: ../src/ui/theme-viewer.c:877
 msgid "Normal Title Font"
@@ -2201,7 +2201,7 @@ msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr ""
+msgstr "Պատկերել շրջանակ %d %g մեջ պատվիրատուի կողմից վայրկյանում  (%g միլիվարկյան մեկ շրջանակի հմար) և %g վարկյանները պատի ժամացույցի ժամանակով այդ թվում X սերվերային ռեսուրսները (%g միլիվարկյան մեկ շրջանակի հմար)\n"
 
 #: ../src/ui/theme-viewer.c:1269
 msgid "position expression test returned TRUE but set error"
