@@ -143,8 +143,13 @@ on_preview_window_style_set (GtkWidget *widget,
   gtk_widget_path_append_type (path, GTK_TYPE_ICON_VIEW);
   gtk_style_context_set_path (context, path);
 
-  gtk_style_context_get (context, GTK_STATE_FLAG_SELECTED, "background-color", &preview->preview_color, NULL);
+  gtk_style_context_save (context);
+  gtk_style_context_set_state (context, GTK_STATE_FLAG_SELECTED);
+  gtk_style_context_get (context, gtk_style_context_get_state (context),
+                         "background-color",
+                         &preview->preview_color, NULL);
   gtk_style_context_get_style (context, "selection-box-alpha", &alpha, NULL);
+  gtk_style_context_restore (context);
 
   preview->preview_color->alpha = (double)alpha / 0xFF;
 

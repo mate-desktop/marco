@@ -849,7 +849,14 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
           gtk_style_context_set_path (style, widget_path);
           gtk_widget_path_free (widget_path);
 
-          gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL, "font", &free_font_desc, NULL);
+          gtk_style_context_save (style);
+          gtk_style_context_set_state (style, GTK_STATE_FLAG_NORMAL);
+          gtk_style_context_get (style,
+                                 gtk_style_context_get_state (style),
+                                 "font",
+                                 &free_font_desc,
+                                 NULL);
+          gtk_style_context_restore (context);
           font_desc = (const PangoFontDescription *) free_font_desc;
 #else
           GtkStyle *default_style;
