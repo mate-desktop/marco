@@ -34,6 +34,11 @@
 #include <unistd.h>
 
 #include <gdk/gdk.h>
+#include <gtk/gtk.h>
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+#include <cairo/cairo-xlib.h>
+#endif
 
 #include "display.h"
 #include "screen.h"
@@ -2797,6 +2802,46 @@ xrender_process_event (MetaCompositor *compositor,
 #endif
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static cairo_surface_t *
+xrender_get_window_surface (MetaCompositor *compositor,
+                            MetaWindow     *window)
+{
+#ifdef HAVE_COMPOSITE_EXTENSIONS
+  MetaFrame *frame;
+  Window xwindow;
+  MetaScreen *screen;
+  MetaCompWindow *cw;
+  MetaCompositorXRender *xrc;
+  Display *display;
+  Pixmap pixmap;
+
+  frame = meta_window_get_frame (window);
+
+  if (frame)
+    xwindow = meta_frame_get_xwindow (frame);
+  else
+    xwindow = meta_window_get_xwindow (window);
+
+  screen = meta_window_get_screen (window);
+  cw = find_window_for_screen (screen, xwindow);
+
+  if (cw == NULL)
+    return NULL;
+
+  xrc = (MetaCompositorXRender *) compositor;
+  display = meta_display_get_xdisplay (xrc->display);
+
+  if (meta_window_is_shaded (window))
+    pixmap = cw->shaded_back_pixmap;
+  else
+    pixmap = cw->back_pixmap;
+
+  return cairo_xlib_surface_create (display, pixmap, cw->attrs.visual,
+                                    cw->attrs.width, cw->attrs.height);
+#endif
+}
+#else
 static Pixmap
 xrender_get_window_pixmap (MetaCompositor *compositor,
                            MetaWindow     *window)
@@ -2817,6 +2862,7 @@ xrender_get_window_pixmap (MetaCompositor *compositor,
     return cw->back_pixmap;
 #endif
 }
+#endif  /* GTK_CHECK_VERSION */
 
 static void
 xrender_set_active_window (MetaCompositor *compositor,
@@ -3000,7 +3046,11 @@ static MetaCompositor comp_info = {
   xrender_remove_window,
   xrender_set_updates,
   xrender_process_event,
+#if GTK_CHECK_VERSION (3, 0, 0)
+  xrender_get_window_surface,
+#else
   xrender_get_window_pixmap,
+#endif
   xrender_set_active_window,
   xrender_free_window,
   xrender_maximize_window,

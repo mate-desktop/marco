@@ -1213,7 +1213,6 @@ meta_screen_update_cursor (MetaScreen *screen)
   XFreeCursor (screen->display->xdisplay, xcursor);
 }
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
 #define MAX_PREVIEW_SIZE 150.0
 
 static GdkPixbuf *
@@ -1221,16 +1220,38 @@ get_window_pixbuf (MetaWindow *window,
                    int        *width,
                    int        *height)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+  cairo_surface_t *surface;
+#else
   Pixmap pmap;
+#endif
   GdkPixbuf *pixbuf, *scaled;
   double ratio;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  surface = meta_compositor_get_window_surface (window->display->compositor,
+                                                window);
+  if (surface == None)
+    return NULL;
+#else
   pmap = meta_compositor_get_window_pixmap (window->display->compositor,
                                             window);
   if (pmap == None)
     return NULL;
+#endif
 
+  meta_error_trap_push (NULL);
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+  pixbuf = meta_ui_get_pixbuf_from_surface (surface);
+  cairo_surface_destroy (surface);
+#else
   pixbuf = meta_ui_get_pixbuf_from_pixmap (pmap);
+#endif
+
+  if (meta_error_trap_pop_with_return (NULL, FALSE) != Success)
+    g_clear_object (&pixbuf);
+
   if (pixbuf == NULL)
     return NULL;
 
@@ -1256,7 +1277,6 @@ get_window_pixbuf (MetaWindow *window,
   g_object_unref (pixbuf);
   return scaled;
 }
-#endif
 
 void
 meta_screen_ensure_tab_popup (MetaScreen      *screen,
@@ -1290,17 +1310,14 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
     {
       MetaWindow *window;
       MetaRectangle r;
-#if !GTK_CHECK_VERSION (3, 0, 0)
       GdkPixbuf *win_pixbuf = NULL;
       int width = 0, height = 0;
-#endif
 
       window = tmp->data;
 
       entries[i].key = (MetaTabEntryKey) window->xwindow;
       entries[i].title = window->title;
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
       /* Only get the pixbuf if the user does NOT have
          compositing-fast-alt-tab-set to true
          in GSettings. There is an obvious lag when the pixbuf is
@@ -1333,10 +1350,6 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
                                 t_width - icon_width, t_height - icon_height,
                                 1.0, 1.0, GDK_INTERP_BILINEAR, 255);
         }
-#else
-      /* at the moment, thumbnails are disabled for GTK3 */
-      entries[i].icon = g_object_ref (window->icon);
-#endif
 
       entries[i].blank = FALSE;
       entries[i].hidden = !meta_window_showing_on_its_workspace (window);

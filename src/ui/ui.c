@@ -1104,7 +1104,18 @@ MetaUIDirection meta_ui_get_direction(void)
 	return META_UI_DIRECTION_LTR;
 }
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
+#if GTK_CHECK_VERSION (3, 0, 0)
+GdkPixbuf *meta_ui_get_pixbuf_from_surface (cairo_surface_t *surface)
+{
+	gint width;
+	gint height;
+
+	width = cairo_xlib_surface_get_width (surface);
+	height = cairo_xlib_surface_get_height (surface);
+
+	return gdk_pixbuf_get_from_surface (surface, 0, 0, width, height);
+}
+#else
 GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
 {
 	GdkPixmap* gpmap;

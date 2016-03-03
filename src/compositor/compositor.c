@@ -107,6 +107,21 @@ meta_compositor_process_event (MetaCompositor *compositor,
 #endif
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+cairo_surface_t *
+meta_compositor_get_window_surface (MetaCompositor *compositor,
+                                    MetaWindow     *window)
+{
+#ifdef HAVE_COMPOSITE_EXTENSIONS
+  if (compositor && compositor->get_window_surface)
+    return compositor->get_window_surface (compositor, window);
+  else
+    return NULL;
+#else
+  return NULL;
+#endif
+}
+#else
 Pixmap
 meta_compositor_get_window_pixmap (MetaCompositor *compositor,
                                    MetaWindow     *window)
@@ -120,6 +135,7 @@ meta_compositor_get_window_pixmap (MetaCompositor *compositor,
   return None;
 #endif
 }
+#endif  /* GTK_CHECK_VERSION */
 
 void
 meta_compositor_set_active_window (MetaCompositor *compositor,
