@@ -95,8 +95,6 @@ void meta_workspace_get_work_area_all_xineramas (MetaWorkspace *workspace,
 GList* meta_workspace_get_onscreen_region       (MetaWorkspace *workspace);
 GList* meta_workspace_get_onxinerama_region     (MetaWorkspace *workspace,
                                                  int            which_xinerama);
-void meta_workspace_get_work_area_all_xineramas (MetaWorkspace *workspace,
-                                                 MetaRectangle *area);
 
 void meta_workspace_focus_default_window (MetaWorkspace *workspace,
                                           MetaWindow    *not_this_one,
