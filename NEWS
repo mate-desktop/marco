@@ -1,11 +1,12 @@
-1.13.1
-   * Bump libmarco-private's sover when Gtk3
-
-
-1.13.0
-   * Gtk+3: fix several deprecations
-   * drop MateConf migration script
-   * compositor-xrender: include old shape in damage
+1.14.0
+    * Drop MateConf migration script
+    * Fix visual glitches appearing after unmaximizing Chromium window
+    * Correct description of compositing-fast-alt-tab GSettings key
+      (mention that it disables thumbnails)
+    * Bump libmarco-private's sover for GTK+3 build
+    * GTK+3: re-add ability to show alt-tab thumbnails when compositor
+      is on
+    * GTK+3: fix several deprecations
 
 1.12.1
     * Fix animation issues that led to crashes and visual glitches
