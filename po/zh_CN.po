@@ -6,17 +6,18 @@
 # Dianjin Wang <1132321739qq@gmail.com>, 2012
 # Cravix <dr.neemous@gmail.com>, 2013
 # nyanyh <rebuilty@gmail.com>, 2013
-# liushuyu011 <liushuyu_011@163.com>, 2014-2015
+# liushuyu011 <liushuyu011@gmail.com>, 2014-2015
+# liushuyu011 <liushuyu011@gmail.com>, 2016
 # Mingye Wang <arthur200126@gmail.com>, 2015-2016
-# 白铭骢 <jeffbai@aosc.xyz>, 2015
-# 白铭骢 <jeffbai@aosc.xyz>, 2015
+# Mingcong Bai <jeffbai@aosc.xyz>, 2015
+# Mingcong Bai <jeffbai@aosc.xyz>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2016-01-08 21:46+0000\n"
-"Last-Translator: Mingye Wang <arthur200126@gmail.com>\n"
+"POT-Creation-Date: 2016-03-09 17:44+0300\n"
+"PO-Revision-Date: 2016-03-26 12:00+0000\n"
+"Last-Translator: liushuyu011 <liushuyu011@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/mate/MATE/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -656,14 +657,15 @@ msgid "Determines whether Marco is a compositing manager."
 msgstr "决定 Marco 是否是混成管理器。"
 
 #: ../src/org.mate.marco.gschema.xml.h:41
-msgid "Fast Alt-Tab Enabled"
-msgstr "启用快速 Alt-Tab 切换"
+msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
+msgstr "对混成管理器使用高速 Alt-Tab (禁用缩略图)"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
-"Whether or not fast alt-tabbing is used when the compositing manager is "
-"enabled."
-msgstr "是否在混成管理器开启的情况下启用快速 Alt-Tab 窗口切换"
+"If set to true, no window thumbnails will be displayed in the alt-tab popup "
+"window when the compositing manager is enabled. Application icons will be "
+"displayed instead."
+msgstr "如果设置此选项, 当混成器启用时, 将不会在 alt-tab 弹出窗口显示缩略图。将仅显示应用图标。"
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
@@ -1162,7 +1164,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5797
+#: ../src/core/window.c:5764
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1175,7 +1177,7 @@ msgstr "窗口 %s 在它自身上设置 SM_CLIENT_ID，而不是按照 ICCCM 规
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6362
+#: ../src/core/window.c:6329
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1386,7 +1388,7 @@ msgstr "工作区 1_0"
 msgid "Workspace %s%d"
 msgstr "工作区 %s%d"
 
-#: ../src/ui/menu.c:391
+#: ../src/ui/menu.c:395
 msgid "Move to Another _Workspace"
 msgstr "移动到另外的工作区(_W)"
 
@@ -1472,7 +1474,7 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:113
+#: ../src/ui/resizepopup.c:120
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -1579,135 +1581,135 @@ msgstr "阴影色中的阴影因子“%s”为负数"
 msgid "Could not parse color \"%s\""
 msgstr "无法解析颜色“%s”"
 
-#: ../src/ui/theme.c:1848
+#: ../src/ui/theme.c:1852
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "坐标表达式包含不允许的字符“%s”"
 
-#: ../src/ui/theme.c:1875
+#: ../src/ui/theme.c:1879
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "坐标表达式包含无法解析的浮点数“%s”"
 
-#: ../src/ui/theme.c:1889
+#: ../src/ui/theme.c:1893
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "坐标表达式包含无法解析的整数“%s”"
 
-#: ../src/ui/theme.c:2011
+#: ../src/ui/theme.c:2015
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "坐标表达式在该文本开始处包含未知的运算符：“%s”"
 
-#: ../src/ui/theme.c:2068
+#: ../src/ui/theme.c:2072
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "坐标表达式为空或无法理解"
 
-#: ../src/ui/theme.c:2179 ../src/ui/theme.c:2189 ../src/ui/theme.c:2223
+#: ../src/ui/theme.c:2183 ../src/ui/theme.c:2193 ../src/ui/theme.c:2227
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "坐标表达式用零做除数"
 
-#: ../src/ui/theme.c:2231
+#: ../src/ui/theme.c:2235
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "坐标表达式试图对浮点数使用 mod 运算符"
 
-#: ../src/ui/theme.c:2287
+#: ../src/ui/theme.c:2291
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "坐标表达式的运算符“%s”应该是一个操作数"
 
-#: ../src/ui/theme.c:2296
+#: ../src/ui/theme.c:2300
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "坐标表达式的某个操作数应该是运算符"
 
-#: ../src/ui/theme.c:2304
+#: ../src/ui/theme.c:2308
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "坐标表达式以运算符结尾，而不是以操作数结尾"
 
-#: ../src/ui/theme.c:2314
+#: ../src/ui/theme.c:2318
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "坐标表达式的运算符“%c”后面跟着运算符“%c”，之间没有操作数"
 
-#: ../src/ui/theme.c:2461 ../src/ui/theme.c:2502
+#: ../src/ui/theme.c:2465 ../src/ui/theme.c:2506
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "坐标表达式有未知的变量或常数“%s”"
 
-#: ../src/ui/theme.c:2556
+#: ../src/ui/theme.c:2560
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "坐标表达式溢出了其缓冲区。"
 
-#: ../src/ui/theme.c:2585
+#: ../src/ui/theme.c:2589
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "坐标表达式有一个闭括号，而没有开括号"
 
-#: ../src/ui/theme.c:2649
+#: ../src/ui/theme.c:2653
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "坐标表达式有一个开括号，而没有闭括号"
 
-#: ../src/ui/theme.c:2660
+#: ../src/ui/theme.c:2664
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "坐标表达式似乎没有任何运算符或操作数"
 
-#: ../src/ui/theme.c:2864 ../src/ui/theme.c:2884 ../src/ui/theme.c:2904
+#: ../src/ui/theme.c:2868 ../src/ui/theme.c:2888 ../src/ui/theme.c:2908
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "主题包含的一个表达式产生错误：%s\n"
 
-#: ../src/ui/theme.c:4782
+#: ../src/ui/theme.c:4786
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "必须为该框架风格指定<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/>"
 
-#: ../src/ui/theme.c:5434 ../src/ui/theme.c:5459
+#: ../src/ui/theme.c:5438 ../src/ui/theme.c:5463
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "缺少 <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: ../src/ui/theme.c:5503
+#: ../src/ui/theme.c:5507
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "无法载入主题“%s”：%s\n"
 
-#: ../src/ui/theme.c:5633 ../src/ui/theme.c:5640 ../src/ui/theme.c:5647
-#: ../src/ui/theme.c:5654 ../src/ui/theme.c:5661
+#: ../src/ui/theme.c:5637 ../src/ui/theme.c:5644 ../src/ui/theme.c:5651
+#: ../src/ui/theme.c:5658 ../src/ui/theme.c:5665
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "没有为主题“%2$s”设置 <%1$s>"
 
-#: ../src/ui/theme.c:5669
+#: ../src/ui/theme.c:5673
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "没有为窗口类型“%s”(在主题“%s”中)设置框架风格，请添加一个 <window type=\"%s\" style_set=\"whatever\"/> 元素"
 
-#: ../src/ui/theme.c:6146 ../src/ui/theme.c:6208 ../src/ui/theme.c:6271
+#: ../src/ui/theme.c:6150 ../src/ui/theme.c:6212 ../src/ui/theme.c:6275
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "用户定义的常数必须以大写字母开头；而“%s”却不必"
 
-#: ../src/ui/theme.c:6154 ../src/ui/theme.c:6216 ../src/ui/theme.c:6279
+#: ../src/ui/theme.c:6158 ../src/ui/theme.c:6220 ../src/ui/theme.c:6283
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "常数“%s”已被定义"
@@ -2111,97 +2113,97 @@ msgstr "这是一个带有“打开”图标的演示用按钮"
 msgid "This is a demo button with a 'quit' icon"
 msgstr "这是一个带有“退出”图标的演示用按钮"
 
-#: ../src/ui/theme-viewer.c:259
+#: ../src/ui/theme-viewer.c:263
 msgid "This is a sample message in a sample dialog"
 msgstr "这是示例对话框中的示例消息"
 
-#: ../src/ui/theme-viewer.c:347
+#: ../src/ui/theme-viewer.c:351
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "虚假菜单项 %d\n"
 
-#: ../src/ui/theme-viewer.c:381
+#: ../src/ui/theme-viewer.c:390
 msgid "Border-only window"
 msgstr "只有边框的窗口"
 
-#: ../src/ui/theme-viewer.c:383
+#: ../src/ui/theme-viewer.c:392
 msgid "Bar"
 msgstr "栏"
 
-#: ../src/ui/theme-viewer.c:400
+#: ../src/ui/theme-viewer.c:409
 msgid "Normal Application Window"
 msgstr "普通的应用程序窗口"
 
-#: ../src/ui/theme-viewer.c:404
+#: ../src/ui/theme-viewer.c:413
 msgid "Dialog Box"
 msgstr "对话框"
 
-#: ../src/ui/theme-viewer.c:408
+#: ../src/ui/theme-viewer.c:417
 msgid "Modal Dialog Box"
 msgstr "模态对话框"
 
-#: ../src/ui/theme-viewer.c:412
+#: ../src/ui/theme-viewer.c:421
 msgid "Utility Palette"
 msgstr "工具盘"
 
-#: ../src/ui/theme-viewer.c:416
+#: ../src/ui/theme-viewer.c:425
 msgid "Torn-off Menu"
 msgstr "撕下的菜单"
 
-#: ../src/ui/theme-viewer.c:420
+#: ../src/ui/theme-viewer.c:429
 msgid "Border"
 msgstr "边框"
 
-#: ../src/ui/theme-viewer.c:748
+#: ../src/ui/theme-viewer.c:757
 #, c-format
 msgid "Button layout test %d"
 msgstr "按钮布局测试 %d"
 
-#: ../src/ui/theme-viewer.c:777
+#: ../src/ui/theme-viewer.c:786
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g 毫秒用来绘制一个窗口框架"
 
-#: ../src/ui/theme-viewer.c:821
+#: ../src/ui/theme-viewer.c:830
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "用法：marco-theme-viewer [主题名称]\n"
 
-#: ../src/ui/theme-viewer.c:828
+#: ../src/ui/theme-viewer.c:837
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "装入主题出错：%s\n"
 
-#: ../src/ui/theme-viewer.c:834
+#: ../src/ui/theme-viewer.c:843
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "在 %2$g 秒内装入主题“%1$s”\n"
 
-#: ../src/ui/theme-viewer.c:877
+#: ../src/ui/theme-viewer.c:886
 msgid "Normal Title Font"
 msgstr "普通标题字体"
 
-#: ../src/ui/theme-viewer.c:883
+#: ../src/ui/theme-viewer.c:892
 msgid "Small Title Font"
 msgstr "小标题字体"
 
-#: ../src/ui/theme-viewer.c:889
+#: ../src/ui/theme-viewer.c:898
 msgid "Large Title Font"
 msgstr "大标题字体"
 
-#: ../src/ui/theme-viewer.c:894
+#: ../src/ui/theme-viewer.c:903
 msgid "Button Layouts"
 msgstr "按钮布局"
 
-#: ../src/ui/theme-viewer.c:899
+#: ../src/ui/theme-viewer.c:908
 msgid "Benchmark"
 msgstr "基准"
 
-#: ../src/ui/theme-viewer.c:946
+#: ../src/ui/theme-viewer.c:955
 msgid "Window Title Goes Here"
 msgstr "窗口标题在这里"
 
-#: ../src/ui/theme-viewer.c:1050
+#: ../src/ui/theme-viewer.c:1059
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
@@ -2209,39 +2211,39 @@ msgid ""
 "frame)\n"
 msgstr "在 %2$g 的客户端秒(每帧 %3$g 毫秒)和包括 X 服务器资源在内的 %4$g 秒时钟时间(每帧 %5$g 毫秒)内绘制 %1$d 帧\n"
 
-#: ../src/ui/theme-viewer.c:1269
+#: ../src/ui/theme-viewer.c:1278
 msgid "position expression test returned TRUE but set error"
 msgstr "位置表达式测试返回了 TRUE 但设置错误"
 
-#: ../src/ui/theme-viewer.c:1271
+#: ../src/ui/theme-viewer.c:1280
 msgid "position expression test returned FALSE but didn't set error"
 msgstr "位置表达式测试返回了 FALSE 但并没有设置错误"
 
-#: ../src/ui/theme-viewer.c:1275
+#: ../src/ui/theme-viewer.c:1284
 msgid "Error was expected but none given"
 msgstr "期待错误但没有给出错误"
 
-#: ../src/ui/theme-viewer.c:1277
+#: ../src/ui/theme-viewer.c:1286
 #, c-format
 msgid "Error %d was expected but %d given"
 msgstr "期待错误 %d，但给出了 %d"
 
-#: ../src/ui/theme-viewer.c:1283
+#: ../src/ui/theme-viewer.c:1292
 #, c-format
 msgid "Error not expected but one was returned: %s"
 msgstr "未期待错误，但返回了错误：%s"
 
-#: ../src/ui/theme-viewer.c:1287
+#: ../src/ui/theme-viewer.c:1296
 #, c-format
 msgid "x value was %d, %d was expected"
 msgstr "x 值为 %d，但应该为 %d"
 
-#: ../src/ui/theme-viewer.c:1290
+#: ../src/ui/theme-viewer.c:1299
 #, c-format
 msgid "y value was %d, %d was expected"
 msgstr "y 值为 %d，但应该为 %d "
 
-#: ../src/ui/theme-viewer.c:1355
+#: ../src/ui/theme-viewer.c:1364
 #, c-format
 msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
 msgstr "在 %2$g 秒内处理了 %1$d 个坐标表达式(平均 %3$g 秒)\n"

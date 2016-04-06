@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-06 11:58+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-09 17:44+0300\n"
+"PO-Revision-Date: 2016-03-09 14:48+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Nepali (http://www.transifex.com/mate/MATE/language/ne/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -650,13 +650,14 @@ msgid "Determines whether Marco is a compositing manager."
 msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:41
-msgid "Fast Alt-Tab Enabled"
+msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
 msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
-"Whether or not fast alt-tabbing is used when the compositing manager is "
-"enabled."
+"If set to true, no window thumbnails will be displayed in the alt-tab popup "
+"window when the compositing manager is enabled. Application icons will be "
+"displayed instead."
 msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:43
@@ -1156,7 +1157,7 @@ msgid "Marco"
 msgstr "मेटासिटि"
 
 #. first time through
-#: ../src/core/window.c:5797
+#: ../src/core/window.c:5764
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1169,7 +1170,7 @@ msgstr "सञ्झ्याल %s ले ICCCM मा निर्दिष्
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6362
+#: ../src/core/window.c:6329
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1380,7 +1381,7 @@ msgstr "कार्यक्षेत्र १_०"
 msgid "Workspace %s%d"
 msgstr "कार्यक्षेत्र %s%d"
 
-#: ../src/ui/menu.c:391
+#: ../src/ui/menu.c:395
 msgid "Move to Another _Workspace"
 msgstr "अन्य कार्यक्षेत्रमा सार्नुहोस्"
 
@@ -1466,7 +1467,7 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:113
+#: ../src/ui/resizepopup.c:120
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -1573,135 +1574,135 @@ msgstr "छाया पारिएको रङको छाया तत्�
 msgid "Could not parse color \"%s\""
 msgstr "रङ \"%s\" पद वर्णन गर्न सकेन"
 
-#: ../src/ui/theme.c:1848
+#: ../src/ui/theme.c:1852
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "संयोजन अभिव्यक्तिले अनुमति नभएको क्यारेक्टर '%s' समाविष्ट गर्दछ"
 
-#: ../src/ui/theme.c:1875
+#: ../src/ui/theme.c:1879
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "संयोजन अभिव्यक्तिले पद वर्णन गर्न नसकिने उत्प्लावन बिन्दु नम्बर '%s' समाविष्ट गर्दछ"
 
-#: ../src/ui/theme.c:1889
+#: ../src/ui/theme.c:1893
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "संयोजन अभिव्यक्तिले पद वर्णन गर्न नसकिने इन्टिजर '%s' समाविष्ट गर्दछ"
 
-#: ../src/ui/theme.c:2011
+#: ../src/ui/theme.c:2015
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "संयोजन अभिव्यक्तिले यसो पाठकोसुुरूमा अज्ञातञ्चालक  राखेको छ: \"%s\""
 
-#: ../src/ui/theme.c:2068
+#: ../src/ui/theme.c:2072
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "संयोजन अभिव्यक्ति खाली वा नबुझिने थियो"
 
-#: ../src/ui/theme.c:2179 ../src/ui/theme.c:2189 ../src/ui/theme.c:2223
+#: ../src/ui/theme.c:2183 ../src/ui/theme.c:2193 ../src/ui/theme.c:2227
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "संयोजन अभिव्यक्ति परिणाम शून्यद्वारा भाग जाने हुन्छ"
 
-#: ../src/ui/theme.c:2231
+#: ../src/ui/theme.c:2235
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "संयोजन अभिव्यक्तिले उत्प्लाव बिन्दु नम्बरमा मोड सञ्चालनकर्ता प्रयोग गर्ने प्रयास गर्दछ"
 
-#: ../src/ui/theme.c:2287
+#: ../src/ui/theme.c:2291
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "संयोजन अभिव्यक्तिमा अपेक्षित अपरेन्डको साटोमा सञ्चालनकर्ता \"%s\" छ"
 
-#: ../src/ui/theme.c:2296
+#: ../src/ui/theme.c:2300
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "संयोजन अभिव्यक्तिमा अपेक्षित सञ्चालनकर्ताको साटोमा अपरेन्ड थियो"
 
-#: ../src/ui/theme.c:2304
+#: ../src/ui/theme.c:2308
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "संयोजन अभिव्यक्ति ओपरन्डको साटोमा सञ्चालनकर्तासँग समाप्त भयो"
 
-#: ../src/ui/theme.c:2314
+#: ../src/ui/theme.c:2318
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "संयोजन अभिव्यक्तिसँग सञ्चालनकर्ता \"%c\" पछ्याउने सञ्चालनकर्ता \"%c\" छ जसको बीचमा अपरेन्ड छैन"
 
-#: ../src/ui/theme.c:2461 ../src/ui/theme.c:2502
+#: ../src/ui/theme.c:2465 ../src/ui/theme.c:2506
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "संयोजन अभिव्यक्तिमा अज्ञात चल वा अचल \"%s\" थियो ।"
 
-#: ../src/ui/theme.c:2556
+#: ../src/ui/theme.c:2560
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "संयोजन अभिव्यक्ति पद वर्णकले यसको बफरलाई अतिप्रवाह गर्यो ।"
 
-#: ../src/ui/theme.c:2585
+#: ../src/ui/theme.c:2589
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "संयोजन अभिव्यक्तिमा खुला कोष्ठक नभएको खुला कोष्ठक थियो"
 
-#: ../src/ui/theme.c:2649
+#: ../src/ui/theme.c:2653
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "संयोजन अभिव्यक्तिमा बन्द गर्ने कोष्ठक नभएको खुला कोष्ठक थियो"
 
-#: ../src/ui/theme.c:2660
+#: ../src/ui/theme.c:2664
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "संयोजन अभिव्यक्तिमा कुनै सञ्चालक वा अपरेन्ड नभएको देखिन्छ"
 
-#: ../src/ui/theme.c:2864 ../src/ui/theme.c:2884 ../src/ui/theme.c:2904
+#: ../src/ui/theme.c:2868 ../src/ui/theme.c:2888 ../src/ui/theme.c:2908
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr ""
 
-#: ../src/ui/theme.c:4782
+#: ../src/ui/theme.c:4786
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> यो फ्रेम शैलीका लागि निर्दिष्ट गरिएको हुनुपर्दछ"
 
-#: ../src/ui/theme.c:5434 ../src/ui/theme.c:5459
+#: ../src/ui/theme.c:5438 ../src/ui/theme.c:5463
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "हराइराखेको <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: ../src/ui/theme.c:5503
+#: ../src/ui/theme.c:5507
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\": %s विषयवस्तु लोड गर्न असफल\n"
 
-#: ../src/ui/theme.c:5633 ../src/ui/theme.c:5640 ../src/ui/theme.c:5647
-#: ../src/ui/theme.c:5654 ../src/ui/theme.c:5661
+#: ../src/ui/theme.c:5637 ../src/ui/theme.c:5644 ../src/ui/theme.c:5651
+#: ../src/ui/theme.c:5658 ../src/ui/theme.c:5665
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "\"%s\" विषयको लागी <%s> सेट भएन"
 
-#: ../src/ui/theme.c:5669
+#: ../src/ui/theme.c:5673
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "विन्डो प्रकार \"%s\" को लागी विषय \"%s\" मा खाका शैली सेट भएको छैन, <windowtype=\"%s\"style_set=\"whatever\"/> तत्व थप्नुहोस्"
 
-#: ../src/ui/theme.c:6146 ../src/ui/theme.c:6208 ../src/ui/theme.c:6271
+#: ../src/ui/theme.c:6150 ../src/ui/theme.c:6212 ../src/ui/theme.c:6275
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "प्रयोगकर्ताको वर्णन  ठूलो अक्षरबाट सुरू हुनुपर्छ, \"%s\" होइन"
 
-#: ../src/ui/theme.c:6154 ../src/ui/theme.c:6216 ../src/ui/theme.c:6279
+#: ../src/ui/theme.c:6158 ../src/ui/theme.c:6220 ../src/ui/theme.c:6283
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "अचर \"%s\" पहिले नै परिभाषित गरिएको छ"
@@ -2105,97 +2106,97 @@ msgstr ""
 msgid "This is a demo button with a 'quit' icon"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:259
+#: ../src/ui/theme-viewer.c:263
 msgid "This is a sample message in a sample dialog"
 msgstr "यो नमुना संवादको नमुना सन्देश हो"
 
-#: ../src/ui/theme-viewer.c:347
+#: ../src/ui/theme-viewer.c:351
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "नक्कली मेनु सामाग्री %d\n"
 
-#: ../src/ui/theme-viewer.c:381
+#: ../src/ui/theme-viewer.c:390
 msgid "Border-only window"
 msgstr "किनारा मात्रको सञ्झ्याल"
 
-#: ../src/ui/theme-viewer.c:383
+#: ../src/ui/theme-viewer.c:392
 msgid "Bar"
 msgstr "पट्टी"
 
-#: ../src/ui/theme-viewer.c:400
+#: ../src/ui/theme-viewer.c:409
 msgid "Normal Application Window"
 msgstr "सामान्य अनुप्रयोग सञ्झ्याल"
 
-#: ../src/ui/theme-viewer.c:404
+#: ../src/ui/theme-viewer.c:413
 msgid "Dialog Box"
 msgstr "संवाद बाकस"
 
-#: ../src/ui/theme-viewer.c:408
+#: ../src/ui/theme-viewer.c:417
 msgid "Modal Dialog Box"
 msgstr "नमूना संवाद बाकस"
 
-#: ../src/ui/theme-viewer.c:412
+#: ../src/ui/theme-viewer.c:421
 msgid "Utility Palette"
 msgstr "रङदानी उपयोगिता"
 
-#: ../src/ui/theme-viewer.c:416
+#: ../src/ui/theme-viewer.c:425
 msgid "Torn-off Menu"
 msgstr "टर्न अफ मेनु"
 
-#: ../src/ui/theme-viewer.c:420
+#: ../src/ui/theme-viewer.c:429
 msgid "Border"
 msgstr "किनारा"
 
-#: ../src/ui/theme-viewer.c:748
+#: ../src/ui/theme-viewer.c:757
 #, c-format
 msgid "Button layout test %d"
 msgstr "बटन सजावट परीक्षण %d"
 
-#: ../src/ui/theme-viewer.c:777
+#: ../src/ui/theme-viewer.c:786
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "एउटा सञ्झ्याल फ्रेम कोर्न %g मिलिसेकेन्ड"
 
-#: ../src/ui/theme-viewer.c:821
+#: ../src/ui/theme-viewer.c:830
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "प्रयोग: मेटासिटि विषयवस्तु दर्शक [THEMENAME]\n"
 
-#: ../src/ui/theme-viewer.c:828
+#: ../src/ui/theme-viewer.c:837
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "विषयवस्तु लोड गर्दा त्रुटि: %s\n"
 
-#: ../src/ui/theme-viewer.c:834
+#: ../src/ui/theme-viewer.c:843
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "विषयवस्तु \"%s\" लाई %g सेकेन्डमा लोड गरियो\n"
 
-#: ../src/ui/theme-viewer.c:877
+#: ../src/ui/theme-viewer.c:886
 msgid "Normal Title Font"
 msgstr "सामान्य शीर्षक फन्ट"
 
-#: ../src/ui/theme-viewer.c:883
+#: ../src/ui/theme-viewer.c:892
 msgid "Small Title Font"
 msgstr "सानो शीर्षक फन्ट"
 
-#: ../src/ui/theme-viewer.c:889
+#: ../src/ui/theme-viewer.c:898
 msgid "Large Title Font"
 msgstr "ठूलो शीर्षक फन्ट"
 
-#: ../src/ui/theme-viewer.c:894
+#: ../src/ui/theme-viewer.c:903
 msgid "Button Layouts"
 msgstr "बटन सजावट"
 
-#: ../src/ui/theme-viewer.c:899
+#: ../src/ui/theme-viewer.c:908
 msgid "Benchmark"
 msgstr "बेन्चमार्क"
 
-#: ../src/ui/theme-viewer.c:946
+#: ../src/ui/theme-viewer.c:955
 msgid "Window Title Goes Here"
 msgstr "सञ्झ्याल शीर्षक यहाँ देखिन्छ"
 
-#: ../src/ui/theme-viewer.c:1050
+#: ../src/ui/theme-viewer.c:1059
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
@@ -2203,39 +2204,39 @@ msgid ""
 "frame)\n"
 msgstr " %d फ्रेमलाई %g क्लाइन्ट तिरको सेकेन्डमा (%g मिलिसेकेन्ड प्रति फ्रेम) र %g सेकेन्ड वाल घडी समय जहाँ X सर्भर संसाधन सम्मिलित (%g मिलिसेकेन्ड प्रति फ्रेम) हुन्छ रेखाङ्कन गर्नुहोस्\n"
 
-#: ../src/ui/theme-viewer.c:1269
+#: ../src/ui/theme-viewer.c:1278
 msgid "position expression test returned TRUE but set error"
 msgstr "स्थिति अभिव्यक्ति परीक्षणले TRUE फिर्ता गर्यो तर त्रुटि सेट गर्यो"
 
-#: ../src/ui/theme-viewer.c:1271
+#: ../src/ui/theme-viewer.c:1280
 msgid "position expression test returned FALSE but didn't set error"
 msgstr "स्थिति अभिव्यक्ति परीक्षणले FALSE फिर्ता गर्यो तर त्रुटि सेट गरेन"
 
-#: ../src/ui/theme-viewer.c:1275
+#: ../src/ui/theme-viewer.c:1284
 msgid "Error was expected but none given"
 msgstr "त्रुटि अपेक्षा गरिएको थियो तर केही दिएन"
 
-#: ../src/ui/theme-viewer.c:1277
+#: ../src/ui/theme-viewer.c:1286
 #, c-format
 msgid "Error %d was expected but %d given"
 msgstr "त्रुटि %d अपेक्षा गरिएको थियो तर %d प्राप्त भएको छ"
 
-#: ../src/ui/theme-viewer.c:1283
+#: ../src/ui/theme-viewer.c:1292
 #, c-format
 msgid "Error not expected but one was returned: %s"
 msgstr "त्रुटि अपेक्षा गरिएको थिएन तर एउटा फिर्ता भयो: %s"
 
-#: ../src/ui/theme-viewer.c:1287
+#: ../src/ui/theme-viewer.c:1296
 #, c-format
 msgid "x value was %d, %d was expected"
 msgstr "x मान %d थियो, %d अपेक्षा गरिएको थियो"
 
-#: ../src/ui/theme-viewer.c:1290
+#: ../src/ui/theme-viewer.c:1299
 #, c-format
 msgid "y value was %d, %d was expected"
 msgstr "y मान %d थियो, %d अपेक्षा गरिएको थियो"
 
-#: ../src/ui/theme-viewer.c:1355
+#: ../src/ui/theme-viewer.c:1364
 #, c-format
 msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
 msgstr "%d संयोजन अभिव्यक्ति %g सेकेन्डमा पद वर्णन गरियो ( औसत %g सेकेन्ड)\n"

@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-06 11:58+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-09 17:44+0300\n"
+"PO-Revision-Date: 2016-03-09 14:48+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Assamese (http://www.transifex.com/mate/MATE/language/as/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -650,13 +650,14 @@ msgid "Determines whether Marco is a compositing manager."
 msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:41
-msgid "Fast Alt-Tab Enabled"
+msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
 msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
-"Whether or not fast alt-tabbing is used when the compositing manager is "
-"enabled."
+"If set to true, no window thumbnails will be displayed in the alt-tab popup "
+"window when the compositing manager is enabled. Application icons will be "
+"displayed instead."
 msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:43
@@ -1156,7 +1157,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5797
+#: ../src/core/window.c:5764
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1169,7 +1170,7 @@ msgstr "উইন্ডো %s দ্বাৰা ICCCM'এ নিৰ্ধাৰ
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6362
+#: ../src/core/window.c:6329
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1380,7 +1381,7 @@ msgstr "কামক্ষেত্ৰ ১০ (_0)"
 msgid "Workspace %s%d"
 msgstr "কামক্ষেত্ৰ %s%d"
 
-#: ../src/ui/menu.c:391
+#: ../src/ui/menu.c:395
 msgid "Move to Another _Workspace"
 msgstr "পৃথক কামক্ষেত্ৰত স্থানান্তৰ কৰক (_W)"
 
@@ -1466,7 +1467,7 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:113
+#: ../src/ui/resizepopup.c:120
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -1573,135 +1574,135 @@ msgstr "ছায়াযুক্ত ৰং'ৰ ক্ষেত্ৰত ছা�
 msgid "Could not parse color \"%s\""
 msgstr "\"%s\" ৰং বিশ্লেষণ কৰোঁতে ব্যৰ্থ"
 
-#: ../src/ui/theme.c:1848
+#: ../src/ui/theme.c:1852
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত '%s' অক্ষৰ উপস্থিত আৰু এৰ ব্যৱহাৰ অনুমোদিত নহয়"
 
-#: ../src/ui/theme.c:1875
+#: ../src/ui/theme.c:1879
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত '%s' ফ্লোটিং পয়েন্ট সংখ্যা উপস্থিত যি বিশ্লেষণ কৰা সম্ভৱ নহয়"
 
-#: ../src/ui/theme.c:1889
+#: ../src/ui/theme.c:1893
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Coordinate expression contains integer '%s' which could not be parsed"
 
-#: ../src/ui/theme.c:2011
+#: ../src/ui/theme.c:2015
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত টেক্সটেৰ প্ৰাৰম্ভিক স্থানে অজ্ঞাত অপাৰেটৰ: \"%s\""
 
-#: ../src/ui/theme.c:2068
+#: ../src/ui/theme.c:2072
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশন ফাঁকা বা বোধগম্য নহয়"
 
-#: ../src/ui/theme.c:2179 ../src/ui/theme.c:2189 ../src/ui/theme.c:2223
+#: ../src/ui/theme.c:2183 ../src/ui/theme.c:2193 ../src/ui/theme.c:2227
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনৰ ফলাফলত শূণ্য দ্বাৰা ভাগ কৰাৰ অৱস্থা উৎপন্ন হয়"
 
-#: ../src/ui/theme.c:2231
+#: ../src/ui/theme.c:2235
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশন দ্বাৰা ফ্লোটিং পয়েন্ট সংখ্যাৰ ওপৰত mod অপাৰেটৰ ব্যৱহাৰৰ প্ৰয়াস কৰা হৈছে"
 
-#: ../src/ui/theme.c:2287
+#: ../src/ui/theme.c:2291
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত  \"%s\" অপাৰেটৰ উপস্থিত কিন্তু অপাৰেন্ড প্ৰত্যাশিত"
 
-#: ../src/ui/theme.c:2296
+#: ../src/ui/theme.c:2300
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত প্ৰত্যাশিত অপাৰেন্ডেৰ পৰিবৰ্তে অপাৰেটৰ উপস্থিত"
 
-#: ../src/ui/theme.c:2304
+#: ../src/ui/theme.c:2308
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনৰ অন্তে প্ৰত্যাশিত অপাৰেন্ডেৰ পৰিবৰ্তে অপাৰেটৰ উপস্থিত"
 
-#: ../src/ui/theme.c:2314
+#: ../src/ui/theme.c:2318
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনৰ ক্ষেত্ৰত \"%c\" অপাৰেটৰৰ পৰে \"%c\" অপাৰেটৰ উপস্থিত আৰু দুটাত কোনো অপাৰেন্ড উপস্থিত নেই"
 
-#: ../src/ui/theme.c:2461 ../src/ui/theme.c:2502
+#: ../src/ui/theme.c:2465 ../src/ui/theme.c:2506
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত অজ্ঞাত ভেৰিয়েবল বা কনস্টেন্ট \"%s\" উপস্থিত"
 
-#: ../src/ui/theme.c:2556
+#: ../src/ui/theme.c:2560
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনৰ বিশ্লেষণাৰৰ বাফাৰৰ সীমা অতিক্ৰান্ত হৈছে  ।"
 
-#: ../src/ui/theme.c:2585
+#: ../src/ui/theme.c:2589
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত শেষেৰ বন্ধনী চিহ্ন উপস্থিত, প্ৰাৰম্ভিক চিহ্ন অনুপস্থিত"
 
-#: ../src/ui/theme.c:2649
+#: ../src/ui/theme.c:2653
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত প্ৰাৰম্ভিক বন্ধনী চিহ্ন উপস্থিত শেষেৰ বন্ধনী চিহ্ন অনুপস্থিত"
 
-#: ../src/ui/theme.c:2660
+#: ../src/ui/theme.c:2664
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত কোনো অপাৰেটৰ বা অপাৰেন্ড উপস্থিত নেই"
 
-#: ../src/ui/theme.c:2864 ../src/ui/theme.c:2884 ../src/ui/theme.c:2904
+#: ../src/ui/theme.c:2868 ../src/ui/theme.c:2888 ../src/ui/theme.c:2908
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Theme contained an expression that resulted in an error: %s\n"
 
-#: ../src/ui/theme.c:4782
+#: ../src/ui/theme.c:4786
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "চিহ্নিত ফ্ৰেমৰ বিন্যাসৰ বাবে <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> উল্লেখ কৰা আৱশ্যক"
 
-#: ../src/ui/theme.c:5434 ../src/ui/theme.c:5459
+#: ../src/ui/theme.c:5438 ../src/ui/theme.c:5463
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> অনুপস্থিত"
 
-#: ../src/ui/theme.c:5503
+#: ../src/ui/theme.c:5507
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" থিম লোড কৰোঁতে ব্যৰ্থ: %s\n"
 
-#: ../src/ui/theme.c:5633 ../src/ui/theme.c:5640 ../src/ui/theme.c:5647
-#: ../src/ui/theme.c:5654 ../src/ui/theme.c:5661
+#: ../src/ui/theme.c:5637 ../src/ui/theme.c:5644 ../src/ui/theme.c:5651
+#: ../src/ui/theme.c:5658 ../src/ui/theme.c:5665
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "<%s> নিৰ্ধাৰিত নহয় \"%s\" থিমৰ বাবে"
 
-#: ../src/ui/theme.c:5669
+#: ../src/ui/theme.c:5673
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "\"%s\" ধৰণৰ উইন্ডোৰ বাবে \"%s\" থিমত ফ্ৰেমৰ বিন্যাস নিৰ্ধাৰিত নহয়, এটা <window type=\"%s\" style_set=\"whatever\"/> স্বত্বা যোগ কৰক"
 
-#: ../src/ui/theme.c:6146 ../src/ui/theme.c:6208 ../src/ui/theme.c:6271
+#: ../src/ui/theme.c:6150 ../src/ui/theme.c:6212 ../src/ui/theme.c:6275
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "ব্যৱহাৰকৰ্তা দ্বাৰা নিৰ্ধাৰিত কনস্টেন্টেৰ ক্ষেত্ৰত প্ৰাৰম্ভে বড় সৰু ডাঙৰেৰ হৰফ উপস্থিত থাকা আৱশ্যক; \"%s\"'এ ক্ষেত্ৰত এটি উপস্থিত নেই"
 
-#: ../src/ui/theme.c:6154 ../src/ui/theme.c:6216 ../src/ui/theme.c:6279
+#: ../src/ui/theme.c:6158 ../src/ui/theme.c:6220 ../src/ui/theme.c:6283
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "কনস্টেন্ট \"%s\" পূৰ্বে নিৰ্ধাৰিত হৈছে"
@@ -2105,97 +2106,97 @@ msgstr ""
 msgid "This is a demo button with a 'quit' icon"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:259
+#: ../src/ui/theme-viewer.c:263
 msgid "This is a sample message in a sample dialog"
 msgstr "এটি নমুনা সম্বাদ বক্সে এটা নমুনা বাৰ্তা"
 
-#: ../src/ui/theme-viewer.c:347
+#: ../src/ui/theme-viewer.c:351
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "নকল মেনু বস্তু %d\n"
 
-#: ../src/ui/theme-viewer.c:381
+#: ../src/ui/theme-viewer.c:390
 msgid "Border-only window"
 msgstr "শুধুমাত্ৰ প্ৰান্তবিশিষ্ট উইন্ডো"
 
-#: ../src/ui/theme-viewer.c:383
+#: ../src/ui/theme-viewer.c:392
 msgid "Bar"
 msgstr "বাৰ"
 
-#: ../src/ui/theme-viewer.c:400
+#: ../src/ui/theme-viewer.c:409
 msgid "Normal Application Window"
 msgstr "স্বাভাবিক অনুপ্ৰয়োগ উইন্ডো"
 
-#: ../src/ui/theme-viewer.c:404
+#: ../src/ui/theme-viewer.c:413
 msgid "Dialog Box"
 msgstr "সম্বাদ বক্স"
 
-#: ../src/ui/theme-viewer.c:408
+#: ../src/ui/theme-viewer.c:417
 msgid "Modal Dialog Box"
 msgstr "মোডাল সম্বাদ বক্স"
 
-#: ../src/ui/theme-viewer.c:412
+#: ../src/ui/theme-viewer.c:421
 msgid "Utility Palette"
 msgstr "সৰঞ্জাম সহ পেলেট"
 
-#: ../src/ui/theme-viewer.c:416
+#: ../src/ui/theme-viewer.c:425
 msgid "Torn-off Menu"
 msgstr "পৰিবৰ্তনশীল অৱস্থানৰ মেনু"
 
-#: ../src/ui/theme-viewer.c:420
+#: ../src/ui/theme-viewer.c:429
 msgid "Border"
 msgstr "Border"
 
-#: ../src/ui/theme-viewer.c:748
+#: ../src/ui/theme-viewer.c:757
 #, c-format
 msgid "Button layout test %d"
 msgstr "বুটাম বিন্যাসৰ পৰীক্ষা %d"
 
-#: ../src/ui/theme-viewer.c:777
+#: ../src/ui/theme-viewer.c:786
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "এটা উইন্ডো ফ্ৰেম নিৰ্মাণৰ বাবে %g মিলিসেকেন্ড"
 
-#: ../src/ui/theme-viewer.c:821
+#: ../src/ui/theme-viewer.c:830
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "ব্যৱহাৰপদ্ধতি: marco-theme-viewer [THEMENAME]\n"
 
-#: ../src/ui/theme-viewer.c:828
+#: ../src/ui/theme-viewer.c:837
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "থিম লোড কৰোঁতে সমস্যা: %s\n"
 
-#: ../src/ui/theme-viewer.c:834
+#: ../src/ui/theme-viewer.c:843
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" থিম %g সেকেন্ডে লোড কৰা হৈছে\n"
 
-#: ../src/ui/theme-viewer.c:877
+#: ../src/ui/theme-viewer.c:886
 msgid "Normal Title Font"
 msgstr "স্বাভাবিক মাপতৰ শিৰোনামে ব্যৱহৃত ফন্ট"
 
-#: ../src/ui/theme-viewer.c:883
+#: ../src/ui/theme-viewer.c:892
 msgid "Small Title Font"
 msgstr "ছোট মাপতৰ শিৰোনামে ব্যৱহৃত ফন্ট"
 
-#: ../src/ui/theme-viewer.c:889
+#: ../src/ui/theme-viewer.c:898
 msgid "Large Title Font"
 msgstr "বড় মাপতৰ শিৰোনামে ব্যৱহৃত ফন্ট"
 
-#: ../src/ui/theme-viewer.c:894
+#: ../src/ui/theme-viewer.c:903
 msgid "Button Layouts"
 msgstr "বুটামৰ বিন্যাস"
 
-#: ../src/ui/theme-viewer.c:899
+#: ../src/ui/theme-viewer.c:908
 msgid "Benchmark"
 msgstr "Benchmark"
 
-#: ../src/ui/theme-viewer.c:946
+#: ../src/ui/theme-viewer.c:955
 msgid "Window Title Goes Here"
 msgstr "উইন্ডো শিৰোনাম চিহ্নিত স্থানে স্থাপিত হ'ব"
 
-#: ../src/ui/theme-viewer.c:1050
+#: ../src/ui/theme-viewer.c:1059
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
@@ -2203,39 +2204,39 @@ msgid ""
 "frame)\n"
 msgstr "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g seconds wall clock time including X server resources (%g milliseconds per frame)\n"
 
-#: ../src/ui/theme-viewer.c:1269
+#: ../src/ui/theme-viewer.c:1278
 msgid "position expression test returned TRUE but set error"
 msgstr "অৱস্থান চিহ্নকৰ্তা Xপ্ৰেশনৰ পৰীক্ষা দ্বাৰা মান TRUE উল্লিখিত হ'লেও ত্ৰুটি নিৰ্ধাৰিত হৈছে"
 
-#: ../src/ui/theme-viewer.c:1271
+#: ../src/ui/theme-viewer.c:1280
 msgid "position expression test returned FALSE but didn't set error"
 msgstr "অৱস্থান চিহ্নকৰ্তা Xপ্ৰেশনৰ পৰীক্ষা দ্বাৰা মান FALSE উল্লিখিত হ'লেও ত্ৰুটি নিৰ্ধাৰিত নহয়"
 
-#: ../src/ui/theme-viewer.c:1275
+#: ../src/ui/theme-viewer.c:1284
 msgid "Error was expected but none given"
 msgstr "ত্ৰুটি প্ৰত্যাশিত কিন্তু উল্লিখিত নহয়"
 
-#: ../src/ui/theme-viewer.c:1277
+#: ../src/ui/theme-viewer.c:1286
 #, c-format
 msgid "Error %d was expected but %d given"
 msgstr "ত্ৰুটি %d প্ৰত্যাশিত %d প্ৰদত্ত"
 
-#: ../src/ui/theme-viewer.c:1283
+#: ../src/ui/theme-viewer.c:1292
 #, c-format
 msgid "Error not expected but one was returned: %s"
 msgstr "ত্ৰুটি প্ৰত্যাশিত নহয় কিন্তু প্ৰাপ্ত: %s"
 
-#: ../src/ui/theme-viewer.c:1287
+#: ../src/ui/theme-viewer.c:1296
 #, c-format
 msgid "x value was %d, %d was expected"
 msgstr "x'ৰ মান %d, %d প্ৰত্যাশিত"
 
-#: ../src/ui/theme-viewer.c:1290
+#: ../src/ui/theme-viewer.c:1299
 #, c-format
 msgid "y value was %d, %d was expected"
 msgstr "y'ৰ মান %d, %d প্ৰত্যাশিত"
 
-#: ../src/ui/theme-viewer.c:1355
+#: ../src/ui/theme-viewer.c:1364
 #, c-format
 msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
 msgstr "%d কো-ওৰ্ডিনেট Xপ্ৰেশন %g সেকেন্ডে বিশ্লেষণ কৰা হৈছে (গড় %g সেকেন্ড)\n"

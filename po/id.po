@@ -6,17 +6,18 @@
 # Anton Toni Agung <vdrive6@gmail.com>, 2015
 # airinuxazis <azis.naufal@gmail.com>, 2012
 # Ibnu Daru Aji, 2014
+# hpiece 8 <hpiece8@gmail.com>, 2016
 # Ibnu Daru Aji, 2013
 # La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2015
-# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2012
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2014
+# Mohamad Hasan Al Banna <se7entime@protonmail.com>, 2012
+# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2014,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-06 13:09+0000\n"
-"Last-Translator: Anton Toni Agung <vdrive6@gmail.com>\n"
+"POT-Creation-Date: 2016-03-09 17:44+0300\n"
+"PO-Revision-Date: 2016-03-28 16:13+0000\n"
+"Last-Translator: Willy Sudiarto Raharjo <willysr@slackware-id.org>\n"
 "Language-Team: Indonesian (http://www.transifex.com/mate/MATE/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -260,12 +261,12 @@ msgstr "Maksimalkan ukuran jendela secara horisontal"
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:137
 msgid "Tile window to east (right) side of screen"
-msgstr ""
+msgstr "Geser jendela ke bagian timur (kanan) layar"
 
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:138
 msgid "Tile window to west (left) side of screen"
-msgstr ""
+msgstr "Geser jendela ke bagian barat (kiri) layar"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 #: ../src/org.mate.marco.gschema.xml.h:139
@@ -656,13 +657,14 @@ msgid "Determines whether Marco is a compositing manager."
 msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:41
-msgid "Fast Alt-Tab Enabled"
-msgstr "Alt+Tab cepat aktif"
+msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
+msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
-"Whether or not fast alt-tabbing is used when the compositing manager is "
-"enabled."
+"If set to true, no window thumbnails will be displayed in the alt-tab popup "
+"window when the compositing manager is enabled. Application icons will be "
+"displayed instead."
 msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:43
@@ -743,15 +745,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
-msgstr ""
+msgstr "Nama area kerja"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Nama area kerja."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Run a defined command"
-msgstr ""
+msgstr "Jalankan perintah yang sudah terdefinisi"
 
 #: ../src/org.mate.marco.gschema.xml.h:58
 msgid ""
@@ -1162,7 +1164,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5797
+#: ../src/core/window.c:5764
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1175,7 +1177,7 @@ msgstr "Jendela %s menyetel SM_CLIENT_ID pada dirinya sendiri, padahal seharusny
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6362
+#: ../src/core/window.c:6329
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1386,7 +1388,7 @@ msgstr "Area Kerja 1_0"
 msgid "Workspace %s%d"
 msgstr "Area Kerja %s%d"
 
-#: ../src/ui/menu.c:391
+#: ../src/ui/menu.c:395
 msgid "Move to Another _Workspace"
 msgstr "Pindahkan ke Area Kerja _Lain"
 
@@ -1472,7 +1474,7 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:113
+#: ../src/ui/resizepopup.c:120
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -1579,135 +1581,135 @@ msgstr "Faktor bayangan \"%s\" pada warna berbayang bernilai negatif"
 msgid "Could not parse color \"%s\""
 msgstr "Tidak dapat membaca warna \"%s\""
 
-#: ../src/ui/theme.c:1848
+#: ../src/ui/theme.c:1852
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Ekspresi koordinat berisi karakter '%s' yang tidak diperbolehkan"
 
-#: ../src/ui/theme.c:1875
+#: ../src/ui/theme.c:1879
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "Ekspresi koordinat berisi angka floating point '%s' yang tidak dapat dibaca"
 
-#: ../src/ui/theme.c:1889
+#: ../src/ui/theme.c:1893
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Ekspresi koordinat berisi integer '%s' yang tidak dapat dibaca"
 
-#: ../src/ui/theme.c:2011
+#: ../src/ui/theme.c:2015
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "Ekspresi koordinat berisi operator tak dikenal pada awal teks berikut: \"%s\""
 
-#: ../src/ui/theme.c:2068
+#: ../src/ui/theme.c:2072
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Ekspresi koordinat kosong atau tidak dapat dimengerti"
 
-#: ../src/ui/theme.c:2179 ../src/ui/theme.c:2189 ../src/ui/theme.c:2223
+#: ../src/ui/theme.c:2183 ../src/ui/theme.c:2193 ../src/ui/theme.c:2227
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Ekspresi koordinat menghasilkan pembagian dengan nol"
 
-#: ../src/ui/theme.c:2231
+#: ../src/ui/theme.c:2235
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "Ekspresi koordinat menggunakan operator mod pada angka bilangan nyata"
 
-#: ../src/ui/theme.c:2287
+#: ../src/ui/theme.c:2291
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Ekspresi koordinat menggunakan operator \"%s\" tanpa adanya operan"
 
-#: ../src/ui/theme.c:2296
+#: ../src/ui/theme.c:2300
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Ekspresi koordinat menggunakan operand tanpa operator"
 
-#: ../src/ui/theme.c:2304
+#: ../src/ui/theme.c:2308
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Ekspresi koordinat diakhiri dengan operator, seharusnya diakhiri dengan operand"
 
-#: ../src/ui/theme.c:2314
+#: ../src/ui/theme.c:2318
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "Ekspresi koordinat memiliki operator \"%c\" diikuti operator \"%c\" tanpa adanya operand di antarany"
 
-#: ../src/ui/theme.c:2461 ../src/ui/theme.c:2502
+#: ../src/ui/theme.c:2465 ../src/ui/theme.c:2506
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "Ada variabel atau konstanta \"%s\" tidak diketahui pada ekspresi koordinat"
 
-#: ../src/ui/theme.c:2556
+#: ../src/ui/theme.c:2560
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Ekspresi koordinat melampaui batasannya."
 
-#: ../src/ui/theme.c:2585
+#: ../src/ui/theme.c:2589
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Terdapat kurung tutup tanpa kurung buka pada ekspresi koordinat"
 
-#: ../src/ui/theme.c:2649
+#: ../src/ui/theme.c:2653
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Terdapat kurung buka tanpa kurung tutup pada ekspresi koordinat "
 
-#: ../src/ui/theme.c:2660
+#: ../src/ui/theme.c:2664
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Ekspresi koordinat sepertinya tidak memiliki operator atau operan"
 
-#: ../src/ui/theme.c:2864 ../src/ui/theme.c:2884 ../src/ui/theme.c:2904
+#: ../src/ui/theme.c:2868 ../src/ui/theme.c:2888 ../src/ui/theme.c:2908
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Tema berisi suatu ekspresi yang menghasilkan galat: %s\n"
 
-#: ../src/ui/theme.c:4782
+#: ../src/ui/theme.c:4786
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> tidak disebutkan pada gaya frame ini"
 
-#: ../src/ui/theme.c:5434 ../src/ui/theme.c:5459
+#: ../src/ui/theme.c:5438 ../src/ui/theme.c:5463
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> tidak ada"
 
-#: ../src/ui/theme.c:5503
+#: ../src/ui/theme.c:5507
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Gagal membuka tema \"%s\": %s\n"
 
-#: ../src/ui/theme.c:5633 ../src/ui/theme.c:5640 ../src/ui/theme.c:5647
-#: ../src/ui/theme.c:5654 ../src/ui/theme.c:5661
+#: ../src/ui/theme.c:5637 ../src/ui/theme.c:5644 ../src/ui/theme.c:5651
+#: ../src/ui/theme.c:5658 ../src/ui/theme.c:5665
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Tidak ada <%s> yang ditentukan untuk tema \"%s\""
 
-#: ../src/ui/theme.c:5669
+#: ../src/ui/theme.c:5673
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "Tidak ada gaya frame untuk tipe window \"%s\" pada tema \"%s\". Tambah dulu elemen <window type=\"%s\" style_set=\"whatever\"/>"
 
-#: ../src/ui/theme.c:6146 ../src/ui/theme.c:6208 ../src/ui/theme.c:6271
+#: ../src/ui/theme.c:6150 ../src/ui/theme.c:6212 ../src/ui/theme.c:6275
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "Konstanta buatan pengguna harus dimulai dengan huruf besar: \"%s\" tidak"
 
-#: ../src/ui/theme.c:6154 ../src/ui/theme.c:6216 ../src/ui/theme.c:6279
+#: ../src/ui/theme.c:6158 ../src/ui/theme.c:6220 ../src/ui/theme.c:6283
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Konstanta \"%s\" telah didefinisikan sebelumnya"
@@ -2057,23 +2059,23 @@ msgstr "Gagal menemukan berkas yang valid bagi tema %s\n"
 
 #: ../src/ui/theme-viewer.c:105
 msgid "_Windows"
-msgstr ""
+msgstr "_Jendela"
 
 #: ../src/ui/theme-viewer.c:106
 msgid "_Dialog"
-msgstr ""
+msgstr "_Dialog"
 
 #: ../src/ui/theme-viewer.c:107
 msgid "_Modal dialog"
-msgstr ""
+msgstr "Dialog _modal"
 
 #: ../src/ui/theme-viewer.c:108
 msgid "_Utility"
-msgstr ""
+msgstr "_Utility"
 
 #: ../src/ui/theme-viewer.c:109
 msgid "_Splashscreen"
-msgstr ""
+msgstr "_Splashscreen"
 
 #: ../src/ui/theme-viewer.c:110
 msgid "_Top dock"
@@ -2111,97 +2113,97 @@ msgstr ""
 msgid "This is a demo button with a 'quit' icon"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:259
+#: ../src/ui/theme-viewer.c:263
 msgid "This is a sample message in a sample dialog"
 msgstr "Ini contoh pesan pada suatu dialog"
 
-#: ../src/ui/theme-viewer.c:347
+#: ../src/ui/theme-viewer.c:351
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Item menu palsu %d\n"
 
-#: ../src/ui/theme-viewer.c:381
+#: ../src/ui/theme-viewer.c:390
 msgid "Border-only window"
 msgstr "Jendela dengan hanya tepi"
 
-#: ../src/ui/theme-viewer.c:383
+#: ../src/ui/theme-viewer.c:392
 msgid "Bar"
 msgstr "Batang"
 
-#: ../src/ui/theme-viewer.c:400
+#: ../src/ui/theme-viewer.c:409
 msgid "Normal Application Window"
 msgstr "Jendela Aplikasi Normal"
 
-#: ../src/ui/theme-viewer.c:404
+#: ../src/ui/theme-viewer.c:413
 msgid "Dialog Box"
 msgstr "Kotak Dialog"
 
-#: ../src/ui/theme-viewer.c:408
+#: ../src/ui/theme-viewer.c:417
 msgid "Modal Dialog Box"
 msgstr "Kotak Dialog Modal"
 
-#: ../src/ui/theme-viewer.c:412
+#: ../src/ui/theme-viewer.c:421
 msgid "Utility Palette"
 msgstr "Palet Perkakas"
 
-#: ../src/ui/theme-viewer.c:416
+#: ../src/ui/theme-viewer.c:425
 msgid "Torn-off Menu"
 msgstr "Menu Dapat Dilepas"
 
-#: ../src/ui/theme-viewer.c:420
+#: ../src/ui/theme-viewer.c:429
 msgid "Border"
 msgstr "Batas"
 
-#: ../src/ui/theme-viewer.c:748
+#: ../src/ui/theme-viewer.c:757
 #, c-format
 msgid "Button layout test %d"
 msgstr "Tes komposisi tombol %d"
 
-#: ../src/ui/theme-viewer.c:777
+#: ../src/ui/theme-viewer.c:786
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "lama waktu menggambar satu bingkai jendela %g milidetik"
 
-#: ../src/ui/theme-viewer.c:821
+#: ../src/ui/theme-viewer.c:830
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Cara pakai: marco-theme-viewer [NAMA TEMA]\n"
 
-#: ../src/ui/theme-viewer.c:828
+#: ../src/ui/theme-viewer.c:837
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Ada galat saat memuat tema: %s\n"
 
-#: ../src/ui/theme-viewer.c:834
+#: ../src/ui/theme-viewer.c:843
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Tema \"%s\" dibuka dalam %g detik\n"
 
-#: ../src/ui/theme-viewer.c:877
+#: ../src/ui/theme-viewer.c:886
 msgid "Normal Title Font"
 msgstr "Fonta Judul Normal"
 
-#: ../src/ui/theme-viewer.c:883
+#: ../src/ui/theme-viewer.c:892
 msgid "Small Title Font"
 msgstr "Fonta Judul Kecil"
 
-#: ../src/ui/theme-viewer.c:889
+#: ../src/ui/theme-viewer.c:898
 msgid "Large Title Font"
 msgstr "Fonta Judul Besar"
 
-#: ../src/ui/theme-viewer.c:894
+#: ../src/ui/theme-viewer.c:903
 msgid "Button Layouts"
 msgstr "Tata Letak Tombol"
 
-#: ../src/ui/theme-viewer.c:899
+#: ../src/ui/theme-viewer.c:908
 msgid "Benchmark"
 msgstr "Pengukuran"
 
-#: ../src/ui/theme-viewer.c:946
+#: ../src/ui/theme-viewer.c:955
 msgid "Window Title Goes Here"
 msgstr "Ini tempat judul jendela"
 
-#: ../src/ui/theme-viewer.c:1050
+#: ../src/ui/theme-viewer.c:1059
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
@@ -2209,39 +2211,39 @@ msgid ""
 "frame)\n"
 msgstr "%d frame dibuat dalam %g detik dalam waktu klien (%g milidetik per frame) dan %g detik dalam waktu sebenarnya (%g milidetik per frame)\n"
 
-#: ../src/ui/theme-viewer.c:1269
+#: ../src/ui/theme-viewer.c:1278
 msgid "position expression test returned TRUE but set error"
 msgstr "tes ekspresi posisi mengembalikan TRUE tapi justru ada galat"
 
-#: ../src/ui/theme-viewer.c:1271
+#: ../src/ui/theme-viewer.c:1280
 msgid "position expression test returned FALSE but didn't set error"
 msgstr "tes ekspresi posisi mengembalikan FALSE tapi tidak ada galat"
 
-#: ../src/ui/theme-viewer.c:1275
+#: ../src/ui/theme-viewer.c:1284
 msgid "Error was expected but none given"
 msgstr "Seharusnya ada galat, tapi ini kok tidak ada"
 
-#: ../src/ui/theme-viewer.c:1277
+#: ../src/ui/theme-viewer.c:1286
 #, c-format
 msgid "Error %d was expected but %d given"
 msgstr "Seharunya ada galat %d, tapi yang terjadi %d"
 
-#: ../src/ui/theme-viewer.c:1283
+#: ../src/ui/theme-viewer.c:1292
 #, c-format
 msgid "Error not expected but one was returned: %s"
 msgstr "Seharusnya tidak ada galat, tapi ini tiba-tiba ada error: %s"
 
-#: ../src/ui/theme-viewer.c:1287
+#: ../src/ui/theme-viewer.c:1296
 #, c-format
 msgid "x value was %d, %d was expected"
 msgstr "nilai x sebelumnya %d, padahal seharusnya %d"
 
-#: ../src/ui/theme-viewer.c:1290
+#: ../src/ui/theme-viewer.c:1299
 #, c-format
 msgid "y value was %d, %d was expected"
 msgstr "nilai y sebelumnya %d, padahal seharusnya %d"
 
-#: ../src/ui/theme-viewer.c:1355
+#: ../src/ui/theme-viewer.c:1364
 #, c-format
 msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
 msgstr "ekspresi koordinat %d diambil dalam %g detik (rata-rata %g detik)\n"

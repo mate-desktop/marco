@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2015-11-06 11:58+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-09 17:44+0300\n"
+"PO-Revision-Date: 2016-03-10 02:06+0000\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/mate/MATE/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -169,7 +169,7 @@ msgstr "Пребацује се на радни простор испод тек
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:76
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Пребацује се на претходно изабрани радни простор"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:104
@@ -254,12 +254,12 @@ msgstr "Увећава прозор водоравно"
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:137
 msgid "Tile window to east (right) side of screen"
-msgstr ""
+msgstr "Поплочава прозор на источну (десну) страну екрана"
 
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:138
 msgid "Tile window to west (left) side of screen"
-msgstr ""
+msgstr "Поплочава прозор на западну (леву) страну екрана"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 #: ../src/org.mate.marco.gschema.xml.h:139
@@ -388,7 +388,7 @@ msgstr "Премешта прозор један радни простор на 
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Измењивач који се користи за радње притиска измењеног прозора"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -397,22 +397,22 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
+msgstr "Притисак на прозор док држите овај измењивачки тастер ће преместити прозор (леви притисак), променити величину прозора (средњи притисак), или приказати изборник прозора (десни притисак). Радње средњег и десног притиска могу бити замењене помоћу кључа „resize_with_right_button“. Измењивач је израза као „&lt;Alt&gt;“ или „&lt;Super&gt;“ на пример."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "Да ли ће мењати величину десним дугметом"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr ""
+msgstr "Изаберите ово да промените величину десним тастером и да прикажете изборник средњим дугметом док држите притиснут тастер дат кључем „mouse_button_modifier“; поништите избор да би радио супротно овоме."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Редослед дугмића на траци наслова"
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
@@ -423,11 +423,11 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr ""
+msgstr "Распоред дугмића на траци наслова. Вредност треба да буде ниска, као на пример: „menu:minimize,maximize,spacer,close“; две тачке раздвајају леви угао прозора од десног, а дугмићи су раздвојени зарезима. Дуплирање дугмића није дозвољено. Непознати називи дугмића се занемарују тако да дугмићи могу да буду додати у будућим издањима марка а да не наруше подешавања старијих издања. Могу се користити специјалне ознаке за убацивање простора између два суседна дугмета."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Window focus mode"
-msgstr ""
+msgstr "Начин фокуса прозора"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -436,11 +436,11 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr ""
+msgstr "Начин фокусирања прозора показује како ће прозори бити активирани. Има три могуће вредности: „click“ — значи да прозор мора бити притиснут да би добио фокус, „sloppy“ — значи да прозор добија фокус када показивач миша уђе у прозор и „mouse“ — значи да ће прозор бити фокусиран када показивачка стрелица миша уђе у прозор и бити одфокусиран када стрелица изађе из прозора."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Контролише како нови прозори добијају фокус"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -448,11 +448,11 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr ""
+msgstr "Ова опција пружа додатну контролу над начином на који нови прозори улазе у фокус. Има две могуће вредности: „smart“ — поставља нормални режим фокуса и „strict“ — када прозори покренути из командне линије не улазе у фокус."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Да ли издизадње треба да буде бочно-дејство других међудејстава корисника"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -474,11 +474,11 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Поништавање ове опције може проузроковати неисправно понашање програма, тако да није препоручљиво. Многе радње (нпр. клик усред области клијента, померање или промена величине прозора) обично уједно и издижу прозор. Искључивање ове опције, а што се не препоручује, ће издвојити подизање прозора од осталих радњи и занемариће програмске захтеве за издизање прозора. Погледајте „http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6“. Чак и уколико је ова опција искључена, прозоре можете издизати левим кликом било где унутар прозора уз држање тастера Алт, обичним кликом на траку наслова прозора или преко посебних порука из пребацивача радних површина (као што је укључивање захтева из програмчета са списком задатака). Ова опција је тренутно искључена у режиму „click-to-focus“ (клик за фокус). Списак начина за подизање прозора када је искључено „raise_on_click“ (подигни на клик) не укључује захтеве из програма за подизање прозора, те ће такви захтеви бити занемарени без обзира на разлог. Уколико пишете сопствени програм и добијете примедбе од стране корисника како ваш програм не ради са овом опцијом искљученом, реците им да је њихова кривица за неисправан рад управника прозорима и да поново изаберу ову опцију или да се навикну на пропратне појаве."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Радња двоструког притиска на траку наслова"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -490,11 +490,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Ова могућност одређује дејство дуплог притиска на насловну траку прозора. Тренутно исправне опције су: „toggle_shade“ — што ће замотати/одмотати прозор, „toggle_maximize“ — што ће увећати или поништити увећање прозора, „toggle_maximize_horizontally“ и „toggle_maximize_vertically“ — што ће увећати или поништити увећање прозора само хоризонтално или усправно, „minimize“ — што ће умањити прозор, „shade“ — што ће замотати прозор, „menu“ — што ће приказати изборник прозора, „lower“ — што ће поставити прозор иза осталих и „none“ — чиме се не обавља никаква радња."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Радња средњег притиска на траку наслова"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -506,11 +506,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Ова могућност одређује дејство средњег притиска на насловну траку прозора. Тренутно исправне опције су: „toggle_shade“ — што ће замотати/одмотати прозор, „toggle_maximize“ — што ће увећати или поништити увећање прозора, „toggle_maximize_horizontally“ и „toggle_maximize_vertically“ — што ће увећати или поништити увећање прозора само хоризонтално или усправно, „minimize“ — што ће умањити прозор, „shade“ — што ће замотати прозор, „menu“ — што ће приказати изборник прозора, „lower“ — што ће поставити прозор иза осталих и „none“ — чиме се не обавља никаква радња."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Радња десног притиска на траку наслова"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -522,11 +522,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Ова могућност одређује дејство десног клика на насловну траку прозора. Тренутно исправне опције су: „toggle_shade“ — што ће замотати/одмотати прозор, „toggle_maximize“ — што ће увећати или поништити увећање прозора, „toggle_maximize_horizontally“ и „toggle_maximize_vertically“ — што ће увећати или поништити увећање прозора само хоризонтално или усправно, „minimize“ — што ће умањити прозор, „shade“ — што ће замотати прозор, „menu“ — што ће приказати изборник прозора, „lower“ — што ће поставити прозор иза осталих и „none“ — чиме се не обавља никаква радња."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Самостално издиже фокусирани прозор"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -534,41 +534,41 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
+msgstr "Ако је постављено на тачно, а начин фокуса је или „sloppy“ или „mouse“ онда ће прозор у фокусу бити аутоматски подигнут након истека временског периода који је подешен преко „auto_raise_delay“ кључа. Ово није повезано са подизањем прозора на клик, нити са фокусирањем у току превуци-и-испусти."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Застој у милисекундама за опцију самосталног издизања"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr ""
+msgstr "Временски период пре подизања прозора ако је опција „auto_raise“ изабрана. Период се изражава у хиљадитим деловима секунде."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Current theme"
-msgstr ""
+msgstr "Текућа тема"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "Тема одређује изглед ивица прозора, траке наслова, и тако редом."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Користи уобичајени словни лик система у насловима прозора"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
+msgstr "Ако је изабрано, занемарује се опција „titlebar_font“, и користи се стандардни словни лик програма за наслове прозора."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Window title font"
-msgstr ""
+msgstr "Словни лик наслова прозора"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
@@ -576,22 +576,22 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr ""
+msgstr "Ниска која описује словни лик за насловну траку прозора. Величина из описа ће бити коришћена само ако је опција „titlebar_font_size“ подешена на 0. Такође, ова опција је искључена ако је опција „titlebar_uses_desktop_font“ постављена на тачно."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Број радних простора"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
+msgstr "Број радних простора. Мора бити већи од нуле, и имати фиксиран максимум како бисте спречили да случајно уништите радну површину тражећи превише радних простора."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Workspace wrap style"
-msgstr ""
+msgstr "Стил завијања радног простора"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -603,32 +603,32 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr ""
+msgstr "Стил завијања се користи да одреди како ће се вршити пребацивање из једног радног простора на други на ивици пребацивача радних простора. Када је подешено на „no wrap“, ништа се неће догодити ако покушате да се пребаците на радни простор који прелази преко ивице пребацивача радних простора. Ако је подешено на „classic“, користи се старо понашање марка: крај једног реда води на почетак следећег а крај колоне води на почетак следеће. Ако је подешено на „toroidal“, радни простори су повезани као прстенови: крај сваког реда води на почетак истог а крај сваке колоне води на сам крај исте."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Укључује визуелне звуке"
 
 #: ../src/org.mate.marco.gschema.xml.h:34
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
+msgstr "Укључује визуелни приказ када програм или систем „зазвони“; корисно у бучним условима."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Системско звонце се чује"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
+msgstr "Одређује да ли програми или систем могу да пусте звучне сигнале; може се користити уз „визуелне звуке“ ради дозвољавања тихих звукова."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Врста визуелног звонца"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
@@ -639,29 +639,30 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr ""
+msgstr "Говори Марку како да спроведе визуелну индикацију када системско звонце или неки други индикатор програма зазвони. Тренутно су могуће две вредности, „fullscreen“ којим цео екран трепери црно-бело, и „frame_flash“ када трепери само насловна трака прозора који је зазвонио. Уколико није познат програм који је зазвонио (као што је то обично случај са „системским звонцетом“), трепереће насловна трака прозора који је тренутно у жижи."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Управник слагања"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Одређује да ли је Марко управник слагања."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
-msgid "Fast Alt-Tab Enabled"
-msgstr ""
+msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
+msgstr "Брзи Алт-Раб са управником слагања (искључује умањени приказ)"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
-"Whether or not fast alt-tabbing is used when the compositing manager is "
-"enabled."
-msgstr ""
+"If set to true, no window thumbnails will be displayed in the alt-tab popup "
+"window when the compositing manager is enabled. Application icons will be "
+"displayed instead."
+msgstr "Ако је изабрано, ниједан умањени приказ прозора неће бити приказан у искачућем прозору алт-таба када је укључен управник слагања. Уместо тога биће приказана иконица програма."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "Ако је изабрано, трампи употребљивост зарад мање употребе ресурса"
 
 #: ../src/org.mate.marco.gschema.xml.h:44
 msgid ""
@@ -670,12 +671,12 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr ""
+msgstr "Ако је изабрано, Марко ће кориснику приказати мање података и мање осећаја о „непосредном управљању“, употребом линија, избегавањем анимација или другим средствима. Ово је значајни недостатак по питању употребљивости за многе кориснике, али може омогућити старим програмима и терминалским серверима да раде када би иначе били непрактични. Такође, употреба линија је онемогућена када је укључена приступачност."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "(Није примењено) Навигација ради у контексту програма а не прозора"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -686,11 +687,11 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
+msgstr "Ако је изабрано, Марко ради у контексту програма, а не прозора. Концепт је помало чудан, али у општем случају поставке базиране на програму су више сличне Мак систему, а мање сличне Виндоуз систему. Када поставите прозор у фокус у овом начину рада, сви прозори те апликације ће бити издигнути. Такође, у овом начину рада, фокусни клик се не шаље прозорима других програма. Такође овај начин рада је увелико недовршен у садашњим издањима."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "Искључује нефункционалности које захтевају стари или оштећени програми"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -698,32 +699,32 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr ""
+msgstr "Неки програми не поштују спецификације на начин који доводи до неисправног функционисања управника прозора. Ово подешавање поставља Марко у строг режим рада који доприноси правилнијем понашању, под условом да се не покушава покретање неисправних програма."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Одређује да ли се нови прозори стварају на средишту екрана"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Ако је изабрано, нови прозори се отварају у средишту екрана. У противном, отварају се на горњој левој страни екрана."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
-msgstr ""
+msgstr "Да ли да укључи поплочавање једно поред другог"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window."
-msgstr ""
+msgstr "Ако је укључено, испуштање прозора по ивицама екрана их увећава усправно и мења им величину по хоризонтали тако да покрију половину расположивог простора. Превлачење и испуштање прозора на врх увећава прозор."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
-msgstr ""
+msgstr "Режим постављања прозора"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -733,19 +734,19 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "Режим постављања прозора указује како се постављају нови прозори. „automatic“ — значи да систем самостално бира положај у зависности од расположивог простора на радној површи, или једноставном каскадом ако нема простора; „pointer“ — значи да се нови прозори постављају у складу са положајем показивача миша; „manual“ — значи да корисник мора ручно да постави нови прозор помоћу миша или тастатуре."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
-msgstr ""
+msgstr "Назив радног простора"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Назив радног простора."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Run a defined command"
-msgstr ""
+msgstr "Покреће одређену наредбу"
 
 #: ../src/org.mate.marco.gschema.xml.h:58
 msgid ""
@@ -755,7 +756,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Комбинација тастера која покреће одговарајуће означену наредбу у „/apps/marco/keybinding_commands“ кључу. Облик записа је „&lt;Control&gt;a“ или „&lt;Shift&gt;&lt;Alt&gt;F1“. Програм за обраду је доста слободан и дозвољава велика или мала слова, као и скраћенице попут „&lt;Ctl&gt;“ или „&lt; Ctrl&gt;“. Ако подесите опцију на нарочити низ знакова „disabled“, онда неће бити коришћена ниједна комбинација тастера за ову акцију."
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
@@ -764,7 +765,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Облик записа је „&lt;Control&gt;a“ или „&lt;Shift&gt;&lt;Alt&gt;F1“. Програм за обраду је доста слободан и дозвољава велика или мала слова, као и скраћенице попут „&lt;Ctl&gt;“ или „&lt; Ctrl&gt;“. Ако подесите опцију на нарочити низ знакова „disabled“, онда неће бити коришћена ниједна комбинација тастера за ову акцију."
 
 #: ../src/org.mate.marco.gschema.xml.h:78
 msgid ""
@@ -775,75 +776,75 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr ""
+msgstr "Облик записа је „&lt;Control&gt;a“ или „&lt;Shift&gt;&lt;Alt&gt;F1“. Програм за обраду је доста слободан и дозвољава велика или мала слова, као и скраћенице попут „&lt;Ctl&gt;“ или „&lt; Ctrl&gt;“. Ако подесите опцију на нарочити низ знакова „disabled“, онда неће бити коришћена ниједна комбинација тастера за ову акцију. Можете обрнути комбинацију тастера притиском на „shift“, стога тастер „shift“ не може бити један од оних које овде користе."
 
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Премешта се уназад између прозора програма, користећи искачући прозор"
 
 #: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Премешта се уназад између прозора, користећи искачући прозор"
 
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Премешта се између прозора на свим радним просторима, користећи искачући прозор"
 
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Премешта се уназад између прозора на свим радним просторима, користећи искачући прозор"
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Премешта се уназад између панела и радне површи, користећи искачући прозор"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Премешта се уназад између прозора програма одмах"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Премешта се уназад између прозора одмах"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Премешта се уназад између панела и радне површи одмах"
 
 #: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Наредбе за покретање као одговор на свезе тастера"
 
 #: ../src/org.mate.marco.gschema.xml.h:99
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr ""
+msgstr "Кључ „/apps/marco/global_keybindings/run_command_N“ одређује комбинације тастера које одговарају овим наредбама. Притиском комбинације тастера за покрени_наредбу_Н ће извршити наредбу_Н."
 
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "The screenshot command"
-msgstr ""
+msgstr "Наредба за снимак екрана"
 
 #: ../src/org.mate.marco.gschema.xml.h:101
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr ""
+msgstr "Кључ „/apps/marco/global_keybindings/run_command_screenshot“ одређује комбинацију тастера која покреће наредбу наведену овим подешавањем."
 
 #: ../src/org.mate.marco.gschema.xml.h:102
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Наредба снимка екрана прозора"
 
 #: ../src/org.mate.marco.gschema.xml.h:103
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr ""
+msgstr "Кључ „/apps/marco/global_keybindings/run_command_window_screenshot“ одређује комбинацију тастера која покреће наредбу наведену овим подешавањем."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Одлучује да ли ће прозор увек бити видљив преко других прозора"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -1121,7 +1122,7 @@ msgstr "Нисам успео да отворим дневник грешака:
 #: ../src/core/util.c:111
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
-msgstr "Нисам успео да „fdopen()“ датотеку дневника „%s“: %s\n"
+msgstr "Функција „fdopen()“ није успела за датотеку дневника „%s“: %s\n"
 
 #: ../src/core/util.c:117
 #, c-format
@@ -1156,7 +1157,7 @@ msgid "Marco"
 msgstr "Метасити"
 
 #. first time through
-#: ../src/core/window.c:5797
+#: ../src/core/window.c:5764
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1169,7 +1170,7 @@ msgstr "Прозор „%s“ је поставио „SM_CLIENT_ID“ на са
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6362
+#: ../src/core/window.c:6329
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1380,7 +1381,7 @@ msgstr "1_0° радни простор"
 msgid "Workspace %s%d"
 msgstr "%s%d° радни простор"
 
-#: ../src/ui/menu.c:391
+#: ../src/ui/menu.c:395
 msgid "Move to Another _Workspace"
 msgstr "Премести на други _радни простор"
 
@@ -1466,7 +1467,7 @@ msgstr "Мод5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:113
+#: ../src/ui/resizepopup.c:120
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -1573,135 +1574,135 @@ msgstr "Чинилац сенке „%s“ у засенченој боји је
 msgid "Could not parse color \"%s\""
 msgstr "Не могу да обрадим боју „%s“"
 
-#: ../src/ui/theme.c:1848
+#: ../src/ui/theme.c:1852
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Израз са координатама садржи знак „%s“ што није дозвољено"
 
-#: ../src/ui/theme.c:1875
+#: ../src/ui/theme.c:1879
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "Израз са координатама садржи децимални број „%s“ што не може бити обрађено"
 
-#: ../src/ui/theme.c:1889
+#: ../src/ui/theme.c:1893
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Израз са координатама садржи цели број „%s“ што не може бити обрађено"
 
-#: ../src/ui/theme.c:2011
+#: ../src/ui/theme.c:2015
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "Израз са координатама садржи непознати оператор на почетку овог текста: „%s“"
 
-#: ../src/ui/theme.c:2068
+#: ../src/ui/theme.c:2072
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Израз са координатама је био празан или неразумљив"
 
-#: ../src/ui/theme.c:2179 ../src/ui/theme.c:2189 ../src/ui/theme.c:2223
+#: ../src/ui/theme.c:2183 ../src/ui/theme.c:2193 ../src/ui/theme.c:2227
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Израз са координатама резултира у дељењу нулом"
 
-#: ../src/ui/theme.c:2231
+#: ../src/ui/theme.c:2235
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "Израз са координатам покушава да користи оператор остатка при дељењу за децимални број"
 
-#: ../src/ui/theme.c:2287
+#: ../src/ui/theme.c:2291
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Израз са координатама има оператор „%s“ где је очекиван операнд"
 
-#: ../src/ui/theme.c:2296
+#: ../src/ui/theme.c:2300
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Израз са координатама имаше операнд где је очекиван оператор"
 
-#: ../src/ui/theme.c:2304
+#: ../src/ui/theme.c:2308
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Израз са координатама је завршио са оператором уместо са операндом"
 
-#: ../src/ui/theme.c:2314
+#: ../src/ui/theme.c:2318
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "Израз са координатама има оператор „%c“, а затим оператор „%c“ без операнда између"
 
-#: ../src/ui/theme.c:2461 ../src/ui/theme.c:2502
+#: ../src/ui/theme.c:2465 ../src/ui/theme.c:2506
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "Израз са координатама има непознату променљиву или константу „%s“"
 
-#: ../src/ui/theme.c:2556
+#: ../src/ui/theme.c:2560
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Израз са координатама је био превелики за смештај и обраду."
 
-#: ../src/ui/theme.c:2585
+#: ../src/ui/theme.c:2589
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Израз са координатама има затворене заграде без отворених заграда"
 
-#: ../src/ui/theme.c:2649
+#: ../src/ui/theme.c:2653
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Израз са координатама има отворену заграду без затворене заграде"
 
-#: ../src/ui/theme.c:2660
+#: ../src/ui/theme.c:2664
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Израз са координатама изгледа да нема ни један оператор или операнд"
 
-#: ../src/ui/theme.c:2864 ../src/ui/theme.c:2884 ../src/ui/theme.c:2904
+#: ../src/ui/theme.c:2868 ../src/ui/theme.c:2888 ../src/ui/theme.c:2908
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Тема садржи израз који резултира грешком: %s\n"
 
-#: ../src/ui/theme.c:4782
+#: ../src/ui/theme.c:4786
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> мора бити наведен за овај стил оквира"
 
-#: ../src/ui/theme.c:5434 ../src/ui/theme.c:5459
+#: ../src/ui/theme.c:5438 ../src/ui/theme.c:5463
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Недостаје <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: ../src/ui/theme.c:5503
+#: ../src/ui/theme.c:5507
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Нисам успео да учитам тему „%s“: %s\n"
 
-#: ../src/ui/theme.c:5633 ../src/ui/theme.c:5640 ../src/ui/theme.c:5647
-#: ../src/ui/theme.c:5654 ../src/ui/theme.c:5661
+#: ../src/ui/theme.c:5637 ../src/ui/theme.c:5644 ../src/ui/theme.c:5651
+#: ../src/ui/theme.c:5658 ../src/ui/theme.c:5665
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Није подешен елемент <%s> за тему „%s“"
 
-#: ../src/ui/theme.c:5669
+#: ../src/ui/theme.c:5673
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "Није подешен стил оквира за прозор врсте „%s“ у теми „%s“, додајте елемент <window type=\"%s\" style_set=\"whatever\"/>"
 
-#: ../src/ui/theme.c:6146 ../src/ui/theme.c:6208 ../src/ui/theme.c:6271
+#: ../src/ui/theme.c:6150 ../src/ui/theme.c:6212 ../src/ui/theme.c:6275
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "Константе које је одредио корисник морају почети великим словом; „%s“ не почиње"
 
-#: ../src/ui/theme.c:6154 ../src/ui/theme.c:6216 ../src/ui/theme.c:6279
+#: ../src/ui/theme.c:6158 ../src/ui/theme.c:6220 ../src/ui/theme.c:6283
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Константа „%s“ је већ одређена"
@@ -2051,151 +2052,151 @@ msgstr "Нисам успео да пронађем исправну датот�
 
 #: ../src/ui/theme-viewer.c:105
 msgid "_Windows"
-msgstr ""
+msgstr "_Прозори"
 
 #: ../src/ui/theme-viewer.c:106
 msgid "_Dialog"
-msgstr ""
+msgstr "_Прозорче"
 
 #: ../src/ui/theme-viewer.c:107
 msgid "_Modal dialog"
-msgstr ""
+msgstr "_Важно прозорче"
 
 #: ../src/ui/theme-viewer.c:108
 msgid "_Utility"
-msgstr ""
+msgstr "_Помагало"
 
 #: ../src/ui/theme-viewer.c:109
 msgid "_Splashscreen"
-msgstr ""
+msgstr "_Поздравни екран"
 
 #: ../src/ui/theme-viewer.c:110
 msgid "_Top dock"
-msgstr ""
+msgstr "_Горња лука"
 
 #: ../src/ui/theme-viewer.c:111
 msgid "_Bottom dock"
-msgstr ""
+msgstr "_Доња лука"
 
 #: ../src/ui/theme-viewer.c:112
 msgid "_Left dock"
-msgstr ""
+msgstr "_Лева лука"
 
 #: ../src/ui/theme-viewer.c:113
 msgid "_Right dock"
-msgstr ""
+msgstr "_Десна лука"
 
 #: ../src/ui/theme-viewer.c:114
 msgid "_All docks"
-msgstr ""
+msgstr "_Све луке"
 
 #: ../src/ui/theme-viewer.c:115
 msgid "Des_ktop"
-msgstr ""
+msgstr "Радна _површ"
 
 #: ../src/ui/theme-viewer.c:121
 msgid "Open another one of these windows"
-msgstr ""
+msgstr "Отвори још једно од ових прозора"
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"
-msgstr ""
+msgstr "Ово је пробно дугме са иконицом „отвори“"
 
 #: ../src/ui/theme-viewer.c:125
 msgid "This is a demo button with a 'quit' icon"
-msgstr ""
+msgstr "Ово је пробно дугме са иконицом „изађи“"
 
-#: ../src/ui/theme-viewer.c:259
+#: ../src/ui/theme-viewer.c:263
 msgid "This is a sample message in a sample dialog"
 msgstr "Ово је пример поруке у пробном прозорчету"
 
-#: ../src/ui/theme-viewer.c:347
+#: ../src/ui/theme-viewer.c:351
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Лажна ставка изборника %d\n"
 
-#: ../src/ui/theme-viewer.c:381
+#: ../src/ui/theme-viewer.c:390
 msgid "Border-only window"
 msgstr "Прозор само са ивицом"
 
-#: ../src/ui/theme-viewer.c:383
+#: ../src/ui/theme-viewer.c:392
 msgid "Bar"
 msgstr "Трака"
 
-#: ../src/ui/theme-viewer.c:400
+#: ../src/ui/theme-viewer.c:409
 msgid "Normal Application Window"
 msgstr "Обичан прозор програма"
 
-#: ../src/ui/theme-viewer.c:404
+#: ../src/ui/theme-viewer.c:413
 msgid "Dialog Box"
 msgstr "Прозорче"
 
-#: ../src/ui/theme-viewer.c:408
+#: ../src/ui/theme-viewer.c:417
 msgid "Modal Dialog Box"
 msgstr "Важно прозорче"
 
-#: ../src/ui/theme-viewer.c:412
+#: ../src/ui/theme-viewer.c:421
 msgid "Utility Palette"
 msgstr "Палета алата"
 
-#: ../src/ui/theme-viewer.c:416
+#: ../src/ui/theme-viewer.c:425
 msgid "Torn-off Menu"
 msgstr "Откинути изборник"
 
-#: ../src/ui/theme-viewer.c:420
+#: ../src/ui/theme-viewer.c:429
 msgid "Border"
 msgstr "Ивица"
 
-#: ../src/ui/theme-viewer.c:748
+#: ../src/ui/theme-viewer.c:757
 #, c-format
 msgid "Button layout test %d"
 msgstr "Проба распореда дугмића %d"
 
-#: ../src/ui/theme-viewer.c:777
+#: ../src/ui/theme-viewer.c:786
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g милисекунде за исцртавање оквира једног прозора"
 
-#: ../src/ui/theme-viewer.c:821
+#: ../src/ui/theme-viewer.c:830
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Употреба: „marco-theme-viewer“ [НАЗИВТЕМЕ]\n"
 
-#: ../src/ui/theme-viewer.c:828
+#: ../src/ui/theme-viewer.c:837
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Грешка учитавања теме: %s\n"
 
-#: ../src/ui/theme-viewer.c:834
+#: ../src/ui/theme-viewer.c:843
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Учитана је тема „%s“ за %g секунде\n"
 
-#: ../src/ui/theme-viewer.c:877
+#: ../src/ui/theme-viewer.c:886
 msgid "Normal Title Font"
 msgstr "Обичан словни лик наслова"
 
-#: ../src/ui/theme-viewer.c:883
+#: ../src/ui/theme-viewer.c:892
 msgid "Small Title Font"
 msgstr "Мали словни лик наслова"
 
-#: ../src/ui/theme-viewer.c:889
+#: ../src/ui/theme-viewer.c:898
 msgid "Large Title Font"
 msgstr "Велики словни лик наслова"
 
-#: ../src/ui/theme-viewer.c:894
+#: ../src/ui/theme-viewer.c:903
 msgid "Button Layouts"
 msgstr "Распоред дугмића"
 
-#: ../src/ui/theme-viewer.c:899
+#: ../src/ui/theme-viewer.c:908
 msgid "Benchmark"
 msgstr "Провера брзине"
 
-#: ../src/ui/theme-viewer.c:946
+#: ../src/ui/theme-viewer.c:955
 msgid "Window Title Goes Here"
 msgstr "Овде иде наслов прозора"
 
-#: ../src/ui/theme-viewer.c:1050
+#: ../src/ui/theme-viewer.c:1059
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
@@ -2203,39 +2204,39 @@ msgid ""
 "frame)\n"
 msgstr "Нацртах %d оквира за %g клијентских секунди (%g милисекунди по оквиру) и %g секунди времена на зидном часовнику укључујући и ресурсе Икс сервера (%g милисекунди по оквиру)\n"
 
-#: ../src/ui/theme-viewer.c:1269
+#: ../src/ui/theme-viewer.c:1278
 msgid "position expression test returned TRUE but set error"
 msgstr "провера израза положаја је вратила тачно, али је поставила грешку"
 
-#: ../src/ui/theme-viewer.c:1271
+#: ../src/ui/theme-viewer.c:1280
 msgid "position expression test returned FALSE but didn't set error"
 msgstr "провера израза положаја је вратила нетачно, али није поставила грешку"
 
-#: ../src/ui/theme-viewer.c:1275
+#: ../src/ui/theme-viewer.c:1284
 msgid "Error was expected but none given"
 msgstr "Очекивана је грешка али није дата"
 
-#: ../src/ui/theme-viewer.c:1277
+#: ../src/ui/theme-viewer.c:1286
 #, c-format
 msgid "Error %d was expected but %d given"
 msgstr "Очекивана је грешка „%d“, али је дата „%d“"
 
-#: ../src/ui/theme-viewer.c:1283
+#: ../src/ui/theme-viewer.c:1292
 #, c-format
 msgid "Error not expected but one was returned: %s"
 msgstr "Грешка није очекивана али је враћена једна: %s"
 
-#: ../src/ui/theme-viewer.c:1287
+#: ../src/ui/theme-viewer.c:1296
 #, c-format
 msgid "x value was %d, %d was expected"
 msgstr "x вредност беше „%d“, а очекивана је „%d“"
 
-#: ../src/ui/theme-viewer.c:1290
+#: ../src/ui/theme-viewer.c:1299
 #, c-format
 msgid "y value was %d, %d was expected"
 msgstr "y вредност беше „%d“, а очекивана је „%d“"
 
-#: ../src/ui/theme-viewer.c:1355
+#: ../src/ui/theme-viewer.c:1364
 #, c-format
 msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
 msgstr "%d израза координата је обрађено за %g секунде (просек %g секунде)\n"

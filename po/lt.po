@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 14:50+0300\n"
-"PO-Revision-Date: 2016-02-16 22:08+0000\n"
+"POT-Creation-Date: 2016-03-09 17:44+0300\n"
+"PO-Revision-Date: 2016-03-27 20:50+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -36,12 +36,12 @@ msgstr "Rodyti skydelio pagrindinį meniu"
 #: ../src/50-marco-desktop-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Take a screenshot"
-msgstr "Padaryti ekrano nuotrauką"
+msgstr "Padaryti ekrano kopiją"
 
 #: ../src/50-marco-desktop-key.xml.in.h:5
 #: ../src/org.mate.marco.gschema.xml.h:96
 msgid "Take a screenshot of a window"
-msgstr "Padaryti lango nuotrauką"
+msgstr "Padaryti lango ekrano kopiją"
 
 #: ../src/50-marco-desktop-key.xml.in.h:6
 #: ../src/org.mate.marco.gschema.xml.h:97
@@ -185,12 +185,12 @@ msgstr "Perjungti viso ekrano veikseną"
 #: ../src/50-marco-window-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid "Toggle maximization state"
-msgstr "Perjungti lango išdidinimo veikseną"
+msgstr "Perjungti lango išskleidimo veikseną"
 
 #: ../src/50-marco-window-key.xml.in.h:5
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid "Maximize window"
-msgstr "Išdidinti langą"
+msgstr "Išskleisti langą"
 
 #: ../src/50-marco-window-key.xml.in.h:6
 #: ../src/org.mate.marco.gschema.xml.h:109
@@ -210,7 +210,7 @@ msgstr "Užverti langą"
 #: ../src/50-marco-window-key.xml.in.h:9
 #: ../src/org.mate.marco.gschema.xml.h:111
 msgid "Minimize window"
-msgstr "Sumažinti langą"
+msgstr "Suskleisti langą"
 
 #: ../src/50-marco-window-key.xml.in.h:10
 #: ../src/org.mate.marco.gschema.xml.h:113
@@ -245,12 +245,12 @@ msgstr "Nuleisti langą žemiau kitų langų"
 #: ../src/50-marco-window-key.xml.in.h:16
 #: ../src/org.mate.marco.gschema.xml.h:135
 msgid "Maximize window vertically"
-msgstr "Išdidinti langą vertikaliai"
+msgstr "Išskleisti langą vertikaliai"
 
 #: ../src/50-marco-window-key.xml.in.h:17
 #: ../src/org.mate.marco.gschema.xml.h:136
 msgid "Maximize window horizontally"
-msgstr "Išdidinti langą horizontaliai"
+msgstr "Išskleisti langą horizontaliai"
 
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:137
@@ -437,7 +437,7 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr "Lango aktyvinimo veiksena nustato kaip bus aktyvuojami langai. Yra trys galimos reikšmės; \"click\" reiškia, kad reikia spustelėti ant lango norint jį aktyvuoti, \"sloppy\" aktyvuoja langus kai ant jų užvedamas pelės kursorius, o \"mouse\" reiškia, kad langai bus aktyvuojami kai ant jų bus užvestas kursorius ir aktyvacija bus atšaukta kursoriui pasitraukus."
+msgstr "Lango aktyvinimo veiksena nustato kaip bus aktyvuojami langai. Yra trys galimos reikšmės; \"click\" reiškia, kad reikia spustelėti ant lango norint jį aktyvuoti, \"sloppy\" aktyvuoja langus kai ant jų užvedamas pelės žymeklis, o \"mouse\" reiškia, kad langai bus aktyvuojami kai ant jų bus užvestas žymeklis ir aktyvacija bus atšaukta žymekliui pasitraukus."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Control how new windows get focus"
@@ -491,7 +491,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Ši parinktis nurodo dvigubo antraštės spustelėjimo veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išdidinti / sumažinti langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išdidinti langą nurodyta kryptimi, „minimize“ – paslėpti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
+msgstr "Ši parinktis nurodo dvigubo antraštės spustelėjimo veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išskleisti / grąžinti iš išskleidimo langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išskleisti langą nurodyta kryptimi, „minimize“ – suskleisti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar middle-click"
@@ -507,7 +507,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Ši parinktis nurodo antraštės spustelėjimo viduriniuoju mygtuku veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išdidinti / sumažinti langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išdidinti langą nurodyta kryptimi, „minimize“ – paslėpti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
+msgstr "Ši parinktis nurodo antraštės spustelėjimo viduriniuoju mygtuku veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išskleisti / grąžinti iš išskleidimo langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išskleisti langą nurodyta kryptimi, „minimize“ – suskleisti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar right-click"
@@ -523,7 +523,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Ši parinktis nurodo antraštės spustelėjimo dešiniuoju mygtuku veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išdidinti / sumažinti langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išdidinti langą nurodyta kryptimi, „minimize“ – paslėpti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
+msgstr "Ši parinktis nurodo antraštės spustelėjimo dešiniuoju mygtuku veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išskleisti / grąžinti iš išskleidimo langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išskleisti langą nurodyta kryptimi, „minimize“ – suskleisti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Automatically raises the focused window"
@@ -604,7 +604,7 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr "Perjungimo stilius yra naudojamas nustatyti kaip darbo sričių keitiklio krašte bus perjunginėjama iš vienos darbo srities į kitą. Jei yra nustatyta \"no wrap\" ir bandysite perjungti į darbo sritį už darbo sričių keitiklio ribų, nieko neįvyks. Jei yra nustatyta \"classic\", bus naudojama sena marco elgsena: vienos eilutės pabaiga veda į kitos eilutės pradžią, o stulpelio pabaiga veda į kito stulpelio pradžią. Jei yra nustatyta \"toroidal\", darbo sritys bus sujungtos kaip spurga: kiekvienos eilutės pabaiga veda prie tos pačios eilutės pradžios, o kiekvieno stulpelio pabaiga veda prie to pačio stulpelio pradžios."
+msgstr "Perjungimo stilius yra naudojamas nustatyti, kaip darbo sričių perjungiklio krašte bus perjunginėjama iš vienos darbo srities į kitą. Jei yra nustatyta \"no wrap\" ir bandysite perjungti į darbo sritį už darbo sričių keitiklio ribų, nieko neįvyks. Jei yra nustatyta \"classic\", bus naudojama sena marco elgsena: vienos eilutės pabaiga veda į kitos eilutės pradžią, o stulpelio pabaiga veda į kito stulpelio pradžią. Jei yra nustatyta \"toroidal\", darbo sritys bus sujungtos kaip spurga: kiekvienos eilutės pabaiga veda prie tos pačios eilutės pradžios, o kiekvieno stulpelio pabaiga veda prie to pačio stulpelio pradžios."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
@@ -651,14 +651,15 @@ msgid "Determines whether Marco is a compositing manager."
 msgstr "Nurodo ar Marco yra komponuojanti tvarkytuvė."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
-msgid "Fast Alt-Tab Enabled"
-msgstr "Greitasis Alt-Tab įjungtas"
+msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
+msgstr "Greitasis Alt-Tab su komponavimo tvarkytuve (išjungti miniatiūras)"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
-"Whether or not fast alt-tabbing is used when the compositing manager is "
-"enabled."
-msgstr "Ar greitasis alt-tab turėtų būti įjungtas, kai yra įjungta komponavimo tvarkytuvė."
+"If set to true, no window thumbnails will be displayed in the alt-tab popup "
+"window when the compositing manager is enabled. Application icons will be "
+"displayed instead."
+msgstr "Jei teisinga, tuomet, komponavimo tvarkytuvei esant įjungtai, alt-tab iškylančiajame lange nebus rodomos langų miniatiūros. Vietoj jų, bus rodomos programų piktogramos."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
@@ -720,7 +721,7 @@ msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window."
-msgstr "Jei įjungta, langų numetimas ekrano krašte išdidins juos vertikaliai ir pakeis jų dydį horizontaliai taip, kad jie užimtų pusę prieinamos ploto. Lango vilkimas į viršų išdidins langą."
+msgstr "Jei įjungta, langų numetimas ekrano krašte išskleis juos vertikaliai ir pakeis jų dydį horizontaliai taip, kad jie užimtų pusę prieinamo ploto. Lango vilkimas į viršų išskleis langą."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
@@ -734,7 +735,7 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "Langų išdėstymo veiksena nurodo kaip yra išdėstomi nauji langai. \"automatic\" reiškia, kad sistema, priklausomai nuo darbalaukyje prieinamos vietos, automatiškai pasirenka vietą arba, jeigu vietos nėra, išdėsto paprastomis pakopomis; \"pointer\" reiškia, kad nauji langai yra išdėstomi pagal pelės rodyklės vietą; \"manual\" reiškia, kad naudotojas, pelės ar klaviatūros pagalba, privalo pats išdėstyti naują langą."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
@@ -776,7 +777,7 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr ""
+msgstr "Formatas yra panašus į \"&lt;Control&gt;a\" arba \"&lt;Shift&gt;&lt;Alt&gt;F1\". Sistema, apdorojanti aprašymą, yra gana laisva ir leidžia maišyti didžiąsias bei mažąsias raides ir naudoti tokius sutrumpinimus kaip \"&lt;Ctl&gt;\" ir \"&lt;Ctrl&gt;\". Nustačius specialų požymį „disabled“, su šiuo veiksmu nebus susietas joks klavišų susiejimas. Šis klavišų susiejimas gali būti apsuktas nuspaudus „Lyg2“ (Shift) klavišą, taigi jame negalima naudoti „Shift“."
 
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Move backward between windows of an application, using a popup window"
@@ -823,7 +824,7 @@ msgstr "/apps/marco/global_keybindings/run_command_N raktai nustato specialius k
 
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "The screenshot command"
-msgstr "Ekrano fotografavimo komanda"
+msgstr "Ekrano kopijos darymo komanda"
 
 #: ../src/org.mate.marco.gschema.xml.h:101
 msgid ""
@@ -833,7 +834,7 @@ msgstr "/apps/marco/global_keybindings/run_command_screenshot raktas nustato kla
 
 #: ../src/org.mate.marco.gschema.xml.h:102
 msgid "The window screenshot command"
-msgstr "Langų fotografavimo komanda"
+msgstr "Langų ekrano kopijos komanda"
 
 #: ../src/org.mate.marco.gschema.xml.h:103
 msgid ""
@@ -957,7 +958,7 @@ msgstr "Naudotinas X ekranas"
 
 #: ../src/core/main.c:292
 msgid "Initialize session from savefile"
-msgstr "Inicijuoti seansą iš išsaugojimo failo"
+msgstr "Inicijuoti seansą iš įrašymo failo"
 
 #: ../src/core/main.c:298
 msgid "Print version"
@@ -978,12 +979,12 @@ msgstr "Išjungti komponavimą"
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Nekurti pilno ekrano langų, kurie yra maksimizuoti ir neturi dekoracijų"
+msgstr "Nekurti pilno ekrano langų, kurie yra išskleisti ir neturi dekoracijų"
 
 #: ../src/core/main.c:522
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
-msgstr "Nepavyko nuskanuoti temų aplanko: %s\n"
+msgstr "Nepavyko nuskenuoti temų katalogo: %s\n"
 
 #: ../src/core/main.c:538
 #, c-format
@@ -1064,7 +1065,7 @@ msgstr "Nepavyko pasitraukti iš ekrano %d vaizduoklyje „%s“\n"
 #: ../src/core/session.c:842 ../src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr "Nepavyko sukurti aplanko „%s“: %s\n"
+msgstr "Nepavyko sukurti katalogo „%s“: %s\n"
 
 #: ../src/core/session.c:859
 #, c-format
@@ -1079,12 +1080,12 @@ msgstr "Klaida, rašant į seanso failą „%s“: %s\n"
 #: ../src/core/session.c:1005
 #, c-format
 msgid "Error closing session file '%s': %s\n"
-msgstr "Klaida, uždarant seanso failą „%s“: %s\n"
+msgstr "Klaida, užveriant seanso failą „%s“: %s\n"
 
 #: ../src/core/session.c:1135
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
-msgstr "Nepavyko apdoroti išsaugoto seanso failo: %s\n"
+msgstr "Nepavyko apdoroti įrašyto seanso failo: %s\n"
 
 #: ../src/core/session.c:1184
 #, c-format
@@ -1112,7 +1113,7 @@ msgstr "Nežinomas elementas %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Šie langai nepalaiko komandos „išsaugoti esamus nustatymus“ ir turės būti paleisti rankiniu būdu, kai prisijungsite kitą kartą."
+msgstr "Šie langai nepalaiko komandos „įrašyti esamą sąranką“ ir turės būti paleisti rankiniu būdu, kai prisijungsite kitą kartą."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1157,7 +1158,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5797
+#: ../src/core/window.c:5764
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1170,7 +1171,7 @@ msgstr "Langas %s nustatė SM_CLIENT_ID kintamajį į save patį vietoj to, kad 
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6362
+#: ../src/core/window.c:6329
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1250,11 +1251,11 @@ msgstr "Lango meniu"
 
 #: ../src/ui/frames.c:1220
 msgid "Minimize Window"
-msgstr "Sumažinti langą"
+msgstr "Suskleisti langą"
 
 #: ../src/ui/frames.c:1223
 msgid "Maximize Window"
-msgstr "Išdidinti langą"
+msgstr "Išskleisti langą"
 
 #: ../src/ui/frames.c:1226
 msgid "Restore Window"
@@ -1287,17 +1288,17 @@ msgstr "Langas tik vienoje darbo srityje"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:64
 msgid "Mi_nimize"
-msgstr "Sumaži_nti"
+msgstr "Susklei_sti"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:66
 msgid "Ma_ximize"
-msgstr "Iš_didinti"
+msgstr "Išs_kleisti"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:68
 msgid "Unma_ximize"
-msgstr "_Grąžinti iš išdidinimo"
+msgstr "_Grąžinti iš išskleidimo"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:70
@@ -1381,7 +1382,7 @@ msgstr "1_0-ta darbo sritis"
 msgid "Workspace %s%d"
 msgstr "Darbo sritis %s%d"
 
-#: ../src/ui/menu.c:391
+#: ../src/ui/menu.c:395
 msgid "Move to Another _Workspace"
 msgstr "Perkelti langą į kitą _darbo sritį"
 
@@ -1467,7 +1468,7 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:113
+#: ../src/ui/resizepopup.c:120
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -1574,135 +1575,135 @@ msgstr "Šešėlio rodiklis \"%s\" tarp šešėlinės spalvos yra neigiamas"
 msgid "Could not parse color \"%s\""
 msgstr "Nepavyko apdoroti spalvos \"%s\""
 
-#: ../src/ui/theme.c:1848
+#: ../src/ui/theme.c:1852
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Koordinačių išraiška turi neleistiną simbolį '%s'"
 
-#: ../src/ui/theme.c:1875
+#: ../src/ui/theme.c:1879
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "Koordinačių išraiška turi skaičių su slankiu kableliu '%s', kuris negali būti apdorotas"
 
-#: ../src/ui/theme.c:1889
+#: ../src/ui/theme.c:1893
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Koordinačių išraiška turi sveiką skaičių '%s', kuris negali būti apdorotas"
 
-#: ../src/ui/theme.c:2011
+#: ../src/ui/theme.c:2015
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "Koordinačių išraiškoje nurodytas nežinomas operatorius šio teksto pradžioje: \"%s\""
 
-#: ../src/ui/theme.c:2068
+#: ../src/ui/theme.c:2072
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Koordinačių išraiška tuščia arba nesuprantama"
 
-#: ../src/ui/theme.c:2179 ../src/ui/theme.c:2189 ../src/ui/theme.c:2223
+#: ../src/ui/theme.c:2183 ../src/ui/theme.c:2193 ../src/ui/theme.c:2227
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Koordinačių išraiška sukelia dalybą iš nulio"
 
-#: ../src/ui/theme.c:2231
+#: ../src/ui/theme.c:2235
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "Koordinačių išraiška bando panaudoti liekanos operatorių (mod) slankaus kablelio skaičiui"
 
-#: ../src/ui/theme.c:2287
+#: ../src/ui/theme.c:2291
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Koordinačių išraiškoje įvestas operatorius \"%s\" ten, kur turi būti vedamas operandas"
 
-#: ../src/ui/theme.c:2296
+#: ../src/ui/theme.c:2300
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Koordinačių išraiškoje operandas įrašytas operatoriaus vietoje"
 
-#: ../src/ui/theme.c:2304
+#: ../src/ui/theme.c:2308
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Koordinačių išraiška pasibaigė operatoriumi, o ne operandu"
 
-#: ../src/ui/theme.c:2314
+#: ../src/ui/theme.c:2318
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "Koordinačių išraiškoje operatorius \"%c\" eina po operatoriaus \"%c\" be tarpinio operando"
 
-#: ../src/ui/theme.c:2461 ../src/ui/theme.c:2502
+#: ../src/ui/theme.c:2465 ../src/ui/theme.c:2506
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "Koordinačių išraiška saugo nežinomą kintamąjį arba konstantą \"%s\""
 
-#: ../src/ui/theme.c:2556
+#: ../src/ui/theme.c:2560
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Koordinačių išraiškų skaitytuvas perpildė buferį."
 
-#: ../src/ui/theme.c:2585
+#: ../src/ui/theme.c:2589
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Koordinačių išraiškoje įvesti uždarantys skliaustai, nors atidarančių skliaustų nerasta"
 
-#: ../src/ui/theme.c:2649
+#: ../src/ui/theme.c:2653
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Koordinačių išraiškoje po atidarančių skliaustų neįvesti uždarantys skliaustai"
 
-#: ../src/ui/theme.c:2660
+#: ../src/ui/theme.c:2664
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Koordinačių išraiška neturi jokių operatorių ar operandų"
 
-#: ../src/ui/theme.c:2864 ../src/ui/theme.c:2884 ../src/ui/theme.c:2904
+#: ../src/ui/theme.c:2868 ../src/ui/theme.c:2888 ../src/ui/theme.c:2908
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Temoje esanti išraiška sukėlė klaidą: %s\n"
 
-#: ../src/ui/theme.c:4782
+#: ../src/ui/theme.c:4786
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "Šiam rėmelio stiliui turi būti nurodytas <button function=\"%s\" state=\"%s\" draw_ops=\"kažkokswhatever\"/> požymis"
 
-#: ../src/ui/theme.c:5434 ../src/ui/theme.c:5459
+#: ../src/ui/theme.c:5438 ../src/ui/theme.c:5463
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Trūksta <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"kažkoks\"/>"
 
-#: ../src/ui/theme.c:5503
+#: ../src/ui/theme.c:5507
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Nepavyko paleisti temos \"%s\": %s\n"
 
-#: ../src/ui/theme.c:5633 ../src/ui/theme.c:5640 ../src/ui/theme.c:5647
-#: ../src/ui/theme.c:5654 ../src/ui/theme.c:5661
+#: ../src/ui/theme.c:5637 ../src/ui/theme.c:5644 ../src/ui/theme.c:5651
+#: ../src/ui/theme.c:5658 ../src/ui/theme.c:5665
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Temoje \"%2$s\" trūksta <%1$s> nustatymų"
 
-#: ../src/ui/theme.c:5669
+#: ../src/ui/theme.c:5673
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr "Rėmelio stilius nenurodytas lango tipui \"%s\" temoje \"%s\", pridėkite <window type=\"%s\" style_set=\"kažkoks\"/> elementą"
 
-#: ../src/ui/theme.c:6146 ../src/ui/theme.c:6208 ../src/ui/theme.c:6271
+#: ../src/ui/theme.c:6150 ../src/ui/theme.c:6212 ../src/ui/theme.c:6275
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "Naudotojo nustatytos konstantos turi prasidėti didžiąja raide; „%s“ nėra didžioji"
 
-#: ../src/ui/theme.c:6154 ../src/ui/theme.c:6216 ../src/ui/theme.c:6279
+#: ../src/ui/theme.c:6158 ../src/ui/theme.c:6220 ../src/ui/theme.c:6283
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Konstanta „%s“ jau aprašyta"
@@ -1955,12 +1956,12 @@ msgstr "Reikšmė „%s“ nepriimtina dydžio keitimo požymyje"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Negalima naudoti \"resize\" požymio elemente <%s>, skirtame išplėtimo/šešėlių būsenų aprašymui"
+msgstr "Negalima naudoti \"resize\" požymio elemente <%s>, skirtame išskleidimo/suvyniavimo būsenų aprašymui"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Negalima naudoti \"resize\" požymio elemente <%s>, skirtame išplėtimo būsenų aprašymui"
+msgstr "Negalima naudoti \"resize\" požymio elemente <%s>, skirtame išskleidimo būsenų aprašymui"
 
 #: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
 #, c-format
@@ -2064,7 +2065,7 @@ msgstr "_Modalinis dialogas"
 
 #: ../src/ui/theme-viewer.c:108
 msgid "_Utility"
-msgstr ""
+msgstr "_Pagalbinė programa"
 
 #: ../src/ui/theme-viewer.c:109
 msgid "_Splashscreen"
@@ -2106,97 +2107,97 @@ msgstr "Tai yra demonstracinis mygtukas su piktograma \"atverti\""
 msgid "This is a demo button with a 'quit' icon"
 msgstr "Tai yra demonstracinis mygtukas su piktograma \"išeiti\""
 
-#: ../src/ui/theme-viewer.c:259
+#: ../src/ui/theme-viewer.c:263
 msgid "This is a sample message in a sample dialog"
 msgstr "Tai yra pavydžio pranešimas pavyzdžio dialoge"
 
-#: ../src/ui/theme-viewer.c:347
+#: ../src/ui/theme-viewer.c:351
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Netikras meniu punktas %d\n"
 
-#: ../src/ui/theme-viewer.c:381
+#: ../src/ui/theme-viewer.c:390
 msgid "Border-only window"
 msgstr "Tik rėmelį turintis langas"
 
-#: ../src/ui/theme-viewer.c:383
+#: ../src/ui/theme-viewer.c:392
 msgid "Bar"
 msgstr "Juosta"
 
-#: ../src/ui/theme-viewer.c:400
+#: ../src/ui/theme-viewer.c:409
 msgid "Normal Application Window"
 msgstr "Normalus programos langas"
 
-#: ../src/ui/theme-viewer.c:404
+#: ../src/ui/theme-viewer.c:413
 msgid "Dialog Box"
 msgstr "Dialogo langas"
 
-#: ../src/ui/theme-viewer.c:408
+#: ../src/ui/theme-viewer.c:417
 msgid "Modal Dialog Box"
 msgstr "Modalinis dialogo langas"
 
-#: ../src/ui/theme-viewer.c:412
+#: ../src/ui/theme-viewer.c:421
 msgid "Utility Palette"
 msgstr "Įrankių paletė"
 
-#: ../src/ui/theme-viewer.c:416
+#: ../src/ui/theme-viewer.c:425
 msgid "Torn-off Menu"
 msgstr "Atkabinamas meniu"
 
-#: ../src/ui/theme-viewer.c:420
+#: ../src/ui/theme-viewer.c:429
 msgid "Border"
 msgstr "Paraštė"
 
-#: ../src/ui/theme-viewer.c:748
+#: ../src/ui/theme-viewer.c:757
 #, c-format
 msgid "Button layout test %d"
 msgstr "Mygtukų išdėstymo testas %d"
 
-#: ../src/ui/theme-viewer.c:777
+#: ../src/ui/theme-viewer.c:786
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "vienam lango kadrui išvesti yra skirta %g milisekundžių"
 
-#: ../src/ui/theme-viewer.c:821
+#: ../src/ui/theme-viewer.c:830
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Panaudojimas: marco-theme-viewer [TEMOS PAVADINIMAS]\n"
 
-#: ../src/ui/theme-viewer.c:828
+#: ../src/ui/theme-viewer.c:837
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Klaida įkeliant temą: %s\n"
 
-#: ../src/ui/theme-viewer.c:834
+#: ../src/ui/theme-viewer.c:843
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Tema „%s“ įkelta per %g sekundžių\n"
 
-#: ../src/ui/theme-viewer.c:877
+#: ../src/ui/theme-viewer.c:886
 msgid "Normal Title Font"
 msgstr "Normalus antraštės šriftas"
 
-#: ../src/ui/theme-viewer.c:883
+#: ../src/ui/theme-viewer.c:892
 msgid "Small Title Font"
 msgstr "Smulkus antraštės šriftas"
 
-#: ../src/ui/theme-viewer.c:889
+#: ../src/ui/theme-viewer.c:898
 msgid "Large Title Font"
 msgstr "Didelis antraštės šriftas"
 
-#: ../src/ui/theme-viewer.c:894
+#: ../src/ui/theme-viewer.c:903
 msgid "Button Layouts"
 msgstr "Mygtukų išdėstymai"
 
-#: ../src/ui/theme-viewer.c:899
+#: ../src/ui/theme-viewer.c:908
 msgid "Benchmark"
 msgstr "Greičio testas"
 
-#: ../src/ui/theme-viewer.c:946
+#: ../src/ui/theme-viewer.c:955
 msgid "Window Title Goes Here"
 msgstr "Čia rodomo lango antraštė"
 
-#: ../src/ui/theme-viewer.c:1050
+#: ../src/ui/theme-viewer.c:1059
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
@@ -2204,39 +2205,39 @@ msgid ""
 "frame)\n"
 msgstr "%d kadrai buvo išvesti per %g klientines sekundes (%g milisekunčių kadrui) ir per %g bendrinio laiko sekundes įskaitant X serverio resursus (%g milisekundžių kadrui)\n"
 
-#: ../src/ui/theme-viewer.c:1269
+#: ../src/ui/theme-viewer.c:1278
 msgid "position expression test returned TRUE but set error"
 msgstr "padėties išraiškos testas grąžino teigiamą reikšmę, bet kartu nustatė klaidos pranešimą"
 
-#: ../src/ui/theme-viewer.c:1271
+#: ../src/ui/theme-viewer.c:1280
 msgid "position expression test returned FALSE but didn't set error"
 msgstr "padėties išraiškos testas grąžino neigiamą reikšmę, bet nenustatė klaidos pranešimo"
 
-#: ../src/ui/theme-viewer.c:1275
+#: ../src/ui/theme-viewer.c:1284
 msgid "Error was expected but none given"
 msgstr "Tikėtasi sulaukti klaidos pranešimo, tačiau nieko nesulaukta"
 
-#: ../src/ui/theme-viewer.c:1277
+#: ../src/ui/theme-viewer.c:1286
 #, c-format
 msgid "Error %d was expected but %d given"
 msgstr "Tikėtasi klaidos %d, tačiau gauta %d"
 
-#: ../src/ui/theme-viewer.c:1283
+#: ../src/ui/theme-viewer.c:1292
 #, c-format
 msgid "Error not expected but one was returned: %s"
 msgstr "Klaidos nesitikėta, tačiau grąžinta klaida: %s"
 
-#: ../src/ui/theme-viewer.c:1287
+#: ../src/ui/theme-viewer.c:1296
 #, c-format
 msgid "x value was %d, %d was expected"
 msgstr "x reikšmė buvo %d, tikėtasi %d"
 
-#: ../src/ui/theme-viewer.c:1290
+#: ../src/ui/theme-viewer.c:1299
 #, c-format
 msgid "y value was %d, %d was expected"
 msgstr "y reikšmė buvo %d, tikėtasi %d"
 
-#: ../src/ui/theme-viewer.c:1355
+#: ../src/ui/theme-viewer.c:1364
 #, c-format
 msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
 msgstr "Koordinačių %d išraiška apdorota per %g sekundžių (%g sekundžių vidurkis)\n"
