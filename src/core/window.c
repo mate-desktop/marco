@@ -2046,6 +2046,10 @@ window_state_on_map (MetaWindow *window,
       /* The default is correct for these */
       break;
     }
+
+ out:
+  if (meta_prefs_get_new_windows_always_on_top ())
+    *places_on_top = TRUE;
 }
 
 static gboolean
@@ -3034,6 +3038,8 @@ window_activate (MetaWindow     *window,
                  MetaWorkspace  *workspace)
 {
   gboolean can_ignore_outdated_timestamps;
+  gboolean only_raise = FALSE;
+
   meta_topic (META_DEBUG_FOCUS,
               "_NET_ACTIVE_WINDOW message sent for %s at time %u "
               "by client type %u.\n",
@@ -3055,8 +3061,28 @@ window_activate (MetaWindow     *window,
                   "last_user_time (%u) is more recent; ignoring "
                   " _NET_ACTIVE_WINDOW message.\n",
                   window->display->last_user_time);
-      meta_window_set_demands_attention(window);
-      return;
+      if (meta_prefs_get_new_windows_always_on_top () &&
+          meta_prefs_get_raise_on_click ())
+        {
+          /* The new_windows_only_on_top preference causes new
+           * focus-denied windows to get raised but not focused
+           * instead of set to demands attention. For consistency, we
+           * do the same here with windows that are "new to the user"
+           * - that self activate and are focus-stealing prevented. We
+           * can't just raise the window and return here because the
+           * window might be on a different workspace, so we need the
+           * handling below. The check for meta_prefs_get_raise_on_click ()
+           * is because that preference, if off, somewhat unexpectedl
+           * akes windows not raise on self-activation.  If that is changed
+           * than the test should be removed here.
+           */
+          only_raise = TRUE;
+        }
+      else
+        {
+          meta_window_set_demands_attention (window);
+          return;
+        }
     }
 
   /* For those stupid pagers, get a valid timestamp and show a warning */
@@ -3105,7 +3131,8 @@ window_activate (MetaWindow     *window,
   meta_topic (META_DEBUG_FOCUS,
               "Focusing window %s due to activation\n",
               window->desc);
-  meta_window_focus (window, timestamp);
+  if (!only_raise)
+    meta_window_focus (window, timestamp);
 }
 
 /* This function exists since most of the functionality in window_activate
@@ -4848,11 +4875,15 @@ meta_window_configure_request (MetaWindow *window,
                       "broken behavior and the request is being ignored.\n",
                       window->desc);
         }
+      /* the new_windows_always_on_top check is because a window that
+       * spontaneously restacks itself to the top is a lot like a new
+       * window that doesn't get focus */
       else if (active_window &&
                !meta_window_same_application (window, active_window) &&
                !meta_window_same_client (window, active_window) &&
                XSERVER_TIME_IS_BEFORE (window->net_wm_user_time,
-                                       active_window->net_wm_user_time))
+                                       active_window->net_wm_user_time) &&
+               !meta_prefs_get_new_windows_always_on_top ())
         {
           meta_topic (META_DEBUG_STACK,
                       "Ignoring xconfigure stacking request from %s (with "

@@ -95,6 +95,7 @@ static MetaVirtualModifier mouse_button_mods = Mod1Mask;
 static MetaFocusMode focus_mode = META_FOCUS_MODE_CLICK;
 static MetaFocusNewWindows focus_new_windows = META_FOCUS_NEW_WINDOWS_SMART;
 static gboolean raise_on_click = TRUE;
+static gboolean new_windows_always_on_top = FALSE;
 static char* current_theme = NULL;
 static int num_workspaces = 4;
 static MetaWrapStyle wrap_style = META_WRAP_NONE;
@@ -417,6 +418,12 @@ static MetaBoolPreference preferences_bool[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_SIDE_BY_SIDE_TILING,
       &side_by_side_tiling,
+      FALSE,
+    },
+    { "new-windows-always-on-top",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_NEW_WINDOWS_ALWAYS_ON_TOP,
+      &new_windows_always_on_top,
       FALSE,
     },
     { NULL, NULL, 0, NULL, FALSE },
@@ -1060,6 +1067,12 @@ meta_prefs_get_raise_on_click (void)
   return raise_on_click || focus_mode == META_FOCUS_MODE_CLICK;
 }
 
+gboolean
+meta_prefs_get_new_windows_always_on_top (void)
+{
+  return new_windows_always_on_top;
+}
+
 const char*
 meta_prefs_get_theme (void)
 {
@@ -1473,6 +1486,9 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_RAISE_ON_CLICK:
       return "RAISE_ON_CLICK";
+
+    case META_PREF_NEW_WINDOWS_ALWAYS_ON_TOP:
+      return "NEW_WINDOWS_ALWAYS_ON_TOP";
 
     case META_PREF_THEME:
       return "THEME";

@@ -70,6 +70,33 @@
       <summary>Control how new windows get focus</summary>
       <description>This option provides additional control over how newly created windows get focus.  It has two possible values; "smart" applies the user's normal focus mode, and "strict" results in windows started from a terminal not being given focus.</description>
     </key>
+    <key name="new-windows-always-on-top" type="b">
+      <default>false</default>
+      <summary>Whether new windows should always be placed on top</summary>
+      <description>The normal behavior is that if a new window is not given the
+           focus (since, for example, the user has interacted with another
+           window after launching an application), then if the window would
+           be stacked on top of the focus window, the window is instead
+           stacked beneath and flashed in the taskbar. This behavior can
+           be annoying on large screens and multihead setups where the
+           taskbar is hard to notice and difficult to get to, so this option,
+           if set, disables this behavior, and new windows are always placed
+           on top, whether or not they get focus.
+
+           Note that if this option is set, a new window may completely hide
+           the focus window but not get focus itself, which can be quite confusing
+           to users. Also, note that setting this option breaks the normal
+           invariant in the 'click' focus mode that the topmost window always
+           has focus, so its most suitable for use with the 'mouse' and
+           'sloppy' focus modes.
+
+           This key also affects windows that try to activate or raise themselves
+           themselves but don't succeed in getting the the focus. Without
+           this key being set, such windows are flashed in the taskbar. With
+           this key set they, like entirely new windows, are raised but not
+           focused.
+      </description>
+    </key>
     <key name="raise-on-click" type="b">
       <default>true</default>
       <summary>Whether raising should be a side-effect of other user interactions</summary>
