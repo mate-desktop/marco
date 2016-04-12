@@ -1240,17 +1240,17 @@ get_window_pixbuf (MetaWindow *window,
     return NULL;
 #endif
 
+#if GTK_CHECK_VERSION (3, 0, 0)
   meta_error_trap_push (NULL);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   pixbuf = meta_ui_get_pixbuf_from_surface (surface);
   cairo_surface_destroy (surface);
-#else
-  pixbuf = meta_ui_get_pixbuf_from_pixmap (pmap);
-#endif
 
   if (meta_error_trap_pop_with_return (NULL, FALSE) != Success)
     g_clear_object (&pixbuf);
+#else
+  pixbuf = meta_ui_get_pixbuf_from_pixmap (pmap);
+#endif
 
   if (pixbuf == NULL)
     return NULL;
