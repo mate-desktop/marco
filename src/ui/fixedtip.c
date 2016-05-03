@@ -51,6 +51,7 @@ draw_handler (GtkWidget *widget,
     return FALSE;
 
   context = gtk_widget_get_style_context (widget);
+  gtk_style_context_add_class (context, "tooltip");
   width = gtk_widget_get_allocated_width (widget);
   height = gtk_widget_get_allocated_height (widget);
 
