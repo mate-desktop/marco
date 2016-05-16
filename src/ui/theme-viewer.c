@@ -351,8 +351,8 @@ menu_contents (void)
       char *str = g_strdup_printf (_("Fake menu item %d\n"), i + 1);
       mi = gtk_label_new (str);
 #if GTK_CHECK_VERSION (3, 0, 0)
-      gtk_widget_set_halign (image, GTK_ALIGN_START);
-      gtk_widget_set_valign (image, GTK_ALIGN_CENTER);
+      gtk_widget_set_halign (mi, GTK_ALIGN_START);
+      gtk_widget_set_valign (mi, GTK_ALIGN_CENTER);
 #else
       gtk_misc_set_alignment (GTK_MISC (mi), 0.0, 0.5);
 #endif
