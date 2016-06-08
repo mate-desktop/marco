@@ -4,14 +4,15 @@
 # 
 # Translators:
 # Ján Ďanovský <dagsoftware@yahoo.com>, 2013-2016
+# Miroslav Sido <miro_redhawk@hotmail.com>, 2016
 # Tibor Kaputa <tibbbi2@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-09 17:44+0300\n"
-"PO-Revision-Date: 2016-04-20 11:53+0000\n"
-"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
+"PO-Revision-Date: 2016-06-08 06:59+0000\n"
+"Last-Translator: Miroslav Sido <miro_redhawk@hotmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/mate/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -475,7 +476,7 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Nastavenie tejto voľby na hodnotu false môže viesť k nespoľahlivému správaniu, užívateľom je silne doporučené nemeniť hodnotu z predvoleného stavu TRUE. Mnoho akcií (napr. Kliknutím do klientskej oblasti, presunutie alebo zmena veľkosti okna) normálne menia okno ako vedľajší efekt. Nastavenie tejto voľby na hodnotu false, ktorá je nedoporučená, sa oddelí zmena od ostatných užívateľských akcií, a ignorujú sa požiadavky na zmenu, generované aplikáciou. Pozri http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Dokonca aj keď je táto voľba false, okná môže ešte byť menené pomocou Alt-kliknite ľavým tlačidlom myši kamkoľvek na okno, normálne kliknite na okraj okna, alebo pomocou špeciálnych správ z pagers, ako sú požiadavky na aktiváciu z tasklistu appletov. Táto možnosť je v súčasnosti zakázaná v režime click-to-focus. Všimnite si, že zoznam spôsobov, ako zmeniť okno, keď raise_on_click je v stave false nezahŕňa programové požiadavky z aplikácií na zmenu okna; Tieto žiadosti budú ignorované bez ohľadu na dôvod žiadosti. Ak ste vývojár aplikácie a užívatelia si sťažovali, že aplikácia nefunguje s týmto nastavením, povedzte im, že je _ich_chyba pre zmeny v ich správcovi okien a že je potrebné túto možnosť zmeniť späť na hodnotu true alebo žiť s danou \"chybou \"."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
@@ -592,7 +593,7 @@ msgstr "Počet pracovných plôch. Musí byť väčší ako nula a musí mať pe
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Workspace wrap style"
-msgstr ""
+msgstr "Štýl pracovných plôch"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -604,7 +605,7 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr ""
+msgstr "Wrap style sa používa na určenie, ako prechádzať z jedného priestoru do druhého pracovného priestoru. Ak je nastavená na \"no wrap\", nič sa nestane, ak sa pokúsite prepnúť do pracovného priestoru okolo hranice prepínača pracovného priestoru. Ak je nastavený na \"klasické\", staré správanie Marco používa: koniec jedného riadka vedie do začiatku budúceho a koniec stĺpca vedie k začiatku nasledujúceho. Ak je nastavený na \"toroidný\", pracovné priestory sú spojené ako šiška: koniec každého riadku vedie k jeho vlastnému začiatku a na konci každého stĺpca vedie k jeho vlastnému začiatku."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
@@ -652,14 +653,14 @@ msgstr "Určuje, či je Marco kompozitný správca okien."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
-msgstr ""
+msgstr "Rýchly Alt-Tab s manažérom prepínania (bez náhľadov)"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr ""
+msgstr "Ak je nastavená na hodnotu true, nebudú zobrazované  náhľady v pop-up okne pri alt-tab, ak je zapnutý manažér prepínania. ikony aplikácií sa zobrazia."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
@@ -704,13 +705,13 @@ msgstr "Niektoré programy nerešpektujú špecifikácie spôsobom, ktorý vedie
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Určí, či sa nové okno zobrazí v strede obrazovky"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Ak je nastavená na hodnotu true, nové okná sa otvárajú v strede obrazovky. Inak sú otvorené v ľavej hornej časti obrazovky."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
@@ -721,11 +722,11 @@ msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window."
-msgstr ""
+msgstr "Ak je povolené, meniť okná na okraji maximalizuje vertikálne aj horizontálne a zmení ich pokrytie na polovicu dostupného priestoru. Drag-drop posun až na vrch obrazovky maximalizuje okno."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
-msgstr ""
+msgstr "Režim umiestnenia okien"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -735,7 +736,7 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "Režim umiestnenia okna ukazuje, ako sú umiestnené nové okná. \"Automatické\" znamená, že systém automaticky zvolí polohu v závislosti na priestore k dispozícii na ploche, alebo pomocou jednoduchého kaskády, pokiaľ nie je priestor; \"Ukazovateľ\" znamená, že nové okná sú umiestnené v závislosti na pozícii ukazovateľa myši; \"Manuálne\" znamená, že užívateľ musí ručne umiestniť nové okno pomocou myši alebo klávesnice."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
@@ -2101,11 +2102,11 @@ msgstr "Otvoriť iné z týchto okien"
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"
-msgstr ""
+msgstr "Jedná sa o demo tlačidlo s ikonou 'otvoriť' "
 
 #: ../src/ui/theme-viewer.c:125
 msgid "This is a demo button with a 'quit' icon"
-msgstr ""
+msgstr "Jedná sa o demo tlačidlo s ikonou 'ukončiť'"
 
 #: ../src/ui/theme-viewer.c:263
 msgid "This is a sample message in a sample dialog"
