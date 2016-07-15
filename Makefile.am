@@ -8,6 +8,9 @@ EXTRA_DIST = autogen.sh HACKING rationales.txt \
 
 DISTCLEANFILES = intltool-extract intltool-merge intltool-update po/stamp-it po/.intltool-merge-cache
 
+DISTCHECK_CONFIGURE_FLAGS = \
+	--with-gtk=$(GTK_API_VERSION)
+
 # Build ChangeLog from GIT  history
 ChangeLog:
 	$(AM_V_GEN) if test -d $(top_srcdir)/.git; then \
