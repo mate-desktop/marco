@@ -288,7 +288,11 @@ meta_preview_draw (GtkWidget *widget,
       border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
 
       meta_theme_draw_frame (preview->theme,
+#if GTK_CHECK_VERSION (3, 0, 0)
+                             gtk_widget_get_style_context (widget),
+#else
                              widget,
+#endif
                              cr,
                              preview->type,
                              preview->flags,

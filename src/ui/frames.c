@@ -46,7 +46,7 @@
     #define gdk_region_rectangle cairo_region_create_rectangle
     #define gdk_region_offset cairo_region_translate
     #define gdk_region_intersect cairo_region_intersect
-    G_DEFINE_TYPE (MetaFrames, meta_frames, GTK_TYPE_INVISIBLE);
+    G_DEFINE_TYPE (MetaFrames, meta_frames, GTK_TYPE_WINDOW);
     #define parent_class meta_frames_parent_class
 #endif
 
@@ -60,10 +60,16 @@ static void meta_frames_destroy    (GtkWidget       *object);
 static void meta_frames_destroy    (GtkObject       *object);
 #endif
 static void meta_frames_finalize   (GObject         *object);
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void meta_frames_style_updated (GtkWidget *widget);
+static void meta_frames_map           (GtkWidget *widget);
+static void meta_frames_unmap         (GtkWidget *widget);
+#else
 static void meta_frames_style_set  (GtkWidget       *widget,
                                     GtkStyle        *prev_style);
 static void meta_frames_realize    (GtkWidget       *widget);
 static void meta_frames_unrealize  (GtkWidget       *widget);
+#endif
 
 static void meta_frames_update_prelit_control (MetaFrames      *frames,
                                                MetaUIFrame     *frame,
@@ -202,20 +208,23 @@ meta_frames_class_init (MetaFramesClass *class)
   gobject_class->finalize = meta_frames_finalize;
   #if !GTK_CHECK_VERSION(3, 0, 0)
   object_class->destroy = meta_frames_destroy;
+  widget_class->style_set = meta_frames_style_set;
   #else
   widget_class->destroy = meta_frames_destroy;
+  widget_class->style_updated = meta_frames_style_updated;
   #endif
 
-  widget_class->style_set = meta_frames_style_set;
 
+
+#if GTK_CHECK_VERSION(3, 0, 0)
+  widget_class->draw = meta_frames_draw;
+  widget_class->map = meta_frames_map;
+  widget_class->unmap = meta_frames_unmap;
+#else
   widget_class->realize = meta_frames_realize;
   widget_class->unrealize = meta_frames_unrealize;
-
-  #if GTK_CHECK_VERSION(3, 0, 0)
-  widget_class->draw = meta_frames_draw;
-  #else
   widget_class->expose_event = meta_frames_expose_event;
-  #endif
+#endif
   widget_class->destroy_event = meta_frames_destroy_event;
   widget_class->button_press_event = meta_frames_button_press_event;
   widget_class->button_release_event = meta_frames_button_release_event;
@@ -321,7 +330,7 @@ meta_frames_destroy (GtkObject *object)
   g_slist_free (winlist);
 
 #if GTK_CHECK_VERSION(3, 0, 0)
-  GTK_WIDGET_CLASS (parent_class)->destroy (object);
+  GTK_WIDGET_CLASS (meta_frames_parent_class)->destroy (object);
 #else
   GTK_OBJECT_CLASS (parent_class)->destroy (object);
 #endif
@@ -512,9 +521,14 @@ reattach_style_func (gpointer key, gpointer value, gpointer data)
   meta_frames_attach_style (frames, frame);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+meta_frames_style_updated (GtkWidget *widget)
+#else
 static void
 meta_frames_style_set  (GtkWidget *widget,
                         GtkStyle  *prev_style)
+#endif
 {
   MetaFrames *frames;
 
@@ -525,7 +539,11 @@ meta_frames_style_set  (GtkWidget *widget,
   g_hash_table_foreach (frames->frames,
                         reattach_style_func, frames);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GTK_WIDGET_CLASS (meta_frames_parent_class)->style_updated (widget);
+#else
   GTK_WIDGET_CLASS (parent_class)->style_set (widget, prev_style);
+#endif
 }
 
 static void
@@ -773,6 +791,19 @@ meta_frames_unmanage_window (MetaFrames *frames,
     meta_warning ("Frame 0x%lx not managed, can't unmanage\n", xwindow);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+meta_frames_map (GtkWidget *widget)
+{
+  gtk_widget_set_mapped (widget, TRUE);
+}
+
+static void
+meta_frames_unmap (GtkWidget *widget)
+{
+  gtk_widget_set_mapped (widget, FALSE);
+}
+#else
 static void
 meta_frames_realize (GtkWidget *widget)
 {
@@ -786,6 +817,7 @@ meta_frames_unrealize (GtkWidget *widget)
   if (GTK_WIDGET_CLASS (parent_class)->unrealize)
     GTK_WIDGET_CLASS (parent_class)->unrealize (widget);
 }
+#endif
 
 static MetaUIFrame*
 meta_frames_lookup_window (MetaFrames *frames,

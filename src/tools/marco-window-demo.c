@@ -25,11 +25,6 @@
 #include <unistd.h>
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
-#define gtk_hbox_new(X, Y) gtk_box_new (GTK_ORIENTATION_HORIZONTAL, Y)
-#endif
-
-#if GTK_CHECK_VERSION (3, 0, 0)
 static void
 do_appwindow (GSimpleAction *action,
               GVariant      *parameter,
@@ -394,7 +389,11 @@ utility_cb (GtkAction *action,
 
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (callback_data));
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -434,7 +433,11 @@ toolbar_cb (GtkAction *action,
 
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (callback_data));
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -465,7 +468,11 @@ menu_cb (GtkAction *action,
 
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (callback_data));
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -493,7 +500,11 @@ override_redirect_cb (GtkAction *action,
   window = gtk_window_new (GTK_WINDOW_POPUP);
   gtk_window_set_title (GTK_WINDOW (window), "Override Redirect");
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -524,7 +535,11 @@ border_only_cb (GtkAction *action,
 
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (callback_data));
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -598,9 +613,17 @@ splashscreen_cb (GtkAction *action,
   set_gtk_window_type (GTK_WINDOW (window), "_NET_WM_WINDOW_TYPE_SPLASHSCREEN");
   gtk_window_set_title (GTK_WINDOW (window), "Splashscreen");
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
   vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
+#if GTK_CHECK_VERSION (3, 10, 0)
   image = gtk_image_new_from_icon_name ("dialog-information", GTK_ICON_SIZE_DIALOG);
+#else
+  image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_DIALOG);
+#endif
   gtk_box_pack_start (GTK_BOX (vbox), image, FALSE, FALSE, 0);
 
   gtk_box_pack_start (GTK_BOX (vbox), focus_label (window), FALSE, FALSE, 0);
@@ -634,11 +657,19 @@ make_dock (int type)
     {
     case DOCK_LEFT:
     case DOCK_RIGHT:
+#if GTK_CHECK_VERSION (3, 0, 0)
+      box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
       box = gtk_vbox_new (FALSE, 0);
+#endif
       break;
     case DOCK_TOP:
     case DOCK_BOTTOM:
+#if GTK_CHECK_VERSION (3, 0, 0)
+      box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
       box = gtk_hbox_new (FALSE, 0);
+#endif
       break;
     case DOCK_ALL:
       break;
@@ -647,7 +678,11 @@ make_dock (int type)
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   set_gtk_window_type (GTK_WINDOW (window), "_NET_WM_WINDOW_TYPE_DOCK");
 
+#if GTK_CHECK_VERSION (3, 10, 0)
   image = gtk_image_new_from_icon_name ("dialog-information", GTK_ICON_SIZE_DIALOG);
+#else
+  image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_DIALOG);
+#endif
   gtk_box_pack_start (GTK_BOX (box), image, FALSE, FALSE, 0);
 
   gtk_box_pack_start (GTK_BOX (box), focus_label (window), FALSE, FALSE, 0);
