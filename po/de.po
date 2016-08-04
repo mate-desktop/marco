@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# desperateCoder <a.dawtjan@gmx.de>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2013-04-30 09:57+0000\n"
+"Last-Translator: desperateCoder <a.dawtjan@gmx.de>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -422,7 +423,7 @@ msgstr "Neustart fehlgeschlagen: %s\n"
 #: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "%d, gespeichert unter dem GSettings-Schlüssel %s, muss im Bereich %d bis %d liegen.\n"
 
 #: ../src/core/prefs.c:1008
 msgid ""
@@ -433,7 +434,7 @@ msgstr "Problemumgehungen (Workarounds) für defekte Anwendungen abgeschaltet. M
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "Schriftbeschreibung »%s« aus MateConf-Schlüssel »%s« konnte nicht verarbeitet werden\n"
 
 #: ../src/core/prefs.c:1137
 #, c-format

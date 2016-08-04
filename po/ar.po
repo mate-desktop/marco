@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#   <noureddin@barid.com>, 2012.
+# noureddin <noureddin@barid.com>, 2012
+# sarhantn <sarhanaissi@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2013-05-31 14:52+0000\n"
+"Last-Translator: sarhantn <sarhanaissi@gmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/MATE/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -423,7 +424,7 @@ msgstr "فشلت إعادة التشغيل: %s\n"
 #: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "%d المحفوظ في مفتاح GSettings %s خارج المدى من %d إلى %d\n\n"
 
 #: ../src/core/prefs.c:1008
 msgid ""
@@ -434,7 +435,7 @@ msgstr "عطّلت الحلول الجزئيّة للتطبيقات المعطو
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "لا يمكن تحليل وصف الخط \"%s\" من مفتاح GSettings %s \n"
 
 #: ../src/core/prefs.c:1137
 #, c-format

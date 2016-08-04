@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# samson <sambelet@yahoo.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2013-06-11 23:39+0000\n"
+"Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/projects/p/MATE/language/am/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
-msgstr ""
+msgstr "ዴስክቶፕ"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 msgid "Show the panel's \"Run Application\" dialog box"
@@ -43,7 +44,7 @@ msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
-msgstr ""
+msgstr "የ መስኮት አስተዳዳሪ"
 
 #: ../src/50-marco-global-key.xml.in.h:2
 msgid "Move between windows, using a popup window"
@@ -272,13 +273,13 @@ msgstr ""
 #: ../src/core/core.c:206
 #, c-format
 msgid "Unknown window information request: %d"
-msgstr ""
+msgstr "ያልታወቀ የ መስኮት መረጃ ጥያቄ: %d"
 
 #. Translators: %s is a window title
 #: ../src/core/delete.c:96
 #, c-format
 msgid "<tt>%s</tt> is not responding."
-msgstr ""
+msgstr "<tt>%s</tt> መልስ አይሰጥም"
 
 #: ../src/core/delete.c:101
 msgid ""
@@ -288,16 +289,16 @@ msgstr ""
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
-msgstr ""
+msgstr "_ይጠብቁ "
 
 #: ../src/core/delete.c:110
 msgid "_Force Quit"
-msgstr ""
+msgstr "_አስገድዶ ማጥፊያ"
 
 #: ../src/core/delete.c:208
 #, c-format
 msgid "Failed to get hostname: %s\n"
-msgstr ""
+msgstr "የ ጋባዡን ስም ማግንኘት አልተቻለም: %s\n"
 
 #: ../src/core/display.c:268
 #, c-format
@@ -338,7 +339,7 @@ msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr ""
+msgstr "ስህተት በ ማስኬድ ላይ እንዳለ <tt>%s</tt>:\n\n%s"
 
 #: ../src/core/keybindings.c:2392
 #, c-format
@@ -414,7 +415,7 @@ msgstr ""
 #: ../src/core/main.c:612
 #, c-format
 msgid "Failed to restart: %s\n"
-msgstr ""
+msgstr "እንደ ገና ማስጀመር አልተቻለም: %s\n"
 
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
@@ -484,7 +485,7 @@ msgstr ""
 #: ../src/core/session.c:842 ../src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr ""
+msgstr "ዳይሬክቶሪ መፍጠር አልተቻለም '%s': %s\n"
 
 #: ../src/core/session.c:859
 #, c-format
@@ -607,27 +608,27 @@ msgstr ""
 #: ../src/core/window-props.c:388
 #, c-format
 msgid "%s (on %s)"
-msgstr ""
+msgstr "%s (on %s)"
 
 #. Simple case-- don't bother to look it up.  It's root.
 #: ../src/core/window-props.c:420
 #, c-format
 msgid "%s (as superuser)"
-msgstr ""
+msgstr "%s (እንደ superuser)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
 #: ../src/core/window-props.c:438
 #, c-format
 msgid "%s (as %s)"
-msgstr ""
+msgstr "%s (እንደ %s)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
 #: ../src/core/window-props.c:444
 #, c-format
 msgid "%s (as another user)"
-msgstr ""
+msgstr "%s (እንደ ሌላ ተጠቃሚ)"
 
 #: ../src/core/window-props.c:1430
 #, c-format
@@ -1573,7 +1574,7 @@ msgstr ""
 
 #: ../src/ui/theme-viewer.c:400
 msgid "Border"
-msgstr ""
+msgstr "ድንበር"
 
 #: ../src/ui/theme-viewer.c:728
 #, c-format

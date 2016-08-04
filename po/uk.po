@@ -3,14 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Yarema aka Knedlyk <yupadmin@gmail.com>, 2012.
+# Koljan1970 <Stuartlittle1970@gmail.com>, 2013
+# Stefano Karapetsas <stefano@karapetsas.com>, 2012
+# Yarema aka Knedlyk <yupadmin@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-02-10 13:01+0100\n"
-"PO-Revision-Date: 2013-02-10 12:02+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2013-06-13 19:29+0000\n"
+"Last-Translator: Koljan1970 <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +22,7 @@ msgstr ""
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
-msgstr "Робочий стіл"
+msgstr "Стільниця"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 msgid "Show the panel's \"Run Application\" dialog box"
@@ -358,7 +360,7 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nCopyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\nЦе - вільне програмне забезпечення; умови копіювання дивіться у текстах програми.\nНе надається НІЯКИХ гарантій; навіть ПРИДАТНОСТІ ДЛЯ ПРОДАЖУ чи ВІДПОВІДНОСТІ ПЕВНІЙ МЕТІ.\n"
+msgstr "marco %s\nАвторське право (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\nЦе - вільне програмне забезпечення; умови копіювання дивіться у текстах програми.\nНе надається НІЯКИХ гарантій; навіть ПРИДАТНОСТІ ДЛЯ ПРОДАЖУ чи ВІДПОВІДНОСТІ ПЕВНІЙ МЕТІ.\n"
 
 #: ../src/core/main.c:275
 msgid "Disable connection to session manager"
@@ -423,7 +425,7 @@ msgstr "Збій перезапуску: %s\n"
 #: ../src/core/prefs.c:558 ../src/core/prefs.c:711
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "Значення %d ключа GSettings «%s» не входить у діапазон значень від %d до %d\n"
 
 #: ../src/core/prefs.c:1008
 msgid ""
@@ -434,7 +436,7 @@ msgstr "Трюк для роботи із зіпсованими програм�
 #: ../src/core/prefs.c:1075
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr ""
+msgstr "Не вдалося розібрати опис шрифту «%s» з ключа GSettings %s\n"
 
 #: ../src/core/prefs.c:1137
 #, c-format
@@ -553,7 +555,7 @@ msgstr "Відкрито журнал %s\n"
 #: ../src/core/util.c:136 ../src/tools/marco-message.c:176
 #, c-format
 msgid "Marco was compiled without support for verbose mode\n"
-msgstr "\"Метасіті\" скомпільовано без підтримки режиму докладних повідомлень\n"
+msgstr "\"Marco\" скомпільовано без підтримки режиму докладних повідомлень\n"
 
 #: ../src/core/util.c:236
 msgid "Window manager: "
