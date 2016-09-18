@@ -18,14 +18,15 @@
 # Petr Kovar <pmkovar@gmail.com>, 2008,2010
 # Petr Šimáček <petr.simacek@gmail.com>, 2016
 # Petr Tomeš <ptomes@gmail.com>, 2006
+# Roman Horník <roman.hornik@debian-linux.cz>, 2016
 # Stanislav Kučera <inactive+kacernator@transifex.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-09 17:44+0300\n"
-"PO-Revision-Date: 2016-05-04 08:46+0000\n"
-"Last-Translator: Petr Šimáček <petr.simacek@gmail.com>\n"
+"PO-Revision-Date: 2016-09-04 08:33+0000\n"
+"Last-Translator: Martin Kříž <liberte.czech@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/mate/MATE/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -489,7 +490,7 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Nastavení této volby na hodnotu FALSE může vést k nespolehlivému chování, užívatelům je silně doporučeno neměnit hodnotu z předvoleného stavu TRUE. Mnoho akcí (např. kliknutí do klientské oblasti, přesunutí nebo změna velikosti okna) normálně mění okno jako vedlejší efekt. Nastavením této volby na hodnotu FALSE, která je nedoporučená, se oddělí změna od ostatních užívatelských akcí a ignorují se požadavky na změnu, generované aplikací. Viz http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Dokonce, i když je tato volba nastavena na FALSE, okna mohou ještě být měněna pomocí Alt + kliknutí levým myšítkem kamkoliv na okno, normálním kliknutím na okraj okna, nebo pomocí speciálních zpráv z pagers, jako jsou požadavky na aktivaci z tasklistu appletů. Tato volba je v současnosti zakázaná v režimu click-to-focus. Všimněte si, že seznam způsobů, jak změnit okno, když raise_on_click je nastaven na FALSE, nezahrnuje programové požadavky z aplikací na změnu okna; tyto žádosti budou ignorované bez ohledu na důvod žádosti. Jste-li vývojářem aplikace a uživatelé si stěžují, že aplikace nefunguje s tímto nastavením, sdělte jim, že je chyba _u nich_, že si zmršili okenního správce, a že buď musí tuto volbu změnit zpět na hodnotu true, nebo ať se naučí žít s touto \"chybou\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
@@ -618,7 +619,7 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr ""
+msgstr "Wrap styl se používá k určení, jak přejít z jednoho prostoru do druhého na hranici přepínače pracovního prostoru. Je-li nastavena na \"no wrap\", nic se nestane, pokud se pokusíte přepnout do pracovního prostoru kolem hranice přepínače pracovního prostoru. Pokud je nastaven na \"klasické\", staré chování, používá se marco: konec jednoho řádku vede do začátku příštího a konec sloupce vede k začátku následujícího. Pokud je nastaven na \"toroidní - prstencové\", pracovní prostory jsou spojeny jako kobliha: konec každého řádku vede k jeho vlastnímu začátku a na konci každého sloupce vede k jeho vlastnímu začátku."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
@@ -673,7 +674,7 @@ msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr ""
+msgstr "Je-li nastaveno na 'true', pak, když je kompozitní vykreslování povoleno, namísto náhledů oken ve vyskakovacím okně při stisknutí Alt + Tab budou zobrazeny ikony aplikací."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
@@ -749,7 +750,7 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "Režim umístění okna ukazuje, jak jsou umístěna nová okna. \"automatické\" znamená, že systém automaticky zvolí polohu v závislosti na prostoru, která je k dispozici na ploše, nebo pokud není prostor, pomocí jednoduché kaskády; \"ukazatel\" znamená, že nová okna jsou umístěna v závislosti na pozici ukazatele myši; \"manuální\" znamená, že uživatel musí ručně umístit nové okno pomocí myši nebo klávesnice."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
@@ -780,7 +781,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Formát vypadá jako  \"&lt;Control&gt;a\" nebo \"&lt;Shift&gt;&lt;Alt&gt;F1\". Analyzátor je poměrně velkorysý a umožňuje malá i velká písmena a zkratky jako \"&lt;Ctl&gt;\". Pokud nastavíte možnost na speciální řetězec \"vypnuto\", pak u této akce nebude žádná klávesová zkratka."
 
 #: ../src/org.mate.marco.gschema.xml.h:78
 msgid ""
@@ -791,7 +792,7 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr ""
+msgstr "Formát má podobu \"&lt;Control&gt;a\" nebo \"&lt;Shift&gt;&lt;Alt&gt;F1\". Analyzátor je poměrně velkorysý a dovoluje malá i velká písmena a zkratky jako \"&lt;Ctl&gt;\" a \"&lt;Ctrl&gt;\". Pokud volbu nastavíte na speciální řetězec \"disabled\", pak pro takovou akci nebude žádná klávesová zkratka. Tato klávesová zkratka může být obrácena podržením klávesy \"Shift\" a proto \"Shift\" nemůže být jedna z použitých kláves."
 
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Move backward between windows of an application, using a popup window"

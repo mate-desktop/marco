@@ -7,13 +7,14 @@
 # crolidge, 2012
 # crolidge, 2014-2015
 # crolidge, 2015-2016
+# Luis Filipe Teixeira <lufilte@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-09 17:44+0300\n"
-"PO-Revision-Date: 2016-05-29 15:43+0000\n"
-"Last-Translator: crolidge\n"
+"PO-Revision-Date: 2016-09-16 08:51+0000\n"
+"Last-Translator: Luis Filipe Teixeira <lufilte@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/mate/MATE/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -400,7 +401,7 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
+msgstr "Clicar uma janela enquanto pressiona esta tecla modificadora irá mover a janela (clique esquerdo), redimensionar a janela (clique do meio) ou mostrar o menu da janela (botão direito). As operações de botão do meio e direita podem ser trocados usando a tecla \"resize_with_right_button\". Modificador é expressa como \"&lt;Alt&gt;\" ou \"&lt;Super&gt;\" por exemplo."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -411,7 +412,7 @@ msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr ""
+msgstr "Definir como verdadeiro para redimensionar com o botão direito e apresentar o menu com o botão do meio enquanto é premida a tecla indicada em \"mouse_button_modifier\"; definir como falso para que funcione de forma inversa."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Arrangement of buttons on the titlebar"
@@ -426,7 +427,7 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr ""
+msgstr "Disposição dos botões na barra de título. O valor deverá ser uma expressão, tal como \"menu:minimize,maximize,spacer,close\"; os dois pontos separa o canto esquerdo da janela do direito, e os nomes dos botões são separados por vírgulas. Não são permitidos botões duplicados. Nomes de botões desconhecidos são ignorados para que possam ser adicionados botões em versões futuras do marco sem gerar erros em versões antigas. Pode ser utilizada uma etiqueta especial de espaçamento para inserir algum espaço entre dois botões adjacentes."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Window focus mode"

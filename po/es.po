@@ -3,27 +3,31 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Fitoschido, 2015
-# Fitoschido, 2014
+# Adolfo Jayme-Barrientos, 2015
+# Adolfo Jayme-Barrientos, 2014
 # Andres Sanchez <blackatze93@gmail.com>, 2016
 # Arcenio Cid <gusty.miliki@gmail.com>, 2015
 # Benjamin Perez Carrillo <benperezc@gmail.com>, 2015
+# Daniel Aranda <dwarandae@gmail.com>, 2016
 # difusion, 2014
 # ebray187 <ebray187@gmail.com>, 2016
 # Emiliano Fascetti, 2014-2015
 # Juan Sánchez <jsrmadrid@gmail.com>, 2015
 # Lluís Tusquellas <lutusq@gmail.com>, 2013
+# Luis Armando Medina <lamedina@gmail.com>, 2016
 # luismiguex <luismiguex@gmail.com>, 2016
 # Lluís Tusquellas <lutusq@gmail.com>, 2012
 # MagicFab <magicfab@member.fsf.org>, 2016
+# Mario Verdin <jmvl1303@gmail.com>, 2016
 # Miguel de Dios Matias <tres.14159@gmail.com>, 2015
+# ZenWalker <scow@riseup.net>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-09 17:44+0300\n"
-"PO-Revision-Date: 2016-04-28 00:59+0000\n"
-"Last-Translator: luismiguex <luismiguex@gmail.com>\n"
+"PO-Revision-Date: 2016-08-21 00:13+0000\n"
+"Last-Translator: Daniel Aranda <dwarandae@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/mate/MATE/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -547,7 +551,7 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
+msgstr "Si está establecido a «true» y el modo del foco es «sloppy» o «mouse» entonces la ventana con el foco será elevada automáticamente tras un retardo especificado en la clave auto_raise_delay. Esto no está relacionado con pulsar en una ventana para elevarla, ni con entrar en una ventana durante una operación de arrastrar y soltar."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Delay in milliseconds for the auto raise option"
@@ -616,7 +620,7 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr ""
+msgstr "El estilo de envoltura se utiliza para determinar cómo cambiar de un espacio de trabajo a otro en la frontera del conmutador de espacio de trabajo. Cuando se establece en \"no wrap\", no pasará nada si intenta cambiar a un espacio de trabajo más allá de la frontera del conmutador de espacio de trabajo. Si se establece en \"classic\", se utiliza el comportamiento marco antiguo: el final de una fila conduce al comienzo de la siguiente y el final de una columna conduce al comienzo de la siguiente. Si se establece en \"toroidal\", los espacios de trabajo están conectados como una rosquilla: al final de cada fila conduce a su propio principio y el final de cada columna lleva a su propio principio."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
@@ -627,7 +631,7 @@ msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
+msgstr "Activa una indicación visual cuando una aplicación o el sistema emite una «campanada» o un «bip» ; es muy útil para los ambientes ruidosos y para las personas con dificultades auditivas."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "System Bell is Audible"
@@ -637,7 +641,7 @@ msgstr "La campana del sistema es audible"
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
+msgstr "Determina si las aplicaciones o el sistema pueden generar «bips» audibles; podría usarse en conjunto con «la campana visual» para permitir «bips» silenciosos."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "Visual Bell Type"
@@ -664,14 +668,14 @@ msgstr "Determina si Marco es un gestor de composición."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
-msgstr ""
+msgstr "Alt-Tab rápido con el gestor de composición (miniaturas inhabilitadas)"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr ""
+msgstr "Si es verdadero, entonces no se mostrarán las miniaturas en la ventana emergente con Alt-Tab cuando el gestor de composición esté habilitado. Los iconos de las aplicaciones se mostrarán en su lugar."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
@@ -700,7 +704,7 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
+msgstr "Si es «true», entonces Marco funciona en términos de aplicaciones en vez de ventanas. El concepto es un poco abstracto, pero en general una configuración basada en aplicaciones es más parecida a un Mac y menos a un Windows. Cuando enfoca a una ventana en el modo basado en aplicación todas las ventanas en la aplicación se elevan. También en el modo basado en aplicación las pulsaciones del foco no se pasan a través de las ventanas en otras aplicaciones. El modo basado en aplicaciones está, sin embargo, no implementado en gran parte en este momento."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -712,7 +716,7 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr ""
+msgstr "Algunas aplicaciones no hacen caso de las especificaciones en formas que resultan en comportamiento incorrecto del gestor de ventanas. Esta opción pone a Marco en un modo rigurosamente correcto, lo que da un interfaz de usuario más consistente, supuesto que uno no necesita ejecutar ninguna aplicación que se comporte mal."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Determines if new windows are created on the center of the screen"
@@ -722,7 +726,7 @@ msgstr "Determina si las nuevas ventanas son creadas en el centro de la pantalla
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Si es verdadero, entonces se abrirá una nueva ventana en el centro de la pantalla. En caso contrario, se abrirán en la parte superior izquierda de la pantalla."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
@@ -733,7 +737,7 @@ msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window."
-msgstr ""
+msgstr "Si está activado, al soltar las ventanas en los bordes de la pantalla las maximiza verticalmente y cambia su tamaño para cubrir la mitad del área disponible. Al arrastrar y soltar al borde superior maximiza la ventana."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
@@ -769,7 +773,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "La combinación de teclas que ejecuta el comando numerado correspondiente en /apps/marco/keybinding_commands. El formato se ve como «&lt;Control&gt;a» o «&lt;Mayús&gt;&lt;Alt&gt;F1». El intérprete es bastante liberal y permite tanto mayúsculas como minúsculas además de abreviaturas como por ejemplo «&lt;Ctl&gt;» y «&lt;Ctrl&gt;». Si configura esta opción con la cadena especial «disabled» entonces no habrá combinación de teclas para esa acción.\""
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
@@ -2008,7 +2012,7 @@ msgstr "No puede tener dos draw_ops para un elemento <menu_icon> (el tema ha esp
 #: ../src/ui/theme-parser.c:3395
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr "El elemento principal en el tema debe ser<metacity_theme> no <%s>"
+msgstr "El elemento principal en el tema debe ser <metacity_theme> no <%s>"
 
 #: ../src/ui/theme-parser.c:3415
 #, c-format

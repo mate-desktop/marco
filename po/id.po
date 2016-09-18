@@ -3,20 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Andika Triwidada <andika@gmail.com>, 2016
 # Anton Toni Agung <vdrive6@gmail.com>, 2015
+# Ari Prabowo <ariprabowo03@gmail.com>, 2016
 # airinuxazis <azis.naufal@gmail.com>, 2012
 # Ibnu Daru Aji, 2014
 # hpiece 8 <hpiece8@gmail.com>, 2016
 # Ibnu Daru Aji, 2013
 # La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2015
 # Mohamad Hasan Al Banna <se7entime@protonmail.com>, 2012
+# Muhammad Herdiansyah <herdiansyah@openmailbox.org>, 2016
 # Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2014,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-09 17:44+0300\n"
-"PO-Revision-Date: 2016-04-20 11:53+0000\n"
+"PO-Revision-Date: 2016-09-04 17:02+0000\n"
 "Last-Translator: Willy Sudiarto Raharjo <willysr@slackware-id.org>\n"
 "Language-Team: Indonesian (http://www.transifex.com/mate/MATE/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -395,7 +398,7 @@ msgstr "Pindahkan jendela ke area kerja bawah"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Tombol yang digunakan untuk menjalankan suatu perintah apabila jendela diklik"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -404,22 +407,22 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
+msgstr "Klik pada sebuah jendela sambil menekan kombinasi tombol ini akan memindahkan jendela (klik kiri), mengubah ukuran jendela (klik tengah), atau menampilkan menu jendela (klik kanan). Operasi klik tengah dan kanan dapat ditukar dengan menggunakan tombol \"ubah_ukuran_dengan_tombol_kanan\". Kombinasi tombol ini akan dinyatakan seperti \"&lt;Alt&gt;\" atau \"&lt;Super&gt;\" sebagai contohnya."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "Apakah akan mengubah ukuran dengan tombol kanan"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr ""
+msgstr "Tata ini ke true untuk mengubah ukuran dengan tombol kanan dan menampilkan suatu menu dengan tombol tengah ketika menahan kunci yang diberikan di \"mouse_button_modifier\"; tata ini ke false untuk membuat sebaliknya."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Pengaturan tombol pada bilah judul"
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
@@ -430,11 +433,11 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr ""
+msgstr "Pengaturan tombol pada bilah judul. Nilai di sini harus berupa string, misalnya \"menu:minimize,maximize,spacer,close\"; tanda titik dua memisahkan pojok kiri jendela dari pojok kanan, dan nama tombol dipisahkan dengan tanda koma. Tombol duplikat tidak diperbolehkan. Nama tombol yang tidak dikenal akan diabaikan sehingga di kemudian hari tombol tersebut akan dapat ditambahkan bila memang diperlukan tanpa harus merusak konfigurasi Marco yang ada sekarang. Suatu tag khusus spacer dapat dipakai untuk menyisipkan ruang antara dua tombol bersebelahan."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Window focus mode"
-msgstr ""
+msgstr "Modus fokus jendela"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -443,11 +446,11 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr ""
+msgstr "Modus fokus jendela mengindikasikan bagaimana jendela-jendela yang ada diaktifkan. Modus ini memiliki memiliki tiga nilai yang dapat dipilih; \"klik\" berarti jendela-jendela tersebut harus diklik untuk memberikan fokus ke jendela-jendela tersebut, \"sloppy\" berarti jendela-jendela tersebut akan mendapatkan fokus ketika mouse memasuki area jendela, dan \"mouse\" berarti jendela-jendela tersebut akan mendapatkan fokus ketika mouse memasuki area jendela dan tidak akan mendapatkan fokus ketika mouse keluar dari area jendela."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Kendalikan cara jendela baru mendapatkan fokus"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -455,11 +458,11 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr ""
+msgstr "Pilihan ini menyediakan kendali tambahan untuk menentukan bagaimana jendela yang baru dibuat mendapatkan fokus. Pilihan ini memiliki dua nilai yang dapat dipilih; \"pintar\" menerapkan modus normal yang dipilih pengguna, dan \"ketat\" membuat jendela-jendela yang ada dimulai dari sebuah terminal yang tidak diberikan fokus."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Apakah kemunculan akan menjadi efek-samping dari interaksi pengguna lain"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -481,11 +484,11 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Mengatur opsi ini ke false dapat menyebabkan perilaku berkutu, sehingga pengguna sangat tidak dianjurkan untuk mengubahnya dari baku yang true. Banyak aksi (misalnya klik di wilayah klien, memindah atau mengubah ukuran jendela) normalnya menaikkan jendela sebagai efek samping. Menetapkan pilihan ini ke false, yang sangat tidak dianjurkan, akan melepas menaikkan dari tindakan pengguna lain, dan mengabaikan permintaan menaikkan yang dihasilkan oleh aplikasi. Lihat http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Bahkan ketika opsi ini false, jendela masih bisa dinaikkan oleh alt-klik-kiri di mana saja di jendela, klik biasa di dekorasi jendela, atau dengan pesan khusus dari pager, seperti permintaan aktivasi dari aplet tasklist. Pilihan ini sedang dimatikan pada mode klik-untuk-fokus. Perhatikan bahwa daftar cara untuk meningkatkan jendela ketika raise_on_click adalah false tidak termasuk permintaan dari program aplikasi untuk menaikkan jendela; permintaan tersebut akan diabaikan tanpa peduli alasan permintaan. Jika Anda seorang pengembang aplikasi dan memiliki pengguna yang mengeluh bahwa aplikasi Anda tidak bekerja ketika pengaturan ini dimatikankan, katakan kepada mereka itu adalah kesalahan _mereka_ karena merusak manajer jendela mereka dan bahwa mereka perlu mengubah pilihan ini kembali ke true atau hidup dengan \"kutu\" yang mereka minta."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Aksi saat batang judul diklik ganda"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -497,11 +500,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Pilihan ini menentukan efek klik ganda pada bilah judul. Pilihan yang sah adalah 'toggle_shade' yang akan mengaktifkan/mematikan bayangan jendela, 'toggle_maximize' yang akan memaksimalkan dan mengecilkan jendela, 'toggle_maximize_horizontally' dan 'toggle_maximize_vertically' yang akan memaksimalkan/membatalkan pemaksimalan jendela hanya ke arah itu, 'minimize' yang akan meminimalkan jendela, 'shade' yang akan menggulung jendela up, 'menu' yang akan menampilkan menu jendela, 'lower' yang akan menempatkan jendela di belakang yang lain, dan 'none' tidak akan melakukan apapun."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Aksi saat batang judul diklik tengah"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -513,11 +516,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Pilihan ini menentukan efek klik tengah pada bilah judul. Pilihan yang sah adalah 'toggle_shade' yang akan mengaktifkan/mematikan bayangan jendela, 'toggle_maximize' yang akan memaksimalkan dan mengecilkan jendela, 'toggle_maximize_horizontally' dan 'toggle_maximize_vertically' yang akan memaksimalkan/membatalkan pemaksimalan jendela hanya ke arah itu, 'minimize' yang akan meminimalkan jendela, 'shade' yang akan menggulung jendela up, 'menu' yang akan menampilkan menu jendela, 'lower' yang akan menempatkan jendela di belakang yang lain, dan 'none' tidak akan melakukan apapun."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Aksi saat batang judul diklik kanan"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -529,11 +532,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Pilihan ini menentukan efek klik kanan pada bilah judul. Pilihan yang sah adalah 'toggle_shade' yang akan mengaktifkan/mematikan bayangan jendela, 'toggle_maximize' yang akan memaksimalkan dan mengecilkan jendela, 'toggle_maximize_horizontally' dan 'toggle_maximize_vertically' yang akan memaksimalkan/membatalkan pemaksimalan jendela hanya ke arah itu, 'minimize' yang akan meminimalkan jendela, 'shade' yang akan menggulung jendela up, 'menu' yang akan menampilkan menu jendela, 'lower' yang akan menempatkan jendela di belakang yang lain, dan 'none' tidak akan melakukan apapun."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Secara otomatis menaikkan jendela yang terfokus"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -541,17 +544,17 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
+msgstr "Bila berisi true dan modus fokus bernilai \"sloppy\" atau \"mouse\" maka jendela yang menerima fokus akan dinaikkan secara otomatis setelah waktu jeda yang ditetapkan oleh key auto_rise_delay. Hal ini tidak berhubungan untuk mengklik pada jendela untuk memunculkannya, ataupun untuk memasukkan jendela ketika seret-dan-jatuhkan."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Jeda dalam milisekon untuk pilihan naikan jendela secara otomatis"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr ""
+msgstr "Waktu jeda sebelum suatu jendela akan otomatis naik apabila auto_rise diaktifkan. Waktu jeda dinyatakan dalam seperseribu detik."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Current theme"
@@ -561,17 +564,17 @@ msgstr "Tema saat ini"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "Tema menentukan tampilan bingkai jendela, titlebar, dan lain-lain."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Gunakan fonta sistem standard pada titel jendela"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
+msgstr "Bila berisi true, mengabaikan titlebar_font dan menggunakan fonta aplikasi standar untuk judul jendela."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Window title font"
@@ -583,7 +586,7 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr ""
+msgstr "Kalimat deskripsi fonta yang menjelaskan fonta bagi bilah judul jendela. Ukuran pada deskripsi akan digunakan hanya jika pilihan titlebar_font_size diset ke angka 0. Pilihan ini juga tidak akan berfungsi apabila pilihan titlebar_uses_desktop_font bernilai true."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Number of workspaces"
@@ -594,11 +597,11 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
+msgstr "Jumlah ruang kerja. Harus lebih dari nol, dan memiliki nilai maksimum yang tetap untuk mencegah tidak dapat digunakannya desktop karena terlalu banyaknya permintaan ruang kerja yang dibuat secara tidak sengaja."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Workspace wrap style"
-msgstr ""
+msgstr "Gaya lipat ruang kerja"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -610,32 +613,32 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr ""
+msgstr "Gaya wrap digunakan untuk menentukan bagaimana berpindah dari satu ruang kerja ke yang lain pada batas pergantian ruang kerja. Ketika diset pada \"tanpa wrap\", tidak akan terjadi apapun jika Anda mencoba berpindah ke ruang kerja melalui batas pergantian. Jika diset ke \"klasik\", perilaku marco yang lama akan digunakan: akhir dari satu baris akan mengarah pada awal baris berikutnya dan akhir dari sebuah kolom akan mengarah pada kolom berikutnya. Jika diset ke \"toroidal\", ruang kerja akan terhubung seperti donat; akhir dari setiap baris kembali ke awal baris dan akhir dari setiap kolom akan kembali ke awal kolom."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Fungsikan Bel Visual"
 
 #: ../src/org.mate.marco.gschema.xml.h:34
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
+msgstr "Menyalakan indikasi visual saat aplikasi atau sistem mengeluarkan 'bell' atau 'beep'; berguna bagi pengguna yang lemah pendengaran atau pada penggunaan di lingkungan yang berisik."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Bel Sistem dapat Didengar"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
+msgstr "Menentukan apakah aplikasi atau sistem dapat membuat bel yang dapat didengar; boleh dipakai bersama dengan 'visual bell' untuk mengijinkan 'beep' hening."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Tipe Bel Visual"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
@@ -646,30 +649,30 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr ""
+msgstr "Menentukan cara Marco menyajikan indikasi visual saat bel sistem atau aplikasi sedang dibunyikan. Ada dua cara yang digunakan, yaitu \"fullscreen\" yang akan menampilkan kilatan hitam putih di seluruh area layar, dan \"frame_flash\"yang akan menampikan kilatan pada bilah judul jendela aplikasi yang membunyikan bel. Jika tidak diketahui aplikasi mana yang membunyikan bel (biasanya karena ini merupakan bel sistem standar) maka kilatan akan ditampilkan pada bilah judul jendela yang sedang memiliki fokus saat ini."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Manajer Pengkomposisian"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Menentukan apakah Marco adalah suatu manajer pengkomposisian."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
-msgstr ""
+msgstr "Alt-Tab cepat dengan manajer pengkomposisian (menonaktifkan gambar mini)"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr ""
+msgstr "Bila diisi true, tidak ada gambar mini jendela yang ditampilkan dalam jendela popup alt-tab ketika manajer pengkomposisian difungsikan. Ikon aplikasi akan ditampilkan sebagai pengganti."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "Apabila benar, penghematan sumber daya akan menggantikan daya guna."
 
 #: ../src/org.mate.marco.gschema.xml.h:44
 msgid ""
@@ -678,12 +681,12 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr ""
+msgstr "Bila bernilai true, marco akan memberikan feedback pengguna yang lebih sedikit dengan menggunakan wireframe, menghindari animasi, atau yang lain. Ini berarti pengurangan yang signifikan dalam hal usabilitas bagi banyak pengguna, tetapi akan mengijinkan aplikasi lama untuk tetap bekerja, dan mungkin juga berguna untuk server terminal. Namun, fitur wireframe akan dimatikan saat aksesibilitas diaktifkan."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "(Tidak diwujudkan) Navigasi bekerja mengikuti aplikasi bukan jendela"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -694,11 +697,11 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
+msgstr "Bila berisi true, Marco akan bekerja berdasarkan aplikasi, bukan berdasarkan jendela. Konsepnya agak sedikit abstrak, tapi secara umum, konsepnya lebih mirip ke Mac ketimbang ke Windows. Saat Anda memberi fokus pada window pada mode berbasis aplikasi, semua jendela pada aplikasi akan dinaikkan. Juga, pada mode berbasis aplikasi, klik fokus tidak diberikan ke jendela pada aplikasi lain. Namun mode berbasis aplikasi belum diimplementasikan secara luas pada saat ini."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "Nonaktifkan fitur yang diperlukan oleh aplikasi tua dan aplikasi rusak"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -706,32 +709,32 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr ""
+msgstr "Beberapa aplikasi mengabaikan spesifikasi yang dapat menyebabkan kesalahan pengelola jendela. Pilihan ini menempatkan Marco pada mode pembenaran yang tepat, yang akan memberikan antar muka pengguna yang lebih konsisten, sehingga tidak perlu menjalankan aplikasi yang memiliki perilaku tidak benar."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Menentukan bila jendela baru dibuat di pusat layar"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Bila diisi true, jendela baru dibuka di pusat layar. Bila tidak, mereka dibuka di kiri atas layar."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
-msgstr ""
+msgstr "Apakah memfungsikan penjajaran bersisian"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window."
-msgstr ""
+msgstr "Bila difungsikan, menjatuhkan jendela pada tepi layar memaksimalkan mereka ke arah vertikal dan mengubah ukuran secara horisontal sehingga mencakup setengah dari area yang tersedia. Menyeret-dan-jatuhkan ke puncak memaksimalkan jendela."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
-msgstr ""
+msgstr "Modus penempatan jendela"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -741,7 +744,7 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "Mode penempatan jendela mengindikasikan bagaimana jendela baru akan diposisikan. \"Otomatis\" berarti sistem akan memiliki lokasi secara otomatis berdasarkan ruang yang tersedia pada desktop, atau bertumpuk apabila tidak terdapat ruang; \"pointer\" berarti jendela baru ditempatkan sesuai posisi pointer mouse; \"manual\" berarti pengguna harus menempatkan jendela baru dengan mouse atau keyboard secara manual."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
@@ -763,7 +766,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Kombinasi tombol yang menjalankan perintah yang sesuai dengan nomor panggilnya pada /apps/marco/keybinding_commands. Format penulisannya seperti \"<Control>a\" atau \"<Shift><Alt>F1. Program pendeteksi kombinasi tombol ini sangat fleksibel dan memperbolehkan digunakannya huruf besar dan huruf kecil, juga memperbolehkan digunakannya singkatan seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda menentukan opsinya pada kata \"disabled\" maka perintah ini tidak memiliki kombinasi tombol."
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
@@ -772,7 +775,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Format penulisannya seperti \"<Control>a\" atau \"<Shift><Alt>F1\". Program pendeteksi kombinasi tombol ini sangat fleksibel dan memperbolehkan digunakannya huruf besar dan huruf kecil, juga memperbolehkan digunakannya singkatan seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda menentukan opsinya pada kata \"disabled\" maka perintah ini tidak memiliki kombinasi tombol."
 
 #: ../src/org.mate.marco.gschema.xml.h:78
 msgid ""
@@ -783,75 +786,75 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr ""
+msgstr "Format penulisannya seperti \"<Control>a\" atau \"<Shift><Alt>F1\". Program pendeteksi kombinasi tombol sangat fleksibel dan memperbolehkan digunakannya huruf besar dan huruf kecil, juga memperbolehkan digunakannya singkatan seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda menentukan opsinya pada kata \"disabled\" maka perintah ini tidak memiliki kombinasi tombol. Kombinasi tombol ini bisa dibalik dengan terus menekan kunci \"shift\"; maka, \"shift\" tidak bisa menjadi salah satu kunci yang dipakai."
 
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Berpindah mundur antar jendela dari suatu aplikasi, memakai suatu jendela popup"
 
 #: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Berpindah mundur antar jendela, memakai suatu jendela popup"
 
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Berpindah antar jendela pada semua ruang kerja, memakai suatu jendela popup"
 
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Berpindah mundur antar jendela pada semua ruang kerja, memakai suatu jendela popup"
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Berpindah mundur antara panel dan desktop, memakai suatu jendela popup"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Berpindahkan mundur antar jendela-jendela aplikasi seketika"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Pndahkan langsung ke belakang antar jendela-jendela"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Pindahkan langsung ke belakang antara panel dan desktop"
 
 #: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Perintah yang akan dijalankan bila tombol kombinasi ditekan"
 
 #: ../src/org.mate.marco.gschema.xml.h:99
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr ""
+msgstr "Kunci /apps/marco/global_keybindings/run_command_N menentukan kombinasi tombol untuk perintah ini. Dengan menekan kombinasi tombol tersebut maka perintah command_N akan dijalankan."
 
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "The screenshot command"
-msgstr ""
+msgstr "Perintah mengambil gambar layar"
 
 #: ../src/org.mate.marco.gschema.xml.h:101
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr ""
+msgstr "Kunci /apps/marco/global_keybindings/run_command_screenshot menentukan kombinasi tombol untuk menjalankan perintah ini"
 
 #: ../src/org.mate.marco.gschema.xml.h:102
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Perintah pengambilay gambar layar pada jendela"
 
 #: ../src/org.mate.marco.gschema.xml.h:103
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr ""
+msgstr "Kunci /apps/marco/global_keybindings/run_command_window_screenshot menentukan kombinasi tombol untuk menjalankan perintah ini."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Jungkitkan apakah sebuah jendela akan selalu tampak di atas jendela lainnya"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -2079,39 +2082,39 @@ msgstr "_Splashscreen"
 
 #: ../src/ui/theme-viewer.c:110
 msgid "_Top dock"
-msgstr ""
+msgstr "Dok _puncak"
 
 #: ../src/ui/theme-viewer.c:111
 msgid "_Bottom dock"
-msgstr ""
+msgstr "Dok _dasar"
 
 #: ../src/ui/theme-viewer.c:112
 msgid "_Left dock"
-msgstr ""
+msgstr "Dok k_iri"
 
 #: ../src/ui/theme-viewer.c:113
 msgid "_Right dock"
-msgstr ""
+msgstr "Dok ka_nan"
 
 #: ../src/ui/theme-viewer.c:114
 msgid "_All docks"
-msgstr ""
+msgstr "Semu_a dok"
 
 #: ../src/ui/theme-viewer.c:115
 msgid "Des_ktop"
-msgstr ""
+msgstr "Des_ktop"
 
 #: ../src/ui/theme-viewer.c:121
 msgid "Open another one of these windows"
-msgstr ""
+msgstr "Buka lagi satu jendela seperti ini"
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"
-msgstr ""
+msgstr "Ini adalah tombol demo dengan ikon 'buka'"
 
 #: ../src/ui/theme-viewer.c:125
 msgid "This is a demo button with a 'quit' icon"
-msgstr ""
+msgstr "Ini adalah tombol demo dengan ikon 'berhenti'"
 
 #: ../src/ui/theme-viewer.c:263
 msgid "This is a sample message in a sample dialog"

@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-09 17:44+0300\n"
-"PO-Revision-Date: 2016-06-08 06:59+0000\n"
-"Last-Translator: Miroslav Sido <miro_redhawk@hotmail.com>\n"
+"PO-Revision-Date: 2016-09-12 17:50+0000\n"
+"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/mate/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -450,7 +450,7 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "Táto možnosť ponúka rozšírenú kontrolu nad tým, ako sa novovytvorené okná stávajú aktívnymi. Má dve možné hodnoty: \"smart\" použije bežný používateľský režim, a \"strict\" spôsobí, že okná spustené z terminálu nie sú hneď aktívne."
+msgstr "Táto možnosť ponúka rozšírenú kontrolu nad tým, ako sa novovytvorené okná stávajú aktívnymi. Má dve možné hodnoty: „smart“ použije bežný používateľský režim, a „strict“ spôsobí, že okná spustené z terminálu nie sú hneď aktívne."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -476,7 +476,7 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr "Nastavenie tejto voľby na hodnotu false môže viesť k nespoľahlivému správaniu, užívateľom je silne doporučené nemeniť hodnotu z predvoleného stavu TRUE. Mnoho akcií (napr. Kliknutím do klientskej oblasti, presunutie alebo zmena veľkosti okna) normálne menia okno ako vedľajší efekt. Nastavenie tejto voľby na hodnotu false, ktorá je nedoporučená, sa oddelí zmena od ostatných užívateľských akcií, a ignorujú sa požiadavky na zmenu, generované aplikáciou. Pozri http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Dokonca aj keď je táto voľba false, okná môže ešte byť menené pomocou Alt-kliknite ľavým tlačidlom myši kamkoľvek na okno, normálne kliknite na okraj okna, alebo pomocou špeciálnych správ z pagers, ako sú požiadavky na aktiváciu z tasklistu appletov. Táto možnosť je v súčasnosti zakázaná v režime click-to-focus. Všimnite si, že zoznam spôsobov, ako zmeniť okno, keď raise_on_click je v stave false nezahŕňa programové požiadavky z aplikácií na zmenu okna; Tieto žiadosti budú ignorované bez ohľadu na dôvod žiadosti. Ak ste vývojár aplikácie a užívatelia si sťažovali, že aplikácia nefunguje s týmto nastavením, povedzte im, že je _ich_chyba pre zmeny v ich správcovi okien a že je potrebné túto možnosť zmeniť späť na hodnotu true alebo žiť s danou \"chybou \"."
+msgstr "Nastavenie tejto možnosti na hodnotu FALSE môže viesť k nespoľahlivému správaniu, používateľom je silne odporúčané nemeniť hodnotu z predvoleného stavu TRUE. Mnoho činností (napr. kliknutie do klientskej oblasti, presunutie alebo zmena veľkosti okna) normálne menia okno ako vedľajší efekt. Nastavenie tejto možnosti na hodnotu FALSE, ktorá je nedoporučená, sa oddelí zmena od ostatných užívateľských akcií, a ignorujú sa požiadavky na zmenu, generované programom. Pozri http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Dokonca aj keď je táto možnosť nastavená na FALSE, okná môže ešte byť menené pomocou Alt-kliknite ľavým tlačidlom myši kamkoľvek na okno, normálne kliknite na okraj okna, alebo pomocou špeciálnych správ z pagers, ako sú požiadavky na aktiváciu z panelu appletov. Táto možnosť je v súčasnosti zakázaná v režime click-to-focus. Všimnite si, že zoznam spôsobov, ako zmeniť okno, keď raise_on_click je v stave FALSE nezahŕňa programové požiadavky z programov na zmenu okna; Tieto žiadosti budú ignorované bez ohľadu na dôvod žiadosti. Ak ste vývojár programu a používatelia sa sťažovali, že program nefunguje s týmto nastavením, povedzte im, že je ich chyba, lebo zmenili nastavenia v svojom správcovi okien a že je potrebné túto možnosť zmeniť späť na hodnotu TRUE, alebo žiť s danou „chybou“."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
@@ -566,7 +566,7 @@ msgstr "Použiť štandardné systémové písmo v titulkoch okna"
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr "Ak je táto možnosť vybraná, ignoruje sa titlebar_font a použije sa štandardné písmo aplikácie pre titulky okien."
+msgstr "Ak je táto možnosť vybraná, ignoruje sa titlebar_font a použije sa štandardné písmo programu pre titulky okien."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Window title font"
@@ -605,7 +605,7 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr "Wrap style sa používa na určenie, ako prechádzať z jedného priestoru do druhého pracovného priestoru. Ak je nastavená na \"no wrap\", nič sa nestane, ak sa pokúsite prepnúť do pracovného priestoru okolo hranice prepínača pracovného priestoru. Ak je nastavený na \"klasické\", staré správanie Marco používa: koniec jedného riadka vedie do začiatku budúceho a koniec stĺpca vedie k začiatku nasledujúceho. Ak je nastavený na \"toroidný\", pracovné priestory sú spojené ako šiška: koniec každého riadku vedie k jeho vlastnému začiatku a na konci každého stĺpca vedie k jeho vlastnému začiatku."
+msgstr "Wrap style sa používa na určenie, ako prechádzať z jedného priestoru do druhého pracovného priestoru. Ak je nastavená na „no wrap“, nič sa nestane, ak sa pokúsite prepnúť do pracovného priestoru okolo hranice prepínača pracovného priestoru. Ak je nastavený na „klasické“, použije sa staré správanie Marco: koniec jedného riadka vedie k začiatku ďalšieho a koniec stĺpca vedie k začiatku nasledujúceho. Ak je nastavený na „toroidný“, pracovné priestory sú spojené ako šiška: koniec každého riadku vedie k jeho vlastnému začiatku a na konci každého stĺpca vedie k jeho vlastnému začiatku."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
@@ -626,7 +626,7 @@ msgstr "Systémový zvonček je počuteľný"
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr "Určuje, či majú aplikácie alebo systém generovať zvukové pípnutia. Spolu s vizuálnym zvončekom umožňuje „tiché pípanie“."
+msgstr "Určuje, či majú programy alebo systém generovať zvukové pípnutia. Spolu s vizuálnym zvončekom umožňuje „tiché pípanie“."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "Visual Bell Type"
@@ -660,7 +660,7 @@ msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr "Ak je nastavená na hodnotu true, nebudú zobrazované  náhľady v pop-up okne pri alt-tab, ak je zapnutý manažér prepínania. ikony aplikácií sa zobrazia."
+msgstr "Ak je táto možnosť vybraná, nebudú sa zobrazovať náhľady okien pri stlačení Alt+Tab, ak je povolený kompozitný správca okien. Namiesto toho sa zobrazia Ikony programov."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
@@ -673,7 +673,7 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr "Ak je táto možnosť vybraná, Marco bude poskytovať používateľovi menej spätnej väzby pomocou obrysov, vynechaním animácií, a pod. Toto pre mnohých používateľov znamená výrazné zníženie použiteľnosti, ale môže umožniť pracovať starým aplikáciam a terminálovým serverom, ktoré by inak boli prakticky nepoužiteľné. Avšak obrysy nebudú povolené pri zapnutej použiteľnosti."
+msgstr "Ak je táto možnosť vybraná, Marco bude poskytovať používateľovi menej spätnej väzby pomocou obrysov, vynechaním animácií, a pod. Toto pre mnohých používateľov znamená výrazné zníženie použiteľnosti, ale môže umožniť pracovať starým programom a terminálovým serverom, ktoré by inak boli prakticky nepoužiteľné. Avšak obrysy nebudú povolené pri zapnutej použiteľnosti."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid ""
@@ -689,7 +689,7 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr "Ak je táto možnosť vybraná, Marco funguje v rámci programov, a nie okien. Je to trochu abstraktnejšie, ale všeobecne sa dá povedať, že nastavenie vzhľadom k aplikáciám sa podobá viac systému Mac a menej systému Windows. Ak urobíte okno aktívnym v režime programov, všetky okná tohto programu sa presunú dopredu. Kliknutie kvôli aktivácii sa oknám iných programov neodovzdáva. Na druhú stranu, máloktorá aplikácia je napísaná pre režim založený na aplikáciách."
+msgstr "Ak je táto možnosť vybraná, Marco funguje v rámci programov, a nie okien. Je to trochu abstraktnejšie, ale všeobecne sa dá povedať, že nastavenie vzhľadom k programom sa podobá viac systému Mac a menej systému Windows. Ak urobíte okno aktívnym v režime programov, všetky okná tohto programu sa presunú dopredu. Kliknutie kvôli aktivácii sa oknám iných programov neodovzdáva. Na druhú stranu, máloktorý program je napísaný pre režim založený na programoch."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -736,7 +736,7 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr "Režim umiestnenia okna ukazuje, ako sú umiestnené nové okná. \"Automatické\" znamená, že systém automaticky zvolí polohu v závislosti na priestore k dispozícii na ploche, alebo pomocou jednoduchého kaskády, pokiaľ nie je priestor; \"Ukazovateľ\" znamená, že nové okná sú umiestnené v závislosti na pozícii ukazovateľa myši; \"Manuálne\" znamená, že užívateľ musí ručne umiestniť nové okno pomocou myši alebo klávesnice."
+msgstr "Režim umiestnenia okna ukazuje, ako sú umiestnené nové okná. „Automatické“ znamená, že systém automaticky zvolí polohu v závislosti na priestore k dispozícii na ploche, alebo pomocou jednoduchej kaskády, pokiaľ nie je priestor; „Ukazovateľ“ znamená, že nové okná sú umiestnené v závislosti na pozícii ukazovateľa myši; „Manuálne“ znamená, že používateľ musí ručne umiestniť nové okno pomocou myši alebo klávesnice."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
@@ -778,7 +778,7 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr "Formát vyzerá ako „<Control>a“ alebo „<Shift><Alt>F1“.\n\nAnalyzátor je celkom liberálny a umožňuje malé aj veľké písmená a skratky ako je „<Ctl>“ a „<Ctrl>“. Ak nastavíte túto možnosť na špeciálny reťazec „disabled“, pre túto činnosť nebude priradená žiadna klávesová skratka.\nTáto klávesová skratka môže byť obrátená podržaním klávesy \"<Shift>\", takže \"<Shift>\" nemôže byť jedným z použitých kláves."
+msgstr "Formát vyzerá ako „<Control>a“ alebo „<Shift><Alt>F1“.\n\nAnalyzátor je celkom liberálny a umožňuje malé aj veľké písmená a skratky ako je „<Ctl>“ a „<Ctrl>“. Ak nastavíte túto možnosť na špeciálny reťazec „disabled“, pre túto činnosť nebude priradená žiadna klávesová skratka.\nTáto klávesová skratka môže byť obrátená podržaním klávesy „<Shift>“, takže „<Shift>“ nemôže byť jedným z použitých kláves."
 
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Move backward between windows of an application, using a popup window"

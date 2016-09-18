@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Pere Orga <gotrunks@gmail.com>, 2012-2013
-# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2015-2016
+# Pere O. <gotrunks@gmail.com>, 2012-2013
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-09 17:44+0300\n"
-"PO-Revision-Date: 2016-04-20 11:53+0000\n"
-"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
+"PO-Revision-Date: 2016-08-17 02:29+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/mate/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,12 +27,12 @@ msgstr "Escriptori"
 #: ../src/50-marco-desktop-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:94
 msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "Mostra el quadre de diàleg d'execució d'aplicacions del taulell"
+msgstr "Mostra el quadre de diàleg d'execució d'aplicacions del tauler"
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Show the panel's main menu"
-msgstr "Mostra el menú principal del taulell"
+msgstr "Mostra el menú principal del tauler"
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:95
@@ -65,7 +66,7 @@ msgstr "Mou-te entre finestres d'una aplicació amb un diàleg emergent"
 #: ../src/50-marco-global-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid "Move between panels and the desktop, using a popup window"
-msgstr "Mou-te entre els taulells i l'escriptori amb una finestra emergent"
+msgstr "Mou-te entre els taulers i l'escriptori amb una finestra emergent"
 
 #: ../src/50-marco-global-key.xml.in.h:5
 #: ../src/org.mate.marco.gschema.xml.h:88
@@ -80,7 +81,7 @@ msgstr "Mou-te entre les finestres d'una aplicació immediatament"
 #: ../src/50-marco-global-key.xml.in.h:7
 #: ../src/org.mate.marco.gschema.xml.h:90
 msgid "Move between panels and the desktop immediately"
-msgstr "Mou-te immediatament entre els taulells i l'escriptori"
+msgstr "Mou-te immediatament entre els taulers i l'escriptori"
 
 #: ../src/50-marco-global-key.xml.in.h:8
 #: ../src/org.mate.marco.gschema.xml.h:92
@@ -652,14 +653,14 @@ msgstr "Determina si Marco és un gestor de composició."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
-msgstr ""
+msgstr "Alt-Tab sense gestor de composició (inhabilita les miniatures)"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr ""
+msgstr "En cas que estigués establert a «true», no es mostraran les miniatures de les finestres amb la finestra emergent alt-tab quan estigui habilitat el gestor de composició. En lloc seu es mostraran les icones de les aplicacions."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
@@ -688,7 +689,7 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr "En cas que fos cert, Marco treballarà en termes d'aplicacions, en lloc de finestres. El concepte està una mica resumit, però en general, una configuració basada en aplicacions és més semblant als Mac i menys com el Windows. Quan teniu el focus en una finestra al mode basat en aplicacions, totes les finestres en l'aplicació s'alçaran. A més a més, al mode basat en aplicacions, els clics de focus no es passen a les finestres de les altres aplicacions. Tanmateix, el mode basat en aplicacions encara no està massa implementat."
+msgstr "En cas que fos cert, Marco treballarà en termes d'aplicacions, en lloc de finestres. El concepte està una mica resumit, però en general, una configuració basada en aplicacions és més semblant als Mac i menys com a Windows. Quan teniu el focus en una finestra al mode basat en aplicacions, totes les finestres en l'aplicació s'alçaran. A més a més, al mode basat en aplicacions, els clics de focus no es passen a les finestres de les altres aplicacions. Tanmateix, el mode basat en aplicacions encara no està massa implementat."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -714,7 +715,7 @@ msgstr "En cas que estigués establert a «true», les noves finestres s'obren a
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
-msgstr ""
+msgstr "Si s'habilita l'enrajolat de costat a costat"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
@@ -735,7 +736,7 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "El mode de col·locació de les finestres indica com es col·loquen les finestres noves. «automàtic» significa que el sistema selecciona automàticament un lloc en funció de l'espai disponible a l'escriptori, o amb una sola cascada si no hi ha espai; «punter» significa que les finestres noves es col·loquen d'acord amb la posició del punter del ratolí; «manual» significa que l'usuari ha de col·locar manualment la finestra nova amb el ratolí o el teclat."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
@@ -797,7 +798,7 @@ msgstr "Mou-te cap enrere entre les finestres en tots els espais de treball amb 
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr "Mou-te cap enrere entre els taulells i l'escriptori amb una finestra emergent"
+msgstr "Mou-te cap enrere entre els taulers i l'escriptori amb una finestra emergent"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows of an application immediately"
@@ -809,7 +810,7 @@ msgstr "Mou-te immediatament cap enrere entre les finestres"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop immediately"
-msgstr "Mou-te immediatament entre els taulells i l'escriptori"
+msgstr "Mou-te immediatament entre els taulers i l'escriptori"
 
 #: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Commands to run in response to keybindings"
@@ -1145,7 +1146,7 @@ msgstr "Error en el gestor de finestres: "
 
 #: ../src/core/util.c:421
 msgid "Window manager warning: "
-msgstr "Avís del gestor de finestres: "
+msgstr "Advertència del gestor de finestres: "
 
 #: ../src/core/util.c:449
 msgid "Window manager error: "
@@ -1645,7 +1646,7 @@ msgstr "L'expressió coordinada té una variable o constant desconeguda «%s»"
 #: ../src/ui/theme.c:2560
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
-msgstr "L'analitzador d'expressions coordinades ha desbordat la seva àrea d'emmagatzematge _temporal."
+msgstr "L'analitzador d'expressions coordinades ha desbordat la seva àrea d'emmagatzematge temporal."
 
 #: ../src/ui/theme.c:2589
 #, c-format
