@@ -117,6 +117,7 @@ static gboolean force_compositor_manager = FALSE;
 static gboolean compositing_manager = FALSE;
 static gboolean compositing_fast_alt_tab = FALSE;
 static gboolean resize_with_right_button = FALSE;
+static gboolean show_tab_border = FALSE;
 static gboolean center_new_windows = FALSE;
 static gboolean force_fullscreen = TRUE;
 static gboolean side_by_side_tiling = FALSE;
@@ -405,6 +406,12 @@ static MetaBoolPreference preferences_bool[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_RESIZE_WITH_RIGHT_BUTTON,
       &resize_with_right_button,
+      FALSE,
+    },
+    { "show-tab-border",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_SHOW_TAB_BORDER,
+      &show_tab_border,
       FALSE,
     },
     { "center-new-windows",
@@ -1558,6 +1565,9 @@ meta_preference_to_string (MetaPreference pref)
     case META_PREF_RESIZE_WITH_RIGHT_BUTTON:
       return "RESIZE_WITH_RIGHT_BUTTON";
 
+    case META_PREF_SHOW_TAB_BORDER:
+      return "SHOW_TAB_BORDER";
+
     case META_PREF_FORCE_FULLSCREEN:
       return "FORCE_FULLSCREEN";
 
@@ -2243,6 +2253,12 @@ guint
 meta_prefs_get_mouse_button_menu (void)
 {
   return resize_with_right_button ? 2: 3;
+}
+
+gboolean
+meta_prefs_show_tab_border(void)
+{
+    return show_tab_border;
 }
 
 gboolean
