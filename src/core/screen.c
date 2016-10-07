@@ -1288,6 +1288,7 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
   GList *tmp;
   int len;
   int i;
+  gint border;
 
   if (screen->tab_popup)
     return;
@@ -1304,6 +1305,8 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
   entries[len].title = NULL;
   entries[len].icon = NULL;
 
+  border = meta_prefs_show_tab_border() ? BORDER_OUTLINE_TAB |
+    BORDER_OUTLINE_WINDOW : BORDER_OUTLINE_TAB;
   i = 0;
   tmp = tab_list;
   while (i < len)
@@ -1368,38 +1371,43 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
        * sides.  On the top it should be the size of the south frame
        * edge.
        */
-#define OUTLINE_WIDTH 5
-      /* Top side */
-      if (!entries[i].hidden &&
-          window->frame && window->frame->bottom_height > 0 &&
-          window->frame->child_y >= window->frame->bottom_height)
-        entries[i].inner_rect.y = window->frame->bottom_height;
-      else
-        entries[i].inner_rect.y = OUTLINE_WIDTH;
+       if (border & BORDER_OUTLINE_WINDOW)
+         {
+           const gint border_outline_width = 5;
 
-      /* Bottom side */
-      if (!entries[i].hidden &&
-          window->frame && window->frame->bottom_height != 0)
-        entries[i].inner_rect.height = r.height
-          - entries[i].inner_rect.y - window->frame->bottom_height;
-      else
-        entries[i].inner_rect.height = r.height
-          - entries[i].inner_rect.y - OUTLINE_WIDTH;
+           /* Top side */
+           if (!entries[i].hidden &&
+                window->frame && window->frame->bottom_height > 0 &&
+                window->frame->child_y >= window->frame->bottom_height)
+             entries[i].inner_rect.y = window->frame->bottom_height;
+           else
+              entries[i].inner_rect.y = border_outline_width;
 
-      /* Left side */
-      if (!entries[i].hidden && window->frame && window->frame->child_x != 0)
-        entries[i].inner_rect.x = window->frame->child_x;
-      else
-        entries[i].inner_rect.x = OUTLINE_WIDTH;
+            /* Bottom side */
+            if (!entries[i].hidden &&
+                window->frame && window->frame->bottom_height != 0)
+              entries[i].inner_rect.height = r.height
+                - entries[i].inner_rect.y - window->frame->bottom_height;
+            else
+              entries[i].inner_rect.height = r.height
+                - entries[i].inner_rect.y - border_outline_width;
 
-      /* Right side */
-      if (!entries[i].hidden &&
-          window->frame && window->frame->right_width != 0)
-        entries[i].inner_rect.width = r.width
-          - entries[i].inner_rect.x - window->frame->right_width;
-      else
-        entries[i].inner_rect.width = r.width
-          - entries[i].inner_rect.x - OUTLINE_WIDTH;
+            /* Left side */
+            if (!entries[i].hidden && window->frame && window->frame->child_x != 0)
+                entries[i].inner_rect.x = window->frame->child_x;
+            else
+                entries[i].inner_rect.x = border_outline_width;
+
+            /* Right side */
+            if (!entries[i].hidden &&
+                    window->frame && window->frame->right_width != 0)
+              entries[i].inner_rect.width = r.width
+                - entries[i].inner_rect.x - window->frame->right_width;
+            else
+              entries[i].inner_rect.width = r.width
+                - entries[i].inner_rect.x - border_outline_width;
+        }
+
 
       ++i;
       tmp = tmp->next;
@@ -1409,7 +1417,7 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
                                              screen->number,
                                              len,
                                              5, /* FIXME */
-                                             TRUE);
+                                             border);
 
   for (i = 0; i < len; i++)
     g_object_unref (entries[i].icon);
@@ -1481,7 +1489,7 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
                                              screen->number,
                                              len,
                                              layout.cols,
-                                             FALSE);
+                                             BORDER_OUTLINE_WORKSPACE);
 
   g_free (entries);
   meta_screen_free_workspace_layout (&layout);
