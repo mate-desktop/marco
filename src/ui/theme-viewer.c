@@ -35,12 +35,6 @@
 #define _(x) dgettext (GETTEXT_PACKAGE, x)
 #define N_(x) x
 
-/* Silence Gtk{V,H}Box deprecations warnings */
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
-#define gtk_hbox_new(X, Y) gtk_box_new (GTK_ORIENTATION_HORIZONTAL, Y)
-#endif
-
 /* We need to compute all different button arrangements
  * in terms of button location. We don't care about
  * different arrangements in terms of button function.
@@ -239,13 +233,9 @@ dialog_contents (void)
   GtkWidget *image;
   GtkWidget *button;
 
-  vbox = gtk_vbox_new (FALSE, 0);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   action_area = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
-#else
-  action_area = gtk_hbutton_box_new ();
-#endif
 
   gtk_button_box_set_layout (GTK_BUTTON_BOX (action_area),
                              GTK_BUTTONBOX_END);
@@ -263,17 +253,13 @@ dialog_contents (void)
   label = gtk_label_new (_("This is a sample message in a sample dialog"));
   image = gtk_image_new_from_icon_name ("dialog-information",
                                         GTK_ICON_SIZE_DIALOG);
-#if GTK_CHECK_VERSION (3, 0, 0)
   gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
   gtk_widget_set_valign (image, GTK_ALIGN_START);
-#else
-  gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
-#endif
 
   gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
 
-  hbox = gtk_hbox_new (FALSE, 6);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
 
   gtk_box_pack_start (GTK_BOX (hbox), image,
                       FALSE, FALSE, 0);
@@ -343,19 +329,15 @@ menu_contents (void)
   gtk_frame_set_shadow_type (GTK_FRAME (frame),
                              GTK_SHADOW_OUT);
 
-  vbox = gtk_vbox_new (FALSE, 0);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
   i = 0;
   while (i < 10)
     {
       char *str = g_strdup_printf (_("Fake menu item %d\n"), i + 1);
       mi = gtk_label_new (str);
-#if GTK_CHECK_VERSION (3, 0, 0)
       gtk_widget_set_halign (mi, GTK_ALIGN_START);
       gtk_widget_set_valign (mi, GTK_ALIGN_CENTER);
-#else
-      gtk_misc_set_alignment (GTK_MISC (mi), 0.0, 0.5);
-#endif
       g_free (str);
       gtk_box_pack_start (GTK_BOX (vbox), mi, FALSE, FALSE, 0);
 
@@ -384,7 +366,7 @@ border_only_contents (void)
   color.blue = 40000;
   gtk_widget_modify_bg (event_box, GTK_STATE_NORMAL, &color);
 
-  vbox = gtk_vbox_new (FALSE, 0);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 3);
 
   w = gtk_label_new (_("Border-only window"));
@@ -499,7 +481,7 @@ preview_collection (int font_size,
                                   GTK_POLICY_AUTOMATIC,
                                   GTK_POLICY_AUTOMATIC);
 
-  box = gtk_vbox_new (FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_box_set_spacing (GTK_BOX (box), 20);
   gtk_container_set_border_width (GTK_CONTAINER (box), 20);
 
@@ -722,7 +704,7 @@ previews_of_button_layouts (void)
                                   GTK_POLICY_AUTOMATIC,
                                   GTK_POLICY_AUTOMATIC);
 
-  box = gtk_vbox_new (FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_box_set_spacing (GTK_BOX (box), 20);
   gtk_container_set_border_width (GTK_CONTAINER (box), 20);
 

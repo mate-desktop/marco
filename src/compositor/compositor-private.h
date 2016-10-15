@@ -44,13 +44,8 @@ struct _MetaCompositor
   void (*process_event) (MetaCompositor *compositor,
                          XEvent         *event,
                          MetaWindow     *window);
-#if GTK_CHECK_VERSION (3, 0, 0)
   cairo_surface_t *(* get_window_surface) (MetaCompositor *compositor,
                                            MetaWindow     *window);
-#else
-  Pixmap (*get_window_pixmap) (MetaCompositor *compositor,
-                               MetaWindow     *window);
-#endif
   void (*set_active_window) (MetaCompositor *compositor,
                              MetaScreen     *screen,
                              MetaWindow     *window);

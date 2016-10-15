@@ -1220,27 +1220,15 @@ get_window_pixbuf (MetaWindow *window,
                    int        *width,
                    int        *height)
 {
-#if GTK_CHECK_VERSION (3, 0, 0)
   cairo_surface_t *surface;
-#else
-  Pixmap pmap;
-#endif
   GdkPixbuf *pixbuf, *scaled;
   double ratio;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   surface = meta_compositor_get_window_surface (window->display->compositor,
                                                 window);
   if (surface == None)
     return NULL;
-#else
-  pmap = meta_compositor_get_window_pixmap (window->display->compositor,
-                                            window);
-  if (pmap == None)
-    return NULL;
-#endif
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   meta_error_trap_push (NULL);
 
   pixbuf = meta_ui_get_pixbuf_from_surface (surface);
@@ -1248,9 +1236,6 @@ get_window_pixbuf (MetaWindow *window,
 
   if (meta_error_trap_pop_with_return (NULL, FALSE) != Success)
     g_clear_object (&pixbuf);
-#else
-  pixbuf = meta_ui_get_pixbuf_from_pixmap (pmap);
-#endif
 
   if (pixbuf == NULL)
     return NULL;

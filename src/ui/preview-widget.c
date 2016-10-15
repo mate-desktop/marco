@@ -31,66 +31,20 @@
 static void     meta_preview_class_init    (MetaPreviewClass *klass);
 static void     meta_preview_init          (MetaPreview      *preview);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-
 static void meta_preview_get_preferred_width(GtkWidget *widget,
                                              gint *minimal, gint *natural);
 static void meta_preview_get_preferred_height(GtkWidget *widget,
                                               gint *minimal, gint *natural);
-#else
-static void     meta_preview_size_request  (GtkWidget        *widget,
-                                            GtkRequisition   *req);
-#endif
 static void     meta_preview_size_allocate (GtkWidget        *widget,
                                             GtkAllocation    *allocation);
-#if GTK_CHECK_VERSION(3, 0, 0)
 static gboolean meta_preview_draw           (GtkWidget          *widget,
                                              cairo_t            *cr);
-#else
-static gboolean meta_preview_expose        (GtkWidget        *widget,
-                                            GdkEventExpose   *event);
-#endif
 static void     meta_preview_finalize      (GObject          *object);
 
 #define NO_CHILD_WIDTH 80
 #define NO_CHILD_HEIGHT 20
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-
 G_DEFINE_TYPE (MetaPreview, meta_preview, GTK_TYPE_BIN);
-#define parent_class meta_preview_parent_class
-
-#else
-
-static GtkWidgetClass *parent_class;
-
-
-GType
-meta_preview_get_type (void)
-{
-  static GType preview_type = 0;
-
-  if (!preview_type)
-    {
-      static const GtkTypeInfo preview_info =
-      {
-       "MetaPreview",
-       sizeof (MetaPreview),
-       sizeof (MetaPreviewClass),
-       (GtkClassInitFunc) meta_preview_class_init,
-       (GtkObjectInitFunc) meta_preview_init,
-    /* reserved_1 */ NULL,
-        /* reserved_2 */ NULL,
-        (GtkClassInitFunc) NULL,
-      };
-
-      preview_type = gtk_type_unique (GTK_TYPE_BIN, &preview_info);
-    }
-
-  return preview_type;
-}
-
-#endif
 
 static void
 meta_preview_class_init (MetaPreviewClass *class)
@@ -99,20 +53,15 @@ meta_preview_class_init (MetaPreviewClass *class)
   GtkWidgetClass *widget_class;
 
   widget_class = (GtkWidgetClass*) class;
-  parent_class = g_type_class_peek (GTK_TYPE_BIN);
+  meta_preview_parent_class = g_type_class_peek (GTK_TYPE_BIN);
 
   gobject_class->finalize = meta_preview_finalize;
 
-#if GTK_CHECK_VERSION(3, 0, 0)
   widget_class->draw = meta_preview_draw;
   widget_class->get_preferred_width = meta_preview_get_preferred_width;
   widget_class->get_preferred_height = meta_preview_get_preferred_height;
 
   gtk_container_class_handle_border_width (GTK_CONTAINER_CLASS (class));
-#else
-  widget_class->expose_event = meta_preview_expose;
-  widget_class->size_request = meta_preview_size_request;
-#endif
   widget_class->size_allocate = meta_preview_size_allocate;
 }
 
@@ -175,7 +124,7 @@ meta_preview_finalize (GObject *object)
   g_free (preview->title);
   preview->title = NULL;
 
-  G_OBJECT_CLASS (parent_class)->finalize (object);
+  G_OBJECT_CLASS (meta_preview_parent_class)->finalize (object);
 }
 
 static void
@@ -245,7 +194,6 @@ ensure_info (MetaPreview *preview)
         }
     }
 }
-#if GTK_CHECK_VERSION(3, 0, 0)
 
 static gboolean
 meta_preview_draw (GtkWidget *widget,
@@ -378,106 +326,6 @@ meta_preview_get_preferred_height (GtkWidget *widget,
   *minimum += border_width * 2;
   *natural += border_width * 2;
 }
-
-#else
-
-static gboolean
-meta_preview_expose (GtkWidget      *widget,
-                     GdkEventExpose *event)
-{
-  MetaPreview *preview;
-  GtkAllocation allocation;
-  int border_width;
-  int client_width;
-  int client_height;
-  MetaButtonState button_states[META_BUTTON_TYPE_LAST] =
-  {
-    META_BUTTON_STATE_NORMAL,
-    META_BUTTON_STATE_NORMAL,
-    META_BUTTON_STATE_NORMAL,
-    META_BUTTON_STATE_NORMAL
-  };
-
-  g_return_val_if_fail (META_IS_PREVIEW (widget), FALSE);
-  g_return_val_if_fail (event != NULL, FALSE);
-
-  preview = META_PREVIEW (widget);
-
-  ensure_info (preview);
-
-  border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
-
-  gtk_widget_get_allocation (widget, &allocation);
-  client_width = allocation.width - preview->left_width - preview->right_width - border_width * 2;
-  client_height = allocation.height - preview->top_height - preview->bottom_height - border_width * 2;
-
-  if (client_width < 0)
-    client_width = 1;
-  if (client_height < 0)
-    client_height = 1;
-
-  if (preview->theme)
-    {
-      border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
-
-      meta_theme_draw_frame (preview->theme,
-                             widget,
-                             gtk_widget_get_window (widget),
-                             &event->area,
-                             allocation.x + border_width,
-                             allocation.y + border_width,
-                             preview->type,
-                             preview->flags,
-                             client_width, client_height,
-                             preview->layout,
-                             preview->text_height,
-                             &preview->button_layout,
-                             button_states,
-                             meta_preview_get_mini_icon (),
-                             meta_preview_get_icon ());
-    }
-
-  /* draw child */
-  return GTK_WIDGET_CLASS (parent_class)->expose_event (widget, event);
-}
-
-static void
-meta_preview_size_request (GtkWidget      *widget,
-                           GtkRequisition *req)
-{
-  MetaPreview *preview;
-  GtkWidget *child;
-  guint border_width;
-
-  preview = META_PREVIEW (widget);
-
-  ensure_info (preview);
-
-  req->width = preview->left_width + preview->right_width;
-  req->height = preview->top_height + preview->bottom_height;
-
-  child = gtk_bin_get_child (GTK_BIN (preview));
-  if (child &&
-      gtk_widget_get_visible (child))
-    {
-      GtkRequisition child_requisition;
-
-      gtk_widget_size_request (child, &child_requisition);
-
-      req->width += child_requisition.width;
-      req->height += child_requisition.height;
-    }
-  else
-    {
-      req->width += NO_CHILD_WIDTH;
-      req->height += NO_CHILD_HEIGHT;
-    }
-
-  border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
-  req->width += border_width * 2;
-  req->height += border_width * 2;
-}
-#endif
 
 static void
 meta_preview_size_allocate (GtkWidget         *widget,
@@ -655,11 +503,11 @@ meta_preview_get_mini_icon (void)
   return default_icon;
 }
 
-GdkRegion *
+cairo_region_t *
 meta_preview_get_clip_region (MetaPreview *preview, gint new_window_width, gint new_window_height)
 {
   GdkRectangle xrect;
-  GdkRegion *corners_xregion, *window_xregion;
+  cairo_region_t *corners_xregion, *window_xregion;
   gint flags;
   MetaFrameLayout *fgeom;
   MetaFrameStyle *frame_style;
@@ -668,14 +516,14 @@ meta_preview_get_clip_region (MetaPreview *preview, gint new_window_width, gint 
 
   flags = (META_PREVIEW (preview)->flags);
 
-  window_xregion = gdk_region_new ();
+  window_xregion = cairo_region_create ();
 
   xrect.x = 0;
   xrect.y = 0;
   xrect.width = new_window_width;
   xrect.height = new_window_height;
 
-  gdk_region_union_with_rect (window_xregion, &xrect);
+  cairo_region_union_rectangle (window_xregion, &xrect);
 
   if (preview->theme == NULL)
     return window_xregion;
@@ -686,7 +534,7 @@ meta_preview_get_clip_region (MetaPreview *preview, gint new_window_width, gint 
 
   fgeom = frame_style->layout;
 
-  corners_xregion = gdk_region_new ();
+  corners_xregion = cairo_region_create ();
 
   if (fgeom->top_left_corner_rounded_radius != 0)
     {
@@ -703,7 +551,7 @@ meta_preview_get_clip_region (MetaPreview *preview, gint new_window_width, gint 
           xrect.width = width;
           xrect.height = 1;
 
-          gdk_region_union_with_rect (corners_xregion, &xrect);
+          cairo_region_union_rectangle (corners_xregion, &xrect);
         }
     }
 
@@ -721,7 +569,7 @@ meta_preview_get_clip_region (MetaPreview *preview, gint new_window_width, gint 
           xrect.width = width;
           xrect.height = 1;
 
-          gdk_region_union_with_rect (corners_xregion, &xrect);
+          cairo_region_union_rectangle (corners_xregion, &xrect);
         }
     }
 
@@ -739,7 +587,7 @@ meta_preview_get_clip_region (MetaPreview *preview, gint new_window_width, gint 
           xrect.width = width;
           xrect.height = 1;
 
-          gdk_region_union_with_rect (corners_xregion, &xrect);
+          cairo_region_union_rectangle (corners_xregion, &xrect);
         }
     }
 
@@ -757,12 +605,12 @@ meta_preview_get_clip_region (MetaPreview *preview, gint new_window_width, gint 
           xrect.width = width;
           xrect.height = 1;
 
-          gdk_region_union_with_rect (corners_xregion, &xrect);
+          cairo_region_union_rectangle (corners_xregion, &xrect);
         }
     }
 
-  gdk_region_subtract (window_xregion, corners_xregion);
-  gdk_region_destroy (corners_xregion);
+  cairo_region_subtract (window_xregion, corners_xregion);
+  cairo_region_destroy (corners_xregion);
 
   return window_xregion;
 }

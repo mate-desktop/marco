@@ -106,11 +106,7 @@ static void popup_position_func(GtkMenu* menu, gint* x, gint* y, gboolean* push_
 
 	pos = user_data;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
-#else
-	gtk_widget_size_request(GTK_WIDGET(menu), &req);
-#endif
 
 	*x = pos->x;
 	*y = pos->y;
@@ -304,11 +300,7 @@ static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 	meta_core_get_menu_accelerator (menuitem->op, workspace_id, &key, &mods);
 
 	accel_label = meta_accel_label_new_with_mnemonic (i18n_label);
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_set_halign (accel_label, GTK_ALIGN_START);
-#else
-	gtk_misc_set_alignment (GTK_MISC (accel_label), 0.0, 0.5);
-#endif
 
 	gtk_container_add (GTK_CONTAINER (mi), accel_label);
 	gtk_widget_show (accel_label);

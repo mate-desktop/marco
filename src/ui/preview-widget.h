@@ -23,15 +23,7 @@
 
 #include "theme.h"
 #include <gtk/gtk.h>
-
-#if GTK_CHECK_VERSION(3, 0, 0)
- 	#include <cairo/cairo.h>
- 	#define GdkRegion cairo_region_t
- 	#define gdk_region_new cairo_region_create
- 	#define gdk_region_subtract cairo_region_subtract
- 	#define gdk_region_destroy cairo_region_destroy
- 	#define gdk_region_union_with_rect cairo_region_union_rectangle
-#endif
+#include <cairo/cairo.h>
 
 #ifndef META_PREVIEW_WIDGET_H
 #define META_PREVIEW_WIDGET_H
@@ -86,7 +78,7 @@ void meta_preview_set_frame_flags   (MetaPreview            *preview,
 void meta_preview_set_button_layout (MetaPreview            *preview,
                                      const MetaButtonLayout *button_layout);
 
-GdkRegion * meta_preview_get_clip_region (MetaPreview *preview,
+cairo_region_t* meta_preview_get_clip_region (MetaPreview *preview,
                                           gint new_window_width,
                                           gint new_window_height);
 

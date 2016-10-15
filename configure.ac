@@ -1,7 +1,7 @@
 AC_PREREQ(2.50)
 
 m4_define([marco_major_version], [1])
-m4_define([marco_minor_version], [16])
+m4_define([marco_minor_version], [17])
 m4_define([marco_micro_version], [0])
 
 m4_define([marco_version],
@@ -103,33 +103,10 @@ if test "x$GCC" = "xyes"; then
 fi
 changequote([,])dnl
 
-AC_MSG_CHECKING([which gtk+ version to compile against])
-AC_ARG_WITH([gtk],
-  AC_HELP_STRING([--with-gtk=2.0|3.0],
-                 [which gtk+ version to compile against (default: 2.0)]),
-  [case "$with_gtk" in
-      2.0|3.0) ;;
-      *) AC_MSG_ERROR([invalid gtk+ version specified]);;
-  esac],
-  [with_gtk=2.0])
-AC_MSG_RESULT([$with_gtk])
-
-case "$with_gtk" in
-  2.0) GTK_API_VERSION=2.0
-       GTK_MIN_VERSION=2.24.0
-       CANBERRA_GTK=libcanberra-gtk
-       ;;
-  3.0) GTK_API_VERSION=3.0
-       GTK_MIN_VERSION=3.0.0
-       CANBERRA_GTK=libcanberra-gtk3
-       ;;
-esac
-AM_CONDITIONAL([HAVE_GTK2], [test "x$with_gtk" = "x2.0"])
-AM_CONDITIONAL([HAVE_GTK3], [test "x$with_gtk" = "x3.0"])
 GIO_MIN_VERSION=2.25.10
+GTK_MIN_VERSION=3.14.0
 
-MARCO_PC_MODULES="gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION gio-2.0 >= $GIO_MIN_VERSION pango >= 1.2.0 $CANBERRA_GTK"
-AC_SUBST(GTK_API_VERSION)
+MARCO_PC_MODULES="gtk+-3.0 >= $GTK_MIN_VERSION gio-2.0 >= $GIO_MIN_VERSION pango >= 1.2.0 libcanberra-gtk3"
 
 GLIB_GSETTINGS
 
@@ -177,9 +154,9 @@ AC_CHECK_HEADERS(execinfo.h, [AC_CHECK_FUNCS(backtrace)])
 
 AM_GLIB_GNU_GETTEXT
 
-PKG_CHECK_MODULES(ALL, glib-2.0 >= 2.32.0)
-PKG_CHECK_MODULES(MARCO_MESSAGE, gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION)
-PKG_CHECK_MODULES(MARCO_WINDOW_DEMO, gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION)
+PKG_CHECK_MODULES(ALL, glib-2.0 >= 2.36.0)
+PKG_CHECK_MODULES(MARCO_MESSAGE, gtk+-3.0 >= $GTK_MIN_VERSION)
+PKG_CHECK_MODULES(MARCO_WINDOW_DEMO, gtk+-3.0 >= $GTK_MIN_VERSION)
 
 if $PKG_CONFIG --atleast-version 1.2.0 pangoxft; then
    echo "pangoxft found"
@@ -532,7 +509,7 @@ fi
 
 dnl ==========================================================================
 echo "
-marco-$VERSION (using gtk+-${GTK_API_VERSION}):
+marco-$VERSION:
 
 	prefix:                   ${prefix}
 	source code location:     ${srcdir}
