@@ -2447,7 +2447,7 @@ queue_windows_showing (MetaScreen *screen)
     {
       MetaWindow *w = tmp->data;
 
-      if (w->screen == screen)
+      if (w->screen == screen && !meta_prefs_is_in_skip_list (w->res_class))
         meta_window_queue (w, META_QUEUE_CALC_SHOWING);
 
       tmp = tmp->next;
@@ -2501,7 +2501,8 @@ meta_screen_show_desktop (MetaScreen *screen,
       MetaWindow *w = windows->data;
 
       if (w->screen == screen  &&
-          w->type == META_WINDOW_DESKTOP)
+          w->type == META_WINDOW_DESKTOP &&
+          !meta_prefs_is_in_skip_list (w->res_class))
         {
           meta_window_focus (w, timestamp);
           break;

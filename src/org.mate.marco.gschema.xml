@@ -186,6 +186,11 @@
       <summary>Window placement mode</summary>
       <description>The window placement mode indicates how new windows are positioned. "automatic" means the system chooses a location automatically based on the space available on the desktop, or by a simple cascade if there is no space; "pointer" means that new windows are placed according to the mouse pointer position; "manual" means that the user must manually place the new window with the mouse or keyboard.</description>
     </key>
+    <key name="show-desktop-skip-list" type="s">
+        <default>''</default>
+        <summary>List of applications ignored by show-desktop</summary>
+        <description>Comma separated class list. Each running GUI application referenced to given windows manager class will be ignored by 'Show Desktop' functionality.</description>
+    </key>
   </schema>
 
   <schema id="org.mate.Marco.workspace-names" path="/org/mate/marco/workspace-names/">
