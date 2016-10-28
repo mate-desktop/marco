@@ -65,7 +65,8 @@ typedef enum
   META_PREF_CENTER_NEW_WINDOWS,
   META_PREF_SIDE_BY_SIDE_TILING,
   META_PREF_FORCE_FULLSCREEN,
-  META_PREF_PLACEMENT_MODE
+  META_PREF_PLACEMENT_MODE,
+  META_PREF_SHOW_DESKTOP_SKIP_LIST
 } MetaPreference;
 
 typedef void (* MetaPrefsChangedFunc) (MetaPreference pref,
@@ -127,6 +128,7 @@ gboolean    meta_prefs_get_compositing_manager (void);
 gboolean    meta_prefs_get_compositing_fast_alt_tab (void);
 gboolean    meta_prefs_get_center_new_windows  (void);
 gboolean    meta_prefs_get_force_fullscreen  (void);
+gboolean    meta_prefs_is_in_skip_list (char *class);
 
 /**
  * Sets whether the compositor is turned on.

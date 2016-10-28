@@ -120,6 +120,7 @@ static gboolean resize_with_right_button = FALSE;
 static gboolean center_new_windows = FALSE;
 static gboolean force_fullscreen = TRUE;
 static gboolean side_by_side_tiling = FALSE;
+static GList *show_desktop_skip_list = NULL;
 
 static MetaVisualBellType visual_bell_type = META_VISUAL_BELL_FULLSCREEN_FLASH;
 static MetaButtonLayout button_layout;
@@ -158,6 +159,7 @@ static void titlebar_handler (MetaPreference, const gchar*, gboolean*);
 static void theme_name_handler (MetaPreference, const gchar*, gboolean*);
 static void mouse_button_mods_handler (MetaPreference, const gchar*, gboolean*);
 static void button_layout_handler (MetaPreference, const gchar*, gboolean*);
+static void show_desktop_skip_list_handler (MetaPreference, const gchar*, gboolean*);
 
 static gboolean update_binding            (MetaKeyPref *binding,
                                            gchar  *value);
@@ -459,6 +461,12 @@ static MetaStringPreference preferences_string[] =
       META_PREF_CURSOR_THEME,
       NULL,
       &cursor_theme,
+    },
+    { "show-desktop-skip-list",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_SHOW_DESKTOP_SKIP_LIST,
+      &show_desktop_skip_list_handler,
+      NULL,
     },
     { NULL, NULL, 0, NULL, NULL },
   };
@@ -1078,6 +1086,18 @@ meta_prefs_get_cursor_size (void)
   return cursor_size;
 }
 
+gboolean
+meta_prefs_is_in_skip_list (char *class)
+{
+  GList *item;
+    
+  for (item = show_desktop_skip_list; item; item = item->next)
+    {
+      if (!g_ascii_strcasecmp (class, item->data))
+        return TRUE;
+    }
+  return FALSE;
+}
 
 /****************************************************************************/
 /* Handlers for string preferences.                                         */
@@ -1163,6 +1183,33 @@ mouse_button_mods_handler (MetaPreference pref,
 
       *inform_listeners = FALSE;
     }
+}
+
+static void
+show_desktop_skip_list_handler (MetaPreference pref,
+                                const gchar *string_value,
+                                gboolean *inform_listeners)
+{
+  gchar **tokens;
+  gchar **tok;
+  GList *item;
+
+  if (show_desktop_skip_list)
+    {
+      for (item = show_desktop_skip_list; item; item = item->next)
+        g_free (item->data);
+      g_list_free (show_desktop_skip_list);
+      show_desktop_skip_list = NULL;
+    }
+
+  if (!(tokens = g_strsplit (string_value, ",", -1)))
+    return;
+  for (tok = tokens; tok && *tok; tok++)
+    {
+      gchar *stripped = g_strstrip (g_strdup (*tok));
+      show_desktop_skip_list = g_list_prepend (show_desktop_skip_list, stripped);
+    }
+  g_strfreev (tokens);
 }
 
 static gboolean
@@ -1566,6 +1613,9 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_PLACEMENT_MODE:
       return "PLACEMENT_MODE";
+
+    case META_PREF_SHOW_DESKTOP_SKIP_LIST:
+      return "SHOW_DESKTOP_SKIP_LIST";
     }
 
   return "(unknown)";
