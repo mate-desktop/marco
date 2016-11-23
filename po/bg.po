@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Georgi Georgiev <georgiev_1994@abv.bg>, 2014-2015
+# Любомир Василев, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-09 17:44+0300\n"
-"PO-Revision-Date: 2016-04-20 11:53+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-11-07 12:24+0000\n"
+"Last-Translator: Любомир Василев\n"
 "Language-Team: Bulgarian (http://www.transifex.com/mate/MATE/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -169,7 +170,7 @@ msgstr "Превключване към работния плот отдолу"
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:76
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Превключване към предишния работен плот"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:104
@@ -254,12 +255,12 @@ msgstr "Максимизиране на прозореца хоризонтал�
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:137
 msgid "Tile window to east (right) side of screen"
-msgstr ""
+msgstr "Подреждане на прозореца в източния (десния) край на екрана"
 
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:138
 msgid "Tile window to west (left) side of screen"
-msgstr ""
+msgstr "Подреждане на прозореца в западния (левия) край на екрана"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 #: ../src/org.mate.marco.gschema.xml.h:139
@@ -388,7 +389,7 @@ msgstr "Преместване на прозореца един работен �
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Модификатор, който да се ползва за модифицираните действия с натискания по прозорците"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -397,22 +398,22 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
+msgstr "Натискането на прозорец, когато този модифициращ клавиш е натиснат, премества прозореца (ляв бутон на мишката), оразмерява прозореца (среден бутон) или показва менюто за прозорци (десен бутон). Действието на средния и десния бутон може да се размени чрез ключа „resize_with_right_button“. Модификаторът е от вида „&lt;Alt&gt;“ или „&lt;Super&gt;“, например."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "Дали да се преоразмерява с десния бутон"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr ""
+msgstr "Ако е зададено като вярно, десният бутон на мишката ще преоразмерява, а менюто ще се показва със средния бутон, когато е натиснат клавиша зададен в ключа „mouse_button_modifier“. Ако е зададено като невярно, бутоните са с разменени функции."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Подредба на бутоните в заглавната лента"
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
@@ -423,11 +424,11 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr ""
+msgstr "Подредба на бутоните в заглавната лента. Стойността трябва да е низ от вида „menu:minimize,maximize,spacer,close“. С двоеточие (:) се разделят левия от десния ъгъл на прозореца, а със запетая (,) — имената на бутоните. Не са позволени повторения на бутоните. Непознатите имена се игнорират, така че в бъдещи версии на „Marco“ да могат да се добавят нови бутони, без да се пречи на старите версии. Може да се използва специалният етикет „spacer“ за вмъкване на малко място между два съседни бутона."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Window focus mode"
-msgstr ""
+msgstr "Режим на фокусиране на прозорците"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -436,11 +437,11 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr ""
+msgstr "Начинът за фокусиране на прозорци указва как се активират прозорците. Има три възможни стойности: „click“ означава, че прозорците трябва да бъдат натиснати с мишката, за да се фокусират, „sloppy“ означава, че прозорците се фокусират, когато мишката влезе в тях, а „mouse“, че прозорците се фокусират, когато мишката влезе в тях и губят фокуса, когато мишката излезе от тях."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Кога новите прозорци получават фокуса"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -448,11 +449,11 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr ""
+msgstr "Тази настройка уточнява допълнително, кога новите прозорци получават фокуса. Възможните стойности са две: „smart“ (хитър) — нормалният начин за получаване на фокус и „strict“ (стриктен) — прозорците, стартирани от терминал, не получават фокуса."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Дали издигането трябва да се получава като страничен резултат от други потребителски действия"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -474,11 +475,11 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Задаването на „невярно“ за тази настройка може да предизвика неправилно поведени, така че се препоръчва да остане със стойността си по подразбиране — „вярно“. Много действия, като щракването в клиентската област, преместването и оразмеряването на прозорците) обикновено имат страничния ефект да издигат прозореца. Ако в тази настройка бъде зададена стойността „невярно“, което не се препоръчва, този страничен ефект на издигане ще бъде премахнат и от другите потребителски действия, както и няма да бъдат зачитани заявките за това от други приложения. Вижте: http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Дори при задаване на „невярно“, прозорците все пак ще могат да бъдат издигани чрез щракване със задържан клавиш „Alt“ някъде в прозореца, нормално щракване по украсата на прозореца или чрез специални съобщения от известяващи програми, като заявките за активиране на приложенията за задачи. Тази настройка в момента е изключена в режима, който изисква щракване с мишката в прозореца за фокусирането му. Имайте предвид, че начините за издигане на прозореца, когато „raise_on_click“ е „невярно“, не включват програмните заявки за издигане на прозорци от приложения; такива заявки ще бъдат пренебрегвани, независимо от причината им. Ако разработвате приложение и потребителите Ви се оплакват, че приложението Ви не работи когато тази настройка е изключена, кажете им, че проблемът е в тях и че трябва да върнат тази настройка на „вярно“ или да се примирят с поведението на приложението."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Действие при двойно натискане върху заглавната лента"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -490,11 +491,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Тази настройка определя ефекта на двойното натискане с левия бутон на мишката върху заглавната лента. Текущите възможни стойности са: „toggle_shade“, която навива/развива прозореца; „toggle_maximize“, която максимизира/демаксимизира прозореца; „toggle_maximize_horizontally“ и „toggle_maximize_vertically“, които максимизират/демаксимизират прозореца само в съответната посока; „minimize“, която минимизира прозореца; „shade“, която навива прозореца; „menu“, която показва менюто на прозореца; „lower“, която поставя прозореца под всички останали и „none“, която не прави нищо."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Действие при натискане със средния бутон на мишката върху заглавната лента"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -506,11 +507,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Тази настройка определя ефекта на натискането със среден бутон на мишката върху заглавната лента. Текущите възможни стойности са: „toggle_shade“, която навива/развива прозореца; „toggle_maximize“, която максимизира/демаксимизира прозореца; „toggle_maximize_horizontally“ и „toggle_maximize_vertically“, които максимизират/демаксимизират прозореца само в съответната посока; „minimize“, която минимизира прозореца; „shade“, която навива прозореца; „menu“, която показва менюто на прозореца; „lower“, която поставя прозореца под всички останали и „none“, която не прави нищо."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Действие при натискане с десния бутон на мишката върху заглавната лента"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -522,11 +523,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Тази настройка определя ефекта на натискането с десния бутон на мишката върху заглавната лента. Текущите възможни стойности са: „toggle_shade“, която навива/развива прозореца; „toggle_maximize“, която максимизира/демаксимизира прозореца; „toggle_maximize_horizontally“ и „toggle_maximize_vertically“, които максимизират/демаксимизират прозореца само в съответната посока; „minimize“, която минимизира прозореца; „shade“, която навива прозореца; „menu“, която показва менюто на прозореца; „lower“, която поставя прозореца под всички останали и „none“, която не прави нищо."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Автоматично издигане на фокусирания прозорец"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -534,41 +535,41 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
+msgstr "Ако е вярно и начинът за фокусиране е „sloppy“ или „mouse“, тогава фокусираният прозорец ще бъде автоматично издигнат след определен интервал, който е зададен в ключа „auto_raise_delay“. Това поведение не е свързано нито с натискането на бутоните на мишката за издигането на прозорец, нито с с навлизането на показалеца на мишката при влачене и пускане."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Забавяне в милисекунди за настройката за автоматично издигане"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr ""
+msgstr "Закъснението в милисекунди преди да се издигне прозорец, ако „auto_raise“ е вярно."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Current theme"
-msgstr ""
+msgstr "Текуща тема"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "Темата определя външния вид на рамките на прозорците, заглавната лента и т.н."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Използване на стандартния системен шрифт за заглавията на прозорците"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
+msgstr "Ако е вярно, настройката за „titlebar_font“ се игнорира. За заглавията на прозорците се използва стандартният шрифт за приложенията."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Window title font"
-msgstr ""
+msgstr "Шрифт за заглавията на прозорците"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
@@ -576,22 +577,22 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr ""
+msgstr "Низ, описващ шрифта за заглавната лента на прозорците. Размерът от описанието ще се използва, само ако настройката „titlebar_font_size“ е зададена на 0. Тази настройка е изключена, ако настройката „titlebar_uses_desktop_font“ е включена."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Брой работни плотове"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
+msgstr "Брой работни плотове. Трябва да е над 0. Има горна граница (за да се предотврати случайното разрушаване на средата, ако поискате прекалено много работни места)."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Workspace wrap style"
-msgstr ""
+msgstr "Стил на превъртане между работните плотове"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -603,32 +604,32 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr ""
+msgstr "Стилът на превъртане се определя начина на преминаване от един работен плот към друг на границата на превключвателя. Ако стойността е „no wrap“ и се опитате да преминете отвъд границата на превключвателя, няма да се случи нищо. Ако стойността е „classic“, ще се използва старото поведение на „marco“: след края на реда се преминава в началото на следващия ред, а след края на колона се преминава в началото на следващата. Ако стойността е „toroidal“, работните плотове ще бъдат свързани като пръстен: след края на един ред се преминава в началото на същия ред, а след края на колона — в началото на същата колона."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Включване на визуалния звънец"
 
 #: ../src/org.mate.marco.gschema.xml.h:34
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
+msgstr "Включва визуална индикация, когато програма или системата се обърнат към „звънец“ или „писукане“. Това е полезно при хора с проблемен слух или при шумно обкръжение."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Системният звънец е звуков"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
+msgstr "Определя дали програми или системата може да генерират звукови „писукания“. Може да се използва заедно с „визуален звънец“, за да се позволят тихи „писукания“."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Вид на визуалния звънец"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
@@ -639,30 +640,30 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr ""
+msgstr "Задава начина, по който „Marco“ представя визуално системния звънец или звънеца на приложение. В момента има две възмжони стойности: „fullscreen“, което съответства на черно-бяло премигване на целия екран, и „frame_flash“, което съответства на премигване на заглавната лента на приложението, което е изпратило сигнала за звънене. Ако приложението, което е изпратило сигнала, е неизвестно (както става с подразбиращия се системен звънец), премигва заглавната лента на текущо фокусирания прозорец."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Мениджър за наслагване"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Указва дали „Marco“ ще действа и като мениджър за наслагване."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
-msgstr ""
+msgstr "Бърз „Alt + Tab“ при включен мениджър на наслагване (изкл. изображения)"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr ""
+msgstr "Ако е вярно и мениджърът на наслагванията е включен, при превключване между прозорците чрез „Alt + Tab“ няма да бъдат показвани изображения на прозорците, а само иконките на приложенията."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "Ако е вярно, се жертва част от използваемостта за повече свободни ресурси"
 
 #: ../src/org.mate.marco.gschema.xml.h:44
 msgid ""
@@ -671,12 +672,12 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr ""
+msgstr "Ако е вярно, „marco“ ще дава на потребителя по-малко обратна връзка, като се използват решетки, избягват се анимации или чрез други средства. Това е значимо влошаване на използваемостта за много потребители, но може да позволи на специфични програми и терминални сървъри да работят. Въпреки това, решетките са изключени, когато са включени настройките за достъпност."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "(Все още не е разработено) Навигацията работи в рамките на програмите, а не на прозорците."
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -687,11 +688,11 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
+msgstr "Ако е вярно, „Marco“ работи на базата на приложения, а не на прозорци. Идеята е малко абстрактна, но като цяло подходът, базиран на приложения, е по-близък до „Мак“ отколкото до „Уиндоус“. Когато фокусирате прозорец при подход базиран на приложения, всички прозорци на приложението ще се издигнат. При този подход натисканията за фокусиране не се предават на прозорците на други приложения. На този етап подходът на базата на приложения още не е напълно завършен."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "Изключване на неправилното поведение, изисквано от старите приложения или такива с грешки"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -699,32 +700,32 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr ""
+msgstr "Някои програми нарушават спецификациите по начини, които предизвикват грешно поведение на мениджъра на прозорци. Тази настройка кара „Marco“ да работи в изцяло правилен режим, което дава малко по-добър потребителски интерфейс, ако не се нуждаете от програма, работеща по неправилен начин."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Определя дали новите прозорци се появяват в средата на екрана"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Ако е вярно, новите прозорци се появяват в средата на екрана. Иначе, те ще се появяват в горния ляв ъгъл."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Whether to enable side-by-side tiling"
-msgstr ""
+msgstr "Дали да е включено подреждането едно до друго"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window."
-msgstr ""
+msgstr "Ако е включено, поставянето на прозорец до ръба на екрана ще го уголеми вертикално и ще го преоразмери хоризонтално, така че да покрива половината видима площ. Влаченето и пускането в най-горната част на екрана ще максимизира прозореца."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Window placement mode"
-msgstr ""
+msgstr "Режим на разполагане на прозорците"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -734,19 +735,19 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "Режимът на разполагането на прозорците определя къде да се поставят новите прозорци. Стойността „automatic“ означава, че системата ще избира местоположението автоматично, според наличното свободно място на работния плот, или чрез най-обикновено наслагване надолу и надясно, ако няма достатъчно място. Стойността „pointer“ означава, че новите прозорци ще се поставят според позицията на показалеца. Стойността „manual“ означава, че потребителят ще трябва ръчно да разполага новите прозорци с мишката или клавиатурата."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Name of workspace"
-msgstr ""
+msgstr "Име на работния плот"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Името на работния плот."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Run a defined command"
-msgstr ""
+msgstr "Изпълняване на определена команда"
 
 #: ../src/org.mate.marco.gschema.xml.h:58
 msgid ""
@@ -756,7 +757,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Бързият клавиш, който изпълнява командата със същия номер в „/apps/marco/keybinding_commands“. Форматът е във вида: „&lt;Control&gt;a“ или „&lt;Shift&gt;&lt;Alt&gt;F1“. Анализиращата програма е доста либерална по отношение на регистъра и съкращения от вида „&lt;Ctl&gt;“ и „&lt;Ctrl&gt;“. Ако зададете стойността да бъде специалният низ „disabled“, това действие няма да има бърз клавиш."
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
@@ -765,7 +766,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Форматът е във вида „&lt;Control&gt;a“ или „&lt;Shift&gt;&lt;Alt&gt;F1“. Анализиращата програма е доста либерална по отношение на регистъра и съкращения от вида „&lt;Ctl&gt;“ и „&lt;Ctrl&gt;“. Ако зададете стойността да бъде специалният низ „disabled“, това действие няма да има бърз клавиш."
 
 #: ../src/org.mate.marco.gschema.xml.h:78
 msgid ""
@@ -776,75 +777,75 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr ""
+msgstr "Форматът е от вида „&lt;Control&gt;a“ или „&lt;Shift&gt;&lt;Alt&gt;F1“. Анализиращата програма е доста либерална по отношение на регистъра и съкращения от вида „&lt;Ctl&gt“ и „&lt;Ctrl&gt;“. Ако зададете стойността да е специалният низ „disabled“, това действие няма да има бърз клавиш. Тази настройка на бърз клавиш може да бъде обърната чрез задържане на клавиша „Shift“, така че той не може да бъде един от клавишите, които тя използва."
 
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Преместване на фокуса между прозорците на едно приложение в обратен ред, като се използва изскачащ прозорец"
 
 #: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Преместване на фокуса между прозорците в обратен ред, като се използва изскачащ прозорец"
 
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Преместване на фокуса между прозорците от всички работни плотове, като се използва изскачащ прозорец"
 
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Преместване на фокуса между прозорците от всички работни плотове в обратен ред, като се използва изскачащ прозорец"
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Преместване на фокуса между панелите и работното място в обратен ред, като се използва изскачащ прозорец"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Незабавно преместване на фокуса между прозорците на едно приложение в обратен ред"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Незабавно преместване на фокуса между прозорците в обратен ред"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Незабавно преместване на фокуса между панелите и работния плот в обратен ред"
 
 #: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Команди, които да се изпълнят при натискането на бързи клавиши"
 
 #: ../src/org.mate.marco.gschema.xml.h:99
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr ""
+msgstr "Ключовете в „/apps/marco/global_keybindings/run_command_N“ дефинират клавишни комбинации, съответстващи на тези команди. Натискането на клавишната комбинация за „run_command_N“ ще изпълни команда „command_N“."
 
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "The screenshot command"
-msgstr ""
+msgstr "Команда за снимка на екрана"
 
 #: ../src/org.mate.marco.gschema.xml.h:101
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr ""
+msgstr "Ключът „/apps/marco/global_keybindings/run_command_screenshot“ определя бързия клавиш, който при натискането си изпълнява указаната от тази настройка програма."
 
 #: ../src/org.mate.marco.gschema.xml.h:102
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Командата за снимка на екрана"
 
 #: ../src/org.mate.marco.gschema.xml.h:103
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr ""
+msgstr "Ключът „/apps/marco/global_keybindings/run_command_windows_screenshot“ определя бързия клавиш, който при натискането си изпълнява указаната от тази настройка програма."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Превключване на видимостта на прозореца над другите прозорци"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -1695,7 +1696,7 @@ msgstr "Не е даден елементът <%s> за темата „%s“"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Няма указан стил на рамката за „%s“ прозорците в тема „%s“. Добавете елемент <window type=\"%s\" style_set=\"нещо си\"/>"
+msgstr "Няма указан стил на рамката за прозорците от вид „%s“ в темата „%s“. Добавете елемент <window type=\"%s\" style_set=\"нещо си\"/>"
 
 #: ../src/ui/theme.c:6150 ../src/ui/theme.c:6212 ../src/ui/theme.c:6275
 #, c-format
@@ -2052,59 +2053,59 @@ msgstr "Неуспех при намирането на валиден файл 
 
 #: ../src/ui/theme-viewer.c:105
 msgid "_Windows"
-msgstr ""
+msgstr "_Прозорци"
 
 #: ../src/ui/theme-viewer.c:106
 msgid "_Dialog"
-msgstr ""
+msgstr "_Диалогов"
 
 #: ../src/ui/theme-viewer.c:107
 msgid "_Modal dialog"
-msgstr ""
+msgstr "_Модален диалогов"
 
 #: ../src/ui/theme-viewer.c:108
 msgid "_Utility"
-msgstr ""
+msgstr "_Инструмент"
 
 #: ../src/ui/theme-viewer.c:109
 msgid "_Splashscreen"
-msgstr ""
+msgstr "_Стартиращ екран"
 
 #: ../src/ui/theme-viewer.c:110
 msgid "_Top dock"
-msgstr ""
+msgstr "_Горен док"
 
 #: ../src/ui/theme-viewer.c:111
 msgid "_Bottom dock"
-msgstr ""
+msgstr "Д_олен док"
 
 #: ../src/ui/theme-viewer.c:112
 msgid "_Left dock"
-msgstr ""
+msgstr "_Ляв док"
 
 #: ../src/ui/theme-viewer.c:113
 msgid "_Right dock"
-msgstr ""
+msgstr "Д_есен док"
 
 #: ../src/ui/theme-viewer.c:114
 msgid "_All docks"
-msgstr ""
+msgstr "_Всички докове"
 
 #: ../src/ui/theme-viewer.c:115
 msgid "Des_ktop"
-msgstr ""
+msgstr "_Работен плот"
 
 #: ../src/ui/theme-viewer.c:121
 msgid "Open another one of these windows"
-msgstr ""
+msgstr "Отваряне на още един от тези прозорци"
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"
-msgstr ""
+msgstr "Това е пробен бутон с иконка за „отваряне“"
 
 #: ../src/ui/theme-viewer.c:125
 msgid "This is a demo button with a 'quit' icon"
-msgstr ""
+msgstr "Това е пробен бутон с иконка за „изход“"
 
 #: ../src/ui/theme-viewer.c:263
 msgid "This is a sample message in a sample dialog"
@@ -2113,7 +2114,7 @@ msgstr "Това е примерно съобщение в примерен ди
 #: ../src/ui/theme-viewer.c:351
 #, c-format
 msgid "Fake menu item %d\n"
-msgstr "Фалшив обект на менюто %d\n"
+msgstr "Фалшив обект в меню %d\n"
 
 #: ../src/ui/theme-viewer.c:390
 msgid "Border-only window"

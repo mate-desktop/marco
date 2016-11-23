@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-09 17:44+0300\n"
-"PO-Revision-Date: 2016-05-01 01:35+0000\n"
+"PO-Revision-Date: 2016-11-19 14:37+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/mate/MATE/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -938,7 +938,7 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nOpphavsrett © 2001-%s Havoc Pennington, Red Hat., Inc, og andre.\nDette er fri programvare; se i kildekoden for kopibetingelser.\nDet gis INGEN garanti ikke engang for SALGBARHET eller EGNETHET FOR ET SPESIFIKT FORMÅL.\n"
+msgstr "marco %s\nKopirett © 2001-%s Havoc Pennington, Red Hat., Inc, og andre.\nDette er fri programvare; se i kildekoden for kopibetingelser.\nDet gis INGEN garanti ikke engang for SALGBARHET eller EGNETHET FOR ET SPESIFIKT FORMÅL.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -984,13 +984,13 @@ msgstr "Ikke vis vinduer som er maksimert og ikke har dekorasjoner i fullskjermm
 #: ../src/core/main.c:522
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
-msgstr "Feil under søk i temakatalog: %s\n"
+msgstr "Feil under søk i draktkatalog: %s\n"
 
 #: ../src/core/main.c:538
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Kunne ikke finne et tema! Sjekk at %s eksisterer og inneholder de vanlige temaene.\n"
+msgstr "Kunne ikke finne en drakt! Sjekk at %s finnes og inneholder de vanlige draktene.\n"
 
 #: ../src/core/main.c:597
 #, c-format
@@ -1021,14 +1021,14 @@ msgstr "Kunne ikke tolke skriftbeskrivelsen «%s» fra GSettings-nøkkelen %s\n"
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "«%s» funnet i konfigurasjonsdatabasen er ikke en gyldig verdi for endring av museknapp\n"
+msgstr "«%s» funnet i oppsettsdatabasen er ikke en gyldig verdi for endring av museknapp\n"
 
 #: ../src/core/prefs.c:1683
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "«%s» funnet i konfigurasjonsdatabasen er ikke en gyldig verdi for tastaturbinding «%s»\n"
+msgstr "«%s» funnet i oppsettsdatabasen er ikke en gyldig verdi for tastaturbinding «%s»\n"
 
 #: ../src/core/prefs.c:1986
 #, c-format
@@ -1113,7 +1113,7 @@ msgstr "Ukjent element %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Disse vinduene støtter ikke &quot;lagre aktiv konfigurasjon&quot; og vil måtte startes på nytt manuelt neste gang du logger inn."
+msgstr "Disse vinduene støtter ikke &quot;lagre aktivt oppsett&quot; og vil måtte startes på nytt manuelt neste gang du logger inn."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1666,7 +1666,7 @@ msgstr "Koordinatuttrykket ser ikke ut til å ha noen operatorer eller operander
 #: ../src/ui/theme.c:2868 ../src/ui/theme.c:2888 ../src/ui/theme.c:2908
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
-msgstr "Tema inneholdt et uttrykk som resulterte i en feil: %s\n"
+msgstr "Drakten inneholdt et uttrykk som resulterte i en feil: %s\n"
 
 #: ../src/ui/theme.c:4786
 #, c-format
@@ -1683,20 +1683,20 @@ msgstr "Mangler <frame state=«%s» resize=«%s» focus=«%s» stil=«ett-eller-
 #: ../src/ui/theme.c:5507
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
-msgstr "Klarte ikke å laste tema «%s»: %s\n"
+msgstr "Klarte ikke å iføre drakt «%s»: %s\n"
 
 #: ../src/ui/theme.c:5637 ../src/ui/theme.c:5644 ../src/ui/theme.c:5651
 #: ../src/ui/theme.c:5658 ../src/ui/theme.c:5665
 #, c-format
 msgid "No <%s> set for theme \"%s\""
-msgstr "<%s> er ikke satt for tema «%s»"
+msgstr "<%s> er ikke satt for drakten «%s»"
 
 #: ../src/ui/theme.c:5673
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Ingen rammestil satt for vindutype «%s» i tema «%s», legg til et <window type=«%s» style_set=«ett-eller-annet»/>-element"
+msgstr "Ingen rammestil satt for vindutype «%s» i drakten «%s», legg til et <window type=«%s» style_set=«ett-eller-annet»/>-element"
 
 #: ../src/ui/theme.c:6150 ../src/ui/theme.c:6212 ../src/ui/theme.c:6275
 #, c-format
@@ -1919,7 +1919,7 @@ msgstr "Ukjent funksjon «%s» for knapp"
 #: ../src/ui/theme-parser.c:2918
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
-msgstr "Knappefunksjon «%s» eksisterer ikke i denne versjonen (%d, trenger %d)"
+msgstr "Knappefunksjon «%s» finnes ikke i denne versjonen (%d, trenger %d)"
 
 #: ../src/ui/theme-parser.c:2930
 #, c-format
@@ -1979,19 +1979,19 @@ msgstr "Stil er allerede spesifisert for tilstanden %s fokus %s"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Kan ikke ha to draw_ops for et <piece>-element (tema spesifiserte en draw_ops-attributt i tillegg til et <draw_ops>-element, eller så spesifiserte det to elementer)"
+msgstr "Kan ikke ha to draw_ops for et <piece>-element (drakten spesifiserte en draw_ops-attributt i tillegg til et <draw_ops>-element, eller så spesifiserte det to elementer)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Kan ikke ha to draw_ops for et <button>-element (tema spesifiserte en draw_ops-attributt i tillegg til et <draw_ops>-element, eller det spesifiserte to elementer)"
+msgstr "Kan ikke ha to draw_ops for et <button>-element (drakten spesifiserte en draw_ops-attributt i tillegg til et <draw_ops>-element, eller det spesifiserte to elementer)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Kan ikke ha to draw_ops for et <menu_icon>-element (tema spesifiserte en draw_ops-attributt i tillegg til et <draw_ops>-element, eller det spesifiserte to elementer)"
+msgstr "Kan ikke ha to draw_ops for et <menu_icon>-element (drakten spesifiserte en draw_ops-attributt i tillegg til et <draw_ops>-element, eller det spesifiserte to elementer)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2044,12 +2044,12 @@ msgstr "Ingen tekst er tillatt inne i element <%s>"
 #: ../src/ui/theme-parser.c:3918
 #, c-format
 msgid "<%s> specified twice for this theme"
-msgstr "<%s> oppgitt to ganger for dette temaet"
+msgstr "<%s> oppgitt to ganger for denne drakten"
 
 #: ../src/ui/theme-parser.c:4211
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
-msgstr "Fant ikke en gyldig fil for tema %s\n"
+msgstr "Fant ikke en gyldig fil for drakten %s\n"
 
 #: ../src/ui/theme-viewer.c:105
 msgid "_Windows"
@@ -2101,11 +2101,11 @@ msgstr "Åpne enda et slikt vindu"
 
 #: ../src/ui/theme-viewer.c:123
 msgid "This is a demo button with an 'open' icon"
-msgstr "Dette er en demoknapp med et 'åpne'-miniatyrbilde"
+msgstr "Dette er en demoknapp med et 'åpne'-ikon"
 
 #: ../src/ui/theme-viewer.c:125
 msgid "This is a demo button with a 'quit' icon"
-msgstr "Dette er en demoknapp med et 'avslutt'-miniatyrbilde"
+msgstr "Dette er en demoknapp med et 'avslutt'-ikon"
 
 #: ../src/ui/theme-viewer.c:263
 msgid "This is a sample message in a sample dialog"
@@ -2161,17 +2161,17 @@ msgstr "%g millisekunder for å tegne en vindusramme"
 #: ../src/ui/theme-viewer.c:830
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
-msgstr "Bruk: marco-theme-viewer [TEMANAVN]\n"
+msgstr "Bruk: marco-theme-viewer [DRAKTNAVN]\n"
 
 #: ../src/ui/theme-viewer.c:837
 #, c-format
 msgid "Error loading theme: %s\n"
-msgstr "Feil under lasting av tema: %s\n"
+msgstr "Feil under lasting av drakt: %s\n"
 
 #: ../src/ui/theme-viewer.c:843
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
-msgstr "Lastet tema «%s» på %g sekunder\n"
+msgstr "Lastet drakten «%s» på %g sekunder\n"
 
 #: ../src/ui/theme-viewer.c:886
 msgid "Normal Title Font"
