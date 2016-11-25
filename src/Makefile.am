@@ -139,18 +139,15 @@ libmarcoinclude_HEADERS = \
 	ui/theme-parser.h \
 	ui/theme.h
 
-#marco_theme_viewer_SOURCES= \
-#	ui/theme-viewer.c
+marco_theme_viewer_SOURCES= \
+	ui/theme-viewer.c
 
-bin_PROGRAMS=marco
-
-# FIXME make it buildable with GTK+3
-#bin_PROGRAMS += marco-theme-viewer
+bin_PROGRAMS=marco marco-theme-viewer
 
 EFENCE=
 marco_LDADD=@MARCO_LIBS@ $(EFENCE)
 
-#marco_theme_viewer_LDADD= @MARCO_LIBS@ libmarco-private.la
+marco_theme_viewer_LDADD= @MARCO_LIBS@ libmarco-private.la
 
 testboxes_SOURCES=include/util.h core/util.c include/boxes.h core/boxes.c core/testboxes.c
 testgradient_SOURCES=ui/gradient.h ui/gradient.c ui/testgradient.c
