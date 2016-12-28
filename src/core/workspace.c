@@ -863,10 +863,10 @@ meta_workspace_get_neighbor (MetaWorkspace      *workspace,
       case META_WRAP_NONE:
         layout.current_col = 0;
         break;
-      case META_WRAP_TOROIDAL:
+      case META_WRAP_CLASSIC:
         layout.current_row = layout.current_row > 0 ? layout.current_row - 1 : layout.rows - 1;
         /* fall through */
-      case META_WRAP_CLASSIC:
+      case META_WRAP_TOROIDAL:
         layout.current_col = layout.cols - 1;
       }
   /* RIGHT */
@@ -876,10 +876,10 @@ meta_workspace_get_neighbor (MetaWorkspace      *workspace,
       case META_WRAP_NONE:
         layout.current_col = layout.cols - 1;
         break;
-      case META_WRAP_TOROIDAL:
+      case META_WRAP_CLASSIC:
         layout.current_row = layout.current_row < layout.rows - 1 ? layout.current_row + 1 : 0;
         /* fall through */
-      case META_WRAP_CLASSIC:
+      case META_WRAP_TOROIDAL:
         layout.current_col = 0;
       }
   /* UP */
@@ -889,10 +889,10 @@ meta_workspace_get_neighbor (MetaWorkspace      *workspace,
       case META_WRAP_NONE:
         layout.current_row = 0;
         break;
-      case META_WRAP_TOROIDAL:
+      case META_WRAP_CLASSIC:
         layout.current_col = layout.current_col > 0 ? layout.current_col - 1 : layout.cols - 1;
         /* fall through */
-      case META_WRAP_CLASSIC:
+      case META_WRAP_TOROIDAL:
         layout.current_row = layout.rows - 1;
       }
   /* DOWN */
@@ -902,10 +902,10 @@ meta_workspace_get_neighbor (MetaWorkspace      *workspace,
       case META_WRAP_NONE:
         layout.current_row = layout.rows - 1;
         break;
-      case META_WRAP_TOROIDAL:
+      case META_WRAP_CLASSIC:
         layout.current_col = layout.current_col < layout.cols - 1 ? layout.current_col + 1 : 0;
         /* fall through */
-      case META_WRAP_CLASSIC:
+      case META_WRAP_TOROIDAL:
         layout.current_row = 0;
       }
 
@@ -919,7 +919,7 @@ meta_workspace_get_neighbor (MetaWorkspace      *workspace,
         break;
       case META_MOTION_RIGHT:
        layout.current_col = 0;
-       if (wrap == META_WRAP_TOROIDAL)
+       if (wrap == META_WRAP_CLASSIC)
          layout.current_row = 0;
        break;
       case META_MOTION_UP:
@@ -927,7 +927,7 @@ meta_workspace_get_neighbor (MetaWorkspace      *workspace,
         break;
       case META_MOTION_DOWN:
         layout.current_row = 0;
-        if (wrap == META_WRAP_TOROIDAL)
+        if (wrap == META_WRAP_CLASSIC)
 	  layout.current_col = layout.current_col < layout.cols - 1 ? layout.current_col + 1 : 0;
         break;
       case META_MOTION_PREV:
