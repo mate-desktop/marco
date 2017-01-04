@@ -3414,6 +3414,20 @@ meta_window_move_resize_internal (MetaWindow          *window,
   if ((flags & (META_IS_MOVE_ACTION | META_IS_RESIZE_ACTION)) ==
       META_IS_RESIZE_ACTION)
     {
+
+      if (window->tile_mode != META_TILE_NONE)
+        window->tile_mode = META_TILE_NONE;
+
+      gint unmaximizeFlags = 0;
+      if (window->maximized_horizontally && new_rect.width != old_rect.width)
+        unmaximizeFlags = unmaximizeFlags | META_MAXIMIZE_HORIZONTAL;
+
+      if (window->maximized_vertically && new_rect.height != old_rect.height)
+        unmaximizeFlags = unmaximizeFlags | META_MAXIMIZE_VERTICAL;
+
+      if (unmaximizeFlags != 0)
+        meta_window_unmaximize (window, unmaximizeFlags);
+
       meta_rectangle_resize_with_gravity (&old_rect,
                                           &new_rect,
                                           gravity,
