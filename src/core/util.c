@@ -635,5 +635,93 @@ meta_show_dialog (const char *type,
 
   return child_pid;
 }
+
+GPid
+meta_show_entry_dialog(const char *message,
+                       gint *active_workspace_id,
+                       const char *entry_text,
+                       const char *display,
+                       const char *ok_text,
+                       const char *cancel_text,
+                       const int transient_for,
+                       const GIOFunc stdio_func_cb)
+{
+  meta_topic (META_DEBUG_KEYBINDINGS,
+              "meta_show_entry_dialog: called. active_workspace_id=%d message=%s entry_text=%s\n",
+              *active_workspace_id, message, entry_text);
+  
+  GError *error = NULL;
+  int i = 0;
+  GPid child_pid;
+  gint stdout_fd;
+  const char **argvl = g_malloc (sizeof (char *) * (17));
+  
+  argvl[i++] = "zenity";
+  argvl[i++] = "--entry";
+  argvl[i++] = "--display";
+  argvl[i++] = display;
+  argvl[i++] = "--class";
+  argvl[i++] = "marco-dialog";
+  argvl[i++] = "--title";
+  /* Translators: This is the title used on dialog boxes */
+  argvl[i++] = _ ("Marco");
+  argvl[i++] = "--text";
+  argvl[i++] = message;
+  
+  if (entry_text)
+    {
+      argvl[i++] = "--entry-text";
+      argvl[i++] = entry_text;
+    }
+    
+  if (ok_text)
+    {
+      argvl[i++] = "--ok-label";
+      argvl[i++] = ok_text;
+    }
+  
+  if (cancel_text)
+    {
+      argvl[i++] = "--cancel-label";
+      argvl[i++] = cancel_text;
+    }
+  argvl[i] = NULL;
+  
+  
+  unsetenv ("WINDOWID"); /* start in current workspace */
+  g_spawn_async_with_pipes (
+                            "/",
+                            (gchar **) argvl,
+                            NULL,
+                            (GSpawnFlags) G_SPAWN_SEARCH_PATH | G_SPAWN_DO_NOT_REAP_CHILD,
+                            NULL,
+                            NULL,
+                            &child_pid,
+                            NULL,
+                            &stdout_fd,
+                            NULL,
+                            &error
+  );
+  
+  g_free (argvl);
+  
+  if (error)
+    {
+      meta_warning ("%s\n", error->message);
+      g_error_free (error);
+      child_pid = -1;
+    }
+  else
+    {
+      GIOChannel *ioc = g_io_channel_unix_new(stdout_fd);
+      g_io_channel_set_encoding(ioc, NULL, NULL);
+      g_io_channel_set_buffered (ioc, FALSE);
+      g_io_channel_set_close_on_unref (ioc, TRUE);
+      g_io_add_watch(ioc,  G_IO_IN | G_IO_PRI | G_IO_ERR | G_IO_HUP | G_IO_NVAL, stdio_func_cb, active_workspace_id);
+      g_io_channel_unref(ioc);
+    }
+  
+  return child_pid;
+}
 /* eof util.c */
 

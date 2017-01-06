@@ -38,6 +38,8 @@
 #include "effects.h"
 #include "util.h"
 
+#include <gio/gio.h>
+
 #include <X11/keysym.h>
 #include <string.h>
 #include <stdio.h>
@@ -64,6 +66,8 @@ handler (MetaDisplay    *display,\
          XEvent         *event,\
          MetaKeyBinding *binding);
 #include "all-keybindings.h"
+#include "../include/util.h"
+
 #undef keybind
 
 /* These can't be bound to anything, but they are used to handle
@@ -3464,5 +3468,155 @@ handle_run_terminal (MetaDisplay    *display,
                         event->xkey.time);
 
       g_error_free (err);
+    }
+}
+
+static gboolean already_displaying_rename_workspace = FALSE;
+#define RENAME_WORKSPACE_BUFSIZE 512
+
+static gboolean
+handle_rename_workspace_callback(GIOChannel *ioc, GIOCondition cond, gpointer data)
+{
+  meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace_callback: called.\n");
+  gint *workspace_index = data;
+  
+  if (!already_displaying_rename_workspace)
+    {
+      meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace_callback: done, already_displaying_rename_workspace=FALSE\n");
+      return FALSE;
+    }
+  
+  if (cond & G_IO_HUP)
+    {
+      meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace_callback: done.\n");
+      g_free(workspace_index);
+      already_displaying_rename_workspace = FALSE;
+      return FALSE;
+    }
+  
+  
+  if (cond & G_IO_ERR )
+    {
+      meta_warning ("handle_rename_workspace_callback: error. G_IO_ERR.\n");
+      g_free(workspace_index);
+      already_displaying_rename_workspace = FALSE;
+      return FALSE;
+    }
+  
+  if (cond & G_IO_NVAL )
+    {
+      meta_warning ("handle_rename_workspace_callback: error. G_IO_NVAL.\n");
+      g_free(workspace_index);
+      already_displaying_rename_workspace = FALSE;
+      return FALSE;
+    }
+  
+  
+  meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace_callback: workspace_index=%d\n", *workspace_index);
+  if (*workspace_index < 0 || *workspace_index > 36)
+    {
+      meta_warning ("handle_rename_workspace_callback: invalid workspace_index=%d\n", *workspace_index);
+      g_free(workspace_index);
+      already_displaying_rename_workspace = FALSE;
+      return FALSE;
+    }
+  
+  
+  if (cond & (!G_IO_IN & !G_IO_PRI))
+    {
+      meta_warning ("handle_rename_workspace_callback: unknown error\n");
+      g_free(workspace_index);
+      already_displaying_rename_workspace = FALSE;
+      return FALSE;
+    }
+  
+  GIOStatus ret;
+  
+  gchar buf[RENAME_WORKSPACE_BUFSIZE];
+  gchar clean_buf[RENAME_WORKSPACE_BUFSIZE];
+  gsize buf_len = 0;
+  glong clean_buf_len = 0;
+  
+  memset (buf, 0x00, RENAME_WORKSPACE_BUFSIZE);
+  memset (clean_buf, 0x00, RENAME_WORKSPACE_BUFSIZE);
+
+  ret = g_io_channel_read_chars (ioc, buf, RENAME_WORKSPACE_BUFSIZE, &buf_len, NULL);
+
+  if (buf_len <= 0 || ret != G_IO_STATUS_NORMAL)
+    {
+      meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace_callback: error getting the new name.\n");
+      g_free(workspace_index);
+      already_displaying_rename_workspace = FALSE;
+      return FALSE;
+    }
+  
+  if (!g_utf8_validate (buf, -1, NULL))
+    {
+      meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace_callback: the string is not utf-8: %s\n", buf);
+      g_free(workspace_index);
+      already_displaying_rename_workspace = FALSE;
+      return FALSE;
+    }
+
+  clean_buf_len = g_utf8_strlen (buf, -1);
+  if (clean_buf_len <= 1)
+    {
+      meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace_callback: invalid name.\n");
+      g_free(workspace_index);
+      already_displaying_rename_workspace = FALSE;
+      return FALSE;
+    }
+  
+  g_utf8_strncpy (clean_buf, buf, clean_buf_len - 1);
+  meta_prefs_change_workspace_name(*workspace_index, clean_buf);
+  already_displaying_rename_workspace = FALSE;
+  
+  return TRUE;
+}
+
+static void
+handle_rename_workspace(MetaDisplay *display,
+                        MetaScreen *screen,
+                        MetaWindow *window,
+                        XEvent *event,
+                        MetaKeyBinding *binding)
+{
+  gchar *window_title, *window_content, *entry_text;
+  GPid dialog_pid;
+  
+  meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace: called.\n");
+  
+  if (already_displaying_rename_workspace)
+    {
+      meta_topic (META_DEBUG_KEYBINDINGS,
+                  "handle_rename_workspace: return, already_displaying_rename_workspace=TRUE.\n");
+      return;
+    }
+  
+  window_title = g_strdup_printf (_("<tt>Rename Workspace</tt>"));
+  window_content = g_strdup_printf (_("New Workspace Name:"));
+  
+  gint *workspace_index = g_malloc (sizeof (gint));
+  *workspace_index = meta_workspace_index (screen->active_workspace);
+  meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace: workspace_index=%d\n", *workspace_index);
+  
+  entry_text = meta_prefs_get_workspace_name(*workspace_index);
+  dialog_pid = meta_show_entry_dialog (window_content,
+                                       workspace_index,
+                                       entry_text,
+                                       screen->screen_name,
+                                       _("OK"), _("Cancel"),
+                                       0,
+                                       handle_rename_workspace_callback);
+  
+  g_free (window_title);
+  g_free (window_content);
+  if (dialog_pid > 0)
+    {
+      already_displaying_rename_workspace = TRUE;
+    }
+  else
+    {
+      g_free(workspace_index);
     }
 }
