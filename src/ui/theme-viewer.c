@@ -465,7 +465,7 @@ get_window_flags (MetaFrameType type)
 
 static GtkWidget*
 preview_collection (int font_size,
-                    PangoFontDescription *base_desc)
+                    const PangoFontDescription *base_desc)
 {
   GtkWidget *box;
   GtkWidget *sw;
@@ -560,7 +560,7 @@ preview_collection (int font_size,
           pango_font_description_set_size (font_desc,
                                            MAX (pango_font_description_get_size (base_desc) * scale, 1));
 
-          gtk_widget_modify_font (preview, font_desc);
+          gtk_widget_override_font (preview, font_desc);
 
           pango_font_description_free (font_desc);
         }
@@ -777,7 +777,8 @@ main (int argc, char **argv)
 {
   GtkWidget *window;
   GtkWidget *collection;
-  GtkStyle *style;
+  GtkStyleContext *style;
+  PangoFontDescription *font_desc;
   GError *err;
   clock_t start, end;
   GtkWidget *notebook;
@@ -847,28 +848,29 @@ main (int argc, char **argv)
                     G_CALLBACK (gtk_main_quit), NULL);
 
   gtk_widget_realize (window);
-  style = gtk_widget_get_style (window);
+  style = gtk_widget_get_style_context (window);
+  gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL, "font", &font_desc, NULL);
 
   g_assert (style);
-  g_assert (style->font_desc);
+  g_assert (font_desc);
 
   notebook = gtk_notebook_new ();
   gtk_container_add (GTK_CONTAINER (window), notebook);
 
   collection = preview_collection (FONT_SIZE_NORMAL,
-                                   style->font_desc);
+                                   font_desc);
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Normal Title Font")));
 
   collection = preview_collection (FONT_SIZE_SMALL,
-                                   style->font_desc);
+                                   font_desc);
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Small Title Font")));
 
   collection = preview_collection (FONT_SIZE_LARGE,
-                                   style->font_desc);
+                                   font_desc);
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Large Title Font")));
@@ -882,6 +884,8 @@ main (int argc, char **argv)
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Benchmark")));
+
+  pango_font_description_free (font_desc);
 
   i = 0;
   while (i < (int) G_N_ELEMENTS (previews))
@@ -919,8 +923,16 @@ get_flags (GtkWidget *widget)
 static int
 get_text_height (GtkWidget *widget)
 {
-  return meta_pango_font_desc_get_text_height (gtk_widget_get_style (widget)->font_desc,
-                                               gtk_widget_get_pango_context (widget));
+  GtkStyleContext      *style;
+  PangoFontDescription *font_desc;
+  int                   text_height;
+
+  style = gtk_widget_get_style_context (widget);
+  gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL, "font", &font_desc, NULL);
+  text_height = meta_pango_font_desc_get_text_height (font_desc, gtk_widget_get_pango_context (widget));
+  pango_font_description_free (font_desc);
+
+  return text_height;
 }
 
 static PangoLayout*
