@@ -29,8 +29,8 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <glib.h>
-#include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
+#include <cairo/cairo.h>
 
 /* This is between GTK_PRIORITY_RESIZE (+10) and GDK_PRIORITY_REDRAW (+20) */
 #define META_PRIORITY_RESIZE    (G_PRIORITY_HIGH_IDLE + 15)
@@ -177,11 +177,7 @@ int      meta_ui_get_drag_threshold       (MetaUI *ui);
 
 MetaUIDirection meta_ui_get_direction (void);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 GdkPixbuf *meta_ui_get_pixbuf_from_surface (cairo_surface_t *surface);
-#else
-GdkPixbuf *meta_ui_get_pixbuf_from_pixmap (Pixmap   pmap);
-#endif
 
 #include "tabpopup.h"
 #include "tile-preview.h"

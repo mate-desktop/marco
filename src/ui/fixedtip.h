@@ -40,9 +40,6 @@
 #ifndef META_FIXED_TIP_H
 #define META_FIXED_TIP_H
 
-#include <gtk/gtk.h>
-#include <gdk/gdkx.h>
-
 /**
  * Displays a tooltip.  There can be only one across the entire system.
  * This function behaves identically whether or not a tooltip is already

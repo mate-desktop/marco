@@ -26,7 +26,6 @@
 
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdk.h>
-#include <gtk/gtk.h>
 
 typedef enum
 {
@@ -36,7 +35,6 @@ typedef enum
   META_GRADIENT_LAST
 } MetaGradientType;
 
-#if GTK_CHECK_VERSION (3, 0 ,0)
 GdkPixbuf* meta_gradient_create_simple     (int               width,
                                             int               height,
                                             const GdkRGBA    *from,
@@ -53,25 +51,6 @@ GdkPixbuf* meta_gradient_create_interwoven (int               width,
                                             int               thickness1,
                                             const GdkRGBA     colors2[2],
                                             int               thickness2);
-#else
-GdkPixbuf* meta_gradient_create_simple     (int               width,
-                                            int               height,
-                                            const GdkColor   *from,
-                                            const GdkColor   *to,
-                                            MetaGradientType  style);
-GdkPixbuf* meta_gradient_create_multi      (int               width,
-                                            int               height,
-                                            const GdkColor   *colors,
-                                            int               n_colors,
-                                            MetaGradientType  style);
-GdkPixbuf* meta_gradient_create_interwoven (int               width,
-                                            int               height,
-                                            const GdkColor    colors1[2],
-                                            int               thickness1,
-                                            const GdkColor    colors2[2],
-                                            int               thickness2);
-#endif
-
 
 /* Generate an alpha gradient and multiply it with the existing alpha
  * channel of the given pixbuf

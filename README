@@ -3,7 +3,7 @@ MATE Marco is a fork of GNOME Metacity.
 COMPILING MARCO
 ===
 
-You need GTK+ 2.24.  For startup notification to work you need
+You need GTK+ 3.14.  For startup notification to work you need
 libstartup-notification at
 http://www.freedesktop.org/software/startup-notification/.
 
@@ -63,7 +63,7 @@ MARCO FEATURES
  - Boring window manager for the adult in you. Many window managers
    are like Marshmallow Froot Loops; Marco is like Cheerios.
 
- - Uses GTK+ 2.0 for drawing window frames. This means colors, fonts,
+ - Uses GTK+ 3.0 for drawing window frames. This means colors, fonts,
    etc. come from GTK+ theme.
 
  - Does not expose the concept of "window manager" to the user.  Some

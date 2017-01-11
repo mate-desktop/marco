@@ -35,12 +35,6 @@
 #define _(x) dgettext (GETTEXT_PACKAGE, x)
 #define N_(x) x
 
-/* Silence Gtk{V,H}Box deprecations warnings */
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
-#define gtk_hbox_new(X, Y) gtk_box_new (GTK_ORIENTATION_HORIZONTAL, Y)
-#endif
-
 /* We need to compute all different button arrangements
  * in terms of button location. We don't care about
  * different arrangements in terms of button function.
@@ -69,10 +63,6 @@ static MetaTheme *global_theme = NULL;
 static GtkWidget *previews[META_FRAME_TYPE_LAST*FONT_SIZE_LAST + BUTTON_LAYOUT_COMBINATIONS] = { NULL, };
 static double milliseconds_to_draw_frame = 0.0;
 
-static void run_position_expression_tests (void);
-#if 0
-static void run_position_expression_timings (void);
-#endif
 static void run_theme_benchmark (void);
 
 
@@ -239,13 +229,9 @@ dialog_contents (void)
   GtkWidget *image;
   GtkWidget *button;
 
-  vbox = gtk_vbox_new (FALSE, 0);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   action_area = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
-#else
-  action_area = gtk_hbutton_box_new ();
-#endif
 
   gtk_button_box_set_layout (GTK_BUTTON_BOX (action_area),
                              GTK_BUTTONBOX_END);
@@ -263,17 +249,13 @@ dialog_contents (void)
   label = gtk_label_new (_("This is a sample message in a sample dialog"));
   image = gtk_image_new_from_icon_name ("dialog-information",
                                         GTK_ICON_SIZE_DIALOG);
-#if GTK_CHECK_VERSION (3, 0, 0)
   gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
   gtk_widget_set_valign (image, GTK_ALIGN_START);
-#else
-  gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
-#endif
 
   gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
 
-  hbox = gtk_hbox_new (FALSE, 6);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
 
   gtk_box_pack_start (GTK_BOX (hbox), image,
                       FALSE, FALSE, 0);
@@ -343,19 +325,15 @@ menu_contents (void)
   gtk_frame_set_shadow_type (GTK_FRAME (frame),
                              GTK_SHADOW_OUT);
 
-  vbox = gtk_vbox_new (FALSE, 0);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
   i = 0;
   while (i < 10)
     {
       char *str = g_strdup_printf (_("Fake menu item %d\n"), i + 1);
       mi = gtk_label_new (str);
-#if GTK_CHECK_VERSION (3, 0, 0)
       gtk_widget_set_halign (mi, GTK_ALIGN_START);
       gtk_widget_set_valign (mi, GTK_ALIGN_CENTER);
-#else
-      gtk_misc_set_alignment (GTK_MISC (mi), 0.0, 0.5);
-#endif
       g_free (str);
       gtk_box_pack_start (GTK_BOX (vbox), mi, FALSE, FALSE, 0);
 
@@ -375,16 +353,17 @@ border_only_contents (void)
   GtkWidget *event_box;
   GtkWidget *vbox;
   GtkWidget *w;
-  GdkColor color;
+  GdkRGBA color;
 
   event_box = gtk_event_box_new ();
 
-  color.red = 40000;
+  color.red = 0.6;
   color.green = 0;
-  color.blue = 40000;
-  gtk_widget_modify_bg (event_box, GTK_STATE_NORMAL, &color);
+  color.blue = 0.6;
+  color.alpha = 1.0;
+  gtk_widget_override_background_color (event_box, 0, &color);
 
-  vbox = gtk_vbox_new (FALSE, 0);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 3);
 
   w = gtk_label_new (_("Border-only window"));
@@ -486,11 +465,11 @@ get_window_flags (MetaFrameType type)
 
 static GtkWidget*
 preview_collection (int font_size,
-                    PangoFontDescription *base_desc)
+                    const PangoFontDescription *base_desc)
 {
   GtkWidget *box;
   GtkWidget *sw;
-  GdkColor desktop_color;
+  GdkRGBA desktop_color;
   int i;
   GtkWidget *eventbox;
 
@@ -499,7 +478,7 @@ preview_collection (int font_size,
                                   GTK_POLICY_AUTOMATIC,
                                   GTK_POLICY_AUTOMATIC);
 
-  box = gtk_vbox_new (FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_box_set_spacing (GTK_BOX (box), 20);
   gtk_container_set_border_width (GTK_CONTAINER (box), 20);
 
@@ -508,11 +487,12 @@ preview_collection (int font_size,
 
   gtk_scrolled_window_add_with_viewport (GTK_SCROLLED_WINDOW (sw), eventbox);
 
-  desktop_color.red = 0x5144;
-  desktop_color.green = 0x75D6;
-  desktop_color.blue = 0xA699;
+  desktop_color.red = 0.32;
+  desktop_color.green = 0.46;
+  desktop_color.blue = 0.65;
+  desktop_color.alpha = 1.0;
 
-  gtk_widget_modify_bg (eventbox, GTK_STATE_NORMAL, &desktop_color);
+  gtk_widget_override_background_color (eventbox, 0, &desktop_color);
 
   i = 0;
   while (i < META_FRAME_TYPE_LAST)
@@ -580,7 +560,7 @@ preview_collection (int font_size,
           pango_font_description_set_size (font_desc,
                                            MAX (pango_font_description_get_size (base_desc) * scale, 1));
 
-          gtk_widget_modify_font (preview, font_desc);
+          gtk_widget_override_font (preview, font_desc);
 
           pango_font_description_free (font_desc);
         }
@@ -707,7 +687,7 @@ previews_of_button_layouts (void)
   static gboolean initted = FALSE;
   GtkWidget *box;
   GtkWidget *sw;
-  GdkColor desktop_color;
+  GdkRGBA desktop_color;
   int i;
   GtkWidget *eventbox;
 
@@ -722,7 +702,7 @@ previews_of_button_layouts (void)
                                   GTK_POLICY_AUTOMATIC,
                                   GTK_POLICY_AUTOMATIC);
 
-  box = gtk_vbox_new (FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_box_set_spacing (GTK_BOX (box), 20);
   gtk_container_set_border_width (GTK_CONTAINER (box), 20);
 
@@ -731,11 +711,12 @@ previews_of_button_layouts (void)
 
   gtk_scrolled_window_add_with_viewport (GTK_SCROLLED_WINDOW (sw), eventbox);
 
-  desktop_color.red = 0x5144;
-  desktop_color.green = 0x75D6;
-  desktop_color.blue = 0xA699;
+  desktop_color.red = 0.32;
+  desktop_color.green = 0.46;
+  desktop_color.blue = 0.65;
+  desktop_color.alpha = 1.0;
 
-  gtk_widget_modify_bg (eventbox, GTK_STATE_NORMAL, &desktop_color);
+  gtk_widget_override_background_color (eventbox, 0, &desktop_color);
 
   i = 0;
   while (i < BUTTON_LAYOUT_COMBINATIONS)
@@ -796,7 +777,8 @@ main (int argc, char **argv)
 {
   GtkWidget *window;
   GtkWidget *collection;
-  GtkStyle *style;
+  GtkStyleContext *style;
+  PangoFontDescription *font_desc;
   GError *err;
   clock_t start, end;
   GtkWidget *notebook;
@@ -805,11 +787,6 @@ main (int argc, char **argv)
   bindtextdomain (GETTEXT_PACKAGE, MARCO_LOCALEDIR);
   textdomain(GETTEXT_PACKAGE);
   bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
-
-  run_position_expression_tests ();
-#if 0
-  run_position_expression_timings ();
-#endif
 
   gtk_init (&argc, &argv);
 
@@ -871,28 +848,29 @@ main (int argc, char **argv)
                     G_CALLBACK (gtk_main_quit), NULL);
 
   gtk_widget_realize (window);
-  style = gtk_widget_get_style (window);
+  style = gtk_widget_get_style_context (window);
+  gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL, "font", &font_desc, NULL);
 
   g_assert (style);
-  g_assert (style->font_desc);
+  g_assert (font_desc);
 
   notebook = gtk_notebook_new ();
   gtk_container_add (GTK_CONTAINER (window), notebook);
 
   collection = preview_collection (FONT_SIZE_NORMAL,
-                                   style->font_desc);
+                                   font_desc);
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Normal Title Font")));
 
   collection = preview_collection (FONT_SIZE_SMALL,
-                                   style->font_desc);
+                                   font_desc);
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Small Title Font")));
 
   collection = preview_collection (FONT_SIZE_LARGE,
-                                   style->font_desc);
+                                   font_desc);
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Large Title Font")));
@@ -906,6 +884,8 @@ main (int argc, char **argv)
   gtk_notebook_append_page (GTK_NOTEBOOK (notebook),
                             collection,
                             gtk_label_new (_("Benchmark")));
+
+  pango_font_description_free (font_desc);
 
   i = 0;
   while (i < (int) G_N_ELEMENTS (previews))
@@ -943,8 +923,16 @@ get_flags (GtkWidget *widget)
 static int
 get_text_height (GtkWidget *widget)
 {
-  return meta_pango_font_desc_get_text_height (gtk_widget_get_style (widget)->font_desc,
-                                               gtk_widget_get_pango_context (widget));
+  GtkStyleContext      *style;
+  PangoFontDescription *font_desc;
+  int                   text_height;
+
+  style = gtk_widget_get_style_context (widget);
+  gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL, "font", &font_desc, NULL);
+  text_height = meta_pango_font_desc_get_text_height (font_desc, gtk_widget_get_pango_context (widget));
+  pango_font_description_free (font_desc);
+
+  return text_height;
 }
 
 static PangoLayout*
@@ -961,7 +949,8 @@ static void
 run_theme_benchmark (void)
 {
   GtkWidget* widget;
-  GdkPixmap *pixmap;
+  cairo_surface_t *pixmap;
+  cairo_t *cr;
   int top_height, bottom_height, left_width, right_width;
   MetaButtonState button_states[META_BUTTON_TYPE_LAST] =
   {
@@ -1024,16 +1013,15 @@ run_theme_benchmark (void)
       /* Creating the pixmap in the loop is right, since
        * GDK does the same with its double buffering.
        */
-      pixmap = gdk_pixmap_new (gtk_widget_get_window (widget),
-                               client_width + left_width + right_width,
-                               client_height + top_height + bottom_height,
-                               -1);
+      pixmap = gdk_window_create_similar_surface (gtk_widget_get_window (widget),
+                                                  CAIRO_CONTENT_COLOR,
+                                                  client_width + left_width + right_width,
+                                                  client_height + top_height + bottom_height);
+      cr = cairo_create (pixmap);
 
       meta_theme_draw_frame (global_theme,
                              widget,
-                             pixmap,
-                             NULL,
-                             0, 0,
+                             cr,
                              META_FRAME_TYPE_NORMAL,
                              get_flags (widget),
                              client_width, client_height,
@@ -1044,7 +1032,8 @@ run_theme_benchmark (void)
                              meta_preview_get_mini_icon (),
                              meta_preview_get_icon ());
 
-      g_object_unref (G_OBJECT (pixmap));
+      cairo_destroy (cr);
+      cairo_surface_destroy (pixmap);
 
       ++i;
       client_width += inc;
@@ -1070,301 +1059,3 @@ run_theme_benchmark (void)
 #undef ITERATIONS
 }
 
-typedef struct
-{
-  GdkRectangle rect;
-  const char *expr;
-  int expected_x;
-  int expected_y;
-  MetaThemeError expected_error;
-} PositionExpressionTest;
-
-#define NO_ERROR -1
-
-static const PositionExpressionTest position_expression_tests[] = {
-  /* Just numbers */
-  { { 10, 20, 40, 50 },
-    "10", 20, 30, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "14.37", 24, 34, NO_ERROR },
-  /* Binary expressions with 2 ints */
-  { { 10, 20, 40, 50 },
-    "14 * 10", 150, 160, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "14 + 10", 34, 44, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "14 - 10", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "8 / 2", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "8 % 3", 12, 22, NO_ERROR },
-  /* Binary expressions with floats and mixed float/ints */
-  { { 10, 20, 40, 50 },
-    "7.0 / 3.5", 12, 22, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "12.1 / 3", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "12 / 2.95", 14, 24, NO_ERROR },
-  /* Binary expressions without whitespace after first number */
-  { { 10, 20, 40, 50 },
-    "14* 10", 150, 160, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "14+ 10", 34, 44, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "14- 10", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "8/ 2", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "7.0/ 3.5", 12, 22, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "12.1/ 3", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "12/ 2.95", 14, 24, NO_ERROR },
-  /* Binary expressions without whitespace before second number */
-  { { 10, 20, 40, 50 },
-    "14 *10", 150, 160, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "14 +10", 34, 44, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "14 -10", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "8 /2", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "7.0 /3.5", 12, 22, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "12.1 /3", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "12 /2.95", 14, 24, NO_ERROR },
-  /* Binary expressions without any whitespace */
-  { { 10, 20, 40, 50 },
-    "14*10", 150, 160, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "14+10", 34, 44, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "14-10", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "8/2", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "7.0/3.5", 12, 22, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "12.1/3", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "12/2.95", 14, 24, NO_ERROR },
-  /* Binary expressions with parentheses */
-  { { 10, 20, 40, 50 },
-    "(14) * (10)", 150, 160, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "(14) + (10)", 34, 44, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "(14) - (10)", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "(8) / (2)", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "(7.0) / (3.5)", 12, 22, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "(12.1) / (3)", 14, 24, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "(12) / (2.95)", 14, 24, NO_ERROR },
-  /* Lots of extra parentheses */
-  { { 10, 20, 40, 50 },
-    "(((14)) * ((10)))", 150, 160, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "((((14)))) + ((((((((10))))))))", 34, 44, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "((((((((((14 - 10))))))))))", 14, 24, NO_ERROR },
-  /* Binary expressions with variables */
-  { { 10, 20, 40, 50 },
-    "2 * width", 90, 100, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "2 * height", 110, 120, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "width - 10", 40, 50, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "height / 2", 35, 45, NO_ERROR },
-  /* More than two operands */
-  { { 10, 20, 40, 50 },
-    "8 / 2 + 5", 19, 29, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "8 * 2 + 5", 31, 41, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "8 + 2 * 5", 28, 38, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "8 + 8 / 2", 22, 32, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "14 / (2 + 5)", 12, 22, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "8 * (2 + 5)", 66, 76, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "(8 + 2) * 5", 60, 70, NO_ERROR },
-  { { 10, 20, 40, 50 },
-    "(8 + 8) / 2", 18, 28, NO_ERROR },
-  /* Errors */
-  { { 10, 20, 40, 50 },
-    "2 * foo", 0, 0, META_THEME_ERROR_UNKNOWN_VARIABLE },
-  { { 10, 20, 40, 50 },
-    "2 *", 0, 0, META_THEME_ERROR_FAILED },
-  { { 10, 20, 40, 50 },
-    "- width", 0, 0, META_THEME_ERROR_FAILED },
-  { { 10, 20, 40, 50 },
-    "5 % 1.0", 0, 0, META_THEME_ERROR_MOD_ON_FLOAT },
-  { { 10, 20, 40, 50 },
-    "1.0 % 5", 0, 0, META_THEME_ERROR_MOD_ON_FLOAT },
-  { { 10, 20, 40, 50 },
-    "! * 2", 0, 0, META_THEME_ERROR_BAD_CHARACTER },
-  { { 10, 20, 40, 50 },
-    "   ", 0, 0, META_THEME_ERROR_FAILED },
-  { { 10, 20, 40, 50 },
-    "() () (( ) ()) ((()))", 0, 0, META_THEME_ERROR_FAILED },
-  { { 10, 20, 40, 50 },
-    "(*) () ((/) ()) ((()))", 0, 0, META_THEME_ERROR_FAILED },
-  { { 10, 20, 40, 50 },
-    "2 * 5 /", 0, 0, META_THEME_ERROR_FAILED },
-  { { 10, 20, 40, 50 },
-    "+ 2 * 5", 0, 0, META_THEME_ERROR_FAILED },
-  { { 10, 20, 40, 50 },
-    "+ 2 * 5", 0, 0, META_THEME_ERROR_FAILED }
-};
-
-static void
-run_position_expression_tests (void)
-{
-#if 0
-  int i;
-  MetaPositionExprEnv env;
-
-  i = 0;
-  while (i < (int) G_N_ELEMENTS (position_expression_tests))
-    {
-      GError *err;
-      gboolean retval;
-      const PositionExpressionTest *test;
-      PosToken *tokens;
-      int n_tokens;
-      int x, y;
-
-      test = &position_expression_tests[i];
-
-      if (g_getenv ("META_PRINT_TESTS") != NULL)
-        g_print ("Test expression: \"%s\" expecting x = %d y = %d",
-                 test->expr, test->expected_x, test->expected_y);
-
-      err = NULL;
-
-      env.rect = meta_rect (test->rect.x, test->rect.y,
-                            test->rect.width, test->rect.height);
-      env.object_width = -1;
-      env.object_height = -1;
-      env.left_width = 0;
-      env.right_width = 0;
-      env.top_height = 0;
-      env.bottom_height = 0;
-      env.title_width = 5;
-      env.title_height = 5;
-      env.icon_width = 32;
-      env.icon_height = 32;
-      env.mini_icon_width = 16;
-      env.mini_icon_height = 16;
-      env.theme = NULL;
-
-      if (err == NULL)
-        {
-          retval = meta_parse_position_expression (tokens, n_tokens,
-                                                   &env,
-                                                   &x, &y,
-                                                   &err);
-        }
-
-      if (retval && err)
-        g_error (_("position expression test returned TRUE but set error"));
-      if (!retval && err == NULL)
-        g_error (_("position expression test returned FALSE but didn't set error"));
-      if (((int) test->expected_error) != NO_ERROR)
-        {
-          if (err == NULL)
-            g_error (_("Error was expected but none given"));
-          if (err->code != (int) test->expected_error)
-            g_error (_("Error %d was expected but %d given"),
-                     test->expected_error, err->code);
-        }
-      else
-        {
-          if (err)
-            g_error (_("Error not expected but one was returned: %s"),
-                     err->message);
-
-          if (x != test->expected_x)
-            g_error (_("x value was %d, %d was expected"), x, test->expected_x);
-
-          if (y != test->expected_y)
-            g_error (_("y value was %d, %d was expected"), y, test->expected_y);
-        }
-
-      if (err)
-        g_error_free (err);
-
-      meta_pos_tokens_free (tokens, n_tokens);
-      ++i;
-    }
-#endif
-}
-
-#if 0
-static void
-run_position_expression_timings (void)
-{
-  int i;
-  int iters;
-  clock_t start;
-  clock_t end;
-  MetaPositionExprEnv env;
-
-#define ITERATIONS 100000
-
-  start = clock ();
-
-  iters = 0;
-  i = 0;
-  while (iters < ITERATIONS)
-    {
-      const PositionExpressionTest *test;
-      int x, y;
-
-      test = &position_expression_tests[i];
-
-      env.x = test->rect.x;
-      env.y = test->rect.y;
-      env.width = test->rect.width;
-      env.height = test->rect.height;
-      env.object_width = -1;
-      env.object_height = -1;
-      env.left_width = 0;
-      env.right_width = 0;
-      env.top_height = 0;
-      env.bottom_height = 0;
-      env.title_width = 5;
-      env.title_height = 5;
-      env.icon_width = 32;
-      env.icon_height = 32;
-      env.mini_icon_width = 16;
-      env.mini_icon_height = 16;
-      env.theme = NULL;
-
-      meta_parse_position_expression (test->expr,
-                                      &env,
-                                      &x, &y, NULL);
-
-      ++iters;
-      ++i;
-      if (i == G_N_ELEMENTS (position_expression_tests))
-        i = 0;
-    }
-
-  end = clock ();
-
-  g_print (_("%d coordinate expressions parsed in %g seconds (%g seconds average)\n"),
-           ITERATIONS,
-           ((double)end - (double)start) / CLOCKS_PER_SEC,
-           ((double)end - (double)start) / CLOCKS_PER_SEC / (double) ITERATIONS);
-
-}
-#endif

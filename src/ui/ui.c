@@ -31,9 +31,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 #include <cairo-xlib.h>
-#endif
 
 static void meta_ui_accelerator_parse(const char* accel, guint* keysym, guint* keycode, GdkModifierType* keymask);
 
@@ -58,9 +56,7 @@ void meta_ui_init(int* argc, char*** argv)
    * GDK will no longer generate the core XEvents we process.
    * So at least for now, enforce the previous behavior.
    */
-#if GTK_CHECK_VERSION(3, 0, 0)
   gdk_disable_multidevice ();
-#endif
 
 	if (!gtk_init_check (argc, argv))
 	{
@@ -93,13 +89,9 @@ maybe_redirect_mouse_event (XEvent *xevent)
 {
   GdkDisplay *gdisplay;
   MetaUI *ui;
-#if GTK_CHECK_VERSION (3, 0, 0)
   GdkDeviceManager *gmanager;
   GdkDevice *gdevice;
   GdkEvent *gevent;
-#else
-  GdkEvent gevent;
-#endif
   GdkWindow *gdk_window;
   Window window;
 
@@ -129,25 +121,15 @@ maybe_redirect_mouse_event (XEvent *xevent)
   if (gdk_window == NULL)
     return FALSE;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   gmanager = gdk_display_get_device_manager (gdisplay);
   gdevice = gdk_device_manager_get_client_pointer (gmanager);
-#endif
 
   /* If GDK already thinks it has a grab, we better let it see events; this
    * is the menu-navigation case and events need to get sent to the appropriate
    * (client-side) subwindow for individual menu items.
    */
-#if GTK_CHECK_VERSION (3, 0, 0)
   if (gdk_display_device_is_grabbed (gdisplay, gdevice))
-#else
-  if (gdk_display_pointer_is_grabbed (gdisplay))
-#endif
     return FALSE;
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  memset (&gevent, 0, sizeof (gevent));
-#endif
 
   switch (xevent->type)
     {
@@ -170,21 +152,12 @@ maybe_redirect_mouse_event (XEvent *xevent)
               ABS (xevent->xbutton.x - ui->button_click_x) <= double_click_distance &&
               ABS (xevent->xbutton.y - ui->button_click_y) <= double_click_distance)
             {
-#if GTK_CHECK_VERSION (3, 0, 0)
               gevent = gdk_event_new (GDK_2BUTTON_PRESS);
-#else
-              gevent.button.type = GDK_2BUTTON_PRESS;
-#endif
-
               ui->button_click_number = 0;
             }
           else
             {
-#if GTK_CHECK_VERSION (3, 0, 0)
               gevent = gdk_event_new (GDK_BUTTON_PRESS);
-#else
-              gevent.button.type = GDK_BUTTON_PRESS;
-#endif
               ui->button_click_number = xevent->xbutton.button;
               ui->button_click_window = xevent->xbutton.window;
               ui->button_click_time = xevent->xbutton.time;
@@ -194,14 +167,9 @@ maybe_redirect_mouse_event (XEvent *xevent)
         }
       else
         {
-#if GTK_CHECK_VERSION (3, 0, 0)
           gevent = gdk_event_new (GDK_BUTTON_RELEASE);
-#else
-          gevent.button.type = GDK_BUTTON_RELEASE;
-#endif
         }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
       gevent->button.window = g_object_ref (gdk_window);
       gevent->button.button = xevent->xbutton.button;
       gevent->button.time = xevent->xbutton.time;
@@ -209,40 +177,18 @@ maybe_redirect_mouse_event (XEvent *xevent)
       gevent->button.y = xevent->xbutton.y;
       gevent->button.x_root = xevent->xbutton.x_root;
       gevent->button.y_root = xevent->xbutton.y_root;
-#else
-      gevent.button.window = gdk_window;
-      gevent.button.button = xevent->xbutton.button;
-      gevent.button.time = xevent->xbutton.time;
-      gevent.button.x = xevent->xbutton.x;
-      gevent.button.y = xevent->xbutton.y;
-      gevent.button.x_root = xevent->xbutton.x_root;
-      gevent.button.y_root = xevent->xbutton.y_root;
-#endif
-
       break;
     case MotionNotify:
-#if GTK_CHECK_VERSION (3, 0, 0)
       gevent = gdk_event_new (GDK_MOTION_NOTIFY);
       gevent->motion.type = GDK_MOTION_NOTIFY;
       gevent->motion.window = g_object_ref (gdk_window);
-#else
-      gevent.motion.type = GDK_MOTION_NOTIFY;
-      gevent.motion.window = gdk_window;
-#endif
       break;
     case EnterNotify:
     case LeaveNotify:
-#if GTK_CHECK_VERSION (3, 0, 0)
       gevent = gdk_event_new (xevent->type == EnterNotify ? GDK_ENTER_NOTIFY : GDK_LEAVE_NOTIFY);
       gevent->crossing.window = g_object_ref (gdk_window);
       gevent->crossing.x = xevent->xcrossing.x;
       gevent->crossing.y = xevent->xcrossing.y;
-#else
-      gevent.crossing.type = xevent->type == EnterNotify ? GDK_ENTER_NOTIFY : GDK_LEAVE_NOTIFY;
-      gevent.crossing.window = gdk_window;
-      gevent.crossing.x = xevent->xcrossing.x;
-      gevent.crossing.y = xevent->xcrossing.y;
-#endif
       break;
     default:
       g_assert_not_reached ();
@@ -250,13 +196,9 @@ maybe_redirect_mouse_event (XEvent *xevent)
     }
 
   /* If we've gotten here, we've filled in the gdk_event and should send it on */
-#if GTK_CHECK_VERSION (3, 0, 0)
   gdk_event_set_device (gevent, gdevice);
   gtk_main_do_event (gevent);
   gdk_event_free (gevent);
-#else
-  gtk_main_do_event (&gevent);
-#endif
 
   return TRUE;
 }
@@ -329,14 +271,10 @@ meta_ui_new (Display *xdisplay,
 
   g_assert (xdisplay == GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
   ui->frames = meta_frames_new (XScreenNumberOfScreen (screen));
-#if GTK_CHECK_VERSION (3, 0, 0)
   /* This does not actually show any widget. MetaFrames has been hacked so
    * that showing it doesn't actually do anything. But we need the flags
    * set for GTK to deliver events properly. */
   gtk_widget_show (GTK_WIDGET (ui->frames));
-#else
-  gtk_widget_realize (GTK_WIDGET (ui->frames));
-#endif
 
   g_object_set_data (G_OBJECT (gdisplay), "meta-ui", ui);
 
@@ -383,9 +321,6 @@ meta_ui_create_frame_window (MetaUI *ui,
   gint attributes_mask;
   GdkWindow *window;
   GdkVisual *visual;
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  GdkColormap *cmap = gdk_screen_get_default_colormap (screen);
-#endif
 
   /* Default depth/visual handles clients with weird visuals; they can
    * always be children of the root depth/visual obviously, but
@@ -398,9 +333,6 @@ meta_ui_create_frame_window (MetaUI *ui,
     {
       visual = gdk_x11_screen_lookup_visual (screen,
                                              XVisualIDFromVisual (xvisual));
-#if !GTK_CHECK_VERSION (3, 0, 0)
-      cmap = gdk_colormap_new (visual, FALSE);
-#endif
     }
 
   attrs.title = NULL;
@@ -416,9 +348,6 @@ meta_ui_create_frame_window (MetaUI *ui,
   attrs.y = y;
   attrs.wclass = GDK_INPUT_OUTPUT;
   attrs.visual = visual;
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  attrs.colormap = cmap;
-#endif
   attrs.window_type = GDK_WINDOW_CHILD;
   attrs.cursor = NULL;
   attrs.wmclass_name = NULL;
@@ -428,11 +357,7 @@ meta_ui_create_frame_window (MetaUI *ui,
   attrs.width  = width;
   attrs.height = height;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL;
-#else
-  attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL | GDK_WA_COLORMAP;
-#endif
 
   window =
     gdk_window_new (gdk_screen_get_root_window(screen),
@@ -579,46 +504,6 @@ meta_ui_window_menu_free (MetaWindowMenu *menu)
   meta_window_menu_free (menu);
 }
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-static GdkColormap*
-get_cmap (GdkPixmap *pixmap)
-{
-  GdkColormap *cmap;
-
-  cmap = gdk_drawable_get_colormap (pixmap);
-  if (cmap)
-    g_object_ref (G_OBJECT (cmap));
-
-  if (cmap == NULL)
-    {
-      if (gdk_drawable_get_depth (pixmap) == 1)
-        {
-          meta_verbose ("Using NULL colormap for snapshotting bitmap\n");
-          cmap = NULL;
-        }
-      else
-        {
-          meta_verbose ("Using system cmap to snapshot pixmap\n");
-          cmap = gdk_screen_get_system_colormap (gdk_drawable_get_screen (pixmap));
-
-          g_object_ref (G_OBJECT (cmap));
-        }
-    }
-
-  /* Be sure we aren't going to blow up due to visual mismatch */
-  if (cmap &&
-      (gdk_visual_get_depth (gdk_colormap_get_visual (cmap)) !=
-       gdk_drawable_get_depth (pixmap)))
-    {
-      cmap = NULL;
-      meta_verbose ("Switching back to NULL cmap because of depth mismatch\n");
-    }
-
-  return cmap;
-}
-#endif
-
-#if GTK_CHECK_VERSION (3, 0, 0)
 GdkPixbuf*
 meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
                                  Pixmap       xpixmap,
@@ -671,50 +556,6 @@ meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
 
   return retval;
 }
-#else
-GdkPixbuf*
-meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
-                                 Pixmap       xpixmap,
-                                 int          src_x,
-                                 int          src_y,
-                                 int          dest_x,
-                                 int          dest_y,
-                                 int          width,
-                                 int          height)
-{
-  GdkDrawable *drawable;
-  GdkPixbuf *retval;
-  GdkColormap *cmap;
-
-  retval = NULL;
-  cmap = NULL;
-
-  drawable = gdk_x11_window_lookup_for_display (gdk_display_get_default (), xpixmap);
-
-  if (drawable)
-    g_object_ref (G_OBJECT (drawable));
-  else
-    drawable = gdk_pixmap_foreign_new (xpixmap);
-
-  if (drawable)
-    {
-      cmap = get_cmap (drawable);
-
-      retval = gdk_pixbuf_get_from_drawable (dest,
-                                             drawable,
-                                             cmap,
-                                             src_x, src_y,
-                                             dest_x, dest_y,
-                                             width, height);
-    }
-  if (cmap)
-    g_object_unref (G_OBJECT (cmap));
-  if (drawable)
-    g_object_unref (G_OBJECT (drawable));
-
-  return retval;
-}
-#endif
 
 void
 meta_ui_push_delay_exposes (MetaUI *ui)
@@ -823,10 +664,8 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
                                  int               *right_width)
 {
   int text_height;
-#if GTK_CHECK_VERSION (3, 0, 0)
   GtkStyleContext *style = NULL;
   PangoFontDescription *free_font_desc = NULL;
-#endif
   PangoContext *context;
   const PangoFontDescription *font_desc;
 
@@ -837,7 +676,6 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
 
       if (!font_desc)
         {
-#if GTK_CHECK_VERSION (3, 0, 0)
           GdkDisplay *display = gdk_x11_lookup_xdisplay (ui->xdisplay);
           GdkScreen *screen = gdk_display_get_screen (display, XScreenNumberOfScreen (ui->xscreen));
           GtkWidgetPath *widget_path;
@@ -858,12 +696,6 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
                                  NULL);
           gtk_style_context_restore (style);
           font_desc = (const PangoFontDescription *) free_font_desc;
-#else
-          GtkStyle *default_style;
-
-          default_style = gtk_widget_get_default_style ();
-          font_desc = default_style->font_desc;
-#endif
         }
 
       text_height = meta_pango_font_desc_get_text_height (font_desc, context);
@@ -873,20 +705,16 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
                                     top_height, bottom_height,
                                     left_width, right_width);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
       if (free_font_desc)
         pango_font_description_free (free_font_desc);
-#endif
     }
   else
     {
       *top_height = *bottom_height = *left_width = *right_width = 0;
     }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   if (style != NULL)
     g_object_unref (style);
-#endif
 }
 
 void
@@ -1104,7 +932,6 @@ MetaUIDirection meta_ui_get_direction(void)
 	return META_UI_DIRECTION_LTR;
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 GdkPixbuf *meta_ui_get_pixbuf_from_surface (cairo_surface_t *surface)
 {
 	gint width;
@@ -1115,37 +942,4 @@ GdkPixbuf *meta_ui_get_pixbuf_from_surface (cairo_surface_t *surface)
 
 	return gdk_pixbuf_get_from_surface (surface, 0, 0, width, height);
 }
-#else
-GdkPixbuf* meta_ui_get_pixbuf_from_pixmap(Pixmap pmap)
-{
-	GdkPixmap* gpmap;
-	GdkScreen* screen;
-	GdkPixbuf* pixbuf;
-	GdkColormap* cmap;
-	int width;
-	int height;
-	int depth;
 
-	gpmap = gdk_pixmap_foreign_new(pmap);
-	screen = gdk_drawable_get_screen(gpmap);
-
-	gdk_drawable_get_size(GDK_DRAWABLE(gpmap), &width, &height);
-
-	depth = gdk_drawable_get_depth(GDK_DRAWABLE(gpmap));
-
-	if (depth <= 24)
-	{
-		cmap = gdk_screen_get_system_colormap(screen);
-	}
-	else
-	{
-		cmap = gdk_screen_get_rgba_colormap(screen);
-	}
-
-	pixbuf = gdk_pixbuf_get_from_drawable(NULL, gpmap, cmap, 0, 0, 0, 0, width, height);
-
-	g_object_unref(gpmap);
-
-	return pixbuf;
-}
-#endif

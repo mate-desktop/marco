@@ -33,7 +33,6 @@ typedef void (* ErrorHandler) (Display *dpy,
                                XErrorEvent *error,
                                gpointer data);
 
-void      meta_errors_init     (void);
 void	  meta_errors_register_foreign_display (Display      *foreign_dpy,
 						ErrorHandler  handler,
 						gpointer      data);

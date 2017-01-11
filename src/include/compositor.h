@@ -23,8 +23,8 @@
 #define META_COMPOSITOR_H
 
 #include <glib.h>
-#include <gtk/gtk.h>
 #include <X11/Xlib.h>
+#include <cairo/cairo.h>
 
 #include "types.h"
 #include "boxes.h"
@@ -51,13 +51,8 @@ void meta_compositor_set_updates (MetaCompositor *compositor,
 void meta_compositor_process_event (MetaCompositor *compositor,
                                     XEvent         *event,
                                     MetaWindow     *window);
-#if GTK_CHECK_VERSION (3, 0, 0)
 cairo_surface_t *meta_compositor_get_window_surface (MetaCompositor *compositor,
                                                      MetaWindow *window);
-#else
-Pixmap meta_compositor_get_window_pixmap (MetaCompositor *compositor,
-                                          MetaWindow     *window);
-#endif
 void meta_compositor_set_active_window (MetaCompositor *compositor,
                                         MetaScreen     *screen,
                                         MetaWindow     *window);

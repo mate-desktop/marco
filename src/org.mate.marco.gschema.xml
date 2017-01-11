@@ -55,6 +55,11 @@
       <summary>Whether to resize with the right button</summary>
       <description>Set this to true to resize with the right button and show a menu with the middle button while holding down the key given in "mouse_button_modifier"; set it to false to make it work the opposite way around.</description>
     </key>
+    <key name="show-tab-border" type="b">
+        <default>true</default>
+        <summary>Whether to display preselected tab window border</summary>
+        <description>Set this to false to disable border of preselected window while performing tab switching.</description>
+    </key>
     <key name="button-layout" type="s">
       <default>'menu:minimize,maximize,close'</default>
       <summary>Arrangement of buttons on the titlebar</summary>

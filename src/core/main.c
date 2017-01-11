@@ -482,9 +482,6 @@ main (int argc, char **argv)
 
   meta_ui_init (&argc, &argv);
 
-  /* must be after UI init so we can override GDK handlers */
-  meta_errors_init ();
-
   /* Load prefs */
   meta_prefs_init ();
   meta_prefs_add_listener (prefs_changed_callback, NULL);

@@ -125,11 +125,7 @@ libmarco_private_la_SOURCES = \
 	ui/theme.c \
 	ui/theme.h
 
-if HAVE_GTK3
 libmarco_private_la_LDFLAGS = -no-undefined -version-info 1:0:0
-else
-libmarco_private_la_LDFLAGS = -no-undefined -version-info 0:0:0
-endif
 libmarco_private_la_LIBADD = @MARCO_LIBS@
 
 libmarcoincludedir = $(includedir)/marco-1/marco-private
@@ -146,14 +142,11 @@ libmarcoinclude_HEADERS = \
 marco_theme_viewer_SOURCES= \
 	ui/theme-viewer.c
 
-bin_PROGRAMS=marco
-
-if HAVE_GTK2
-bin_PROGRAMS += marco-theme-viewer
-endif
+bin_PROGRAMS=marco marco-theme-viewer
 
 EFENCE=
 marco_LDADD=@MARCO_LIBS@ $(EFENCE)
+
 marco_theme_viewer_LDADD= @MARCO_LIBS@ libmarco-private.la
 
 testboxes_SOURCES=include/util.h core/util.c include/boxes.h core/boxes.c core/testboxes.c
