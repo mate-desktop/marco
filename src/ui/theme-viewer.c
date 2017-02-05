@@ -118,7 +118,7 @@ static GtkActionEntry tool_items[] =
 static GtkWidget *
 normal_contents (void)
 {
-  GtkWidget *table;
+  GtkWidget *grid;
   GtkWidget *handlebox;
   GtkWidget *statusbar;
   GtkWidget *contents;
@@ -126,7 +126,7 @@ normal_contents (void)
   GtkActionGroup *action_group;
   GtkUIManager *ui_manager;
 
-  table = gtk_table_new (1, 4, FALSE);
+  grid = gtk_grid_new ();
 
   /* Create the menubar
    */
@@ -148,29 +148,32 @@ normal_contents (void)
   /* create menu items */
   gtk_ui_manager_add_ui_from_string (ui_manager, menu_item_string, -1, NULL);
 
-  gtk_table_attach (GTK_TABLE (table),
-                    gtk_ui_manager_get_widget (ui_manager, "/ui/menubar"),
-                    /* X direction */          /* Y direction */
-                    0, 1,                      0, 1,
-                    GTK_EXPAND | GTK_FILL,     0,
-                    0,                         0);
+  gtk_widget_set_hexpand (gtk_ui_manager_get_widget (ui_manager, "/ui/menubar"),
+                          TRUE);
+
+  gtk_grid_attach (GTK_GRID (grid),
+                   gtk_ui_manager_get_widget (ui_manager, "/ui/menubar"),
+                   0, 0, 1, 1);
+
+
+
 
   handlebox = gtk_handle_box_new ();
+  gtk_widget_set_hexpand (handlebox, TRUE);
 
   gtk_container_add (GTK_CONTAINER (handlebox),
                      gtk_ui_manager_get_widget (ui_manager, "/ui/toolbar"));
 
-  gtk_table_attach (GTK_TABLE (table),
-                    handlebox,
-                    /* X direction */       /* Y direction */
-                    0, 1,                   1, 2,
-                    GTK_EXPAND | GTK_FILL,  0,
-                    0,                      0);
+  gtk_grid_attach (GTK_GRID (grid),
+                   handlebox,
+                   0, 1, 1, 1);
 
   /* Create document
    */
 
   sw = gtk_scrolled_window_new (NULL, NULL);
+  gtk_widget_set_hexpand (sw, TRUE);
+  gtk_widget_set_vexpand (sw, TRUE);
 
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (sw),
                                   GTK_POLICY_AUTOMATIC,
@@ -179,12 +182,9 @@ normal_contents (void)
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (sw),
                                        GTK_SHADOW_IN);
 
-  gtk_table_attach (GTK_TABLE (table),
-                    sw,
-                    /* X direction */       /* Y direction */
-                    0, 1,                   2, 3,
-                    GTK_EXPAND | GTK_FILL,  GTK_EXPAND | GTK_FILL,
-                    0,                      0);
+  gtk_grid_attach (GTK_GRID (grid),
+                   sw,
+                   0, 2, 1, 1);
 
   contents = gtk_text_view_new ();
   gtk_text_view_set_wrap_mode (GTK_TEXT_VIEW (contents),
@@ -196,18 +196,16 @@ normal_contents (void)
   /* Create statusbar */
 
   statusbar = gtk_statusbar_new ();
-  gtk_table_attach (GTK_TABLE (table),
-                    statusbar,
-                    /* X direction */       /* Y direction */
-                    0, 1,                   3, 4,
-                    GTK_EXPAND | GTK_FILL,  0,
-                    0,                      0);
+  gtk_widget_set_hexpand (statusbar, TRUE);
+  gtk_grid_attach (GTK_GRID (grid),
+                   statusbar,
+                   0, 3, 1, 1);
 
-  gtk_widget_show_all (table);
+  gtk_widget_show_all (grid);
 
   g_object_unref (ui_manager);
 
-  return table;
+  return grid;
 }
 
 static void
@@ -275,11 +273,11 @@ dialog_contents (void)
 static GtkWidget*
 utility_contents (void)
 {
-  GtkWidget *table;
+  GtkWidget *grid;
   GtkWidget *button;
   int i, j;
 
-  table = gtk_table_new (3, 4, FALSE);
+  grid = gtk_grid_new ();
 
   i = 0;
   while (i < 3)
@@ -295,12 +293,12 @@ utility_contents (void)
 
           g_free (str);
 
-          gtk_table_attach (GTK_TABLE (table),
-                            button,
-                            /* X direction */       /* Y direction */
-                            i, i+1,                   j, j+1,
-                            GTK_EXPAND | GTK_FILL,  GTK_EXPAND | GTK_FILL,
-                            0,                      0);
+          gtk_widget_set_hexpand (button, TRUE);
+          gtk_widget_set_vexpand (button, TRUE);
+
+          gtk_grid_attach (GTK_GRID (grid),
+                           button,
+                           i, j, 1, 1);
 
           ++j;
         }
@@ -308,9 +306,9 @@ utility_contents (void)
       ++i;
     }
 
-  gtk_widget_show_all (table);
+  gtk_widget_show_all (grid);
 
-  return table;
+  return grid;
 }
 
 static GtkWidget*
