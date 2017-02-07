@@ -524,8 +524,7 @@ preview_collection (int font_size,
     {
       const char *title = NULL;
       GtkWidget *contents;
-      GtkWidget *align;
-      double xalign, yalign;
+      GtkAlign xalign, yalign;
       GtkWidget *eventbox2;
       GtkWidget *preview;
       PangoFontDescription *font_desc;
@@ -551,19 +550,19 @@ preview_collection (int font_size,
 
       if (i == META_FRAME_TYPE_MENU)
         {
-          xalign = 0.0;
-          yalign = 0.0;
+          xalign = GTK_ALIGN_START;
+          yalign = GTK_ALIGN_START;
         }
       else
         {
-          xalign = 0.5;
-          yalign = 0.5;
+          xalign = GTK_ALIGN_FILL;
+          yalign = GTK_ALIGN_FILL;
         }
 
-      align = gtk_alignment_new (0.0, 0.0, xalign, yalign);
-      gtk_container_add (GTK_CONTAINER (align), eventbox2);
+      gtk_widget_set_halign (eventbox2, xalign);
+      gtk_widget_set_valign (eventbox2, yalign);
 
-      gtk_box_pack_start (GTK_BOX (box), align, TRUE, TRUE, 0);
+      gtk_box_pack_start (GTK_BOX (box), eventbox2, TRUE, TRUE, 0);
 
       switch (font_size)
         {
@@ -746,8 +745,6 @@ previews_of_button_layouts (void)
   i = 0;
   while (i < BUTTON_LAYOUT_COMBINATIONS)
     {
-      GtkWidget *align;
-      double xalign, yalign;
       GtkWidget *eventbox2;
       GtkWidget *preview;
       char *title;
@@ -767,13 +764,9 @@ previews_of_button_layouts (void)
       meta_preview_set_button_layout (META_PREVIEW (preview),
                                       &different_layouts[i]);
 
-      xalign = 0.5;
-      yalign = 0.5;
+      gtk_widget_set_halign (eventbox2, GTK_ALIGN_FILL);
 
-      align = gtk_alignment_new (0.0, 0.0, xalign, yalign);
-      gtk_container_add (GTK_CONTAINER (align), eventbox2);
-
-      gtk_box_pack_start (GTK_BOX (box), align, TRUE, TRUE, 0);
+      gtk_box_pack_start (GTK_BOX (box), eventbox2, TRUE, TRUE, 0);
 
       previews[META_FRAME_TYPE_LAST*FONT_SIZE_LAST + i] = preview;
 
