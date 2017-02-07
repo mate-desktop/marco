@@ -480,6 +480,25 @@ get_window_flags (MetaFrameType type)
   return flags;
 }
 
+static void
+override_font (GtkWidget   *widget,
+               const gchar *font)
+{
+  gchar          *css;
+  GtkCssProvider *provider;
+
+  provider = gtk_css_provider_new ();
+
+  css = g_strdup_printf ("* { font: %s; }", font);
+  gtk_css_provider_load_from_data (provider, css, -1, NULL);
+  g_free (css);
+
+  gtk_style_context_add_provider (gtk_widget_get_style_context (widget),
+                                  GTK_STYLE_PROVIDER (provider),
+                                  GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  g_object_unref (provider);
+}
+
 static GtkWidget*
 preview_collection (int font_size,
                     const PangoFontDescription *base_desc)
@@ -528,6 +547,7 @@ preview_collection (int font_size,
       GtkWidget *eventbox2;
       GtkWidget *preview;
       PangoFontDescription *font_desc;
+      gchar *font_string;
       double scale;
 
       eventbox2 = gtk_event_box_new ();
@@ -584,7 +604,9 @@ preview_collection (int font_size,
           pango_font_description_set_size (font_desc,
                                            MAX (pango_font_description_get_size (base_desc) * scale, 1));
 
-          gtk_widget_override_font (preview, font_desc);
+          font_string = pango_font_description_to_string (font_desc);
+          override_font (preview, font_string);
+          g_free (font_string);
 
           pango_font_description_free (font_desc);
         }
