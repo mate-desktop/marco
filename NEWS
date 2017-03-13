@@ -1,14 +1,15 @@
-### marco 1.17.1
+### marco 1.18.0
 
-  * theme-viewer: use GtkStyleContext
-  * theme-viewer: use GdkRGBA instead of GdkColor
-  * Added functionality to disable display preselected tab window border
-  * actually build theme-viewer
-
-### marco 1.17.0
-
+  * NEWS: use consistent, project wide, markdown-like formatting to make
+    generating release announcements easier
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-gtk
+    build option
+  * Theme viewer: fix build for GTK+3 and fix some GTK+ deprecations
+  * Add ability to disable showing preselected window border on alt-tab
+  * Add ability to ignore applications when show-desktop is triggered
+  * Workspaces: switch wrapping behavior for 'classic' and 'toroidal'
+    modes (it was reversed somehow)
   * Translations update
-  * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
 
 ### marco 1.16.0
 
