@@ -147,7 +147,7 @@
       <description>Tells Marco how to implement the visual indication that the system bell or another application 'bell' indicator has been rung.  Currently there are two valid values, "fullscreen", which causes a fullscreen white-black flash, and "frame_flash" which causes the titlebar of the application which sent the bell signal to flash.  If the application which sent the bell is unknown (as is usually the case for the default "system beep"), the currently focused window's titlebar is flashed.</description>
     </key>
     <key name="compositing-manager" type="b">
-      <default>false</default>
+      <default>true</default>
       <summary>Compositing Manager</summary>
       <description>Determines whether Marco is a compositing manager.</description>
     </key>
