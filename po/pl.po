@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Darek Witkowski, 2016
+# Lukasz Kaminski <elpikej@gmail.com>, 2017
 # m4sk1n <m4sk1n@o2.pl>, 2016
 # Marcin Kralka <marcink96@gmail.com>, 2013-2014
 # Marcin Sedlak <fdmarcin@gmail.com>, 2016
@@ -13,14 +14,14 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:09+0300\n"
-"PO-Revision-Date: 2016-12-16 20:07+0000\n"
-"Last-Translator: m4sk1n <m4sk1n@o2.pl>\n"
+"PO-Revision-Date: 2017-01-29 14:43+0000\n"
+"Last-Translator: Lukasz Kaminski <elpikej@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/mate/MATE/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
@@ -422,7 +423,7 @@ msgstr "Określa, czy wyświetlać granicę okna podczas zmiany kart."
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
-msgstr ""
+msgstr "Ustaw to na wartość fałsz ab"
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -665,7 +666,7 @@ msgstr "Określa, czy program Marco ma być menedżerem składania."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
-msgstr ""
+msgstr "Szybki Alt-Tab z menedżerem kompozycji (wyłączone miniatury)"
 
 #: ../src/org.mate.marco.gschema.xml.h:44
 msgid ""
@@ -790,7 +791,7 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr ""
+msgstr "Przykładowy zapis ma postać \"<Control>a\" lub \"<Shift><Alt>F1.\n\nAnaliza składniowa jest niezbyt restrykcyjna - pozwala to na używanie małych i wielkich liter oraz skrótów, takich jak \"<Ctl>\" oraz \"<Ctrl>\". Jeśli opcji zostanie przypisany specjalny napis \"disabled\" (wyłączone), wówczas z czynnością nie będzie powiązany żaden skrót klawiszowy.\n\nDziałanie skrótu może zostać odwrócone poprzez naciśnięcie klawisza \"Shift\"; z tego powodu, do skrótu nie można przypisać klawisza \"Shift\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move backward between windows of an application, using a popup window"
@@ -843,7 +844,7 @@ msgstr "Polecenie pobrania zrzutu ekranu"
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr ""
+msgstr "Klucz /apps/marco/global_keybindings/run_command_screenshot określa skrót klawiszowy wywołujący polecenie określone przez to ustawienie."
 
 #: ../src/org.mate.marco.gschema.xml.h:104
 msgid "The window screenshot command"
@@ -854,7 +855,7 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr ""
+msgstr "Klucz /apps/marco/global_keybindings/run_command_window_screenshot określa skrót klawiszowy wywołujący polecenia określone przez to ustawienie."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "Toggle whether a window will always be visible over other windows"

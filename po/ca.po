@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Pere O. <gotrunks@gmail.com>, 2012-2013
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2017
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:09+0300\n"
-"PO-Revision-Date: 2016-12-06 07:38+0000\n"
+"PO-Revision-Date: 2017-03-07 19:38+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/mate/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -161,7 +161,7 @@ msgstr "Canvia a l'espai de treball a la dreta de l'actual"
 #: ../src/50-marco-global-key.xml.in.h:23
 #: ../src/org.mate.marco.gschema.xml.h:76
 msgid "Switch to workspace above the current workspace"
-msgstr "Canvia a l'espai de treball damunt de l'actual"
+msgstr "Canvia a l'espai de treball a damunt de l'actual"
 
 #: ../src/50-marco-global-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:77
@@ -181,12 +181,12 @@ msgstr "Activa el menú de finestra"
 #: ../src/50-marco-window-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "Toggle fullscreen mode"
-msgstr "Si s'utilitza el mode a pantalla completa"
+msgstr "Commuta el mode de pantalla completa"
 
 #: ../src/50-marco-window-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid "Toggle maximization state"
-msgstr "Canvia l'estat de maximització"
+msgstr "Commuta l'estat de maximització"
 
 #: ../src/50-marco-window-key.xml.in.h:5
 #: ../src/org.mate.marco.gschema.xml.h:110
@@ -201,7 +201,7 @@ msgstr "Restaura la finestra"
 #: ../src/50-marco-window-key.xml.in.h:7
 #: ../src/org.mate.marco.gschema.xml.h:112
 msgid "Toggle shaded state"
-msgstr "Canvia l'estat d'ombrejat"
+msgstr "Commuta l'estat d'ombrejat"
 
 #: ../src/50-marco-window-key.xml.in.h:8
 #: ../src/org.mate.marco.gschema.xml.h:114
@@ -231,12 +231,12 @@ msgstr "Commuta la funció que fa que la finestra estigui en tots els espais de 
 #: ../src/50-marco-window-key.xml.in.h:13
 #: ../src/org.mate.marco.gschema.xml.h:134
 msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr "Alça una finestra coberta per una altra, altrament la baixa"
+msgstr "Alça la finestra si està coberta per una altra, altrament l'abaixa."
 
 #: ../src/50-marco-window-key.xml.in.h:14
 #: ../src/org.mate.marco.gschema.xml.h:135
 msgid "Raise window above other windows"
-msgstr "Alça una finestra per damunt de les altres"
+msgstr "Alça la finestra per damunt de les altres"
 
 #: ../src/50-marco-window-key.xml.in.h:15
 #: ../src/org.mate.marco.gschema.xml.h:136
@@ -410,7 +410,7 @@ msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr "Establiu-ho a «true» per canviar la mida amb el botó secundari i mostrar un menú amb el botó del mig mentre es premi la tecla especificada al paràmetre «mouse_button_modifier». Establiu-ho a «false» perquè funcioni a la inversa."
+msgstr "Establiu-ho a cert per canviar la mida amb el botó secundari i mostrar un menú amb el botó del mig mentre es premi la tecla especificada al paràmetre «mouse_button_modifier». Establiu-ho a false perquè funcioni a la inversa."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -486,7 +486,7 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr "Amb l'establiment d'aquesta opció a «false» (fals) es pot produir un comportament incorrecte, de manera que s'aconsella als usuaris que no canviïn el seu valor predeterminat: «true». Moltes accions (p. ex. fer clic a l'àrea del client, moure o canviar la mida de la finestra) normalment alcen la finestra com a efecte secundari. Amb l'establiment d'aquesta opció a «false» -cosa molt poc recomanable- se separarà l'alçament de la finestra d'altres accions de l'usuari i s'ignoraran les sol·licituds d'alçament que generin les aplicacions. Vegeu l'informe d'error http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Fins i tot quan aquesta opció sigui «false», encara es poden alçar les finestres amb alt-clic-esquerra en qualsevol lloc de la finestra, amb un clic a les decoracions de la finestra, o amb un missatge especial dels paginadors, com ara les sol·licituds d'activació des de les miniaplicacions de la llista de finestres. Aquesta opció està inhabilitada en el mode d'alçar les finestres fent clic. Fixeu-vos que les diverses maneres d'alçar les finestres quan «raise_on_click» és fals no inclouen les peticions programades de les aplicacions per alçar finestres; aquestes peticions s'ignoraran, sigui quin sigui el motiu. Si desenvolupeu aplicacions i un usuari es queixa que l'aplicació no funciona quan aquest paràmetre està inhabilitat, digueu-li que es culpa _seva_ per haver trencat el gestor de finestres, i que ha de tornar a canviar aquesta opció a «true» o conviure amb l'«error»."
+msgstr "Amb l'establiment d'aquesta opció a «false» (fals) es pot produir un comportament incorrecte, de manera que s'aconsella als usuaris que no canviïn el seu valor predeterminat: «true». Moltes accions (p. ex. fer clic a l'àrea del client, moure o canviar la mida de la finestra) normalment alcen la finestra com a efecte secundari. Amb l'establiment d'aquesta opció a «false» -cosa molt poc recomanable- se separarà l'alçament de la finestra d'altres accions de l'usuari i s'ignoraran les sol·licituds d'alçament que generin les aplicacions. Vegeu l'informe d'error http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Fins i tot quan aquesta opció sigui «false», encara es poden alçar les finestres amb alt-clic-esquerra en qualsevol lloc de la finestra, amb un clic a les decoracions de la finestra, o amb un missatge especial dels paginadors, com ara les sol·licituds d'activació des de les miniaplicacions de la llista de finestres. Aquesta opció està inhabilitada en el mode d'alçar les finestres fent clic. Fixeu-vos que les diverses maneres d'alçar les finestres quan «raise_on_click» és fals no inclouen les peticions programades de les aplicacions per alçar finestres; aquestes peticions s'ignoraran, sigui quin sigui el motiu. Si desenvolupeu aplicacions i un usuari es queixa que l'aplicació no funciona quan aquest ajust està inhabilitat, digueu-li que es culpa _seva_ per haver trencat el gestor de finestres, i que ha de tornar a canviar aquesta opció a «true» o conviure amb l'«error»."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -538,7 +538,7 @@ msgstr "Aquesta opció determina l'efecte de l'acció de fer clic amb el botó s
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr "Alça automàticament la finestra amb el focus"
+msgstr "Alça automàticament la finestra amb focus"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -546,7 +546,7 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr "En cas que estigués establert a «true», i el mode del focus fos «sloppy» o «mouse», aleshores la finestra amb el focus s'alçarà automàticament després d'un retard, que s'especifica a la clau auto_raise_delay. Això no està relacionat amb l'acció de fer clic a una finestra per alçar-la, ni tampoc amb l'entrada a una finestra en arrossegar i deixar anar."
+msgstr "En cas que estigués establert a cert, i el mode del focus fos «sloppy» o «mouse», aleshores la finestra amb el focus s'alçarà automàticament després d'un retard, que s'especifica a la clau auto_raise_delay. Això no està relacionat amb l'acció de fer clic a una finestra per alçar-la, ni tampoc amb l'entrada a una finestra en arrossegar i deixar anar."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
@@ -556,7 +556,7 @@ msgstr "Retard en mil·lisegons per a l'opció d'alçament automàtic"
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr "El retard de temps abans d'alçar una finestra si auto_raise està establert a «true». El retard es dóna en mil·lèssimes de segon."
+msgstr "El retard de temps abans d'alçar una finestra si auto_raise està establert a cert. El retard es dóna en mil·lèssimes de segon."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -588,7 +588,7 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr "Una cadena de text de descripció de la lletra per a les barres de títol de les finestres. La mida de la descripció només s'utilitzarà si l'opció «titlebar_font_size» està establerta a 0. A més, aquesta opció està inhabilitada si «titlebar_uses_desktop_font» està establerta a «true»."
+msgstr "Una cadena de text de descripció de la lletra per a les barres de títol de les finestres. La mida de la descripció només s'utilitzarà si l'opció «titlebar_font_size» està establerta a 0. A més, aquesta opció està inhabilitada si «titlebar_uses_desktop_font» està establerta a cert."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -670,7 +670,7 @@ msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr "En cas que estigués establert a «true», no es mostraran les miniatures de les finestres amb la finestra emergent alt-tab quan estigui habilitat el gestor de composició. En lloc seu es mostraran les icones de les aplicacions."
+msgstr "En cas que estigués establert a cert, no es mostraran les miniatures de les finestres amb la finestra emergent alt-tab quan estigui habilitat el gestor de composició. En lloc seu es mostraran les icones de les aplicacions."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
@@ -721,7 +721,7 @@ msgstr "Determina si les noves finestres es creen al centre de la pantalla"
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr "En cas que estigués establert a «true», les noves finestres s'obren al centre de la pantalla. Altrament, s'obren a la part superior esquerra de la pantalla."
+msgstr "En cas que estigués establert a cert, les noves finestres s'obren al centre de la pantalla. Altrament, s'obren a la part superior esquerra de la pantalla."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable side-by-side tiling"
@@ -1179,7 +1179,7 @@ msgstr "La finestra %s estableix un consell MWM que indica que no es pot redimen
 #: ../src/core/window-props.c:306
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
-msgstr "L'aplicació ha definit un _NET_WM_PID %lu fals\n"
+msgstr "L'aplicació ha establert un fals _NET_WM_PID %lu\n"
 
 #. Translators: the title of a window from another machine
 #: ../src/core/window-props.c:457
@@ -1761,12 +1761,12 @@ msgstr "Els valors booleans han de ser «true» (cert) o «false» (fals), no «
 #: ../src/ui/theme-parser.c:688
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
-msgstr "L'angle ha d'estar entre 0.0 i 360.0, era %g\n"
+msgstr "L'angle ha d'estar entre 0,0 i 360,0, era %g\n"
 
 #: ../src/ui/theme-parser.c:751
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "L'opacitat ha d'estar entre 0.0 (invisible) i 1.0 (totalment opac), era a %g\n"
+msgstr "L'opacitat ha d'estar entre 0,0 (invisible) i 1,0 (totalment opac), era a %g\n"
 
 #: ../src/ui/theme-parser.c:816
 #, c-format
@@ -2205,11 +2205,11 @@ msgstr "S'han dibuixat %d marcs en %g segons del client (%g mil·lisegons per ma
 
 #: ../src/ui/theme-viewer.c:1261
 msgid "position expression test returned TRUE but set error"
-msgstr "La prova d'expressió de posició ha tornat TRUE però ha establert error"
+msgstr "La prova d'expressió de posició ha tornat TRUE però ha establert l'error"
 
 #: ../src/ui/theme-viewer.c:1263
 msgid "position expression test returned FALSE but didn't set error"
-msgstr "La prova d'expressió de posició ha tornat FALSE però no ha establert error"
+msgstr "La prova d'expressió de posició ha tornat FALSE però no ha establert l'error"
 
 #: ../src/ui/theme-viewer.c:1267
 msgid "Error was expected but none given"
@@ -2223,7 +2223,7 @@ msgstr "S'esperava l'error %d però s'ha donat %d"
 #: ../src/ui/theme-viewer.c:1275
 #, c-format
 msgid "Error not expected but one was returned: %s"
-msgstr "No s'esperava cap error però s'ha tornat un: %s"
+msgstr "No s'esperava cap error però se n'ha tornat un: %s"
 
 #: ../src/ui/theme-viewer.c:1279
 #, c-format
