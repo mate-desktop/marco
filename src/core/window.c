@@ -1831,7 +1831,6 @@ meta_window_queue (MetaWindow *window, guint queuebits)
 static gboolean
 intervening_user_event_occurred (MetaWindow *window)
 {
-  guint32 compare;
   MetaWindow *focus_window;
 
   focus_window = window->display->focus_window;
@@ -1875,60 +1874,8 @@ intervening_user_event_occurred (MetaWindow *window)
       return TRUE;
     }
 
-  if (!(window->net_wm_user_time_set) && !(window->initial_timestamp_set))
-    {
-      meta_topic (META_DEBUG_STARTUP,
-                  "no information about window %s found\n",
-                  window->desc);
-      return FALSE;
-    }
 
-  if (focus_window != NULL &&
-      !focus_window->net_wm_user_time_set)
-    {
-      meta_topic (META_DEBUG_STARTUP,
-                  "focus window, %s, doesn't have a user time set yet!\n",
-                  window->desc);
-      return FALSE;
-    }
-
-  /* To determine the "launch" time of an application,
-   * startup-notification can set the TIMESTAMP and the
-   * application (usually via its toolkit such as gtk or qt) can
-   * set the _NET_WM_USER_TIME.  If both are set, we need to be
-   * using the newer of the two values.
-   *
-   * See http://bugzilla.gnome.org/show_bug.cgi?id=573922
-   */
-  compare = 0;
-  if (window->net_wm_user_time_set &&
-      window->initial_timestamp_set)
-    compare =
-      XSERVER_TIME_IS_BEFORE (window->net_wm_user_time,
-                              window->initial_timestamp) ?
-      window->initial_timestamp : window->net_wm_user_time;
-  else if (window->net_wm_user_time_set)
-    compare = window->net_wm_user_time;
-  else if (window->initial_timestamp_set)
-    compare = window->initial_timestamp;
-
-  if ((focus_window != NULL) &&
-      XSERVER_TIME_IS_BEFORE (compare, focus_window->net_wm_user_time))
-    {
-      meta_topic (META_DEBUG_STARTUP,
-                  "window %s focus prevented by other activity; %u < %u\n",
-                  window->desc,
-                  compare,
-                  focus_window->net_wm_user_time);
-      return TRUE;
-    }
-  else
-    {
-      meta_topic (META_DEBUG_STARTUP,
-                  "new window %s with no intervening events\n",
-                  window->desc);
-      return FALSE;
-    }
+   return FALSE;
 }
 
 /* This function is an ugly hack.  It's experimental in nature and ought to be
