@@ -23,7 +23,7 @@
  */
 
 #define _GNU_SOURCE
-#define _SVID_SOURCE /* for gethostname() */
+#define _XOPEN_SOURCE /* for gethostname() and kill() */
 
 #include <config.h>
 #include "util.h"

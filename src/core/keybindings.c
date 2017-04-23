@@ -24,7 +24,7 @@
  */
 
 #define _GNU_SOURCE
-#define _SVID_SOURCE /* for putenv() */
+#define _XOPEN_SOURCE /* for putenv() */
 
 #include <config.h>
 #include "keybindings.h"
