@@ -172,10 +172,6 @@ void meta_compositor_end_move (MetaCompositor *compositor,
 void meta_compositor_free_window (MetaCompositor *compositor,
                                   MetaWindow     *window)
 {
-#ifdef HAVE_COMPOSITE_EXTENSIONS
-  if (compositor && compositor->free_window)
-    compositor->free_window (compositor, window);
-#endif
 }
 
 void
