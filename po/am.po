@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:09+0300\n"
-"PO-Revision-Date: 2017-03-07 22:13+0000\n"
+"PO-Revision-Date: 2017-03-23 16:07+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/mate/MATE/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -412,13 +412,13 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
-msgstr ""
+msgstr "በ ቅድሚያ የ ተመረጠውን tab መስኮት ድንበር ይታይ እንደሆን መወሰኛ"
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
-msgstr ""
+msgstr "ይህን ወደ ሀሰት ማሰናጃ ድንበር ለ ማሰናከል በ ቅድሚያ የ ተመረጠውን መስኮት የ tab መቀየሪያ በሚፈጽሙ ጊዜ"
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -564,7 +564,7 @@ msgstr "የ አሁኑ ገጽታ"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "ገጽታ የሚወስነው የት እንደሚታይ ነው: የ መስኮት ድንበር: የ እርእስት መደርደሪያ: እና ወዘተ"
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
@@ -574,7 +574,7 @@ msgstr "ለ መስኮት አርእስት መደበኛ የ ስርአት ፊደል
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
+msgstr "እውነት ከሆነ: ተወው የ አርእስት መደርደሪያ_ፊደል ምርጫ: እና መደበኛ የ መተግበሪያ ፊደል ለ መስኮት አርእስት ይጠቀሙ"
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -653,7 +653,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "የ መቀላቀያ አስትዳዳሪ"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
@@ -713,17 +713,17 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "በ መመልከቻው መካከል ላይ አዲስ መስኮት ይፈጠር እንደሆን መወሰኛ"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "እንደ እውነት ከ ተሰናዳ: በ መመልከቻው መካከል ላይ አዲስ መስኮት ይፈጠራል: ያለ በለዚያ ከ ላይ በ ግራ መመልከቻ በኩል ይከፈታል"
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable side-by-side tiling"
-msgstr ""
+msgstr "ጎን-ለ-ጎን መከመሪያ ማስቻያ"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -1046,12 +1046,12 @@ msgstr ""
 #: ../src/core/screen.c:401
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr ""
+msgstr "በ መመልከቻው ላይ የ መስኮት አስተዳዳሪ ክፍለ ጊዜ %d ማሳየት አልተቻለም \"%s\"\n"
 
 #: ../src/core/screen.c:459
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
-msgstr ""
+msgstr "መመልከቻው %d በ ማሳያው ላይ \"%s\" የ መስኮት አስተዳዳሪ አለው\n"
 
 #: ../src/core/screen.c:674
 #, c-format
@@ -1151,7 +1151,7 @@ msgstr "የ መስኮት አስተዳዳሪ ስህተት:"
 #: ../src/core/util.c:569 ../src/marco.desktop.in.h:1
 #: ../src/marco-wm.desktop.in.h:1
 msgid "Marco"
-msgstr ""
+msgstr "Marco"
 
 #. first time through
 #: ../src/core/window.c:5764
@@ -1734,7 +1734,7 @@ msgstr "መተንተን አልተቻለም \"%s\" እንደ ኢንቲጀር"
 #: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
-msgstr ""
+msgstr "የ መጎተቻ ባህሪ አልገባውም \"%s\" በ ሀረግ ውስጥ \"%s\""
 
 #: ../src/ui/theme-parser.c:566
 #, c-format
@@ -1771,7 +1771,7 @@ msgstr "አልፋ መሆን አለበት በ 0.0 (የሚታይ) እና 1.0 (በ 
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr ""
+msgstr "ዋጋ የሌለው የ አርእስት መመጠኛ \"%s\" (አንዱን መሆን አለበት  xx-small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1925,7 +1925,7 @@ msgstr "ያልታወቀ ሁኔታ \"%s\" ለ ቁልፍ"
 #: ../src/ui/theme-parser.c:2938
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
-msgstr ""
+msgstr "የ ክፈፍ ዘዴ ቀደም ብሎ የ ተግባር ቁልፍ ነበረው %s ሁኔታ %s"
 
 #: ../src/ui/theme-parser.c:3019
 #, c-format
@@ -1935,17 +1935,17 @@ msgstr "\"%s\" ለ ትኩረት መለያ ዋጋ የለውም"
 #: ../src/ui/theme-parser.c:3028
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
-msgstr ""
+msgstr "\"%s\" iዋጋ ያለው ዋጋ አይደለም ለ ሁኔታው መለያ"
 
 #: ../src/ui/theme-parser.c:3038
 #, c-format
 msgid "A style called \"%s\" has not been defined"
-msgstr ""
+msgstr "ይህ ዘዴ \"%s\" አልተገለጸም"
 
 #: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
-msgstr ""
+msgstr "\"%s\" ይህ ዋጋ ዋጋ የለውም መለያውን እንደገና ለ መመጠን "
 
 #: ../src/ui/theme-parser.c:3093
 #, c-format
@@ -2014,13 +2014,13 @@ msgstr "አካል <%s> አይፈቀድም በ ርቀት/ድንበር/ማነፃ�
 #: ../src/ui/theme-parser.c:3454
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
-msgstr ""
+msgstr "ይህ አካል <%s> በ መሳያ ተግባር አካል ውስጥ አይፈቀድም"
 
 #: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr ""
+msgstr "ይህ አካል <%s> አይፈቀድም  <%s> በ አካል ውስጥ "
 
 #: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"

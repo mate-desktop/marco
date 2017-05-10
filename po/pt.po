@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# crolidge, 2013
-# crolidge, 2012
-# crolidge, 2014-2015
-# crolidge, 2015-2016
+# Carlos Moreira, 2013
+# Carlos Moreira, 2012
+# Carlos Moreira, 2014-2015,2017
+# Carlos Moreira, 2015-2016
 # Luis Filipe Teixeira <lufilte@gmail.com>, 2016
 # Manuela Silva <manuela.silva@sky.com>, 2016-2017
 msgid ""
@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:09+0300\n"
-"PO-Revision-Date: 2017-01-13 02:35+0000\n"
-"Last-Translator: Manuela Silva <manuela.silva@sky.com>\n"
+"PO-Revision-Date: 2017-04-07 14:50+0000\n"
+"Last-Translator: Carlos Moreira\n"
 "Language-Team: Portuguese (http://www.transifex.com/mate/MATE/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -417,7 +417,7 @@ msgstr "Definir como verdadeiro para redimensionar com o botão direito e aprese
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
-msgstr ""
+msgstr "Se a margem da janela do separador pré-selecionado deve ser mostrada."
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
@@ -702,7 +702,7 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
+msgstr "Se verdadeiro, o Marco funcionará em termos de aplicações e não de janelas. O conceito é algo abstrato, mas em geral uma configuração baseada em aplicações é mais tipo Mac e menos tipo Windows. Ao colocar o foco numa janela em modo aplicação, todas as janelas da aplicação são elevadas. Também, em modo aplicação, cliques de foco não são passados para janelas noutras aplicações. O modo aplicação está ainda, no entanto, quase todo por implementar."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
