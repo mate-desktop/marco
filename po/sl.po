@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Damir Jerovšek <jierro@windowslive.com>, 2013
+# Helena S <ele@tutamail.com>, 2017
 # Marko Šterman <marko.chamillionaire@gmail.com>, 2012
 # worm <thewormhole@gmail.com>, 2015
 msgid ""
@@ -11,8 +12,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:09+0300\n"
-"PO-Revision-Date: 2016-12-05 21:11+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2017-04-15 21:19+0000\n"
+"Last-Translator: Helena S <ele@tutamail.com>\n"
 "Language-Team: Slovenian (http://www.transifex.com/mate/MATE/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -171,7 +172,7 @@ msgstr "Preklopi na delovno površino pod trenutno delovno površino"
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:78
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Preklopite na predhodno izbran delovni prostor"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:106
@@ -256,12 +257,12 @@ msgstr "Razpni okno vodoravno"
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Tile window to east (right) side of screen"
-msgstr ""
+msgstr "Razpostavi okno na desno (vzhodno) stran zaslona"
 
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:140
 msgid "Tile window to west (left) side of screen"
-msgstr ""
+msgstr "Razpostavi okno na levo (zahodno) stran zaslona"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 #: ../src/org.mate.marco.gschema.xml.h:141
@@ -390,7 +391,7 @@ msgstr "Prestavi okno eno delovno površino navzdol"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Spremenilnik, ki naj se uporabi za dejanja klika na okno"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -399,18 +400,18 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr ""
+msgstr "Klik na okno ob držanju tipke spremenilnika bo premaknil okno (levi klik), spremenil velikost okna (srednji klik) ali pokazal meni okna (desni klik). Delovanje srednje in desne tipke je mogoče zamenjati s ključem \"spremeni_velikost_z_desnim gumbom\". Spremenilnik je izražen kot \"<Alt>\" ali \"<Super>\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "Ali je mogoče spreminjati velikost okna z desnim gumbom."
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr ""
+msgstr "Izbrana možnost omogoča, da se velikost okna spremeni z desnim gumbom in prikaže meni s srednjim, če je določena tudi tipka tipkovnice."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -424,7 +425,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Postavitev gumbov v nazivni vrstici okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -435,11 +436,11 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr ""
+msgstr "Postavitev gumbov na nazivni vrstici okna. Vrednost mora biti niz, kot je \"meni:skrči,razpni,preslednik,zapri\";  dvopičje loči levi kot okna od desnega in imena gumbov so ločena z vejico. Podvojeni gumbi niso dovoljeni. Neznana imena gumbov so tiho prezrta, tako, da se lahko v novih različicah Marco doda nove gumbe brez, da bi se porušila skladnost s starimi različicami. Posebna oznaka ločilnika se lahko uporabi pri večanju razdalje med gumbi."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
-msgstr ""
+msgstr "Način žariščenja oken"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -448,11 +449,11 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr ""
+msgstr "Način žariščenja določa kako se okna postavijo v žarišče. Možnosti so; \"click\", ki zahteva klik miške na oknu, \"sloppy\", ki omogoča žariščenje s pomikom miške na okno in \"mouse\", ki omogoča žariščenje, ko je kazalka miške v oknu, in sprostitev žarišča, ko okno zapusti."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Nadzor žariščenja okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -460,11 +461,11 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr ""
+msgstr "Možnost omogoča dodaten nadzor za pridobivanje žarišča novih oken. Na voljo sta možnosti: \"smart\", ki uveljavi običajen način žariščenja in \"strict\", ki pa žarišča ne dodeli oknom zagnanim preko terminala."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Ali naj bo dvigovanje stranski učinek drugih dejanj uporabnika"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -486,11 +487,11 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr ""
+msgstr "Nastavitev možnosti lahko privede do nestanovitnega delovanja, zato spreminjanje možnosti ni priporočeno. Veliko dejanj (primer: klikanje znotraj oken, premikanje in spreminjanje velikosti oken) običajno privzdigne okno kot stranski učinek dejanja. Z onemogočenjem možnosti bo program preprečil dvig okna drugim programom in bo prezrl zahteve, ki jih ustvarjajo ukazi. Več podrobnosti najdete na http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Tudi z onemogočenjem možnosti je okna mogoče privzdigniti z alt-levi klik kjerkoli na oknu. Možnost je onemogočena le v klik-za-žarišče načinu. Seznam načinov, s katerimi je mogoče privzdigniti okno ne vključuje programskih zahtev programov za dvig okna; take zahteve so prezrte ne glede na vzrok zahteve."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Dejanje ob dvojnem kliku na nazivno vrstico okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -502,11 +503,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Možnost določa učinek dvojnega klika miške na nazivno vrstico okna. Trenutno veljavne možnosti so 'preklop_senčenja', ki spremeni zasenčenost okna, 'preklop razpenjanja', ki razpne ali skrči okno, 'preklop razpenjanja vodoravno' in 'preklop razpenjanja navpično', ki razpneta okna le v eni smeri, 'pomanjšaj', ki pomanjša okno, 'zavij', ki zvije okno na velikost naslovne vrstice', 'meni', ki prikaže meni okna, 'pod', ki skrije okno pod ostala okna in 'brez', ki ne naredi ničesar."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Dejanje ob srednjem kliku na nazivno vrstico okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -518,11 +519,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Možnost določa učinek srednjega klika miške na nazivno vrstico okna. Trenutno veljavne možnosti so 'preklop_senčenja', ki spremeni zasenčenost okna, 'preklop razpenjanja', ki razpne ali skrči okno, 'preklop razpenjanja vodoravno' in 'preklop razpenjanja navpično', ki razpneta okna le v eni smeri, 'pomanjšaj', ki pomanjša okno, 'zavij', ki zavije okno na velikost naslovne vrstice', 'meni', ki prikaže meni okna, 'pod', ki skrije okno pod ostala okna in 'brez', ki ne naredi ničesar."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Dejanje ob desnem kliku na nazivno vrstico okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -534,11 +535,11 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr ""
+msgstr "Možnost določa učinek desnega klika miške na nazivno vrstico okna. Trenutno veljavne možnosti so 'preklop_senčenja', ki spremeni zasenčenost okna, 'preklop razpenjanja', ki razpne ali skrči okno, 'preklop razpenjanja vodoravno' in 'preklop razpenjanja navpično', ki razpneta okna le v eni smeri, 'pomanjšaj', ki pomanjša okno, 'zavij', ki zvije okno na velikost naslovne vrstice', 'meni', ki prikaže meni okna, 'pod', ki skrije okno pod ostala okna in 'brez', ki ne naredi ničesar."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Samodejno dvigne dejavno okno"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -546,41 +547,41 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr ""
+msgstr "Izbrana možnost omogoča, da je način žariščenja \"sloppy\" ali \"mouse\", potem bo okno v žarišču po premoru, določenem v ključu auto_raise_delay, samodejno dvignjeno. To ni povezano s klikanjem za dviganje okna, niti z vstopom v okno z metodo povleci-spusti."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Premor v milisekundah za možnost samodejnega dviga"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr ""
+msgstr "Časovni zamik preden se okno dvigne, kadar je auto_raise omogočen. Zamik je podan v tisočinkah sekunde."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr ""
+msgstr "Trenutna tema"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "Tema določa videz robov oken, nazivne vrstice oken itd."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "V nazivnih vrsticah oken uporabi običajno sistemsko pisavo"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
+msgstr "Izbrana možnost omogoča, da se prezre možnost pisave nazivne vrstice okna in uporabi privzeto pisavo programov."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
-msgstr ""
+msgstr "Pisava naziva okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
@@ -588,18 +589,18 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr ""
+msgstr "Niz opisa pisave, ki opisuje pisavo za nazivne vrstice oken. Velikost opisa bo uporabljena le, če je možnost velikosti pisave nazivne vrstice nastavljena na 0. Možnost je onemogočena tudi, kadar je privzeto uporabljena pisava namizja."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Število delovnih površin"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
+msgstr "Število delovnih površin. Mora biti več kot nič in ima določeno najvišjo vrednost, da prepreči uničenje namizja z vnosom prevelikega števila delovnih površin."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -619,28 +620,28 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Omogoči vizualni zvonec"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
+msgstr "Vključi vidna opozorila, ko program ali sistem uporabi 'zvonec' ali 'pisk'. Uporabno v hrupnih okoljih."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Sistemski zvonec je slišen"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
+msgstr "Ugotovi, ali lahko program ali sistem ustvari zvočne piske. Uporabno tudi skupaj z 'vizualnim zvoncem', tako da nastanejo tihi 'piski'."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Vrste vizualnega zvonca"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid ""
@@ -651,15 +652,15 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr ""
+msgstr "Možnost določa način izvajanja vidnega opozarjanja sistemskega zvonca ali zvonca drugega programa. Trenutno sta na voljo dve veljavni vrednosti, \"fullscreen\", ki povzroči celozaslonsko črno belo utripanje in \"frame_flash\", ki povzroči utripanje nazivne vrstice programa, ki je sprožil zvonec. V kolikor je slednji neznan (npr. v primeru \"sistemskega zvonca\"), utripa naslovna vrstica okna, ki je trenutno v žarišču."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Upravljalnik skladnje 3D"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Ugotovi, ali je Marco upravljalnik sestavljanja."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -674,7 +675,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "Izbrana možnost omogoča kompromis uporabnosti, na račun zmanjšanja sistemskih virov"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -683,12 +684,12 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr ""
+msgstr "Izbrana možnost omogoča, da bo program uporabniku podal manj odzivov z uporabo preprostejših okvirjev z ukinjanjem animacij in na druge načine. To predstavlja občutno zmanjševanje uporabnosti za večino uporabnikov, število delujočih programov pa se lahko poveča, izbira pa je primerna tudi za terminalske strežnike. Kljub temu je možnost preprostejših okvirjev onemogočena pri uporabi dostopnosti."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "(Ni vstavljeno) Navigacija deluje v smislu programov, ne oken"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -699,11 +700,11 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr ""
+msgstr "Izbrana možnost omogoča, da program prednostno obravnava program kot celoto in ne okna programa. Ta možnost je nekoliko abstraktna in je pomensko značilna za okolje Mac in manj za Windows. Ko je okno postavljeno v žarišče v programskem načinu, se vsa okna programa dvignejo. Prav tako se v tem načinu kliki z miško ne prenesejo na okna ostalih programov. Programski način v veliki meri še ni dokončno razvit."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "Onemogoči dodatke, ki jih uporabljajo stari ali pokvarjeni programi"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -711,21 +712,21 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr ""
+msgstr "Nekateri programi prezrejo določila, tako da upravljalnik oken ne deluje v celoti pravilno. Ta možnost postavi Marco v pravilen način, ki daje bolj celovit uporabniški vmesnik, če uporabniku ni treba zaganjati programov, ki ne delujejo pravilno."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Določa ali naj se nova okna odprejo na sredini zaslona"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr ""
+msgstr "Izbrana možnost omogoča, da se nova okna odprejo na sredini zaslona. Drugače se odprejo zgoraj levo na zaslonu."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable side-by-side tiling"
-msgstr ""
+msgstr "Ali se omogoči razpostavljanje drugega ob drugem"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -750,15 +751,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Name of workspace"
-msgstr ""
+msgstr "Ime delovne površine"
 
 #: ../src/org.mate.marco.gschema.xml.h:58
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Ime delovne površine."
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "Run a defined command"
-msgstr ""
+msgstr "Zaženi določen ukaz"
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
@@ -768,7 +769,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Tipkovna bližnjica, ki zažene ustrezno oštevilčen ukaz v /apps/marco/keybinding_commands. Oblikovana je kot \"<Control>a\" ali \"<Shift><Alt>F1. Razčlenjevalnik je precej popustljiv in dopušča različno velikost črk ter okrajšave kot npr. \"<Ctl>\" in \"<Ctrl>\". V kolikor je izbrana možnost \"onemogočeno\", potem za to dejanje ne bo bližnjice."
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid ""
@@ -777,7 +778,7 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr ""
+msgstr "Zapis je oblikovan kot \"&lt;Control&gt;a\" ali pa \"&lt;Shift&gt;&lt;Alt&gt;F1\". Razčlenjevalnik je precej popustljiv in dopušča različno velikost črk ter okrajšave kot npr. \"&lt;Ctl&gt;\" in \"&lt;Ctrl&gt;\". V primeru, da uporabit možnost \"disabled\", potem za to dejanje ne bo tipkovne bližnjice."
 
 #: ../src/org.mate.marco.gschema.xml.h:80
 msgid ""
@@ -788,75 +789,75 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr ""
+msgstr "Zapis je oblikovan kot \"&lt;Control&gt;a\" ali pa \"&lt;Shift&gt;&lt;Alt&gt;F1\". Razčlenjevalnik je precej popustljiv in dopušča različno velikost črk ter okrajšave kot npr. \"&lt;Ctl&gt;\" in \"&lt;Ctrl&gt;\". V primeru, da uporabite možnost \"disabled\", potem za to dejanje ne bo bližnjice tipk. Tipkovno bližnjico je lahko povrnete s pritiskom tipke \"shift\" zato tipka \"shift\" ne more biti del tipkovne bližnjice."
 
 #: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Premikanje nazaj med okni programa s pojavnim oknom"
 
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Premikanje nazaj med okni s pojavnim oknom"
 
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Premikaje med okni s pojavnim oknom na vseh delovnih površinah"
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "Premikanje nazaj med okni s pojavnim oknom na vseh delovnih površinah"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Premikanje nazaj med pladnji in namizjem s pojavnim oknom"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Takoj premakni nazaj med okni programa"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Takoj premakni nazaj med okni"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Med pulti in namizjem se takoj pomakni nazaj"
 
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Ukazi zagnani preko tipkovnih bližnjic"
 
 #: ../src/org.mate.marco.gschema.xml.h:101
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr ""
+msgstr "Ključi /apps/marco/global_keybindings/run_command_N določa tipkovne bližnjice, ki ustrezajo tem ukazom. Pritisk tipke za run_command_N bo izvedel ukaz command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:102
 msgid "The screenshot command"
-msgstr ""
+msgstr "Ukaz za zajem zaslona"
 
 #: ../src/org.mate.marco.gschema.xml.h:103
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr ""
+msgstr "Ključ /apps/marco/global_keybindings/run_command_screenshot določa tipkovno bližnjico, ki izvede ukaz, določen s temi nastavitvami."
 
 #: ../src/org.mate.marco.gschema.xml.h:104
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Ukaz za zajem okna na zaslonu"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr ""
+msgstr "Ključ /apps/marco/global_keybindings/run_command_window_screenshot določa tipkovno bližnjico, ki izvede ukaz, določen s temi nastavitvami."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Preklopi ali je okno vedno vidno nad drugimi okni"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -2051,59 +2052,59 @@ msgstr "Ni mogoče najti veljavne datoteke za temo %s\n"
 
 #: ../src/ui/theme-viewer.c:99
 msgid "_Windows"
-msgstr ""
+msgstr "_Okna"
 
 #: ../src/ui/theme-viewer.c:100
 msgid "_Dialog"
-msgstr ""
+msgstr "_Pogovorno okno"
 
 #: ../src/ui/theme-viewer.c:101
 msgid "_Modal dialog"
-msgstr ""
+msgstr "_Modalno pogovorno okno"
 
 #: ../src/ui/theme-viewer.c:102
 msgid "_Utility"
-msgstr ""
+msgstr "P_ripomoček"
 
 #: ../src/ui/theme-viewer.c:103
 msgid "_Splashscreen"
-msgstr ""
+msgstr "Pre_dstavitveno okno"
 
 #: ../src/ui/theme-viewer.c:104
 msgid "_Top dock"
-msgstr ""
+msgstr "_Zgornje sidro"
 
 #: ../src/ui/theme-viewer.c:105
 msgid "_Bottom dock"
-msgstr ""
+msgstr "_Spodnje sidro"
 
 #: ../src/ui/theme-viewer.c:106
 msgid "_Left dock"
-msgstr ""
+msgstr "_Levo sidro"
 
 #: ../src/ui/theme-viewer.c:107
 msgid "_Right dock"
-msgstr ""
+msgstr "_Desno sidro"
 
 #: ../src/ui/theme-viewer.c:108
 msgid "_All docks"
-msgstr ""
+msgstr "_Vsa sidra"
 
 #: ../src/ui/theme-viewer.c:109
 msgid "Des_ktop"
-msgstr ""
+msgstr "_Namizje"
 
 #: ../src/ui/theme-viewer.c:115
 msgid "Open another one of these windows"
-msgstr ""
+msgstr "Odpri še enega od teh oken"
 
 #: ../src/ui/theme-viewer.c:117
 msgid "This is a demo button with an 'open' icon"
-msgstr ""
+msgstr "To je vzorčni gumb z ikono 'odpri'"
 
 #: ../src/ui/theme-viewer.c:119
 msgid "This is a demo button with a 'quit' icon"
-msgstr ""
+msgstr "To je vzorčni gumb z ikono 'končaj'"
 
 #: ../src/ui/theme-viewer.c:253
 msgid "This is a sample message in a sample dialog"

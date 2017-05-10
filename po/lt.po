@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014
-# Moo, 2015-2016
+# Moo, 2015-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:09+0300\n"
-"PO-Revision-Date: 2016-12-05 21:22+0000\n"
+"PO-Revision-Date: 2017-03-16 10:14+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -459,7 +459,7 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "Ši parinktis leidžia tiksliau valdyti naujų langų aktyvinimą. Leidžiamos dvi reikšmės: „smart“ įjungia normalią veikseną, o „strict“ neaktyvina langų, paleistų iš terminalo."
+msgstr "Šis parametras leidžia tiksliau valdyti naujų langų aktyvinimą. Leidžiamos dvi reikšmės: „smart“ įjungia normalią veikseną, o „strict“ neaktyvina langų, paleistų iš terminalo."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -501,7 +501,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Ši parinktis nurodo dvikarčio antraštės spustelėjimo veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išskleisti / grąžinti iš išskleidimo langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išskleisti langą nurodyta kryptimi, „minimize“ – suskleisti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
+msgstr "Šis parametras nurodo dvikarčio antraštės spustelėjimo veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išskleisti / grąžinti iš išskleidimo langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išskleisti langą nurodyta kryptimi, „minimize“ – suskleisti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
@@ -517,7 +517,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Ši parinktis nurodo antraštės spustelėjimo viduriniuoju mygtuku veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išskleisti / grąžinti iš išskleidimo langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išskleisti langą nurodyta kryptimi, „minimize“ – suskleisti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
+msgstr "Šis parametras nurodo antraštės spustelėjimo viduriniuoju mygtuku veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išskleisti / grąžinti iš išskleidimo langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išskleisti langą nurodyta kryptimi, „minimize“ – suskleisti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
@@ -533,7 +533,7 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Ši parinktis nurodo antraštės spustelėjimo dešiniuoju mygtuku veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išskleisti / grąžinti iš išskleidimo langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išskleisti langą nurodyta kryptimi, „minimize“ – suskleisti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
+msgstr "Šis parametras nurodo antraštės spustelėjimo dešiniuoju mygtuku veiksmą. Galimos reikšmės: „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išskleisti / grąžinti iš išskleidimo langą, „toggle_maximize_horizontally“ ir „toggle_maximize_vertically“ – išskleisti langą nurodyta kryptimi, „minimize“ – suskleisti langą, „shade“ – suvynioti langą, „menu“ – parodyti lango meniu, „lower“ – nukelti langą už kitų langų ir „none“ – nedaryti nieko."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
@@ -575,7 +575,7 @@ msgstr "Langų antraštėse naudoti standartinį sistemos šriftą"
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr "Jei reikšmė teigiama, nepaisyti titlebar_font parinkties ir langų antraštėms naudoti standartinį programų šriftą."
+msgstr "Jei reikšmė teigiama, nepaisyti titlebar_font parametro ir langų antraštėms naudoti standartinį programų šriftą."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -587,7 +587,7 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr "Šrifto aprašymo seka, nurodanti šriftą, naudojamą langų antraštėms. Šrifto dydis, esantis aprašyme, naudojamas tik tuo atveju, jei titlebar_font_size požymis yra lygus 0. Be to, šis požymis atjungiamas, jei titlebar_uses_desktop_font požymis yra teigiamas true."
+msgstr "Šrifto aprašymo seka, nurodanti šriftą, naudojamą langų antraštėms. Šrifto dydis, esantis aprašyme, naudojamas tik tuo atveju, jei titlebar_font_size požymis yra lygus 0. Be to, šis parametras išjungiamas, jei titlebar_uses_desktop_font parametras yra teigiamas true."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -625,7 +625,7 @@ msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr "Įjungia vaizdinius indikatorius, kai programa arba sistema perduoda standartinius garsinius perspėjimo signalus; naudinga esant klausos sutrikimams, triukšmingoje aplinkoje arba kai garsinis signalas yra išjungtas."
+msgstr "Įjungia vaizdinius indikatorius, kai programa arba sistema perduoda standartinius garsinius įspėjimo signalus; naudinga esant klausos sutrikimams, triukšmingoje aplinkoje arba kai garsinis signalas yra išjungtas."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
@@ -710,7 +710,7 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr "Kai kurios programos nevykdo nurodymų specifikacijose, todėl kyla smulkių nesklandumų. Ši parinktis įjungia griežtą veikseną, kuri padaro aplinką vienalytiškesnę, jei nenaudojate nekorektiškų programų."
+msgstr "Kai kurios programos nevykdo nurodymų specifikacijose, todėl kyla smulkių nesklandumų. Ši parametras įjungia griežtą veikseną, kuri padaro aplinką vienalytiškesnę, jei nenaudojate nekorektiškų programų."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -1042,7 +1042,7 @@ msgstr "Ekranas %d vaizduoklyje „%s“ netinkamas\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Ekranas %d vaizduoklyje „%s“ jau turi langų tvarkytuvę; pabandykite pasinaudoti parinktimi --replace, jei norite pakeisti esamą langų tvarkytuvę.\n"
+msgstr "Ekranas %d vaizduoklyje „%s“ jau turi langų tvarkytuvę; pabandykite pasinaudoti parametru --replace, jei norite pakeisti esamą langų tvarkytuvę.\n"
 
 #: ../src/core/screen.c:401
 #, c-format
@@ -1142,7 +1142,7 @@ msgstr "Klaida langų tvarkytuvėje:"
 
 #: ../src/core/util.c:421
 msgid "Window manager warning: "
-msgstr "Langų tvarkytuvės perspėjimas:"
+msgstr "Langų tvarkytuvės įspėjimas:"
 
 #: ../src/core/util.c:449
 msgid "Window manager error: "
