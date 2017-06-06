@@ -1390,46 +1390,49 @@ meta_color_spec_new_gtk (MetaGtkColorComponent component,
 }
 
 static void
-get_background_color_real (GtkStyleContext *context,
-                           GtkStateFlags    state,
-                           GdkRGBA         *color)
-{
-  GdkRGBA *c;
-
-  g_return_if_fail (color != NULL);
-  g_return_if_fail (GTK_IS_STYLE_CONTEXT (context));
-
-  gtk_style_context_get (context,
-                         state,
-                         "background-color", &c,
-                         NULL);
-
-  *color = *c;
-  gdk_rgba_free (c);
-}
-
-static void
 get_background_color (GtkStyleContext *context,
                       GtkStateFlags    state,
                       GdkRGBA         *color)
 {
-  GdkRGBA empty = { 0.0, 0.0, 0.0, 0.0 };
   GdkRGBA rgba;
+  GtkWidget *toplevel;
+  GtkStyleContext *tmp;
 
-  get_background_color_real (context, state, &rgba);
+  toplevel = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  tmp = gtk_widget_get_style_context (toplevel);
 
-  if (gdk_rgba_equal (&rgba, &empty))
-    {
-      GtkWidget *toplevel;
-      GtkStyleContext *tmp;
+  g_return_if_fail (GTK_IS_STYLE_CONTEXT (tmp));
 
-      toplevel = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-      tmp = gtk_widget_get_style_context (toplevel);
+  gtk_style_context_get (tmp,
+                         state,
+                         "background-color", &rgba,
+                         NULL);
 
-      get_background_color_real (tmp, state, &rgba);
+  gtk_widget_destroy (toplevel);
 
-      gtk_widget_destroy (toplevel);
-    }
+  *color = rgba;
+}
+
+static void
+get_foreground_color (GtkStyleContext *context,
+                      GtkStateFlags    state,
+                      GdkRGBA         *color)
+{
+  GdkRGBA rgba;
+  GtkWidget *toplevel;
+  GtkStyleContext *tmp;
+
+  toplevel = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  tmp = gtk_widget_get_style_context (toplevel);
+
+  g_return_if_fail (GTK_IS_STYLE_CONTEXT (tmp));
+
+  gtk_style_context_get (tmp,
+                         state,
+                         "color", &rgba,
+                         NULL);
+
+  gtk_widget_destroy (toplevel);
 
   *color = rgba;
 }
@@ -1475,10 +1478,10 @@ meta_set_color_from_style (GdkRGBA               *color,
       break;
     case META_GTK_COLOR_FG:
     case META_GTK_COLOR_TEXT:
-      gtk_style_context_get_color (context, state, color);
+      get_foreground_color (context, state, color);
       break;
     case META_GTK_COLOR_TEXT_AA:
-      gtk_style_context_get_color (context, state, color);
+      get_foreground_color (context, state, color);
       meta_set_color_from_style (&other, context, state, META_GTK_COLOR_BASE);
 
       color->red = (color->red + other.red) / 2;
