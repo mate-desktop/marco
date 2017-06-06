@@ -519,9 +519,7 @@ draw_xor_rect (MetaScreen          *screen,
    * other, or the XOR gets reversed. So we have to draw things
    * a bit oddly.
    */
-  XSegment segments[8];
   MetaRectangle shrunk_rect;
-  int i;
 
 #define LINE_WIDTH META_WIREFRAME_XOR_LINE_WIDTH
 
@@ -542,119 +540,6 @@ draw_xor_rect (MetaScreen          *screen,
                   shrunk_rect.x, shrunk_rect.y,
                   shrunk_rect.width, shrunk_rect.height);
 
-  /* Don't put lines inside small rectangles where they won't fit */
-  if (shrunk_rect.width < (LINE_WIDTH * 4) ||
-      shrunk_rect.height < (LINE_WIDTH * 4))
-    return;
-
-  if ((width >= 0) && (height >= 0))
-    {
-      XGCValues gc_values = { 0 };
-
-      if (XGetGCValues (screen->display->xdisplay,
-                        screen->root_xor_gc,
-                        GCFont, &gc_values))
-        {
-          char *text;
-          int text_length;
-
-          XFontStruct *font_struct;
-          int text_width, text_height;
-          int box_x, box_y;
-          int box_width, box_height;
-
-          font_struct = XQueryFont (screen->display->xdisplay,
-                                    gc_values.font);
-
-          if (font_struct != NULL)
-            {
-              text = g_strdup_printf ("%d x %d", width, height);
-              text_length = strlen (text);
-
-              text_width = text_length * font_struct->max_bounds.width;
-              text_height = font_struct->max_bounds.descent +
-                            font_struct->max_bounds.ascent;
-
-              box_width = text_width + 2 * LINE_WIDTH;
-              box_height = text_height + 2 * LINE_WIDTH;
-
-
-              box_x = shrunk_rect.x + (shrunk_rect.width - box_width) / 2;
-              box_y = shrunk_rect.y + (shrunk_rect.height - box_height) / 2;
-
-              if ((box_width < shrunk_rect.width) &&
-                  (box_height < shrunk_rect.height))
-                {
-                  XFillRectangle (screen->display->xdisplay,
-                                  screen->xroot,
-                                  screen->root_xor_gc,
-                                  box_x, box_y,
-                                  box_width, box_height);
-                  XDrawString (screen->display->xdisplay,
-                               screen->xroot,
-                               screen->root_xor_gc,
-                               box_x + LINE_WIDTH,
-                               box_y + LINE_WIDTH + font_struct->max_bounds.ascent,
-                               text, text_length);
-                }
-
-              g_free (text);
-
-              XFreeFontInfo (NULL, font_struct, 1);
-
-              if ((box_width + LINE_WIDTH) >= (shrunk_rect.width / 3))
-                return;
-
-              if ((box_height + LINE_WIDTH) >= (shrunk_rect.height / 3))
-                return;
-            }
-        }
-    }
-
-  /* Two vertical lines at 1/3 and 2/3 */
-  segments[0].x1 = shrunk_rect.x + shrunk_rect.width / 3;
-  segments[0].y1 = shrunk_rect.y + LINE_WIDTH / 2 + LINE_WIDTH % 2;
-  segments[0].x2 = segments[0].x1;
-  segments[0].y2 = shrunk_rect.y + shrunk_rect.height - LINE_WIDTH / 2;
-
-  segments[1] = segments[0];
-  segments[1].x1 = shrunk_rect.x + (shrunk_rect.width / 3) * 2;
-  segments[1].x2 = segments[1].x1;
-
-  /* Now make two horizontal lines at 1/3 and 2/3, but not
-   * overlapping the verticals
-   */
-
-  segments[2].x1 = shrunk_rect.x + LINE_WIDTH / 2 + LINE_WIDTH % 2;
-  segments[2].x2 = segments[0].x1 - LINE_WIDTH / 2;
-  segments[2].y1 = shrunk_rect.y + shrunk_rect.height / 3;
-  segments[2].y2 = segments[2].y1;
-
-  segments[3] = segments[2];
-  segments[3].x1 = segments[2].x2 + LINE_WIDTH;
-  segments[3].x2 = segments[1].x1 - LINE_WIDTH / 2;
-
-  segments[4] = segments[3];
-  segments[4].x1 = segments[3].x2 + LINE_WIDTH;
-  segments[4].x2 = shrunk_rect.x + shrunk_rect.width - LINE_WIDTH / 2;
-
-  /* Second horizontal line is just like the first, but
-   * shifted down
-   */
-  i = 5;
-  while (i < 8)
-    {
-      segments[i] = segments[i - 3];
-      segments[i].y1 = shrunk_rect.y + (shrunk_rect.height / 3) * 2;
-      segments[i].y2 = segments[i].y1;
-      ++i;
-    }
-
-  XDrawSegments (screen->display->xdisplay,
-                 screen->xroot,
-                 screen->root_xor_gc,
-                 segments,
-                 G_N_ELEMENTS (segments));
 }
 
 void
