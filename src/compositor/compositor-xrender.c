@@ -45,6 +45,7 @@
 #include "window.h"
 #include "compositor-private.h"
 #include "compositor-xrender.h"
+#include "../core/window-private.h"
 #include "xprops.h"
 #include <X11/Xatom.h>
 #include <X11/extensions/shape.h>
@@ -883,6 +884,14 @@ window_has_shadow (MetaCompWindow *cw)
         return TRUE;
       }
     }
+
+  /* Calculate mate-panel *prior* to ARGB checks */
+  if (cw->type == META_COMP_WINDOW_DOCK && cw->window) {
+    if (cw->window->res_name && g_str_equal(cw->window->res_name, "mate-panel")) {
+      meta_verbose ("Window has shadow because it is mate-panel");
+      return TRUE;
+    }
+  }
 
   /* Do not add shadows to ARGB windows */
   if (cw->mode == WINDOW_ARGB) {
