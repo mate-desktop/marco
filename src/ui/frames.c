@@ -118,10 +118,6 @@ meta_frames_constructor (GType                  gtype,
   gobject_class = G_OBJECT_CLASS (meta_frames_parent_class);
   object = gobject_class->constructor (gtype, n_properties, properties);
 
-  g_object_set (object,
-                "type", GTK_WINDOW_POPUP,
-                NULL);
-
   return object;
 }
 
