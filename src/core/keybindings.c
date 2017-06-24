@@ -2219,6 +2219,15 @@ process_tab_grab (MetaDisplay *display,
       break;
     }
 
+  /* Allow use of arrows while in window switching mode */
+  if (event->xkey.keycode == 114)
+    key_used = TRUE;
+  else if (event->xkey.keycode == 113)
+    {
+      key_used = TRUE;
+      backward = TRUE;
+    }
+
   if (key_used)
     {
       meta_topic (META_DEBUG_KEYBINDINGS,
