@@ -90,14 +90,14 @@ MARCO FEATURES
    marco-theme-viewer to preview themes.
 
  - Change number of workspaces via gsettings:
-     gsettings set org.mate.Marco.general num_workspaces 5
+     gsettings set org.mate.Marco.general num-workspaces 5
 
    Can also change workspaces from MATE 2 pager.
 
  - Change focus mode:
-     gsettings set org.mate.Marco.general focus_mode mouse
-     gsettings set org.mate.Marco.general focus_mode sloppy
-     gsettings set org.mate.Marco.general focus_mode click
+     gsettings set org.mate.Marco.general focus-mode mouse
+     gsettings set org.mate.Marco.general focus-mode sloppy
+     gsettings set org.mate.Marco.general focus-mode click
 
  - Global keybinding defaults include:
 
@@ -112,7 +112,7 @@ MARCO FEATURES
 
    Change keybindings for example:
 
-     gsettings set org.mate.Marco.global-keybindings switch_to_workspace_1 '<Alt>F1'
+     gsettings set org.mate.Marco.global-keybindings switch-to-workspace-1 '<Alt>F1'
 
    Also try the MATE keyboard shortcuts control panel.
 
