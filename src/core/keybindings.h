@@ -29,6 +29,12 @@
 #ifndef META_KEYBINDINGS_H
 #define META_KEYBINDINGS_H
 
+#define ARROW_LEFT 113
+#define ARROW_LEFT_PAD 83
+
+#define ARROW_RIGHT 114
+#define ARROW_RIGHT_PAD 85
+
 #include "display-private.h"
 #include "window.h"
 
