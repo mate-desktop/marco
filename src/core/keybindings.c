@@ -2220,9 +2220,9 @@ process_tab_grab (MetaDisplay *display,
     }
 
   /* Allow use of arrows while in window switching mode */
-  if (event->xkey.keycode == 114)
+  if (event->xkey.keycode == ARROW_RIGHT || event->xkey.keycode == ARROW_RIGHT_PAD)
     key_used = TRUE;
-  else if (event->xkey.keycode == 113)
+  else if (event->xkey.keycode == ARROW_LEFT || event->xkey.keycode == ARROW_LEFT_PAD)
     {
       key_used = TRUE;
       backward = TRUE;
