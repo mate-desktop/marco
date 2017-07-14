@@ -1169,7 +1169,7 @@ show_tip_now (MetaFrames *frames)
       if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
         dx += rect->width;
 
-      screen_number = gdk_screen_get_number (gtk_widget_get_screen (GTK_WIDGET (frames)));
+      screen_number = gdk_x11_screen_get_screen_number (gtk_widget_get_screen (GTK_WIDGET (frames)));
 
       meta_fixed_tip_show (screen_number,
                            rect->x + dx,
