@@ -279,7 +279,7 @@ meta_ui_new (Display *xdisplay,
   g_assert (gdisplay == gdk_display_get_default ());
 
   g_assert (xdisplay == GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
-  ui->frames = meta_frames_new (XScreenNumberOfScreen (screen));
+  ui->frames = meta_frames_new ();
   /* This does not actually show any widget. MetaFrames has been hacked so
    * that showing it doesn't actually do anything. But we need the flags
    * set for GTK to deliver events properly. */
@@ -321,11 +321,10 @@ meta_ui_create_frame_window (MetaUI *ui,
 			     gint x,
 			     gint y,
 			     gint width,
-			     gint height,
-			     gint screen_no)
+			     gint height)
 {
   GdkDisplay *display = gdk_x11_lookup_xdisplay (xdisplay);
-  GdkScreen *screen = gdk_display_get_screen (display, screen_no);
+  GdkScreen *screen = gdk_display_get_default_screen (display);
   GdkWindowAttr attrs;
   gint attributes_mask;
   GdkWindow *window;
@@ -686,7 +685,7 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
       if (!font_desc)
         {
           GdkDisplay *display = gdk_x11_lookup_xdisplay (ui->xdisplay);
-          GdkScreen *screen = gdk_display_get_screen (display, XScreenNumberOfScreen (ui->xscreen));
+          GdkScreen *screen = gdk_display_get_default_screen (display);
           GtkWidgetPath *widget_path;
 
           style = gtk_style_context_new ();

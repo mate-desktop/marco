@@ -214,7 +214,6 @@ tab_entry_new (const MetaTabEntry *entry,
 
 MetaTabPopup*
 meta_ui_tab_popup_new (const MetaTabEntry *entries,
-                       int                 screen_number,
                        int                 entry_count,
                        int                 width,
                        gint                border)
@@ -235,8 +234,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
   popup->outline_window = gtk_window_new (GTK_WINDOW_POPUP);
 
-  screen = gdk_display_get_screen (gdk_display_get_default (),
-                                   screen_number);
+  screen = gdk_display_get_default_screen (gdk_display_get_default ());
   gtk_window_set_screen (GTK_WINDOW (popup->outline_window),
                          screen);
 

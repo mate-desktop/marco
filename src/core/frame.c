@@ -104,8 +104,7 @@ meta_window_ensure_frame (MetaWindow *window)
                                                 frame->rect.x,
                                                 frame->rect.y,
 						frame->rect.width,
-						frame->rect.height,
-						frame->window->screen->number);
+						frame->rect.height);
 
   meta_verbose ("Frame for %s is 0x%lx\n", frame->window->desc, frame->xwindow);
   attrs.event_mask = EVENT_MASK;

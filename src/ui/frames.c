@@ -550,12 +550,11 @@ meta_frames_calc_geometry (MetaFrames        *frames,
 }
 
 MetaFrames*
-meta_frames_new (int screen_number)
+meta_frames_new (void)
 {
   GdkScreen *screen;
 
-  screen = gdk_display_get_screen (gdk_display_get_default (),
-                                   screen_number);
+  screen = gdk_display_get_default_screen (gdk_display_get_default ());
 
   return g_object_new (META_TYPE_FRAMES,
                        "screen", screen,
@@ -1155,7 +1154,6 @@ show_tip_now (MetaFrames *frames)
       MetaFrameGeometry fgeom;
       GdkRectangle *rect;
       int dx, dy;
-      int screen_number;
 
       meta_frames_calc_geometry (frames, frame, &fgeom);
 
@@ -1169,10 +1167,7 @@ show_tip_now (MetaFrames *frames)
       if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
         dx += rect->width;
 
-      screen_number = gdk_x11_screen_get_screen_number (gtk_widget_get_screen (GTK_WIDGET (frames)));
-
-      meta_fixed_tip_show (screen_number,
-                           rect->x + dx,
+      meta_fixed_tip_show (rect->x + dx,
                            rect->y + rect->height + 2 + dy,
                            tiptext);
     }

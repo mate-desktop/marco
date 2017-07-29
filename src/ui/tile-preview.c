@@ -124,12 +124,12 @@ on_preview_window_style_set (GtkWidget *widget,
 }
 
 MetaTilePreview *
-meta_tile_preview_new (int      screen_number)
+meta_tile_preview_new (void)
 {
   MetaTilePreview *preview;
   GdkScreen *screen;
 
-  screen = gdk_display_get_screen (gdk_display_get_default (), screen_number);
+  screen = gdk_display_get_default_screen (gdk_display_get_default ());
 
   preview = g_new (MetaTilePreview, 1);
 

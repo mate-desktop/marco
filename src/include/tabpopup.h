@@ -56,7 +56,6 @@ struct _MetaTabEntry
 };
 
 MetaTabPopup*   meta_ui_tab_popup_new          (const MetaTabEntry *entries,
-                                                int                 screen_number,
                                                 int                 entry_count,
                                                 int                 width,
                                                 gboolean            outline);

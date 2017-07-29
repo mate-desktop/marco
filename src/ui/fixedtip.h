@@ -51,8 +51,7 @@
  * \param  root_y         The Y coordinate where the tooltip should appear
  * \param  markup_text    Text to display in the tooltip; can contain markup
  */
-void meta_fixed_tip_show (int screen_number,
-                          int root_x, int root_y,
+void meta_fixed_tip_show (int root_x, int root_y,
                           const char *markup_text);
 
 /**

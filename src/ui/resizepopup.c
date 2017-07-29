@@ -78,8 +78,7 @@ ensure_size_window (MetaResizePopup *popup)
   popup->size_window = gtk_window_new (GTK_WINDOW_POPUP);
 
   gtk_window_set_screen (GTK_WINDOW (popup->size_window),
-			 gdk_display_get_screen (gdk_x11_lookup_xdisplay (popup->display),
-						 popup->screen_number));
+			 gdk_display_get_default_screen (gdk_x11_lookup_xdisplay (popup->display)));
 
   /* never shrink the size window */
   gtk_window_set_resizable (GTK_WINDOW (popup->size_window),

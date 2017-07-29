@@ -1399,7 +1399,6 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
     }
 
   screen->tab_popup = meta_ui_tab_popup_new (entries,
-                                             screen->number,
                                              len,
                                              5, /* FIXME */
                                              border);
@@ -1471,7 +1470,6 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
     }
 
   screen->tab_popup = meta_ui_tab_popup_new (entries,
-                                             screen->number,
                                              len,
                                              layout.cols,
                                              BORDER_OUTLINE_WORKSPACE);
@@ -1492,7 +1490,7 @@ meta_screen_tile_preview_update_timeout (gpointer data)
   screen->tile_preview_timeout_id = 0;
 
   if (!screen->tile_preview)
-    screen->tile_preview = meta_tile_preview_new (screen->number);
+    screen->tile_preview = meta_tile_preview_new ();
 
   if (window)
     {

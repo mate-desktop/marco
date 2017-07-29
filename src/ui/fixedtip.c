@@ -62,8 +62,7 @@ draw_handler (GtkWidget *widget,
 }
 
 void
-meta_fixed_tip_show (int screen_number,
-                     int root_x, int root_y,
+meta_fixed_tip_show (int root_x, int root_y,
                      const char *markup_text)
 {
   gint w;
@@ -82,7 +81,7 @@ meta_fixed_tip_show (int screen_number,
       gtk_style_context_add_class (gtk_widget_get_style_context (tip),
                                    GTK_STYLE_CLASS_TOOLTIP);
 
-      screen = gdk_display_get_screen (gdk_display_get_default (), screen_number);
+      screen = gdk_display_get_default_screen (gdk_display_get_default ());
       visual = gdk_screen_get_rgba_visual (screen);
 
       gtk_window_set_screen (GTK_WINDOW (tip), screen);

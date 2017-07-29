@@ -79,8 +79,7 @@ Window meta_ui_create_frame_window (MetaUI *ui,
 				    gint x,
 				    gint y,
 				    gint width,
-				    gint height,
-				    gint screen_no);
+				    gint height);
 void meta_ui_destroy_frame_window (MetaUI *ui,
 				   Window  xwindow);
 void meta_ui_move_resize_frame (MetaUI *ui,

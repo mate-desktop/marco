@@ -28,7 +28,7 @@
 
 typedef struct _MetaTilePreview MetaTilePreview;
 
-MetaTilePreview   *meta_tile_preview_new    (int                screen_number);
+MetaTilePreview   *meta_tile_preview_new    (void);
 void               meta_tile_preview_free   (MetaTilePreview   *preview);
 void               meta_tile_preview_show   (MetaTilePreview   *preview,
                                              MetaRectangle     *rect,
