@@ -1785,8 +1785,6 @@ static gboolean event_callback(XEvent* event, gpointer data)
           int x, y, root_x, root_y;
           Window root, child;
           guint mask;
-          MetaScreen *random_screen;
-          random_screen = display->screens->data;
           XQueryPointer (display->xdisplay,
                          event->xany.window,
                          &root, &child,
