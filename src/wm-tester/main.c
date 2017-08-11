@@ -117,14 +117,16 @@ evil_timeout (gpointer data)
       GtkWidget *c;
       int t;
       GtkWidget *parent;
+      int sc_width, sc_height;
+
+      gdk_window_get_geometry (gdk_screen_get_root_window (gdk_screen_get_default()),
+                               NULL, NULL, &sc_width, &sc_height);
 
       w = gtk_window_new (GTK_WINDOW_TOPLEVEL);
 
       gtk_window_move (GTK_WINDOW (w),
-                       g_random_int_range (0,
-                                           gdk_screen_width ()),
-                       g_random_int_range (0,
-                                           gdk_screen_height ()));
+                       g_random_int_range (0, sc_width),
+                       g_random_int_range (0, sc_height));
 
       parent = NULL;
 
