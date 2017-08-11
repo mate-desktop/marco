@@ -559,6 +559,8 @@ make_dock (int type)
   GtkWidget *image;
   GtkWidget *box;
   GtkWidget *button;
+  int        sc_width;
+  int        sc_height;
 
   g_return_if_fail (type != DOCK_ALL);
 
@@ -593,6 +595,9 @@ make_dock (int type)
 
   gtk_container_add (GTK_CONTAINER (window), box);
 
+  gdk_window_get_geometry (gdk_screen_get_root_window (gdk_screen_get_default()),
+                           NULL, NULL, &sc_width, &sc_height);
+
 #define DOCK_SIZE 48
   switch (type)
     {
@@ -604,7 +609,7 @@ make_dock (int type)
       break;
     case DOCK_RIGHT:
       gtk_widget_set_size_request (window, DOCK_SIZE, 400);
-      gtk_window_move (GTK_WINDOW (window), gdk_screen_width () - DOCK_SIZE, 200);
+      gtk_window_move (GTK_WINDOW (window), sc_width - DOCK_SIZE, 200);
       set_gtk_window_struts (window, 0, DOCK_SIZE, 0, 0);
       gtk_window_set_title (GTK_WINDOW (window), "RightDock");
       break;
@@ -616,7 +621,7 @@ make_dock (int type)
       break;
     case DOCK_BOTTOM:
       gtk_widget_set_size_request (window, 600, DOCK_SIZE);
-      gtk_window_move (GTK_WINDOW (window), 200, gdk_screen_height () - DOCK_SIZE);
+      gtk_window_move (GTK_WINDOW (window), 200, sc_height - DOCK_SIZE);
       set_gtk_window_struts (window, 0, 0, 0, DOCK_SIZE);
       gtk_window_set_title (GTK_WINDOW (window), "BottomDock");
       break;
@@ -693,12 +698,16 @@ desktop_cb (GSimpleAction *action,
   GtkWidget *window;
   GtkWidget *label;
   GdkRGBA    desktop_color;
+  int        sc_width;
+  int        sc_height;
+
+  gdk_window_get_geometry (gdk_screen_get_root_window (gdk_screen_get_default()),
+                           NULL, NULL, &sc_width, &sc_height);
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   set_gtk_window_type (GTK_WINDOW (window), "_NET_WM_WINDOW_TYPE_DESKTOP");
   gtk_window_set_title (GTK_WINDOW (window), "Desktop");
-  gtk_widget_set_size_request (window,
-                               gdk_screen_width (), gdk_screen_height ());
+  gtk_widget_set_size_request (window, sc_width, sc_height);
   gtk_window_move (GTK_WINDOW (window), 0, 0);
 
   desktop_color.red = 0.32;
