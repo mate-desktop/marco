@@ -1779,6 +1779,20 @@ static gboolean event_callback(XEvent* event, gpointer data)
       meta_display_process_key_event (display, window, event);
       break;
     case ButtonPress:
+      /* Use window under pointer when processing synthetic events from another client */
+      if (window == NULL && event->xbutton.send_event)
+        {
+          int x, y, root_x, root_y;
+          Window root, child;
+          guint mask;
+          XQueryPointer (display->xdisplay,
+                         event->xany.window,
+                         &root, &child,
+                         &root_x, &root_y,
+                         &x, &y,
+                         &mask);
+          window = meta_display_lookup_x_window (display, child);
+        }
       if ((window &&
            grab_op_is_mouse (display->grab_op) &&
            display->grab_button != (int) event->xbutton.button &&

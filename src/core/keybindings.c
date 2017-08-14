@@ -1306,6 +1306,14 @@ meta_display_process_key_event (MetaDisplay *display,
       meta_ui_window_is_widget (screen->ui, event->xany.window))
     return;
 
+  /* Use focused window when processing synthetic events from another client */
+  if (window == NULL && event->xkey.send_event) {
+    Window focus = None;
+    int ret_to = RevertToPointerRoot;
+    XGetInputFocus (display->xdisplay, &focus, &ret_to);
+    window = meta_display_lookup_x_window (display, focus);
+  }
+
   /* window may be NULL */
 
 #ifdef HAVE_XKB
