@@ -13,21 +13,10 @@ marco_message_SOURCES= 				\
 marco_window_demo_SOURCES=				\
 	marco-window-demo.c
 
-marco_mag_SOURCES=					\
-	marco-mag.c
-
-marco_grayscale_SOURCES=				\
-	marco-grayscale.c
-
 bin_PROGRAMS=marco-message marco-window-demo
-
-## cheesy hacks I use, don't really have any business existing. ;-)
-noinst_PROGRAMS=marco-mag marco-grayscale
 
 marco_message_LDADD= @MARCO_MESSAGE_LIBS@
 marco_window_demo_LDADD= @MARCO_WINDOW_DEMO_LIBS@
-marco_mag_LDADD= @MARCO_WINDOW_DEMO_LIBS@ -lm
-marco_grayscale_LDADD = @MARCO_WINDOW_DEMO_LIBS@
 
 EXTRA_DIST=$(icon_DATA)
 
