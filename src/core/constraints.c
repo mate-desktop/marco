@@ -876,6 +876,7 @@ constrain_tiling (MetaWindow         *window,
   gboolean hminbad, vminbad;
   gboolean horiz_equal, vert_equal;
   gboolean constraint_already_satisfied;
+  gboolean allow_resize = FALSE;
 
   if (priority > PRIORITY_TILING)
     return TRUE;
@@ -908,9 +909,37 @@ constrain_tiling (MetaWindow         *window,
   if (check_only || constraint_already_satisfied)
     return constraint_already_satisfied;
 
+  /* Allow the user to resize horizontally when tiled */
+  if (info->is_user_action)
+    {
+      /* Only allow resizing from the window side farther from the screen edge */
+      switch (info->resize_gravity)
+        {
+        case NorthEastGravity:
+        case EastGravity:
+        case SouthEastGravity:
+          if (window->tile_mode == META_TILE_RIGHT)
+            allow_resize = TRUE;
+          break;
+        case NorthWestGravity:
+        case WestGravity:
+        case SouthWestGravity:
+          if (window->tile_mode == META_TILE_LEFT)
+            allow_resize = TRUE;
+          break;
+        }
+
+      /* Maintain current tile size for all other user-initiated alternatives */
+      target_size.x = info->orig.x;
+      target_size.width = info->orig.width;
+    }
+
   /*** Enforce constraint ***/
-  info->current.x      = target_size.x;
-  info->current.width  = target_size.width;
+  if (!allow_resize)
+    {
+      info->current.x      = target_size.x;
+      info->current.width  = target_size.width;
+    }
   info->current.y      = target_size.y;
   info->current.height = target_size.height;
 

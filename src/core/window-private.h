@@ -408,12 +408,12 @@ struct _MetaWindow
 #define META_WINDOW_TILED_RIGHT(w) (META_WINDOW_TILED(w) && \
                                     (w)->tile_mode == META_TILE_RIGHT)
 #define META_WINDOW_ALLOWS_MOVE(w)     ((w)->has_move_func && !(w)->fullscreen)
-#define META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS(w)   ((w)->has_resize_func && !META_WINDOW_MAXIMIZED (w) && !META_WINDOW_TILED(w) && !(w)->fullscreen && !(w)->shaded)
+#define META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS(w)   ((w)->has_resize_func && !META_WINDOW_MAXIMIZED (w) && !(w)->fullscreen && !(w)->shaded)
 #define META_WINDOW_ALLOWS_RESIZE(w)   (META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS (w) &&                \
                                         (((w)->size_hints.min_width < (w)->size_hints.max_width) ||  \
                                          ((w)->size_hints.min_height < (w)->size_hints.max_height)))
 #define META_WINDOW_ALLOWS_HORIZONTAL_RESIZE(w) (META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS (w) && (w)->size_hints.min_width < (w)->size_hints.max_width)
-#define META_WINDOW_ALLOWS_VERTICAL_RESIZE(w)   (META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS (w) && (w)->size_hints.min_height < (w)->size_hints.max_height)
+#define META_WINDOW_ALLOWS_VERTICAL_RESIZE(w)   (META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS (w) && !META_WINDOW_TILED(w) && (w)->size_hints.min_height < (w)->size_hints.max_height)
 
 MetaWindow* meta_window_new                (MetaDisplay *display,
                                             Window       xwindow,
