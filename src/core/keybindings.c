@@ -3109,6 +3109,7 @@ handle_toggle_tiled (MetaDisplay *display,
   else if (meta_window_can_tile (window))
     {
       window->tile_mode = mode;
+      window->tile_resized = FALSE;
       window->tile_monitor_number = meta_screen_get_xinerama_for_window (window->screen, window)->number;
       /* Maximization constraints beat tiling constraints, so if the window
        * is maximized, tiling won't have any effect unless we unmaximize it

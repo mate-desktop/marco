@@ -476,6 +476,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->require_titlebar_visible = TRUE;
   window->on_all_workspaces = FALSE;
   window->tile_mode = META_TILE_NONE;
+  window->tile_resized = FALSE;
   window->tile_monitor_number = -1;
   window->shaded = FALSE;
   window->initially_iconic = FALSE;
@@ -7032,6 +7033,7 @@ update_move (MetaWindow  *window,
       /* Check if the cursor is in a position which triggers tiling
        * and set tile_mode accordingly.
        */
+      MetaTileMode tile_mode = window->tile_mode;
       if (meta_window_can_tile (window) &&
           x >= monitor->rect.x && x < (work_area.x + shake_threshold))
         window->tile_mode = META_TILE_LEFT;
@@ -7047,6 +7049,10 @@ update_move (MetaWindow  *window,
 
       if (window->tile_mode != META_TILE_NONE)
         window->tile_monitor_number = monitor->number;
+
+      /* Reset resized flag when changing tile mode */
+      if (tile_mode != window->tile_mode)
+        window->tile_resized = FALSE;
     }
 
   /* shake loose (unmaximize) maximized or tiled window if dragged beyond

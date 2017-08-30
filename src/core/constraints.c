@@ -929,7 +929,13 @@ constrain_tiling (MetaWindow         *window,
           break;
         }
 
-      /* Maintain current tile size for all other user-initiated alternatives */
+      /* Mark window as being resized from a tiled state */
+      window->tile_resized = TRUE;
+    }
+
+  if (window->tile_resized)
+    {
+      /* Maintain current tile size for user-resized windows */
       target_size.x = info->orig.x;
       target_size.width = info->orig.width;
     }
