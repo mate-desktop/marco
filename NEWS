@@ -1,3 +1,26 @@
+### marco 1.19.1
+
+  * Translations update
+  * Store a window flag when user resizes from tiled
+  * Allow tiled windows to be resized horizontally
+  * gtk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
+  * avoid deprecated gdk_screen_width/height
+  * avoid deprecated gdk_screen_get_width
+  * display: don't use deprecated GDK_DEVICE_MANAGER
+  * tools: remove marco-mag and marco-grayscaletools
+  * Fix synthetic keybinding/button-grab window
+  * Forces a window scale of 1 for the window manager,
+    instead of using the default or user configured scale.
+  * avoid deprecated gdk_display_get_screen
+  * avoid deprecated gdk_screen_get_number
+  * Alt/tab - define arrow keycode + numpad arrows
+  * Allow use of arrows while in alt+tab popup
+  * ui: Fix invalid object construction in frames
+  * README: fix names of GSettings keys
+  * keybindings: remove uppercase from "current workspace"
+  * Added hotkey to rename current workspace
+  * Restore Polish translation credits from GNOME
+
 ### marco 1.19.0
 
   * fix strange window switching foreground/background behavior
