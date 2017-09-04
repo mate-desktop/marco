@@ -6,16 +6,16 @@
 # Falu <info@falu.me>, 2016
 # Falu.Me, 2015
 # Falu <info@falu.me>, 2015
-# kami911 <kami911@gmail.com>, 2015
-# kami911 <kami911@gmail.com>, 2016
+# KAMI KAMI <kami911@gmail.com>, 2015
+# KAMI KAMI <kami911@gmail.com>, 2016-2017
 # Rezső Páder <rezso@rezso.net>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:09+0300\n"
-"PO-Revision-Date: 2016-12-05 21:11+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2017-05-29 18:56+0000\n"
+"Last-Translator: KAMI KAMI <kami911@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/mate/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -417,13 +417,13 @@ msgstr "Állítsa igazra a „mouse_button_modifier” kulcsban megadott billent
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
-msgstr ""
+msgstr "Megjelenjen-e a kiválasztott lap kerete."
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
-msgstr ""
+msgstr "Tiltsa le ezt az előre kijelölt ablak keretének kikapcsolásához a lapok váltása során."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -618,7 +618,7 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr ""
+msgstr "A körbetekerés stílusa adja meg, a munkaterület széleinek viselkedését, egyik munkaterületről a másikra történő váltáskor.\nAmikor a „no wrap” értéket választja, nem fog történni semmi, amikor az egérmutató elhagyja a munkaterület váltó határait.\nHa a „classic” érték van megadva, akkor a régi marco működés szerint a sor végén a következő sorba lép, az oszlop végén a következő sorba lép.\nAmennyiben a „toroidal” értéket állítja be, akkor a minden sor vége ugyanazon sor elejére ugrik, minden oszlop vége ugyanazon oszlop elejére ugrik."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
@@ -673,7 +673,7 @@ msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr ""
+msgstr "Igaz értékre állítva nem jelennek meg az ablak előnézeti képei az alkalmazások között váltó ALT-TAB felugró ablaknál, amikor egy kompozítáló ablakkezelő be van kapcsolva. Az alkalmazások ikonja jelenik meg helyette."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
@@ -749,7 +749,7 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr ""
+msgstr "Az ablak elhelyezése üzemmód jelzi, hogy a megjelenő új ablak, hova lesz elhelyezve.\nAz „automatic” érték megadása esetén a rendszer dönti el az ablak helyét, a rendelkezésre álló szabad hely alapján. Amennyiben nincsen elegendő hely, úgy az ablak lépcsőzetes elrendezésben jelenik meg.\nA „pointer” érték megadása esetén az új ablak az egérmutató által megadott helyre kerül.\nA „manual” érték esetén a felhasználónak egérrel és billentyűzettel kell elhelyeznie az új ablakot."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Name of workspace"
