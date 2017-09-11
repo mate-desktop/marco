@@ -69,6 +69,10 @@
 	#include <X11/extensions/Xrender.h>
 #endif
 
+#ifdef HAVE_PRESENT
+	#include <X11/extensions/Xpresent.h>
+#endif
+
 #ifdef HAVE_XKB
 	#include <X11/XKBlib.h>
 #endif
