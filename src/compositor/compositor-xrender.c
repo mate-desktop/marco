@@ -1373,21 +1373,34 @@ paint_all (MetaScreen   *screen,
 
   paint_windows (screen, info->windows, info->root_buffers[b], region);
 
-  /* FIXME: Things break here... */
-  /* XPresentPixmap(xdisplay, */
-  /*                info->output, */
-  /*                info->root_pixmaps[b], */
-  /*                ++info->present_serial, */
-  /*                None, */
-  /*                region, */
-  /*                0, 0, */
-  /*                None, None, None, PresentOptionNone, */
-  /*                0, 1, 0, NULL, 0); */
-  /* info->present_pending = True; */
   XFixesSetPictureClipRegion (xdisplay, info->root_buffers[b], 0, 0, region);
   XRenderComposite (xdisplay, PictOpSrc, info->root_buffers[b], None,
                     info->root_picture, 0, 0, 0, 0, 0, 0,
                     screen_width, screen_height);
+
+  /* FIXME: Things break here with BadWindow error */
+  g_message("XPresentPixmap");
+  meta_error_trap_push (display);
+  XPresentPixmap(xdisplay,
+                 info->output,
+                 info->root_pixmaps[b],
+                 ++info->present_serial,
+                 None,
+                 region,
+                 0, 0,
+                 None, None, None, PresentOptionNone,
+                 0, 1, 0, NULL, 0);
+  int error_code;
+  error_code = meta_error_trap_pop_with_return (display, FALSE);
+  g_message("error_code: %d", error_code);
+  if (error_code == BadWindow || error_code == BadMatch)
+    {
+      info->present_pending = False;
+    }
+  else
+    {
+      info->present_pending = True;
+    }
 }
 
 static void
@@ -2484,6 +2497,7 @@ static void
 xrender_present_complete(MetaScreen *screen,
                          XPresentCompleteNotifyEvent *ce)
 {
+  g_message("xrender_present_complete");
   MetaCompScreen *info = meta_screen_get_compositor_data (screen);
 
   info->present_pending = False;
@@ -2494,15 +2508,20 @@ static void
 process_generic(MetaCompositorXRender   *compositor,
                 XGenericEvent           *event)
 {
+  g_message("process_generic");
   XGenericEventCookie *ge = (XGenericEventCookie *) event;
 
+  g_message("ge->extension: %s", ge->extension);
+  g_message("compositor->present_major: %s", compositor->present_major);
   if (ge->extension == compositor->present_major) {
     Display *xdisplay = meta_display_get_xdisplay (compositor->display);
     XGetEventData(xdisplay, ge);
     switch (ge->evtype) {
     case PresentConfigureNotify:
+      g_message("PresentConfigureNotify");
       break;
     case PresentCompleteNotify: {
+      g_message("PresentCompleteNotify");
       XPresentCompleteNotifyEvent *ce = ge->data;
       MetaScreen *screen = find_screen_from_output(compositor->display, ce->window);
       if (screen) {
@@ -3173,6 +3192,7 @@ meta_compositor_xrender_new (MetaDisplay *display)
   xrc->show_redraw = FALSE;
   xrc->debug = FALSE;
   xrc->has_present = XPresentQueryExtension(xdisplay, &xrc->present_major, NULL, NULL);
+  g_message("has_present: %d", xrc->has_present);
 
 #ifdef USE_IDLE_REPAINT
   meta_verbose ("Using idle repaint\n");
