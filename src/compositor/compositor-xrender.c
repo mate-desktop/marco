@@ -53,7 +53,10 @@
 #include <X11/extensions/Xdamage.h>
 #include <X11/extensions/Xfixes.h>
 #include <X11/extensions/Xrender.h>
+
+#ifdef HAVE_PRESENT
 #include <X11/extensions/Xpresent.h>
+#endif
 
 #define USE_IDLE_REPAINT 1
 
@@ -153,8 +156,8 @@ typedef struct _MetaCompScreen
 
   GSList *dock_windows;
 
-  uint32_t present_serial;
   XID present_eid;
+  gboolean use_present;
   gboolean present_pending;
 } MetaCompScreen;
 
@@ -827,38 +830,57 @@ root_tile (MetaScreen *screen)
   return picture;
 }
 
-static void
-create_root_buffer (MetaScreen *screen, int b)
+static Pixmap
+create_root_pixmap (MetaScreen *screen)
+{
+  MetaDisplay *display = meta_screen_get_display (screen);
+  Display *xdisplay = meta_display_get_xdisplay (display);
+  MetaCompScreen *info = meta_screen_get_compositor_data (screen);
+  Window xroot = meta_screen_get_xroot (screen);
+  Pixmap pixmap;
+  int depth, screen_width, screen_height, screen_number;
+
+  if (info == NULL)
+    {
+      return None;
+    }
+
+  meta_screen_get_size (screen, &screen_width, &screen_height);
+  screen_number = meta_screen_get_screen_number (screen);
+
+  depth = DefaultDepth (xdisplay, screen_number);
+  pixmap = XCreatePixmap (xdisplay, xroot,
+                          screen_width, screen_height,
+                          depth);
+
+  return pixmap;
+}
+
+static Picture
+create_root_buffer (MetaScreen *screen, Pixmap root_pixmap)
 {
   MetaDisplay *display = meta_screen_get_display (screen);
   Display *xdisplay = meta_display_get_xdisplay (display);
   MetaCompScreen *info = meta_screen_get_compositor_data (screen);
   Picture pict;
   XRenderPictFormat *format;
-  Pixmap root_pixmap;
   Visual *visual;
-  int depth, screen_width, screen_height, screen_number;
+  int screen_number;
 
   if (info == NULL)
     {
-      return;
+      return None;
     }
+  g_return_val_if_fail (root_pixmap != None, None);
 
-  meta_screen_get_size (screen, &screen_width, &screen_height);
   screen_number = meta_screen_get_screen_number (screen);
   visual = DefaultVisual (xdisplay, screen_number);
-  depth = DefaultDepth (xdisplay, screen_number);
 
   format = XRenderFindVisualFormat (xdisplay, visual);
-  g_return_if_fail (format != NULL);
-
-  root_pixmap = XCreatePixmap (xdisplay, info->output,
-                               screen_width, screen_height, depth);
+  g_return_val_if_fail (format != NULL, None);
 
   pict = XRenderCreatePicture (xdisplay, root_pixmap, format, 0, NULL);
-
-  info->root_pixmaps[b] = root_pixmap;
-  info->root_buffers[b] = pict;
+  return pict;
 }
 
 static void
@@ -1136,10 +1158,48 @@ paint_dock_shadows (MetaScreen   *screen,
     }
 }
 
+#ifdef HAVE_PRESENT
+static gboolean
+present_flip (MetaScreen *screen, XserverRegion region, Pixmap pixmap)
+{
+  static uint32_t present_serial;
+
+  MetaCompScreen *info = meta_screen_get_compositor_data (screen);
+  MetaDisplay *display = meta_screen_get_display (screen);
+  Display *xdisplay = meta_display_get_xdisplay (display);
+
+  /* FIXME: Things break here with BadWindow error */
+  meta_error_trap_push (display);
+  XPresentPixmap(xdisplay,
+                 info->output,
+                 pixmap,
+                 present_serial,
+                 None,
+                 region,
+                 0, 0,
+                 None, None, None, PresentOptionNone,
+                 0, 1, 0, NULL, 0);
+
+  int error_code;
+  error_code = meta_error_trap_pop_with_return (display, FALSE);
+  g_message("XPresentPixmap window %p pixmap %p error: %i", info->output, pixmap, error_code);
+  if (error_code)
+    {
+      info->use_present = FALSE;
+      return FALSE;
+    }
+
+  present_serial++;
+
+  return TRUE;
+}
+#endif /* HAVE_PRESENT */
+
 static void
 paint_windows (MetaScreen   *screen,
                GList        *windows,
                Picture       root_buffer,
+               Pixmap        root_pixmap,
                XserverRegion region)
 {
   MetaDisplay *display = meta_screen_get_display (screen);
@@ -1331,6 +1391,22 @@ paint_windows (MetaScreen   *screen,
         }
     }
 
+
+  XFixesSetPictureClipRegion (xdisplay, root_buffer, 0, 0, region);
+
+#ifdef HAVE_PRESENT
+  if (info->use_present)
+    info->present_pending = present_flip (screen, region, root_pixmap);
+#endif
+
+  if (!info->use_present || !info->present_pending)
+    {
+      XRenderComposite (xdisplay, PictOpSrc, root_buffer, None,
+          info->root_picture, 0, 0, 0, 0, 0, 0,
+          screen_width, screen_height);
+    }
+
+  XFlush (xdisplay);
   XFixesDestroyRegion (xdisplay, paint_region);
 }
 
@@ -1368,39 +1444,13 @@ paint_all (MetaScreen   *screen,
       usleep (100 * 1000);
     }
 
+  if (info->root_pixmaps[b] == None)
+    info->root_pixmaps[b] = create_root_pixmap (screen);
+
   if (info->root_buffers[b] == None)
-    create_root_buffer (screen, b);
+    info->root_buffers[b] = create_root_buffer (screen, info->root_pixmaps[b]);
 
-  paint_windows (screen, info->windows, info->root_buffers[b], region);
-
-  XFixesSetPictureClipRegion (xdisplay, info->root_buffers[b], 0, 0, region);
-  XRenderComposite (xdisplay, PictOpSrc, info->root_buffers[b], None,
-                    info->root_picture, 0, 0, 0, 0, 0, 0,
-                    screen_width, screen_height);
-
-  /* FIXME: Things break here with BadWindow error */
-  g_message("XPresentPixmap");
-  meta_error_trap_push (display);
-  XPresentPixmap(xdisplay,
-                 info->output,
-                 info->root_pixmaps[b],
-                 ++info->present_serial,
-                 None,
-                 region,
-                 0, 0,
-                 None, None, None, PresentOptionNone,
-                 0, 1, 0, NULL, 0);
-  int error_code;
-  error_code = meta_error_trap_pop_with_return (display, FALSE);
-  g_message("error_code: %d", error_code);
-  if (error_code == BadWindow || error_code == BadMatch)
-    {
-      info->present_pending = False;
-    }
-  else
-    {
-      info->present_pending = True;
-    }
+  paint_windows (screen, info->windows, info->root_buffers[b], info->root_pixmaps[b], region);
 }
 
 static void
@@ -1410,22 +1460,45 @@ repair_screen (MetaScreen *screen)
   MetaDisplay *display = meta_screen_get_display (screen);
   Display *xdisplay = meta_display_get_xdisplay (display);
 
-  if (info!=NULL && info->all_damage != None && !info->present_pending)
+  g_return_if_fail(info != NULL);
+
+  if (info->all_damage != None)
     {
-      XserverRegion     damage = info->all_damage;
-      meta_error_trap_push (display);
-      if (info->prev_damage) {
-        XFixesUnionRegion(xdisplay, info->prev_damage, info->prev_damage, damage);
-        damage = info->prev_damage;
-      }
-      paint_all (screen, damage, info->root_current);
-      if (info->prev_damage)
-        XFixesDestroyRegion (xdisplay, info->prev_damage);
-      info->root_current = !info->root_current;
-      info->prev_damage = info->all_damage;
-      info->all_damage = None;
-      info->clip_changed = FALSE;
-      meta_error_trap_pop (display, FALSE);
+#ifdef HAVE_PRESENT
+      if (info->use_present)
+        {
+          if (!info->present_pending)
+            {
+              XserverRegion damage = info->all_damage;
+              meta_error_trap_push (display);
+              if (info->prev_damage)
+                {
+                  XFixesUnionRegion(xdisplay, info->prev_damage, info->prev_damage, damage);
+                  damage = info->prev_damage;
+                }
+
+              /* TODO: Check which region (in damage) gets sent here... */
+              paint_all (screen, damage, info->root_current);
+
+              if (++info->root_current >= NUM_BUFFER)
+                info->root_current = 0;
+
+              if (info->prev_damage)
+                XFixesDestroyRegion (xdisplay, info->prev_damage);
+
+              info->prev_damage = info->all_damage;
+              info->all_damage = None;
+              info->clip_changed = FALSE;
+              meta_error_trap_pop (display, FALSE);
+            }
+        }
+      else
+#endif /* HAVE_PRESENT */
+        {
+          paint_all (screen, info->all_damage, info->root_current);
+          XFixesDestroyRegion (xdisplay, info->all_damage);
+          info->all_damage = None;
+        }
     }
 }
 
@@ -2497,8 +2570,15 @@ static void
 xrender_present_complete(MetaScreen *screen,
                          XPresentCompleteNotifyEvent *ce)
 {
-  g_message("xrender_present_complete");
   MetaCompScreen *info = meta_screen_get_compositor_data (screen);
+
+  g_message("present complete:\n");
+  /* g_message("\teid:      %08x\n", ce->eid); */
+  /* g_message("\twindow:   %08lx\n", ce->window); */
+  /* g_message("\tserial:   %d\n", ce->serial_number); */
+  /* g_message("\tust:      %lld\n", ce->ust); */
+  /* g_message("\tmsc:      %lld\n", ce->msc); */
+  /* g_message("\tscreen:   %p\n", screen); */
 
   info->present_pending = False;
   repair_screen(screen);
@@ -2511,8 +2591,8 @@ process_generic(MetaCompositorXRender   *compositor,
   g_message("process_generic");
   XGenericEventCookie *ge = (XGenericEventCookie *) event;
 
-  g_message("ge->extension: %s", ge->extension);
-  g_message("compositor->present_major: %s", compositor->present_major);
+  g_message("ge->extension: %d", ge->extension);
+  g_message("compositor->present_major: %d", compositor->present_major);
   if (ge->extension == compositor->present_major) {
     Display *xdisplay = meta_display_get_xdisplay (compositor->display);
     XGetEventData(xdisplay, ge);
@@ -2696,8 +2776,17 @@ xrender_manage_screen (MetaCompositor *compositor,
     meta_verbose ("Disabling shadows\n");
 
   if (xrc->has_present)
-    info->present_eid = XPresentSelectInput(xdisplay, info->output,
-                                            PresentConfigureNotifyMask|PresentCompleteNotifyMask);
+    {
+      info->present_eid = XPresentSelectInput(xdisplay, info->output,
+                                              PresentCompleteNotifyMask);
+      info->use_present = TRUE;
+      info->present_pending = FALSE;
+    }
+  else
+    {
+      info->use_present = FALSE;
+      g_message("XPresent not available");
+    }
 
   XClearArea (xdisplay, info->output, 0, 0, 0, 0, TRUE);
 
