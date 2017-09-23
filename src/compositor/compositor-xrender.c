@@ -1182,9 +1182,9 @@ present_flip (MetaScreen *screen, XserverRegion region, Pixmap pixmap)
 
   int error_code;
   error_code = meta_error_trap_pop_with_return (display, FALSE);
-  g_message("XPresentPixmap window %p pixmap %p error: %i", info->output, pixmap, error_code);
   if (error_code)
     {
+      g_warning ("XPresentPixmap window %p pixmap %p error: %i", (void *)info->output, (void *)pixmap, error_code);
       info->use_present = FALSE;
       return FALSE;
     }
@@ -2572,14 +2572,6 @@ xrender_present_complete(MetaScreen *screen,
 {
   MetaCompScreen *info = meta_screen_get_compositor_data (screen);
 
-  g_message("present complete:\n");
-  /* g_message("\teid:      %08x\n", ce->eid); */
-  /* g_message("\twindow:   %08lx\n", ce->window); */
-  /* g_message("\tserial:   %d\n", ce->serial_number); */
-  /* g_message("\tust:      %lld\n", ce->ust); */
-  /* g_message("\tmsc:      %lld\n", ce->msc); */
-  /* g_message("\tscreen:   %p\n", screen); */
-
   info->present_pending = False;
   repair_screen(screen);
 }
@@ -2588,25 +2580,19 @@ static void
 process_generic(MetaCompositorXRender   *compositor,
                 XGenericEvent           *event)
 {
-  g_message("process_generic");
   XGenericEventCookie *ge = (XGenericEventCookie *) event;
 
-  g_message("ge->extension: %d", ge->extension);
-  g_message("compositor->present_major: %d", compositor->present_major);
   if (ge->extension == compositor->present_major) {
     Display *xdisplay = meta_display_get_xdisplay (compositor->display);
     XGetEventData(xdisplay, ge);
     switch (ge->evtype) {
     case PresentConfigureNotify:
-      g_message("PresentConfigureNotify");
       break;
     case PresentCompleteNotify: {
-      g_message("PresentCompleteNotify");
       XPresentCompleteNotifyEvent *ce = ge->data;
       MetaScreen *screen = find_screen_from_output(compositor->display, ce->window);
-      if (screen) {
+      if (screen)
         xrender_present_complete(screen, ce);
-      }
     }
       break;
     }
@@ -2785,7 +2771,7 @@ xrender_manage_screen (MetaCompositor *compositor,
   else
     {
       info->use_present = FALSE;
-      g_message("XPresent not available");
+      g_warning ("XPresent not available");
     }
 
   XClearArea (xdisplay, info->output, 0, 0, 0, 0, TRUE);
@@ -3281,7 +3267,6 @@ meta_compositor_xrender_new (MetaDisplay *display)
   xrc->show_redraw = FALSE;
   xrc->debug = FALSE;
   xrc->has_present = XPresentQueryExtension(xdisplay, &xrc->present_major, NULL, NULL);
-  g_message("has_present: %d", xrc->has_present);
 
 #ifdef USE_IDLE_REPAINT
   meta_verbose ("Using idle repaint\n");
