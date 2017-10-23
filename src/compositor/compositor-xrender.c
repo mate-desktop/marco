@@ -108,9 +108,11 @@ typedef struct _MetaCompositorXRender
   guint enabled : 1;
   guint show_redraw : 1;
   guint debug : 1;
-  guint has_present :1;
 
+#ifdef HAVE_PRESENT
+  guint has_present : 1;
   int present_major;
+#endif /* HAVE_PRESENT */
 } MetaCompositorXRender;
 
 typedef struct _conv
@@ -147,18 +149,20 @@ typedef struct _MetaCompScreen
   Picture black_picture;
   Picture trans_black_picture;
   Picture root_tile;
-  XserverRegion prev_damage;
   XserverRegion all_damage;
+#ifdef HAVE_PRESENT
+  XserverRegion prev_damage;
+
+  XID present_eid;
+  gboolean use_present;
+  gboolean present_pending;
+#endif /* HAVE_PRESENT */
 
   guint overlays;
   gboolean compositor_active;
   gboolean clip_changed;
 
   GSList *dock_windows;
-
-  XID present_eid;
-  gboolean use_present;
-  gboolean present_pending;
 } MetaCompScreen;
 
 typedef struct _MetaCompWindow
@@ -691,6 +695,7 @@ find_window_for_child_window_in_display (MetaDisplay *display,
   return NULL;
 }
 
+#ifdef HAVE_PRESENT
 static MetaScreen *
 find_screen_from_output(MetaDisplay *display, Window output)
 {
@@ -708,6 +713,7 @@ find_screen_from_output(MetaDisplay *display, Window output)
     }
   return NULL;
 }
+#endif /* HAVE_PRESENT */
 
 static Picture
 solid_picture (MetaDisplay *display,
@@ -1406,9 +1412,9 @@ paint_windows (MetaScreen   *screen,
 #ifdef HAVE_PRESENT
   if (info->use_present)
     info->present_pending = present_flip (screen, region, root_pixmap);
-#endif
 
   if (!info->use_present || !info->present_pending)
+#endif /* HAVE_PRESENT */
     {
       XRenderComposite (xdisplay, PictOpSrc, root_buffer, None,
           info->root_picture, 0, 0, 0, 0, 0, 0,
@@ -1503,9 +1509,12 @@ repair_screen (MetaScreen *screen)
       else
 #endif /* HAVE_PRESENT */
         {
+          meta_error_trap_push (display);
           paint_all (screen, info->all_damage, info->root_current);
           XFixesDestroyRegion (xdisplay, info->all_damage);
           info->all_damage = None;
+          info->clip_changed = FALSE;
+          meta_error_trap_pop (display, FALSE);
         }
     }
 }
@@ -2591,28 +2600,28 @@ process_generic(MetaCompositorXRender   *compositor,
                 XGenericEvent           *event)
 {
   XGenericEventCookie *ge = (XGenericEventCookie *) event;
+  Display *xdisplay = meta_display_get_xdisplay (compositor->display);
+  XGetEventData(xdisplay, ge);
 
-  if (ge->extension == compositor->present_major)
+  switch (ge->evtype)
     {
-      Display *xdisplay = meta_display_get_xdisplay (compositor->display);
-      XGetEventData(xdisplay, ge);
-      switch (ge->evtype)
-        {
 #ifdef HAVE_PRESENT
-        case PresentConfigureNotify:
-          break;
-        case PresentCompleteNotify:
+    case PresentConfigureNotify:
+      break;
+    case PresentCompleteNotify:
+      {
+        if (ge->extension == compositor->present_major)
           {
             XPresentCompleteNotifyEvent *ce = ge->data;
             MetaScreen *screen = find_screen_from_output(compositor->display, ce->window);
             if (screen)
               xrender_present_complete(screen, ce);
           }
-          break;
+      }
+      break;
 #endif /* HAVE_PRESENT */
-        }
-      XFreeEventData(xdisplay, ge);
     }
+  XFreeEventData(xdisplay, ge);
 }
 
 static int
@@ -2776,12 +2785,11 @@ xrender_manage_screen (MetaCompositor *compositor,
   else
     meta_verbose ("Disabling shadows\n");
 
+#ifdef HAVE_PRESENT
   if (xrc->has_present)
     {
-#ifdef HAVE_PRESENT
       info->present_eid = XPresentSelectInput(xdisplay, info->output,
                                               PresentCompleteNotifyMask);
-#endif /* HAVE_PRESENT */
       info->use_present = TRUE;
       info->present_pending = FALSE;
     }
@@ -2790,6 +2798,7 @@ xrender_manage_screen (MetaCompositor *compositor,
       info->use_present = FALSE;
       g_warning ("XPresent not available");
     }
+#endif /* HAVE_PRESENT */
 
   XClearArea (xdisplay, info->output, 0, 0, 0, 0, TRUE);
 
@@ -3285,8 +3294,6 @@ meta_compositor_xrender_new (MetaDisplay *display)
   xrc->debug = FALSE;
 #ifdef HAVE_PRESENT
   xrc->has_present = XPresentQueryExtension(xdisplay, &xrc->present_major, NULL, NULL);
-#else
-  xrc->has_present = 0;
 #endif /* HAVE_PRESENT */
 
 #ifdef USE_IDLE_REPAINT
