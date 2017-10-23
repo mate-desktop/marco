@@ -740,16 +740,15 @@ list_windows (MetaScreen *screen)
                             children[i], &info->attrs);
 
       if (meta_error_trap_pop_with_return (screen->display, TRUE))
-        {
+	{
           meta_verbose ("Failed to get attributes for window 0x%lx\n",
                         children[i]);
-          g_free (info);
-          continue;
+	  g_free (info);
         }
       else
         {
-          info->xwindow = children[i];
-        }
+	  info->xwindow = children[i];
+	}
 
       result = g_list_prepend (result, info);
     }
