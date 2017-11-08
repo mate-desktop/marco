@@ -1321,8 +1321,15 @@ paint_windows (MetaScreen   *screen,
 
           if (cw->type == META_COMP_WINDOW_DESKTOP)
             {
-              desktop_region = XFixesCreateRegion (xdisplay, 0, 0);
-              XFixesCopyRegion (xdisplay, desktop_region, paint_region);
+              if(desktop_region)
+              {
+                XFixesUnionRegion (xdisplay, desktop_region, desktop_region, paint_region);
+              }
+              else
+              {
+                desktop_region = XFixesCreateRegion (xdisplay, 0, 0);
+                XFixesCopyRegion (xdisplay, desktop_region, paint_region);
+              }
             }
 
           XFixesSubtractRegion (xdisplay, paint_region,
