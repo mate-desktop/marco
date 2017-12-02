@@ -71,7 +71,11 @@ typedef enum {
   META_TILE_NONE,
   META_TILE_LEFT,
   META_TILE_RIGHT,
-  META_TILE_MAXIMIZED /* only used for previews */
+  META_TILE_MAXIMIZED, /* only used for previews */
+  META_TILE_TOP_LEFT,
+  META_TILE_TOP_RIGHT,
+  META_TILE_BOTTOM_LEFT,
+  META_TILE_BOTTOM_RIGHT
 } MetaTileMode;
 
 struct _MetaDisplay {

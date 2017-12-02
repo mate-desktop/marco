@@ -1495,21 +1495,21 @@ meta_screen_tile_preview_update_timeout (gpointer data)
   if (window)
     {
       switch (window->tile_mode)
-        {
-          case META_TILE_LEFT:
-          case META_TILE_RIGHT:
-              if (!META_WINDOW_TILED (window))
-                needs_preview = TRUE;
-              break;
+        {     
+        case META_TILE_MAXIMIZED:
+          if (!META_WINDOW_MAXIMIZED (window))
+            needs_preview = TRUE;
+          break;
+              
+        case META_TILE_NONE:
+          needs_preview = FALSE;
+          break;
 
-          case META_TILE_MAXIMIZED:
-              if (!META_WINDOW_MAXIMIZED (window))
-                needs_preview = TRUE;
-              break;
+        default:
+          if (!META_WINDOW_SIDE_TILED (window))
+            needs_preview = TRUE;
+          break;
 
-          default:
-              needs_preview = FALSE;
-              break;
         }
     }
 
