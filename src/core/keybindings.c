@@ -1457,7 +1457,9 @@ process_mouse_move_resize_grab (MetaDisplay *display,
         meta_window_maximize (window,
                               META_MAXIMIZE_HORIZONTAL |
                               META_MAXIMIZE_VERTICAL);
-      else if (window->tile_mode == META_TILE_LEFT || window->tile_mode == META_TILE_RIGHT)
+      else if (window->tile_mode == META_TILE_LEFT ||
+               window->tile_mode == META_TILE_RIGHT||
+               META_WINDOW_QUARTER_TILED(window))
         meta_window_tile (window);
       else if (!display->grab_wireframe_active)
         meta_window_move_resize (display->grab_window,
