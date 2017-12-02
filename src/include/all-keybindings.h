@@ -258,6 +258,18 @@ keybind (tile-to-side-e, handle_toggle_tiled, META_TILE_RIGHT,
 keybind (tile-to-side-w, handle_toggle_tiled, META_TILE_LEFT,
         BINDING_PER_WINDOW)
 
+keybind (tile-to-corner-nw, handle_toggle_tiled, META_TILE_TOP_LEFT,
+         BINDING_PER_WINDOW)
+
+keybind (tile-to-corner-ne, handle_toggle_tiled, META_TILE_TOP_RIGHT,
+         BINDING_PER_WINDOW)
+
+keybind (tile-to-corner-se, handle_toggle_tiled, META_TILE_BOTTOM_RIGHT,
+         BINDING_PER_WINDOW)
+
+keybind (tile-to-corner-sw, handle_toggle_tiled, META_TILE_BOTTOM_LEFT,
+         BINDING_PER_WINDOW)
+
 keybind (move-to-corner-nw, handle_move_to_corner_nw, 0,
         BINDING_PER_WINDOW)
 keybind (move-to-corner-ne, handle_move_to_corner_ne, 0,
