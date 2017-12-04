@@ -34,6 +34,7 @@
 #include "../core/frame-private.h"
 #include "draw-workspace.h"
 #include <gtk/gtk.h>
+#include <gdk/gdkx.h>
 #include <math.h>
 
 #define OUTSIDE_SELECT_RECT 2
@@ -259,9 +260,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   popup->current_selected_entry = NULL;
   popup->border = border;
 
-  gdk_window_get_geometry (gdk_screen_get_root_window (screen), NULL, NULL,
-                           &screen_width, NULL);
-
+  screen_width = WidthOfScreen (gdk_x11_screen_get_xscreen (screen));
   for (i = 0; i < entry_count; ++i)
     {
       TabEntry* new_entry = tab_entry_new (&entries[i], screen_width,
