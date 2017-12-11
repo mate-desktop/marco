@@ -3090,8 +3090,9 @@ handle_toggle_tiled (MetaDisplay *display,
 {
   MetaTileMode mode = binding->handler->data;
 
-  if ((META_WINDOW_TILED_LEFT (window) && mode == META_TILE_LEFT) ||
-      (META_WINDOW_TILED_RIGHT (window) && mode == META_TILE_RIGHT))
+  if (mode == window->tile_mode &&
+      window->maximized_vertically &&
+      !window->maximized_horizontally)
     {
       if (window->saved_maximize)
         {

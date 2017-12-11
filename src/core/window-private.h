@@ -408,7 +408,7 @@ struct _MetaWindow
                                    (w)->tile_mode == META_TILE_LEFT)
 #define META_WINDOW_TILED_RIGHT(w) (META_WINDOW_SIDE_TILED(w) && \
                                     (w)->tile_mode == META_TILE_RIGHT)
-#define META_WINDOW_QUARTER_TILED(w) (!(w)->maximized_vertically &&   \
+#define META_WINDOW_QUARTER_TILED(w) ((w)->maximized_vertically &&   \
                                       !(w)->maximized_horizontally && \
                                       ((w)->tile_mode == META_TILE_BOTTOM_RIGHT || \
                                       (w)->tile_mode == META_TILE_BOTTOM_LEFT || \
