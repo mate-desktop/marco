@@ -1457,9 +1457,8 @@ process_mouse_move_resize_grab (MetaDisplay *display,
         meta_window_maximize (window,
                               META_MAXIMIZE_HORIZONTAL |
                               META_MAXIMIZE_VERTICAL);
-      else if (window->tile_mode == META_TILE_LEFT ||
-               window->tile_mode == META_TILE_RIGHT||
-               META_WINDOW_QUARTER_TILED(window))
+      else if (window->tile_mode != META_TILE_MAXIMIZED &&
+               window->tile_mode != META_TILE_NONE)
         meta_window_tile (window);
       else if (!display->grab_wireframe_active)
         meta_window_move_resize (display->grab_window,
@@ -3090,24 +3089,11 @@ handle_toggle_tiled (MetaDisplay *display,
 {
   MetaTileMode mode = binding->handler->data;
 
-  if (mode == window->tile_mode &&
-      window->maximized_vertically &&
-      !window->maximized_horizontally)
+  if (mode == window->tile_mode && META_WINDOW_TILED(window))
     {
-      if (window->saved_maximize)
-        {
-          window->tile_mode = META_TILE_MAXIMIZED;
-          window->tile_monitor_number = meta_screen_get_xinerama_for_window (window->screen, window)->number;
-          meta_window_maximize (window, META_MAXIMIZE_VERTICAL |
-                                        META_MAXIMIZE_HORIZONTAL);
-        }
-      else
-        {
-          window->tile_mode = META_TILE_NONE;
-          window->tile_monitor_number = -1;
-          meta_window_unmaximize (window, META_MAXIMIZE_VERTICAL |
-                                          META_MAXIMIZE_HORIZONTAL);
-        }
+      window->tile_mode = META_TILE_NONE;
+      window->tile_monitor_number = -1;
+      meta_window_untile(window);
     }
   else if (meta_window_can_tile (window))
     {
@@ -3128,6 +3114,7 @@ handle_toggle_tiled (MetaDisplay *display,
         window->saved_maximize = FALSE;
 
       window->maximized_horizontally = FALSE;
+      window->maximized_vertically = FALSE;
       meta_window_tile (window);
     }
 }
