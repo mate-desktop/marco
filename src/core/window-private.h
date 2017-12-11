@@ -147,6 +147,7 @@ struct _MetaWindow
    * requested after the window grab is released */
   guint tile_mode : 3;
   guint tile_resized : 1;
+  guint tiled : 1;
 
   /* The last "full" maximized/unmaximized state. We need to keep track of
    * that to toggle between normal/tiled or maximized/tiled states. */
@@ -401,19 +402,19 @@ struct _MetaWindow
                                         (w)->maximized_vertically)
 #define META_WINDOW_MAXIMIZED_VERTICALLY(w)    ((w)->maximized_vertically)
 #define META_WINDOW_MAXIMIZED_HORIZONTALLY(w)  ((w)->maximized_horizontally)
-#define META_WINDOW_SIDE_TILED(w)           ((w)->maximized_vertically && \
-                                        !(w)->maximized_horizontally && \
-                                        (w)->tile_mode != META_TILE_NONE)
-#define META_WINDOW_TILED_LEFT(w) (META_WINDOW_SIDE_TILED(w) && \
+#define META_WINDOW_SIDE_TILED(w)           ((w)->tiled &&              \
+                                             ((w)->tile_mode == META_TILE_LEFT || \
+                                              (w)->tile_mode == META_TILE_RIGHT))
+#define META_WINDOW_TILED_LEFT(w) (META_WINDOW_SIDE_TILED(w) &&         \
                                    (w)->tile_mode == META_TILE_LEFT)
 #define META_WINDOW_TILED_RIGHT(w) (META_WINDOW_SIDE_TILED(w) && \
                                     (w)->tile_mode == META_TILE_RIGHT)
-#define META_WINDOW_QUARTER_TILED(w) ((w)->maximized_vertically &&   \
-                                      !(w)->maximized_horizontally && \
-                                      ((w)->tile_mode == META_TILE_BOTTOM_RIGHT || \
+#define META_WINDOW_CORNER_TILED(w) ((w)->tiled &&                      \
+                                     ((w)->tile_mode == META_TILE_BOTTOM_RIGHT || \
                                       (w)->tile_mode == META_TILE_BOTTOM_LEFT || \
                                       (w)->tile_mode == META_TILE_TOP_RIGHT || \
                                       (w)->tile_mode == META_TILE_TOP_LEFT))
+#define META_WINDOW_TILED(w) (META_WINDOW_SIDE_TILED(w) || META_WINDOW_CORNER_TILED(w))
 #define META_WINDOW_ALLOWS_MOVE(w)     ((w)->has_move_func && !(w)->fullscreen)
 #define META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS(w)   ((w)->has_resize_func && !META_WINDOW_MAXIMIZED (w) && !(w)->fullscreen && !(w)->shaded)
 #define META_WINDOW_ALLOWS_RESIZE(w)   (META_WINDOW_ALLOWS_RESIZE_EXCEPT_HINTS (w) &&                \
@@ -435,6 +436,7 @@ void        meta_window_calc_showing       (MetaWindow  *window);
 void        meta_window_queue              (MetaWindow  *window,
                                             guint queuebits);
 void        meta_window_tile               (MetaWindow  *window);
+void        meta_window_untile               (MetaWindow  *window);
 void        meta_window_minimize           (MetaWindow  *window);
 void        meta_window_unminimize         (MetaWindow  *window);
 void        meta_window_maximize           (MetaWindow        *window,
