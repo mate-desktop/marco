@@ -15,7 +15,7 @@ Please check for duplicates, *especially* if you are reporting a feature
 request.
 
 Please do *not* add "me too!" or "yes I really want this!" comments to
-feature requests in bugzilla. Please read
+feature requests on GitHub. Please read
 http://pobox.com/~hp/features.html prior to adding any kind of flame
 about missing features or misfeatures.
 
@@ -35,20 +35,22 @@ the theme engine.
 You can strip about 70K from the marco binary by compiling with
 options such as:
 
+ ```
  --disable-sm
  --disable-verbose-mode
  --disable-startup-notification
+ ```
 
 However the result is no good for desktop use, all prefs have to be
 hardcoded in the binary, for example. If you wanted to make a really
 small marco, here's some additional stuff you might consider
 implementing:
 
- - add --disable-themes, which would replace theme.c and theme-parser.c
+ - add `--disable-themes`, which would replace theme.c and theme-parser.c
    with a hardcoded implementation of the interface in theme.h,
    should save about 80K. This should be fairly easy.
 
- - add --disable-gtk, which would implement the interface in ui.h
+ - add `--disable-gtk`, which would implement the interface in ui.h
    without using GTK. This one is easier than you think because the
    main part of the window manager doesn't use GTK directly, but is
    still fairly hard to do.  You would probably have to give up some
@@ -81,38 +83,47 @@ MARCO FEATURES
 
  - Has a simple theme system and a couple of extra themes come with it.
    Change themes via gsettings:
-     gsettings set org.mate.Marco.general theme Crux
-     gsettings set org.mate.Marco.general theme Gorilla
-     gsettings set org.mate.Marco.general theme Atlanta
-     gsettings set org.mate.Marco.general theme Bright
+     ```
+     gsettings set org.mate.Marco.general theme Menta
+     gsettings set org.mate.Marco.general theme BlackMATE
+     gsettings set org.mate.Marco.general theme TraditionalOk
+     ```
 
    See theme-format.txt for docs on the theme format. Use
    marco-theme-viewer to preview themes.
 
  - Change number of workspaces via gsettings:
+     ```
      gsettings set org.mate.Marco.general num-workspaces 5
+     ```
 
    Can also change workspaces from MATE 2 pager.
 
  - Change focus mode:
+     ```
      gsettings set org.mate.Marco.general focus-mode mouse
      gsettings set org.mate.Marco.general focus-mode sloppy
      gsettings set org.mate.Marco.general focus-mode click
+     ```
 
  - Global keybinding defaults include:
 
-    Alt-Tab                forward cycle window focus
-    Alt-Shift-Tab          backward cycle focus
-    Alt-Ctrl-Tab           forward cycle focus among panels
-    Alt-Ctrl-Shift-Tab     backward cycle focus among panels
-    Alt-Escape             cycle window focus without a popup thingy
-    Ctrl-Alt-Left Arrow    previous workspace
-    Ctrl-Alt-Right Arrow   next workspace
-    Ctrl-Alt-D             minimize/unminimize all, to show desktop
+   |                                                      |                                         |
+   |------------------------------------------------------|-----------------------------------------|
+   | <kbd>Alt</kbd>-<kbd>Tab</kbd>                        |forward cycle window focus               |
+   | <kbd>Alt</kbd>-<kbd>Shift</kbd>-<kbd>Tab</kbd>       |backward cycle focus                     |
+   | <kbd>Alt</kbd>-<kbd>Ctrl</kbd>-<kbd>Tab</kbd>        |forward cycle focus among panels         |
+   | <kbd>Alt</kbd>-<kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>Tab</kbd>|backward cycle focus among panels|
+   | <kbd>Alt</kbd>-<kbd>Escape</kbd>                     |cycle window focus without a popup thingy|
+   | <kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>Left Arrow</kbd> |previous workspace                       |
+   | <kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>Right Arrow</kbd>|next workspace                           |
+   | <kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>D</kbd>          |minimize/unminimize all, to show desktop |
 
    Change keybindings for example:
 
+     ```
      gsettings set org.mate.Marco.global-keybindings switch-to-workspace-1 '<Alt>F1'
+     ```
 
    Also try the MATE keyboard shortcuts control panel.
 
@@ -120,9 +131,9 @@ MARCO FEATURES
 
  - Window keybindings:
 
-    Alt-space         window menu
+    <kbd>Alt</kbd>-<kbd>space</kbd>         window menu
 
-    Mnemonics work in the menu. That is, Alt-space then underlined
+    Mnemonics work in the menu. That is, <kbd>Alt</kbd>-<kbd>space</kbd> then underlined
     letter in the menu item works.
 
     Choose Move from menu, and arrow keys to move the window.
