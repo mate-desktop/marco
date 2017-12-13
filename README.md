@@ -84,10 +84,9 @@ MARCO FEATURES
  - Has a simple theme system and a couple of extra themes come with it.
    Change themes via gsettings:
      ```
-     gsettings set org.mate.Marco.general theme Crux
-     gsettings set org.mate.Marco.general theme Gorilla
-     gsettings set org.mate.Marco.general theme Atlanta
-     gsettings set org.mate.Marco.general theme Bright
+     gsettings set org.mate.Marco.general theme Menta
+     gsettings set org.mate.Marco.general theme BlackMATE
+     gsettings set org.mate.Marco.general theme TraditionalOk
      ```
 
    See theme-format.txt for docs on the theme format. Use
@@ -108,7 +107,7 @@ MARCO FEATURES
      ```
 
  - Global keybinding defaults include:
- 
+
    |                                                      |                                         |
    |------------------------------------------------------|-----------------------------------------|
    | <kbd>Alt</kbd>-<kbd>Tab</kbd>                        |forward cycle window focus               |
@@ -121,7 +120,7 @@ MARCO FEATURES
    | <kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>D</kbd>          |minimize/unminimize all, to show desktop |
 
    Change keybindings for example:
-   
+
      ```
      gsettings set org.mate.Marco.global-keybindings switch-to-workspace-1 '<Alt>F1'
      ```
