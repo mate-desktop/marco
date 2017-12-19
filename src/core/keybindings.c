@@ -3156,7 +3156,9 @@ handle_unmaximize         (MetaDisplay    *display,
                            XEvent         *event,
                            MetaKeyBinding *binding)
 {
-  if (window->maximized_vertically || window->maximized_horizontally)
+  if (window->maximized_vertically ||
+      window->maximized_horizontally ||
+      META_WINDOW_CORNER_TILED((window)))
     meta_window_unmaximize (window,
                             META_MAXIMIZE_HORIZONTAL |
                             META_MAXIMIZE_VERTICAL);
