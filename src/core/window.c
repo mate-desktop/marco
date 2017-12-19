@@ -2789,6 +2789,8 @@ meta_window_unmaximize (MetaWindow        *window,
   if (unmaximize_horizontally && unmaximize_vertically)
     window->saved_maximize = FALSE;
 
+  window->tile_mode = META_TILE_NONE;
+
   /* Only do something if the window isn't already maximized in the
    * given direction(s).
    */
