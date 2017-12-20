@@ -75,11 +75,12 @@ handler (MetaDisplay    *display,\
  * handler functions and have some kind of flag to say they're unbindable.
  */
 
-static void handle_workspace_switch  (MetaDisplay    *display,
-                                      MetaScreen     *screen,
-                                      MetaWindow     *window,
-                                      XEvent         *event,
-                                      MetaKeyBinding *binding);
+static void handle_workspace_switch_or_move  (MetaDisplay    *display,
+                                              MetaScreen     *screen,
+                                              MetaWindow     *window,
+                                              XEvent         *event,
+                                              MetaKeyBinding *binding,
+                                              gboolean        is_move);
 
 static gboolean process_mouse_move_resize_grab (MetaDisplay *display,
                                                 MetaScreen  *screen,
@@ -106,6 +107,7 @@ static gboolean process_tab_grab           (MetaDisplay *display,
 
 static gboolean process_workspace_switch_grab (MetaDisplay *display,
                                                MetaScreen  *screen,
+                                               MetaWindow  *window,
                                                XEvent      *event,
                                                KeySym       keysym);
 
@@ -1404,11 +1406,11 @@ meta_display_process_key_event (MetaDisplay *display,
               break;
 
             case META_GRAB_OP_KEYBOARD_WORKSPACE_SWITCHING:
+            case META_GRAB_OP_KEYBOARD_WORKSPACE_MOVING:
               meta_topic (META_DEBUG_KEYBINDINGS,
                           "Processing event for keyboard workspace switching\n");
-              keep_grab = process_workspace_switch_grab (display, screen, event, keysym);
+              keep_grab = process_workspace_switch_grab (display, screen, window, event, keysym);
               break;
-
             default:
               break;
             }
@@ -2330,7 +2332,7 @@ handle_switch_to_workspace (MetaDisplay    *display,
        * Note that we're the only caller of that function, so perhaps
        * we should merge with it.
        */
-      handle_workspace_switch (display, screen, event_window, event, binding);
+      handle_workspace_switch_or_move (display, screen, event_window, event, binding, FALSE);
       return;
     }
 
@@ -2672,6 +2674,7 @@ handle_move_to_center  (MetaDisplay    *display,
 static gboolean
 process_workspace_switch_grab (MetaDisplay *display,
                                MetaScreen  *screen,
+                               MetaWindow  *window,
                                XEvent      *event,
                                KeySym       keysym)
 {
@@ -2700,12 +2703,15 @@ process_workspace_switch_grab (MetaDisplay *display,
                       "Ending grab so we can focus on the target workspace\n");
           meta_display_end_grab_op (display, event->xkey.time);
 
-          meta_topic (META_DEBUG_KEYBINDINGS,
-                      "Focusing default window on target workspace\n");
 
-          meta_workspace_focus_default_window (target_workspace,
-                                               NULL,
-                                               event->xkey.time);
+          if(display->grab_op == META_GRAB_OP_KEYBOARD_WORKSPACE_SWITCHING)
+            {
+              meta_topic (META_DEBUG_KEYBINDINGS,
+                          "Focusing default window on target workspace\n");
+              meta_workspace_focus_default_window (target_workspace,
+                                                   NULL,
+                                                   event->xkey.time);
+            }
 
           return TRUE; /* we already ended the grab */
         }
@@ -2741,21 +2747,25 @@ process_workspace_switch_grab (MetaDisplay *display,
       switch (action)
         {
         case META_KEYBINDING_ACTION_WORKSPACE_UP:
+        case META_KEYBINDING_ACTION_WORKSPACE_MOVE_UP:
           target_workspace = meta_workspace_get_neighbor (workspace,
                                                           META_MOTION_UP);
           break;
 
         case META_KEYBINDING_ACTION_WORKSPACE_DOWN:
+        case META_KEYBINDING_ACTION_WORKSPACE_MOVE_DOWN:
           target_workspace = meta_workspace_get_neighbor (workspace,
                                                           META_MOTION_DOWN);
           break;
 
         case META_KEYBINDING_ACTION_WORKSPACE_LEFT:
+        case META_KEYBINDING_ACTION_WORKSPACE_MOVE_LEFT:
           target_workspace = meta_workspace_get_neighbor (workspace,
                                                           META_MOTION_LEFT);
           break;
 
         case META_KEYBINDING_ACTION_WORKSPACE_RIGHT:
+        case META_KEYBINDING_ACTION_WORKSPACE_MOVE_RIGHT:
           target_workspace = meta_workspace_get_neighbor (workspace,
                                                           META_MOTION_RIGHT);
           break;
@@ -2775,7 +2785,18 @@ process_workspace_switch_grab (MetaDisplay *display,
           meta_topic (META_DEBUG_KEYBINDINGS,
                       "Activating target workspace\n");
 
-          meta_workspace_activate (target_workspace, event->xkey.time);
+          if(display->grab_op == META_GRAB_OP_KEYBOARD_WORKSPACE_SWITCHING)
+            meta_workspace_activate (target_workspace, event->xkey.time);
+          else
+            {
+              meta_window_change_workspace (window, target_workspace);
+              target_workspace->screen->display->mouse_mode = FALSE;
+              meta_workspace_activate_with_focus (target_workspace,
+                                                  window,
+                                                  event->xkey.time);
+            }
+            
+          
 
           return TRUE; /* we already ended the grab */
         }
@@ -2786,7 +2807,10 @@ process_workspace_switch_grab (MetaDisplay *display,
               "Ending workspace tabbing & focusing default window; uninteresting key pressed\n");
   workspace =
     (MetaWorkspace *) meta_ui_tab_popup_get_selected (screen->tab_popup);
-  meta_workspace_focus_default_window (workspace, NULL, event->xkey.time);
+  
+  if(display->grab_op == META_GRAB_OP_KEYBOARD_WORKSPACE_SWITCHING)
+    meta_workspace_focus_default_window (workspace, NULL, event->xkey.time);
+  
   return FALSE;
 }
 
@@ -3260,7 +3284,6 @@ handle_move_to_workspace  (MetaDisplay    *display,
                               MetaKeyBinding *binding)
 {
   gint which = binding->handler->data;
-  gboolean flip = (which < 0);
   MetaWorkspace *workspace;
 
   /* If which is zero or positive, it's a workspace number, and the window
@@ -3274,31 +3297,18 @@ handle_move_to_workspace  (MetaDisplay    *display,
   if (window->always_sticky)
     return;
 
-  workspace = NULL;
-  if (flip)
+  if (which < 0)
     {
-      workspace = meta_workspace_get_neighbor (screen->active_workspace,
-                                               which);
+      handle_workspace_switch_or_move (display, screen, window, event, binding, TRUE);
+      return;
     }
-  else
-    {
-      workspace = meta_screen_get_workspace_by_index (screen, which);
-    }
+  
+  workspace = meta_screen_get_workspace_by_index (screen, which);
 
   if (workspace)
     {
       /* Activate second, so the window is never unmapped */
       meta_window_change_workspace (window, workspace);
-      if (flip)
-        {
-          meta_topic (META_DEBUG_FOCUS,
-                      "Resetting mouse_mode to FALSE due to "
-                      "handle_move_to_workspace() call with flip set.\n");
-          workspace->screen->display->mouse_mode = FALSE;
-          meta_workspace_activate_with_focus (workspace,
-                                              window,
-                                              event->xkey.time);
-        }
     }
   else
     {
@@ -3373,11 +3383,12 @@ handle_lower (MetaDisplay    *display,
 }
 
 static void
-handle_workspace_switch  (MetaDisplay    *display,
-                          MetaScreen     *screen,
-                          MetaWindow     *window,
-                          XEvent         *event,
-                          MetaKeyBinding *binding)
+handle_workspace_switch_or_move  (MetaDisplay    *display,
+                                  MetaScreen     *screen,
+                                  MetaWindow     *window,
+                                  XEvent         *event,
+                                  MetaKeyBinding *binding,
+                                  gboolean        is_move)
 {
   gint motion = binding->handler->data;
   unsigned int grab_mask;
@@ -3387,13 +3398,17 @@ handle_workspace_switch  (MetaDisplay    *display,
   meta_topic (META_DEBUG_KEYBINDINGS,
               "Starting tab between workspaces, showing popup\n");
 
+  MetaGrabOp grab_op = is_move ?
+    META_GRAB_OP_KEYBOARD_WORKSPACE_MOVING
+    : META_GRAB_OP_KEYBOARD_WORKSPACE_SWITCHING;
+
   /* FIXME should we use binding->mask ? */
   grab_mask = event->xkey.state & ~(display->ignored_modifier_mask);
 
   if (meta_display_begin_grab_op (display,
                                   screen,
-                                  NULL,
-                                  META_GRAB_OP_KEYBOARD_WORKSPACE_SWITCHING,
+                                  is_move ? window : NULL,
+                                  grab_op,
                                   FALSE,
                                   FALSE,
                                   0,
@@ -3422,7 +3437,19 @@ handle_workspace_switch  (MetaDisplay    *display,
           meta_display_end_grab_op (display, event->xkey.time);
         }
 
-      meta_workspace_activate (next, event->xkey.time);
+      if(is_move)
+        {
+          meta_window_change_workspace (window, next);
+          meta_topic (META_DEBUG_FOCUS,
+                      "Resetting mouse_mode to FALSE due to "
+                      "handle_move_to_workspace() call with flip set.\n");
+          next->screen->display->mouse_mode = FALSE;
+          meta_workspace_activate_with_focus (next,
+                                              window,
+                                              event->xkey.time);
+        }
+      else
+        meta_workspace_activate (next, event->xkey.time);
 
       if (grabbed_before_release)
         {
