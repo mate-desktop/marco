@@ -1,3 +1,22 @@
+### marco 1.19.2
+
+  * Translations update
+  * building: add back README
+  * Fixes windows not going to save_rect when unmaximimizing
+  * Allow horizontal and vertical resizing when corner tiled
+  * Fixes window getting reset to saved_rect when untiling from corner
+  * Added keybindings for corner tiling
+  * Implemented simple corner tiling by mouse drag
+  * WidthOfScreen and HeightOfScreen implementation
+  * Use Markdown for formatting the README
+  * XFIXES regions are leaked during paint_windows
+  * Add stricter logic for running without XPresent support
+  * Make XPresent optional
+  * Remove debug output
+  * Add in some changes from xfwm4
+  * Cancel present_pending flag when erroring out
+  * XPresent extension support - first pass
+
 ### marco 1.19.1
 
   * Translations update
