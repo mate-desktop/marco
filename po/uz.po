@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 00:09+0300\n"
-"PO-Revision-Date: 2017-09-19 22:01+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2017-11-06 11:12+0100\n"
+"PO-Revision-Date: 2017-11-06 10:13+0000\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
 "Language-Team: Uzbek (http://www.transifex.com/mate/MATE/language/uz/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,366 +23,371 @@ msgid "Desktop"
 msgstr "Ish stoli"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:96
+#: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Show the panel's \"Run Application\" dialog box"
 msgstr ""
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:95
+#: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Show the panel's main menu"
 msgstr "Panelning asosiy menyusini ko'rsatish "
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:97
+#: ../src/org.mate.marco.gschema.xml.h:99
 msgid "Take a screenshot"
 msgstr "Ekranni suratga olish"
 
 #: ../src/50-marco-desktop-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:98
+#: ../src/org.mate.marco.gschema.xml.h:100
 msgid "Take a screenshot of a window"
 msgstr "Oynani suratga olish"
 
 #: ../src/50-marco-desktop-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:99
+#: ../src/org.mate.marco.gschema.xml.h:101
 msgid "Run a terminal"
 msgstr "Terminalni ochish"
+
+#: ../src/50-marco-desktop-key.xml.in.h:7
+#: ../src/org.mate.marco.gschema.xml.h:102
+msgid "Rename current workspace"
+msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
 msgstr "Oyna Boshqaruvi"
 
 #: ../src/50-marco-global-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:82
+#: ../src/org.mate.marco.gschema.xml.h:84
 msgid "Move between windows, using a popup window"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:79
+#: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move between windows of an application, using a popup window"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:86
+#: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between panels and the desktop, using a popup window"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:90
+#: ../src/org.mate.marco.gschema.xml.h:92
 msgid "Move between windows immediately"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:88
+#: ../src/org.mate.marco.gschema.xml.h:90
 msgid "Move between windows of an application immediately"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:92
+#: ../src/org.mate.marco.gschema.xml.h:94
 msgid "Move between panels and the desktop immediately"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:94
+#: ../src/org.mate.marco.gschema.xml.h:96
 msgid "Hide all normal windows and set focus to the desktop"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:61
+#: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Switch to workspace 1"
 msgstr "1- Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:63
+#: ../src/org.mate.marco.gschema.xml.h:65
 msgid "Switch to workspace 2"
 msgstr "2 - Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:64
+#: ../src/org.mate.marco.gschema.xml.h:66
 msgid "Switch to workspace 3"
 msgstr "3- Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:65
+#: ../src/org.mate.marco.gschema.xml.h:67
 msgid "Switch to workspace 4"
 msgstr "4- Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:66
+#: ../src/org.mate.marco.gschema.xml.h:68
 msgid "Switch to workspace 5"
 msgstr "5- Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:67
+#: ../src/org.mate.marco.gschema.xml.h:69
 msgid "Switch to workspace 6"
 msgstr "6- Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:68
+#: ../src/org.mate.marco.gschema.xml.h:70
 msgid "Switch to workspace 7"
 msgstr "7- Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:69
+#: ../src/org.mate.marco.gschema.xml.h:71
 msgid "Switch to workspace 8"
 msgstr "8 - Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:70
+#: ../src/org.mate.marco.gschema.xml.h:72
 msgid "Switch to workspace 9"
 msgstr "9 - Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:71
+#: ../src/org.mate.marco.gschema.xml.h:73
 msgid "Switch to workspace 10"
 msgstr "10 - Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:72
+#: ../src/org.mate.marco.gschema.xml.h:74
 msgid "Switch to workspace 11"
 msgstr "11- Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:20
-#: ../src/org.mate.marco.gschema.xml.h:73
+#: ../src/org.mate.marco.gschema.xml.h:75
 msgid "Switch to workspace 12"
 msgstr "12 - Ish maydoniga o'tish"
 
 #: ../src/50-marco-global-key.xml.in.h:21
-#: ../src/org.mate.marco.gschema.xml.h:74
+#: ../src/org.mate.marco.gschema.xml.h:76
 msgid "Switch to workspace on the left of the current workspace"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:22
-#: ../src/org.mate.marco.gschema.xml.h:75
+#: ../src/org.mate.marco.gschema.xml.h:77
 msgid "Switch to workspace on the right of the current workspace"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:23
-#: ../src/org.mate.marco.gschema.xml.h:76
+#: ../src/org.mate.marco.gschema.xml.h:78
 msgid "Switch to workspace above the current workspace"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:77
+#: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Switch to workspace below the current workspace"
 msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:78
+#: ../src/org.mate.marco.gschema.xml.h:80
 msgid "Switch to previously selected workspace"
 msgstr "Avvalgi tanlangan ish maydoniga o'tish"
 
 #: ../src/50-marco-window-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:106
+#: ../src/org.mate.marco.gschema.xml.h:109
 msgid "Activate the window menu"
 msgstr "Oyna menyusini faollashtirish"
 
 #: ../src/50-marco-window-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:107
+#: ../src/org.mate.marco.gschema.xml.h:110
 msgid "Toggle fullscreen mode"
 msgstr "To'la ekran usuliga o'tish"
 
 #: ../src/50-marco-window-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:108
+#: ../src/org.mate.marco.gschema.xml.h:111
 msgid "Toggle maximization state"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:110
+#: ../src/org.mate.marco.gschema.xml.h:113
 msgid "Maximize window"
 msgstr "Yoyish"
 
 #: ../src/50-marco-window-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:111
+#: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Restore window"
 msgstr "Oynani tiklash"
 
 #: ../src/50-marco-window-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:112
+#: ../src/org.mate.marco.gschema.xml.h:115
 msgid "Toggle shaded state"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:114
+#: ../src/org.mate.marco.gschema.xml.h:117
 msgid "Close window"
 msgstr "Oynani yopish"
 
 #: ../src/50-marco-window-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:113
+#: ../src/org.mate.marco.gschema.xml.h:116
 msgid "Minimize window"
 msgstr "Oyanani yigʻish"
 
 #: ../src/50-marco-window-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:115
+#: ../src/org.mate.marco.gschema.xml.h:118
 msgid "Move window"
 msgstr "Oynani surish"
 
 #: ../src/50-marco-window-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:116
+#: ../src/org.mate.marco.gschema.xml.h:119
 msgid "Resize window"
 msgstr "Oyna hajmini o'zgartirish"
 
 #: ../src/50-marco-window-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:117
+#: ../src/org.mate.marco.gschema.xml.h:120
 msgid "Toggle whether window is on all workspaces or just one"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:134
+#: ../src/org.mate.marco.gschema.xml.h:137
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:135
+#: ../src/org.mate.marco.gschema.xml.h:138
 msgid "Raise window above other windows"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:136
+#: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Lower window below other windows"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:137
+#: ../src/org.mate.marco.gschema.xml.h:140
 msgid "Maximize window vertically"
 msgstr "Oynani vertikal yoyish"
 
 #: ../src/50-marco-window-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:138
+#: ../src/org.mate.marco.gschema.xml.h:141
 msgid "Maximize window horizontally"
 msgstr "Oynani gorizontal yoyish"
 
 #: ../src/50-marco-window-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:139
+#: ../src/org.mate.marco.gschema.xml.h:142
 msgid "Tile window to east (right) side of screen"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:140
+#: ../src/org.mate.marco.gschema.xml.h:143
 msgid "Tile window to west (left) side of screen"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:20
-#: ../src/org.mate.marco.gschema.xml.h:141
+#: ../src/org.mate.marco.gschema.xml.h:144
 msgid "Move window to north-west (top left) corner"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:21
-#: ../src/org.mate.marco.gschema.xml.h:142
+#: ../src/org.mate.marco.gschema.xml.h:145
 msgid "Move window to north-east (top right) corner"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:22
-#: ../src/org.mate.marco.gschema.xml.h:143
+#: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Move window to south-west (bottom left) corner"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:23
-#: ../src/org.mate.marco.gschema.xml.h:144
+#: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Move window to south-east (bottom right) corner"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:145
+#: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Move window to north (top) side of screen"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:146
+#: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Move window to south (bottom) side of screen"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:26
-#: ../src/org.mate.marco.gschema.xml.h:147
+#: ../src/org.mate.marco.gschema.xml.h:150
 msgid "Move window to east (right) side of screen"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:27
-#: ../src/org.mate.marco.gschema.xml.h:148
+#: ../src/org.mate.marco.gschema.xml.h:151
 msgid "Move window to west (left) side of screen"
 msgstr ""
 
 #: ../src/50-marco-window-key.xml.in.h:28
-#: ../src/org.mate.marco.gschema.xml.h:149
+#: ../src/org.mate.marco.gschema.xml.h:152
 msgid "Move window to center of screen"
 msgstr "Oynani ekran markaziga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:29
-#: ../src/org.mate.marco.gschema.xml.h:118
+#: ../src/org.mate.marco.gschema.xml.h:121
 msgid "Move window to workspace 1"
 msgstr "Oynani 1 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:30
-#: ../src/org.mate.marco.gschema.xml.h:119
+#: ../src/org.mate.marco.gschema.xml.h:122
 msgid "Move window to workspace 2"
 msgstr "Oynani 2 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:31
-#: ../src/org.mate.marco.gschema.xml.h:120
+#: ../src/org.mate.marco.gschema.xml.h:123
 msgid "Move window to workspace 3"
 msgstr "Oynani 3 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:32
-#: ../src/org.mate.marco.gschema.xml.h:121
+#: ../src/org.mate.marco.gschema.xml.h:124
 msgid "Move window to workspace 4"
 msgstr "Oynani 4 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:33
-#: ../src/org.mate.marco.gschema.xml.h:122
+#: ../src/org.mate.marco.gschema.xml.h:125
 msgid "Move window to workspace 5"
 msgstr "Oynani 5 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:34
-#: ../src/org.mate.marco.gschema.xml.h:123
+#: ../src/org.mate.marco.gschema.xml.h:126
 msgid "Move window to workspace 6"
 msgstr "Oynani 6 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:35
-#: ../src/org.mate.marco.gschema.xml.h:124
+#: ../src/org.mate.marco.gschema.xml.h:127
 msgid "Move window to workspace 7"
 msgstr "Oynani 7 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:36
-#: ../src/org.mate.marco.gschema.xml.h:125
+#: ../src/org.mate.marco.gschema.xml.h:128
 msgid "Move window to workspace 8"
 msgstr "Oynani 8 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:37
-#: ../src/org.mate.marco.gschema.xml.h:126
+#: ../src/org.mate.marco.gschema.xml.h:129
 msgid "Move window to workspace 9"
 msgstr "Oynani 9 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:38
-#: ../src/org.mate.marco.gschema.xml.h:127
+#: ../src/org.mate.marco.gschema.xml.h:130
 msgid "Move window to workspace 10"
 msgstr "Oynani 10 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:39
-#: ../src/org.mate.marco.gschema.xml.h:128
+#: ../src/org.mate.marco.gschema.xml.h:131
 msgid "Move window to workspace 11"
 msgstr "Oynani 11 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:40
-#: ../src/org.mate.marco.gschema.xml.h:129
+#: ../src/org.mate.marco.gschema.xml.h:132
 msgid "Move window to workspace 12"
 msgstr "Oynani 12 - Ish maydoniga surish"
 
 #: ../src/50-marco-window-key.xml.in.h:41
-#: ../src/org.mate.marco.gschema.xml.h:130
+#: ../src/org.mate.marco.gschema.xml.h:133
 msgid "Move window one workspace to the left"
 msgstr "Oynani bir ish maydoni chapga ko'chirish"
 
 #: ../src/50-marco-window-key.xml.in.h:42
-#: ../src/org.mate.marco.gschema.xml.h:131
+#: ../src/org.mate.marco.gschema.xml.h:134
 msgid "Move window one workspace to the right"
 msgstr "Oynani bir ish maydoni o'ngga ko'chirish"
 
 #: ../src/50-marco-window-key.xml.in.h:43
-#: ../src/org.mate.marco.gschema.xml.h:132
+#: ../src/org.mate.marco.gschema.xml.h:135
 msgid "Move window one workspace up"
 msgstr "Oynani bir ish maydoni yuqoriga ko'chirish"
 
 #: ../src/50-marco-window-key.xml.in.h:44
-#: ../src/org.mate.marco.gschema.xml.h:133
+#: ../src/org.mate.marco.gschema.xml.h:136
 msgid "Move window one workspace down"
 msgstr "Oynani bir ish maydoni pastga ko'chirish"
 
@@ -747,18 +752,28 @@ msgid ""
 msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:57
+msgid "List of applications ignored by show-desktop"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:58
+msgid ""
+"Comma separated class list. Each running GUI application referenced to given"
+" windows manager class will be ignored by 'Show Desktop' functionality."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:59
 msgid "Name of workspace"
 msgstr "Ish maydoni nomi"
 
-#: ../src/org.mate.marco.gschema.xml.h:58
+#: ../src/org.mate.marco.gschema.xml.h:60
 msgid "The name of a workspace."
 msgstr "Ish maydonining nomi."
 
-#: ../src/org.mate.marco.gschema.xml.h:59
+#: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Run a defined command"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:60
+#: ../src/org.mate.marco.gschema.xml.h:62
 msgid ""
 "The keybinding that runs the correspondingly-numbered command in "
 "/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
@@ -768,7 +783,7 @@ msgid ""
 "then there will be no keybinding for this action."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:62
+#: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
 "The format looks like \"&lt;Control&gt;a\" or "
 "\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
@@ -777,7 +792,7 @@ msgid ""
 "then there will be no keybinding for this action."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:80
+#: ../src/org.mate.marco.gschema.xml.h:82
 msgid ""
 "The format looks like \"&lt;Control&gt;a\" or "
 "\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
@@ -788,71 +803,71 @@ msgid ""
 "one of the keys it uses."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:81
+#: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move backward between windows of an application, using a popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:83
+#: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows, using a popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:84
+#: ../src/org.mate.marco.gschema.xml.h:86
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:85
+#: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:87
+#: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:89
+#: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between windows of an application immediately"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:91
+#: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows immediately"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:93
+#: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between panels and the desktop immediately"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:100
+#: ../src/org.mate.marco.gschema.xml.h:103
 msgid "Commands to run in response to keybindings"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:101
+#: ../src/org.mate.marco.gschema.xml.h:104
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:102
+#: ../src/org.mate.marco.gschema.xml.h:105
 msgid "The screenshot command"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:103
+#: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:104
+#: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The window screenshot command"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:105
+#: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:109
+#: ../src/org.mate.marco.gschema.xml.h:112
 msgid "Toggle whether a window will always be visible over other windows"
 msgstr ""
 
@@ -900,7 +915,7 @@ msgstr ""
 msgid "Failed to open X Window System display '%s'\n"
 msgstr ""
 
-#: ../src/core/keybindings.c:716
+#: ../src/core/keybindings.c:720
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -909,7 +924,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2353
+#: ../src/core/keybindings.c:2374
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -917,14 +932,32 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/core/keybindings.c:2442
+#: ../src/core/keybindings.c:2463
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr ""
 
-#: ../src/core/keybindings.c:3453
+#: ../src/core/keybindings.c:3475
 #, c-format
 msgid "No terminal command has been defined.\n"
+msgstr ""
+
+#: ../src/core/keybindings.c:3614
+#, c-format
+msgid "<tt>Rename Workspace</tt>"
+msgstr ""
+
+#: ../src/core/keybindings.c:3615
+#, c-format
+msgid "New Workspace Name:"
+msgstr ""
+
+#: ../src/core/keybindings.c:3626
+msgid "OK"
+msgstr ""
+
+#: ../src/core/keybindings.c:3626
+msgid "Cancel"
 msgstr ""
 
 #: ../src/core/main.c:131
@@ -996,37 +1029,37 @@ msgstr ""
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:591 ../src/core/prefs.c:744
+#: ../src/core/prefs.c:599 ../src/core/prefs.c:752
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1038
+#: ../src/core/prefs.c:1046
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1105
+#: ../src/core/prefs.c:1125
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1167
+#: ../src/core/prefs.c:1187
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1693
+#: ../src/core/prefs.c:1743
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1996
+#: ../src/core/prefs.c:2046
 #, c-format
 msgid "Workspace %d"
 msgstr "Ish maydoni %d"
@@ -1148,13 +1181,13 @@ msgid "Window manager error: "
 msgstr "Oyna boshqaruvchisi xatosi:"
 
 #. Translators: This is the title used on dialog boxes
-#: ../src/core/util.c:569 ../src/marco.desktop.in.h:1
+#: ../src/core/util.c:569 ../src/core/util.c:667 ../src/marco.desktop.in.h:1
 #: ../src/marco-wm.desktop.in.h:1
 msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5764
+#: ../src/core/window.c:5765
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1167,7 +1200,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6329
+#: ../src/core/window.c:6330
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1237,47 +1270,47 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr ""
 
-#: ../src/ui/frames.c:1103
+#: ../src/ui/frames.c:1098
 msgid "Close Window"
 msgstr "Oynani Yopish"
 
-#: ../src/ui/frames.c:1106
+#: ../src/ui/frames.c:1101
 msgid "Window Menu"
 msgstr "Oyna Menyusi"
 
-#: ../src/ui/frames.c:1109
+#: ../src/ui/frames.c:1104
 msgid "Minimize Window"
 msgstr "Oynani Yigʻish"
 
-#: ../src/ui/frames.c:1112
+#: ../src/ui/frames.c:1107
 msgid "Maximize Window"
 msgstr "Oynani Yoyish"
 
-#: ../src/ui/frames.c:1115
+#: ../src/ui/frames.c:1110
 msgid "Restore Window"
 msgstr "Oynani Tiklash"
 
-#: ../src/ui/frames.c:1118
+#: ../src/ui/frames.c:1113
 msgid "Roll Up Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1121
+#: ../src/ui/frames.c:1116
 msgid "Unroll Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1124
+#: ../src/ui/frames.c:1119
 msgid "Keep Window On Top"
 msgstr ""
 
-#: ../src/ui/frames.c:1127
+#: ../src/ui/frames.c:1122
 msgid "Remove Window From Top"
 msgstr ""
 
-#: ../src/ui/frames.c:1130
+#: ../src/ui/frames.c:1125
 msgid "Always On Visible Workspace"
 msgstr "Barcha Ish maydonlarida doim ko'rinsin"
 
-#: ../src/ui/frames.c:1133
+#: ../src/ui/frames.c:1128
 msgid "Put Window On Only One Workspace"
 msgstr ""
 
@@ -1363,22 +1396,22 @@ msgstr ""
 msgid "_Close"
 msgstr "_Yopish"
 
-#: ../src/ui/menu.c:196
+#: ../src/ui/menu.c:200
 #, c-format
 msgid "Workspace %d%n"
 msgstr ""
 
-#: ../src/ui/menu.c:206
+#: ../src/ui/menu.c:210
 #, c-format
 msgid "Workspace 1_0"
 msgstr ""
 
-#: ../src/ui/menu.c:208
+#: ../src/ui/menu.c:212
 #, c-format
 msgid "Workspace %s%d"
 msgstr ""
 
-#: ../src/ui/menu.c:387
+#: ../src/ui/menu.c:391
 msgid "Move to Another _Workspace"
 msgstr ""
 
@@ -1464,7 +1497,7 @@ msgstr ""
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:116
+#: ../src/ui/resizepopup.c:115
 #, c-format
 msgid "%d x %d"
 msgstr ""
@@ -2047,193 +2080,100 @@ msgstr ""
 msgid "Failed to find a valid file for theme %s\n"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:99
-msgid "_Windows"
-msgstr "_Oynalar"
-
-#: ../src/ui/theme-viewer.c:100
-msgid "_Dialog"
-msgstr "_Dialog"
-
-#: ../src/ui/theme-viewer.c:101
-msgid "_Modal dialog"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:102
-msgid "_Utility"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:103
-msgid "_Splashscreen"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:104
-msgid "_Top dock"
-msgstr "_Yuqori dok"
-
-#: ../src/ui/theme-viewer.c:105
-msgid "_Bottom dock"
-msgstr "_Quyi dok"
-
-#: ../src/ui/theme-viewer.c:106
-msgid "_Left dock"
-msgstr "_Chap dok"
-
-#: ../src/ui/theme-viewer.c:107
-msgid "_Right dock"
-msgstr "_O'ng dok"
-
-#: ../src/ui/theme-viewer.c:108
-msgid "_All docks"
-msgstr "_Barcha doklar"
-
-#: ../src/ui/theme-viewer.c:109
-msgid "Des_ktop"
-msgstr "Ish _Stoli"
-
-#: ../src/ui/theme-viewer.c:115
-msgid "Open another one of these windows"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:117
-msgid "This is a demo button with an 'open' icon"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:119
-msgid "This is a demo button with a 'quit' icon"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:253
+#: ../src/ui/theme-viewer.c:266
 msgid "This is a sample message in a sample dialog"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:337
+#: ../src/ui/theme-viewer.c:350
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:372
+#: ../src/ui/theme-viewer.c:386
 msgid "Border-only window"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:374
+#: ../src/ui/theme-viewer.c:388
 msgid "Bar"
 msgstr "Bar"
 
-#: ../src/ui/theme-viewer.c:391
+#: ../src/ui/theme-viewer.c:405
 msgid "Normal Application Window"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:395
+#: ../src/ui/theme-viewer.c:409
 msgid "Dialog Box"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:399
+#: ../src/ui/theme-viewer.c:413
 msgid "Modal Dialog Box"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:403
+#: ../src/ui/theme-viewer.c:417
 msgid "Utility Palette"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:407
+#: ../src/ui/theme-viewer.c:421
 msgid "Torn-off Menu"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:411
+#: ../src/ui/theme-viewer.c:425
 msgid "Border"
 msgstr "Chegara"
 
-#: ../src/ui/theme-viewer.c:739
+#: ../src/ui/theme-viewer.c:782
 #, c-format
 msgid "Button layout test %d"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:768
+#: ../src/ui/theme-viewer.c:807
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:812
+#: ../src/ui/theme-viewer.c:847
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:819
+#: ../src/ui/theme-viewer.c:854
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:825
+#: ../src/ui/theme-viewer.c:860
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:868
+#: ../src/ui/theme-viewer.c:904
 msgid "Normal Title Font"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:874
+#: ../src/ui/theme-viewer.c:910
 msgid "Small Title Font"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:880
+#: ../src/ui/theme-viewer.c:916
 msgid "Large Title Font"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:885
+#: ../src/ui/theme-viewer.c:921
 msgid "Button Layouts"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:890
+#: ../src/ui/theme-viewer.c:926
 msgid "Benchmark"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:937
+#: ../src/ui/theme-viewer.c:983
 msgid "Window Title Goes Here"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:1042
+#: ../src/ui/theme-viewer.c:1088
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:1261
-msgid "position expression test returned TRUE but set error"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:1263
-msgid "position expression test returned FALSE but didn't set error"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:1267
-msgid "Error was expected but none given"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:1269
-#, c-format
-msgid "Error %d was expected but %d given"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:1275
-#, c-format
-msgid "Error not expected but one was returned: %s"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:1279
-#, c-format
-msgid "x value was %d, %d was expected"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:1282
-#, c-format
-msgid "y value was %d, %d was expected"
-msgstr ""
-
-#: ../src/ui/theme-viewer.c:1347
-#, c-format
-msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
 msgstr ""

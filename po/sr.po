@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 00:09+0300\n"
-"PO-Revision-Date: 2017-09-19 11:02+0000\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"POT-Creation-Date: 2017-11-06 11:12+0100\n"
+"PO-Revision-Date: 2017-11-06 10:13+0000\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
 "Language-Team: Serbian (http://www.transifex.com/mate/MATE/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,366 +23,371 @@ msgid "Desktop"
 msgstr "Радна површ"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:96
+#: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Show the panel's \"Run Application\" dialog box"
 msgstr "Приказује прозорче за покретање програма на панелу"
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:95
+#: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Show the panel's main menu"
 msgstr "Приказује главни изборник на панелу"
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:97
+#: ../src/org.mate.marco.gschema.xml.h:99
 msgid "Take a screenshot"
 msgstr "Прави снимак екрана"
 
 #: ../src/50-marco-desktop-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:98
+#: ../src/org.mate.marco.gschema.xml.h:100
 msgid "Take a screenshot of a window"
 msgstr "Прави снимак прозора"
 
 #: ../src/50-marco-desktop-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:99
+#: ../src/org.mate.marco.gschema.xml.h:101
 msgid "Run a terminal"
 msgstr "Покреће терминал"
+
+#: ../src/50-marco-desktop-key.xml.in.h:7
+#: ../src/org.mate.marco.gschema.xml.h:102
+msgid "Rename current workspace"
+msgstr ""
 
 #: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
 msgstr "Управљање прозорима"
 
 #: ../src/50-marco-global-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:82
+#: ../src/org.mate.marco.gschema.xml.h:84
 msgid "Move between windows, using a popup window"
 msgstr "Премешта између прозора, користећи искачући прозор"
 
 #: ../src/50-marco-global-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:79
+#: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Move between windows of an application, using a popup window"
 msgstr "Премешта између прозора програма, користећи искачући прозор"
 
 #: ../src/50-marco-global-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:86
+#: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between panels and the desktop, using a popup window"
 msgstr "Премешта између панела и радне површи, користећи искачући прозор"
 
 #: ../src/50-marco-global-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:90
+#: ../src/org.mate.marco.gschema.xml.h:92
 msgid "Move between windows immediately"
 msgstr "Премешта одмах између прозора"
 
 #: ../src/50-marco-global-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:88
+#: ../src/org.mate.marco.gschema.xml.h:90
 msgid "Move between windows of an application immediately"
 msgstr "Премешта одмах између прозора програма"
 
 #: ../src/50-marco-global-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:92
+#: ../src/org.mate.marco.gschema.xml.h:94
 msgid "Move between panels and the desktop immediately"
 msgstr "Премешта одмах између панела и радне површи"
 
 #: ../src/50-marco-global-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:94
+#: ../src/org.mate.marco.gschema.xml.h:96
 msgid "Hide all normal windows and set focus to the desktop"
 msgstr "Скрива све обичне прозоре и поставља први план на радну површ"
 
 #: ../src/50-marco-global-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:61
+#: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Switch to workspace 1"
 msgstr "Прелази на радни простор 1"
 
 #: ../src/50-marco-global-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:63
+#: ../src/org.mate.marco.gschema.xml.h:65
 msgid "Switch to workspace 2"
 msgstr "Прелази на радни простор 2"
 
 #: ../src/50-marco-global-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:64
+#: ../src/org.mate.marco.gschema.xml.h:66
 msgid "Switch to workspace 3"
 msgstr "Прелази на радни простор 3"
 
 #: ../src/50-marco-global-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:65
+#: ../src/org.mate.marco.gschema.xml.h:67
 msgid "Switch to workspace 4"
 msgstr "Прелази на радни простор 4"
 
 #: ../src/50-marco-global-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:66
+#: ../src/org.mate.marco.gschema.xml.h:68
 msgid "Switch to workspace 5"
 msgstr "Прелази на радни простор 5"
 
 #: ../src/50-marco-global-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:67
+#: ../src/org.mate.marco.gschema.xml.h:69
 msgid "Switch to workspace 6"
 msgstr "Прелази на радни простор 6"
 
 #: ../src/50-marco-global-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:68
+#: ../src/org.mate.marco.gschema.xml.h:70
 msgid "Switch to workspace 7"
 msgstr "Прелази на радни простор 7"
 
 #: ../src/50-marco-global-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:69
+#: ../src/org.mate.marco.gschema.xml.h:71
 msgid "Switch to workspace 8"
 msgstr "Прелази на радни простор 8"
 
 #: ../src/50-marco-global-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:70
+#: ../src/org.mate.marco.gschema.xml.h:72
 msgid "Switch to workspace 9"
 msgstr "Прелази на радни простор 9"
 
 #: ../src/50-marco-global-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:71
+#: ../src/org.mate.marco.gschema.xml.h:73
 msgid "Switch to workspace 10"
 msgstr "Прелази на радни простор 10"
 
 #: ../src/50-marco-global-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:72
+#: ../src/org.mate.marco.gschema.xml.h:74
 msgid "Switch to workspace 11"
 msgstr "Прелази на радни простор 11"
 
 #: ../src/50-marco-global-key.xml.in.h:20
-#: ../src/org.mate.marco.gschema.xml.h:73
+#: ../src/org.mate.marco.gschema.xml.h:75
 msgid "Switch to workspace 12"
 msgstr "Прелази на радни простор 12"
 
 #: ../src/50-marco-global-key.xml.in.h:21
-#: ../src/org.mate.marco.gschema.xml.h:74
+#: ../src/org.mate.marco.gschema.xml.h:76
 msgid "Switch to workspace on the left of the current workspace"
 msgstr "Пребацује се на радни простор на лево од текућег радног простора"
 
 #: ../src/50-marco-global-key.xml.in.h:22
-#: ../src/org.mate.marco.gschema.xml.h:75
+#: ../src/org.mate.marco.gschema.xml.h:77
 msgid "Switch to workspace on the right of the current workspace"
 msgstr "Пребацује се на радни простор на десно од текућег радног простора"
 
 #: ../src/50-marco-global-key.xml.in.h:23
-#: ../src/org.mate.marco.gschema.xml.h:76
+#: ../src/org.mate.marco.gschema.xml.h:78
 msgid "Switch to workspace above the current workspace"
 msgstr "Пребацује се на радни простор изнад текућег радног простора"
 
 #: ../src/50-marco-global-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:77
+#: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Switch to workspace below the current workspace"
 msgstr "Пребацује се на радни простор испод текућег радног простора"
 
 #: ../src/50-marco-global-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:78
+#: ../src/org.mate.marco.gschema.xml.h:80
 msgid "Switch to previously selected workspace"
 msgstr "Пребацује се на претходно изабрани радни простор"
 
 #: ../src/50-marco-window-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:106
+#: ../src/org.mate.marco.gschema.xml.h:109
 msgid "Activate the window menu"
 msgstr "Покреће изборник прозора"
 
 #: ../src/50-marco-window-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:107
+#: ../src/org.mate.marco.gschema.xml.h:110
 msgid "Toggle fullscreen mode"
 msgstr "Искључује/укључује приказ преко целог екрана"
 
 #: ../src/50-marco-window-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:108
+#: ../src/org.mate.marco.gschema.xml.h:111
 msgid "Toggle maximization state"
 msgstr "Искључује/укључује стање увећања"
 
 #: ../src/50-marco-window-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:110
+#: ../src/org.mate.marco.gschema.xml.h:113
 msgid "Maximize window"
 msgstr "Увећава прозор"
 
 #: ../src/50-marco-window-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:111
+#: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Restore window"
 msgstr "Враћа величину прозора"
 
 #: ../src/50-marco-window-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:112
+#: ../src/org.mate.marco.gschema.xml.h:115
 msgid "Toggle shaded state"
 msgstr "Искључује/укључује стање засенчености"
 
 #: ../src/50-marco-window-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:114
+#: ../src/org.mate.marco.gschema.xml.h:117
 msgid "Close window"
 msgstr "Затвара прозор"
 
 #: ../src/50-marco-window-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:113
+#: ../src/org.mate.marco.gschema.xml.h:116
 msgid "Minimize window"
 msgstr "Умањује прозор"
 
 #: ../src/50-marco-window-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:115
+#: ../src/org.mate.marco.gschema.xml.h:118
 msgid "Move window"
 msgstr "Премешта прозор"
 
 #: ../src/50-marco-window-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:116
+#: ../src/org.mate.marco.gschema.xml.h:119
 msgid "Resize window"
 msgstr "Мења величину прозора"
 
 #: ../src/50-marco-window-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:117
+#: ../src/org.mate.marco.gschema.xml.h:120
 msgid "Toggle whether window is on all workspaces or just one"
 msgstr "Приказује прозор на свим радним просторима или само на једном"
 
 #: ../src/50-marco-window-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:134
+#: ../src/org.mate.marco.gschema.xml.h:137
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr "Издиже прозор уколико га други прозор заклања, у противном га спушта"
 
 #: ../src/50-marco-window-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:135
+#: ../src/org.mate.marco.gschema.xml.h:138
 msgid "Raise window above other windows"
 msgstr "Издиже прозор изнад осталих прозора"
 
 #: ../src/50-marco-window-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:136
+#: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Lower window below other windows"
 msgstr "Спушта прозор испод осталих прозора"
 
 #: ../src/50-marco-window-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:137
+#: ../src/org.mate.marco.gschema.xml.h:140
 msgid "Maximize window vertically"
 msgstr "Увећава прозор усправно"
 
 #: ../src/50-marco-window-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:138
+#: ../src/org.mate.marco.gschema.xml.h:141
 msgid "Maximize window horizontally"
 msgstr "Увећава прозор водоравно"
 
 #: ../src/50-marco-window-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:139
+#: ../src/org.mate.marco.gschema.xml.h:142
 msgid "Tile window to east (right) side of screen"
 msgstr "Поплочава прозор на источну (десну) страну екрана"
 
 #: ../src/50-marco-window-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:140
+#: ../src/org.mate.marco.gschema.xml.h:143
 msgid "Tile window to west (left) side of screen"
 msgstr "Поплочава прозор на западну (леву) страну екрана"
 
 #: ../src/50-marco-window-key.xml.in.h:20
-#: ../src/org.mate.marco.gschema.xml.h:141
+#: ../src/org.mate.marco.gschema.xml.h:144
 msgid "Move window to north-west (top left) corner"
 msgstr "Премешта прозор у северозападни угао (горњи леви)"
 
 #: ../src/50-marco-window-key.xml.in.h:21
-#: ../src/org.mate.marco.gschema.xml.h:142
+#: ../src/org.mate.marco.gschema.xml.h:145
 msgid "Move window to north-east (top right) corner"
 msgstr "Премешта прозор у североисточни угао (горњи десни)"
 
 #: ../src/50-marco-window-key.xml.in.h:22
-#: ../src/org.mate.marco.gschema.xml.h:143
+#: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Move window to south-west (bottom left) corner"
 msgstr "Премешта прозор у југозападни угао (доњи леви)"
 
 #: ../src/50-marco-window-key.xml.in.h:23
-#: ../src/org.mate.marco.gschema.xml.h:144
+#: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Move window to south-east (bottom right) corner"
 msgstr "Премешта прозор у југоисточни угао (доњи десни)"
 
 #: ../src/50-marco-window-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:145
+#: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Move window to north (top) side of screen"
 msgstr "Премешта прозор на северну страну екрана (горњу)"
 
 #: ../src/50-marco-window-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:146
+#: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Move window to south (bottom) side of screen"
 msgstr "Премешта прозор на јужну страну екрана (доњу)"
 
 #: ../src/50-marco-window-key.xml.in.h:26
-#: ../src/org.mate.marco.gschema.xml.h:147
+#: ../src/org.mate.marco.gschema.xml.h:150
 msgid "Move window to east (right) side of screen"
 msgstr "Премешта прозор на источну страну екрана (десну)"
 
 #: ../src/50-marco-window-key.xml.in.h:27
-#: ../src/org.mate.marco.gschema.xml.h:148
+#: ../src/org.mate.marco.gschema.xml.h:151
 msgid "Move window to west (left) side of screen"
 msgstr "Премешта прозор на западну страну екрана (леву)"
 
 #: ../src/50-marco-window-key.xml.in.h:28
-#: ../src/org.mate.marco.gschema.xml.h:149
+#: ../src/org.mate.marco.gschema.xml.h:152
 msgid "Move window to center of screen"
 msgstr "Премешта прозор у средиште екрана"
 
 #: ../src/50-marco-window-key.xml.in.h:29
-#: ../src/org.mate.marco.gschema.xml.h:118
+#: ../src/org.mate.marco.gschema.xml.h:121
 msgid "Move window to workspace 1"
 msgstr "Премешта прозор на радни простор број 1"
 
 #: ../src/50-marco-window-key.xml.in.h:30
-#: ../src/org.mate.marco.gschema.xml.h:119
+#: ../src/org.mate.marco.gschema.xml.h:122
 msgid "Move window to workspace 2"
 msgstr "Премешта прозор на радни простор број 2"
 
 #: ../src/50-marco-window-key.xml.in.h:31
-#: ../src/org.mate.marco.gschema.xml.h:120
+#: ../src/org.mate.marco.gschema.xml.h:123
 msgid "Move window to workspace 3"
 msgstr "Премешта прозор на радни простор број 3"
 
 #: ../src/50-marco-window-key.xml.in.h:32
-#: ../src/org.mate.marco.gschema.xml.h:121
+#: ../src/org.mate.marco.gschema.xml.h:124
 msgid "Move window to workspace 4"
 msgstr "Премешта прозор на радни простор број 4"
 
 #: ../src/50-marco-window-key.xml.in.h:33
-#: ../src/org.mate.marco.gschema.xml.h:122
+#: ../src/org.mate.marco.gschema.xml.h:125
 msgid "Move window to workspace 5"
 msgstr "Премешта прозор на радни простор број 5"
 
 #: ../src/50-marco-window-key.xml.in.h:34
-#: ../src/org.mate.marco.gschema.xml.h:123
+#: ../src/org.mate.marco.gschema.xml.h:126
 msgid "Move window to workspace 6"
 msgstr "Премешта прозор на радни простор број 6"
 
 #: ../src/50-marco-window-key.xml.in.h:35
-#: ../src/org.mate.marco.gschema.xml.h:124
+#: ../src/org.mate.marco.gschema.xml.h:127
 msgid "Move window to workspace 7"
 msgstr "Премешта прозор на радни простор број 7"
 
 #: ../src/50-marco-window-key.xml.in.h:36
-#: ../src/org.mate.marco.gschema.xml.h:125
+#: ../src/org.mate.marco.gschema.xml.h:128
 msgid "Move window to workspace 8"
 msgstr "Премешта прозор на радни простор број 8"
 
 #: ../src/50-marco-window-key.xml.in.h:37
-#: ../src/org.mate.marco.gschema.xml.h:126
+#: ../src/org.mate.marco.gschema.xml.h:129
 msgid "Move window to workspace 9"
 msgstr "Премешта прозор на радни простор број 9"
 
 #: ../src/50-marco-window-key.xml.in.h:38
-#: ../src/org.mate.marco.gschema.xml.h:127
+#: ../src/org.mate.marco.gschema.xml.h:130
 msgid "Move window to workspace 10"
 msgstr "Премешта прозор на радни простор број 10"
 
 #: ../src/50-marco-window-key.xml.in.h:39
-#: ../src/org.mate.marco.gschema.xml.h:128
+#: ../src/org.mate.marco.gschema.xml.h:131
 msgid "Move window to workspace 11"
 msgstr "Премешта прозор на радни простор број 11"
 
 #: ../src/50-marco-window-key.xml.in.h:40
-#: ../src/org.mate.marco.gschema.xml.h:129
+#: ../src/org.mate.marco.gschema.xml.h:132
 msgid "Move window to workspace 12"
 msgstr "Премешта прозор на радни простор број 12"
 
 #: ../src/50-marco-window-key.xml.in.h:41
-#: ../src/org.mate.marco.gschema.xml.h:130
+#: ../src/org.mate.marco.gschema.xml.h:133
 msgid "Move window one workspace to the left"
 msgstr "Премешта прозор један радни простор улево"
 
 #: ../src/50-marco-window-key.xml.in.h:42
-#: ../src/org.mate.marco.gschema.xml.h:131
+#: ../src/org.mate.marco.gschema.xml.h:134
 msgid "Move window one workspace to the right"
 msgstr "Премешта прозор један радни простор удесно"
 
 #: ../src/50-marco-window-key.xml.in.h:43
-#: ../src/org.mate.marco.gschema.xml.h:132
+#: ../src/org.mate.marco.gschema.xml.h:135
 msgid "Move window one workspace up"
 msgstr "Премешта прозор један радни простор на горе"
 
 #: ../src/50-marco-window-key.xml.in.h:44
-#: ../src/org.mate.marco.gschema.xml.h:133
+#: ../src/org.mate.marco.gschema.xml.h:136
 msgid "Move window one workspace down"
 msgstr "Премешта прозор један радни простор на доле"
 
@@ -747,18 +752,28 @@ msgid ""
 msgstr "Режим постављања прозора указује како се постављају нови прозори. „automatic“ — значи да систем самостално бира положај у зависности од расположивог простора на радној површи, или једноставном каскадом ако нема простора; „pointer“ — значи да се нови прозори постављају у складу са положајем показивача миша; „manual“ — значи да корисник мора ручно да постави нови прозор помоћу миша или тастатуре."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
+msgid "List of applications ignored by show-desktop"
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:58
+msgid ""
+"Comma separated class list. Each running GUI application referenced to given"
+" windows manager class will be ignored by 'Show Desktop' functionality."
+msgstr ""
+
+#: ../src/org.mate.marco.gschema.xml.h:59
 msgid "Name of workspace"
 msgstr "Назив радног простора"
 
-#: ../src/org.mate.marco.gschema.xml.h:58
+#: ../src/org.mate.marco.gschema.xml.h:60
 msgid "The name of a workspace."
 msgstr "Назив радног простора."
 
-#: ../src/org.mate.marco.gschema.xml.h:59
+#: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Run a defined command"
 msgstr "Покреће одређену наредбу"
 
-#: ../src/org.mate.marco.gschema.xml.h:60
+#: ../src/org.mate.marco.gschema.xml.h:62
 msgid ""
 "The keybinding that runs the correspondingly-numbered command in "
 "/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
@@ -768,7 +783,7 @@ msgid ""
 "then there will be no keybinding for this action."
 msgstr "Комбинација тастера која покреће одговарајуће означену наредбу у „/apps/marco/keybinding_commands“ кључу. Облик записа је „&lt;Control&gt;a“ или „&lt;Shift&gt;&lt;Alt&gt;F1“. Програм за обраду је доста слободан и дозвољава велика или мала слова, као и скраћенице попут „&lt;Ctl&gt;“ или „&lt; Ctrl&gt;“. Ако подесите опцију на нарочити низ знакова „disabled“, онда неће бити коришћена ниједна комбинација тастера за ову акцију."
 
-#: ../src/org.mate.marco.gschema.xml.h:62
+#: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
 "The format looks like \"&lt;Control&gt;a\" or "
 "\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
@@ -777,7 +792,7 @@ msgid ""
 "then there will be no keybinding for this action."
 msgstr "Облик записа је „&lt;Control&gt;a“ или „&lt;Shift&gt;&lt;Alt&gt;F1“. Програм за обраду је доста слободан и дозвољава велика или мала слова, као и скраћенице попут „&lt;Ctl&gt;“ или „&lt; Ctrl&gt;“. Ако подесите опцију на нарочити низ знакова „disabled“, онда неће бити коришћена ниједна комбинација тастера за ову акцију."
 
-#: ../src/org.mate.marco.gschema.xml.h:80
+#: ../src/org.mate.marco.gschema.xml.h:82
 msgid ""
 "The format looks like \"&lt;Control&gt;a\" or "
 "\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
@@ -788,71 +803,71 @@ msgid ""
 "one of the keys it uses."
 msgstr "Облик записа је „&lt;Control&gt;a“ или „&lt;Shift&gt;&lt;Alt&gt;F1“. Програм за обраду је доста слободан и дозвољава велика или мала слова, као и скраћенице попут „&lt;Ctl&gt;“ или „&lt; Ctrl&gt;“. Ако подесите опцију на нарочити низ знакова „disabled“, онда неће бити коришћена ниједна комбинација тастера за ову акцију. Можете обрнути комбинацију тастера притиском на „shift“, стога тастер „shift“ не може бити један од оних које овде користе."
 
-#: ../src/org.mate.marco.gschema.xml.h:81
+#: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move backward between windows of an application, using a popup window"
 msgstr "Премешта се уназад између прозора програма, користећи искачући прозор"
 
-#: ../src/org.mate.marco.gschema.xml.h:83
+#: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows, using a popup window"
 msgstr "Премешта се уназад између прозора, користећи искачући прозор"
 
-#: ../src/org.mate.marco.gschema.xml.h:84
+#: ../src/org.mate.marco.gschema.xml.h:86
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr "Премешта се између прозора на свим радним просторима, користећи искачући прозор"
 
-#: ../src/org.mate.marco.gschema.xml.h:85
+#: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr "Премешта се уназад између прозора на свим радним просторима, користећи искачући прозор"
 
-#: ../src/org.mate.marco.gschema.xml.h:87
+#: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr "Премешта се уназад између панела и радне површи, користећи искачући прозор"
 
-#: ../src/org.mate.marco.gschema.xml.h:89
+#: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between windows of an application immediately"
 msgstr "Премешта се уназад између прозора програма одмах"
 
-#: ../src/org.mate.marco.gschema.xml.h:91
+#: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows immediately"
 msgstr "Премешта се уназад између прозора одмах"
 
-#: ../src/org.mate.marco.gschema.xml.h:93
+#: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between panels and the desktop immediately"
 msgstr "Премешта се уназад између панела и радне површи одмах"
 
-#: ../src/org.mate.marco.gschema.xml.h:100
+#: ../src/org.mate.marco.gschema.xml.h:103
 msgid "Commands to run in response to keybindings"
 msgstr "Наредбе за покретање као одговор на свезе тастера"
 
-#: ../src/org.mate.marco.gschema.xml.h:101
+#: ../src/org.mate.marco.gschema.xml.h:104
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr "Кључ „/apps/marco/global_keybindings/run_command_N“ одређује комбинације тастера које одговарају овим наредбама. Притиском комбинације тастера за покрени_наредбу_Н ће извршити наредбу_Н."
 
-#: ../src/org.mate.marco.gschema.xml.h:102
+#: ../src/org.mate.marco.gschema.xml.h:105
 msgid "The screenshot command"
 msgstr "Наредба за снимак екрана"
 
-#: ../src/org.mate.marco.gschema.xml.h:103
+#: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr "Кључ „/apps/marco/global_keybindings/run_command_screenshot“ одређује комбинацију тастера која покреће наредбу наведену овим подешавањем."
 
-#: ../src/org.mate.marco.gschema.xml.h:104
+#: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The window screenshot command"
 msgstr "Наредба снимка екрана прозора"
 
-#: ../src/org.mate.marco.gschema.xml.h:105
+#: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr "Кључ „/apps/marco/global_keybindings/run_command_window_screenshot“ одређује комбинацију тастера која покреће наредбу наведену овим подешавањем."
 
-#: ../src/org.mate.marco.gschema.xml.h:109
+#: ../src/org.mate.marco.gschema.xml.h:112
 msgid "Toggle whether a window will always be visible over other windows"
 msgstr "Одлучује да ли ће прозор увек бити видљив преко других прозора"
 
@@ -900,7 +915,7 @@ msgstr "Недостаје потребан композитни додатак 
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Нисам успео да отворим екран система Х прозора „%s“\n"
 
-#: ../src/core/keybindings.c:716
+#: ../src/core/keybindings.c:720
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -909,7 +924,7 @@ msgstr "Неки други програм већ користи тастер �
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2353
+#: ../src/core/keybindings.c:2374
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -917,15 +932,33 @@ msgid ""
 "%s"
 msgstr "Дошло је до грешке покретања <tt>%s</tt>:\n\n%s"
 
-#: ../src/core/keybindings.c:2442
+#: ../src/core/keybindings.c:2463
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Ниједна наредба „%d“ није одређена.\n"
 
-#: ../src/core/keybindings.c:3453
+#: ../src/core/keybindings.c:3475
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Није одређена ниједна наредба терминала.\n"
+
+#: ../src/core/keybindings.c:3614
+#, c-format
+msgid "<tt>Rename Workspace</tt>"
+msgstr ""
+
+#: ../src/core/keybindings.c:3615
+#, c-format
+msgid "New Workspace Name:"
+msgstr ""
+
+#: ../src/core/keybindings.c:3626
+msgid "OK"
+msgstr ""
+
+#: ../src/core/keybindings.c:3626
+msgid "Cancel"
+msgstr ""
 
 #: ../src/core/main.c:131
 #, c-format
@@ -996,37 +1029,37 @@ msgstr "Нисам успео поново да покренем: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:591 ../src/core/prefs.c:744
+#: ../src/core/prefs.c:599 ../src/core/prefs.c:752
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr "%d смештено у кључу Гпоодешавања %s је ван опсега %d до %d\n"
 
-#: ../src/core/prefs.c:1038
+#: ../src/core/prefs.c:1046
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr "Решења за оштећене програме су искључена. Неке апликације се могу понашати чудно.\n"
 
-#: ../src/core/prefs.c:1105
+#: ../src/core/prefs.c:1125
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "Не могу да обрадим опис „%s“ из кључа „%s“ у гномовим подешавањима\n"
 
-#: ../src/core/prefs.c:1167
+#: ../src/core/prefs.c:1187
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "„%s“ је пронађен у бази подешавања што није исправна вредност за типку која мења понашање тастера миша\n"
 
-#: ../src/core/prefs.c:1693
+#: ../src/core/prefs.c:1743
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "„%s“ из базе са подешавањима није исправна комбинација тастера „%s“\n"
 
-#: ../src/core/prefs.c:1996
+#: ../src/core/prefs.c:2046
 #, c-format
 msgid "Workspace %d"
 msgstr "Радни простор бр. %d"
@@ -1148,13 +1181,13 @@ msgid "Window manager error: "
 msgstr "Грешка управника прозора: "
 
 #. Translators: This is the title used on dialog boxes
-#: ../src/core/util.c:569 ../src/marco.desktop.in.h:1
+#: ../src/core/util.c:569 ../src/core/util.c:667 ../src/marco.desktop.in.h:1
 #: ../src/marco-wm.desktop.in.h:1
 msgid "Marco"
 msgstr "Метасити"
 
 #. first time through
-#: ../src/core/window.c:5764
+#: ../src/core/window.c:5765
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1167,7 +1200,7 @@ msgstr "Прозор „%s“ је поставио „SM_CLIENT_ID“ на са
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6329
+#: ../src/core/window.c:6330
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1237,47 +1270,47 @@ msgstr "Својство „%s“ прозора 0x%lx садржи неиспр
 msgid "Usage: %s\n"
 msgstr "Употреба: %s\n"
 
-#: ../src/ui/frames.c:1103
+#: ../src/ui/frames.c:1098
 msgid "Close Window"
 msgstr "Затвори прозор"
 
-#: ../src/ui/frames.c:1106
+#: ../src/ui/frames.c:1101
 msgid "Window Menu"
 msgstr "Изборник прозора"
 
-#: ../src/ui/frames.c:1109
+#: ../src/ui/frames.c:1104
 msgid "Minimize Window"
 msgstr "Умањи прозор"
 
-#: ../src/ui/frames.c:1112
+#: ../src/ui/frames.c:1107
 msgid "Maximize Window"
 msgstr "Увећај прозор"
 
-#: ../src/ui/frames.c:1115
+#: ../src/ui/frames.c:1110
 msgid "Restore Window"
 msgstr "Врати величину прозору"
 
-#: ../src/ui/frames.c:1118
+#: ../src/ui/frames.c:1113
 msgid "Roll Up Window"
 msgstr "Замотај прозор"
 
-#: ../src/ui/frames.c:1121
+#: ../src/ui/frames.c:1116
 msgid "Unroll Window"
 msgstr "Одмотај прозор"
 
-#: ../src/ui/frames.c:1124
+#: ../src/ui/frames.c:1119
 msgid "Keep Window On Top"
 msgstr "Стави прозор у први план"
 
-#: ../src/ui/frames.c:1127
+#: ../src/ui/frames.c:1122
 msgid "Remove Window From Top"
 msgstr "Склони прозор из првог плана"
 
-#: ../src/ui/frames.c:1130
+#: ../src/ui/frames.c:1125
 msgid "Always On Visible Workspace"
 msgstr "Увек на приказаном радном простору"
 
-#: ../src/ui/frames.c:1133
+#: ../src/ui/frames.c:1128
 msgid "Put Window On Only One Workspace"
 msgstr "Стави прозор само на један радни простор"
 
@@ -1363,22 +1396,22 @@ msgstr "Премести на радни простор и_спод"
 msgid "_Close"
 msgstr "_Затвори"
 
-#: ../src/ui/menu.c:196
+#: ../src/ui/menu.c:200
 #, c-format
 msgid "Workspace %d%n"
 msgstr "Радни простор %d%n"
 
-#: ../src/ui/menu.c:206
+#: ../src/ui/menu.c:210
 #, c-format
 msgid "Workspace 1_0"
 msgstr "1_0° радни простор"
 
-#: ../src/ui/menu.c:208
+#: ../src/ui/menu.c:212
 #, c-format
 msgid "Workspace %s%d"
 msgstr "%s%d° радни простор"
 
-#: ../src/ui/menu.c:387
+#: ../src/ui/menu.c:391
 msgid "Move to Another _Workspace"
 msgstr "Премести на други _радни простор"
 
@@ -1464,7 +1497,7 @@ msgstr "Мод5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:116
+#: ../src/ui/resizepopup.c:115
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -2047,193 +2080,100 @@ msgstr "Елемент <%s> је наведен два пута у овој те
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Нисам успео да пронађем исправну датотеку за тему „%s“\n"
 
-#: ../src/ui/theme-viewer.c:99
-msgid "_Windows"
-msgstr "_Прозори"
-
-#: ../src/ui/theme-viewer.c:100
-msgid "_Dialog"
-msgstr "_Прозорче"
-
-#: ../src/ui/theme-viewer.c:101
-msgid "_Modal dialog"
-msgstr "_Важно прозорче"
-
-#: ../src/ui/theme-viewer.c:102
-msgid "_Utility"
-msgstr "_Помагало"
-
-#: ../src/ui/theme-viewer.c:103
-msgid "_Splashscreen"
-msgstr "_Поздравни екран"
-
-#: ../src/ui/theme-viewer.c:104
-msgid "_Top dock"
-msgstr "_Горња лука"
-
-#: ../src/ui/theme-viewer.c:105
-msgid "_Bottom dock"
-msgstr "_Доња лука"
-
-#: ../src/ui/theme-viewer.c:106
-msgid "_Left dock"
-msgstr "_Лева лука"
-
-#: ../src/ui/theme-viewer.c:107
-msgid "_Right dock"
-msgstr "_Десна лука"
-
-#: ../src/ui/theme-viewer.c:108
-msgid "_All docks"
-msgstr "_Све луке"
-
-#: ../src/ui/theme-viewer.c:109
-msgid "Des_ktop"
-msgstr "Радна _површ"
-
-#: ../src/ui/theme-viewer.c:115
-msgid "Open another one of these windows"
-msgstr "Отвори још једно од ових прозора"
-
-#: ../src/ui/theme-viewer.c:117
-msgid "This is a demo button with an 'open' icon"
-msgstr "Ово је пробно дугме са иконицом „отвори“"
-
-#: ../src/ui/theme-viewer.c:119
-msgid "This is a demo button with a 'quit' icon"
-msgstr "Ово је пробно дугме са иконицом „изађи“"
-
-#: ../src/ui/theme-viewer.c:253
+#: ../src/ui/theme-viewer.c:266
 msgid "This is a sample message in a sample dialog"
 msgstr "Ово је пример поруке у пробном прозорчету"
 
-#: ../src/ui/theme-viewer.c:337
+#: ../src/ui/theme-viewer.c:350
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Лажна ставка изборника %d\n"
 
-#: ../src/ui/theme-viewer.c:372
+#: ../src/ui/theme-viewer.c:386
 msgid "Border-only window"
 msgstr "Прозор само са ивицом"
 
-#: ../src/ui/theme-viewer.c:374
+#: ../src/ui/theme-viewer.c:388
 msgid "Bar"
 msgstr "Трака"
 
-#: ../src/ui/theme-viewer.c:391
+#: ../src/ui/theme-viewer.c:405
 msgid "Normal Application Window"
 msgstr "Обичан прозор програма"
 
-#: ../src/ui/theme-viewer.c:395
+#: ../src/ui/theme-viewer.c:409
 msgid "Dialog Box"
 msgstr "Прозорче"
 
-#: ../src/ui/theme-viewer.c:399
+#: ../src/ui/theme-viewer.c:413
 msgid "Modal Dialog Box"
 msgstr "Важно прозорче"
 
-#: ../src/ui/theme-viewer.c:403
+#: ../src/ui/theme-viewer.c:417
 msgid "Utility Palette"
 msgstr "Палета алата"
 
-#: ../src/ui/theme-viewer.c:407
+#: ../src/ui/theme-viewer.c:421
 msgid "Torn-off Menu"
 msgstr "Откинути изборник"
 
-#: ../src/ui/theme-viewer.c:411
+#: ../src/ui/theme-viewer.c:425
 msgid "Border"
 msgstr "Ивица"
 
-#: ../src/ui/theme-viewer.c:739
+#: ../src/ui/theme-viewer.c:782
 #, c-format
 msgid "Button layout test %d"
 msgstr "Проба распореда дугмића %d"
 
-#: ../src/ui/theme-viewer.c:768
+#: ../src/ui/theme-viewer.c:807
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g милисекунде за исцртавање оквира једног прозора"
 
-#: ../src/ui/theme-viewer.c:812
+#: ../src/ui/theme-viewer.c:847
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Употреба: „marco-theme-viewer“ [НАЗИВТЕМЕ]\n"
 
-#: ../src/ui/theme-viewer.c:819
+#: ../src/ui/theme-viewer.c:854
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Грешка учитавања теме: %s\n"
 
-#: ../src/ui/theme-viewer.c:825
+#: ../src/ui/theme-viewer.c:860
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Учитана је тема „%s“ за %g секунде\n"
 
-#: ../src/ui/theme-viewer.c:868
+#: ../src/ui/theme-viewer.c:904
 msgid "Normal Title Font"
 msgstr "Обичан словни лик наслова"
 
-#: ../src/ui/theme-viewer.c:874
+#: ../src/ui/theme-viewer.c:910
 msgid "Small Title Font"
 msgstr "Мали словни лик наслова"
 
-#: ../src/ui/theme-viewer.c:880
+#: ../src/ui/theme-viewer.c:916
 msgid "Large Title Font"
 msgstr "Велики словни лик наслова"
 
-#: ../src/ui/theme-viewer.c:885
+#: ../src/ui/theme-viewer.c:921
 msgid "Button Layouts"
 msgstr "Распоред дугмића"
 
-#: ../src/ui/theme-viewer.c:890
+#: ../src/ui/theme-viewer.c:926
 msgid "Benchmark"
 msgstr "Провера брзине"
 
-#: ../src/ui/theme-viewer.c:937
+#: ../src/ui/theme-viewer.c:983
 msgid "Window Title Goes Here"
 msgstr "Овде иде наслов прозора"
 
-#: ../src/ui/theme-viewer.c:1042
+#: ../src/ui/theme-viewer.c:1088
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
 msgstr "Нацртах %d оквира за %g клијентских секунди (%g милисекунди по оквиру) и %g секунди времена на зидном часовнику укључујући и ресурсе Икс сервера (%g милисекунди по оквиру)\n"
-
-#: ../src/ui/theme-viewer.c:1261
-msgid "position expression test returned TRUE but set error"
-msgstr "провера израза положаја је вратила тачно, али је поставила грешку"
-
-#: ../src/ui/theme-viewer.c:1263
-msgid "position expression test returned FALSE but didn't set error"
-msgstr "провера израза положаја је вратила нетачно, али није поставила грешку"
-
-#: ../src/ui/theme-viewer.c:1267
-msgid "Error was expected but none given"
-msgstr "Очекивана је грешка али није дата"
-
-#: ../src/ui/theme-viewer.c:1269
-#, c-format
-msgid "Error %d was expected but %d given"
-msgstr "Очекивана је грешка „%d“, али је дата „%d“"
-
-#: ../src/ui/theme-viewer.c:1275
-#, c-format
-msgid "Error not expected but one was returned: %s"
-msgstr "Грешка није очекивана али је враћена једна: %s"
-
-#: ../src/ui/theme-viewer.c:1279
-#, c-format
-msgid "x value was %d, %d was expected"
-msgstr "x вредност беше „%d“, а очекивана је „%d“"
-
-#: ../src/ui/theme-viewer.c:1282
-#, c-format
-msgid "y value was %d, %d was expected"
-msgstr "y вредност беше „%d“, а очекивана је „%d“"
-
-#: ../src/ui/theme-viewer.c:1347
-#, c-format
-msgid "%d coordinate expressions parsed in %g seconds (%g seconds average)\n"
-msgstr "%d израза координата је обрађено за %g секунде (просек %g секунде)\n"
