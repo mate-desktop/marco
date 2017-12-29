@@ -5399,6 +5399,27 @@ meta_window_client_message (MetaWindow *window,
 
       meta_window_update_fullscreen_monitors (window, top, bottom, left, right);
     }
+  else if (event->xclient.message_type ==
+           display->atom__GTK_SHOW_WINDOW_MENU)
+    {
+      gulong x_root, y_root;
+      guint32 timestamp;
+      int button;
+
+      if (meta_prefs_get_raise_on_click ())
+        meta_window_raise (window);
+
+      timestamp = meta_display_get_current_time_roundtrip (display);
+      x_root = event->xclient.data.l[1];
+      y_root = event->xclient.data.l[2];
+      button = 3;
+
+      meta_window_show_menu (window,
+                             x_root,
+                             y_root,
+                             button,
+                             timestamp);
+    }
 
   return FALSE;
 }
