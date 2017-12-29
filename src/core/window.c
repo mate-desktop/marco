@@ -2902,6 +2902,7 @@ meta_window_make_fullscreen_internal (MetaWindow  *window)
       meta_window_save_rect (window);
 
       window->fullscreen = TRUE;
+      window->tile_resized = FALSE;
       window->force_save_user_rect = FALSE;
 
       meta_stack_freeze (window->screen->stack);
@@ -2938,7 +2939,11 @@ meta_window_unmake_fullscreen (MetaWindow  *window)
                   "Unfullscreening %s\n", window->desc);
 
       window->fullscreen = FALSE;
-      target_rect = window->saved_rect;
+
+      if(!META_WINDOW_TILED (window))
+        target_rect = window->saved_rect;
+      else
+        meta_window_get_current_tile_area(window, &target_rect);
 
       /* Window's size hints may have changed while maximized, making
        * saved_rect invalid.  #329152
