@@ -2556,7 +2556,7 @@ handle_move_to_corner_backend (MetaDisplay    *display,
   }
 
   meta_window_move_resize (window,
-          FALSE,
+          TRUE,
           new_x,
           new_y,
           window->rect.width,
