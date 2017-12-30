@@ -2937,7 +2937,7 @@ meta_window_unmake_fullscreen (MetaWindow  *window)
 
       meta_topic (META_DEBUG_WINDOW_OPS,
                   "Unfullscreening %s\n", window->desc);
-
+      
       window->fullscreen = FALSE;
 
       if(!META_WINDOW_TILED (window))
