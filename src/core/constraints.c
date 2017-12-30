@@ -800,7 +800,7 @@ constrain_maximization (MetaWindow         *window,
 
   /* Determine whether constraint applies; exit if it doesn't */
   if ((!window->maximized_horizontally && !window->maximized_vertically) ||
-      META_WINDOW_SIDE_TILED (window))
+      META_WINDOW_TILED (window))
     return TRUE;
 
   /* Calculate target_size = maximized size of (window + frame) */
