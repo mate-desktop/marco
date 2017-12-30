@@ -130,6 +130,22 @@
 	_description="Move window to center of screen" />
 
 	<KeyListEntry
+	name="move-to-monitor-n"
+	_description="Move window to north (top) monitor" />
+
+	<KeyListEntry
+	name="move-to-monitor-s"
+	_description="Move window to south (bottom) monitor" />
+
+	<KeyListEntry
+	name="move-to-monitor-e"
+	_description="Move window to east (right) monitor" />
+
+	<KeyListEntry
+	name="move-to-monitor-w"
+	_description="Move window to west (left) monitor" />
+
+	<KeyListEntry
 	name="move-to-workspace-1"
 	_description="Move window to workspace 1"
 	value="1"
