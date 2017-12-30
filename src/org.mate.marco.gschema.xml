@@ -948,6 +948,26 @@
       <summary>Move window to center of screen</summary>
       <description>The format looks like "&lt;Control&gt;a" or "&lt;Shift&gt;&lt;Alt&gt;F1". The parser is fairly liberal and allows lower or upper case, and also abbreviations such as "&lt;Ctl&gt;" and "&lt;Ctrl&gt;". If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
     </key>
+      <key name="move-to-monitor-n" type="s">
+      <default>'disabled'</default>
+      <summary>Move window to north (top) monitor</summary>
+      <description>The format looks like "&lt;Control&gt;a" or "&lt;Shift&gt;&lt;Alt&gt;F1". The parser is fairly liberal and allows lower or upper case, and also abbreviations such as "&lt;Ctl&gt;" and "&lt;Ctrl&gt;". If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
+    </key>
+    <key name="move-to-monitor-s" type="s">
+      <default>'disabled'</default>
+      <summary>Move window to south (bottom) monitor</summary>
+      <description>The format looks like "&lt;Control&gt;a" or "&lt;Shift&gt;&lt;Alt&gt;F1". The parser is fairly liberal and allows lower or upper case, and also abbreviations such as "&lt;Ctl&gt;" and "&lt;Ctrl&gt;". If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
+    </key>
+    <key name="move-to-monitor-e" type="s">
+      <default>'disabled'</default>
+      <summary>Move window to east (right) monitor</summary>
+      <description>The format looks like "&lt;Control&gt;a" or "&lt;Shift&gt;&lt;Alt&gt;F1". The parser is fairly liberal and allows lower or upper case, and also abbreviations such as "&lt;Ctl&gt;" and "&lt;Ctrl&gt;". If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
+    </key>
+    <key name="move-to-monitor-w" type="s">
+      <default>'disabled'</default>
+      <summary>Move window to west (left) monitor</summary>
+      <description>The format looks like "&lt;Control&gt;a" or "&lt;Shift&gt;&lt;Alt&gt;F1". The parser is fairly liberal and allows lower or upper case, and also abbreviations such as "&lt;Ctl&gt;" and "&lt;Ctrl&gt;". If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
+    </key>
   </schema>
 
 </schemalist>
