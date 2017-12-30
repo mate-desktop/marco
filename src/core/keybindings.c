@@ -2680,37 +2680,20 @@ handle_move_to_monitor  (MetaDisplay    *display,
                          XEvent         *event,
                          MetaKeyBinding *binding)
 {  
-  MetaScreenDirection move_direction = binding->handler->data;
-  MetaXineramaScreenInfo* current;
-  MetaXineramaScreenInfo* neighbour;
-  MetaRectangle current_window_rect;
-  int new_x;
-  int new_y;
+  const MetaScreenDirection move_direction = binding->handler->data;
+  const MetaXineramaScreenInfo* current;
+  const MetaXineramaScreenInfo* neighbour;
   
-  
-   current = meta_screen_get_xinerama_for_window(screen, window);
-   neighbour = meta_screen_get_xinerama_neighbor(screen, current->number, move_direction);
+  current = meta_screen_get_xinerama_for_window(screen, window);
+  neighbour = meta_screen_get_xinerama_neighbor(screen, current->number, move_direction);
 
-   if(neighbour == NULL ||
-      current->number == neighbour->number)
-     return;
+  if(neighbour == NULL ||
+     current->number == neighbour->number)
+    return;
 
-   if(META_WINDOW_TILED (window))
-     {
-       window->tile_monitor_number = neighbour->number;
-       return;
-     }
-
-   meta_window_get_client_root_coords(window, &current_window_rect);
-
-   new_x = current_window_rect.x - current->rect.x + neighbour->rect.x;
-   new_y = current_window_rect.y - current->rect.y + neighbour->rect.y;
-   /* target_rect.width = window->rect.width; */
-   /* target_rect.height = window->rect.height; */
-   /* Maybe do some resizing? */
-   
-   meta_window_move(window, TRUE, new_x, new_y);
-   
+  meta_window_move_to_monitor(window,
+                              current,
+                              neighbour);
 }
 
 static gboolean
