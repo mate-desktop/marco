@@ -114,6 +114,9 @@ static MetaTileMode calculate_tiling_mode(int x,
                                           MetaRectangle work_area,
                                           int shake_threshold);
 
+static void         meta_window_rescale_to_monitor (MetaRectangle *target_rect,
+                                                    const MetaRectangle *from_monitor,
+                                                    const MetaRectangle *to_monitor);
 
 
 static gboolean update_resize_timeout (gpointer data);
@@ -2862,6 +2865,61 @@ meta_window_unmaximize (MetaWindow        *window,
 
   meta_compositor_unmaximize_window (window->display->compositor, window);
 }
+
+
+void
+meta_window_move_to_monitor(MetaWindow *window,
+                            const MetaXineramaScreenInfo *from_monitor,
+                            const MetaXineramaScreenInfo *to_monitor)
+{
+  MetaRectangle target_rect;
+  
+  if(META_WINDOW_TILED (window))
+    {
+      window->tile_monitor_number = to_monitor->number;
+      meta_window_rescale_to_monitor(&window->saved_rect,
+                                     &from_monitor->rect,
+                                     &to_monitor->rect);
+      meta_window_tile(window);
+      return;
+    }
+  
+  meta_window_get_client_root_coords(window, &target_rect);
+  meta_window_rescale_to_monitor(&target_rect,
+                                 &from_monitor->rect,
+                                 &to_monitor->rect);
+  
+  meta_window_move_resize(window, TRUE,
+                          target_rect.x,
+                          target_rect.y,
+                          target_rect.width,
+                          target_rect.height);
+}
+
+static void meta_window_rescale_to_monitor(MetaRectangle *target_rect,
+                                           const MetaRectangle *from_monitor,
+                                           const MetaRectangle *to_monitor)
+{
+  double horizontal_ratio;
+  double vertical_ratio;
+  
+  target_rect->x += to_monitor->x - from_monitor->x;
+  target_rect->y += to_monitor->y - from_monitor->y;
+  
+  if(from_monitor->width == to_monitor->width &&
+     from_monitor->height == to_monitor->height)
+    return;
+  
+  horizontal_ratio = (double)to_monitor->width / from_monitor->width;
+  vertical_ratio = (double)to_monitor->height / from_monitor->height;
+
+  target_rect->width *= horizontal_ratio;
+  target_rect->height *= vertical_ratio;
+  target_rect->x *= horizontal_ratio;
+  target_rect->y *= vertical_ratio;
+}
+
+
 
 void
 meta_window_make_above (MetaWindow  *window)

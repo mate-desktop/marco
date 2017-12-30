@@ -446,6 +446,9 @@ void        meta_window_maximize_internal  (MetaWindow        *window,
                                             MetaRectangle     *saved_rect);
 void        meta_window_unmaximize         (MetaWindow        *window,
                                             MetaMaximizeFlags  directions);
+void        meta_window_move_to_monitor    (MetaWindow *window,
+                                            const MetaXineramaScreenInfo *from_monitor,
+                                            const MetaXineramaScreenInfo *to_monitor);
 void        meta_window_make_above         (MetaWindow  *window);
 void        meta_window_unmake_above       (MetaWindow  *window);
 void        meta_window_shade              (MetaWindow  *window,
