@@ -64,7 +64,8 @@ typedef enum
   META_PREF_RESIZE_WITH_RIGHT_BUTTON,
   META_PREF_SHOW_TAB_BORDER,
   META_PREF_CENTER_NEW_WINDOWS,
-  META_PREF_SIDE_BY_SIDE_TILING,
+  META_PREF_ALLOW_TILING,
+  META_PREF_ALLOW_TOP_TILING,
   META_PREF_FORCE_FULLSCREEN,
   META_PREF_PLACEMENT_MODE,
   META_PREF_SHOW_DESKTOP_SKIP_LIST
@@ -98,8 +99,9 @@ int                         meta_prefs_get_auto_raise_delay   (void);
 MetaWrapStyle               meta_prefs_get_wrap_style         (void);
 gboolean                    meta_prefs_get_reduced_resources  (void);
 gboolean                    meta_prefs_get_mate_accessibility (void);
-gboolean                    meta_prefs_get_mate_animations   (void);
-gboolean                    meta_prefs_get_side_by_side_tiling (void);
+gboolean                    meta_prefs_get_mate_animations    (void);
+gboolean                    meta_prefs_get_allow_tiling       (void);
+gboolean                    meta_prefs_get_allow_top_tiling   (void);
 
 const char*                 meta_prefs_get_command            (int i);
 
