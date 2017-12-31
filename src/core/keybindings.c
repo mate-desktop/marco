@@ -3591,7 +3591,8 @@ handle_rename_workspace(MetaDisplay *display,
                         XEvent *event,
                         MetaKeyBinding *binding)
 {
-  gchar *window_title, *window_content, *entry_text;
+  gchar *window_title, *window_content;
+  const char *entry_text;
   GPid dialog_pid;
   
   meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace: called.\n");
