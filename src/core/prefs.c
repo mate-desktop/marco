@@ -120,7 +120,8 @@ static gboolean resize_with_right_button = FALSE;
 static gboolean show_tab_border = FALSE;
 static gboolean center_new_windows = FALSE;
 static gboolean force_fullscreen = TRUE;
-static gboolean side_by_side_tiling = FALSE;
+static gboolean allow_tiling = FALSE;
+static gboolean allow_top_tiling = TRUE;
 static GList *show_desktop_skip_list = NULL;
 
 static MetaVisualBellType visual_bell_type = META_VISUAL_BELL_FULLSCREEN_FLASH;
@@ -422,10 +423,16 @@ static MetaBoolPreference preferences_bool[] =
       &center_new_windows,
       FALSE,
     },
-    { "side-by-side-tiling",
+    { "allow-tiling",
       KEY_GENERAL_SCHEMA,
-      META_PREF_SIDE_BY_SIDE_TILING,
-      &side_by_side_tiling,
+      META_PREF_ALLOW_TILING,
+      &allow_tiling,
+      FALSE,
+    },
+    { "allow-top-tiling",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ALLOW_TOP_TILING,
+      &allow_top_tiling,
       FALSE,
     },
     { NULL, NULL, 0, NULL, FALSE },
@@ -1618,8 +1625,11 @@ meta_preference_to_string (MetaPreference pref)
     case META_PREF_FORCE_FULLSCREEN:
       return "FORCE_FULLSCREEN";
 
-    case META_PREF_SIDE_BY_SIDE_TILING:
-      return "SIDE_BY_SIDE_TILING";
+    case META_PREF_ALLOW_TILING:
+      return "ALLOW_TILING";
+
+    case META_PREF_ALLOW_TOP_TILING:
+      return "ALLOW_TOP_TILING";
 
     case META_PREF_PLACEMENT_MODE:
       return "PLACEMENT_MODE";
@@ -2288,9 +2298,15 @@ meta_prefs_get_center_new_windows (void)
 }
 
 gboolean
-meta_prefs_get_side_by_side_tiling ()
+meta_prefs_get_allow_tiling ()
 {
-  return side_by_side_tiling;
+  return allow_tiling;
+}
+
+gboolean
+meta_prefs_get_allow_top_tiling ()
+{
+  return allow_top_tiling;
 }
 
 guint
