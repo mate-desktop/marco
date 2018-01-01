@@ -7033,7 +7033,7 @@ update_move (MetaWindow  *window,
       window->tile_mode = META_TILE_NONE;
       window->tile_monitor_number = -1;
     }
-  else if (meta_prefs_get_side_by_side_tiling () &&
+  else if (meta_prefs_get_allow_tiling () &&
            !META_WINDOW_MAXIMIZED (window) &&
            !META_WINDOW_TILED (window))
     {
@@ -7061,16 +7061,16 @@ update_move (MetaWindow  *window,
       /* Check if the cursor is in a position which triggers tiling
        * and set tile_mode accordingly.
        */
-      MetaTileMode tile_mode = window->tile_mode;
+      MetaTileMode old_tile_mode = window->tile_mode;
       window->tile_mode = calculate_tiling_mode(x, y, window, monitor,
                                                 work_area, shake_threshold);
-
-
+      
+      
       if (window->tile_mode != META_TILE_NONE)
         window->tile_monitor_number = monitor->number;
 
       /* Reset resized flag when changing tile mode */
-      if (tile_mode != window->tile_mode)
+      if (old_tile_mode != window->tile_mode)
         window->tile_resized = FALSE;
     }  
 
@@ -7265,7 +7265,8 @@ static MetaTileMode calculate_tiling_mode(int x,
         return META_TILE_RIGHT; 
     }
   else if (meta_window_can_tile_maximized (window) &&
-           y >= monitor->rect.y && y <= work_area.y)
+           y >= monitor->rect.y && y <= work_area.y &&
+           meta_prefs_get_allow_top_tiling ())
     return META_TILE_MAXIMIZED; 
   else
     return META_TILE_NONE;

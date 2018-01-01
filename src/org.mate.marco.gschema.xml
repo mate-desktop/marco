@@ -176,10 +176,15 @@
       <summary>Determines if new windows are created on the center of the screen</summary>
       <description>If set to true, new windows are opened in the center of the screen. Otherwise, they are opened at the top left of the screen.</description>
     </key>
-    <key name="side-by-side-tiling" type="b">
+    <key name="allow-tiling" type="b">
       <default>true</default>
       <summary>Whether to enable side-by-side tiling</summary>
-      <description>If enabled, dropping windows on screen edges maximizes them vertically and resizes them horizontally to cover half of the available area. Drag-dropping to the top maximizes the window.</description>
+      <description>If enabled, dropping windows on screen edges maximizes them vertically and resizes them horizontally to cover half of the available area. Drag-dropping to the top maximizes the windowif allow-top-tiling is enabled.</description>
+    </key>
+    <key name="allow-top-tiling" type="b">
+      <default>true</default>
+      <summary>Wether to maximize the window when dragged to the top of the screen</summary>
+      <description>If enabled, drag-dropping a window to the top of the screen will maximize it. Only works when allow-tiling is enabled.</description>
     </key>
     <key name="placement-mode" enum="org.mate.Marco.placement_type">
       <default>'automatic'</default>
