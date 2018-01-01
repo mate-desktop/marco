@@ -111,6 +111,15 @@ keybind (switch-to-workspace-up, handle_switch_to_workspace,
 keybind (switch-to-workspace-down, handle_switch_to_workspace,
          META_MOTION_DOWN, 0)
 
+keybind (move-to-workspace-left, handle_move_to_workspace,
+         META_MOTION_LEFT, BINDING_PER_WINDOW)
+keybind (move-to-workspace-right, handle_move_to_workspace,
+         META_MOTION_RIGHT, BINDING_PER_WINDOW)
+keybind (move-to-workspace-up, handle_move_to_workspace,
+         META_MOTION_UP, BINDING_PER_WINDOW)
+keybind (move-to-workspace-down, handle_move_to_workspace,
+         META_MOTION_DOWN, BINDING_PER_WINDOW)
+
 /***********************************/
 
 /* The ones which have inverses.  These can't be bound to any keystroke
@@ -233,15 +242,6 @@ keybind (move-to-workspace-12, handle_move_to_workspace, 11, BINDING_PER_WINDOW)
  * If your definition of keybind() throws them away, you don't need to include
  * workspace.h, of course.
  */
-
-keybind (move-to-workspace-left, handle_move_to_workspace,
-         META_MOTION_LEFT, BINDING_PER_WINDOW)
-keybind (move-to-workspace-right, handle_move_to_workspace,
-         META_MOTION_RIGHT, BINDING_PER_WINDOW)
-keybind (move-to-workspace-up, handle_move_to_workspace,
-         META_MOTION_UP, BINDING_PER_WINDOW)
-keybind (move-to-workspace-down, handle_move_to_workspace,
-         META_MOTION_DOWN, BINDING_PER_WINDOW)
 
 keybind (raise-or-lower, handle_raise_or_lower, 0, BINDING_PER_WINDOW)
 keybind (raise, handle_raise, 0, BINDING_PER_WINDOW)
