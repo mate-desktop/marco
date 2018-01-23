@@ -158,12 +158,6 @@ PKG_CHECK_MODULES(ALL, glib-2.0 >= 2.36.0)
 PKG_CHECK_MODULES(MARCO_MESSAGE, gtk+-3.0 >= $GTK_MIN_VERSION)
 PKG_CHECK_MODULES(MARCO_WINDOW_DEMO, gtk+-3.0 >= $GTK_MIN_VERSION)
 
-if $PKG_CONFIG --atleast-version 1.2.0 pangoxft; then
-   echo "pangoxft found"
-else
-   AC_MSG_ERROR("Pango 1.2.0 or greater based on Xft2 is required")
-fi
-
 # Unconditionally use this dir to avoid a circular dep with matecc
 MATE_KEYBINDINGS_KEYSDIR="${datadir}/mate-control-center/keybindings"
 AC_SUBST(MATE_KEYBINDINGS_KEYSDIR)
