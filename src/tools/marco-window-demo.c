@@ -663,7 +663,6 @@ dock_cb (GSimpleAction *action,
     }
 }
 
-#if GTK_CHECK_VERSION (3, 16, 0)
 static void
 override_background_color (GtkWidget *widget,
                            GdkRGBA   *rgba)
@@ -683,7 +682,6 @@ override_background_color (GtkWidget *widget,
                                   GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
   g_object_unref (provider);
 }
-#endif
 
 static void
 desktop_cb (GSimpleAction *action,
@@ -707,11 +705,7 @@ desktop_cb (GSimpleAction *action,
   desktop_color.blue = 0.65;
   desktop_color.alpha = 1.0;
 
-#if GTK_CHECK_VERSION (3, 16, 0)
   override_background_color (window, &desktop_color);
-#else
-  gtk_widget_override_background_color (window, 0, &desktop_color);
-#endif
 
   label = focus_label (window);
 

@@ -65,7 +65,6 @@ get_window_rect (const WnckWindowDisplayInfo *win,
   rect->height = height;
 }
 
-#if GTK_CHECK_VERSION (3, 16, 0)
 static void
 get_background_color (GtkStyleContext *context,
                       GtkStateFlags    state,
@@ -84,7 +83,6 @@ get_background_color (GtkStyleContext *context,
   *color = *c;
   gdk_rgba_free (c);
 }
-#endif
 
 static void
 draw_window (GtkWidget                   *widget,
@@ -110,11 +108,8 @@ draw_window (GtkWidget                   *widget,
   if (is_active)
     meta_gtk_style_get_light_color (style, state, &color);
   else
-#if GTK_CHECK_VERSION (3, 16, 0)
     get_background_color (style, state, &color);
-#else
-    gtk_style_context_get_background_color (style, state, &color);
-#endif
+
   gdk_cairo_set_source_rgba (cr, &color);
 
   cairo_rectangle (cr,
