@@ -67,11 +67,7 @@ meta_fixed_tip_show (int root_x, int root_y,
 {
   gint w;
   gint h;
-#if GTK_CHECK_VERSION (3, 22, 0)
   GdkMonitor *mon_num;
-#else
-  gint mon_num;
-#endif
   GdkRectangle monitor;
   gint screen_right_edge;
 
@@ -99,12 +95,8 @@ meta_fixed_tip_show (int root_x, int root_y,
 
       label = gtk_label_new (NULL);
       gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
-#if GTK_CHECK_VERSION (3, 16, 0)
       gtk_label_set_xalign (GTK_LABEL (label), 0.5);
       gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-#else
-      gtk_misc_set_alignment (GTK_MISC (label), 0.5, 0.5);
-#endif
       gtk_widget_show (label);
 
       gtk_container_set_border_width (GTK_CONTAINER (tip), 4);
@@ -114,13 +106,8 @@ meta_fixed_tip_show (int root_x, int root_y,
 			G_CALLBACK (gtk_widget_destroyed), &tip);
     }
 
-#if GTK_CHECK_VERSION (3, 22, 0)
   mon_num = gdk_display_get_monitor_at_point (gdk_screen_get_display (screen), root_x, root_y);
   gdk_monitor_get_geometry (mon_num, &monitor);
-#else
-  mon_num = gdk_screen_get_monitor_at_point (screen, root_x, root_y);
-  gdk_screen_get_monitor_geometry (screen, mon_num, &monitor);
-#endif
   screen_right_edge = monitor.x + monitor.width;
 
   gtk_label_set_markup (GTK_LABEL (label), markup_text);
