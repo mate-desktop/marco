@@ -1,3 +1,22 @@
+### marco 1.20.0
+
+  * Translations update
+  * require GTK+ 3.22 and GLib 2.50
+  * build: drop unneeded pangoxft requirement
+  * Small bugfix for the move_to_X keybinds
+  * Bugfix for monitors of different sizes
+  * Restructured monitor keybinds and adjust save_rect
+  * Implemented simple shourtcuts to move window to another monitor
+  * schema: fix typos
+  * compositor: don't try to paint window that is not viewable, fix #324
+  * Fix wrong result in meta_window_titlebar_is_onscreen() for windows without a frame
+  * Add support for gtk3 _GTK_SHOW_WINDOW_MENU event
+  * More elegant solution for handling new move-to-workspace keybinds
+  * Implemented a setting to disable top tiling
+  * Implemented tabpopup when moving window to different workspace
+  * keybindings.c: Fix build warning:
+  * Reset tile_resized to false when fullscreening
+
 ### marco 1.19.2
 
   * Translations update
