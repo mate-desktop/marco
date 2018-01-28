@@ -8,14 +8,15 @@
 # Νίκος Κοντ. <nkontopos@gmail.com>, 2016
 # Nisok Kosin <nikos.efthimiou@gmail.com>, 2012
 # Petros Freris (Πέτρος Φρέρης) <petrosfreris@gmail.com>, 2013
+# Αλέξανδρος Καπετάνιος <alexandros@gnugr.org>, 2018
 # Γιώργος Μηντζιλώνης, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-06 11:12+0100\n"
-"PO-Revision-Date: 2017-11-13 18:51+0000\n"
-"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
+"POT-Creation-Date: 2018-01-15 17:36+0100\n"
+"PO-Revision-Date: 2018-01-15 18:56+0000\n"
+"Last-Translator: Αλέξανδρος Καπετάνιος <alexandros@gnugr.org>\n"
 "Language-Team: Greek (http://www.transifex.com/mate/MATE/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,371 +29,407 @@ msgid "Desktop"
 msgstr "Επιφάνεια εργασίας"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:98
+#: ../src/org.mate.marco.gschema.xml.h:100
 msgid "Show the panel's \"Run Application\" dialog box"
 msgstr "Εμφάνιση του διαλόγου \"Εκτέλεση εφαρμογής\" του πίνακα εφαρμογών"
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:97
+#: ../src/org.mate.marco.gschema.xml.h:99
 msgid "Show the panel's main menu"
 msgstr "Εμφάνιση του κύριου μενού του πίνακα εφαρμογών"
 
 #: ../src/50-marco-desktop-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:99
+#: ../src/org.mate.marco.gschema.xml.h:101
 msgid "Take a screenshot"
 msgstr "Λήψη στιγμιότυπου οθόνης"
 
 #: ../src/50-marco-desktop-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:100
+#: ../src/org.mate.marco.gschema.xml.h:102
 msgid "Take a screenshot of a window"
 msgstr "Λήψη στιγμιότυπου ενός παραθύρου"
 
 #: ../src/50-marco-desktop-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:101
+#: ../src/org.mate.marco.gschema.xml.h:103
 msgid "Run a terminal"
 msgstr "Εκτέλεση ενός τερματικού"
 
 #: ../src/50-marco-desktop-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:102
+#: ../src/org.mate.marco.gschema.xml.h:104
 msgid "Rename current workspace"
-msgstr ""
+msgstr "Μετονομασία τρέχοντος χώρου εργασίας"
 
 #: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
 msgstr "Διαχείριση Παραθύρων"
 
 #: ../src/50-marco-global-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:84
+#: ../src/org.mate.marco.gschema.xml.h:86
 msgid "Move between windows, using a popup window"
 msgstr "Εναλλαγή μεταξύ παραθύρων, με αναδυόμενο παράθυρο"
 
 #: ../src/50-marco-global-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:81
+#: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move between windows of an application, using a popup window"
 msgstr "Εναλλαγή μεταξύ παραθύρων μιας εφαρμογής, με αναδυόμενο παράθυρο"
 
 #: ../src/50-marco-global-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:88
+#: ../src/org.mate.marco.gschema.xml.h:90
 msgid "Move between panels and the desktop, using a popup window"
 msgstr "Εναλλαγή μεταξύ πινάκων εφαρμογών και επιφ. εργασίας, με αναδυόμενο παράθυρο"
 
 #: ../src/50-marco-global-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:92
+#: ../src/org.mate.marco.gschema.xml.h:94
 msgid "Move between windows immediately"
 msgstr "Άμεση εναλλαγή μεταξύ παραθύρων"
 
 #: ../src/50-marco-global-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:90
+#: ../src/org.mate.marco.gschema.xml.h:92
 msgid "Move between windows of an application immediately"
 msgstr "Άμεση εναλλαγή μεταξύ παραθύρων μιας εφαρμογής"
 
 #: ../src/50-marco-global-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:94
+#: ../src/org.mate.marco.gschema.xml.h:96
 msgid "Move between panels and the desktop immediately"
 msgstr "Άμεση εναλλαγή μεταξύ πινάκων εφαρμογών και επιφάνειας εργασίας"
 
 #: ../src/50-marco-global-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:96
+#: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Hide all normal windows and set focus to the desktop"
 msgstr "Απόκρυψη όλων των κανονικών παραθύρων και εστίαση στην επιφάνεια εργασίας"
 
 #: ../src/50-marco-global-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:63
+#: ../src/org.mate.marco.gschema.xml.h:65
 msgid "Switch to workspace 1"
 msgstr "Αλλαγή στο χώρο εργασίας 1"
 
 #: ../src/50-marco-global-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:65
+#: ../src/org.mate.marco.gschema.xml.h:67
 msgid "Switch to workspace 2"
 msgstr "Αλλαγή στο χώρο εργασίας 2"
 
 #: ../src/50-marco-global-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:66
+#: ../src/org.mate.marco.gschema.xml.h:68
 msgid "Switch to workspace 3"
 msgstr "Αλλαγή στο χώρο εργασίας 3"
 
 #: ../src/50-marco-global-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:67
+#: ../src/org.mate.marco.gschema.xml.h:69
 msgid "Switch to workspace 4"
 msgstr "Αλλαγή στο χώρο εργασίας 4"
 
 #: ../src/50-marco-global-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:68
+#: ../src/org.mate.marco.gschema.xml.h:70
 msgid "Switch to workspace 5"
 msgstr "Αλλαγή στο χώρο εργασίας 5"
 
 #: ../src/50-marco-global-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:69
+#: ../src/org.mate.marco.gschema.xml.h:71
 msgid "Switch to workspace 6"
 msgstr "Αλλαγή στο χώρο εργασίας 6"
 
 #: ../src/50-marco-global-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:70
+#: ../src/org.mate.marco.gschema.xml.h:72
 msgid "Switch to workspace 7"
 msgstr "Αλλαγή στο χώρο εργασίας 7"
 
 #: ../src/50-marco-global-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:71
+#: ../src/org.mate.marco.gschema.xml.h:73
 msgid "Switch to workspace 8"
 msgstr "Αλλαγή στο χώρο εργασίας 8"
 
 #: ../src/50-marco-global-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:72
+#: ../src/org.mate.marco.gschema.xml.h:74
 msgid "Switch to workspace 9"
 msgstr "Αλλαγή στο χώρο εργασίας 9"
 
 #: ../src/50-marco-global-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:73
+#: ../src/org.mate.marco.gschema.xml.h:75
 msgid "Switch to workspace 10"
 msgstr "Αλλαγή στο χώρο εργασίας 10"
 
 #: ../src/50-marco-global-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:74
+#: ../src/org.mate.marco.gschema.xml.h:76
 msgid "Switch to workspace 11"
 msgstr "Αλλαγή στο χώρο εργασίας 11"
 
 #: ../src/50-marco-global-key.xml.in.h:20
-#: ../src/org.mate.marco.gschema.xml.h:75
+#: ../src/org.mate.marco.gschema.xml.h:77
 msgid "Switch to workspace 12"
 msgstr "Αλλαγή στο χώρο εργασίας 12"
 
 #: ../src/50-marco-global-key.xml.in.h:21
-#: ../src/org.mate.marco.gschema.xml.h:76
+#: ../src/org.mate.marco.gschema.xml.h:78
 msgid "Switch to workspace on the left of the current workspace"
 msgstr "Αλλαγή στο χώρο εργασίας αριστερά του τρέχοντος"
 
 #: ../src/50-marco-global-key.xml.in.h:22
-#: ../src/org.mate.marco.gschema.xml.h:77
+#: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Switch to workspace on the right of the current workspace"
 msgstr "Αλλαγή στο χώρο εργασίας δεξιά του τρέχοντος"
 
 #: ../src/50-marco-global-key.xml.in.h:23
-#: ../src/org.mate.marco.gschema.xml.h:78
+#: ../src/org.mate.marco.gschema.xml.h:80
 msgid "Switch to workspace above the current workspace"
 msgstr "Αλλαγή στο χώρο εργασίας πάνω από τον τρέχοντα"
 
 #: ../src/50-marco-global-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:79
+#: ../src/org.mate.marco.gschema.xml.h:81
 msgid "Switch to workspace below the current workspace"
 msgstr "Αλλαγή στο χώρο εργασίας κάτω από τον τρέχοντα"
 
 #: ../src/50-marco-global-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:80
+#: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Switch to previously selected workspace"
 msgstr "Αλλαγή στον προηγούμενο επιλεγμένο χώρο εργασίας"
 
 #: ../src/50-marco-window-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:109
+#: ../src/org.mate.marco.gschema.xml.h:111
 msgid "Activate the window menu"
 msgstr "Ενεργοποίηση του μενού του παραθύρου"
 
 #: ../src/50-marco-window-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:110
+#: ../src/org.mate.marco.gschema.xml.h:112
 msgid "Toggle fullscreen mode"
 msgstr "Εναλλαγή κατάστασης πλήρους οθόνης"
 
 #: ../src/50-marco-window-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:111
+#: ../src/org.mate.marco.gschema.xml.h:113
 msgid "Toggle maximization state"
 msgstr "Εναλλαγή κατάστασης μεγιστοποίησης"
 
 #: ../src/50-marco-window-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:113
+#: ../src/org.mate.marco.gschema.xml.h:115
 msgid "Maximize window"
 msgstr "Μεγιστοποίηση παραθύρου"
 
 #: ../src/50-marco-window-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:114
+#: ../src/org.mate.marco.gschema.xml.h:116
 msgid "Restore window"
 msgstr "Επαναφορά παραθύρου"
 
 #: ../src/50-marco-window-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:115
+#: ../src/org.mate.marco.gschema.xml.h:117
 msgid "Toggle shaded state"
 msgstr "Εναλλαγή σκιασμένης κατάστασης"
 
 #: ../src/50-marco-window-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:117
+#: ../src/org.mate.marco.gschema.xml.h:119
 msgid "Close window"
 msgstr "Κλείσιμο παραθύρου"
 
 #: ../src/50-marco-window-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:116
+#: ../src/org.mate.marco.gschema.xml.h:118
 msgid "Minimize window"
 msgstr "Ελαχιστοποίηση παραθύρου"
 
 #: ../src/50-marco-window-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:118
+#: ../src/org.mate.marco.gschema.xml.h:120
 msgid "Move window"
 msgstr "Μετακίνηση παραθύρου"
 
 #: ../src/50-marco-window-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:119
+#: ../src/org.mate.marco.gschema.xml.h:121
 msgid "Resize window"
 msgstr "Αλλαγή μεγέθους παραθύρου"
 
 #: ../src/50-marco-window-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:120
+#: ../src/org.mate.marco.gschema.xml.h:122
 msgid "Toggle whether window is on all workspaces or just one"
 msgstr "Εμφάνιση παραθύρου σε όλους τους χώρους εργασίας ή μόνο σε έναν"
 
 #: ../src/50-marco-window-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:137
+#: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr "Ανασήκωση παραθύρου αν καλύπτεται από άλλο παράθυρο, αλλιώς χαμήλωμα του"
 
 #: ../src/50-marco-window-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:138
+#: ../src/org.mate.marco.gschema.xml.h:140
 msgid "Raise window above other windows"
 msgstr "Ανασήκωση παραθύρου πάνω από τα άλλα παράθυρα"
 
 #: ../src/50-marco-window-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:139
+#: ../src/org.mate.marco.gschema.xml.h:141
 msgid "Lower window below other windows"
 msgstr "Χαμήλωμα παραθύρου κάτω από τα άλλα παράθυρα"
 
 #: ../src/50-marco-window-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:140
+#: ../src/org.mate.marco.gschema.xml.h:142
 msgid "Maximize window vertically"
 msgstr "Μεγιστοποίηση ενός παραθύρου κάθετα"
 
 #: ../src/50-marco-window-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:141
+#: ../src/org.mate.marco.gschema.xml.h:143
 msgid "Maximize window horizontally"
 msgstr "Μεγιστοποίηση ενός παραθύρου οριζόντια"
 
 #: ../src/50-marco-window-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:142
+#: ../src/org.mate.marco.gschema.xml.h:144
 msgid "Tile window to east (right) side of screen"
 msgstr "Μετακίνηση παραθύρου στην ανατολική (δεξιά) μεριά της οθόνης"
 
 #: ../src/50-marco-window-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:143
+#: ../src/org.mate.marco.gschema.xml.h:145
 msgid "Tile window to west (left) side of screen"
 msgstr "Μετακίνηση παραθύρου στη δυτική (αριστερή) μεριά της οθόνης"
 
 #: ../src/50-marco-window-key.xml.in.h:20
-#: ../src/org.mate.marco.gschema.xml.h:144
+msgid "Tile window to north-west (top left) corner"
+msgstr "Παράθυρο πλακιδίων στη βορειοδυτική (πάνω αριστερή) γωνία"
+
+#: ../src/50-marco-window-key.xml.in.h:21
+msgid "Tile window to north-east (top right) corner"
+msgstr "Παράθυρο πλακιδίων στη βορειοανατολική (πάνω δεξιά) γωνία"
+
+#: ../src/50-marco-window-key.xml.in.h:22
+msgid "Tile window to south-west (bottom left) corner"
+msgstr "Παράθυρο πλακιδίων στη νοτιοδυτική (κάτω αριστερή) γωνία"
+
+#: ../src/50-marco-window-key.xml.in.h:23
+msgid "Tile window to south-east (bottom right) corner"
+msgstr "Παράθυρο πλακιδίων προς τη νοτιοανατολική (κάτω δεξιά) γωνία"
+
+#: ../src/50-marco-window-key.xml.in.h:24
+#: ../src/org.mate.marco.gschema.xml.h:150
 msgid "Move window to north-west (top left) corner"
 msgstr "Μετακίνηση του παραθύρου στην πάνω αριστερή γωνία"
 
-#: ../src/50-marco-window-key.xml.in.h:21
-#: ../src/org.mate.marco.gschema.xml.h:145
+#: ../src/50-marco-window-key.xml.in.h:25
+#: ../src/org.mate.marco.gschema.xml.h:151
 msgid "Move window to north-east (top right) corner"
 msgstr "Μετακίνηση του παραθύρου στην πάνω δεξιά γωνία"
 
-#: ../src/50-marco-window-key.xml.in.h:22
-#: ../src/org.mate.marco.gschema.xml.h:146
+#: ../src/50-marco-window-key.xml.in.h:26
+#: ../src/org.mate.marco.gschema.xml.h:152
 msgid "Move window to south-west (bottom left) corner"
 msgstr "Μετακίνηση του παραθύρου στην κάτω αριστερή γωνία"
 
-#: ../src/50-marco-window-key.xml.in.h:23
-#: ../src/org.mate.marco.gschema.xml.h:147
+#: ../src/50-marco-window-key.xml.in.h:27
+#: ../src/org.mate.marco.gschema.xml.h:153
 msgid "Move window to south-east (bottom right) corner"
 msgstr "Μετακίνηση παραθύρου στην κάτω δεξιά γωνία"
 
-#: ../src/50-marco-window-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:148
+#: ../src/50-marco-window-key.xml.in.h:28
+#: ../src/org.mate.marco.gschema.xml.h:154
 msgid "Move window to north (top) side of screen"
 msgstr "Μετακίνηση παραθύρου στην πάνω μεριά της οθόνης"
 
-#: ../src/50-marco-window-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:149
+#: ../src/50-marco-window-key.xml.in.h:29
+#: ../src/org.mate.marco.gschema.xml.h:155
 msgid "Move window to south (bottom) side of screen"
 msgstr "Μετακίνηση παραθύρου στην κάτω μεριά της οθόνης"
 
-#: ../src/50-marco-window-key.xml.in.h:26
-#: ../src/org.mate.marco.gschema.xml.h:150
+#: ../src/50-marco-window-key.xml.in.h:30
+#: ../src/org.mate.marco.gschema.xml.h:156
 msgid "Move window to east (right) side of screen"
 msgstr "Μετακίνηση παραθύρου στην δεξιά μεριά της οθόνης"
 
-#: ../src/50-marco-window-key.xml.in.h:27
-#: ../src/org.mate.marco.gschema.xml.h:151
+#: ../src/50-marco-window-key.xml.in.h:31
+#: ../src/org.mate.marco.gschema.xml.h:157
 msgid "Move window to west (left) side of screen"
 msgstr "Μετακίνηση παραθύρου στην αριστερή μεριά της οθόνης"
 
-#: ../src/50-marco-window-key.xml.in.h:28
-#: ../src/org.mate.marco.gschema.xml.h:152
+#: ../src/50-marco-window-key.xml.in.h:32
+#: ../src/org.mate.marco.gschema.xml.h:158
 msgid "Move window to center of screen"
 msgstr "Μετακίνηση του παραθύρου στο κέντρο της οθόνης"
 
-#: ../src/50-marco-window-key.xml.in.h:29
-#: ../src/org.mate.marco.gschema.xml.h:121
+#: ../src/50-marco-window-key.xml.in.h:33
+#: ../src/org.mate.marco.gschema.xml.h:159
+msgid "Move window to north (top) monitor"
+msgstr "Μετακινήστε το παράθυρο στη βόρεια (πάνω) οθόνη"
+
+#: ../src/50-marco-window-key.xml.in.h:34
+#: ../src/org.mate.marco.gschema.xml.h:160
+msgid "Move window to south (bottom) monitor"
+msgstr "Μετακινήστε το παράθυρο προς τη νότια (κάτω) οθόνη"
+
+#: ../src/50-marco-window-key.xml.in.h:35
+#: ../src/org.mate.marco.gschema.xml.h:161
+msgid "Move window to east (right) monitor"
+msgstr "Μετακινήστε το παράθυρο στην ανατολική (δεξιά) οθόνη"
+
+#: ../src/50-marco-window-key.xml.in.h:36
+#: ../src/org.mate.marco.gschema.xml.h:162
+msgid "Move window to west (left) monitor"
+msgstr "Μετακινήστε το παράθυρο στη δυτική (αριστερή) οθόνη"
+
+#: ../src/50-marco-window-key.xml.in.h:37
+#: ../src/org.mate.marco.gschema.xml.h:123
 msgid "Move window to workspace 1"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 1"
 
-#: ../src/50-marco-window-key.xml.in.h:30
-#: ../src/org.mate.marco.gschema.xml.h:122
+#: ../src/50-marco-window-key.xml.in.h:38
+#: ../src/org.mate.marco.gschema.xml.h:124
 msgid "Move window to workspace 2"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 2"
 
-#: ../src/50-marco-window-key.xml.in.h:31
-#: ../src/org.mate.marco.gschema.xml.h:123
+#: ../src/50-marco-window-key.xml.in.h:39
+#: ../src/org.mate.marco.gschema.xml.h:125
 msgid "Move window to workspace 3"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 3"
 
-#: ../src/50-marco-window-key.xml.in.h:32
-#: ../src/org.mate.marco.gschema.xml.h:124
+#: ../src/50-marco-window-key.xml.in.h:40
+#: ../src/org.mate.marco.gschema.xml.h:126
 msgid "Move window to workspace 4"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 4"
 
-#: ../src/50-marco-window-key.xml.in.h:33
-#: ../src/org.mate.marco.gschema.xml.h:125
+#: ../src/50-marco-window-key.xml.in.h:41
+#: ../src/org.mate.marco.gschema.xml.h:127
 msgid "Move window to workspace 5"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 5"
 
-#: ../src/50-marco-window-key.xml.in.h:34
-#: ../src/org.mate.marco.gschema.xml.h:126
+#: ../src/50-marco-window-key.xml.in.h:42
+#: ../src/org.mate.marco.gschema.xml.h:128
 msgid "Move window to workspace 6"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 6"
 
-#: ../src/50-marco-window-key.xml.in.h:35
-#: ../src/org.mate.marco.gschema.xml.h:127
+#: ../src/50-marco-window-key.xml.in.h:43
+#: ../src/org.mate.marco.gschema.xml.h:129
 msgid "Move window to workspace 7"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 7"
 
-#: ../src/50-marco-window-key.xml.in.h:36
-#: ../src/org.mate.marco.gschema.xml.h:128
+#: ../src/50-marco-window-key.xml.in.h:44
+#: ../src/org.mate.marco.gschema.xml.h:130
 msgid "Move window to workspace 8"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 8"
 
-#: ../src/50-marco-window-key.xml.in.h:37
-#: ../src/org.mate.marco.gschema.xml.h:129
+#: ../src/50-marco-window-key.xml.in.h:45
+#: ../src/org.mate.marco.gschema.xml.h:131
 msgid "Move window to workspace 9"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 9"
 
-#: ../src/50-marco-window-key.xml.in.h:38
-#: ../src/org.mate.marco.gschema.xml.h:130
+#: ../src/50-marco-window-key.xml.in.h:46
+#: ../src/org.mate.marco.gschema.xml.h:132
 msgid "Move window to workspace 10"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 10"
 
-#: ../src/50-marco-window-key.xml.in.h:39
-#: ../src/org.mate.marco.gschema.xml.h:131
+#: ../src/50-marco-window-key.xml.in.h:47
+#: ../src/org.mate.marco.gschema.xml.h:133
 msgid "Move window to workspace 11"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 11"
 
-#: ../src/50-marco-window-key.xml.in.h:40
-#: ../src/org.mate.marco.gschema.xml.h:132
+#: ../src/50-marco-window-key.xml.in.h:48
+#: ../src/org.mate.marco.gschema.xml.h:134
 msgid "Move window to workspace 12"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας 12"
 
-#: ../src/50-marco-window-key.xml.in.h:41
-#: ../src/org.mate.marco.gschema.xml.h:133
+#: ../src/50-marco-window-key.xml.in.h:49
+#: ../src/org.mate.marco.gschema.xml.h:135
 msgid "Move window one workspace to the left"
 msgstr "Μετακίνηση του παραθύρου ένα χώρο εργασίας αριστερά"
 
-#: ../src/50-marco-window-key.xml.in.h:42
-#: ../src/org.mate.marco.gschema.xml.h:134
+#: ../src/50-marco-window-key.xml.in.h:50
+#: ../src/org.mate.marco.gschema.xml.h:136
 msgid "Move window one workspace to the right"
 msgstr "Μετακίνηση του παραθύρου ένα χώρο εργασίας δεξιά"
 
-#: ../src/50-marco-window-key.xml.in.h:43
-#: ../src/org.mate.marco.gschema.xml.h:135
+#: ../src/50-marco-window-key.xml.in.h:51
+#: ../src/org.mate.marco.gschema.xml.h:137
 msgid "Move window one workspace up"
 msgstr "Μετακίνηση του παραθύρου ένα χώρο εργασίας πάνω"
 
-#: ../src/50-marco-window-key.xml.in.h:44
-#: ../src/org.mate.marco.gschema.xml.h:136
+#: ../src/50-marco-window-key.xml.in.h:52
+#: ../src/org.mate.marco.gschema.xml.h:138
 msgid "Move window one workspace down"
 msgstr "Μετακίνηση του παραθύρου ένα χώρο εργασίας κάτω"
 
@@ -732,21 +769,31 @@ msgid ""
 msgstr "Αν οριστεί σε αληθές, τα νέα παράθυρα ανοίγουν στο κέντρο της οθόνης. Αλλιώς, ανοίγουν στο πάνω αριστερό μέρος στην οθόνη."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
-msgid "Whether to enable side-by-side tiling"
-msgstr "Είτε να ενεργοποιηθούν τα πλάι-πλάι πλακίδια"
+msgid "Whether to enable window tiling"
+msgstr "Είτε για να ενεργοποιήσετε την πλακάκια παραθύρων"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
-" to the top maximizes the window."
-msgstr "Αν ενεργοποιηθεί, ρίχνοντας τα παράθυρα στις άκρες της οθόνης τα μεγιστοποιεί καθέτως και να τους αλλάζει το μέγεθος οριζόντια για να καλύψει το μισώ της διαθέσιμης περιοχής. Σύρσιμο-ρίψη στην κορυφή μεγιστοποιεί το παράθυρο."
+" to the top maximizes the window if allow-top-tiling is enabled."
+msgstr "Εάν είναι ενεργοποιημένο, τα παράθυρα που ανοίγουν στις άκρες της οθόνης τους μεγιστοποιούν κατακόρυφα και τα αλλάζουν σε οριζόντια θέση για να καλύψουν το ήμισυ της διαθέσιμης περιοχής. Η μετακίνηση στην κορυφή μεγιστοποιεί το παράθυρο εάν είναι ενεργοποιημένη η επιτρέπει επικάλυψη."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
+msgid "Whether to maximize the window when dragged to the top of the screen"
+msgstr "Είτε πρόκειται να μεγιστοποιήσετε το παράθυρο όταν σύρεται στο επάνω μέρος της οθόνης"
+
+#: ../src/org.mate.marco.gschema.xml.h:56
+msgid ""
+"If enabled, drag-dropping a window to the top of the screen will maximize "
+"it. Only works when allow-tiling is enabled."
+msgstr "Εάν είναι ενεργοποιημένη, η μετακίνηση ενός παραθύρου στην κορυφή της οθόνης θα το μεγιστοποιήσει. Λειτουργεί μόνο όταν είναι ενεργοποιημένο το άνοιγμα."
+
+#: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
 msgstr "Λειτουργία τοποθέτηση παραθύρων"
 
-#: ../src/org.mate.marco.gschema.xml.h:56
+#: ../src/org.mate.marco.gschema.xml.h:58
 msgid ""
 "The window placement mode indicates how new windows are positioned. "
 "\"automatic\" means the system chooses a location automatically based on the"
@@ -756,29 +803,29 @@ msgid ""
 " window with the mouse or keyboard."
 msgstr "Ο τρόπος τοποθέτησης παράθυρου δείχνει πώς τα νέα παράθυρα τοποθετούνται. \"Αυτόματη\" σημαίνει ότι το σύστημα επιλέγει μια θέση αυτόματα με βάση το διαθέσιμο χώρο στην επιφάνεια εργασίας, ή με μια απλή αλληλοεπικάλυψη, αν δεν υπάρχει χώρος; \"Δείκτης\" σημαίνει ότι τα νέα παράθυρα τοποθετούνται ανάλογα με τη θέση του δείκτη του ποντικιού; \"Χειροκίνητη\" σημαίνει ότι ο χρήστης πρέπει να τοποθετήσει χειροκίνητα το νέο παράθυρο με το ποντίκι ή το πληκτρολόγιο."
 
-#: ../src/org.mate.marco.gschema.xml.h:57
+#: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
-msgstr ""
+msgstr "Λίστα εφαρμογών που αγνοούνται από το show-desktop"
 
-#: ../src/org.mate.marco.gschema.xml.h:58
+#: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
-msgstr ""
+msgstr "Λίστα τάξης διαχωρισμένη με κόμματα. Κάθε εκτελούμενη εφαρμογή GUI που αναφέρεται σε μια δεδομένη κλάση του διαχειριστή παραθύρων θα αγνοηθεί από τη λειτουργία \"Εμφάνιση επιφάνειας εργασίας\"."
 
-#: ../src/org.mate.marco.gschema.xml.h:59
+#: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
 msgstr "Όνομα χώρου εργασίας"
 
-#: ../src/org.mate.marco.gschema.xml.h:60
+#: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
 msgstr "Το όνομα του χώρου εργασίας."
 
-#: ../src/org.mate.marco.gschema.xml.h:61
+#: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
 msgstr "Εκτέλεση μιας ορισμένης εντολής"
 
-#: ../src/org.mate.marco.gschema.xml.h:62
+#: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
 "The keybinding that runs the correspondingly-numbered command in "
 "/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
@@ -788,7 +835,7 @@ msgid ""
 "then there will be no keybinding for this action."
 msgstr "Ο συνδυασμός πλήκτρων που εκτελεί την αντίστοιχη αριθμημένη εντολή στο /apps/marco/keybinding_commands. Η διαμόρφωση μοιάζει με \"<Control>a\" ή \"<Shift><Alt>F1\"..  Ο διαβιβαστής είναι φιλελεύθερος και επιτρέπει κεφαλαία και πεζά και συντομεύσεις όπως \"<Ctl>\" και \"<Ctrl>\".  Αν ορίσετε \"απενεργοποιημένο\" δε θα υπάρχει κανένας συνδυασμός πλήκτρων για αυτή την ενέργεια."
 
-#: ../src/org.mate.marco.gschema.xml.h:64
+#: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
 "The format looks like \"&lt;Control&gt;a\" or "
 "\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
@@ -797,7 +844,7 @@ msgid ""
 "then there will be no keybinding for this action."
 msgstr "Η μορφοποιήσει μοιάζει \"<Control>a\" ή \"<Shift><Alt>F1\". Tο πρόγραμμα ανάλυσης είναι αρκετά ελαστικό και επιτρέπει τη χρήση πεζών ή κεφαλαίων χαρακτήρων, καθώς και συντομεύσεις όπως \"<Ctl>\" ή \"<Ctrl>\". Αν ορίσετε την επιλογή στην τιμή \"ανενεργό\", τότε δεν θα ισχύει καμία συντόμευση για την ενέργεια."
 
-#: ../src/org.mate.marco.gschema.xml.h:82
+#: ../src/org.mate.marco.gschema.xml.h:84
 msgid ""
 "The format looks like \"&lt;Control&gt;a\" or "
 "\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
@@ -808,73 +855,89 @@ msgid ""
 "one of the keys it uses."
 msgstr "Η μορφοποιήσει μοιάζει \"<Control>a\" ή \"<Shift><Alt>F1\". Tο πρόγραμμα ανάλυσης είναι αρκετά ελαστικό και επιτρέπει τη χρήση πεζών ή κεφαλαίων χαρακτήρων, καθώς και συντομεύσεις όπως \"<Ctl>\" ή \"<Ctrl>\". Αν ορίσετε την επιλογή στην τιμή \"ανενεργό\", τότε δεν θα ισχύει καμία συντόμευση για την ενέργεια. Αυτός ο συνδυασμός πλήκτρων μπορεί να αντιστραφεί, κρατώντας πατημένο το πλήκτρο \"Shift\"; Ως εκ τούτου, το \"shift\" δεν μπορεί να είναι ένα από τα πλήκτρα που χρησιμοποιεί."
 
-#: ../src/org.mate.marco.gschema.xml.h:83
+#: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
 msgstr "Εναλλαγή προς τα πίσω μεταξύ παραθύρων μιας εφαρμογής, με αναδυόμενο παράθυρο"
 
-#: ../src/org.mate.marco.gschema.xml.h:85
+#: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
 msgstr "Εναλλαγή προς τα πίσω μεταξύ παραθύρων, με αναδυόμενο παράθυρο"
 
-#: ../src/org.mate.marco.gschema.xml.h:86
+#: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr "Εναλλαγή μεταξύ παραθύρων σε όλους τους χώρους εργασίας, χρησιμοποιώντας ένα αναδυόμενο παράθυρο"
 
-#: ../src/org.mate.marco.gschema.xml.h:87
+#: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr "Εναλλαγή προς τα πισω μεταξύ παραθύρων σε όλους τους χώρους εργασίας, χρησιμοποιώντας ένα αναδυόμενο παράθυρο"
 
-#: ../src/org.mate.marco.gschema.xml.h:89
+#: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr "Εναλλαγή προς τα πίσω μεταξύ πινάκων εφαρμογών και επιφάνειας εργασίας, χρησιμοποιώντας ένα αναδυόμενο παράθυρο"
 
-#: ../src/org.mate.marco.gschema.xml.h:91
+#: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
 msgstr "Άμεση εναλλαγή προς τα πίσω μεταξύ παραθύρων μιας εφαρμογής"
 
-#: ../src/org.mate.marco.gschema.xml.h:93
+#: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between windows immediately"
 msgstr "Άμεση εναλλαγή προς τα πίσω μεταξύ παραθύρων"
 
-#: ../src/org.mate.marco.gschema.xml.h:95
+#: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
 msgstr "Άμεση εναλλαγή προς τα πίσω μεταξύ πινάκων εφαρμογών και επιφάνειας εργασίας"
 
-#: ../src/org.mate.marco.gschema.xml.h:103
+#: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
 msgstr "Εντολές που εκτελούνται σε αντιστοίχιση με συνδυασμούς πλήκτρων"
 
-#: ../src/org.mate.marco.gschema.xml.h:104
+#: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr "Τα κλειδιά /apps/marco/global_keybindings/run_command_N ορίζουν τους συνδυασμούς πλήκτρων που αντιστοιχούν σε αυτές τις εντολές. Πιέζοντας το συνδυασμό για run_command_N θα εκτελείται η εντολή_Ν."
 
-#: ../src/org.mate.marco.gschema.xml.h:105
+#: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
 msgstr "Η εντολή λήψης στιγμιότυπου οθόνης"
 
-#: ../src/org.mate.marco.gschema.xml.h:106
+#: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr "Το κλειδί /apps/marco/global_keybindings/run_command_screenshot ορίζει το συνδυασμό πλήκτρων που αντιστοιχεί σε αυτή την εντολή."
 
-#: ../src/org.mate.marco.gschema.xml.h:107
+#: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
 msgstr "Η εντολή λήψης στιγμιότυπου παραθύρου"
 
-#: ../src/org.mate.marco.gschema.xml.h:108
+#: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr "Το κλειδί /apps/marco/global_keybindings/run_command_window_screenshotορπροσδιορίζει το συνδυασμό πλήκτρων που αντιστοιχεί σε αυτή την εντολή."
 
-#: ../src/org.mate.marco.gschema.xml.h:112
+#: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
 msgstr "Εναλλαγή αν το παράθυρο θα είναι πάντα ορατό πάνω από τα υπόλοιπα"
+
+#: ../src/org.mate.marco.gschema.xml.h:146
+msgid "Tile window to north-west (upper left) corner of screen"
+msgstr "Παράθυρο πλακιδίων στη βορειοδυτική (πάνω αριστερή) γωνία της οθόνης"
+
+#: ../src/org.mate.marco.gschema.xml.h:147
+msgid "Tile window to north-east (upper right) corner of screen"
+msgstr "Παράθυρο πλακιδίων στη βορειοανατολική (πάνω δεξιά) γωνία της οθόνης"
+
+#: ../src/org.mate.marco.gschema.xml.h:148
+msgid "Tile window to south-east (lower right) corner of screen"
+msgstr "Παράθυρο πλακιδίων στη νοτιοανατολική (κάτω δεξιά) γωνία της οθόνης"
+
+#: ../src/org.mate.marco.gschema.xml.h:149
+msgid "Tile window to south-west (lower left) corner of screen"
+msgstr "Παράθυρο πλακιδίων στη νοτιοδυτική (κάτω αριστερή) γωνία της οθόνης"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -920,7 +983,7 @@ msgstr "Λείπει η επέκταση %s που απαιτείται για c
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Αποτυχία ανοίγματος οθόνης του συστήματος παραθύρων Χ '%s'\n"
 
-#: ../src/core/keybindings.c:720
+#: ../src/core/keybindings.c:722
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -929,7 +992,7 @@ msgstr "Κάποιο άλλο πρόγραμμα χρησιμοποιεί ήδη
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2374
+#: ../src/core/keybindings.c:2377
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -937,31 +1000,31 @@ msgid ""
 "%s"
 msgstr "Σφάλμα κατά την εκτέλεση του <tt>%s</tt>:\n\n%s"
 
-#: ../src/core/keybindings.c:2463
+#: ../src/core/keybindings.c:2466
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Δεν έχει ορισθεί εντολή %d.\n"
 
-#: ../src/core/keybindings.c:3475
+#: ../src/core/keybindings.c:3518
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Δεν έχει ορισθεί εντολή τερματικού.\n"
 
-#: ../src/core/keybindings.c:3614
+#: ../src/core/keybindings.c:3658
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
-msgstr ""
+msgstr "<tt>Μετονομάστε το Χώρο εργασίας</tt>"
 
-#: ../src/core/keybindings.c:3615
+#: ../src/core/keybindings.c:3659
 #, c-format
 msgid "New Workspace Name:"
-msgstr ""
+msgstr "Νέο όνομα χώρου εργασίας"
 
-#: ../src/core/keybindings.c:3626
+#: ../src/core/keybindings.c:3670
 msgid "OK"
-msgstr ""
+msgstr "ΟΚ"
 
-#: ../src/core/keybindings.c:3626
+#: ../src/core/keybindings.c:3670
 msgid "Cancel"
 msgstr "Ακύρωση"
 
@@ -1034,64 +1097,64 @@ msgstr "Αποτυχία επανεκκίνησης: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:599 ../src/core/prefs.c:752
+#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr "Το %d που αποθηκεύτηκε στο κλειδί MateConf %s είναι εκτός του εύρους %d έως %d\n"
 
-#: ../src/core/prefs.c:1046
+#: ../src/core/prefs.c:1053
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr "Οι προσωρινές λύσεις για προβληματικές εφαρμογές έχουν απενεργοποιηθεί. Μερικές εφαρμογές μπορεί να μη συμπεριφέρονται σωστά.\n"
 
-#: ../src/core/prefs.c:1125
+#: ../src/core/prefs.c:1132
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "Αδυναμία ανάλυσης περιγραφής γραμματοσειράς \"%s\" από κλειδί MateConf %s\n"
 
-#: ../src/core/prefs.c:1187
+#: ../src/core/prefs.c:1194
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "Το \"%s\" που βρέθηκε στη βάση δεδομένων ρυθμίσεων δεν είναι μια έγκυρη τιμή για μετατροπέα κουμπιού ποντικιού\n"
 
-#: ../src/core/prefs.c:1743
+#: ../src/core/prefs.c:1753
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "Το \"%s\" που βρέθηκε στη βάση δεδομένων ρυθμίσεων δεν είναι μια έγκυρη τιμή για συνδυασμό πλήκτρων\"%s\"\n"
 
-#: ../src/core/prefs.c:2046
+#: ../src/core/prefs.c:2056
 #, c-format
 msgid "Workspace %d"
 msgstr "Χώρος εργασίας %d"
 
-#: ../src/core/screen.c:358
+#: ../src/core/screen.c:359
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "Η οθόνη %d στην προβολή '%s' δεν είναι έγκυρη\n"
 
-#: ../src/core/screen.c:374
+#: ../src/core/screen.c:375
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
 msgstr "Η οθόνη %d στην προβολή '%s' έχει ήδη ένα διαχειριστή παραθύρων. Προσπαθήστε να χρησιμοποιήσετε την επιλογή --replace για να αντικαταστήσετε τον τρέχων διαχειριστή παραθύρων.\n"
 
-#: ../src/core/screen.c:401
+#: ../src/core/screen.c:402
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr "Αδυναμία λήψης επιλογής διαχειριστή παραθύρων στην οθόνη %d προβολή \"%s\"\n"
 
-#: ../src/core/screen.c:459
+#: ../src/core/screen.c:460
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "Η οθόνη  %d στην προβολή \"%s\" έχει ήδη ένα διαχειριστή παραθύρων\n"
 
-#: ../src/core/screen.c:674
+#: ../src/core/screen.c:675
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Αδυναμία απελευθέρωσης οθόνης %d στην προβολή \"%s\"\n"
@@ -1192,7 +1255,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5765
+#: ../src/core/window.c:5880
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1205,7 +1268,7 @@ msgstr "Το παράθυρο %s όρισε SM_CLIENT_ID στον εαυτό τ�
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6330
+#: ../src/core/window.c:6445
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1320,103 +1383,103 @@ msgid "Put Window On Only One Workspace"
 msgstr "Τοποθέτηση παράθυρου μόνο σε ένα χώρο εργασίας"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:64
+#: ../src/ui/menu.c:65
 msgid "Mi_nimize"
 msgstr "Ελα_χιστοποίηση"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:66
+#: ../src/ui/menu.c:67
 msgid "Ma_ximize"
 msgstr "_Μεγιστοποίηση"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:68
+#: ../src/ui/menu.c:69
 msgid "Unma_ximize"
 msgstr "Απόμε_γιστοποίηση"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:70
+#: ../src/ui/menu.c:71
 msgid "Roll _Up"
 msgstr "Τύλιγμα _πάνω"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:72
+#: ../src/ui/menu.c:73
 msgid "_Unroll"
 msgstr "_Ξετύλιγμα"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:74
+#: ../src/ui/menu.c:75
 msgid "_Move"
 msgstr "_Μετακίνηση"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:76
+#: ../src/ui/menu.c:77
 msgid "_Resize"
 msgstr "Αλλαγή με_γέθους"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:78
+#: ../src/ui/menu.c:79
 msgid "Move Titlebar On_screen"
 msgstr "Μετακίνηση μπάρας τίτλου στην ο_θόνη"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:81 ../src/ui/menu.c:83
+#: ../src/ui/menu.c:82 ../src/ui/menu.c:84
 msgid "Always on _Top"
 msgstr "Πάντα σε _πρώτο πλάνο"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:85
+#: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
 msgstr "_Ορατό σε όλους τους χώρους εργασίας"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:87
+#: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
 msgstr "Μόνο σε _αυτό το χώρο εργασίας"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:89
+#: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
 msgstr "Μετακίνηση στο χώρο εργασίας αρι_στερά"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:91
+#: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
 msgstr "Μετακίνηση στο χώρο εργασίας δε_ξιά"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:93
+#: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
 msgstr "Μετακίνηση παραθύρου στο χώρο εργασίας πά_νω"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:95
+#: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
 msgstr "Μετακίνηση στο χώρο εργασίας _κάτω"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:99
+#: ../src/ui/menu.c:100
 msgid "_Close"
 msgstr "_Κλείσιμο"
 
-#: ../src/ui/menu.c:200
+#: ../src/ui/menu.c:197
 #, c-format
 msgid "Workspace %d%n"
 msgstr "Χώρος εργασίας %d%n"
 
-#: ../src/ui/menu.c:210
+#: ../src/ui/menu.c:207
 #, c-format
 msgid "Workspace 1_0"
 msgstr "Χώρος Εργασίας 1_0"
 
-#: ../src/ui/menu.c:212
+#: ../src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
 msgstr "Χώρος Εργασίας %s%d"
 
-#: ../src/ui/menu.c:391
+#: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
 msgstr "Μετακίνηση σε άλλο _χώρο εργασίας"
 
