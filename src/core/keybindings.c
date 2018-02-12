@@ -2636,12 +2636,16 @@ handle_move_to_center  (MetaDisplay    *display,
                         XEvent         *event,
                         MetaKeyBinding *binding)
 {
+  const MetaXineramaScreenInfo* current;
   MetaRectangle work_area;
   MetaRectangle outer;
   int orig_x, orig_y;
   int frame_width, frame_height;
 
-  meta_window_get_work_area_all_xineramas (window, &work_area);
+  current = meta_screen_get_xinerama_for_window(screen, window);
+  meta_window_get_work_area_for_xinerama (window,
+                                          current->number,
+                                          &work_area);
   meta_window_get_outer_rect (window, &outer);
   meta_window_get_position (window, &orig_x, &orig_y);
 
