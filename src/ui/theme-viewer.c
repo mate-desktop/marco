@@ -253,7 +253,12 @@ dialog_contents (void)
   gtk_button_box_set_layout (GTK_BUTTON_BOX (action_area),
                              GTK_BUTTONBOX_END);
 
-  button = gtk_button_new_from_stock (GTK_STOCK_OK);
+  button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
+                                     "label", "gtk-ok",
+                                     "use-stock", TRUE,
+                                     "use-underline", TRUE,
+                                     NULL));
+
   gtk_box_pack_end (GTK_BOX (action_area),
                     button,
                     FALSE, TRUE, 0);
