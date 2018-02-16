@@ -253,11 +253,8 @@ dialog_contents (void)
   gtk_button_box_set_layout (GTK_BUTTON_BOX (action_area),
                              GTK_BUTTONBOX_END);
 
-  button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
-                                     "label", "gtk-ok",
-                                     "use-stock", TRUE,
-                                     "use-underline", TRUE,
-                                     NULL));
+  button = gtk_button_new_with_mnemonic (_("_OK"));
+  gtk_button_set_image (GTK_BUTTON (button), gtk_image_new_from_icon_name ("gtk-ok", GTK_ICON_SIZE_BUTTON));
 
   gtk_box_pack_end (GTK_BOX (action_area),
                     button,
