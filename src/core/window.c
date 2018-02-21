@@ -1259,7 +1259,7 @@ static void
 set_net_wm_state (MetaWindow *window)
 {
   int i;
-  unsigned long data[12];
+  unsigned long data[13];
 
   i = 0;
   if (window->shaded)
@@ -1320,6 +1320,11 @@ set_net_wm_state (MetaWindow *window)
   if (window->on_all_workspaces)
     {
       data[i] = window->display->atom__NET_WM_STATE_STICKY;
+      ++i;
+    }
+  if (window->has_focus)
+    {
+      data[i] = window->display->atom__NET_WM_STATE_FOCUSED;
       ++i;
     }
 
@@ -5490,6 +5495,15 @@ meta_window_client_message (MetaWindow *window,
   return FALSE;
 }
 
+static void
+meta_window_appears_focused_changed (MetaWindow *window)
+{
+  set_net_wm_state (window);
+
+  if (window->frame)
+    meta_frame_queue_draw (window->frame);
+}
+
 gboolean
 meta_window_notify_focus (MetaWindow *window,
                           XEvent     *event)
@@ -5599,8 +5613,7 @@ meta_window_notify_focus (MetaWindow *window,
                                 window);
             }
 
-          if (window->frame)
-            meta_frame_queue_draw (window->frame);
+          meta_window_appears_focused_changed (window);
 
           meta_error_trap_push (window->display);
           XInstallColormap (window->display->xdisplay,
@@ -5652,8 +5665,8 @@ meta_window_notify_focus (MetaWindow *window,
 
           window->display->focus_window = NULL;
           window->has_focus = FALSE;
-          if (window->frame)
-            meta_frame_queue_draw (window->frame);
+
+          meta_window_appears_focused_changed (window);
 
           meta_compositor_set_active_window (window->display->compositor,
                                              window->screen, NULL);
