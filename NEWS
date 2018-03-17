@@ -1,3 +1,12 @@
+### marco 1.18.3
+
+  * build: drop unneeded pangoxft requirement
+  * compositor: don't try to paint window that is not viewable
+  * Fix mismatched enums in keybinding detection for switch-panels
+    and switch-panels-backward (fixes Ctrl-Alt-Tab dialog)
+  * Fix move_to_center moving window between monitors
+  * Fix XFIXES regions leak
+
 ### marco 1.18.2
 
   * Translations update
