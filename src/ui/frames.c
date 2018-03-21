@@ -1028,7 +1028,7 @@ meta_frames_move_resize_frame (MetaFrames *frames,
   old_width = gdk_window_get_width (frame->window);
   old_height = gdk_window_get_height (frame->window);
 
-  scale = gdk_window_get_scale_factor (gdk_get_default_root_window ());
+  scale = gdk_window_get_scale_factor (frame->window);
 
   gdk_window_move_resize (frame->window, x / scale, y / scale, width / scale, height / scale);
 
