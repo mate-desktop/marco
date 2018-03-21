@@ -148,8 +148,8 @@ dimm_icon (GdkPixbuf *pixbuf)
 
 static TabEntry*
 tab_entry_new (const MetaTabEntry *entry,
-               gint                screen_width,
-               gboolean            outline)
+               gboolean            outline,
+               gint                scale)
 {
   TabEntry *te;
 
@@ -200,15 +200,15 @@ tab_entry_new (const MetaTabEntry *entry,
 
   if (outline)
     {
-      te->rect.x = entry->rect.x;
-      te->rect.y = entry->rect.y;
-      te->rect.width = entry->rect.width;
-      te->rect.height = entry->rect.height;
+      te->rect.x = entry->rect.x / scale;
+      te->rect.y = entry->rect.y / scale;
+      te->rect.width = entry->rect.width / scale;
+      te->rect.height = entry->rect.height / scale;
 
-      te->inner_rect.x = entry->inner_rect.x;
-      te->inner_rect.y = entry->inner_rect.y;
-      te->inner_rect.width = entry->inner_rect.width;
-      te->inner_rect.height = entry->inner_rect.height;
+      te->inner_rect.x = entry->inner_rect.x / scale;
+      te->inner_rect.y = entry->inner_rect.y / scale;
+      te->inner_rect.width = entry->inner_rect.width / scale;
+      te->inner_rect.height = entry->inner_rect.height / scale;
     }
   return te;
 }
@@ -229,7 +229,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   int max_label_width; /* the actual max width of the labels we create */
   AtkObject *obj;
   GdkScreen *screen;
-  int screen_width;
+  int screen_width, scale;
 
   popup = g_new (MetaTabPopup, 1);
 
@@ -260,11 +260,11 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   popup->current_selected_entry = NULL;
   popup->border = border;
 
+  scale = gtk_widget_get_scale_factor (GTK_WIDGET (popup->window));
   screen_width = WidthOfScreen (gdk_x11_screen_get_xscreen (screen));
   for (i = 0; i < entry_count; ++i)
     {
-      TabEntry* new_entry = tab_entry_new (&entries[i], screen_width,
-        border & BORDER_OUTLINE_WINDOW);
+      TabEntry* new_entry = tab_entry_new (&entries[i], border & BORDER_OUTLINE_WINDOW, scale);
       popup->entries = g_list_prepend (popup->entries, new_entry);
     }
 
