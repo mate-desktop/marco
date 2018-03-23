@@ -1,22 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# ABE Tsunehiko, 2013,2015-2017
-# Ikuru K <kanumaiku@gmail.com>, 2015
-# mauron, 2013
-# Mika Kobayashi, 2015,2017
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Japanese (http://www.transifex.com/mate/MATE/language/ja/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: mauron, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -271,19 +268,19 @@ msgstr "ウィンドウを画面の西 (左側) に並べる"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "ウィンドウを北西 (左側の上) に並べる"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "ウィンドウを北東 (右側の上) に並べる"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "ウィンドウを南西 (左側の下) に並べる"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "ウィンドウを南東 (右側の下) に並べる"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
@@ -333,22 +330,22 @@ msgstr "ウィンドウを画面中央に移動"
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
 msgid "Move window to north (top) monitor"
-msgstr ""
+msgstr "ウィンドウを北 (上側) モニターへ移動する"
 
 #: ../src/50-marco-window-key.xml.in.h:34
 #: ../src/org.mate.marco.gschema.xml.h:160
 msgid "Move window to south (bottom) monitor"
-msgstr ""
+msgstr "ウィンドウを南 (下側) モニターへ移動する"
 
 #: ../src/50-marco-window-key.xml.in.h:35
 #: ../src/org.mate.marco.gschema.xml.h:161
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "ウィンドウを東 (右側) モニターへ移動する"
 
 #: ../src/50-marco-window-key.xml.in.h:36
 #: ../src/org.mate.marco.gschema.xml.h:162
 msgid "Move window to west (left) monitor"
-msgstr ""
+msgstr "ウィンドウを西 (左側) モニターへ移動する"
 
 #: ../src/50-marco-window-key.xml.in.h:37
 #: ../src/org.mate.marco.gschema.xml.h:123
@@ -441,7 +438,11 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr "この修飾キーを押したままの状態でウィンドウをクリックすると、ウィンドウを移動させたり (左クリック)、ウィンドウ・サイズを変更したり (中クリック)、ウィンドウ・メニューを表示させたり(右クリック)することができます。中クリックと右クリックの操作は \"resize_with_right_button\" キーを使えば交換できます。修飾キーは、例えば、\"<Alt>\" や \"<Super>\" のように表されます。"
+msgstr ""
+"この修飾キーを押したままの状態でウィンドウをクリックすると、ウィンドウを移動させたり (左クリック)、ウィンドウ・サイズを変更したり "
+"(中クリック)、ウィンドウ・メニューを表示させたり(右クリック)することができます。中クリックと右クリックの操作は "
+"\"resize_with_right_button\" キーを使えば交換できます。修飾キーは、例えば、\"<Alt>\" や \"<Super>\" "
+"のように表されます。"
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -452,7 +453,9 @@ msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr "これを TRUE に設定すると、\"mouse_button_modifier\" で設定したキーを押しながら右のボタンでサイズ変更し、真ん中のボタンでメニューを表示します。"
+msgstr ""
+"これを TRUE に設定すると、\"mouse_button_modifier\" "
+"で設定したキーを押しながら右のボタンでサイズ変更し、真ん中のボタンでメニューを表示します。"
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -477,7 +480,11 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr "タイトル・バーのボタンの位置を指定します。ここで指定する値は \"menu:minimize,maximize,spacer,close\" のような文字列にしてください; コロンでウィンドウの右上隅と左上隅を分割し、ボタン名はコンマで区切ります。ボタンを重複させることはできません。不明なボタン名は単に無視されるだけなので、marco の新しいバージョンが旧バージョンに影響を与えることはありません。spacer というタグはボタンとボタンの間に挿入する空白を意味します。"
+msgstr ""
+"タイトル・バーのボタンの位置を指定します。ここで指定する値は \"menu:minimize,maximize,spacer,close\" "
+"のような文字列にしてください; "
+"コロンでウィンドウの右上隅と左上隅を分割し、ボタン名はコンマで区切ります。ボタンを重複させることはできません。不明なボタン名は単に無視されるだけなので、marco"
+" の新しいバージョンが旧バージョンに影響を与えることはありません。spacer というタグはボタンとボタンの間に挿入する空白を意味します。"
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
@@ -490,7 +497,10 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr "ウィンドウフォーカスモードはウィンドウがアクティブになる条件を表します。設定可能な値は3つあり、\"click\" はクリックするとフォーカスします。\"sloppy\" はマウスがウィンドウ内に入るとフォーカスします。\"mouse\" はマウスがウィンドウ内に入るとフォーカスし、マウスがウィンドウから出るとフォーカスが外れます。"
+msgstr ""
+"ウィンドウフォーカスモードはウィンドウがアクティブになる条件を表します。設定可能な値は3つあり、\"click\" "
+"はクリックするとフォーカスします。\"sloppy\" はマウスがウィンドウ内に入るとフォーカスします。\"mouse\" "
+"はマウスがウィンドウ内に入るとフォーカスし、マウスがウィンドウから出るとフォーカスが外れます。"
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
@@ -502,7 +512,9 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "このオプションを使い、新しく生成したウィンドウに対して、どのようにフォーカスを与えるかを制御します。設定可能なオプション: \"smart\" (ユーザが定義したフォーカスモードを適用します)、\"strict\" (端末から起動したアプリのウィンドウにはフォーカスを与えないようにします)"
+msgstr ""
+"このオプションを使い、新しく生成したウィンドウに対して、どのようにフォーカスを与えるかを制御します。設定可能なオプション: \"smart\" "
+"(ユーザが定義したフォーカスモードを適用します)、\"strict\" (端末から起動したアプリのウィンドウにはフォーカスを与えないようにします)"
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -528,7 +540,19 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr "このオプションを FALSE にすると不安定になるため、デフォルトの TRUE のままにしておくことを強くお勧めします。クライアントエリアをクリックする、ウィンドウを移動したりウィンドウのサイズを変更するなどの様々な操作は、一般的に副作用としてウィンドウを最前面に移動します。まったくお勧めはしませんが、このオプションを FALSE にすると、ユーザー操作とウィンドウを最前面に移動する処理を切り離し、アプリケーションからのウィンドウを最前面に移動する処理のリクエストも無視するようになります。詳細については http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 で確認してください。このオプションを FALSE にしても、ウィンドウのどこかを Alt + 右クリック、ウィンドウの装飾部分をクリック、タスクリストアプレットからのアクティベーションリクエストなどのページャーからの特殊メッセージなどにより、ウィンドウは最前面に移動します。現在このオプションはクリックしてフォーカスするという処理を無効にしています。上に記載した FALSE の時でもウィンドウを最前面に移動する操作の中には、アプリケーションからのウィンドウを最前面に移動する処理のリクエストが含まれていないことに注意してください。すなわち、アプリケーションからのリクエストはその理由を問わず無視されます。もしあなたが開発者で、この設定を FALSE にするとアプリケーションが動作しないバグがあると主張するユーザーが現れた場合、ユーザー自身が自分のウィンドウマネージャーを壊したということと、バグを解決するためにこのオプションを TRUE に戻す必要があることを伝えてください。"
+msgstr ""
+"このオプションを FALSE にすると不安定になるため、デフォルトの TRUE "
+"のままにしておくことを強くお勧めします。クライアントエリアをクリックする、ウィンドウを移動したりウィンドウのサイズを変更するなどの様々な操作は、一般的に副作用としてウィンドウを最前面に移動します。まったくお勧めはしませんが、このオプションを"
+" FALSE "
+"にすると、ユーザー操作とウィンドウを最前面に移動する処理を切り離し、アプリケーションからのウィンドウを最前面に移動する処理のリクエストも無視するようになります。詳細については"
+" http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 で確認してください。このオプションを "
+"FALSE にしても、ウィンドウのどこかを Alt + "
+"右クリック、ウィンドウの装飾部分をクリック、タスクリストアプレットからのアクティベーションリクエストなどのページャーからの特殊メッセージなどにより、ウィンドウは最前面に移動します。現在このオプションはクリックしてフォーカスするという処理を無効にしています。上に記載した"
+" FALSE "
+"の時でもウィンドウを最前面に移動する操作の中には、アプリケーションからのウィンドウを最前面に移動する処理のリクエストが含まれていないことに注意してください。すなわち、アプリケーションからのリクエストはその理由を問わず無視されます。もしあなたが開発者で、この設定を"
+" FALSE "
+"にするとアプリケーションが動作しないバグがあると主張するユーザーが現れた場合、ユーザー自身が自分のウィンドウマネージャーを壊したということと、バグを解決するためにこのオプションを"
+" TRUE に戻す必要があることを伝えてください。"
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -544,7 +568,13 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "タイトルバーをダブル・クリックした際の効果を指定します。指定可能なオプション: 'toggle_shade' (ウィンドウの巻き上げ状態を切り替える)、'toggle_maximize' (ウィンドウを最大化/通常サイズ化する)、'toggle_maximize_horizontally' (水平方向にのみウィンドウを最大化/通常サイズ化する)、'toggle_maximize_vertically' (垂直方向にのみウィンドウを最大化/通常サイズ化する)、'minimize' (ウィンドウを最小化する)、'shade' (ウィンドウを巻き上げる)、'menu' (ウィンドウメニューを表示する)、'lower' (ウィンドウを一番後ろに回す)、'none' (何もしない)"
+msgstr ""
+"タイトルバーをダブル・クリックした際の効果を指定します。指定可能なオプション: 'toggle_shade' "
+"(ウィンドウの巻き上げ状態を切り替える)、'toggle_maximize' "
+"(ウィンドウを最大化/通常サイズ化する)、'toggle_maximize_horizontally' "
+"(水平方向にのみウィンドウを最大化/通常サイズ化する)、'toggle_maximize_vertically' "
+"(垂直方向にのみウィンドウを最大化/通常サイズ化する)、'minimize' (ウィンドウを最小化する)、'shade' "
+"(ウィンドウを巻き上げる)、'menu' (ウィンドウメニューを表示する)、'lower' (ウィンドウを一番後ろに回す)、'none' (何もしない)"
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
@@ -560,7 +590,13 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "タイトルバーを中クリックした際の効果を指定します。指定可能なオプション: 'toggle_shade' (ウィンドウの巻き上げ状態を切り替える)、'toggle_maximize' (ウィンドウを最大化/通常サイズ化する)、'toggle_maximize_horizontally' (水平方向にのみウィンドウを最大化/通常サイズ化する)、'toggle_maximize_vertically' (垂直方向にのみウィンドウを最大化/通常サイズ化する)、'minimize' (ウィンドウを最小化する)、'shade' (ウィンドウを巻き上げる)、'menu' (ウィンドウメニューを表示する)、'lower' (ウィンドウを一番後ろに回す)、'none' (何もしない)"
+msgstr ""
+"タイトルバーを中クリックした際の効果を指定します。指定可能なオプション: 'toggle_shade' "
+"(ウィンドウの巻き上げ状態を切り替える)、'toggle_maximize' "
+"(ウィンドウを最大化/通常サイズ化する)、'toggle_maximize_horizontally' "
+"(水平方向にのみウィンドウを最大化/通常サイズ化する)、'toggle_maximize_vertically' "
+"(垂直方向にのみウィンドウを最大化/通常サイズ化する)、'minimize' (ウィンドウを最小化する)、'shade' "
+"(ウィンドウを巻き上げる)、'menu' (ウィンドウメニューを表示する)、'lower' (ウィンドウを一番後ろに回す)、'none' (何もしない)"
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
@@ -576,7 +612,13 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "タイトルバーを右クリックした際の効果を指定します。指定可能なオプション: 'toggle_shade' (ウィンドウの巻き上げ状態を切り替える)、'toggle_maximize' (ウィンドウを最大化/通常サイズ化する)、'toggle_maximize_horizontally' (水平方向にのみウィンドウを最大化/通常サイズ化する)、'toggle_maximize_vertically' (垂直方向にのみウィンドウを最大化/通常サイズ化する)、'minimize' (ウィンドウを最小化する)、'shade' (ウィンドウを巻き上げる)、'menu' (ウィンドウメニューを表示する)、'lower' (ウィンドウを一番後ろに回す)、'none' (何もしない)"
+msgstr ""
+"タイトルバーを右クリックした際の効果を指定します。指定可能なオプション: 'toggle_shade' "
+"(ウィンドウの巻き上げ状態を切り替える)、'toggle_maximize' "
+"(ウィンドウを最大化/通常サイズ化する)、'toggle_maximize_horizontally' "
+"(水平方向にのみウィンドウを最大化/通常サイズ化する)、'toggle_maximize_vertically' "
+"(垂直方向にのみウィンドウを最大化/通常サイズ化する)、'minimize' (ウィンドウを最小化する)、'shade' "
+"(ウィンドウを巻き上げる)、'menu' (ウィンドウメニューを表示する)、'lower' (ウィンドウを一番後ろに回す)、'none' (何もしない)"
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
@@ -588,7 +630,10 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr "この値が TRUE かつフォーカスモードが \"sloppy\" または \"mouse\" の場合、フォーカスを取得したウィンドウは auto_raise_delay キーに指定した時間が経過した後に自動的に前面に表示されます。これはウィンドウをクリックして前面に表示する場合とは関係はなく、ドラッグアンドドロップ中にポインタがウィンドウ内に入った場合とも関係はありません。"
+msgstr ""
+"この値が TRUE かつフォーカスモードが \"sloppy\" または \"mouse\" の場合、フォーカスを取得したウィンドウは "
+"auto_raise_delay "
+"キーに指定した時間が経過した後に自動的に前面に表示されます。これはウィンドウをクリックして前面に表示する場合とは関係はなく、ドラッグアンドドロップ中にポインタがウィンドウ内に入った場合とも関係はありません。"
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
@@ -598,7 +643,8 @@ msgstr "自動的に全面に移動するオプションの遅延時間 (ミリ�
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr "auto_raise が TRUE に設定されている際、ウィンドウを全面に移動するまでの遅延時間を指定します。この遅延はミリ秒単位で指定します。"
+msgstr ""
+"auto_raise が TRUE に設定されている際、ウィンドウを全面に移動するまでの遅延時間を指定します。この遅延はミリ秒単位で指定します。"
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -618,7 +664,8 @@ msgstr "ウィンドウのタイトルに標準のシステムフォントを使
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr "この値が TRUE の場合、titlebar_font オプションを無視してウィンドウのタイトルに標準のアプリケーションフォントを使用します。"
+msgstr ""
+"この値が TRUE の場合、titlebar_font オプションを無視してウィンドウのタイトルに標準のアプリケーションフォントを使用します。"
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -630,7 +677,10 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr "ウィンドウのタイトルバーに表示するフォントを記述するフォント記述文字です。ただし、ここで指定したフォントサイズが使用されるのは、titlebar_font_size オプションが 0 の場合だけです。また titlebar_uses_desktop_font オプションが TRUE の場合でも、このオプションは無効になります。"
+msgstr ""
+"ウィンドウのタイトルバーに表示するフォントを記述するフォント記述文字です。ただし、ここで指定したフォントサイズが使用されるのは、titlebar_font_size"
+" オプションが 0 の場合だけです。また titlebar_uses_desktop_font オプションが TRUE "
+"の場合でも、このオプションは無効になります。"
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -641,7 +691,9 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr "ワークスペースの数です。ワークスペースの数を 0 にしないでください。また、誤って大量のワークスペースを指定してしまいデスクトップが使いにくくなることを防ぐため、最大値は固定になっています。"
+msgstr ""
+"ワークスペースの数です。ワークスペースの数を 0 "
+"にしないでください。また、誤って大量のワークスペースを指定してしまいデスクトップが使いにくくなることを防ぐため、最大値は固定になっています。"
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -657,7 +709,11 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr "ラップ形式はワークスペース切り替え時に端から端へ移動する際の動きを決定するために使用します。\"no wrap\" にすると端から端へ移動しなくなります。\"classic\" に設定すると Marco の古い挙動と同じになります。すなわち、行の終わりは次の行の先頭とつながっているとみなされます。\"toroidal\" を選択すると、ワークスペースはドーナツ形に接続します。すなわち、行の終わりはその行の先頭と、列の終わりはその列の先頭とつながっているとみなされます。"
+msgstr ""
+"ラップ形式はワークスペース切り替え時に端から端へ移動する際の動きを決定するために使用します。\"no wrap\" "
+"にすると端から端へ移動しなくなります。\"classic\" に設定すると Marco "
+"の古い挙動と同じになります。すなわち、行の終わりは次の行の先頭とつながっているとみなされます。\"toroidal\" "
+"を選択すると、ワークスペースはドーナツ形に接続します。すなわち、行の終わりはその行の先頭と、列の終わりはその列の先頭とつながっているとみなされます。"
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
@@ -678,7 +734,9 @@ msgstr "システムベルを鳴らす"
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr "アプリケーションもしくはシステムが聴覚的なビープ音を生成できるか決定します。これは、無音のビープを許可する '視覚的なベルを有効にする' と共に用いられます。"
+msgstr ""
+"アプリケーションもしくはシステムが聴覚的なビープ音を生成できるか決定します。これは、無音のビープを許可する '視覚的なベルを有効にする' "
+"と共に用いられます。"
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
@@ -693,7 +751,11 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr "システムベルや他のアプリケーションのベル表示が鳴らされたことを視覚的に通知する実装の方法を Marco に通知します。現在、2つの方法が有効です。\"fullscreen\" は全画面を白黒で点滅させます。\"frame_flash\" はベルのシグナルを通知したアプリケーションのタイトルバーを点滅させます。どのアプリケーションがベルのシグナルを鳴らしたのか分からないとき (デフォルトのシステムビープではよくあるケースです) は、その時点でフォーカスされているウィンドウのタイトルバーを点滅させます。"
+msgstr ""
+"システムベルや他のアプリケーションのベル表示が鳴らされたことを視覚的に通知する実装の方法を Marco "
+"に通知します。現在、2つの方法が有効です。\"fullscreen\" は全画面を白黒で点滅させます。\"frame_flash\" "
+"はベルのシグナルを通知したアプリケーションのタイトルバーを点滅させます。どのアプリケーションがベルのシグナルを鳴らしたのか分からないとき "
+"(デフォルトのシステムビープではよくあるケースです) は、その時点でフォーカスされているウィンドウのタイトルバーを点滅させます。"
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
@@ -712,7 +774,9 @@ msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr "TRUE にすると、コンポジットマネージャーとして動作している際、Alt-Tab のポップアップにウィンドウのサムネイルを表示しなくなります。アプリケーションのアイコンが代わりに表示されます。"
+msgstr ""
+"TRUE にすると、コンポジットマネージャーとして動作している際、Alt-Tab "
+"のポップアップにウィンドウのサムネイルを表示しなくなります。アプリケーションのアイコンが代わりに表示されます。"
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
@@ -725,7 +789,10 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr "この値が TRUE の場合、Marco はワイヤーフレームを使ったり、アニメーションをしなくなったりするなど、ユーザーへのフィードバックが少なくなり、\"直感的な操作\" という点で操作性が落ちます。これは多くのユーザーにとってユーザビリティの重大な低下につながりますが、そうしないと操作に困るような旧式のアプリケーションやターミナル・サーバーもうまく使えるようになります。しかしながら、アクセシビリティの機能が有効な場合はワイヤーフレームの機能は無効になります。"
+msgstr ""
+"この値が TRUE の場合、Marco "
+"はワイヤーフレームを使ったり、アニメーションをしなくなったりするなど、ユーザーへのフィードバックが少なくなり、\"直感的な操作\" "
+"という点で操作性が落ちます。これは多くのユーザーにとってユーザビリティの重大な低下につながりますが、そうしないと操作に困るような旧式のアプリケーションやターミナル・サーバーもうまく使えるようになります。しかしながら、アクセシビリティの機能が有効な場合はワイヤーフレームの機能は無効になります。"
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
@@ -741,7 +808,11 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr "この値が TRUE の場合、Marco の動作はウィンドウではなくアプリケーションに依存します。この概念はやや抽象的ですが、一般的にアプリケーション固定モードは Mac に近く、Windows にはあまり似ていません。アプリケーション固定モードでウィンドウがフォーカスされると、アプリケーションのすべてのウィンドウが手前に表示されます。また、アプリケーション固定モードでは、フォーカス・クリックが他のアプリケーションのウィンドウに渡されることはありません。しかしながら、アプリケーション固定モードは現在のところ大部分が未実装です。"
+msgstr ""
+"この値が TRUE の場合、Marco "
+"の動作はウィンドウではなくアプリケーションに依存します。この概念はやや抽象的ですが、一般的にアプリケーション固定モードは Mac に近く、Windows"
+" "
+"にはあまり似ていません。アプリケーション固定モードでウィンドウがフォーカスされると、アプリケーションのすべてのウィンドウが手前に表示されます。また、アプリケーション固定モードでは、フォーカス・クリックが他のアプリケーションのウィンドウに渡されることはありません。しかしながら、アプリケーション固定モードは現在のところ大部分が未実装です。"
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -753,7 +824,9 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr "いくつかのアプリケーションではウィンドウマネージャーの間違った動きや機能の結果、仕様を無視します。このオプションは Marco を厳格に正しいモードにし、さらに一貫したユーザーインタフェースを提供することで、何かおかしな動きをするアプリケーションを実行することがないようにします。"
+msgstr ""
+"いくつかのアプリケーションではウィンドウマネージャーの間違った動きや機能の結果、仕様を無視します。このオプションは Marco "
+"を厳格に正しいモードにし、さらに一貫したユーザーインタフェースを提供することで、何かおかしな動きをするアプリケーションを実行することがないようにします。"
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -798,7 +871,10 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr "新しいウィンドウをどのように配置するかを設定します。\"automatic\" は、デスクトップに空きがある場合その位置に、空きがない場合は単純に重なる位置にシステムが自動配置します。\"pointer\" はマウスポインターの位置に配置します。\"manual\"はユーザーがマウスやキーボードを使って配置位置を決定します。"
+msgstr ""
+"新しいウィンドウをどのように配置するかを設定します。\"automatic\" "
+"は、デスクトップに空きがある場合その位置に、空きがない場合は単純に重なる位置にシステムが自動配置します。\"pointer\" "
+"はマウスポインターの位置に配置します。\"manual\"はユーザーがマウスやキーボードを使って配置位置を決定します。"
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
@@ -831,6 +907,10 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"/apps/marco/keybinding_commands に対応する数字のコマンドを実行するキーバインドを指定します。フォーマットは "
+"\"&lt;Control&gt;a\" や \"&lt;Shift&gt;&lt;Alt&gt;F1\" "
+"のようにします。パーサは完全に自由で大文字や小文字を許可します。そして \"&lt;Ctl&gt;\" や \"&lt;Ctrl&gt;\" "
+"のような省略もできます。もし特別な文字 \"disabled\" をオプションに設定した場合は、この動作のキーバインドはなくなります。"
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -854,11 +934,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "ポップアップ・ウインドウを利用して後方のアプリケーションのウィンドウへ移動する"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "ポップアップ・ウインドウを利用して後方のウィンドウへ移動する"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
@@ -870,19 +950,19 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "ポップアップ・ウィンドウを使ってパネルとデスクトップの間を後方に移動する"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "アプリケーションが持つ複数のウィンドウの間を後方にすばやく移動する"
 
 #: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "ウィンドウ間を後方にすばやく移動する"
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "後方のパネルとデスクトップとの間を切り替える"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
@@ -894,6 +974,8 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"/apps/marco/global_keybindings/runs_command_N "
+"キーは、これらのコマンドに対応するキーバインドを定義します。run_command_N のキーバインドを押すとcommand_Nが実行されます。"
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
@@ -904,6 +986,8 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"/apps/marco/global_keybindings/runs_command_screenshot "
+"キーは。この設定で実行するよう指定されたコマンドに対応するキーバインドを定義します。"
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
@@ -915,26 +999,28 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"/apps/marco/global_keybindings/runs_command_window_screenshot "
+"キーは、この設定で実行するよう指定されたコマンドに対応するキーバインドを定義します。"
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "ウィンドウを常に他のウィンドウの上に表示するかどうかを切り替える"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
+msgstr "ウィンドウを画面の北西 (左側の上) に並べる"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "ウィンドウを画面の北東 (右側の上) に並べる"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "ウィンドウを画面の南東 (右側の下) に並べる"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "ウィンドウを画面の南西 (左側の下) に並べる"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -989,41 +1075,44 @@ msgstr "既にバインディングとして別のプログラムでキー %s (�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "<tt>%s</tt> が動作中にエラーがありました:\n\n%s"
+msgstr ""
+"<tt>%s</tt> が動作中にエラーがありました:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "コマンド %d は定義されていません。\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "端末を起動するコマンドが定義されていません。\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1032,11 +1121,15 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nCopyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., とその他の貢献者\nこれはフリーソフトウェアです; 複製する際の条件はソース・ファイルを参照してください。\nこのソフトウェアは無保証です; 商用や特定目的への適用についても保証しません。\n"
+msgstr ""
+"marco %s\n"
+"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., とその他の貢献者\n"
+"これはフリーソフトウェアです; 複製する際の条件はソース・ファイルを参照してください。\n"
+"このソフトウェアは無保証です; 商用や特定目的への適用についても保証しません。\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "セッション・マネージャに接続しない"
+msgstr "セッションマネージャーに接続しない"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1060,7 +1153,7 @@ msgstr "バージョンを表示する"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Xの呼び出しを同期する"
+msgstr "X の呼び出しを同期する"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1139,7 +1232,9 @@ msgstr "ディスプレイ '%2$s' 上のスクリーン %1$d は無効です\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "ディスプレイ \"%2$s\" 上のスクリーン %1$d はすでにウィンドウマネージャを持っています; 現在のウィンドウマネージャを上書きするために--replace オプションの使用を試してください。\n"
+msgstr ""
+"ディスプレイ \"%2$s\" 上のスクリーン %1$d はすでにウィンドウマネージャを持っています; 現在のウィンドウマネージャを上書きするために--"
+"replace オプションの使用を試してください。\n"
 
 #: ../src/core/screen.c:402
 #, c-format
@@ -1257,7 +1352,9 @@ msgstr "Marco"
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "ウィンドウ %s は ICCCM で指定されてたような WM_CLIENT_LEADER ウィンドウの代わりに自分自身で SM_CLIENT_ID を設定しています\n"
+msgstr ""
+"ウィンドウ %s は ICCCM で指定されてたような WM_CLIENT_LEADER ウィンドウの代わりに自分自身で SM_CLIENT_ID "
+"を設定しています\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1270,7 +1367,9 @@ msgstr "ウィンドウ %s は ICCCM で指定されてたような WM_CLIENT_LE
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "ウィンドウ %s はリサイズ可能ではない MWM ヒント指示を設定していますが、最小サイズ %d x %d と最大サイズ %d x %dも設定しています。これはあまり意味がありません\n"
+msgstr ""
+"ウィンドウ %s はリサイズ可能ではない MWM ヒント指示を設定していますが、最小サイズ %d x %d と最大サイズ %d x "
+"%dも設定しています。これはあまり意味がありません\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1316,7 +1415,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "ウィンドウ 0x%1$lx には type %5$s format %6$d n_items %7$d のプロパティ\n%2$s が指定されていますが、実際には type %3$s format %4$d であることを\n期待されています。これは、ほとんどの場合、アプリケーションのバグであり、\nウィンドウマネージャのバグではありません。\nウィンドウの属性は title=\"%8$s\" class=\"%9$s\" name=\"%10$s\"です。\n"
+msgstr ""
+"ウィンドウ 0x%1$lx には type %5$s format %6$d n_items %7$d のプロパティ\n"
+"%2$s が指定されていますが、実際には type %3$s format %4$d であることを\n"
+"期待されています。これは、ほとんどの場合、アプリケーションのバグであり、\n"
+"ウィンドウマネージャのバグではありません。\n"
+"ウィンドウの属性は title=\"%8$s\" class=\"%9$s\" name=\"%10$s\"です。\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1337,7 +1441,7 @@ msgstr "用法: %s\n"
 
 #: ../src/ui/frames.c:1098
 msgid "Close Window"
-msgstr "ウィンドウを閉じます"
+msgstr "ウィンドウを閉じる"
 
 #: ../src/ui/frames.c:1101
 msgid "Window Menu"
@@ -1392,7 +1496,7 @@ msgstr "最大化(_X)"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "元のサイズに戻す(_X)"
+msgstr "最大化解除(_X)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1577,11 +1681,11 @@ msgstr "下"
 
 #: ../src/ui/theme.c:256
 msgid "left"
-msgstr "左"
+msgstr "左側"
 
 #: ../src/ui/theme.c:258
 msgid "right"
-msgstr "右"
+msgstr "右側"
 
 #: ../src/ui/theme.c:285
 #, c-format
@@ -1613,14 +1717,18 @@ msgstr "階調度は少なくとも2つの色をもつべきです"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "\"%s\" を解析できませんでした; GTK の色指定では gtk:fg[NORMAL] のように状態を大括弧で囲み指定する必要があります (NORMAL は状態を示す)"
+msgstr ""
+"\"%s\" を解析できませんでした; GTK の色指定では gtk:fg[NORMAL] のように状態を大括弧で囲み指定する必要があります "
+"(NORMAL は状態を示す)"
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "\"%s\" を解析できませんでした; GTK の色指定では gtk:fg[NORMAL] のように状態の後に右大括弧をつける必要があります (NORMAL は状態を示す)"
+msgstr ""
+"\"%s\" を解析できませんでした; GTK の色指定では gtk:fg[NORMAL] のように状態の後に右大括弧をつける必要があります "
+"(NORMAL は状態を示す)"
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1767,7 +1875,9 @@ msgstr "テーマにエラーを引き起こす式が含まれていました: %
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "このフレームスタイルは <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> を指定する必要があります"
+msgstr ""
+"このフレームスタイルは <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> "
+"を指定する必要があります"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
@@ -1790,7 +1900,9 @@ msgstr "テーマ \"%1$s\" の <%2$s> が設定されていません"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "テーマ \"%2$s\" にウィンドウタイプ \"%1$s\" のフレームスタイルが設定されていません。<window type=\"%3$s\" style_set=\"whatever\"/> エレメントを追加してください"
+msgstr ""
+"テーマ \"%2$s\" にウィンドウタイプ \"%1$s\" のフレームスタイルが設定されていません。<window type=\"%3$s\" "
+"style_set=\"whatever\"/> エレメントを追加してください"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
@@ -1807,12 +1919,12 @@ msgstr "定数 \"%s\" は既に定義されています"
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "エレメント <%2$s> に \"%1$s\" 属性がありません"
+msgstr "属性 \"%s\" が要素 <%s> にありません"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "%d 行目 %d 文字目: %s"
+msgstr "%d 行 %d 桁: %s"
 
 #: ../src/ui/theme-parser.c:438
 #, c-format
@@ -1822,7 +1934,7 @@ msgstr "同じ <%2$s> エレメント上で属性 \"%1$s\" が 2 度繰り返さ
 #: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "このコンテキスト内では <%2$s> エレメント上の属性 \"%1$s\" は無効です"
+msgstr "属性 \"%s\" はこのコンテキストの要素 <%s> には不適切です"
 
 #: ../src/ui/theme-parser.c:547
 #, c-format
@@ -1869,7 +1981,9 @@ msgstr "アルファ値は 0.0 (不可視)と 1.0 (完全に不透明) の間で
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "無効なタイトルスケール \"%s\" です (xx-small,x-small,small,medium,large,x-large,xx-large のひとつでなければなりません)\n"
+msgstr ""
+"無効なタイトルスケール \"%s\" です (xx-small,x-small,small,medium,large,x-large,xx-large "
+"のひとつでなければなりません)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1920,7 +2034,7 @@ msgstr "ウィンドウタイプ \"%s\" はすでにスタイル設定に割り�
 #: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "エレメント <%s> は <%s> の下では許可されていません"
+msgstr "要素 <%s> は <%s> の下に格納できません"
 
 #: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
 #: ../src/ui/theme-parser.c:1438
@@ -1952,7 +2066,9 @@ msgstr "エレメント <%s> に \"start_angle\" または \"from\" 属性はあ
 #: ../src/ui/theme-parser.c:1827
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
-msgstr "エレメント <%s> に \"extent_angle\" または \"to\" 属性はありません\n               "
+msgstr ""
+"エレメント <%s> に \"extent_angle\" または \"to\" 属性はありません\n"
+"               "
 
 #: ../src/ui/theme-parser.c:2067
 #, c-format
@@ -2073,19 +2189,25 @@ msgstr "状態 %s フォーカス %s のためのスタイルはすでに指定�
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "<piece> エレメントは2つの draw_ops を持つことができません (テーマで draw_ops 属性と <draw_ops> エレメントが指定されたか、あるいは 2 つのエレメントが指定されました)"
+msgstr ""
+"<piece> エレメントは2つの draw_ops を持つことができません (テーマで draw_ops 属性と <draw_ops> "
+"エレメントが指定されたか、あるいは 2 つのエレメントが指定されました)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "<button> エレメントは 2 つの draw_ops を持つことができません (テーマで draw_ops 属性と <draw_ops> エレメントが指定されたか、あるいは 2 つのエレメントが指定されました)"
+msgstr ""
+"<button> エレメントは 2 つの draw_ops を持つことができません (テーマで draw_ops 属性と <draw_ops> "
+"エレメントが指定されたか、あるいは 2 つのエレメントが指定されました)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "<menu_icon> エレメントは 2 つの draw_ops を持つことができません (テーマで draw_ops 属性と <draw_ops> エレメントが指定されたか、あるいは 2 つのエレメントが指定されました)"
+msgstr ""
+"<menu_icon> エレメントは 2 つの draw_ops を持つことができません (テーマで draw_ops 属性と <draw_ops> "
+"エレメントが指定されたか、あるいは 2 つのエレメントが指定されました)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2118,7 +2240,7 @@ msgstr "エレメント <%s> は描画処理エレメントの内側に許可さ
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "エレメント <%s> は <%s> エレメントの内側に許可されていません"
+msgstr "要素 <%s> は要素 <%s> の内側に格納できません"
 
 #: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"
@@ -2131,7 +2253,7 @@ msgstr "ボタンのための draw_ops は提供されていません"
 #: ../src/ui/theme-parser.c:3815
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "エレメント <%s> の内側にテキストは許可されません"
+msgstr "要素 <%s> の内側にテキストを格納できません"
 
 #: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
 #: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
@@ -2184,7 +2306,7 @@ msgstr "トーンオフ メニュー"
 
 #: ../src/ui/theme-viewer.c:425
 msgid "Border"
-msgstr "ボーダー"
+msgstr "境界線を付ける"
 
 #: ../src/ui/theme-viewer.c:782
 #, c-format
@@ -2241,4 +2363,6 @@ msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "%d フレームをクライアント側で %g秒 (1フレームにつき %gミリ秒)、実時間ではXサーバのリソースを含めて %g秒 (1フレームにつき %gミリ秒)で描画しました\n"
+msgstr ""
+"%d フレームをクライアント側で %g秒 (1フレームにつき %gミリ秒)、実時間ではXサーバのリソースを含めて %g秒 (1フレームにつき "
+"%gミリ秒)で描画しました\n"

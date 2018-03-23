@@ -1,18 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Esperanto (http://www.transifex.com/mate/MATE/language/eo/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Martin Wimpress <code@flexion.org>, 2018\n"
+"Language-Team: Esperanto (https://www.transifex.com/mate/teams/13566/eo/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: eo\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -208,7 +209,7 @@ msgstr ""
 #: ../src/50-marco-window-key.xml.in.h:8
 #: ../src/org.mate.marco.gschema.xml.h:119
 msgid "Close window"
-msgstr "Fermi la fenestron"
+msgstr "Fermi fenestron"
 
 #: ../src/50-marco-window-key.xml.in.h:9
 #: ../src/org.mate.marco.gschema.xml.h:118
@@ -490,7 +491,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Kontroli kiel novaj fenestroj iĝas fokusitaj"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -598,7 +599,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr ""
+msgstr "Aktuala etoso"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
@@ -630,7 +631,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Nombro da laborspacoj"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -657,7 +658,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Ebligi videblan sonorilon"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
@@ -668,7 +669,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Sistempepo estas aŭdeble"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
@@ -693,7 +694,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Kunmet-administrilo"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
@@ -808,11 +809,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
-msgstr ""
+msgstr "Nomo de laborspaco"
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
-msgstr ""
+msgstr "La nomo de laborspaco."
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
@@ -850,11 +851,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Moviĝi malantaŭen inter fenestroj de aplikaĵo, uzante ŝprucfenestron"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Moviĝi malantaŭen inter fenestroj, uzante ŝprucfenestron"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
@@ -866,19 +867,19 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Moviĝi malantaŭen inter paneloj kaj labortablo, uzante ŝprucfenestron"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Moviĝi malantaŭen inter fenestroj de aplikaĵo tuj"
 
 #: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Moviĝi malantaŭen inter fenestroj tuj"
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Moviĝi malantaŭen inter paneloj kaj labortablo tuj"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
@@ -985,41 +986,44 @@ msgstr "Iu alia programo jam uzas klavon %s kun modifiloj %x kiel bindon\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Okazis eraro lanĉante <tt>%s</tt>:\n\n%s"
+msgstr ""
+"Okazis eraro lanĉante <tt>%s</tt>:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Neniu komando %d estis difinita.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Neniu terminala komando estis difinita.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "Nuligi"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1028,11 +1032,15 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nKopirajto (C) 2001-%s Havoc Pennington, Red Hat, Inc., kaj aliaj\nĈi tiu estas libera programaro; bonvolu vidi la fontan kodon por kopiaj kondicojn,\nNE estas IU garantio; nek por KOMERCEBLECO nek ADAPTEBLECO POR SPECIFA CELO.\n"
+msgstr ""
+"marco %s\n"
+"Kopirajto (C) 2001-%s Havoc Pennington, Red Hat, Inc., kaj aliaj\n"
+"Ĉi tiu estas libera programaro; bonvolu vidi la fontan kodon por kopiaj kondicojn,\n"
+"NE estas IU garantio; nek por KOMERCEBLECO nek ADAPTEBLECO POR SPECIFA CELO.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "Elŝalti konekton al la seanco-administrilo"
+msgstr "Malŝalti konekton al seanco-administrilo"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1040,7 +1048,7 @@ msgstr "Anstataŭigi la nun ruliĝantan fenestromastrumilon per Marco"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Specifi seancoadministran identigilon"
+msgstr "Specifi identigilon de seancoadministrilo"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1080,7 +1088,9 @@ msgstr "Malsukcesis skani etosan dosierujon %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Ne eblis trovi ian etoson! Certigu, ke %s ekzistas kaj enhavas la ordinarajn etosojn.\n"
+msgstr ""
+"Ne eblis trovi ian etoson! Certigu, ke %s ekzistas kaj enhavas la ordinarajn"
+" etosojn.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1099,7 +1109,9 @@ msgstr ""
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Provizoraj solvoj por rompitaj aplikaĵoj estas malaktivigitaj. Kelkaj aplikaĵoj povus ruli malkorekte.\n"
+msgstr ""
+"Provizoraj solvoj por rompitaj aplikaĵoj estas malaktivigitaj. Kelkaj "
+"aplikaĵoj povus ruli malkorekte.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
@@ -1111,19 +1123,23 @@ msgstr ""
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "Valoro \"%s\", trovita en la agorda datenbanko, ne estas cvalida valoro kiel mus-butona modifilo.\n"
+msgstr ""
+"Valoro \"%s\", trovita en la agorda datenbanko, ne estas cvalida valoro kiel"
+" mus-butona modifilo.\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "Valoro %s, trovita en la MateConf-agordaro, ne estas valida kiel klavo-bindaĵo \"%s\".\n"
+msgstr ""
+"Valoro %s, trovita en la MateConf-agordaro, ne estas valida kiel klavo-"
+"bindaĵo \"%s\".\n"
 
 #: ../src/core/prefs.c:2056
 #, c-format
 msgid "Workspace %d"
-msgstr "Laborspaco %d"
+msgstr "Laborkadro %d"
 
 #: ../src/core/screen.c:359
 #, c-format
@@ -1135,12 +1151,15 @@ msgstr "Ekrano %d en vidigo '%s' ne estas valida.\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Ekrano %d en montrilo \"%s\" jam havas fenestroadministrilo; provi uzi opcion --replace por anstataŭigi la nunan fenestroadministrilo.\n"
+msgstr ""
+"Ekrano %d en montrilo \"%s\" jam havas fenestroadministrilo; provi uzi "
+"opcion --replace por anstataŭigi la nunan fenestroadministrilo.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr "Neeblas akiri fenestroadministrilan elekton ĉe ekrano %d, montrilo “%s”\n"
+msgstr ""
+"Neeblas akiri fenestroadministrilan elekton ĉe ekrano %d, montrilo “%s”\n"
 
 #: ../src/core/screen.c:460
 #, c-format
@@ -1333,7 +1352,7 @@ msgstr "Uzo: %s\n"
 
 #: ../src/ui/frames.c:1098
 msgid "Close Window"
-msgstr "Fermi Fenestron"
+msgstr "Fermi la fenestron"
 
 #: ../src/ui/frames.c:1101
 msgid "Window Menu"
@@ -1378,17 +1397,17 @@ msgstr ""
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:65
 msgid "Mi_nimize"
-msgstr "Mi_nimumigi"
+msgstr "Mi_nimumigu"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:67
 msgid "Ma_ximize"
-msgstr "Ma_ksimumigi"
+msgstr "Ma_ksimumigu"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "Malma_ksimumigi"
+msgstr "Nema_ksimumigu"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1403,12 +1422,12 @@ msgstr ""
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:75
 msgid "_Move"
-msgstr "_Movi"
+msgstr "_Movu"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:77
 msgid "_Resize"
-msgstr "_Readapti"
+msgstr "_Regrandigi"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:79
@@ -1424,38 +1443,38 @@ msgstr "Ĉiam malfone"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
-msgstr "Ĉi_am en videbla laborspaco"
+msgstr "Nur en _videbla laborkadro"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
-msgstr "_Nur en ĉi tiu laborspaco"
+msgstr "Nur en _tiu laborkadro"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "Movi al la _maldekstra laborspaco"
+msgstr "Movu al la _maldekstra laborkadro"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "Movi al la _dekstra laborspaco"
+msgstr "Movu al la _dekstra laborkadro"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "Movi al la su_pra laborspaco"
+msgstr "Movu al la _supera laborkadro"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "Movi al la su_ba laborspaco"
+msgstr "Movu al la s_uba laborkadro"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:100
 msgid "_Close"
-msgstr "_Fermi"
+msgstr "_Fermu"
 
 #: ../src/ui/menu.c:197
 #, c-format
@@ -1465,16 +1484,16 @@ msgstr "Laborspaco %d%n"
 #: ../src/ui/menu.c:207
 #, c-format
 msgid "Workspace 1_0"
-msgstr "Laborspaco 1_0"
+msgstr "Laborkadro 1_0"
 
 #: ../src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
-msgstr "Laborspaco %s%d"
+msgstr "Laborkadro %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Movi al alia laborspaco"
+msgstr "Movu al _alia laborkadro"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -2180,7 +2199,7 @@ msgstr ""
 
 #: ../src/ui/theme-viewer.c:425
 msgid "Border"
-msgstr "Rando"
+msgstr "Bordero"
 
 #: ../src/ui/theme-viewer.c:782
 #, c-format

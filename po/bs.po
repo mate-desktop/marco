@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Sky Lion <xskylionx@gmail.com>, 2016-2017
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Bosnian (http://www.transifex.com/mate/MATE/language/bs/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Sky Lion <xskylionx@gmail.com>, 2018\n"
+"Language-Team: Bosnian (https://www.transifex.com/mate/teams/13566/bs/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: bs\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -429,7 +429,7 @@ msgstr "Premjesti prozor za jednu radnu površinu ispod"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Ispravljać za korištenje prepravljenih akcija klika u prozoru"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -488,6 +488,11 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"Fokus prozora podešava kako će prozori biti aktivirani. Ima tri moguće "
+"vrijednosti „click“ znači da prozor mora biti izabran da bi dobio fokus, "
+"„sloppy“ znači da prozor dobija fokus kada pokazivač miša uđe u prozor i "
+"„mouse“ što znači da će prozor biti fokusiran kada pokazivačka strelica miša"
+" uđe u prozor i biti defokusiran kada strelica izađe iz prozora."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
@@ -499,7 +504,11 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "Ova opcija pruža dodatnu kontrolu o kako novi prozori dobivaju fokus. Ima dvije moguće vrijednosti; \"pametni\" primjenjuje korisnikov uobičajeni način fokusa, i \"strog\" rezultira u ne davanju fokusa prozorima koji su pokrenuti iz terminala."
+msgstr ""
+"Ova opcija pruža dodatnu kontrolu o kako novi prozori dobivaju fokus. Ima "
+"dvije moguće vrijednosti; \"pametni\" primjenjuje korisnikov uobičajeni "
+"način fokusa, i \"strog\" rezultira u ne davanju fokusa prozorima koji su "
+"pokrenuti iz terminala."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -577,7 +586,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Automatski podiže prozor sa fokusom"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -589,13 +598,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Odgoda u milisekundama za opciju automatskog podizanja"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
+"Vremenski period prije podizanja prozora ako je opcija auto_raise "
+"postavljena na „true“. Period se izražava u hiljaditim dijelovima sekunde."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -616,6 +627,8 @@ msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
+"Ako je aktivirano, ignorira se titlebar_font  opcija i koristi se standardno"
+" aplikacijsko pismo za naslovnu traku prozora."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -638,7 +651,10 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr "Broj radnih površina. Mora biti više od nule, i ima postavljeni maksimum da spriječi stvaranje desktopa neupotrebljivim slučajnim traženjem previše radnih površina."
+msgstr ""
+"Broj radnih površina. Mora biti više od nule, i ima postavljeni maksimum da "
+"spriječi stvaranje desktopa neupotrebljivim slučajnim traženjem previše "
+"radnih površina."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -658,7 +674,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Aktiviraj vidni signal"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
@@ -669,17 +685,19 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Sistemsko zvono se čuje"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"Određuje hoće li aplikacije ili sistem generisati zvučne 'beepove'može se "
+"koristiti u spoju sa 'vizuelnim zvonom' da se dozvoli tihi 'beep'"
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Vrsta vizulnog zvonca "
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid ""
@@ -691,6 +709,12 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"Govori Marco-u da prikaže nešto kada zazvoni sistemsko zvono ili neki drugi "
+"program zazvoni. Trenutno su moguće dvije vrijednosti, „fullscreen“ kojim "
+"cijeli zaslon treperi crno-bijelo, i „frame_flash“ kada treperi samo "
+"naslovna linija prozora koji je zazvonio. Ukoliko nije poznat program koji "
+"je zazvonio (kao što je to obično slučaj sa „sistemskim zvonom“), trepereće "
+"naslovna linija prozora koji je trenutno u fokusu."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
@@ -713,7 +737,8 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
-msgstr "Ako je postavljno, mijenja se iskorištenost za manje korištenje resursa"
+msgstr ""
+"Ako je postavljno, mijenja se iskorištenost za manje korištenje resursa"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -727,7 +752,7 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "(Nije ugrađeno) Navigacija radi u smislu aplikacija, ne prozora"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -742,7 +767,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "Isključi mogućnosti potrebne za stare ili neispravne aplikacijie"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -760,7 +785,9 @@ msgstr "Odlučuje da li su novi prozori stvoreni u centar ekrana"
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr "Ako je postavljeno, novi prozori su otvoreni u centru ekrana. Inače, oni su otvoreni u gornjem lijevom uglu ekrana."
+msgstr ""
+"Ako je postavljeno, novi prozori su otvoreni u centru ekrana. Inače, oni su "
+"otvoreni u gornjem lijevom uglu ekrana."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
@@ -828,6 +855,13 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"Kombinacije dugmadi koja pokreću odgovarajuće označenu naredbu u "
+"/apps/marco/keybinding_commands ključu. Oblik zapisa izgleda kao "
+"\"&lt;Control&gt;a\" ili \"&lt;Shift&gt;&lt;Alt&gt;F1\". Program za obradu "
+"je dosta slobodan i dozvoljava velika ili mala slova, također i skraćenice "
+"poput \"&lt;Ctl&gt;\" i \"&lt; Ctrl&gt;\". Ako postavite opciju na "
+"specijalni niz znakova \"disabled\", tada neće biti korištena niti jedna "
+"kombinacija tipki za ovu aktivnost."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -879,11 +913,12 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Pomjeranje unazad između panela i radnih površina  bez odlaganja"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
 msgstr ""
+"Naredbe koje će se pokrenuti na odaziv  kombinacije tipki sa tastature"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -891,6 +926,9 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"Ključ /apps/marco/global_keybindings/run_command_N definiše dugmad koja "
+"odgovaraju ovim komandama. Pritiskom kombinacije dugmadi za "
+"pokretanje_komandu_N će izvršiti komandu_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
@@ -901,6 +939,8 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"Ključ /apps/marco/global_keybindings/run_command_N definiše funkciju dugmadi"
+" kojim se pokreće naredba navedena pomoću njega."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
@@ -912,6 +952,8 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"Ključ /apps/marco/global_keybindings/run_command_window_screenshot definiše "
+"funkciju dugmadi kojim se pokreće naredba navedena pomoću njega."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
@@ -952,7 +994,9 @@ msgstr ""
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Možete odabrati da li da sačekate krarko vijeme da nastavi ili da prisilite aplikaciju da potpuno prestane."
+msgstr ""
+"Možete odabrati da li da sačekate krarko vijeme da nastavi ili da prisilite "
+"aplikaciju da potpuno prestane."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -986,7 +1030,7 @@ msgstr "Neki drugi program već koristi kljuć %s sa modifikacijama %x kao spoj\
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -994,33 +1038,33 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Nijedna komanda %d nije definisana.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr ""
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "Odustani"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1033,7 +1077,7 @@ msgstr ""
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Onemogući spajanje sa upraviteljem sesije"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1041,7 +1085,7 @@ msgstr "Zamjenite trenutni prozorni menadžer sa Marco"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr ""
+msgstr "Navedi ID upravitelja sesije"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1057,7 +1101,7 @@ msgstr "Ispiši verziju"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr ""
+msgstr "Sinhroniziraj X pozive"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1100,7 +1144,9 @@ msgstr ""
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Kompromisi za loše programe su isključeni. Neki programi se mogu ponašati čudno.\n"
+msgstr ""
+"Kompromisi za loše programe su isključeni. Neki programi se mogu ponašati "
+"čudno.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
@@ -1112,7 +1158,9 @@ msgstr ""
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "“%s“ je pronađen u bazi podešavanja što nije ispravna vrijednost za dugme koje mijenja ponašanje dugmadi miša\n"
+msgstr ""
+"“%s“ je pronađen u bazi podešavanja što nije ispravna vrijednost za dugme "
+"koje mijenja ponašanje dugmadi miša\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
@@ -1136,12 +1184,15 @@ msgstr "Ekran %d na prikazu '%s' je neispravan\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Ekran %d na prikazu \"%s\" već ima upravitelja prozora; pokušajte koristiti --replace opciju da zamjenite trenutni upravitelj prozora.\n"
+msgstr ""
+"Ekran %d na prikazu \"%s\" već ima upravitelja prozora; pokušajte koristiti "
+"--replace opciju da zamjenite trenutni upravitelj prozora.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr "Nije moguće dobiti biranje upravitelja prozora na ekranu %d prikaza \"%s\"\n"
+msgstr ""
+"Nije moguće dobiti biranje upravitelja prozora na ekranu %d prikaza \"%s\"\n"
 
 #: ../src/core/screen.c:460
 #, c-format
@@ -1254,7 +1305,9 @@ msgstr "Marco"
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Prozor %s je postavio SM_CLIENT_ID na samog sebe umjesto na prozor WM_CLIENT_LEADER kao što je navedeno u ICCCM.\n"
+msgstr ""
+"Prozor %s je postavio SM_CLIENT_ID na samog sebe umjesto na prozor "
+"WM_CLIENT_LEADER kao što je navedeno u ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1267,7 +1320,10 @@ msgstr "Prozor %s je postavio SM_CLIENT_ID na samog sebe umjesto na prozor WM_CL
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Prozor %s je postavio MWM hint navodeći da mu se veličina ne može promijeniti, ali postavlja min. veličinu %d x %d a maksimalnu %d x %d; ovo nema previše smisla.\n"
+msgstr ""
+"Prozor %s je postavio MWM hint navodeći da mu se veličina ne može "
+"promijeniti, ali postavlja min. veličinu %d x %d a maksimalnu %d x %d; ovo "
+"nema previše smisla.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1313,7 +1369,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Prozor 0x%lx ima osobinu %s\ntako da je očekivano da ima tip %s format %d,\na zapravo ima tip %s format %d n_items %d.\nOvo je najverovatnije greška u programu, a ne u upravitelju prozora.\nProzor ima naslov=\"%s\" klasa=\"%s\" ime=\"%s\"\n"
+msgstr ""
+"Prozor 0x%lx ima osobinu %s\n"
+"tako da je očekivano da ima tip %s format %d,\n"
+"a zapravo ima tip %s format %d n_items %d.\n"
+"Ovo je najverovatnije greška u programu, a ne u upravitelju prozora.\n"
+"Prozor ima naslov=\"%s\" klasa=\"%s\" ime=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1325,7 +1386,9 @@ msgstr "Osobina %s na prozoru 0x%lx je sadržala neispravan UTF-8\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Osobina %s na prozoru 0x%lx sadrži neispravni UTF-8 za predmet %d na popisu\n"
+msgstr ""
+"Osobina %s na prozoru 0x%lx sadrži neispravni UTF-8 za predmet %d na "
+"popisu\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1379,17 +1442,17 @@ msgstr "Stavi prozor na samo jednu radnu površinu"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:65
 msgid "Mi_nimize"
-msgstr "_Minimiziraj"
+msgstr "Mi_nimiziraj"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:67
 msgid "Ma_ximize"
-msgstr "_Maksimiziraj"
+msgstr "Ma_ksimiziraj"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "Vrati sa _maksimiziranog"
+msgstr "Dema_ksimiziraj"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1475,7 +1538,7 @@ msgstr "Radna površina %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Pomjeri na drugu _radnu površinu"
+msgstr "Prebacise na drugu _Radnu površinu"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -1610,14 +1673,18 @@ msgstr "Stepenovanje mora imati barem dvije boje"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK specifikacija boje mora imati stanje u zagradi,naprimjer  gtk:fg[NORMAL]  gdje je NORMAL stanje;nije moguće analizirati \"%s\""
+msgstr ""
+"GTK specifikacija boje mora imati stanje u zagradi,naprimjer  gtk:fg[NORMAL]"
+"  gdje je NORMAL stanje;nije moguće analizirati \"%s\""
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK specifikacija boje mora imati zatvorenu zagradu poslije stanja,naprimjer  gtk:fg[NORMAL] gdje je NORMAL stanje;nije moguće analizirati \"%s\""
+msgstr ""
+"GTK specifikacija boje mora imati zatvorenu zagradu poslije stanja,naprimjer"
+"  gtk:fg[NORMAL] gdje je NORMAL stanje;nije moguće analizirati \"%s\""
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1634,7 +1701,9 @@ msgstr "Ne razumijem komponentu boje \"%s\" u  izboru boja"
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Format miješanja „blend/bg_color/fg_color/alpha“, „%s“ se ne uklapa u traženi format zapisa"
+msgstr ""
+"Format miješanja „blend/bg_color/fg_color/alpha“, „%s“ se ne uklapa u "
+"traženi format zapisa"
 
 #: ../src/ui/theme.c:1259
 #, c-format
@@ -1676,19 +1745,23 @@ msgstr "Izraz koordinacije sadrži karakter '%s'  koji nije dozvoljen"
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "Izraz koordinacije sadrži broj sa pokretnom točkom '%s' koji nije mogao biti analiziran"
+msgstr ""
+"Izraz koordinacije sadrži broj sa pokretnom točkom '%s' koji nije mogao biti"
+" analiziran"
 
 #: ../src/ui/theme.c:1747
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr "Izraz koordinacije sadrži cijeli broj '%s' koji nije mogao biti analiziran"
+msgstr ""
+"Izraz koordinacije sadrži cijeli broj '%s' koji nije mogao biti analiziran"
 
 #: ../src/ui/theme.c:1869
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Izraz koordinacije sadrži nepoznati operator na početku ovog teksta \"%s\""
+msgstr ""
+"Izraz koordinacije sadrži nepoznati operator na početku ovog teksta \"%s\""
 
 #: ../src/ui/theme.c:1926
 #, c-format
@@ -1704,7 +1777,9 @@ msgstr "Izraz koordinata je rezultat podjele sa nulom"
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "Izraz koordinacije pokušava upotrijebiti mod operator na broju sa pomičnim zarezom"
+msgstr ""
+"Izraz koordinacije pokušava upotrijebiti mod operator na broju sa pomičnim "
+"zarezom"
 
 #: ../src/ui/theme.c:2145
 #, c-format
@@ -1726,7 +1801,9 @@ msgstr "Izraz koordinacije je završio sa operatorom umjesto operanta"
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Izraz koordinacije ima operator \"%c\" koji prati operator  \"%c\" ali bez operacija između"
+msgstr ""
+"Izraz koordinacije ima operator \"%c\" koji prati operator  \"%c\" ali bez "
+"operacija između"
 
 #: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
 #, c-format
@@ -1741,13 +1818,15 @@ msgstr ""
 #: ../src/ui/theme.c:2443
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr "Izraz koordinacije je morao zatvoriti zagrade sa ne otvorenim zagradama."
+msgstr ""
+"Izraz koordinacije je morao zatvoriti zagrade sa ne otvorenim zagradama."
 
 #: ../src/ui/theme.c:2507
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
-msgstr "Izraz koordinacije je imao otvorene zagrade sa ne zatvorenim zagradama"
+msgstr ""
+"Izraz koordinacije je imao otvorene zagrade sa ne zatvorenim zagradama"
 
 #: ../src/ui/theme.c:2518
 #, c-format
@@ -1764,7 +1843,9 @@ msgstr ""
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"svejedno\"/> mora biti određeno za format ovog okvira"
+msgstr ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"svejedno\"/> mora biti "
+"određeno za format ovog okvira"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
@@ -1787,12 +1868,16 @@ msgstr "Nije podešen <%s> za temu \"%s\""
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Nije odabrana vrsta okvira za prozor tipa  \"%s\" u temi  \"%s\", dodajte <window type=\"%s\" style_set=\"svejedno\"/> element"
+msgstr ""
+"Nije odabrana vrsta okvira za prozor tipa  \"%s\" u temi  \"%s\", dodajte "
+"<window type=\"%s\" style_set=\"svejedno\"/> element"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Korisnički definisane konstante moraju početi velikim slovom; \"%s\" ne počinje "
+msgstr ""
+"Korisnički definisane konstante moraju početi velikim slovom; \"%s\" ne "
+"počinje "
 
 #: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
 #, c-format
@@ -1804,12 +1889,12 @@ msgstr "Konstanta \"%s\" je već definisana"
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr ""
+msgstr "Nema atributa \"%s\" na elementu <%s>"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "Linija %d karakter %d: %s"
+msgstr "Linija %d znak %d: %s"
 
 #: ../src/ui/theme-parser.c:438
 #, c-format
@@ -1819,7 +1904,7 @@ msgstr "Osobina \"%s\" je ponovljena dva puta u istom elementu <%s>"
 #: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Osobina \"%s\" je neispravana u elementu <%s> u ovom kontekstu"
+msgstr "U ovom slučaju je atribut \"%s\" nevažeći na elementu <%s>"
 
 #: ../src/ui/theme-parser.c:547
 #, c-format
@@ -1859,14 +1944,18 @@ msgstr "Ugao mora biti između 0.0 i 360.0, bio %g\n"
 #: ../src/ui/theme-parser.c:751
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Alfa osobina mora biti između 0.0 (nevidljivo) i 1.0 (potpuno neprozirno), bila je %g\n"
+msgstr ""
+"Alfa osobina mora biti između 0.0 (nevidljivo) i 1.0 (potpuno neprozirno), "
+"bila je %g\n"
 
 #: ../src/ui/theme-parser.c:816
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Neispravna veličina naslova \"%s\" (mora biti jedna od xx-mala,x-mala,mala,srednja,velika,x-velika,xx-velika)\n"
+msgstr ""
+"Neispravna veličina naslova \"%s\" (mora biti jedna od xx-"
+"mala,x-mala,mala,srednja,velika,x-velika,xx-velika)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1917,7 +2006,7 @@ msgstr "Vrsti prozora \"%s\" je već dodijeljena grupa stilova"
 #: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "Element  <%s> nije dozvoljen ispod <%s>"
+msgstr "Element <%s> nije dozvoljen ispod <%s>"
 
 #: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
 #: ../src/ui/theme-parser.c:1438
@@ -2047,7 +2136,9 @@ msgstr "\"%s\" nije dozvoljena vrijednost za osobina resize"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Nikako ne treba imati „resize“ atribut u elementu <%s> za uvećana/zasjenčena stanja"
+msgstr ""
+"Nikako ne treba imati „resize“ atribut u elementu <%s> za uvećana/zasjenčena"
+" stanja"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
@@ -2070,19 +2161,25 @@ msgstr "Stil je već odabran za stanje %s fokusiranja %s"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Ne mogu postojati dva draw_ops-a za element <piece> (tema navodi svojstvo draw_ops  i <draw_ops> element ili navodi dva elementa)"
+msgstr ""
+"Ne mogu postojati dva draw_ops-a za element <piece> (tema navodi svojstvo "
+"draw_ops  i <draw_ops> element ili navodi dva elementa)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Ne mogu postojati dva draw_ops-a za element <button> (tema navodi draw_ops svojstvo i <draw_ops> element ili navodi dva elementa)"
+msgstr ""
+"Ne mogu postojati dva draw_ops-a za element <button> (tema navodi draw_ops "
+"svojstvo i <draw_ops> element ili navodi dva elementa)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Ne mogu postojati dva draw_ops-a za element <menu_icon> (tema navodi svojstvo draw_ops i <draw_ops> element ili navodi dva elementa)"
+msgstr ""
+"Ne mogu postojati dva draw_ops-a za element <menu_icon> (tema navodi "
+"svojstvo draw_ops i <draw_ops> element ili navodi dva elementa)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2104,7 +2201,8 @@ msgstr "Element <%s> nije dozvoljen unutar <constant> elementa"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "Element <%s> nije dozvoljen unutar udaljenost/granica/omjer_slike elementa"
+msgstr ""
+"Element <%s> nije dozvoljen unutar udaljenost/granica/omjer_slike elementa"
 
 #: ../src/ui/theme-parser.c:3454
 #, c-format
@@ -2115,7 +2213,7 @@ msgstr "Element <%s> nije dozvoljen unutar operacije crtanja"
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "Element <%s> nije dozvoljen unutar <%s> elementa"
+msgstr "Element <%s> nije dozvoljen unutar elementa <%s>"
 
 #: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"
@@ -2128,7 +2226,7 @@ msgstr "Bez draw_ops datih dugmetu"
 #: ../src/ui/theme-parser.c:3815
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "Tekst nije dozvoljen unutar elementa<%s>"
+msgstr "Tekst nije dozvoljen u elementu <%s>"
 
 #: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
 #: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
@@ -2238,4 +2336,7 @@ msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "Na korisničkoj strani sam nacrtao %d okvira za %g sekundi (%g milisekundi po okviru) i %g sekundi ukupnog vremena uključujući resurse poslužitelja X-a (%g milisekundi po okviru)\n"
+msgstr ""
+"Na korisničkoj strani sam nacrtao %d okvira za %g sekundi (%g milisekundi po"
+" okviru) i %g sekundi ukupnog vremena uključujući resurse poslužitelja X-a "
+"(%g milisekundi po okviru)\n"

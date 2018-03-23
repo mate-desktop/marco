@@ -1,27 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Ardit Dani <ardit.dani@gmail.com>, 2014
-# Indrit Bashkimi <indrit.bashkimi@gmail.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Albanian (http://www.transifex.com/mate/MATE/language/sq/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>, 2018\n"
+"Language-Team: Albanian (https://www.transifex.com/mate/teams/13566/sq/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sq\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
-msgstr "Ambienti grafik"
+msgstr "Desktopi"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:100
@@ -65,7 +64,8 @@ msgstr "Leviz midis dritareve, duke përdorur një dritare popup"
 #: ../src/50-marco-global-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move between windows of an application, using a popup window"
-msgstr "Leviz midis dritareve të një aplikimi, duke përdorur një dritare popup"
+msgstr ""
+"Leviz midis dritareve të një aplikimi, duke përdorur një dritare popup"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:90
@@ -90,7 +90,9 @@ msgstr "Zhvendos menjëherë fokusin midis panelëve dhe desktop-it"
 #: ../src/50-marco-global-key.xml.in.h:8
 #: ../src/org.mate.marco.gschema.xml.h:98
 msgid "Hide all normal windows and set focus to the desktop"
-msgstr "Fsheh të gjitha dritaret normale dhe të vendos fokusin të përqëndrohet në desktop"
+msgstr ""
+"Fsheh të gjitha dritaret normale dhe të vendos fokusin të përqëndrohet në "
+"desktop"
 
 #: ../src/50-marco-global-key.xml.in.h:9
 #: ../src/org.mate.marco.gschema.xml.h:65
@@ -160,7 +162,8 @@ msgstr "Kaloni në hapësirën e punës në të majtë të hapësirave aktuale e
 #: ../src/50-marco-global-key.xml.in.h:22
 #: ../src/org.mate.marco.gschema.xml.h:79
 msgid "Switch to workspace on the right of the current workspace"
-msgstr "Kaloni në hapësirën e punës në të djathtë të hapësirave aktuale e punës"
+msgstr ""
+"Kaloni në hapësirën e punës në të djathtë të hapësirave aktuale e punës"
 
 #: ../src/50-marco-global-key.xml.in.h:23
 #: ../src/org.mate.marco.gschema.xml.h:80
@@ -175,7 +178,7 @@ msgstr "Kaloni në hapësirën e punës poshtë hapësires aktuale e punës"
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Kalo tek hapësira e punës e zgjedhur më parë"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:111
@@ -230,12 +233,15 @@ msgstr "Ndrysho përmasat e dritares"
 #: ../src/50-marco-window-key.xml.in.h:12
 #: ../src/org.mate.marco.gschema.xml.h:122
 msgid "Toggle whether window is on all workspaces or just one"
-msgstr "Kontrollo nëse dritarja është në të gjitha hapësirat e punës apo vetëm një"
+msgstr ""
+"Kontrollo nëse dritarja është në të gjitha hapësirat e punës apo vetëm një"
 
 #: ../src/50-marco-window-key.xml.in.h:13
 #: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr "Ngre dritaren në qoftë se është i mbuluar nga një tjetër dritare, ndryshe ule atë"
+msgstr ""
+"Ngre dritaren në qoftë se është i mbuluar nga një tjetër dritare, ndryshe "
+"ule atë"
 
 #: ../src/50-marco-window-key.xml.in.h:14
 #: ../src/org.mate.marco.gschema.xml.h:140
@@ -431,6 +437,7 @@ msgstr "Zhvendos dritaren tek hapësira e poshtme e punës"
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
 msgstr ""
+"Ndryshuesi që duhet përdorur për veprimet mbi dritare me pulsantët e mouse"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -464,7 +471,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Vendvendosja e butonëve tek shtylla e titullit"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -476,10 +483,18 @@ msgid ""
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
 msgstr ""
+"Vendvendosja e butonëve tek shtylla e titullit. Vlera duhet të jetë një "
+"stringë, tip \"menu:minimize,maximize,spacer,close\"; dy pikat veçojnë "
+"këndin e majtë të dritares nga i djathti, emrat e pulsantëve duhet të ndahen"
+" me presje. Nuk lejohen butonët e duplikuar. Emrat e panjohur të butonëve do"
+" të shpërfillen në menyrë që butonët e rinj të mund të shtohen në versionet "
+"e ardhshëm të marco, pa prishur përputhshmërinë me versionet më të vjetër. "
+"Një etiketë speciale \"spacer\" mund të përdoret për të shtuar hapësirë "
+"midis dy pulsantësh që gjenden njëri afër tjetrit."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
-msgstr ""
+msgstr "Modaliteti i fokusimit të dritareve"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -489,10 +504,15 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"Modaliteti i fokusimit përcakton mënyrën e aktivizimit të dritareve. Vlerat "
+"e mundëshme janë tre: \"click\" bën që dritaret të aktivizohen kur klikohen,"
+" \"sloppy\" bën që të aktivizohen kur i kalon kursori sipër dhe \"mouse\" "
+"bën që fokusi t'i jepet dritares mbi të cilën ndodhet kursori dhe t'i hiqet "
+"kur ky i fundit të lëshojë dritaren."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Kontrollon se si dritaret e reja marrin fokusin"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -501,10 +521,16 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
+"Ky opsion afron një kontroll shtesë në lidhje me menyrën me të cilën "
+"dritaret e sapokrijuara marrin fokusin. Lejohen dy vlera: \"smart\" për të "
+"aplikuar modalitetin normal të fokusimit të përdoruesit dhe \"strict\" për "
+"të mos i dhënë fokusin dritares së nisur nga një terminal."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
 msgstr ""
+"Nëse ngritja duhet të jetë një efekt dytësor i aktiviteteve të tjera të "
+"përdoruesit"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -530,7 +556,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Veprimi për klik-dopjo tek shtylla e titullit"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -543,10 +569,18 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Ky opsion përcakton efektin e dopio-klik mbi shtyllën e titullit. Opsionet "
+"aktualisht të vlefshme janë \"toggle_shade\" për të palosur/shpalosur "
+"dritaren, \"toggle_maximize\" për të maksimizuar/çmaksimizuar dritaren, "
+"\"toggle_maximize_horizontally\" dhe \"toggle_maximize_vertically\" për të "
+"maksimizuar/çmaksimizuar dritaren vetëm në drejtimin e speçfikuar, "
+"\"minimize\" për të minimizuar dritaren, \"shade\" për të palosur dritaren, "
+"\"menu\" për të shfaqur menunë e dritares, \"lower\" për të vendosur "
+"dritaren nën dritaret e tjera dhe \"none\" për të mos kryer asnjë veprim."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Veprimi për klik-qendror tek shtylla e titullit"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -559,10 +593,19 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Ky opsion përcakton efektin e klikimit me pulsantin qendror mbi shtyllën e "
+"titullit. Opsionet aktualisht të vlefshme janë \"toggle_shade\" për të "
+"palosur/shpalosur dritaren, \"toggle_maximize\" për të "
+"maksimizuar/çmaksimizuar dritaren, \"toggle_maximize_horizontally\" dhe "
+"\"toggle_maximize_vertically\" për të maksimizuar/çmaksimizuar dritaren "
+"vetëm në drejtimin e speçfikuar, \"minimize\" për të minimizuar dritaren, "
+"\"shade\" për të palosur dritaren, \"menu\" për të shfaqur menunë e "
+"dritares, \"lower\" për të vendosur dritaren nën dritaret e tjera dhe "
+"\"none\" për të mos kryer asnjë veprim."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Veprimi për klik-i djathtë tek shtylla e titullit"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -575,10 +618,19 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Ky opsion përcakton efektin e klikimit me pulsantin e djathtë mbi shtyllën e"
+" titullit. Opsionet aktualisht të vlefshme janë \"toggle_shade\" për të "
+"palosur/shpalosur dritaren, \"toggle_maximize\" për të "
+"maksimizuar/çmaksimizuar dritaren, \"toggle_maximize_horizontally\" dhe "
+"\"toggle_maximize_vertically\" për të maksimizuar/çmaksimizuar dritaren "
+"vetëm në drejtimin e speçfikuar, \"minimize\" për të minimizuar dritaren, "
+"\"shade\" për të palosur dritaren, \"menu\" për të shfaqur menunë e "
+"dritares, \"lower\" për të vendosur dritaren nën dritaret e tjera dhe "
+"\"none\" për të mos kryer asnjë veprim."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Sill automatikisht në plan të parë dritaret që kanë fokus-in"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -587,40 +639,51 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
+"Nëse caktuar në E VËRTETË dhe modaliteti i fokusit është \"sloppy\" ose "
+"\"mouse\", atëhere dritarja me fokus sillet automatikisht në plan të parë "
+"mbas një vonese të përcaktuar në kyçin \"auto_raise_delay\". Kjo nuk ka të "
+"bëjë me klikimin mbi një dritare për ta sjellë në plan të parë, apo me "
+"hyrjen në një dritare gjatë një veprimi kap-e-tërhiq."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Vonesa në milisekonda për opcionin e \"auto raise\""
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
+"Intervali i kohës para se dritarja të sillet në plan të parë kur auto_raise "
+"është caktuar në E VËRTETË. Intervali jepet në të mijta të sekondës."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr ""
+msgstr "Tema aktuale"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
 msgstr ""
+"Tema përcakton paraqitjen e kornizave të dritareve, shtyllës të titullit, e "
+"kështu me rradhë."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Përdor gërmat e paracaktuara të sistemit për titujt e dritares"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
+"Nëse e vërtetë injoron opcionin titlebar_font dhe përdor gërmat e programit "
+"për titujt e dritareve."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
-msgstr ""
+msgstr "Gërmat e titullit të dritares"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
@@ -629,10 +692,15 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
+"Një stringë përshkrimi të llojit të gërmave që përcakton një lloj gërme për "
+"shtyllën e titullit të dritares. Përmasa e specifikuar këtu përdoret vetëm "
+"nëse opsioni \"titlebar_font_size\" është caktuar në 0. Gjithashtu, ky "
+"opsion është i çaktivizuar nëse \"titlebar_uses_desktop_font\" është caktuar"
+" në E VËRTETË."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Numri i hapësirave të punës"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -640,6 +708,10 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
+"Numri i hapësirave të punës. Duhet të jetë më i madh se zero dhe ka një kufi"
+" maksimum të paracaktuar për të shmangur rrezikun e bërjes të "
+"pashfrytëzueshëm të mjedisit të punës duke kërkuar padashje një numër tepër "
+"të madh hapësirash pune."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -659,7 +731,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Aktivo 'Visual Bell'"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
@@ -667,20 +739,26 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
+"Aktivizon një sinjal viziv kur një aplikativ ose sistemi lëshon një \"bip\" "
+"ose \"i bie ziles\"; e dobishme për ata që kanë probleme dëgjimi apo për "
+"përdorim në mjedise me zhurmë."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Zilja e sistemit është e dëgjueshme"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"Përcakton se kur programet apo sistemi mund të gjenerojnë tingujt 'beeps'; "
+"mund të përdoret e shoqëruar nga 'visual bell' për të mundësuar 'beeps' e "
+"heshtur."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Lloji i sinjalit të dukshëm"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid ""
@@ -692,14 +770,21 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"Tregon sesi Marco kryen njoftimin viziv që zilja e sistemit apo ndonjë "
+"tregues tjetër \"zileje\" aplikativi është duke rënë. Tani për tani pranohen"
+" dy vlera: \"fullscreen\", që shkakton një flash në bardhë e zi në të gjithë"
+" ekranin, dhe \"frame_flash\" që shkakton ndriçimin e shtyllës së titullit "
+"të aplikativit që ka dërguar sinjalin e ziles. Nëse aplikativi që ka dërguar"
+" sinjalin e ziles është i panjohur (sikurse ndodh në rastin e ziles sl "
+"sistemit), do të ndriçohet dritarja që në atë moment ka fokusin."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Përgjegjësi i kompozimit"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Përcakton se kur është Marco përgjegjësi i kompozimit."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -715,6 +800,7 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
 msgstr ""
+"Nëse e vërtetë, hiqet lehtësia e përdorimit në favor të konsumit më të ulët"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -724,11 +810,19 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
+"Nëse caktuar në E VËRTETË, marco i jep përdoruesit më pak komunikim duke "
+"përdorur wireframe, duke shmangur animacionet e të tjera. Është një reduktim"
+" i ndjeshëm i lehtësisë së përdorimit për shumë përdorues, por mund t'i japë"
+" mundësinë aplikativëve legacy të vazhdojnë funksionimin, ashtu sikurse mund"
+" të jetë një kompromis i pranueshëm për terminal serverët. Funksioni "
+"wireframe është i çaktivizuar kur açesibiliteti të jetë duke punuar."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
 msgstr ""
+"(E pakompletuar) Lundrimi funksionon në nivel programi, jo në nivel "
+"dritareje"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -740,10 +834,19 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
+"Nëse caktuar në E VËRTETË, Marco funksionon në terme aplikativësh në vend të"
+" dritaresh. Koncepti është pak abstrakt, por në vija të përgjithshme një "
+"konfigurim i bazuar tek aplikativët është më shumë i ngjashëm me Mac sesa me"
+" Windows. Kur i jepet fokusi një dritareje në modalitetin e bazuar tek "
+"aplikativët, gati të gjitha dritaret \"ngrihen\". Gjithashtu, në këtë "
+"modalitet, klikimet për caktimin e fokusit nuk kalohen nëpërmjet dritareve "
+"drejt aplikativëve të tjerë. Modaliteti në bazë të apliaktivëve është tani "
+"për tani gati krejtësisht i paplotësuar."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr ""
+"Disaktivo funksionet e kërkuara nga programet e vjetër ose jo funksionues"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -752,6 +855,10 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
+"Disa aplikativë nuk respektojnë specifikat duke shkaktuar funksionime të "
+"gabuara tek window manager. Ky opsion vendos Marco në një modalitet "
+"rigorozisht korrekt, që afron një interfaqe përdoruesi jokontradiktore, me "
+"përjashtim të rasteve kur duhet ekzekutuar ndonjë aplikativ keqfunksionues."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -810,15 +917,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
-msgstr ""
+msgstr "Emri i hapësirës së punës"
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Emri i hapësirës së punës."
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
-msgstr ""
+msgstr "Zbato një komandë të përcaktuar"
 
 #: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
@@ -829,6 +936,12 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"Kombinimi përshpejtues që zbaton komandën me numurin korrispondues në "
+"/apps/marco/keybinding_commands. Forma është \"&lt;Control&gt;a\" ose "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\". Lejohet përdorimi i gërmave të mëdha, të "
+"vogla sidhe shkurtimet si p.sh. \"&lt;Ctl&gt;\" dhe \"&lt;Ctrl&gt;\". Nëse "
+"ky opsion vendoset tek stringa speciale \"disabled\", atëhere nuk do të ketë"
+" asnjë kombinim përshpejtues për këtë veprim."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -881,10 +994,12 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
 msgstr ""
+"Zhvendos menjëherë dhe në drejtim të kundërt fokusin midis panelëve dhe "
+"desktop-it"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Komandat që duhen zbatuar në përgjigje të një kombinimi përshpejtues"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -892,20 +1007,27 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"Kyçet /apps/marco/global_keybindings/run_command_N përçaktojnë kombinimet e "
+"tasteve të tastierës që korrespondojnë me këto komanda. Duke shtypur tastet "
+"e kombinimit që korrespondon me kyçin run_command_N, do të zbatohet komanda "
+"command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
-msgstr ""
+msgstr "Komanda për marrjen e pamjeve"
 
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"Kyçi /apps/marco/global_keybindings/run_command_screenshot përcakton një "
+"kombinim tastesh në tastierë që shkakton thirrjen e komandës së specifikuar "
+"nga ky rregullim."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Komanda për marrjen e pamjes së dritares"
 
 #: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
@@ -913,6 +1035,9 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"Kyçi /apps/marco/global_keybindings/run_command_window_screenshot përcakton "
+"një kombinim tastesh në tastierë që shkakton thirrjen e komandës së "
+"specifikuar nga ky rregullim."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
@@ -953,7 +1078,9 @@ msgstr "<tt>%s</tt> nuk përgjigjet"
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Mund të vendosni të prisni pak duke lejuar vazhdimin e aplikativit, ose të detyroni përfundimin e tij."
+msgstr ""
+"Mund të vendosni të prisni pak duke lejuar vazhdimin e aplikativit, ose të "
+"detyroni përfundimin e tij."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -983,45 +1110,50 @@ msgstr "Hapja e display «%s» të X Window System dështoi\n"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Ndonjë program tjetër është duke përdorur si shoqërim tastin %s me ndryshuesin %x\n"
+msgstr ""
+"Ndonjë program tjetër është duke përdorur si shoqërim tastin %s me "
+"ndryshuesin %x\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Ka një gabim në funksion <tt>%s<.tt>:\n\n%s"
+msgstr ""
+"Ka një gabim në funksion <tt>%s<.tt>:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Komanda %d nuk është përcaktuar.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Nuk është përcaktuar asnjë komandë terminali.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "Anulo"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1030,11 +1162,15 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "makro %s\nCopyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\nKy është software falas, shihni burimin për kushtet e kopjimit.\nNuk ka asnjë garanci; as për SHITJES apo PËRDORIM PËR NJË QËLLIM TË CAKTUAR.\n"
+msgstr ""
+"makro %s\n"
+"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
+"Ky është software falas, shihni burimin për kushtet e kopjimit.\n"
+"Nuk ka asnjë garanci; as për SHITJES apo PËRDORIM PËR NJË QËLLIM TË CAKTUAR.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "Çaktivizo lidhjen me administruesin e seancës"
+msgstr "Çaktivizo lidhjen me menaxhuesin e seancës"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1042,7 +1178,7 @@ msgstr "Zëvendëson window manager në ekzekutim me Marco"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Specifiko ID e administruesit të seancës"
+msgstr "Specifiko ID e menaxhuesit të seancës"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1058,7 +1194,7 @@ msgstr "Printo versionin"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Bën thirrjet X të sinkronizuara"
+msgstr "Bëj që thirrjet e X të jenë të sinkronizuara"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1071,7 +1207,8 @@ msgstr "Fikni kompozimin"
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Mos bëj dritare me ekran të plotë që janë maksimizuar dhe nuk kanë dekorata"
+msgstr ""
+"Mos bëj dritare me ekran të plotë që janë maksimizuar dhe nuk kanë dekorata"
 
 #: ../src/core/main.c:519
 #, c-format
@@ -1082,7 +1219,9 @@ msgstr "Skanimi i directory të temave dështoi: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Nuk u gjet asnjë temë. Sigurohu që %s ekziston dhe që përmban temat standard.\n"
+msgstr ""
+"Nuk u gjet asnjë temë. Sigurohu që %s ekziston dhe që përmban temat "
+"standard.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1101,26 +1240,34 @@ msgstr "%d të ruajtura në çelës GSettings  %s janë jashtë diapazonit %d t�
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Veprimtari mirëmbajtje për administrimin e programeve difektozë të çaktivizuar. Disa programe mund të shfaqin sjellje të gabuara.\n"
+msgstr ""
+"Veprimtari mirëmbajtje për administrimin e programeve difektozë të "
+"çaktivizuar. Disa programe mund të shfaqin sjellje të gabuara.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr "I pamundur analizimi i përshkrimin e shkronjave \"%s\" nga çelësi GSettings %s\n"
+msgstr ""
+"I pamundur analizimi i përshkrimin e shkronjave \"%s\" nga çelësi GSettings "
+"%s\n"
 
 #: ../src/core/prefs.c:1194
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "Vlera «%s» në bazën e të dhënave të konfigurimit është e pavlefshme për ndryshuesin e pulsantit të mouse\n"
+msgstr ""
+"Vlera «%s» në bazën e të dhënave të konfigurimit është e pavlefshme për "
+"ndryshuesin e pulsantit të mouse\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "Vlera \"%s\" në databazën e konfigurimit është e pavlefshme për kombinim tastesh \"%s\"\n"
+msgstr ""
+"Vlera \"%s\" në databazën e konfigurimit është e pavlefshme për kombinim "
+"tastesh \"%s\"\n"
 
 #: ../src/core/prefs.c:2056
 #, c-format
@@ -1137,12 +1284,16 @@ msgstr "Screen %d tek display '%s' nuk është i vlefshëm\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Screen %d tek display \"%s\" ka një administrues dritaresh; provo të zevëndësosh administruesin aktual të dritareve duke përdorur --replace.\n"
+msgstr ""
+"Screen %d tek display \"%s\" ka një administrues dritaresh; provo të "
+"zevëndësosh administruesin aktual të dritareve duke përdorur --replace.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr "E pamundur marrja e zgjedhjes së adminiatruesit të dritares për screen %d tek display \"%s\"\n"
+msgstr ""
+"E pamundur marrja e zgjedhjes së adminiatruesit të dritares për screen %d "
+"tek display \"%s\"\n"
 
 #: ../src/core/screen.c:460
 #, c-format
@@ -1182,7 +1333,8 @@ msgstr "Gabim gjatë analizimit të file të ruajtur të seancës: %s\n"
 #: ../src/core/session.c:1184
 #, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
-msgstr "U gjet një karakteristikë në <marco_session> por ekziston një ID për seancën"
+msgstr ""
+"U gjet një karakteristikë në <marco_session> por ekziston një ID për seancën"
 
 #: ../src/core/session.c:1197 ../src/core/session.c:1272
 #: ../src/core/session.c:1304 ../src/core/session.c:1376
@@ -1205,7 +1357,9 @@ msgstr "Element %s i panjohur"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Këto dritare nuk e mbështesin \"ruani konfigurimin aktual\" dhe do të duhet të riniset manualisht herën tjetër që hyni."
+msgstr ""
+"Këto dritare nuk e mbështesin \"ruani konfigurimin aktual\" dhe do të duhet "
+"të riniset manualisht herën tjetër që hyni."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1225,7 +1379,8 @@ msgstr "File i log %s u hap\n"
 #: ../src/core/util.c:136 ../src/tools/marco-message.c:176
 #, c-format
 msgid "Marco was compiled without support for verbose mode\n"
-msgstr "Marco është kompiluar pa përfshirë suportin për menyrën bashkë-dialoguese\n"
+msgstr ""
+"Marco është kompiluar pa përfshirë suportin për menyrën bashkë-dialoguese\n"
 
 #: ../src/core/util.c:236
 msgid "Window manager: "
@@ -1255,7 +1410,9 @@ msgstr "Marco"
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Dritarja %s ja ka dhënë SM_CLIENT_ID vetvetes, në vend që t'a vendoste tek dritarja WM_CLIENT_LEADER sikurse specifikuar në ICCCM.\n"
+msgstr ""
+"Dritarja %s ja ka dhënë SM_CLIENT_ID vetvetes, në vend që t'a vendoste tek "
+"dritarja WM_CLIENT_LEADER sikurse specifikuar në ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1268,7 +1425,10 @@ msgstr "Dritarja %s ja ka dhënë SM_CLIENT_ID vetvetes, në vend që t'a vendos
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Dritarja %s ka vendosur një propozim MWM duke treguar që është me madhësi të ndryshueshme, por nga ana tjetër ka përcaktuar madhësinë minimum %d x %d dhe madhësinë maksimum %d x %d; gjë që nuk ka shumë kuptim.\n"
+msgstr ""
+"Dritarja %s ka vendosur një propozim MWM duke treguar që është me madhësi të"
+" ndryshueshme, por nga ana tjetër ka përcaktuar madhësinë minimum %d x %d "
+"dhe madhësinë maksimum %d x %d; gjë që nuk ka shumë kuptim.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1304,7 +1464,8 @@ msgstr "%s (si përdorues tjetër)"
 #: ../src/core/window-props.c:1499
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
-msgstr "Është specifikuar një WM_TRANSIENT_FOR dritarja 0x%lx i pavlefshëm për %s.\n"
+msgstr ""
+"Është specifikuar një WM_TRANSIENT_FOR dritarja 0x%lx i pavlefshëm për %s.\n"
 
 #: ../src/core/xprops.c:155
 #, c-format
@@ -1314,7 +1475,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Dritarja 0x%lx ka një pronësi %s\nqë duhet të jetë e llojit %s dhe formatit %d\ndhe aktualisht është e llojit %s dhe formatit %d e n_items %d.\nKa shumë mundësi që të jetë një difekt i programit, jo i administruesit të dritareve.\nKarakteristikat e dritares janë titulli=\"%s\" klasa=\"%s\" emri=\"%s\"\n"
+msgstr ""
+"Dritarja 0x%lx ka një pronësi %s\n"
+"që duhet të jetë e llojit %s dhe formatit %d\n"
+"dhe aktualisht është e llojit %s dhe formatit %d e n_items %d.\n"
+"Ka shumë mundësi që të jetë një difekt i programit, jo i administruesit të dritareve.\n"
+"Karakteristikat e dritares janë titulli=\"%s\" klasa=\"%s\" emri=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1326,7 +1492,9 @@ msgstr "Pronësia %s e dritares 0x%lx përmban UTF-8 të pavlefshme\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Pronësia %s e dritares 0x%lx përmban UTF-8 të pavlefshme për elementin %d në listë\n"
+msgstr ""
+"Pronësia %s e dritares 0x%lx përmban UTF-8 të pavlefshme për elementin %d në"
+" listë\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1335,7 +1503,7 @@ msgstr "Përdorimi: %s\n"
 
 #: ../src/ui/frames.c:1098
 msgid "Close Window"
-msgstr "Mbyll dritaren"
+msgstr "Mbylle dritaren"
 
 #: ../src/ui/frames.c:1101
 msgid "Window Menu"
@@ -1390,7 +1558,7 @@ msgstr "Ma_ksimizo"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "Çmak_simizo"
+msgstr "Zvo_gëlo"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1405,7 +1573,7 @@ msgstr "_Shpalose"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:75
 msgid "_Move"
-msgstr "_Lëvize"
+msgstr "_Lëviz"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:77
@@ -1436,22 +1604,22 @@ msgstr "_Vetëm në këtë hapësirë pune"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "Zhvendose tek hapësira e punës _majtas"
+msgstr "_Lëvize tek hapësira e punës majtas"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "Zhvendose tek hapësira e punës d_jathtas"
+msgstr "Lëv_ize tek hapësira e punës djathtas"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "Zhvendose tek hapësira e p_unës sipër"
+msgstr "Lëvize tek hapësira e p_Unës sipër"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "Zhvendose tek hapësira e punës _poshtë"
+msgstr "Lëvize tek hapësira e punës _poshtë"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
@@ -1476,7 +1644,7 @@ msgstr "Hapësira e punës %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Zhvendose tek një tjetër hap_ësirë pune"
+msgstr "Lëvize tek një tjetër hapësirë pune"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -1611,14 +1779,19 @@ msgstr "Gradient-ët duhet të kenë të paktën dy ngjyra"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "Specifikimi i ngjyrave GTK duhet të ketë gjëndjen midis kllapave, p.sh. gtk:fg[NORMAL] ku NORMAL është gjëndja; i pamundur analizimi i \"%s\""
+msgstr ""
+"Specifikimi i ngjyrave GTK duhet të ketë gjëndjen midis kllapave, p.sh. "
+"gtk:fg[NORMAL] ku NORMAL është gjëndja; i pamundur analizimi i \"%s\""
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "Specifikimi i ngjyrave GTK duhet të ketë një kllapë të mbyllur mbas gjëndjes, p.sh. gtk:fg[NORMAL] ku NORMAL është gjendja; i pamundur analizimi i \"%s\""
+msgstr ""
+"Specifikimi i ngjyrave GTK duhet të ketë një kllapë të mbyllur mbas "
+"gjëndjes, p.sh. gtk:fg[NORMAL] ku NORMAL është gjendja; i pamundur analizimi"
+" i \"%s\""
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1635,7 +1808,9 @@ msgstr "Përbërës i ngjyrës \"%s\" i pakuptueshëm në specifikimin e ngjyrë
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Formati i përzierjes është \"blend/bg_color/fg_color/alpha\", \"%s\" nuk bën pjesë në format"
+msgstr ""
+"Formati i përzierjes është \"blend/bg_color/fg_color/alpha\", \"%s\" nuk bën"
+" pjesë në format"
 
 #: ../src/ui/theme.c:1259
 #, c-format
@@ -1650,7 +1825,9 @@ msgstr "Vlera alpha \"%s\" në ngjyrën e përzier nuk gjendet midis 0.0 dhe 1.0
 #: ../src/ui/theme.c:1316
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "Formati i hijes është \"shade/base_color/factor\", \"%s\" nuk bën pjesë në format"
+msgstr ""
+"Formati i hijes është \"shade/base_color/factor\", \"%s\" nuk bën pjesë në "
+"format"
 
 #: ../src/ui/theme.c:1327
 #, c-format
@@ -1677,19 +1854,24 @@ msgstr "Shprehja e koordinatës përmban gërmën '%s' që nuk lejohet"
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "Shprehja e koordinatës përmban numrin me presje të lëvizëshme '%s' që nuk mund të analizohet"
+msgstr ""
+"Shprehja e koordinatës përmban numrin me presje të lëvizëshme '%s' që nuk "
+"mund të analizohet"
 
 #: ../src/ui/theme.c:1747
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr "Shprehja e koordinatës përmban numrin e plotë '%s' që nuk mund të analizohet"
+msgstr ""
+"Shprehja e koordinatës përmban numrin e plotë '%s' që nuk mund të analizohet"
 
 #: ../src/ui/theme.c:1869
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Shprehja e koordinatës përmban një operator të panjohur në fillim të këtij teksti: \"%s\""
+msgstr ""
+"Shprehja e koordinatës përmban një operator të panjohur në fillim të këtij "
+"teksti: \"%s\""
 
 #: ../src/ui/theme.c:1926
 #, c-format
@@ -1705,7 +1887,9 @@ msgstr "Shprehja e koordinatës rezulton një pjestim me zero"
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "Shprehja e koordinatës përpiqet të përdorë një operator në një numër me presje të lëvizëshme"
+msgstr ""
+"Shprehja e koordinatës përpiqet të përdorë një operator në një numër me "
+"presje të lëvizëshme"
 
 #: ../src/ui/theme.c:2145
 #, c-format
@@ -1720,19 +1904,24 @@ msgstr "Shprehja e koordinatës ka një operim atje ku pritej një operator"
 #: ../src/ui/theme.c:2162
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
-msgstr "Shprehja e koordinatës mbaron me një operator në vend që të mbarojë me një operim"
+msgstr ""
+"Shprehja e koordinatës mbaron me një operator në vend që të mbarojë me një "
+"operim"
 
 #: ../src/ui/theme.c:2172
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Shprehja e koordinatës ka operatorin \"%c\" të ndjekur nga operatori \"%c\" pa një operim midis të dyve"
+msgstr ""
+"Shprehja e koordinatës ka operatorin \"%c\" të ndjekur nga operatori \"%c\" "
+"pa një operim midis të dyve"
 
 #: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
-msgstr "Shprehja e koordinatës ka të ndryshueshmen apo konstanten \"%s\" të panjohur"
+msgstr ""
+"Shprehja e koordinatës ka të ndryshueshmen apo konstanten \"%s\" të panjohur"
 
 #: ../src/ui/theme.c:2414
 #, c-format
@@ -1742,13 +1931,15 @@ msgstr "Analizuesi i shprehjes së koordinatës ka tejkaluar buffer-in e tij."
 #: ../src/ui/theme.c:2443
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr "Shprehja e koordinatës ka një kllapë të mbyllur pa patur një kllapë të hapur"
+msgstr ""
+"Shprehja e koordinatës ka një kllapë të mbyllur pa patur një kllapë të hapur"
 
 #: ../src/ui/theme.c:2507
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
-msgstr "Shprehja e koordinatës ka një kllapë të hapur pa patur një kllapë të mbyllur"
+msgstr ""
+"Shprehja e koordinatës ka një kllapë të hapur pa patur një kllapë të mbyllur"
 
 #: ../src/ui/theme.c:2518
 #, c-format
@@ -1765,7 +1956,9 @@ msgstr "Tema përmban një shprehje që ka përfunduar në një gabim: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> duhet të specifikohet për këtë stil kornize"
+msgstr ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> duhet të "
+"specifikohet për këtë stil kornize"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
@@ -1788,12 +1981,16 @@ msgstr "Asnjë <%s> e përcaktuar për temën \"%s\""
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Asnjë stil kornize është përcaktuar për dritaren e llojit \"%s\" tek tema \"%s\", shto një element <window type=\"%s\" style_set=\"whatever\"/>"
+msgstr ""
+"Asnjë stil kornize është përcaktuar për dritaren e llojit \"%s\" tek tema "
+"\"%s\", shto një element <window type=\"%s\" style_set=\"whatever\"/>"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Konstantet e përcaktuara nga përdoruesi duhet të fillojnë me një gërmë të madhe, \"%s\" nuk fillon me gërmë të madhe"
+msgstr ""
+"Konstantet e përcaktuara nga përdoruesi duhet të fillojnë me një gërmë të "
+"madhe, \"%s\" nuk fillon me gërmë të madhe"
 
 #: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
 #, c-format
@@ -1867,7 +2064,9 @@ msgstr "Alpha duhet të jetë midis 0.0 (e tejdukshme) dhe 1.0 (opake), e jo %g\
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Shkallë e titullit \"%s\"  e pavlefshme (duhet të jetë njëra prej xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr ""
+"Shkallë e titullit \"%s\"  e pavlefshme (duhet të jetë njëra prej xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1889,11 +2088,14 @@ msgstr "<%s> gjeometria \"%s\" nuk është përcaktuar"
 #: ../src/ui/theme-parser.c:1107
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
-msgstr "<%s> duhet të specifikojë një gjeometri ose një prind që ka një gjeometri"
+msgstr ""
+"<%s> duhet të specifikojë një gjeometri ose një prind që ka një gjeometri"
 
 #: ../src/ui/theme-parser.c:1149
 msgid "You must specify a background for an alpha value to be meaningful"
-msgstr "Është i nevojshëm specifikimi i një sfondi për një vlerë alpha që të jetë e kuptueshme"
+msgstr ""
+"Është i nevojshëm specifikimi i një sfondi për një vlerë alpha që të jetë e "
+"kuptueshme"
 
 #: ../src/ui/theme-parser.c:1216
 #, c-format
@@ -1925,7 +2127,9 @@ msgstr "Nuk lejohet përdorimi i elementit <%s> mbas <%s>"
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Nuk mund të specifikojë \"gjerësi_butoni\"/\"gjatësi_butoni\" dhe \"aspekt_proporcioni\" për butonat"
+msgstr ""
+"Nuk mund të specifikojë \"gjerësi_butoni\"/\"gjatësi_butoni\" dhe "
+"\"aspekt_proporcioni\" për butonat"
 
 #: ../src/ui/theme-parser.c:1402
 #, c-format
@@ -2011,7 +2215,8 @@ msgstr "Funksion i panjohur \"%s\" për pulsantin"
 #: ../src/ui/theme-parser.c:2918
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
-msgstr "Funksioni i butonit «%s» nuk ekziston në këtë version (%d, nevoitet %d)"
+msgstr ""
+"Funksioni i butonit «%s» nuk ekziston në këtë version (%d, nevoitet %d)"
 
 #: ../src/ui/theme-parser.c:2930
 #, c-format
@@ -2048,12 +2253,16 @@ msgstr "Vlera \"%s\" nuk është e vlefshme për atributin resize"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Nuk duhet të ekzistojë atributi \"resize\" në elementin <%s> për gjëndjet maximized/shaded"
+msgstr ""
+"Nuk duhet të ekzistojë atributi \"resize\" në elementin <%s> për gjëndjet "
+"maximized/shaded"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Nuk duhet të ekzistojë atributi \"resize\" në elementin <%s> për gjëndjet maximized"
+msgstr ""
+"Nuk duhet të ekzistojë atributi \"resize\" në elementin <%s> për gjëndjet "
+"maximized"
 
 #: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
 #, c-format
@@ -2071,19 +2280,28 @@ msgstr "Stili është i përcaktuar njëherë për state %s focus %s"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nuk ka mundësi të ketë dy due draw_ops për një element <piece> (tema ka specifikuar një karakteristikë draw_ops si dhe një element <draw_ops>, ose ka specifikuar dy elementë)"
+msgstr ""
+"Nuk ka mundësi të ketë dy due draw_ops për një element <piece> (tema ka "
+"specifikuar një karakteristikë draw_ops si dhe një element <draw_ops>, ose "
+"ka specifikuar dy elementë)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nuk ka mundësi të ketë dy due draw_ops për një element <button> (tema ka specifikuar një karakteristikë draw_ops si dhe një element <draw_ops>, ose ka specifikuar dy elementë)"
+msgstr ""
+"Nuk ka mundësi të ketë dy due draw_ops për një element <button> (tema ka "
+"specifikuar një karakteristikë draw_ops si dhe një element <draw_ops>, ose "
+"ka specifikuar dy elementë)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nuk ka mundësi të ketë dy due draw_ops për një element <menu_icon> (tema ka specifikuar një karakteristikë draw_ops si dhe një element <draw_ops>, ose ka specifikuar dy elementë)"
+msgstr ""
+"Nuk ka mundësi të ketë dy due draw_ops për një element <menu_icon> (tema ka "
+"specifikuar një karakteristikë draw_ops si dhe një element <draw_ops>, ose "
+"ka specifikuar dy elementë)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2094,7 +2312,9 @@ msgstr "Element i jashtëm në temë duhet të <metacity_theme> jo <%s>"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
-msgstr "Elementi <%s> nuk lejohet në brendësi të elementëve name/author/date/description"
+msgstr ""
+"Elementi <%s> nuk lejohet në brendësi të elementëve "
+"name/author/date/description"
 
 #: ../src/ui/theme-parser.c:3420
 #, c-format
@@ -2105,12 +2325,16 @@ msgstr "Elementi <%s> nuk lejohet në brendësi të elementit <constant>"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "Elementi <%s> nuk lejohet në brendësi të elementëve distance/border/aspect_ratio"
+msgstr ""
+"Elementi <%s> nuk lejohet në brendësi të elementëve "
+"distance/border/aspect_ratio"
 
 #: ../src/ui/theme-parser.c:3454
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
-msgstr "Elementi <%s> nuk lejohet në brendësi të një elementi relativ me një operacion vizatimi"
+msgstr ""
+"Elementi <%s> nuk lejohet në brendësi të një elementi relativ me një "
+"operacion vizatimi"
 
 #: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
@@ -2239,4 +2463,7 @@ msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "Vizatuar %d korniza në %g sekonda ana klient (%g milisekonda për kornizë) dhe %g sekonda wall clock time, përfshirë rezervat e serverit server X (%g milisekonda për kornizë)\n"
+msgstr ""
+"Vizatuar %d korniza në %g sekonda ana klient (%g milisekonda për kornizë) "
+"dhe %g sekonda wall clock time, përfshirë rezervat e serverit server X (%g "
+"milisekonda për kornizë)\n"

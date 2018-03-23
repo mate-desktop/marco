@@ -1,20 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Allan Nordhøy <epost@anotheragency.no>, 2016-2017
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2016
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Norwegian Bokmål (http://www.transifex.com/mate/MATE/language/nb/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kenneth Jenssen <kennethjenssen@yahoo.com>, 2018\n"
+"Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -439,7 +438,12 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr "Klikk på et vindu mens denne endringstasten holdes nede vil flytte vinduet (venstreklikk), endre størrelse på vinduet (klikk med midterste knapp) eller vise vindusmenyen (høyreklikk). Klikk med midtre og høyre knapp kan byttes om ved å bruke nøkkelen «resize_with_right_button\". Endringstasten uttrykkes som for eksempel «<Alt>» eller «<Super>»."
+msgstr ""
+"Klikk på et vindu mens denne endringstasten holdes nede vil flytte vinduet "
+"(venstreklikk), endre størrelse på vinduet (klikk med midterste knapp) eller"
+" vise vindusmenyen (høyreklikk). Klikk med midtre og høyre knapp kan byttes "
+"om ved å bruke nøkkelen «resize_with_right_button\". Endringstasten "
+"uttrykkes som for eksempel «<Alt>» eller «<Super>»."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -450,7 +454,10 @@ msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr "Sett denne til \"sann\" for å endre størrelse på høyre knapp og vise en meny med midre knapp mens tasten angitt i \"mouse_button_modifier\"; satt til falsk for å få det til å fungere på motsatt vis."
+msgstr ""
+"Sett denne til \"sann\" for å endre størrelse på høyre knapp og vise en meny"
+" med midre knapp mens tasten angitt i \"mouse_button_modifier\"; satt til "
+"falsk for å få det til å fungere på motsatt vis."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -460,7 +467,9 @@ msgstr "Hvorvidt forvalgt rammekant skal vises"
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
-msgstr "Sett denne til usann for å skru av rammekat for forvalgte vinduer mens det utføres fanebytte."
+msgstr ""
+"Sett denne til usann for å skru av rammekat for forvalgte vinduer mens det "
+"utføres fanebytte."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -475,7 +484,14 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr "Plassering av knapper på tittellinjen. Verdien skal være en streng av type «menu:minimize,maximize,spacer,close»; kolon skiller venstre hjørne av vinduet fra høyre hjørne, og knappenavnene skilles av komma. Duplisering av knapper er ikke lovlig. Ukjente knapper ignoreres uten tilbakemelding slik at knapper kan legges til i fremtidige versjoner uten å ødelegge for eldre versjoner. En tagg for mellomrom kan brukes for å sette inn mellomrom mellom to knapper."
+msgstr ""
+"Plassering av knapper på tittellinjen. Verdien skal være en streng av type "
+"«menu:minimize,maximize,spacer,close»; kolon skiller venstre hjørne av "
+"vinduet fra høyre hjørne, og knappenavnene skilles av komma. Duplisering av "
+"knapper er ikke lovlig. Ukjente knapper ignoreres uten tilbakemelding slik "
+"at knapper kan legges til i fremtidige versjoner uten å ødelegge for eldre "
+"versjoner. En tagg for mellomrom kan brukes for å sette inn mellomrom mellom"
+" to knapper."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
@@ -488,7 +504,12 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr "Fokusmodus for vindu indikerer hvordan vinduer aktiveres. Denne har tre mulige verdier; «click» betyr at vinduer må klikkes for å fokusere dem, «sloppy» betyr at vinduer fokuseres når muspekeren er over vinduet, og «mus» betyr at vinduer fokuseres når muspekeren er over vinduet og at fokus fjernes når muspekeren forlater vinduet."
+msgstr ""
+"Fokusmodus for vindu indikerer hvordan vinduer aktiveres. Denne har tre "
+"mulige verdier; «click» betyr at vinduer må klikkes for å fokusere dem, "
+"«sloppy» betyr at vinduer fokuseres når muspekeren er over vinduet, og «mus»"
+" betyr at vinduer fokuseres når muspekeren er over vinduet og at fokus "
+"fjernes når muspekeren forlater vinduet."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
@@ -500,11 +521,16 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "Dette alternativet gir ekstra kontroll over hvordan nylig opprettede vinduer får fokus. Det har to mulige verdier; «smart» benytter brukers normale fokusmodus, og «strict» som fører til at vinduer som startes fra en terminal ikke får fokus."
+msgstr ""
+"Dette alternativet gir ekstra kontroll over hvordan nylig opprettede vinduer"
+" får fokus. Det har to mulige verdier; «smart» benytter brukers normale "
+"fokusmodus, og «strict» som fører til at vinduer som startes fra en terminal"
+" ikke får fokus."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr "Om heving skal være en sideeffekt av andre handlinger brukeren utfører"
+msgstr ""
+"Om heving skal være en sideeffekt av andre handlinger brukeren utfører"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -526,7 +552,26 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr "Feil bruk av denne innstillingen kan medføre feilaktig oppførsel, brukere anbefales å ikke endre på forvalget som er satt til sant. Mange handlinger (f.eks. klikk i klientområdet, flytting eller endring av størrelsen på vinduer) fremhever vinduet som en sideeffekt. Hvis denne innstilling er usann, hvilket sterkt frarådes, frakobles fremheving fra andre brukerhandlinger, og fremhevelsesforespørsler opprettet fra programmer ignoreres. Se http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Selv når denne innstilling er falsk, kan vinduer fremdeles fremheves ved Alt+venstre-klikk et sted i vinduet, et normalt klikk på vindusdekorasjonene eller av spesielle beskjeder fra tekstsøkere, som aktiveringsforespørsler fra tasklist-panelprogrammer. Denne innstillingen er for øyeblikket avskrudd i klikk-for-fokus-tilstand. Merk at listen over måter å fremheve vinduer når raise_on_click er usant ikke inkluderer programmeringsmessige forespørsler fra programmer om fremheving av vinduer: slike forespørsler vil bli sett bort fra uansett årsak for forespørsel. Hvis du er programutvikler og har en bruker som klager over at programmet ikke fungerer med denne innstilling avskrudd, fortell dem at det er »deres« skyld at deres vindushåndtering ikke fungerer og at de skal endre innstillingen tilbake til sant eller leve med »feilen« de har igangsatt."
+msgstr ""
+"Feil bruk av denne innstillingen kan medføre feilaktig oppførsel, brukere "
+"anbefales å ikke endre på forvalget som er satt til sant. Mange handlinger "
+"(f.eks. klikk i klientområdet, flytting eller endring av størrelsen på "
+"vinduer) fremhever vinduet som en sideeffekt. Hvis denne innstilling er "
+"usann, hvilket sterkt frarådes, frakobles fremheving fra andre "
+"brukerhandlinger, og fremhevelsesforespørsler opprettet fra programmer "
+"ignoreres. Se http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Selv når "
+"denne innstilling er falsk, kan vinduer fremdeles fremheves ved Alt+venstre-"
+"klikk et sted i vinduet, et normalt klikk på vindusdekorasjonene eller av "
+"spesielle beskjeder fra tekstsøkere, som aktiveringsforespørsler fra "
+"tasklist-panelprogrammer. Denne innstillingen er for øyeblikket avskrudd i "
+"klikk-for-fokus-tilstand. Merk at listen over måter å fremheve vinduer når "
+"raise_on_click er usant ikke inkluderer programmeringsmessige forespørsler "
+"fra programmer om fremheving av vinduer: slike forespørsler vil bli sett "
+"bort fra uansett årsak for forespørsel. Hvis du er programutvikler og har en"
+" bruker som klager over at programmet ikke fungerer med denne innstilling "
+"avskrudd, fortell dem at det er »deres« skyld at deres vindushåndtering ikke"
+" fungerer og at de skal endre innstillingen tilbake til sant eller leve med "
+"»feilen« de har igangsatt."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -542,7 +587,15 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Dette alternativet bestemmer effekten av dobbeltklikk på tittellinjen. Gyldige alternativer er «toggle_shade», hvilket vil rulle ned/opp vinduet, «toggle_maximizes» som vil maksimere/gjenopprette vinduet, «toggle_maximize_horisontally» som vil maksimere vinduet i horisontal retning, «toggle_maximize_vertically» som vil maksimere/gjenopprette vinduet i vertikal retning, «toggle_minimize», som vil minimere vinduet, «shade» som vil rulle vinduet opp, «menu» som vil vise vindusmenyen, «lower» som vil plassere vinduet bak alle andre og «none» som ikke gjør noen ting."
+msgstr ""
+"Dette alternativet bestemmer effekten av dobbeltklikk på tittellinjen. "
+"Gyldige alternativer er «toggle_shade», hvilket vil rulle ned/opp vinduet, "
+"«toggle_maximizes» som vil maksimere/gjenopprette vinduet, "
+"«toggle_maximize_horisontally» som vil maksimere vinduet i horisontal "
+"retning, «toggle_maximize_vertically» som vil maksimere/gjenopprette vinduet"
+" i vertikal retning, «toggle_minimize», som vil minimere vinduet, «shade» "
+"som vil rulle vinduet opp, «menu» som vil vise vindusmenyen, «lower» som vil"
+" plassere vinduet bak alle andre og «none» som ikke gjør noen ting."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
@@ -558,7 +611,15 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Dette alternativet bestemmer effekten av klikk med midterste musknapp på tittellinjen. Gyldige alternativer er «toggle_shade», hvilket vil rulle ned/opp vinduet, «toggle_maximizes» som vil maksimere/gjenopprette vinduet, «toggle_maximize_horisontally» som vil maksimere vinduet i horisontal retning, «toggle_maximize_vertically» som vil maksimere/gjenopprette vinduet i vertikal retning, «toggle_minimize», som vil minimere vinduet, «shade» som vil rulle vinduet opp, «menu» som vil vise vindusmenyen, «lower» som vil plassere vinduet bak alle andre og «none» som ikke gjør noen ting."
+msgstr ""
+"Dette alternativet bestemmer effekten av klikk med midterste musknapp på "
+"tittellinjen. Gyldige alternativer er «toggle_shade», hvilket vil rulle "
+"ned/opp vinduet, «toggle_maximizes» som vil maksimere/gjenopprette vinduet, "
+"«toggle_maximize_horisontally» som vil maksimere vinduet i horisontal "
+"retning, «toggle_maximize_vertically» som vil maksimere/gjenopprette vinduet"
+" i vertikal retning, «toggle_minimize», som vil minimere vinduet, «shade» "
+"som vil rulle vinduet opp, «menu» som vil vise vindusmenyen, «lower» som vil"
+" plassere vinduet bak alle andre og «none» som ikke gjør noen ting."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
@@ -574,7 +635,15 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Dette alternativet bestemmer effekten av høyreklikk på tittellinjen. Gyldige alternativer er «toggle_shade», hvilket vil rulle ned/opp vinduet, «toggle_maximizes» som vil maksimere/gjenopprette vinduet, «toggle_maximize_horisontally» som vil maksimere vinduet i horisontal retning, «toggle_maximize_vertically» som vil maksimere/gjenopprette vinduet i vertikal retning, «minimize», som vil minimere vinduet, «shade» som vil rulle vinduet opp, «menu» som vil vise vindusmenyen, «lower» som vil plassere vinduet bak alle andre og «none» som ikke gjør noen ting."
+msgstr ""
+"Dette alternativet bestemmer effekten av høyreklikk på tittellinjen. Gyldige"
+" alternativer er «toggle_shade», hvilket vil rulle ned/opp vinduet, "
+"«toggle_maximizes» som vil maksimere/gjenopprette vinduet, "
+"«toggle_maximize_horisontally» som vil maksimere vinduet i horisontal "
+"retning, «toggle_maximize_vertically» som vil maksimere/gjenopprette vinduet"
+" i vertikal retning, «minimize», som vil minimere vinduet, «shade» som vil "
+"rulle vinduet opp, «menu» som vil vise vindusmenyen, «lower» som vil "
+"plassere vinduet bak alle andre og «none» som ikke gjør noen ting."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
@@ -586,7 +655,11 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr "Hvis denne settes til «true» og fokusmodus er enten «sloppy» eller «mouse» så vil vindu med fokus automatisk heves etter et pause oppgitt i nøkkelen auto_raise_delay. Dette er ikke relatert til heving av vinduet ved å klikke på det og heller ikke til å gå inn i et vindu ved en dra-og-slipp operasjon."
+msgstr ""
+"Hvis denne settes til «true» og fokusmodus er enten «sloppy» eller «mouse» "
+"så vil vindu med fokus automatisk heves etter et pause oppgitt i nøkkelen "
+"auto_raise_delay. Dette er ikke relatert til heving av vinduet ved å klikke "
+"på det og heller ikke til å gå inn i et vindu ved en dra-og-slipp operasjon."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
@@ -596,11 +669,13 @@ msgstr "Ventetid i millisekund for autohevningsvalg"
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr "Ventetid for vinduet heves hvis auto_raise er satt til sann. Tiden angis i tusendels sekund."
+msgstr ""
+"Ventetid for vinduet heves hvis auto_raise er satt til sann. Tiden angis i "
+"tusendels sekund."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr "Valgt drakt"
+msgstr "Iført drakt"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
@@ -616,7 +691,9 @@ msgstr "Bruk forvalgt systemskrift i vinsutitler"
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr "Hvis denne settes vil «titlebar_font» ignoreres og forvalgt skrift vil brukes for vindustitler."
+msgstr ""
+"Hvis denne settes vil «titlebar_font» ignoreres og forvalgt skrift vil "
+"brukes for vindustitler."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -628,7 +705,11 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr "En streng som beskriver en skrift for vinduers tittellinje. Størrelsen fra beskrivelsen vil kun brukes hvis alternativet titlebar_font_size settes til 0. I tillegg vil dette alternativet deaktiveres hvis alternativet titlebar_uses_desktop_font settes til «true»."
+msgstr ""
+"En streng som beskriver en skrift for vinduers tittellinje. Størrelsen fra "
+"beskrivelsen vil kun brukes hvis alternativet titlebar_font_size settes til "
+"0. I tillegg vil dette alternativet deaktiveres hvis alternativet "
+"titlebar_uses_desktop_font settes til «true»."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -639,7 +720,10 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr "Antall arbeidsområder. Må være større enn null og har et fast maksimum for å hindre at noen ødelegger skrivebordet ved å be om for mange arbeidsområder ved en feiltagelse."
+msgstr ""
+"Antall arbeidsområder. Må være større enn null og har et fast maksimum for å"
+" hindre at noen ødelegger skrivebordet ved å be om for mange arbeidsområder "
+"ved en feiltagelse."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -655,7 +739,16 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr "Brytningsstilen brukes til å bestemme hvordan det byttes fra et arbeidsområde til et annet på grensen til arbeidsområdebytteren. Hvis satt til \"ingen brytning\", vil ingenting skje hvis du prøver å bytte til et arbeidsområde som befinner seg på utsiden av grensen for arbeidsområdebytteren. Hvis satt til \"klassisk\", vil gammel Marco-oppførsel brukes: enen av en rad leder til begynnelsen på neste og enden på en kolonne likeså. Hvis satt till \"torodial\", vil arbeidsområder koble til hverandre som en smultring: enden av hver rad leder til sin egen begynnelse og enden av hver kolonne likeså."
+msgstr ""
+"Brytningsstilen brukes til å bestemme hvordan det byttes fra et "
+"arbeidsområde til et annet på grensen til arbeidsområdebytteren. Hvis satt "
+"til \"ingen brytning\", vil ingenting skje hvis du prøver å bytte til et "
+"arbeidsområde som befinner seg på utsiden av grensen for "
+"arbeidsområdebytteren. Hvis satt til \"klassisk\", vil gammel Marco-"
+"oppførsel brukes: enen av en rad leder til begynnelsen på neste og enden på "
+"en kolonne likeså. Hvis satt till \"torodial\", vil arbeidsområder koble til"
+" hverandre som en smultring: enden av hver rad leder til sin egen begynnelse"
+" og enden av hver kolonne likeså."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
@@ -666,7 +759,9 @@ msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr "Aktiverer en synlig indikator når et program eller systemet lager et pip; nyttig for hørselsskadde og for bruk i støyende miljøer."
+msgstr ""
+"Aktiverer en synlig indikator når et program eller systemet lager et pip; "
+"nyttig for hørselsskadde og for bruk i støyende miljøer."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
@@ -676,7 +771,9 @@ msgstr "Systemringeklokka er hørbar"
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr "Bestemmer om systemet og programmer kan generere hørbare «pip». Kan brukes sammen med «synlig klokke» for å tillate still «pip»."
+msgstr ""
+"Bestemmer om systemet og programmer kan generere hørbare «pip». Kan brukes "
+"sammen med «synlig klokke» for å tillate still «pip»."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
@@ -691,7 +788,13 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr "Forteller Marco hvordan synlig tilbakemelding på at systempip eller andre programspesifikke pip har vært aktivert. Det er to gyldige verdier; «fullscreen» som forårsaker et sort/hvitt blink over hele skjermen, og «frame_flash», som forårsaker at tittellinjen i programmet som sendte pipet blinker. Hvis programmet som sendte pipet er ukjent (hvilket er tilfelle for forvalgt «systempip») vil tittellinjen i fokusert vindu blinke."
+msgstr ""
+"Forteller Marco hvordan synlig tilbakemelding på at systempip eller andre "
+"programspesifikke pip har vært aktivert. Det er to gyldige verdier; "
+"«fullscreen» som forårsaker et sort/hvitt blink over hele skjermen, og "
+"«frame_flash», som forårsaker at tittellinjen i programmet som sendte pipet "
+"blinker. Hvis programmet som sendte pipet er ukjent (hvilket er tilfelle for"
+" forvalgt «systempip») vil tittellinjen i fokusert vindu blinke."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
@@ -710,7 +813,10 @@ msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr "Hvis angitt som sann, vil ingen vindusminiatyrbilder bli vist i et Alt+Tab-oppsprettsvindu når kompositeringsbehandleren er påskrudd. Programminiatyrbilder vil bli vist i steden for."
+msgstr ""
+"Hvis angitt som sann, vil ingen vindusminiatyrbilder bli vist i et Alt+Tab-"
+"oppsprettsvindu når kompositeringsbehandleren er påskrudd. "
+"Programminiatyrbilder vil bli vist i steden for."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
@@ -723,12 +829,20 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr "Hvis denne er sann vil marco gi bruker mindre informasjon og inntrykk av «direkte manipulasjon», ved å vise kun ramme ved flytting og å unngå animasjoner. Dette er en betydelig reduksjon i brukervennlighet for mange brukere, men kan la eldre programmer og terminaltjenere fungere på en bedre måte.Denne funksjonen vil deaktiveres hvis hjelpefunksjoner for tilgjengelighet aktiveres."
+msgstr ""
+"Hvis denne er sann vil marco gi bruker mindre informasjon og inntrykk av "
+"«direkte manipulasjon», ved å vise kun ramme ved flytting og å unngå "
+"animasjoner. Dette er en betydelig reduksjon i brukervennlighet for mange "
+"brukere, men kan la eldre programmer og terminaltjenere fungere på en bedre "
+"måte.Denne funksjonen vil deaktiveres hvis hjelpefunksjoner for "
+"tilgjengelighet aktiveres."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr "(Ikke implementert) Navigering fungerer med hensyn på programmer, ikke vinduer"
+msgstr ""
+"(Ikke implementert) Navigering fungerer med hensyn på programmer, ikke "
+"vinduer"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -739,7 +853,13 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr "Hvis denne settes til sann vil Marco forholde seg til programmer i stedet for vinduer. Konseptet er litt abstrakt, men i praksis er programbasert oppsett mer likt Mac, og mindre likt Windows. Når du fokuserer et vindu i programbasert modus vil alle vinduer i programmet heves. I tillegg vil ikke fokusklikk sendes gjennom til vinduer i andre programmer i programbasert modus. Programbasert modus er i stor grad ikke implementert ennå."
+msgstr ""
+"Hvis denne settes til sann vil Marco forholde seg til programmer i stedet "
+"for vinduer. Konseptet er litt abstrakt, men i praksis er programbasert "
+"oppsett mer likt Mac, og mindre likt Windows. Når du fokuserer et vindu i "
+"programbasert modus vil alle vinduer i programmet heves. I tillegg vil ikke "
+"fokusklikk sendes gjennom til vinduer i andre programmer i programbasert "
+"modus. Programbasert modus er i stor grad ikke implementert ennå."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -751,7 +871,11 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr "Noen programmer overser spesifikasjoner på måter som resulterer i problemer i vindushåndtereren. Dette alternativet setter Marco i strengt korrekt modus som vil gi et mer konsist brukergrensesnitt gitt at man ikke må kjøre programmer som oppfører seg på feil måte."
+msgstr ""
+"Noen programmer overser spesifikasjoner på måter som resulterer i problemer "
+"i vindushåndtereren. Dette alternativet setter Marco i strengt korrekt modus"
+" som vil gi et mer konsist brukergrensesnitt gitt at man ikke må kjøre "
+"programmer som oppfører seg på feil måte."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -761,7 +885,9 @@ msgstr "Bestem om nye vinduer opprettes midt i skjermen"
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr "Hvis angitt som sant, vil nye vinduer åpnes midt på skjermen. Ellers åpnes de øverst til venstre."
+msgstr ""
+"Hvis angitt som sant, vil nye vinduer åpnes midt på skjermen. Ellers åpnes "
+"de øverst til venstre."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
@@ -796,7 +922,13 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr "Vinduplaseringsmodus indikerer hvordan nye vinduer plasseres. \"automatic\" betyr at systemet velger en plassering automatisk basert på tilgjengelig plass på skrivebordet, eller ved en simpel kaskade hvis det ikke finnes noen plass; \"pointer\" betyr at nye vinduer plasseres i samsvar med musepekerens posisjon: \"manual\" betyr at brukeren manuelt skal plassere det nye vinduet med musa eller tastaturet."
+msgstr ""
+"Vinduplaseringsmodus indikerer hvordan nye vinduer plasseres. \"automatic\" "
+"betyr at systemet velger en plassering automatisk basert på tilgjengelig "
+"plass på skrivebordet, eller ved en simpel kaskade hvis det ikke finnes noen"
+" plass; \"pointer\" betyr at nye vinduer plasseres i samsvar med "
+"musepekerens posisjon: \"manual\" betyr at brukeren manuelt skal plassere "
+"det nye vinduet med musa eller tastaturet."
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
@@ -806,7 +938,10 @@ msgstr "Liste over programmer ignorert av show-desktop"
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
-msgstr "Kommainndelt klasseliste. Hvert kjørende med grafisk brukergresesnitt referert til gitt vindusbehandlerklasse vil bli ignorert av \"Vis skrivebord\"-funksjonalitet."
+msgstr ""
+"Kommainndelt klasseliste. Hvert kjørende med grafisk brukergresesnitt "
+"referert til gitt vindusbehandlerklasse vil bli ignorert av \"Vis "
+"skrivebord\"-funksjonalitet."
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
@@ -828,7 +963,13 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "Tastatursnarvei for kjøring av en tilhørende kommando i /apps/marco/keybinding_commands. Formatet ser slik ut: «<Control>a» eller «<Shift><Alt>F1.». Tolkeren er ganske liberal og tillater små og store bokstaver, i tillegg til forkortelser som «<Ctl>» og «<Ctrl>». Hvis du setter alternativet til den spesielle strengen «disabled», vil det ikke være en tastatursnarvei for denne handlingen."
+msgstr ""
+"Tastatursnarvei for kjøring av en tilhørende kommando i "
+"/apps/marco/keybinding_commands. Formatet ser slik ut: «<Control>a» eller "
+"«<Shift><Alt>F1.». Tolkeren er ganske liberal og tillater små og store "
+"bokstaver, i tillegg til forkortelser som «<Ctl>» og «<Ctrl>». Hvis du "
+"setter alternativet til den spesielle strengen «disabled», vil det ikke være"
+" en tastatursnarvei for denne handlingen."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -837,7 +978,12 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "Formatet ser ut som »&lt;Control&gt;a« eller »&lt;Shift&gt;&lt;Alt&gt;F1«. Fortolkeren er ganske liberal når det gjelder versalsensitivitet, og tolker også forkortelser som »&lt;Ctl&gt;« og »&lt;Ctrl&gt;«. Hvis du setter valget til spesialstrengen \"disabled\", vil det ikke være noen tastatursnarvei for denne handlingen."
+msgstr ""
+"Formatet ser ut som »&lt;Control&gt;a« eller »&lt;Shift&gt;&lt;Alt&gt;F1«. "
+"Fortolkeren er ganske liberal når det gjelder versalsensitivitet, og tolker "
+"også forkortelser som »&lt;Ctl&gt;« og »&lt;Ctrl&gt;«. Hvis du setter valget"
+" til spesialstrengen \"disabled\", vil det ikke være noen tastatursnarvei "
+"for denne handlingen."
 
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid ""
@@ -848,7 +994,11 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr "Formatet ser ut som »<Control>a« eller »<Skift><Alt>F1«. Fortolkeren er ikke kresen og tillater både store og små bokstaver, samt forkortelser som »<Ctl>« og »<Ctrl>«. Hvis du setter innstillingen til den spesialstrengen »disabled«, vil der ikke være noen tastatursnarvei for denne handlingen."
+msgstr ""
+"Formatet ser ut som »<Control>a« eller »<Skift><Alt>F1«. Fortolkeren er ikke"
+" kresen og tillater både store og små bokstaver, samt forkortelser som "
+"»<Ctl>« og »<Ctrl>«. Hvis du setter innstillingen til den spesialstrengen "
+"»disabled«, vil der ikke være noen tastatursnarvei for denne handlingen."
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
@@ -860,15 +1010,19 @@ msgstr "Gå gjennom vinduer baklengs, ved bruk av et oppsprettsvindu."
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr "Flytt mellom vinduer på alle arbeidsområder, ved bruk av et oppsprettsvindu"
+msgstr ""
+"Flytt mellom vinduer på alle arbeidsområder, ved bruk av et oppsprettsvindu"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr "Gå gjennom vinduer baklengs på alle arbeidsområder, ved bruk av et oppsprettsvindu"
+msgstr ""
+"Gå gjennom vinduer baklengs på alle arbeidsområder, ved bruk av et "
+"oppsprettsvindu"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr "Gå baklengs mellom paneler og skrivebordet, ved bruk av et oppsprettsvindu"
+msgstr ""
+"Gå baklengs mellom paneler og skrivebordet, ved bruk av et oppsprettsvindu"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
@@ -891,7 +1045,10 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr "Nøklene /apps/marco/global_keybindings/run_command_N definerer tastaturbindinger som korresponderer til disse kommandoene. Aktivering av tastaturbinding for run_command_N vil utføre kommando_N."
+msgstr ""
+"Nøklene /apps/marco/global_keybindings/run_command_N definerer "
+"tastaturbindinger som korresponderer til disse kommandoene. Aktivering av "
+"tastaturbinding for run_command_N vil utføre kommando_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
@@ -901,7 +1058,9 @@ msgstr "Kommando for skjermavbildning"
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr "Nøkkelen /apps/macro/global_keybindings/run_command_screenshot definerer en tastatursnarvei som utløser innstillingen for denne kommandoen."
+msgstr ""
+"Nøkkelen /apps/macro/global_keybindings/run_command_screenshot definerer en "
+"tastatursnarvei som utløser innstillingen for denne kommandoen."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
@@ -912,7 +1071,10 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr "Nøkkelen /apps/marco/global_keybindings/run_command_window_screenshot definerer en tastaturbinding som medfører at kommandoen som oppgis av denne innstillingen kjøres."
+msgstr ""
+"Nøkkelen /apps/marco/global_keybindings/run_command_window_screenshot "
+"definerer en tastaturbinding som medfører at kommandoen som oppgis av denne "
+"innstillingen kjøres."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
@@ -953,7 +1115,9 @@ msgstr "<tt>%s</tt> svarer ikke."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Du kan velge å vente en kort stund for å se om det fortsetter eller tvinge programmet til å avslutte helt."
+msgstr ""
+"Du kan velge å vente en kort stund for å se om det fortsetter eller tvinge "
+"programmet til å avslutte helt."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -983,43 +1147,48 @@ msgstr "Feil under åpning av X Window System skjerm «%s»\n"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Et annet program bruker allerede nøkkelen %s med modifikatorer %x som binding\n"
+msgstr ""
+"Et annet program bruker allerede nøkkelen %s med modifikatorer %x som "
+"binding\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Det oppsto en feil under kjøring av <tt>%s</tt>:\n\n%s"
+msgstr ""
+"Det oppsto en feil under kjøring av <tt>%s</tt>:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Ingen kommando %d er definert\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Ingen terminalkommando er definert\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Gi arbeidsområde nytt navn</tt>"
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr "Nytt navn på arbeidsområde:"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr "OK"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -1030,11 +1199,15 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nOpphavsrett © 2001-%s Havoc Pennington, Red Hat., Inc, og andre.\nDette er fri programvare; se i kildekoden for kopibetingelser.\nDet gis INGEN garanti ikke engang for SALGBARHET eller EGNETHET FOR ET SPESIFIKT FORMÅL.\n"
+msgstr ""
+"marco %s\n"
+"Opphavsrett © 2001-%s Havoc Pennington, Red Hat., Inc, og andre.\n"
+"Dette er fri programvare; se i kildekoden for kopibetingelser.\n"
+"Det gis INGEN garanti ikke engang for SALGBARHET eller EGNETHET FOR ET SPESIFIKT FORMÅL.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "Slå av tilkobling til øktbehandleren"
+msgstr "Slå av tilkobling til øktbehandler"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1054,7 +1227,7 @@ msgstr "Sett igang økt fra fra ei lagret fil"
 
 #: ../src/core/main.c:298
 msgid "Print version"
-msgstr "Skriv versjonsnummer"
+msgstr "Skriv ut versjon"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
@@ -1071,7 +1244,8 @@ msgstr "Slå av «kompositering»"
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Ikke vis vinduer som er maksimert og ikke har dekorasjoner i fullskjermmodus"
+msgstr ""
+"Ikke vis vinduer som er maksimert og ikke har dekorasjoner i fullskjermmodus"
 
 #: ../src/core/main.c:519
 #, c-format
@@ -1082,7 +1256,9 @@ msgstr "Feil under søk i draktkatalog: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Kunne ikke finne en drakt! Sjekk at %s finnes og inneholder de vanlige draktene.\n"
+msgstr ""
+"Kunne ikke finne en drakt! Sjekk at %s finnes og inneholder de vanlige "
+"draktene.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1101,7 +1277,9 @@ msgstr "%d lagret i GSettings-nøkkel %s er utenfor intervallet %d til %d\n"
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Funksjonalitet for å gå rundt ødelagte programmer er deaktivert. Noen programmer vil kanskje ikke oppføre seg korrekt.\n"
+msgstr ""
+"Funksjonalitet for å gå rundt ødelagte programmer er deaktivert. Noen "
+"programmer vil kanskje ikke oppføre seg korrekt.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
@@ -1113,14 +1291,18 @@ msgstr "Kunne ikke tolke skriftbeskrivelsen «%s» fra GSettings-nøkkelen %s\n"
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "«%s» funnet i oppsettsdatabasen er ikke en gyldig verdi for endring av museknapp\n"
+msgstr ""
+"«%s» funnet i oppsettsdatabasen er ikke en gyldig verdi for endring av "
+"museknapp\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "«%s» funnet i oppsettsdatabasen er ikke en gyldig verdi for tastaturbinding «%s»\n"
+msgstr ""
+"«%s» funnet i oppsettsdatabasen er ikke en gyldig verdi for tastaturbinding "
+"«%s»\n"
 
 #: ../src/core/prefs.c:2056
 #, c-format
@@ -1137,7 +1319,9 @@ msgstr "Skjerm %d på display «%s» er ugyldig\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Skjerm %d på display «%s» har allerede en vindushåndterer; prøv å bruke flagget --replace for å erstatte aktiv vindushåndterer.\n"
+msgstr ""
+"Skjerm %d på display «%s» har allerede en vindushåndterer; prøv å bruke "
+"flagget --replace for å erstatte aktiv vindushåndterer.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
@@ -1205,7 +1389,9 @@ msgstr "Ukjent element %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Disse vinduene støtter ikke &quot;lagre aktivt oppsett&quot; og vil måtte startes på nytt manuelt neste gang du logger inn."
+msgstr ""
+"Disse vinduene støtter ikke &quot;lagre aktivt oppsett&quot; og vil måtte "
+"startes på nytt manuelt neste gang du logger inn."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1255,7 +1441,9 @@ msgstr "Marco"
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Vindu %s setter SM_CLIENT_ID på seg selv i steden for på WM_CLIENT_LEADER-vinduet som spesifisert i ICCCM.\n"
+msgstr ""
+"Vindu %s setter SM_CLIENT_ID på seg selv i steden for på WM_CLIENT_LEADER-"
+"vinduet som spesifisert i ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1268,7 +1456,10 @@ msgstr "Vindu %s setter SM_CLIENT_ID på seg selv i steden for på WM_CLIENT_LEA
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Vindu %s setter et MWM-hint som indikerer at det ikke kan endre størrelse, men setter minste størrelse %d x %d og maks størrelse %d x %d; dette virker ikke fornuftig.\n"
+msgstr ""
+"Vindu %s setter et MWM-hint som indikerer at det ikke kan endre størrelse, "
+"men setter minste størrelse %d x %d og maks størrelse %d x %d; dette virker "
+"ikke fornuftig.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1314,7 +1505,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Vindu 0x%lx har egenskap %s\nsom var forventet å ha type %s format %d\nog faktisk har type %s format %d n_items %d.\nDette er mest sannsynlig en feil i programmet, ikke vindushåndtereren.\nVinduet har title=«%s» class=«%s» name=«%s»\n"
+msgstr ""
+"Vindu 0x%lx har egenskap %s\n"
+"som var forventet å ha type %s format %d\n"
+"og faktisk har type %s format %d n_items %d.\n"
+"Dette er mest sannsynlig en feil i programmet, ikke vindushåndtereren.\n"
+"Vinduet har title=«%s» class=«%s» name=«%s»\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1326,7 +1522,9 @@ msgstr "Egenskap %s på vindu 0x%lx inneholdt ugyldig UTF-8\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Egenskap %s på vindu 0x%lx inneholdt ugyldig UTF-8 for oppføring %d i listen\n"
+msgstr ""
+"Egenskap %s på vindu 0x%lx inneholdt ugyldig UTF-8 for oppføring %d i "
+"listen\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1390,7 +1588,7 @@ msgstr "Ma_ksimer"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "G_jenopprett"
+msgstr "_Gjenopprett"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1405,12 +1603,12 @@ msgstr "R_ull ned"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:75
 msgid "_Move"
-msgstr "_Flytt"
+msgstr "F_lytt"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:77
 msgid "_Resize"
-msgstr "End_re størrelse"
+msgstr "_Endre størrelse"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:79
@@ -1436,22 +1634,22 @@ msgstr "K_un på dette arbeidsområdet"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "Flytt til arbeidsområdet ti_l venstre"
+msgstr "Flytt til arbeidsområdet til _venstre"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "Flytt til a_rbeidsområdet til høyre"
+msgstr "Flytt til arbeidsområdet til hø_yre"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "Flytt til arbeidsområdet _over"
+msgstr "Flytt til et arbeidsområdet _over"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "Flytt til arbeidsområdet ne_denfor"
+msgstr "Flytt til arbeidsområdet un_der"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
@@ -1476,7 +1674,7 @@ msgstr "Arbeidsområde %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Flytt til et annet ar_beidsområde"
+msgstr "Flytt til et annet _arbeidsområde"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -1611,14 +1809,18 @@ msgstr "Gradienter må ha minst to farger"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK-fargespesifikasjon må ha tilstand i klammer, f.eks. gtk:fg[NORMAL], hvor NORMAL er tilstanden; kunne ikke lese «%s»"
+msgstr ""
+"GTK-fargespesifikasjon må ha tilstand i klammer, f.eks. gtk:fg[NORMAL], hvor"
+" NORMAL er tilstanden; kunne ikke lese «%s»"
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK-fargespesifikasjon må ha en avsluttende klamme etter tilstanden, f.eks. gtk:fg[NORMAL], hvor NORMAL er tilstanden; kunne ikke lese «%s»"
+msgstr ""
+"GTK-fargespesifikasjon må ha en avsluttende klamme etter tilstanden, f.eks. "
+"gtk:fg[NORMAL], hvor NORMAL er tilstanden; kunne ikke lese «%s»"
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1635,7 +1837,9 @@ msgstr "Forsto ikke fargekomponent «%s» i fargespesifikasjonen"
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Blandingsformat er «blend/bg_color/fg_color/alpha», «%s» passer ikke i formatet"
+msgstr ""
+"Blandingsformat er «blend/bg_color/fg_color/alpha», «%s» passer ikke i "
+"formatet"
 
 #: ../src/ui/theme.c:1259
 #, c-format
@@ -1650,7 +1854,8 @@ msgstr "Alpha-verdi «%s» i blandet farge er ikke mellom 0.0 og 1.0"
 #: ../src/ui/theme.c:1316
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "Skyggeformatet er «shade/base_color/factor», «%s» passer ikke i formatet"
+msgstr ""
+"Skyggeformatet er «shade/base_color/factor», «%s» passer ikke i formatet"
 
 #: ../src/ui/theme.c:1327
 #, c-format
@@ -1689,7 +1894,9 @@ msgstr "Koordinatuttrykk inneholder heltall «%s» som ikke kunne tolkes"
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Koordinatuttrykket inneholdt en ukjent operator ved begynnelsen av denne teksten: «%s»"
+msgstr ""
+"Koordinatuttrykket inneholdt en ukjent operator ved begynnelsen av denne "
+"teksten: «%s»"
 
 #: ../src/ui/theme.c:1926
 #, c-format
@@ -1727,7 +1934,9 @@ msgstr "Koordinatuttrykket sluttet med en operator i stedet for en operand"
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Koordinatuttrykket har en operator «%c» etter en operator «%c» og ingen operand mellom dem."
+msgstr ""
+"Koordinatuttrykket har en operator «%c» etter en operator «%c» og ingen "
+"operand mellom dem."
 
 #: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
 #, c-format
@@ -1748,12 +1957,14 @@ msgstr "Koordinatuttrykket hadde en parantes slutt uten parantes start"
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
-msgstr "Koordinatuttrykket hadde en åpen parantes uten en avsluttende parantes"
+msgstr ""
+"Koordinatuttrykket hadde en åpen parantes uten en avsluttende parantes"
 
 #: ../src/ui/theme.c:2518
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
-msgstr "Koordinatuttrykket ser ikke ut til å ha noen operatorer eller operander"
+msgstr ""
+"Koordinatuttrykket ser ikke ut til å ha noen operatorer eller operander"
 
 #: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
 #, c-format
@@ -1765,12 +1976,15 @@ msgstr "Drakten inneholdt et uttrykk som resulterte i en feil: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "<button function=«%s» state=«%s» draw_ops=«ett-eller-annet»/> må spesifiseres for denne rammestilen"
+msgstr ""
+"<button function=«%s» state=«%s» draw_ops=«ett-eller-annet»/> må "
+"spesifiseres for denne rammestilen"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
-msgstr "Mangler <frame state=«%s» resize=«%s» focus=«%s» stil=«ett-eller-annet»/>"
+msgstr ""
+"Mangler <frame state=«%s» resize=«%s» focus=«%s» stil=«ett-eller-annet»/>"
 
 #: ../src/ui/theme.c:4982
 #, c-format
@@ -1788,12 +2002,15 @@ msgstr "<%s> er ikke satt for drakten «%s»"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Ingen rammestil satt for vindutype «%s» i drakten «%s», legg til et <window type=«%s» style_set=«ett-eller-annet»/>-element"
+msgstr ""
+"Ingen rammestil satt for vindutype «%s» i drakten «%s», legg til et <window "
+"type=«%s» style_set=«ett-eller-annet»/>-element"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Brukerdefinerte konstanter må begynne med stor bokstav; «%s» gjør ikke det"
+msgstr ""
+"Brukerdefinerte konstanter må begynne med stor bokstav; «%s» gjør ikke det"
 
 #: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
 #, c-format
@@ -1810,7 +2027,7 @@ msgstr "Ingen «%s»-attributt på element <%s>"
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "Linje %d tegn %d: %s"
+msgstr "Linje %d, tegn %d : %s"
 
 #: ../src/ui/theme-parser.c:438
 #, c-format
@@ -1820,7 +2037,7 @@ msgstr "Attributt «%s» gjentatt to ganger på samme <%s>-element"
 #: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Attributt «%s» er ugyldig på <%s>-element i denne konteksten"
+msgstr "Attributt «%s» er ugyldig i <%s>-element i denne sammenhengen"
 
 #: ../src/ui/theme-parser.c:547
 #, c-format
@@ -1860,14 +2077,17 @@ msgstr "Vinkelen må være mellom 0.0 og 360.0, var %g\n"
 #: ../src/ui/theme-parser.c:751
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Alpha må være mellom 0.0 (usynlig) og 1.0 (helt ugjennomsiktig), var %g\n"
+msgstr ""
+"Alpha må være mellom 0.0 (usynlig) og 1.0 (helt ugjennomsiktig), var %g\n"
 
 #: ../src/ui/theme-parser.c:816
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Ugyldig skalering av tittel «%s» (må være en av xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr ""
+"Ugyldig skalering av tittel «%s» (må være en av xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1889,7 +2109,8 @@ msgstr "<%s> geometri «%s» er ikke definert"
 #: ../src/ui/theme-parser.c:1107
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
-msgstr "<%s> må spesifisere enten en geometri eller et opphav som har geometri"
+msgstr ""
+"<%s> må spesifisere enten en geometri eller et opphav som har geometri"
 
 #: ../src/ui/theme-parser.c:1149
 msgid "You must specify a background for an alpha value to be meaningful"
@@ -1925,7 +2146,9 @@ msgstr "Element <%s> er ikke tillatt under <%s>"
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Kan ikke oppgi både «button_width»/«button_height» og «aspect_ratio» for knapper"
+msgstr ""
+"Kan ikke oppgi både «button_width»/«button_height» og «aspect_ratio» for "
+"knapper"
 
 #: ../src/ui/theme-parser.c:1402
 #, c-format
@@ -1986,7 +2209,8 @@ msgstr "Ingen <draw_ops> kalt «%s» er definert"
 #: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
-msgstr "Hvis du tar med draw_ops «%s» her vil dette lage en sirkulær referanse"
+msgstr ""
+"Hvis du tar med draw_ops «%s» her vil dette lage en sirkulær referanse"
 
 #: ../src/ui/theme-parser.c:2855
 #, c-format
@@ -2048,17 +2272,22 @@ msgstr "«%s» er ikke en gyldig verdi for attributt for endring av størrelse"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Skal ikke være noen «resize»-attributt på <%s>-element for maksimert/skyggelagt tilstand"
+msgstr ""
+"Skal ikke være noen «resize»-attributt på <%s>-element for "
+"maksimert/skyggelagt tilstand"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Skal ikke være noen «resize»-attributt på <%s>-element for maksimert tilstand"
+msgstr ""
+"Skal ikke være noen «resize»-attributt på <%s>-element for maksimert "
+"tilstand"
 
 #: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
-msgstr "Stil er allerede spesifisert for tilstand %s størrelsesendring %s fokus %s"
+msgstr ""
+"Stil er allerede spesifisert for tilstand %s størrelsesendring %s fokus %s"
 
 #: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
 #: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
@@ -2071,19 +2300,28 @@ msgstr "Stil er allerede spesifisert for tilstanden %s fokus %s"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Kan ikke ha to draw_ops for et <piece>-element (drakten spesifiserte en draw_ops-attributt i tillegg til et <draw_ops>-element, eller så spesifiserte det to elementer)"
+msgstr ""
+"Kan ikke ha to draw_ops for et <piece>-element (drakten spesifiserte en "
+"draw_ops-attributt i tillegg til et <draw_ops>-element, eller så "
+"spesifiserte det to elementer)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Kan ikke ha to draw_ops for et <button>-element (drakten spesifiserte en draw_ops-attributt i tillegg til et <draw_ops>-element, eller det spesifiserte to elementer)"
+msgstr ""
+"Kan ikke ha to draw_ops for et <button>-element (drakten spesifiserte en "
+"draw_ops-attributt i tillegg til et <draw_ops>-element, eller det "
+"spesifiserte to elementer)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Kan ikke ha to draw_ops for et <menu_icon>-element (drakten spesifiserte en draw_ops-attributt i tillegg til et <draw_ops>-element, eller det spesifiserte to elementer)"
+msgstr ""
+"Kan ikke ha to draw_ops for et <menu_icon>-element (drakten spesifiserte en "
+"draw_ops-attributt i tillegg til et <draw_ops>-element, eller det "
+"spesifiserte to elementer)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2094,7 +2332,8 @@ msgstr "Det ytterste elementet i drakten skal være <metacity_theme> ikke <%s>"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
-msgstr "Element <%s> er ikke tillatt inne i et name/author/date/description element"
+msgstr ""
+"Element <%s> er ikke tillatt inne i et name/author/date/description element"
 
 #: ../src/ui/theme-parser.c:3420
 #, c-format
@@ -2105,7 +2344,8 @@ msgstr "Element <%s> er ikke tillatt inne i et <constand> element"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "Element <%s> er ikke tillatt inne i et avstand/kant/aspektrate-element"
+msgstr ""
+"Element <%s> er ikke tillatt inne i et avstand/kant/aspektrate-element"
 
 #: ../src/ui/theme-parser.c:3454
 #, c-format
@@ -2129,7 +2369,7 @@ msgstr "Ingen draw_ops tilbys for knappen"
 #: ../src/ui/theme-parser.c:3815
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "Ingen tekst er tillatt inne i element <%s>"
+msgstr "Ingen tekst tillatt inne i element <%s>"
 
 #: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
 #: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
@@ -2239,4 +2479,7 @@ msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "Tegnet %d rammer på %g sekunder hos klienten (%g millisekunder per ramme) og %g sekunder på klokken inklusive ressurser på X-tjener (%g millisekunder per ramme)\n"
+msgstr ""
+"Tegnet %d rammer på %g sekunder hos klienten (%g millisekunder per ramme) og"
+" %g sekunder på klokken inklusive ressurser på X-tjener (%g millisekunder "
+"per ramme)\n"

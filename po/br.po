@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Alan Monfort <alan.monfort@free.fr>, 2015-2016
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Breton (http://www.transifex.com/mate/MATE/language/br/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Alan Monfort <alan.monfort@free.fr>, 2018\n"
+"Language-Team: Breton (https://www.transifex.com/mate/teams/13566/br/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: br\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -64,12 +64,16 @@ msgstr "Mont eus ur prenestr d'egile en ur ober gant prenestroù o tiflugañ"
 #: ../src/50-marco-global-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move between windows of an application, using a popup window"
-msgstr "Mont eus ur prenestr eus un arload d'egile en ur ober gant prenestroù o tiflugañ"
+msgstr ""
+"Mont eus ur prenestr eus un arload d'egile en ur ober gant prenestroù o "
+"tiflugañ"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:90
 msgid "Move between panels and the desktop, using a popup window"
-msgstr "Mont eus ur penel ha d'ur burev d'egile en ur ober gant prenestroù o tiflugañ"
+msgstr ""
+"Mont eus ur penel ha d'ur burev d'egile en ur ober gant prenestroù o "
+"tiflugañ"
 
 #: ../src/50-marco-global-key.xml.in.h:5
 #: ../src/org.mate.marco.gschema.xml.h:94
@@ -229,12 +233,16 @@ msgstr "Adventañ ar prenestr"
 #: ../src/50-marco-window-key.xml.in.h:12
 #: ../src/org.mate.marco.gschema.xml.h:122
 msgid "Toggle whether window is on all workspaces or just one"
-msgstr "Trec'haoliñ evit ma vo ar prenestr war an holl dachennoù labour pe unan nemetken"
+msgstr ""
+"Trec'haoliñ evit ma vo ar prenestr war an holl dachennoù labour pe unan "
+"nemetken"
 
 #: ../src/50-marco-window-key.xml.in.h:13
 #: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr "Lakaat ar prenestr en a-raog mar bez goloet gant ur prenestr all, a-hend-all e lakaat a-zindan"
+msgstr ""
+"Lakaat ar prenestr en a-raog mar bez goloet gant ur prenestr all, a-hend-all"
+" e lakaat a-zindan"
 
 #: ../src/50-marco-window-key.xml.in.h:14
 #: ../src/org.mate.marco.gschema.xml.h:140
@@ -429,7 +437,8 @@ msgstr "Dilec'hiañ ar prenestr d'un dachenn labour dindan"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr "Daskemmer da arverañ evit ar gwezhioù dre glik daskemmet war ar prenestr"
+msgstr ""
+"Daskemmer da arverañ evit ar gwezhioù dre glik daskemmet war ar prenestr"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -438,7 +447,13 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr "Klikañ war ur prenestr en ur zerc'hel an afell-daskemmañ pouezet warni a dalv da zilec'hiañ ar prenestr (klik a-gleiz) pe diskouez lañser ar prenestr (klik a-zehou), adventañ ar prenestr (klik kreiz). Ar gwezhioù dre glikañ a-gleiz pe a-zehou a vez kevamsavet en ur ober gant an alc'hwez \"resize_with_right_button\". Eztaolet e vez an daskemmer gant \"&lt;Alt&gt;\" pe \"&lt;Super&gt;\" da skouer."
+msgstr ""
+"Klikañ war ur prenestr en ur zerc'hel an afell-daskemmañ pouezet warni a "
+"dalv da zilec'hiañ ar prenestr (klik a-gleiz) pe diskouez lañser ar prenestr"
+" (klik a-zehou), adventañ ar prenestr (klik kreiz). Ar gwezhioù dre glikañ "
+"a-gleiz pe a-zehou a vez kevamsavet en ur ober gant an alc'hwez "
+"\"resize_with_right_button\". Eztaolet e vez an daskemmer gant "
+"\"&lt;Alt&gt;\" pe \"&lt;Super&gt;\" da skouer."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -449,7 +464,11 @@ msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr "Despizañ da wir da adventañ gant an afell a-zehou ha diskouez ul lañser gant an afell greiz en ur zerc'hel an afell pouezet warni lavaret e \"mouse_button_modifier\" ; despizañ da ziwir da lakaat da vont en-dro gant un doare gin."
+msgstr ""
+"Despizañ da wir da adventañ gant an afell a-zehou ha diskouez ul lañser gant"
+" an afell greiz en ur zerc'hel an afell pouezet warni lavaret e "
+"\"mouse_button_modifier\" ; despizañ da ziwir da lakaat da vont en-dro gant "
+"un doare gin."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -474,7 +493,15 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr "Kempennadur an afelloù war ar varrenn ditl. Un hedad a zlefe bezañ ar werzh evel \"menu:minimize,maximize,spacer,close\"; ar skej a zisparti korn kleiz ar prenestr diouzh ar c'horn dehou hag anvioù an afelloù a zo dispartiet gant ur skej. N'hoc'h eus ket ar gwir da arredaoliñ afelloù. Laosket a-gostez e vo an anvioù afelloù dianav ken ma vo tro deoc'h ouzhpennañ an afelloù-mañ e handelvoù marco da zont hep kaout kudennoù gant an handelvoù koshoc'h. Ur c'hlav esaouiñ arbennik a c'hall bezañ enlakaet da ensoc'hañ un tamm plas etre div afell kichen ha kichen."
+msgstr ""
+"Kempennadur an afelloù war ar varrenn ditl. Un hedad a zlefe bezañ ar werzh "
+"evel \"menu:minimize,maximize,spacer,close\"; ar skej a zisparti korn kleiz "
+"ar prenestr diouzh ar c'horn dehou hag anvioù an afelloù a zo dispartiet "
+"gant ur skej. N'hoc'h eus ket ar gwir da arredaoliñ afelloù. Laosket "
+"a-gostez e vo an anvioù afelloù dianav ken ma vo tro deoc'h ouzhpennañ an "
+"afelloù-mañ e handelvoù marco da zont hep kaout kudennoù gant an handelvoù "
+"koshoc'h. Ur c'hlav esaouiñ arbennik a c'hall bezañ enlakaet da ensoc'hañ un"
+" tamm plas etre div afell kichen ha kichen."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
@@ -499,7 +526,12 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "An dibarzh-mañ a bourchas reolerezhioù ouzhpenn evit gouzout penaos e vo lakaet stiañ war ar prenestroù nevez krouet. Ar gwerzhioù a c'hall bezañ : \"smart/sperekek\" a arloañ ar mod stiañ gant un doare reizh ha \"strict/rik\" a zo tizhet gant prenestroù loc'het gant un dermenell n'eo ket bet lakaet stiañ warnañ."
+msgstr ""
+"An dibarzh-mañ a bourchas reolerezhioù ouzhpenn evit gouzout penaos e vo "
+"lakaet stiañ war ar prenestroù nevez krouet. Ar gwerzhioù a c'hall bezañ : "
+"\"smart/sperekek\" a arloañ ar mod stiañ gant un doare reizh ha "
+"\"strict/rik\" a zo tizhet gant prenestroù loc'het gant un dermenell n'eo "
+"ket bet lakaet stiañ warnañ."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -529,7 +561,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Efed an doubl-klik war ar varrenn-ditl"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -577,7 +609,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "A gas war-eeun ar prenestr emañ ar fokus enni war c'horre"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -590,6 +622,7 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
 msgstr ""
+"Amzer da c'hortoz (e mili eilenoù) araog ar mont war c'horre emgefreek."
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
@@ -599,7 +632,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr ""
+msgstr "Neuz en implij"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
@@ -619,7 +652,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
-msgstr ""
+msgstr "Nodrezh titl ar prenestr"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
@@ -631,7 +664,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "kementad an tachennoù labour"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -658,7 +691,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Implijout kloc'h hewel"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
@@ -669,13 +702,16 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Kloc'h ar reizhiad a c'hell bezañ klevet"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"Dibab ma c'hell ar meziantoù pe ar sistem reiñ 'bipoù' da glevet; tu 'zo "
+"implijout an dra-se asamblez gant ar 'c'hloc'h hewel' evit kaout 'bipoù' "
+"didrouz."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
@@ -728,6 +764,8 @@ msgstr ""
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
 msgstr ""
+"(N'eo ket savet c'hoazh) An doare da furchal a zo liammet d'ar meziantoù ha "
+"n'eo ket d'ar prenistri"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -809,15 +847,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
-msgstr ""
+msgstr "Anv an dachenn labour"
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Anv un dachenn labour"
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
-msgstr ""
+msgstr "Kas un arc'had resis da benn"
 
 #: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
@@ -883,7 +921,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Arc'hadoù da gas pa vo pouezet war an touchennoù liammet"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -894,7 +932,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
-msgstr ""
+msgstr "Arc'had 'benn tennañ ur pakad skrammad"
 
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
@@ -904,7 +942,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Arc'had 'benn pakañ un skeudenn eus ur prenestr"
 
 #: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
@@ -982,45 +1020,49 @@ msgstr "Fazi digoradur gant sistem diskouez X Window '%s'\n"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Ur meziant all a implij an alc'hwez %s gant ar gemmerien %x e giz liammoù\n"
+msgstr ""
+"Ur meziant all a implij an alc'hwez %s gant ar gemmerien %x e giz liammoù\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Bet eo bet ur fazi o lañsañ <tt>%s</tt>:\n\n%s"
+msgstr ""
+"Bet eo bet ur fazi o lañsañ <tt>%s</tt>:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "N'eus bet termenet arc'had %d ebet.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "N'eus bet despizet arc'had termenell ebet.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "Nullañ"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1033,7 +1075,7 @@ msgstr ""
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "Lazhañ kevreadenn ar merour dalc'hadoù"
+msgstr "Lazhañ kennask ouzh ardoer an estez"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1041,7 +1083,7 @@ msgstr "Implij Marco e lec'h ar merour dalc'hadoù en implij"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Dibab ID merañ an dalc'hadoù"
+msgstr "Dibab ID ardoadur an estez"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1124,7 +1166,7 @@ msgstr ""
 #: ../src/core/prefs.c:2056
 #, c-format
 msgid "Workspace %d"
-msgstr ""
+msgstr "Tachenn-labour %d"
 
 #: ../src/core/screen.c:359
 #, c-format
@@ -1384,12 +1426,12 @@ msgstr "Bi_hanaat"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:67
 msgid "Ma_ximize"
-msgstr "Bra_saat"
+msgstr "B_rasaat"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "Divra_saat"
+msgstr "Div_rasaat"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1404,12 +1446,12 @@ msgstr "Di_blegañ"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:75
 msgid "_Move"
-msgstr "_Dilec'hiañ"
+msgstr "Di_lec'hiañ"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:77
 msgid "_Resize"
-msgstr "_Adventañ"
+msgstr "_Admentañ"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:79
@@ -1430,17 +1472,17 @@ msgstr "_Atav war an dachenn labour war wel"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
-msgstr "War an dachenn-labour-mañ _hepken"
+msgstr "War an dachenn-lab_our-mañ hepken"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "Kas d'an dachenn-labour kleiz"
+msgstr "Kas d'an dachenn-labour a-_gleiz"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "Kas d'an dachenn-labour dehou"
+msgstr "Kas d'an dachenn-labour a-_zehou"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
@@ -1466,16 +1508,16 @@ msgstr ""
 #: ../src/ui/menu.c:207
 #, c-format
 msgid "Workspace 1_0"
-msgstr ""
+msgstr "Tachenn-labour 1_0"
 
 #: ../src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
-msgstr ""
+msgstr "Tachenn-labour %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Kas d'un _dachenn-labour all"
+msgstr "Kas d'un dachenn-labour _all"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -2181,7 +2223,7 @@ msgstr "Lañser distaget"
 
 #: ../src/ui/theme-viewer.c:425
 msgid "Border"
-msgstr "Trolinenn"
+msgstr "Riblenn"
 
 #: ../src/ui/theme-viewer.c:782
 #, c-format

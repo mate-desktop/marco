@@ -1,20 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Daniel <danny3@tutanota.com>, 2015-2016
-# Octi <octi@writeme.com>, 2014
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Octi <octi@writeme.com>, 2018\n"
+"Language-Team: Romanian (https://www.transifex.com/mate/teams/13566/ro/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
@@ -65,7 +64,8 @@ msgstr "Comută între ferestre, folosind o fereastră informativă"
 #: ../src/50-marco-global-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move between windows of an application, using a popup window"
-msgstr "Comută între ferestrele unui program, folosind o fereastră informativă"
+msgstr ""
+"Comută între ferestrele unui program, folosind o fereastră informativă"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:90
@@ -230,12 +230,14 @@ msgstr "Redimensionează fereastra"
 #: ../src/50-marco-window-key.xml.in.h:12
 #: ../src/org.mate.marco.gschema.xml.h:122
 msgid "Toggle whether window is on all workspaces or just one"
-msgstr "Comută dacă fereastra este în toate spațiile de lucru sau doar într-unul"
+msgstr ""
+"Comută dacă fereastra este în toate spațiile de lucru sau doar într-unul"
 
 #: ../src/50-marco-window-key.xml.in.h:13
 #: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr "Ridică fereastra dacă este acoperită de altă fereastră, altfel coboară-o"
+msgstr ""
+"Ridică fereastra dacă este acoperită de altă fereastră, altfel coboară-o"
 
 #: ../src/50-marco-window-key.xml.in.h:14
 #: ../src/org.mate.marco.gschema.xml.h:140
@@ -430,7 +432,7 @@ msgstr "Mută fereastra pe spațiul de lucru de mai jos"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Modificatorul folosit pentru acțiunile speciale asupra ferestrei"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -440,6 +442,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
 msgstr ""
+"Apăsând pe o fereastră în timp ce țineți apăsat această tastă modificatoare "
+"va mișca fereastra (clic stânga), redimensiona fereastra (clic central) sau "
+"va arăta meniul ferestrei (clic dreapta). Operațiile clic mijloc și dreapta "
+"pot fi inversate folosind tasta „resize_with_right_button”. Modificatorul "
+"este exprimat ca „&lt;Alt&gt;” sau „&lt;Super&gt;”, de exemplu."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -451,6 +458,10 @@ msgid ""
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
 msgstr ""
+"Definiți ca „true” pentru a redimensiona cu butonul drept și a arăta meniul "
+"cu butonul central când țineți apăsată tasta aleasă la "
+"„mouse_button_modifier”; definiți ca „false” pentru a obține comportamentul "
+"invers."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -476,6 +487,13 @@ msgid ""
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
 msgstr ""
+"Aranjamentul butoanelor pe bara de titlu. Valoare ar trebui să fie un șir ca"
+" „menu:minimize,maximize,spacer,close”; două puncte separă colțul stâng de "
+"cel drept al ferestrei, și numele butoanelor sunt separate cu virgulă. Nu "
+"este permisă reduplicarea butoanelor. Numele de butoane necunoscute sunt "
+"ignorate, astfel că noi butoane pot fi adăugate în versiuni viitoare ale "
+"Marco fără a încurca versiunile mai vechi. O etichetă specială „spacer” "
+"poate fi folosită pentru a introduce un spațiu între două butoane adiacente."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
@@ -489,6 +507,12 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"Modul de focalizare al ferestrei indică modul în care ferestrele sunt "
+"activate. Are trei valori posibile: „click” înseamnă că fereastra trebuie "
+"click-ată pentru a fi focalizată, „sloppy” înseamnă ca fereastra este "
+"focalizată când mouse-ul se suprapune ferestrei, și „mouse” înseamnă că "
+"ferestrele sunt focalizate când mouse-ul se suprapune ferestrei, și pierde "
+"focusul în momentul când acesta nu se mai suprapune."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
@@ -501,10 +525,16 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
+"Această opțiune furnizează un control adițional la cum ferestrele nou create"
+" primesc focus. Are valori posibile, „smart” furnizează modul normal de "
+"focus, iar „strict” face ca ferestrele pornite dintr-un terminal să nu "
+"primească focus."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr "Dacă ridicarea să fie un efect secundar al altor interacțiuni ale utilizatorul"
+msgstr ""
+"Dacă ridicarea să fie un efect secundar al altor interacțiuni ale "
+"utilizatorul"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -543,6 +573,14 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Această opțiune determină efectul unui dublu-clic pe bara de titlu. "
+"Deocamdată valorile acceptate sunt „toggle_shade”, care rulează/derulează "
+"fereastra, „toggle_maximize” care maximizează/demaximizează fereastra, "
+"„toggle_maximize_horizontally” și „toggle_maximize_vertically” care "
+"maximizează/restaurează fereastra orizontal și respectiv vertical, "
+"„minimize” care va minimiza fereastra, „shade” care rulează sus fereastra, "
+"„menu” care afișează meniul ferestrei, „lower” care pune fereastra sub toate"
+" celelalte, și „none” care nu face nimic."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
@@ -559,6 +597,14 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Această opțiune determină efectul unui clic-centru pe bara de titlu. "
+"Deocamdată valorile acceptate sunt „toggle_shade”, care rulează/derulează "
+"fereastra, „toggle_maximize” care maximizează/demaximizează fereastra, "
+"„toggle_maximize_horizontally” și „toggle_maximize_vertically” care "
+"maximizează/restaurează fereastra orizontal și respectiv vertical, "
+"„minimize” care va minimiza fereastra, „shade” care rulează sus fereastra, "
+"„menu” care afișează meniul ferestrei, „lower” care pune fereastra sub toate"
+" celelalte, și „none” care nu face nimic."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
@@ -575,6 +621,14 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Această opțiune determină efectul unui clic-dreapta pe bara de titlu. "
+"Deocamdată valorile acceptate sunt „toggle_shade”, care rulează/derulează "
+"fereastra, „toggle_maximize” care maximizează/demaximizează fereastra, "
+"„toggle_maximize_horizontally” și „toggle_maximize_vertically” care "
+"maximizează/restaurează fereastra orizontal și, respectiv, vertical, "
+"„minimize” care va minimiza fereastra, „shade” care rulează sus fereastra, "
+"„menu” care afișează meniul ferestrei, „lower” care pune fereastra sub toate"
+" celelalte, și „none” care nu face nimic."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
@@ -587,6 +641,11 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
+"Dacă este activat, iar modul de focalizare este „sloppy” sau „mouse”, "
+"fereastra focalizată va fi automat ridicată după o întârziere precizată de "
+"cheia auto_raise_delay. Aceasta nu are legătură cu clicul pe o fereastră "
+"pentru a o ridica și nici cu pătrunderea într-o fereastră în timpul unei "
+"operațiuni trage-și-plasează."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
@@ -596,7 +655,9 @@ msgstr "Întârzierea în milisecunde pentru opțiunea de ridicare automată"
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr "Întârzierea de timp după care se ridică o fereastră când auto_raise este definită ca adevărată. Întârzierea este dată în miimi de secundă."
+msgstr ""
+"Întârzierea de timp după care se ridică o fereastră când auto_raise este "
+"definită ca adevărată. Întârzierea este dată în miimi de secundă."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -606,7 +667,9 @@ msgstr "Tema actuală"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr "Tema determină aspectul marginilor ferestrei, a bării de titlu și așa mai departe."
+msgstr ""
+"Tema determină aspectul marginilor ferestrei, a bării de titlu și așa mai "
+"departe."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
@@ -616,7 +679,9 @@ msgstr "Folosește fontul standard al sistemului pentru titlul ferestrelor"
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr "Dacă este adevărat, ignoră opțiunea titlebar_font, și folosește fontul standard de aplicații pentru titlul ferestrelor."
+msgstr ""
+"Dacă este adevărat, ignoră opțiunea titlebar_font, și folosește fontul "
+"standard de aplicații pentru titlul ferestrelor."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -629,6 +694,10 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
+"O descriere pentru fontul folosit pentru bările de titlu. Mărimea din "
+"descriere va fi folosită doar dacă opțiunea titlebar_font_size este setată "
+"la 0. De asemenea, această opțiune este dezactivată dacă opțiunea "
+"titlebar_uses_desktop_font este setată ca true."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -640,6 +709,9 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
+"Numărul de spații de lucru. Trebuie să fie mai mare decât zero, și are un "
+"maxim fix pentru a preveni distrugerea accidentală a desktopului cerând un "
+"număr prea mare de ecrane."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -667,6 +739,9 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
+"Când o aplicație sau sistemul emite un „bell” sau „beep”, activează "
+"indicatorul vizual corespunzător (folositor pentru cei cu probleme auditive "
+"sau în medii zgomotoase)."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
@@ -677,6 +752,9 @@ msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"Determină dacă aplicația sau sistemul va genera „bipuri” audio; poate fi "
+"folosit împreună cu „bipurile” vizuale, pentru a permite „bipuri” "
+"silențioase."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
@@ -692,6 +770,12 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"Instruiește Marco cum să implementeze indicația vizuală la producerea unui "
+"bip. Pentru moment sunt două valori, „fullscreen”, ce produce o clipire alb-"
+"negru pe tot ecranul, și „frame_flash”, ce produce o clipire la nivelul "
+"barei de titlu al aplicației ce a cauzat bipul. Dacă aplicația care a trimis"
+" bipul nu poate fi determinată (ca în cazul bipului de sistem), va clipi "
+"bara de titlu a ferestrei care are focusul în acel moment."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
@@ -715,6 +799,8 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
 msgstr ""
+"Daca este true, reduce uzabilitatea în favoarea ocupării a mai puține "
+"resurse"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -724,6 +810,11 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
+"Daca este true, marco va furniza mai puțin feedback folosind wireframe, "
+"dezactivand animațiile și alte efecte. În acest fel uzabilitatea va fi mult "
+"înrăutățită pentru utilizatori, dar multe aplicații mai vechi și servere de "
+"terminale vor putea funcționa doar în aceste condiții. Totuși, facilitatea "
+"de wireframe este dezactivată când accesibilitatea este activată."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
@@ -740,10 +831,18 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
+"Dacă este adevărat, atunci Marco operează cu aplicații mai degrabă decât cu "
+"ferestre. Conceptul este puțin abstract, dar în general setarea unei "
+"aplicații va fi mai apropiată de stilul Mac decât de cel Windows. Când "
+"focalizezi o fereastra în modul bazat pe aplicație, toate ferestrele din "
+"aplicație vor fi ridicate. De asemenea, în acest mod click-urile de "
+"focalizare nu sunt transmise prin fereastre către alte aplicații. Modul "
+"bazat pe aplicație este implementat doar în stadiu incipient pentru moment."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr ""
+"Dezactivează facilitățile care sunt cerute de aplicațiile vechi sau stricate"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -752,6 +851,11 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
+"Unele aplicații nu iau în seamă specificațiile într-un mod care duce la "
+"funcționarea defectuoasă a managerului de ferestre. Această opțiune pune "
+"Marco într-un mod riguros corect, ceea ce duce la o interfață utilizator mai"
+" consistentă, admițând că nu este nevoie să executați nici o aplicație "
+"problematică."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -829,6 +933,12 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"Combinația de taste care execută comenzile corespunzător numerotate din "
+"/apps/marco/keybinding_commands. Formatul arată ca de exemplu "
+"„&lt;Control&gt;a” sau „&lt;Shift&gt;&lt;Alt&gt;F1”. Este permisă folosirea "
+"majusculelor și a minusculelor, precum și a abrevierilor gen „&lt;Ctl&gt;” "
+"și „&lt;Ctrl&gt;”. Dacă setați opțiunea cu șirul „disabled”, atunci nu va "
+"exista o combinație de taste pentru această acțiune."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -852,7 +962,9 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr "Comută înapoi între ferestrele unei aplicații, folosind o fereastră informativă"
+msgstr ""
+"Comută înapoi între ferestrele unei aplicații, folosind o fereastră "
+"informativă"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
@@ -860,15 +972,20 @@ msgstr "Comută înapoi între ferestre, folosind o fereastră informativă"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr "Comută între ferestrele de pe toate spațiile de lucru, folosind o fereastră informativă"
+msgstr ""
+"Comută între ferestrele de pe toate spațiile de lucru, folosind o fereastră "
+"informativă"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr "Comută înapoi între ferestrele de pe toate spațiile de lucru, folosind o fereastră informativă"
+msgstr ""
+"Comută înapoi între ferestrele de pe toate spațiile de lucru, folosind o "
+"fereastră informativă"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr "Comută înapoi între panouri și desktop, folosind o fereastră informativă"
+msgstr ""
+"Comută înapoi între panouri și desktop, folosind o fereastră informativă"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
@@ -892,6 +1009,9 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"Cheile /apps/marco/global_keybindings/run_command_N definesc combinațiile de"
+" taste corespunzătoare acestor comenzi. Apăsând combinația de taste pentru "
+"run_command_N se va executa command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
@@ -902,6 +1022,8 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"Cheia /apps/marco/global_keybindings/run_command_screenshot definește "
+"combinația de taste corespunzătoare acestei comenzi."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
@@ -913,10 +1035,13 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"Cheia /apps/marco/global_keybindings/run_command_window_screenshot definește"
+" combinația de taste corespunzătoare acestei comenzi."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr "Comută dacă o fereastră este întotdeauna vizibilă deasupra altor ferestre"
+msgstr ""
+"Comută dacă o fereastră este întotdeauna vizibilă deasupra altor ferestre"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
@@ -953,7 +1078,9 @@ msgstr "<tt>%s</tt> nu răspunde."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Puteți aștepta încă puțin pentru a continua sau puteți forța închiderea completă a aplicației."
+msgstr ""
+"Puteți aștepta încă puțin pentru a continua sau puteți forța închiderea "
+"completă a aplicației."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -983,45 +1110,49 @@ msgstr "Nu s-a putut deschide afișajul X Window System „%s”\n"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Alt program folosește deja tasta %s cu modificatorul %x drept combinație\n"
+msgstr ""
+"Alt program folosește deja tasta %s cu modificatorul %x drept combinație\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "A apărut o eroare la executarea <tt>%s</tt>:\n\n%s"
+msgstr ""
+"A apărut o eroare la executarea <tt>%s</tt>:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Nicio comandă %d nu a fost definită.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Nicio comandă pentru terminal nu a fost definită.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "Renunță"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1030,7 +1161,11 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nDrepturi de autori (C) 2001-%s Havoc Pennington, Red Hat, Inc., și alții\nAcesta este software liber; consultați sursa pentru condițiile de copiere.\nNu există NICIO garanție; nici aceea de COMERCIALIZARE sau ADECVARE PENTRU UN SCOP ANUME.\n"
+msgstr ""
+"marco %s\n"
+"Drepturi de autori (C) 2001-%s Havoc Pennington, Red Hat, Inc., și alții\n"
+"Acesta este software liber; consultați sursa pentru condițiile de copiere.\n"
+"Nu există NICIO garanție; nici aceea de COMERCIALIZARE sau ADECVARE PENTRU UN SCOP ANUME.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -1042,7 +1177,7 @@ msgstr "Înlocuiește administratorul de ferestre actual cu Marco"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Specifică ID-ul administrării de sesiune"
+msgstr "Specifică ID-ul administratorului de sesiune"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1058,7 +1193,7 @@ msgstr "Afișează versiunea"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Realizează apelurile X sincron"
+msgstr "Sincronizează apelurile X"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1071,7 +1206,9 @@ msgstr "Oprește efectele compozite"
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Nu desena pe tot ecranul ferestrele care sunt maximizate, dar care nu au decorații"
+msgstr ""
+"Nu desena pe tot ecranul ferestrele care sunt maximizate, dar care nu au "
+"decorații"
 
 #: ../src/core/main.c:519
 #, c-format
@@ -1082,7 +1219,9 @@ msgstr "Nu s-a putut citi dosarul de teme: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Nu s-a putut găsi o temă ! Asigurați-vă că %s există și conține temele uzuale.\n"
+msgstr ""
+"Nu s-a putut găsi o temă ! Asigurați-vă că %s există și conține temele "
+"uzuale.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1101,7 +1240,9 @@ msgstr "%d stocat în cheia GSettings %s este în afara intervalului %d la %d\n"
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Soluțiile de compromis pentru aplicațiile problematice sunt dezactivate. Există posibilitatea ca unele aplicații să nu se comporte corect.\n"
+msgstr ""
+"Soluțiile de compromis pentru aplicațiile problematice sunt dezactivate. "
+"Există posibilitatea ca unele aplicații să nu se comporte corect.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
@@ -1113,14 +1254,18 @@ msgstr "Nu s-a putut analiza descrierea fontului „%s” din cheia GSettings %s
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "„%s” găsită în configurație nu este o cheie validă pentru modificatorul butonului de maus\n"
+msgstr ""
+"„%s” găsită în configurație nu este o cheie validă pentru modificatorul "
+"butonului de maus\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "„%s” găsită în configurație nu este o cheie validă pentru combinația de taste „%s”\n"
+msgstr ""
+"„%s” găsită în configurație nu este o cheie validă pentru combinația de "
+"taste „%s”\n"
 
 #: ../src/core/prefs.c:2056
 #, c-format
@@ -1137,12 +1282,17 @@ msgstr "Ecranul %d pe afișajul „%s” este invalid\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Ecranul %d pe afișajul „%s” are deja un administrator de ferestre; încercați să folosiți opțiunea --replace pentru a înlocui administratorul de ferestre actual.\n"
+msgstr ""
+"Ecranul %d pe afișajul „%s” are deja un administrator de ferestre; încercați"
+" să folosiți opțiunea --replace pentru a înlocui administratorul de ferestre"
+" actual.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr "Nu s-a putut obține selecția administratorului de ferestre pe ecranul %d afișajul „%s”\n"
+msgstr ""
+"Nu s-a putut obține selecția administratorului de ferestre pe ecranul %d "
+"afișajul „%s”\n"
 
 #: ../src/core/screen.c:460
 #, c-format
@@ -1205,7 +1355,9 @@ msgstr "Element necunoscut %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Aceste ferestre nu suportă &quot;save current setup&quot; și va trebui să fie restaurate manual în sesiunea următoare."
+msgstr ""
+"Aceste ferestre nu suportă &quot;save current setup&quot; și va trebui să "
+"fie restaurate manual în sesiunea următoare."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1215,7 +1367,8 @@ msgstr "Nu s-a putut deschide înregistrarea de depanare: %s\n"
 #: ../src/core/util.c:111
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
-msgstr "Nu s-a putut deschide folosind fdopen() fișierul de înregistrare %s: %s\n"
+msgstr ""
+"Nu s-a putut deschide folosind fdopen() fișierul de înregistrare %s: %s\n"
 
 #: ../src/core/util.c:117
 #, c-format
@@ -1255,7 +1408,9 @@ msgstr "Marco"
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Fereastra %s definește SM_CLIENT_ID asupra sa, în loc să o facă asupra ferestrei WM_CLIENT_LEADER așa cum este specificat în ICCCM.\n"
+msgstr ""
+"Fereastra %s definește SM_CLIENT_ID asupra sa, în loc să o facă asupra "
+"ferestrei WM_CLIENT_LEADER așa cum este specificat în ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1268,7 +1423,10 @@ msgstr "Fereastra %s definește SM_CLIENT_ID asupra sa, în loc să o facă asup
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Fereastra %s definește un indicator MWM indicând că nu e redimensionabilă, dar definește dimensiunea minimă %d x %d și dimensiunea maximă %d x %d; asta nu prea are sens.\n"
+msgstr ""
+"Fereastra %s definește un indicator MWM indicând că nu e redimensionabilă, "
+"dar definește dimensiunea minimă %d x %d și dimensiunea maximă %d x %d; asta"
+" nu prea are sens.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1314,7 +1472,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Fereastra 0x%lx are proprietatea %s\ncare era așteptată să aibă tipul %s formatul %d\nși de fapt are tipul %s formatul %d n_items %d.\nAcest lucru e cel mai probabil o problemă a aplicației, nu a managerului de ferestre.\nFereastra are titlul=„%s” clasa=„%s” nume=„%s”\n"
+msgstr ""
+"Fereastra 0x%lx are proprietatea %s\n"
+"care era așteptată să aibă tipul %s formatul %d\n"
+"și de fapt are tipul %s formatul %d n_items %d.\n"
+"Acest lucru e cel mai probabil o problemă a aplicației, nu a managerului de ferestre.\n"
+"Fereastra are titlul=„%s” clasa=„%s” nume=„%s”\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1326,7 +1489,9 @@ msgstr "Proprietatea %s din fereastra 0x%lx conține date invalide UTF-8\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Proprietatea %s din fereastra 0x%lx conține date invalide UTF-8 pentru elementul %d din listă\n"
+msgstr ""
+"Proprietatea %s din fereastra 0x%lx conține date invalide UTF-8 pentru "
+"elementul %d din listă\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1426,12 +1591,12 @@ msgstr "Întotdeauna _deasupra"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
-msgstr "Întotde_auna pe spațiul de lucru vizibil"
+msgstr "Întotde_auna în spațiul de lucru vizibil"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
-msgstr "D_oar pe acest spațiu de lucru"
+msgstr "D_oar în acest spațiu de lucru"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
@@ -1441,23 +1606,23 @@ msgstr "Mută în spațiul de _lucru din stânga"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "Mută în spațiul de lucru d_in dreapta"
+msgstr "Mută în spaț_iul de lucru din dreapta"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "Mută pe spațiul de lucru de s_us"
+msgstr "Mută în spațiul de lucru de mai s_us"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "Mută pe spațiul _de lucru de jos"
+msgstr "Mută în spațiul _de lucru de mai jos"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:100
 msgid "_Close"
-msgstr "_Închide"
+msgstr "În_chide"
 
 #: ../src/ui/menu.c:197
 #, c-format
@@ -1467,7 +1632,7 @@ msgstr "Spațiul de lucru %d%n"
 #: ../src/ui/menu.c:207
 #, c-format
 msgid "Workspace 1_0"
-msgstr "Spațiul de lucru de 1_0"
+msgstr "Spațiul de lucru 1_0"
 
 #: ../src/ui/menu.c:209
 #, c-format
@@ -1476,7 +1641,7 @@ msgstr "Spațiul de lucru %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Mută pe un alt _spațiul de lucru"
+msgstr "Mută în alt _spațiu de lucru"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -1611,14 +1776,19 @@ msgstr "Degradeul ar trebui să aibă cel puțin două culori"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "Specificația culorilor GTK trebuie să aibă starea între paranteze drepte, de exemplu gtk:fg[NORMAL], unde starea este NORMAL; nu s-a putut analiza „%s”"
+msgstr ""
+"Specificația culorilor GTK trebuie să aibă starea între paranteze drepte, de"
+" exemplu gtk:fg[NORMAL], unde starea este NORMAL; nu s-a putut analiza „%s”"
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "Specificația culorilor GTK trebuie să fie aibă o paranteză dreaptă după stare, de exemplu gtk:fg[NORMAL], unde starea este NORMAL; nu s-a putut analiza „%s”"
+msgstr ""
+"Specificația culorilor GTK trebuie să fie aibă o paranteză dreaptă după "
+"stare, de exemplu gtk:fg[NORMAL], unde starea este NORMAL; nu s-a putut "
+"analiza „%s”"
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1628,14 +1798,17 @@ msgstr "Nu s-a putut înțelege starea „%s” în specificarea culorilor"
 #: ../src/ui/theme.c:1219
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
-msgstr "Nu s-a putut înțelege componenta de culoare „%s” în specificarea culorilor"
+msgstr ""
+"Nu s-a putut înțelege componenta de culoare „%s” în specificarea culorilor"
 
 #: ../src/ui/theme.c:1248
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Formatul blend este „blend/bg_color/fg_color/alpha”, unde„%s” nu se potrivește formatului"
+msgstr ""
+"Formatul blend este „blend/bg_color/fg_color/alpha”, unde„%s” nu se "
+"potrivește formatului"
 
 #: ../src/ui/theme.c:1259
 #, c-format
@@ -1650,7 +1823,9 @@ msgstr "Valoarea alfa „%s” în culoarea blend-ată nu este între 0.0 și 1.
 #: ../src/ui/theme.c:1316
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "Formatul de umbră este „shade/base_color/factor”, „%s” nu se potrivește formatului"
+msgstr ""
+"Formatul de umbră este „shade/base_color/factor”, „%s” nu se potrivește "
+"formatului"
 
 #: ../src/ui/theme.c:1327
 #, c-format
@@ -1677,19 +1852,24 @@ msgstr "Expresia coordonatelor conține caracterul nepermis „%s”"
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "Expresia coordonatelor conține numărul în virgulă mobilă „%s” care nu a putut fi analizat."
+msgstr ""
+"Expresia coordonatelor conține numărul în virgulă mobilă „%s” care nu a "
+"putut fi analizat."
 
 #: ../src/ui/theme.c:1747
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr "Expresia coordonatelor conține întregul „%s” care nu a putut fi analizat"
+msgstr ""
+"Expresia coordonatelor conține întregul „%s” care nu a putut fi analizat"
 
 #: ../src/ui/theme.c:1869
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Expresia coordonatelor conține operatorul necunoscut la începutul acestui text: „%s”"
+msgstr ""
+"Expresia coordonatelor conține operatorul necunoscut la începutul acestui "
+"text: „%s”"
 
 #: ../src/ui/theme.c:1926
 #, c-format
@@ -1705,7 +1885,9 @@ msgstr "Expresia coordonatelor este rezultată în urma unei împărțiri la zer
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "Expresia coordonatelor încearcă să folosească operatorul mod asupra unui număr în virgulă mobilă"
+msgstr ""
+"Expresia coordonatelor încearcă să folosească operatorul mod asupra unui "
+"număr în virgulă mobilă"
 
 #: ../src/ui/theme.c:2145
 #, c-format
@@ -1720,14 +1902,17 @@ msgstr "Expresia coordonatelor are un operand unde un operator era așteptat"
 #: ../src/ui/theme.c:2162
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
-msgstr "Expresia coordonatelor a fost terminată cu un operator în locul operandului"
+msgstr ""
+"Expresia coordonatelor a fost terminată cu un operator în locul operandului"
 
 #: ../src/ui/theme.c:2172
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Expresia coordonatelor are un operator „%c” urmând operatorului „%c” fără un operand între ele"
+msgstr ""
+"Expresia coordonatelor are un operator „%c” urmând operatorului „%c” fără un"
+" operand între ele"
 
 #: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
 #, c-format
@@ -1742,7 +1927,9 @@ msgstr "Parcurgerea expresiei coordonatelor a cauzat un buffer overflow."
 #: ../src/ui/theme.c:2443
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr "Expresia coordonatelor are o paranteză închisă fără nici o paranteză deschisă"
+msgstr ""
+"Expresia coordonatelor are o paranteză închisă fără nici o paranteză "
+"deschisă"
 
 #: ../src/ui/theme.c:2507
 #, c-format
@@ -1765,7 +1952,9 @@ msgstr "Tema conținea o expresie ce a rezultat într-o eroare: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> trebuie specificate pentru stilul acestui cadru"
+msgstr ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> trebuie "
+"specificate pentru stilul acestui cadru"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
@@ -1788,12 +1977,16 @@ msgstr "Nu a fost definit niciun <%s> pentru tema „%s”"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Nici un stil de cadru definit pentru tipul de fereastră „%s” în tema „%s”; adăugați un element <window type=\"%s\" style_set=\"whatever\"/>"
+msgstr ""
+"Nici un stil de cadru definit pentru tipul de fereastră „%s” în tema „%s”; "
+"adăugați un element <window type=\"%s\" style_set=\"whatever\"/>"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Constantele definite de utilizatori trebuie să înceapă cu o majusculă; „%s” nu respectă acest lucru"
+msgstr ""
+"Constantele definite de utilizatori trebuie să înceapă cu o majusculă; „%s” "
+"nu respectă acest lucru"
 
 #: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
 #, c-format
@@ -1810,7 +2003,7 @@ msgstr "Niciun atribut „%s” în elementul <%s>"
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "Linia %d caracterul %d: %s"
+msgstr "Linia %d, caracterul %d: %s"
 
 #: ../src/ui/theme-parser.c:438
 #, c-format
@@ -1820,7 +2013,7 @@ msgstr "Atributul „%s” se repetă de două ori în același element <%s>"
 #: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Atributul „%s” este invalid în elementul <%s> în acest context"
+msgstr "Atributul „%s” este nevalid în acest context pentru elementul <%s>"
 
 #: ../src/ui/theme-parser.c:547
 #, c-format
@@ -1860,14 +2053,18 @@ msgstr "Unghiul trebuie să fie între 0.0 și 360.0, el fiind %g\n"
 #: ../src/ui/theme-parser.c:751
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Alfa trebuie să fie între 0.0 (invizibil) și 1.0 (complet opac), el fiind %g\n"
+msgstr ""
+"Alfa trebuie să fie între 0.0 (invizibil) și 1.0 (complet opac), el fiind "
+"%g\n"
 
 #: ../src/ui/theme-parser.c:816
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Scalare invalidă a titlului „%s” (trebuie să fie una dintre xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr ""
+"Scalare invalidă a titlului „%s” (trebuie să fie una dintre xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1889,11 +2086,13 @@ msgstr "<%s> geometrie „%s” nu a fost definită"
 #: ../src/ui/theme-parser.c:1107
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
-msgstr "<%s> trebuie să specifice o geometrie sau un părinte care are o geometrie"
+msgstr ""
+"<%s> trebuie să specifice o geometrie sau un părinte care are o geometrie"
 
 #: ../src/ui/theme-parser.c:1149
 msgid "You must specify a background for an alpha value to be meaningful"
-msgstr "Trebuie să specificați un fundal pentru o valoare alfa pentru a avea sens"
+msgstr ""
+"Trebuie să specificați un fundal pentru o valoare alfa pentru a avea sens"
 
 #: ../src/ui/theme-parser.c:1216
 #, c-format
@@ -1918,14 +2117,16 @@ msgstr "Ferestrei tip „%s” i-a fost deja atribuit un set de stil"
 #: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "Elementul <%s> nu poate coborî sub <%s>"
+msgstr "Elementul <%s> nu este permis sub <%s>"
 
 #: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
 #: ../src/ui/theme-parser.c:1438
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Nu se pot specifica în același timp „button_width”/„button_height” și  „aspect_ratio” pentru butoane"
+msgstr ""
+"Nu se pot specifica în același timp „button_width”/„button_height” și  "
+"„aspect_ratio” pentru butoane"
 
 #: ../src/ui/theme-parser.c:1402
 #, c-format
@@ -2011,7 +2212,8 @@ msgstr "Funcție necunoscută „%s” pentru buton"
 #: ../src/ui/theme-parser.c:2918
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
-msgstr "Funcția de buton „%s” nu există în această versiune (%d, este nevoie de %d)"
+msgstr ""
+"Funcția de buton „%s” nu există în această versiune (%d, este nevoie de %d)"
 
 #: ../src/ui/theme-parser.c:2930
 #, c-format
@@ -2048,17 +2250,23 @@ msgstr "„%s” nu este o valoare validă pentru atributul de redimensionare"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Nu ar trebui să aveți atributul „resize” în elementul <%s> pentru stările maximizate/umbrite"
+msgstr ""
+"Nu ar trebui să aveți atributul „resize” în elementul <%s> pentru stările "
+"maximizate/umbrite"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Nu trebuie să conțină atributul „resize” în elementul <%s> pentru stările maximizate"
+msgstr ""
+"Nu trebuie să conțină atributul „resize” în elementul <%s> pentru stările "
+"maximizate"
 
 #: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
-msgstr "Stilul a fost deja specificat pentru starea %s redimensionare %s focalizare %s"
+msgstr ""
+"Stilul a fost deja specificat pentru starea %s redimensionare %s focalizare "
+"%s"
 
 #: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
 #: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
@@ -2071,30 +2279,40 @@ msgstr "Stilul deja a fost specificat pentru starea %s focalizarea %s"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nu puteți avea două draw_ops pentru un element <piece> (tema a specificat un atribut draw_ops și un element <draw_ops>, sau pe amândouă)"
+msgstr ""
+"Nu puteți avea două draw_ops pentru un element <piece> (tema a specificat un"
+" atribut draw_ops și un element <draw_ops>, sau pe amândouă)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nu puteți avea două draw_ops pentru un element <button> (tema a specificat un atribut draw_ops și un element <draw_ops>, sau pe amândouă)"
+msgstr ""
+"Nu puteți avea două draw_ops pentru un element <button> (tema a specificat "
+"un atribut draw_ops și un element <draw_ops>, sau pe amândouă)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nu puteți avea două draw_ops pentru un element <menu_icon> (tema a specificat un atribut draw_ops și un element <draw_ops>, sau pe amândouă)"
+msgstr ""
+"Nu puteți avea două draw_ops pentru un element <menu_icon> (tema a "
+"specificat un atribut draw_ops și un element <draw_ops>, sau pe amândouă)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr "Elementul din temă situat în poziția cea mai îndepărtată trebuie să fie <metacity_theme>, nu <%s>"
+msgstr ""
+"Elementul din temă situat în poziția cea mai îndepărtată trebuie să fie "
+"<metacity_theme>, nu <%s>"
 
 #: ../src/ui/theme-parser.c:3415
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
-msgstr "Elementul <%s> nu este permis în interiorul un element name/author/date/description"
+msgstr ""
+"Elementul <%s> nu este permis în interiorul un element "
+"name/author/date/description"
 
 #: ../src/ui/theme-parser.c:3420
 #, c-format
@@ -2105,7 +2323,9 @@ msgstr "Elementul <%s> nu este permis în interiorul unui element <constant>"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "Elementul <%s> nu este permis în interiorul unui element distance/border/aspect_ratio"
+msgstr ""
+"Elementul <%s> nu este permis în interiorul unui element "
+"distance/border/aspect_ratio"
 
 #: ../src/ui/theme-parser.c:3454
 #, c-format
@@ -2116,7 +2336,7 @@ msgstr "Elementul <%s> nu este permis în interiorul unui element de desenare"
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "Elementul <%s> nu este permis în interiorul unui element <%s>"
+msgstr "Elementul <%s> nu este permis înăuntrul unui element <%s>"
 
 #: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"
@@ -2182,7 +2402,7 @@ msgstr "Meniu Torn-off"
 
 #: ../src/ui/theme-viewer.c:425
 msgid "Border"
-msgstr "Margine"
+msgstr "Contur"
 
 #: ../src/ui/theme-viewer.c:782
 #, c-format
@@ -2239,4 +2459,7 @@ msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "%d cadre desenate în %g secunde măsurate la client (%g milisecunde pe cadru) și %g secunde consumate de proces incluzând resursele servitorului X (%g milisecunde pe cadru)\n"
+msgstr ""
+"%d cadre desenate în %g secunde măsurate la client (%g milisecunde pe cadru)"
+" și %g secunde consumate de proces incluzând resursele servitorului X (%g "
+"milisecunde pe cadru)\n"

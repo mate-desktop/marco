@@ -1,27 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Edward Sawyer <saoded@gmail.com>, 2016
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2012-2013
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Hebrew (http://www.transifex.com/mate/MATE/language/he/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: shy tzedaka <shaytzedaka123@gmail.com>, 2018\n"
+"Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
-msgstr "שולחן עבודה"
+msgstr "שולחן העבודה"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:100
@@ -210,7 +209,7 @@ msgstr "Toggle shaded state"
 #: ../src/50-marco-window-key.xml.in.h:8
 #: ../src/org.mate.marco.gschema.xml.h:119
 msgid "Close window"
-msgstr "Close window"
+msgstr "סגירת החלון"
 
 #: ../src/50-marco-window-key.xml.in.h:9
 #: ../src/org.mate.marco.gschema.xml.h:118
@@ -286,47 +285,47 @@ msgstr ""
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
 msgid "Move window to north-west (top left) corner"
-msgstr ""
+msgstr "Move window to north-west (top left) corner"
 
 #: ../src/50-marco-window-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:151
 msgid "Move window to north-east (top right) corner"
-msgstr ""
+msgstr "Move window to north-east (top right) corner"
 
 #: ../src/50-marco-window-key.xml.in.h:26
 #: ../src/org.mate.marco.gschema.xml.h:152
 msgid "Move window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Move window to south-west (bottom left) corner"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 #: ../src/org.mate.marco.gschema.xml.h:153
 msgid "Move window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Move window to south-east (bottom right) corner"
 
 #: ../src/50-marco-window-key.xml.in.h:28
 #: ../src/org.mate.marco.gschema.xml.h:154
 msgid "Move window to north (top) side of screen"
-msgstr ""
+msgstr "Move window to north (top) side of screen"
 
 #: ../src/50-marco-window-key.xml.in.h:29
 #: ../src/org.mate.marco.gschema.xml.h:155
 msgid "Move window to south (bottom) side of screen"
-msgstr ""
+msgstr "Move window to south (bottom) side of screen"
 
 #: ../src/50-marco-window-key.xml.in.h:30
 #: ../src/org.mate.marco.gschema.xml.h:156
 msgid "Move window to east (right) side of screen"
-msgstr ""
+msgstr "Move window to east (right) side of screen"
 
 #: ../src/50-marco-window-key.xml.in.h:31
 #: ../src/org.mate.marco.gschema.xml.h:157
 msgid "Move window to west (left) side of screen"
-msgstr ""
+msgstr "Move window to west (left) side of screen"
 
 #: ../src/50-marco-window-key.xml.in.h:32
 #: ../src/org.mate.marco.gschema.xml.h:158
 msgid "Move window to center of screen"
-msgstr ""
+msgstr "Move window to center of screen"
 
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
@@ -430,7 +429,7 @@ msgstr "Move window one workspace down"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Modifier to use for modified window click actions"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -440,10 +439,15 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
 msgstr ""
+"Clicking a window while holding down this modifier key will move the window "
+"(left click), resize the window (middle click), or show the window menu "
+"(right click). The middle and right click operations may be swapped using "
+"the \"resize_with_right_button\" key. Modifier is expressed as "
+"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "Whether to resize with the right button"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
@@ -451,6 +455,9 @@ msgid ""
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
 msgstr ""
+"Set this to true to resize with the right button and show a menu with the "
+"middle button while holding down the key given in \"mouse_button_modifier\";"
+" set it to false to make it work the opposite way around."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -464,7 +471,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Arrangement of buttons on the titlebar"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -476,10 +483,17 @@ msgid ""
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
 msgstr ""
+"Arrangement of buttons on the titlebar. The value should be a string, such "
+"as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
+"corner of the window from the right corner, and the button names are comma-"
+"separated. Duplicate buttons are not allowed. Unknown button names are "
+"silently ignored so that buttons can be added in future marco versions "
+"without breaking older versions. A special spacer tag can be used to insert "
+"some space between two adjacent buttons."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
-msgstr ""
+msgstr "Window focus mode"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -489,10 +503,15 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"The window focus mode indicates how windows are activated. It has three "
+"possible values; \"click\" means windows must be clicked in order to focus "
+"them, \"sloppy\" means windows are focused when the mouse enters the window,"
+" and \"mouse\" means windows are focused when the mouse enters the window "
+"and unfocused when the mouse leaves the window."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Control how new windows get focus"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -501,10 +520,14 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
+"This option provides additional control over how newly created windows get "
+"focus. It has two possible values; \"smart\" applies the user's normal focus"
+" mode, and \"strict\" results in windows started from a terminal not being "
+"given focus."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Whether raising should be a side-effect of other user interactions"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -527,10 +550,28 @@ msgid ""
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
 msgstr ""
+"Setting this option to false can lead to buggy behavior, so users are "
+"strongly discouraged from changing it from the default of true. Many actions"
+" (e.g. clicking in the client area, moving or resizing the window) normally "
+"raise the window as a side-effect. Setting this option to false, which is "
+"strongly discouraged, will decouple raising from other user actions, and "
+"ignore raise requests generated by applications. See "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Even when this option "
+"is false, windows can still be raised by an alt-left-click anywhere on the "
+"window, a normal click on the window decorations, or by special messages "
+"from pagers, such as activation requests from tasklist applets. This option "
+"is currently disabled in click-to-focus mode. Note that the list of ways to "
+"raise windows when raise_on_click is false does not include programmatic "
+"requests from applications to raise windows; such requests will be ignored "
+"regardless of the reason for the request. If you are an application "
+"developer and have a user complaining that your application does not work "
+"with this setting disabled, tell them it is _their_ fault for breaking their"
+" window manager and that they need to change this option back to true or "
+"live with the \"bug\" they requested."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Action on title bar double-click"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -543,10 +584,18 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"This option determines the effects of double-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Action on title bar middle-click"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -559,10 +608,18 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"This option determines the effects of middle-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Action on title bar right-click"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -575,10 +632,18 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"This option determines the effects of right-clicking on the title bar. "
+"Current valid options are 'toggle_shade', which will shade/unshade the "
+"window, 'toggle_maximize' which will maximize/unmaximize the window, "
+"'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will "
+"maximize/unmaximize the window in that direction only, 'minimize' which will"
+" minimize the window, 'shade' which will roll the window up, 'menu' which "
+"will display the window menu, 'lower' which will put the window behind all "
+"the others, and 'none' which will not do anything."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Automatically raises the focused window"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -587,40 +652,50 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
+"If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
+"the focused window will be automatically raised after a delay specified by "
+"the auto_raise_delay key. This is not related to clicking on a window to "
+"raise it, nor to entering a window during drag-and-drop."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Delay in milliseconds for the auto raise option"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
+"The time delay before raising a window if auto_raise is set to true. The "
+"delay is given in thousandths of a second."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr ""
+msgstr "Current theme"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
 msgstr ""
+"The theme determines the appearance of window borders, titlebar, and so "
+"forth."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Use standard system font in window titles"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
+"If true, ignore the titlebar_font option, and use the standard application "
+"font for window titles."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
-msgstr ""
+msgstr "Window title font"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
@@ -629,10 +704,14 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
+"A font description string describing a font for window titlebars. The size "
+"from the description will only be used if the titlebar_font_size option is "
+"set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
+"option is set to true."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Number of workspaces"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -640,6 +719,9 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
+"Number of workspaces. Must be more than zero, and has a fixed maximum to "
+"prevent making the desktop unusable by accidentally asking for too many "
+"workspaces."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -659,7 +741,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Enable Visual Bell"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
@@ -667,20 +749,25 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
+"Turns on a visual indication when an application or the system issues a "
+"'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
+"environments."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "System Bell is Audible"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"Determines whether applications or the system can generate audible 'beeps'; "
+"may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Visual Bell Type"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid ""
@@ -692,14 +779,21 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"Tells Marco how to implement the visual indication that the system bell or "
+"another application 'bell' indicator has been rung. Currently there are two "
+"valid values, \"fullscreen\", which causes a fullscreen white-black flash, "
+"and \"frame_flash\" which causes the titlebar of the application which sent "
+"the bell signal to flash. If the application which sent the bell is unknown "
+"(as is usually the case for the default \"system beep\"), the currently "
+"focused window's titlebar is flashed."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "מנהל תפעול חלונות"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Determines whether Marco is a compositing manager."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -714,7 +808,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "If true, trade off usability for less resource usage"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -724,11 +818,17 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
+"If true, marco will give the user less feedback by using wireframes, "
+"avoiding animations, or other means. This is a significant reduction in "
+"usability for many users, but may allow legacy applications to continue "
+"working, and may also be a useful tradeoff for terminal servers. However, "
+"the wireframe feature is disabled when accessibility is on."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
 msgstr ""
+"(Not implemented) Navigation works in terms of applications not windows"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -740,10 +840,17 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
+"If true, then Marco works in terms of applications rather than windows. The "
+"concept is a bit abstract, but in general an application-based setup is more"
+" like the Mac and less like Windows. When you focus a window in application-"
+"based mode, all the windows in the application will be raised. Also, in "
+"application-based mode, focus clicks are not passed through to windows in "
+"other applications. Application-based mode is, however, largely "
+"unimplemented at the moment."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "Disable misfeatures that are required by old or broken applications"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -752,6 +859,10 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
+"Some applications disregard specifications in ways that result in window "
+"manager misfeatures. This option puts Marco in a rigorously correct mode, "
+"which gives a more consistent user interface, provided one does not need to "
+"run any misbehaving applications."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -810,15 +921,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
-msgstr ""
+msgstr "Name of workspace"
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
-msgstr ""
+msgstr "The name of a workspace."
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
-msgstr ""
+msgstr "Run a defined command"
 
 #: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
@@ -829,6 +940,12 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"The keybinding that runs the correspondingly-numbered command in "
+"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
+"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
+"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
+"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
+"then there will be no keybinding for this action."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -852,11 +969,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Move backward between windows of an application, using a popup window"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Move backward between windows, using a popup window"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
@@ -868,23 +985,23 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Move backward between panels and the desktop, using a popup window"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Move backward between windows of an application immediately"
 
 #: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Move backward between windows immediately"
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Move backward between panels and the desktop immediately"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Commands to run in response to keybindings"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -892,20 +1009,25 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"The /apps/marco/global_keybindings/run_command_N keys define keybindings "
+"that correspond to these commands. Pressing the keybinding for run_command_N"
+" will execute command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
-msgstr ""
+msgstr "The screenshot command"
 
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"The /apps/marco/global_keybindings/run_command_screenshot key defines a "
+"keybinding which causes the command specified by this setting to be invoked."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
-msgstr ""
+msgstr "The window screenshot command"
 
 #: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
@@ -913,10 +1035,13 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
+" a keybinding which causes the command specified by this setting to be "
+"invoked."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Toggle whether a window will always be visible over other windows"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
@@ -953,7 +1078,9 @@ msgstr "<tt>%s</tt> אינו מגיב."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "ניתן לבחור האם להמתין זמן מה עד להמשך פעולת היישום או לאלץ את סגירת היישום לחלוטין."
+msgstr ""
+"ניתן לבחור האם להמתין זמן מה עד להמשך פעולת היישום או לאלץ את סגירת היישום "
+"לחלוטין."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -987,41 +1114,44 @@ msgstr "תוכנית אחרת כבר משתמשת במקש %s עם המקש %x �
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "ארעה שגיאה בהרצת <tt>%s</tt>:‏\n\n%s"
+msgstr ""
+"ארעה שגיאה בהרצת <tt>%s</tt>:‏\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "אף פקודה %d לא הוגדרה.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "אף פקודת מסוף לא הוגדרה.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1030,7 +1160,11 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nCopyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\nThis is free software; see the source for copying conditions.\nThere is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"marco %s\n"
+"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
+"This is free software; see the source for copying conditions.\n"
+"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -1042,7 +1176,7 @@ msgstr "Replace the running window manager with Marco"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Specify session management ID"
+msgstr "הגדר מס\"ד ניהול עבור ה-Session"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1058,7 +1192,7 @@ msgstr "Print version"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Make X calls synchronous"
+msgstr "סנכרן קריאות X"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1082,7 +1216,8 @@ msgstr "Failed to scan themes directory: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
+msgstr ""
+"Could not find a theme! Be sure %s exists and contains the usual themes.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1101,7 +1236,9 @@ msgstr "%d stored in GSettings key %s is out of range %d to %d\n"
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Workarounds for broken applications disabled. Some applications may not behave properly.\n"
+msgstr ""
+"Workarounds for broken applications disabled. Some applications may not "
+"behave properly.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
@@ -1113,14 +1250,18 @@ msgstr "Could not parse font description \"%s\" from GSettings key %s\n"
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "\"%s\" found in configuration database is not a valid value for mouse button modifier\n"
+msgstr ""
+"\"%s\" found in configuration database is not a valid value for mouse button"
+" modifier\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "\"%s\" found in configuration database is not a valid value for keybinding \"%s\"\n"
+msgstr ""
+"\"%s\" found in configuration database is not a valid value for keybinding "
+"\"%s\"\n"
 
 #: ../src/core/prefs.c:2056
 #, c-format
@@ -1137,7 +1278,9 @@ msgstr "Screen %d on display '%s' is invalid\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Screen %d on display \"%s\" already has a window manager; try using the --replace option to replace the current window manager.\n"
+msgstr ""
+"Screen %d on display \"%s\" already has a window manager; try using the "
+"--replace option to replace the current window manager.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
@@ -1205,7 +1348,9 @@ msgstr "Unknown element %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "חלון זה אינו תומך ב־&quot;שמירת ההגדרות הנוכחיות&quot;, ויהיה צורך באתחול ידני בכניסה הבאה שלך."
+msgstr ""
+"חלון זה אינו תומך ב־&quot;שמירת ההגדרות הנוכחיות&quot;, ויהיה צורך באתחול "
+"ידני בכניסה הבאה שלך."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1255,7 +1400,9 @@ msgstr "Marco"
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER window as specified in the ICCCM.\n"
+msgstr ""
+"Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
+"window as specified in the ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1268,7 +1415,9 @@ msgstr "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADE
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Window %s sets an MWM hint indicating it isn't resizable, but sets min size %d x %d and max size %d x %d; this doesn't make much sense.\n"
+msgstr ""
+"Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
+"%d x %d and max size %d x %d; this doesn't make much sense.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1314,7 +1463,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Window 0x%lx has property %s\nthat was expected to have type %s format %d\nand actually has type %s format %d n_items %d.\nThis is most likely an application bug, not a window manager bug.\nThe window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
+msgstr ""
+"Window 0x%lx has property %s\n"
+"that was expected to have type %s format %d\n"
+"and actually has type %s format %d n_items %d.\n"
+"This is most likely an application bug, not a window manager bug.\n"
+"The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1326,7 +1480,9 @@ msgstr "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the list\n"
+msgstr ""
+"Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
+"list\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1335,7 +1491,7 @@ msgstr "שימוש: %s\n"
 
 #: ../src/ui/frames.c:1098
 msgid "Close Window"
-msgstr "סגור חלון"
+msgstr "סגירת חלון"
 
 #: ../src/ui/frames.c:1101
 msgid "Window Menu"
@@ -1410,7 +1566,7 @@ msgstr "_הזז"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:77
 msgid "_Resize"
-msgstr "_שנה גודל"
+msgstr "ש_נה גודל"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:79
@@ -1426,7 +1582,7 @@ msgstr "תמיד מ_למעלה"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
-msgstr "_הראה בכל סביבות העבודה"
+msgstr "תמיד בסביבת העבודה ה_גלויה"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
@@ -1436,22 +1592,22 @@ msgstr "רק בסביבת עבודה _זו"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "הזז חלון לסביבת העבודה ה_שמאלית"
+msgstr "הזז לסביבת _העבודה השמאלית"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "הזז חלון לסביבת העבודה ה_ימנית"
+msgstr "הזז לסביבת _הע_בודה הימנית"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "הזז חלון לסביבת העבודה למעלה"
+msgstr "הזז לסביבת העבו_דה למעלה"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "הזז חלון לסביבת העבודה למטה"
+msgstr "הזז לסביבת העבודה ל_מטה"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
@@ -1476,7 +1632,7 @@ msgstr "סביבת עבודה %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "הזז חלון לסביבת עבודה אחרת"
+msgstr "הזז לסביבת _עבודה אחרת"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -1575,11 +1731,11 @@ msgstr "bottom"
 
 #: ../src/ui/theme.c:256
 msgid "left"
-msgstr "left"
+msgstr "שמאלה"
 
 #: ../src/ui/theme.c:258
 msgid "right"
-msgstr "right"
+msgstr "ימינה"
 
 #: ../src/ui/theme.c:285
 #, c-format
@@ -1611,14 +1767,18 @@ msgstr "Gradients should have at least two colors"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
+msgstr ""
+"GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
+" where NORMAL is the state; could not parse \"%s\""
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK color specification must have a close bracket after the state, e.g. gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
+msgstr ""
+"GTK color specification must have a close bracket after the state, e.g. "
+"gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1635,7 +1795,9 @@ msgstr "Did not understand color component \"%s\" in color specification"
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the format"
+msgstr ""
+"Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
+"format"
 
 #: ../src/ui/theme.c:1259
 #, c-format
@@ -1677,7 +1839,9 @@ msgstr "Coordinate expression contains character '%s' which is not allowed"
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "Coordinate expression contains floating point number '%s' which could not be parsed"
+msgstr ""
+"Coordinate expression contains floating point number '%s' which could not be"
+" parsed"
 
 #: ../src/ui/theme.c:1747
 #, c-format
@@ -1689,7 +1853,9 @@ msgstr "Coordinate expression contains integer '%s' which could not be parsed"
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Coordinate expression contained unknown operator at the start of this text: \"%s\""
+msgstr ""
+"Coordinate expression contained unknown operator at the start of this text: "
+"\"%s\""
 
 #: ../src/ui/theme.c:1926
 #, c-format
@@ -1705,12 +1871,14 @@ msgstr "Coordinate expression results in division by zero"
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "Coordinate expression tries to use mod operator on a floating-point number"
+msgstr ""
+"Coordinate expression tries to use mod operator on a floating-point number"
 
 #: ../src/ui/theme.c:2145
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
-msgstr "Coordinate expression has an operator \"%s\" where an operand was expected"
+msgstr ""
+"Coordinate expression has an operator \"%s\" where an operand was expected"
 
 #: ../src/ui/theme.c:2154
 #, c-format
@@ -1727,7 +1895,9 @@ msgstr "Coordinate expression ended with an operator instead of an operand"
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Coordinate expression has operator \"%c\" following operator \"%c\" with no operand in between"
+msgstr ""
+"Coordinate expression has operator \"%c\" following operator \"%c\" with no "
+"operand in between"
 
 #: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
 #, c-format
@@ -1742,13 +1912,15 @@ msgstr "Coordinate expression parser overflowed its buffer."
 #: ../src/ui/theme.c:2443
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr "Coordinate expression had a close parenthesis with no open parenthesis"
+msgstr ""
+"Coordinate expression had a close parenthesis with no open parenthesis"
 
 #: ../src/ui/theme.c:2507
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
-msgstr "Coordinate expression had an open parenthesis with no close parenthesis"
+msgstr ""
+"Coordinate expression had an open parenthesis with no close parenthesis"
 
 #: ../src/ui/theme.c:2518
 #, c-format
@@ -1765,7 +1937,9 @@ msgstr "Theme contained an expression that resulted in an error: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be specified for this frame style"
+msgstr ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
+"specified for this frame style"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
@@ -1788,7 +1962,9 @@ msgstr "No <%s> set for theme \"%s\""
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "No frame style set for window type \"%s\" in theme \"%s\", add a <window type=\"%s\" style_set=\"whatever\"/> element"
+msgstr ""
+"No frame style set for window type \"%s\" in theme \"%s\", add a <window "
+"type=\"%s\" style_set=\"whatever\"/> element"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
@@ -1867,7 +2043,9 @@ msgstr "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Invalid title scale \"%s\" (must be one of xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr ""
+"Invalid title scale \"%s\" (must be one of xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1925,7 +2103,9 @@ msgstr "Element <%s> is not allowed below <%s>"
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" for buttons"
+msgstr ""
+"Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
+"for buttons"
 
 #: ../src/ui/theme-parser.c:1402
 #, c-format
@@ -2048,7 +2228,9 @@ msgstr "\"%s\" is not a valid value for resize attribute"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Should not have \"resize\" attribute on <%s> element for maximized/shaded states"
+msgstr ""
+"Should not have \"resize\" attribute on <%s> element for maximized/shaded "
+"states"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
@@ -2071,19 +2253,25 @@ msgstr "Style has already been specified for state %s focus %s"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
+"attribute and also a <draw_ops> element, or specified two elements)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Can't have a two draw_ops for a <button> element (theme specified a draw_ops attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
+" attribute and also a <draw_ops> element, or specified two elements)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Can't have a two draw_ops for a <menu_icon> element (theme specified a draw_ops attribute and also a <draw_ops> element, or specified two elements)"
+msgstr ""
+"Can't have a two draw_ops for a <menu_icon> element (theme specified a "
+"draw_ops attribute and also a <draw_ops> element, or specified two elements)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2094,7 +2282,8 @@ msgstr "הרכיב החיצוני ביותר בערכת העיצוב חייב ל
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
-msgstr "Element <%s> is not allowed inside a name/author/date/description element"
+msgstr ""
+"Element <%s> is not allowed inside a name/author/date/description element"
 
 #: ../src/ui/theme-parser.c:3420
 #, c-format
@@ -2105,7 +2294,8 @@ msgstr "Element <%s> is not allowed inside a <constant> element"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
+msgstr ""
+"Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 
 #: ../src/ui/theme-parser.c:3454
 #, c-format
@@ -2129,7 +2319,7 @@ msgstr "No draw_ops provided for button"
 #: ../src/ui/theme-parser.c:3815
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "מלל לא מורשה בתג <%s>"
+msgstr "No text is allowed inside element <%s>"
 
 #: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
 #: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
@@ -2182,7 +2372,7 @@ msgstr "Torn-off Menu"
 
 #: ../src/ui/theme-viewer.c:425
 msgid "Border"
-msgstr "Border"
+msgstr "גבול"
 
 #: ../src/ui/theme-viewer.c:782
 #, c-format
@@ -2239,4 +2429,7 @@ msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g seconds wall clock time including X server resources (%g milliseconds per frame)\n"
+msgstr ""
+"Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
+"seconds wall clock time including X server resources (%g milliseconds per "
+"frame)\n"

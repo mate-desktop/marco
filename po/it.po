@@ -1,32 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# ShadowK98 <amedeo.giuliani.98@gmail.com>, 2016
-# talorno <giovanni.talorno@gmail.com>, 2012
-# Giuseppe Pignataro (Fasbyte01) <rogepix@gmail.com>, 2017
-# Giuseppe Pignataro (Fasbyte01) <rogepix@gmail.com>, 2015
-# Marco Bartolucci <nap.84@live.it>, 2016
-# Marco Z. <minaz666@gmail.com>, 2016
-# Stefano Karapetsas <stefano@karapetsas.com>, 2013-2014
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Italian (http://www.transifex.com/mate/MATE/language/it/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Marco Z. <minaz666@gmail.com>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
-msgstr "Ambiente grafico"
+msgstr "Scrivania"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:100
@@ -215,7 +209,7 @@ msgstr "Commuta lo stato arrotolato"
 #: ../src/50-marco-window-key.xml.in.h:8
 #: ../src/org.mate.marco.gschema.xml.h:119
 msgid "Close window"
-msgstr "Chiudi la finestra"
+msgstr "Chiude la finestra"
 
 #: ../src/50-marco-window-key.xml.in.h:9
 #: ../src/org.mate.marco.gschema.xml.h:118
@@ -235,12 +229,16 @@ msgstr "Ridimensiona la finestra"
 #: ../src/50-marco-window-key.xml.in.h:12
 #: ../src/org.mate.marco.gschema.xml.h:122
 msgid "Toggle whether window is on all workspaces or just one"
-msgstr "Commuta la presenza della finestra in tutti gli spazi di lavoro o solo in uno"
+msgstr ""
+"Commuta la presenza della finestra in tutti gli spazi di lavoro o solo in "
+"uno"
 
 #: ../src/50-marco-window-key.xml.in.h:13
 #: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr "Solleva la finestra se è coperta da un'altra finestra, in caso contrario l'abbassa"
+msgstr ""
+"Solleva la finestra se è coperta da un'altra finestra, in caso contrario "
+"l'abbassa"
 
 #: ../src/50-marco-window-key.xml.in.h:14
 #: ../src/org.mate.marco.gschema.xml.h:140
@@ -274,19 +272,19 @@ msgstr "Affianca la finestra sul lato ovest (sinistra) dello schermo"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "Piastrella la finestra nell'angolo nord-ovest (sinistra in alto)"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Piastrella la finestra nell'angolo nord-est (destra in alto)"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Piastrella la finestra nell'angolo sud-ovest (sinistra in basso)"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Piastrella la finestra nell'angolo sud-est (destra in basso)"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
@@ -336,22 +334,22 @@ msgstr "Muovi la finestra al centro dello schermo"
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
 msgid "Move window to north (top) monitor"
-msgstr ""
+msgstr "Muovi la finestra sul lato nord (in alto) dello schermo"
 
 #: ../src/50-marco-window-key.xml.in.h:34
 #: ../src/org.mate.marco.gschema.xml.h:160
 msgid "Move window to south (bottom) monitor"
-msgstr ""
+msgstr "Muovi la finestra sul lato nord (in alto) dello schermo"
 
 #: ../src/50-marco-window-key.xml.in.h:35
 #: ../src/org.mate.marco.gschema.xml.h:161
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Muovi la finestra sul lato nord (in alto) dello schermo"
 
 #: ../src/50-marco-window-key.xml.in.h:36
 #: ../src/org.mate.marco.gschema.xml.h:162
 msgid "Move window to west (left) monitor"
-msgstr ""
+msgstr "Muovi la finestra sul lato nord (in alto) dello schermo"
 
 #: ../src/50-marco-window-key.xml.in.h:37
 #: ../src/org.mate.marco.gschema.xml.h:123
@@ -435,7 +433,9 @@ msgstr "Sposta la finestra sullo spazio di lavoro in basso"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr "Modificatore da utilizzare per le azioni sulle finestre con i pulsanti del mouse"
+msgstr ""
+"Modificatore da utilizzare per le azioni sulle finestre con i pulsanti del "
+"mouse"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -444,7 +444,13 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr "Facendo clic su una finestra mentre viene tenuto premuto questo tasto modificatore è possibile muovere la finestra (clic sinistro), ridimensionare la finestra (clic centrale) o visualizzare il menù finestra (clic destro). Le operazioni con il clic centrale e destro possono essere invertite usando la chiave \"resize_with_right_button\". Il modificatore è espresso come \"<Alt>\" o \"<Super>\" per esempio."
+msgstr ""
+"Facendo clic su una finestra mentre viene tenuto premuto questo tasto "
+"modificatore è possibile muovere la finestra (clic sinistro), ridimensionare"
+" la finestra (clic centrale) o visualizzare il menù finestra (clic destro). "
+"Le operazioni con il clic centrale e destro possono essere invertite usando "
+"la chiave \"resize_with_right_button\". Il modificatore è espresso come "
+"\"<Alt>\" o \"<Super>\" per esempio."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -455,17 +461,24 @@ msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr "Impostare questa opzione a vero per ridimensionare con il pulsante destro e mostrare un menù con il pulsante centrale mentre si tiene premuto il tasto indicato in \"mouse_button_modifier\": impostare a falso per farli funzionare nel modo opposto."
+msgstr ""
+"Impostare questa opzione a vero per ridimensionare con il pulsante destro e "
+"mostrare un menù con il pulsante centrale mentre si tiene premuto il tasto "
+"indicato in \"mouse_button_modifier\": impostare a falso per farli "
+"funzionare nel modo opposto."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
-msgstr "Indica se visualizzare il bordo della finestra della scheda selezionata"
+msgstr ""
+"Indica se visualizzare il bordo della finestra della scheda selezionata"
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
-msgstr "Impostare questo su false per disabilitare il bordo della finestra preselezionata mentre si cambia la scheda."
+msgstr ""
+"Impostare questo su false per disabilitare il bordo della finestra "
+"preselezionata mentre si cambia la scheda."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -480,7 +493,15 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr "Disposizione dei pulsanti sulla barra del titolo. Il valore deve essere una stringa, tipo \"menu:minimize,maximize,spacer,close\". I due punti separano l'angolo sinistro della finestra dal destro, i nomi dei pulsanti sono separati da virgole. Non sono ammessi pulsanti duplicati. I nomi di pulsanti sconosciuti sono ignorati in silenzio in modo da poter aggiungere nuovi pulsanti nelle versioni future di marco, senza precludere la compatibilità con le versioni più vecchie. Un tag speciale \"spacer\" può essere usato per inserire dello spazio tra due pulsanti adiacenti."
+msgstr ""
+"Disposizione dei pulsanti sulla barra del titolo. Il valore deve essere una "
+"stringa, tipo \"menu:minimize,maximize,spacer,close\". I due punti separano "
+"l'angolo sinistro della finestra dal destro, i nomi dei pulsanti sono "
+"separati da virgole. Non sono ammessi pulsanti duplicati. I nomi di pulsanti"
+" sconosciuti sono ignorati in silenzio in modo da poter aggiungere nuovi "
+"pulsanti nelle versioni future di marco, senza precludere la compatibilità "
+"con le versioni più vecchie. Un tag speciale \"spacer\" può essere usato per"
+" inserire dello spazio tra due pulsanti adiacenti."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
@@ -493,7 +514,13 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr "La modalità di focus delle finestre indica come vengono attivate le finestre. I possibili valori sono tre: \"click\" indica che è necessario fare clic sulle finestre al fine di dare loro il focus, \"sloppy\" indica che le finestre ottengono il focus quando il puntatore entra nella loro area, \"mouse\" indica che le finestre ottengono il focus quando il puntatore entra nella loro area e lo perdono quando abbandona tale area."
+msgstr ""
+"La modalità di focus delle finestre indica come vengono attivate le "
+"finestre. I possibili valori sono tre: \"click\" indica che è necessario "
+"fare clic sulle finestre al fine di dare loro il focus, \"sloppy\" indica "
+"che le finestre ottengono il focus quando il puntatore entra nella loro "
+"area, \"mouse\" indica che le finestre ottengono il focus quando il "
+"puntatore entra nella loro area e lo perdono quando abbandona tale area."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
@@ -505,11 +532,17 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "Questa opzione fornisce un controllo aggiuntivo sul modo in cui le finestre appena create ottengono il focus. Sono ammessi due valori: \"smart\" per applicare la normale modalità di focus dell'utente e \"strict\" per non dare il focus a finestre avviate da un terminale."
+msgstr ""
+"Questa opzione fornisce un controllo aggiuntivo sul modo in cui le finestre "
+"appena create ottengono il focus. Sono ammessi due valori: \"smart\" per "
+"applicare la normale modalità di focus dell'utente e \"strict\" per non dare"
+" il focus a finestre avviate da un terminale."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr "Indica se sollevare la finestra è un effetto secondario di altre interazioni utente"
+msgstr ""
+"Indica se sollevare la finestra è un effetto secondario di altre interazioni"
+" utente"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -531,7 +564,29 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr "Impostare questa opzione a FALSE può portare ad un comportamento instabile, quindi è fortemente sconsigliato agli utenti modificare questa opzione in \"True\". Molte azioni  (es. cliccare nell'area del client, muovere o ridimensionare la finestra) normalmente portano in primo piano la finestra come effetto collaterale. Impostare questa opzione su FALSO, cosa che è fortemente sconsigliata, scollegherà il portare il primo piano la finestra dalle altre azioni utente, e ignorerà le richieste di messa in primo piano generate dalle applicazioni. Vedi http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Quando questa opzione è settata su FALSE, le finestre possono comunque essere portate in primo piano con la combinazione alt-left-click ovunque sulla finestra, un normale click sulle decorazioni della finestra, o con messaggi specifici dai pagers, come le richieste d'attivazione dalle tasklist applets. Questa opzione è attualmente disabilitata in modalità click-to focus. La lista dei modi per portare in primo piano le finestre quando l'opzione raise_on_click è falsa, non include le richieste programmatiche dalle applicazioni; questo tipo di richieste saranno ignorate a prescindere dalla ragione per cui verranno effettuate. Se sei uno sviluppatore e hai utenti che si lamentano del fatto che la tua applicazione non funzioni con questa impostazione disabilitata, digli che è un _loro_ errore aver \"rotto\" il gestore finestre, e che le uniche soluzioni sono reimpostare questa opzione su \"Vero\" o convivere con questo \"bug\"."
+msgstr ""
+"Impostare questa opzione a FALSE può portare ad un comportamento instabile, "
+"quindi è fortemente sconsigliato agli utenti modificare questa opzione in "
+"\"True\". Molte azioni  (es. cliccare nell'area del client, muovere o "
+"ridimensionare la finestra) normalmente portano in primo piano la finestra "
+"come effetto collaterale. Impostare questa opzione su FALSO, cosa che è "
+"fortemente sconsigliata, scollegherà il portare il primo piano la finestra "
+"dalle altre azioni utente, e ignorerà le richieste di messa in primo piano "
+"generate dalle applicazioni. Vedi "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Quando questa opzione è"
+" settata su FALSE, le finestre possono comunque essere portate in primo "
+"piano con la combinazione alt-left-click ovunque sulla finestra, un normale "
+"click sulle decorazioni della finestra, o con messaggi specifici dai pagers,"
+" come le richieste d'attivazione dalle tasklist applets. Questa opzione è "
+"attualmente disabilitata in modalità click-to focus. La lista dei modi per "
+"portare in primo piano le finestre quando l'opzione raise_on_click è falsa, "
+"non include le richieste programmatiche dalle applicazioni; questo tipo di "
+"richieste saranno ignorate a prescindere dalla ragione per cui verranno "
+"effettuate. Se sei uno sviluppatore e hai utenti che si lamentano del fatto "
+"che la tua applicazione non funzioni con questa impostazione disabilitata, "
+"digli che è un _loro_ errore aver \"rotto\" il gestore finestre, e che le "
+"uniche soluzioni sono reimpostare questa opzione su \"Vero\" o convivere con"
+" questo \"bug\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -547,7 +602,16 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Questa opzione determina gli effetti del doppio-clic sulla barra del titolo. Le opzioni attualmente valide sono \"toggle_shade\" per arrotolare/srotolare la finestra, \"toggle_maximize\" per  massimizzare/de massimizzare la finestra, \"toggle_maximize_horizontally\" e \"toggle_maximize_vertically\" per massimizzare/de-massimizzare la finestra solo in una prefissata direzione, \"minimize\" per minimizzare la finestra, \"shade\" per arrotolare la finestra, \"menu\" per mostrare il menù finestra, \"lower\" per collocare la finestra sotto tutte le altre e \"none\" per non compiere alcuna azione."
+msgstr ""
+"Questa opzione determina gli effetti del doppio-clic sulla barra del titolo."
+" Le opzioni attualmente valide sono \"toggle_shade\" per "
+"arrotolare/srotolare la finestra, \"toggle_maximize\" per  massimizzare/de "
+"massimizzare la finestra, \"toggle_maximize_horizontally\" e "
+"\"toggle_maximize_vertically\" per massimizzare/de-massimizzare la finestra "
+"solo in una prefissata direzione, \"minimize\" per minimizzare la finestra, "
+"\"shade\" per arrotolare la finestra, \"menu\" per mostrare il menù "
+"finestra, \"lower\" per collocare la finestra sotto tutte le altre e "
+"\"none\" per non compiere alcuna azione."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
@@ -563,7 +627,16 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Questa opzione determina gli effetti del clic-centrale sulla barra del titolo. Le opzioni attualmente valide sono \"toggle_shade\" per arrotolare/srotolare la finestra, \"toggle_maximize\" per  massimizzare/de-massimizzare la finestra, \"toggle_maximize_horizontally\" e \"toggle_maximize_vertically\" per massimizzare/de-massimizzare la finestra solo in una prefissata direzione, \"minimize\" per minimizzare la finestra, \"shade\" per arrotolare la finestra, \"menu\" per mostrare il menù finestra, \"lower\" per collocare la finestra sotto tutte le altre e \"none\" per non compiere alcuna azione."
+msgstr ""
+"Questa opzione determina gli effetti del clic-centrale sulla barra del "
+"titolo. Le opzioni attualmente valide sono \"toggle_shade\" per "
+"arrotolare/srotolare la finestra, \"toggle_maximize\" per  massimizzare/de-"
+"massimizzare la finestra, \"toggle_maximize_horizontally\" e "
+"\"toggle_maximize_vertically\" per massimizzare/de-massimizzare la finestra "
+"solo in una prefissata direzione, \"minimize\" per minimizzare la finestra, "
+"\"shade\" per arrotolare la finestra, \"menu\" per mostrare il menù "
+"finestra, \"lower\" per collocare la finestra sotto tutte le altre e "
+"\"none\" per non compiere alcuna azione."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
@@ -579,7 +652,16 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Questa opzione determina gli effetti del clic-destro sulla barra del titolo. Le opzioni attualmente valide sono \"toggle_shade\" per arrotolare/srotolare la finestra, \"toggle_maximize\" per  massimizzare/de-massimizzare la finestra, \"toggle_maximize_horizontally\" e \"toggle_maximize_vertically\" per massimizzare/de-massimizzare la finestra solo in una prefissata direzione, \"minimize\" per minimizzare la finestra, \"shade\" per arrotolare la finestra, \"menu\" per mostrare il menù finestra, \"lower\" per collocare la finestra sotto tutte le altre e \"none\" per non compiere alcuna azione."
+msgstr ""
+"Questa opzione determina gli effetti del clic-destro sulla barra del titolo."
+" Le opzioni attualmente valide sono \"toggle_shade\" per "
+"arrotolare/srotolare la finestra, \"toggle_maximize\" per  massimizzare/de-"
+"massimizzare la finestra, \"toggle_maximize_horizontally\" e "
+"\"toggle_maximize_vertically\" per massimizzare/de-massimizzare la finestra "
+"solo in una prefissata direzione, \"minimize\" per minimizzare la finestra, "
+"\"shade\" per arrotolare la finestra, \"menu\" per mostrare il menù "
+"finestra, \"lower\" per collocare la finestra sotto tutte le altre e "
+"\"none\" per non compiere alcuna azione."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
@@ -591,7 +673,12 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr "Se impostata a VERO e la modalità di focus è \"sloppy\" o \"mouse\", allora la finestra con il focus è sollevata automaticamente dopo un ritardo specificato nella chiave \"auto_raise_delay\". Ciò non ha relazioni con il fare clic su una finestra per sollevarla, né con il passare sopra una finestra durante un'operazione di trascinamento."
+msgstr ""
+"Se impostata a VERO e la modalità di focus è \"sloppy\" o \"mouse\", allora "
+"la finestra con il focus è sollevata automaticamente dopo un ritardo "
+"specificato nella chiave \"auto_raise_delay\". Ciò non ha relazioni con il "
+"fare clic su una finestra per sollevarla, né con il passare sopra una "
+"finestra durante un'operazione di trascinamento."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
@@ -601,7 +688,9 @@ msgstr "Ritardo in millisecondi per l'opzione sollevamento automatico"
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr "L'intervallo di tempo in millisecondi prima che la finestra venga sollevata quando auto_raise è impostato a VERO."
+msgstr ""
+"L'intervallo di tempo in millisecondi prima che la finestra venga sollevata "
+"quando auto_raise è impostato a VERO."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -611,7 +700,9 @@ msgstr "Tema corrente"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr "Il tema determina l'aspetto dei bordi delle finestre, della barra del titolo e così via."
+msgstr ""
+"Il tema determina l'aspetto dei bordi delle finestre, della barra del titolo"
+" e così via."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
@@ -621,7 +712,10 @@ msgstr "Usare il carattere di sistema nei titoli delle finestre"
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr "Se impostata a VERO, l'opzione \"titlebar_font\" è ignorata e per i titoli delle finestre viene usato il tipo di carattere predefinito per le applicazioni."
+msgstr ""
+"Se impostata a VERO, l'opzione \"titlebar_font\" è ignorata e per i titoli "
+"delle finestre viene usato il tipo di carattere predefinito per le "
+"applicazioni."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -633,7 +727,12 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr "Una stringa di descrizione del tipo di carattere che descrive un tipo di carattere per la barra del titolo della finestra. La dimensione specificata nella descrizione è usata solo se l'opzione \"titlebar_font_size\" è impostata a 0. Inoltre, questa opzione è disabilitata se l'opzione \"titlebar_uses_desktop_font\" è impostata a VERO."
+msgstr ""
+"Una stringa di descrizione del tipo di carattere che descrive un tipo di "
+"carattere per la barra del titolo della finestra. La dimensione specificata "
+"nella descrizione è usata solo se l'opzione \"titlebar_font_size\" è "
+"impostata a 0. Inoltre, questa opzione è disabilitata se l'opzione "
+"\"titlebar_uses_desktop_font\" è impostata a VERO."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -644,7 +743,10 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr "Numero degli spazi di lavoro. Deve essere maggiore di zero e presenta un limite massimo prefissato per evitare di rendere l'ambiente grafico inutilizzabile qualora si richiedano accidentalmente troppi spazi di lavoro."
+msgstr ""
+"Numero degli spazi di lavoro. Deve essere maggiore di zero e presenta un "
+"limite massimo prefissato per evitare di rendere l'ambiente grafico "
+"inutilizzabile qualora si richiedano accidentalmente troppi spazi di lavoro."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -660,7 +762,17 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr "Lo stile dell'avvolgimento viene utilizzato per determinare come passare da un'area di lavoro ad un altra al bordo dell'impostazione dell'area di lavoro. Quando è impostato su \"wrap\", non accadrà nulla se si tenta di passare a uno spazio di lavoro oltre il bordo della impostazione dell'area di lavoro . Se impostato su \"classic\", il vecchio comportamento di Marco viene utilizzato: la fine di una riga porta all'inizio della successiva e la fine di una colonna porta all'inizio della successiva. Se impostato su \"toroidal\", le aree di lavoro sono collegate come una ciambella : la fine di ogni riga conduce al proprio inizio e la fine di ogni colonna porta al proprio inizio. "
+msgstr ""
+"Lo stile dell'avvolgimento viene utilizzato per determinare come passare da "
+"un'area di lavoro ad un altra al bordo dell'impostazione dell'area di "
+"lavoro. Quando è impostato su \"wrap\", non accadrà nulla se si tenta di "
+"passare a uno spazio di lavoro oltre il bordo della impostazione dell'area "
+"di lavoro . Se impostato su \"classic\", il vecchio comportamento di Marco "
+"viene utilizzato: la fine di una riga porta all'inizio della successiva e la"
+" fine di una colonna porta all'inizio della successiva. Se impostato su "
+"\"toroidal\", le aree di lavoro sono collegate come una ciambella : la fine "
+"di ogni riga conduce al proprio inizio e la fine di ogni colonna porta al "
+"proprio inizio. "
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
@@ -671,7 +783,10 @@ msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr "Attiva un'indicazione visiva quando un'applicazione o il sistema emette un \"bip\" o \"suona una campanella\"; utile per chi ha problemi d'udito o per l'uso in ambienti rumorosi."
+msgstr ""
+"Attiva un'indicazione visiva quando un'applicazione o il sistema emette un "
+"\"bip\" o \"suona una campanella\"; utile per chi ha problemi d'udito o per "
+"l'uso in ambienti rumorosi."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
@@ -681,7 +796,10 @@ msgstr "Campanella di sistema udibile"
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr "Determina se le applicazioni o il sistema possono generare dei bip udibili; può essere usato in congiunzione con \"visual_bell\" per consentire dei bip silenziosi."
+msgstr ""
+"Determina se le applicazioni o il sistema possono generare dei bip udibili; "
+"può essere usato in congiunzione con \"visual_bell\" per consentire dei bip "
+"silenziosi."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
@@ -696,7 +814,15 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr "Indica a Marco come implementare l'indicazione visiva che la campanella di sistema o un altro indicatore \"campanella\" di applicazione sta suonando. Al momento sono ammessi due valori: \"fullscreen\", che causa un lampeggio bianco-nero a schermo intero, e \"frame_flash\", che causa il lampeggio della barra del titolo dell'applicazione che ha inviato il segnale della campanella. Se l'applicazione che ha inviato la campanella è sconosciuta (come accade di solito nel caso della campanella di sistema), il lampeggio avviene sulla finestra che al momento ha il focus."
+msgstr ""
+"Indica a Marco come implementare l'indicazione visiva che la campanella di "
+"sistema o un altro indicatore \"campanella\" di applicazione sta suonando. "
+"Al momento sono ammessi due valori: \"fullscreen\", che causa un lampeggio "
+"bianco-nero a schermo intero, e \"frame_flash\", che causa il lampeggio "
+"della barra del titolo dell'applicazione che ha inviato il segnale della "
+"campanella. Se l'applicazione che ha inviato la campanella è sconosciuta "
+"(come accade di solito nel caso della campanella di sistema), il lampeggio "
+"avviene sulla finestra che al momento ha il focus."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
@@ -715,7 +841,10 @@ msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr "Se impostato su vero, nessuna miniatura delle finestre verrà visualizzata nella finestra popup attivata con alt-tab quando il gestore del compositing è attivo. Verrano visualizzate invece le icone delle applicazioni."
+msgstr ""
+"Se impostato su vero, nessuna miniatura delle finestre verrà visualizzata "
+"nella finestra popup attivata con alt-tab quando il gestore del compositing "
+"è attivo. Verrano visualizzate invece le icone delle applicazioni."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
@@ -728,12 +857,20 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr "Se impostata a VERO, marco fornisce all'utente un minore riscontro usando wireframe, evitando le animazioni e altro. Questo comporta una significativa riduzione in termini di facilità d'uso per molti utenti, ma potrebbe consentire ad applicazioni legacy di continuare a funzionare, così come potrebbe essere un buon compromesso per i terminal server. Comunque, la funzionalità wireframe è disabilitata quando l'accessibilità è in funzione."
+msgstr ""
+"Se impostata a VERO, marco fornisce all'utente un minore riscontro usando "
+"wireframe, evitando le animazioni e altro. Questo comporta una significativa"
+" riduzione in termini di facilità d'uso per molti utenti, ma potrebbe "
+"consentire ad applicazioni legacy di continuare a funzionare, così come "
+"potrebbe essere un buon compromesso per i terminal server. Comunque, la "
+"funzionalità wireframe è disabilitata quando l'accessibilità è in funzione."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr "(Non implementato) La navigazione funziona a livello applicazione, non a livello finestra"
+msgstr ""
+"(Non implementato) La navigazione funziona a livello applicazione, non a "
+"livello finestra"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -744,11 +881,21 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr "Se impostata a VERO, Marco funziona in termini di applicazioni invece che di finestre. Il concetto è un po' astratto, ma in generale una configurazione basata sulle applicazioni è più simile al Mac che a Windows. Quando si da il focus a una finestra nella modalità basata sulle applicazioni, tutte le finestre dell'applicazione vengono sollevate. Inoltre in questa modalità i clic per l'assegnazione del focus non vengono passati attraverso le finestre verso altre applicazioni. Al momento però, la modalità in base alle applicazioni è ampiamente non implementata."
+msgstr ""
+"Se impostata a VERO, Marco funziona in termini di applicazioni invece che di"
+" finestre. Il concetto è un po' astratto, ma in generale una configurazione "
+"basata sulle applicazioni è più simile al Mac che a Windows. Quando si da il"
+" focus a una finestra nella modalità basata sulle applicazioni, tutte le "
+"finestre dell'applicazione vengono sollevate. Inoltre in questa modalità i "
+"clic per l'assegnazione del focus non vengono passati attraverso le finestre"
+" verso altre applicazioni. Al momento però, la modalità in base alle "
+"applicazioni è ampiamente non implementata."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr "Disabilita le funzioni inadeguate richieste da applicazioni vecchie o non funzionanti"
+msgstr ""
+"Disabilita le funzioni inadeguate richieste da applicazioni vecchie o non "
+"funzionanti"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -756,7 +903,12 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr "Alcune applicazioni non rispettano le specifiche a tal punto da avere come risultato funzionalità inadeguate nel gestore finestre. Questa opzione pone Marco in una modalità rigorosamente corretta, che fornisce una interfaccia utente più coerente, a meno che non si debba eseguire una qualche applicazione mal funzionante."
+msgstr ""
+"Alcune applicazioni non rispettano le specifiche a tal punto da avere come "
+"risultato funzionalità inadeguate nel gestore finestre. Questa opzione pone "
+"Marco in una modalità rigorosamente corretta, che fornisce una interfaccia "
+"utente più coerente, a meno che non si debba eseguire una qualche "
+"applicazione mal funzionante."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -766,11 +918,13 @@ msgstr "Determina se le nuove finestre vengono create al centro dello schermo"
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr "Se impostata a VERO, le nuove finestre vengono aperte al centro dello schermo. Altrimenti vengono aperte in alto a sinistra dello schermo."
+msgstr ""
+"Se impostata a VERO, le nuove finestre vengono aperte al centro dello "
+"schermo. Altrimenti vengono aperte in alto a sinistra dello schermo."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Indica se abilitare il piastrellamento"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -778,16 +932,23 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Se attivato, trascinare le finestre sui bordi laterali dello schermo le "
+"massimizza verticalmente e le ridimensiona orizzontalmente in modo da "
+"coprire metà della superficie disponibile. Trascinarle sul bordo superiore "
+"le massimizza."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
 msgstr ""
+"Indica se massimizzare la finestra quando trascinata sul bordo superiore."
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"Se attivato, trascinare una finestra sul bordo superiore la massimizzerà. "
+"Funziona solo se il piastrellamento è attivato."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -801,7 +962,14 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr "La modalità di posizionamento finestra indica come le nuove finestre sono posizionate. \"automatico\", il sistema seleziona automaticamente una posizione in base allo spazio disponibile sul desktop, o da una semplice cascata se non c'è spazio; \"pointer\" significa che le nuove finestre sono posizionate in base alla posizione del puntatore del mouse; \"manuale\" significa che l'utente deve posizionare manualmente la nuova finestra con il mouse o la tastiera ."
+msgstr ""
+"La modalità di posizionamento finestra indica come le nuove finestre sono "
+"posizionate. \"automatico\", il sistema seleziona automaticamente una "
+"posizione in base allo spazio disponibile sul desktop, o da una semplice "
+"cascata se non c'è spazio; \"pointer\" significa che le nuove finestre sono "
+"posizionate in base alla posizione del puntatore del mouse; \"manuale\" "
+"significa che l'utente deve posizionare manualmente la nuova finestra con il"
+" mouse o la tastiera ."
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
@@ -833,7 +1001,13 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "L'associazione di tasti che esegue il comando con numero corrispondente in /apps/marco/keybinding_commands. Il formato è \"&lt;Control&gt;a\" oppure \"<Shift><Alt>F1\". È consentito l'utilizzo di lettere maiuscole, minuscole e anche di abbreviazioni tipo \"<Ctl>\" o \"<Ctrl>\". Se l'opzione è impostata alla stringa speciale \"disabled\", allora non c'è alcuna associazione di tasti per questa azione."
+msgstr ""
+"L'associazione di tasti che esegue il comando con numero corrispondente in "
+"/apps/marco/keybinding_commands. Il formato è \"&lt;Control&gt;a\" oppure "
+"\"<Shift><Alt>F1\". È consentito l'utilizzo di lettere maiuscole, minuscole "
+"e anche di abbreviazioni tipo \"<Ctl>\" o \"<Ctrl>\". Se l'opzione è "
+"impostata alla stringa speciale \"disabled\", allora non c'è alcuna "
+"associazione di tasti per questa azione."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -842,7 +1016,13 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "L'associazione di tasti che esegue il comando con numero corrispondente in /apps/marco/keybinding_commands. Il formato è \"&lt;Control&gt;a\" oppure \"<Shift><Alt>F1\". È consentito l'utilizzo di lettere maiuscole, minuscole e anche di abbreviazioni tipo \"<Ctl>\" o \"<Ctrl>\". Se l'opzione è impostata alla stringa speciale \"disabled\", allora non c'è alcuna associazione di tasti per questa azione."
+msgstr ""
+"L'associazione di tasti che esegue il comando con numero corrispondente in "
+"/apps/marco/keybinding_commands. Il formato è \"&lt;Control&gt;a\" oppure "
+"\"<Shift><Alt>F1\". È consentito l'utilizzo di lettere maiuscole, minuscole "
+"e anche di abbreviazioni tipo \"<Ctl>\" o \"<Ctrl>\". Se l'opzione è "
+"impostata alla stringa speciale \"disabled\", allora non c'è alcuna "
+"associazione di tasti per questa azione."
 
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid ""
@@ -853,11 +1033,20 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr "Il formato è \"&lt;Control&gt;a\" o \"&lt;Shift&gt;&lt;Alt&gt;F1\". È consentito l'utilizzo di lettere maiuscole, minuscole e anche di abbreviazioni tipo \"<Ctl>\" o \"<Ctrl>\". Se l'opzione è impostata alla stringa speciale \"disabled\", allora non c'è alcuna associazione di tasti per questa azione. Questa combinazione di tasti può essere invertita tenendo premuto il tasto \"Maiusc\"; dunque, \" Maiusc\" non può essere una delle chiavi che utilizza."
+msgstr ""
+"Il formato è \"&lt;Control&gt;a\" o \"&lt;Shift&gt;&lt;Alt&gt;F1\". È "
+"consentito l'utilizzo di lettere maiuscole, minuscole e anche di "
+"abbreviazioni tipo \"<Ctl>\" o \"<Ctrl>\". Se l'opzione è impostata alla "
+"stringa speciale \"disabled\", allora non c'è alcuna associazione di tasti "
+"per questa azione. Questa combinazione di tasti può essere invertita tenendo"
+" premuto il tasto \"Maiusc\"; dunque, \" Maiusc\" non può essere una delle "
+"chiavi che utilizza."
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr "Sposta all'indietro tra le finestre di un'applicazione, usando una finestra a comparsa"
+msgstr ""
+"Sposta all'indietro tra le finestre di un'applicazione, usando una finestra "
+"a comparsa"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
@@ -865,15 +1054,21 @@ msgstr "Sposta all'indietro tra le finestre, usando una finestra a comparsa"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr "Sposta tra le finestre su tutti gli spazi di lavoro, usando una finestra a comparsa"
+msgstr ""
+"Sposta tra le finestre su tutti gli spazi di lavoro, usando una finestra a "
+"comparsa"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr "Sposta al contrario tra le finestre su tutti gli spazi di lavoro, usando una finestra a comparsa"
+msgstr ""
+"Sposta al contrario tra le finestre su tutti gli spazi di lavoro, usando una"
+" finestra a comparsa"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr "Sposta al contrario tra i pannelli e la scrivania, usando una finestra a comparsa"
+msgstr ""
+"Sposta al contrario tra i pannelli e la scrivania, usando una finestra a "
+"comparsa"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
@@ -896,7 +1091,11 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr "Le chiavi /apps/marco/global_keybindings/run_command_N definiscono le associazioni di tasti che corrispondono a questi comandi. Premendo l'associazione di tasti per la chiave \"run_command_N\", viene eseguito il comando della chiave \"command_N\"."
+msgstr ""
+"Le chiavi /apps/marco/global_keybindings/run_command_N definiscono le "
+"associazioni di tasti che corrispondono a questi comandi. Premendo "
+"l'associazione di tasti per la chiave \"run_command_N\", viene eseguito il "
+"comando della chiave \"command_N\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
@@ -906,7 +1105,10 @@ msgstr "Il comando per schermate"
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr "La chiave /apps/marco/global_keybindings/run_command_screenshot definisce una associazione di tasti che causa l'invocazione del comando specificato da questa impostazione."
+msgstr ""
+"La chiave /apps/marco/global_keybindings/run_command_screenshot definisce "
+"una associazione di tasti che causa l'invocazione del comando specificato da"
+" questa impostazione."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
@@ -917,7 +1119,10 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr "La chiave /apps/marco/global_keybindings/run_command_window_screenshot definisce una associazione di tasti che causa l'invocazione del comando specificato da questa impostazione."
+msgstr ""
+"La chiave /apps/marco/global_keybindings/run_command_window_screenshot "
+"definisce una associazione di tasti che causa l'invocazione del comando "
+"specificato da questa impostazione."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
@@ -925,19 +1130,19 @@ msgstr "Commuta la visibilità permanente di una finestra sopra le altre"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
+msgstr "Piastrella la finestra nell'angolo nord-ovest (sinistra in alto)"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "Piastrella la finestra nell'angolo nord-est (destra in alto)"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Piastrella la finestra nell'angolo nord-est (destra in alto)"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Piastrella la finestra nell'angolo nord-ovest (sinistra in alto)"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -958,7 +1163,9 @@ msgstr "Nessuna risposta da <tt>%s</tt>."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "È possibile scegliere di attendere un po' lasciando che l'applicazione continui, oppure forzare la terminazione dell'applicazione."
+msgstr ""
+"È possibile scegliere di attendere un po' lasciando che l'applicazione "
+"continui, oppure forzare la terminazione dell'applicazione."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -988,43 +1195,48 @@ msgstr "Apertura del display «%s» di X Window System non riuscita\n"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Qualche altro programma sta già usando il tasto %s con i modificatori %x come una associazione di tasti\n"
+msgstr ""
+"Qualche altro programma sta già usando il tasto %s con i modificatori %x "
+"come una associazione di tasti\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Si è verificato un errore nell'eseguire <tt>%s</tt>:\n\n%s."
+msgstr ""
+"Si è verificato un errore nell'eseguire <tt>%s</tt>:\n"
+"\n"
+"%s."
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Non è stato definito alcuno comando %d.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Non è stato definito alcun comando di terminale.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Rinomina spazio di lavoro</tt>"
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr "Nuovo nome spazio di lavoro:"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr "OK"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
 msgstr "Annulla"
 
@@ -1035,7 +1247,12 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nCopyright © 2001-%s Havoc Pennington, Red Hat, Inc., e altri\nQuesto è software libero; si vedano i sorgenti per le condizioni di copia.\nNON è fornita alcuna garanzia; neanche di COMMERCIABILITÀ o\nAPPLICABILITÀ PER UNO SCOPO PARTICOLARE.\n"
+msgstr ""
+"marco %s\n"
+"Copyright © 2001-%s Havoc Pennington, Red Hat, Inc., e altri\n"
+"Questo è software libero; si vedano i sorgenti per le condizioni di copia.\n"
+"NON è fornita alcuna garanzia; neanche di COMMERCIABILITÀ o\n"
+"APPLICABILITÀ PER UNO SCOPO PARTICOLARE.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -1063,7 +1280,7 @@ msgstr "Stampa la versione"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Rende le chiamate X sincrone"
+msgstr "Rendere le chiamate di X sincrone"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1076,7 +1293,9 @@ msgstr "Disattiva il compositing"
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Non rendere a schermo intero le finestre che sono massimizzate e che non hanno decorazioni"
+msgstr ""
+"Non rendere a schermo intero le finestre che sono massimizzate e che non "
+"hanno decorazioni"
 
 #: ../src/core/main.c:519
 #, c-format
@@ -1087,7 +1306,9 @@ msgstr "Scansione della directory dei temi non riuscita: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Non è stato trovato alcun tema. Assicurarsi che %s esista e contenga i temi standard.\n"
+msgstr ""
+"Non è stato trovato alcun tema. Assicurarsi che %s esista e contenga i temi "
+"standard.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1106,26 +1327,34 @@ msgstr "%d salvato nella chiave GSettings %s è fuori intervallo %d a %d\n"
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Disabilitate le funzionalità palliative per la applicazioni difettose. Alcune applicazioni potrebbero avere comportamenti errati.\n"
+msgstr ""
+"Disabilitate le funzionalità palliative per la applicazioni difettose. "
+"Alcune applicazioni potrebbero avere comportamenti errati.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr "Impossibile analizzare la descrizione del carattere \"%s\" dalla chiave GSettings %s.\n"
+msgstr ""
+"Impossibile analizzare la descrizione del carattere \"%s\" dalla chiave "
+"GSettings %s.\n"
 
 #: ../src/core/prefs.c:1194
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "Il valore «%s» trovato nel database di configurazione non è valido per il modificatore del tasto del mouse\n"
+msgstr ""
+"Il valore «%s» trovato nel database di configurazione non è valido per il "
+"modificatore del tasto del mouse\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "Il valore «%s» nel database di configurazione non è valido per l'associazione di tasti «%s»\n"
+msgstr ""
+"Il valore «%s» nel database di configurazione non è valido per "
+"l'associazione di tasti «%s»\n"
 
 #: ../src/core/prefs.c:2056
 #, c-format
@@ -1142,12 +1371,16 @@ msgstr "Lo schermo %d nel display «%s» non è valido\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Lo schermo %d sul display «%s» ha già un gestore finestre; provare a utilizzare l'opzione --replace per sostituirlo.\n"
+msgstr ""
+"Lo schermo %d sul display «%s» ha già un gestore finestre; provare a "
+"utilizzare l'opzione --replace per sostituirlo.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr "Impossibile acquisire la selezione del gestore finestre per lo schermo %d nel display «%s»\n"
+msgstr ""
+"Impossibile acquisire la selezione del gestore finestre per lo schermo %d "
+"nel display «%s»\n"
 
 #: ../src/core/screen.c:460
 #, c-format
@@ -1187,7 +1420,9 @@ msgstr "Analisi del file della sessione salvato non riuscita: %s\n"
 #: ../src/core/session.c:1184
 #, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
-msgstr "Attributo <marco_session> individuato, ma è già presente un ID della sessione"
+msgstr ""
+"Attributo <marco_session> individuato, ma è già presente un ID della "
+"sessione"
 
 #: ../src/core/session.c:1197 ../src/core/session.c:1272
 #: ../src/core/session.c:1304 ../src/core/session.c:1376
@@ -1210,7 +1445,9 @@ msgstr "Elemento %s sconosciuto"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Queste finestre non supportano la funzione &quot;salva impostazioni attuali&quot; e dovranno essere riavviate manualmente al prossimo accesso."
+msgstr ""
+"Queste finestre non supportano la funzione &quot;salva impostazioni "
+"attuali&quot; e dovranno essere riavviate manualmente al prossimo accesso."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1230,7 +1467,8 @@ msgstr "File di registro %s aperto\n"
 #: ../src/core/util.c:136 ../src/tools/marco-message.c:176
 #, c-format
 msgid "Marco was compiled without support for verbose mode\n"
-msgstr "Marco è stato compilato escludendo il supporto per la modalità prolissa\n"
+msgstr ""
+"Marco è stato compilato escludendo il supporto per la modalità prolissa\n"
 
 #: ../src/core/util.c:236
 msgid "Window manager: "
@@ -1260,7 +1498,9 @@ msgstr "Marco"
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "La finestra %s ha impostato SM_CLIENT_ID su se stessa, invece che sulla finestra WM_CLIENT_LEADER come da specifiche ICCCM.\n"
+msgstr ""
+"La finestra %s ha impostato SM_CLIENT_ID su se stessa, invece che sulla "
+"finestra WM_CLIENT_LEADER come da specifiche ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1273,7 +1513,10 @@ msgstr "La finestra %s ha impostato SM_CLIENT_ID su se stessa, invece che sulla 
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "La finestra %s ha impostato un hint MWM indicando che non è ridimensionabile, ma ha impostato la dimensione minima %d x %d e la dimensione massima %d x %d; ciò non ha senso.\n"
+msgstr ""
+"La finestra %s ha impostato un hint MWM indicando che non è "
+"ridimensionabile, ma ha impostato la dimensione minima %d x %d e la "
+"dimensione massima %d x %d; ciò non ha senso.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1319,7 +1562,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "La finestra 0x%lx ha la proprietà %s\nche era attesa avere tipo %s formato %d\ne in realtà ha tipo %s formato %d n_items %d.\nMolto probabilmente è un bug dell'applicazione, non del gestore finestre.\nLa finestra presenta titolo=\"%s\" classe=\"%s\" nome=\"%s\"\n"
+msgstr ""
+"La finestra 0x%lx ha la proprietà %s\n"
+"che era attesa avere tipo %s formato %d\n"
+"e in realtà ha tipo %s formato %d n_items %d.\n"
+"Molto probabilmente è un bug dell'applicazione, non del gestore finestre.\n"
+"La finestra presenta titolo=\"%s\" classe=\"%s\" nome=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1331,7 +1579,9 @@ msgstr "La proprietà %s sulla finestra 0x%lx contiene UTF-8 non valido\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "La proprietà %s sulla finestra 0x%lx contiene UTF-8 non valido per l'elemento %d nella lista\n"
+msgstr ""
+"La proprietà %s sulla finestra 0x%lx contiene UTF-8 non valido per "
+"l'elemento %d nella lista\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1340,7 +1590,7 @@ msgstr "Uso: %s\n"
 
 #: ../src/ui/frames.c:1098
 msgid "Close Window"
-msgstr "Chiude la finestra"
+msgstr "Chiudi finestra"
 
 #: ../src/ui/frames.c:1101
 msgid "Window Menu"
@@ -1580,11 +1830,11 @@ msgstr "basso"
 
 #: ../src/ui/theme.c:256
 msgid "left"
-msgstr "sinistra"
+msgstr "sinistro"
 
 #: ../src/ui/theme.c:258
 msgid "right"
-msgstr "destra"
+msgstr "destro"
 
 #: ../src/ui/theme.c:285
 #, c-format
@@ -1594,7 +1844,9 @@ msgstr "la geometria della cornice non specifica la dimensione «%s»"
 #: ../src/ui/theme.c:304
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
-msgstr "la geometria della cornice non specifica la dimensione «%s» per il bordo «%s»"
+msgstr ""
+"la geometria della cornice non specifica la dimensione «%s» per il bordo "
+"«%s»"
 
 #: ../src/ui/theme.c:341
 #, c-format
@@ -1616,14 +1868,19 @@ msgstr "I gradienti dovrebbero avere almeno due colori"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "La specificazione del colore GTK deve avere lo stato fra parentesi, per es. gtk:fg[NORMAL] dove NORMAL è lo stato; impossibile analizzare \"%s\""
+msgstr ""
+"La specificazione del colore GTK deve avere lo stato fra parentesi, per es. "
+"gtk:fg[NORMAL] dove NORMAL è lo stato; impossibile analizzare \"%s\""
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "La specificazione del colore GTK deve avere una parentesi di chiusura dopo lo stato, per es. gtk:fg[NORMAL] dove NORMAL è lo stato; impossibile analizzare \"%s\""
+msgstr ""
+"La specificazione del colore GTK deve avere una parentesi di chiusura dopo "
+"lo stato, per es. gtk:fg[NORMAL] dove NORMAL è lo stato; impossibile "
+"analizzare \"%s\""
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1633,14 +1890,17 @@ msgstr "State «%s» incomprensibile nella specificazione del colore"
 #: ../src/ui/theme.c:1219
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
-msgstr "Componente di colore «%s» incomprensibile nella specificazione del colore"
+msgstr ""
+"Componente di colore «%s» incomprensibile nella specificazione del colore"
 
 #: ../src/ui/theme.c:1248
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Il formato della sfumature è «blend/bg_color/fg_color/alpha», «%s» non è adatto a tale formato"
+msgstr ""
+"Il formato della sfumature è «blend/bg_color/fg_color/alpha», «%s» non è "
+"adatto a tale formato"
 
 #: ../src/ui/theme.c:1259
 #, c-format
@@ -1655,12 +1915,16 @@ msgstr "Il valore alpha «%s» nel colore sfumato non è compreso tra 0.0 e 1.0"
 #: ../src/ui/theme.c:1316
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "Il formato dell'ombreggiatura è «shade/base_color/factor», «%s» non è adatto a tale formato"
+msgstr ""
+"Il formato dell'ombreggiatura è «shade/base_color/factor», «%s» non è adatto"
+" a tale formato"
 
 #: ../src/ui/theme.c:1327
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
-msgstr "Impossibile analizzare il fattore di ombreggiatura «%s» nel colore ombreggiato"
+msgstr ""
+"Impossibile analizzare il fattore di ombreggiatura «%s» nel colore "
+"ombreggiato"
 
 #: ../src/ui/theme.c:1337
 #, c-format
@@ -1675,26 +1939,34 @@ msgstr "Impossibile analizzare il colore «%s»"
 #: ../src/ui/theme.c:1706
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
-msgstr "L'espressione delle coordinate contiene il carattere «%s» che non è consentito"
+msgstr ""
+"L'espressione delle coordinate contiene il carattere «%s» che non è "
+"consentito"
 
 #: ../src/ui/theme.c:1733
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "L'espressione delle coordinate contiene il numero in virgola mobile «%s» che non può essere analizzato"
+msgstr ""
+"L'espressione delle coordinate contiene il numero in virgola mobile «%s» che"
+" non può essere analizzato"
 
 #: ../src/ui/theme.c:1747
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr "L'espressione delle coordinate contiene l'intero «%s» che non può essere analizzato"
+msgstr ""
+"L'espressione delle coordinate contiene l'intero «%s» che non può essere "
+"analizzato"
 
 #: ../src/ui/theme.c:1869
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "L'espressione delle coordinate contiene un operatore sconosciuto all'inizio di questo testo: \"%s\""
+msgstr ""
+"L'espressione delle coordinate contiene un operatore sconosciuto all'inizio "
+"di questo testo: \"%s\""
 
 #: ../src/ui/theme.c:1926
 #, c-format
@@ -1704,61 +1976,80 @@ msgstr "L'espressione delle coordinate è vuota o incomprensibile"
 #: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
 #, c-format
 msgid "Coordinate expression results in division by zero"
-msgstr "L'espressione delle coordinate ha come risultato una divisione per zero"
+msgstr ""
+"L'espressione delle coordinate ha come risultato una divisione per zero"
 
 #: ../src/ui/theme.c:2089
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "L'espressione delle coordinate tenta di usare un operatore mod su un numero in virgola mobile"
+msgstr ""
+"L'espressione delle coordinate tenta di usare un operatore mod su un numero "
+"in virgola mobile"
 
 #: ../src/ui/theme.c:2145
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
-msgstr "L'espressione delle coordinate ha un operatore «%s» dove è atteso un operando"
+msgstr ""
+"L'espressione delle coordinate ha un operatore «%s» dove è atteso un "
+"operando"
 
 #: ../src/ui/theme.c:2154
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
-msgstr "L'espressione delle coordinate ha un operando dove è atteso un operatore"
+msgstr ""
+"L'espressione delle coordinate ha un operando dove è atteso un operatore"
 
 #: ../src/ui/theme.c:2162
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
-msgstr "L'espressione delle coordinate finisce con un operatore invece che un operando"
+msgstr ""
+"L'espressione delle coordinate finisce con un operatore invece che un "
+"operando"
 
 #: ../src/ui/theme.c:2172
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "L'espressione delle coordinate ha l'operatore «%c» seguito dall'operatore «%c» senza un operando fra i due"
+msgstr ""
+"L'espressione delle coordinate ha l'operatore «%c» seguito dall'operatore "
+"«%c» senza un operando fra i due"
 
 #: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
-msgstr "L'espressione delle coordinate ha la variabile o la costante «%s» sconosciuta"
+msgstr ""
+"L'espressione delle coordinate ha la variabile o la costante «%s» "
+"sconosciuta"
 
 #: ../src/ui/theme.c:2414
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
-msgstr "L'analizzatore dell'espressione delle coordinate ha superato il proprio buffer."
+msgstr ""
+"L'analizzatore dell'espressione delle coordinate ha superato il proprio "
+"buffer."
 
 #: ../src/ui/theme.c:2443
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr "L'espressione delle coordinate ha una parentesi di chiusura senza la relativa di apertura"
+msgstr ""
+"L'espressione delle coordinate ha una parentesi di chiusura senza la "
+"relativa di apertura"
 
 #: ../src/ui/theme.c:2507
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
-msgstr "L'espressione delle coordinate ha una parentesi di apertura senza la relativa di chiusura"
+msgstr ""
+"L'espressione delle coordinate ha una parentesi di apertura senza la "
+"relativa di chiusura"
 
 #: ../src/ui/theme.c:2518
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
-msgstr "L'espressione delle coordinate non sembra avere né operatori né operandi"
+msgstr ""
+"L'espressione delle coordinate non sembra avere né operatori né operandi"
 
 #: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
 #, c-format
@@ -1770,7 +2061,9 @@ msgstr "Il tema contiene un'espressione che ha come risultato un errore: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "È necessario specificare <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> per questo stile di cornice"
+msgstr ""
+"È necessario specificare <button function=\"%s\" state=\"%s\" "
+"draw_ops=\"whatever\"/> per questo stile di cornice"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
@@ -1793,12 +2086,16 @@ msgstr "Nessun <%s> impostato per il tema «%s»"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Nessuno stile di cornice impostato per il tipo di finestra «%s» nel tema «%s», aggiungere un elemento <window type=\"%s\" style_set=\"whatever\"/>"
+msgstr ""
+"Nessuno stile di cornice impostato per il tipo di finestra «%s» nel tema "
+"«%s», aggiungere un elemento <window type=\"%s\" style_set=\"whatever\"/>"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Le costanti definite dall'utente devono iniziare con una lettera maiuscola, «%s» non lo fa"
+msgstr ""
+"Le costanti definite dall'utente devono iniziare con una lettera maiuscola, "
+"«%s» non lo fa"
 
 #: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
 #, c-format
@@ -1810,7 +2107,7 @@ msgstr "La costante «%s» è già definita"
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "Nessun attributo «%s» nell'elemento <%s>"
+msgstr "Nessun attributo \"%s\" nell'elemento <%s>"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
@@ -1825,7 +2122,7 @@ msgstr "L'attributo «%s» è ripetuto due volte nello stesso elemento <%s>"
 #: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "L'attributo «%s» non è valido nell'elemento <%s> in questo contesto"
+msgstr "L'attributo \"%s\" non è valido nell'elemento <%s> in questo contesto"
 
 #: ../src/ui/theme-parser.c:547
 #, c-format
@@ -1835,7 +2132,8 @@ msgstr "Impossibile analizzare «%s» come un intero"
 #: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
-msgstr "Non sono stati compresi i caratteri  di chiusura «%s» nella stringa «%s»"
+msgstr ""
+"Non sono stati compresi i caratteri  di chiusura «%s» nella stringa «%s»"
 
 #: ../src/ui/theme-parser.c:566
 #, c-format
@@ -1872,7 +2170,9 @@ msgstr "Alpha deve essere tra 0.0 (trasparente) e 1.0 (opaco), non %g\n"
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Taglia del titolo «%s» non valida (deve essere xx-small, x-small, small, medium,large, x-large, o xx-large)\n"
+msgstr ""
+"Taglia del titolo «%s» non valida (deve essere xx-small, x-small, small, "
+"medium,large, x-large, o xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1894,11 +2194,14 @@ msgstr "La geometria «%2$s» di <%1$s> non è stata definita"
 #: ../src/ui/theme-parser.c:1107
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
-msgstr "<%s> deve specificare una geometria o un genitore che ha una geometria"
+msgstr ""
+"<%s> deve specificare una geometria o un genitore che ha una geometria"
 
 #: ../src/ui/theme-parser.c:1149
 msgid "You must specify a background for an alpha value to be meaningful"
-msgstr "È necessario specificare uno sfondo per un valore alpha affinché sia significativo"
+msgstr ""
+"È necessario specificare uno sfondo per un valore alpha affinché sia "
+"significativo"
 
 #: ../src/ui/theme-parser.c:1216
 #, c-format
@@ -1913,7 +2216,8 @@ msgstr "style_set «%s» sconosciuto nell'elemento <%s>"
 #: ../src/ui/theme-parser.c:1235
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
-msgstr "Al tipo di finestra «%s» è stata già assegnata una impostazione di stile"
+msgstr ""
+"Al tipo di finestra «%s» è stata già assegnata una impostazione di stile"
 
 #: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
 #: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
@@ -1923,14 +2227,16 @@ msgstr "Al tipo di finestra «%s» è stata già assegnata una impostazione di s
 #: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "L'elemento <%s> non è consentito all'interno di <%s>"
+msgstr "L'elemento <%s> non è permesso sotto <%s>"
 
 #: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
 #: ../src/ui/theme-parser.c:1438
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Non è possibile specificare sia \"button_width\"/\"button_height\" che \"aspect_ratio\" per i pulsanti"
+msgstr ""
+"Non è possibile specificare sia \"button_width\"/\"button_height\" che "
+"\"aspect_ratio\" per i pulsanti"
 
 #: ../src/ui/theme-parser.c:1402
 #, c-format
@@ -1991,7 +2297,8 @@ msgstr "Non è stato definito alcun <draw_ops> di nome «%s»"
 #: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
-msgstr "Includendo draw_ops «%s» qui si potrebbe creare un riferimento circolare"
+msgstr ""
+"Includendo draw_ops «%s» qui si potrebbe creare un riferimento circolare"
 
 #: ../src/ui/theme-parser.c:2855
 #, c-format
@@ -2016,7 +2323,9 @@ msgstr "Funzione «%s» sconosciuta per il pulsante"
 #: ../src/ui/theme-parser.c:2918
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
-msgstr "La funzione di pulsante «%s» non esiste in questa versione (%d, necessaria %d)"
+msgstr ""
+"La funzione di pulsante «%s» non esiste in questa versione (%d, necessaria "
+"%d)"
 
 #: ../src/ui/theme-parser.c:2930
 #, c-format
@@ -2053,12 +2362,16 @@ msgstr "«%s» non è un valore valido per l'attributo resize"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Non si dovrebbe avere l'attributo «resize» nell'elemento <%s> per gli stati maximized/shaded"
+msgstr ""
+"Non si dovrebbe avere l'attributo «resize» nell'elemento <%s> per gli stati "
+"maximized/shaded"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Non si dovrebbe avere l'attributo «resize» nell'elemento <%s> per gli stati maximized"
+msgstr ""
+"Non si dovrebbe avere l'attributo «resize» nell'elemento <%s> per gli stati "
+"maximized"
 
 #: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
 #, c-format
@@ -2076,52 +2389,69 @@ msgstr "Lo stile è stato già specificato per lo stato %s focus %s"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Impossibile avere due draw_ops per un elemento <piece> (il tema ha specificato un attributo draw_ops e anche un elemento <draw_ops>, o ha specificato due elementi)"
+msgstr ""
+"Impossibile avere due draw_ops per un elemento <piece> (il tema ha "
+"specificato un attributo draw_ops e anche un elemento <draw_ops>, o ha "
+"specificato due elementi)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Impossibile avere due draw_ops per un elemento <button> (il tema ha specificato un attributo draw_ops e anche un elemento <draw_ops>, o ha specificato due elementi)"
+msgstr ""
+"Impossibile avere due draw_ops per un elemento <button> (il tema ha "
+"specificato un attributo draw_ops e anche un elemento <draw_ops>, o ha "
+"specificato due elementi)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Impossibile avere due draw_ops per un elemento <menu_icon> (il tema ha specificato un attributo draw_ops e anche un elemento <draw_ops>, o ha specificato due elementi)"
+msgstr ""
+"Impossibile avere due draw_ops per un elemento <menu_icon> (il tema ha "
+"specificato un attributo draw_ops e anche un elemento <draw_ops>, o ha "
+"specificato due elementi)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr "L'elemento più esterno del tema deve essere <metacity_theme> e non <%s>"
+msgstr ""
+"L'elemento più esterno del tema deve essere <metacity_theme> e non <%s>"
 
 #: ../src/ui/theme-parser.c:3415
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
-msgstr "L'elemento <%s> non è consentito all'interno di un elemento name/author/date/description"
+msgstr ""
+"L'elemento <%s> non è consentito all'interno di un elemento "
+"name/author/date/description"
 
 #: ../src/ui/theme-parser.c:3420
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
-msgstr "L'elemento <%s> non è consentito all'interno di un elemento <constant>"
+msgstr ""
+"L'elemento <%s> non è consentito all'interno di un elemento <constant>"
 
 #: ../src/ui/theme-parser.c:3432
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "L'elemento <%s> non è consentito all'interno di un elemento distance/border/aspect_ratio"
+msgstr ""
+"L'elemento <%s> non è consentito all'interno di un elemento "
+"distance/border/aspect_ratio"
 
 #: ../src/ui/theme-parser.c:3454
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
-msgstr "L'elemento <%s> non è consentito all'interno di un elemento relativo un'operazione di disegno"
+msgstr ""
+"L'elemento <%s> non è consentito all'interno di un elemento relativo "
+"un'operazione di disegno"
 
 #: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "L'elemento <%s> non è consentito all'interno di un elemento <%s>"
+msgstr "L'elemento <%s> non è permesso dentro un elemento <%s>"
 
 #: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"
@@ -2134,7 +2464,7 @@ msgstr "Nessun draw_ops fornito per il pulsante"
 #: ../src/ui/theme-parser.c:3815
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "Il testo non è consentito all'interno dell'elemento <%s>"
+msgstr "Non è permesso alcun testo all'interno dell'elemento <%s>"
 
 #: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
 #: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
@@ -2244,4 +2574,7 @@ msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "Disegnate %d cornici in %g secondi lato client (%g millisecondi per cornice) e %g secondi di wall clock time, incluse le risorse del server X (%g millisecondi per cornice)\n"
+msgstr ""
+"Disegnate %d cornici in %g secondi lato client (%g millisecondi per cornice)"
+" e %g secondi di wall clock time, incluse le risorse del server X (%g "
+"millisecondi per cornice)\n"

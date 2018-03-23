@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# samson <sambelet@yahoo.com>, 2013-2015,2017
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Amharic (http://www.transifex.com/mate/MATE/language/am/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Amharic (https://www.transifex.com/mate/teams/13566/am/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: am\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -459,7 +459,8 @@ msgstr "በ ቅድሚያ የ ተመረጠውን tab መስኮት ድንበር �
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
-msgstr "ይህን ወደ ሀሰት ማሰናጃ ድንበር ለ ማሰናከል በ ቅድሚያ የ ተመረጠውን መስኮት የ tab መቀየሪያ በሚፈጽሙ ጊዜ"
+msgstr ""
+"ይህን ወደ ሀሰት ማሰናጃ ድንበር ለ ማሰናከል በ ቅድሚያ የ ተመረጠውን መስኮት የ tab መቀየሪያ በሚፈጽሙ ጊዜ"
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -615,7 +616,8 @@ msgstr "ለ መስኮት አርእስት መደበኛ የ ስርአት ፊደል
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr "እውነት ከሆነ: ተወው የ አርእስት መደርደሪያ_ፊደል ምርጫ: እና መደበኛ የ መተግበሪያ ፊደል ለ መስኮት አርእስት ይጠቀሙ"
+msgstr ""
+"እውነት ከሆነ: ተወው የ አርእስት መደርደሪያ_ፊደል ምርጫ: እና መደበኛ የ መተግበሪያ ፊደል ለ መስኮት አርእስት ይጠቀሙ"
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -760,7 +762,9 @@ msgstr "በ መመልከቻው መካከል ላይ አዲስ መስኮት ይፈ
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr "እንደ እውነት ከ ተሰናዳ: በ መመልከቻው መካከል ላይ አዲስ መስኮት ይፈጠራል: ያለ በለዚያ ከ ላይ በ ግራ መመልከቻ በኩል ይከፈታል"
+msgstr ""
+"እንደ እውነት ከ ተሰናዳ: በ መመልከቻው መካከል ላይ አዲስ መስኮት ይፈጠራል: ያለ በለዚያ ከ ላይ በ ግራ መመልከቻ "
+"በኩል ይከፈታል"
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
@@ -867,7 +871,8 @@ msgstr "በ መስኮቶች መካከል ወደ ኋላ መንቀሳቀሻ በ �
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr "በ ክፍሎች መካከል ወደ ኋላ መንቀሳቀሻ እና በ ዴስክቶፕ ውስጥ በ ሁሉም የ ስራ ቦታዎች: ብቅ ባይ መስኮት በ መጠቀም"
+msgstr ""
+"በ ክፍሎች መካከል ወደ ኋላ መንቀሳቀሻ እና በ ዴስክቶፕ ውስጥ በ ሁሉም የ ስራ ቦታዎች: ብቅ ባይ መስኮት በ መጠቀም"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
@@ -986,41 +991,44 @@ msgstr "ሌላ ፕሮግራም እየተጠቀመበት ነው %s በ ማሻሻ�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "ስህተት በ ማስኬድ ላይ እንዳለ <tt>%s</tt>:\n\n%s"
+msgstr ""
+"ስህተት በ ማስኬድ ላይ እንዳለ <tt>%s</tt>:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "ምንም ትእዛዝ %d አልተገለጸም\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "ምንም የ ተርሚናል ትእዛዝ አልተገለጸም\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr "የ ስራ ቦታ እንደገና መሰየሚያ"
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr "እሺ"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "መሰረዣ"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1033,7 +1041,7 @@ msgstr ""
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "ግንኙነት ወደ ክፍለ ጊዜ አስተዳዳሪ ማሰናከያ"
+msgstr "ከ ክፍለ ጊዜ አስተዳዳሪ ጋር ግንኙነት ማሰናከያ"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1053,7 +1061,7 @@ msgstr "ከ ተቀመጠ ፋይል ውስጥ ክፍለ ጊዜ ማስጀመሪያ
 
 #: ../src/core/main.c:298
 msgid "Print version"
-msgstr "የ እትም ዝርያ"
+msgstr "የ ማተሚያ እትም"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
@@ -1334,7 +1342,7 @@ msgstr "አጠቃቀም፦ %s\n"
 
 #: ../src/ui/frames.c:1098
 msgid "Close Window"
-msgstr "መስኮቱን ዝጋ"
+msgstr "መስኮቱን መዝጊያ "
 
 #: ../src/ui/frames.c:1101
 msgid "Window Menu"
@@ -1471,7 +1479,7 @@ msgstr "የ ስራ ቦታ 1_0"
 #: ../src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
-msgstr "መሥሪያ ቦታ %s%d"
+msgstr "የስራ ቦታ %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
@@ -1562,7 +1570,7 @@ msgstr "Mod5"
 #: ../src/ui/resizepopup.c:115
 #, c-format
 msgid "%d x %d"
-msgstr "%d በ %d"
+msgstr "%d x %d"
 
 #: ../src/ui/theme.c:252
 msgid "top"
@@ -1574,11 +1582,11 @@ msgstr "ወደ ታች"
 
 #: ../src/ui/theme.c:256
 msgid "left"
-msgstr "ግራ"
+msgstr "የግራ "
 
 #: ../src/ui/theme.c:258
 msgid "right"
-msgstr "ቀኝ"
+msgstr "የቀኝ "
 
 #: ../src/ui/theme.c:285
 #, c-format
@@ -1866,7 +1874,9 @@ msgstr "አልፋ መሆን አለበት በ 0.0 (የሚታይ) እና 1.0 (በ 
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "ዋጋ የሌለው የ አርእስት መመጠኛ \"%s\" (አንዱን መሆን አለበት  xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr ""
+"ዋጋ የሌለው የ አርእስት መመጠኛ \"%s\" (አንዱን መሆን አለበት  xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -2149,7 +2159,9 @@ msgstr ""
 #: ../src/ui/theme-viewer.c:350
 #, c-format
 msgid "Fake menu item %d\n"
-msgstr "እውነት ያልሆነ ዝርዝር እቃ %d\n\n"
+msgstr ""
+"እውነት ያልሆነ ዝርዝር እቃ %d\n"
+"\n"
 
 #: ../src/ui/theme-viewer.c:386
 msgid "Border-only window"

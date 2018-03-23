@@ -1,27 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Dianjin Wang <1132321739qq@gmail.com>, 2012
-# Cravix <dr.neemous@gmail.com>, 2013
-# nyanyh <rebuilty@gmail.com>, 2013
-# liushuyu011 <liushuyu011@gmail.com>, 2014-2015
-# liushuyu011 <liushuyu011@gmail.com>, 2016-2017
-# Mingcong Bai <jeffbai@aosc.xyz>, 2017-2018
-# Mingye Wang <arthur200126@gmail.com>, 2015-2016
-# Mingcong Bai <jeffbai@aosc.xyz>, 2015
-# Mingcong Bai <jeffbai@aosc.xyz>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-22 18:12+0000\n"
-"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/mate/MATE/language/zh_CN/)\n"
+"POT-Creation-Date: 2018-03-16 14:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: nyanyh <rebuilty@gmail.com>, 2018\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -446,7 +438,8 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr "单击窗口时如果按住这个修饰键将移动窗口(左键单击)，改变窗口大小(中键单击)，或者显示窗口菜单(右键单击)。使用“鼠标按钮更改大小”键可以互换左右键操作。例如，修饰键可写作“<Alt>”或者“<Super>”。"
+msgstr ""
+"单击窗口时如果按住这个修饰键将移动窗口(左键单击)，改变窗口大小(中键单击)，或者显示窗口菜单(右键单击)。使用“鼠标按钮更改大小”键可以互换左右键操作。例如，修饰键可写作“<Alt>”或者“<Super>”。"
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -482,7 +475,9 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr "标题栏上按钮的排列。它的值必须是一个字符串，比如“menu:minimize,maximize,spacer,close”；窗口左上角和右上角的按钮用半角冒号，按钮名称之间用半角逗号分隔。不允许指定重复的按钮。未知的按钮名称将被忽略，因此在将来版本的 marco 中可以添加新的按钮，而不至于破坏旧的版本。而特殊的 spacer 标记可在两个按钮之间添加一些空格。"
+msgstr ""
+"标题栏上按钮的排列。它的值必须是一个字符串，比如“menu:minimize,maximize,spacer,close”；窗口左上角和右上角的按钮用半角冒号，按钮名称之间用半角逗号分隔。不允许指定重复的按钮。未知的按钮名称将被忽略，因此在将来版本的"
+" marco 中可以添加新的按钮，而不至于破坏旧的版本。而特殊的 spacer 标记可在两个按钮之间添加一些空格。"
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
@@ -495,7 +490,8 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr "窗口焦点模式指明窗口的激活方式。它有三个可能的值；“click”表示必须单击窗口才能聚焦该窗口，“sloppy”表示当鼠标进入窗口时，即会聚焦该窗口，“mouse”表示当鼠标进入窗口时会聚焦该窗口，当鼠标离开该窗口时则会失去焦点。"
+msgstr ""
+"窗口焦点模式指明窗口的激活方式。它有三个可能的值；“click”表示必须单击窗口才能聚焦该窗口，“sloppy”表示当鼠标进入窗口时，即会聚焦该窗口，“mouse”表示当鼠标进入窗口时会聚焦该窗口，当鼠标离开该窗口时则会失去焦点。"
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
@@ -507,7 +503,8 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "此选项提供了关于新创建的窗口如何获得焦点的额外控制。目前有效的选项包括，“smart”将应用用户普通的聚焦模式，而“strict”将使得通过终端启动的窗口不获得焦点。"
+msgstr ""
+"此选项提供了关于新创建的窗口如何获得焦点的额外控制。目前有效的选项包括，“smart”将应用用户普通的聚焦模式，而“strict”将使得通过终端启动的窗口不获得焦点。"
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -533,7 +530,15 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr "将此项设为 false 可能会导致错误，因此强烈不建议用户改变原来为 true 的默认值。许多动作（如点击客户端区域、移动或调整窗口大小）通常会有前置窗口的副作用。强烈不建议将此项设为 false，否则会将前置与其他的用户动作解绑，并同时忽略由应用程序所产生的前置请求，参见 http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 。此项被设为 false 时，Alt 加上在单击窗口、在窗口的边框上按下一般的鼠标左键，或是来自工作区切换器的特殊消息像是工作菜单小程序的启动请求，仍然均可以将窗口前置。目前这个项目于单击取得焦点（click-to-focus）模式中停用。请注意当 raise_on_click 为 false 时，来自应用软件的窗口前置程序要求无论原因为何都不会生效。如果您是一位应用程序开发者，接到某位用户抱怨说您的应用软件无法在此项设置为停用时正常工作的话，请告诉他们这是他们的错误而搞坏了窗口管理器，而他们需要将此项改回 true，或是接受这个他们所要求的程序错误。"
+msgstr ""
+"将此项设为 false 可能会导致错误，因此强烈不建议用户改变原来为 true "
+"的默认值。许多动作（如点击客户端区域、移动或调整窗口大小）通常会有前置窗口的副作用。强烈不建议将此项设为 "
+"false，否则会将前置与其他的用户动作解绑，并同时忽略由应用程序所产生的前置请求，参见 "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 。此项被设为 false 时，Alt "
+"加上在单击窗口、在窗口的边框上按下一般的鼠标左键，或是来自工作区切换器的特殊消息像是工作菜单小程序的启动请求，仍然均可以将窗口前置。目前这个项目于单击取得焦点"
+"（click-to-focus）模式中停用。请注意当 raise_on_click 为 false "
+"时，来自应用软件的窗口前置程序要求无论原因为何都不会生效。如果您是一位应用程序开发者，接到某位用户抱怨说您的应用软件无法在此项设置为停用时正常工作的话，请告诉他们这是他们的错误而搞坏了窗口管理器，而他们需要将此项改回"
+" true，或是接受这个他们所要求的程序错误。"
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -549,7 +554,8 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "这个选项决定在标题栏上双击的效果。当前有效的选项包括，“toggle_shade”将卷起/展开窗口，“toggle_maximize”将最大化/还原窗口，“toggle_maximize_horizontally”和“toggle_maximize_vertically”将分别在水平和垂直方向上最大化窗口，“minimize”将最小化窗口，“shade”将卷起窗口，“menu”将显示窗口菜单，“lower”将把窗口推至最后b，而“none”将不执行任何操作。"
+msgstr ""
+"这个选项决定在标题栏上双击的效果。当前有效的选项包括，“toggle_shade”将卷起/展开窗口，“toggle_maximize”将最大化/还原窗口，“toggle_maximize_horizontally”和“toggle_maximize_vertically”将分别在水平和垂直方向上最大化窗口，“minimize”将最小化窗口，“shade”将卷起窗口，“menu”将显示窗口菜单，“lower”将把窗口推至最后b，而“none”将不执行任何操作。"
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
@@ -565,7 +571,8 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "这个选项决定在标题栏上单击中键的效果。当前有效的选项包括，“toggle_shade”将卷起/展开窗口，“toggle_maximize”将最大化/还原窗口，“toggle_maximize_horizontally”和“toggle_maximize_vertically”将分别在水平和垂直方向上最大化窗口，“minimize”将最小化窗口，“shade”将卷起窗口，“menu”将显示窗口菜单，“lower”将把窗口推至最后b，而“none”将不执行任何操作。"
+msgstr ""
+"这个选项决定在标题栏上单击中键的效果。当前有效的选项包括，“toggle_shade”将卷起/展开窗口，“toggle_maximize”将最大化/还原窗口，“toggle_maximize_horizontally”和“toggle_maximize_vertically”将分别在水平和垂直方向上最大化窗口，“minimize”将最小化窗口，“shade”将卷起窗口，“menu”将显示窗口菜单，“lower”将把窗口推至最后b，而“none”将不执行任何操作。"
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
@@ -581,7 +588,8 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "这个选项决定在标题栏上单击右键的效果。当前有效的选项包括，“toggle_shade”将卷起/展开窗口，“toggle_maximize”将最大化/还原窗口，“toggle_maximize_horizontally”和“toggle_maximize_vertically”将分别在水平和垂直方向上最大化窗口，“minimize”将最小化窗口，“shade”将卷起窗口，“menu”将显示窗口菜单，“lower”将把窗口推至最后b，而“none”将不执行任何操作。"
+msgstr ""
+"这个选项决定在标题栏上单击右键的效果。当前有效的选项包括，“toggle_shade”将卷起/展开窗口，“toggle_maximize”将最大化/还原窗口，“toggle_maximize_horizontally”和“toggle_maximize_vertically”将分别在水平和垂直方向上最大化窗口，“minimize”将最小化窗口，“shade”将卷起窗口，“menu”将显示窗口菜单，“lower”将把窗口推至最后b，而“none”将不执行任何操作。"
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
@@ -593,7 +601,9 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr "如果为真，而聚焦模式为“sloppy”或“mouse”，那么聚焦的窗口将会在指定延迟后自动升起，延迟的时间由 auto_raise_delay 键指定。此选项与单击行为并没有什么关系，它也与拖放时进入窗口无关。"
+msgstr ""
+"如果为真，而聚焦模式为“sloppy”或“mouse”，那么聚焦的窗口将会在指定延迟后自动升起，延迟的时间由 auto_raise_delay "
+"键指定。此选项与单击行为并没有什么关系，它也与拖放时进入窗口无关。"
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
@@ -635,7 +645,9 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr "描述窗口标题栏所用字体的字体描述字符串。但是，只有在 titlebar_font_size 选项设置为 0 时，才使用该说明中的字体大小。同时，如果 titlebar_uses_desktop_font 选项设置为真，则禁用该选项。默认情况下不设置 titlebar_font。"
+msgstr ""
+"描述窗口标题栏所用字体的字体描述字符串。但是，只有在 titlebar_font_size 选项设置为 0 时，才使用该说明中的字体大小。同时，如果 "
+"titlebar_uses_desktop_font 选项设置为真，则禁用该选项。默认情况下不设置 titlebar_font。"
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -662,7 +674,10 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr "换行风格决定如何从一个工作区切换到另一个工作区切换区的边界。当设置为“no wrap”，若您试图切换工作区到前一个工作区的切换器边界时，什么事都不会发生。若设置为“classic”，将会使用旧版 marco 的行为：一行的末端引出下一行的开始，一列的末端也会引出下一列的开始。若设置为“toroidal”，工作区将会像甜甜圈一样成环，每一行的末端会导向自己的开始，每列的末端也会导向自己的开始。"
+msgstr ""
+"换行风格决定如何从一个工作区切换到另一个工作区切换区的边界。当设置为“no "
+"wrap”，若您试图切换工作区到前一个工作区的切换器边界时，什么事都不会发生。若设置为“classic”，将会使用旧版 marco "
+"的行为：一行的末端引出下一行的开始，一列的末端也会引出下一列的开始。若设置为“toroidal”，工作区将会像甜甜圈一样成环，每一行的末端会导向自己的开始，每列的末端也会导向自己的开始。"
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
@@ -698,7 +713,9 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr "通知 Marco 如何实现系统铃声或其它应用程序响铃的视觉标识。目前有两种值，“全屏”将以黑白色闪烁整个屏幕，而“框架闪烁”将闪烁发出响铃信号的应用程序的标题栏。如果发送响铃的程序未知(通常是默认的“系统响铃”)，则闪烁当前窗口的标题栏。"
+msgstr ""
+"通知 Marco "
+"如何实现系统铃声或其它应用程序响铃的视觉标识。目前有两种值，“全屏”将以黑白色闪烁整个屏幕，而“框架闪烁”将闪烁发出响铃信号的应用程序的标题栏。如果发送响铃的程序未知(通常是默认的“系统响铃”)，则闪烁当前窗口的标题栏。"
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
@@ -730,7 +747,9 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr "如果为真，marco 将会给用户提供较少的反馈，方法是使用线框而避免动画或者其它途径。这对许多用户来说，可用性大打折扣，但是这将允许较早的应用程序和终端服务器能够顺利运行。此外，如果开启了辅助功能，系统会自动禁用线框特性。"
+msgstr ""
+"如果为真，marco "
+"将会给用户提供较少的反馈，方法是使用线框而避免动画或者其它途径。这对许多用户来说，可用性大打折扣，但是这将允许较早的应用程序和终端服务器能够顺利运行。此外，如果开启了辅助功能，系统会自动禁用线框特性。"
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
@@ -746,7 +765,9 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr "如果为真，那么 Marco 将以应用程序而不是窗口的方式工作。该概念有点抽象，但通常基于应用程序的设置更类似于 Mac 系统，而不太像 Windows 系统。当您以基于应用程序的模式聚焦窗口时，该应用程序中的所有窗口都将被提升。同时，在基于应用程序的模式下，聚焦点击不会被传递到其它应用程序中的窗口。但是，基于应用程序的模式目前还基本没有实现。"
+msgstr ""
+"如果为真，那么 Marco 将以应用程序而不是窗口的方式工作。该概念有点抽象，但通常基于应用程序的设置更类似于 Mac 系统，而不太像 Windows "
+"系统。当您以基于应用程序的模式聚焦窗口时，该应用程序中的所有窗口都将被提升。同时，在基于应用程序的模式下，聚焦点击不会被传递到其它应用程序中的窗口。但是，基于应用程序的模式目前还基本没有实现。"
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -758,7 +779,9 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr "某些应用程序破坏规定从而导致窗口管理器功能失常。该选项将 Marco 置于完全正确模式下，这样的用户界面会更具有一致性，假定您不需要运行任何有缺陷的应用程序。"
+msgstr ""
+"某些应用程序破坏规定从而导致窗口管理器功能失常。该选项将 Marco "
+"置于完全正确模式下，这样的用户界面会更具有一致性，假定您不需要运行任何有缺陷的应用程序。"
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -779,7 +802,8 @@ msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
-msgstr "如果该选项被启用，那么将窗口拖动到屏幕左右边缘，会使它们在垂直方向上最大化，在水平方向上覆盖桌面可用空间的一半。而将窗口拖动到屏幕最上方将会最大化该窗口。"
+msgstr ""
+"如果该选项被启用，那么将窗口拖动到屏幕左右边缘，会使它们在垂直方向上最大化，在水平方向上覆盖桌面可用空间的一半。而将窗口拖动到屏幕最上方将会最大化该窗口。"
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
@@ -803,7 +827,9 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr "窗口摆放模式指示新窗口将会怎样摆放。\"自动\"意味着系统会根据桌面可用空间摆放新窗口，如果没有可用空间将会重叠窗口; \"指针\"意味着新窗口将会根据鼠标当前位置摆放; \"手动\"意味着新窗口需要用户使用键盘或鼠标来手动摆放。"
+msgstr ""
+"窗口摆放模式指示新窗口将会怎样摆放。\"自动\"意味着系统会根据桌面可用空间摆放新窗口，如果没有可用空间将会重叠窗口; "
+"\"指针\"意味着新窗口将会根据鼠标当前位置摆放; \"手动\"意味着新窗口需要用户使用键盘或鼠标来手动摆放。"
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
@@ -835,7 +861,9 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "运行 /apps/marco/keybinding_commands 中相应编号的命令的按键组合。其格式类似于“<Control>a”或者“<Shift><Alt>F1”。该分析程序的格式相当自由并允许大小写或者缩写，如“<Ctl>”和“<Ctrl>”。如果将该选项设置为特殊字符串“disabled”，那么此操作将没有按键组合。"
+msgstr ""
+"运行 /apps/marco/keybinding_commands "
+"中相应编号的命令的按键组合。其格式类似于“<Control>a”或者“<Shift><Alt>F1”。该分析程序的格式相当自由并允许大小写或者缩写，如“<Ctl>”和“<Ctrl>”。如果将该选项设置为特殊字符串“disabled”，那么此操作将没有按键组合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -844,7 +872,9 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "其格式类似于“<Control>a”或 “<Shift><Alt>F1”。该解析程序相当自由，大小写以及诸如“<Ctl>” 和“<Ctrl>” 的缩写均允许使用。如果将该选项设置为特殊字符串“disabled”，那么此操作将没有按键组合。"
+msgstr ""
+"其格式类似于“<Control>a”或 “<Shift><Alt>F1”。该解析程序相当自由，大小写以及诸如“<Ctl>” 和“<Ctrl>” "
+"的缩写均允许使用。如果将该选项设置为特殊字符串“disabled”，那么此操作将没有按键组合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid ""
@@ -855,7 +885,12 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr "其格式类似于“<Control>a”或 “<Shift><Alt>F1”。\n\n该解析程序相当自由，大小写以及诸如“<Ctl>”和“<Ctrl>”的缩写均允许使用。如果将该选项设置为特殊字符串“disabled”，那么此操作将没有按键组合。\n\n此按键组合可以按住“Shift”键进行反转，所以不能在组合中使用“Shift”。"
+msgstr ""
+"其格式类似于“<Control>a”或 “<Shift><Alt>F1”。\n"
+"\n"
+"该解析程序相当自由，大小写以及诸如“<Ctl>”和“<Ctrl>”的缩写均允许使用。如果将该选项设置为特殊字符串“disabled”，那么此操作将没有按键组合。\n"
+"\n"
+"此按键组合可以按住“Shift”键进行反转，所以不能在组合中使用“Shift”。"
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
@@ -898,7 +933,9 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr "/apps/marco/global_keybindings/run_command_N 键值定义这些命令对应的按键组合。按下 run_command_N 对应的按键组合将执行命令 command_N。"
+msgstr ""
+"/apps/marco/global_keybindings/run_command_N 键值定义这些命令对应的按键组合。按下 "
+"run_command_N 对应的按键组合将执行命令 command_N。"
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
@@ -908,7 +945,8 @@ msgstr "截图命令"
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr "/apps/marco/global_keybindings/run_command_screenshot 键值定义了导致调用此设置的按键组合。"
+msgstr ""
+"/apps/marco/global_keybindings/run_command_screenshot 键值定义了导致调用此设置的按键组合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
@@ -919,7 +957,9 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr "/apps/marco/global_keybindings/run_command_window_screenshot 键值定义了导致调用此设置的按键组合。"
+msgstr ""
+"/apps/marco/global_keybindings/run_command_window_screenshot "
+"键值定义了导致调用此设置的按键组合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
@@ -994,39 +1034,42 @@ msgstr "某个其它程序已经将按键 %s 和修饰键 %x 配合使用作为�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "运行 <tt>%s</tt>时发生错误：\n\n%s"
+msgstr ""
+"运行 <tt>%s</tt>时发生错误：\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "命令 %d 尚未定义。\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "终端命令尚未定义。\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>重命名工作区</tt>"
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr "新工作区名称："
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr "确定"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
 msgstr "取消"
 
@@ -1037,7 +1080,11 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\n版权所有 (C) 2001-%s Havoc Pennington, Red Hat, Inc., 以及其他人\n这是自由软件：版权条款请参见源码.\n不存在任何保证：即使是对适销性或者适合某种特定目的也不作保证。\n"
+msgstr ""
+"marco %s\n"
+"版权所有 (C) 2001-%s Havoc Pennington, Red Hat, Inc., 以及其他人\n"
+"这是自由软件：版权条款请参见源码.\n"
+"不存在任何保证：即使是对适销性或者适合某种特定目的也不作保证。\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -1262,7 +1309,8 @@ msgstr "Marco"
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "窗口 %s 在它自身上设置 SM_CLIENT_ID，而不是按照 ICCCM 规定的那样，设置在 WM_CLIENT_LEADER 窗口上。\n"
+msgstr ""
+"窗口 %s 在它自身上设置 SM_CLIENT_ID，而不是按照 ICCCM 规定的那样，设置在 WM_CLIENT_LEADER 窗口上。\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1275,7 +1323,8 @@ msgstr "窗口 %s 在它自身上设置 SM_CLIENT_ID，而不是按照 ICCCM 规
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "窗口 %s 设置了一个 MWM 提示，表明它是不可改变大小的，但设置最小尺寸为 %d x %d，最大尺寸为 %d x %d；这没有任何意义。\n"
+msgstr ""
+"窗口 %s 设置了一个 MWM 提示，表明它是不可改变大小的，但设置最小尺寸为 %d x %d，最大尺寸为 %d x %d；这没有任何意义。\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1321,7 +1370,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "窗口 0x%lx 的属性 %s\n的期望类型为 %s、格式为 %d，\n而实际类型为 %s、格式为 %d、n_items 为 %d。\n这很可能是应用程序的错误，不是窗口管理器的错误。\n窗口的标题为“%s”，类别为“%s”，名称为“%s”\n"
+msgstr ""
+"窗口 0x%lx 的属性 %s\n"
+"的期望类型为 %s、格式为 %d，\n"
+"而实际类型为 %s、格式为 %d、n_items 为 %d。\n"
+"这很可能是应用程序的错误，不是窗口管理器的错误。\n"
+"窗口的标题为“%s”，类别为“%s”，名称为“%s”\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1397,7 +1451,7 @@ msgstr "最大化(_X)"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "取消最大化(_X)"
+msgstr "恢复(_X)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1438,27 +1492,27 @@ msgstr "总在可见工作区(_A)"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
-msgstr "只在此工作区(_O)"
+msgstr "仅在此工作区(_O)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "移动到左侧工作区(_L)"
+msgstr "移动到左侧的工作区(_L)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "移动到右侧工作区(_I)"
+msgstr "移动到右侧的工作区(_I)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "移动到上侧工作区(_U)"
+msgstr "移动到上侧的工作区(_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "移动到下侧工作区(_D)"
+msgstr "移动到下侧的工作区(_D)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
@@ -1795,7 +1849,9 @@ msgstr "没有为主题“%2$s”设置 <%1$s>"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "没有为窗口类型“%s”(在主题“%s”中)设置框架风格，请添加一个 <window type=\"%s\" style_set=\"whatever\"/> 元素"
+msgstr ""
+"没有为窗口类型“%s”(在主题“%s”中)设置框架风格，请添加一个 <window type=\"%s\" "
+"style_set=\"whatever\"/> 元素"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
@@ -1812,12 +1868,12 @@ msgstr "常数“%s”已被定义"
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "元素 <%2$s> 上没有“%1$s”属性"
+msgstr "<%2$s> 元素没有“%1$s”属性"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "行 %d 字符 %d：%s"
+msgstr "第 %d 行第 %d 个字符：%s"
 
 #: ../src/ui/theme-parser.c:438
 #, c-format
@@ -1827,7 +1883,7 @@ msgstr "属性“%s”在同一个 <%s> 元素上重复了两次"
 #: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "在该上下文中，属性“%s”对 <%s> 元素无效"
+msgstr "在此上下文中，<%2$s> 元素的属性“%1$s”无效"
 
 #: ../src/ui/theme-parser.c:547
 #, c-format
@@ -1874,7 +1930,8 @@ msgstr "Alpha 值必须界于 0.0(不可见)到 1.0(完全不透明)之间，现
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "无效的标题比例“%s”(必须是 xx-small、x-small、small、medium、large、x-large、xx-large 中的一个)\n"
+msgstr ""
+"无效的标题比例“%s”(必须是 xx-small、x-small、small、medium、large、x-large、xx-large 中的一个)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1925,7 +1982,7 @@ msgstr "已经为窗口类型“%s”指定了一种风格设置"
 #: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "不允许元素 <%s> 在 <%s> 下方"
+msgstr "不允许在 <%2$s> 下出现元素 <%1$s>"
 
 #: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
 #: ../src/ui/theme-parser.c:1438
@@ -2078,19 +2135,23 @@ msgstr "已经为 state 属性 %s、focus 属性 %s 指定了风格"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一个 <piece> 元素不能有两个 draw_ops(主题指定了一个 draw_ops属性和一个 <draw_ops> 元素，或者指定了两个元素)"
+msgstr ""
+"一个 <piece> 元素不能有两个 draw_ops(主题指定了一个 draw_ops属性和一个 <draw_ops> 元素，或者指定了两个元素)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一个 <button> 元素不能有两个 draw_ops(主题指定了一个 draw_ops属性和一个 <draw_ops> 元素，或者指定了两个元素)"
+msgstr ""
+"一个 <button> 元素不能有两个 draw_ops(主题指定了一个 draw_ops属性和一个 <draw_ops> 元素，或者指定了两个元素)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一个 <menu_icon> 元素不能有两个 draw_ops(主题指定了一个draw_ops 属性和一个 <draw_ops> 元素，或者指定了两个元素)"
+msgstr ""
+"一个 <menu_icon> 元素不能有两个 draw_ops(主题指定了一个draw_ops 属性和一个 <draw_ops> "
+"元素，或者指定了两个元素)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2123,7 +2184,7 @@ msgstr "draw operation 元素中不允许有元素 <%s>"
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "元素 <%s> 不允许出现在 <%s> 元素内"
+msgstr "不允许在 <%2$s> 元素内出现元素 <%1$s>"
 
 #: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"
@@ -2136,7 +2197,7 @@ msgstr "没有为按钮提供 draw_ops"
 #: ../src/ui/theme-parser.c:3815
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "元素 <%s> 中不允许有文本"
+msgstr "不允许在元素 <%s> 内出现文字"
 
 #: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
 #: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
@@ -2165,7 +2226,7 @@ msgstr "只有边框的窗口"
 
 #: ../src/ui/theme-viewer.c:388
 msgid "Bar"
-msgstr "栏"
+msgstr "柱状图"
 
 #: ../src/ui/theme-viewer.c:405
 msgid "Normal Application Window"
@@ -2246,4 +2307,5 @@ msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "在 %2$g 的客户端秒(每帧 %3$g 毫秒)和包括 X 服务器资源在内的 %4$g 秒时钟时间(每帧 %5$g 毫秒)内绘制 %1$d 帧\n"
+msgstr ""
+"在 %2$g 的客户端秒(每帧 %3$g 毫秒)和包括 X 服务器资源在内的 %4$g 秒时钟时间(每帧 %5$g 毫秒)内绘制 %1$d 帧\n"
