@@ -60,6 +60,7 @@ typedef enum
   META_PREF_CURSOR_THEME,
   META_PREF_CURSOR_SIZE,
   META_PREF_COMPOSITING_MANAGER,
+  META_PREF_COMPOSITING_SHADOWS,
   META_PREF_COMPOSITING_FAST_ALT_TAB,
   META_PREF_RESIZE_WITH_RIGHT_BUTTON,
   META_PREF_SHOW_TAB_BORDER,
@@ -128,6 +129,7 @@ void        meta_prefs_change_workspace_name (int         i,
 const char* meta_prefs_get_cursor_theme      (void);
 int         meta_prefs_get_cursor_size       (void);
 gboolean    meta_prefs_get_compositing_manager (void);
+gboolean    meta_prefs_get_compositing_shadows (void);
 gboolean    meta_prefs_get_compositing_fast_alt_tab (void);
 gboolean    meta_prefs_get_center_new_windows  (void);
 gboolean    meta_prefs_get_force_fullscreen  (void);
@@ -140,6 +142,8 @@ gboolean    meta_prefs_is_in_skip_list (char *class);
  * \param whether   TRUE to turn on, FALSE to turn off
  */
 void meta_prefs_set_force_compositing_manager (gboolean whether);
+
+void meta_prefs_set_compositing_shadows (gboolean whether);
 
 void meta_prefs_set_compositing_fast_alt_tab (gboolean whether);
 

@@ -50,6 +50,7 @@
 #define KEY_GENERAL_TITLEBAR_FONT "titlebar-font"
 #define KEY_GENERAL_NUM_WORKSPACES "num-workspaces"
 #define KEY_GENERAL_COMPOSITOR "compositing-manager"
+#define KEY_GENERAL_COMPOSITOR_SHADOWS "compositing-shadows"
 #define KEY_GENERAL_COMPOSITOR_FAST_ALT_TAB "compositing-fast-alt-tab"
 #define KEY_GENERAL_CENTER_NEW_WINDOWS "center-new-windows"
 
@@ -116,6 +117,7 @@ static int   cursor_size = 24;
 static gboolean use_force_compositor_manager = FALSE;
 static gboolean force_compositor_manager = FALSE;
 static gboolean compositing_manager = FALSE;
+static gboolean compositing_shadows = TRUE;
 static gboolean compositing_fast_alt_tab = FALSE;
 static gboolean resize_with_right_button = FALSE;
 static gboolean show_tab_border = FALSE;
@@ -399,6 +401,12 @@ static MetaBoolPreference preferences_bool[] =
       META_PREF_COMPOSITING_MANAGER,
       &compositing_manager,
       FALSE,
+    },
+    { "compositing-shadows",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_COMPOSITING_SHADOWS,
+      &compositing_shadows,
+      TRUE,
     },
     { "compositing-fast-alt-tab",
       KEY_GENERAL_SCHEMA,
@@ -1614,6 +1622,9 @@ meta_preference_to_string (MetaPreference pref)
     case META_PREF_COMPOSITING_MANAGER:
       return "COMPOSITING_MANAGER";
 
+    case META_PREF_COMPOSITING_SHADOWS:
+      return "COMPOSITING_SHADOWS";
+
     case META_PREF_COMPOSITING_FAST_ALT_TAB:
       return "COMPOSITING_FAST_ALT_TAB";
 
@@ -2290,6 +2301,12 @@ meta_prefs_get_compositing_manager (void)
 }
 
 gboolean
+meta_prefs_get_compositing_shadows (void)
+{
+    return compositing_shadows;
+}
+
+gboolean
 meta_prefs_get_compositing_fast_alt_tab (void)
 {
     return compositing_fast_alt_tab;
@@ -2348,6 +2365,14 @@ meta_prefs_set_force_compositing_manager (gboolean whether)
 {
   use_force_compositor_manager = TRUE;
   force_compositor_manager = whether;
+}
+
+void
+meta_prefs_set_compositing_shadows (gboolean whether)
+{
+    g_settings_set_boolean (settings_general,
+                            KEY_GENERAL_COMPOSITOR_SHADOWS,
+                            whether);
 }
 
 void
