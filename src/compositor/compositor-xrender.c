@@ -38,6 +38,7 @@
 
 #include <cairo/cairo-xlib.h>
 
+#include "prefs.h"
 #include "display.h"
 #include "../core/display-private.h"
 #include "screen.h"
@@ -2786,7 +2787,9 @@ xrender_manage_screen (MetaCompositor *compositor,
   info->overlays = 0;
   info->clip_changed = TRUE;
 
-  info->have_shadows = (g_getenv("META_DEBUG_NO_SHADOW") == NULL);
+  info->have_shadows = (g_getenv("META_DEBUG_NO_SHADOW") == NULL &&
+                        meta_prefs_get_compositing_shadows() == TRUE);
+
   if (info->have_shadows)
     {
       meta_verbose ("Enabling shadows\n");
