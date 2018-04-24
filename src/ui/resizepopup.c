@@ -106,9 +106,11 @@ update_size_window (MetaResizePopup *popup)
   char *str;
   int x, y;
   int width, height;
+  int scale;
 
   g_return_if_fail (popup->size_window != NULL);
 
+  scale = gtk_widget_get_scale_factor (GTK_WIDGET (popup->size_window));
   /* Translators: This represents the size of a window.  The first number is
    * the width of the window and the second is the height.
    */
@@ -124,6 +126,12 @@ update_size_window (MetaResizePopup *popup)
 
   x = popup->rect.x + (popup->rect.width - width) / 2;
   y = popup->rect.y + (popup->rect.height - height) / 2;
+
+  if (scale)
+    {
+      x = x / scale;
+      y = y / scale;
+    }
 
   if (gtk_widget_get_realized (popup->size_window))
     {
