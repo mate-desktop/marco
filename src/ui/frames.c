@@ -549,11 +549,6 @@ meta_frames_calc_geometry (MetaFrames        *frames,
                             width / scale, height / scale,
                             &button_layout,
                             fgeom);
-
-  fgeom->top_height *= scale;
-  fgeom->bottom_height *= scale;
-  fgeom->left_width *= scale;
-  fgeom->right_width *= scale;
 }
 
 MetaFrames*
