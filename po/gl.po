@@ -50,7 +50,7 @@ msgstr "Executar nun terminal"
 #: ../src/50-marco-desktop-key.xml.in.h:7
 #: ../src/org.mate.marco.gschema.xml.h:104
 msgid "Rename current workspace"
-msgstr ""
+msgstr "Renomear o espazo de traballo actual"
 
 #: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
@@ -174,7 +174,7 @@ msgstr "Cambiar ao espazo de traballo baixo o espazo actual"
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Cambiar ao espazo de traballo seleccionado anteriormente"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:111
@@ -241,7 +241,7 @@ msgstr ""
 #: ../src/50-marco-window-key.xml.in.h:14
 #: ../src/org.mate.marco.gschema.xml.h:140
 msgid "Raise window above other windows"
-msgstr "Subir a xanela por enriba doutras xanelas"
+msgstr "Elevar a xanela por enriba doutras xanelas"
 
 #: ../src/50-marco-window-key.xml.in.h:15
 #: ../src/org.mate.marco.gschema.xml.h:141
@@ -261,28 +261,28 @@ msgstr "Maximizar a xanela horizontalmente"
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:144
 msgid "Tile window to east (right) side of screen"
-msgstr ""
+msgstr "Xanela en mosaico no lado leste (dereita) da pantalla"
 
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:145
 msgid "Tile window to west (left) side of screen"
-msgstr ""
+msgstr "Xanela en mosaico no lado oeste (esquerda) da pantalla"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "Xanela en mosaico no canto noroeste (arriba á esquerda)"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Xanela en mosaico no canto nordeste (arriba á dereita)"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Xanela en mosaico no canto sudoeste (abaixo á esquerda)"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Xanela en mosaico no canto sueste (abaixo á dereita)"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
@@ -332,22 +332,22 @@ msgstr "Mover a xanela ao centro da pantalla"
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
 msgid "Move window to north (top) monitor"
-msgstr ""
+msgstr "Mover a xanela ao lado norte (arriba) do monitor"
 
 #: ../src/50-marco-window-key.xml.in.h:34
 #: ../src/org.mate.marco.gschema.xml.h:160
 msgid "Move window to south (bottom) monitor"
-msgstr ""
+msgstr "Mover a xanela ao lado sur (abaixo) do monitor"
 
 #: ../src/50-marco-window-key.xml.in.h:35
 #: ../src/org.mate.marco.gschema.xml.h:161
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Mover a xanela ao lado leste (dereita) do monitor"
 
 #: ../src/50-marco-window-key.xml.in.h:36
 #: ../src/org.mate.marco.gschema.xml.h:162
 msgid "Move window to west (left) monitor"
-msgstr ""
+msgstr "Mover a xanela ao lado oeste (esquerda) do monitor"
 
 #: ../src/50-marco-window-key.xml.in.h:37
 #: ../src/org.mate.marco.gschema.xml.h:123
@@ -467,13 +467,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
-msgstr ""
+msgstr "Se hai que amosar o bordo da xanela preseleccionada"
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
 msgstr ""
+"Estableza isto a falso para desactivar o bordo da xanela preseleccionada "
+"mentres se realiza o cambio de lapelas."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -559,6 +561,28 @@ msgid ""
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
 msgstr ""
+"Poñer esta opción a «false» (falso) pode resultar nun comportamento erróneo,"
+" polo que recoméndaselle encarecidamente os usuarios que non o fagan. Moitas"
+" accións (por exemplo premer na area dos clientes, mover ou redimensionar a "
+"xanela) elevan a xanela coma un efecto secundario. Poñer esta opción a "
+"«false» (falso), o que insistimos que está absolutamente desaconsellado, "
+"desacoplará a elevación doutras accións de usuario e ignorará as peticións "
+"de elevación xeradas por aplicativos. Véxase "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Incluso cando esta "
+"opción estea posta como «false» (falso), as xanelas aínda poden ser elevadas"
+" mediante un clic co botón esquerdo ao premer a tecla «Alt» en calquera "
+"sitio da xanela, mediante un clic normal nas decoracións da xanela, ou "
+"mediante mensaxes especiais dos paxinadores tales como as peticións dun "
+"miniaplicativo de lista de tarefas. Esta opción está normalmente desactivada"
+" co modo «click-to-focus» (clic-para-poñer-en-foco). Nótese que a lista de "
+"formas de elevar a xanela cando o modo «raise_on_click» (erguer-co-clic) é "
+"«false» (falso) non inclúe peticións programáticas de aplicacións para "
+"elevar xanelas; tales peticións serán ignoradas sen importar a razón da "
+"petición. Se vostede é un desenvolvedor e ten algún usuario queixándose de "
+"que o seu aplicativo non funciona con esta configuración desactivada, "
+"sinálelle entón que a culpa é _súa_ por rachar o xestor de xanelas e que "
+"debe reverter esta opción a «true» (verdadeiro) ou convivir co fallo que "
+"sinala."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -640,23 +664,23 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
-"Se se define como true, e o modo de foco é \"sloppy\" ou \"mouse\", entón a "
-"xanela enfocada subirá automaticamente despois dun atraso especificado na "
-"chave auto_raise_delay. Isto non está relacionado con premer nunha xanela "
-"para subila, nin con entrar nunha xanela durante unha operación de arrastrar"
-" e soltar."
+"Se se define como true, e o modo de foco é «sloppy» ou «mouse», entón a "
+"xanela enfocada elevarase automaticamente após un atraso especificado na "
+"chave «auto_raise_delay». Isto non está relacionado con premer nunha xanela "
+"para elevala, nin con entrar nunha xanela durante unha operación de "
+"arrastrar e soltar."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr "Atraso en milisegundos para a opción de subida automática"
+msgstr "Atraso en milisegundos para a opción de elevación automática"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
-"O atraso antes de subir unha xanela se auto_raise está configurado como "
-"true. O atraso está indicado en milésimas de segundo."
+"O atraso antes de elevar unha xanela se «auto_raise» está configurado como "
+"«true». O atraso está indicado en milésimas de segundo."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -714,7 +738,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
-msgstr ""
+msgstr "Estilo de axuste dos espazos de traballo"
 
 #: ../src/org.mate.marco.gschema.xml.h:34
 msgid ""
@@ -727,6 +751,16 @@ msgid ""
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
 msgstr ""
+"O estilo de axuste utilizase para determinar como cambiar dun espazo de "
+"traballo a outro no bordo do conmutador de espazo de traballo. Cando se "
+"establece en «no wrap» (sen axuste), non acontecerá nada se tenta cambiar a "
+"un espazo de traballo máis aló do bordo do conmutador de espazo de traballo."
+" Se o estabelece en «classic» (clásico), utilizase o comportamento marco "
+"antigo: a fin dunha fila conduce ao comezo da seguinte e a fin dunha columna"
+" conduce ao comezo da seguinte. Se se establece en «toroidal», os espazos de"
+" traballo están conectados como unha rosquilla: a fin de cada fila conduce "
+"ao seu propio principio e a fin de cada columna leva ao seu propio "
+"principio."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
@@ -788,7 +822,7 @@ msgstr "Determina se o Marco é un xestor de composición."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
-msgstr ""
+msgstr "Alt-Tab rápido co xestor de composición (miniaturas desactivadas)"
 
 #: ../src/org.mate.marco.gschema.xml.h:44
 msgid ""
@@ -796,6 +830,9 @@ msgid ""
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
 msgstr ""
+"Se é «true» (verdadeiro), entón non se amosarán as miniaturas na xanela "
+"emerxente con Alt-Tab cando o xestor de composición estea activado. "
+"Amosaranse as iconas dos aplicativos no seu lugar."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
@@ -836,10 +873,10 @@ msgstr ""
 "Se é true, entón o Marco funciona en termos de aplicativos en vez de en "
 "xanelas. O concepto é un pouco abstracto, mais en xeral unha configuración "
 "baseada en aplicativos é máis parecida a un Mac e menos a un Windows. Cando "
-"enfoca unha xanela no modo baseado en aplicativo, subiranse todas as xanelas"
-" do aplicativo. Tamén no modo baseado en aplicativo as pulsacións do foco "
-"non se pasan a través das xanelas noutros aplicativos. Porén, este modo "
-"baseado en aplicativo non está implementado neste momento."
+"enfoca unha xanela no modo baseado en aplicativo, elevaranse todas as "
+"xanelas do aplicativo. Tamén no modo baseado en aplicativo as pulsacións do "
+"foco non se pasan a través das xanelas noutros aplicativos. Porén, este modo"
+" baseado en aplicativo non está implementado neste momento."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -862,17 +899,20 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Determina se as novas xanelas son creadas no centro da pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
 msgstr ""
+"Se é «true» (verdadeiro), entón abrirase unha nova xanela no centro da "
+"pantalla. No caso contrario, abrirase na parte superior esquerda da "
+"pantalla."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Indica se se debe activar o mosaico de xanelas"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -880,20 +920,30 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Se está activado, arrastrar as xanelas contra os bordos laterais da pantalla"
+" maximízaas verticalmente e cámbialles o tamaño horizontalmente para cubrir "
+"a metade da área dispoñíbel. Arrastrar y colocar contra o bordo superior "
+"maximiza a xanela se «allow-top-tiling» (permitir-mosaico-superior) está "
+"activado."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
 msgstr ""
+"Indica se se debe maximizar a xanela cando se arrastra contra o bordo "
+"superior da pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"Se está activado, ao arrastrar e soltar unha xanela contra o bordo superior "
+"da pantalla maximizarase. Só funciona cando «allow-tiling» (permitir-"
+"mosaico) está activado."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
-msgstr ""
+msgstr "Modo de posicionameto da xanela"
 
 #: ../src/org.mate.marco.gschema.xml.h:58
 msgid ""
@@ -904,16 +954,25 @@ msgid ""
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
 msgstr ""
+"O modo de posicionamento da xanela indica como se colocan as novas xanelas. "
+"«Automático» significa que o sistema escolle a posición automaticamente "
+"baseándose no espazo dispoñíbel no escritorio, ou nunha simple fervenza se "
+"non hai espazo; «Cursor» significa que as novas xanelas colócanse conforme a"
+" posición do cursor do rato; «Manual» significa que o usuario debe colocar "
+"manualmente a nova xanela co rato ou co teclado."
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
-msgstr ""
+msgstr "Lista de aplicativos ignorados por «amosar escritorio»"
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
 msgstr ""
+"Lista de clases separada por comas. Cada aplicativo de interface gráfica de "
+"usuario referido a unha clase dada do xestor de xanelas será ignorado pola "
+"función «Amosar escritorio»."
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
@@ -952,6 +1011,11 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"O formato seméllase a «&lt;Control&gt;a» ou «&lt;Shift&gt;&lt;Alt&gt;F1». O "
+"analizador é bastante libre e permite minúsculas ou maiúsculas, e tamén "
+"abreviaturas como «&lt;Ctl&gt;» e «&lt;Ctrl&gt;». Se define esta opción coa "
+"cadea especial «disabled» (desactivado)\", entón non haberá unha combinación"
+" de teclas para esta acción."
 
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid ""
@@ -963,6 +1027,13 @@ msgid ""
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
 msgstr ""
+"O formato seméllase a «&lt;Control&gt;a» ou «&lt;Shift&gt;&lt;Alt&gt;F1»\". "
+"O analizador é bastante libre e permite minúsculas ou maiúsculas, e tamén "
+"abreviacións como «&lt;Ctl&gt;» e «&lt;Ctrl&gt;». Se define esta opción coa "
+"cadea especial «disabled» (desactivado), entón non haberá unha combinación "
+"de teclas para esta acción. Esta combinación de teclas pode ser invertida "
+"mantendo premida a tecla «Maiús»; polo tanto, a tecla «Maiús» non poderá ser"
+" unha das teclas usadas."
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
@@ -977,10 +1048,14 @@ msgstr "Moverse cara a atrás entre xanelas usando unha xanela emerxente"
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr ""
+"Moverse entre xanelas en todos os espazos de traballo, usando unha xanela "
+"emerxente"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr ""
+"Moverse cara a atrás entre xanelas en todos os espazos de traballo, usando "
+"unha xanela emerxente"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
@@ -1049,19 +1124,19 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
+msgstr "Xanela en mosaico no canto noroeste (arriba á esquerda) da pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "Xanela en mosaico no canto nordeste (arriba á dereita) da pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Xanela en mosaico no canto sueste (abaixo á dereita) da pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Xanela en mosaico no canto suroeste (abaixo á esquerda) da pantalla"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -1144,16 +1219,16 @@ msgstr "Non se definiu ningunha orde de terminal.\n"
 #: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
-msgstr ""
+msgstr "<tt>Renomear o espazo de traballo</tt>"
 
 #: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
-msgstr ""
+msgstr "Nome do novo espazo de traballo:"
 
 #: ../src/core/keybindings.c:3678
 msgid "OK"
-msgstr ""
+msgstr "Aceptar"
 
 #: ../src/core/keybindings.c:3678
 msgid "Cancel"

@@ -274,19 +274,19 @@ msgstr "Fenster zur westlichen (linken) Seite des Bildschirms anordnen"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "Fenster in obere linke Ecke des Bildschirms kacheln"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Fenster in obere rechte Ecke des Bildschirms kacheln"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Fenster in untere linke Ecke des Bildschirms kacheln"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Fenster in untere rechte Ecke des Bildschirms kacheln"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
@@ -336,22 +336,22 @@ msgstr "Fenster in die Mitte des Bildschirms verschieben"
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
 msgid "Move window to north (top) monitor"
-msgstr ""
+msgstr "Fenster zum oberen Bildschirm verschieben"
 
 #: ../src/50-marco-window-key.xml.in.h:34
 #: ../src/org.mate.marco.gschema.xml.h:160
 msgid "Move window to south (bottom) monitor"
-msgstr ""
+msgstr "Fenster zum unteren Bildschirm verschieben"
 
 #: ../src/50-marco-window-key.xml.in.h:35
 #: ../src/org.mate.marco.gschema.xml.h:161
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Fenster zum rechten Bildschirm verschieben"
 
 #: ../src/50-marco-window-key.xml.in.h:36
 #: ../src/org.mate.marco.gschema.xml.h:162
 msgid "Move window to west (left) monitor"
-msgstr ""
+msgstr "Fenster zum linken Bildschirm verschieben"
 
 #: ../src/50-marco-window-key.xml.in.h:37
 #: ../src/org.mate.marco.gschema.xml.h:123
@@ -892,7 +892,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Legt fest, ob das Fensterkacheln aktiviert wird"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -900,16 +900,25 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Wenn aktiviert, werden beim Ablegen von Fenstern, an den Bildschirmrändern, "
+"diese senkrecht und horizontal maximiert – auf die Hälfte der zur Verfügung "
+"stehenden Fläche. Schieben und Ablegen an den oberen Rand maximiert die "
+"Fenster, wenn oberes Kacheln aktiviert ist."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
 msgstr ""
+"Legt fest, ob ob das Fenster maximiert werden soll, wenn es an den oberen "
+"Bildschirmrand gezogen wird"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"Wenn diese Option aktiviert ist, wird beim Ziehen und Ablegen eines Fensters"
+" am oberen Bildschirmrand dieses maximiert. Funktioniert nur, wenn  das "
+"Kacheln erlaubt ist."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -943,6 +952,9 @@ msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
 msgstr ""
+"Komma getrennte Klassenliste. Jede laufende GUI-Anwendung, die auf eine "
+"bestimmte Fensterverwaltungsklasse verweist, wird von der Funktion "
+"»Schreibtisch anzeigen« vernachlässigt."
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
@@ -1090,19 +1102,19 @@ msgstr "Ein-/Ausschalten, ob ein Fenster immer über anderen sichtbar ist"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
+msgstr "Fenster in obere linke Ecke des Bildschirms kacheln"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "Fenster in obere rechte Ecke des Bildschirms kacheln"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Fenster in untere rechte Ecke des Bildschirms kacheln"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Fenster in untere linke Ecke des Bildschirms kacheln"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
