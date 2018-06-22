@@ -1,4 +1,17 @@
-### marco 1.20.1
+### marco 1.21.0
+
+    sync with transifex
+    Correct resize popup position on HiDPI displays
+    Fix frame geometry to avoid stuck resize cursor
+    Scale cursor size for HiDPI
+    tx: update config with branch specific resoures
+    Use frame window to determine scale
+    Support HiDPI window decorations
+    Fix mismatched enums in keybinding detection for switch-panels and switch-panels-backward
+    window: add _NET_WM_STATE_FOCUSED hint to _NET_WM_STATE
+    avoid deprecated GtkButton:use-stock
+    avoid deprecated GtkStock
+    Fixes move_to_center moving window between monitors
 
 ### marco 1.20.0
 
