@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Chinese (Hong Kong) (http://www.transifex.com/mate/MATE/language/zh_HK/)\n"
+"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Janfy Tan <janfytan@gmail.com>, 2018\n"
+"Language-Team: Chinese (Hong Kong) (https://www.transifex.com/mate/teams/13566/zh_HK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -284,47 +285,47 @@ msgstr ""
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
 msgid "Move window to north-west (top left) corner"
-msgstr ""
+msgstr "將視窗移至北-西(左上)角"
 
 #: ../src/50-marco-window-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:151
 msgid "Move window to north-east (top right) corner"
-msgstr ""
+msgstr "將視窗移至北-東(右上)角"
 
 #: ../src/50-marco-window-key.xml.in.h:26
 #: ../src/org.mate.marco.gschema.xml.h:152
 msgid "Move window to south-west (bottom left) corner"
-msgstr ""
+msgstr "將視窗移至南-西(左下)角"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 #: ../src/org.mate.marco.gschema.xml.h:153
 msgid "Move window to south-east (bottom right) corner"
-msgstr ""
+msgstr "將視窗移至南-東(右下)角"
 
 #: ../src/50-marco-window-key.xml.in.h:28
 #: ../src/org.mate.marco.gschema.xml.h:154
 msgid "Move window to north (top) side of screen"
-msgstr ""
+msgstr "將視窗移至畫面的北(上)方"
 
 #: ../src/50-marco-window-key.xml.in.h:29
 #: ../src/org.mate.marco.gschema.xml.h:155
 msgid "Move window to south (bottom) side of screen"
-msgstr ""
+msgstr "將視窗移至畫面的南(下)方"
 
 #: ../src/50-marco-window-key.xml.in.h:30
 #: ../src/org.mate.marco.gschema.xml.h:156
 msgid "Move window to east (right) side of screen"
-msgstr ""
+msgstr "將視窗移至畫面的東(右)方"
 
 #: ../src/50-marco-window-key.xml.in.h:31
 #: ../src/org.mate.marco.gschema.xml.h:157
 msgid "Move window to west (left) side of screen"
-msgstr ""
+msgstr "將視窗移至畫面的西(左)方"
 
 #: ../src/50-marco-window-key.xml.in.h:32
 #: ../src/org.mate.marco.gschema.xml.h:158
 msgid "Move window to center of screen"
-msgstr ""
+msgstr "將視窗移動至螢幕中央"
 
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
@@ -428,7 +429,7 @@ msgstr "將視窗移至下方的工作區"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "按下指定的特殊按鍵後，點擊動作會代表不同的操作程序"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -438,10 +439,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
 msgstr ""
+"當在視窗中按下滑鼠按鈕及本特殊按鍵會：移動視窗（左按鈕）、調整視窗大小（中按鈕）或顯示視窗選單（右按鈕）。使用「resize_with_right_button」設定鍵可以交換中和右鍵的操作。特殊按鍵可以表示為「&lt;Alt&gt;」或「&lt;Super&gt;」那樣。"
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "是否以右鍵調整大小"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
@@ -449,6 +451,8 @@ msgid ""
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
 msgstr ""
+"將此項設為 true 則按下「mouse_button_modifier」指定的按鍵時，可用右鍵調整大小並以中鍵顯示選單；將它設為 false "
+"則會以相反的方式運作。"
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -462,7 +466,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "標題列上的按鈕排列"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -474,10 +478,12 @@ msgid ""
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
 msgstr ""
+"標題列上的按鈕排列。設定值必須為字串，例如“menu:minimize,maximize,spacer,close”；冒號表示將視窗左上角及右上角分開，而按鈕名稱則以逗號分開。不會接受重複的按鈕名稱。不明的按鈕會忽略不理，使得在日後的"
+" marco 版本增加新的按鈕時也不會令舊版本無法使用。特殊的 spacer 標籤則是用來在兩個相鄰的按鈕之間加入空白。"
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
-msgstr ""
+msgstr "視窗焦點模式"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -487,10 +493,14 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"「視窗焦點模式」表示視窗如何對輸入產生反應。它有 3 個可接受的值：\n"
+"“click”表示必須在視窗按滑鼠按鈕才會令視窗獲取輸入焦點，\n"
+"“sloppy”表示當鼠標在某視窗上時會令該視窗獲取輸入焦點，最後\n"
+"“mouse”表示當鼠標在某視窗上時會令該視窗獲取輸入焦點，而且當鼠標移離視窗時輸入焦點也會脫離該視窗。"
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "控制視窗如何取得焦點"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -499,10 +509,11 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
+"本選項會在新建視窗取得焦點上提供符加的控制。它有兩個可用的值“smart”會套用使用者平常使用的焦點模式，及“strick”會導致在終端中執行的視窗在開始時不會取得焦點。"
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "由於其他使用的動作，提升視窗取得焦點應否是一個副作用"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -528,7 +539,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "連按兩下標題列所表示的操作程序"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -541,10 +552,11 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"本選項決定在標題列上連按兩下滑鼠按鈕的效果。目前有效的選項為：「toggle_shade」會捲起/放下視窗，「toggle_maximize」會切換是否將視窗最大化，「toggle_maximize_horizontally」和「toggle_maximize_vertically」會根據其方向決定最大化的方式。「minimize」會將視窗最小化，「shade」會捲起視窗，「menu」會顯示視窗選單，「降低」會把視窗置於所有其他視窗之後，而「nome」則不會作出任何反應。"
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "中鍵點選標題列所表示的操作程序"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -557,10 +569,11 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"本選項決定在標題列上按下滑鼠中鍵的效果。目前有效的選項為：「toggle_shade」會捲起/放下視窗，「toggle_maximize」會切換是否將視窗最大化，「toggle_maximize_horizontally」和「toggle_maximize_vertically」會根據其方向決定最大化的方式。「minimize」會將視窗最小化，「shade」會捲起視窗，「menu」會顯示視窗選單，「降低」會把視窗置於所有其他視窗之後，而「nome」則不會作出任何反應。"
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "右擊標題列所表示的操作程序"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -573,10 +586,11 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"本選項決定在標題列上安下滑鼠右鍵的效果。目前有效的選項為：「toggle_shade」會捲起/放下視窗，「toggle_maximize」會切換是否將視窗最大化，「toggle_maximize_horizontally」和「toggle_maximize_vertically」會根據其方向決定最大化的方式。「minimize」會將視窗最小化，「shade」會捲起視窗，「menu」會顯示視窗選單，「降低」會把視窗置於所有其他視窗之後，而「nome」則不會作出任何反應。"
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "輸入焦點所在的視窗自動地覆蓋其它視窗"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -585,40 +599,42 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
+"如設定為‘true’，而且焦點模式是“sloppy”或“mouse”的時候，輸入焦點所在的視窗經過某段時間後會自動完全顯示（auto_raise_delay"
+" 設定鍵指定了延遲的時間）。這跟按下視窗將視窗升起，及以在拖曳時進入視窗無關。"
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "某視窗自動覆蓋其它視窗前延遲的時間"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr ""
+msgstr "如果選用 auto_raise 選項時，令視窗不被遮蔽的延遲時間。延遲的時間會以 1/1000 秒為單位來表示。"
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr ""
+msgstr "當前主題"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "佈景主題可指定視窗邊框、標題列等的外觀。"
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "在視窗標題中使用標準系統字型"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr ""
+msgstr "如設定為‘true’，則忽略 titlebar_font 選項，並在視窗標題中使用標準的程式字型。"
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
-msgstr ""
+msgstr "視窗標題列字型"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
@@ -627,17 +643,19 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
+"視窗標題所使用的字型的描述字串。可是只有當 titlebar_font_size option 設定為 0 時才會採用本設定值中的字型大小。另外，當 "
+"titlebar_uses_desktop_font 設定為‘true’時本設定值不會生效。"
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "工作區數目"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr ""
+msgstr "工作區數目。必須大於 0，並有固定的最大值（防止因工作區數目過多而破壞桌面）。"
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -657,28 +675,28 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "啟用鈴聲視覺效果"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr ""
+msgstr "當程式系統發出「聲響」或「鈴聲」時，以視覺方式表示。對於聽障人士、在嘈雜的環境中時，這個設定會比較有用。"
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "系統聲響可發出聲音"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr ""
+msgstr "決定程式或系統可否發出可聽見的「聲響」；配合「鈴聲視覺效果」後，就可以產生不發出聲音的「聲響」。"
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "鈴聲視覺效果類型"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid ""
@@ -690,14 +708,17 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"讓 Marco 知道當系統或程式發出「鈴聲」時，如何顯示該「鈴聲」的視覺效果。目前可接受的值有兩個：\n"
+"“fullscreen”令整個畫面以黑白方式閃爍\n"
+"“frame_flash”令發出鈴聲的程式的視窗標題列閃動。如果不知道發出鈴聲的是哪一個視窗（主要的例子為預設的「系統聲響」），則會令目前輸入焦點所在的視窗閃動標題列。"
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "視窗管理程式"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "決定 Marco 是否視窗管理程式。"
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -712,7 +733,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "如設定為‘true’，以改變可用性來換取使用更少的資源"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -722,11 +743,13 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
+"如設定為‘true’，marco "
+"會給使用者更少的回饋：會使用線框、防止動畫或使用其它方法的使用。這很明顯會減低很多給使用者的可用性。但可能會使到在啟用此項前不能使用的舊程式及終端服務可以運作。但是，如果使用了無障礙環境，線框功能將會停用，以防止捆綁的桌面破損。"
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "（未完成）使用桌面時以應用程式為主的方式運作，並非以視窗為主"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -738,10 +761,12 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
+"如設定為‘true’，Marco 會以應用程式而不是以視窗為主的方式運作。它的概念是比較抽象，但大致上，以應用程式為主的設定會類似 Mac 多於 "
+"Windows。在應用程式為主的模式中，當視窗獲得輸入焦點時，所有該程式的視窗都會完全顯示出來。另外，在應用程式為主的模式中，若在輸入焦點以外的視窗按滑鼠按鈕，只會令輸入焦點轉移，按該下按鈕不會令程式帶來其它變化。另外，應用程式為主的設定目前大致上仍未編寫完成。"
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "關閉舊式或不合規格的程式所需的功能"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -750,6 +775,7 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
+"某些應用程式不符合規定，導致令視窗管理員要加入某些不應該有的功能。本選項會關閉對這些不合規格的程式的支援，如果你不需要執行任何不合規格的程式，這樣的使用者界面會較好。"
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -808,15 +834,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
-msgstr ""
+msgstr "工作區名稱"
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
-msgstr ""
+msgstr "工作區的名稱。"
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
-msgstr ""
+msgstr "執行指定的指令"
 
 #: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
@@ -827,6 +853,8 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"本按鍵組合可以執行在 /apps/marco/keybinding_commands "
+"中加上相應數字的指令。格式可以像“&lt;Control&gt;a”或是“&lt;Shift&gt;&lt;Alt&gt;F1”。分析按鍵組合字串時是比較寬鬆的，允許使用大寫或小寫，也允許使用像“&lt;Ctl&gt;”及“&lt;Ctrl&gt;”等的縮寫。如果將此選項設定為字串“disabled”，則不會為該項操作安排任何按鍵組合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -850,11 +878,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "在應用程式的視窗之間相反次序切換，使用彈出式視窗"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "在視窗之間以相反次序切換，使用彈出式視窗"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
@@ -866,23 +894,23 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "在面板及桌面之間以相反次序切換，使用彈出式視窗"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "立即在應用程式的視窗之間相反次序切換"
 
 #: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "立即在視窗之間相反次序切換"
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "將輸入焦點在面板及桌面之間以相反次序切換（立即模式）"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "按下按鍵組合後執行相關的指令"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -890,20 +918,23 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_N 設定鍵中定義了相應指令所使用的按鍵組合。按下 "
+"run_command_N 的按鍵組合會執行 command_N。"
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
-msgstr ""
+msgstr "桌面畫面快照指令"
 
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_screenshot 設定鍵中定義了相應指令所使用的按鍵組合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
-msgstr ""
+msgstr "視窗畫面快照指令"
 
 #: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
@@ -911,10 +942,12 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_window_screenshot "
+"設定鍵中定義了相應指令所使用的按鍵組合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "切換某個視窗是否永遠可以遮蔽其他視窗"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
@@ -985,41 +1018,44 @@ msgstr "其它程式已經使用了按鍵 %s 加上特殊按鍵 %x 作為按鍵�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "執行 <tt>%s</tt> 時發生錯誤：\n\n%s"
+msgstr ""
+"執行 <tt>%s</tt> 時發生錯誤：\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "並未定義任何指令 %d。\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "沒有定義任何終端機指令。\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1028,7 +1064,11 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\n版權所有 (C) 2001-%s Havoc Pennington, Red Hat, Inc. 及其它開發者\n本程式是自由軟件；有關版權的詳情請參考源程式碼。\n本程式不負任何擔保責任；亦無對適售性或特定目的適用性所為的默示性擔保。\n"
+msgstr ""
+"marco %s\n"
+"版權所有 (C) 2001-%s Havoc Pennington, Red Hat, Inc. 及其它開發者\n"
+"本程式是自由軟件；有關版權的詳情請參考源程式碼。\n"
+"本程式不負任何擔保責任；亦無對適售性或特定目的適用性所為的默示性擔保。\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -1248,7 +1288,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5893
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1261,7 +1301,7 @@ msgstr "視窗 %s 將 SM_CLIENT_ID 設定為該視窗本身，而不是 ICCCM �
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6458
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1312,7 +1352,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "視窗 0x%lx 的 %s 屬性應該是\ntype %s format %d，但實際上是\ntype %s format %d n_items %d。\n這極可能是程式方面的漏洞，而不是視窗總管的漏洞。\n該視窗的其它屬性為 title=\"%s\" class=\"%s\" name=\"%s\"\n"
+msgstr ""
+"視窗 0x%lx 的 %s 屬性應該是\n"
+"type %s format %d，但實際上是\n"
+"type %s format %d n_items %d。\n"
+"這極可能是程式方面的漏洞，而不是視窗總管的漏洞。\n"
+"該視窗的其它屬性為 title=\"%s\" class=\"%s\" name=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1786,7 +1831,9 @@ msgstr "佈景主題“%s”未指定 <%s>"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "在佈景主題“%2$s”中，視窗類型“%1$s”沒有指定任何邊框款式。請加上 <window type=\"%3$s\" style_set=\"whatever\"/> 元素"
+msgstr ""
+"在佈景主題“%2$s”中，視窗類型“%1$s”沒有指定任何邊框款式。請加上 <window type=\"%3$s\" "
+"style_set=\"whatever\"/> 元素"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
@@ -1803,7 +1850,7 @@ msgstr "已定義了“%s”常數"
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "在元素 <%2$s> 中沒有「%1$s」屬性"
+msgstr "<%2$s> 元素中缺少了“%1$s”屬性"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
@@ -1865,7 +1912,9 @@ msgstr "透明度必須在 0.0（完全透明）至 1.0（完全不透明）之�
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "無效的標題大小“%s”(必須為 xx-small、x-small、small、medium、large、\nx-large、xx-large 其中一個)\n"
+msgstr ""
+"無效的標題大小“%s”(必須為 xx-small、x-small、small、medium、large、\n"
+"x-large、xx-large 其中一個)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -2069,19 +2118,25 @@ msgstr "當 state=%s focus=%s 時，樣式早已經被指定了"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一個 <piece> 元素不可同時使用兩個 draw_ops (佈景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> 元素，或是指定了兩個元素)"
+msgstr ""
+"一個 <piece> 元素不可同時使用兩個 draw_ops (佈景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> "
+"元素，或是指定了兩個元素)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一個 <button> 元素不可同時使用兩個 draw_ops (佈景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> 元素，或是指定了兩個元素)"
+msgstr ""
+"一個 <button> 元素不可同時使用兩個 draw_ops (佈景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> "
+"元素，或是指定了兩個元素)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一個 <menu_icon> 元素不可同時使用兩個 draw_ops (佈景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> 元素，或是指定了兩個元素)"
+msgstr ""
+"一個 <menu_icon> 元素不可同時使用兩個 draw_ops (佈景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> "
+"元素，或是指定了兩個元素)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2141,100 +2196,107 @@ msgstr "<%s> 指定了此佈景主題兩次"
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "無法佈景主題的有效檔案 %s\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "這是在樣版對話視窗中的樣版訊息"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "假的選單項目 %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "只有邊框的視窗"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
 msgstr "列"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "正常的程式視窗"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "對話盒"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "模態對話盒"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "公用程式控制板"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "關閉選單"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
 msgstr "邊框"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:784
 #, c-format
 msgid "Button layout test %d"
 msgstr "按鈕配置測試 %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:809
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "繪畫一個視窗需時 %g 毫秒"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:849
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "用法： marco-theme-viewer [佈景主題名稱]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "載入佈景主題失敗 %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:862
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "載入佈景主題 “%s” 需時 %g 秒\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:906
 msgid "Normal Title Font"
 msgstr "正常標題列字型"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:912
 msgid "Small Title Font"
 msgstr "小標題列字型"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:918
 msgid "Large Title Font"
 msgstr "大標題列字型"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:923
 msgid "Button Layouts"
 msgstr "按鈕配置"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:928
 msgid "Benchmark"
 msgstr "速度測試"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:985
 msgid "Window Title Goes Here"
 msgstr "這裏是視窗標題"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1090
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "繪畫 %d 幀需時：\n在客戶端是 %g 秒（每幀 %g 毫秒）\n包括 X 伺服器資源的實際消耗時間是 %g 秒（每幀 %g 毫秒）\n"
+msgstr ""
+"繪畫 %d 幀需時：\n"
+"在客戶端是 %g 秒（每幀 %g 毫秒）\n"
+"包括 X 伺服器資源的實際消耗時間是 %g 秒（每幀 %g 毫秒）\n"

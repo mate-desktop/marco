@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Ivar Smolin <okul@linux.ee>, 2014,2018
-# xpander0 <xpander0@gmail.com>, 2012
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-17 08:44+0000\n"
-"Last-Translator: Ivar Smolin <okul@linux.ee>\n"
-"Language-Team: Estonian (http://www.transifex.com/mate/MATE/language/et/)\n"
+"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Rivo Zängov <eraser@eraser.ee>, 2018\n"
+"Language-Team: Estonian (https://www.transifex.com/mate/teams/13566/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,7 +50,7 @@ msgstr "Terminali käivitamine"
 #: ../src/50-marco-desktop-key.xml.in.h:7
 #: ../src/org.mate.marco.gschema.xml.h:104
 msgid "Rename current workspace"
-msgstr ""
+msgstr "Nimeta praegune tööala ümber"
 
 #: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
@@ -175,7 +174,7 @@ msgstr "Lülitumine selle tööala all olevale tööalale"
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Lülitumine eelmisele valitud tööalale"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:111
@@ -286,47 +285,47 @@ msgstr ""
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
 msgid "Move window to north-west (top left) corner"
-msgstr ""
+msgstr "Akna tõstmine ekraani loodenurka (ülemisse vasakusse)"
 
 #: ../src/50-marco-window-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:151
 msgid "Move window to north-east (top right) corner"
-msgstr ""
+msgstr "Akna tõstmine ekraani kirdenurka (ülemisse paremasse)"
 
 #: ../src/50-marco-window-key.xml.in.h:26
 #: ../src/org.mate.marco.gschema.xml.h:152
 msgid "Move window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Akna tõstmine ekraani edelanurka (alumisse vasakusse)"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 #: ../src/org.mate.marco.gschema.xml.h:153
 msgid "Move window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Akna tõstmine ekraani kagunurka (alumisse paremasse)"
 
 #: ../src/50-marco-window-key.xml.in.h:28
 #: ../src/org.mate.marco.gschema.xml.h:154
 msgid "Move window to north (top) side of screen"
-msgstr ""
+msgstr "Akna tõstmine ekraani põhjakülge (ülemisse)"
 
 #: ../src/50-marco-window-key.xml.in.h:29
 #: ../src/org.mate.marco.gschema.xml.h:155
 msgid "Move window to south (bottom) side of screen"
-msgstr ""
+msgstr "Akna tõstmine ekraani lõunakülge (alumisse)"
 
 #: ../src/50-marco-window-key.xml.in.h:30
 #: ../src/org.mate.marco.gschema.xml.h:156
 msgid "Move window to east (right) side of screen"
-msgstr ""
+msgstr "Akna tõstmine ekraani idakülge (paremasse)"
 
 #: ../src/50-marco-window-key.xml.in.h:31
 #: ../src/org.mate.marco.gschema.xml.h:157
 msgid "Move window to west (left) side of screen"
-msgstr ""
+msgstr "Akna tõstmine ekraani läänekülge (vasakusse)"
 
 #: ../src/50-marco-window-key.xml.in.h:32
 #: ../src/org.mate.marco.gschema.xml.h:158
 msgid "Move window to center of screen"
-msgstr ""
+msgstr "Akna tõstmine ekraani keskele"
 
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
@@ -430,7 +429,7 @@ msgstr "Akna tõstmine ühe tööala võrra allapoole"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Modifikaator, mida kasutatakse muudetud aknaklõpsamise tegevustel"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -440,10 +439,15 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
 msgstr ""
+"Modifikaatorklahvi all hoides aknale klõpsates saab akent nihutada "
+"(vasakklõps), muuta suurust (keskklahvi klõps) või kuvada akna menüüd "
+"(paremklõps). Keskmise ja parema klahvi tegevusi saab vahetada võtme "
+"\"resize_with_right_button\" abil. Modifikaatorit väljendatakse näiteks kui "
+"\"&lt;Alt&gt;\" või \"&lt;Super&gt;\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "Kas paremklahv muudab suurust"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
@@ -451,6 +455,9 @@ msgid ""
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
 msgstr ""
+"Kui märgitud, muudab paremklahv suurust ja keskklahvi vajutamisel, kui all "
+"hoitakse \"mouse_button_modifier\" võtme määratud klahvi, näitab menüüd; kui"
+" mitte märkida, toimib see vastupidi."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -464,7 +471,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Tiitliriba nuppude järjestus"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -476,10 +483,17 @@ msgid ""
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
 msgstr ""
+"Tiitliriba nuppude järjestus. Väärtus peaks olema sarnane sõnele "
+"\"menu:minimize,maximize,spacer,close\"; koolon eraldab akna vasakut nurka "
+"paremast, nuppude nimed eraldatakse komaga. Topeltnupud pole lubatud. "
+"Tundmatute nuppude nimesid eiratakse vaikides, et marco järgmistes "
+"versioonides saaks lisada uusi nuppe ilma rikkumata ühilduvust vanade "
+"versioonidega. Erilist Kahe nupu vahele ruumi tegemiseks saab kasutada "
+"erilist ruumimärki."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
-msgstr ""
+msgstr "Aknafookuse režiim"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -489,10 +503,15 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"Akna fookuse režiim määrab kuidas aknaid aktiveeritakse. Sellel on kolm "
+"võimalikku väärtus; \"click\" tähendab et akna fokuseerimiseks tuleb sellel "
+"klõpsata, \"sloppy\" tähendab et aken fokuseeritakse, kui hiir siseneb "
+"aknasse ja \"mouse\" tähendab, et aken aktiveeritakse kui hiir siseneb "
+"aknasse ja deaktiveeritakse, kui hiir lahkub aknast."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Määrab, kuidas uued aknad saavad fookuse"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -501,10 +520,14 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
+"See valik võimaldab lisakontrolli uute akende fookuse haaramisele. Sellel on"
+" kaks võimalikku väärtust; \"smart\" rakendab kasutaja tavalisi "
+"fokuseerimise sätteid ja \"strict\" määrab, et terminalist käivitatud aknaid"
+" ei fookuseerita."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Kas akna tõstmine peaks kaasnema kasutaja teiste tegevustega"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -527,10 +550,12 @@ msgid ""
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
 msgstr ""
+"Selle valiku vale peale selekteerimine võib vigasid tekitada, seega "
+"kasutajatel soovitatakse seda mitte muuta vaike sättelt õige."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Pealkirjariba topeltklõpsamisel tehtav tegevus"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -543,10 +568,17 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"See valik määrab tiitliriba topeltklõpsu toimingu. Praegu sobivad võimalused"
+" 'toggle_shade', mis akna kas varjutab või toob välja, 'toggle_maximize' mis"
+" maksimeerib/taastab akna, 'toggle_maximize_horizontally' ja "
+"'toggle_maximize_vertically' mis maksimeerib/taastab suuruse ainult ühes "
+"suunas, 'minimize' mis minimeerib akna, 'shade' mis kerib akna ülse, 'menu' "
+"mis näitab akna menüüd, 'lower' mis saadab akna kõigi teiste taha ja 'none' "
+"mis ei tee midagi."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Pealkirjaribal keskmise klahviga klõpsamisel tehtav tegevus"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -559,10 +591,17 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"See valik määrab tiitliriba kesk-klõpsu toimingu. Praegu sobivad võimalused "
+"'toggle_shade', mis akna kas varjutab või toob välja, 'toggle_maximize' mis "
+"maksimeerib/taastab akna, 'toggle_maximize_horizontally' ja "
+"'toggle_maximize_vertically' mis maksimeerib/taastab suuruse ainult ühes "
+"suunas, 'minimize' mis minimeerib akna, 'shade' mis kerib akna ülse, 'menu' "
+"mis näitab akna menüüd, 'lower' mis saadab akna kõigi teiste taha ja 'none' "
+"mis ei tee midagi."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Pealkirjariba paremklõpsamisel tehtav tegevus"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -575,10 +614,17 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"See valik määrab tiitliriba paremklõpsu toimingu. Praegu sobivad võimalused "
+"'toggle_shade', mis akna kas varjutab või toob välja, 'toggle_maximize' mis "
+"maksimeerib/taastab akna, 'toggle_maximize_horizontally' ja "
+"'toggle_maximize_vertically' mis maksimeerib/taastab suuruse ainult ühes "
+"suunas, 'minimize' mis minimeerib akna, 'shade' mis kerib akna ülse, 'menu' "
+"mis näitab akna menüüd, 'lower' mis saadab akna kõigi teiste taha ja 'none' "
+"mis ei tee midagi."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Automaatselt tõstab fookuses oleva akna"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -587,16 +633,22 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
+"Kui märgitud ja fookuse režiim on \"sloppy\" või \"mouse\", siis tõstetakse "
+"fokuseeritud aken automaatselt pärast auto_raise_delay võtme määratud "
+"viivitust. See ei ole seotud aknal klõpsamisega selle tõstmiseks ega "
+"lohistamisel aknasse sisenemisega."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Automaattõstmise valiku viivitus millisekundites"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
+"Viivitus millisekundites enne akna tõstmist, kui auto_raise on määratud "
+"tõeseks."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -606,17 +658,19 @@ msgstr "Praegune teema"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "Teema määrab aknaääriste, tiitliriba jm väljanägemise."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Kasuta standardset süsteemifonti akende tiitlites"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
+"Kui märgitud, siis titlebar_font valikut eiratakse ja akende tiitliribal "
+"kasutatakse standardset rakenduste kirjastiili."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -629,6 +683,10 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
+"Kirjastiili kirjelduse sõne, mis kirjeldab akna tiitliriba kirjastiili. "
+"Selle kirjelduse suurust kasutatakse ainult siis, kui titlebar_font_size "
+"väärtuseks on 0. Lisaks, see valik on kasutu, kui titlebar_uses_desktop_font"
+" väärtus on määratud tõeseks."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -640,6 +698,9 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
+"Tööalade arv. Peab olema suurem kui null ja omab fikseeritud "
+"maksimaalsuurust, et ära hoida kogemata töölaua rikkumist liiga paljude "
+"tööalade eraldamise tagajärjel."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -659,7 +720,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Luba visuaalkelluke"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
@@ -667,20 +728,24 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
+"Lülitab sisse visuaalse süsteemi piiksu näitaja; on kasulik lärmakas "
+"keskkonnas."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Süsteemipiiks on kuuldav"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"Määrab, kas süsteemi rakendused saavad tekitada kuuldavaid \"piikse\"; võib "
+"kasutada koos \"visuaalkellukesega\", et võimaldada vaikseid \"piikse\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Visuaalpiiksu tüüp"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid ""
@@ -692,14 +757,21 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"Teatab Marcole, kuidas visuaalselt näidata, et süsteemi või mõne muu "
+"rakenduse 'kell' helises. Praegu on sellel kaks võimalikku väärtust, "
+"\"fullscreen\", mis teeb täisekraani must-valge välgatuse, ja "
+"\"frame_flash\", mis paneb signaali saatnud rakenduse tiitliriba vilkuma. "
+"Kui kella signaali saatnud rakendus on teadmata (nagu see tavaliselt "
+"vaikimisi \"süsteemipiiksul\" on), vilgutatakse parasjagu fokuseeritud akna "
+"tiitliriba."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Komposiithaldur"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Määrab, kas Marco on komposiithaldur"
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -715,6 +787,8 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
 msgstr ""
+"Kui märgitud, tehakse kasutatavause arvelt kompromiss ressursside "
+"säästmisekst"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -724,11 +798,17 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
+"Kui märgitud, annab marco kasutajale vähem tagasisidet kasutades "
+"sõrestikvaadet, hoidudes animatsioonides ja teistest tagasiside viisidest. "
+"See vähendab mõne kasutaja jaoks oluliselt kasutatavust, aga võib jätta "
+"ammused pärandprogrammid tööle, lisaks võib olla kasulik kompromiss "
+"terminaliserveris. Siiski on hõlbustuste sisselülitamise korral "
+"sõrestikvaade keelatud."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "(Pole teostatud) Navigeerimine töötab rakenduste, mitte akende kaupa"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -740,10 +820,17 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
+"Kui märgitud, haldab Marco akende asemel rakendusi. Põhimõte on pisut "
+"abstraktne, aga üldiselt on rakenduste baasil süsteem rohkem Maci ja vähem "
+"Windowsi moodi. Kui sa fokuseerid akna rakenduste-baasil režiimis, "
+"tõstetakse kõik selle rakenduse aknad. Lisaks rakenduste-baasil režiimis ei "
+"edastata fokuseerimise klõpse teiste rakenduste akendele. Rakenduste-baasil "
+"režiim on hetkel siiski veel teostamata."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr ""
+"Keela väärvõimalused, mis on vajalikud vanadele või rikkis rakendustele"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -752,6 +839,9 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
+"Mõned rakendused eiravad spetsifikatsiooni nii et see avaldub aknahalduri "
+"valekäitumises. See valik seab Marco rangelt korrektsesse režiimi, mis annab"
+" ühtlasema kasutajakeskkonna, kui valestikäituvaid rakendusi pole vaja."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -818,7 +908,7 @@ msgstr "Tööala nimi."
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
-msgstr ""
+msgstr "Käivita defineeritud käsk"
 
 #: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
@@ -829,6 +919,12 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"Vastava järjenumbriga käsu /apps/marco/keybinding_commands käivitamise "
+"klahvikombinatsioon. Vorming on kujul \"&lt;Control&gt;a\" või "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\". Parser on vormingu suhtes üpris leplik ja "
+"lubab läbisegi nii suur- kui väiketähti, samuti ka lühendeid nagu "
+"\"&lt;Ctl&gt;\" ja \"&lt;Ctrl&gt;\". Kui väärtuseks määrata eristring "
+"\"disabled\", siis on selle toimingu jaoks klahvikombinatsioon keelatud."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -852,11 +948,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Rakenduse akende vahel tagasisuunas liikumine, hüpikaknaga"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Akende vahel tagasisuunas liikumine, hüpikaknaga"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
@@ -868,23 +964,23 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Paneelide ja töölaua vahel tagasisuunas liikumine, hüpikaknaga"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Rakenduse akende vahel kohenene tagasisuunas liikumine"
 
 #: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Akende vahel kohenene tagasisuunas liikumine"
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Paneeli ja töölaua vahel kohenene tagasisuunas liikumine"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Käsud mida käivitada kiirklahvidele reageerides"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -892,20 +988,25 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_N võtmed määravad "
+"klahvikombinatsioonid, mis nendele käskudele vastavad. Klahvikombinatsiooni "
+"run_command_N vajutamine käivitab käsu command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
-msgstr ""
+msgstr "Ekraanitõmmise võtmise käsk"
 
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_screenshot määrab "
+"klahvikombinatsiooni, mis käivitab selle sättega määratud käsu."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Akna ekraanitõmmise käsk"
 
 #: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
@@ -913,10 +1014,12 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_window_screenshot võti määrab "
+"klahvikombinatsiooni, mis käivitab selle sättega määratud käsu."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Alati kõige pealmiseks olemise sisse- ja väljalülitamine"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
@@ -983,45 +1086,50 @@ msgstr "Tõrge X Window System'i kuva '%s' avamisel\n"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Mõni teine programm juba kasutab klahvi %s koos muuteklahvidega %x kiirklahvina\n"
+msgstr ""
+"Mõni teine programm juba kasutab klahvi %s koos muuteklahvidega %x "
+"kiirklahvina\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "<tt>%s</tt> käivitamisel esines viga:\n\n%s"
+msgstr ""
+"<tt>%s</tt> käivitamisel esines viga:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Käsku %d pole defineeritud.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Terminalikäsku pole defineeritud.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "Tühista"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1030,7 +1138,13 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nAutoriõigused (C) 2001-%s Havoc Pennington, Red Hat, Inc., ja teised\nSee programm on vaba tarkvara; kopeerimistingimuste kohta vaata\nprogrammi lähteteksti. Sellel programmil pole MINGISUGUST GARANTIID;\nisegi MITTE KOMMERTSGARANTIID EGA GARANTIID SOBIVUSELE\nTEATUD KINDLAKS EESMÄRGIKS.\n"
+msgstr ""
+"marco %s\n"
+"Autoriõigused (C) 2001-%s Havoc Pennington, Red Hat, Inc., ja teised\n"
+"See programm on vaba tarkvara; kopeerimistingimuste kohta vaata\n"
+"programmi lähteteksti. Sellel programmil pole MINGISUGUST GARANTIID;\n"
+"isegi MITTE KOMMERTSGARANTIID EGA GARANTIID SOBIVUSELE\n"
+"TEATUD KINDLAKS EESMÄRGIKS.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -1054,11 +1168,11 @@ msgstr "Seansi lähtestamine salvestatud failist"
 
 #: ../src/core/main.c:298
 msgid "Print version"
-msgstr "Versiooni printimine"
+msgstr "Versiooniandmete väljastamine"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Tee Xi väljakutsedkutsed sünkroonseks"
+msgstr "X'i kutsungite muutmine sünkroonseks"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1071,7 +1185,9 @@ msgstr "Komposiitmontaaž keelatud"
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Ilma dekoratsioonideta ja maksimeeritud aknaid ei muudeta täisekraaniakendeks"
+msgstr ""
+"Ilma dekoratsioonideta ja maksimeeritud aknaid ei muudeta "
+"täisekraaniakendeks"
 
 #: ../src/core/main.c:519
 #, c-format
@@ -1082,7 +1198,8 @@ msgstr "Tõrge teemadekataloogi skannimisel: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Teemat ei leitud! Veendu, et %s on olemas ja sisaldab harilikke teemasid.\n"
+msgstr ""
+"Teemat ei leitud! Veendu, et %s on olemas ja sisaldab harilikke teemasid.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1101,7 +1218,9 @@ msgstr ""
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Ümbernurga parandused vigastele rakendustele on keelatud. Mõned rakendused ei pruugi õigesti käituda.\n"
+msgstr ""
+"Ümbernurga parandused vigastele rakendustele on keelatud. Mõned rakendused "
+"ei pruugi õigesti käituda.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
@@ -1113,7 +1232,9 @@ msgstr ""
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "Seadistuste andmebaasist leitud väärtus \"%s\" ei sobi hiireklahvi modifikaatoriks\n"
+msgstr ""
+"Seadistuste andmebaasist leitud väärtus \"%s\" ei sobi hiireklahvi "
+"modifikaatoriks\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
@@ -1137,7 +1258,9 @@ msgstr "Ekraan %d kuval '%s' on vigane\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Ekraan %d kuval '%s' on juba aknahalduri poolt hallatav. Olemasoleva aknahalduri asendamiseks proovi --replace võtit \n"
+msgstr ""
+"Ekraan %d kuval '%s' on juba aknahalduri poolt hallatav. Olemasoleva "
+"aknahalduri asendamiseks proovi --replace võtit \n"
 
 #: ../src/core/screen.c:402
 #, c-format
@@ -1205,7 +1328,9 @@ msgstr "Tundmatu element %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Need aknad ei toeta &quot;praeguse paigutuse salvestamist&quot; ja tuleb järgmisel sisselogimisel käsitsi taaskäivitada."
+msgstr ""
+"Need aknad ei toeta &quot;praeguse paigutuse salvestamist&quot; ja tuleb "
+"järgmisel sisselogimisel käsitsi taaskäivitada."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1250,12 +1375,14 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5893
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Aken %s määrab SM_CLIENT_ID endale, selle asemel, et määrata see WM_CLIENT_LEADER aknale, nagu seda kirjeldab ICCCM.\n"
+msgstr ""
+"Aken %s määrab SM_CLIENT_ID endale, selle asemel, et määrata see "
+"WM_CLIENT_LEADER aknale, nagu seda kirjeldab ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1263,12 +1390,15 @@ msgstr "Aken %s määrab SM_CLIENT_ID endale, selle asemel, et määrata see WM_
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6458
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Aken %s määrab MWM vihje, näidates, et see pole muudetava suurusega, aga määrab vähimaks suuruseks %d x %d ja suurimaks suuruseks %d x %d; sel pole tähendust.\n"
+msgstr ""
+"Aken %s määrab MWM vihje, näidates, et see pole muudetava suurusega, aga "
+"määrab vähimaks suuruseks %d x %d ja suurimaks suuruseks %d x %d; sel pole "
+"tähendust.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1314,7 +1444,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Aknal 0x%lx on omadus %s\nmis oleks pidanud olema %s liiki %d vormingus,\naga tegelikult oli %s tüüpi %d vormingus n_items %d.\nSee on kõige tõenäolisemalt rakenduse viga, mitte aknahalduri viga.\nAknal on title=\"%s\" class=\"%s\" name=\"%s\"\n"
+msgstr ""
+"Aknal 0x%lx on omadus %s\n"
+"mis oleks pidanud olema %s liiki %d vormingus,\n"
+"aga tegelikult oli %s tüüpi %d vormingus n_items %d.\n"
+"See on kõige tõenäolisemalt rakenduse viga, mitte aknahalduri viga.\n"
+"Aknal on title=\"%s\" class=\"%s\" name=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1335,7 +1470,7 @@ msgstr "Kasutamine: %s\n"
 
 #: ../src/ui/frames.c:1098
 msgid "Close Window"
-msgstr "Sulge aken"
+msgstr "Akna sulgemine"
 
 #: ../src/ui/frames.c:1101
 msgid "Window Menu"
@@ -1390,7 +1525,7 @@ msgstr "Ma_ksimeeri"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "T_aasta suurus"
+msgstr "Taasta s_uurus"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1426,12 +1561,12 @@ msgstr "Alati _pealmine"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
-msgstr "_Alati nähtaval tööalal"
+msgstr "Alati nä_htaval tööalal"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
-msgstr "Ainu_lt sellel tööalal"
+msgstr "_Ainult sellel tööalal"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
@@ -1441,7 +1576,7 @@ msgstr "Tõsta _vasakpoolsele tööalale"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "Tõsta pa_rempoolsele tööalale"
+msgstr "Tõsta _parempoolsele tööalale"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
@@ -1451,7 +1586,7 @@ msgstr "Tõsta _ülemisele tööalale"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "T_õsta alumisele tööalale"
+msgstr "Tõsta _alumisele tööalale"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
@@ -1476,7 +1611,7 @@ msgstr "Tööala %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Tõsta muule _tööalale"
+msgstr "Tõsta mõ_nele teisele tööalale"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -1575,11 +1710,11 @@ msgstr "alumine"
 
 #: ../src/ui/theme.c:256
 msgid "left"
-msgstr "vasak"
+msgstr "Vasaku"
 
 #: ../src/ui/theme.c:258
 msgid "right"
-msgstr "parem"
+msgstr "Parema"
 
 #: ../src/ui/theme.c:285
 #, c-format
@@ -1611,14 +1746,18 @@ msgstr "Värviüleminekus peaks olema vähemalt kaks värvi"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK värvispetsifikatsioonil peab olek olema määratud nurksulgudes, nt. gtk:fg[NORMAL] kus NORMAL on olek; väärtust \"%s\" ei saa töödelda"
+msgstr ""
+"GTK värvispetsifikatsioonil peab olek olema määratud nurksulgudes, nt. "
+"gtk:fg[NORMAL] kus NORMAL on olek; väärtust \"%s\" ei saa töödelda"
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK värvispetsifikatsioonil peab lõppema nurksuluga, nt. gtk:fg[NORMAL] kus NORMAL on olek; väärtust \"%s\" ei saa töödelda"
+msgstr ""
+"GTK värvispetsifikatsioonil peab lõppema nurksuluga, nt. gtk:fg[NORMAL] kus "
+"NORMAL on olek; väärtust \"%s\" ei saa töödelda"
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1635,7 +1774,9 @@ msgstr "Mõistetamatu värvikomponent \"%s\" värvispetsifikatsioonis"
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Segatud värvi vorming on \"segamine/taustavärv/värv/katvus\", \"%s\" ei sobi vorminguga"
+msgstr ""
+"Segatud värvi vorming on \"segamine/taustavärv/värv/katvus\", \"%s\" ei sobi"
+" vorminguga"
 
 #: ../src/ui/theme.c:1259
 #, c-format
@@ -1650,7 +1791,9 @@ msgstr "Segatud värvi katvuse väärtus \"%s\" ei ole 0.0 ja 1.0 vahel"
 #: ../src/ui/theme.c:1316
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "Varjundamise vorming on \"varjundus/alusvärv/tegur\", \"%s\" ei sobi vorminguga"
+msgstr ""
+"Varjundamise vorming on \"varjundus/alusvärv/tegur\", \"%s\" ei sobi "
+"vorminguga"
 
 #: ../src/ui/theme.c:1327
 #, c-format
@@ -1677,19 +1820,24 @@ msgstr "Koordinaatide avaldis sisaldab lubamatut märki '%s'"
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "Koordinaatide avaldis sisaldab ujukomaarvu '%s', seda aga pole võimalik analüüsida"
+msgstr ""
+"Koordinaatide avaldis sisaldab ujukomaarvu '%s', seda aga pole võimalik "
+"analüüsida"
 
 #: ../src/ui/theme.c:1747
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr "Koordinaatide avaldis sisaldab täisarvu '%s', seda aga pole võimalik analüüsida"
+msgstr ""
+"Koordinaatide avaldis sisaldab täisarvu '%s', seda aga pole võimalik "
+"analüüsida"
 
 #: ../src/ui/theme.c:1869
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Koordinaatide avaldis sisaldab teksti alguses tundmatut operaatorit: \"%s\""
+msgstr ""
+"Koordinaatide avaldis sisaldab teksti alguses tundmatut operaatorit: \"%s\""
 
 #: ../src/ui/theme.c:1926
 #, c-format
@@ -1705,7 +1853,9 @@ msgstr "Koordinaatide avaldise tulemuseks on nulliga jagamine"
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "Koordinaatide avaldis püüab ujukomaarvul kasutada jagamise jäägi (mod) operaatorit"
+msgstr ""
+"Koordinaatide avaldis püüab ujukomaarvul kasutada jagamise jäägi (mod) "
+"operaatorit"
 
 #: ../src/ui/theme.c:2145
 #, c-format
@@ -1727,7 +1877,9 @@ msgstr "Koordinaatide avaldis lõppes operandi asemel operaatoriga"
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Koordinaatide avaldis sisaldab operaatoreid \"%c\" ja \"%c\" ilma nendevahelise operandita"
+msgstr ""
+"Koordinaatide avaldis sisaldab operaatoreid \"%c\" ja \"%c\" ilma "
+"nendevahelise operandita"
 
 #: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
 #, c-format
@@ -1753,7 +1905,8 @@ msgstr "Koordinaatide avaldises on avavad sulud ilma sulgevate sulgudeta"
 #: ../src/ui/theme.c:2518
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
-msgstr "Tundub, et koordinaatide avaldis ei sisalda ei operaatoreid ega operande"
+msgstr ""
+"Tundub, et koordinaatide avaldis ei sisalda ei operaatoreid ega operande"
 
 #: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
 #, c-format
@@ -1765,7 +1918,9 @@ msgstr "Teema sisaldas avaldist, mis põhjustas vea: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"misiganes\"/> peab selles raamistiilis olema määratud"
+msgstr ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"misiganes\"/> peab selles "
+"raamistiilis olema määratud"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
@@ -1788,7 +1943,9 @@ msgstr "Teemas \"%s2\" pole määratud ühtki <%s1>"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Teemas \"%s2\" pole \"%s1\" liiki aknale määratud raamistiili, lisa <window type=\"%s3\" style_set=\"misiganes\"/> element"
+msgstr ""
+"Teemas \"%s2\" pole \"%s1\" liiki aknale määratud raamistiili, lisa <window "
+"type=\"%s3\" style_set=\"misiganes\"/> element"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
@@ -1810,7 +1967,7 @@ msgstr "Elemendil <%2s> pole \"%1s\" atribuuti"
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "Rida %d, märk %d: %s"
+msgstr "Rida %d  tähemärk %d: %s"
 
 #: ../src/ui/theme-parser.c:438
 #, c-format
@@ -1860,14 +2017,17 @@ msgstr "Nurk peab olema 0.0 ja 360.0 vahel, oli aga %g\n"
 #: ../src/ui/theme-parser.c:751
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Läbipaistvus peab olema 0.0 (nähtamatu) ja 1.0 (täiskattev) vahel, oli %g\n"
+msgstr ""
+"Läbipaistvus peab olema 0.0 (nähtamatu) ja 1.0 (täiskattev) vahel, oli %g\n"
 
 #: ../src/ui/theme-parser.c:816
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Tiitli suurus \"%s\" on sobimatu (peab olema üks valikust: xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr ""
+"Tiitli suurus \"%s\" on sobimatu (peab olema üks valikust: xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1918,14 +2078,16 @@ msgstr "Aknatüübile \"%s\" on stiilikomplekt juba määratud"
 #: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "Element <%s> pole lubatud <%s> sees"
+msgstr "Element <%s> pole <%s> all lubatud"
 
 #: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
 #: ../src/ui/theme-parser.c:1438
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Nuppudele ei saa korraga määrata \"button_width\"/\"button_height\" ja \"aspect_ratio\" atribuute"
+msgstr ""
+"Nuppudele ei saa korraga määrata \"button_width\"/\"button_height\" ja "
+"\"aspect_ratio\" atribuute"
 
 #: ../src/ui/theme-parser.c:1402
 #, c-format
@@ -2048,7 +2210,9 @@ msgstr "\"%s\" pole sobiv väärtus resize atribuudile"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Elemendil <%s> ei peaks olema \"resize\" atribuuti maximized/shaded olekute jaoks"
+msgstr ""
+"Elemendil <%s> ei peaks olema \"resize\" atribuuti maximized/shaded olekute "
+"jaoks"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
@@ -2071,19 +2235,25 @@ msgstr "Olekule %s ja fookusele %s on stiil juba määratud"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Elemendil <piece> ei saa olla kaks draw_ops'i (teema määras draw_ops atribuudi ja <draw_ops> elemendi või kaks elementi)"
+msgstr ""
+"Elemendil <piece> ei saa olla kaks draw_ops'i (teema määras draw_ops "
+"atribuudi ja <draw_ops> elemendi või kaks elementi)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Elemendil <button> ei saa olla kaks draw_ops'i (teema määras draw_ops atribuudi ja <draw_ops> elemendi või kaks elementi)"
+msgstr ""
+"Elemendil <button> ei saa olla kaks draw_ops'i (teema määras draw_ops "
+"atribuudi ja <draw_ops> elemendi või kaks elementi)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Elemendil <menu_icon> ei saa olla kaks draw_ops'i (teema määras draw_ops atribuudi ja <draw_ops> elemendi või kaks elementi)"
+msgstr ""
+"Elemendil <menu_icon> ei saa olla kaks draw_ops'i (teema määras draw_ops "
+"atribuudi ja <draw_ops> elemendi või kaks elementi)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2094,7 +2264,8 @@ msgstr "Äärmine teema element peab olema <metacity_theme> mitte <%s>"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
-msgstr "Element <%s> pole elementide name/author/date/description sees lubatud"
+msgstr ""
+"Element <%s> pole elementide name/author/date/description sees lubatud"
 
 #: ../src/ui/theme-parser.c:3420
 #, c-format
@@ -2105,7 +2276,8 @@ msgstr "Element <%s> pole elemendi <constant> sees lubatud"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "Element <%s> pole elementide distance/border/aspect_ratio sees lubatud"
+msgstr ""
+"Element <%s> pole elementide distance/border/aspect_ratio sees lubatud"
 
 #: ../src/ui/theme-parser.c:3454
 #, c-format
@@ -2116,7 +2288,7 @@ msgstr "Element <%s> pole joonistusoperatsiooni elemendi sees lubatud"
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "Element <%s> pole elemendi <%s> sees lubatud"
+msgstr "Element <%s> ei ole elemendi <%s> sees lubatud"
 
 #: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"
@@ -2129,7 +2301,7 @@ msgstr "Nupule pole määratud draw_ops"
 #: ../src/ui/theme-parser.c:3815
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "Elemendi <%s> sees pole tekst lubatud"
+msgstr "Tekst pole elemendi <%s> sees lubatud"
 
 #: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
 #: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
@@ -2143,100 +2315,107 @@ msgstr "Selle teema jaoks on <%s> määratud kaks korda"
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Tõrge %s teema jaoks korrektse faili leidmisel\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr "_OK"
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "See on näidisteade näidisdialoogis"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Võltsitud menüüpunkt %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "Ainult raamiga aken"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
-msgstr "Riba"
+msgstr "Tulp"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "Tavaline rakenduseaken"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "Dialoogikast"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "Modaalne dialoogikast"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "Rakendite palett"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "Ärarebitav menüü"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
-msgstr "Raam"
+msgstr "Ääris"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:784
 #, c-format
 msgid "Button layout test %d"
 msgstr "Nuppude paigutuse test %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:809
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g millisekundit kulub ühe akna raami joonistamiseks"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:849
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Kasutamine: marco-theme-viewer [TEEMANIMI]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Viga teema laadimisel: %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:862
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Teema \"%s\" laaditi %g sekundiga\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:906
 msgid "Normal Title Font"
 msgstr "Tiitli tavasuurusega kirjatüüp"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:912
 msgid "Small Title Font"
 msgstr "Tiitli väike kirjatüüp"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:918
 msgid "Large Title Font"
 msgstr "Tiitli suur kirjatüüp"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:923
 msgid "Button Layouts"
 msgstr "Nuppude paigutus"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:928
 msgid "Benchmark"
 msgstr "Jõudlus"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:985
 msgid "Window Title Goes Here"
 msgstr "Siia tuleb akna pealkiri"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1090
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "Joonistati %d kaadrit %g kliendi-kella sekundiga (%g millisekundit kaadrile) ja %g sekundiga seinakella järgi, millesse on kaasatud X serveri ressursikasutus (%g millisekundit kaadrile)\n"
+msgstr ""
+"Joonistati %d kaadrit %g kliendi-kella sekundiga (%g millisekundit kaadrile)"
+" ja %g sekundiga seinakella järgi, millesse on kaasatud X serveri "
+"ressursikasutus (%g millisekundit kaadrile)\n"

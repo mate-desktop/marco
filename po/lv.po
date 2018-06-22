@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Imants Liepiņš <imzzinator@gmail.com>, 2012
-# Rihards Priedītis <rprieditis@gmail.com>, 2013
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Latvian (http://www.transifex.com/mate/MATE/language/lv/)\n"
+"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: ciba43 <voiceofwise1@gmail.com>, 2018\n"
+"Language-Team: Latvian (https://www.transifex.com/mate/teams/13566/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -286,47 +285,47 @@ msgstr ""
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
 msgid "Move window to north-west (top left) corner"
-msgstr ""
+msgstr "Pārvietot logu uz ekrāna ziemeļrietumu (augšējo kreiso) stūri"
 
 #: ../src/50-marco-window-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:151
 msgid "Move window to north-east (top right) corner"
-msgstr ""
+msgstr "Pārvietot logu uz ekrāna ziemeļaustrumu (augšējo labo) stūri"
 
 #: ../src/50-marco-window-key.xml.in.h:26
 #: ../src/org.mate.marco.gschema.xml.h:152
 msgid "Move window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Pārvietot logu uz ekrāna dienvidrietumu (apakšējo kreiso) stūri"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 #: ../src/org.mate.marco.gschema.xml.h:153
 msgid "Move window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Pārvietot logu uz ekrāna dienvidaustrumu (apakšējo labo) stūri"
 
 #: ../src/50-marco-window-key.xml.in.h:28
 #: ../src/org.mate.marco.gschema.xml.h:154
 msgid "Move window to north (top) side of screen"
-msgstr ""
+msgstr "Pārvietot logu uz ekrāna ziemeļu (augšējo) malu"
 
 #: ../src/50-marco-window-key.xml.in.h:29
 #: ../src/org.mate.marco.gschema.xml.h:155
 msgid "Move window to south (bottom) side of screen"
-msgstr ""
+msgstr "Pārvietot logu uz ekrāna dienvidu (apakšējo) malu"
 
 #: ../src/50-marco-window-key.xml.in.h:30
 #: ../src/org.mate.marco.gschema.xml.h:156
 msgid "Move window to east (right) side of screen"
-msgstr ""
+msgstr "Pārvietot logu uz ekrāna austrumu (labo) malu"
 
 #: ../src/50-marco-window-key.xml.in.h:31
 #: ../src/org.mate.marco.gschema.xml.h:157
 msgid "Move window to west (left) side of screen"
-msgstr ""
+msgstr "Pārvietot logu uz ekrāna rietumu (kreiso) malu"
 
 #: ../src/50-marco-window-key.xml.in.h:32
 #: ../src/org.mate.marco.gschema.xml.h:158
 msgid "Move window to center of screen"
-msgstr ""
+msgstr "Pārvietot logu uz ekrāna centru"
 
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
@@ -430,7 +429,7 @@ msgstr "Pārvietot logu vienu darbvietu lejup"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Modifikators, kuru lietot modificētā loga klikšķu darbībām"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -440,10 +439,15 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
 msgstr ""
+"Klikšķis uz loga, turot nospiestu šo taustiņu, pārvietos logu (kreisais "
+"klikšķis), mainīs loga izmēru (vidējais klikšķis) vai parādīs loga izvēlni "
+"(labais klikšķis). Kreisās un labās darbības var mainīt vietām ar "
+"\"mouse_button_resize\" atslēgu. Šo taustiņu apzīmē, piemēram, "
+"\"&lt;Alt&gt;\" vai \"&lt;Super&gt;\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr ""
+msgstr "Vai mainīt izmēru ar labo pogu"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
@@ -451,6 +455,10 @@ msgid ""
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
 msgstr ""
+"Iestatiet to uz patiesu, lai mainītu izmēru ar labo pogu un rādītu izvēlni "
+"ar vidējo pogu, kamēr tur nospiestu taustiņu, kurš ir norādīts atslēgā "
+"\"mouse_button_modifier\"; iestatiet to uz nepatiesu, lai tas strādātu "
+"otrādi."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -464,7 +472,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Pogu kārtība virsrakstjoslā"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -476,10 +484,17 @@ msgid ""
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
 msgstr ""
+"Pogu kārtība virsrakstjoslā. Vērtībai jābūt virknei, tādai kā "
+"\"menu:minimize,maximize,close\"; kols atdala kreiso loga stūri no labā "
+"stūra un pogu nosaukumi ir komatu atdalīti. Dublētas pogas netiek pieļautas."
+" Nezināmi pogu nosaukumi tiek klusi ignorēti, tādējādi pogas var tikt "
+"pievienotas turpmākās marco versijās, nesabojājot vecākas versijas. "
+"Speciālas atstarpju birkas var izmantot, lai ievietotu atstarpes starp "
+"blakus esošām pogām."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
-msgstr ""
+msgstr "Logu fokusēšanas režīms"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -489,10 +504,15 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"Loga fokusēšanās režīms nosaka, kā logi tiek aktivizēti. Tam ir trīs "
+"iespējamās vērtības: \"klikšķis\" nozīmē, ka uz logiem ir jāuzklikšķina, lai"
+" tos fokusētu, \"paviršs\" nozīmē , ka logi tiek fokusēti, kad pele slīd "
+"tiem pāri, un \"pele\" nozīmē, ka logi tiek fokusēti, kad pele slīd logam "
+"pāri, un atfokusēti, kad pele pamet logu."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Kā jauni logi iegūst fokusu"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -501,10 +521,14 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
+"Šī vērtība nodrošina papildu kontroli pār to, kā jaunizveidotie logi tiek "
+"aktivizēti. Tai ir divas iespējamas vērtības: \"smart\" izmanto standarta "
+"aktivizēšanas iestatījumus, \"strict\" nosaka, ka no komandrindas palaistie "
+"logi netiks aktivizēti."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Vai logu aktivizēšanai būtu jābūt citu mijiedarbību blakusrezultātam"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -527,10 +551,25 @@ msgid ""
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
 msgstr ""
+"Šīs iespējas False iestatīšana var izraisīt kļūmīgu darbību, tāpēc neiesakām"
+" mainīt to no pamata vai True. Daudzu darbību (piemēram, klikšķis logā, loga"
+" pāvietošana vai tā izmēru mainīšana) blakusparādība ir loga pacelšanās. Šīs"
+" iespējas iestatīšana False, kas nav ieteicama, atsaistīs lietotāja darbības"
+" izraisītu loga pacelšanu un ignorēs loga pacelšanu, kas vajadzīga "
+"programmām. Skatīt http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Pat "
+"ja ši iespēja ir iestatīta nepareizi, logi var tikt pacelti ar alt-left-"
+"click jebkur logā, ar parastu klikšķi, vai pēc uzdevumu saraksta "
+"sīklietotnes pieprasījuma. Click-to-focus režīmā šī iespēja pašlaik ir "
+"atspējota. Ievērojiet, ka logu pacelšanas iemeslu sarakstā nav iekļauti "
+"programmu pieprasījumi logu pacelšanai, ja raise_on_click iestatīts False; "
+"šie pieprasījumi tiek ignorēti jebkurā gadījumā. Ja Jums kā programmas "
+"izstrādātājam pienāk lietotāju sūdzības par nestrādājošu programmu šīs "
+"iespējas nepareizas iestatīšanas dēļ, varat atbildēt, ka tiem jāmaina šis "
+"iestatījums uz True vai Live"
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Darbība uz virsrakstjoslas dubultklikšķa"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -543,10 +582,17 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Šī vērtība nosaka peles dubultklikšķa efektu uz virsrakstjoslas. Šobrīd "
+"derīgas vērtības ir 'toggle_shade', kas ēnos/atēnos logu, un "
+"'toggle_maximize_horizontally' un 'toggle_maximize_vertically', kas "
+"maksimizēs/atmaksimizēs logu tikai šajā virzienā, 'minimize', kas minimizēs "
+"logu, 'shade', kas uzritinās logu augšup, 'menu', kas parādīs loga izvēlni, "
+"'lower', kas novietos logu aiz visiem citiem logiem un 'none', kas nedarīs "
+"neko."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Vidējās pogas klikšķa darbība uz virsrakstjoslas"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -559,10 +605,17 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Šī vērtība nosaka peles vidējā taustiņa klikšķa efektu uz virsrakstjoslas. "
+"Šobrīd derīgas vērtības ir 'toggle_shade', kas ēnos/atēnos logu, un "
+"'toggle_maximize_horizontally' un 'toggle_maximize_vertically', kas "
+"maksimizēs/atmaksimizēs logu tikai šajā virzienā, 'minimize', kas minimizēs "
+"logu, 'shade', kas uzritinās logu augšup, 'menu', kas parādīs loga izvēlni, "
+"'lower', kas novietos logu aiz visiem citiem logiem un 'none', kas nedarīs "
+"neko."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Labās pogas klikšķa darbība uz virsrakstjoslas"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -575,10 +628,17 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Šī vērtība nosaka peles labā taustiņa klikšķa efektu uz virsrakstjoslas. "
+"Šobrīd derīgas vērtības ir 'toggle_shade', kas ēnos/atēnos logu, un "
+"'toggle_maximize_horizontally' un 'toggle_maximize_vertically', kas "
+"maksimizēs/atmaksimizēs logu tikai šajā virzienā, 'minimize', kas minimizēs "
+"logu, 'shade', kas uzritinās logu augšup, 'menu', kas parādīs loga izvēlni, "
+"'lower', kas novietos logu aiz visiem citiem logiem un 'none', kas nedarīs "
+"neko."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Automātiski pacelt fokusēto logu"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -587,40 +647,48 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
+"Ja patiess un fokusēšanas režīms ir vai nu \"paviršs\" vai \"pele\", tad "
+"fokusētais logs tiks automātiski aktivizēts pēc aiztures (aizturi nosaka "
+"auto_raise_delay). Tam nav sakara ar loga aktivizēšanu ar klikšķi vai "
+"ievilkšanu."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Aizture milisekundēs automātiskās pacelšanas opcijai"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
+"Laika aizture pirms loga pacelšanas, ja auto_raise ir iestatīts kā patiess. "
+"Aizture tiek izteikta sekundes tūkstošdaļās."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr ""
+msgstr "Patreizējā tēma"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "Tēma nosaka izskatu loga robežām, virsrakstjoslai un tamlīdzīgi."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Lietot sistēmas standarta fontu logu virsrakstos"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
+"Ja patiess, ignorēt titlebar_font iespēju un lietot standarta lietotņu fontu"
+" logu nosaukumiem."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
-msgstr ""
+msgstr "Loga virsraksta fonts"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
@@ -629,10 +697,13 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
+"Fonta apraksta virkne, kas apraksta fontu logu virsrakstjoslās. Izmērs no "
+"apraksta tiks lietots, ja titlebar_font_size vērtība ir 0. Šī vērtība tiek "
+"atslēgta, ja ieslēgta titlebar_uses_desktop_font."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Darbvietu skaits"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -640,6 +711,8 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
+"Darbvietu skaits. Jābūt lielākam par nulli un ir fiksēts maksimums, lai "
+"nejauši nepadarītu darbvirsmu nelietojamu."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -659,7 +732,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Aktivizēt vizuālo zvanu"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
@@ -667,20 +740,24 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
+"Ieslēdz programmu vai sistēmas 'zvanu' vai 'pīkstienu' vizuālu indikāciju; "
+"noderīga vājdzirdīgiem cilvēkiem un darbam trokšņainās vidēs."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Sistēmas zvans ir dzirdams"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"Nosaka, vai lietotnes un sistēma var ģenerēt dzirdamus 'pīkstienus'; var "
+"lietot kopā ar 'vizuālo zvanu', lai atļautu klusos 'zvanus'."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Vizuālā zvana tips"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid ""
@@ -692,14 +769,20 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"Nosaka, kā Marco vajadzētu īstenot vizuālo indikāciju, ka sistēmas zvans vai"
+" citas programmas 'zvana' indikators ir iedarbojies. Šobrīd ir divas derīgas"
+" vērtības: \"fullscreen\", kas izraisa zibsni pa visu ekrānu, un "
+"\"frame_flash\", kas liek iezibsnīties izsaucošās programmas virsraksta "
+"joslai. Ja nav zināma programma, kas ir nosūtījusi zvanu, tad iezibsnīsies "
+"aktīvā loga virsraksta josla."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Kompozicionēšanas pārvaldnieks"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Nosaka, vai Marco ir kompozicionēšanas pārvaldnieks."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -715,6 +798,8 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
 msgstr ""
+"Ja šis elements ir atzīmēts, lietojamība tiks iemainīta pret mazāku resursu "
+"izmantojumu"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -724,11 +809,15 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
+"Ja patiess, Marco sniegs lietotājam mazāk informācijas, izmantojot "
+"vadrāmjus, izvairoties no animācijām u.tml. Tas samazina lietojamību, taču "
+"var noderēt darbā ar vecākām programmām vai terminālserveru risinājumos. Ja "
+"aktivizētas pieejamības funkcijas, Marco tomēr nelietos vadrāmjus."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "(Nav iestrādāts) Navigācija darbojas vairāk pēc lietotnēm nekā logiem"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -740,10 +829,15 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
+"Ja patiess, tad Marco darbojas drīzāk ar lietotnēm nekā logiem. Varētu "
+"teikt, vairāk kā Mac nekā Windows. Kad fokusējat logu lietotņu režīmā, visi "
+"lietotnes logi tiek aktivizēti. Tāpat arī lietotņu režīmā fokusēšanas "
+"klikšķi netiek nodoti logiem citās lietotnēs. Šis režīms gan vēl nav īsti "
+"izstrādāts."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "Atslēgt īpatnības, kas nepieciešamas vecām vai līkām lietotnēm"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -752,6 +846,10 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
+"Dažas programmas neievēro specifikācijas, un logu pārvaldniekiem nākas "
+"pielāgoties. Šī vērtība ieslēdz Marco strikto režīmu, kas nodrošina "
+"saskanīgāku lietotāja saskarni, ja jums nav vajadzīgas nepaklausīgās "
+"programmas."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -810,15 +908,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
-msgstr ""
+msgstr "Darbvietas nosaukums"
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Darbvietas nosaukums."
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
-msgstr ""
+msgstr "Palaist definētu komandu"
 
 #: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
@@ -829,6 +927,11 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"Taustiņsasaiste, kas palaiž atbilstoši numurēto komandu no "
+"/apps/marco/keybinding_commands. Formāts izskatās kā \"&lt;Control&gt;a\" "
+"vai \"&lt;Shift&gt;&lt;Alt&gt;F1. Parseris pieļauj lielos un mazos burtus un"
+" saīsinājumus, tādus kā \"&lt;Ctl&gt;\" vai \"&lt;Ctrl&gt;\". Ja "
+"ierakstīsiet šeit \"disabled\", šai darbībai nebūs taustiņsasaistes."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -852,11 +955,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Pārvietoties atpakaļ starp lietotnes logiem, lietojot izlecošo logu"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Pārvietoties atpakaļ starp logiem, lietojot izlecošo logu"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
@@ -869,22 +972,23 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr ""
+"Pārvietoties atpakaļ starp paneļiem un darbvirsmu, lietojot izlecošo logu"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Nekavējoties pārvietoties atpakaļ starp lietotņu logiem"
 
 #: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Nekavējoties pārvietoties atpakaļ starp logiem"
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Nekavējoties pārvietoties atpakaļ starp paneļiem un darbvirsmu"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Komandas, kuras palaiž taustiņsasaistes"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -892,20 +996,25 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"Atslēgas /apps/marco/global_keybindings/run_command_N definē "
+"taustiņsasaistes, kas atbilst šīm komandām. Taustiņsasaiste run_command_N "
+"palaidīs command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
-msgstr ""
+msgstr "Ekrānattēla komanda"
 
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_screenshot atslēga definē "
+"taustiņsasaistes, kas izpilda attiecīgo komandu."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Loga ekrānattēla komanda"
 
 #: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
@@ -913,10 +1022,12 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_window_screenshot atslēga definē "
+"taustiņsasaistes, kas izpilda attiecīgo komandu."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Pārslēdz to, vai logs vienmēr redzams virs citiem logiem"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
@@ -953,7 +1064,9 @@ msgstr "<tt>%s</tt> nereaģē."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Jūs varat uzgaidīt neilgu brīdi, līdz tā atgūstas, vai arī aizvērt to piespiedu kārtā."
+msgstr ""
+"Jūs varat uzgaidīt neilgu brīdi, līdz tā atgūstas, vai arī aizvērt to "
+"piespiedu kārtā."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -983,45 +1096,49 @@ msgstr "Neizdevās atvērt X logu sistēmas displeju '%s'\n"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Kāda cita programma jau lieto taustiņu %s ar modificētājiem %x kā sasaisti\n"
+msgstr ""
+"Kāda cita programma jau lieto taustiņu %s ar modificētājiem %x kā sasaisti\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Kļūda, darbinot <tt>%s</tt>:\n\n%s"
+msgstr ""
+"Kļūda, darbinot <tt>%s</tt>:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Komanda %d nav definēta.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Termināla komandas nav definētas.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1030,11 +1147,15 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nAutortiesības (C) 2001-%s Havoc Pennington, Red Hat, Inc., un citi\nŠī ir brīvā programmatūra; par kopēšanas nosacījumiem skatīt avotu.\nNetiek dota NEKĀDA garantija; pat ne KOMERCIĀLAS VĒRTĪBAS vai DERĪGUMA NOTEIKTAM NOLŪKAM.\n"
+msgstr ""
+"marco %s\n"
+"Autortiesības (C) 2001-%s Havoc Pennington, Red Hat, Inc., un citi\n"
+"Šī ir brīvā programmatūra; par kopēšanas nosacījumiem skatīt avotu.\n"
+"Netiek dota NEKĀDA garantija; pat ne KOMERCIĀLAS VĒRTĪBAS vai DERĪGUMA NOTEIKTAM NOLŪKAM.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "Atslēgt savienojumu ar sesiju pārvaldnieku"
+msgstr "Atvienoties no sesiju pārvaldnieka"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1042,7 +1163,7 @@ msgstr "Aizvietot darbojošos logu pārvaldnieku ar Marco"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Norādīt sesijas pārvaldnieka ID"
+msgstr "Norādīt sesijas pārvaldības ID"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1054,7 +1175,7 @@ msgstr "Inicializēt sesiju no saglabātā faila"
 
 #: ../src/core/main.c:298
 msgid "Print version"
-msgstr "Parādīt versiju"
+msgstr "Drukāt versiju"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
@@ -1082,7 +1203,9 @@ msgstr "Neizdevās noskanēt tēmu direktoriju: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Neizdevās atrast tēmu! Pārliecinieties, ka %s eksistē un satur parastās tēmas.\n"
+msgstr ""
+"Neizdevās atrast tēmu! Pārliecinieties, ka %s eksistē un satur parastās "
+"tēmas.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1095,13 +1218,16 @@ msgstr "Neizdevās pārstartēt: %s\n"
 #: ../src/core/prefs.c:606 ../src/core/prefs.c:759
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr "%d, kas saglabāts GSettings atslēgā %s, ir ārpus %d līdz %d diapazona\\n\n"
+msgstr ""
+"%d, kas saglabāts GSettings atslēgā %s, ir ārpus %d līdz %d diapazona\\n\n"
 
 #: ../src/core/prefs.c:1053
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Apvedceļi bojātām lietotnēm atslēgti. Dažas lietotnes var neuzvesties pareizi.\n"
+msgstr ""
+"Apvedceļi bojātām lietotnēm atslēgti. Dažas lietotnes var neuzvesties "
+"pareizi.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
@@ -1113,19 +1239,23 @@ msgstr "Neizdevās parsēt fonta aprakstu \"%s\" no  GSettings atslēgas %s\\n\n
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "\"%s\", kas atrasta konfigurācijas datubāzē, nav derīga vērtība peles pogas modifikatoram\n"
+msgstr ""
+"\"%s\", kas atrasta konfigurācijas datubāzē, nav derīga vērtība peles pogas "
+"modifikatoram\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "\"%s\", kas atrasta konfigurācijas datubāzē, nav derīga vērtība taustiņsasaistei \"%s\"\n"
+msgstr ""
+"\"%s\", kas atrasta konfigurācijas datubāzē, nav derīga vērtība "
+"taustiņsasaistei \"%s\"\n"
 
 #: ../src/core/prefs.c:2056
 #, c-format
 msgid "Workspace %d"
-msgstr "Darbvieta %d"
+msgstr "Darba vieta %d"
 
 #: ../src/core/screen.c:359
 #, c-format
@@ -1137,7 +1267,9 @@ msgstr "Ekrāna %d displejs \"%s\" ir nederīgs\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Ekrāna %d displejam \"%s\" jau ir logu pārvaldnieks; mēģiniet lietot --replace iespēju, lai aizvietotu pašreizējo logu pārvaldnieku.\n"
+msgstr ""
+"Ekrāna %d displejam \"%s\" jau ir logu pārvaldnieks; mēģiniet lietot "
+"--replace iespēju, lai aizvietotu pašreizējo logu pārvaldnieku.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
@@ -1205,7 +1337,9 @@ msgstr "Nezināms elements %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Šie logi neatbalsta &quot;saglabāt pašreizējos iestatījumus&quot; un būs jārestartē pašrocīgi nākamreiz, kad pieteiksieties."
+msgstr ""
+"Šie logi neatbalsta &quot;saglabāt pašreizējos iestatījumus&quot; un būs "
+"jārestartē pašrocīgi nākamreiz, kad pieteiksieties."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1250,12 +1384,14 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5893
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Logs %s iestata SM_CLIENT_ID pats sev, nevis WM_CLIENT_LEADER logam kā norādīts ICCCM.\n"
+msgstr ""
+"Logs %s iestata SM_CLIENT_ID pats sev, nevis WM_CLIENT_LEADER logam kā "
+"norādīts ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1263,12 +1399,14 @@ msgstr "Logs %s iestata SM_CLIENT_ID pats sev, nevis WM_CLIENT_LEADER logam kā 
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6458
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Logs %s iestata MWM padomu, ka tā izmērs nav maināms, bet iestata minimālo izmēru %d x %d un maksimālo izmēru %d x %d; tas ir diezgan dīvaini.\n"
+msgstr ""
+"Logs %s iestata MWM padomu, ka tā izmērs nav maināms, bet iestata minimālo "
+"izmēru %d x %d un maksimālo izmēru %d x %d; tas ir diezgan dīvaini.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1314,7 +1452,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Logam 0x%lx ir rekvizīts %s,\nkam vajadzēja būt %s tipa formātā %d,\nbet īstenībā bija %s tipa formātā %d n_items %d\nŠī visdrīzāk ir lietotnes, nevis logu pārvaldnieka kļūda.\nLogam bija virsraksts=\"%s\" klase=\"%s\" nosaukums=\"%s\"\n"
+msgstr ""
+"Logam 0x%lx ir rekvizīts %s,\n"
+"kam vajadzēja būt %s tipa formātā %d,\n"
+"bet īstenībā bija %s tipa formātā %d n_items %d\n"
+"Šī visdrīzāk ir lietotnes, nevis logu pārvaldnieka kļūda.\n"
+"Logam bija virsraksts=\"%s\" klase=\"%s\" nosaukums=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1326,7 +1469,8 @@ msgstr "Rekvizīts %s logā 0x%lx saturēja nederīgu UTF-8\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Rekvizīts %slogā 0x%lx saturēja nederīgu UTF-8 priekšmetam %d no saraksta\n"
+msgstr ""
+"Rekvizīts %slogā 0x%lx saturēja nederīgu UTF-8 priekšmetam %d no saraksta\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1335,7 +1479,7 @@ msgstr "Lietošana: %s\n"
 
 #: ../src/ui/frames.c:1098
 msgid "Close Window"
-msgstr "Aizvērt logu"
+msgstr "Aizvērt Logu"
 
 #: ../src/ui/frames.c:1101
 msgid "Window Menu"
@@ -1385,12 +1529,12 @@ msgstr "Mi_nimizēt"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:67
 msgid "Ma_ximize"
-msgstr "Ma_ksimizēt"
+msgstr "Mak_simizēt"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "At_jaunot"
+msgstr "Atma_ksimizēt"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1405,12 +1549,12 @@ msgstr "_Norullēt"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:75
 msgid "_Move"
-msgstr "_Pārvietot"
+msgstr "Pār_vietot"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:77
 msgid "_Resize"
-msgstr "_Mainīt"
+msgstr "Mainīt izmē_ru"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:79
@@ -1426,32 +1570,32 @@ msgstr "Vienmēr _virspusē"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
-msgstr "Vienmēr uz redzamās d_arbvietas"
+msgstr "Vienmēr uz redz_amās darba vietas"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
-msgstr "_Tikai uz šīs darbvietas"
+msgstr "_Tikai uz šīs darba vietas"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "Pārvietot uz darbvietu pa _kreisi"
+msgstr "Pārvietot uz darba vietu pa _kreisi"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "Pārvietot uz darbvietu pa lab_i"
+msgstr "Pārvietot uz darba vietu pa lab_i"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "Pārvietot _uz augstāku darbvietu"
+msgstr "Pārvietot uz darba vietu a_ugšup"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "Pārvietot uz zemāku _darbvietu"
+msgstr "Pārvietot uz _darba vietu lejup"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
@@ -1467,16 +1611,16 @@ msgstr "Darbvieta %d%n"
 #: ../src/ui/menu.c:207
 #, c-format
 msgid "Workspace 1_0"
-msgstr "Darbvieta 1_0"
+msgstr "Darba vieta 1_0"
 
 #: ../src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
-msgstr "Darbvieta %s%d"
+msgstr "Darba vieta %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Pārvietot uz citu darb_vietu"
+msgstr "Pārvietot uz citu darba _vietu"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -1563,7 +1707,7 @@ msgstr "Mod5"
 #: ../src/ui/resizepopup.c:115
 #, c-format
 msgid "%d x %d"
-msgstr "%d x %d"
+msgstr "%d × %d"
 
 #: ../src/ui/theme.c:252
 msgid "top"
@@ -1575,11 +1719,11 @@ msgstr "apakša"
 
 #: ../src/ui/theme.c:256
 msgid "left"
-msgstr "pa kreisi"
+msgstr "pa kreisi %s"
 
 #: ../src/ui/theme.c:258
 msgid "right"
-msgstr "pa labi"
+msgstr "pa labi %s"
 
 #: ../src/ui/theme.c:285
 #, c-format
@@ -1611,14 +1755,18 @@ msgstr "Krāsu pārejās ir jābūt vismaz divām krāsām"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK krāsas specifikācijā ir jābūt stāvoklim iekavās, piem., gtk:fg[NORMAL], kur NORMAL ir stāvoklis; neizdevās parsēt \"%s\""
+msgstr ""
+"GTK krāsas specifikācijā ir jābūt stāvoklim iekavās, piem., gtk:fg[NORMAL], "
+"kur NORMAL ir stāvoklis; neizdevās parsēt \"%s\""
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK krāsas specifikācijā ir jābūt kvadrātiekavām pēc stāvokļa, piem., gtk:fg[NORMAL], kur NORMAL ir stāvoklis; neizdevās parsēt \"%s\""
+msgstr ""
+"GTK krāsas specifikācijā ir jābūt kvadrātiekavām pēc stāvokļa, piem., "
+"gtk:fg[NORMAL], kur NORMAL ir stāvoklis; neizdevās parsēt \"%s\""
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1635,7 +1783,9 @@ msgstr "Nesaprotams krāsas komponents \"%s\" krāsas specifikācijā"
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Saplūšanas formāts ir \"blend/bg_color/fg_color/alpha\", \"%s\" neatbilst formātam"
+msgstr ""
+"Saplūšanas formāts ir \"blend/bg_color/fg_color/alpha\", \"%s\" neatbilst "
+"formātam"
 
 #: ../src/ui/theme.c:1259
 #, c-format
@@ -1705,7 +1855,8 @@ msgstr "Koordinātu izteiksme noved pie dalīšanas ar nulli"
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "Koordinātu izteiksme mēģina lietot mod operatoru uz peldošā punkta skaitļa"
+msgstr ""
+"Koordinātu izteiksme mēģina lietot mod operatoru uz peldošā punkta skaitļa"
 
 #: ../src/ui/theme.c:2145
 #, c-format
@@ -1727,7 +1878,9 @@ msgstr "Koordinātu izteiksme beidzās ar operatoru, nevis ar operandu"
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Koordinātu izteiksmē ir operatoram \"%c\" sekojošais operators \"%c\" bez operanda to starpā"
+msgstr ""
+"Koordinātu izteiksmē ir operatoram \"%c\" sekojošais operators \"%c\" bez "
+"operanda to starpā"
 
 #: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
 #, c-format
@@ -1742,13 +1895,15 @@ msgstr "Koordinātu izteiksme pārpildīja parsera buferi."
 #: ../src/ui/theme.c:2443
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr "Koordinātu izteiksmei bija aizvērtās iekavas bez nevienas atvērtās iekavas"
+msgstr ""
+"Koordinātu izteiksmei bija aizvērtās iekavas bez nevienas atvērtās iekavas"
 
 #: ../src/ui/theme.c:2507
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
-msgstr "Koordinātu izteiksmei bija atvērtās iekavas bez nevienas aizvērtās iekavas"
+msgstr ""
+"Koordinātu izteiksmei bija atvērtās iekavas bez nevienas aizvērtās iekavas"
 
 #: ../src/ui/theme.c:2518
 #, c-format
@@ -1765,7 +1920,9 @@ msgstr "Tēma saturēja izteiksmi, kas noveda pie kļūdas: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"jebkas\"/> jābūt noteiktam šajā rāmja stilā"
+msgstr ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"jebkas\"/> jābūt noteiktam "
+"šajā rāmja stilā"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
@@ -1788,7 +1945,9 @@ msgstr "Nav iestatīts <%s> tēmai \"%s\""
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Nav rāmja stila kopas loga tipam \"%s\" tēmā \"%s\"; pievienojiet <window type=\"%s\" style_set=\"jebkas\"/> elementu"
+msgstr ""
+"Nav rāmja stila kopas loga tipam \"%s\" tēmā \"%s\"; pievienojiet <window "
+"type=\"%s\" style_set=\"jebkas\"/> elementu"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
@@ -1810,7 +1969,7 @@ msgstr "Nav \"%s\" atribūta elementam <%s>"
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "Rinda %d rakstzīme %d: %s"
+msgstr "Rinda %d simbols %d: %s"
 
 #: ../src/ui/theme-parser.c:438
 #, c-format
@@ -1820,7 +1979,7 @@ msgstr "Atribūts \"%s\" atkārtots divreiz vienam <%s> elementam"
 #: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Atribūts \"%s\" ir nederīgs <%s> elementam šajā kontekstā"
+msgstr "Atribūts \"%s\" ir neparezs uz <%s> elementa šajā kontekstā"
 
 #: ../src/ui/theme-parser.c:547
 #, c-format
@@ -1860,14 +2019,17 @@ msgstr "Leņķim jābūt starp 0.0 un 360.0, bija %g\n"
 #: ../src/ui/theme-parser.c:751
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Alfa jābūt starp 0.0 (neredzams) un 1.0 (pilnībā necaurredzams), bija %g\n"
+msgstr ""
+"Alfa jābūt starp 0.0 (neredzams) un 1.0 (pilnībā necaurredzams), bija %g\n"
 
 #: ../src/ui/theme-parser.c:816
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Nederīgs virsraksta mērogs \"%s\" (var būt: xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr ""
+"Nederīgs virsraksta mērogs \"%s\" (var būt: xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1918,7 +2080,7 @@ msgstr "Loga tipam \"%s\" jau ir piešķirta stila kopa"
 #: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "Elements <%s> netiek atļauts zem <%s>"
+msgstr "Elements <%s> nav atļauts zem <%s>"
 
 #: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
 #: ../src/ui/theme-parser.c:1438
@@ -2048,12 +2210,15 @@ msgstr "\"%s\" nav derīga vērtība izmēra maiņas atribūtam"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Elementam <%s> nevajadzētu būt \"resize\" atribūtam maksimizētos/ēnotos stāvokļos"
+msgstr ""
+"Elementam <%s> nevajadzētu būt \"resize\" atribūtam maksimizētos/ēnotos "
+"stāvokļos"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Elementam <%s> nevajadzētu būt \"resize\" atribūtam maksimizētajos stāvokļos"
+msgstr ""
+"Elementam <%s> nevajadzētu būt \"resize\" atribūtam maksimizētajos stāvokļos"
 
 #: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
 #, c-format
@@ -2071,19 +2236,25 @@ msgstr "Stils jau ir ticis noteikts stāvokļa %s fokusam %s"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nevar būt divi draw_ops <piece> elementam (tēma noteica draw_ops atribūtu un arī <draw_ops> elementu, vai noteica divus elementus)"
+msgstr ""
+"Nevar būt divi draw_ops <piece> elementam (tēma noteica draw_ops atribūtu un"
+" arī <draw_ops> elementu, vai noteica divus elementus)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nevar būt divi draw_ops <button> elementam (tēma noteica draw_ops atribūtu un arī <draw_ops> elementu, vai noteica divus elementus)"
+msgstr ""
+"Nevar būt divi draw_ops <button> elementam (tēma noteica draw_ops atribūtu "
+"un arī <draw_ops> elementu, vai noteica divus elementus)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nevar būt divi draw_ops <menu_icon> elementam (tēma noteica draw_ops atribūtu un arī <draw_ops> elementu, vai noteica divus elementus)"
+msgstr ""
+"Nevar būt divi draw_ops <menu_icon> elementam (tēma noteica draw_ops "
+"atribūtu un arī <draw_ops> elementu, vai noteica divus elementus)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2116,7 +2287,7 @@ msgstr "Elements <%s> netiek atļauts zīmēšanas operāciju elementā"
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "Elements <%s> netiek atļauts elementā <%s>"
+msgstr "Elements <%s> nav atļauts <%s> elementā"
 
 #: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"
@@ -2143,100 +2314,107 @@ msgstr "<%s> šai tēmai noteikts divreiz"
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Neizdevās atrast derīgu faila nosaukumu tēmai %s\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "Šis ir paraugpaziņojums parauga dialogā"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Neīsts izvēlnes elements %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "Logs tikai ar apmali"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
 msgstr "Josla"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "Normāls lietotnes logs"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "Dialoglodziņš"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "Modālais dialoglodziņš"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "Utilītpalete"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "Atrauta izvēlne"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
-msgstr "Apmale"
+msgstr "Mala"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:784
 #, c-format
 msgid "Button layout test %d"
 msgstr "Pogu izkārtojuma tests %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:809
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g milisekundes, lai uzzīmētu loga rāmi"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:849
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Pielietojums: marco-theme-viewer [TĒMASNOSAUKUMS]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Kļūda, ielādējot tēmu: %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:862
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Tēma \"%s\" ielādēta \"%g\"sekundēs\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:906
 msgid "Normal Title Font"
 msgstr "Normāls virsraksta fonts"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:912
 msgid "Small Title Font"
 msgstr "Mazs virsraksta fonts"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:918
 msgid "Large Title Font"
 msgstr "Liels virsraksta fonts"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:923
 msgid "Button Layouts"
 msgstr "Pogu izkārtojumi"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:928
 msgid "Benchmark"
 msgstr "Etalonuzdevums"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:985
 msgid "Window Title Goes Here"
 msgstr "Šeit paredzēts loga virsraksts"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1090
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "Uzzīmēju %d kadrus %g klienta puses sekundēs (%g milisekundes uz kadru) un %g sekundēs pēc ierastā laika, ieskaitot X servera resursus (%g milisekundes uz kadru)\n"
+msgstr ""
+"Uzzīmēju %d kadrus %g klienta puses sekundēs (%g milisekundes uz kadru) un "
+"%g sekundēs pēc ierastā laika, ieskaitot X servera resursus (%g milisekundes"
+" uz kadru)\n"

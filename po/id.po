@@ -1,33 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# airinuxazis <azis.naufal@gmail.com>, 2012
-# Andika Triwidada <andika@gmail.com>, 2016
-# Anton Toni Agung <vdrive6@gmail.com>, 2015
-# Ari Prabowo <ariprabowo03@gmail.com>, 2016
-# airinuxazis <azis.naufal@gmail.com>, 2012
-# Febrian Setianto <febrian.setianto@gmail.com>, 2017
-# Ibnu Daru Aji, 2014
-# hpiece 8 <hpiece8@gmail.com>, 2016
-# hpiece 8 <hpiece8@gmail.com>, 2016
-# Ibnu Daru Aji, 2013-2014
-# Ibnu Daru Aji, 2013
-# La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2015
-# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2012
-# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2012
-# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2012
-# Muhammad Herdiansyah <herdiansyah@openmailbox.org>, 2016
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2014,2016
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Indonesian (http://www.transifex.com/mate/MATE/language/id/)\n"
+"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: hpiece 8 <hpiece8@gmail.com>, 2018\n"
+"Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,7 +20,7 @@ msgstr ""
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
-msgstr "Destop"
+msgstr "Desktop"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:100
@@ -80,7 +64,8 @@ msgstr "Berpindah antar jendela, memakai suatu jendela popup"
 #: ../src/50-marco-global-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move between windows of an application, using a popup window"
-msgstr "Berpindah antar jendela dari suatu aplikasi, memakai suatu jendela popup"
+msgstr ""
+"Berpindah antar jendela dari suatu aplikasi, memakai suatu jendela popup"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:90
@@ -250,7 +235,8 @@ msgstr "Jungkit apakah jendela pada semua area kerja atau hanya satu"
 #: ../src/50-marco-window-key.xml.in.h:13
 #: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr "Naikan jendela bila tertutup oleh jendela lain, bila tidak maka turunkan"
+msgstr ""
+"Naikan jendela bila tertutup oleh jendela lain, bila tidak maka turunkan"
 
 #: ../src/50-marco-window-key.xml.in.h:14
 #: ../src/org.mate.marco.gschema.xml.h:140
@@ -445,7 +431,9 @@ msgstr "Pindahkan jendela ke area kerja bawah"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr "Tombol yang digunakan untuk menjalankan suatu perintah apabila jendela diklik"
+msgstr ""
+"Tombol yang digunakan untuk menjalankan suatu perintah apabila jendela "
+"diklik"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -454,7 +442,13 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr "Klik pada sebuah jendela sambil menekan kombinasi tombol ini akan memindahkan jendela (klik kiri), mengubah ukuran jendela (klik tengah), atau menampilkan menu jendela (klik kanan). Operasi klik tengah dan kanan dapat ditukar dengan menggunakan tombol \"ubah_ukuran_dengan_tombol_kanan\". Kombinasi tombol ini akan dinyatakan seperti \"&lt;Alt&gt;\" atau \"&lt;Super&gt;\" sebagai contohnya."
+msgstr ""
+"Klik pada sebuah jendela sambil menekan kombinasi tombol ini akan "
+"memindahkan jendela (klik kiri), mengubah ukuran jendela (klik tengah), atau"
+" menampilkan menu jendela (klik kanan). Operasi klik tengah dan kanan dapat "
+"ditukar dengan menggunakan tombol \"ubah_ukuran_dengan_tombol_kanan\". "
+"Kombinasi tombol ini akan dinyatakan seperti \"&lt;Alt&gt;\" atau "
+"\"&lt;Super&gt;\" sebagai contohnya."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -465,7 +459,10 @@ msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr "Tata ini ke true untuk mengubah ukuran dengan tombol kanan dan menampilkan suatu menu dengan tombol tengah ketika menahan kunci yang diberikan di \"mouse_button_modifier\"; tata ini ke false untuk membuat sebaliknya."
+msgstr ""
+"Tata ini ke true untuk mengubah ukuran dengan tombol kanan dan menampilkan "
+"suatu menu dengan tombol tengah ketika menahan kunci yang diberikan di "
+"\"mouse_button_modifier\"; tata ini ke false untuk membuat sebaliknya."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -475,7 +472,9 @@ msgstr "Apakah akan menampilkan tab bingkai jendela yang dipilih sebelumnya"
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
-msgstr "Tata ini ke false untuk menonaktifkan bingkai jendela dipilih sebelumnya saat melakukan perpindahan tab."
+msgstr ""
+"Tata ini ke false untuk menonaktifkan bingkai jendela dipilih sebelumnya "
+"saat melakukan perpindahan tab."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -490,7 +489,15 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr "Pengaturan tombol pada bilah judul. Nilai di sini harus berupa string, misalnya \"menu:minimize,maximize,spacer,close\"; tanda titik dua memisahkan pojok kiri jendela dari pojok kanan, dan nama tombol dipisahkan dengan tanda koma. Tombol duplikat tidak diperbolehkan. Nama tombol yang tidak dikenal akan diabaikan sehingga di kemudian hari tombol tersebut akan dapat ditambahkan bila memang diperlukan tanpa harus merusak konfigurasi Marco yang ada sekarang. Suatu tag khusus spacer dapat dipakai untuk menyisipkan ruang antara dua tombol bersebelahan."
+msgstr ""
+"Pengaturan tombol pada bilah judul. Nilai di sini harus berupa string, "
+"misalnya \"menu:minimize,maximize,spacer,close\"; tanda titik dua memisahkan"
+" pojok kiri jendela dari pojok kanan, dan nama tombol dipisahkan dengan "
+"tanda koma. Tombol duplikat tidak diperbolehkan. Nama tombol yang tidak "
+"dikenal akan diabaikan sehingga di kemudian hari tombol tersebut akan dapat "
+"ditambahkan bila memang diperlukan tanpa harus merusak konfigurasi Marco "
+"yang ada sekarang. Suatu tag khusus spacer dapat dipakai untuk menyisipkan "
+"ruang antara dua tombol bersebelahan."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
@@ -503,7 +510,15 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr "Modus fokus jendela mengindikasikan bagaimana jendela-jendela yang ada diaktifkan. Modus ini memiliki memiliki tiga nilai yang dapat dipilih; \"klik\" berarti jendela-jendela tersebut harus diklik untuk memberikan fokus ke jendela-jendela tersebut, \"sloppy\" berarti jendela-jendela tersebut akan mendapatkan fokus ketika mouse memasuki area jendela, dan \"mouse\" berarti jendela-jendela tersebut akan mendapatkan fokus ketika mouse memasuki area jendela dan tidak akan mendapatkan fokus ketika mouse keluar dari area jendela."
+msgstr ""
+"Modus fokus jendela mengindikasikan bagaimana jendela-jendela yang ada "
+"diaktifkan. Modus ini memiliki memiliki tiga nilai yang dapat dipilih; "
+"\"klik\" berarti jendela-jendela tersebut harus diklik untuk memberikan "
+"fokus ke jendela-jendela tersebut, \"sloppy\" berarti jendela-jendela "
+"tersebut akan mendapatkan fokus ketika mouse memasuki area jendela, dan "
+"\"mouse\" berarti jendela-jendela tersebut akan mendapatkan fokus ketika "
+"mouse memasuki area jendela dan tidak akan mendapatkan fokus ketika mouse "
+"keluar dari area jendela."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
@@ -515,11 +530,17 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "Pilihan ini menyediakan kendali tambahan untuk menentukan bagaimana jendela yang baru dibuat mendapatkan fokus. Pilihan ini memiliki dua nilai yang dapat dipilih; \"pintar\" menerapkan modus normal yang dipilih pengguna, dan \"ketat\" membuat jendela-jendela yang ada dimulai dari sebuah terminal yang tidak diberikan fokus."
+msgstr ""
+"Pilihan ini menyediakan kendali tambahan untuk menentukan bagaimana jendela "
+"yang baru dibuat mendapatkan fokus. Pilihan ini memiliki dua nilai yang "
+"dapat dipilih; \"pintar\" menerapkan modus normal yang dipilih pengguna, dan"
+" \"ketat\" membuat jendela-jendela yang ada dimulai dari sebuah terminal "
+"yang tidak diberikan fokus."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr "Apakah kemunculan akan menjadi efek-samping dari interaksi pengguna lain"
+msgstr ""
+"Apakah kemunculan akan menjadi efek-samping dari interaksi pengguna lain"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -541,7 +562,27 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr "Mengatur opsi ini ke false dapat menyebabkan perilaku berkutu, sehingga pengguna sangat tidak dianjurkan untuk mengubahnya dari baku yang true. Banyak aksi (misalnya klik di wilayah klien, memindah atau mengubah ukuran jendela) normalnya menaikkan jendela sebagai efek samping. Menetapkan pilihan ini ke false, yang sangat tidak dianjurkan, akan melepas menaikkan dari tindakan pengguna lain, dan mengabaikan permintaan menaikkan yang dihasilkan oleh aplikasi. Lihat http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Bahkan ketika opsi ini false, jendela masih bisa dinaikkan oleh alt-klik-kiri di mana saja di jendela, klik biasa di dekorasi jendela, atau dengan pesan khusus dari pager, seperti permintaan aktivasi dari aplet tasklist. Pilihan ini sedang dimatikan pada mode klik-untuk-fokus. Perhatikan bahwa daftar cara untuk meningkatkan jendela ketika raise_on_click adalah false tidak termasuk permintaan dari program aplikasi untuk menaikkan jendela; permintaan tersebut akan diabaikan tanpa peduli alasan permintaan. Jika Anda seorang pengembang aplikasi dan memiliki pengguna yang mengeluh bahwa aplikasi Anda tidak bekerja ketika pengaturan ini dimatikankan, katakan kepada mereka itu adalah kesalahan _mereka_ karena merusak manajer jendela mereka dan bahwa mereka perlu mengubah pilihan ini kembali ke true atau hidup dengan \"kutu\" yang mereka minta."
+msgstr ""
+"Mengatur opsi ini ke false dapat menyebabkan perilaku berkutu, sehingga "
+"pengguna sangat tidak dianjurkan untuk mengubahnya dari baku yang true. "
+"Banyak aksi (misalnya klik di wilayah klien, memindah atau mengubah ukuran "
+"jendela) normalnya menaikkan jendela sebagai efek samping. Menetapkan "
+"pilihan ini ke false, yang sangat tidak dianjurkan, akan melepas menaikkan "
+"dari tindakan pengguna lain, dan mengabaikan permintaan menaikkan yang "
+"dihasilkan oleh aplikasi. Lihat "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Bahkan ketika opsi ini "
+"false, jendela masih bisa dinaikkan oleh alt-klik-kiri di mana saja di "
+"jendela, klik biasa di dekorasi jendela, atau dengan pesan khusus dari "
+"pager, seperti permintaan aktivasi dari aplet tasklist. Pilihan ini sedang "
+"dimatikan pada mode klik-untuk-fokus. Perhatikan bahwa daftar cara untuk "
+"meningkatkan jendela ketika raise_on_click adalah false tidak termasuk "
+"permintaan dari program aplikasi untuk menaikkan jendela; permintaan "
+"tersebut akan diabaikan tanpa peduli alasan permintaan. Jika Anda seorang "
+"pengembang aplikasi dan memiliki pengguna yang mengeluh bahwa aplikasi Anda "
+"tidak bekerja ketika pengaturan ini dimatikankan, katakan kepada mereka itu "
+"adalah kesalahan _mereka_ karena merusak manajer jendela mereka dan bahwa "
+"mereka perlu mengubah pilihan ini kembali ke true atau hidup dengan \"kutu\""
+" yang mereka minta."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -557,7 +598,15 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Pilihan ini menentukan efek klik ganda pada bilah judul. Pilihan yang sah adalah 'toggle_shade' yang akan mengaktifkan/mematikan bayangan jendela, 'toggle_maximize' yang akan memaksimalkan dan mengecilkan jendela, 'toggle_maximize_horizontally' dan 'toggle_maximize_vertically' yang akan memaksimalkan/membatalkan pemaksimalan jendela hanya ke arah itu, 'minimize' yang akan meminimalkan jendela, 'shade' yang akan menggulung jendela up, 'menu' yang akan menampilkan menu jendela, 'lower' yang akan menempatkan jendela di belakang yang lain, dan 'none' tidak akan melakukan apapun."
+msgstr ""
+"Pilihan ini menentukan efek klik ganda pada bilah judul. Pilihan yang sah "
+"adalah 'toggle_shade' yang akan mengaktifkan/mematikan bayangan jendela, "
+"'toggle_maximize' yang akan memaksimalkan dan mengecilkan jendela, "
+"'toggle_maximize_horizontally' dan 'toggle_maximize_vertically' yang akan "
+"memaksimalkan/membatalkan pemaksimalan jendela hanya ke arah itu, 'minimize'"
+" yang akan meminimalkan jendela, 'shade' yang akan menggulung jendela up, "
+"'menu' yang akan menampilkan menu jendela, 'lower' yang akan menempatkan "
+"jendela di belakang yang lain, dan 'none' tidak akan melakukan apapun."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
@@ -573,7 +622,15 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Pilihan ini menentukan efek klik tengah pada bilah judul. Pilihan yang sah adalah 'toggle_shade' yang akan mengaktifkan/mematikan bayangan jendela, 'toggle_maximize' yang akan memaksimalkan dan mengecilkan jendela, 'toggle_maximize_horizontally' dan 'toggle_maximize_vertically' yang akan memaksimalkan/membatalkan pemaksimalan jendela hanya ke arah itu, 'minimize' yang akan meminimalkan jendela, 'shade' yang akan menggulung jendela up, 'menu' yang akan menampilkan menu jendela, 'lower' yang akan menempatkan jendela di belakang yang lain, dan 'none' tidak akan melakukan apapun."
+msgstr ""
+"Pilihan ini menentukan efek klik tengah pada bilah judul. Pilihan yang sah "
+"adalah 'toggle_shade' yang akan mengaktifkan/mematikan bayangan jendela, "
+"'toggle_maximize' yang akan memaksimalkan dan mengecilkan jendela, "
+"'toggle_maximize_horizontally' dan 'toggle_maximize_vertically' yang akan "
+"memaksimalkan/membatalkan pemaksimalan jendela hanya ke arah itu, 'minimize'"
+" yang akan meminimalkan jendela, 'shade' yang akan menggulung jendela up, "
+"'menu' yang akan menampilkan menu jendela, 'lower' yang akan menempatkan "
+"jendela di belakang yang lain, dan 'none' tidak akan melakukan apapun."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
@@ -589,7 +646,15 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Pilihan ini menentukan efek klik kanan pada bilah judul. Pilihan yang sah adalah 'toggle_shade' yang akan mengaktifkan/mematikan bayangan jendela, 'toggle_maximize' yang akan memaksimalkan dan mengecilkan jendela, 'toggle_maximize_horizontally' dan 'toggle_maximize_vertically' yang akan memaksimalkan/membatalkan pemaksimalan jendela hanya ke arah itu, 'minimize' yang akan meminimalkan jendela, 'shade' yang akan menggulung jendela up, 'menu' yang akan menampilkan menu jendela, 'lower' yang akan menempatkan jendela di belakang yang lain, dan 'none' tidak akan melakukan apapun."
+msgstr ""
+"Pilihan ini menentukan efek klik kanan pada bilah judul. Pilihan yang sah "
+"adalah 'toggle_shade' yang akan mengaktifkan/mematikan bayangan jendela, "
+"'toggle_maximize' yang akan memaksimalkan dan mengecilkan jendela, "
+"'toggle_maximize_horizontally' dan 'toggle_maximize_vertically' yang akan "
+"memaksimalkan/membatalkan pemaksimalan jendela hanya ke arah itu, 'minimize'"
+" yang akan meminimalkan jendela, 'shade' yang akan menggulung jendela up, "
+"'menu' yang akan menampilkan menu jendela, 'lower' yang akan menempatkan "
+"jendela di belakang yang lain, dan 'none' tidak akan melakukan apapun."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
@@ -601,7 +666,12 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr "Bila berisi true dan modus fokus bernilai \"sloppy\" atau \"mouse\" maka jendela yang menerima fokus akan dinaikkan secara otomatis setelah waktu jeda yang ditetapkan oleh key auto_rise_delay. Hal ini tidak berhubungan untuk mengklik pada jendela untuk memunculkannya, ataupun untuk memasukkan jendela ketika seret-dan-jatuhkan."
+msgstr ""
+"Bila berisi true dan modus fokus bernilai \"sloppy\" atau \"mouse\" maka "
+"jendela yang menerima fokus akan dinaikkan secara otomatis setelah waktu "
+"jeda yang ditetapkan oleh key auto_rise_delay. Hal ini tidak berhubungan "
+"untuk mengklik pada jendela untuk memunculkannya, ataupun untuk memasukkan "
+"jendela ketika seret-dan-jatuhkan."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
@@ -611,7 +681,9 @@ msgstr "Jeda dalam milisekon untuk pilihan naikan jendela secara otomatis"
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr "Waktu jeda sebelum suatu jendela akan otomatis naik apabila auto_rise diaktifkan. Waktu jeda dinyatakan dalam seperseribu detik."
+msgstr ""
+"Waktu jeda sebelum suatu jendela akan otomatis naik apabila auto_rise "
+"diaktifkan. Waktu jeda dinyatakan dalam seperseribu detik."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -631,7 +703,9 @@ msgstr "Gunakan fonta sistem standard pada titel jendela"
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr "Bila berisi true, mengabaikan titlebar_font dan menggunakan fonta aplikasi standar untuk judul jendela."
+msgstr ""
+"Bila berisi true, mengabaikan titlebar_font dan menggunakan fonta aplikasi "
+"standar untuk judul jendela."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -643,7 +717,11 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr "Kalimat deskripsi fonta yang menjelaskan fonta bagi bilah judul jendela. Ukuran pada deskripsi akan digunakan hanya jika pilihan titlebar_font_size diset ke angka 0. Pilihan ini juga tidak akan berfungsi apabila pilihan titlebar_uses_desktop_font bernilai true."
+msgstr ""
+"Kalimat deskripsi fonta yang menjelaskan fonta bagi bilah judul jendela. "
+"Ukuran pada deskripsi akan digunakan hanya jika pilihan titlebar_font_size "
+"diset ke angka 0. Pilihan ini juga tidak akan berfungsi apabila pilihan "
+"titlebar_uses_desktop_font bernilai true."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -654,7 +732,10 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr "Jumlah ruang kerja. Harus lebih dari nol, dan memiliki nilai maksimum yang tetap untuk mencegah tidak dapat digunakannya desktop karena terlalu banyaknya permintaan ruang kerja yang dibuat secara tidak sengaja."
+msgstr ""
+"Jumlah ruang kerja. Harus lebih dari nol, dan memiliki nilai maksimum yang "
+"tetap untuk mencegah tidak dapat digunakannya desktop karena terlalu "
+"banyaknya permintaan ruang kerja yang dibuat secara tidak sengaja."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -670,7 +751,16 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr "Gaya wrap digunakan untuk menentukan bagaimana berpindah dari satu ruang kerja ke yang lain pada batas pergantian ruang kerja. Ketika diset pada \"tanpa wrap\", tidak akan terjadi apapun jika Anda mencoba berpindah ke ruang kerja melalui batas pergantian. Jika diset ke \"klasik\", perilaku marco yang lama akan digunakan: akhir dari satu baris akan mengarah pada awal baris berikutnya dan akhir dari sebuah kolom akan mengarah pada kolom berikutnya. Jika diset ke \"toroidal\", ruang kerja akan terhubung seperti donat; akhir dari setiap baris kembali ke awal baris dan akhir dari setiap kolom akan kembali ke awal kolom."
+msgstr ""
+"Gaya wrap digunakan untuk menentukan bagaimana berpindah dari satu ruang "
+"kerja ke yang lain pada batas pergantian ruang kerja. Ketika diset pada "
+"\"tanpa wrap\", tidak akan terjadi apapun jika Anda mencoba berpindah ke "
+"ruang kerja melalui batas pergantian. Jika diset ke \"klasik\", perilaku "
+"marco yang lama akan digunakan: akhir dari satu baris akan mengarah pada "
+"awal baris berikutnya dan akhir dari sebuah kolom akan mengarah pada kolom "
+"berikutnya. Jika diset ke \"toroidal\", ruang kerja akan terhubung seperti "
+"donat; akhir dari setiap baris kembali ke awal baris dan akhir dari setiap "
+"kolom akan kembali ke awal kolom."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
@@ -681,7 +771,10 @@ msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr "Menyalakan indikasi visual saat aplikasi atau sistem mengeluarkan 'bell' atau 'beep'; berguna bagi pengguna yang lemah pendengaran atau pada penggunaan di lingkungan yang berisik."
+msgstr ""
+"Menyalakan indikasi visual saat aplikasi atau sistem mengeluarkan 'bell' "
+"atau 'beep'; berguna bagi pengguna yang lemah pendengaran atau pada "
+"penggunaan di lingkungan yang berisik."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
@@ -691,7 +784,10 @@ msgstr "Bel Sistem dapat Didengar"
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr "Menentukan apakah aplikasi atau sistem dapat membuat bel yang dapat didengar; boleh dipakai bersama dengan 'visual bell' untuk mengijinkan 'beep' hening."
+msgstr ""
+"Menentukan apakah aplikasi atau sistem dapat membuat bel yang dapat "
+"didengar; boleh dipakai bersama dengan 'visual bell' untuk mengijinkan "
+"'beep' hening."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
@@ -706,7 +802,15 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr "Menentukan cara Marco menyajikan indikasi visual saat bel sistem atau aplikasi sedang dibunyikan. Ada dua cara yang digunakan, yaitu \"fullscreen\" yang akan menampilkan kilatan hitam putih di seluruh area layar, dan \"frame_flash\"yang akan menampikan kilatan pada bilah judul jendela aplikasi yang membunyikan bel. Jika tidak diketahui aplikasi mana yang membunyikan bel (biasanya karena ini merupakan bel sistem standar) maka kilatan akan ditampilkan pada bilah judul jendela yang sedang memiliki fokus saat ini."
+msgstr ""
+"Menentukan cara Marco menyajikan indikasi visual saat bel sistem atau "
+"aplikasi sedang dibunyikan. Ada dua cara yang digunakan, yaitu "
+"\"fullscreen\" yang akan menampilkan kilatan hitam putih di seluruh area "
+"layar, dan \"frame_flash\"yang akan menampikan kilatan pada bilah judul "
+"jendela aplikasi yang membunyikan bel. Jika tidak diketahui aplikasi mana "
+"yang membunyikan bel (biasanya karena ini merupakan bel sistem standar) maka"
+" kilatan akan ditampilkan pada bilah judul jendela yang sedang memiliki "
+"fokus saat ini."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
@@ -718,14 +822,18 @@ msgstr "Menentukan apakah Marco adalah suatu manajer pengkomposisian."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
-msgstr "Alt-Tab cepat dengan manajer pengkomposisian (menonaktifkan gambar mini)"
+msgstr ""
+"Alt-Tab cepat dengan manajer pengkomposisian (menonaktifkan gambar mini)"
 
 #: ../src/org.mate.marco.gschema.xml.h:44
 msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr "Bila diisi true, tidak ada gambar mini jendela yang ditampilkan dalam jendela popup alt-tab ketika manajer pengkomposisian difungsikan. Ikon aplikasi akan ditampilkan sebagai pengganti."
+msgstr ""
+"Bila diisi true, tidak ada gambar mini jendela yang ditampilkan dalam "
+"jendela popup alt-tab ketika manajer pengkomposisian difungsikan. Ikon "
+"aplikasi akan ditampilkan sebagai pengganti."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
@@ -738,7 +846,13 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr "Bila bernilai true, marco akan memberikan feedback pengguna yang lebih sedikit dengan menggunakan wireframe, menghindari animasi, atau yang lain. Ini berarti pengurangan yang signifikan dalam hal usabilitas bagi banyak pengguna, tetapi akan mengijinkan aplikasi lama untuk tetap bekerja, dan mungkin juga berguna untuk server terminal. Namun, fitur wireframe akan dimatikan saat aksesibilitas diaktifkan."
+msgstr ""
+"Bila bernilai true, marco akan memberikan feedback pengguna yang lebih "
+"sedikit dengan menggunakan wireframe, menghindari animasi, atau yang lain. "
+"Ini berarti pengurangan yang signifikan dalam hal usabilitas bagi banyak "
+"pengguna, tetapi akan mengijinkan aplikasi lama untuk tetap bekerja, dan "
+"mungkin juga berguna untuk server terminal. Namun, fitur wireframe akan "
+"dimatikan saat aksesibilitas diaktifkan."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
@@ -754,11 +868,19 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr "Bila berisi true, Marco akan bekerja berdasarkan aplikasi, bukan berdasarkan jendela. Konsepnya agak sedikit abstrak, tapi secara umum, konsepnya lebih mirip ke Mac ketimbang ke Windows. Saat Anda memberi fokus pada window pada mode berbasis aplikasi, semua jendela pada aplikasi akan dinaikkan. Juga, pada mode berbasis aplikasi, klik fokus tidak diberikan ke jendela pada aplikasi lain. Namun mode berbasis aplikasi belum diimplementasikan secara luas pada saat ini."
+msgstr ""
+"Bila berisi true, Marco akan bekerja berdasarkan aplikasi, bukan berdasarkan"
+" jendela. Konsepnya agak sedikit abstrak, tapi secara umum, konsepnya lebih "
+"mirip ke Mac ketimbang ke Windows. Saat Anda memberi fokus pada window pada "
+"mode berbasis aplikasi, semua jendela pada aplikasi akan dinaikkan. Juga, "
+"pada mode berbasis aplikasi, klik fokus tidak diberikan ke jendela pada "
+"aplikasi lain. Namun mode berbasis aplikasi belum diimplementasikan secara "
+"luas pada saat ini."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr "Nonaktifkan fitur yang diperlukan oleh aplikasi tua dan aplikasi rusak"
+msgstr ""
+"Nonaktifkan fitur yang diperlukan oleh aplikasi tua dan aplikasi rusak"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -766,7 +888,12 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr "Beberapa aplikasi mengabaikan spesifikasi yang dapat menyebabkan kesalahan pengelola jendela. Pilihan ini menempatkan Marco pada mode pembenaran yang tepat, yang akan memberikan antar muka pengguna yang lebih konsisten, sehingga tidak perlu menjalankan aplikasi yang memiliki perilaku tidak benar."
+msgstr ""
+"Beberapa aplikasi mengabaikan spesifikasi yang dapat menyebabkan kesalahan "
+"pengelola jendela. Pilihan ini menempatkan Marco pada mode pembenaran yang "
+"tepat, yang akan memberikan antar muka pengguna yang lebih konsisten, "
+"sehingga tidak perlu menjalankan aplikasi yang memiliki perilaku tidak "
+"benar."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -776,7 +903,9 @@ msgstr "Menentukan bila jendela baru dibuat di pusat layar"
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr "Bila diisi true, jendela baru dibuka di pusat layar. Bila tidak, mereka dibuka di kiri atas layar."
+msgstr ""
+"Bila diisi true, jendela baru dibuka di pusat layar. Bila tidak, mereka "
+"dibuka di kiri atas layar."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
@@ -811,7 +940,13 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr "Mode penempatan jendela mengindikasikan bagaimana jendela baru akan diposisikan. \"Otomatis\" berarti sistem akan memiliki lokasi secara otomatis berdasarkan ruang yang tersedia pada desktop, atau bertumpuk apabila tidak terdapat ruang; \"pointer\" berarti jendela baru ditempatkan sesuai posisi pointer mouse; \"manual\" berarti pengguna harus menempatkan jendela baru dengan mouse atau keyboard secara manual."
+msgstr ""
+"Mode penempatan jendela mengindikasikan bagaimana jendela baru akan "
+"diposisikan. \"Otomatis\" berarti sistem akan memiliki lokasi secara "
+"otomatis berdasarkan ruang yang tersedia pada desktop, atau bertumpuk "
+"apabila tidak terdapat ruang; \"pointer\" berarti jendela baru ditempatkan "
+"sesuai posisi pointer mouse; \"manual\" berarti pengguna harus menempatkan "
+"jendela baru dengan mouse atau keyboard secara manual."
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
@@ -821,7 +956,10 @@ msgstr "Daftar aplikasi yang diabaikan oleh tampilkan-destop"
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
-msgstr "Daftar kelas yang dipisahkan koma. Setiap aplikasi GUI yang berjalan yang dirujuk ke kelas manajer windows yang diberikan akan diabaikan oleh fungsi 'Tampilkan Destop'."
+msgstr ""
+"Daftar kelas yang dipisahkan koma. Setiap aplikasi GUI yang berjalan yang "
+"dirujuk ke kelas manajer windows yang diberikan akan diabaikan oleh fungsi "
+"'Tampilkan Destop'."
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
@@ -843,7 +981,14 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "Kombinasi tombol yang menjalankan perintah yang sesuai dengan nomor panggilnya pada /apps/marco/keybinding_commands. Format penulisannya seperti \"<Control>a\" atau \"<Shift><Alt>F1. Program pendeteksi kombinasi tombol ini sangat fleksibel dan memperbolehkan digunakannya huruf besar dan huruf kecil, juga memperbolehkan digunakannya singkatan seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda menentukan opsinya pada kata \"disabled\" maka perintah ini tidak memiliki kombinasi tombol."
+msgstr ""
+"Kombinasi tombol yang menjalankan perintah yang sesuai dengan nomor "
+"panggilnya pada /apps/marco/keybinding_commands. Format penulisannya seperti"
+" \"<Control>a\" atau \"<Shift><Alt>F1. Program pendeteksi kombinasi tombol "
+"ini sangat fleksibel dan memperbolehkan digunakannya huruf besar dan huruf "
+"kecil, juga memperbolehkan digunakannya singkatan seperti \"<Ctl>\" atau "
+"\"<Ctrl>\". Apabila Anda menentukan opsinya pada kata \"disabled\" maka "
+"perintah ini tidak memiliki kombinasi tombol."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -852,7 +997,12 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "Format penulisannya seperti \"<Control>a\" atau \"<Shift><Alt>F1\". Program pendeteksi kombinasi tombol ini sangat fleksibel dan memperbolehkan digunakannya huruf besar dan huruf kecil, juga memperbolehkan digunakannya singkatan seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda menentukan opsinya pada kata \"disabled\" maka perintah ini tidak memiliki kombinasi tombol."
+msgstr ""
+"Format penulisannya seperti \"<Control>a\" atau \"<Shift><Alt>F1\". Program "
+"pendeteksi kombinasi tombol ini sangat fleksibel dan memperbolehkan "
+"digunakannya huruf besar dan huruf kecil, juga memperbolehkan digunakannya "
+"singkatan seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda menentukan opsinya"
+" pada kata \"disabled\" maka perintah ini tidak memiliki kombinasi tombol."
 
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid ""
@@ -863,11 +1013,20 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr "Format penulisannya seperti \"<Control>a\" atau \"<Shift><Alt>F1\". Program pendeteksi kombinasi tombol sangat fleksibel dan memperbolehkan digunakannya huruf besar dan huruf kecil, juga memperbolehkan digunakannya singkatan seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda menentukan opsinya pada kata \"disabled\" maka perintah ini tidak memiliki kombinasi tombol. Kombinasi tombol ini bisa dibalik dengan terus menekan kunci \"shift\"; maka, \"shift\" tidak bisa menjadi salah satu kunci yang dipakai."
+msgstr ""
+"Format penulisannya seperti \"<Control>a\" atau \"<Shift><Alt>F1\". Program "
+"pendeteksi kombinasi tombol sangat fleksibel dan memperbolehkan digunakannya"
+" huruf besar dan huruf kecil, juga memperbolehkan digunakannya singkatan "
+"seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda menentukan opsinya pada kata"
+" \"disabled\" maka perintah ini tidak memiliki kombinasi tombol. Kombinasi "
+"tombol ini bisa dibalik dengan terus menekan kunci \"shift\"; maka, "
+"\"shift\" tidak bisa menjadi salah satu kunci yang dipakai."
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr "Berpindah mundur antar jendela dari suatu aplikasi, memakai suatu jendela popup"
+msgstr ""
+"Berpindah mundur antar jendela dari suatu aplikasi, memakai suatu jendela "
+"popup"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
@@ -875,15 +1034,19 @@ msgstr "Berpindah mundur antar jendela, memakai suatu jendela popup"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr "Berpindah antar jendela pada semua ruang kerja, memakai suatu jendela popup"
+msgstr ""
+"Berpindah antar jendela pada semua ruang kerja, memakai suatu jendela popup"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr "Berpindah mundur antar jendela pada semua ruang kerja, memakai suatu jendela popup"
+msgstr ""
+"Berpindah mundur antar jendela pada semua ruang kerja, memakai suatu jendela"
+" popup"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr "Berpindah mundur antara panel dan desktop, memakai suatu jendela popup"
+msgstr ""
+"Berpindah mundur antara panel dan desktop, memakai suatu jendela popup"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
@@ -906,7 +1069,10 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr "Kunci /apps/marco/global_keybindings/run_command_N menentukan kombinasi tombol untuk perintah ini. Dengan menekan kombinasi tombol tersebut maka perintah command_N akan dijalankan."
+msgstr ""
+"Kunci /apps/marco/global_keybindings/run_command_N menentukan kombinasi "
+"tombol untuk perintah ini. Dengan menekan kombinasi tombol tersebut maka "
+"perintah command_N akan dijalankan."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
@@ -916,7 +1082,9 @@ msgstr "Perintah mengambil gambar layar"
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr "Kunci /apps/marco/global_keybindings/run_command_screenshot menentukan kombinasi tombol untuk menjalankan perintah ini"
+msgstr ""
+"Kunci /apps/marco/global_keybindings/run_command_screenshot menentukan "
+"kombinasi tombol untuk menjalankan perintah ini"
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
@@ -927,11 +1095,14 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr "Kunci /apps/marco/global_keybindings/run_command_window_screenshot menentukan kombinasi tombol untuk menjalankan perintah ini."
+msgstr ""
+"Kunci /apps/marco/global_keybindings/run_command_window_screenshot "
+"menentukan kombinasi tombol untuk menjalankan perintah ini."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr "Jungkitkan apakah sebuah jendela akan selalu tampak di atas jendela lainnya"
+msgstr ""
+"Jungkitkan apakah sebuah jendela akan selalu tampak di atas jendela lainnya"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
@@ -968,7 +1139,8 @@ msgstr "<tt>%s</tt> tak menanggapi."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Anda bisa memilih untuk menunggu sebentar atau memaksa aplikasi keluar."
+msgstr ""
+"Anda bisa memilih untuk menunggu sebentar atau memaksa aplikasi keluar."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -1002,39 +1174,42 @@ msgstr "Ada program lain yang menggunakan tombol %s dengan kombinasi %x\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Ada galat saat menjalankan <tt>%s</tt>:\n\n%s."
+msgstr ""
+"Ada galat saat menjalankan <tt>%s</tt>:\n"
+"\n"
+"%s."
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Tidak ada perintah %d.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Tidak ada perintah untuk menjalankan terminal.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Ganti Nama Ruang Kerja</tt>"
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr "Nama Ruang Kerja Baru:"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr "OK"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
 msgstr "Batal"
 
@@ -1045,11 +1220,15 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nHak Cipta (C) 2001-%s Havoc Pennington, Red Hat, Inc., dan lain-lain.\nIni adalah perangkat lunak bebas, silakan lihat kode asalnya untuk kondisi penyalinan.\nTIDAK ADA jaminan, bahkan untuk KELAYAKAN JUAL atau KELAYAKAN UNTUK KEGUNAAN TERTENTU.\n"
+msgstr ""
+"marco %s\n"
+"Hak Cipta (C) 2001-%s Havoc Pennington, Red Hat, Inc., dan lain-lain.\n"
+"Ini adalah perangkat lunak bebas, silakan lihat kode asalnya untuk kondisi penyalinan.\n"
+"TIDAK ADA jaminan, bahkan untuk KELAYAKAN JUAL atau KELAYAKAN UNTUK KEGUNAAN TERTENTU.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "Matikan koneksi ke pengatur sesi"
+msgstr "Menonaktifkan koneksi ke manajer sesi"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1057,7 +1236,7 @@ msgstr "Ganti program pengatur jendela yang aktif dengan Marco"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Tentukan kode pengaturan sesi"
+msgstr "Tentukan ID manajemen sesi"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1069,11 +1248,11 @@ msgstr "Aktifkan sesi dari berkas simpanan"
 
 #: ../src/core/main.c:298
 msgid "Print version"
-msgstr "Cetak versi"
+msgstr "Menampilkan versi"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Buat panggilan X selaras"
+msgstr "Buat call X sinkoronus"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1086,7 +1265,9 @@ msgstr "Matikan pengkomposisian"
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Jangan jadikan layar penuh jendela yang dimaksimalkan dan tak memiliki hiasan"
+msgstr ""
+"Jangan jadikan layar penuh jendela yang dimaksimalkan dan tak memiliki "
+"hiasan"
 
 #: ../src/core/main.c:519
 #, c-format
@@ -1110,13 +1291,17 @@ msgstr "Gagal menjalankan ulang: %s\n"
 #: ../src/core/prefs.c:606 ../src/core/prefs.c:759
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr "%d disimpan pada kunci GSettings %s yang berada diluar jangkauan dari %d ke %d\n"
+msgstr ""
+"%d disimpan pada kunci GSettings %s yang berada diluar jangkauan dari %d ke "
+"%d\n"
 
 #: ../src/core/prefs.c:1053
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Pencegahan kesalahan bagi aplikasi yang rusak sedang dinonaktifkan. Mungkin nanti ada beberapa aplikasi yang akan bertingkah aneh.\n"
+msgstr ""
+"Pencegahan kesalahan bagi aplikasi yang rusak sedang dinonaktifkan. Mungkin "
+"nanti ada beberapa aplikasi yang akan bertingkah aneh.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
@@ -1128,19 +1313,23 @@ msgstr "Tidak dapat membaca deskripsi fonta \"%s\" dari kunci GSettings %s\n"
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "\"%s\" yang ada pada database konfigurasi bukanlah nilai yang benar untuk tombol mouse.\n"
+msgstr ""
+"\"%s\" yang ada pada database konfigurasi bukanlah nilai yang benar untuk "
+"tombol mouse.\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "\"%s\" yang ada pada database konfigurasi bernilai tidak benar untuk kombinasi tombol \"%s\"\n"
+msgstr ""
+"\"%s\" yang ada pada database konfigurasi bernilai tidak benar untuk "
+"kombinasi tombol \"%s\"\n"
 
 #: ../src/core/prefs.c:2056
 #, c-format
 msgid "Workspace %d"
-msgstr "Area kerja %d"
+msgstr "Area Kerja %d"
 
 #: ../src/core/screen.c:359
 #, c-format
@@ -1152,12 +1341,16 @@ msgstr "Layar %d pada tampilan '%s' tidak benar\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Layar %d pada tampilan \"%s\" sudah memiliki pengatur jendela. Cobalah gunakan pilihan --replace untuk mengganti pengatur jendela yang aktif.\n"
+msgstr ""
+"Layar %d pada tampilan \"%s\" sudah memiliki pengatur jendela. Cobalah "
+"gunakan pilihan --replace untuk mengganti pengatur jendela yang aktif.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr "Tidak dapat mendapatkan pilihan pengatur jendela pada layar %d tampilan \"%s\"\n"
+msgstr ""
+"Tidak dapat mendapatkan pilihan pengatur jendela pada layar %d tampilan "
+"\"%s\"\n"
 
 #: ../src/core/screen.c:460
 #, c-format
@@ -1220,7 +1413,9 @@ msgstr "Elemen %s tidak dikenal"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Jendela ini tidak bisa &quot;menyimpan setelan aktif saat ini&quot; dan bila log masuk kali lain Anda harus menjalankannya ulang."
+msgstr ""
+"Jendela ini tidak bisa &quot;menyimpan setelan aktif saat ini&quot; dan bila"
+" log masuk kali lain Anda harus menjalankannya ulang."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1265,12 +1460,14 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5893
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Jendela %s menyetel SM_CLIENT_ID pada dirinya sendiri, padahal seharusnya disetel pada jendela WM_CLIENT_LEADER sesuai aturan ICCCM.\n"
+msgstr ""
+"Jendela %s menyetel SM_CLIENT_ID pada dirinya sendiri, padahal seharusnya "
+"disetel pada jendela WM_CLIENT_LEADER sesuai aturan ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1278,12 +1475,15 @@ msgstr "Jendela %s menyetel SM_CLIENT_ID pada dirinya sendiri, padahal seharusny
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6458
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Jendela %s menyetel hint MWM yang menandakan bahwa ia tidak dapat dirubah ukurannya, sedangkan ukuran minimalnya adalah %d x %d dan maksimal %d x %d yang tidak masuk di akal.\n"
+msgstr ""
+"Jendela %s menyetel hint MWM yang menandakan bahwa ia tidak dapat dirubah "
+"ukurannya, sedangkan ukuran minimalnya adalah %d x %d dan maksimal %d x %d "
+"yang tidak masuk di akal.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1329,7 +1529,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Jendela 0x%lx memiliki properti %s\nyang seharusnya memiliki tipe %s format %d.\nSekarang dia memiliki tipe %s format %d n_items %d.\nSepertinya ini adalah bug aplikasinya, bukan bug pengatur jendela.\nJudul jendelanya adalah \"%s\" class=\"%s\" dan bernama=\"%s\"\n"
+msgstr ""
+"Jendela 0x%lx memiliki properti %s\n"
+"yang seharusnya memiliki tipe %s format %d.\n"
+"Sekarang dia memiliki tipe %s format %d n_items %d.\n"
+"Sepertinya ini adalah bug aplikasinya, bukan bug pengatur jendela.\n"
+"Judul jendelanya adalah \"%s\" class=\"%s\" dan bernama=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1341,7 +1546,9 @@ msgstr "Properti %s pada jendela 0x%lx berisi karakter UTF-8 yang salah\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Properti %s pada jendela 0x%lx di obyek %d berisi karakter UTF-8 yang salah\n"
+msgstr ""
+"Properti %s pada jendela 0x%lx di obyek %d berisi karakter UTF-8 yang "
+"salah\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1395,17 +1602,17 @@ msgstr "Letakkan Jendela Hanya Pada Satu Area Kerja"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:65
 msgid "Mi_nimize"
-msgstr "Kecilka_n"
+msgstr "Mi_nimalkan"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:67
 msgid "Ma_ximize"
-msgstr "Pe_rbesar"
+msgstr "Ma_ksimalkan"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "Kem_balikan"
+msgstr "Tak Ma_ksimalkan"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1441,32 +1648,32 @@ msgstr "Selalu di _Puncak"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
-msgstr "T_ampak pada Area Kerja Aktif"
+msgstr "Sel_alu pada Area Kerja yang Tampak"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
-msgstr "_Tampak pada Area Kerja Ini Saja"
+msgstr "_Hanya untuk Area Kerja ini"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "Pindahkan ke Area Kerja _Kiri"
+msgstr "Pindah ke Area Kerja _Kiri"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "Pindahkan ke A_rea Kerja Kanan"
+msgstr "P_indah ke Area Kerja Kanan"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "Pindahkan ke Area Kerja Ata_s"
+msgstr "Pindah ke Area Kerja _Atas"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "Pindahkan ke Area Kerja _Bawah"
+msgstr "Pindah ke Area Kerja _Bawah"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
@@ -1491,7 +1698,7 @@ msgstr "Area Kerja %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Pindahkan ke Area Kerja _Lain"
+msgstr "_Pindah ke Area Kerja Lain"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -1626,14 +1833,20 @@ msgstr "Gradien harus paling tidak ada dua warna"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "Spesifikasi warna GTK harus memiliki kondisi pada kurung, misal gtk:fg[NORMAL] dengan NORMAL adalah jenis kondisinya, tidak dapat membaca \"%s\""
+msgstr ""
+"Spesifikasi warna GTK harus memiliki kondisi pada kurung, misal "
+"gtk:fg[NORMAL] dengan NORMAL adalah jenis kondisinya, tidak dapat membaca "
+"\"%s\""
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "Spesifikasi warna GTK harus memiliki kurung tutup pada kondisinya, misal gtk:fg[NORMAL] dengan NORMAL adalah jenis kondisinya, tidak dapat membaca \"%s\""
+msgstr ""
+"Spesifikasi warna GTK harus memiliki kurung tutup pada kondisinya, misal "
+"gtk:fg[NORMAL] dengan NORMAL adalah jenis kondisinya, tidak dapat membaca "
+"\"%s\""
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1650,7 +1863,9 @@ msgstr "Komponen warna \"%s\" tidak benar pada spesifikasi warna"
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Format pencampuran adalah \"blend/bg_color/fg_color/alpha\", \"%s\" bukan ditulis dalam format yang benar"
+msgstr ""
+"Format pencampuran adalah \"blend/bg_color/fg_color/alpha\", \"%s\" bukan "
+"ditulis dalam format yang benar"
 
 #: ../src/ui/theme.c:1259
 #, c-format
@@ -1660,12 +1875,16 @@ msgstr "Tidak dapat membaca nilai alpha \"%s\" pada pencampuran warna"
 #: ../src/ui/theme.c:1269
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
-msgstr "Nilai alpha \"%s\" pada warna yang dicampur tidak ada dalam rentang 0.0 dan 1.0"
+msgstr ""
+"Nilai alpha \"%s\" pada warna yang dicampur tidak ada dalam rentang 0.0 dan "
+"1.0"
 
 #: ../src/ui/theme.c:1316
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "Format bayangan adalah \"shade/base_color/factor\", \"%s\" ditulis dalam format yang keliru"
+msgstr ""
+"Format bayangan adalah \"shade/base_color/factor\", \"%s\" ditulis dalam "
+"format yang keliru"
 
 #: ../src/ui/theme.c:1327
 #, c-format
@@ -1692,7 +1911,8 @@ msgstr "Ekspresi koordinat berisi karakter '%s' yang tidak diperbolehkan"
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "Ekspresi koordinat berisi angka floating point '%s' yang tidak dapat dibaca"
+msgstr ""
+"Ekspresi koordinat berisi angka floating point '%s' yang tidak dapat dibaca"
 
 #: ../src/ui/theme.c:1747
 #, c-format
@@ -1704,7 +1924,9 @@ msgstr "Ekspresi koordinat berisi integer '%s' yang tidak dapat dibaca"
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Ekspresi koordinat berisi operator tak dikenal pada awal teks berikut: \"%s\""
+msgstr ""
+"Ekspresi koordinat berisi operator tak dikenal pada awal teks berikut: "
+"\"%s\""
 
 #: ../src/ui/theme.c:1926
 #, c-format
@@ -1735,19 +1957,24 @@ msgstr "Ekspresi koordinat menggunakan operand tanpa operator"
 #: ../src/ui/theme.c:2162
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
-msgstr "Ekspresi koordinat diakhiri dengan operator, seharusnya diakhiri dengan operand"
+msgstr ""
+"Ekspresi koordinat diakhiri dengan operator, seharusnya diakhiri dengan "
+"operand"
 
 #: ../src/ui/theme.c:2172
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Ekspresi koordinat memiliki operator \"%c\" diikuti operator \"%c\" tanpa adanya operand di antarany"
+msgstr ""
+"Ekspresi koordinat memiliki operator \"%c\" diikuti operator \"%c\" tanpa "
+"adanya operand di antarany"
 
 #: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
-msgstr "Ada variabel atau konstanta \"%s\" tidak diketahui pada ekspresi koordinat"
+msgstr ""
+"Ada variabel atau konstanta \"%s\" tidak diketahui pada ekspresi koordinat"
 
 #: ../src/ui/theme.c:2414
 #, c-format
@@ -1780,7 +2007,9 @@ msgstr "Tema berisi suatu ekspresi yang menghasilkan galat: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> tidak disebutkan pada gaya frame ini"
+msgstr ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> tidak "
+"disebutkan pada gaya frame ini"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
@@ -1803,7 +2032,9 @@ msgstr "Tidak ada <%s> yang ditentukan untuk tema \"%s\""
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Tidak ada gaya frame untuk tipe window \"%s\" pada tema \"%s\". Tambah dulu elemen <window type=\"%s\" style_set=\"whatever\"/>"
+msgstr ""
+"Tidak ada gaya frame untuk tipe window \"%s\" pada tema \"%s\". Tambah dulu "
+"elemen <window type=\"%s\" style_set=\"whatever\"/>"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
@@ -1820,7 +2051,7 @@ msgstr "Konstanta \"%s\" telah didefinisikan sebelumnya"
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "Tidak ada atribut \"%s\" untuk elemen <%s>"
+msgstr "Tidak ada atribut \"%s\" pada elemen <%s>"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
@@ -1835,7 +2066,7 @@ msgstr "Atribut \"%s\" diulangi dua kali pada elemen <%s> yang sama"
 #: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Atribut \"%s\" tidak diperkenankan pada elemen <%s> pada konteks ini"
+msgstr "Dalam konteks ini, atribut \"%s\" tidak boleh dipasang pada elemen <%s>"
 
 #: ../src/ui/theme-parser.c:547
 #, c-format
@@ -1875,14 +2106,18 @@ msgstr "Sudut harus ada dalam rentang 0.0 dan 360.0, dalam berkas didapat %g\n"
 #: ../src/ui/theme-parser.c:751
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Alpha harus ada dalam rentang 0.0 (tidak kelihatan) dan 1.0 (nampak  semua, dalam berkas didapat %g\n"
+msgstr ""
+"Alpha harus ada dalam rentang 0.0 (tidak kelihatan) dan 1.0 (nampak  semua, "
+"dalam berkas didapat %g\n"
 
 #: ../src/ui/theme-parser.c:816
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Skala judul \"%s\" tidak benar (harusnya bernilai xx-small, x-small, small, medium, large, x-large, xx-large)\n"
+msgstr ""
+"Skala judul \"%s\" tidak benar (harusnya bernilai xx-small, x-small, small, "
+"medium, large, x-large, xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1908,7 +2143,8 @@ msgstr "<%s> harus menentukan geometri atau induk yang ada geometrinya"
 
 #: ../src/ui/theme-parser.c:1149
 msgid "You must specify a background for an alpha value to be meaningful"
-msgstr "Anda mesti menyatakan suatu latar belakang bagi nilai alfa agar berarti"
+msgstr ""
+"Anda mesti menyatakan suatu latar belakang bagi nilai alfa agar berarti"
 
 #: ../src/ui/theme-parser.c:1216
 #, c-format
@@ -1933,14 +2169,16 @@ msgstr "Tipe jendela \"%s\" sudah memiliki set gaya"
 #: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "Elemen <%s> tidak diperkenankan ada di bawah <%s>"
+msgstr "Elemen <%s> tidak diperbolehkan di bawah <%s>"
 
 #: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
 #: ../src/ui/theme-parser.c:1438
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Tidak dapat menyatakan sekaligus \"button_width\"/\"button_height\" dan \"aspect_ratio\" untuk tombol"
+msgstr ""
+"Tidak dapat menyatakan sekaligus \"button_width\"/\"button_height\" dan "
+"\"aspect_ratio\" untuk tombol"
 
 #: ../src/ui/theme-parser.c:1402
 #, c-format
@@ -2063,12 +2301,16 @@ msgstr "\"%s\" bukan nilai yang benar untuk atribut resize"
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Atribut \"resize\" tidak boleh ada pada elemen <%s> untuk kondisi ukuran window maksimum/tergulung"
+msgstr ""
+"Atribut \"resize\" tidak boleh ada pada elemen <%s> untuk kondisi ukuran "
+"window maksimum/tergulung"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Atribut \"resize\" tidak boleh ada pada elemen <%s> untuk kondisi ukuran jendela maksimum"
+msgstr ""
+"Atribut \"resize\" tidak boleh ada pada elemen <%s> untuk kondisi ukuran "
+"jendela maksimum"
 
 #: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
 #, c-format
@@ -2086,19 +2328,26 @@ msgstr "Gaya sudah menjelaskan kondisi %s focus %s"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Tidak boleh ada dua draw_ops untuk elemen <piece> (tema menyebutkan atribut draw_ops dan juga elemen <draw_ops> atau meyebutkan dua elemen tersebut "
+msgstr ""
+"Tidak boleh ada dua draw_ops untuk elemen <piece> (tema menyebutkan atribut "
+"draw_ops dan juga elemen <draw_ops> atau meyebutkan dua elemen tersebut "
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Tidak boleh ada dua draw_ops untuk elemen <button> (tema menyebutkan atribut draw_ops dan juga elemen <draw_ops> atau meyebutkan dua elemen tersebut "
+msgstr ""
+"Tidak boleh ada dua draw_ops untuk elemen <button> (tema menyebutkan atribut"
+" draw_ops dan juga elemen <draw_ops> atau meyebutkan dua elemen tersebut "
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Tidak boleh ada dua draw_ops untuk elemen <menu_icon> (tema menyebutkan atribut draw_ops dan juga elemen <draw_ops> atau meyebutkan dua elemen tersebut "
+msgstr ""
+"Tidak boleh ada dua draw_ops untuk elemen <menu_icon> (tema menyebutkan "
+"atribut draw_ops dan juga elemen <draw_ops> atau meyebutkan dua elemen "
+"tersebut "
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2109,7 +2358,8 @@ msgstr "Elemen paling luar dalam tema harus <metacity_theme> bukan <%s>"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
-msgstr "Elemen <%s> tidak diperbolehkan berada elemen name/author/date/description"
+msgstr ""
+"Elemen <%s> tidak diperbolehkan berada elemen name/author/date/description"
 
 #: ../src/ui/theme-parser.c:3420
 #, c-format
@@ -2120,7 +2370,8 @@ msgstr "Elemen <%s> tidak boleh ada dalam elemen <constat>"
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "Elemen <%s> tidak boleh ada di dalam elemen distance/border/aspec_ratio"
+msgstr ""
+"Elemen <%s> tidak boleh ada di dalam elemen distance/border/aspec_ratio"
 
 #: ../src/ui/theme-parser.c:3454
 #, c-format
@@ -2158,100 +2409,106 @@ msgstr "<%s> disebutkan dua kali pada tema ini"
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Gagal menemukan berkas yang valid bagi tema %s\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "Ini contoh pesan pada suatu dialog"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Item menu palsu %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "Jendela dengan hanya tepi"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
 msgstr "Batang"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "Jendela Aplikasi Normal"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "Kotak Dialog"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "Kotak Dialog Modal"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "Palet Perkakas"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "Menu Dapat Dilepas"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
 msgstr "Batas"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:784
 #, c-format
 msgid "Button layout test %d"
 msgstr "Tes komposisi tombol %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:809
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "lama waktu menggambar satu bingkai jendela %g milidetik"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:849
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Cara pakai: marco-theme-viewer [NAMA TEMA]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Ada galat saat memuat tema: %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:862
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Tema \"%s\" dibuka dalam %g detik\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:906
 msgid "Normal Title Font"
 msgstr "Fonta Judul Normal"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:912
 msgid "Small Title Font"
 msgstr "Fonta Judul Kecil"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:918
 msgid "Large Title Font"
 msgstr "Fonta Judul Besar"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:923
 msgid "Button Layouts"
 msgstr "Tata Letak Tombol"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:928
 msgid "Benchmark"
 msgstr "Pengukuran"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:985
 msgid "Window Title Goes Here"
 msgstr "Ini tempat judul jendela"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1090
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "%d frame dibuat dalam %g detik dalam waktu klien (%g milidetik per frame) dan %g detik dalam waktu sebenarnya (%g milidetik per frame)\n"
+msgstr ""
+"%d frame dibuat dalam %g detik dalam waktu klien (%g milidetik per frame) "
+"dan %g detik dalam waktu sebenarnya (%g milidetik per frame)\n"

@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# 趙惟倫 <bluebat@member.fsf.org>, 2012-2013
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Chinese (Mandarin) (http://www.transifex.com/mate/MATE/language/cmn/)\n"
+"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: 趙惟倫 <bluebat@member.fsf.org>, 2018\n"
+"Language-Team: Chinese (Mandarin) (https://www.transifex.com/mate/teams/13566/cmn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -599,7 +599,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr ""
+msgstr "目前布景主題"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
@@ -694,7 +694,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "複合管理器"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
@@ -986,41 +986,44 @@ msgstr "其他程式已經使用了按鍵 %s 加上特殊按鍵 %x 作為按鍵�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "執行 <tt>%s</tt> 時發生錯誤：\n\n%s"
+msgstr ""
+"執行 <tt>%s</tt> 時發生錯誤：\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "並未定義任何指令 %d。\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "沒有定義任何終端機指令。\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1029,7 +1032,11 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\n著作權 (C) 2001-%s Havoc Pennington，Red Hat，Inc。及其他開發者\n本程式是自由軟體；有關著作權的詳情請參考源程式碼。\n本程式不負任何擔保責任；亦無對適售性或特定目的適用性所為的默示性擔保。\n"
+msgstr ""
+"marco %s\n"
+"著作權 (C) 2001-%s Havoc Pennington，Red Hat，Inc。及其他開發者\n"
+"本程式是自由軟體；有關著作權的詳情請參考源程式碼。\n"
+"本程式不負任何擔保責任；亦無對適售性或特定目的適用性所為的默示性擔保。\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -1249,7 +1256,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5893
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1262,7 +1269,7 @@ msgstr "視窗 %s 將 SM_CLIENT_ID 設定為該視窗本身，而不是 ICCCM �
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6458
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1313,7 +1320,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "視窗 0x%lx 的 %s 屬性應該是\ntype %s format %d，但實際上是\ntype %s format %d n_items %d。\n這極可能是程式方面的漏洞，而不是視窗總管的漏洞。\n該視窗的其他屬性為 title=「%s」class=「%s」name=「%s」\n"
+msgstr ""
+"視窗 0x%lx 的 %s 屬性應該是\n"
+"type %s format %d，但實際上是\n"
+"type %s format %d n_items %d。\n"
+"這極可能是程式方面的漏洞，而不是視窗總管的漏洞。\n"
+"該視窗的其他屬性為 title=「%s」class=「%s」name=「%s」\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1787,7 +1799,9 @@ msgstr "布景主題“%s”未指定 <%s>"
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "在布景主題“%2$s”中，視窗類型“%1$s”沒有指定任何邊框款式。請加上 <window type=\"%3$s\" style_set=\"whatever\"/> 元素"
+msgstr ""
+"在布景主題“%2$s”中，視窗類型“%1$s”沒有指定任何邊框款式。請加上 <window type=\"%3$s\" "
+"style_set=\"whatever\"/> 元素"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
@@ -1804,7 +1818,7 @@ msgstr "已定義了“%s”常數"
 #: ../src/ui/theme-parser.c:226
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "在元素 <%2$s> 中沒有「%1$s」屬性"
+msgstr "<%2$s> 元素中缺少了“%1$s”屬性"
 
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
@@ -1866,7 +1880,9 @@ msgstr "透明度必須在 0.0（完全透明）至 1.0（完全不透明）之�
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "無效的標題大小“%s”(必須為 xx-small、x-small、small、medium、large、\nx-large、xx-large 其中一個)\n"
+msgstr ""
+"無效的標題大小“%s”(必須為 xx-small、x-small、small、medium、large、\n"
+"x-large、xx-large 其中一個)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -2070,19 +2086,25 @@ msgstr "當 state=%s focus=%s 時，樣式早已經被指定了"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一個 <piece> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> 元素，或是指定了兩個元素)"
+msgstr ""
+"一個 <piece> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> "
+"元素，或是指定了兩個元素)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一個 <button> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> 元素，或是指定了兩個元素)"
+msgstr ""
+"一個 <button> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> "
+"元素，或是指定了兩個元素)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一個 <menu_icon> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> 元素，或是指定了兩個元素)"
+msgstr ""
+"一個 <menu_icon> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> "
+"元素，或是指定了兩個元素)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2142,100 +2164,107 @@ msgstr "<%s> 指定了此布景主題兩次"
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "無法布景主題的有效檔案 %s\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "這是在樣版對話視窗中的樣版訊息"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "假的選單項目 %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "只有邊框的視窗"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
 msgstr "列"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "正常的程式視窗"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "對話盒"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "模態對話盒"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "公用程式控制板"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "關閉選單"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
-msgstr "邊框"
+msgstr "Border"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:784
 #, c-format
 msgid "Button layout test %d"
 msgstr "按鈕配置測試 %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:809
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "繪畫一個視窗需時 %g 毫秒"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:849
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "用法： marco-theme-viewer [布景主題名稱]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "載入布景主題失敗 %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:862
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "載入布景主題 “%s” 需時 %g 秒\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:906
 msgid "Normal Title Font"
 msgstr "正常標題列字型"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:912
 msgid "Small Title Font"
 msgstr "小標題列字型"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:918
 msgid "Large Title Font"
 msgstr "大標題列字型"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:923
 msgid "Button Layouts"
 msgstr "按鈕配置"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:928
 msgid "Benchmark"
 msgstr "速度測試"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:985
 msgid "Window Title Goes Here"
 msgstr "這裡是視窗標題"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1090
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "繪畫 %d 幀需時：\n在客戶端是 %g 秒（每幀 %g 毫秒）\n包括 X 伺服器資源的實際消耗時間是 %g 秒（每幀 %g 毫秒）\n"
+msgstr ""
+"繪畫 %d 幀需時：\n"
+"在客戶端是 %g 秒（每幀 %g 毫秒）\n"
+"包括 X 伺服器資源的實際消耗時間是 %g 秒（每幀 %g 毫秒）\n"

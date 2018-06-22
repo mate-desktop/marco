@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# ciaran, 2014-2016
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Welsh (http://www.transifex.com/mate/MATE/language/cy/)\n"
+"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: ciaran, 2018\n"
+"Language-Team: Welsh (https://www.transifex.com/mate/teams/13566/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
-msgstr "Bwrdd Gwaith"
+msgstr "Bwrdd gwaith"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:100
@@ -174,7 +174,7 @@ msgstr "Newid i'r weithfan o dan y weithfan gyfredol"
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Newid i'r weithfan flaenorol"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:111
@@ -234,7 +234,9 @@ msgstr "Toglo a ydy'r ffenestr ar bob gweithfan neu un yn unig"
 #: ../src/50-marco-window-key.xml.in.h:13
 #: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Raise window if it's covered by another window, otherwise lower it"
-msgstr "Codi'r ffenestr os yw ffenestr arall yn ei chuddio, fel arall gostwng y ffenestr"
+msgstr ""
+"Codi'r ffenestr os yw ffenestr arall yn ei chuddio, fel arall gostwng y "
+"ffenestr"
 
 #: ../src/50-marco-window-key.xml.in.h:14
 #: ../src/org.mate.marco.gschema.xml.h:140
@@ -429,7 +431,7 @@ msgstr "Symud y ffenestr un weithfan i lawr"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Addaswr i ddefnyddio am weithredoedd clic ffenestr addasedig"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -463,7 +465,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Trefniant y botymau ar y bar teitl"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -478,7 +480,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
-msgstr ""
+msgstr "Modd ffocysu ffenestri"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -488,10 +490,16 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"Mae'r modd ffocysu yn penodi sut caiff ffenestri eu gweithredu. Mae ganddo "
+"tri gwerth posib; mae \"click\" yn golygu mae'n rhaid i ffenestri gael eu "
+"clicio er mwyn eu ffocysu; mae \"sloppy\" yn golygu caiff ffenestri ei "
+"ffocysu pan mae'r llygoden yn cyrraedd y ffenest, ac mae \"mouse\" yn golygu"
+" caiff ffenestri eu ffocysu pan mae'r llygoden yn cyrraedd y ffenest a'u "
+"dadffocysu pan mae'r llygoden yn gadael y ffenest."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Rheoli sut mae ffenestri newydd yn cael ffocws"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -500,10 +508,16 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
+"Mae'r opsiwn hwn yn rhoi mwy o reolaeth ar sut mae'r ffenestri newydd eu "
+"creu yn derbyn ffocws. Mae iddo ddau werth posib; \"smart\", sy'n rhoi modd "
+"ffocws arferol y defnyddiwr ar waith, a \"strict\" sy'n peri i ffenestri "
+"sydd wedi'u cychwyn o derfynell i beidio â derbyn ffocws."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
 msgstr ""
+"A ddylai codi'r ffenestr fod yn sgil effaith gweithrediadau eraill y "
+"defnyddiwr"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -529,7 +543,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Gweithred pan mae clic dwbl ar far teitl"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -545,7 +559,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Gweithred wrth wneud clic botwm canol ar y bar teitl"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -561,7 +575,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Gweithred wrth wneud clic botwm dde ar y bar teitl"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -577,7 +591,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Codi'r ffenest wedi ffocysu'n awtomatig"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -586,16 +600,21 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
+"Os yn wir, ac mae'r modd ffocysu yn \"sloppy\" neu \"mouse\", mi fydd y "
+"ffenestr sydd wedi'i ffocysu yn codi'n awtomatig ar ôl y cyfnod o oedi sy'n "
+"cael ei benderfynu gan yr allwedd auto_raise_delay. "
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Saib mewn milfedau eiliad ar gyfer yr opsiwn codi awtomatig"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
+"Yr oediad cyn codi ffenestr os yw auto_raise yn wir. Mae'r oediad mewn "
+"milfed eiliad."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -606,16 +625,20 @@ msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
 msgstr ""
+"Mae'r thema yn penodi edrychiad borderi ffenestri, y bar teitl, ac yn y "
+"blaen."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Defnyddiwch ffont system safonol yn nheitlau ffenestri"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
+"Os yn wir, anwybyddu'r gosodiad titlebar_font, a defnyddio'r ffont safonol y"
+" rhaglen am deitlau ffenestr."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -628,10 +651,13 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
+"Llinyn i ddisgrifio ffont barau teitl y ffenestr. Caiff y maint yn y "
+"disgrifiad ond ei ddefnyddio os yw'r opsiwn titlebar_font_size yn 0. Hefyd, "
+"caiff yr opsiwn ei analluogi os yw titlebar_uses_desktop_font yn wir."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Nifer y gweithfannau"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -639,6 +665,9 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
+"Nifer y gweithfannau. Rhaid ei fod yn fwy na sero, ac mae uchafswm "
+"gosodedig, er mwyn osgoi i chi ofyn am ormod o weithfannau ar y tro, fel na "
+"fedrwch chi ddefnyddio'r penbwrdd."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -666,16 +695,20 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
+"Gosod effaith gweledol pan fo'r system, neu raglen, yn rhoi sain cloch neu "
+"'bîp'; yn ddefnyddiol i'r trwm eu clyw, neu mewn amgylchiadau swnllyd."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Clock y System yn Glywadwy"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"Penodi a ydi rhaglenni neu'r system yn gallu gwneud 'bîp' clywadwy; gellir "
+"ei ddefnyddio efo 'cloch weladwy' er mwyn caniatáu 'bîpiau' distaw."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
@@ -691,14 +724,20 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"Yn dweud sut dylid Marco hysbysu fod cloch y system neu gloch rhaglen wedi "
+"atseinio. Mae yna dwy werth dilys, \"fullscreen\" sydd yn creu fflach gwyn-"
+"du llawn sgrin, a \"frame_flash\" sy'n gweud i far teitl y rhaglen a "
+"anfonodd y gloch i fflachio. Os yw'r rhaglen a anfonodd y gloch yn anhysbys "
+"(sy'n digwydd ar gloch y system) y mae bar teitl y rhaglen canolbwyntiol yn "
+"fflachio."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Rheolwr Cyfansawdd"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Penderfynu a yw Marco yn rheolwr cyfansawdd"
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -714,6 +753,7 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
 msgstr ""
+"Os yn wir, ffafrio defnyddio llai o adnoddau yn hytrach na hawster defnyddio"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -723,11 +763,17 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
+"Os yn wir, fe fydd marco yn rhoi llai o adborth i'r defnyddiwr drwy fframiau"
+" gwifren, osgoi animeiddio, a dulliau eraill. Mae hyn yn ostyngiad sylweddol"
+" mewn lefelau defnyddioldeb i'r rhan fwyaf o ddefnyddwyr, ond gall ganiatáu "
+"i hen raglenni a gweinyddwyr terfynell barhau i weithio. Fodd bynnag, mae'r "
+"fframiau gwifren wedi eu hanalluogi tra bod hygyrchedd ar waith."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
 msgstr ""
+"(Heb ei weithredoli) Llywio yn gweithio yn nhermau rhaglenni nid ffenestri"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -739,10 +785,19 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
+"Os yn wir, mae Marco yn gweithredu yn nhermau rhaglenni yn hytrach na "
+"ffenestri. Mae hyn yn syniad eithaf haniaethol, ond yn gyffredinol mae'r "
+"modd rhaglen yn fwy tebyg i'r Mac ac yn llai tebyg i Windows. Wrth roi "
+"ffocws ar ffenestr yn y modd rhaglen, mi fydd pob ffenestr sy'n perthyn i'r "
+"rhaglen yn codi. Hefyd, yn y modd rhaglen, nid yw cliciau ffocws yn cael eu "
+"pasio i ffenestri rhaglenni eraill. Serch hynny, mae'r modd rhaglen heb ei "
+"gynnal i raddau helaeth ar hyn o bryd."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr ""
+"Analluogi cam-nodweddion sy'n angenrheidiol ar gyfer rhaglenni sy'n hen neu "
+"wedi torri"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -751,6 +806,10 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
+"Mae rhai rhaglenni yn anwybyddu manyleb y system ffenestri, sy'n achosi i'r "
+"rheolwr ffenestri fod yn anghyson. Mae'r opsiwn hwn yn rhoi Metactity mewn "
+"modd manwl gywir, sy'n rhoi rhyngwyneb mwy cyson, cyn belled nad oes rhaid "
+"rhedeg unrhyw raglenni anghyson."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -809,15 +868,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
-msgstr ""
+msgstr "Enw'r weithfan"
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Enw gweithfan."
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
-msgstr ""
+msgstr "Gweithredu gorchymyn gosodedig"
 
 #: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
@@ -828,6 +887,13 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"Y bysellrwymiad sy'n gweithredu'r gorchymyn a'r rhif cyfatebol yn "
+"/apps/marco/keybinding_commands. Mae'r fformat yn edrych fel "
+"\"&lt;Control&gt;a\" neu &lt;Shift&gt;&lt;Alt&gt;F1\". Mae'r gramadegydd yn "
+"eithaf rhyddfrydol ac mae'n caniatáu prif lythrennau a llythrennau bach, a "
+"hefyd talfyriadau fel \"&lt;Ctl&gt;\" ac \"&lt;Ctrl&gt;\". Os ydych chi'n "
+"gosod yr opsiwn i'r llinyn arbennig \"disabled\", ni fydd bysellrwymiad ar "
+"gyfer y weithred hon."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -879,11 +945,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Symud yn ôl rhwng y paneli a'r penbwrdd ar unwaith"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Gorchmynion i'w gweithredu yn ôl rhwymiadau bysell"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -891,20 +957,26 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"Mae'r allweddi /apps/marco/global_keybindings/run_command_N yn diffinio "
+"bysellrhwymiadau sy'n cyferbynnu i'r gorchmynion hyn. Fe fydd gwasgu'r "
+"bysellrwymiad ar gyfer run_command_N yn gweithredu command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
-msgstr ""
+msgstr "Y gorchymyn sgrînlun"
 
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"Mae'r allwedd /apps/marco/global_keybindings/run_command_screenshot yn "
+"diffinio bysellrwymiad sy'n achosi i'r gorchymyn a benodir gan y gosodiad "
+"hwn i gael ei weithredi."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Y gorchymyn sgrînlun ffenest"
 
 #: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
@@ -912,6 +984,9 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"Mae'r allwedd /apps/marco/global_keybindings/run_command_window_screenshot  "
+"yn diffinio bysellrwymiad sy'n achosi i'r gorchymyn a benodir gan y gosodiad"
+" hwn i gael ei weithredi."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
@@ -952,7 +1027,9 @@ msgstr "Nid yw <tt>%s</tt> yn ymateb."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Gallwch aros ychydig er mwyn iddi barhau, neu gallwch orfodi'r rhaglen i orffen yn gyfan gwbl."
+msgstr ""
+"Gallwch aros ychydig er mwyn iddi barhau, neu gallwch orfodi'r rhaglen i "
+"orffen yn gyfan gwbl."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -982,45 +1059,50 @@ msgstr "Methu agor y dangosydd system ffenestri X '%s'\n"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Mae rhaglen arall yn defnyddio'r fysell %s gyda’r addasyddion %x fel rhwymiad eisoes\n"
+msgstr ""
+"Mae rhaglen arall yn defnyddio'r fysell %s gyda’r addasyddion %x fel "
+"rhwymiad eisoes\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2381
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Bu gwall wrth geisio rhedeg <tt>%s</tt>:\n\n%s"
+msgstr ""
+"Bu gwall wrth geisio rhedeg <tt>%s</tt>:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2470
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Does dim gorchymyn %d wedi ei ddiffinio.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3526
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Does dim gorchymyn wedi ei ddiffinio.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3667
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3678
 msgid "Cancel"
-msgstr ""
+msgstr "Diddymu"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1029,7 +1111,11 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nHawlfraint (C) 2001-%s Havoc Pennington, Red Hat, Inc., ac eraill\nMeddalwedd rhydd a rhad ac am ddim yw hon; gwelwch y ffynhonnell ar gyfer telerau copïo.\nNID oes gwarant; dim hyd yn oed ar gyfer GWERTHADWYEDD neu FFITRWYDD AT BWRPAS ARBENNIG.\n"
+msgstr ""
+"marco %s\n"
+"Hawlfraint (C) 2001-%s Havoc Pennington, Red Hat, Inc., ac eraill\n"
+"Meddalwedd rhydd a rhad ac am ddim yw hon; gwelwch y ffynhonnell ar gyfer telerau copïo.\n"
+"NID oes gwarant; dim hyd yn oed ar gyfer GWERTHADWYEDD neu FFITRWYDD AT BWRPAS ARBENNIG.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -1057,7 +1143,7 @@ msgstr "Fersiwn argraffu"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Gwneud galwadau X yn gydamserol"
+msgstr "Gwneud galwadau X yn gydamseredig"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1070,7 +1156,8 @@ msgstr "DIffodd cyfansoddi"
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Peidio â mynd i'r sgrin lawn os yw ffenestr heb addurniadau wedi'i hehangu "
+msgstr ""
+"Peidio â mynd i'r sgrin lawn os yw ffenestr heb addurniadau wedi'i hehangu "
 
 #: ../src/core/main.c:519
 #, c-format
@@ -1081,7 +1168,9 @@ msgstr "Methwyd chwilio'r cyfeiriadur thema: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Methu canfod thema! Sicrhewch fod %s yn bodoli ac yn cynnwys y themâu arferol.\n"
+msgstr ""
+"Methu canfod thema! Sicrhewch fod %s yn bodoli ac yn cynnwys y themâu "
+"arferol.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1100,7 +1189,9 @@ msgstr ""
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Mae cywiriadau ar gyfer rhaglenni toredig wedi ei analluogi. Efallai ni fydd rhai rhaglenni yn ymddwyn yn gywir.\n"
+msgstr ""
+"Mae cywiriadau ar gyfer rhaglenni toredig wedi ei analluogi. Efallai ni fydd"
+" rhai rhaglenni yn ymddwyn yn gywir.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
@@ -1112,14 +1203,18 @@ msgstr ""
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "Nid yw \"%s\" sydd wedi ei ddarganfod yn y gronfa cyfluniad yn werth dilys ar gyfer addasydd botwm llygoden\n"
+msgstr ""
+"Nid yw \"%s\" sydd wedi ei ddarganfod yn y gronfa cyfluniad yn werth dilys "
+"ar gyfer addasydd botwm llygoden\n"
 
 #: ../src/core/prefs.c:1753
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "Nid yw \"%s\" sydd wedi ei ddarganfod yn y gronfa cyfluniad yn werth dilys ar gyfer y rhwymiad bysell \"%s\"\n"
+msgstr ""
+"Nid yw \"%s\" sydd wedi ei ddarganfod yn y gronfa cyfluniad yn werth dilys "
+"ar gyfer y rhwymiad bysell \"%s\"\n"
 
 #: ../src/core/prefs.c:2056
 #, c-format
@@ -1136,7 +1231,9 @@ msgstr "Mae sgrin %d ar y dangosydd '%s' yn annilys\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Mae gan sgrin %d ar y dangosydd \"%s\" drefnydd ffenestri eisoes; defnyddiwch yr opsiwn --replace i amnewid y rheolydd ffenestri cyfredol.\n"
+msgstr ""
+"Mae gan sgrin %d ar y dangosydd \"%s\" drefnydd ffenestri eisoes; "
+"defnyddiwch yr opsiwn --replace i amnewid y rheolydd ffenestri cyfredol.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
@@ -1249,12 +1346,14 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5893
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Y mae ffenestr %s yn gosod SM_CLIENT_ID ar ei hunan, yn lle ar y ffenestr WM_CLIENT_LEADER fel y penodir yn yr ICCCM.\n"
+msgstr ""
+"Y mae ffenestr %s yn gosod SM_CLIENT_ID ar ei hunan, yn lle ar y ffenestr "
+"WM_CLIENT_LEADER fel y penodir yn yr ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1262,12 +1361,15 @@ msgstr "Y mae ffenestr %s yn gosod SM_CLIENT_ID ar ei hunan, yn lle ar y ffenest
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6458
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Mae'r ffenest %s yn gosod awgrym MWM yn dynodi ni ellir newid ei faint, ond yn gosod maint lleiaf %d x %d a maint mwyaf %d x %d; nid yw hyn yn gwneud llawer o synnwyr.\n"
+msgstr ""
+"Mae'r ffenest %s yn gosod awgrym MWM yn dynodi ni ellir newid ei faint, ond "
+"yn gosod maint lleiaf %d x %d a maint mwyaf %d x %d; nid yw hyn yn gwneud "
+"llawer o synnwyr.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1303,7 +1405,9 @@ msgstr "%s (fel defnyddiwr arall)"
 #: ../src/core/window-props.c:1499
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
-msgstr "Cafodd ffenestr WM_TRANSIENT_FOR 0x%lx, sy'n annilys, ei benodi ar gyfer %s.\n"
+msgstr ""
+"Cafodd ffenestr WM_TRANSIENT_FOR 0x%lx, sy'n annilys, ei benodi ar gyfer "
+"%s.\n"
 
 #: ../src/core/xprops.c:155
 #, c-format
@@ -1313,7 +1417,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Mae gan y ffenest 0x%lx y briodwedd %s\na ddisgwyliwyd i gael y math %s fformat %d\nond sydd a'r math %s fformat %d n_items %d.\nMae hyn mwy na thebyg yn nam rhaglen, ac nid yn nam rheolydd ffenestri.\nMae gan y ffenest teitl=\"%s\" dosbarth=\"%s\" enw=\"%s\"\n"
+msgstr ""
+"Mae gan y ffenest 0x%lx y briodwedd %s\n"
+"a ddisgwyliwyd i gael y math %s fformat %d\n"
+"ond sydd a'r math %s fformat %d n_items %d.\n"
+"Mae hyn mwy na thebyg yn nam rhaglen, ac nid yn nam rheolydd ffenestri.\n"
+"Mae gan y ffenest teitl=\"%s\" dosbarth=\"%s\" enw=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1325,7 +1434,9 @@ msgstr "Roedd y briodwedd %s ar y ffenest 0x%lx yn cynnwys UTF-8 annilys\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Roedd y briodwedd %s ar y ffenest 0x%lx yn cynnwys UTF-8 annilys ar gyfer eitem %d yn y rhestr\n"
+msgstr ""
+"Roedd y briodwedd %s ar y ffenest 0x%lx yn cynnwys UTF-8 annilys ar gyfer "
+"eitem %d yn y rhestr\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
@@ -1425,7 +1536,7 @@ msgstr "Ar y _Blaen o Hyd"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
-msgstr "Pob tro ar y Weithfan Weladwy"
+msgstr "Ar y Weithfan Weladwy pob tro"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
@@ -1435,28 +1546,28 @@ msgstr "Ar y Weithfan _Yma'n Unig"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "Symud at y Weithfan i'r _Chwith"
+msgstr "Symud i'r Weithfan i'r _Chwith"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "Symud at y Weithfan i'r _Dde"
+msgstr "Symud i'r Weithfan i'r _Dde"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "Symud at y Weithfan i _Fyny"
+msgstr "Symud i'r Weithfan i _Fyny"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "Symud at y Weithfan i _Lawr"
+msgstr "Symud i'r Weithfan i _Lawr"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:100
 msgid "_Close"
-msgstr "_Cau"
+msgstr "Ca_u"
 
 #: ../src/ui/menu.c:197
 #, c-format
@@ -1475,7 +1586,7 @@ msgstr "Gweithfan %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Symud at _Weithfan Arall"
+msgstr "Symud i _Weithfan Arall"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -1610,14 +1721,18 @@ msgstr "Dylid graddfa cael o leiaf dau liw"
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "Rhaid i benodiad lliw GTK cael cyflwr tu fewn i fracedi, e.e. gtk:fg[NORMAL] lle mae NORMAL yw'r cyflwr; ni all gramadegu \"%s\""
+msgstr ""
+"Rhaid i benodiad lliw GTK cael cyflwr tu fewn i fracedi, e.e. gtk:fg[NORMAL]"
+" lle mae NORMAL yw'r cyflwr; ni all gramadegu \"%s\""
 
 #: ../src/ui/theme.c:1195
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "Rhaid i benodiad lliw GTK gael braced cau e.e. gtk:fg[NORMAL] lle NORMAL yw'r cyflwr; ni allwyd gramadegu \"%s\""
+msgstr ""
+"Rhaid i benodiad lliw GTK gael braced cau e.e. gtk:fg[NORMAL] lle NORMAL "
+"yw'r cyflwr; ni allwyd gramadegu \"%s\""
 
 #: ../src/ui/theme.c:1206
 #, c-format
@@ -1634,7 +1749,9 @@ msgstr "Wedi methu deall y gydran lliw \"%s\" yn y penodiad lliw"
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "\"blend/bg_color/fg_color/alpha\" yw'r fformat cyfuno, nid yw \"%s\" yn cytuno a'r fformat"
+msgstr ""
+"\"blend/bg_color/fg_color/alpha\" yw'r fformat cyfuno, nid yw \"%s\" yn "
+"cytuno a'r fformat"
 
 #: ../src/ui/theme.c:1259
 #, c-format
@@ -1649,7 +1766,9 @@ msgstr "Nid yw'r gwerth alffa \"%s\" yn y lliw cyfunedig rhwng 0.0 ac 1.0"
 #: ../src/ui/theme.c:1316
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "\"shade/base_color/factor\" yw'r fformat cysgod, nid yw \"%s\" yn cytuno a'r fformat"
+msgstr ""
+"\"shade/base_color/factor\" yw'r fformat cysgod, nid yw \"%s\" yn cytuno a'r"
+" fformat"
 
 #: ../src/ui/theme.c:1327
 #, c-format
@@ -1676,19 +1795,25 @@ msgstr "Mae'r mynegiad cyfesuryn yn cynnwys y nod '%s'. Ni chaniateir hyn."
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "Mae'r mynegiad cyfesuryn yn cynnwys rhif pwynt arnawf '%s' sydd ddim yn bosib ei ramadegu."
+msgstr ""
+"Mae'r mynegiad cyfesuryn yn cynnwys rhif pwynt arnawf '%s' sydd ddim yn "
+"bosib ei ramadegu."
 
 #: ../src/ui/theme.c:1747
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr "Mae'r mynegiad cyfesuryn yn cynnwys cyfanrif  '%s' sydd ddim yn bosib ei ramadegu."
+msgstr ""
+"Mae'r mynegiad cyfesuryn yn cynnwys cyfanrif  '%s' sydd ddim yn bosib ei "
+"ramadegu."
 
 #: ../src/ui/theme.c:1869
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Mae'r mynegiad cyfesuryn yn cynnwys gweithredwr anhysbys ar ddechrau'r testun hwn: \"%s\""
+msgstr ""
+"Mae'r mynegiad cyfesuryn yn cynnwys gweithredwr anhysbys ar ddechrau'r "
+"testun hwn: \"%s\""
 
 #: ../src/ui/theme.c:1926
 #, c-format
@@ -1704,12 +1829,15 @@ msgstr "Mae'r mynegiant cyfesuryn yn golygu rhannu â sero"
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "Mae'r mynegiad cyfesuryn yn ceisio defnyddio'r gweithredwr 'mod' ar rif pwynt arnawf"
+msgstr ""
+"Mae'r mynegiad cyfesuryn yn ceisio defnyddio'r gweithredwr 'mod' ar rif "
+"pwynt arnawf"
 
 #: ../src/ui/theme.c:2145
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
-msgstr "Roedd gan y mynegiant cyfesuryn weithredydd \"%s\" lle disgwyliwyd operand"
+msgstr ""
+"Roedd gan y mynegiant cyfesuryn weithredydd \"%s\" lle disgwyliwyd operand"
 
 #: ../src/ui/theme.c:2154
 #, c-format
@@ -1726,7 +1854,9 @@ msgstr "Gorffennodd y mynegiant cyfesuryn gyda gweithredydd yn lle operand"
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Mae gan fynegiant cyfesuryn y gweithredydd \"%c\" yn dilyn y gweithredydd \"% c\" efo dim operand rhyngddynt"
+msgstr ""
+"Mae gan fynegiant cyfesuryn y gweithredydd \"%c\" yn dilyn y gweithredydd "
+"\"% c\" efo dim operand rhyngddynt"
 
 #: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
 #, c-format
@@ -1752,7 +1882,9 @@ msgstr "Roedd gan y mynegiant cyfesuryn cromfach agor heb gromfach cau"
 #: ../src/ui/theme.c:2518
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
-msgstr "Ymddengys nad oes gan y mynegiant cyfesuryn unrhyw weithredyddion neu operandau"
+msgstr ""
+"Ymddengys nad oes gan y mynegiant cyfesuryn unrhyw weithredyddion neu "
+"operandau"
 
 #: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
 #, c-format
@@ -1764,7 +1896,9 @@ msgstr "Roedd y thema yn cynnwys mynegiad wnaeth achosi gwall: %s\n"
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "Rhaid penodi <button function=\"%s\" state=\"%s\" draw_ops=\"rhywbeth\"/> ar gyfer yr arddull ffrâm hwn"
+msgstr ""
+"Rhaid penodi <button function=\"%s\" state=\"%s\" draw_ops=\"rhywbeth\"/> ar"
+" gyfer yr arddull ffrâm hwn"
 
 #: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
 #, c-format
@@ -1787,12 +1921,16 @@ msgstr "Dim <%s> wedi ei osod ar gyfer y thema \"%s\""
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Dim arddull ffrâm wedi ei osod ar gyfer y math ffenest \"%s\" yn y thema \"%s\", ychwanegwch elfen <window type=\"%s\" style_set\"beth bynnag\"/>"
+msgstr ""
+"Dim arddull ffrâm wedi ei osod ar gyfer y math ffenest \"%s\" yn y thema "
+"\"%s\", ychwanegwch elfen <window type=\"%s\" style_set\"beth bynnag\"/>"
 
 #: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Mae'n rhaid i gysonion a ddiffiniwyd gan y defnyddiwr gychwyn efo priflythyren; nid yw \"%s\""
+msgstr ""
+"Mae'n rhaid i gysonion a ddiffiniwyd gan y defnyddiwr gychwyn efo "
+"priflythyren; nid yw \"%s\""
 
 #: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
 #, c-format
@@ -1819,7 +1957,7 @@ msgstr "Y mae'r briodoledd \"%s\" wedi'i hailadrodd dwywaith ar yr un elfen <%s>
 #: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Y mae'r briodoledd \"%s\" yn annilys ar elfen <%s> yn y cyd-destun hwn"
+msgstr "Mae'r priodoledd \"%s\" yn annilys ar yr elfen <%s> yn y cyd-destun hwn"
 
 #: ../src/ui/theme-parser.c:547
 #, c-format
@@ -1859,14 +1997,18 @@ msgstr "Mae'n rhaid i ongl fod rhwng 0.0 a 360.0, %g oedd hyn\n"
 #: ../src/ui/theme-parser.c:751
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Mae'n rhaid i'r alffa fod rhwng 0.0 (anweledig) ac 1.0 (di-draidd), ond rhoddwyd %g\n"
+msgstr ""
+"Mae'n rhaid i'r alffa fod rhwng 0.0 (anweledig) ac 1.0 (di-draidd), ond "
+"rhoddwyd %g\n"
 
 #: ../src/ui/theme-parser.c:816
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Maint teitl annilys \"%s\" (rhaid ei fod yn un o xx-small, x-small, small, medium, large, x-large, xx-large)\n"
+msgstr ""
+"Maint teitl annilys \"%s\" (rhaid ei fod yn un o xx-small, x-small, small, "
+"medium, large, x-large, xx-large)\n"
 
 #: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
 #: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
@@ -1888,7 +2030,8 @@ msgstr "ni ddiffiniwyd geometreg <%s> \"%s\""
 #: ../src/ui/theme-parser.c:1107
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
-msgstr "Mae'n rhaid i <%s> benodi naill ai geometreg, neu riant sydd â geometreg"
+msgstr ""
+"Mae'n rhaid i <%s> benodi naill ai geometreg, neu riant sydd â geometreg"
 
 #: ../src/ui/theme-parser.c:1149
 msgid "You must specify a background for an alpha value to be meaningful"
@@ -1917,14 +2060,16 @@ msgstr "Neilltuir set arddull i fath ffenestr \"%s\" yn barod. "
 #: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "Ni chaniateir elfen <%s> yn is na <%s>"
+msgstr "Ni chaniateir elfen <%s> islaw elfen <%s>"
 
 #: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
 #: ../src/ui/theme-parser.c:1438
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Methu nodi \"button_width\"/\"button_height\" ac \"aspect_ratio\" ar gyfer botymau"
+msgstr ""
+"Methu nodi \"button_width\"/\"button_height\" ac \"aspect_ratio\" ar gyfer "
+"botymau"
 
 #: ../src/ui/theme-parser.c:1402
 #, c-format
@@ -2010,7 +2155,9 @@ msgstr "Ffwythiant anhysbys \"%s\" am fotwm"
 #: ../src/ui/theme-parser.c:2918
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
-msgstr "Nid yw'r swyddogaeth \"%s\" i fotwm yn bodoli yn y fersiwn hwn (%d, mae angen %d)"
+msgstr ""
+"Nid yw'r swyddogaeth \"%s\" i fotwm yn bodoli yn y fersiwn hwn (%d, mae "
+"angen %d)"
 
 #: ../src/ui/theme-parser.c:2930
 #, c-format
@@ -2020,7 +2167,8 @@ msgstr "Cyflwr anhysbys \"%s\" am fotwm"
 #: ../src/ui/theme-parser.c:2938
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
-msgstr "Mae'r arddull ffrâm eisoes wedi cael botwm am swyddogaeth %s cyflwr %s"
+msgstr ""
+"Mae'r arddull ffrâm eisoes wedi cael botwm am swyddogaeth %s cyflwr %s"
 
 #: ../src/ui/theme-parser.c:3019
 #, c-format
@@ -2047,17 +2195,22 @@ msgstr "Nid yw \"%s\" yn werth dilys ar gyfer y briodwedd \"resize\""
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Ni ddylid cael priodwedd \"ailfientio\" ar elfen <%s> ar gyfer cyflyrau ehangu/wedi cysgodi"
+msgstr ""
+"Ni ddylid cael priodwedd \"ailfientio\" ar elfen <%s> ar gyfer cyflyrau "
+"ehangu/wedi cysgodi"
 
 #: ../src/ui/theme-parser.c:3107
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Ni ddylid cael priodwedd \"ailfeintio\" ar elfen <%s> mewn cyflwr wedi'i ehangu"
+msgstr ""
+"Ni ddylid cael priodwedd \"ailfeintio\" ar elfen <%s> mewn cyflwr wedi'i "
+"ehangu"
 
 #: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
-msgstr "Mae arddull wedi ei benodi eisoes ar gyfer cyflwr %s ailfeintio %s ffocws %s"
+msgstr ""
+"Mae arddull wedi ei benodi eisoes ar gyfer cyflwr %s ailfeintio %s ffocws %s"
 
 #: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
 #: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
@@ -2070,19 +2223,25 @@ msgstr "Mae arddull wedi ei benodi eisoes ar gyfer cyflwr %s ffocws %s"
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Methir cael dau draw_ops ar gyfer elfen <piece> (penododd y thema briodwedd draw_ops ac elfen <draw_ops> hefyd, neu penododd e dwy elfen)"
+msgstr ""
+"Methir cael dau draw_ops ar gyfer elfen <piece> (penododd y thema briodwedd "
+"draw_ops ac elfen <draw_ops> hefyd, neu penododd e dwy elfen)"
 
 #: ../src/ui/theme-parser.c:3275
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Methir cael dau draw_ops ar gyfer elfen <button> (penododd y thema briodwedd draw_ops ac elfen <draw_ops> hefyd, neu penododd e dwy elfen)"
+msgstr ""
+"Methir cael dau draw_ops ar gyfer elfen <button> (penododd y thema briodwedd"
+" draw_ops ac elfen <draw_ops> hefyd, neu penododd e dwy elfen)"
 
 #: ../src/ui/theme-parser.c:3347
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Methir cael dau draw_ops ar gyfer elfen <piece> (penododd y thema briodwedd draw_ops ac elfen <draw_ops> hefyd, neu penododd e dwy elfen)"
+msgstr ""
+"Methir cael dau draw_ops ar gyfer elfen <piece> (penododd y thema briodwedd "
+"draw_ops ac elfen <draw_ops> hefyd, neu penododd e dwy elfen)"
 
 #: ../src/ui/theme-parser.c:3395
 #, c-format
@@ -2115,7 +2274,7 @@ msgstr "Ni chaniateir elfen <%s> tu fewn i elfen weithred darlunio"
 #: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "Ni chaniateir elfen <%s> tu fewn i elfen <%s>"
+msgstr "Ni chaniateir elfen <%s> o fewn elfen <%s>"
 
 #: ../src/ui/theme-parser.c:3738
 msgid "No draw_ops provided for frame piece"
@@ -2128,7 +2287,7 @@ msgstr "Darparwyd dim draw_ops ar gyfer botwm"
 #: ../src/ui/theme-parser.c:3815
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "Ni chaniateir testun tu fewn i elfen <%s>"
+msgstr "Ni chaniateir testun o fewn elfen <%s>"
 
 #: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
 #: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
@@ -2142,100 +2301,107 @@ msgstr "Nodwyd <%s> ddwywaith ar gyfer y thema hon"
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Methu canfod ffeil ddilys i thema %s\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "Dyma neges esiampl o fewn deialog esiampl"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Eitem dewislen ffug %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "Ffenest amlinell-yn-unig"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
 msgstr "Bar"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "Ffenest Rhaglen Normal"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "Blwch Deialog"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "Blwch Deialog Moddol"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "Palet Cyfleuster"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "Dewislen Wedi ei Rhwygo i Ffwrdd"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
-msgstr "Amlinell"
+msgstr "Border"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:784
 #, c-format
 msgid "Button layout test %d"
 msgstr "Prawf lleoli botymau %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:809
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g milfed eiliad i arlunio un ffrâm ffenest"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:849
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Defnydd: marco-theme-viewer [ENWTHEMA]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Gwall wrth lwytho thema: %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:862
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Llwythwyd y thema \"%s\" mewn %g eiliad\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:906
 msgid "Normal Title Font"
 msgstr "Ffont Teitl Normal"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:912
 msgid "Small Title Font"
 msgstr "Ffont Teitl Bychan"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:918
 msgid "Large Title Font"
 msgstr "Ffont Teitl Mawr"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:923
 msgid "Button Layouts"
 msgstr "Llunwedd Botymau"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:928
 msgid "Benchmark"
 msgstr "Meincnod"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:985
 msgid "Window Title Goes Here"
 msgstr "Mae Teitl y Ffenest yn Mynd Yma"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1090
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "Arluniwyd %d ffrâm o fewn %g eiliad ochr cleient (%g milfed eiliad bob ffrâm) a %g eiliad amser cloc wal yn cynnwys adnoddau gweinydd X (%g milfed eiliad bob ffrâm)\n"
+msgstr ""
+"Arluniwyd %d ffrâm o fewn %g eiliad ochr cleient (%g milfed eiliad bob "
+"ffrâm) a %g eiliad amser cloc wal yn cynnwys adnoddau gweinydd X (%g milfed "
+"eiliad bob ffrâm)\n"
