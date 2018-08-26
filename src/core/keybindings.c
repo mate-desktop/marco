@@ -3419,6 +3419,10 @@ handle_workspace_switch_or_move  (MetaDisplay    *display,
 
   g_assert (motion < 0);
 
+  /* Don't show the ws switcher if we get just one ws */
+  if (meta_screen_get_n_workspaces(screen) == 1)
+    return;
+
   meta_topic (META_DEBUG_KEYBINDINGS,
               "Starting tab between workspaces, showing popup\n");
 
