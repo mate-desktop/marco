@@ -233,17 +233,30 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
   popup = g_new (MetaTabPopup, 1);
 
-  popup->outline_window = gtk_window_new (GTK_WINDOW_POPUP);
-
   screen = gdk_display_get_default_screen (gdk_display_get_default ());
-  gtk_window_set_screen (GTK_WINDOW (popup->outline_window),
-                         screen);
 
-  gtk_widget_set_app_paintable (popup->outline_window, TRUE);
-  gtk_widget_realize (popup->outline_window);
+  if (border & BORDER_OUTLINE_WINDOW)
+    {
+      GdkRGBA black = { 0.0, 0.0, 0.0, 1.0 };
 
-  g_signal_connect (G_OBJECT (popup->outline_window), "draw",
-                    G_CALLBACK (outline_window_draw), popup);
+      popup->outline_window = gtk_window_new (GTK_WINDOW_POPUP);
+
+      gtk_window_set_screen (GTK_WINDOW (popup->outline_window),
+                             screen);
+
+      gtk_widget_set_app_paintable (popup->outline_window, TRUE);
+      gtk_widget_realize (popup->outline_window);
+
+      gdk_window_set_background_rgba (gtk_widget_get_window (popup->outline_window),
+                                      &black);
+
+      g_signal_connect (G_OBJECT (popup->outline_window), "draw",
+                        G_CALLBACK (outline_window_draw), popup);
+
+      gtk_widget_show (popup->outline_window);
+    }
+  else
+    popup->outline_window = NULL;
 
   popup->window = gtk_window_new (GTK_WINDOW_POPUP);
 
@@ -446,12 +459,6 @@ static void
 display_entry (MetaTabPopup *popup,
                TabEntry     *te)
 {
-  GdkRectangle rect;
-  cairo_region_t *region;
-  cairo_region_t *inner_region;
-  GdkWindow *window;
-
-
   if (popup->current_selected_entry)
   {
     if (popup->border & BORDER_OUTLINE_TAB)
@@ -469,8 +476,11 @@ display_entry (MetaTabPopup *popup,
 
   if (popup->border & BORDER_OUTLINE_WINDOW)
     {
-      window = gtk_widget_get_window (popup->outline_window);
+      GdkRectangle rect;
+      GdkWindow *window;
+      cairo_region_t *region;
 
+      window = gtk_widget_get_window (popup->outline_window);
       /* Do stuff behind gtk's back */
       gdk_window_hide (window);
       meta_core_increment_event_serial (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
@@ -479,30 +489,17 @@ display_entry (MetaTabPopup *popup,
       rect.x = 0;
       rect.y = 0;
 
-      gdk_window_move_resize (window,
-                              te->rect.x, te->rect.y,
-                              te->rect.width, te->rect.height);
-
-      GdkRGBA black = { 0.0, 0.0, 0.0, 1.0 };
-      gdk_window_set_background_rgba (window, &black);
+      gtk_window_move (GTK_WINDOW (popup->outline_window), te->rect.x, te->rect.y);
+      gtk_window_resize (GTK_WINDOW (popup->outline_window), te->rect.width, te->rect.height);
 
       region = cairo_region_create_rectangle (&rect);
-      inner_region = cairo_region_create_rectangle (&te->inner_rect);
-      cairo_region_subtract (region, inner_region);
-      cairo_region_destroy (inner_region);
+      cairo_region_subtract_rectangle (region, &te->inner_rect);
 
-      gdk_window_shape_combine_region (window,
+      gdk_window_shape_combine_region (gtk_widget_get_window (popup->outline_window),
                                        region,
                                        0, 0);
 
       cairo_region_destroy (region);
-
-      /* This should piss off gtk a bit, but we don't want to raise
-       * above the tab popup.  So, instead of calling gtk_widget_show,
-       * we manually set the window as mapped and then manually map it
-       * with gdk functions.
-       */
-      gtk_widget_set_mapped (popup->outline_window, TRUE);
       gdk_window_show_unraised (window);
     }
 
