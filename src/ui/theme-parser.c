@@ -27,11 +27,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-/* This is a hack for Ubuntu's metacity themes
- * Its safe for unable or not.
- * I am using this define to know what code was added */
-#define USE_UBUNTU_CODE 1
-
 typedef enum
 {
   STATE_START,
@@ -72,10 +67,8 @@ typedef enum
   STATE_FRAME_STYLE,
   STATE_PIECE,
   STATE_BUTTON,
-#ifdef USE_UBUNTU_CODE
   STATE_SHADOW,
   STATE_PADDING,
-#endif
   /* style set */
   STATE_FRAME_STYLE_SET,
   STATE_FRAME,
@@ -182,7 +175,6 @@ static void parse_button_element    (GMarkupParseContext  *context,
                                      ParseInfo            *info,
                                      GError              **error);
 
-#ifdef USE_UBUNTU_CODE
 static void parse_shadow_element    (GMarkupParseContext  *context,
                                      const gchar          *element_name,
                                      const gchar         **attribute_names,
@@ -196,7 +188,7 @@ static void parse_padding_element   (GMarkupParseContext  *context,
                                      const gchar         **attribute_values,
                                      ParseInfo            *info,
                                      GError              **error);
-#endif
+
 static void parse_menu_icon_element (GMarkupParseContext  *context,
                                      const gchar          *element_name,
                                      const gchar         **attribute_names,
@@ -2963,7 +2955,6 @@ parse_style_element (GMarkupParseContext  *context,
 
       push_state (info, STATE_BUTTON);
     }
-#ifdef USE_UBUNTU_CODE
   else if (ELEMENT_IS ("shadow"))
     {
       push_state (info, STATE_SHADOW);
@@ -2972,7 +2963,6 @@ parse_style_element (GMarkupParseContext  *context,
     {
       push_state (info, STATE_PADDING);
     }
-#endif
   else
     {
       set_error (error, context,
@@ -3294,7 +3284,6 @@ parse_button_element (GMarkupParseContext  *context,
     }
 }
 
-#ifdef USE_UBUNTU_CODE
 static void
 parse_shadow_element (GMarkupParseContext  *context,
                       const gchar          *element_name,
@@ -3326,7 +3315,6 @@ parse_padding_element (GMarkupParseContext  *context,
              _("Element <%s> is not allowed below <%s>"),
              element_name, "padding");
 }
-#endif
 
 static void
 parse_menu_icon_element (GMarkupParseContext  *context,
@@ -3479,7 +3467,6 @@ start_element_handler (GMarkupParseContext *context,
                             attribute_names, attribute_values,
                             info, error);
       break;
-#ifdef USE_UBUNTU_CODE
     case STATE_SHADOW:
        parse_shadow_element (context, element_name,
                              attribute_names, attribute_values,
@@ -3490,7 +3477,6 @@ start_element_handler (GMarkupParseContext *context,
                               attribute_names, attribute_values,
                               info, error);
        break;
-#endif
     case STATE_MENU_ICON:
       parse_menu_icon_element (context, element_name,
                                attribute_names, attribute_values,
@@ -3760,7 +3746,6 @@ end_element_handler (GMarkupParseContext *context,
         }
       pop_state (info);
       break;
-#ifdef USE_UBUNTU_CODE
     case STATE_SHADOW:
       g_assert (info->style);
       pop_state (info);
@@ -3769,7 +3754,6 @@ end_element_handler (GMarkupParseContext *context,
       g_assert (info->style);
       pop_state (info);
       break;
-#endif
     case STATE_MENU_ICON:
       g_assert (info->theme);
       if (info->op_list != NULL)
@@ -3994,14 +3978,12 @@ text_handler (GMarkupParseContext *context,
     case STATE_BUTTON:
       NO_TEXT ("button");
       break;
-#ifdef USE_UBUNTU_CODE
     case STATE_SHADOW:
       NO_TEXT ("shadow");
       break;
     case STATE_PADDING:
       NO_TEXT ("padding");
       break;
-#endif
     case STATE_MENU_ICON:
       NO_TEXT ("menu_icon");
       break;
