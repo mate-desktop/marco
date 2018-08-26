@@ -128,7 +128,7 @@ libmarco_private_la_SOURCES = \
 libmarco_private_la_LDFLAGS = -no-undefined -version-info 1:0:0
 libmarco_private_la_LIBADD = @MARCO_LIBS@
 
-libmarcoincludedir = $(includedir)/marco-1/marco-private
+libmarcoincludedir = $(includedir)/marco/marco-private
 
 libmarcoinclude_HEADERS = \
 	include/boxes.h \

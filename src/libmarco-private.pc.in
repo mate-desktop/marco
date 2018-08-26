@@ -9,4 +9,4 @@ Description: Marco internals shared
 Requires: gtk+-3.0
 Version: @VERSION@
 Libs: -L${libdir} -lmarco-private
-Cflags: -I${includedir}/marco-1
+Cflags: -I${includedir}/marco
