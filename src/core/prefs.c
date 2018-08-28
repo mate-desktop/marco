@@ -335,12 +335,6 @@ static MetaEnumPreference preferences_enum[] =
 
 static MetaBoolPreference preferences_bool[] =
   {
-    { "attach-modal-dialogs",
-      KEY_GENERAL_SCHEMA,
-      META_PREF_ATTACH_MODAL_DIALOGS,
-      &attach_modal_dialogs,
-      TRUE,
-    },
     { "raise-on-click",
       KEY_GENERAL_SCHEMA,
       META_PREF_RAISE_ON_CLICK,
