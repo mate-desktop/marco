@@ -8707,13 +8707,13 @@ meta_window_get_xwindow (MetaWindow *window)
  *
  * Returns the #MetaWindow for the window that is pointed to by the
  * WM_TRANSIENT_FOR hint on this window (see XGetTransientForHint()
- * or XSetTransientForHint()). Metacity keeps transient windows above their
+ * or XSetTransientForHint()). Marco keeps transient windows above their
  * parents. A typical usage of this hint is for a dialog that wants to stay
  * above its associated window.
  *
  * Return value: (transfer none): the window this window is transient for, or
  * %NULL if the WM_TRANSIENT_FOR hint is unset or does not point to a toplevel
- * window that Metacity knows about.
+ * window that Marco knows about.
  */
 MetaWindow *
 meta_window_get_transient_for (MetaWindow *window)

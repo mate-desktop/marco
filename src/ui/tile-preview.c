@@ -1,6 +1,6 @@
 /* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 
-/* Mutter tile-preview marks the area a window will *ehm* snap to */
+/* Marco tile-preview marks the area a window will *ehm* snap to */
 
 /*
  * Copyright (C) 2010 Florian Müllner
