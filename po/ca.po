@@ -3,14 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Pere O. <gotrunks@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-16 13:55+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Pere O. <gotrunks@gmail.com>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:12+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018\n"
 "Language-Team: Catalan (https://www.transifex.com/mate/teams/13566/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -270,40 +275,39 @@ msgstr "Títol de la finestra a la part oest (esquerra) de la pantalla"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
-"Enrajola la finestra a la cantonada nord-oest (part superior esquerra)"
+msgstr "Enrajola la finestra al cantó nord-oest (part superior esquerra)"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr "Enrajola la finestra a la cantonada nord-est (part superior dreta)"
+msgstr "Enrajola la finestra al cantó nord-est (part superior dreta)"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr "Enrajola la finestra a la cantonada sud-oest (part inferior esquerra)"
+msgstr "Enrajola la finestra al cantó sud-oest (part inferior esquerra)"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr "Enrajola la finestra a la cantonada sud-est (part inferior dreta)"
+msgstr "Enrajola la finestra al cantó sud-est (part inferior dreta)"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
 msgid "Move window to north-west (top left) corner"
-msgstr "Mou la finestra a la cantonada nord-oest (part superior esquerra)"
+msgstr "Mou la finestra al cantó nord-oest (part superior esquerra)"
 
 #: ../src/50-marco-window-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:151
 msgid "Move window to north-east (top right) corner"
-msgstr "Mou la finestra a la cantonada nord-est (part superior dreta)"
+msgstr "Mou la finestra al cantó nord-est (part superior dreta)"
 
 #: ../src/50-marco-window-key.xml.in.h:26
 #: ../src/org.mate.marco.gschema.xml.h:152
 msgid "Move window to south-west (bottom left) corner"
-msgstr "Mou la finestra a la cantonada sud-oest (part inferior esquerra)"
+msgstr "Mou la finestra al cantó sud-oest (part inferior esquerra)"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 #: ../src/org.mate.marco.gschema.xml.h:153
 msgid "Move window to south-east (bottom right) corner"
-msgstr "Mou la finestra a la cantonada sud-est (part inferior dreta)"
+msgstr "Mou la finestra al cantó sud-est (part inferior dreta)"
 
 #: ../src/50-marco-window-key.xml.in.h:28
 #: ../src/org.mate.marco.gschema.xml.h:154
@@ -473,8 +477,8 @@ msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
 msgstr ""
-"Establiu-ho a fals per a inhabilitar el contorn de la finestra "
-"preseleccionada mentre es realitza el canvi de pestanya."
+"Establiu-ho a fals per inhabilitar el contorn de la finestra preseleccionada"
+" mentre es realitza el canvi de pestanya."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -492,8 +496,8 @@ msgid ""
 msgstr ""
 "La disposició dels botons a la barra del títol. El valor ha de ser una "
 "cadena de text, com ara «menu:minimize,maximize,spacer,close»; els dos punts"
-" separen la cantonada esquerra de la finestra de la dreta, i els noms dels "
-"botons se separen amb comes. No es permeten botons duplicats. Els botons "
+" separen el cantó esquerre de la finestra del dret, i els noms dels botons "
+"se separen amb comes. No es permeten botons duplicats. Els botons "
 "desconeguts es descartaran sense cap notificació, de manera que es puguin "
 "afegir botons en futures versions de Marco sense trencar les versions "
 "antigues. Es pot afegir una etiqueta especial d'espaiament («spacer») per "
@@ -763,7 +767,7 @@ msgid ""
 "own beginning and the end of each column leads to its own beginning."
 msgstr ""
 "L'estil d'ajustament s'utilitza per determinar com es canvia d'un espai de "
-"treball a un altre a la cantonada del selector d'espais de treball. Quan "
+"treball a un altre a la vora del selector d'espais de treball. Quan "
 "s'estableix a «no wrap», no passarà res si s'intenta canviar a un espai de "
 "treball que estigui per sobre del llindar del selector d'espais de treball. "
 "Si s'estableix a «classic», s'utilitza el comportament antic de Macro: el "
@@ -951,7 +955,7 @@ msgid ""
 "it. Only works when allow-tiling is enabled."
 msgstr ""
 "Si està habilitat, si s'arrossega una finestra a la part superior de la "
-"pantalla la maximitzarà. Només funciona quan està habilitat l'enrajolament."
+"pantalla, la maximitzarà. Només funciona quan està habilitat l'enrajolament."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -1136,25 +1140,23 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
 msgstr ""
-"Enrajola la finestra a la cantonada nord-oest (part superior esquerra) de la"
-" pantalla"
+"Enrajola la finestra al cantó nord-oest (part superior esquerra) de la "
+"pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
 msgstr ""
-"Enrajola la finestra a la cantonada nord-est (part superior dreta) de la "
-"pantalla"
+"Enrajola la finestra al cantó nord-est (part superior dreta) de la pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
 msgstr ""
-"Enrajola la finestra a la cantonada sud-est (part inferior dreta) de la "
-"pantalla"
+"Enrajola la finestra al cantó sud-est (part inferior dreta) de la pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
-"Enrajola la finestra a la cantonada sud-oest (part inferior esquerra) de la "
+"Enrajola la finestra al cantó sud-oest (part inferior esquerra) de la "
 "pantalla"
 
 #: ../src/core/bell.c:294
@@ -1786,7 +1788,7 @@ msgstr "Meta"
 #. * this.
 #: ../src/ui/metaaccellabel.c:104
 msgid "Super"
-msgstr "Super"
+msgstr "Súper"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the hyper key. If the text on this key isn't typically
