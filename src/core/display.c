@@ -1821,8 +1821,8 @@ static gboolean event_callback(XEvent* event, gpointer data)
                 meta_stack_set_positions (screen->stack,
                                           display->grab_old_window_stacking);
             }
-          meta_display_end_grab_op (display,
-                                    event->xbutton.time);
+/*          meta_display_end_grab_op (display,
+                                    event->xbutton.time);*/
         }
       else if (window && display->grab_op == META_GRAB_OP_NONE)
         {

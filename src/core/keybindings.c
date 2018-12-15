@@ -1134,7 +1134,7 @@ get_primary_modifier (MetaDisplay *display,
    * ends the operation. It's pretty random how we order
    * these.
    */
-  unsigned int masks[] = { Mod5Mask, Mod4Mask, Mod3Mask,
+unsigned int masks[] = { Mod5Mask, Mod4Mask, Mod3Mask,
                            Mod2Mask, Mod1Mask, ControlMask,
                            ShiftMask, LockMask };
 
@@ -1185,7 +1185,7 @@ primary_modifier_still_pressed (MetaDisplay *display,
   random_screen = display->screens->data;
   random_xwindow = random_screen->no_focus_window;
   XQueryPointer (display->xdisplay,
-                 random_xwindow, /* some random window */
+                 random_xwindow, 
                  &root, &child,
                  &root_x, &root_y,
                  &x, &y,
@@ -2096,6 +2096,8 @@ process_tab_grab (MetaDisplay *display,
 
           meta_topic (META_DEBUG_KEYBINDINGS,
                       "Ending grab early so we can focus the target window\n");
+  
+/*there*/
           meta_display_end_grab_op (display, event->xkey.time);
 
           return TRUE; /* we already ended the grab */

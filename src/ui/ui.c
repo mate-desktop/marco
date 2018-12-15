@@ -221,8 +221,8 @@ filter_func (GdkXEvent *xevent,
   g_return_val_if_fail (ef != NULL, GDK_FILTER_CONTINUE);
 
   if ((* ef->func) (xevent, ef->data) ||
-      maybe_redirect_mouse_event (xevent))
-    return GDK_FILTER_REMOVE;
+        maybe_redirect_mouse_event (xevent))
+    return GDK_FILTER_CONTINUE;
   else
     return GDK_FILTER_CONTINUE;
 }
