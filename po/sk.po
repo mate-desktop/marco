@@ -3,14 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Dušan Kazik <prescott66@gmail.com>, 2018
+# Miroslav Sido <miro_redhawk@hotmail.com>, 2018
+# tylnesh <kohutek.michal@gmail.com>, 2018
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Tibor Kaputa <tibbbi2@gmail.com>, 2018
+# Vendelín Slezák <klaykap@yandex.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-16 14:01+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: tylnesh <kohutek.michal@gmail.com>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:11+0000\n"
+"Last-Translator: Vendelín Slezák <klaykap@yandex.com>, 2018\n"
 "Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -269,19 +278,19 @@ msgstr "Dlaždice okna na západnej (ľavej) strane obrazovky"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "Titulok okna do severozápadného(vľavo hore) rohu"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Titulok okna do severovýchodného(vpravo hore) rohu"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Titulok okna do juhozápadného(vľavo dole) rohu"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Titulok okna do juhovýchodného(vpravo dole) rohu"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
@@ -331,22 +340,22 @@ msgstr "Presunúť okno na prostred obrazovky"
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
 msgid "Move window to north (top) monitor"
-msgstr ""
+msgstr "Presunúť okno na sever(hore) monitoru"
 
 #: ../src/50-marco-window-key.xml.in.h:34
 #: ../src/org.mate.marco.gschema.xml.h:160
 msgid "Move window to south (bottom) monitor"
-msgstr ""
+msgstr "Presunúť okno na juh(dole) monitoru"
 
 #: ../src/50-marco-window-key.xml.in.h:35
 #: ../src/org.mate.marco.gschema.xml.h:161
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Presunúť okno na východ(vpravo) monitoru"
 
 #: ../src/50-marco-window-key.xml.in.h:36
 #: ../src/org.mate.marco.gschema.xml.h:162
 msgid "Move window to west (left) monitor"
-msgstr ""
+msgstr "Presunúť okno na západ(vľavo) monitoru"
 
 #: ../src/50-marco-window-key.xml.in.h:37
 #: ../src/org.mate.marco.gschema.xml.h:123
@@ -893,7 +902,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Povoliť automatické zmeny veľkosti okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -901,16 +910,22 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Keď je táto voľba zapnutá, okno sa po presunutí na okraj obrazovky roztiahne"
+" na polovicu tej strany obrazovky kam ste okno pritiahli alebo ak ho "
+"presuniete na vrch, maximalizuje sa."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
-msgstr ""
+msgstr "Povoliť maximalizovanie okna ak je na vrchu obrazovky"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"Keď je táto voľba zapnutá tak po pretiahnutí okna na vrch obrazovky sa "
+"automaticky zmaximalizuje. Táto voľba pracuje iba pri zapnutých "
+"Automatických zmenách veľkosti okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -1084,19 +1099,19 @@ msgstr "Určuje, či bude okno vždy viditeľné nad ostatnými oknami"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
+msgstr "Titulok okna do severozápadného(hore vľavo) rohu obrazovky."
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "Titulok okna do severovýchodného(hore vpravo) rohu obrazovky."
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Titulok okna do juhovýchodného(dole vpravo) rohu obrazovky."
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Titulok okna do juhozápadného(dole vľavo) rohu obrazovky."
 
 #: ../src/core/bell.c:294
 msgid "Bell event"

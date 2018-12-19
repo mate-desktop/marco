@@ -3,14 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Yarema aka Knedlyk <yupadmin@gmail.com>, 2018
+# Evolve32 <evolve32@yandex.ru>, 2018
+# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Микола Ткач <znadibnyk@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-16 14:01+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:11+0000\n"
+"Last-Translator: Микола Ткач <znadibnyk@gmail.com>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +32,7 @@ msgstr "Стільниця"
 #: ../src/50-marco-desktop-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "Показати діялоґове вікно панелі «Виконати проґраму»"
+msgstr "Показати діалогове вікно панелі «Виконати програму»"
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:99
@@ -64,7 +71,7 @@ msgstr "Перехід між вікнами через контекстне в�
 #: ../src/50-marco-global-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move between windows of an application, using a popup window"
-msgstr "Перемикати фокус вводу між вікнами проґрами через контекстне вікно"
+msgstr "Перемикати фокус вводу між вікнами програми через контекстне вікно"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:90
@@ -164,7 +171,7 @@ msgstr "Перейти на робочий простір праворуч ві�
 #: ../src/50-marco-global-key.xml.in.h:23
 #: ../src/org.mate.marco.gschema.xml.h:80
 msgid "Switch to workspace above the current workspace"
-msgstr "Перейти на робочий простір вище над поточним"
+msgstr "Перейти на робочий простір вище поточного"
 
 #: ../src/50-marco-global-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:81
@@ -236,18 +243,18 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr ""
-"Підняти вікно на передній плян, якщо воно затінене иньшим, інакше опустити "
+"Підняти вікно на передній план, якщо воно затінене іншим, інакше опустити "
 "його"
 
 #: ../src/50-marco-window-key.xml.in.h:14
 #: ../src/org.mate.marco.gschema.xml.h:140
 msgid "Raise window above other windows"
-msgstr "Підняти вікно над иньшими"
+msgstr "Підняти вікно над іншими"
 
 #: ../src/50-marco-window-key.xml.in.h:15
 #: ../src/org.mate.marco.gschema.xml.h:141
 msgid "Lower window below other windows"
-msgstr "Помістити вікно під иньшими вікнами"
+msgstr "Помістити вікно під іншими вікнами"
 
 #: ../src/50-marco-window-key.xml.in.h:16
 #: ../src/org.mate.marco.gschema.xml.h:142
@@ -271,19 +278,19 @@ msgstr "Перемістити вікно на західну (ліву) обл�
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "Перемістити вікно у північно-західний (верхній лівий) кут"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Перемістити вікно у північно-східний (верхній правий) кут"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Перемістити вікно у південно-західний (нижній лівий) кут"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Перемістити вікно у південно-східний (нижній правий) кут"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
@@ -333,22 +340,22 @@ msgstr "Перемістити вікно у центр екрану"
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
 msgid "Move window to north (top) monitor"
-msgstr ""
+msgstr "Перемістити вікно на північний (верхній) монітор"
 
 #: ../src/50-marco-window-key.xml.in.h:34
 #: ../src/org.mate.marco.gschema.xml.h:160
 msgid "Move window to south (bottom) monitor"
-msgstr ""
+msgstr "Перемістити вікно на південний (нижній) монітор"
 
 #: ../src/50-marco-window-key.xml.in.h:35
 #: ../src/org.mate.marco.gschema.xml.h:161
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Перемістити вікно на східний (правий) монітор"
 
 #: ../src/50-marco-window-key.xml.in.h:36
 #: ../src/org.mate.marco.gschema.xml.h:162
 msgid "Move window to west (left) monitor"
-msgstr ""
+msgstr "Перемістити вікно на західний (лівий) монітор"
 
 #: ../src/50-marco-window-key.xml.in.h:37
 #: ../src/org.mate.marco.gschema.xml.h:123
@@ -442,7 +449,7 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
 msgstr ""
-"Клацнувши по вікні при натисканні цієї клявіші-модифікатора, Ви зможете "
+"Клацнувши по вікні при натисканні цієї клавіші-модифікатора, Ви зможете "
 "пересунути вікно (ліва кнопка), змінити його розмір(середня кнопка), або "
 "показати меню вікна (права кнопка). Функції лівої і правої кнопок "
 "змінюються, якщо увімкнено параметр «resize_with_right_button» Модифікатор "
@@ -459,8 +466,8 @@ msgid ""
 " set it to false to make it work the opposite way around."
 msgstr ""
 "Якщо ключ встановлено, розмір вікна змінюється правою кнопкою миші, а меню "
-"показується середньою, якщо втримується клявіша, вказана у "
-"«mouse_button_modifier». Якщо ключ не встановлено, функцииії кнопок миші "
+"показується середньою, якщо втримується клавіша, вказана у "
+"«mouse_button_modifier». Якщо ключ не встановлено, функції кнопок миші "
 "міняються місцями."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
@@ -899,7 +906,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Чи увімкнути тайлінг вікна"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -907,16 +914,21 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Якщо увімкнено, перетягування вікна на межу екрану розгортає вікно "
+"вертикально й змінює розмір горизонтально для покриття половини доступного "
+"простору. Перетягування вікна наверх розгортає вікно."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
-msgstr ""
+msgstr "Чи унайбільшити вікно при перетягуванні до верхнього краю екрану"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"Якщо увімкнено, перетягування вікна у верхню частину екрану унайбільшує "
+"його. Працює лише у тому випадку, якщо тайлінг дозволено."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -1096,19 +1108,19 @@ msgstr "Чи буде вікно завжди розташоване повер�
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
+msgstr "Перемістити вікно на північно-західний (верхній лівий) кут екрану"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "Перемістити вікно на північно-східний (верхній правий) кут екрану"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Перемістити вікно у південно-східний (нижній правий) кут екрану"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Перемістити вікно до південо-західного (нижнього лівого) кута екрану"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"

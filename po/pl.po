@@ -3,14 +3,29 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Paweł Bandura <gawelx@gmail.com>, 2018
+# Jan Bońkowski <bonkowskijan@gmail.com>, 2018
+# Przemek P <ppjg@dami.pl>, 2018
+# Piotr Strębski <strebski@gmail.com>, 2018
+# Marcin Kralka <marcink96@gmail.com>, 2018
+# emariusek <wisniowy@g.pl>, 2018
+# Darek Witkowski, 2018
+# Lukasz Kaminski <inactive+elpikej@transifex.com>, 2018
+# Marcin Mikołajczak <me@m4sk.in>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Marcin Sedlak <fdmarcin@gmail.com>, 2018
+# Piotr Drąg <piotrdrag@gmail.com>, 2018
+# pietrasagh <pietrasagh@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-16 14:01+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Marcin Pianka <marcin.pianka@gmail.com>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:11+0000\n"
+"Last-Translator: pietrasagh <pietrasagh@gmail.com>, 2018\n"
 "Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -270,19 +285,20 @@ msgstr "Ułożenie sąsiadująco po lewej części ekranu"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "Ułóż sąsiadująco okno do północno-zachodniego (lewego górnego) rogu"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Ułóż sąsiadująco okno do północno-wschodniego (prawego górnego) rogu"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Ułóż sąsiadująco okno do południowo-zachodniego (lewego dolnego) rogu"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
 msgstr ""
+"Ułóż sąsiadująco okno do południowo-wschodniego (prawego dolnego) rogu"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
@@ -332,22 +348,22 @@ msgstr "Przenieś okno na środek ekranu"
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
 msgid "Move window to north (top) monitor"
-msgstr "Przenieś okno do górnej części ekranu. "
+msgstr "Przenieś okno do północnego (górnego) monitora"
 
 #: ../src/50-marco-window-key.xml.in.h:34
 #: ../src/org.mate.marco.gschema.xml.h:160
 msgid "Move window to south (bottom) monitor"
-msgstr "Przenieś okno do dolnej części ekranu. "
+msgstr "Przenieś okno do południowego (dolnego) monitora"
 
 #: ../src/50-marco-window-key.xml.in.h:35
 #: ../src/org.mate.marco.gschema.xml.h:161
 msgid "Move window to east (right) monitor"
-msgstr "Przenieś okno do prawej części ekranu. "
+msgstr "Przenieś okno do wschodniego (prawego) monitora"
 
 #: ../src/50-marco-window-key.xml.in.h:36
 #: ../src/org.mate.marco.gschema.xml.h:162
 msgid "Move window to west (left) monitor"
-msgstr "Przenieś okno do lewej części ekranu. "
+msgstr "Przenieś okno do zachodniego (lewego) monitora"
 
 #: ../src/50-marco-window-key.xml.in.h:37
 #: ../src/org.mate.marco.gschema.xml.h:123
@@ -557,6 +573,24 @@ msgid ""
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
 msgstr ""
+"Przestawienie tej opcji do \"fałsz\" może doprowadzić do błędnego "
+"zachowania, więc użytkownikom jest silnie odradzana zmiana z domyślnej "
+"wartości \"prawda\". Wiele wydarzeń (no. kliknięcie w obszarze klienta, "
+"przesunięcie okna) normalnie wynosi okno jako efekt uboczny. Przestawienie "
+"tej opcji do \"fałsz\", jest silnie odradzane, odłączy wynoszenie okna  od "
+"innych zdarzeń i zignoruje zapytania wyniesienia generowane przez aplikacje."
+" Patrz https://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Nawet kiedy ta "
+"opcja ma wartość \"fałsz\", okna nadal mogą być wynoszone poprzez lewe "
+"kliknięcie gdziekolwiek na oknie, normalne kliknięcie na dekoracji lub "
+"poprzez specjalne wiadomości ze pagerów takich jak  zapytanie aktywacji z "
+"appletu listy zadań. Ta opcja jest aktualnie wyłączona w trybie kliknij-aby-"
+"uaktywnić. Pamiętaj, że lista metod aby wynieść okna kiedy "
+"wynieś_przy_kliknięciu ma wartość \"fałsz\" nie zawiera programowych zapytań"
+"  z aplikacji wynoszących okna; takie zapytania będą ignorowane niezależne "
+"od powodu zapytania. Jeżeli jesteś deweloperem  aplikacji i masz użytkownika"
+" skarżącego się, że aplikacja nie działa przy wyłączonej tej opcji, przekaż "
+"mu, że to _jego_ wina przez zepsucie managera okien i żeby ustawili tą opcję"
+" z powrotem to \"prawda\" albo pogodzili się z \"błędem\" o który prosili."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -730,6 +764,15 @@ msgid ""
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
 msgstr ""
+"Styl obramowania jest używany do określenia jak przełączać z jednego obszaru"
+" roboczego do innego na krawędzi przełącznika obszaru roboczego. Kiedy jest "
+"ustawione \"brak obramowania\", nic się nie wydarzy jeżeli spróbujesz "
+"przełączyć poza granicę przełącznika obszarów roboczych. Jeżeli ustawisz "
+"\"klasyczny\", będzie użyte stare zachowanie macro: koniec jednego rzędu "
+"prowadzi na początek następnego a koniec kolumny prowadzi do początku "
+"następnej. Jeżeli ustawisz \"toroidalny\", przestrzenie robocze będą "
+"połączone jak obarzanek: koniec jednego rzędu prowadzi na początek jego "
+"samego a koniec każdej kolumny początku jej samej."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
@@ -876,7 +919,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Określa, czy włączyć kafelkowanie."
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -884,16 +927,22 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Włączenie sprawia, że przeciągnięcie i upuszczenie okna na krawędziach "
+"ekranu spowoduje zmianę rozmiaru poziomo tak, by okno zajmowało połowę "
+"dostępnej przestrzeni. Przeciągnięcie do góry spowoduje maksymalizację okna "
+"jeżeli zezwól-na-górne-kafelkowanie jest włączone."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
-msgstr ""
+msgstr "Czy zmaksymalizować okno kiedy jest przeciągnięte do góry ekranu"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"Jeżeli włączone, przeciągnięcie i opuszczenie okna na górze ekranu "
+"zmaksymalizuje je. Działa tylko jeżeli zezwól-na-kafelkowanie jest włączone."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -908,16 +957,25 @@ msgid ""
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
 msgstr ""
+"Tryb rozmieszczania okien wskazuje jak nowe okna są rozmieszczane. "
+"\"Automatyczny\" oznacza, że system wybierze położenie automatycznie na "
+"podstawie dostępnego miejsca na pulpicie, lub w kaskadę kiedy brakuje "
+"miejsca; \"wskaźnik\" oznacza, że nowe okno będzie umieszczone wg położenia "
+"wskaźnika myszy; \"ręczny\" oznacza, że użytkownik musi ręcznie umieścić "
+"okno za pomocą myszy lub klawiatury."
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
-msgstr ""
+msgstr "Lista aplikacji ignorowana przez wyświetl-pulpit"
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
 msgstr ""
+"Lista klas oddzielana przecinkiem. Każda działająca aplikacja GUI  wskazana "
+"w danej klasie managera okien będzie ignorowana przez funkcjonalność "
+"\"Pokarz Pulpit\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
@@ -1063,18 +1121,23 @@ msgstr "Przełącza, czy okno będzie zawsze widoczne nad innymi oknami"
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
 msgstr ""
+"Ułóż sąsiadująco okno do północno-zachodniego (lewego górnego) rogu ekranu"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
 msgstr ""
+"Ułóż sąsiadująco okno do północno-wschodniego (prawego górnego) rogu ekranu"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
 msgstr ""
+"Ułóż sąsiadująco okno do południowo-wschodniego (prawego dolnego) rogu "
+"ekranu"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
+"Ułóż sąsiadująco okno do południowo-zachodniego (lewego dolnego) rogu ekranu"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -1155,7 +1218,7 @@ msgstr "Nie określono polecenia terminala.\n"
 #: ../src/core/keybindings.c:3666
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
-msgstr "Zmień nazwę obszaru roboczego"
+msgstr "<tt>Zmień nazwę obszaru roboczego</tt>"
 
 #: ../src/core/keybindings.c:3667
 #, c-format

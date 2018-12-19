@@ -3,14 +3,30 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Aleksey Kabanov <ak099@mail.ru>, 2018
+# Alexei Sorokin <sor.alexei@meowr.ru>, 2018
+# AlexL <loginov.alex.valer@gmail.com>, 2018
+# Evolve32 <evolve32@yandex.ru>, 2018
+# monsta <monsta@inbox.ru>, 2018
+# Andreï Victorovitch Kostyrka, 2018
+# Dmitry Kireev <dinimito@mail.ru>, 2018
+# Oldboy Boyold <boyoldboyold@gmail.com>, 2018
+# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Дмитрий Михирев, 2018
+# Ivan, 2018
+# theirix <theirix@gmail.com>, 2018
+# Alex Putz, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-16 14:01+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Oldboy Boyold <boyoldboyold@gmail.com>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:11+0000\n"
+"Last-Translator: Alex Putz, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -270,19 +286,19 @@ msgstr "Пригнать окно к западной (левой) сторон�
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "Переместить окно в северо-западный (верхний левый) угол"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Переместить окно в северо-восточный (верхний правый) угол"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Переместить окно в юго-западный (нижний левый) угол"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Переместить окно в юго-восточный (нижний правый) угол"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
@@ -909,16 +925,21 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Если включено, перетаскивание окна на границу экрана разворачивает окно "
+"вертикально и изменяет размер горизонтально для покрытия половины доступного"
+" пространства. Перетаскивание окна наверх разворачивает окно."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
-msgstr ""
+msgstr "Максимизировать ли окно при перетягивании к верхнему краю экрана"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"Если включено, перетаскивание окна в верхнюю часть экрана максимизирует его."
+" Работает только в том случае, если тайлинг разрешен."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -1101,19 +1122,19 @@ msgstr "Будет ли окно всегда расположено повер�
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
+msgstr "Пригнать окно к северо-западному (верхнему левому) углу экрана"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "Пригнать окно к северо-восточному (верхнему правому) углу экрана"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Пригнать окно к юго-восточному (нижнему правому) углу экрана"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Пригнать окно к юго-западному (нижнему левому) углу экрана"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
