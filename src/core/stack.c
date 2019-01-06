@@ -964,7 +964,7 @@ raise_window_relative_to_managed_windows (MetaScreen *screen,
    * or restack any windows before using the XQueryTree results.
    */
 
-  meta_error_trap_push_with_return (screen->display);
+  meta_error_trap_push (screen->display);
 
   XQueryTree (screen->display->xdisplay,
               screen->xroot,

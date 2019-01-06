@@ -220,7 +220,7 @@ meta_window_new (MetaDisplay *display,
                                    * creation, to reduce XSync() calls
                                    */
 
-  meta_error_trap_push_with_return (display);
+  meta_error_trap_push (display);
 
   if (XGetWindowAttributes (display->xdisplay,xwindow, &attrs))
    {
@@ -328,7 +328,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
                     wm_state_to_string (existing_wm_state));
     }
 
-  meta_error_trap_push_with_return (display);
+  meta_error_trap_push (display);
 
   XAddToSaveSet (display->xdisplay, xwindow);
 
@@ -5101,12 +5101,12 @@ meta_window_client_message (MetaWindow *window,
           char *str1;
           char *str2;
 
-          meta_error_trap_push_with_return (display);
+          meta_error_trap_push (display);
           str1 = XGetAtomName (display->xdisplay, first);
           if (meta_error_trap_pop_with_return (display, TRUE) != Success)
             str1 = NULL;
 
-          meta_error_trap_push_with_return (display);
+          meta_error_trap_push (display);
           str2 = XGetAtomName (display->xdisplay, second);
           if (meta_error_trap_pop_with_return (display, TRUE) != Success)
             str2 = NULL;
@@ -8348,7 +8348,7 @@ warp_grab_pointer (MetaWindow          *window,
   *x = CLAMP (*x, 0, window->screen->rect.width-1);
   *y = CLAMP (*y, 0, window->screen->rect.height-1);
 
-  meta_error_trap_push_with_return (display);
+  meta_error_trap_push (display);
 
   meta_topic (META_DEBUG_WINDOW_OPS,
               "Warping pointer to %d,%d with window at %d,%d\n",

@@ -232,7 +232,7 @@ read_rgb_icon (MetaDisplay   *display,
   int mini_w, mini_h;
   gulong *data_as_long;
 
-  meta_error_trap_push_with_return (display);
+  meta_error_trap_push (display);
   type = None;
   data = NULL;
   result = XGetWindowProperty (display->xdisplay,
@@ -473,7 +473,7 @@ get_kwm_win_icon (MetaDisplay *display,
   *pixmap = None;
   *mask = None;
 
-  meta_error_trap_push_with_return (display);
+  meta_error_trap_push (display);
   icons = NULL;
   result = XGetWindowProperty (display->xdisplay, xwindow,
                                display->atom__KWM_WIN_ICON,

@@ -698,7 +698,8 @@ meta_change_keygrab (MetaDisplay *display,
         }
 
       if (meta_is_debugging ())
-        meta_error_trap_push_with_return (display);
+        meta_error_trap_push (display);
+
       if (grab)
         XGrabKey (display->xdisplay, keycode,
                   modmask | ignored_mask,
@@ -779,10 +780,7 @@ static void
 ungrab_all_keys (MetaDisplay *display,
                  Window       xwindow)
 {
-  if (meta_is_debugging ())
-    meta_error_trap_push_with_return (display);
-  else
-    meta_error_trap_push (display);
+  meta_error_trap_push (display);
 
   XUngrabKey (display->xdisplay, AnyKey, AnyModifier,
               xwindow);
@@ -913,7 +911,7 @@ grab_keyboard (MetaDisplay *display,
   /* Grab the keyboard, so we get key releases and all key
    * presses
    */
-  meta_error_trap_push_with_return (display);
+  meta_error_trap_push (display);
 
   grab_status = XGrabKeyboard (display->xdisplay,
                                xwindow, True,
