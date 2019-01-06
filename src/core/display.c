@@ -3405,7 +3405,7 @@ meta_display_set_grab_op_cursor (MetaDisplay *display,
 
   if (change_pointer)
     {
-      meta_error_trap_push_with_return (display);
+      meta_error_trap_push (display);
       XChangeActivePointerGrab (display->xdisplay,
                                 GRAB_MASK,
                                 cursor,
@@ -3617,7 +3617,7 @@ meta_display_begin_grab_op (MetaDisplay *display,
           XSyncAlarmAttributes values;
 	  XSyncValue init;
 
-          meta_error_trap_push_with_return (display);
+          meta_error_trap_push (display);
 
 	  /* Set the counter to 0, so we know that the application's
 	   * responses to the client messages will always trigger
@@ -3934,7 +3934,7 @@ meta_change_button_grab (MetaDisplay *display,
         }
 
       if (meta_is_debugging ())
-        meta_error_trap_push_with_return (display);
+        meta_error_trap_push (display);
 
       /* GrabModeSync means freeze until XAllowEvents */
 
@@ -4877,7 +4877,7 @@ convert_property (MetaDisplay *display,
   conversion_targets[2] = display->atom_TIMESTAMP;
   conversion_targets[3] = display->atom_VERSION;
 
-  meta_error_trap_push_with_return (display);
+  meta_error_trap_push (display);
   if (target == display->atom_TARGETS)
     XChangeProperty (display->xdisplay, w, property,
 		     XA_ATOM, 32, PropModeReplace,
@@ -4955,7 +4955,7 @@ process_selection_request (MetaDisplay   *display,
           unsigned long num, rest;
           unsigned char *data;
 
-          meta_error_trap_push_with_return (display);
+          meta_error_trap_push (display);
           if (XGetWindowProperty (display->xdisplay,
                                   event->xselectionrequest.requestor,
                                   event->xselectionrequest.property, 0, 256, False,

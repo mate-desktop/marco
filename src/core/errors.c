@@ -44,12 +44,6 @@ meta_error_trap_pop (MetaDisplay *display,
   gdk_x11_display_error_trap_pop_ignored (gdk_x11_lookup_xdisplay (meta_display_get_xdisplay (display)));
 }
 
-void
-meta_error_trap_push_with_return (MetaDisplay *display)
-{
-  gdk_x11_display_error_trap_push (gdk_x11_lookup_xdisplay (meta_display_get_xdisplay (display)));
-}
-
 int
 meta_error_trap_pop_with_return  (MetaDisplay *display,
                                   gboolean     last_request_was_roundtrip)
