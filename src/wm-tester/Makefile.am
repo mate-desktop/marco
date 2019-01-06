@@ -23,3 +23,5 @@ test_gravity_LDADD= @MARCO_LIBS@
 test_resizing_LDADD= @MARCO_LIBS@
 test_size_hints_LDADD= @MARCO_LIBS@
 focus_window_LDADD= @MARCO_LIBS@
+
+-include $(top_srcdir)/git.mk
