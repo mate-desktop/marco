@@ -824,9 +824,6 @@ meta_frames_apply_shapes (MetaFrames *frames,
   /* Apply shapes as if window had new_window_width, new_window_height */
   MetaUIFrame *frame;
   MetaFrameGeometry fgeom;
-  XRectangle xrect;
-  Region corners_xregion;
-  Region window_xregion;
   cairo_rectangle_int_t rect;
   cairo_region_t *corners_region;
   cairo_region_t *window_region;
