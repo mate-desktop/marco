@@ -1221,21 +1221,23 @@ get_window_pixbuf (MetaWindow *window,
                    int        *width,
                    int        *height)
 {
+  MetaDisplay *display;
   cairo_surface_t *surface;
   GdkPixbuf *pixbuf, *scaled;
   double ratio;
 
+  display = window->display;
   surface = meta_compositor_get_window_surface (window->display->compositor,
                                                 window);
   if (surface == None)
     return NULL;
 
-  meta_error_trap_push (NULL);
+  meta_error_trap_push (display);
 
   pixbuf = meta_ui_get_pixbuf_from_surface (surface);
   cairo_surface_destroy (surface);
 
-  if (meta_error_trap_pop_with_return (NULL, FALSE) != Success)
+  if (meta_error_trap_pop_with_return (display, FALSE) != Success)
     g_clear_object (&pixbuf);
 
   if (pixbuf == NULL)
