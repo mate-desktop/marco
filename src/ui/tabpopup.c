@@ -68,7 +68,8 @@ static GtkWidget* selectable_image_new (GdkPixbuf *pixbuf);
 static void       select_image         (GtkWidget *widget);
 static void       unselect_image       (GtkWidget *widget);
 
-static GtkWidget* selectable_workspace_new (MetaWorkspace *workspace);
+static GtkWidget* selectable_workspace_new (MetaWorkspace *workspace,
+                                                           int entry_count);
 static void       select_workspace         (GtkWidget *widget);
 static void       unselect_workspace       (GtkWidget *widget);
 
@@ -361,7 +362,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
             }
           else
             {
-              image = selectable_workspace_new ((MetaWorkspace *) te->key);
+              image = selectable_workspace_new ((MetaWorkspace *) te->key, entry_count);
             }
 
           te->widget = image;
@@ -753,23 +754,47 @@ struct _MetaSelectWorkspaceClass
 static GType meta_select_workspace_get_type (void) G_GNUC_CONST;
 
 #define SELECT_OUTLINE_WIDTH 2
-#define MINI_WORKSPACE_WIDTH 48
+#define MINI_WORKSPACE_SCALE 2
 
 static GtkWidget*
-selectable_workspace_new (MetaWorkspace *workspace)
+selectable_workspace_new (MetaWorkspace *workspace, int entry_count)
 {
   GtkWidget *widget;
-  double screen_aspect;
+  GdkMonitor *monitor;
+  GdkRectangle rect;
+  int mini_workspace_width, mini_workspace_height;
+  double mini_workspace_ratio;
 
   widget = g_object_new (meta_select_workspace_get_type (), NULL);
 
-  screen_aspect = (double) workspace->screen->rect.height /
-                  (double) workspace->screen->rect.width;
+  monitor = meta_screen_get_current_monitor ();
+  if (monitor != NULL)
+  {
+    gdk_monitor_get_geometry (monitor, &rect);
+  }
+  else
+  {
+    rect.width = workspace->screen->rect.width;
+    rect.height = workspace->screen->rect.height;
+  }
+
+  if (workspace->screen->rect.width < workspace->screen->rect.height)
+  {
+    mini_workspace_ratio = (double) workspace->screen->rect.width / (double) workspace->screen->rect.height;
+    mini_workspace_height = (int) ((double) rect.height / entry_count - SELECT_OUTLINE_WIDTH * 2);
+    mini_workspace_width = (int) ((double) mini_workspace_height * mini_workspace_ratio);
+  }
+  else
+  {
+    mini_workspace_ratio = (double) workspace->screen->rect.height / (double) workspace->screen->rect.width;
+    mini_workspace_width = (int) ((double) rect.width / entry_count - SELECT_OUTLINE_WIDTH * 2);
+    mini_workspace_height = (int) ((double) mini_workspace_width * mini_workspace_ratio);
+  }
 
   /* account for select rect */
   gtk_widget_set_size_request (widget,
-                               MINI_WORKSPACE_WIDTH + SELECT_OUTLINE_WIDTH * 2,
-                               MINI_WORKSPACE_WIDTH * screen_aspect + SELECT_OUTLINE_WIDTH * 2);
+                               mini_workspace_width / MINI_WORKSPACE_SCALE,
+                               mini_workspace_height / MINI_WORKSPACE_SCALE);
 
   META_SELECT_WORKSPACE (widget)->workspace = workspace;
 

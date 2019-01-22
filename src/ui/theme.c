@@ -5341,9 +5341,12 @@ meta_theme_load_image (MetaTheme  *theme,
                        GError    **error)
 {
   GdkPixbuf *pixbuf;
+  int scale;
 
   pixbuf = g_hash_table_lookup (theme->images_by_filename,
                                 filename);
+
+  scale = gdk_window_get_scale_factor (gdk_get_default_root_window ());
 
   if (pixbuf == NULL)
     {
@@ -5351,10 +5354,11 @@ meta_theme_load_image (MetaTheme  *theme,
       if (g_str_has_prefix (filename, "theme:") &&
           META_THEME_ALLOWS (theme, META_THEME_IMAGES_FROM_ICON_THEMES))
         {
-          pixbuf = gtk_icon_theme_load_icon (
+          pixbuf = gtk_icon_theme_load_icon_for_scale (
               gtk_icon_theme_get_default (),
               filename+6,
               size_of_theme_icons,
+              scale,
               0,
               error);
           if (pixbuf == NULL) return NULL;
