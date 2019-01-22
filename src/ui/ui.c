@@ -569,7 +569,7 @@ meta_ui_pop_delay_exposes  (MetaUI *ui)
 }
 
 static GdkPixbuf *
-load_default_window_icon (int size)
+load_default_window_icon (int size, int scale)
 {
   GtkIconTheme *theme = gtk_icon_theme_get_default ();
   const char *icon_name;
@@ -579,17 +579,19 @@ load_default_window_icon (int size)
   else
     icon_name = "image-missing";
 
-  return gtk_icon_theme_load_icon (theme, icon_name, size, 0, NULL);
+  return gtk_icon_theme_load_icon_for_scale (theme, icon_name, size, scale, 0, NULL);
 }
 
 GdkPixbuf*
 meta_ui_get_default_window_icon (MetaUI *ui)
 {
   static GdkPixbuf *default_icon = NULL;
+  int scale;
 
   if (default_icon == NULL)
     {
-      default_icon = load_default_window_icon (META_ICON_WIDTH);
+      scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
+      default_icon = load_default_window_icon (META_ICON_WIDTH, scale);
       g_assert (default_icon);
     }
 
@@ -602,29 +604,12 @@ GdkPixbuf*
 meta_ui_get_default_mini_icon (MetaUI *ui)
 {
   static GdkPixbuf *default_icon = NULL;
+  int scale;
 
   if (default_icon == NULL)
     {
-      GtkIconTheme *theme;
-      gboolean icon_exists;
-
-      theme = gtk_icon_theme_get_default ();
-
-      icon_exists = gtk_icon_theme_has_icon (theme, META_DEFAULT_ICON_NAME);
-
-      if (icon_exists)
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   META_DEFAULT_ICON_NAME,
-                                                   META_MINI_ICON_WIDTH,
-                                                   0,
-                                                   NULL);
-      else
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "image-missing",
-                                                   META_MINI_ICON_WIDTH,
-                                                   0,
-                                                   NULL);
-
+      scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
+      default_icon = load_default_window_icon (META_MINI_ICON_WIDTH, scale);
       g_assert (default_icon);
     }
 

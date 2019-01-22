@@ -1214,7 +1214,7 @@ meta_screen_update_cursor (MetaScreen *screen)
   XFreeCursor (screen->display->xdisplay, xcursor);
 }
 
-#define MAX_PREVIEW_SIZE 150.0
+#define MAX_PREVIEW_SCALE 10.0
 
 static GdkPixbuf *
 get_window_pixbuf (MetaWindow *window,
@@ -1224,6 +1224,8 @@ get_window_pixbuf (MetaWindow *window,
   MetaDisplay *display;
   cairo_surface_t *surface;
   GdkPixbuf *pixbuf, *scaled;
+  GdkMonitor *monitor;
+  GdkRectangle rect;
   double ratio;
 
   display = window->display;
@@ -1246,17 +1248,30 @@ get_window_pixbuf (MetaWindow *window,
   *width = gdk_pixbuf_get_width (pixbuf);
   *height = gdk_pixbuf_get_height (pixbuf);
 
-  /* Scale pixbuf to max dimension MAX_PREVIEW_SIZE */
+  monitor = meta_screen_get_current_monitor ();
+  if (monitor != NULL)
+  {
+    gdk_monitor_get_geometry (monitor, &rect);
+  }
+  else
+  {
+    rect.width = window->screen->rect.width;
+    rect.height = window->screen->rect.height;
+  }
+
+  /* Scale pixbuf to max dimension based on monitor size */
   if (*width > *height)
     {
-      ratio = ((double) *width) / MAX_PREVIEW_SIZE;
-      *width = (int) MAX_PREVIEW_SIZE;
+      int max_preview_width = rect.width / MAX_PREVIEW_SCALE;
+      ratio = ((double) *width) / max_preview_width;
+      *width = (int) max_preview_width;
       *height = (int) (((double) *height) / ratio);
     }
   else
     {
-      ratio = ((double) *height) / MAX_PREVIEW_SIZE;
-      *height = (int) MAX_PREVIEW_SIZE;
+      int max_preview_height = rect.height / MAX_PREVIEW_SCALE;
+      ratio = ((double) *height) / max_preview_height;
+      *height = (int) max_preview_height;
       *width = (int) (((double) *width) / ratio);
     }
 
@@ -1795,6 +1810,29 @@ meta_screen_get_current_xinerama (MetaScreen *screen)
     }
 
   return &screen->xinerama_infos[screen->last_xinerama_index];
+}
+
+GdkMonitor *
+meta_screen_get_current_monitor ()
+{
+  GdkDisplay *display;
+  GdkSeat *seat;
+  GdkDevice *device;
+  GdkMonitor *current;
+  gint x, y;
+
+  display = gdk_display_get_default ();
+  seat = gdk_display_get_default_seat (display);
+  device = gdk_seat_get_pointer (seat);
+
+  gdk_device_get_position (device, NULL, &x, &y);
+  current = gdk_display_get_monitor_at_point (display, x, y);
+
+  if (current != NULL) {
+    return current;
+  }
+
+  return gdk_display_get_primary_monitor (display);
 }
 
 #define _NET_WM_ORIENTATION_HORZ 0
