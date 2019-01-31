@@ -36,7 +36,6 @@
 #include "display-private.h"
 #include "screen.h"
 #include <X11/Xutil.h>
-#include <gdk/gdk.h>
 #include "ui.h"
 
 typedef struct _MetaXineramaScreenInfo MetaXineramaScreenInfo;
@@ -193,8 +192,6 @@ void          meta_screen_get_natural_xinerama_list (MetaScreen *screen,
 void          meta_screen_update_workspace_layout (MetaScreen             *screen);
 void          meta_screen_update_workspace_names  (MetaScreen             *screen);
 void          meta_screen_queue_workarea_recalc   (MetaScreen             *screen);
-
-GdkMonitor* meta_screen_get_current_monitor (void);
 
 Window meta_create_offscreen_window (Display *xdisplay,
                                      Window   parent,
