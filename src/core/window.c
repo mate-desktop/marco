@@ -7197,8 +7197,8 @@ update_move (MetaWindow  *window,
        * inside edge, because we don't want to force users to maximize
        * windows they are placing near the top of their screens.
        *
-       * The "current" idea of meta_window_get_work_area_current_monitor() and
-       * meta_screen_get_current_monitor() is slightly different: the former
+       * The "current" idea of meta_window_get_work_area_for_xinerama() and
+       * meta_screen_get_current_xinerama() is slightly different: the former
        * refers to the monitor which contains the largest part of the window,
        * the latter to the one where the pointer is located.
        */

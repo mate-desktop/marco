@@ -760,34 +760,24 @@ static GtkWidget*
 selectable_workspace_new (MetaWorkspace *workspace, int entry_count)
 {
   GtkWidget *widget;
-  GdkMonitor *monitor;
-  GdkRectangle rect;
+  const MetaXineramaScreenInfo *current;
   int mini_workspace_width, mini_workspace_height;
   double mini_workspace_ratio;
 
   widget = g_object_new (meta_select_workspace_get_type (), NULL);
 
-  monitor = meta_screen_get_current_monitor ();
-  if (monitor != NULL)
-  {
-    gdk_monitor_get_geometry (monitor, &rect);
-  }
-  else
-  {
-    rect.width = workspace->screen->rect.width;
-    rect.height = workspace->screen->rect.height;
-  }
+  current = meta_screen_get_current_xinerama (workspace->screen);
 
   if (workspace->screen->rect.width < workspace->screen->rect.height)
   {
     mini_workspace_ratio = (double) workspace->screen->rect.width / (double) workspace->screen->rect.height;
-    mini_workspace_height = (int) ((double) rect.height / entry_count - SELECT_OUTLINE_WIDTH * 2);
+    mini_workspace_height = (int) ((double) current->rect.height / entry_count - SELECT_OUTLINE_WIDTH * 2);
     mini_workspace_width = (int) ((double) mini_workspace_height * mini_workspace_ratio);
   }
   else
   {
     mini_workspace_ratio = (double) workspace->screen->rect.height / (double) workspace->screen->rect.width;
-    mini_workspace_width = (int) ((double) rect.width / entry_count - SELECT_OUTLINE_WIDTH * 2);
+    mini_workspace_width = (int) ((double) current->rect.width / entry_count - SELECT_OUTLINE_WIDTH * 2);
     mini_workspace_height = (int) ((double) mini_workspace_width * mini_workspace_ratio);
   }
 
