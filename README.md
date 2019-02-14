@@ -1,3 +1,6 @@
+Marco [![Build Status](https://travis-ci.org/mate-desktop/marco.svg?branch=master)](https://travis-ci.org/mate-desktop/marco)
+===
+
 MATE Marco is a fork of GNOME Metacity.
 
 COMPILING MARCO
