@@ -10,6 +10,9 @@ before_install:
   - chmod +x docker-build
  
 install:
+  - sudo apt-get install -y python3-pip python3-setuptools
+  - sudo pip3 install --upgrade pip
+  - sudo pip install PyGithub
   - ./docker-build --name ${DISTRO} --config .travis.yml --install
 
 script:
@@ -29,22 +32,22 @@ requires:
     # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/trunk?h=packages/marco
     - gcc
     - git
-    - gtk3
     - glib2
+    - gtk3
     - intltool
-    - make
-    - yelp-tools
-    - mate-common
     - libcanberra
     - libgtop
-    - mate-desktop
-    - zenity
     - libxpresent
+    - make
+    - mate-common
+    - mate-desktop
     - which
+    - yelp-tools
+    - zenity
 
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-mate-team/mate-desktop
+    # Useful URL: https://salsa.debian.org/debian-mate-team/marco
     - git
     - intltool
     - libcanberra-gtk3-dev
@@ -74,26 +77,25 @@ requires:
 
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/marco.git
+    - desktop-file-utils
     - gcc
     - git
-    - make
-    - redhat-rpm-config
-    - desktop-file-utils
     - gtk3-devel
-    - libcanberra-devel
-    - libgtop2-devel
     - libSM-devel
-    - libsoup-devel
     - libXdamage-devel
     - libXpresent-devel
+    - libcanberra-devel
+    - libgtop2-devel
+    - libsoup-devel
+    - make
     - mate-common
     - mate-desktop-devel
-    - zenity
+    - redhat-rpm-config
     - startup-notification-devel
     - yelp-tools
+    - zenity
 
   ubuntu:
-    # Same as debian
     - git
     - intltool
     - libcanberra-gtk3-dev
