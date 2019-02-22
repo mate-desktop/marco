@@ -5,6 +5,10 @@ language: bash
 services:
   - docker
 
+branches:
+  except:
+  - gh-pages
+
 before_install:
   - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
   - chmod +x docker-build
@@ -23,6 +27,16 @@ env:
   - DISTRO="debian:sid"
   - DISTRO="fedora:29"
   - DISTRO="ubuntu:18.10"
+
+deploy:
+  provider: pages
+  github-token: $GITHUB_TOKEN
+  #keep-history: true
+  target-branch: gh-pages
+  local-dir: html-report
+  on:
+    all_branches: true
+    condition: "${DISTRO} =~ ^fedora.*$"
 
 ##########################################################
 # THE FOLLOWING LINES IS USED BY docker-build
@@ -77,6 +91,8 @@ requires:
 
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/marco.git
+    - clang-analyzer # for static analyzer
+    - clang          # for static analyzer
     - desktop-file-utils
     - gcc
     - git
@@ -125,6 +141,45 @@ requires:
 
 variables:
   - CFLAGS="-Wall -Werror=format-security"
+  - 'CHECKERS="
+    --use-analyzer=/usr/share/clang
+    -enable-checker deadcode.DeadStores
+    -enable-checker alpha.core.CastSize
+    -enable-checker alpha.core.CastToStruct
+    -enable-checker alpha.core.IdenticalExpr
+    -enable-checker alpha.core.SizeofPtr
+    -enable-checker alpha.security.ArrayBoundV2
+    -enable-checker alpha.security.MallocOverflow
+    -enable-checker alpha.security.ReturnPtrRange
+    -enable-checker alpha.unix.SimpleStream
+    -enable-checker alpha.unix.cstring.BufferOverlap
+    -enable-checker alpha.unix.cstring.NotNullTerminated
+    -enable-checker alpha.unix.cstring.OutOfBounds
+    -enable-checker alpha.core.FixedAddr
+    -enable-checker security.insecureAPI.strcpy"'
 
 after_scripts:
+  - if [ ${DISTRO_NAME} == "fedora" ];then
+  -     ./autogen.sh
+  -     scan-build $CHECKERS --use-analyzer=/usr/bin/clang ./configure
+  -     make clean
+  -     scan-build $CHECKERS --use-analyzer=/usr/bin/clang --keep-cc -o html-report make
+  -     cat > index.html <<EOF
+  -     <h1>
+  -       <a href="https://github.com/mate-desktop/marco">marco</a>
+  #-       <a href="https://github.com/$OWNER_NAME/$REPO_NAME">$REPO_NAME</a> #for docker-build v0.1.1
+  -     </h1>
+  -     <a href="https://travis-ci.org/mate-desktop/marco">
+  #-     <a href="https://travis-ci.org/$OWNER_NAME/$REPO_NAME"> #for docker-build v0.1.1
+  -       <img src="https://travis-ci.org/mate-desktop/marco.svg?branch=master" alt="Build Status" /></a>
+  #-       <img src="https://travis-ci.org/$OWNER_NAME/$REPO_NAME.svg?branch=master" alt="Build Status" /></a> #for docker-build v0.1.1
+  -     <hr/>
+  -     <ul>
+  -     EOF
+  -     for i in `ls html-report`;do
+  -       echo "<li><a href=$i>Static analizer result($i)</a></li>" >> index.html
+  -     done
+  -     echo "</ul>" >> index.html
+  -     mv index.html html-report
+  - fi
   - make distcheck
