@@ -4,23 +4,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Rui <xymarior@yandex.com>, 2018
 # Luis Filipe Teixeira <lufilte@gmail.com>, 2018
 # MS <manuelarodsilva@gmail.com>, 2018
+# José Vieira <jvieira33@sapo.pt>, 2018
 # Sérgio Marques <smarquespt@gmail.com>, 2018
 # Carlos Moreira, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# José Vieira <jvieira33@sapo.pt>, 2018
 # Manel Tinoco <maneltinoco@gmail.com>, 2018
+# Rui <xymarior@yandex.com>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-16 13:55+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Manel Tinoco <maneltinoco@gmail.com>, 2018\n"
+"Last-Translator: Rui <xymarior@yandex.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -272,28 +272,28 @@ msgstr "Maximizar janela horizontalmente"
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:144
 msgid "Tile window to east (right) side of screen"
-msgstr "A janela ao lado leste (direito) do ecrã"
+msgstr "Ladrilhar a janela para este (direita) do ecrã"
 
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:145
 msgid "Tile window to west (left) side of screen"
-msgstr "A janela ao lado oeste (esquerdo) do ecrã"
+msgstr "Ladrilhar a janela para oeste (esquerda) do ecrã"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "Ladrilhar a janela para o canto noroeste (topo esquerdo)"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Ladrilhar a janela para o canto nordeste (topo direito)"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Ladrilhar a janela para o canto sudoeste (fundo esquerdo)"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Ladrilhar a janela para o canto sudeste (fundo direito)"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
@@ -343,22 +343,22 @@ msgstr "Mover janela para o centro do ecrã"
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
 msgid "Move window to north (top) monitor"
-msgstr ""
+msgstr "Mover a janela para o monitor norte (topo)"
 
 #: ../src/50-marco-window-key.xml.in.h:34
 #: ../src/org.mate.marco.gschema.xml.h:160
 msgid "Move window to south (bottom) monitor"
-msgstr ""
+msgstr "Mover a janela para o monitor sul (fundo)"
 
 #: ../src/50-marco-window-key.xml.in.h:35
 #: ../src/org.mate.marco.gschema.xml.h:161
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Mover a janela para o monitor este (direita)"
 
 #: ../src/50-marco-window-key.xml.in.h:36
 #: ../src/org.mate.marco.gschema.xml.h:162
 msgid "Move window to west (left) monitor"
-msgstr ""
+msgstr "Mover a janela para o monitor oeste (esquerda)"
 
 #: ../src/50-marco-window-key.xml.in.h:37
 #: ../src/org.mate.marco.gschema.xml.h:123
@@ -483,8 +483,8 @@ msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
 msgstr ""
-"Definir como falso para desactivar os bordos da janela pré-selecionada "
-"quando alternar entre separadores."
+"Definir como falso para desativar os bordos da janela pré-selecionada quando"
+" alternar entre separadores."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -521,7 +521,7 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
-"O modo de foco de janela indica como as janelas são activadas. Tem três "
+"O modo de foco de janela indica como as janelas são ativadas. Tem três "
 "valores possíveis; \"clique\" significa que a janela tem de ser clicada para"
 " obter o foco, \"entrada\" significa que a janela fica com foco quando o "
 "rato entra na janela, e \"sobre\" significa que a janela fica com o foco "
@@ -572,29 +572,29 @@ msgid ""
 msgstr ""
 "Definir esta opção como falso pode levar a comportamento estranho, pelo que "
 "é altamente recomendado aos utilizadores que não alterem a opção pré-"
-"definida de verdadeiro. Muitas acções (p. ex. clicar na área do cliente, "
+"definida de verdadeiro. Muitas ações (por ex. clicar na área do cliente, "
 "mover ou redimensionar a janela) normalmente têm o efeito secundário de "
 "elevar a janela. Definir esta opção como falso, o que é altamente "
-"desaconselhado, desligará a acção de elevar de outras acções de utilizador e"
-" ignorará acções de elevar geradas por aplicações. Ver "
+"desaconselhado, desligará a ação de elevar de outras ações de utilizador e "
+"ignorará ações de elevar geradas por aplicações. Ver "
 "http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Mesmo quando esta opção"
 " é definida como falso, as janelas ainda podem ser elevadas através de "
 "alt+clique esquerdo em qualquer ponto da janela, um clique normal nas "
 "envolventes da janela, ou por mensagens especiais de paginadores, tais como "
-"solicitações de activação por parte de mini-aplicações (applets) de lista de"
-" tarefas. Presentemente, esta opção está desactivada no modo clique-para-"
-"focar. Notar que a lista de maneiras de elevar janelas quando elevar-por-"
-"clique está definido como falso não inclui solicitações programadas nas "
+"solicitações de ativação por parte de mini-aplicações (mini-aplicações) de "
+"lista de tarefas. Presentemente, esta opção está desativada no modo clique-"
+"para-focar. Notar que a lista de maneiras de elevar janelas quando elevar-"
+"por-clique está definido como falso não inclui solicitações programadas nas "
 "aplicações para elevar janelas; tais solicitações serão ignoradas "
-"independentemente da razão para a solicitação. Se é um desenvolvedor de "
+"independentemente da razão para a solicitação. Se é um programador de "
 "aplicações e um utilizador reclama por a sua aplicação não funcionar com "
-"esta função desactivada, diga-lhe que a falta é _dele_ por ter danificadoo "
+"esta função desativada, diga-lhe que a falta é _dele_ por ter danificado o "
 "gestor de janelas e que ele tem que alterar esta opção novamente para "
 "verdadeiro ou viverá com a deficiência (\"bug\") que provocou."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr "Acção do clique duplo na barra de título"
+msgstr "Ação do clique duplo na barra de título"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -612,7 +612,7 @@ msgstr ""
 "que sombreia/desombreia a janela, 'alternar maximização' ('toggle_maximize')"
 " que maximiza/desmaximiza a janela, 'alternar_maximização_horizontalmente' e"
 " 'alternar_maximização_verticalmente' que maximiza/desmaximiza a janela "
-"apenas na direção respectiva, 'minimizar' que minimiza a janela, 'sombrear' "
+"apenas na direção respetiva, 'minimizar' que minimiza a janela, 'sombrear' "
 "('shade') que recolherá a janela para cima, 'menu' que exibirá o menu de "
 "janela, 'para trás' ('lower') que põe a janela atrás de todas as outras, e "
 "'nenhum' ('none') que não fará nada."
@@ -637,7 +637,7 @@ msgstr ""
 "que sombreia/desombreia a janela, 'alternar maximização' ('toggle_maximize')"
 " que maximiza/desmaximiza a janela, 'alternar_maximização_horizontalmente' e"
 " 'alternar_maximização_verticalmente' que maximiza/desmaximiza a janela "
-"apenas na direção respectiva, 'minimizar' que minimiza a janela, 'sombrear' "
+"apenas na direção respetiva, 'minimizar' que minimiza a janela, 'sombrear' "
 "('shade') que recolherá a janela para cima, 'menu' que exibirá o menu de "
 "janela, 'para trás' ('lower') que põe a janela atrás de todas as outras, e "
 "'nenhum' ('none') que não fará nada."
@@ -662,7 +662,7 @@ msgstr ""
 "que sombreia/desombreia a janela, 'alternar maximização' ('toggle_maximize')"
 " que maximiza/desmaximiza a janela, 'alternar_maximização_horizontalmente' e"
 " 'alternar_maximização_verticalmente' que maximiza/desmaximiza a janela "
-"apenas na direção respectiva, 'minimizar' que minimiza a janela, 'sombrear' "
+"apenas na direção respetiva, 'minimizar' que minimiza a janela, 'sombrear' "
 "('shade') que recolherá a janela para cima, 'menu' que exibirá o menu de "
 "janela, 'para trás' ('lower') que põe a janela atrás de todas as outras, e "
 "'nenhum' ('none') que não fará nada."
@@ -734,7 +734,7 @@ msgstr ""
 "Texto que descreve o tipo de letra para as barras de título das janelas. O "
 "tamanho da descrição será usado apenas se a opção "
 "tamanho_do_tipo_de_letra_da_barra_de_título estiver definido para 0. Além "
-"disso, esta opção é desactivada se a opção "
+"disso, esta opção é desativada se a opção "
 "barra_de_título_usa_tipo_de_letra_da_área_de_trabalho estiver definida para "
 "verdadeiro."
 
@@ -767,14 +767,14 @@ msgid ""
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
 msgstr ""
-"O estilo envolvente é usado para determinar como mudar deuma área de "
+"O estilo envolvente é usado para determinar como mudar de uma área de "
 "trabalho para outra no bordo da alternador de áreas de trabalho. Quando "
 "definido para \"sem envolvimento\", nada acontece quando se tenta mudar para"
 " uma área de trabalho para além do bordo do alternador de áreas de trabalho."
 " Quando definido para \"clássico\", é usado o anterior comportamento do "
 "marco: o final duma linha leva ao início da seguinte e o final duma coluna "
 "leva ao início da seguinte. Quando definido para \"toroidal\", as áreas de "
-"trabalho ficam ligadasem 'pescada-de-rabo-na boca': o final de cada linha "
+"trabalho ficam ligada sem 'pescada-de-rabo-na boca': o final de cada linha "
 "leva ao início da própria linha e o final de cada coluna leva ao início da "
 "própria coluna. "
 
@@ -837,7 +837,7 @@ msgstr "Determina se o Marco é ou não um gestor de composições."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
-msgstr "Rápido Alt-Tab com o gestor de composição (desactiva as miniaturas)"
+msgstr "Rápido Alt-Tab com o gestor de composição (desativa as miniaturas)"
 
 #: ../src/org.mate.marco.gschema.xml.h:44
 msgid ""
@@ -845,8 +845,8 @@ msgid ""
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
 msgstr ""
-"Se definido para verdadeiro, quando o gestor de composição está activado não"
-" serão exibidas miniaturas das janelas na janela popup aberta com alt-tab. "
+"Se definido para verdadeiro, quando o gestor de composição está ativado não "
+"serão exibidas miniaturas das janelas na janela popup aberta com alt-tab. "
 "Serão antes exibidos os ícones das aplicações. "
 
 #: ../src/org.mate.marco.gschema.xml.h:45
@@ -866,8 +866,8 @@ msgstr ""
 "uma redução significativa da usabilidade a muitos utilizadores, mas pode "
 "permitir que aplicações antigas continuem a funcionar, e pode também "
 "propiciar um compromisso para servidores de terminal. Contudo, a "
-"funcionalidade 'usar estruturas' está desactivada quando a acessibilidade "
-"está activada."
+"funcionalidade 'usar estruturas' está desativada quando a acessibilidade "
+"está ativada."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
@@ -909,7 +909,7 @@ msgid ""
 msgstr ""
 "Algumas aplicações ignoram certas especificações de forma que resulta em "
 "disfuncionalidades nos gestores de janelas. Esta opção coloca o Marco num "
-"modo rigorosamente correcto, o que proporciona uma interface de utilizador "
+"modo rigorosamente correto, o que proporciona uma interface de utilizador "
 "mais consistente, desde que não seja necessário executar algum aplicação de "
 "comportamento incomum. "
 
@@ -927,7 +927,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Ativar ou não o ladrilhamento de janelas"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -935,16 +935,22 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Se ativado, largar janelas nas bordas do ecrã maximiza-as verticalmente e "
+"redimensiona-as horizontalmente para cobrir metade da área disponível. "
+"Arrastar e largar no topo maximiza a janela se estiver ativo o permitir "
+"ladrilhamento no topo."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
-msgstr ""
+msgstr "Maximizar ou não a janela ao ser arrastada para o topo do ecrã"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"Se ativado, ao arrastar e largar uma janela no topo do ecrã irá maximizá-la."
+" Apenas funciona se estive ativo o permitir ladrilhamento."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -1006,7 +1012,7 @@ msgstr ""
 "/apps/marco/keybinding_commands. O formato será \"&lt;Control&gt;a\" ou "
 "\"&lt;Shift&gt;&lt;Alt&gt;F1\". O interpretador é flexível e aceita "
 "minúsculas ou maiúsculas, bem como abreviaturas como \"&lt;Ctl&gt;\" e "
-"\"&lt;Ctrl&gt;\". Se for definida a opção \"desactivado\" para a linha "
+"\"&lt;Ctrl&gt;\". Se for definida a opção \"desativado\" para a linha "
 "especial, não será atribuída nenhuma tecla a esta ação. "
 
 #: ../src/org.mate.marco.gschema.xml.h:66
@@ -1020,8 +1026,8 @@ msgstr ""
 "O formato será \"&lt;Control&gt;a\" ou \"&lt;Shift&gt;&lt;Alt&gt;F1\".O "
 "interpretador é flexível e aceita minúsculas ou maiúsculas, bem como "
 "abreviaturas como \"&lt;Ctl&gt;\" e \"&lt;Ctrl&gt;\". Se for definida a "
-"opção \"desactivado\" para a linha especial, não será atribuída nenhuma "
-"tecla a esta ação. "
+"opção \"desativado\" para a linha especial, não será atribuída nenhuma tecla"
+" a esta ação. "
 
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid ""
@@ -1036,9 +1042,9 @@ msgstr ""
 "O formato será \"&lt;Control&gt;a\" ou \"&lt;Shift&gt;&lt;Alt&gt;F1\".O "
 "interpretador é flexível e aceita minúsculas ou maiúsculas, assim como "
 "abreviaturas como \"&lt;Ctl&gt;\" e \"&lt;Ctrl&gt;\". Se for definida a "
-"opção \"desactivado\" para a linha especial, não será atribuída nenhuma "
-"tecla a esta ação. Esta atribuição de teclas pode ser revertida mantendo a "
-"tecla \"shift\" premida; por isso, a tecla \"shift\" não pode ser usada. "
+"opção \"desativado\" para a linha especial, não será atribuída nenhuma tecla"
+" a esta ação. Esta atribuição de teclas pode ser revertida mantendo a tecla "
+"\"shift\" premida; por isso, a tecla \"shift\" não pode ser usada. "
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
@@ -1124,19 +1130,19 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
+msgstr "Ladrilhar a janela para o canto noroeste (topo esquerdo) do ecrã"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "Ladrilhar a janela para o canto nordeste (topo direito) do ecrã"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Ladrilhar a janela para o canto sudeste (fundo direito) do ecrã"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Ladrilhar a janela para o canto sudoeste (fundo esquerdo) do ecrã"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -1323,7 +1329,7 @@ msgid ""
 "behave properly.\n"
 msgstr ""
 "Soluções para aplicações problemáticas desativadas. Algumas aplicações "
-"poderão não funcionar correctamente.\n"
+"poderão não funcionar corretamente.\n"
 
 #: ../src/core/prefs.c:1132
 #, c-format
@@ -1919,7 +1925,7 @@ msgstr "Incapaz de processar cor \"%s\""
 #: ../src/ui/theme.c:1706
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
-msgstr "Expressão de coordenada contém carácter '%s' que não é permitido"
+msgstr "Expressão de coordenada contém o caractere '%s' que não é permitido"
 
 #: ../src/ui/theme.c:1733
 #, c-format
@@ -2078,7 +2084,7 @@ msgstr "Nenhum atributo \"%s\" no elemento <%s>"
 #: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "Linha %d caracter %d: %s"
+msgstr "Linha %d caractere %d: %s"
 
 #: ../src/ui/theme-parser.c:438
 #, c-format
