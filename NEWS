@@ -1,3 +1,18 @@
+### marco 1.22.0
+
+  * update translations
+    Initialize travis support
+    screen: Remove get_current_monitor in favor of get_current_xinerama
+    Increase icon size on tab and workspace popups
+    screen: avoid 'NULL' in 'meta_error_trap...' functions
+    prefs: avoid deprecated 'g_settings_list_keys'
+    add git.mk to autogenerate .gitignore files
+    enable silent output when building
+    'meta_error_trap_push' instead 'meta_error_trap_push_with_return'
+    errors.c: avoid deprecated 'gdk_error_trap...' functions:
+    frames.c: drop unused variables
+    compositor-xrender: avoid deprecated 'gdk_error_trap_push/pop'
+
 ### marco 1.21.1
 
   * update translations
