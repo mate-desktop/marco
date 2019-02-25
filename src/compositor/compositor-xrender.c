@@ -584,6 +584,8 @@ make_shadow (MetaDisplay   *display,
         }
     }
 
+  ximage->data = (char *) data;
+
   return ximage;
 }
 
