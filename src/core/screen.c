@@ -749,9 +749,8 @@ list_windows (MetaScreen *screen)
       else
         {
 	  info->xwindow = children[i];
+          result = g_list_prepend (result, info);
 	}
-
-      result = g_list_prepend (result, info);
     }
 
   if (children)
