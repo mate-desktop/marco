@@ -233,8 +233,6 @@ meta_preview_draw (GtkWidget *widget,
 
   if (preview->theme)
     {
-      border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
-
       meta_theme_draw_frame (preview->theme,
                              widget,
                              cr,

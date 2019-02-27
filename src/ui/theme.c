@@ -667,10 +667,6 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
   fgeom->left_titlebar_edge = layout->left_titlebar_edge;
   fgeom->right_titlebar_edge = layout->right_titlebar_edge;
 
-  /* gcc warnings */
-  button_width = -1;
-  button_height = -1;
-
   switch (layout->button_sizing)
     {
     case META_BUTTON_SIZING_ASPECT:
@@ -683,7 +679,9 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
       break;
     case META_BUTTON_SIZING_LAST:
       g_assert_not_reached ();
-      break;
+    default:
+      button_width = -1;
+      button_height = -1;
     }
 
   /* FIXME all this code sort of pretends that duplicate buttons
