@@ -881,7 +881,6 @@ save_state (void)
            client_id);
 
   windows = meta_display_list_windows (meta_get_display ());
-  stack_position = 0;
 
   windows = g_slist_sort (windows, meta_display_stack_cmp);
   tmp = windows;

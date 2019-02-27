@@ -2874,7 +2874,6 @@ handle_panel (MetaDisplay    *display,
   Atom action_atom;
   XClientMessageEvent ev;
 
-  action_atom = None;
   switch (action)
     {
     /* FIXME: The numbers are wrong */

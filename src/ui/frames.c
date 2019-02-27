@@ -1478,7 +1478,7 @@ meta_frames_button_press_event (GtkWidget      *widget,
       (control == META_FRAME_CONTROL_MAXIMIZE ||
        control == META_FRAME_CONTROL_UNMAXIMIZE))
     {
-      MetaGrabOp op = META_GRAB_OP_NONE;
+      MetaGrabOp op;
 
       switch (control)
         {
@@ -1490,8 +1490,6 @@ meta_frames_button_press_event (GtkWidget      *widget,
           op = op > META_GRAB_OP_CLICKING_MAXIMIZE_HORIZONTAL ? META_GRAB_OP_CLICKING_MAXIMIZE : op;
           break;
         case META_FRAME_CONTROL_UNMAXIMIZE:
-          op = META_GRAB_OP_CLICKING_UNMAXIMIZE + event->button - 1;
-          op = op > META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL ? META_GRAB_OP_CLICKING_UNMAXIMIZE : op;
           op = META_GRAB_OP_CLICKING_UNMAXIMIZE;
           break;
         case META_FRAME_CONTROL_DELETE:
@@ -1523,7 +1521,7 @@ meta_frames_button_press_event (GtkWidget      *widget,
           break;
         default:
           g_assert_not_reached ();
-          break;
+          op = META_GRAB_OP_NONE;
         }
 
       meta_core_begin_grab_op (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),

@@ -3475,8 +3475,6 @@ meta_window_move_resize_internal (MetaWindow          *window,
   gboolean need_move_frame = FALSE;
   gboolean need_resize_client = FALSE;
   gboolean need_resize_frame = FALSE;
-  int frame_size_dx;
-  int frame_size_dy;
   int size_dx;
   int size_dy;
   gboolean is_configure_request;
@@ -3581,7 +3579,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
 
   if (have_window_frame)
     {
-      int new_w, new_h;
+      int frame_size_dx, frame_size_dy, new_w, new_h;
 
       new_w = window->rect.width + fgeom.left_width + fgeom.right_width;
 
@@ -3602,11 +3600,6 @@ meta_window_move_resize_internal (MetaWindow          *window,
                   "Calculated frame size %dx%d\n",
                   window->frame->rect.width,
                   window->frame->rect.height);
-    }
-  else
-    {
-      frame_size_dx = 0;
-      frame_size_dy = 0;
     }
 
   /* For nice effect, when growing the window we want to move/resize
