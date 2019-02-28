@@ -37,6 +37,7 @@
 #include <errno.h>
 #include <signal.h>
 #include <assert.h>
+#include <glib.h>
 
 #ifndef TRUE
 #define TRUE 1
@@ -138,7 +139,7 @@ my_strdup (const char *str)
       fprintf (stderr, "malloc failed\n");
       exit (1);
     }
-  strcpy (s, str);
+  g_strlcpy (s, str, (strlen (str) + 1));
 
   return s;
 }
