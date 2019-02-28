@@ -1528,7 +1528,6 @@ constrain_titlebar_visible (MetaWindow         *window,
       window->type == META_WINDOW_DOCK    ||
       window->fullscreen                  ||
       !window->require_titlebar_visible   ||
-      !window->decorated                  ||
       unconstrained_user_action)
     return TRUE;
 
