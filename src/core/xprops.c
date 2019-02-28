@@ -821,7 +821,7 @@ class_hint_from_results (GetPropertyResults *results,
       return FALSE;
     }
 
-  strcpy (class_hint->res_name, (char *)results->prop);
+  g_strlcpy (class_hint->res_name, (char *)results->prop, (len_name + 1));
 
   if (len_name == (int) results->n_items)
     len_name--;
@@ -837,7 +837,7 @@ class_hint_from_results (GetPropertyResults *results,
       return FALSE;
     }
 
-  strcpy (class_hint->res_class, (char *)results->prop + len_name + 1);
+  g_strlcpy (class_hint->res_class, (char *)results->prop + len_name + 1, (len_class + 1));
 
   XFree (results->prop);
   results->prop = NULL;
@@ -1133,7 +1133,7 @@ meta_prop_get_values (MetaDisplay   *display,
               xmalloc_new_str = ag_Xmalloc (strlen (new_str) + 1);
               if (xmalloc_new_str != NULL)
                 {
-                  strcpy (xmalloc_new_str, new_str);
+                  g_strlcpy (xmalloc_new_str, new_str, (strlen (new_str) + 1));
                   meta_XFree (values[i].v.str);
                   values[i].v.str = xmalloc_new_str;
                 }
