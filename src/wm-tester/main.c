@@ -230,8 +230,7 @@ set_up_icon_windows (void)
 
       gtk_window_set_icon_list (GTK_WINDOW (w), icons);
 
-      g_list_foreach (icons, (GFunc) g_object_unref, NULL);
-      g_list_free (icons);
+      g_list_free_full (icons, g_object_unref);
 
       gtk_widget_show_all (w);
 

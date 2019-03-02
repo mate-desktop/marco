@@ -22,6 +22,7 @@
  * 02110-1301, USA.  */
 
 #include "eventqueue.h"
+#include <glib-object.h>
 #include <X11/Xlib.h>
 
 static gboolean eq_prepare  (GSource     *source,
@@ -70,7 +71,7 @@ meta_event_queue_new (Display *display, MetaEventQueueFunc func, gpointer data)
   g_source_add_poll (source, &eq->poll_fd);
   g_source_set_can_recurse (source, TRUE);
 
-  g_source_set_callback (source, (GSourceFunc) func, data, NULL);
+  g_source_set_callback (source, G_SOURCE_FUNC (func), data, NULL);
 
   g_source_attach (source, NULL);
   g_source_unref (source);
@@ -152,7 +153,7 @@ eq_dispatch (GSource *source, GSourceFunc callback, gpointer user_data)
       MetaEventQueueFunc func;
 
       event = g_queue_pop_head (eq->events);
-      func = (MetaEventQueueFunc) callback;
+      func = (MetaEventQueueFunc) G_CALLBACK (callback);
 
       (* func) (event, user_data);
 
