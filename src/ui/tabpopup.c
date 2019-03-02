@@ -636,7 +636,9 @@ unselect_image (GtkWidget *widget)
   gtk_widget_queue_draw (widget);
 }
 
-static void     meta_select_image_class_init   (MetaSelectImageClass *klass);
+static void     meta_select_image_class_init   (MetaSelectImageClass *klass,
+                                                void                 *data);
+
 static gboolean meta_select_image_draw         (GtkWidget            *widget,
                                                 cairo_t              *cr);
 
@@ -669,7 +671,7 @@ meta_select_image_get_type (void)
 }
 
 static void
-meta_select_image_class_init (MetaSelectImageClass *klass)
+meta_select_image_class_init (MetaSelectImageClass *klass, void *data)
 {
   GtkWidgetClass *widget_class;
 
@@ -805,7 +807,8 @@ unselect_workspace (GtkWidget *widget)
   gtk_widget_queue_draw (widget);
 }
 
-static void meta_select_workspace_class_init (MetaSelectWorkspaceClass *klass);
+static void meta_select_workspace_class_init (MetaSelectWorkspaceClass *klass,
+                                              void                     *data);
 
 static gboolean meta_select_workspace_draw (GtkWidget *widget,
                                             cairo_t   *cr);
@@ -840,7 +843,8 @@ meta_select_workspace_get_type (void)
 }
 
 static void
-meta_select_workspace_class_init (MetaSelectWorkspaceClass *klass)
+meta_select_workspace_class_init (MetaSelectWorkspaceClass *klass,
+                                  void                     *data)
 {
   GtkWidgetClass *widget_class;
 

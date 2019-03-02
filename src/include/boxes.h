@@ -25,6 +25,8 @@
 #define META_BOXES_H
 
 #include <glib.h>
+#include <glib-object.h>
+#include <gobject/gvaluecollector.h>
 #include "common.h"
 
 typedef struct _MetaRectangle MetaRectangle;
