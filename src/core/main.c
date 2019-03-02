@@ -385,7 +385,9 @@ sigterm_handler (int signum)
 }
 
 static gboolean
-on_sigterm (void)
+on_sigterm (GIOChannel   *source,
+            GIOCondition condition,
+            gpointer     user_data)
 {
   meta_quit (META_EXIT_SUCCESS);
   return FALSE;
@@ -437,7 +439,7 @@ main (int argc, char **argv)
 
   channel = g_io_channel_unix_new (sigterm_pipe_fds[0]);
   g_io_channel_set_flags (channel, G_IO_FLAG_NONBLOCK, NULL);
-  g_io_add_watch (channel, G_IO_IN, (GIOFunc) on_sigterm, NULL);
+  g_io_add_watch (channel, G_IO_IN, on_sigterm, NULL);
   g_io_channel_set_close_on_unref (channel, TRUE);
   g_io_channel_unref (channel);
 
