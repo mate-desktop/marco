@@ -188,15 +188,6 @@ void     meta_rectangle_expand_to_avoiding_struts (
                                          const MetaDirection  direction,
                                          const GSList        *all_struts);
 
-/* Free the list created by
- *   meta_rectangle_get_minimal_spanning_set_for_region()
- * or
- *   meta_rectangle_find_onscreen_edges ()
- * or
- *   meta_rectangle_find_nonintersected_xinerama_edges()
- */
-void     meta_rectangle_free_list_and_elements (GList *filled_list);
-
 /* could_fit_in_region determines whether one of the spanning_rects is
  * big enough to contain rect.  contained_in_region checks whether one
  * actually contains it.
