@@ -1072,7 +1072,7 @@ meta_window_free (MetaWindow  *window,
 
   if (window->struts)
     {
-      meta_free_gslist_and_elements (window->struts);
+      g_slist_free_full (window->struts, g_free);
       window->struts = NULL;
 
       meta_topic (META_DEBUG_WORKAREA,
@@ -6289,7 +6289,7 @@ meta_window_update_struts (MetaWindow *window)
   changed = (old_iter != NULL || new_iter != NULL);
 
   /* Update appropriately */
-  meta_free_gslist_and_elements (old_struts);
+  g_slist_free_full (old_struts, g_free);
   window->struts = new_struts;
   if (changed)
     {
