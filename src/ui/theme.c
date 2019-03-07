@@ -5179,7 +5179,7 @@ meta_theme_new (void)
     g_hash_table_new_full (g_str_hash,
                            g_str_equal,
                            g_free,
-                           (GDestroyNotify) g_object_unref);
+                           g_object_unref);
 
   theme->layouts_by_name =
     g_hash_table_new_full (g_str_hash,
