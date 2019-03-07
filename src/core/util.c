@@ -204,12 +204,6 @@ utf8_fputs (const char *str,
   return retval;
 }
 
-void
-meta_free_gslist_and_elements (GSList *list_to_deep_free)
-{
-  g_slist_free_full (list_to_deep_free, g_free);
-}
-
 #ifdef WITH_VERBOSE_MODE
 void
 meta_debug_spew_real (const char *format, ...)
