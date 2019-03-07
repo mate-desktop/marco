@@ -156,11 +156,11 @@ meta_workspace_free (MetaWorkspace *workspace)
     {
       workspace_free_struts (workspace);
       for (i = 0; i < screen->n_xinerama_infos; i++)
-        meta_rectangle_free_list_and_elements (workspace->xinerama_region[i]);
+        g_list_free_full (workspace->xinerama_region[i], g_free);
       g_free (workspace->xinerama_region);
-      meta_rectangle_free_list_and_elements (workspace->screen_region);
-      meta_rectangle_free_list_and_elements (workspace->screen_edges);
-      meta_rectangle_free_list_and_elements (workspace->xinerama_edges);
+      g_list_free_full (workspace->screen_region, g_free);
+      g_list_free_full (workspace->screen_edges, g_free);
+      g_list_free_full (workspace->xinerama_edges, g_free);
     }
 
   g_free (workspace);
@@ -560,11 +560,11 @@ meta_workspace_invalidate_work_area (MetaWorkspace *workspace)
   workspace_free_struts (workspace);
 
   for (i = 0; i < workspace->screen->n_xinerama_infos; i++)
-    meta_rectangle_free_list_and_elements (workspace->xinerama_region[i]);
+    g_list_free_full (workspace->xinerama_region[i], g_free);
   g_free (workspace->xinerama_region);
-  meta_rectangle_free_list_and_elements (workspace->screen_region);
-  meta_rectangle_free_list_and_elements (workspace->screen_edges);
-  meta_rectangle_free_list_and_elements (workspace->xinerama_edges);
+  g_list_free_full (workspace->screen_region, g_free);
+  g_list_free_full (workspace->screen_edges, g_free);
+  g_list_free_full (workspace->xinerama_edges, g_free);
   workspace->xinerama_region = NULL;
   workspace->screen_region = NULL;
   workspace->screen_edges = NULL;

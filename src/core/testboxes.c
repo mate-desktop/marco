@@ -357,7 +357,7 @@ get_xinerama_edges (int which_xinerama_set, int which_strut_set)
   ret = meta_rectangle_find_nonintersected_xinerama_edges (&screenrect, xins, struts);
 
   free_strut_list (struts);
-  meta_rectangle_free_list_and_elements (xins);
+  g_list_free_full (xins, g_free);
 
   return ret;
 }
@@ -598,8 +598,8 @@ test_regions_okay ()
   tmp = NULL;
   tmp = g_list_prepend (tmp, new_meta_rect (0, 0, 1600, 1200));
   verify_lists_are_equal (region, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (region, g_free);
 
   /*************************************************************/
   /* Make sure test region 1 has the right spanning rectangles */
@@ -609,8 +609,8 @@ test_regions_okay ()
   tmp = g_list_prepend (tmp, new_meta_rect (0, 20,  400, 1180));
   tmp = g_list_prepend (tmp, new_meta_rect (0, 20, 1600, 1140));
   verify_lists_are_equal (region, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (region, g_free);
 
   /*************************************************************/
   /* Make sure test region 2 has the right spanning rectangles */
@@ -623,8 +623,8 @@ test_regions_okay ()
   tmp = g_list_prepend (tmp, new_meta_rect (   0,   20,  800, 1130));
   tmp = g_list_prepend (tmp, new_meta_rect (   0,   20, 1600, 1080));
   verify_lists_are_equal (region, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (region, g_free);
 
   /*************************************************************/
   /* Make sure test region 3 has the right spanning rectangles */
@@ -649,8 +649,8 @@ test_regions_okay ()
   printf ("%s vs. %s\n", region_list, tmp_list);
 #endif
   verify_lists_are_equal (region, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (region, g_free);
 
   /*************************************************************/
   /* Make sure test region 4 has the right spanning rectangles */
@@ -659,8 +659,8 @@ test_regions_okay ()
   tmp = NULL;
   tmp = g_list_prepend (tmp, new_meta_rect ( 800,   20,  800, 1180));
   verify_lists_are_equal (region, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (region, g_free);
 
   /*************************************************************/
   /* Make sure test region 5 has the right spanning rectangles */
@@ -692,7 +692,7 @@ test_region_fitting ()
       g_assert (meta_rectangle_contained_in_region (region, &rect) == FALSE ||
                 meta_rectangle_could_fit_in_region (region, &rect) == TRUE);
     }
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (region, g_free);
 
   /* Do some manual tests too */
   region = get_screen_region (1);
@@ -709,14 +709,14 @@ test_region_fitting ()
   g_assert (meta_rectangle_could_fit_in_region (region, &rect));
   g_assert (!meta_rectangle_contained_in_region (region, &rect));
 
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (region, g_free);
 
   region = get_screen_region (2);
   rect = meta_rect (1000, 50, 600, 1100);
   g_assert (meta_rectangle_could_fit_in_region (region, &rect));
   g_assert (!meta_rectangle_contained_in_region (region, &rect));
 
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (region, g_free);
 
   printf ("%s passed.\n", G_STRFUNC);
 }
@@ -746,7 +746,7 @@ test_clamping_to_region ()
       g_assert (meta_rectangle_could_fit_in_region (region, &rect) == TRUE);
       g_assert (rect.x == temp.x && rect.y == temp.y);
     }
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (region, g_free);
 
   /* Do some manual tests too */
   region = get_screen_region (1);
@@ -812,7 +812,7 @@ test_clamping_to_region ()
                                            &min_size);
   g_assert (rect.width == 100 && rect.height == 999999);
 
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (region, g_free);
 
   printf ("%s passed.\n", G_STRFUNC);
 }
@@ -856,7 +856,7 @@ test_clipping_to_region ()
           g_assert (meta_rectangle_contained_in_region (region, &rect) == TRUE);
         }
     }
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (region, g_free);
 
   /* Do some manual tests too */
   region = get_screen_region (2);
@@ -895,7 +895,7 @@ test_clipping_to_region ()
                                  &rect);
   g_assert (meta_rectangle_equal (&rect, &temp));
 
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (region, g_free);
 
   printf ("%s passed.\n", G_STRFUNC);
 }
@@ -918,7 +918,7 @@ test_shoving_into_region ()
           g_assert (meta_rectangle_contained_in_region (region, &rect));
         }
     }
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (region, g_free);
 
   /* Do some manual tests too */
   region = get_screen_region (2);
@@ -965,7 +965,7 @@ test_shoving_into_region ()
                                     &rect);
   g_assert (meta_rectangle_equal (&rect, &temp));
 
-  meta_rectangle_free_list_and_elements (region);
+  g_list_free_full (region, g_free);
 
   printf ("%s passed.\n", G_STRFUNC);
 }
@@ -1038,8 +1038,8 @@ test_find_onscreen_edges ()
   tmp = g_list_prepend (tmp, new_screen_edge (1600,    0, 0, 1200, right));
   tmp = g_list_prepend (tmp, new_screen_edge (   0,    0, 0, 1200, left));
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************/
   /* Make sure test region 1 has the correct edges */
@@ -1053,8 +1053,8 @@ test_find_onscreen_edges ()
   tmp = g_list_prepend (tmp, new_screen_edge ( 400, 1160, 0,   40, right));
   tmp = g_list_prepend (tmp, new_screen_edge (   0,   20, 0, 1180, left));
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************/
   /* Make sure test region 2 has the correct edges */
@@ -1074,8 +1074,8 @@ test_find_onscreen_edges ()
   tmp = g_list_prepend (tmp, new_screen_edge ( 450, 1150, 0,   50, left));
   tmp = g_list_prepend (tmp, new_screen_edge (   0,   20, 0, 1180, left));
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************/
   /* Make sure test region 3 has the correct edges */
@@ -1109,8 +1109,8 @@ test_find_onscreen_edges ()
 #endif
 
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************/
   /* Make sure test region 4 has the correct edges */
@@ -1122,8 +1122,8 @@ test_find_onscreen_edges ()
   tmp = g_list_prepend (tmp, new_screen_edge (1600,   20, 0, 1180, right));
   tmp = g_list_prepend (tmp, new_screen_edge ( 800,   20, 0, 1180, left));
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************/
   /* Make sure test region 5 has the correct edges */
@@ -1131,8 +1131,8 @@ test_find_onscreen_edges ()
   edges = get_screen_edges (5);
   tmp = NULL;
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************/
   /* Make sure test region 6 has the correct edges */
@@ -1144,8 +1144,8 @@ test_find_onscreen_edges ()
   tmp = g_list_prepend (tmp, new_screen_edge (1600,   40, 0,  1160, right));
   tmp = g_list_prepend (tmp, new_screen_edge (   0,   40, 0,  1160, left));
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   printf ("%s passed.\n", G_STRFUNC);
 }
@@ -1167,8 +1167,8 @@ test_find_nonintersected_xinerama_edges ()
   edges = get_xinerama_edges (0, 0);
   tmp = NULL;
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************************************/
   /* Make sure test xinerama set 2 for with region 1 has the correct edges */
@@ -1178,8 +1178,8 @@ test_find_nonintersected_xinerama_edges ()
   tmp = g_list_prepend (tmp, new_xinerama_edge (   0,  600, 1600, 0, bottom));
   tmp = g_list_prepend (tmp, new_xinerama_edge (   0,  600, 1600, 0, top));
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************************************/
   /* Make sure test xinerama set 1 for with region 2 has the correct edges */
@@ -1197,8 +1197,8 @@ test_find_nonintersected_xinerama_edges ()
          big_buffer1, big_buffer2);
 #endif
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************************************/
   /* Make sure test xinerama set 3 for with region 3 has the correct edges */
@@ -1212,8 +1212,8 @@ test_find_nonintersected_xinerama_edges ()
   tmp = g_list_prepend (tmp, new_xinerama_edge ( 800,  675, 0,  425, right));
   tmp = g_list_prepend (tmp, new_xinerama_edge ( 800,  675, 0,  525, left));
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************************************/
   /* Make sure test xinerama set 3 for with region 4 has the correct edges */
@@ -1224,8 +1224,8 @@ test_find_nonintersected_xinerama_edges ()
   tmp = g_list_prepend (tmp, new_xinerama_edge ( 800,  600,  800, 0, top));
   tmp = g_list_prepend (tmp, new_xinerama_edge ( 800,  600,  0, 600, right));
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   /*************************************************************************/
   /* Make sure test xinerama set 3 for with region 5has the correct edges */
@@ -1233,8 +1233,8 @@ test_find_nonintersected_xinerama_edges ()
   edges = get_xinerama_edges (3, 5);
   tmp = NULL;
   verify_edge_lists_are_equal (edges, tmp);
-  meta_rectangle_free_list_and_elements (tmp);
-  meta_rectangle_free_list_and_elements (edges);
+  g_list_free_full (tmp, g_free);
+  g_list_free_full (edges, g_free);
 
   printf ("%s passed.\n", G_STRFUNC);
 }
