@@ -30,6 +30,53 @@
 #include "util.h"
 #include <X11/Xutil.h>  /* Just for the definition of the various gravities */
 
+#define META_RECTANGLE_CONTAINS_RECTANGLE(OUTER_RECT, INNER_RECT)                   \
+  ((INNER_RECT->x                        >= OUTER_RECT->x) &&                       \
+   (INNER_RECT->y                        >= OUTER_RECT->y) &&                       \
+   ((INNER_RECT->x + INNER_RECT->width)  <= (OUTER_RECT->x + OUTER_RECT->width)) && \
+   ((INNER_RECT->y + INNER_RECT->height) <= (OUTER_RECT->y + OUTER_RECT->height)))
+
+#define META_RECTANGLE_OVERLAP_HORIZONTALLY_RECTANGLE(RECT_A, RECT_B)  \
+  ((RECT_B->x <= (RECT_A->x + RECT_A->width)) &&                       \
+   (RECT_A->x <= (RECT_B->x + RECT_B->width)))
+
+#define META_RECTANGLE_OVERLAP_VERTICALLY_RECTANGLE(RECT_A, RECT_B)    \
+  ((RECT_B->y <= (RECT_A->y + RECT_A->height)) &&                      \
+   (RECT_A->y <= (RECT_B->y + RECT_B->height)))
+
+#define META_RECTANGLE_OVERLAP_RECTANGLE(RECT_A, RECT_B)               \
+  ((RECT_B->x <= (RECT_A->x + RECT_A->width))  &&                      \
+   (RECT_A->x <= (RECT_B->x + RECT_B->width))  &&                      \
+   (RECT_B->y <= (RECT_A->y + RECT_A->height)) &&                      \
+   (RECT_A->y <= (RECT_B->y + RECT_B->height)))
+
+#define META_RECTANGLE_NOT_OVERLAP_RECTANGLE(RECT_A, RECT_B)           \
+  !META_RECTANGLE_OVERLAP_RECTANGLE (RECT_A, RECT_B)
+
+#define META_RECTANGLES_HORIZONTALLY_ADJACENTS(RECT_A, RECT_B)         \
+  (((RECT_A->y + RECT_A->height) == RECT_B->height) ||                 \
+   ((RECT_B->y + RECT_B->height) == RECT_A->height))
+
+#define META_RECTANGLES_VERTICALLY_ADJACENTS(RECT_A, RECT_B)           \
+  (((RECT_A->x + RECT_A->width) == RECT_B->x) ||                       \
+   ((RECT_B->x + RECT_B->width) == RECT_A->x))
+
+#define META_RECTANGLES_EQUAL_VERTICALLY(A, B)               \
+  ((A->y == B->y) &&                                         \
+   (A->height == B->height))
+
+#define META_RECTANGLES_EQUAL_HORIZONTALLY(A, B)             \
+  ((A->x == B->x) &&                                         \
+   (A->width == B->width))
+
+#define META_RECTANGLES_EQUAL(A, B)                          \
+  (META_RECTANGLES_EQUAL_VERTICALLY(A, B) &&                 \
+   META_RECTANGLES_EQUAL_HORIZONTALLY(A, B))
+
+#define META_RECTANGLE_COULD_FIT_RECTANGLE(OUTER_RECT, INNER_RECT) \
+  (OUTER_RECT->width >= INNER_RECT->width &&                        \
+   OUTER_RECT->width >= INNER_RECT->width)
+
 char*
 meta_rectangle_to_string (const MetaRectangle *rect,
                           char                *output)
@@ -191,10 +238,7 @@ gboolean
 meta_rectangle_equal (const MetaRectangle *src1,
                       const MetaRectangle *src2)
 {
-  return ((src1->x == src2->x) &&
-          (src1->y == src2->y) &&
-          (src1->width == src2->width) &&
-          (src1->height == src2->height));
+  return META_RECTANGLES_EQUAL (src1, src2);
 }
 
 void
@@ -238,45 +282,35 @@ meta_rectangle_overlap (const MetaRectangle *rect1,
   g_return_val_if_fail (rect1 != NULL, FALSE);
   g_return_val_if_fail (rect2 != NULL, FALSE);
 
-  return !((rect1->x + rect1->width  <= rect2->x) ||
-           (rect2->x + rect2->width  <= rect1->x) ||
-           (rect1->y + rect1->height <= rect2->y) ||
-           (rect2->y + rect2->height <= rect1->y));
+  return META_RECTANGLE_OVERLAP_RECTANGLE (rect1, rect2);
 }
 
 gboolean
 meta_rectangle_vert_overlap (const MetaRectangle *rect1,
                              const MetaRectangle *rect2)
 {
-  return (rect1->y < rect2->y + rect2->height &&
-          rect2->y < rect1->y + rect1->height);
+  return  META_RECTANGLE_OVERLAP_HORIZONTALLY_RECTANGLE ( rect1, rect2);
 }
 
 gboolean
 meta_rectangle_horiz_overlap (const MetaRectangle *rect1,
                               const MetaRectangle *rect2)
 {
-  return (rect1->x < rect2->x + rect2->width &&
-          rect2->x < rect1->x + rect1->width);
+  return META_RECTANGLE_OVERLAP_VERTICALLY_RECTANGLE (rect1, rect2);
 }
 
 gboolean
 meta_rectangle_could_fit_rect (const MetaRectangle *outer_rect,
                                const MetaRectangle *inner_rect)
 {
-  return (outer_rect->width  >= inner_rect->width &&
-          outer_rect->height >= inner_rect->height);
+  return META_RECTANGLE_COULD_FIT_RECTANGLE (outer_rect, inner_rect);
 }
 
 gboolean
 meta_rectangle_contains_rect  (const MetaRectangle *outer_rect,
                                const MetaRectangle *inner_rect)
 {
-  return
-    inner_rect->x                      >= outer_rect->x &&
-    inner_rect->y                      >= outer_rect->y &&
-    inner_rect->x + inner_rect->width  <= outer_rect->x + outer_rect->width &&
-    inner_rect->y + inner_rect->height <= outer_rect->y + outer_rect->height;
+  return META_RECTANGLE_CONTAINS_RECTANGLE (outer_rect, inner_rect);
 }
 
 void
@@ -394,69 +428,55 @@ merge_spanning_rects_in_region (GList *region)
       return NULL;
     }
 
+  int a_xx, a_yy, b_xx, b_yy;
   while (compare && compare->next)
     {
       MetaRectangle *a = compare->data;
       GList *other = compare->next;
 
       g_assert (a->width > 0 && a->height > 0);
-
+      a_xx = a->x + a->width;
+      a_yy = a->y + a->height;
       while (other)
         {
           MetaRectangle *b = other->data;
           GList *delete_me = NULL;
 
           g_assert (b->width > 0 && b->height > 0);
+          b_xx = b->x + b->width;
+          b_yy = b->y + b->height;
 
           /* If a contains b, just remove b */
-          if (meta_rectangle_contains_rect (a, b))
+          if (META_RECTANGLE_CONTAINS_RECTANGLE (a, b))
             {
               delete_me = other;
             }
           /* If b contains a, just remove a */
-          else if (meta_rectangle_contains_rect (b, a))
+          else if (META_RECTANGLE_CONTAINS_RECTANGLE (b, a))
             {
               delete_me = compare;
             }
-          /* If a and b might be mergeable horizontally */
-          else if (a->y == b->y && a->height == b->height)
+          /* If a and b might be mergeable horizontally,
+             AND (a and b overlap OR a and b are adjacent) */
+          else if (META_RECTANGLES_EQUAL_VERTICALLY (a, b) &&
+                   (META_RECTANGLE_OVERLAP_VERTICALLY_RECTANGLE (a, b) ||
+                    META_RECTANGLES_HORIZONTALLY_ADJACENTS (a, b)))
             {
-              /* If a and b overlap */
-              if (meta_rectangle_overlap (a, b))
-                {
-                  int new_x = MIN (a->x, b->x);
-                  a->width = MAX (a->x + a->width, b->x + b->width) - new_x;
-                  a->x = new_x;
-                  delete_me = other;
-                }
-              /* If a and b are adjacent */
-              else if (a->x + a->width == b->x || a->x == b->x + b->width)
-                {
-                  int new_x = MIN (a->x, b->x);
-                  a->width = MAX (a->x + a->width, b->x + b->width) - new_x;
-                  a->x = new_x;
-                  delete_me = other;
-                }
+              int new_x = MIN (a->x, b->x);
+              a->width = MAX (a_xx, b_xx) - new_x;
+              a->x = new_x;
+              delete_me = other;
             }
-          /* If a and b might be mergeable vertically */
-          else if (a->x == b->x && a->width == b->width)
+          /* If a and b might be mergeable vertically
+             AND (a and b overlap OR a and b are adjacent)*/
+          else if (META_RECTANGLES_EQUAL_HORIZONTALLY (a, b) &&
+                   (META_RECTANGLE_OVERLAP_HORIZONTALLY_RECTANGLE (a, b) ||
+                    META_RECTANGLES_VERTICALLY_ADJACENTS (a, b)))
             {
-              /* If a and b overlap */
-              if (meta_rectangle_overlap (a, b))
-                {
-                  int new_y = MIN (a->y, b->y);
-                  a->height = MAX (a->y + a->height, b->y + b->height) - new_y;
-                  a->y = new_y;
-                  delete_me = other;
-                }
-              /* If a and b are adjacent */
-              else if (a->y + a->height == b->y || a->y == b->y + b->height)
-                {
-                  int new_y = MIN (a->y, b->y);
-                  a->height = MAX (a->y + a->height, b->y + b->height) - new_y;
-                  a->y = new_y;
-                  delete_me = other;
-                }
+              int new_y = MIN (a->y, b->y);
+              a->height = MAX (a->y + a_yy, b_yy) - new_y;
+              a->y = new_y;
+              delete_me = other;
             }
 
           other = other->next;
@@ -470,6 +490,8 @@ merge_spanning_rects_in_region (GList *region)
                   compare = compare->next;
                   other = compare->next;
                   a = compare->data;
+                  a_xx = a->x + a->width;
+                  a_yy = a->y + a->height;
                 }
 
               /* Okay, we can free it now */
@@ -589,7 +611,7 @@ meta_rectangle_get_minimal_spanning_set_for_region (
       while (rect_iter)
         {
           MetaRectangle *rect = (MetaRectangle*) rect_iter->data;
-          if (!meta_rectangle_overlap (rect, strut_rect))
+          if (META_RECTANGLE_NOT_OVERLAP_RECTANGLE (rect, strut_rect))
             ret = g_list_prepend (ret, rect);
           else
             {
@@ -723,38 +745,39 @@ meta_rectangle_expand_to_avoiding_struts (MetaRectangle       *rect,
   /* Run over all struts */
   for (strut_iter = all_struts; strut_iter; strut_iter = strut_iter->next)
     {
-      MetaStrut *strut = (MetaStrut*) strut_iter->data;
+      MetaStrut *meta_strut = (MetaStrut*) strut_iter->data;
 
       /* Skip struts that don't overlap */
-      if (!meta_rectangle_overlap (&strut->rect, rect))
+      MetaRectangle * rect_strut = (MetaRectangle *) &(meta_strut->rect);
+      if (META_RECTANGLE_NOT_OVERLAP_RECTANGLE (rect_strut, rect))
         continue;
 
       if (direction == META_DIRECTION_HORIZONTAL)
         {
-          if (strut->side == META_SIDE_LEFT)
+          if (meta_strut->side == META_SIDE_LEFT)
             {
-              int offset = BOX_RIGHT(strut->rect) - BOX_LEFT(*rect);
+              int offset = BOX_RIGHT(meta_strut->rect) - BOX_LEFT(*rect);
               rect->x     += offset;
               rect->width -= offset;
             }
-          else if (strut->side == META_SIDE_RIGHT)
+          else if (meta_strut->side == META_SIDE_RIGHT)
             {
-              int offset = BOX_RIGHT (*rect) - BOX_LEFT(strut->rect);
+              int offset = BOX_RIGHT (*rect) - BOX_LEFT(meta_strut->rect);
               rect->width -= offset;
             }
           /* else ignore the strut */
         }
       else /* direction == META_DIRECTION_VERTICAL */
         {
-          if (strut->side == META_SIDE_TOP)
+          if (meta_strut->side == META_SIDE_TOP)
             {
-              int offset = BOX_BOTTOM(strut->rect) - BOX_TOP(*rect);
+              int offset = BOX_BOTTOM(meta_strut->rect) - BOX_TOP(*rect);
               rect->y      += offset;
               rect->height -= offset;
             }
-          else if (strut->side == META_SIDE_BOTTOM)
+          else if (meta_strut->side == META_SIDE_BOTTOM)
             {
-              int offset = BOX_BOTTOM(*rect) - BOX_TOP(strut->rect);
+              int offset = BOX_BOTTOM(*rect) - BOX_TOP(meta_strut->rect);
               rect->height -= offset;
             }
           /* else ignore the strut */
@@ -800,7 +823,8 @@ meta_rectangle_contained_in_region (const GList         *spanning_rects,
   contained = FALSE;
   while (!contained && temp != NULL)
     {
-      contained = contained || meta_rectangle_contains_rect (temp->data, rect);
+      MetaRectangle * rect_contained = temp->data;
+      contained = contained || META_RECTANGLE_CONTAINS_RECTANGLE (rect_contained, rect);
       temp = temp->next;
     }
 
@@ -818,7 +842,8 @@ meta_rectangle_overlaps_with_region (const GList         *spanning_rects,
   overlaps = FALSE;
   while (!overlaps && temp != NULL)
     {
-      overlaps = overlaps || meta_rectangle_overlap (temp->data, rect);
+      MetaRectangle * rect_overlap = temp->data;
+      overlaps = overlaps || META_RECTANGLE_OVERLAP_RECTANGLE (rect_overlap, rect);
       temp = temp->next;
     }
 
