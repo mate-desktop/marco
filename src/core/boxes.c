@@ -472,6 +472,9 @@ merge_spanning_rects_in_region (GList *region)
                   a = compare->data;
                 }
 
+              /* avoid false positive warning in Clang static analyzer */
+              g_assert (a != delete_me->data);
+
               /* Okay, we can free it now */
               g_free (delete_me->data);
               region = g_list_delete_link (region, delete_me);
