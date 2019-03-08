@@ -27,6 +27,8 @@
 #include <stdio.h>
 #include <X11/Xutil.h> /* Just for the definition of the various gravities */
 #include <time.h>      /* To initialize random seed */
+#include <math.h>
+#include <float.h>
 
 #define NUM_RANDOM_RUNS 10000
 
@@ -1346,17 +1348,22 @@ test_find_closest_point_to_line ()
   double x1, y1, x2, y2, px, py, rx, ry;
   double answer_x, answer_y;
 
-  x1 =  3.0;  y1 =  49.0;
-  x2 =  2.0;  y2 = - 1.0;
-  px = -2.6;  py =  19.1;
+  x1 =   3.0;  y1 =  49.0;
+  x2 =   2.0;  y2 = - 1.0;
+  px =  -2.6;  py =  19.1;
   answer_x = 2.4; answer_y = 19;
   meta_rectangle_find_linepoint_closest_to_point (x1,  y1,
                                                   x2,  y2,
                                                   px,  py,
                                                   &rx, &ry);
-  g_assert (rx == answer_x && ry == answer_y);
+#if GLIB_CHECK_VERSION (2, 58, 0)
+  g_assert_cmpfloat_with_epsilon (rx, answer_x, DBL_EPSILON);
+  g_assert_cmpfloat_with_epsilon (ry, answer_y, DBL_EPSILON);
+#else
+  g_assert_true (fabs (rx - answer_x) < DBL_EPSILON && fabs (ry - answer_y) < DBL_EPSILON);
+#endif
 
-  /* Special test for x1 == x2, so that slop of line is infinite */
+  /* Special test for x1 == x2 */
   x1 =  3.0;  y1 =  49.0;
   x2 =  3.0;  y2 = - 1.0;
   px = -2.6;  py =  19.1;
@@ -1365,9 +1372,14 @@ test_find_closest_point_to_line ()
                                                   x2,  y2,
                                                   px,  py,
                                                   &rx, &ry);
-  g_assert (rx == answer_x && ry == answer_y);
+#if GLIB_CHECK_VERSION (2, 58, 0)
+  g_assert_cmpfloat_with_epsilon (rx, answer_x, DBL_EPSILON);
+  g_assert_cmpfloat_with_epsilon (ry, answer_y, DBL_EPSILON);
+#else
+  g_assert_true (fabs (rx - answer_x) < DBL_EPSILON && fabs (ry - answer_y) < DBL_EPSILON);
+#endif
 
-  /* Special test for y1 == y2, so perp line has slope of infinity */
+  /* Special test for y1 == y2 */
   x1 =  3.14;  y1 =   7.0;
   x2 =  2.718; y2 =   7.0;
   px = -2.6;   py =  19.1;
@@ -1376,7 +1388,21 @@ test_find_closest_point_to_line ()
                                                   x2,  y2,
                                                   px,  py,
                                                   &rx, &ry);
-  g_assert (rx == answer_x && ry == answer_y);
+/*
+ Assert fails with DBL_EPSILON
+ rx:       -2.60000000000007958079E+00
+ answer_x: -2.60000000000000008882E+00
+ E: 7.94919685631612082943E-14
+
+ printf( "rx: %.20E\nanswer_x: %.20E\nE: %.20E\n",rx, answer_x, fabs(rx - answer_x));
+*/
+#define EPSILON 1.0E-13
+#if GLIB_CHECK_VERSION (2, 58, 0)
+  g_assert_cmpfloat_with_epsilon (rx, answer_x, EPSILON);
+  g_assert_cmpfloat_with_epsilon (ry, answer_y, EPSILON);
+#else
+  g_assert_true (fabs (rx - answer_x) < EPSILON && fabs (ry - answer_y) < EPSILON);
+#endif
 
   /* Test when we the point we want to be closest to is actually on the line */
   x1 =  3.0;  y1 =  49.0;
@@ -1387,7 +1413,12 @@ test_find_closest_point_to_line ()
                                                   x2,  y2,
                                                   px,  py,
                                                   &rx, &ry);
-  g_assert (rx == answer_x && ry == answer_y);
+#if GLIB_CHECK_VERSION (2, 58, 0)
+  g_assert_cmpfloat_with_epsilon (rx, answer_x, DBL_EPSILON);
+  g_assert_cmpfloat_with_epsilon (ry, answer_y, DBL_EPSILON);
+#else
+  g_assert_true (fabs (rx - answer_x) < DBL_EPSILON && fabs (ry - answer_y) < DBL_EPSILON);
+#endif
 
   printf ("%s passed.\n", G_STRFUNC);
 }

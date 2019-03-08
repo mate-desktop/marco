@@ -29,6 +29,9 @@
 #include "boxes.h"
 #include "util.h"
 #include <X11/Xutil.h>  /* Just for the definition of the various gravities */
+#include <math.h>
+
+#define POLINOMIAL_WITH_SINGLE_NEGATIVE_ROOT(a, b) pow(a,2) - 2*a*b + pow(b,2)
 
 char*
 meta_rectangle_to_string (const MetaRectangle *rect,
@@ -1117,20 +1120,26 @@ meta_rectangle_find_linepoint_closest_to_point (double x1,
    * really didn't specify a line after all).  However, the caller should
    * be careful to avoid making (x1,y1) and (x2,y2) too close (e.g. like
    * 10^{-8} apart in each coordinate), otherwise roundoff error could
-   * cause issues.  Solving these equations by hand (or using Maple(TM) or
-   * Mathematica(TM) or whatever) results in slightly messy expressions,
-   * but that's all the below few lines do.
+   * cause issues.  Solving these equations using SageMath:
+   *
+   * var('x1,x2,y1,y2,rx,ry,px,py')
+   * a = (ry-y1)*(x2-x1) == (y2-y1)*(rx-x1)
+   * b = (rx-px)*(x2-x1) + (ry-py)*(y2-y1) == 0
+   * solve([a,b], rx,ry)
+   *
+   * Solution:
+   * rx == (px*x1^2 - 2*px*x1*x2 + px*x2^2 + x2*y1^2 + x1*y2^2 + (py*x1 - py*x2)*y1 - (py*x1 - py*x2 + (x1 + x2)*y1)*y2)/(x1^2 - 2*x1*x2 + x2^2 + y1^2 - 2*y1*y2 + y2^2)
+   * ry == (py*y1^2 + py*y2^2 + (px*x1 - (px + x1)*x2 + x2^2)*y1 - (px*x1 - x1^2 - (px - x1)*x2 + 2*py*y1)*y2)/(x1^2 - 2*x1*x2 + x2^2 + y1^2 - 2*y1*y2 + y2^2)
+   *
+   * Simplify denominator:
+   * den = x1^2 - 2*x1*x2 + x2^2 + y1^2 - 2*y1*y2 + y2^2 = (x1 -x2)^2 + (y1 -y2)^2 :: (x1 -x2)^2 = (x2 -x1)^2, (y1 -y2)^2 = (y2 -y1)^2
+   * den = POLINOMIAL_WITH_SINGLE_NEGATIVE_ROOT (x2, x1) + POLINOMIAL_WITH_SINGLE_NEGATIVE_ROOT (y2, y1)
    */
 
-  double diffx, diffy, den;
-  diffx = x2 - x1;
-  diffy = y2 - y1;
-  den = diffx * diffx + diffy * diffy;
-
-  *valx = (py * diffx * diffy + px * diffx * diffx +
-           y2 * x1 * diffy - y1 * x2 * diffy) / den;
-  *valy = (px * diffx * diffy + py * diffy * diffy +
-           x2 * y1 * diffx - x1 * y2 * diffx) / den;
+   *valx = (px*pow(x1,2) - 2*px*x1*x2 + px*pow(x2,2) + x2*pow(y1,2) + x1*pow(y2,2) + (py*x1 - py*x2)*y1 - (py*x1 - py*x2 + (x1 + x2)*y1)*y2) /
+           (POLINOMIAL_WITH_SINGLE_NEGATIVE_ROOT (x2, x1) + POLINOMIAL_WITH_SINGLE_NEGATIVE_ROOT (y2, y1));
+   *valy = (py*pow(y1,2) + py*pow(y2,2) + (px*x1 - (px + x1)*x2 + pow(x2,2))*y1 - (px*x1 - pow(x1,2) - (px - x1)*x2 + 2*py*y1)*y2) /
+           (POLINOMIAL_WITH_SINGLE_NEGATIVE_ROOT (x2, x1) + POLINOMIAL_WITH_SINGLE_NEGATIVE_ROOT (y2, y1));
 }
 
 /***************************************************************************/
