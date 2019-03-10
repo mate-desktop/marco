@@ -3484,6 +3484,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
   gboolean is_user_action;
   gboolean configure_frame_first;
   gboolean use_static_gravity;
+  gboolean have_window_frame;
   /* used for the configure request, but may not be final
    * destination due to StaticGravity etc.
    */
@@ -3491,6 +3492,11 @@ meta_window_move_resize_internal (MetaWindow          *window,
   int client_move_y;
   MetaRectangle new_rect;
   MetaRectangle old_rect;
+
+  if (window->frame)
+    have_window_frame = TRUE;
+  else
+    have_window_frame = FALSE;
 
   is_configure_request = (flags & META_IS_CONFIGURE_REQUEST) != 0;
   do_gravity_adjust = (flags & META_DO_GRAVITY_ADJUST) != 0;
@@ -3511,7 +3517,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
               is_user_action ? " (user move/resize)" : "",
               old_rect.x, old_rect.y, old_rect.width, old_rect.height);
 
-  if (window->frame)
+  if (have_window_frame)
     meta_frame_calc_geometry (window->frame,
                               &fgeom);
 
@@ -3540,7 +3546,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
   else if (is_configure_request || do_gravity_adjust)
     {
       adjust_for_gravity (window,
-                          window->frame ? &fgeom : NULL,
+                          have_window_frame ? &fgeom : NULL,
                           /* configure request coords assume
                            * the border width existed
                            */
@@ -3555,7 +3561,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
     }
 
   meta_window_constrain (window,
-                         window->frame ? &fgeom : NULL,
+                         have_window_frame ? &fgeom : NULL,
                          flags,
                          gravity,
                          &old_rect,
@@ -3573,7 +3579,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
   window->rect.width = w;
   window->rect.height = h;
 
-  if (window->frame)
+  if (have_window_frame)
     {
       int new_w, new_h;
 
@@ -3618,7 +3624,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
    * enough to set CWX | CWWidth but pass in the current size/pos.
    */
 
-  if (window->frame)
+  if (have_window_frame)
     {
       int new_x, new_y;
       int frame_pos_dx, frame_pos_dy;
@@ -3719,7 +3725,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
 
   /* If frame extents have changed, fill in other frame fields and
      change frame's extents property. */
-  if (window->frame &&
+  if (have_window_frame &&
       (window->frame->child_x != fgeom.left_width ||
        window->frame->child_y != fgeom.top_height ||
        window->frame->right_width != fgeom.right_width ||
@@ -3760,7 +3766,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
    * PPosition/UPosition hints aren't set, marco seems to send a
    * ConfigureNotify anyway due to the above code.)
    */
-  if (window->constructing && window->frame &&
+  if (window->constructing && have_window_frame &&
       ((window->size_hints.flags & PPosition) ||
        (window->size_hints.flags & USPosition)))
     need_configure_notify = TRUE;
@@ -3779,7 +3785,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
   if (use_static_gravity)
     meta_window_set_gravity (window, StaticGravity);
 
-  if (configure_frame_first && window->frame)
+  if (configure_frame_first && have_window_frame)
     meta_frame_sync_to_window (window->frame,
                                gravity,
                                need_move_frame, need_resize_frame);
@@ -3836,7 +3842,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
       meta_error_trap_pop (window->display, FALSE);
     }
 
-  if (!configure_frame_first && window->frame)
+  if (!configure_frame_first && have_window_frame)
     meta_frame_sync_to_window (window->frame,
                                gravity,
                                need_move_frame, need_resize_frame);
