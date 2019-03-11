@@ -23,6 +23,8 @@
  * 02110-1301, USA.
  */
 
+#define _GNU_SOURCE
+
 #include <config.h>
 #include "constraints.h"
 #include "workspace.h"
@@ -1327,9 +1329,8 @@ constrain_aspect_ratio (MetaWindow         *window,
                                                       new_width, new_height,
                                                       &best_width, &best_height);
 
-      /* Yeah, I suck for doing implicit rounding -- sue me */
-      new_width  = best_width;
-      new_height = best_height;
+      new_width  = round (best_width);
+      new_height = round (best_height);
 
       break;
     }

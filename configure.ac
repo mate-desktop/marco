@@ -29,6 +29,8 @@ m4_define([lt_version_info], [lt_current:lt_revision:lt_age])
 
 AC_SUBST([LT_VERSION_INFO], [lt_version_info])
 
+AC_CHECK_LIB(m, round)
+
 # Honor aclocal flags
 AC_SUBST(ACLOCAL_AMFLAGS, "\${ACLOCAL_FLAGS}")
 
