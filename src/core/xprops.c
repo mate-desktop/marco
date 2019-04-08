@@ -758,7 +758,7 @@ wm_hints_from_results (GetPropertyResults *results,
 
   hints = ag_Xmalloc0 (sizeof (XWMHints));
 
-  raw = (xPropWMHints*) results->prop;
+  raw = (xPropWMHints*) (gpointer) results->prop;
 
   hints->flags = raw->flags;
   hints->input = (raw->input ? True : False);
@@ -880,7 +880,7 @@ size_hints_from_results (GetPropertyResults *results,
   if (results->n_items < OldNumPropSizeElements)
     return FALSE;
 
-  raw = (xPropSizeHints*) results->prop;
+  raw = (xPropSizeHints*) (gpointer) results->prop;
 
   hints = ag_Xmalloc (sizeof (XSizeHints));
 
