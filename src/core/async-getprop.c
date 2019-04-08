@@ -274,7 +274,7 @@ async_get_property_handler (Display *dpy,
 #endif
 
   /* (kind of a silly as we know sizeof(xGetPropertyReply) == sizeof(xReply)) */
-  reply = (xGetPropertyReply *)
+  reply = (xGetPropertyReply *) (void *)
     _XGetAsyncReply (dpy, (char *)&replbuf, rep, buf, len,
                      (SIZEOF (xGetPropertyReply) - bytes_read) >> 2, /* in 32-bit words */
                      False); /* False means expecting more data to follow,
