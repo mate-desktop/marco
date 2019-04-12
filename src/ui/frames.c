@@ -183,6 +183,8 @@ prefs_changed_callback (MetaPreference pref,
 static void
 meta_frames_init (MetaFrames *frames)
 {
+  GtkWidgetPath *path;
+
   frames->text_heights = g_hash_table_new (NULL, NULL);
 
   frames->frames = g_hash_table_new (unsigned_long_hash, unsigned_long_equal);
@@ -194,6 +196,11 @@ meta_frames_init (MetaFrames *frames)
   frames->invalidate_cache_timeout_id = 0;
   frames->invalidate_frames = NULL;
   frames->cache = g_hash_table_new (g_direct_hash, g_direct_equal);
+
+  path = gtk_widget_path_new ();
+  gtk_widget_path_append_type (path, META_TYPE_FRAMES);
+  gtk_widget_path_iter_add_class (path, -1, GTK_STYLE_CLASS_BACKGROUND);
+  gtk_widget_path_unref (path);
 
   meta_prefs_add_listener (prefs_changed_callback, frames);
 }
