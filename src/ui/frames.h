@@ -127,10 +127,9 @@ void meta_frames_set_title (MetaFrames *frames,
 void meta_frames_repaint_frame (MetaFrames *frames,
                                 Window      xwindow);
 
-void meta_frames_get_geometry (MetaFrames *frames,
-                               Window xwindow,
-                               int *top_height, int *bottom_height,
-                               int *left_width, int *right_width);
+void meta_frames_get_borders (MetaFrames       *frames,
+                              Window            xwindow,
+                              MetaFrameBorders *borders);
 
 void meta_frames_apply_shapes (MetaFrames *frames,
                                Window      xwindow,
