@@ -591,7 +591,7 @@ meta_ui_get_default_window_icon (MetaUI *ui)
   if (default_icon == NULL)
     {
       scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
-      default_icon = load_default_window_icon (META_ICON_WIDTH, scale);
+      default_icon = load_default_window_icon (meta_prefs_get_icon_size(), scale);
       g_assert (default_icon);
     }
 

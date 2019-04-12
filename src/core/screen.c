@@ -35,6 +35,7 @@
 #include "prefs.h"
 #include "workspace.h"
 #include "keybindings.h"
+#include "prefs.h"
 #include "stack.h"
 #include "xprops.h"
 #include "compositor.h"
@@ -118,14 +119,15 @@ set_supported_hint (MetaScreen *screen)
 static int
 set_wm_icon_size_hint (MetaScreen *screen)
 {
+  int icon_size = meta_prefs_get_icon_size();
 #define N_VALS 6
   gulong vals[N_VALS];
 
   /* min width, min height, max w, max h, width inc, height inc */
-  vals[0] = META_ICON_WIDTH;
-  vals[1] = META_ICON_HEIGHT;
-  vals[2] = META_ICON_WIDTH;
-  vals[3] = META_ICON_HEIGHT;
+  vals[0] = icon_size; /* width */
+  vals[1] = icon_size; /* height */
+  vals[2] = icon_size; /* width */
+  vals[3] = icon_size; /* height */
   vals[4] = 0;
   vals[5] = 0;
 
