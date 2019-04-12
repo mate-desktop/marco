@@ -812,3 +812,25 @@ meta_invalidate_default_icons (void)
   g_slist_free (windows);
 }
 
+void
+meta_invalidate_all_icons (void)
+{
+  MetaDisplay *display = meta_get_display ();
+  GSList *windows;
+  GSList *l;
+
+  if (display == NULL)
+    return; /* We can validly be called before the display is opened. */
+
+  windows = meta_display_list_windows (display);
+  for (l = windows; l != NULL; l = l->next)
+    {
+      MetaWindow *window = (MetaWindow*)l->data;
+
+      meta_icon_cache_invalidate (&(window->icon_cache));
+      meta_window_update_icon_now (window);
+    }
+
+  g_slist_free (windows);
+}
+

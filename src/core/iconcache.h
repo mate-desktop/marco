@@ -51,10 +51,15 @@ struct _MetaIconCache
   guint wm_hints_dirty : 1;
   guint kwm_win_icon_dirty : 1;
   guint net_wm_icon_dirty : 1;
+
+  guint wm_hints_dirty_forced : 1;
+  guint kwm_win_icon_dirty_forced : 1;
+  guint fallback_icon_dirty_forced : 1;
 };
 
 void           meta_icon_cache_init                 (MetaIconCache *icon_cache);
 void           meta_icon_cache_free                 (MetaIconCache *icon_cache);
+void           meta_icon_cache_invalidate           (MetaIconCache *icon_cache);
 void           meta_icon_cache_property_changed     (MetaIconCache *icon_cache,
                                                      MetaDisplay   *display,
                                                      Atom           atom);

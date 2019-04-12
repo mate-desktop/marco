@@ -586,13 +586,16 @@ GdkPixbuf*
 meta_ui_get_default_window_icon (MetaUI *ui)
 {
   static GdkPixbuf *default_icon = NULL;
-  int scale;
+  static int icon_size = 0;
+  int current_icon_size = meta_prefs_get_icon_size();
 
-  if (default_icon == NULL)
+  int scale;
+  if (default_icon == NULL || current_icon_size != icon_size)
     {
       scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
-      default_icon = load_default_window_icon (meta_prefs_get_icon_size(), scale);
+      default_icon = load_default_window_icon (current_icon_size, scale);
       g_assert (default_icon);
+      icon_size = current_icon_size;
     }
 
   g_object_ref (G_OBJECT (default_icon));

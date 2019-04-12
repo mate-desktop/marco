@@ -52,6 +52,7 @@
 #include "ui.h"
 #include "session.h"
 #include "prefs.h"
+#include "core.h"
 
 #include <glib-object.h>
 #include <glib/gprintf.h>
@@ -658,6 +659,9 @@ prefs_changed_callback (MetaPreference pref,
     case META_PREF_CURSOR_SIZE:
       meta_display_set_cursor_theme (meta_prefs_get_cursor_theme (),
 				     meta_prefs_get_cursor_size ());
+      break;
+    case META_PREF_ICON_SIZE:
+      meta_invalidate_all_icons();
       break;
     default:
       /* handled elsewhere or otherwise */
