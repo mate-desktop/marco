@@ -52,6 +52,7 @@
 #define KEY_GENERAL_COMPOSITOR "compositing-manager"
 #define KEY_GENERAL_COMPOSITOR_FAST_ALT_TAB "compositing-fast-alt-tab"
 #define KEY_GENERAL_CENTER_NEW_WINDOWS "center-new-windows"
+#define KEY_GENERAL_ICON_SIZE "icon-size"
 
 #define KEY_COMMAND_SCHEMA "org.mate.Marco.keybinding-commands"
 #define KEY_COMMAND_PREFIX "command-"
@@ -114,6 +115,7 @@ static gboolean mate_accessibility = FALSE;
 static gboolean mate_animations = TRUE;
 static char *cursor_theme = NULL;
 static int   cursor_size = 24;
+static int   icon_size   = META_DEFAULT_ICON_SIZE;
 static gboolean use_force_compositor_manager = FALSE;
 static gboolean force_compositor_manager = FALSE;
 static gboolean compositing_manager = FALSE;
@@ -511,6 +513,12 @@ static MetaIntPreference preferences_int[] =
       META_PREF_CURSOR_SIZE,
       &cursor_size,
       1, 128, 24,
+    },
+    { "icon-size",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ICON_SIZE,
+      &icon_size,
+      6, G_MAXINT, META_DEFAULT_ICON_SIZE,
     },
     { NULL, NULL, 0, NULL, 0, 0, 0, },
   };
@@ -1111,6 +1119,12 @@ meta_prefs_get_cursor_size (void)
   return cursor_size * scale;
 }
 
+int
+meta_prefs_get_icon_size (void)
+{
+  return icon_size;
+}
+
 gboolean
 meta_prefs_is_in_skip_list (char *class)
 {
@@ -1622,6 +1636,9 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_CURSOR_SIZE:
       return "CURSOR_SIZE";
+
+    case META_PREF_ICON_SIZE:
+      return "ICON_SIZE";
 
     case META_PREF_COMPOSITING_MANAGER:
       return "COMPOSITING_MANAGER";

@@ -452,13 +452,13 @@ meta_preview_get_icon (void)
       if (icon_exists)
           default_icon = gtk_icon_theme_load_icon (theme,
                                                    META_DEFAULT_ICON_NAME,
-                                                   META_ICON_WIDTH,
+                                                   META_DEFAULT_ICON_SIZE,
                                                    0,
                                                    NULL);
       else
           default_icon = gtk_icon_theme_load_icon (theme,
                                                    "image-missing",
-                                                   META_ICON_WIDTH,
+                                                   META_DEFAULT_ICON_SIZE,
                                                    0,
                                                    NULL);
 

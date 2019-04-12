@@ -196,6 +196,12 @@
         <summary>List of applications ignored by show-desktop</summary>
         <description>Comma separated class list. Each running GUI application referenced to given windows manager class will be ignored by 'Show Desktop' functionality.</description>
     </key>
+    <key name="icon-size" type="i">
+        <range min="6" />
+        <default>48</default>
+        <summary>Icon size</summary>
+        <description>Size of the application icons displayed in alt-tab popup window if compositing-fast-alt-tab is enabled. The screen's scale factor is applied to this value.</description>
+    </key>
   </schema>
 
   <schema id="org.mate.Marco.workspace-names" path="/org/mate/marco/workspace-names/">
