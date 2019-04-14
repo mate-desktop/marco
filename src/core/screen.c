@@ -1338,11 +1338,25 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
           gdk_pixbuf_copy_area (win_pixbuf, 0, 0, width, height,
                                 entries[i].icon, 0, 0);
           g_object_unref (win_pixbuf);
+          
+          double icon_scale   = 1.0;
+          double max_coverage = 0.9;
+          
+          if (icon_width > t_width * max_coverage)
+            icon_scale = (t_width * max_coverage) / icon_width;
+            
+          if (icon_height * icon_scale > t_height * max_coverage)
+            icon_scale = (t_height * max_coverage) / icon_height;
+          
+          int t_icon_width  = (int)(icon_width  * icon_scale);
+          int t_icon_height = (int)(icon_height * icon_scale);
+          
           gdk_pixbuf_composite (window->icon, entries[i].icon,
-                                t_width - icon_width, t_height - icon_height,
-                                icon_width, icon_height,
-                                t_width - icon_width, t_height - icon_height,
-                                1.0, 1.0, GDK_INTERP_BILINEAR, 255);
+                                t_width  - t_icon_width, 
+                                t_height - t_icon_height,
+                                t_icon_width, t_icon_height,
+                                t_width - t_icon_width, t_height - t_icon_height,
+                                icon_scale, icon_scale, GDK_INTERP_BILINEAR, 255);
         }
 
       entries[i].blank = FALSE;
