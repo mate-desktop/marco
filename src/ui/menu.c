@@ -100,21 +100,6 @@ static MenuItem menuitems[] = {
 	{META_MENU_OP_DELETE, MENU_ITEM_IMAGE, MARCO_STOCK_DELETE, FALSE, N_("_Close")}
 };
 
-static void
-sn_menu_data_free (MenuData *menu_data,
-                   GClosure *closure)
-{
-  g_free (menu_data->menu);
-  g_free (menu_data);
-}
-
-static void
-sn_menu_item_free (MenuItem *menu_item,
-                   GClosure *closure)
-{
-  g_free (menu_item);
-}
-
 static void popup_position_func(GtkMenu* menu, gint* x, gint* y, gboolean* push_in, gpointer user_data)
 {
 	GtkRequisition req;
@@ -457,7 +442,7 @@ meta_window_menu_new   (MetaFrames         *frames,
                           "activate",
                           G_CALLBACK (activate_cb),
                           md,
-                          (GClosureNotify) sn_menu_data_free, 0);
+                          (GClosureNotify) g_free, 0);
 
                       gtk_menu_shell_append (GTK_MENU_SHELL (submenu), submi);
 
@@ -484,7 +469,7 @@ meta_window_menu_new   (MetaFrames         *frames,
                                      "activate",
                                      G_CALLBACK (activate_cb),
                                      md,
-                                     (GClosureNotify) sn_menu_item_free, 0);
+                                     (GClosureNotify) g_free, 0);
             }
 
           if (mi)
