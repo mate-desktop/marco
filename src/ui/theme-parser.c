@@ -38,7 +38,7 @@
  * look out for.
  */
 #define THEME_MAJOR_VERSION 3
-#define THEME_MINOR_VERSION 5
+#define THEME_MINOR_VERSION 6
 #define THEME_VERSION (1000 * THEME_MAJOR_VERSION + THEME_MINOR_VERSION)
 
 #define MARCO_THEME_FILENAME_FORMAT "metacity-theme-%d.xml"
@@ -1570,6 +1570,8 @@ parse_border (GMarkupParseContext  *context,
     border = &info->layout->title_border;
   else if (strcmp (name, "button_border") == 0)
     border = &info->layout->button_border;
+  else if (strcmp (name, "invisible_border") == 0)
+    border = &info->layout->invisible_border;
 
   if (border == NULL)
     {
