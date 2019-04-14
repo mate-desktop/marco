@@ -518,7 +518,7 @@ static MetaIntPreference preferences_int[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_ICON_SIZE,
       &icon_size,
-      6, G_MAXINT, META_DEFAULT_ICON_SIZE,
+      META_MIN_ICON_SIZE, META_MAX_ICON_SIZE, META_DEFAULT_ICON_SIZE,
     },
     { NULL, NULL, 0, NULL, 0, 0, 0, },
   };

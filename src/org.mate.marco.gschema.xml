@@ -197,7 +197,7 @@
         <description>Comma separated class list. Each running GUI application referenced to given windows manager class will be ignored by 'Show Desktop' functionality.</description>
     </key>
     <key name="icon-size" type="i">
-        <range min="6" />
+        <range min="6" max="1024"/>
         <default>48</default>
         <summary>Icon size</summary>
         <description>Size of the application icons displayed in alt-tab popup window. The screen's scale factor is applied to this value.</description>
