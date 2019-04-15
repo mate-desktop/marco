@@ -62,10 +62,13 @@ MetaFrameFlags meta_frame_get_flags (MetaFrame *frame);
 /* These should ONLY be called from meta_window_move_resize_internal */
 void meta_frame_calc_borders      (MetaFrame        *frame,
                                    MetaFrameBorders *borders);
-void meta_frame_sync_to_window    (MetaFrame        *frame,
-                                   int               gravity,
-                                   gboolean          need_move,
-                                   gboolean          need_resize);
+
+gboolean meta_frame_sync_to_window (MetaFrame       *frame,
+                                    int              gravity,
+                                    gboolean         need_move,
+                                    gboolean         need_resize);
+
+cairo_region_t *meta_frame_get_frame_bounds (MetaFrame *frame);
 
 void meta_frame_set_screen_cursor (MetaFrame        *frame,
                                    MetaCursor        cursor);

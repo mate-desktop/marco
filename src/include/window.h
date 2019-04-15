@@ -23,6 +23,7 @@
 #define META_WINDOW_H
 
 #include <glib.h>
+#include <cairo.h>
 #include <X11/Xlib.h>
 
 #include "boxes.h"
@@ -37,5 +38,7 @@ MetaDisplay *meta_window_get_display (MetaWindow *window);
 Window meta_window_get_xwindow (MetaWindow *window);
 MetaWindow *meta_window_get_transient_for (MetaWindow *window);
 gboolean meta_window_is_maximized (MetaWindow *window);
+
+cairo_region_t *meta_window_get_frame_bounds (MetaWindow *window);
 
 #endif
