@@ -219,10 +219,11 @@ meta_frame_layout_new  (void)
   layout->right_width = -1;
   layout->bottom_height = -1;
 
-  layout->invisible_border.left = 10;
-  layout->invisible_border.right = 10;
-  layout->invisible_border.bottom = 10;
-  layout->invisible_border.top = 10;
+  /* Default to 0 to avoid graphical glitches */
+  layout->invisible_border.left = 0;
+  layout->invisible_border.right = 0;
+  layout->invisible_border.bottom = 0;
+  layout->invisible_border.top = 0;
 
   init_border (&layout->title_border);
 
