@@ -715,6 +715,11 @@ meta_frames_get_borders (MetaFrames       *frames,
   borders->visible.bottom *= scale;
   borders->visible.left *= scale;
   borders->visible.right *= scale;
+
+  borders->total.top *= scale;
+  borders->total.bottom *= scale;
+  borders->total.left *= scale;
+  borders->total.right *= scale;
 }
 
 #ifdef HAVE_SHAPE
