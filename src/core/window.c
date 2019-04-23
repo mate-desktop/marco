@@ -8662,7 +8662,15 @@ meta_window_appears_focused (MetaWindow *window)
       meta_window_foreach_transient (window, transient_has_focus, &focus);
       return focus;
     }
-  return window->has_focus;
+
+  if (window->has_focus)
+    return TRUE;
+
+  if (window->type == META_WINDOW_DOCK ||
+      window->type == META_WINDOW_SPLASHSCREEN)
+    return TRUE;
+
+  return FALSE;
 }
 
 gboolean
