@@ -1322,7 +1322,7 @@ set_net_wm_state (MetaWindow *window)
       data[i] = window->display->atom__NET_WM_STATE_STICKY;
       ++i;
     }
-  if (window->has_focus)
+  if (meta_window_appears_focused (window))
     {
       data[i] = window->display->atom__NET_WM_STATE_FOCUSED;
       ++i;
