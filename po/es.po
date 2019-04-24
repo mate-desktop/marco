@@ -4,33 +4,34 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lluís Tusquellas <lutusq@gmail.com>, 2018
-# difusion, 2018
-# Miguel de Dios Matias <tres.14159@gmail.com>, 2018
-# Mario Verdin <jmvl1303@gmail.com>, 2018
-# Fabian Rodriguez, 2018
-# Andres Sanchez <blackatze93@gmail.com>, 2018
-# ebray187 <ebray187@gmail.com>, 2018
-# Benjamin Perez Carrillo <benperezc@gmail.com>, 2018
-# luismiguex <luismiguex@gmail.com>, 2018
-# Juan Sánchez <jsrmadrid@gmail.com>, 2018
-# Emiliano Fascetti, 2018
-# Arcenio Cid <gusty.miliki@gmail.com>, 2018
-# ZenWalker <scow@riseup.net>, 2018
-# Adolfo Jayme-Barrientos, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Luis Armando Medina <lamedina@gmail.com>, 2018
-# David García-Abad <dgarciabad@gmail.com>, 2018
-# Joel Barrios <darkshram@gmail.com>, 2018
+# Andres Sanchez <blackatze93@gmail.com>, 2019
+# luismiguex <luismiguex@gmail.com>, 2019
+# Fito JB, 2019
+# Lluís Tusquellas <lutusq@gmail.com>, 2019
+# ebray187 <ebray187@gmail.com>, 2019
+# Benjamin Perez Carrillo <benperezc@gmail.com>, 2019
+# Wolfgang Ulbrich <mate@raveit.de>, 2019
+# difusion, 2019
+# Juan Sánchez <jsrmadrid@gmail.com>, 2019
+# David García-Abad <dgarciabad@gmail.com>, 2019
+# Emiliano Fascetti, 2019
+# Miguel de Dios Matias <tres.14159@gmail.com>, 2019
+# Arcenio Cid <gusty.miliki@gmail.com>, 2019
+# Luis Armando Medina <lamedina@gmail.com>, 2019
+# Mario Verdin <jmvl1303@gmail.com>, 2019
+# Fabian Rodriguez, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Joel Barrios <darkshram@gmail.com>, 2019
+# ZenWalker <scow@riseup.net>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-16 13:55+0100\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Joel Barrios <darkshram@gmail.com>, 2018\n"
+"PO-Revision-Date: 2019-03-12 19:28+0000\n"
+"Last-Translator: ZenWalker <scow@riseup.net>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,7 +75,7 @@ msgstr "Re-nombrar espacio de trabajo actual"
 
 #: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
-msgstr "Administrador de ventanas"
+msgstr "Gestión de ventanas"
 
 #: ../src/50-marco-global-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:86
@@ -945,7 +946,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
-msgstr "Si se debe activar el mosaico de ventanas"
+msgstr "Si se debe habilitar el mosaico de ventanas"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -954,8 +955,9 @@ msgid ""
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
 "Si está activado, al soltar las ventanas en los bordes de la pantalla las "
-"maximiza verticalmente y cambia su tamaño para cubrir la mitad del área "
-"disponible. Al arrastrar y soltar al borde superior maximiza la ventana."
+"maximiza verticalmente y cambia su tamaño horizontalmente para cubrir la "
+"mitad del área disponible. Al arrastrar y soltar al borde superior maximiza "
+"la ventana."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
