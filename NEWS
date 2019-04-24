@@ -1,19 +1,46 @@
 ### marco 1.23.0
 
+  * tx: sync with transifex
+  * ui: always set the frame background to None
+  * theme-viewer: avoid deprecated gtk_widget_override_background_color
+  * window: set atom__NET_WM_STATE_FOCUSED for meta_window_appears_focused
+  * window: make docks and spashscreens appear focused
+  * Limit icon size to 480
+  * scale icon down if icon is larger than alt+tab preview thumbnail
+  * description for icon size preference corrected
+  * reload icons if icon size preference changed
+  * make icon size configurable
+  * Remove unnecessary GClosureNotify methods
+  * Replace meta_free_gslist_and_elements with g_slist_free_full
+  * Replace meta_rectangle_free_list_and_elements with g_list_free_full
+  * Remove GDestroyNotify function cast for g_object_unref
+  * delete: remove old code
+  * Fix -Werror=cast-function-type
+  * Improve performance by removing unused assignments
+  * window: avoid clang warning: garbage value
+  * frames: avoid deprecated 'gtk_widget_set_double_buffered'
+  * [ci] Enable Clang Static Analyzer for marco
+  * boxes: avoid false positive warning in Clang static analyzer
+  * Do not judge whether the window is decorated or not
+  * screen: Fix use of memory after it is freed
+  * boxes: Actually check for rectangle containment
+  * [Security] Use 'g_strlcpy' instead of 'strcpy'
+  * compositor-xrender: Fix memory leak
+
 ### marco 1.22.0
 
   * update translations
-    Initialize travis support
-    screen: Remove get_current_monitor in favor of get_current_xinerama
-    Increase icon size on tab and workspace popups
-    screen: avoid 'NULL' in 'meta_error_trap...' functions
-    prefs: avoid deprecated 'g_settings_list_keys'
-    add git.mk to autogenerate .gitignore files
-    enable silent output when building
-    'meta_error_trap_push' instead 'meta_error_trap_push_with_return'
-    errors.c: avoid deprecated 'gdk_error_trap...' functions:
-    frames.c: drop unused variables
-    compositor-xrender: avoid deprecated 'gdk_error_trap_push/pop'
+  * Initialize travis support
+  * screen: Remove get_current_monitor in favor of get_current_xinerama
+  * Increase icon size on tab and workspace popups
+  * screen: avoid 'NULL' in 'meta_error_trap...' functions
+  * prefs: avoid deprecated 'g_settings_list_keys'
+  * add git.mk to autogenerate .gitignore files
+  * enable silent output when building
+  * 'meta_error_trap_push' instead 'meta_error_trap_push_with_return'
+  * errors.c: avoid deprecated 'gdk_error_trap...' functions:
+  * frames.c: drop unused variables
+  * compositor-xrender: avoid deprecated 'gdk_error_trap_push/pop'
 
 ### marco 1.21.1
 
