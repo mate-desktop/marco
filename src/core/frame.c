@@ -28,10 +28,7 @@
 #include "bell.h"
 #include "errors.h"
 #include "keybindings.h"
-
-#ifdef HAVE_RENDER
-#include <X11/extensions/Xrender.h>
-#endif
+#include "prefs.h"
 
 #define EVENT_MASK (SubstructureRedirectMask |                     \
                     StructureNotifyMask | SubstructureNotifyMask | \
@@ -42,12 +39,34 @@
                     FocusChangeMask |                              \
                     ColormapChangeMask)
 
+static gboolean update_shape (MetaFrame *frame);
+
+static void
+prefs_changed_callback (MetaPreference preference,
+                        gpointer       data)
+{
+  MetaFrame *frame = (MetaFrame *) data;
+
+  switch (preference)
+    {
+      case META_PREF_COMPOSITING_MANAGER:
+        frame->need_reapply_frame_shape = TRUE;
+        meta_window_queue (frame->window, META_QUEUE_MOVE_RESIZE);
+        break;
+      default:
+        break;
+    }
+}
+
 void
 meta_window_ensure_frame (MetaWindow *window)
 {
   MetaFrame *frame;
+  MetaScreen *screen;
   XSetWindowAttributes attrs;
+  XVisualInfo visual_info;
   Visual *visual;
+  int status;
 
   if (window->frame)
     return;
@@ -90,13 +109,24 @@ meta_window_ensure_frame (MetaWindow *window)
    * the default of NULL.
    */
 
-  /* Special case for depth 32 windows (assumed to be ARGB),
-   * we use the window's visual. Otherwise we just use the system visual.
-   */
-  if (window->depth == 32)
-    visual = window->xvisual;
+  screen = meta_window_get_screen (window);
+  status = XMatchVisualInfo (window->display->xdisplay,
+                             XScreenNumberOfScreen (screen->xscreen),
+                             32, TrueColor,
+                             &visual_info);
+
+  if (!status)
+    {
+      /* Special case for depth 32 windows (assumed to be ARGB),
+       * we use the window's visual. Otherwise we just use the system visual.
+       */
+      if (window->depth == 32)
+        visual = window->xvisual;
+      else
+        visual = NULL;
+    }
   else
-    visual = NULL;
+    visual = visual_info.visual;
 
   frame->xwindow = meta_ui_create_frame_window (window->screen->ui,
                                                 window->display->xdisplay,
@@ -163,6 +193,8 @@ meta_window_ensure_frame (MetaWindow *window)
   frame->need_reapply_frame_shape = FALSE;
 
   meta_display_ungrab (window->display);
+
+  meta_prefs_add_listener (prefs_changed_callback, frame);
 }
 
 void
@@ -177,6 +209,8 @@ meta_window_destroy_frame (MetaWindow *window)
   meta_verbose ("Unframing window %s\n", window->desc);
 
   frame = window->frame;
+
+  meta_prefs_remove_listener (prefs_changed_callback, frame);
 
   meta_frame_calc_borders (frame, &borders);
 
