@@ -797,15 +797,13 @@ get_visible_region (MetaFrames        *frames,
   cairo_region_t *visible_region;
   cairo_rectangle_int_t rect;
   cairo_rectangle_int_t frame_rect;
-  gint scale;
 
   corners_region = cairo_region_create ();
   get_visible_frame_rect (fgeom, window_width, window_height, &frame_rect);
-  scale = gdk_window_get_scale_factor (frame->window);
 
   if (fgeom->top_left_corner_rounded_radius != 0)
     {
-      const int corner = fgeom->top_left_corner_rounded_radius * scale;
+      const int corner = fgeom->top_left_corner_rounded_radius;
       const float radius = sqrt(corner) + corner;
       int i;
 
@@ -823,7 +821,7 @@ get_visible_region (MetaFrames        *frames,
 
   if (fgeom->top_right_corner_rounded_radius != 0)
     {
-      const int corner = fgeom->top_right_corner_rounded_radius * scale;
+      const int corner = fgeom->top_right_corner_rounded_radius;
       const float radius = sqrt(corner) + corner;
       int i;
 
@@ -841,7 +839,7 @@ get_visible_region (MetaFrames        *frames,
 
   if (fgeom->bottom_left_corner_rounded_radius != 0)
     {
-      const int corner = fgeom->bottom_left_corner_rounded_radius * scale;
+      const int corner = fgeom->bottom_left_corner_rounded_radius;
       const float radius = sqrt(corner) + corner;
       int i;
 
@@ -859,7 +857,7 @@ get_visible_region (MetaFrames        *frames,
 
   if (fgeom->bottom_right_corner_rounded_radius != 0)
     {
-      const int corner = fgeom->bottom_right_corner_rounded_radius * scale;
+      const int corner = fgeom->bottom_right_corner_rounded_radius;
       const float radius = sqrt(corner) + corner;
       int i;
 
@@ -2359,6 +2357,7 @@ meta_frames_draw (GtkWidget *widget,
 {
   MetaUIFrame *frame;
   MetaFrames *frames;
+  MetaFrameGeometry fgeom;
   CachedPixels *pixels;
   cairo_region_t *region;
   cairo_rectangle_int_t clip;
@@ -2381,7 +2380,12 @@ meta_frames_draw (GtkWidget *widget,
 
   populate_cache (frames, frame);
 
-  region = cairo_region_create_rectangle (&clip);
+  meta_frames_calc_geometry (frames, frame, &fgeom);
+
+  region = get_visible_region (frames, frame, &fgeom, fgeom.width, fgeom.height);
+
+  gdk_cairo_region (cr, region);
+  cairo_clip(cr);
 
   pixels = get_cache (frames, frame);
 
