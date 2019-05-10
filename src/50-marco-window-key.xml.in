@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<KeyListEntries _name="Window Management" wm_name="Metacity (Marco)" package="marco" schema="org.mate.Marco.window-keybindings">
+<KeyListEntries name="Window Management" wm_name="Metacity (Marco)" package="marco" schema="org.mate.Marco.window-keybindings">
 
 	<KeyListEntry
 	name="activate-window-menu"
-	_description="Activate the window menu" />
+	description="Activate the window menu" />
 
 	<KeyListEntry
 	name="toggle-fullscreen"
-	_description="Toggle fullscreen mode" />
+	description="Toggle fullscreen mode" />
 
 	<KeyListEntry
 	name="toggle-maximized"
-	_description="Toggle maximization state" />
+	description="Toggle maximization state" />
 
 	<KeyListEntry
 	name="maximize"
-	_description="Maximize window" />
+	description="Maximize window" />
 
 	<KeyListEntry
 	name="unmaximize"
-	_description="Restore window" />
+	description="Restore window" />
 
 	<KeyListEntry
 	name="toggle-shaded"
-	_description="Toggle shaded state" />
+	description="Toggle shaded state" />
 
 	<KeyListEntry
 	name="close"
-	_description="Close window" />
+	description="Close window" />
 
 	<KeyListEntry
 	name="minimize"
-	_description="Minimize window" />
+	description="Minimize window" />
 
 	<KeyListEntry
 	name="begin-move"
-	_description="Move window" />
+	description="Move window" />
 
 	<KeyListEntry
 	name="begin-resize"
-	_description="Resize window" />
+	description="Resize window" />
 
 	<KeyListEntry
 	name="toggle-on-all-workspaces"
-	_description="Toggle whether window is on all workspaces or just one"
+	description="Toggle whether window is on all workspaces or just one"
 	value="1"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -51,103 +51,103 @@
 
 	<KeyListEntry
 	name="raise-or-lower"
-	_description="Raise window if it's covered by another window, otherwise lower it" />
+	description="Raise window if it's covered by another window, otherwise lower it" />
 
 	<KeyListEntry
 	name="raise"
-	_description="Raise window above other windows" />
+	description="Raise window above other windows" />
 
 	<KeyListEntry
 	name="lower"
-	_description="Lower window below other windows" />
+	description="Lower window below other windows" />
 
 	<KeyListEntry
 	name="maximize-vertically"
-	_description="Maximize window vertically" />
+	description="Maximize window vertically" />
 
 	<KeyListEntry
 	name="maximize-horizontally"
-	_description="Maximize window horizontally" />
+	description="Maximize window horizontally" />
 
 	<KeyListEntry
 	name="tile-to-side-e"
-	_description="Tile window to east (right) side of screen" />
+	description="Tile window to east (right) side of screen" />
 
 	<KeyListEntry
 	name="tile-to-side-w"
-	_description="Tile window to west (left) side of screen" />
+	description="Tile window to west (left) side of screen" />
 
 	<KeyListEntry
 	name="tile-to-corner-nw"
-	_description="Tile window to north-west (top left) corner" />
+	description="Tile window to north-west (top left) corner" />
 
 	<KeyListEntry
 	name="tile-to-corner-ne"
-	_description="Tile window to north-east (top right) corner" />
+	description="Tile window to north-east (top right) corner" />
 
 	<KeyListEntry
 	name="tile-to-corner-sw"
-	_description="Tile window to south-west (bottom left) corner" />
+	description="Tile window to south-west (bottom left) corner" />
 
 	<KeyListEntry
 	name="tile-to-corner-se"
-	_description="Tile window to south-east (bottom right) corner" />
+	description="Tile window to south-east (bottom right) corner" />
 
 	<KeyListEntry
 	name="move-to-corner-nw"
-	_description="Move window to north-west (top left) corner" />
+	description="Move window to north-west (top left) corner" />
 
 	<KeyListEntry
 	name="move-to-corner-ne"
-	_description="Move window to north-east (top right) corner" />
+	description="Move window to north-east (top right) corner" />
 
 	<KeyListEntry
 	name="move-to-corner-sw"
-	_description="Move window to south-west (bottom left) corner" />
+	description="Move window to south-west (bottom left) corner" />
 
 	<KeyListEntry
 	name="move-to-corner-se"
-	_description="Move window to south-east (bottom right) corner" />
+	description="Move window to south-east (bottom right) corner" />
 
 	<KeyListEntry
 	name="move-to-side-n"
-	_description="Move window to north (top) side of screen" />
+	description="Move window to north (top) side of screen" />
 
 	<KeyListEntry
 	name="move-to-side-s"
-	_description="Move window to south (bottom) side of screen" />
+	description="Move window to south (bottom) side of screen" />
 
 	<KeyListEntry
 	name="move-to-side-e"
-	_description="Move window to east (right) side of screen" />
+	description="Move window to east (right) side of screen" />
 
 	<KeyListEntry
 	name="move-to-side-w"
-	_description="Move window to west (left) side of screen" />
+	description="Move window to west (left) side of screen" />
 
 	<KeyListEntry
 	name="move-to-center"
-	_description="Move window to center of screen" />
+	description="Move window to center of screen" />
 
 	<KeyListEntry
 	name="move-to-monitor-n"
-	_description="Move window to north (top) monitor" />
+	description="Move window to north (top) monitor" />
 
 	<KeyListEntry
 	name="move-to-monitor-s"
-	_description="Move window to south (bottom) monitor" />
+	description="Move window to south (bottom) monitor" />
 
 	<KeyListEntry
 	name="move-to-monitor-e"
-	_description="Move window to east (right) monitor" />
+	description="Move window to east (right) monitor" />
 
 	<KeyListEntry
 	name="move-to-monitor-w"
-	_description="Move window to west (left) monitor" />
+	description="Move window to west (left) monitor" />
 
 	<KeyListEntry
 	name="move-to-workspace-1"
-	_description="Move window to workspace 1"
+	description="Move window to workspace 1"
 	value="1"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -155,7 +155,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-2"
-	_description="Move window to workspace 2"
+	description="Move window to workspace 2"
 	value="1"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -163,7 +163,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-3"
-	_description="Move window to workspace 3"
+	description="Move window to workspace 3"
 	value="2"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -171,7 +171,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-4"
-	_description="Move window to workspace 4"
+	description="Move window to workspace 4"
 	value="3"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -179,7 +179,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-5"
-	_description="Move window to workspace 5"
+	description="Move window to workspace 5"
 	value="4"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -187,7 +187,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-6"
-	_description="Move window to workspace 6"
+	description="Move window to workspace 6"
 	value="5"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -195,7 +195,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-7"
-	_description="Move window to workspace 7"
+	description="Move window to workspace 7"
 	value="6"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -203,7 +203,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-8"
-	_description="Move window to workspace 8"
+	description="Move window to workspace 8"
 	value="7"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -211,7 +211,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-9"
-	_description="Move window to workspace 9"
+	description="Move window to workspace 9"
 	value="8"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -219,7 +219,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-10"
-	_description="Move window to workspace 10"
+	description="Move window to workspace 10"
 	value="9"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -227,7 +227,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-11"
-	_description="Move window to workspace 11"
+	description="Move window to workspace 11"
 	value="10"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -235,7 +235,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-12"
-	_description="Move window to workspace 12"
+	description="Move window to workspace 12"
 	value="11"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -243,7 +243,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-left"
-	_description="Move window one workspace to the left"
+	description="Move window one workspace to the left"
 	value="1"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -251,7 +251,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-right"
-	_description="Move window one workspace to the right"
+	description="Move window one workspace to the right"
 	value="1"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -259,7 +259,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-up"
-	_description="Move window one workspace up"
+	description="Move window one workspace up"
 	value="1"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
@@ -267,7 +267,7 @@
 
 	<KeyListEntry
 	name="move-to-workspace-down"
-	_description="Move window one workspace down"
+	description="Move window one workspace down"
 	value="1"
 	key="num-workspaces"
 	schema="org.mate.Marco.general"
