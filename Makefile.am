@@ -1,12 +1,11 @@
 
-SUBDIRS=src po doc
+SUBDIRS = po src doc
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-EXTRA_DIST = autogen.sh HACKING rationales.txt \
-	intltool-extract.in intltool-merge.in intltool-update.in
+EXTRA_DIST = its autogen.sh HACKING rationales.txt
 
-DISTCLEANFILES = intltool-extract intltool-merge intltool-update po/stamp-it po/.intltool-merge-cache
+DISTCLEANFILES = po/stamp-it
 
 # Build ChangeLog from GIT  history
 ChangeLog:

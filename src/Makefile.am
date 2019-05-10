@@ -159,7 +159,8 @@ testboxes_LDADD= @MARCO_LIBS@
 testgradient_LDADD= @MARCO_LIBS@
 testasyncgetprop_LDADD= @MARCO_LIBS@
 
-@INTLTOOL_DESKTOP_RULE@
+%.desktop: %.desktop.in
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 desktopfilesdir=$(datadir)/applications
 desktopfiles_in_files=marco.desktop.in
@@ -174,14 +175,15 @@ wmproperties_DATA = $(wmproperties_files)
 gsettings_SCHEMAS = org.mate.marco.gschema.xml
 @GSETTINGS_RULES@
 
-@INTLTOOL_XML_NOMERGE_RULE@
-
 xmldir = @MATE_KEYBINDINGS_KEYSDIR@
 xml_in_files = \
 	50-marco-desktop-key.xml.in \
 	50-marco-window-key.xml.in \
 	50-marco-global-key.xml.in
 xml_DATA = $(xml_in_files:.xml.in=.xml)
+
+%.xml: %.xml.in
+	$(AM_V_GEN) GETTEXTDATADIR=$(top_srcdir) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
 BUILT_SOURCES =
 CLEANFILES = \
