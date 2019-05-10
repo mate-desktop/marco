@@ -118,6 +118,7 @@ requires:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/marco.git
     - clang-analyzer
     - clang
+    - cppcheck-htmlreport
     - desktop-file-utils
     - gcc
     - git
@@ -198,7 +199,9 @@ build_scripts:
 
 after_scripts:
   - if [ ${DISTRO_NAME} == "fedora" ];then
-  -   ./gen-index -i https://github.com/${OWNER_NAME}/mate-icon-theme/raw/master/mate/16x16/apps/preferences-system-windows.png
+  -   cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude --force .
+  -   cppcheck-htmlreport --title=${REPO_NAME} --file=cppcheck.xml --report-dir=cppcheck-htmlreport
+  -   ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/mate-icon-theme/raw/master/mate/16x16/apps/preferences-system-windows.png
   - fi
   - make distcheck
 
