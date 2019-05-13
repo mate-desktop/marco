@@ -2,4 +2,4 @@
 
 PACKAGE=marco;
 
-make -C po $PACKAGE.pot && mv po/$PACKAGE.pot .
+rm -f po/$PACKAGE.pot && make -C po $PACKAGE.pot && mv po/$PACKAGE.pot .
