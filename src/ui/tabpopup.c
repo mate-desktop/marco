@@ -218,7 +218,8 @@ MetaTabPopup*
 meta_ui_tab_popup_new (const MetaTabEntry *entries,
                        int                 entry_count,
                        int                 width,
-                       gint                border)
+                       gint                border,
+                       gboolean            consider_label_width)
 {
   MetaTabPopup *popup;
   int i, left, right, top, bottom;
@@ -324,6 +325,8 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   bottom = 1;
   tmp = popup->entries;
 
+  gtk_widget_show(popup->label); /* for gtk_widget_get_preferred_size() */
+  
   while (tmp && top < height)
     {
       left = 0;
@@ -390,16 +393,47 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   /* Make it so that we ellipsize if the text is too long */
   gtk_label_set_ellipsize (GTK_LABEL (popup->label), PANGO_ELLIPSIZE_END);
 
-  /* Limit the window size to no bigger than screen_width/4 */
-  if (max_label_width>(screen_width/4))
+  int default_window_width = 0; /* 0 == small as possible, truncate label */
+
+  if (consider_label_width && top <= 1 && left < width)
     {
-      max_label_width = screen_width/4;
+      /* only one row partially filled with columns
+         => calculate default_window_width to fit max_label_width if possible */
+
+      max_label_width += 20; /* add random padding */
+    
+      GtkWidget **dummies = malloc(sizeof(GtkWidget*) * (width - left));
+      int i;
+      for (i = 0; i < width - left; ++i) 
+        {
+          GtkWidget *dummy = gtk_label_new ("");
+          dummies[i] = dummy;
+          gtk_grid_attach (GTK_GRID (grid), dummy, left + i, top, 1, 1);
+        }
+        
+      gtk_grid_set_column_homogeneous(grid, TRUE);
+      gtk_widget_set_halign (grid, GTK_ALIGN_CENTER);
+      gtk_widget_show_all(grid); /* for gtk_widget_get_preferred_size */
+
+      GtkRequisition req;
+      gtk_widget_get_preferred_size (grid, &req, NULL);
+      default_window_width = req.width;
+
+      for (i = 0; i < width - left; ++i) 
+        {
+          gtk_container_remove(grid, dummies[i]);
+        }
+      free(dummies);
+
+      /* Limit the window size to no bigger than max_label_width */
+      if (max_label_width < default_window_width)
+        {
+          default_window_width = max_label_width;
+        }
     }
 
-  max_label_width += 20; /* add random padding */
-
   gtk_window_set_default_size (GTK_WINDOW (popup->window),
-                               max_label_width,
+                               default_window_width,
                                -1);
 
   return popup;

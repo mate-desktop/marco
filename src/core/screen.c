@@ -1399,7 +1399,8 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
   screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              len,
                                              5, /* FIXME */
-                                             border);
+                                             border,
+                                             TRUE);
 
   for (i = 0; i < len; i++)
     g_object_unref (entries[i].icon);
@@ -1470,7 +1471,8 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
   screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              len,
                                              layout.cols,
-                                             BORDER_OUTLINE_WORKSPACE);
+                                             BORDER_OUTLINE_WORKSPACE,
+                                             FALSE);
 
   g_free (entries);
   meta_screen_free_workspace_layout (&layout);
