@@ -1398,7 +1398,7 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
 
   screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              len,
-                                             5, /* FIXME */
+                                             meta_prefs_get_alt_tab_max_columns(),
                                              border,
                                              TRUE);
 
