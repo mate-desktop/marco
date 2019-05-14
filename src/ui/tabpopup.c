@@ -222,7 +222,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
                        gboolean            consider_label_width)
 {
   MetaTabPopup *popup;
-  int i, left, right, top, bottom;
+  int i, left, top;
   int height;
   GtkWidget *grid;
   GtkWidget *vbox;
@@ -322,7 +322,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
   max_label_width = 0;
   top = 0;
-  bottom = 1;
+  left = 0;
   tmp = popup->entries;
 
   gtk_widget_show(popup->label); /* for gtk_widget_get_preferred_size() */
@@ -330,7 +330,6 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   while (tmp && top < height)
     {
       left = 0;
-      right = 1;
 
       while (tmp && left < width)
         {
@@ -381,11 +380,9 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
           tmp = tmp->next;
 
           ++left;
-          ++right;
         }
 
       ++top;
-      ++bottom;
     }
 
   /* remove all the temporary text */
