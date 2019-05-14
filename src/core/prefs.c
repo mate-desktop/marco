@@ -53,6 +53,8 @@
 #define KEY_GENERAL_COMPOSITOR_FAST_ALT_TAB "compositing-fast-alt-tab"
 #define KEY_GENERAL_CENTER_NEW_WINDOWS "center-new-windows"
 #define KEY_GENERAL_ICON_SIZE "icon-size"
+#define KEY_GENERAL_ALT_TAB_MAX_COLUMNS "alt-tab-max-columns"
+#define KEY_GENERAL_ALT_TAB_EXPAND_TO_FIT_TITLE "alt-tab-expand-to-fit-title"
 
 #define KEY_COMMAND_SCHEMA "org.mate.Marco.keybinding-commands"
 #define KEY_COMMAND_PREFIX "command-"
@@ -116,6 +118,8 @@ static gboolean mate_animations = TRUE;
 static char *cursor_theme = NULL;
 static int   cursor_size = 24;
 static int   icon_size   = META_DEFAULT_ICON_SIZE;
+static int   alt_tab_max_columns = META_DEFAULT_ALT_TAB_MAX_COLUMNS;
+static gboolean alt_tab_expand_to_fit_title = META_DEFAULT_ALT_TAB_EXPAND_TO_FIT_TITLE;
 static gboolean use_force_compositor_manager = FALSE;
 static gboolean force_compositor_manager = FALSE;
 static gboolean compositing_manager = FALSE;
@@ -439,6 +443,12 @@ static MetaBoolPreference preferences_bool[] =
       &allow_top_tiling,
       FALSE,
     },
+    { "alt-tab-expand-to-fit-title",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ALT_TAB_EXPAND_TO_FIT_TITLE,
+      &alt_tab_expand_to_fit_title,
+      META_DEFAULT_ALT_TAB_EXPAND_TO_FIT_TITLE,
+    },
     { NULL, NULL, 0, NULL, FALSE },
   };
 
@@ -519,6 +529,14 @@ static MetaIntPreference preferences_int[] =
       META_PREF_ICON_SIZE,
       &icon_size,
       META_MIN_ICON_SIZE, META_MAX_ICON_SIZE, META_DEFAULT_ICON_SIZE,
+    },
+    { "alt-tab-max-columns",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ALT_TAB_MAX_COLUMNS,
+      &alt_tab_max_columns,
+      META_MIN_ALT_TAB_MAX_COLUMNS, 
+      META_MAX_ALT_TAB_MAX_COLUMNS, 
+      META_DEFAULT_ALT_TAB_MAX_COLUMNS,
     },
     { NULL, NULL, 0, NULL, 0, 0, 0, },
   };
@@ -1122,6 +1140,18 @@ meta_prefs_get_icon_size (void)
   return icon_size;
 }
 
+int
+meta_prefs_get_alt_tab_max_columns (void)
+{
+  return alt_tab_max_columns;
+}
+
+gboolean
+meta_prefs_get_alt_tab_expand_to_fit_title (void)
+{
+  return alt_tab_expand_to_fit_title;
+}
+
 gboolean
 meta_prefs_is_in_skip_list (char *class)
 {
@@ -1636,6 +1666,12 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_ICON_SIZE:
       return "ICON_SIZE";
+
+    case META_PREF_ALT_TAB_MAX_COLUMNS:
+      return "ALT_TAB_MAX_COLUMNS";
+
+    case META_PREF_ALT_TAB_EXPAND_TO_FIT_TITLE:
+      return "ALT_TAB_EXPAND_TO_FIT_TITLE";
 
     case META_PREF_COMPOSITING_MANAGER:
       return "COMPOSITING_MANAGER";

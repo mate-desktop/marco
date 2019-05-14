@@ -1398,7 +1398,8 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
 
   screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              len,
-                                             5, /* FIXME */
+                                             meta_prefs_get_alt_tab_max_columns(),
+                                             meta_prefs_get_alt_tab_expand_to_fit_title(),
                                              border);
 
   for (i = 0; i < len; i++)
@@ -1470,6 +1471,7 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
   screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              len,
                                              layout.cols,
+                                             FALSE, /* expand_for_titles */
                                              BORDER_OUTLINE_WORKSPACE);
 
   g_free (entries);

@@ -202,6 +202,17 @@
         <summary>Icon size</summary>
         <description>Size of the application icons displayed in alt-tab popup window. The screen's scale factor is applied to this value.</description>
     </key>
+    <key name="alt-tab-max-columns" type="i">
+        <range min="1" max="1024"/>
+        <default>5</default>
+        <summary>Maximum number of columns in alt-tab popup window</summary>
+        <description>The popup window will be expanded to fit up to these many entries per row.</description>
+    </key>
+    <key name="alt-tab-expand-to-fit-title" type="b">
+        <default>false</default>
+        <summary>Expand the alt-tab popup window to fit longer window titles</summary>
+        <description>The popup window may be expanded up to the width determined by the config parameter 'alt-tab-max-columns'.</description>
+    </key>
   </schema>
 
   <schema id="org.mate.Marco.workspace-names" path="/org/mate/marco/workspace-names/">
