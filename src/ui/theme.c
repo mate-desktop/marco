@@ -53,6 +53,7 @@
  */
 
 #include <config.h>
+#include "prefs.h"
 #include "theme.h"
 #include "theme-parser.h"
 #include "util.h"
@@ -442,6 +443,14 @@ meta_frame_layout_get_borders (const MetaFrameLayout *layout,
     {
       borders->invisible.bottom = layout->invisible_border.bottom;
       borders->invisible.top = layout->invisible_border.top;
+    }
+
+  if (!meta_prefs_get_compositing_manager ())
+    {
+      borders->invisible.left = 0;
+      borders->invisible.right = 0;
+      borders->invisible.top = 0;
+      borders->invisible.bottom = 0;
     }
 
   borders->total.left = borders->invisible.left + borders->visible.left;

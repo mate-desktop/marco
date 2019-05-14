@@ -14,6 +14,13 @@ AM_CPPFLAGS = \
 	@MARCO_CFLAGS@
 
 marco_SOURCES = \
+	core/main.c \
+	include/main.h
+
+# by setting libmarco_private_la_CFLAGS, the files shared with
+# marco proper will be compiled with different names.
+libmarco_private_la_CFLAGS =
+libmarco_private_la_SOURCES = \
 	core/async-getprop.c \
 	core/async-getprop.h \
 	core/atomnames.h \
@@ -95,6 +102,8 @@ marco_SOURCES = \
 	ui/menu.h \
 	ui/metaaccellabel.c \
 	ui/metaaccellabel.h \
+	ui/preview-widget.c \
+	ui/preview-widget.h \
 	ui/resizepopup.c \
 	include/resizepopup.h \
 	ui/tabpopup.c \
@@ -107,25 +116,6 @@ marco_SOURCES = \
 	ui/theme.h \
 	ui/ui.c \
 	include/all-keybindings.h
-
-# by setting libmarco_private_la_CFLAGS, the files shared with
-# marco proper will be compiled with different names.
-libmarco_private_la_CFLAGS =
-libmarco_private_la_SOURCES = \
-	core/boxes.c \
-	include/boxes.h \
-	ui/gradient.c \
-	ui/gradient.h \
-	core/util.c \
-	include/util.h \
-	core/common.c \
-	include/common.h \
-	ui/preview-widget.c \
-	ui/preview-widget.h \
-	ui/theme-parser.c \
-	ui/theme-parser.h \
-	ui/theme.c \
-	ui/theme.h
 
 libmarco_private_la_LDFLAGS = -no-undefined -version-info 1:0:0
 libmarco_private_la_LIBADD = @MARCO_LIBS@
@@ -142,13 +132,13 @@ libmarcoinclude_HEADERS = \
 	ui/theme.h
 
 marco_theme_viewer_SOURCES= \
+	ui/preview-widget.c \
+	ui/preview-widget.h \
 	ui/theme-viewer.c
 
 bin_PROGRAMS=marco marco-theme-viewer
 
-EFENCE=
-marco_LDADD=@MARCO_LIBS@ $(EFENCE)
-
+marco_LDADD=@MARCO_LIBS@ libmarco-private.la
 marco_theme_viewer_LDADD= @MARCO_LIBS@ libmarco-private.la
 
 testboxes_SOURCES=include/util.h core/util.c include/boxes.h core/boxes.c core/testboxes.c
