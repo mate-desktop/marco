@@ -199,6 +199,7 @@ typedef struct _MetaCompWindow
   Picture shadow_pict;
 
   XserverRegion window_region;
+  XserverRegion client_region;
 
   XserverRegion window_size;
   XserverRegion extents;
@@ -1169,6 +1170,62 @@ get_window_region (MetaCompWindow *cw)
 }
 
 static XserverRegion
+get_client_region (MetaCompWindow *cw)
+{
+  MetaDisplay *display;
+  Display *xdisplay;
+  XserverRegion region;
+  MetaFrame *frame;
+
+  display = meta_screen_get_display (cw->screen);
+  xdisplay = meta_display_get_xdisplay (display);
+
+  if (cw->window_region != None)
+    {
+      region = XFixesCreateRegion (xdisplay, NULL, 0);
+      XFixesCopyRegion (xdisplay, region, cw->window_region);
+    }
+  else
+    {
+      region = get_window_region (cw);
+      if (region == None)
+        return None;
+    }
+
+  frame = cw->window ? meta_window_get_frame (cw->window) : NULL;
+
+  if (frame != NULL)
+    {
+      MetaFrameBorders borders;
+      int x;
+      int y;
+      int width;
+      int height;
+      XRectangle rect;
+      XserverRegion client;
+
+      meta_frame_calc_borders (frame, &borders);
+
+      x = cw->attrs.x;
+      y = cw->attrs.y;
+      width = cw->attrs.width + cw->attrs.border_width * 2;
+      height = cw->attrs.height + cw->attrs.border_width * 2;
+
+      rect.x = x + borders.total.left;
+      rect.y = y + borders.total.top;
+      rect.width = width - borders.total.left - borders.total.right;
+      rect.height = height - borders.total.top - borders.total.bottom;
+
+      client = XFixesCreateRegion (xdisplay, &rect, 1);
+
+      XFixesIntersectRegion (xdisplay, region, region, client);
+      XFixesDestroyRegion (xdisplay, client);
+    }
+
+  return region;
+}
+
+static XserverRegion
 window_size (MetaCompWindow *cw)
 {
   MetaScreen *screen = cw->screen;
@@ -1428,6 +1485,12 @@ paint_windows (MetaScreen   *screen,
               cw->window_region = None;
             }
 
+          if (cw->client_region)
+            {
+              XFixesDestroyRegion (xdisplay, cw->client_region);
+              cw->client_region = None;
+            }
+
           if (cw->window_size)
             {
               XFixesDestroyRegion (xdisplay, cw->window_size);
@@ -1445,6 +1508,9 @@ paint_windows (MetaScreen   *screen,
 
       if (cw->window_region == None)
         cw->window_region = get_window_region (cw);
+
+      if (cw->client_region == None)
+        cw->client_region = get_client_region (cw);
 
       if (cw->window_size == None)
         cw->window_size = window_size (cw);
@@ -1854,6 +1920,12 @@ free_win (MetaCompWindow *cw,
       cw->window_region = None;
     }
 
+  if (cw->client_region)
+    {
+      XFixesDestroyRegion (xdisplay, cw->client_region);
+      cw->client_region = None;
+    }
+
   if (cw->window_size)
     {
       XFixesDestroyRegion (xdisplay, cw->window_size);
@@ -2129,6 +2201,7 @@ add_win (MetaScreen *screen,
   cw->shadow_pict = None;
 
   cw->window_region = None;
+  cw->client_region = None;
 
   cw->window_size = None;
   cw->extents = None;
