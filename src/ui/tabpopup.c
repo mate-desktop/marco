@@ -231,7 +231,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   int max_label_width; /* the actual max width of the labels we create */
   AtkObject *obj;
   GdkScreen *screen;
-  int screen_width, scale;
+  int scale;
 
   popup = g_new (MetaTabPopup, 1);
 
@@ -276,7 +276,6 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   popup->border = border;
 
   scale = gtk_widget_get_scale_factor (GTK_WIDGET (popup->window));
-  screen_width = WidthOfScreen (gdk_x11_screen_get_xscreen (screen));
   for (i = 0; i < entry_count; ++i)
     {
       TabEntry* new_entry = tab_entry_new (&entries[i], border & BORDER_OUTLINE_WINDOW, scale);
@@ -402,15 +401,15 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
       GtkWidget **dummies = g_try_malloc(sizeof(GtkWidget*) * (width - left));
       if (dummies)
         {
-          int i;
-          for (i = 0; i < width - left; ++i) 
+          int j;
+          for (j = 0; j < width - left; ++j) 
             {
               GtkWidget *dummy = gtk_label_new ("");
-              dummies[i] = dummy;
-              gtk_grid_attach (GTK_GRID (grid), dummy, left + i, top, 1, 1);
+              dummies[j] = dummy;
+              gtk_grid_attach (GTK_GRID (grid), dummy, left + j, top, 1, 1);
             }
             
-          gtk_grid_set_column_homogeneous(grid, TRUE);
+          gtk_grid_set_column_homogeneous(GTK_GRID(grid), TRUE);
           gtk_widget_set_halign (grid, GTK_ALIGN_CENTER);
           gtk_widget_show_all(grid); /* for gtk_widget_get_preferred_size */
     
@@ -418,9 +417,9 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
           gtk_widget_get_preferred_size (grid, &req, NULL);
           default_window_width = req.width;
     
-          for (i = 0; i < width - left; ++i) 
+          for (j = 0; j < width - left; ++j) 
             {
-              gtk_container_remove(grid, dummies[i]);
+              gtk_container_remove(GTK_CONTAINER(grid), dummies[j]);
             }
           g_free(dummies);
           /* Limit the window size to no bigger than max_label_width */
