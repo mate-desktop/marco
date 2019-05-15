@@ -69,6 +69,13 @@ void meta_ui_theme_get_frame_borders (MetaUI           *ui,
 void meta_ui_get_frame_borders (MetaUI           *ui,
                                 Window            frame_xwindow,
                                 MetaFrameBorders *borders);
+
+void meta_ui_get_frame_mask (MetaUI  *ui,
+                             Window   frame_xwindow,
+                             guint    width,
+                             guint    height,
+                             cairo_t *cr);
+
 Window meta_ui_create_frame_window (MetaUI *ui,
                                     Display *xdisplay,
                                     Visual *xvisual,

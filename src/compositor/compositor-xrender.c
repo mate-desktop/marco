@@ -38,9 +38,11 @@
 #include <gtk/gtk.h>
 
 #include <cairo/cairo-xlib.h>
+#include <cairo/cairo-xlib-xrender.h>
 
 #include "display.h"
 #include "../core/display-private.h"
+#include "../core/frame-private.h"
 #include "screen.h"
 #include "frame.h"
 #include "errors.h"
@@ -192,6 +194,7 @@ typedef struct _MetaCompWindow
 
   Damage damage;
   Picture picture;
+  Picture mask;
   Picture alpha_pict;
 
   gboolean needs_shadow;
@@ -1330,6 +1333,90 @@ get_window_picture (MetaCompWindow *cw)
   return None;
 }
 
+static Picture
+get_window_mask (MetaCompWindow *cw)
+{
+  MetaFrame *frame;
+  MetaDisplay *display;
+  Display *xdisplay;
+  int width;
+  int height;
+  XRenderPictFormat *format;
+  Pixmap pixmap;
+  cairo_surface_t *surface;
+  cairo_t *cr;
+  Picture picture;
+
+  if (cw->window == NULL)
+    return None;
+
+  frame = meta_window_get_frame (cw->window);
+  if (frame == NULL)
+    return None;
+
+  display = meta_screen_get_display (cw->screen);
+  xdisplay = meta_display_get_xdisplay (display);
+  width = cw->attrs.width + cw->attrs.border_width * 2;
+  height = cw->attrs.height + cw->attrs.border_width * 2;
+  format = XRenderFindStandardFormat (xdisplay, PictStandardA8);
+
+  meta_error_trap_push (display);
+  pixmap = XCreatePixmap (xdisplay, cw->id, width, height, format->depth);
+  if (meta_error_trap_pop_with_return (display, FALSE) != 0)
+    return None;
+
+  surface = cairo_xlib_surface_create_with_xrender_format (xdisplay, pixmap,
+                                                           DefaultScreenOfDisplay (xdisplay),
+                                                           format, width, height);
+
+  cr = cairo_create (surface);
+
+  cairo_set_operator (cr, CAIRO_OPERATOR_CLEAR);
+  cairo_set_source_rgba (cr, 0, 0, 0, 1);
+  cairo_paint (cr);
+
+  {
+    cairo_rectangle_int_t rect;
+    cairo_region_t *frame_paint_region;
+    MetaFrameBorders borders;
+
+    rect.x = 0;
+    rect.y = 0;
+    rect.width = width;
+    rect.height = height;
+
+    frame_paint_region = cairo_region_create_rectangle (&rect);
+    meta_frame_calc_borders (frame, &borders);
+
+    rect.x += borders.total.left;
+    rect.y += borders.total.top;
+    rect.width -= borders.total.left + borders.total.right;
+    rect.height -= borders.total.top + borders.total.bottom;
+
+    cairo_region_subtract_rectangle (frame_paint_region, &rect);
+
+    gdk_cairo_region (cr, frame_paint_region);
+    cairo_clip (cr);
+
+    cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
+    meta_frame_get_mask (frame, cr);
+
+    cairo_surface_flush (surface);
+    cairo_region_destroy (frame_paint_region);
+  }
+
+  cairo_destroy (cr);
+  cairo_surface_destroy (surface);
+
+  meta_error_trap_push (display);
+  picture = XRenderCreatePicture (xdisplay, pixmap, format, 0, NULL);
+  meta_error_trap_pop (display, FALSE);
+
+  XFreePixmap (xdisplay, pixmap);
+
+  return picture;
+}
+
 static void
 paint_dock_shadows (MetaScreen   *screen,
                     Picture       root_buffer,
@@ -1486,6 +1573,9 @@ paint_windows (MetaScreen   *screen,
 
       if (cw->picture == None)
         cw->picture = get_window_picture (cw);
+
+      if (cw->mask == None)
+        cw->mask = get_window_mask (cw);
 
       /* If the clip region of the screen has been changed
          then we need to recreate the extents of the window */
@@ -1906,6 +1996,12 @@ free_win (MetaCompWindow *cw,
     {
       XRenderFreePicture (xdisplay, cw->picture);
       cw->picture = None;
+    }
+
+  if (cw->mask)
+    {
+      XRenderFreePicture (xdisplay, cw->mask);
+      cw->mask = None;
     }
 
   if (cw->shadow)
@@ -2412,6 +2508,12 @@ resize_win (MetaCompWindow *cw,
         {
           XRenderFreePicture (xdisplay, cw->picture);
           cw->picture = None;
+        }
+
+      if (cw->mask)
+        {
+          XRenderFreePicture (xdisplay, cw->mask);
+          cw->mask = None;
         }
 
       if (cw->shadow)
@@ -3358,6 +3460,12 @@ xrender_set_active_window (MetaCompositor *compositor,
 
       if (old_focus->attrs.map_state == IsViewable)
         {
+          if (old_focus->mask)
+            {
+              XRenderFreePicture (xdisplay, old_focus->mask);
+              old_focus->mask = None;
+            }
+
           if (old_focus->shadow)
             {
               XRenderFreePicture (xdisplay, old_focus->shadow);
@@ -3401,6 +3509,12 @@ xrender_set_active_window (MetaCompositor *compositor,
       new_focus->shadow_type = META_SHADOW_LARGE;
       determine_mode (display, screen, new_focus);
       new_focus->needs_shadow = window_has_shadow (new_focus);
+
+      if (new_focus->mask)
+        {
+          XRenderFreePicture (xdisplay, new_focus->mask);
+          new_focus->mask = None;
+        }
 
       if (new_focus->shadow)
         {

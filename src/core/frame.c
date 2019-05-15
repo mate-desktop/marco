@@ -422,6 +422,14 @@ meta_frame_get_frame_bounds (MetaFrame *frame)
 }
 
 void
+meta_frame_get_mask (MetaFrame *frame,
+                     cairo_t   *cr)
+{
+  meta_ui_get_frame_mask (frame->window->screen->ui, frame->xwindow,
+                          frame->rect.width, frame->rect.height, cr);
+}
+
+void
 meta_frame_queue_draw (MetaFrame *frame)
 {
   meta_ui_queue_frame_draw (frame->window->screen->ui,

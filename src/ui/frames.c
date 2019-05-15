@@ -2301,6 +2301,23 @@ cached_pixels_draw (CachedPixels   *pixels,
     }
 }
 
+void
+meta_frames_get_mask (MetaFrames *frames,
+                      Window      xwindow,
+                      guint       width,
+                      guint       height,
+                      cairo_t    *cr)
+{
+  MetaUIFrame *frame;
+
+  frame = meta_frames_lookup_window (frames, xwindow);
+
+  if (frame == NULL)
+    return;
+
+  meta_frames_paint_to_drawable (frames, frame, cr);
+}
+
 static void
 subtract_client_area (cairo_region_t *region, MetaUIFrame *frame)
 {

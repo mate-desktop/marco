@@ -140,6 +140,11 @@ cairo_region_t *meta_frames_get_frame_bounds (MetaFrames *frames,
                                               Window      xwindow,
                                               int         window_width,
                                               int         window_height);
+void meta_frames_get_mask (MetaFrames *frames,
+                           Window      xwindow,
+                           guint       width,
+                           guint       height,
+                           cairo_t    *cr);
 void meta_frames_move_resize_frame (MetaFrames *frames,
 				    Window      xwindow,
 				    int         x,
