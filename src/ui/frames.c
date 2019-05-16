@@ -2206,28 +2206,28 @@ populate_cache (MetaFrames *frames,
    * size without any border added. */
 
   /* top */
-  pixels->piece[0].rect.x = 0;
-  pixels->piece[0].rect.y = 0;
-  pixels->piece[0].rect.width = (width + borders.total.left + borders.total.right) * scale;
-  pixels->piece[0].rect.height = borders.total.top * scale;
+  pixels->piece[0].rect.x = borders.invisible.left / scale;
+  pixels->piece[0].rect.y = borders.invisible.top / scale;
+  pixels->piece[0].rect.width = (width + borders.visible.left + borders.visible.right) * scale;
+  pixels->piece[0].rect.height = borders.visible.top * scale;
 
   /* left */
-  pixels->piece[1].rect.x = 0;
+  pixels->piece[1].rect.x = borders.invisible.left / scale;
   pixels->piece[1].rect.y = borders.total.top / scale;
-  pixels->piece[1].rect.width = borders.total.left * scale;
+  pixels->piece[1].rect.width = borders.visible.left * scale;
   pixels->piece[1].rect.height = height * scale;
 
   /* right */
   pixels->piece[2].rect.x = (borders.total.left + width) / scale;
   pixels->piece[2].rect.y = borders.total.top / scale;
-  pixels->piece[2].rect.width = borders.total.right * scale;
+  pixels->piece[2].rect.width = borders.visible.right * scale;
   pixels->piece[2].rect.height = height * scale;
 
   /* bottom */
-  pixels->piece[3].rect.x = 0;
+  pixels->piece[3].rect.x = borders.invisible.left / scale;
   pixels->piece[3].rect.y = (borders.total.top + height) / scale;
-  pixels->piece[3].rect.width = (width + borders.total.left + borders.total.right) * scale;
-  pixels->piece[3].rect.height = borders.total.bottom * scale;
+  pixels->piece[3].rect.width = (width + borders.visible.left + borders.visible.right) * scale;
+  pixels->piece[3].rect.height = borders.visible.bottom * scale;
 
   for (i = 0; i < 4; i++)
     {
