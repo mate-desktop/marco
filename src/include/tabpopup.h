@@ -64,6 +64,8 @@ void            meta_ui_tab_popup_set_showing  (MetaTabPopup       *popup,
                                                 gboolean            showing);
 void            meta_ui_tab_popup_forward      (MetaTabPopup       *popup);
 void            meta_ui_tab_popup_backward     (MetaTabPopup       *popup);
+void            meta_ui_tab_popup_down         (MetaTabPopup       *popup);
+void            meta_ui_tab_popup_up           (MetaTabPopup       *popup);
 MetaTabEntryKey meta_ui_tab_popup_get_selected (MetaTabPopup      *popup);
 void            meta_ui_tab_popup_select       (MetaTabPopup       *popup,
                                                 MetaTabEntryKey     key);

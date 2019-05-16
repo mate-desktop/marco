@@ -46,6 +46,8 @@ struct _TabEntry
 {
   MetaTabEntryKey  key;
   char            *title;
+  gint             grid_left;
+  gint             grid_top;
   GdkPixbuf       *icon, *dimmed_icon;
   GtkWidget       *widget;
   GdkRectangle     rect;
@@ -56,6 +58,7 @@ struct _TabEntry
 struct _MetaTabPopup
 {
   GtkWidget *window;
+  GtkWidget *grid;
   GtkWidget *label;
   GList *current;
   GList *entries;
@@ -291,7 +294,8 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
-  grid = gtk_grid_new ();
+  popup->grid = gtk_grid_new ();
+  grid = popup->grid;
 
   frame = gtk_frame_new (NULL);
   gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_OUT);
@@ -366,7 +370,8 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
             }
 
           te->widget = image;
-
+          te->grid_left = left;
+          te->grid_top  = top;
           gtk_grid_attach (GTK_GRID (grid), te->widget, left, top, 1, 1);
 
           /* Efficiency rules! */
@@ -543,6 +548,50 @@ meta_ui_tab_popup_backward (MetaTabPopup *popup)
       te = popup->current->data;
 
       display_entry (popup, te);
+    }
+}
+
+static void
+display_widget (MetaTabPopup *popup,
+                GtkWidget    *w)
+{
+  if (w != NULL) 
+    {
+      GList *c = popup->entries;
+      while (c != NULL && ((TabEntry*)c->data)->widget != w)
+        c = c->next;
+      if (c != NULL) 
+        {
+          popup->current = c;
+          TabEntry *te = c->data;
+          display_entry (popup, te);
+        }
+    }
+}
+
+void
+meta_ui_tab_popup_down (MetaTabPopup *popup)
+{
+  if (popup->current != NULL)
+    {
+      TabEntry *te = popup->current->data;
+      GtkWidget* w = gtk_grid_get_child_at (GTK_GRID(popup->grid), 
+                                            te->grid_left,
+                                            te->grid_top + 1);
+      display_widget (popup, w);
+    }
+}
+
+void
+meta_ui_tab_popup_up (MetaTabPopup *popup)
+{
+  if (popup->current != NULL)
+    {
+      TabEntry *te = popup->current->data;
+      GtkWidget* w = gtk_grid_get_child_at (GTK_GRID(popup->grid), 
+                                            te->grid_left,
+                                            te->grid_top - 1);
+      display_widget (popup, w);
     }
 }
 
