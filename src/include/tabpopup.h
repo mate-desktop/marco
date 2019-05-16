@@ -69,7 +69,10 @@ void            meta_ui_tab_popup_up           (MetaTabPopup       *popup);
 MetaTabEntryKey meta_ui_tab_popup_get_selected (MetaTabPopup      *popup);
 void            meta_ui_tab_popup_select       (MetaTabPopup       *popup,
                                                 MetaTabEntryKey     key);
-
+Window          meta_ui_tab_popup_get_xid      (MetaTabPopup       *popup);
+void            meta_ui_tab_popup_mouse_press  (MetaTabPopup       *popup,
+                                                gint                x,
+                                                gint                y);
 
 #endif
 

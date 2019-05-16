@@ -640,6 +640,46 @@ meta_ui_tab_popup_select (MetaTabPopup *popup,
     }
 }
 
+Window
+meta_ui_tab_popup_get_xid (MetaTabPopup *popup)
+{
+  if (popup != NULL && popup->window != NULL) 
+    return gdk_x11_window_get_xid(gtk_widget_get_window(popup->window)); 
+  else
+    return 0;
+}
+
+void
+meta_ui_tab_popup_mouse_press (MetaTabPopup       *popup,
+                               gint                x,
+                               gint                y)
+{
+  GList *tmp = popup->entries;
+  gboolean found = FALSE;
+  while (tmp != NULL && !found)
+    {
+      TabEntry *te = tmp->data;
+      gint wx, wy;
+      if (gtk_widget_translate_coordinates(popup->window,
+                                           te->widget, 
+                                           x, y, 
+                                           &wx, &wy))
+        {
+          GtkAllocation alloc;
+          gtk_widget_get_allocation(te->widget, &alloc);
+          found = (0 <= wx && wx < alloc.width &&
+                   0 <= wy && wy < alloc.height);
+          if (found)
+            {
+              popup->current = tmp;
+              display_entry (popup, te);
+            }
+        }
+      tmp = tmp->next;
+    }
+}
+
+
 #define META_TYPE_SELECT_IMAGE            (meta_select_image_get_type ())
 #define META_SELECT_IMAGE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), META_TYPE_SELECT_IMAGE, MetaSelectImage))
 

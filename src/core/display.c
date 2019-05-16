@@ -1592,6 +1592,37 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 	return TRUE;
 }
 
+static gboolean
+mouse_event_is_in_tab_popup (MetaDisplay *display,
+                             MetaScreen  *screen,
+                             Window       event_window,
+                             int          event_x,
+                             int          event_y,
+                             int         *popup_x,
+                             int         *popup_y)
+{
+  if (screen && screen->tab_popup)
+    {
+      int x, y;
+      Window child1, child2;
+      gboolean ok1 = XTranslateCoordinates (display->xdisplay,
+                                            event_window, event_window,
+                                            event_x, event_y,
+                                            &x, &y, &child1);
+  
+      Window popup_xid = meta_ui_tab_popup_get_xid(screen->tab_popup);
+  
+      gboolean ok2 = XTranslateCoordinates (display->xdisplay,
+                                            event_window, popup_xid,
+                                            event_x, event_y,
+                                            popup_x, popup_y, &child2);
+    
+      return (ok1 && ok2 && child1 == popup_xid);
+    }
+  else
+    return FALSE;
+}
+
 /**
  * This is the most important function in the whole program. It is the heart,
  * it is the nexus, it is the Grand Central Station of Marco's world.
@@ -1803,26 +1834,44 @@ static gboolean event_callback(XEvent* event, gpointer data)
            display->grab_window == window) ||
           grab_op_is_keyboard (display->grab_op))
         {
-          meta_topic (META_DEBUG_WINDOW_OPS,
-                      "Ending grab op %u on window %s due to button press\n",
-                      display->grab_op,
-                      (display->grab_window ?
-                       display->grab_window->desc :
-                       "none"));
-          if (GRAB_OP_IS_WINDOW_SWITCH (display->grab_op))
+          gboolean is_in_tab_popup = FALSE;
+          if (grab_op_is_keyboard (display->grab_op))
             {
-              MetaScreen *screen;
-              meta_topic (META_DEBUG_WINDOW_OPS,
-                          "Syncing to old stack positions.\n");
-              screen =
-                meta_display_screen_for_root (display, event->xany.window);
-
-              if (screen!=NULL)
-                meta_stack_set_positions (screen->stack,
-                                          display->grab_old_window_stacking);
+              MetaScreen *screen = meta_display_screen_for_root (display, event->xany.window);
+              int popup_x, popup_y;
+              is_in_tab_popup = mouse_event_is_in_tab_popup (display,
+                                                             screen,
+                                                             event->xany.window,
+                                                             event->xbutton.x,
+                                                             event->xbutton.y,
+                                                             &popup_x,
+                                                             &popup_y);
+              if (is_in_tab_popup && event->xbutton.button == Button1) 
+                meta_ui_tab_popup_mouse_press(screen->tab_popup, popup_x, popup_y);
             }
-          meta_display_end_grab_op (display,
-                                    event->xbutton.time);
+          if (!is_in_tab_popup)
+            {
+              meta_topic (META_DEBUG_WINDOW_OPS,
+                          "Ending grab op %u on window %s due to button press\n",
+                          display->grab_op,
+                          (display->grab_window ?
+                           display->grab_window->desc :
+                           "none"));
+              if (GRAB_OP_IS_WINDOW_SWITCH (display->grab_op))
+                {
+                  MetaScreen *screen;
+                  meta_topic (META_DEBUG_WINDOW_OPS,
+                              "Syncing to old stack positions.\n");
+                  screen =
+                    meta_display_screen_for_root (display, event->xany.window);
+    
+                  if (screen!=NULL)
+                    meta_stack_set_positions (screen->stack,
+                                              display->grab_old_window_stacking);
+                }
+              meta_display_end_grab_op (display,
+                                        event->xbutton.time);
+            }
         }
       else if (window && display->grab_op == META_GRAB_OP_NONE)
         {
