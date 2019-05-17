@@ -388,6 +388,8 @@ meta_display_open (void)
   /* FIXME copy the checks from GDK probably */
   the_display->static_gravity_works = g_getenv ("MARCO_USE_STATIC_GRAVITY") != NULL;
 
+  the_display->tab_popup_mouse_pressed = FALSE;
+
   meta_bell_init (the_display);
 
   meta_display_init_keys (the_display);
@@ -1847,7 +1849,10 @@ static gboolean event_callback(XEvent* event, gpointer data)
                                                              &popup_x,
                                                              &popup_y);
               if (is_in_tab_popup && event->xbutton.button == Button1) 
-                meta_ui_tab_popup_mouse_press(screen->tab_popup, popup_x, popup_y);
+                {
+                  display->tab_popup_mouse_pressed = TRUE;
+                  meta_ui_tab_popup_mouse_press(screen->tab_popup, popup_x, popup_y);
+                }
             }
           if (!is_in_tab_popup)
             {
@@ -2039,11 +2044,27 @@ static gboolean event_callback(XEvent* event, gpointer data)
       if (display->grab_window == window &&
           grab_op_is_mouse (display->grab_op))
         meta_window_handle_mouse_grab_op_event (window, event);
+      if (event->xbutton.button == Button1) 
+        display->tab_popup_mouse_pressed = FALSE;
       break;
     case MotionNotify:
       if (display->grab_window == window &&
           grab_op_is_mouse (display->grab_op))
         meta_window_handle_mouse_grab_op_event (window, event);
+      else if (grab_op_is_keyboard (display->grab_op) && display->tab_popup_mouse_pressed)
+        {
+          MetaScreen *screen = meta_display_screen_for_root (display, event->xany.window);
+          int popup_x, popup_y;
+          gboolean is_in_tab_popup = mouse_event_is_in_tab_popup (display,
+                                                                  screen,
+                                                                  event->xany.window,
+                                                                  event->xbutton.x,
+                                                                  event->xbutton.y,
+                                                                  &popup_x,
+                                                                  &popup_y);
+          if (is_in_tab_popup) 
+            meta_ui_tab_popup_mouse_press (screen->tab_popup, popup_x, popup_y);
+        }
       break;
     case EnterNotify:
       if (display->grab_window == window &&
@@ -3604,6 +3625,7 @@ meta_display_begin_grab_op (MetaDisplay *display,
         }
     }
 
+  display->tab_popup_mouse_pressed = FALSE;
   display->grab_op = op;
   display->grab_window = window;
   display->grab_screen = screen;
@@ -3832,6 +3854,7 @@ meta_display_end_grab_op (MetaDisplay *display,
     {
       meta_ui_tab_popup_free (display->grab_screen->tab_popup);
       display->grab_screen->tab_popup = NULL;
+      display->tab_popup_mouse_pressed = FALSE;
 
       /* If the ungrab here causes an EnterNotify, ignore it for
        * sloppy focus
