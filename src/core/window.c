@@ -8143,11 +8143,8 @@ meta_window_refresh_resize_popup (MetaWindow *window)
 
   if (window->display->grab_resize_popup == NULL)
     {
-      gint scale = gdk_window_get_scale_factor (gdk_get_default_root_window ());
-      /* Display the resize popup only for windows that report an
-       * increment hint that's larger than the scale factor. */
-      if (window->size_hints.width_inc > scale ||
-          window->size_hints.height_inc > scale)
+      if (window->size_hints.width_inc ||
+          window->size_hints.height_inc)
         window->display->grab_resize_popup =
           meta_ui_resize_popup_new (window->display->xdisplay,
                                     window->screen->number);

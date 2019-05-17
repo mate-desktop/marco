@@ -515,12 +515,10 @@ meta_frames_calc_geometry (MetaFrames        *frames,
                            MetaUIFrame       *frame,
                            MetaFrameGeometry *fgeom)
 {
-  int width, height, scale;
+  int width, height;
   MetaFrameFlags flags;
   MetaFrameType type;
   MetaButtonLayout button_layout;
-
-  scale = gdk_window_get_scale_factor (frame->window);
 
   meta_core_get (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow,
                  META_CORE_GET_CLIENT_WIDTH, &width,
@@ -537,7 +535,7 @@ meta_frames_calc_geometry (MetaFrames        *frames,
                             type,
                             frame->text_height,
                             flags,
-                            width / scale, height / scale,
+                            width, height,
                             &button_layout,
                             fgeom);
 }
@@ -682,10 +680,8 @@ meta_frames_get_borders (MetaFrames       *frames,
   MetaFrameFlags flags;
   MetaUIFrame *frame;
   MetaFrameType type;
-  gint scale;
 
   frame = meta_frames_lookup_window (frames, xwindow);
-  scale = gdk_window_get_scale_factor (frame->window);
 
   if (frame == NULL)
     meta_bug ("No such frame 0x%lx\n", xwindow);
@@ -709,17 +705,6 @@ meta_frames_get_borders (MetaFrames       *frames,
                                 frame->text_height,
                                 flags,
                                 borders);
-
-  /* Scale frame geometry to ensure proper frame position */
-  borders->visible.top *= scale;
-  borders->visible.bottom *= scale;
-  borders->visible.left *= scale;
-  borders->visible.right *= scale;
-
-  borders->total.top *= scale;
-  borders->total.bottom *= scale;
-  borders->total.left *= scale;
-  borders->total.right *= scale;
 }
 
 #ifdef HAVE_SHAPE
@@ -797,13 +782,15 @@ get_visible_region (MetaFrames        *frames,
   cairo_region_t *visible_region;
   cairo_rectangle_int_t rect;
   cairo_rectangle_int_t frame_rect;
+  int scale;
 
   corners_region = cairo_region_create ();
   get_visible_frame_rect (fgeom, window_width, window_height, &frame_rect);
+  scale = get_window_scaling_factor ();
 
   if (fgeom->top_left_corner_rounded_radius != 0)
     {
-      const int corner = fgeom->top_left_corner_rounded_radius;
+      const int corner = fgeom->top_left_corner_rounded_radius / scale;
       const float radius = sqrt(corner) + corner;
       int i;
 
@@ -821,7 +808,7 @@ get_visible_region (MetaFrames        *frames,
 
   if (fgeom->top_right_corner_rounded_radius != 0)
     {
-      const int corner = fgeom->top_right_corner_rounded_radius;
+      const int corner = fgeom->top_right_corner_rounded_radius / scale;
       const float radius = sqrt(corner) + corner;
       int i;
 
@@ -839,7 +826,7 @@ get_visible_region (MetaFrames        *frames,
 
   if (fgeom->bottom_left_corner_rounded_radius != 0)
     {
-      const int corner = fgeom->bottom_left_corner_rounded_radius;
+      const int corner = fgeom->bottom_left_corner_rounded_radius / scale;
       const float radius = sqrt(corner) + corner;
       int i;
 
@@ -857,7 +844,7 @@ get_visible_region (MetaFrames        *frames,
 
   if (fgeom->bottom_right_corner_rounded_radius != 0)
     {
-      const int corner = fgeom->bottom_right_corner_rounded_radius;
+      const int corner = fgeom->bottom_right_corner_rounded_radius / scale;
       const float radius = sqrt(corner) + corner;
       int i;
 
@@ -1083,14 +1070,11 @@ meta_frames_move_resize_frame (MetaFrames *frames,
 {
   MetaUIFrame *frame = meta_frames_lookup_window (frames, xwindow);
   int old_width, old_height;
-  gint scale;
 
   old_width = gdk_window_get_width (frame->window);
   old_height = gdk_window_get_height (frame->window);
 
-  scale = gdk_window_get_scale_factor (frame->window);
-
-  gdk_window_move_resize (frame->window, x / scale, y / scale, width / scale, height / scale);
+  gdk_window_move_resize (frame->window, x, y, width, height);
 
   if (old_width != width || old_height != height)
     invalidate_whole_window (frames, frame);
@@ -1236,16 +1220,15 @@ show_tip_now (MetaFrames *frames)
     {
       MetaFrameGeometry fgeom;
       GdkRectangle *rect;
-      int dx, dy, scale;
+      int dx, dy;
 
       meta_frames_calc_geometry (frames, frame, &fgeom);
 
       rect = control_rect (control, &fgeom);
-      scale = gdk_window_get_scale_factor (frame->window);
 
       /* get conversion delta for root-to-frame coords */
-      dx = (root_x - x) / scale;
-      dy = (root_y - y) / scale;
+      dx = (root_x - x);
+      dy = (root_y - y);
 
       /* Align the tooltip to the button right end if RTL */
       if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
@@ -2010,13 +1993,10 @@ meta_frames_motion_notify_event     (GtkWidget           *widget,
     case META_GRAB_OP_CLICKING_UNSTICK:
       {
         MetaFrameControl control;
-        int x, y, scale;
+        int x, y;
 
         gdk_window_get_device_position (frame->window, event->device,
                                         &x, &y, NULL);
-        scale = gdk_window_get_scale_factor (frame->window);
-        x *= scale;
-        y *= scale;
 
         /* Control is set to none unless it matches
          * the current grab
@@ -2061,13 +2041,10 @@ meta_frames_motion_notify_event     (GtkWidget           *widget,
     case META_GRAB_OP_NONE:
       {
         MetaFrameControl control;
-        int x, y, scale;
+        int x, y;
 
         gdk_window_get_device_position (frame->window, event->device,
                                         &x, &y, NULL);
-        scale = gdk_window_get_scale_factor (frame->window);
-        x *= scale;
-        y *= scale;
 
         control = get_control (frames, frame, x, y);
 
@@ -2161,7 +2138,6 @@ populate_cache (MetaFrames *frames,
   MetaFrameBorders borders;
   int width, height;
   int frame_width, frame_height, screen_width, screen_height;
-  gint scale;
   CachedPixels *pixels;
   MetaFrameType frame_type;
   MetaFrameFlags frame_flags;
@@ -2192,7 +2168,6 @@ populate_cache (MetaFrames *frames,
                                 &borders);
 
   pixels = get_cache (frames, frame);
-  scale = gdk_window_get_scale_factor (frame->window);
 
   /* Setup the rectangles for the four visible frame borders. First top, then
    * left, right and bottom. Top and bottom extend to the invisible borders
@@ -2206,28 +2181,28 @@ populate_cache (MetaFrames *frames,
    * size without any border added. */
 
   /* top */
-  pixels->piece[0].rect.x = borders.invisible.left / scale;
-  pixels->piece[0].rect.y = borders.invisible.top / scale;
-  pixels->piece[0].rect.width = (width + borders.visible.left + borders.visible.right) * scale;
-  pixels->piece[0].rect.height = borders.visible.top * scale;
+  pixels->piece[0].rect.x = borders.invisible.left;
+  pixels->piece[0].rect.y = borders.invisible.top;
+  pixels->piece[0].rect.width = width + borders.visible.left + borders.visible.right;
+  pixels->piece[0].rect.height = borders.visible.top;
 
   /* left */
-  pixels->piece[1].rect.x = borders.invisible.left / scale;
-  pixels->piece[1].rect.y = borders.total.top / scale;
-  pixels->piece[1].rect.width = borders.visible.left * scale;
-  pixels->piece[1].rect.height = height * scale;
+  pixels->piece[1].rect.x = borders.invisible.left;
+  pixels->piece[1].rect.y = borders.total.top;
+  pixels->piece[1].rect.width = borders.visible.left;
+  pixels->piece[1].rect.height = height;
 
   /* right */
-  pixels->piece[2].rect.x = (borders.total.left + width) / scale;
-  pixels->piece[2].rect.y = borders.total.top / scale;
-  pixels->piece[2].rect.width = borders.visible.right * scale;
-  pixels->piece[2].rect.height = height * scale;
+  pixels->piece[2].rect.x = borders.total.left + width;
+  pixels->piece[2].rect.y = borders.total.top;
+  pixels->piece[2].rect.width = borders.visible.right;
+  pixels->piece[2].rect.height = height;
 
   /* bottom */
-  pixels->piece[3].rect.x = borders.invisible.left / scale;
-  pixels->piece[3].rect.y = (borders.total.top + height) / scale;
-  pixels->piece[3].rect.width = (width + borders.visible.left + borders.visible.right) * scale;
-  pixels->piece[3].rect.height = borders.visible.bottom * scale;
+  pixels->piece[3].rect.x = borders.invisible.left;
+  pixels->piece[3].rect.y = borders.total.top + height;
+  pixels->piece[3].rect.width = width + borders.visible.left + borders.visible.right;
+  pixels->piece[3].rect.height = borders.visible.bottom;
 
   for (i = 0; i < 4; i++)
     {
@@ -2327,10 +2302,8 @@ subtract_client_area (cairo_region_t *region, MetaUIFrame *frame)
   MetaFrameBorders borders;
   cairo_region_t *tmp_region;
   Display *display;
-  gint scale;
 
   display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
-  scale = gdk_window_get_scale_factor (frame->window);
 
   meta_core_get (display, frame->xwindow,
                  META_CORE_GET_FRAME_FLAGS, &flags,
@@ -2343,10 +2316,8 @@ subtract_client_area (cairo_region_t *region, MetaUIFrame *frame)
                                 type, frame->text_height, flags,
                                 &borders);
 
-  area.width /= scale;
-  area.height /= scale;
-  area.x = borders.total.left / scale;
-  area.y = borders.total.top / scale;
+  area.x = borders.total.left;
+  area.y = borders.total.top;
 
   tmp_region = cairo_region_create_rectangle (&area);
   cairo_region_subtract (region, tmp_region);
@@ -2448,7 +2419,7 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
   MetaFrameType type;
   GdkPixbuf *mini_icon;
   GdkPixbuf *icon;
-  int w, h, scale;
+  int w, h;
   MetaButtonState button_states[META_BUTTON_TYPE_LAST];
   Window grab_frame;
   int i;
@@ -2557,13 +2528,12 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
 
   meta_prefs_get_button_layout (&button_layout);
 
-  scale = gdk_window_get_scale_factor (frame->window);
   meta_theme_draw_frame_with_style (meta_theme_get_current (),
                                     frame->style,
                                     cr,
                                     type,
                                     flags,
-                                    w / scale, h / scale,
+                                    w, h,
                                     frame->layout,
                                     frame->text_height,
                                     &button_layout,
@@ -2693,13 +2663,8 @@ get_control (MetaFrames *frames,
   MetaFrameFlags flags;
   gboolean has_vert, has_horiz;
   GdkRectangle client;
-  gint scale;
 
   meta_frames_calc_geometry (frames, frame, &fgeom);
-
-  scale = gdk_window_get_scale_factor (frame->window);
-  x /= scale;
-  y /= scale;
 
   get_client_rect (&fgeom, fgeom.width, fgeom.height, &client);
 
@@ -2727,7 +2692,7 @@ get_control (MetaFrames *frames,
 
   if (POINT_IN_RECT (x, y, fgeom.title_rect))
     {
-      if (has_vert && y <= TOP_RESIZE_HEIGHT * scale)
+      if (has_vert && y <= TOP_RESIZE_HEIGHT)
         return META_FRAME_CONTROL_RESIZE_N;
       else
         return META_FRAME_CONTROL_TITLE;
@@ -2815,7 +2780,7 @@ get_control (MetaFrames *frames,
       else if (has_horiz)
         return META_FRAME_CONTROL_RESIZE_E;
     }
-  else if (y <= fgeom.borders.invisible.top + TOP_RESIZE_HEIGHT * scale)
+  else if (y <= fgeom.borders.invisible.top + TOP_RESIZE_HEIGHT)
     {
       if (has_vert)
         return META_FRAME_CONTROL_RESIZE_N;

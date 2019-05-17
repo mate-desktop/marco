@@ -149,8 +149,7 @@ dimm_icon (GdkPixbuf *pixbuf)
 
 static TabEntry*
 tab_entry_new (const MetaTabEntry *entry,
-               gboolean            outline,
-               gint                scale)
+               gboolean            outline)
 {
   TabEntry *te;
 
@@ -201,15 +200,15 @@ tab_entry_new (const MetaTabEntry *entry,
 
   if (outline)
     {
-      te->rect.x = entry->rect.x / scale;
-      te->rect.y = entry->rect.y / scale;
-      te->rect.width = entry->rect.width / scale;
-      te->rect.height = entry->rect.height / scale;
+      te->rect.x = entry->rect.x;
+      te->rect.y = entry->rect.y;
+      te->rect.width = entry->rect.width;
+      te->rect.height = entry->rect.height;
 
-      te->inner_rect.x = entry->inner_rect.x / scale;
-      te->inner_rect.y = entry->inner_rect.y / scale;
-      te->inner_rect.width = entry->inner_rect.width / scale;
-      te->inner_rect.height = entry->inner_rect.height / scale;
+      te->inner_rect.x = entry->inner_rect.x;
+      te->inner_rect.y = entry->inner_rect.y;
+      te->inner_rect.width = entry->inner_rect.width;
+      te->inner_rect.height = entry->inner_rect.height;
     }
   return te;
 }
@@ -230,7 +229,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   int max_label_width; /* the actual max width of the labels we create */
   AtkObject *obj;
   GdkScreen *screen;
-  int screen_width, scale;
+  int screen_width;
 
   popup = g_new (MetaTabPopup, 1);
 
@@ -274,11 +273,10 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   popup->current_selected_entry = NULL;
   popup->border = border;
 
-  scale = gtk_widget_get_scale_factor (GTK_WIDGET (popup->window));
   screen_width = WidthOfScreen (gdk_x11_screen_get_xscreen (screen));
   for (i = 0; i < entry_count; ++i)
     {
-      TabEntry* new_entry = tab_entry_new (&entries[i], border & BORDER_OUTLINE_WINDOW, scale);
+      TabEntry* new_entry = tab_entry_new (&entries[i], border & BORDER_OUTLINE_WINDOW);
       popup->entries = g_list_prepend (popup->entries, new_entry);
     }
 
@@ -764,11 +762,13 @@ selectable_workspace_new (MetaWorkspace *workspace, int entry_count)
   GtkWidget *widget;
   const MetaXineramaScreenInfo *current;
   int mini_workspace_width, mini_workspace_height;
+  int scale;
   double mini_workspace_ratio;
 
   widget = g_object_new (meta_select_workspace_get_type (), NULL);
 
   current = meta_screen_get_current_xinerama (workspace->screen);
+  scale = get_window_scaling_factor ();
 
   if (workspace->screen->rect.width < workspace->screen->rect.height)
   {
@@ -785,8 +785,8 @@ selectable_workspace_new (MetaWorkspace *workspace, int entry_count)
 
   /* account for select rect */
   gtk_widget_set_size_request (widget,
-                               mini_workspace_width / MINI_WORKSPACE_SCALE,
-                               mini_workspace_height / MINI_WORKSPACE_SCALE);
+                               mini_workspace_width * scale / MINI_WORKSPACE_SCALE,
+                               mini_workspace_height * scale / MINI_WORKSPACE_SCALE);
 
   META_SELECT_WORKSPACE (widget)->workspace = workspace;
 

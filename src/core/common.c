@@ -33,3 +33,19 @@ meta_frame_borders_clear (MetaFrameBorders *self)
   self->visible.left = self->invisible.left = self->total.left = 0;
   self->visible.right = self->invisible.right = self->total.right = 0;
 }
+
+int
+get_window_scaling_factor (void)
+{
+  GdkScreen *screen;
+  GValue value = G_VALUE_INIT;
+
+  screen = gdk_screen_get_default ();
+
+  g_value_init (&value, G_TYPE_INT);
+
+  if (gdk_screen_get_setting (screen, "gdk-window-scaling-factor", &value))
+    return g_value_get_int (&value);
+  else
+    return 1;
+}

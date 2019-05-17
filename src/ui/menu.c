@@ -254,6 +254,7 @@ get_workspace_name_with_accel (Display *display,
     }
 }
 
+#define ICON_SIZE_MENU 16
 static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 {
 	unsigned int key;
@@ -268,19 +269,30 @@ static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 	}
 	else if (menuitem->type == MENU_ITEM_IMAGE)
 	{
-		GtkWidget* image = gtk_image_new_from_icon_name(menuitem->stock_id, GTK_ICON_SIZE_MENU);
+		int scale;
+		cairo_surface_t* surface;
+		GtkWidget *image;
+
+		scale = get_window_scaling_factor ();
+		surface = gtk_icon_theme_load_surface (gtk_icon_theme_get_default (),
+		                                       menuitem->stock_id,
+		                                       ICON_SIZE_MENU * scale, scale,
+		                                       NULL, 0, NULL);
+		image = gtk_image_new_from_surface (surface);
 
 		mi = gtk_image_menu_item_new();
 
 		gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(mi), image);
 		gtk_widget_show(image);
+
+                cairo_surface_destroy (surface);
 	}
 	else if (menuitem->type == MENU_ITEM_CHECKBOX)
 	{
 		mi = gtk_check_menu_item_new ();
 
 		gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(mi), menuitem->checked);
-    }
+	}
 	else if (menuitem->type == MENU_ITEM_RADIOBUTTON)
 	{
 		mi = gtk_check_menu_item_new ();
@@ -490,13 +502,11 @@ meta_window_menu_new   (MetaFrames         *frames,
 void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int button, guint32 timestamp)
 {
 	GdkPoint* pt = g_new(GdkPoint, 1);
-	gint scale;
 
 	g_object_set_data_full(G_OBJECT(menu->menu), "destroy-point", pt, g_free);
 
-	scale = gtk_widget_get_scale_factor (menu->menu);
-	pt->x = root_x / scale;
-	pt->y = root_y / scale;
+	pt->x = root_x;
+	pt->y = root_y;
 
 	gtk_menu_popup(GTK_MENU (menu->menu), NULL, NULL, popup_position_func, pt, button, timestamp);
 

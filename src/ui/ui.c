@@ -62,6 +62,11 @@ void meta_ui_init(int* argc, char*** argv)
 	{
 		meta_fatal ("Unable to open X display %s\n", XDisplayName (NULL));
 	}
+
+  /* We need to be able to fully trust that the window and monitor sizes
+   * that GDK reports corresponds to the X ones, so we disable the automatic
+   * scale handling */
+  gdk_x11_display_set_window_scale (gdk_display_get_default (), 1);
 }
 
 Display* meta_ui_get_display(void)
@@ -606,7 +611,7 @@ meta_ui_get_default_window_icon (MetaUI *ui)
   int scale;
   if (default_icon == NULL || current_icon_size != icon_size)
     {
-      scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
+      scale = get_window_scaling_factor ();
       default_icon = load_default_window_icon (current_icon_size, scale);
       g_assert (default_icon);
       icon_size = current_icon_size;
@@ -625,7 +630,7 @@ meta_ui_get_default_mini_icon (MetaUI *ui)
 
   if (default_icon == NULL)
     {
-      scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
+      scale = get_window_scaling_factor ();
       default_icon = load_default_window_icon (META_MINI_ICON_WIDTH, scale);
       g_assert (default_icon);
     }

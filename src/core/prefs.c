@@ -27,7 +27,6 @@
 #include "prefs.h"
 #include "ui.h"
 #include "util.h"
-#include <gdk/gdk.h>
 #include <gio/gio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -1113,16 +1112,13 @@ meta_prefs_get_cursor_theme (void)
 int
 meta_prefs_get_cursor_size (void)
 {
-  GdkWindow *window = gdk_get_default_root_window ();
-  gint scale = gdk_window_get_scale_factor (window);
-
-  return cursor_size * scale;
+  return cursor_size * get_window_scaling_factor ();
 }
 
 int
 meta_prefs_get_icon_size (void)
 {
-  return icon_size;
+  return icon_size * get_window_scaling_factor ();
 }
 
 gboolean

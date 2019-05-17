@@ -175,13 +175,6 @@ meta_tile_preview_show (MetaTilePreview *preview,
 {
   GdkWindow *window;
   GdkRectangle old_rect;
-  gint scale;
-
-  scale = gtk_widget_get_scale_factor (preview->preview_window);
-  tile_rect->x /= scale;
-  tile_rect->y /= scale;
-  tile_rect->width /= scale;
-  tile_rect->height /= scale;
 
   if (gtk_widget_get_visible (preview->preview_window)
       && preview->tile_rect.x == tile_rect->x

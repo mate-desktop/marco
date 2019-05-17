@@ -347,4 +347,7 @@ typedef enum
   META_PLACEMENT_MODE_MANUAL
 } MetaPlacementMode;
 
+G_GNUC_INTERNAL
+int get_window_scaling_factor (void);
+
 #endif
