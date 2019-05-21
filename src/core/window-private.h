@@ -117,6 +117,7 @@ struct _MetaWindow
   char *sm_client_id;
   char *wm_client_machine;
   char *startup_id;
+  char *gtk_theme_variant;
 
   int net_wm_pid;
 
