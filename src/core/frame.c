@@ -146,6 +146,10 @@ meta_window_ensure_frame (MetaWindow *window)
   /* stick frame to the window */
   window->frame = frame;
 
+  /* Now that frame->xwindow is registered with window, we can set its
+   * style.
+   */
+  meta_ui_update_frame_style (window->screen->ui, frame->xwindow);
   if (window->title)
     meta_ui_set_frame_title (window->screen->ui,
                              window->frame->xwindow,
