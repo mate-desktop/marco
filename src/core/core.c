@@ -271,8 +271,7 @@ meta_core_user_lower_and_unfocus (Display *xdisplay,
 
   meta_window_lower (window);
 
-  if (meta_prefs_get_focus_mode () == META_FOCUS_MODE_CLICK &&
-      meta_prefs_get_raise_on_click ())
+  if (meta_prefs_get_raise_on_click ())
     {
       /* Move window to the back of the focusing workspace's MRU list.
        * Do extra sanity checks to avoid possible race conditions.

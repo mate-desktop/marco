@@ -1084,10 +1084,7 @@ meta_prefs_get_attach_modal_dialogs (void)
 gboolean
 meta_prefs_get_raise_on_click (void)
 {
-  /* Force raise_on_click on for click-to-focus, as requested by Havoc
-   * in #326156.
-   */
-  return raise_on_click || focus_mode == META_FOCUS_MODE_CLICK;
+  return raise_on_click;
 }
 
 const char*
