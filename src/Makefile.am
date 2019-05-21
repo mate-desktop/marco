@@ -90,7 +90,6 @@ libmarco_private_la_SOURCES=			\
 	core/workspace.h \
 	core/xprops.c \
 	include/xprops.h \
-	core/common.c \
 	include/common.h \
 	include/core.h \
 	include/ui.h \
