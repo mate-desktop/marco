@@ -99,6 +99,8 @@ struct _MetaFrames
   guint tooltip_timeout;
   MetaUIFrame *last_motion_frame;
 
+  GtkStyleContext *normal_style;
+  GHashTable *style_variants;
   int expose_delay_count;
 
   int invalidate_cache_timeout_id;
