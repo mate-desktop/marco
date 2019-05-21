@@ -2542,17 +2542,19 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
   meta_prefs_get_button_layout (&button_layout);
 
   scale = gdk_window_get_scale_factor (frame->window);
-  meta_theme_draw_frame_with_style (meta_theme_get_current (),
+  meta_theme_draw_frame (meta_theme_get_current (),
                                     frame->style,
                                     cr,
                                     type,
                                     flags,
-                                    w / scale, h / scale,
+                                    w / scale,
+                                    h / scale,
                                     frame->layout,
                                     frame->text_height,
                                     &button_layout,
                                     button_states,
-                                    mini_icon, icon);
+                                    mini_icon,
+                                    icon);
 }
 
 static gboolean
