@@ -427,6 +427,13 @@ meta_ui_unmap_frame (MetaUI *ui,
 }
 
 void
+meta_ui_update_frame_style (MetaUI *ui,
+                            Window  xwindow)
+{
+  meta_frames_update_frame_style (ui->frames, xwindow);
+}
+
+void
 meta_ui_repaint_frame (MetaUI *ui,
                        Window xwindow)
 {
