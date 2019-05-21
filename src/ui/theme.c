@@ -219,11 +219,6 @@ meta_frame_layout_new  (void)
   layout->right_width = -1;
   layout->bottom_height = -1;
 
-  layout->invisible_border.left = 10;
-  layout->invisible_border.right = 10;
-  layout->invisible_border.bottom = 10;
-  layout->invisible_border.top = 10;
-
   init_border (&layout->title_border);
 
   layout->title_vertical_pad = -1;
@@ -430,10 +425,8 @@ meta_frame_layout_get_borders (const MetaFrameLayout *layout,
 
   if (flags & META_FRAME_FULLSCREEN)
     {
-      borders->visible.top = 0;
-      borders->visible.bottom = 0;
-      borders->visible.left = 0;
-      borders->visible.right = 0;
+      meta_frame_borders_clear (borders);
+      return;
     }
 }
 
@@ -5658,10 +5651,7 @@ meta_theme_get_frame_borders (MetaTheme        *theme,
 
   style = theme_get_style (theme, type, flags);
 
-  borders->visible.top = 0;
-  borders->visible.left = 0;
-  borders->visible.right = 0;
-  borders->visible.bottom = 0;
+  meta_frame_borders_clear (borders);
 
   /* Parser is not supposed to allow this currently */
   if (style == NULL)
