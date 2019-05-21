@@ -561,6 +561,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->sm_client_id = NULL;
   window->wm_client_machine = NULL;
   window->startup_id = NULL;
+  window->gtk_theme_variant = NULL;
 
   window->net_wm_pid = -1;
 
@@ -1229,6 +1230,7 @@ meta_window_free (MetaWindow  *window,
   g_free (window->title);
   g_free (window->icon_name);
   g_free (window->desc);
+  g_free (window->gtk_theme_variant);
   g_free (window);
 }
 
