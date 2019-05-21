@@ -1066,7 +1066,7 @@ run_theme_benchmark (void)
       cr = cairo_create (pixmap);
 
       meta_theme_draw_frame (global_theme,
-                             widget,
+                             gtk_widget_get_style_context (widget),
                              cr,
                              META_FRAME_TYPE_NORMAL,
                              get_flags (widget),
