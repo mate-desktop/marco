@@ -265,6 +265,7 @@ meta_frames_init (MetaFrames *frames)
   frames->cache = g_hash_table_new (g_direct_hash, g_direct_equal);
   frames->style_variants = g_hash_table_new_full (g_str_hash, g_str_equal,
                                                   g_free, g_object_unref);
+  update_style_contexts (frames);
 
   meta_prefs_add_listener (prefs_changed_callback, frames);
 }
