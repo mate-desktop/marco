@@ -433,6 +433,16 @@ meta_frame_layout_get_borders (const MetaFrameLayout *layout,
       meta_frame_borders_clear (borders);
       return;
     }
+
+  borders->invisible.left = layout->invisible_border.left;
+  borders->invisible.right = layout->invisible_border.right;
+  borders->invisible.bottom = layout->invisible_border.bottom;
+  borders->invisible.top = layout->invisible_border.top;
+
+  borders->total.left = borders->invisible.left + borders->visible.left;
+  borders->total.right = borders->invisible.right + borders->visible.right;
+  borders->total.bottom = borders->invisible.bottom + borders->visible.bottom;
+  borders->total.top = borders->invisible.top + borders->visible.top;
 }
 
 static MetaButtonType

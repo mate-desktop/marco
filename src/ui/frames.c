@@ -799,6 +799,16 @@ meta_ui_frame_get_borders (MetaFrames       *frames,
   borders->visible.bottom *= scale;
   borders->visible.left *= scale;
   borders->visible.right *= scale;
+
+  borders->invisible.top *= scale;
+  borders->invisible.bottom *= scale;
+  borders->invisible.left *= scale;
+  borders->invisible.right *= scale;
+
+  borders->total.top *= scale;
+  borders->total.bottom *= scale;
+  borders->total.left *= scale;
+  borders->total.right *= scale;
 }
 
 void
