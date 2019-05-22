@@ -316,7 +316,7 @@ meta_frame_calc_borders (MetaFrame        *frame,
                              borders);
 }
 
-static void
+static gboolean
 update_shape (MetaFrame *frame)
 {
   if (frame->need_reapply_frame_shape)
@@ -327,10 +327,13 @@ update_shape (MetaFrame *frame)
                                  frame->rect.height,
                                  frame->window->has_shape);
       frame->need_reapply_frame_shape = FALSE;
+      return TRUE;
     }
+  else
+    return FALSE;
 }
 
-void
+gboolean
 meta_frame_sync_to_window (MetaFrame *frame,
                            int        resize_gravity,
                            gboolean   need_move,
@@ -338,8 +341,7 @@ meta_frame_sync_to_window (MetaFrame *frame,
 {
   if (!(need_move || need_resize))
     {
-      update_shape (frame);
-      return;
+      return update_shape (frame);
     }
 
   meta_topic (META_DEBUG_GEOMETRY,
@@ -381,6 +383,16 @@ meta_frame_sync_to_window (MetaFrame *frame,
         meta_ui_repaint_frame (frame->window->screen->ui,
                                frame->xwindow);
     }
+  return need_resize;
+}
+
+cairo_region_t *
+meta_frame_get_frame_bounds (MetaFrame *frame)
+{
+  return meta_ui_get_frame_bounds (frame->window->screen->ui,
+                                   frame->xwindow,
+                                   frame->rect.width,
+                                   frame->rect.height);
 }
 
 void
