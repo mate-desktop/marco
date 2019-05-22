@@ -596,6 +596,35 @@ double shadow_offsets_y[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_Y,
                                              SHADOW_MEDIUM_OFFSET_Y,
                                              SHADOW_LARGE_OFFSET_Y};
 
+static XserverRegion
+cairo_region_to_xserver_region (Display        *xdisplay,
+                                cairo_region_t *region)
+{
+  int n_rects, i;
+  XRectangle *rects;
+  XserverRegion xregion;
+
+  n_rects = cairo_region_num_rectangles (region);
+  rects = g_new (XRectangle, n_rects);
+
+  for (i = 0; i < n_rects; i++)
+    {
+      cairo_rectangle_int_t rect;
+
+      cairo_region_get_rectangle (region, i, &rect);
+
+      rects[i].x = rect.x;
+      rects[i].y = rect.y;
+      rects[i].width = rect.width;
+      rects[i].height = rect.height;
+    }
+
+  xregion = XFixesCreateRegion (xdisplay, rects, n_rects);
+  g_free (rects);
+
+  return xregion;
+}
+
 static void
 shadow_clip (Display          *xdisplay,
              Picture           shadow_picture,
