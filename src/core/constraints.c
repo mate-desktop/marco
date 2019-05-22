@@ -590,6 +590,7 @@ place_window_if_needed(MetaWindow     *window,
           window->maximize_horizontally_after_placement = FALSE;
           window->maximize_vertically_after_placement = FALSE;
         }
+      window->user_rect = info->current;
       if (window->minimize_after_placement)
           meta_window_minimize (window);
     }
