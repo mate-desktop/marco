@@ -219,6 +219,11 @@ meta_frame_layout_new  (void)
   layout->right_width = -1;
   layout->bottom_height = -1;
 
+  layout->invisible_border.left = 10;
+  layout->invisible_border.right = 10;
+  layout->invisible_border.bottom = 10;
+  layout->invisible_border.top = 10;
+
   init_border (&layout->title_border);
 
   layout->title_vertical_pad = -1;
