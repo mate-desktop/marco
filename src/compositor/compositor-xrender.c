@@ -589,12 +589,59 @@ make_shadow (MetaDisplay   *display,
   return ximage;
 }
 
+double shadow_offsets_x[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_X,
+                                             SHADOW_MEDIUM_OFFSET_X,
+                                             SHADOW_LARGE_OFFSET_X};
+double shadow_offsets_y[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_Y,
+                                             SHADOW_MEDIUM_OFFSET_Y,
+                                             SHADOW_LARGE_OFFSET_Y};
+
+static void
+shadow_clip (Display          *xdisplay,
+             Picture           shadow_picture,
+             XImage           *shadow_image,
+             MetaShadowType    shadow_type,
+             MetaFrameBorders  borders,
+             int               width,
+             int               height)
+{
+  int shadow_dx = -1 * shadow_offsets_x [shadow_type];
+  int shadow_dy = -1 * shadow_offsets_y [shadow_type];
+  XRectangle clip[4];
+
+  /* Top */
+  clip[0].x      = 0;
+  clip[0].y      = 0;
+  clip[0].width  = shadow_image->width;
+  clip[0].height = shadow_dy + borders.visible.top;
+
+  /* Bottom */
+  clip[1].x      = 0;
+  clip[1].y      = shadow_dy + (height - borders.visible.bottom);
+  clip[1].width  = shadow_image->width;
+  clip[1].height = shadow_image->height - (shadow_dy + (height - borders.visible.bottom));
+
+  /* Left */
+  clip[2].x      = 0;
+  clip[2].y      = shadow_dy + borders.visible.top;
+  clip[2].width  = shadow_dx + borders.visible.left;
+  clip[2].height = height - borders.visible.top - borders.visible.bottom;
+
+  /* Right */
+  clip[3].x      = width + shadow_dx;
+  clip[3].y      = shadow_dy + borders.visible.top;
+  clip[3].width  = shadow_image->width - (width + shadow_dx);
+  clip[3].height = height - borders.visible.top - borders.visible.bottom;
+
+  XRenderSetPictureClipRectangles (xdisplay, shadow_picture, 0, 0, clip, 4);
+}
 static Picture
 shadow_picture (MetaDisplay   *display,
                 MetaScreen    *screen,
                 MetaShadowType shadow_type,
                 double         opacity,
                 Picture        alpha_pict,
+                MetaFrameBorders  borders,
                 int            width,
                 int            height,
                 int           *wp,
@@ -621,8 +668,7 @@ shadow_picture (MetaDisplay   *display,
     }
 
   shadow_picture = XRenderCreatePicture (xdisplay, shadow_pixmap,
-                                         XRenderFindStandardFormat (xdisplay,
-PictStandardA8),
+                                         XRenderFindStandardFormat (xdisplay, PictStandardA8),
                                          0, 0);
   if (!shadow_picture)
     {
@@ -630,6 +676,10 @@ PictStandardA8),
       XFreePixmap (xdisplay, shadow_pixmap);
       return None;
     }
+  shadow_clip (xdisplay,
+               shadow_picture, shadow_image, shadow_type,
+               borders,
+               width, height);
 
   gc = XCreateGC (xdisplay, shadow_pixmap, 0, 0);
   if (!gc)
@@ -984,12 +1034,6 @@ window_has_shadow (MetaCompWindow *cw)
   return FALSE;
 }
 
-double shadow_offsets_x[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_X,
-                                             SHADOW_MEDIUM_OFFSET_X,
-                                             SHADOW_LARGE_OFFSET_X};
-double shadow_offsets_y[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_Y,
-                                             SHADOW_MEDIUM_OFFSET_Y,
-                                             SHADOW_LARGE_OFFSET_Y};
 static XserverRegion
 win_extents (MetaCompWindow *cw)
 {
@@ -1005,8 +1049,18 @@ win_extents (MetaCompWindow *cw)
 
   if (cw->needs_shadow)
     {
+      MetaFrameBorders borders;
       XRectangle sr;
 
+      meta_frame_borders_clear (&borders);
+
+      if (cw->window)
+        {
+          MetaFrame *frame = meta_window_get_frame (cw->window);
+
+          if (frame)
+            meta_frame_calc_borders (frame, &borders);
+        }
       cw->shadow_dx = shadow_offsets_x [cw->shadow_type];
       cw->shadow_dy = shadow_offsets_y [cw->shadow_type];
 
@@ -1018,6 +1072,7 @@ win_extents (MetaCompWindow *cw)
 
           cw->shadow = shadow_picture (display, screen, cw->shadow_type,
                                        opacity, cw->alpha_pict,
+                                       borders,
                                        cw->attrs.width + cw->attrs.border_width * 2,
                                        cw->attrs.height + cw->attrs.border_width * 2,
                                        &cw->shadow_width, &cw->shadow_height);
