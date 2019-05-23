@@ -30,10 +30,6 @@
 #include "keybindings.h"
 #include "prefs.h"
 
-#ifdef HAVE_RENDER
-#include <X11/extensions/Xrender.h>
-#endif
-
 #define EVENT_MASK (SubstructureRedirectMask |                     \
                     StructureNotifyMask | SubstructureNotifyMask | \
                     ExposureMask |                                 \
