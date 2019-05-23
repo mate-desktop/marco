@@ -878,6 +878,7 @@ static void
 apply_cairo_region_to_window (Display        *display,
                               Window          xwindow,
                               cairo_region_t *region,
+                              int             dest_kind,
                               int             op)
 {
   int n_rects, i;
@@ -899,7 +900,7 @@ apply_cairo_region_to_window (Display        *display,
     }
 
   XShapeCombineRectangles (display, xwindow,
-                           ShapeBounding, 0, 0, rects, n_rects,
+                           dest_kind, 0, 0, rects, n_rects,
                            op, YXBanded);
 
   g_free (rects);
@@ -1167,7 +1168,7 @@ meta_frames_apply_shapes (MetaFrames *frames,
       cairo_region_destroy (client_region);
 
       apply_cairo_region_to_window (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), shape_window,
-                                    window_region, ShapeUnion);
+                                    window_region, ShapeBounding, ShapeUnion);
 
       /* Now copy shape_window shape to the real frame */
       XShapeCombineShape (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow, ShapeBounding,
@@ -1187,7 +1188,7 @@ meta_frames_apply_shapes (MetaFrames *frames,
                   frame->xwindow);
 
       apply_cairo_region_to_window (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow,
-                                    window_region, ShapeSet);
+                                    window_region, ShapeBounding, ShapeSet);
     }
 
   frame->shape_applied = TRUE;
