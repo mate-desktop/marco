@@ -66,8 +66,11 @@ void
 meta_window_ensure_frame (MetaWindow *window)
 {
   MetaFrame *frame;
+  MetaScreen *screen;
   XSetWindowAttributes attrs;
+  XVisualInfo visual_info;
   Visual *visual;
+  int status;
 
   if (window->frame)
     return;
@@ -110,13 +113,24 @@ meta_window_ensure_frame (MetaWindow *window)
    * the default of NULL.
    */
 
-  /* Special case for depth 32 windows (assumed to be ARGB),
-   * we use the window's visual. Otherwise we just use the system visual.
-   */
-  if (window->depth == 32)
-    visual = window->xvisual;
+  screen = meta_window_get_screen (window);
+  status = XMatchVisualInfo (window->display->xdisplay,
+                             XScreenNumberOfScreen (screen->xscreen),
+                             32, TrueColor,
+                             &visual_info);
+
+  if (!status)
+    {
+      /* Special case for depth 32 windows (assumed to be ARGB),
+       * we use the window's visual. Otherwise we just use the system visual.
+       */
+      if (window->depth == 32)
+        visual = window->xvisual;
+      else
+        visual = NULL;
+    }
   else
-    visual = NULL;
+    visual = visual_info.visual;
 
   frame->xwindow = meta_ui_create_frame_window (window->screen->ui,
                                                 window->display->xdisplay,
