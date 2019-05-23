@@ -55,7 +55,7 @@ prefs_changed_callback (MetaPreference preference,
     {
       case META_PREF_COMPOSITING_MANAGER:
         frame->need_reapply_frame_shape = TRUE;
-        update_shape (frame);
+        meta_window_queue (frame->window, META_QUEUE_MOVE_RESIZE);
         break;
       default:
         break;
