@@ -2370,7 +2370,6 @@ populate_cache (MetaFrames *frames,
   MetaFrameBorders borders;
   int width, height;
   int frame_width, frame_height, screen_width, screen_height;
-  gint scale;
   CachedPixels *pixels;
   MetaFrameType frame_type;
   MetaFrameFlags frame_flags;
@@ -2401,7 +2400,6 @@ populate_cache (MetaFrames *frames,
                                 &borders);
 
   pixels = get_cache (frames, frame);
-  scale = gdk_window_get_scale_factor (frame->window);
 
   /* Setup the rectangles for the four visible frame borders. First top, then
    * left, right and bottom. Top and bottom extend to the invisible borders
@@ -2415,28 +2413,28 @@ populate_cache (MetaFrames *frames,
    * size without any border added. */
 
   /* top */
-  pixels->piece[0].rect.x = borders.invisible.left / scale;
-  pixels->piece[0].rect.y = borders.invisible.top / scale;
-  pixels->piece[0].rect.width = (width + borders.visible.left + borders.visible.right) * scale;
-  pixels->piece[0].rect.height = borders.visible.top * scale;
+  pixels->piece[0].rect.x = borders.invisible.left;
+  pixels->piece[0].rect.y = borders.invisible.top;
+  pixels->piece[0].rect.width = width + borders.visible.left + borders.visible.right;
+  pixels->piece[0].rect.height = borders.visible.top;
 
   /* left */
-  pixels->piece[1].rect.x = borders.invisible.left / scale;
-  pixels->piece[1].rect.y = borders.total.top / scale;
-  pixels->piece[1].rect.width = borders.visible.left * scale;
-  pixels->piece[1].rect.height = height * scale;
+  pixels->piece[1].rect.x = borders.invisible.left;
+  pixels->piece[1].rect.y = borders.total.top;
+  pixels->piece[1].rect.width = borders.visible.left;
+  pixels->piece[1].rect.height = height;
 
   /* right */
-  pixels->piece[2].rect.x = (borders.total.left + width) / scale;
-  pixels->piece[2].rect.y = borders.total.top / scale;
-  pixels->piece[2].rect.width = borders.visible.right * scale;
-  pixels->piece[2].rect.height = height * scale;
+  pixels->piece[2].rect.x = borders.total.left + width;
+  pixels->piece[2].rect.y = borders.total.top;
+  pixels->piece[2].rect.width = borders.visible.right;
+  pixels->piece[2].rect.height = height;
 
   /* bottom */
-  pixels->piece[3].rect.x = borders.invisible.left / scale;
-  pixels->piece[3].rect.y = (borders.total.top + height) / scale;
-  pixels->piece[3].rect.width = (width + borders.visible.left + borders.visible.right) * scale;
-  pixels->piece[3].rect.height = borders.visible.bottom * scale;
+  pixels->piece[3].rect.x = borders.invisible.left;
+  pixels->piece[3].rect.y = borders.total.top + height;
+  pixels->piece[3].rect.width = width + borders.visible.left + borders.visible.right;
+  pixels->piece[3].rect.height = borders.visible.bottom;
 
   for (i = 0; i < 4; i++)
     {
