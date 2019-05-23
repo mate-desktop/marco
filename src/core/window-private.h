@@ -542,6 +542,8 @@ void        meta_window_get_geometry         (MetaWindow  *window,
                                               int         *y,
                                               int         *width,
                                               int         *height);
+void        meta_window_get_input_rect       (const MetaWindow *window,
+                                              MetaRectangle    *rect);
 void        meta_window_get_outer_rect       (const MetaWindow *window,
                                               MetaRectangle    *rect);
 void        meta_window_get_xor_rect         (MetaWindow          *window,

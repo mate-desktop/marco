@@ -4154,24 +4154,62 @@ meta_window_get_geometry (MetaWindow  *window,
     window->size_hints.height_inc;
 }
 
+/**
+ * meta_window_get_input_rect:
+ * @window: a #MetaWindow
+ * @rect: (out): pointer to an allocated #MetaRectangle
+ *
+ * Gets the rectangle that bounds @window that is responsive to mouse events.
+ * This includes decorations - the visible portion of its border - and (if
+ * present) any invisible area that we make make responsive to mouse clicks in
+ * order to allow convenient border dragging.
+ */
 void
-meta_window_get_outer_rect (const MetaWindow *window,
+meta_window_get_input_rect (const MetaWindow *window,
                             MetaRectangle    *rect)
 {
   if (window->frame)
     *rect = window->frame->rect;
   else
-    {
-        *rect = window->rect;
+    *rect = window->rect;
+}
 
-	if (window->has_custom_frame_extents)
-	  {
-	    const GtkBorder *extents = &window->custom_frame_extents;
-	    rect->x += extents->left;
-	    rect->y += extents->top;
-	    rect->width -= extents->left + extents->right;
-	    rect->height -= extents->top + extents->bottom;
-	  }
+/**
+ * meta_window_get_outer_rect:
+ * @window: a #MetaWindow
+ * @rect: (out): pointer to an allocated #MetaRectangle
+ *
+ * Gets the rectangle that bounds @window that is responsive to mouse events.
+ * This includes only what is visible; it doesn't include any extra reactive
+ * area we add to the edges of windows.
+ */
+void
+meta_window_get_outer_rect (const MetaWindow *window,
+                            MetaRectangle    *rect)
+{
+  if (window->frame)
+    {
+      MetaFrameBorders borders;
+      *rect = window->frame->rect;
+      meta_frame_calc_borders (window->frame, &borders);
+
+      rect->x += borders.invisible.left;
+      rect->y += borders.invisible.top;
+      rect->width -= borders.invisible.left + borders.invisible.right;
+      rect->height -= borders.invisible.top + borders.invisible.bottom;
+    }
+  else
+    {
+      *rect = window->rect;
+
+      if (window->has_custom_frame_extents)
+        {
+          const GtkBorder *extents = &window->custom_frame_extents;
+          rect->x += extents->left;
+          rect->y += extents->top;
+          rect->width -= extents->left + extents->right;
+          rect->height -= extents->top + extents->bottom;
+        }
     }
 }
 
