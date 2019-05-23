@@ -28,6 +28,7 @@
 #include "bell.h"
 #include "errors.h"
 #include "keybindings.h"
+#include "prefs.h"
 
 #ifdef HAVE_RENDER
 #include <X11/extensions/Xrender.h>
@@ -41,6 +42,25 @@
                     EnterWindowMask | LeaveWindowMask |            \
                     FocusChangeMask |                              \
                     ColormapChangeMask)
+
+static gboolean update_shape (MetaFrame *frame);
+
+static void
+prefs_changed_callback (MetaPreference preference,
+                        gpointer       data)
+{
+  MetaFrame *frame = (MetaFrame *) data;
+
+  switch (preference)
+    {
+      case META_PREF_COMPOSITING_MANAGER:
+        frame->need_reapply_frame_shape = TRUE;
+        update_shape (frame);
+        break;
+      default:
+        break;
+    }
+}
 
 void
 meta_window_ensure_frame (MetaWindow *window)
@@ -167,6 +187,8 @@ meta_window_ensure_frame (MetaWindow *window)
   frame->need_reapply_frame_shape = FALSE;
 
   meta_display_ungrab (window->display);
+
+  meta_prefs_add_listener (prefs_changed_callback, frame);
 }
 
 void
@@ -181,6 +203,8 @@ meta_window_destroy_frame (MetaWindow *window)
   meta_verbose ("Unframing window %s\n", window->desc);
 
   frame = window->frame;
+
+  meta_prefs_remove_listener (prefs_changed_callback, frame);
 
   meta_frame_calc_borders (frame, &borders);
 
