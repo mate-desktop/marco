@@ -648,8 +648,8 @@ shadow_picture_clip (Display          *xdisplay,
   if (!visible_region)
     return;
 
-  shadow_dx = -1 * shadow_offsets_x [cw->shadow_type];
-  shadow_dy = -1 * shadow_offsets_y [cw->shadow_type];
+  shadow_dx = -1 * (int) shadow_offsets_x [cw->shadow_type] - borders.invisible.left;
+  shadow_dy = -1 * (int) shadow_offsets_y [cw->shadow_type] - borders.invisible.top;
 
   rect.x = 0;
   rect.y = 0;
@@ -1094,18 +1094,21 @@ win_extents (MetaCompWindow *cw)
             meta_frame_calc_borders (frame, &borders);
         }
 
-      cw->shadow_dx = shadow_offsets_x [cw->shadow_type];
-      cw->shadow_dy = shadow_offsets_y [cw->shadow_type];
+      cw->shadow_dx = (int) shadow_offsets_x [cw->shadow_type] + borders.invisible.left;
+      cw->shadow_dy = (int) shadow_offsets_y [cw->shadow_type] + borders.invisible.top;
 
       if (!cw->shadow)
         {
           double opacity = SHADOW_OPACITY;
+          int invisible_width = borders.invisible.left + borders.invisible.right;
+          int invisible_height = borders.invisible.top + borders.invisible.bottom;
+
           if (cw->opacity != (guint) OPAQUE)
             opacity = opacity * ((double) cw->opacity) / ((double) OPAQUE);
 
           cw->shadow = shadow_picture (display, screen, cw, opacity, borders,
-                                       cw->attrs.width + cw->attrs.border_width * 2,
-                                       cw->attrs.height + cw->attrs.border_width * 2,
+                                       cw->attrs.width - invisible_width + cw->attrs.border_width * 2,
+                                       cw->attrs.height - invisible_height + cw->attrs.border_width * 2,
                                        &cw->shadow_width, &cw->shadow_height);
         }
 
