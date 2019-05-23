@@ -1145,7 +1145,17 @@ border_size (MetaCompWindow *cw)
   MetaScreen *screen = cw->screen;
   MetaDisplay *display = meta_screen_get_display (screen);
   Display *xdisplay = meta_display_get_xdisplay (display);
+  cairo_region_t *visible_region;
+  XserverRegion visible = None;
   XserverRegion border;
+
+  if (cw->window)
+    {
+      visible_region = meta_window_get_frame_bounds (cw->window);
+
+      if (visible_region)
+        visible = cairo_region_to_xserver_region (xdisplay, visible_region);
+    }
 
   meta_error_trap_push (display);
   border = XFixesCreateRegionFromWindow (xdisplay, cw->id,
@@ -1156,6 +1166,19 @@ border_size (MetaCompWindow *cw)
   XFixesTranslateRegion (xdisplay, border,
                          cw->attrs.x + cw->attrs.border_width,
                          cw->attrs.y + cw->attrs.border_width);
+
+  if (visible != None)
+    {
+      XFixesTranslateRegion (xdisplay, visible,
+                         cw->attrs.x + cw->attrs.border_width,
+                         cw->attrs.y + cw->attrs.border_width);
+
+      XFixesIntersectRegion (xdisplay, visible, visible, border);
+      XFixesDestroyRegion (xdisplay, border);
+
+      return visible;
+    }
+
   return border;
 }
 
