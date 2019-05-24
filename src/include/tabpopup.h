@@ -31,6 +31,7 @@
 #include <X11/Xlib.h>
 #include <glib.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
+#include <gtk/gtk.h>
 
 typedef struct _MetaTabEntry MetaTabEntry;
 typedef struct _MetaTabPopup MetaTabPopup;
@@ -67,7 +68,7 @@ void            meta_ui_tab_popup_backward     (MetaTabPopup       *popup);
 MetaTabEntryKey meta_ui_tab_popup_get_selected (MetaTabPopup      *popup);
 void            meta_ui_tab_popup_select       (MetaTabPopup       *popup,
                                                 MetaTabEntryKey     key);
-Window          meta_ui_tab_popup_get_xid      (MetaTabPopup       *popup);
+GtkWidget*      meta_ui_tab_popup_get_widget   (MetaTabPopup       *popup);
 void            meta_ui_tab_popup_mouse_press  (MetaTabPopup       *popup,
                                                 gint                x,
                                                 gint                y);
