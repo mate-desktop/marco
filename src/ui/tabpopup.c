@@ -640,13 +640,13 @@ meta_ui_tab_popup_select (MetaTabPopup *popup,
     }
 }
 
-Window
-meta_ui_tab_popup_get_xid (MetaTabPopup *popup)
+GtkWidget*
+meta_ui_tab_popup_get_widget (MetaTabPopup *popup)
 {
-  if (popup != NULL && popup->window != NULL) 
-    return gdk_x11_window_get_xid(gtk_widget_get_window(popup->window)); 
+  if (popup != NULL) 
+    return popup->window; 
   else
-    return 0;
+    return NULL;
 }
 
 void

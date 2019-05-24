@@ -1611,18 +1611,30 @@ mouse_event_is_in_tab_popup (MetaDisplay *display,
                                             event_window, event_window,
                                             event_x, event_y,
                                             &x, &y, &child1);
+
+      GtkWidget *popup_widget = meta_ui_tab_popup_get_widget (screen->tab_popup);
+      if (ok1 && popup_widget != NULL) 
+        {
+          Window popup_xid = gdk_x11_window_get_xid (gtk_widget_get_window (popup_widget));
   
-      Window popup_xid = meta_ui_tab_popup_get_xid(screen->tab_popup);
-  
-      gboolean ok2 = XTranslateCoordinates (display->xdisplay,
-                                            event_window, popup_xid,
-                                            event_x, event_y,
-                                            popup_x, popup_y, &child2);
+          gboolean ok2 = XTranslateCoordinates (display->xdisplay,
+                                                event_window, popup_xid,
+                                                event_x, event_y,
+                                                popup_x, popup_y, &child2);
     
-      return (ok1 && ok2 && child1 == popup_xid);
+          if (ok2 && child1 == popup_xid)
+            {
+              int scale = gtk_widget_get_scale_factor (popup_widget);
+              if (scale != 0)
+                {
+                  *popup_x /= scale;
+                  *popup_y /= scale;
+                }
+              return TRUE;
+            }
+        }
     }
-  else
-    return FALSE;
+  return FALSE;
 }
 
 /**
