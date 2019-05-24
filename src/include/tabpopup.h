@@ -58,8 +58,8 @@ struct _MetaTabEntry
 MetaTabPopup*   meta_ui_tab_popup_new          (const MetaTabEntry *entries,
                                                 int                 entry_count,
                                                 int                 width,
-                                                gboolean            outline,
-                                                gboolean            consider_label_width);
+                                                int                 additional_columns,
+                                                gboolean            outline);
 void            meta_ui_tab_popup_free         (MetaTabPopup       *popup);
 void            meta_ui_tab_popup_set_showing  (MetaTabPopup       *popup,
                                                 gboolean            showing);

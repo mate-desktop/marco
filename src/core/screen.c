@@ -1399,8 +1399,8 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
   screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              len,
                                              meta_prefs_get_alt_tab_max_columns(),
-                                             border,
-                                             TRUE);
+                                             meta_prefs_get_alt_tab_max_empty_columns(),
+                                             border);
 
   for (i = 0; i < len; i++)
     g_object_unref (entries[i].icon);
@@ -1471,8 +1471,8 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
   screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              len,
                                              layout.cols,
-                                             BORDER_OUTLINE_WORKSPACE,
-                                             FALSE);
+                                             0, /* additional_columns */
+                                             BORDER_OUTLINE_WORKSPACE);
 
   g_free (entries);
   meta_screen_free_workspace_layout (&layout);
