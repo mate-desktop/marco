@@ -206,7 +206,7 @@
         <range min="1" max="1024"/>
         <default>5</default>
         <summary>Maximum number of columns in alt-tab popup window</summary>
-        <description>The popup window may be expanded by empty columns up to the maximum columns width to fit window labels if less columns are displayed and if config option '' has a value > 0.</description>
+        <description>The popup window may be expanded by empty columns up to the maximum columns width to fit window labels if less columns are displayed and if config option 'alt-tab-max-empty-columns' has a value > 0.</description>
     </key>
     <key name="alt-tab-max-empty-columns" type="i">
         <range min="0" max="1024"/>
