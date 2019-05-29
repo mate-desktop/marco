@@ -528,7 +528,7 @@ splashscreen_cb (GSimpleAction *action,
   GtkWidget *vbox;
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  set_gtk_window_type (GTK_WINDOW (window), "_NET_WM_WINDOW_TYPE_SPLASHSCREEN");
+  set_gtk_window_type (GTK_WINDOW (window), "_NET_WM_WINDOW_TYPE_SPLASH");
   gtk_window_set_title (GTK_WINDOW (window), "Splashscreen");
 
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
