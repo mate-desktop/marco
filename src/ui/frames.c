@@ -2307,7 +2307,7 @@ generate_pixmap (MetaFrames            *frames,
     return NULL;
 
   result = gdk_window_create_similar_surface (frame->window,
-                                              CAIRO_CONTENT_COLOR,
+                                              CAIRO_CONTENT_COLOR_ALPHA,
                                               rect->width, rect->height);
 
   cr = cairo_create (result);
@@ -2373,28 +2373,28 @@ populate_cache (MetaFrames *frames,
    * size without any border added. */
 
   /* top */
-  pixels->piece[0].rect.x = borders.invisible.left;
-  pixels->piece[0].rect.y = borders.invisible.top;
-  pixels->piece[0].rect.width = width + borders.visible.left + borders.visible.right;
-  pixels->piece[0].rect.height = borders.visible.top;
+  pixels->piece[0].rect.x = 0;
+  pixels->piece[0].rect.y = 0;
+  pixels->piece[0].rect.width = width + borders.total.left + borders.total.right;
+  pixels->piece[0].rect.height = borders.total.top;
 
   /* left */
-  pixels->piece[1].rect.x = borders.invisible.left;
+  pixels->piece[1].rect.x = 0;
   pixels->piece[1].rect.y = borders.total.top;
-  pixels->piece[1].rect.width = borders.visible.left;
+  pixels->piece[1].rect.width = borders.total.left;
   pixels->piece[1].rect.height = height;
 
   /* right */
   pixels->piece[2].rect.x = borders.total.left + width;
   pixels->piece[2].rect.y = borders.total.top;
-  pixels->piece[2].rect.width = borders.visible.right;
+  pixels->piece[2].rect.width = borders.total.right;
   pixels->piece[2].rect.height = height;
 
   /* bottom */
-  pixels->piece[3].rect.x = borders.invisible.left;
+  pixels->piece[3].rect.x = 0;
   pixels->piece[3].rect.y = borders.total.top + height;
-  pixels->piece[3].rect.width = width + borders.visible.left + borders.visible.right;
-  pixels->piece[3].rect.height = borders.visible.bottom;
+  pixels->piece[3].rect.width = width + borders.total.left + borders.total.right;
+  pixels->piece[3].rect.height = borders.total.bottom;
 
   for (i = 0; i < 4; i++)
     {
