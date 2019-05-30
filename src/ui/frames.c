@@ -686,7 +686,6 @@ meta_frames_manage_window (MetaFrames *frames,
   frame->title = NULL;
   frame->expose_delayed = FALSE;
   frame->shape_applied = FALSE;
-  frame->dest_kind = ShapeBounding;
   frame->prelit_control = META_FRAME_CONTROL_NONE;
 
   meta_core_grab_buttons (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow);
@@ -814,7 +813,7 @@ meta_ui_frame_get_borders (MetaFrames       *frames,
 
 void
 meta_frames_get_borders (MetaFrames       *frames,
-                                 Window      xwindow,
+                         Window            xwindow,
                          MetaFrameBorders *borders)
 {
   MetaUIFrame *frame;
@@ -830,10 +829,10 @@ meta_frames_get_borders (MetaFrames       *frames,
 static void
 meta_ui_frame_get_corner_radiuses (MetaFrames  *frames,
                                    MetaUIFrame *frame,
-                                 float      *top_left,
-                                 float      *top_right,
-                                 float      *bottom_left,
-                                 float      *bottom_right)
+                                   float       *top_left,
+                                   float       *top_right,
+                                   float       *bottom_left,
+                                   float       *bottom_right)
 {
   MetaFrameGeometry fgeom;
 
@@ -879,7 +878,6 @@ static void
 apply_cairo_region_to_window (Display        *display,
                               Window          xwindow,
                               cairo_region_t *region,
-                              int             dest_kind,
                               int             op)
 {
   int n_rects, i;
@@ -901,7 +899,7 @@ apply_cairo_region_to_window (Display        *display,
     }
 
   XShapeCombineRectangles (display, xwindow,
-                           dest_kind, 0, 0, rects, n_rects,
+                           ShapeBounding, 0, 0, rects, n_rects,
                            op, YXBanded);
 
   g_free (rects);
@@ -1084,54 +1082,29 @@ meta_frames_apply_shapes (MetaFrames *frames,
   cairo_region_t *window_region;
   Display *display;
   gboolean compositing_manager;
-  int dest_kind;
 
   frame = meta_frames_lookup_window (frames, xwindow);
   g_return_if_fail (frame != NULL);
 
   display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
 
-  meta_frames_calc_geometry (frames, frame, &fgeom);
-
-  if (!(fgeom.top_left_corner_rounded_radius != 0 ||
-        fgeom.top_right_corner_rounded_radius != 0 ||
-        fgeom.bottom_left_corner_rounded_radius != 0 ||
-        fgeom.bottom_right_corner_rounded_radius != 0 ||
-        window_has_shape))
+  if (frame->shape_applied)
     {
-      if (frame->shape_applied)
-        {
-          meta_topic (META_DEBUG_SHAPES,
-                      "Unsetting shape mask on frame 0x%lx\n",
-                      frame->xwindow);
+      meta_topic (META_DEBUG_SHAPES,
+                  "Unsetting shape mask on frame 0x%lx\n",
+                  frame->xwindow);
 
-          XShapeCombineMask (display, frame->xwindow,
-                             ShapeBounding, 0, 0, None, ShapeSet);
-          XShapeCombineMask (display, frame->xwindow,
-                             ShapeClip, 0, 0, None, ShapeSet);
-          frame->shape_applied = FALSE;
-        }
-      else
-        {
-          meta_topic (META_DEBUG_SHAPES,
-                      "Frame 0x%lx still doesn't need a shape mask\n",
-                      frame->xwindow);
-        }
-
-      return; /* nothing to do */
+      XShapeCombineMask (display, frame->xwindow,
+                         ShapeBounding, 0, 0, None, ShapeSet);
+      frame->shape_applied = FALSE;
     }
+
+  meta_frames_calc_geometry (frames, frame, &fgeom);
 
   compositing_manager = meta_prefs_get_compositing_manager ();
 
-  dest_kind = ShapeClip;
-  if (!compositing_manager)
-    dest_kind = ShapeBounding;
-
-  if (frame->dest_kind != dest_kind)
-    {
-      XShapeCombineMask (display, frame->xwindow,
-                         frame->dest_kind, 0, 0, None, ShapeSet);
-    }
+  if (!window_has_shape && compositing_manager)
+    return;
 
   window_region = get_visible_region (frames,
                                       frame,
@@ -1165,8 +1138,8 @@ meta_frames_apply_shapes (MetaFrames *frames,
 
       attrs.override_redirect = True;
 
-      shape_window = XCreateWindow (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
-                                    RootWindow (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), screen_number),
+      shape_window = XCreateWindow (display,
+                                    RootWindow (display, screen_number),
                                     -5000, -5000,
                                     new_window_width,
                                     new_window_height,
@@ -1178,11 +1151,11 @@ meta_frames_apply_shapes (MetaFrames *frames,
                                     &attrs);
 
       /* Copy the client's shape to the temporary shape_window */
-      meta_core_get (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow,
+      meta_core_get (display, frame->xwindow,
                      META_CORE_GET_CLIENT_XWINDOW, &client_window,
                      META_CORE_GET_END);
 
-      XShapeCombineShape (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), shape_window, ShapeBounding,
+      XShapeCombineShape (display, shape_window, ShapeBounding,
                           fgeom.borders.total.left,
                           fgeom.borders.total.top,
                           client_window,
@@ -1204,26 +1177,19 @@ meta_frames_apply_shapes (MetaFrames *frames,
 
       cairo_region_destroy (client_region);
 
-      apply_cairo_region_to_window (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), shape_window,
-                                    tmp_region, ShapeBounding, ShapeUnion);
+      apply_cairo_region_to_window (display, shape_window,
+                                    tmp_region, ShapeUnion);
 
       cairo_region_destroy (frame_region);
 
       /* Now copy shape_window shape to the real frame */
-      XShapeCombineShape (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow, ShapeBounding,
+      XShapeCombineShape (display, frame->xwindow, ShapeBounding,
                           0, 0,
                           shape_window,
                           ShapeBounding,
                           ShapeSet);
 
-      XDestroyWindow (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), shape_window);
-
-      if (compositing_manager)
-        {
-          apply_cairo_region_to_window (display,
-                                        frame->xwindow, window_region,
-                                        dest_kind, ShapeSet);
-        }
+      XDestroyWindow (display, shape_window);
     }
   else
     {
@@ -1233,12 +1199,12 @@ meta_frames_apply_shapes (MetaFrames *frames,
                   "Frame 0x%lx has shaped corners\n",
                   frame->xwindow);
 
-      apply_cairo_region_to_window (display,
-                                    frame->xwindow, window_region,
-                                    dest_kind, ShapeSet);
+      if (!compositing_manager)
+        apply_cairo_region_to_window (display,
+                                      frame->xwindow, window_region,
+                                      ShapeSet);
     }
 
-  frame->dest_kind = dest_kind;
   frame->shape_applied = TRUE;
 
   cairo_region_destroy (window_region);
