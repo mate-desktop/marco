@@ -53,6 +53,7 @@
  */
 
 #include <config.h>
+#include "prefs.h"
 #include "theme.h"
 #include "theme-parser.h"
 #include "util.h"
