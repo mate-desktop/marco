@@ -83,7 +83,6 @@ struct _MetaUIFrame
   char *title; /* NULL once we have a layout */
   guint expose_delayed : 1;
   guint shape_applied : 1;
-  int dest_kind;
 
   /* FIXME get rid of this, it can just be in the MetaFrames struct */
   MetaFrameControl prelit_control;
