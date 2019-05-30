@@ -78,7 +78,7 @@ struct _MetaUIFrame
   GdkWindow *window;
   GtkStyleContext *style;
   MetaFrameStyle *cache_style;
-  PangoLayout *layout;
+  PangoLayout *text_layout;
   int text_height;
   char *title; /* NULL once we have a layout */
   guint expose_delayed : 1;

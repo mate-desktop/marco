@@ -425,15 +425,14 @@ queue_recalc_func (gpointer key, gpointer value, gpointer data)
   invalidate_whole_window (frames, frame);
   meta_core_queue_frame_resize (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
                                 frame->xwindow);
-  if (frame->layout)
+  if (frame->text_layout)
     {
       /* save title to recreate layout */
       g_free (frame->title);
 
-      frame->title = g_strdup (pango_layout_get_text (frame->layout));
+      frame->title = g_strdup (pango_layout_get_text (frame->text_layout));
 
-      g_object_unref (G_OBJECT (frame->layout));
-      frame->layout = NULL;
+      g_clear_object (&frame->text_layout);
     }
 }
 
@@ -509,7 +508,7 @@ meta_frames_ensure_layout (MetaFrames  *frames,
   MetaFrameType type;
   MetaFrameStyle *style;
 
-  g_return_if_fail (gtk_widget_get_realized (GTK_WIDGET(frames)));
+  g_return_if_fail (gtk_widget_get_realized (GTK_WIDGET (frames)));
 
   widget = GTK_WIDGET (frames);
 
@@ -523,21 +522,20 @@ meta_frames_ensure_layout (MetaFrames  *frames,
 
   if (style != frame->cache_style)
     {
-      if (frame->layout)
+      if (frame->text_layout)
         {
           /* save title to recreate layout */
           g_free (frame->title);
 
-          frame->title = g_strdup (pango_layout_get_text (frame->layout));
+          frame->title = g_strdup (pango_layout_get_text (frame->text_layout));
 
-          g_object_unref (G_OBJECT (frame->layout));
-          frame->layout = NULL;
+          g_clear_object (&frame->text_layout);
         }
     }
 
   frame->cache_style = style;
 
-  if (frame->layout == NULL)
+  if (frame->text_layout == NULL)
     {
       gpointer key, value;
       PangoFontDescription *font_desc;
@@ -548,12 +546,12 @@ meta_frames_ensure_layout (MetaFrames  *frames,
                                           type,
                                           flags);
 
-      frame->layout = gtk_widget_create_pango_layout (widget, frame->title);
+      frame->text_layout = gtk_widget_create_pango_layout (widget, frame->title);
 
-      pango_layout_set_ellipsize (frame->layout, PANGO_ELLIPSIZE_END);
-      pango_layout_set_auto_dir (frame->layout, FALSE);
+      pango_layout_set_ellipsize (frame->text_layout, PANGO_ELLIPSIZE_END);
+      pango_layout_set_auto_dir (frame->text_layout, FALSE);
 
-      pango_layout_set_single_paragraph_mode (frame->layout, TRUE);
+      pango_layout_set_single_paragraph_mode (frame->text_layout, TRUE);
 
       font_desc = meta_gtk_widget_get_font_desc (widget, scale,
                                                  meta_prefs_get_titlebar_font ());
@@ -577,7 +575,7 @@ meta_frames_ensure_layout (MetaFrames  *frames,
                                 GINT_TO_POINTER (frame->text_height));
         }
 
-      pango_layout_set_font_description (frame->layout,
+      pango_layout_set_font_description (frame->text_layout,
                                          font_desc);
 
       pango_font_description_free (font_desc);
@@ -681,7 +679,7 @@ meta_frames_manage_window (MetaFrames *frames,
 
   frame->xwindow = xwindow;
   frame->cache_style = NULL;
-  frame->layout = NULL;
+  frame->text_layout = NULL;
   frame->text_height = -1;
   frame->title = NULL;
   frame->expose_delayed = FALSE;
@@ -726,8 +724,8 @@ meta_frames_unmanage_window (MetaFrames *frames,
 
       gdk_window_destroy (frame->window);
 
-      if (frame->layout)
-        g_object_unref (G_OBJECT (frame->layout));
+      if (frame->text_layout)
+        g_object_unref (G_OBJECT (frame->text_layout));
 
       if (frame->title)
         g_free (frame->title);
@@ -1280,11 +1278,7 @@ meta_frames_set_title (MetaFrames *frames,
   g_free (frame->title);
   frame->title = g_strdup (title);
 
-  if (frame->layout)
-    {
-      g_object_unref (frame->layout);
-      frame->layout = NULL;
-    }
+  g_clear_object (&frame->text_layout);
 
   invalidate_whole_window (frames, frame);
 }
@@ -2718,7 +2712,7 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
                                     flags,
                                     w / scale,
                                     h / scale,
-                                    frame->layout,
+                                    frame->text_layout,
                                     frame->text_height,
                                     &button_layout,
                                     button_states,
