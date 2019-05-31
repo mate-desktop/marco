@@ -956,10 +956,14 @@ gboolean       meta_draw_op_list_contains (MetaDrawOpList    *op_list,
 
 MetaGradientSpec* meta_gradient_spec_new    (MetaGradientType        type);
 void              meta_gradient_spec_free   (MetaGradientSpec       *desc);
-GdkPixbuf*        meta_gradient_spec_render (const MetaGradientSpec *desc,
-                                             GtkStyleContext        *style_gtk,
-                                             int                     width,
-                                             int                     height);
+void              meta_gradient_spec_render (const MetaGradientSpec      *spec,
+                                             const MetaAlphaGradientSpec *alpha_spec,
+                                             cairo_t                     *cr,
+                                             GtkStyleContext             *context,
+                                             gint                         x,
+                                             gint                         y,
+                                             gint                         width,
+                                             gint                         height);
 gboolean          meta_gradient_spec_validate (MetaGradientSpec     *spec,
                                                GError              **error);
 
