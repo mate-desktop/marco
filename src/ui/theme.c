@@ -5462,9 +5462,11 @@ theme_get_style (MetaTheme     *theme,
       state = META_FRAME_STATE_MAXIMIZED;
       break;
     case META_FRAME_TILED_LEFT:
+    case (META_FRAME_MAXIMIZED | META_FRAME_TILED_LEFT):
       state = META_FRAME_STATE_TILED_LEFT;
       break;
     case META_FRAME_TILED_RIGHT:
+    case (META_FRAME_MAXIMIZED | META_FRAME_TILED_RIGHT):
       state = META_FRAME_STATE_TILED_RIGHT;
       break;
     case META_FRAME_SHADED:
