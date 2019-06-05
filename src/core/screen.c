@@ -1471,7 +1471,7 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
   screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              len,
                                              layout.cols,
-                                             0, /* additional_columns */
+                                             FALSE, /* expand_for_titles */
                                              BORDER_OUTLINE_WORKSPACE);
 
   g_free (entries);
