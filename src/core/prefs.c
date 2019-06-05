@@ -54,7 +54,7 @@
 #define KEY_GENERAL_CENTER_NEW_WINDOWS "center-new-windows"
 #define KEY_GENERAL_ICON_SIZE "icon-size"
 #define KEY_GENERAL_ALT_TAB_MAX_COLUMNS "alt-tab-max-columns"
-#define KEY_GENERAL_ALT_TAB_MAX_EMPTY_COLUMNS "alt-tab-max-empty-columns"
+#define KEY_GENERAL_ALT_TAB_EXPAND_TO_FIT_TITLE "alt-tab-expand-to-fit-title"
 
 #define KEY_COMMAND_SCHEMA "org.mate.Marco.keybinding-commands"
 #define KEY_COMMAND_PREFIX "command-"
@@ -119,7 +119,7 @@ static char *cursor_theme = NULL;
 static int   cursor_size = 24;
 static int   icon_size   = META_DEFAULT_ICON_SIZE;
 static int   alt_tab_max_columns = META_DEFAULT_ALT_TAB_MAX_COLUMNS;
-static int   alt_tab_max_empty_columns = META_DEFAULT_ALT_TAB_MAX_EMPTY_COLUMNS;
+static gboolean alt_tab_expand_to_fit_title = META_DEFAULT_ALT_TAB_EXPAND_TO_FIT_TITLE;
 static gboolean use_force_compositor_manager = FALSE;
 static gboolean force_compositor_manager = FALSE;
 static gboolean compositing_manager = FALSE;
@@ -443,6 +443,12 @@ static MetaBoolPreference preferences_bool[] =
       &allow_top_tiling,
       FALSE,
     },
+    { "alt-tab-expand-to-fit-title",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ALT_TAB_EXPAND_TO_FIT_TITLE,
+      &alt_tab_expand_to_fit_title,
+      META_DEFAULT_ALT_TAB_EXPAND_TO_FIT_TITLE,
+    },
     { NULL, NULL, 0, NULL, FALSE },
   };
 
@@ -531,14 +537,6 @@ static MetaIntPreference preferences_int[] =
       META_MIN_ALT_TAB_MAX_COLUMNS, 
       META_MAX_ALT_TAB_MAX_COLUMNS, 
       META_DEFAULT_ALT_TAB_MAX_COLUMNS,
-    },
-    { "alt-tab-max-empty-columns",
-      KEY_GENERAL_SCHEMA,
-      META_PREF_ALT_TAB_MAX_EMPTY_COLUMNS,
-      &alt_tab_max_empty_columns,
-      META_MIN_ALT_TAB_MAX_EMPTY_COLUMNS, 
-      META_MAX_ALT_TAB_MAX_EMPTY_COLUMNS, 
-      META_DEFAULT_ALT_TAB_MAX_EMPTY_COLUMNS,
     },
     { NULL, NULL, 0, NULL, 0, 0, 0, },
   };
@@ -1151,10 +1149,10 @@ meta_prefs_get_alt_tab_max_columns (void)
   return alt_tab_max_columns;
 }
 
-int
-meta_prefs_get_alt_tab_max_empty_columns (void)
+gboolean
+meta_prefs_get_alt_tab_expand_to_fit_title (void)
 {
-  return alt_tab_max_empty_columns;
+  return alt_tab_expand_to_fit_title;
 }
 
 gboolean
@@ -1675,8 +1673,8 @@ meta_preference_to_string (MetaPreference pref)
     case META_PREF_ALT_TAB_MAX_COLUMNS:
       return "ALT_TAB_MAX_COLUMNS";
 
-    case META_PREF_ALT_TAB_MAX_EMPTY_COLUMNS:
-      return "ALT_TAB_MAX_EMPTY_COLUMNS";
+    case META_PREF_ALT_TAB_EXPAND_TO_FIT_TITLE:
+      return "ALT_TAB_EXPAND_TO_FIT_TITLE";
 
     case META_PREF_COMPOSITING_MANAGER:
       return "COMPOSITING_MANAGER";

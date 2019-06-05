@@ -218,7 +218,7 @@ MetaTabPopup*
 meta_ui_tab_popup_new (const MetaTabEntry *entries,
                        int                 entry_count,
                        int                 width,
-                       int                 additional_columns,
+                       gboolean            expand_for_titles,
                        gint                border)
 {
   MetaTabPopup *popup;
@@ -391,22 +391,16 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
   int default_window_width = 0; /* 0 == small as possible, truncate label */
 
-  if (additional_columns > 0 && top <= 1 && left < width)
+  if (expand_for_titles && top <= 1 && left < width)
     {
       /* only one row partially filled with columns and additional_columns given
          => calculate default_window_width to fit max_label_width if possible */
       
-      int width2 = left + additional_columns;
-      if (width2 > width)
-        width2 = width;
-      
-      max_label_width += 20; /* add random padding */
-    
-      GtkWidget **dummies = g_try_malloc(sizeof(GtkWidget*) * (width2 - left));
+      GtkWidget **dummies = g_try_malloc(sizeof(GtkWidget*) * (width - left));
       if (dummies)
         {
           int j;
-          for (j = 0; j < width2 - left; ++j) 
+          for (j = 0; j < width - left; ++j) 
             {
               GtkWidget *dummy = gtk_label_new ("");
               dummies[j] = dummy;
@@ -421,7 +415,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
           gtk_widget_get_preferred_size (grid, &req, NULL);
           default_window_width = req.width;
     
-          for (j = 0; j < width2 - left; ++j) 
+          for (j = 0; j < width - left; ++j) 
             {
               gtk_container_remove(GTK_CONTAINER(grid), dummies[j]);
             }

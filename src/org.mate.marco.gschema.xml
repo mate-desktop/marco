@@ -208,11 +208,10 @@
         <summary>Maximum number of columns in alt-tab popup window</summary>
         <description>The popup window will be expanded to fit up to these many entries per row.</description>
     </key>
-    <key name="alt-tab-max-empty-columns" type="i">
-        <range min="0" max="1024"/>
-        <default>0</default>
-        <summary>Maximum number of empty columns in alt-tab popup window that are added to display long window labels</summary>
-        <description>The popup window may be expanded by empty columns up to the maximum columns width configured in config option 'alt-tab-max-columns' to fit window labels if less columns are displayed.</description>
+    <key name="alt-tab-expand-to-fit-title" type="b">
+        <default>false</default>
+        <summary>Expand the alt-tab popup window to fit longer window titles</summary>
+        <description>The popup window may be expanded up to the width determined by the config parameter 'alt-tab-max-columns'.</description>
     </key>
   </schema>
 
