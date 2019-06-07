@@ -1,3 +1,69 @@
+### marco 1.23.1
+
+  * tx: sync with transifex
+  * Make alt+tab max columns configurable and consider window label width
+  * add invisible-border
+  * theme: Fix window state when tiling from maximized
+  * compositor: fix possible crash closing/destroying window
+  * update window->has_resize_func at the right time when unfullscreening
+  * frames: include invisible area in cache
+  * frames: Rename layout to text_layout
+  * frames: again change meta_frames_applet_shapes
+  * Fix scaling overcorrection when caching frame borders
+  * compositor: fix border_size
+  * frame: make frame window transparent
+  * frames: apply shapes in different way
+  * frames: add dest_kind to apply_cairo_region_to_window
+  * frames: Fall back to title bar if nothing else matched
+  * theme-viewer: Fix invisible borders
+  * window: Correct coordinates for the configure event
+  * frame: Make sure to offset by invisible borders when unmanaging windows
+  * window: Fix _NET_FRAME_EXTENTS to work properly
+  * theme: don't add invisible borders for windows that can't be resized
+  * window: Fix window placement to exclude invisible borders
+  * theme: Don't add any bottom border to shaded windows
+  * Account for invisible borders when constraining modal dialogs
+  * compositor: fix shadow size and placement
+  * MetaWindow: Repurpose get_outer_rect and add get_input_rect
+  * MetaWindow: Compensate for invisible border changes
+  * ui: Replace inline borders in MetaFrameGeometry with MetaFrameBorder
+  * MetaFrameBorders: add invisible borders
+  * theme: add invisible_border to metacity theme
+  * compositor: don't draw shadow under decorations
+  * compositor: add function to convert cairo region to xserver region
+  * constraints: fix mem leak in meta_window_constrain()
+  * MetaFrames: factor out MetaUIFrame accessors for borders, corner radiuses
+  * frame: Add "get_corner_radiuses" chain
+  * frame: destroy window->frame_bounds when destroying the frame
+  * Only shadow ARGB windows with a frame outside the frame
+  * Fix XShape
+  * compositor: don't draw shadow under windows
+  * constraints: initialize window->user_rect in initial placement
+  * theme: Make meta_frame_draw_theme take a GtkStyleContext instead of a widget
+  * build everything as library
+  * Allow raise_on_click to be set independent of focus_mode
+  * window: initialize few variables
+  * frames: Explicitly initialize style contexts
+  * fix a crash-on-exit
+  * ui-frame: Add support for style variants
+  * ui-frames: Delay attaching the style to new frames
+  * core: Update frame style when _GTK_THEME_VARIANT changes
+  * ui: Add meta_ui_update_frame_style()
+  * core: Allow retrieving the theme variant via core_get()
+  * window: Parse _GTK_THEME_VARIANT property
+  * MetaFrameBorders: Add meta_frame_borders_clear
+  * Replace public MetaFrameGeometry with MetaFrameBorders
+  * alt+tab popup: bugfix mouse click handling for scale factor > 1
+  * alt+tab popup: follow mouse while mouse button is pressed
+  * Handle mouse clicks in Alt+Tab Popup
+  * Allow use of up/down arrow keys in alt+tab popup
+  * libmetacity: use cairo to render gradient
+  * gradient: sync code with mutter before it was removed
+  * fix window type for splash
+  * Fix Could not parse desktop file marco.desktop
+  * travis: use fedora-30 and ubuntu-19.10 for building
+  * Migrate from intltool to gettext
+
 ### marco 1.23.0
 
   * tx: sync with transifex
