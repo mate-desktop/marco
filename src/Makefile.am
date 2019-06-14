@@ -116,7 +116,7 @@ libmarco_private_la_SOURCES=			\
 	ui/ui.c \
 	include/all-keybindings.h
 
-libmarco_private_la_LDFLAGS = -no-undefined -version-info 1:0:0
+libmarco_private_la_LDFLAGS = -no-undefined -version-info $(LT_VERSION_INFO)
 libmarco_private_la_LIBADD = @MARCO_LIBS@
 
 libmarcoincludedir = $(includedir)/marco-1/marco-private
