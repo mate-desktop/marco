@@ -20,7 +20,7 @@ dnl **************************************************************************
 dnl Library version information
 dnl **************************************************************************
 
-m4_define([lt_current], [1])
+m4_define([lt_current], [2])
 m4_define([lt_revision], [0])
 m4_define([lt_age], [0])
 m4_define([lt_version_info], [lt_current:lt_revision:lt_age])
