@@ -16,9 +16,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Butterfly <gokhanlnx@gmail.com>, 2019\n"
 "Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
@@ -1123,7 +1123,7 @@ msgstr "Pencereyi Güney Batı (alt sol) köşeye döşe"
 msgid "Bell event"
 msgstr "Zil olayı"
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Bilinmeyen pencere bilgi isteği: %d"
@@ -1165,7 +1165,7 @@ msgstr "Kompozisyon için gerekli olan %s eklentisi eksik"
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X Pencere Sistemi '%s' ekranı açılamadı\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1176,7 +1176,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2381
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1187,31 +1187,31 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/core/keybindings.c:2470
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "%d komutu tanımlanmamış.\n"
 
-#: ../src/core/keybindings.c:3526
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Hiçbir terminal komutu tanımlanmamış.\n"
 
-#: ../src/core/keybindings.c:3666
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Çalışma alanının ismini değiştir</tt>"
 
-#: ../src/core/keybindings.c:3667
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
 msgstr "Yeni Çalışm Alanı Adı:"
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "OK"
 msgstr "Tamam"
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
 msgstr "İptal"
 
@@ -1290,12 +1290,12 @@ msgstr "Yeniden başlatılamadı: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr "%s GStettings anahtarında saklanan %d, %d ilâ %d alanı dışında\n"
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1303,12 +1303,12 @@ msgstr ""
 "Hatalı uygulamalara yönelik çözümler devre dışı. Bazı uygulamalar düzgün "
 "işlemeyebilir.\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "\"%s\" yazıtipi açıklaması %s GSettings anahtarından ayrıştırılamadı\n"
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1317,7 +1317,7 @@ msgstr ""
 "Yapılandırma veritabanında bulunan \"%s\", fare düğme düzenleyicisi olarak "
 "geçerli bir değer değil\n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1326,7 +1326,7 @@ msgstr ""
 "Yapılandırma veritabanında bulunan \"%s\", \"%s\" tuş bağı olarak geçerli "
 "bir değer değil\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
 msgstr "Çalışma Alanı %d"
@@ -1463,7 +1463,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5893
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1478,7 +1478,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6458
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1558,47 +1558,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "Kullanım: %s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "Pencereyi Kapat"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "Pencere Menüsü"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "Pencereyi Küçült"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "Pencereyi Büyült"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr "Pencereyi Eski Boyutuna Getir"
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr "Pencereyi Yukarı Sar"
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr "Pencereyi Geri Sar"
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr "Pencereyi Üstte Tut"
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr "Pencereyi Üstten Kaldır"
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr "Her Zaman Görünen Çalışma Alanında"
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr "Pencereyi Sadece Bir Çalışma Alanına Yerleştir"
 
@@ -1785,53 +1789,74 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "üst"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "alt"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
 msgstr "sol"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
 msgstr "sağ"
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "çerçeve geometrisi \"%s\" boyutunu tanımlamıyor"
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "çerçeve geometrisi \"%s\" boyutunu \"%s\" pencere kenarı için tanımlamıyor"
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "%g kabul edilebilir bir düğme en-boy oranı değil"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Çerçeve geometrisi düğmelerin boyutunu tanımlamıyor"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Renk geçişlerinde en az iki renk olmalı"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr ""
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1841,7 +1866,7 @@ msgstr ""
 "örneğin, gtk:fg[NORMAL] belirtiminde NORMAL, durumu gösterir; \"%s\" "
 "ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1851,17 +1876,17 @@ msgstr ""
 "örneğin, gtk:fg[NORMAL] belirtiminde NORMAL, durumu gösterir; \"%s\" "
 "ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Renk belirtimindeki \"%s\" durumu anlaşılamadı"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Renk belirtimindeki \"%s\" renk bileşeni anlaşılamadı"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1870,44 +1895,44 @@ msgstr ""
 "Renk karışımının doğru biçimi \"blend/bg_color/fg_color/alpha\"dır; \"%s\" "
 "bu biçime uymuyor"
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Renk karışımındaki \"%s\" alfa değeri ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "Renk karışımının alfa değeri \"%s\", 0.0 ile 1.0 arasında değil"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr ""
 "Gölgelendirmenin doğru biçimi \"shade/bas_color/factor\"dır; \"%s\" bu "
 "biçime uymuyor"
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Gölgeli rengin gölge katsayısı olan \"%s\" ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Gölgeli rengin gölge katsayısı olan \"%s\", negatif"
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "\"%s\" rengi ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Koordinat ifadesi izin verilmeyen '%s' karakterini içeriyor"
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1915,29 +1940,29 @@ msgid ""
 msgstr ""
 "Koordinat ifadesi '%s' gerçel sayısını içeriyor ve bu sayı ayrıştırılamıyor"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Koordinat ifadesi ayrıştırılamayan '%s' tamsayısını içeriyor"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "Koordinat ifadesi bu metnin başında bilinmeyen bir işleç içeriyor: \"%s\""
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Koordinat ifadesi boş ya da anlaşılamadı"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Koordinat ifadesi sıfıra bölümle sonuçlanıyor"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
@@ -1945,22 +1970,22 @@ msgstr ""
 "Koordinat ifadesi bir gerçel sayı üzerinde mod (kalan bulma) işlecini "
 "kullanmaya çalıştı"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Koordinat ifadesi işleneni beklenen \"%s\", işlecini içeriyor"
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Koordinat ifadesi işleci beklenen bir işlenen içeriyor"
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Koordinat ifadesi bir işlenen yerine işleçle bitiyor"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1969,39 +1994,39 @@ msgstr ""
 "Koordinat ifadesi birbirlerinin izleyen ve aralarında işlenen olmayan "
 "\"%2$c\" ve \"%1$c\" işleçlerini içeriyor"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr ""
 "Koordinat ifadesi bilinmeyen bir değişken ya da sabit olan \"%s\" içeriyor"
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Koordinat belirtim ayrıştırıcısı tamponundan taştı."
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Koordinat ifadesi sol parantezi olmayan bir sağ parantez içeriyor"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Koordinat ifadesi sağ parantezi olmayan bir sol parantez içeriyor"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Koordinat ifadesi göründüğü kadarıyla ne işleç ne de işlenen içeriyor"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Tema bir hata ile sonuçlanan ifadeye sahip: %s\n"
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2010,23 +2035,23 @@ msgstr ""
 "Bu çerçeve biçeminde <button function=\"%s\" state=\"%s\" draw_ops=\"her "
 "neyse\"/> belirtilmek zorunda"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Eksik <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"her neyse\"/>"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" teması yüklenemedi: %s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "\"%2$s\" temasında hiç <%1$s> atanmamış"
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2035,82 +2060,82 @@ msgstr ""
 "\"%2$s\" temasında \"%1$s\" pencere türüne çerçeve biçemi atanmamış, bir "
 "<window type=\"%3$s\" style_set=\"her neyse\"/> öğesi ekleyin"
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "Kullanıcı tanımlı sabitler büyük harfle başlamalıdır; \"%s\" buna uymuyor"
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "\"%s\" sabit değeri zaten tanımlanmış"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "<%2$s> öğesinde \"%1$s\" özniteliği yok"
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "Satır %d karakter %d: %s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "\"%s\" özniteliği aynı <%s> öğesinde iki kez kullanılmış"
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "\"%s\" özniteliği bu <%s> öğesi içinde geçerli değil"
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\" bir tamsayı olarak ayrıştırılamadı"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "\"%2$s\" dizgisinin sonundaki \"%1$s\" karakterleri anlaşılmadı"
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "%ld tamsayısı pozitif olmalı"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "%ld tamsayısı çok büyük, şu anda üst sınır %d"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "\"%s\" bir gerçel sayı olarak ayrıştırılamadı"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr ""
 "Mantıksal değerler ancak \"true\" (doğru) ya da \"false\" (yanlış) "
 "değerlerini alabilir; \"%s\" olamaz"
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Açı 0.0 ile 360.0 arasında olmalı, %g verilmiş\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "Alfa 0.0 (görünmez) ile 1.0 (düz renk) arasında olmalıydı ama %g verilmiş\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2119,59 +2144,59 @@ msgstr ""
 "Geçersiz öğe ölçüsü \"%s\" (şunlardan biri olmalıdır: xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> adı \"%s\" ikinci kez kullanılmış"
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> üst değeri \"%s\" tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> geometrisi \"%s\" tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s>, ya bir geometri ya da geometrisi olan bir üst öğe belirtmeli"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "Arkaplanı anlamlı olabilmesi için bir alfa değeri ile belirtmelisiniz"
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "<%2$s> öğesinde bilinmeyen type \"%1$s\""
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "<%2$s> öğesinde bilinmeyen style_set \"%1$s\""
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "\"%s\" pencere türünün önceden atanmış bir biçem kümesi var"
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "<%2$s> altında <%1$s> öğesi kullanılamaz"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2179,123 +2204,123 @@ msgstr ""
 "Düğmelere hem \"button_width\"/\"button_height\" (en-boy) değerleri hem de "
 "\"aspect_ratio\" değeri verilemez"
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "\"%s\" uzaklığı bilinmiyor"
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "\"%s\" en-boy oranı bilinmiyor"
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "\"%s\" pencere kenarı bilinmiyor"
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "<%s> öğesinde \"start_angle\" (başlama açısı) ya da \"from\" özniteliği yok"
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "<%s> öğesinde \"extent_angle\" (genişletme açısı) ya da \"to\" özniteliği yok"
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Renk geçişi türü olarak verilen \"%s\" değeri anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "<%2$s> öğesinin doldurma türü \"%1$s\" anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "<%2$s> öğesi için \"%1$s\" durumu anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "<%2$s> öğesi için \"%1$s\" gölgesi anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "<%2$s> öğesi için \"%1$s\" oku anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "\"%s\" adında hiç <draw_ops> tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Burada \"%s\" draw_ops'unu içermek çevrimsel gönderime yol açar"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Çerçeve parçası için bilinmeyen konum \"%s\""
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Çerçeve biçeminin %s konumunda zaten bir parça var"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "\"%s\" adında hiç <draw_ops> tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Düğme için geçersiz işlev \"%s\""
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "Düğme işlevi \"%s\" bu sürümde mevcut değil (%d, gereken %d)"
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Düğme için geçersiz durum \"%s\""
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Çerçeve biçeminde %s işlevi, %s durumu için zaten bir düğme var"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\", odak özniteliği için geçerli bir değer değil"
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\", durum özniteliği için geçerli bir değer değil"
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "\"%s\" adlı bir biçem tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "\"%s\", yeniden boyutlandırma özniteliği için geçerli bir değer değil"
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
@@ -2304,25 +2329,25 @@ msgstr ""
 "<%s> öğesinin büyütülmüş/toplanmış durumlarında \"resize\" özniteliği "
 "bulunmamalı"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr "<%s> öğesinin büyütülmüş durumlarında \"resize\" özniteliği bulunmamalı"
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr ""
 "%s durumu, %s yeniden boyutlandırma, %s odak için biçem zaten belirtilmiş"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "%s durumu, odak %s için biçem zaten belirtilmiş"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
@@ -2330,7 +2355,7 @@ msgstr ""
 "Bir <piece> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops "
 "özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
@@ -2338,7 +2363,7 @@ msgstr ""
 "Bir <button> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops "
 "özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
@@ -2346,62 +2371,78 @@ msgstr ""
 "Bir <menu_icon> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops "
 "özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr "En dıştaki tema unsuru <%s> değil <metacity_theme> olmalıdır"
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr ""
 "name/author/date/description öğelerinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "<constant> öğesinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr ""
 "distance/border/aspect_ratio öğelerinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "draw operation öğesinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "<%s> öğesi <%s> öğesi içinde kullanılamaz"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "Çerçeve parçası için hiç draw_ops sağlanmamış"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "Düğme için hiç draw_ops sağlanmamış"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "<%s> öğesi içinde hiçbir metin kullanılamaz"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "Bu temada <%s> iki kez belirtilmiş"
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Tema %s için geçerli bir dosya bulunamadı\n"
@@ -2451,56 +2492,60 @@ msgstr "Kesilebilir Menü"
 msgid "Border"
 msgstr "Köşelik"
 
-#: ../src/ui/theme-viewer.c:784
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "Düğme düzeni testi %d"
 
-#: ../src/ui/theme-viewer.c:809
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "bir pencere çerçevesi çizmek için %g milisaniye"
 
-#: ../src/ui/theme-viewer.c:849
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Kullanım: marco-theme-viewer [TEMAİSMİ]\n"
 
-#: ../src/ui/theme-viewer.c:856
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Tema yüklenirken hata: %s\n"
 
-#: ../src/ui/theme-viewer.c:862
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" teması %g saniye içerisinde yüklendi\n"
 
-#: ../src/ui/theme-viewer.c:906
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "Normal Başlık Yazıtipi"
 
-#: ../src/ui/theme-viewer.c:912
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "Küçük Başlık Yazıtipi"
 
-#: ../src/ui/theme-viewer.c:918
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "Büyük Başlık Yazıtipi"
 
-#: ../src/ui/theme-viewer.c:923
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "Düğme Düzenleri"
 
-#: ../src/ui/theme-viewer.c:928
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "Karşılaştırma"
 
-#: ../src/ui/theme-viewer.c:985
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "Pencere Başlığı Buraya Gelir"
 
-#: ../src/ui/theme-viewer.c:1090
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

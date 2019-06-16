@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Malagasy (https://www.transifex.com/mate/teams/13566/mg/)\n"
@@ -1026,7 +1026,7 @@ msgstr ""
 msgid "Bell event"
 msgstr ""
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr ""
@@ -1066,7 +1066,7 @@ msgstr ""
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Tsy afaka nanokatra ny sehon'ny ny rafitra Window X '%s'\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1077,7 +1077,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2381
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1085,31 +1085,31 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/core/keybindings.c:2470
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Tsy mbola nisy baiko %d nofaritana.\n"
 
-#: ../src/core/keybindings.c:3526
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Tsy mbola nisy baikon'ny terminal nofaritana.\n"
 
-#: ../src/core/keybindings.c:3666
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3667
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
 msgstr "Ajanony"
 
@@ -1182,12 +1182,12 @@ msgstr "Tsy afaka miverina mandeha: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1195,12 +1195,12 @@ msgstr ""
 "Natsahatra ireo vahaolana ho an'ny rindranasa simba. Mety tsy handeha tsara "
 "ny rindranasa sasantsasany.\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1209,7 +1209,7 @@ msgstr ""
 "Tsy mety ho an'ny mpanovan'ny tsindrin'ny totozy ny sanda \"%s\" ao "
 "anatin'ny soratra fototry ny kirakira\n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1218,7 +1218,7 @@ msgstr ""
 "Ny sanda \"%s\" ao anatin'ny soratra fototra dia tsy mety ho an'ny "
 "fitambaran-kitendry \"%s\"\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
 msgstr "Workspace %d"
@@ -1355,7 +1355,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5893
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1371,7 +1371,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6458
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1451,47 +1451,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "Fampiasa: %s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "Hidio ilay fikandrana"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "Tolotry ny fikandrana"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "Akelezo ilay fikandrana"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "Alehibiazo ilay fikandrana"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr ""
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr ""
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr ""
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr ""
 
@@ -1678,53 +1682,74 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "ambony"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "ambany"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
 msgstr "havia"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
 msgstr "havanana"
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "Tsy nofaritan'ny rafitsarin'ilay frame ny habe \"%s\" "
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "Tsy nofaritan'ny rafitsarin'ilay frame ny habe \"%s\" an'ny \"%s\""
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "Tsy araka ny tokony ho izy ny halava/saka %g an'ilay tsindry"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Tsy nofaritan'ny rafitsarin'ilay frame ny haben'ny tsindry"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Tokony hanana loko roa fahafahakeliny ireo zavatra misompirana"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr ""
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1734,7 +1759,7 @@ msgstr ""
 "Ohatra: gtk:fg[NORMAL]; NORMAL ilay toetra eto. Tsy afaka nizarazara ny "
 "\"%s\""
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1744,17 +1769,17 @@ msgstr ""
 "loko GTK. Ohatra: gtk:fg[NORMAL]; NORMAL no toetra eto. Tsy afaka nizarazara"
 " ny \"%s\""
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Tsy mazava ny toetra \"%s\" anatin'ilay famaritana loko"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Tsy mazava ny singan-doko \"%s\" anatin'ilay famaritana loko"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1763,46 +1788,46 @@ msgstr ""
 "\"blend/bg_color/fg_color/alpha\" no lamin'ny fifangaroana; tsy mifanaraka "
 "amin'io lamina io ny \"%s\""
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Tsy afaka nizarazara ny sanda alpha \"%s\" anatin'ilay loko mifangaro"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr ""
 "Tsy tafiditra anatin'ny 0.0 sy 1.0 ny sanda alpha \"%s\" anatin'ilay loko "
 "mifangaro"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr ""
 "\"shade/base_color/factor\" no lamin'ny fanalofana; tsy mifanaraka amin'ilay"
 " lamina ny \"%s\""
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Tsy afaka nizarazara anon'ny fanalofana \"%s\" amin'ilay loko voaaloka"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Negatif ny anon'ny fanalofana \"%s\" amin'ilay loko voaaloka"
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "Tsy afaka nizarazara ny loko \"%s\""
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Ahitana ny marika '%s' izay tsy ekena ny filazan'ilay coordonnée"
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1811,14 +1836,14 @@ msgstr ""
 "Ahitana ny floating point number '%s' izay tsy mety zarazaraina ny "
 "filazan'ilay coordonnée"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr ""
 "Ahitana ny isa feno '%s' izay tsy mety zarazaraina ny filazan'ilay "
 "coordonnée"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
@@ -1827,17 +1852,17 @@ msgstr ""
 "Ahitana mpikirakira tsy fantatra ilay filazan'ny coordonnée eo amin'ny "
 "fiandohan'ity lahabolana ity: \"%s\""
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Foana na tsy mazava ny filazan'ilay coordonnée"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Mahatonga fizarana 0 ny filazan'ilay coordonnée"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
@@ -1845,27 +1870,27 @@ msgstr ""
 "Manandrana mampiasa mpikirakira mod amina floating-point number iray ny "
 "filazan'ilay coordonnée"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr ""
 "Ahitana mpikirakira \"%s\" amin'ny toerana nampoizina hisy operand ny "
 "filazan'ilay coordonnée"
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr ""
 "Nahitana operand amin'ny toerana nampoizina hisy mpikirakira ny filazan'ilay"
 " coordonnée"
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr ""
 "Niafara tamin'ny mpikirakira fa tsy operand ny filazan'ilay coordonnée"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1874,26 +1899,26 @@ msgstr ""
 "Ahitana mpikirakira \"%c\" manaraka ny mpikirakira \"%c\" tsy elanelanina "
 "operand ny filazan'ilay coordonnée"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr ""
 "Manana teny miova na sanda tsy miova tsy fantatra \"%s\" ny filazan'ilay "
 "cooordonnée"
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Nihoatra ny buffer-ny ny mpizarazara ny filazan'ilay coordonnée."
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr ""
 "Nisy fonosana mikatona saingy tsy nisy fonosana misokatra ny filazan'ilay "
 "coordonnée"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
@@ -1901,18 +1926,18 @@ msgstr ""
 "Nisy fonosana misokatra saingy tsy nisy fonosana mikatona ny filazan'ilay "
 "coordonnée"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr ""
 "Tahaka ny tsy manana mpikirakira ny operand ny filazan'ilay coordonnée"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr ""
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1921,23 +1946,23 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> tsy maintsy "
 "faritana ho an'ity endrika frame ity"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> tsy ampy"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Tsy nety ny fakana ny endrika \"%s\": %s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Tsy misy <%s> voafaritra ho an'ny endrika \"%s\""
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1947,85 +1972,85 @@ msgstr ""
 "endrika \"%s\". Manampia singataharo <window type=\"%s\" "
 "style_set=\"whatever\"/> iray"
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Tsy maintsy manomboka amin'ny sora-baventy ny sanda tsy miova faritan'ny "
 "mpampiasa; tsy tahaka izany anefa ny \"%s\""
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Efa voafaritra ny sanda tsy miova \"%s\""
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "Tsy misy marika manokana \"%s\" amin'ny singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "Andalana %d marika %d: %s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "Miverina indroa anatin'ny singantaharo <%s> ny marika \"%s\" "
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr ""
 "Tsy mety ny marika manokana \"%s\" amin'ny <%s> ao anatin'izao seha-kevitra "
 "izao"
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "Tsy afaka nizarazara ny \"%s\" amin'ny maha isa feno azy"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "Tsy mazava ireo marika faramparany \"%s\" ao amin'ny laha-daza \"%s\""
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "Tsy maintsy positif ilay isa feno %ld"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "Be loatra ilay isa feno %ld; %d izao no avo indrindra"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "Tsy nahazarazara ny \"%s\" amin'ny maha floating point number azy"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "Tsy maintsy \"true\" na \"false\" ny sanda boleanina, fa tsy \"%s\""
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Tsy maintsy anelanelan'ny 0.0 sy 360.0 ilay zoro; %g izy teo\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "Tsy maintsy anelanelan'ny 0.0 (tsy hita maso) sy 1.0 (hita mazava tsara) "
 "ilay alpha; %g izy teo\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2034,181 +2059,181 @@ msgstr ""
 "ambaratongan-dohateny \"%s\" tsy mety (tsy maintsy iray amin'ny xx-"
 "small,x-small,small,medium,large,x-large,xx-large ilay izy)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "Miverina indroa ny anarana \"%s\" an'ny <%s>"
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "Tsy mbola vaofaritra ny reny \"%s\" an'ny <%s>"
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "Tsy mbola voafaritra ny rafitsary \"%s\" an'ny <%s>"
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "Tsy mamaritra rafitsary iray na reny manana rafitsary iray ny <%s>"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "Karazana \"%s\" tsy fantatra amin'ny singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "style_set \"%s\" tsy fantatra amin'ny singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "Efa nomena amboaran'endrika ny karazam-pikandrana \"%s\""
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "Ny singantaharo <%s> dia tsy afaka apetraka ambanin'ny <%s>"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "Tsy fantatra ny elanelana \"%s\""
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "Tsy fantatra ny fifandanjana halava/saka \"%s\""
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "Tsy fantatra ny sisiny \"%s\""
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Tsy mazava ny sanda \"%s\" ho an'ny karazan'ilay zavatra misompirana"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "Tsy mazava ny karazam-pamenoana \"%s\" ho an'ny singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "Tsy mazava ny toetra \"%s\" ho an'ny singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "Tsy mazava ny aloka \"%s\" ho an'ny singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "Tsy mazava ny tondro \"%s\" ho an'ny singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "Tsy misy <draw_ops> mitondra ny anarana \"%s\" mbola voafaritra"
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Hiteraka référence mihodinkodina ny fampidirana ny draw_ops \"%s\" eto"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Toerana \"%s\" tsy fantatra ho an'ny singan'ilay frame"
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Efa manana singa amin'ny toerana %s ilay endriky ny frame"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "Tsy mbola misy <draw_ops> mitondra ny anarana \"%s\" voafaritra"
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Asa \"%s\" tsy fantatra ho an'ny tsindry"
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Toetra \"%s\" tsy fantatra ho an'ny tsindry"
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Efa manana tsindry ho an'ny asa %s sy toetra %s ny endrik'ilay frame"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "Tsy manan-kery ho an'ny marika manokan'ny fanasongadinana ny sanda \"%s\""
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "Tsy manan-kery ho an'ny marika manokan'ny toetra ny sanda \"%s\""
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "Tsy mbola voafaritra ny endrika \"%s\""
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "Tsy manan-kery ho an'ny marika manokan'ny fanovana habe ny sanda \"%s\""
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
@@ -2217,26 +2242,26 @@ msgstr ""
 "Tsy tokony hisy marika manokana \"resize\" amin'ny singantaharo <%s> ho "
 "an'ny fanalehibiazana/fanalofana"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr ""
 "Efa voafaritra ny endrika ho an'ny toetra %s fanovana habe %s "
 "fanasongadinana %s"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "Efa voafaritra ny endrika ho an'ny toetra %s fanasongadinana %s"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
@@ -2245,7 +2270,7 @@ msgstr ""
 "marika manokana draw_ops iray sy singantaharo <draw_ops> iray na namaritra "
 "singantaharo roa ilay endrika)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
@@ -2254,7 +2279,7 @@ msgstr ""
 "marika manokana draw_ops iray sy singantaharo <draw_ops> iray na namaritra "
 "singantaharo roa ilay endrika)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
@@ -2263,12 +2288,28 @@ msgstr ""
 "marika manokana draw_ops iray sy singantaharo <draw_ops> iray na namaritra "
 "singantaharo roa ilay endrika)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
@@ -2276,12 +2317,12 @@ msgstr ""
 "Tsy azo atao anaty singantaharo name/author/date/description ny singantaharo"
 " <%s>"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "Tsy azo atao anaty singantaharo <constant> ny singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
@@ -2289,38 +2330,38 @@ msgstr ""
 "Tsy azo atao anaty singantaharo distance/border/aspect_ratio ny singantaharo"
 " <%s>"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "Tsy azo atao anaty singantaharo draw operation ny singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "Ny singantaharo <%s> dia tsy afaka apetraka anatina singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "Tsy misy draw_ops ho an'ny singan'ny frame"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "Tsy misy draw_ops ho an'ny tsindry"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "Tsy azo asiana soratra anatin'ny singantaharo <%s>"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr ""
@@ -2370,56 +2411,60 @@ msgstr "Tolotra miongotra"
 msgid "Border"
 msgstr "Sisiny"
 
-#: ../src/ui/theme-viewer.c:784
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "%d fitsapana ny fandaminana tsindry"
 
-#: ../src/ui/theme-viewer.c:809
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g milisegaondra hanoritana frame-na fikandrana iray"
 
-#: ../src/ui/theme-viewer.c:849
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Fampiasa:marco-theme-viewer [ANARANENDRIKA]\n"
 
-#: ../src/ui/theme-viewer.c:856
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Tsy nety ny fakana ilay endrika: %s\n"
 
-#: ../src/ui/theme-viewer.c:862
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Maka ilay endrika \"%s\" anatin'ny %g segaondra\n"
 
-#: ../src/ui/theme-viewer.c:906
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "Endri-tsora-dohateny antonony"
 
-#: ../src/ui/theme-viewer.c:912
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "Endri-tsora-dohateny madinika"
 
-#: ../src/ui/theme-viewer.c:918
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "Endri-tsora-dohateny lehibe"
 
-#: ../src/ui/theme-viewer.c:923
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "Fandaminana tsindry"
 
-#: ../src/ui/theme-viewer.c:928
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "Fitsapana fahombiazana"
 
-#: ../src/ui/theme-viewer.c:985
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "Manketo ny lohatenin'ny fikandrana"
 
-#: ../src/ui/theme-viewer.c:1090
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

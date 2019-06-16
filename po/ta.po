@@ -13,9 +13,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Tamil (https://www.transifex.com/mate/teams/13566/ta/)\n"
@@ -1060,7 +1060,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "மணி நிகழ்ச்சி"
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "தெரியாத சாளர தகவல் வேண்டுகோள்: %d"
@@ -1102,7 +1102,7 @@ msgstr "பலவின் ஆக்கத்திற்கு கிடக்�
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X சாளர காட்சியை திறப்பதில் தோல்வி '%s'\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1112,7 +1112,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2381
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1123,31 +1123,31 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/core/keybindings.c:2470
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "கட்டளை %d எதுவும் குறிப்பிடப்படவில்லை.\n"
 
-#: ../src/core/keybindings.c:3526
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "முனைய கட்டளை எதுவும் குறிப்பிடப்படவில்லை.\n"
 
-#: ../src/core/keybindings.c:3666
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3667
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
 msgstr "ரத்து செய்க"
 
@@ -1226,12 +1226,12 @@ msgstr "மீண்டும் துவக்குவதில் பிழ�
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1239,26 +1239,26 @@ msgstr ""
 "உடைந்த பயன்பாடுகளின் செயல்பாடு தடைசெய்யப்பட்டது, சில பயன்பாடுகள் சரியாக வேலை"
 " செய்யாது.\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "அமைப்பு பாங்கில் உள்ள \"%s\" சுட்டி பட்டன் மாற்றியில் செல்லாத மதிப்பு\n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "\"%s\" அமைப்பு தரவுத்தளத்தில் உள்ள மதிப்பு செல்லாத கீபைன்டிங்\"%s\"\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
 msgstr "வேலையிடம் %d"
@@ -1391,7 +1391,7 @@ msgid "Marco"
 msgstr "மெட்டாசிட்டி"
 
 #. first time through
-#: ../src/core/window.c:5893
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1406,7 +1406,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6458
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1483,47 +1483,51 @@ msgstr "பண்பு %s சாளரம் 0x%lx செல்லாத UTF-8 
 msgid "Usage: %s\n"
 msgstr "பயன்பாடு: %s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "சாளரம் மூடவும்"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "சாளர பட்டி"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "சாளரத்தை குறுக்கவும்"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "சாளரத்தை பெரிதாக்கவும்"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr "சாளரத்தை மீட்டெடு"
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr "சாளரத்தை மேலே சுருட்டு"
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr "சாளரம் விரிக்கவும்"
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr "சாளரத்தை மேலே வைத்திரு "
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr "மேலிருந்து சாளரத்தை நீக்கு  "
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr "வேலைகளத்தில்  எப்போதும் தெரியும் "
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr "சாளரத்தை ஒரே ஒரு பணியிடத்தில் மட்டும் வைக்கவும்"
 
@@ -1710,53 +1714,74 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "மேல்"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "கீழ்"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
 msgstr "இடது"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
 msgstr "வலது"
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "சட்ட வடிவியல் \"%s\" அளவை குறிப்பிடவில்லை"
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "\"%s\" ஓரத்திற்கு வடிவியல் \"%s\" அளவை குறிப்பிடவில்லை"
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "பட்டன் அளவு விகிதம் %g சரியில்ல"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "சட்ட அளவு பட்டன் அளவை குறிப்பிடவில்லை"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "க்ரேடியன்டில் இரண்டு நிறங்களாவது இருக்க வேண்டும்"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr ""
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1765,7 +1790,7 @@ msgstr ""
 "GTK வண்ணம் அடைப்புக்குறிகளை கொண்டிருக்க வேண்டும் உம் gtk:fg[NORMAL] NORMAL "
 "நிலையை குறிக்கும் பகுக்க முடியாது \"%s\""
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1774,17 +1799,17 @@ msgstr ""
 "GTK வண்ணம் மூடிய அடைப்புக்குறிகளை கொண்டிருக்க வேண்டும் உம் gtk:fg[NORMAL] "
 "NORMAL நிலையை குறிக்கும் பகுக்க முடியாது \"%s\""
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "நிலை \"%s\" வண்ண குறிப்பில் புரிந்துகொள்ள முடியவில்லை"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "நிலை \"%s\" வண்ண குறிப்பு பொருளில் புரிந்துகொள்ள முடியவில்லை"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1793,56 +1818,56 @@ msgstr ""
 "வளைந்த அமைப்பு \"blend/bg_color/fg_color/alpha\", \"%s\" இந்த வடிவமைப்பிற்கு"
 " பொருந்தாது"
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "ஆம்ஃபா மதிப்பை \"%s\" வளைந்த நிறத்தில் பகுக்க முடியவில்லை"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "ஆல்ஃபா மதுப்பு \"%s\"வளைவு நிறத்தில் 0.0 க்கும் 1.0 க்கும் இடையில் இல்லை"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr ""
 "நிழல் வடிவமைப்பு \"shade/base_color/factor\", \"%s\" இந்த அமைப்பிற்கு "
 "பொருந்தாது"
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "நிழல்விகிதத்தை \"%s\" நிறத்தோடு பகுக்க முடியாது"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "நிழல் விகிதம் \"%s\" முழுக்களாக உள்ளது "
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "\"%s\" நிறத்தை பகுக்க முடியவில்லை"
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "அச்சுக்கள் எழுத்தால் குறிக்கப்பட்டுள்ளது '%s' க்கு அனுமதி இல்லை"
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "அச்சுக்கள் பின்ன எண்ணால் குறிக்கப்பட்டுள்ளது '%s' ஐ பகுக்க முடியாது"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "அச்சுக்கள் இயல் எண்ணால் குறிக்கப்பட்டுள்ளது '%s' ஐ பகுக்க முடியாது"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
@@ -1850,39 +1875,39 @@ msgid ""
 msgstr ""
 "உரையின் துவக்கத்தில் அச்சின் கூற்றில் தெரியாத செயல் இடம்பெற்றுள்ளது \"%s\""
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "அச்சு கூற்று காலியாக உள்ளது அல்லது புரியவில்லை"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "அச்சு கூற்று பூஜ்ஜியத்தால் வகுத்தல் பிழையை தந்தது"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "அச்சு கூற்று mod ஆப்பரேட்டரை பின்ன எண்ணில் பயன்படுத்த முயல்கிறது"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "அச்சு கூற்றில் ஆப்பரேட்டர் உள்ளது \"%s\" ஆப்பரன் எதிர்பார்க்கப்படுகிறது"
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr ""
 "அச்சு கூற்றில் ஆப்பரன்ட் உள்ளது ஆனால் ஆப்பரேட்டர் எதிர்பார்க்கப்படுகிறது"
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "அச்சு கூற்றில் ஆப்பரன்ட்டுக்கு பதில் ஆப்பரேட்டரால் முடிந்தது"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1891,40 +1916,40 @@ msgstr ""
 "அச்சு கூற்றில்  \"%c\" ஆப்பரேட்டர் உள்ளது \"%c\" ஆப்பரேட்டருக்கு ஆப்பரன்ட் "
 "இல்லை"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "அச்சு கூற்றில் செல்லாத மாற்றி மற்றும் கான்ஸ்ட்டன் உள்ளது \"%s\""
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "ஆயத்தொலைவு தெரிவிப்பு பகுப்பி அதன் இடையகத்தை நிரப்பியது"
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr ""
 "அச்சு கூற்றில் மூடிய அடைப்புக்குறி உள்ளது ஆனால் திறந்த அடைப்புகுறி இல்லை"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr ""
 "அச்சு கூற்றில் திறந்த அடைப்புக்குறி உள்ளது ஆனால் மூடிய அடைப்புகுறி இல்லை"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "அச்சுக்கூற்றில் ஆப்பரன்ட் மற்றும் ஆப்பரேட்டர் காணப்படவில்லை"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "கருப்பொருளில் உள்ள கூற்றால் பிழை ஏற்பட்டது: %s\n"
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1933,23 +1958,23 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> இந்த சட்ட "
 "பாணிக்கு குறிப்பிடப்பட வேண்டும்"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "காணவில்லை <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "கருப்பொருளை ஏற்றுவதில் தோல்வி \"%s\": %s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "இல்லை<%s> கருப்பொருளுக்காக அமைக்கப்பட்டது \"%s\""
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1958,81 +1983,81 @@ msgstr ""
 "சட்ட பாணி சாளர வகை இல்லை\"%s\" கருப்பொருளில் \"%s\", <window type=\"%s\" "
 "style_set=\"whatever\"/> உறுப்பை சேர்க்கவும்"
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "பயனீட்டாளர்-குறிப்பிட்ட கான்ஸ்டன் பெரிய எழுத்தில் துவங்க வேண்டும்; \"%s\" "
 "இல்லை"
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "கான்ஸ்டன் \"%s\" ஏற்கெனவே குறிப்பிடப்பட்டது"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "இல்லை \"%s\" உருப்பின் குணன்ங்கள் <%s>"
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "கோடு %d எழுத்து %d: %s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "பண்பு \"%s\" ஒரே உறுப்பில் இரண்டு முறை வந்துள்ளது <%s>"
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "குணங்கள் \"%s\" செல்லாதது <%s> சூழலிலின் உருப்புகள்"
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\" ஐ இயல் எண்ணாக பகுக்க முடியாது"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "\"%s\" தொடரும் சரத்தில் \"%s\" சரத்தை புரிந்துகொள்ள முடியவில்லை"
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "இயல் எண் %ld முழு எண்ணாக இருக்க வேண்டும்"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "இயல் எண் %ld பெரிதாக இருக்கிறது, தற்போது அதிகபட்சம் %d"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "\"%s\" பின்ன எண் பகுக்க முடியாது"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "பூலியன் மதிப்புகள் \"true\" அல்லது \"false\" \"%s\" இல்லை"
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "கோணம் 0.0 மற்றும் 360.0, இடைப்பட்டதாக இருக்க வேண்டும் %g\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr "ஆல்ஃபா 0.0 (பார்வைக்கு) மற்றும் 1.0 (முழுவதும் ஒலிபுகும்), %g\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2041,60 +2066,60 @@ msgstr ""
 "செல்லாத தலைப்பு அளவு \"%s\" ( xx-small,x-small,small,medium,large,x-large"
 ",xx-large)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> பெயர் \"%s\" இரண்டாது முறை பயன்படுத்தப்படுகிறது"
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> தாய் \"%s\" குறிப்பிடப்படவில்லை"
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> வடிவியல் \"%s\" குறிப்பிடப்படவில்லை"
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> வடிவியல் அல்லது வடிவியல் உள்ள மூலத்தை குறிப்பிடவேண்டும்"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr ""
 "ஆல்பா மதிப்பு அர்தமுள்ளதாக இருக்க நீங்கள் ஒரு பின்னணி ஐ குறிப்பிட வேண்டும்."
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "தெரியாத வகை \"%s\" <%s> உறுப்பில்"
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "(_s)தெரியாத பாணி அமைப்பு \"%s\" <%s> உறுப்பில்"
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "சாளர வகை \"%s\" இந்த பாணிக்கு ஏற்கெனவே குறிப்பிடப்பட்டது"
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "உருப்பு <%s> கீழ் அனுமதிக்க படாது <%s>"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2102,123 +2127,123 @@ msgstr ""
 "பட்டன்களுக்கு \"button_width\"/\"button_height\" மற்றும்  \"aspect_ratio\" "
 "இரண்டையுமே குறிப்பிட முடியாது"
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "தூரன் \"%s\" தெரியாது"
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "சீராக்க விகிதம் \"%s\" தெரியாது"
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "ஓரம் \"%s\" தெரியாது"
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "உறுப்பு <%s> இல் \"start_angle\" அல்லது \"from\" மதிப்புரு இல்லை "
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "உறுப்பு <%s> இல் \"extent_angle\" அல்லது \"to\" மதிப்புரு இல்லை "
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "இந்த ஒலிவிளைவிற்கான மதிப்பு \"%s\" ஐ புரிந்துகொள்ள முடியவில்லை"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "இந்த உறுப்பிற்கான <%s> நிரப்பல் வகை \"%s\" ஐ புரிந்துகொள்ள முடியவில்லை"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "இந்த உறுப்பிற்கான <%s> நிலை \"%s\" ஐ புரிந்துகொள்ள முடியவில்லை"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "இந்த உறுப்பிற்கான <%s> நிழல் \"%s\" ஐ புரிந்துகொள்ள முடியவில்லை"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "இந்த உறுப்பிற்கான <%s> அம்புக்குறி \"%s\" ஐ புரிந்துகொள்ள முடியவில்லை"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "இல்லை <draw_ops> அழைக்கப்பட்ட \"%s\" குறிப்பிடப்பட்டது"
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "draw_ops உம் சேர்த்து \"%s\" முழு குறிப்பை உருவாக்கும்"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "சட்டம் ்தில் \"%s\" தெரியாத நிலை"
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "%s இட சட்டம் ஏற்கெனவே உள்ளது"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "இல்லை <draw_ops> இந்த பெயர் \"%s\" எற்கெனவே குறிப்பிடப்பட்டது"
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "\"%s\" பட்டனுக்கு தெரியாத செயல்"
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "பொத்தான் தொழிற்பாடு \"%s\" இந்த வடிவ நிலையில் இல்லை (%d, தேவை %d)"
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "\"%s\" பட்டனுக்கு தெரியாத நிலை"
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "%s நிலை %s இல் ஏற்கெனவே பட்டன் அல்லது செயல் உள்ளது"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\" குறிப்பு பண்பிற்கு இது செல்லாத மதிப்பு"
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\" நிலை பண்பிற்கு இது செல்லாத மதிப்பு"
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "பாணி \"%s\" குறிப்பிடப்படவில்லை"
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "\"%s\" அளவுமாற்ற ப்பு பண்பிற்கு இது செல்லாத மதிப்பு"
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
@@ -2227,26 +2252,26 @@ msgstr ""
 "<%s> உறுப்பில் பெரிதாக்கு/சிறிதாக்கு நிலையில் \"அளவு மாற்ற\" பண்பு "
 "இருக்கக்கூடாது"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr ""
 "பெரிதாக்கிய நிலையில் <%s> உறுப்பு க்கு \"resize\" மதிப்புரு இருக்கக்கூடாது."
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr ""
 " %s அளவுமாற்று %s குறி %s ஆகியவைகளின் நிலை ஏற்கெனவே குறிப்பிடப்பட்டுள்ளது"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "%s குறி %s ஆகியவைகளின் நிலை ஏற்கெனவே குறிப்பிடப்பட்டுள்ளது"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
@@ -2254,7 +2279,7 @@ msgstr ""
 "இரண்டு draw_ops கள் <piece> உறுப்பிற்கு இருக்கக்கூடாது (draw_ops ஐ "
 "குறிப்பிடும் கருப்பொருள் மற்றும் அதன் பண்புகள் <draw_ops> அல்லது இரண்டும்)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
@@ -2262,7 +2287,7 @@ msgstr ""
 "இரண்டு draw_ops கள் <button> உறுப்பிற்கு இருக்கக்கூடாது (draw_ops ஐ "
 "குறிப்பிடும் கருப்பொருள் மற்றும் அதன் பண்புகள் <draw_ops> அல்லது இரண்டும்)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
@@ -2270,60 +2295,76 @@ msgstr ""
 "இரண்டு draw_ops கள் <menu_icon> உறுப்பிற்கு இருக்கக்கூடாது (draw_ops ஐ "
 "குறிப்பிடும் கருப்பொருள் மற்றும் அதன் பண்புகள் <draw_ops> அல்லது இரண்டும்)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr "உறுப்பு <%s> name/author/date/description க்குள் அனுமதி இல்லை"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "உறுப்பு <%s> க்கு <constant> உறுப்பில் அனுமதி இல்லை"
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr "உறுப்பு <%s> க்கு distance/border/aspect_ratio உறுப்பில் அனுமதி இல்லை"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "உறுப்பு <%s> க்கு வரையும் செயல்பாட்டில் பில் அனுமதி இல்லை"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "உருப்பு <%s> இந்த உருப்புக்குள் அனுமதி <%s> கிடையாது"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "சட்டத்திற்கு draw_ops தரப்படவில்லை"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "பட்டனுக்கு ்திற்கு draw_ops தரப்படவில்லை"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "இந்த உருப்புகுள் எந்த உரை அனுமதி கிடையாது <%s>"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "<%s> கருப்பொருக்கு இரண்டுமுறை குறிப்பிட்டுள்ளது"
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "%s கருத்துக்கு செல்லுபடியாகும் கோப்பு கண்டுபிடித்தல் தோல்வியுற்றது \n"
@@ -2373,56 +2414,60 @@ msgstr "Torn-off மெனு"
 msgid "Border"
 msgstr "எல்லை"
 
-#: ../src/ui/theme-viewer.c:784
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "பட்டன் உருவரை சோதனை %d"
 
-#: ../src/ui/theme-viewer.c:809
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g சாளரத்தை வரைய மில்லிசெக்கண்டு"
 
-#: ../src/ui/theme-viewer.c:849
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "பயன்பாடு: marco-theme-viewer [THEMENAME]\n"
 
-#: ../src/ui/theme-viewer.c:856
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "கருப்பொருளை ஏற்றுவதில் பிழை: %s\n"
 
-#: ../src/ui/theme-viewer.c:862
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "கருப்பொருள்  \"%s\" %g செகண்டில்\n"
 
-#: ../src/ui/theme-viewer.c:906
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "இயல்பான தலைப்பு எழுத்துரு"
 
-#: ../src/ui/theme-viewer.c:912
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "சிறிய தலைப்பு எழுத்துரு"
 
-#: ../src/ui/theme-viewer.c:918
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "பெரிய தலைப்பு எழுத்துரு"
 
-#: ../src/ui/theme-viewer.c:923
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "பட்டன் உருவரை"
 
-#: ../src/ui/theme-viewer.c:928
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "நிர்ணயம்"
 
-#: ../src/ui/theme-viewer.c:985
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "சாளர தலைப்பு இங்கே"
 
-#: ../src/ui/theme-viewer.c:1090
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

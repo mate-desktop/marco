@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Yoruba (https://www.transifex.com/mate/teams/13566/yo/)\n"
@@ -992,7 +992,7 @@ msgstr ""
 msgid "Bell event"
 msgstr ""
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr ""
@@ -1032,7 +1032,7 @@ msgstr ""
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Ó kùnà láti ṣí ìṣàfihàn Ètò Fèrèsé X '%s'\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1043,7 +1043,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2381
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1051,31 +1051,31 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/core/keybindings.c:2470
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "A kò tíì soríkì àṣe %d kankan.\n"
 
-#: ../src/core/keybindings.c:3526
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "A kò tíì soríkì àṣẹ támínà kankan.\n"
 
-#: ../src/core/keybindings.c:3666
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3667
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
 msgstr "Parẹ́̀"
 
@@ -1148,12 +1148,12 @@ msgstr "Ó kùnà láti tún bẹ̀rẹ̀: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1161,12 +1161,12 @@ msgstr ""
 "Àwọn workaround fún àwọn ìṣàmúlò-ètò tó dàrú kò ṣiṣẹ́. "
 "Ọ̀pọ̀lọpọ̀ àwọn ìṣàmúlò-ètò kò hùwà dáadáa.\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1175,7 +1175,7 @@ msgstr ""
 "\"%s\" tí a rí nínú èròjà ìwádìí àtòpọ̀ kìí ṣe fálù tó "
 "fẹsẹ̀múlẹ̀ fún aṣàtúntò bọ́tìnì ohun-èlò aṣèkúté\n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1184,7 +1184,7 @@ msgstr ""
 "\"%s\" tí a rí nínú èròjà ìwádìí àtòpọ̀ kìí ṣe fálu tó "
 "fẹsẹ̀múlẹ̀ fún aṣẹ̀dá-ìtọ́ka \"%s\"\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
 msgstr "Ààyè-iṣẹ́ %d"
@@ -1320,7 +1320,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5893
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1335,7 +1335,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6458
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1416,47 +1416,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "Ìlò: %s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "Ti Fèrèsé"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "Àtròjọ-ẹ̀yàn Fèrèsé"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "Pa Fèrèsé Dé"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "Fẹ Fèrèsé"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr ""
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr ""
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr ""
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr ""
 
@@ -1643,55 +1647,76 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "òkè"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "ìsàlẹ̀"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
 msgstr "òsì"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
 msgstr "ọ̀tún"
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "Férémù jiọmítírì kò sọ ní pàtó ojúùwọ̀n \"%s\""
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr ""
 "Férémù jiọmítírì kò sọ ní pàtó ojúùwọ̀n \"%s\" fún ìpàlà "
 "\"%s\""
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "Bọ́tìnì réṣíò aspect %g kò ní ọ̀pọ̀lọ"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Férémù jiọmítírì kò sọ ní pàtó ìwọ̀n àwọn bọ́tìnì"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Àwọn ìdàgẹ̀rẹ̀ yẹ kó ní ó kéré tán àwọn àwọ̀ méjì"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr ""
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1701,7 +1726,7 @@ msgstr ""
 "b.a. gtk:fg[DÉÉDÉÉ] níbi tí DÉÉDÉÉ bá jẹ́ ipò;kò ní lè "
 "páàsì \"%s\""
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1711,17 +1736,17 @@ msgstr ""
 "b.a. gtk:fg[DÉÉDÉÉ] níbi tí DÉÉDÉÉ ti jẹ́ ipò kò ní lè "
 "páàsì \"%s\""
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Ipò \"%s\" kò ye nínú ojú-ìwọ̀n àwọ̀"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Ọmọ-inú àwọ̀ \"%s\" kò ye nínú ojú-ìwọ̀n àwọ̀"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1730,46 +1755,46 @@ msgstr ""
 "Ìgúnrégé tí a pòpọ̀ ni \"blend/bg_color/fg_color/alpha\", \"%s\" kò "
 "bá ìgúnrégé náà mu"
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Kò lè páàsì fálù áfà \"%s\" nínú àwọ tí a pòpọ̀"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr ""
 "Fálù áfà \"%s\" nínú àwọ̀ tí a papọ̀ kò sí láàrin 0.0 àti 1.0"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr ""
 "Ìgúnrégé kíkùn jẹ́ \"shade/base_color/factor\", \"%s\" kò bá "
 "ìgúnrégé náà mu"
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Kò lè páàsì ọ̀fà kíkùn \"%s\" nínú àwọ̀ tí a kùn"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Ọ̀fà kíkùn \"%s\" nínú àwọ̀ tí a kùn jẹ́ ìyọkúrò"
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "Kò lè páàsì àwọ̀ \"%s\""
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr ""
 "Ìsọ ìfètò sí nǹkan ní àmì-ìkọ '%s' nínú tí a kò fàyè gbà"
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1778,13 +1803,13 @@ msgstr ""
 "Ìsọ ìfètò sí nǹkan ní nọ́ńbà floating point nínú '%s' tí a kò "
 "lè páàsì"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr ""
 "Ìsọ ìfètò sí nǹkan ní ítíjà '%s' nínú tí a kò lè páàsì"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
@@ -1793,17 +1818,17 @@ msgstr ""
 "Ìsọ ìfètò sí nǹkan ní ọpirétọ̀ àìmọ̀ nínú ní ìbẹ̀rẹ̀ àyọkà "
 "yìí: \"%s\""
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Òfìfo ni ìsọ ìfètò sí nǹkan wà tàbí kó má yé ni"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Èsì ìpín ìsọ ìfètò sí nǹkan pẹ̀lú òdo"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
@@ -1811,24 +1836,24 @@ msgstr ""
 "Ìsọ ìfètò sí nǹkan ń gbìyànjú láti lo ọpirétọ̀ mod lórí "
 "nọ́ńbà floating point"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr ""
 "Ìsọ ìfètò sí nǹkan ní ọpirétọ̀ \"%s\" kan níbi tí a ti ń retí "
 "operand"
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Ìsọ ìfèto sí nǹkan ní operand níbi tí a ti ń retí ọpirétọ̀"
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Ọpirétọ̀ ló kẹ́yìn ìsọ ìfètò sí nǹkàn dípò operand"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1837,42 +1862,42 @@ msgstr ""
 "Ìsọ ìfètò sí nǹkan ní ọpirétọ̀ \"%c\" tó tẹ̀lé ọpirétọ̀ \"%c\" "
 "láì sí operand láàrin rẹ̀"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr ""
 "Ìsọ ìfètò sí nǹkan ní férébù tàbí kọ́nsítáǹtì \"%s\" àìmọ̀"
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr ""
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Ìsọ ìfètò sí nǹkan ní àkámọ́ títì, kò ní àkámọ́ ṣíṣí"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr ""
 "Ìsọ ìfètò sí nǹkan ní àkámọ́ ṣíṣí láì sí àkámọ́ títì"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr ""
 "Ó jọ pé ìsọ ìfètò sí nǹkan kò ní àwọn ọpirétọ̀ tàbí àwọn "
 "operand"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr ""
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1881,25 +1906,25 @@ msgstr ""
 "<ojúṣe bọ́tìnì=\"%s\" ipò=\"%s\" ya_ops=\"ohunkóhun\"/> a gbọ́dọ̀ sọ "
 "ní pàtó fún sítáì férémù"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr ""
 "A kò ri <ipò férémù=\"%s\" ìṣòdíwọ̀n=\"%s\" òye=\"%s\" "
 "sítáì=\"ohunkóhun\"/>"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Ó kùnà láti ki kókó \"%s\": %s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Kòsí <%s> àgbékalẹ̀ fún kókó \"%s\""
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1909,84 +1934,84 @@ msgstr ""
 "\"%s\" nínú kókó \"%s\", ṣàfikún <irúfẹ́ fèrèsé=\"%s\" "
 "àgbékalẹ̀_sítáì=\"ohunkóhun\"/> fọ́nrán"
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Àwọn kọ́nsítáǹtì òǹlò gbọ́dọ̀ bẹ̀rẹ̀ pẹ̀lú lẹ́tà ńlá; \"%s\" kò"
 " ní"
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "A ti soríkì kọ́nsítáǹtì \"%s\" tẹ́lẹ̀"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "Kò sí àbùdá \"%s\" lórí fọ́nrán <%s>"
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "Ilà %d àmì-ìkọ %d: %s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "Àbùdá \"%s\" tí a tún ṣe lẹ́ẹ̀mejì lórí fọ́nrán <%s. kan náà"
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr ""
 "Àbùdá \"%s\" kò fẹsẹ̀múlẹ̀ lórí fọ́nrán <%s> ní ọ̀gangan ipò yìí"
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "Kò lè ṣètò \"%s\" gẹ́gẹ́ bíi ítíjà"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "Àwọn àmì-ìkọ tírélìn kò yé \"%s\" nínú fọ́nrán \"%s\""
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "Ítíjà %ld gbọ́dọ̀ jẹ́ àròpọ̀"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "Ítíjà %ld ti tóbi jù, max lọ́wọ́lọ́wọ́ jẹ́ %d"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "Kò lé páàsì \"%s\" gẹ́gẹ́ bíi nọ́ńbà floating point"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "Àwọn fálù Boolean gbọ́dọ̀ jẹ́ \"òótọ́\" tàbí \"irọ́ kìí ṣe \"%s\""
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Áńgù gbọ́dọ̀ wà láàrin 0.0 àti 360.0, ó jẹ́ %g\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "Áfà gbọ́dọ̀ wà láàrin 0.0 (àìfojúrí) àti 1.0 (dídí "
 "pátápátá), ó jẹ́ %g\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -1995,183 +2020,183 @@ msgstr ""
 "Òṣùwọ̀n àkọ́lé tí kò fẹsẹ̀múlẹ̀ \"%s\" (ó gbọ́dọ̀ jẹ́ ọ̀kan lára "
 "kékeré gan,kékeré díẹ̀,àárín,ńlá,ńlá díẹ̀, ńlá púpọ̀)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> orúkọ \"%s\" tí a lò lẹ́ẹ̀kejì"
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> a kò tíi soríkì òbí \"%s\""
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> a kò tíì soríkì \"%s\" jiọmítírì"
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr ""
 "<%s> gbọ́dọ̀ sọ ní pàtó bóyá jiọmítírì tàbí òbí tó ní "
 "jiọmítírì"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "Irúfẹ́ àìmọ̀ \"%s\" lórí <%s> fọ́nrán"
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "Sẹ́ẹ̀tì_sítàì àìmọ̀ \"%s\" lórí <%s> fọ́nrán"
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "Irúfẹ́ fèrèsé \"%s\" ti ní sẹ́ètì sítàì ná"
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "A kò fàyè gba <%s> fọ́nrán nísàlẹ̀ <%s>"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "A kò mọ ìjìnsí \"%s\""
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "A kò mọ réṣíò aspect \"%s\""
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "Àìmọ̀ ni ìpàlà \"%s\""
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Fálù \"%s\" fún irúfẹ́ ìdàgẹ̀rẹ̀ kò ye"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "Irúfẹ́ \"%s\" fún fọ́nrán <%s> kò ye"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "Ipò \"%s\" fún fọ́nrán <%s> kò ye"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "Òjìji \"%s\" fún  fọ́nrán <%s> kò ye"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "Atọ́ka árò \"%s\" fún fọ́nrán <%s> kò ye"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "Kò sí <draw_ops> tí a pè ní \"%s\" tí a ti kì"
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Ṣíṣàfikún draw_ops \"%s\" níbí á ṣẹ̀dá ìtọ́kasí òbìrìkìtí"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Ipò àìmọ̀ \"%s\" fún férémù"
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Sítàì férémù ti ní ẹyọ ipò %s tẹ́lẹ̀"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "Kò sí <draw_ops> pẹ̀lú orúkọ \"%s\" tí a ti kì"
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Ojúṣe àìmọ̀ \"%s\" fún bọ́tìnì"
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Ipò àìmọ̀\"%s\" fún bọ́tìnì"
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Sítàì férémù ti ni bọ́tìnì fún ojúṣe %s ipò %s tẹ́lẹ̀"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\" kìí ṣe fálù tó fesẹ̀múlẹ̀ fún àbùdá òye"
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\" kìí ṣe fálù tó fẹsẹ̀múlẹ̀ fún àbùdá ipò"
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "A kò tíì soríkì sítàì tí a pè ní \"%s\""
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "\"%s\" kìí ṣe fálù tó fesẹ̀múlẹ̀ fún àbùdá ìṣòdíwọ̀n"
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
@@ -2180,24 +2205,24 @@ msgstr ""
 "Kó má ní àbùdá \"ìṣòdíwọ̀n\" lórí fọ́nrán <%s> fún àwọn ipò "
 "tí a fẹ̀lójú/kùn"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr "A ti sọ sítàì kan ní pàtó fún ipò %s ìṣòdíwọ̀n %s òye %s"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "A ti sọ sítàì kan ní pàtó fún ipò %s òye %s"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
@@ -2206,7 +2231,7 @@ msgstr ""
 "draw_ops àti fọ́nrán <draw_ops> pẹ̀lú tàbí àwọn fọ́nrán méjì ní "
 "pàtó)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
@@ -2215,7 +2240,7 @@ msgstr ""
 "àbùdá draw_ops àti fọ́nrán <draw_ops> pẹ̀lú, tàbí àwọn fọ́nrán "
 "méjì ní pàtó)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
@@ -2224,12 +2249,28 @@ msgstr ""
 "ní pàtó àbùdá draw_ops àti fọ́nrán <draw_ops> pẹ̀lú tàbí àwọn "
 "fọ́nrán méjì ní pàtó)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
@@ -2237,12 +2278,12 @@ msgstr ""
 "Kò sáyè fún fọ́nrán <%s> nínú fọ́nrán "
 "orúkọ/olùdásílẹ̀/déètì/àpèjúwe"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "Kò sáyè fún fọ́nrán <%s> nínú fọ́nrán <kọ́nsítáǹtì."
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
@@ -2250,38 +2291,38 @@ msgstr ""
 "Kò sáyè fún fọ́nrán <%s> nínú fọ́nrán "
 "ìjìnsí/ìpàlà/aspect_ratio"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "Kò sáyè fún fọ́nrán <%s> nínú fọ́nrán iṣẹ́"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "Fọ́nrán <%s> kò fàyè gba nínú fọ́nrán <%s>"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "A kò pèsè draw_ops fún ẹyọ férémù"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "A kò pèsè draw_ops fún bọ́tìnì"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "A kò fàyè gba àyọkà nínú fọ́nrán <%s>"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr ""
@@ -2331,56 +2372,60 @@ msgstr "Pa Àtòjọ-ẹ̀yàn"
 msgid "Border"
 msgstr "Ìpàlà"
 
-#: ../src/ui/theme-viewer.c:784
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "Àyẹ̀wò ìlàálẹ̀ bọ́tìnì %d"
 
-#: ../src/ui/theme-viewer.c:809
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g ọ̀kẹ́-ìṣísẹ̀ láti ya férémù fèrèsé kan"
 
-#: ../src/ui/theme-viewer.c:849
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Ìlò: awòye-kókó-marco [ORÚKỌ-KÓKÓ]\n"
 
-#: ../src/ui/theme-viewer.c:856
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Àṣìṣe kíki kókó: %s\n"
 
-#: ../src/ui/theme-viewer.c:862
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Kókó tí a ti kì\"%s\" ní %g ìṣísẹ̀\n"
 
-#: ../src/ui/theme-viewer.c:906
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "Ìrísí-lẹ́tà Àkọ́lé déédéé"
 
-#: ../src/ui/theme-viewer.c:912
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "Ìrísí-lẹ́tà Àkọ́lé Kékeré"
 
-#: ../src/ui/theme-viewer.c:918
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "Ìrísí-lẹ́tà Àkọ́lé Ńlá"
 
-#: ../src/ui/theme-viewer.c:923
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "Àwọn Ìlàálẹ̀ Bọ́tìnì"
 
-#: ../src/ui/theme-viewer.c:928
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "Ìdíwọ̀n"
 
-#: ../src/ui/theme-viewer.c:985
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "Ibí ni Àkọ́lé Fèrèsé Máa Lọ"
 
-#: ../src/ui/theme-viewer.c:1090
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

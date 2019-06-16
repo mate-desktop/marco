@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Malayalam (https://www.transifex.com/mate/teams/13566/ml/)\n"
@@ -1079,7 +1079,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "ബെല്‍ ഇവന്റ്"
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "ജാലകത്തിനുള്ള ആവശ്യം അപരിചിതമായ സ്ഥലത്ത് നിന്നും : %d"
@@ -1121,7 +1121,7 @@ msgstr "കംപോസിറ്റിങിനുള്ള %s എക്സ്�
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "XWindow തുറക്കുന്നതില്‌ പരാജയം : %s\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1132,7 +1132,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2381
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1143,31 +1143,31 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/core/keybindings.c:2470
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "%d എന്ന കമാന്‍ഡ് ലഭ്യമല്ല.\n"
 
-#: ../src/core/keybindings.c:3526
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "ഒരു ടെര്‍മിനല്‍ കമാന്‍ഡും ലഭ്യമല്ല.\n"
 
-#: ../src/core/keybindings.c:3666
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3667
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
@@ -1249,12 +1249,12 @@ msgstr "പുനരാരംഭിക്കുന്നതില്‌ പര�
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1262,12 +1262,12 @@ msgstr ""
 "തകരാറുള്ള പ്രയോഗങ്ങളിലുള്ള പ്രവര്‍ത്തനങ്ങള്‍ നിര്‍ജ്ജീവം. ചില പ്രയോഗങ്ങള്‍ "
 "ശരിയായി പ്രവര്‍ത്തിക്കുന്നതല്ല.\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1276,7 +1276,7 @@ msgstr ""
 "ക്രമീകരണ ഡേറ്റാബെയിസില്‍ ലഭ്യമായ \"%s\" മൌസ് ബട്ടണ്‍ മോഡിഫയറിനുള്ള ശരിയായൊരു"
 " മൂല്ല്യമല്ല\n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1285,7 +1285,7 @@ msgstr ""
 "ക്രമീകരണ ഡേറ്റാബെയിസില്‍ ലഭ്യമായ \"%s\" കീബൈന്‍ഡിങിനുള്ള \"%s\" ശരിയായൊരു "
 "മൂല്ല്യമല്ല\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
 msgstr "പണിയറ %d"
@@ -1422,7 +1422,7 @@ msgid "Marco"
 msgstr "മെറ്റാസിറ്റി"
 
 #. first time through
-#: ../src/core/window.c:5893
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1438,7 +1438,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6458
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1518,47 +1518,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "ഉപയോഗം: %s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "ജാലകം അടയ്ക്കുക"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "ജാലക പട്ടിക‌"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "ജാലകം ചെറുതാക്കുക"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "ജാലകം വലുതാക്കുക"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr "ജാലകം വീണ്ടെടുക്കുക"
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr "ജാലകം ചുരുട്ടുക"
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr "Unroll Window"
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr "ജാലകം മുകളിലാക്കുക"
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr "ജാലകം മുകളില്‍ നിന്നും നീക്കുക"
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr "എപ്പോഴും ദൃശ്യമായ പണിയറയില്‍ "
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr "ഒരു പണിയറയില്‍ ജാലകം കാണിക്കുക"
 
@@ -1745,53 +1749,74 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "മുകളില്‌"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "താഴെ"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
 msgstr "ഇടത് "
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
 msgstr "വലത് "
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "ഫ്രെയിം ജോമെട്രി \"%s\" അളവുകള്‍ നല്‍കുന്നില്ല"
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "ഫ്രെയിം ജോമെട്രി \"%s\" അളവുകള്‍ നല്‍കുന്നില്ല. ഇവ \"%s\" അതിരിനുള്ളതാണു്"
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "ബട്ടണ്‍ ആസ്പെക്ട് റേഷ്യോ %g ഉചിതമല്ല"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "ഫ്രെയിം ജോമെട്രി ബട്ടണുകള്‍ക്കുള്ള വ്യാപ്തി നല്‍കുന്നില്ല"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "ഗ്രേഡിയന്റ്സിനു് കുറഞ്ഞതു് രണ്ടു് നിറങ്ങളുണ്ടാവണം"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr ""
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1800,7 +1825,7 @@ msgstr ""
 "GTK നിറം വിവരണത്തില്‍ ബ്രാക്കറ്റുകളില്‍ അവസ്ഥയുണ്ടായിരിക്കണം, ഉദാ. "
 "gtk:fg[NORMAL], ഇവിടെ NORMAL ആണു് അവസ്ഥ, \"%s\" പാഴ്സ് ചെയ്യുവാനായില്ല"
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1810,17 +1835,17 @@ msgstr ""
 "ബ്രാക്കറ്റുണ്ടായിരിക്കണം, ഉദാ. gtk:fg[NORMAL], ഇവിടെ NORMAL ആണു് അവസ്ഥ, "
 "\"%s\" പാഴ്സ് ചെയ്യുവാനായില്ല"
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "നിറം വിവരിക്കുന്നതില്‌ \"%s\" അവസ്ഥ മനസ്സിലാക്കുവാന്‍ സാധ്യമല്ല"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "നിറത്തിന്റെ വിവരണത്തിലുള്ള നിറത്തിനുള്ള ഘടകം \"%s\" മനസ്സിലായില്ല"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1829,42 +1854,42 @@ msgstr ""
 "\"blend/bg_color/fg_color/alpha\" ആണു് ബ്ലെന്‍ഡ് ശൈലി, \"%s\" ശൈലിയ്ക്കു് "
 "പാകമല്ല"
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "%s നെ ഒരു സംഖ്യയായി വേര്‍തിരിക്കാന്‍ കഴിയുന്നില്ല"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "ബ്ലെന്‍ഡഡ് നിറത്തിലുള്ള ആല്‍ഫാ മൂല്ല്യം \"%s\" 0.0-നും 1.0-നും ഇടയിലല്ല"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "\"shade/base_color/factor\" ആണു് ഷെയിഡ് ശൈലി, \"%s\" ശൈലിയ്ക്കു് പാകമല്ല"
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "%s നെ ഒരു സംഖ്യയായി വേര്‍തിരിക്കാന്‍ കഴിയുന്നില്ല"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "ഷേയിഡഡ് നിറത്തിലുള്ള \"%s\" ഷെയിഡ് ഫാക്ടര്‍ നെഗറ്റീവാണു്"
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "\"%s\" നിറം പാഴ്സ് ചെയ്യുവാന്‍ സാധ്യമല്ല"
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ അനുവാദമില്ലാത്ത ഒരു അക്ഷരം '%s' ഉണ്ടു്"
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1873,14 +1898,14 @@ msgstr ""
 "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ പാഴ്സ് ചെയ്യുവാന്‍ സാധ്യമല്ലാത്ത ഒരു "
 "ഫ്ലോട്ടിങ് പോയിന്റ് നംബര്‍ '%s' ഉണ്ടു്"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr ""
 "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ പാഴ്സ് ചെയ്യുവാന്‍ സാധ്യമല്ലാത്ത ഒരു ഇന്റിജര്‍"
 " '%s' ഉണ്ടു്"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
@@ -1889,18 +1914,18 @@ msgstr ""
 "പദാവലിയുടെ ആരംഭത്തില്‍ കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ അപരിചിതമായ "
 "ഓപ്പറേറ്ററുണ്ടു്: \"%s\""
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr ""
 "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷന്‍ ശൂന്യമായിരുന്നു അല്ലെങ്കില്‍ മനസ്സിലായില്ല"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷന്റെ ഫലം പൂജ്യം കൊണ്ടുള്ള ഹരണമാകുന്നു"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
@@ -1908,28 +1933,28 @@ msgstr ""
 "ഒരു ഫ്ലോട്ടിങ്-പോയിന്റ് നംബറില്‍ കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷന്‍ mod "
 "ഓപ്പറേറ്റര്‍ ഉപയോഗിക്കുവാന്‍ ശ്രമിക്കുന്നു"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr ""
 "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ ഒരു  \"%s\" ഓപ്പറേറ്റുണ്ടു് പക്ഷേ "
 "പ്രതീക്ഷിച്ചതു് ഒരു ഓപ്പറണ്ട്"
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr ""
 "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ ഒരു ഓപ്പറണ്ടുണ്ടു് പക്ഷേ പ്രതീക്ഷിച്ചതു് ഒരു "
 "ഓപ്പറേറ്റര്‍."
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr ""
 "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷന്‍ ഒരു ഓപ്പറണ്ടിനു പകരം ഒരു ഓപ്പറേറ്റില്‍ "
 "അവസാനിച്ചു"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1938,26 +1963,26 @@ msgstr ""
 "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ \"%c\" ഓപ്പറേറ്റര്‍, ശേഷം \"%c\" ഓപ്പറേറ്റര്‍ "
 "ഉണ്ടു്, പക്ഷേ ഇടയില്‍ ഓപ്പറണ്ടില്ല"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr ""
 "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ അപരിചിതമായ വേരിയബിള്‍ അല്ലെങ്കില്‍ "
 "കോണ്‍സ്റ്റന്റ് \"%s\" "
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷന്‍ പാഴ്സര്‍ അതിലുള്ള ബഫര്‍ ഓവര്‍ഫ്ലോ ചെയ്തു."
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr ""
 "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ അടയ്ക്കുന്നൊരു പരാന്ഥസിസ് ഉണ്ടായിരുന്നു, പക്ഷേ"
 " തുറക്കുന്നതു് ലഭ്യമല്ല"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
@@ -1965,17 +1990,17 @@ msgstr ""
 "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ ഒരു ഓപ്പണ്‍ പരാന്ഥസിസ് ഉണ്ടായിരുന്നു, പക്ഷേ "
 "അടയ്ക്കുന്നതു് ലഭ്യമല്ല"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷനില്‍ ഒരു ഓപ്പറേറ്ററും ഓപ്പറണ്ടും ലഭ്യമല്ല"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "ഒരു പിശകുണ്ടാക്കിയ എക്സ്പ്രെഷന്‍ പ്രമേയത്തിലുണ്ടായിരുന്നു: %s\n"
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1984,23 +2009,23 @@ msgstr ""
 "ഈ ഫ്രെയിം ശൈലിയ്ക്കു് <button function=\"%s\" state=\"%s\" "
 "draw_ops=\"whatever\"/>  വ്യക്തമാക്കിയിരിക്കണം"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> ലഭ്യമല്ല"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "പ്രമേയം %s കൊണ്ട് വരാന് കഴിഞ്ഞില്ല: %s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "<%s> \"%s\" പ്രമേയത്തിനു് സജ്ജമല്ല"
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2009,83 +2034,83 @@ msgstr ""
 "\"%s\" ജാലക തരത്തിലുള്ള \"%s\" പ്രമേയത്തില്‍ ഒരു ഫ്രെയിം ശൈലിയും സജ്ജമല്ല, "
 "ഒരു <window type=\"%s\" style_set=\"whatever\"/> എലമെന്റ് ചേര്‍ക്കുക"
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "ഉപയോക്താവു് നിഷ്കര്‍ഷിച്ചിട്ടുള്ള കോണ്‍സ്റ്റന്റുകള്‍ കാപ്പിറ്റല്‍ "
 "അക്ഷരത്തില്‍ ആരംഭിക്കണം; \"%s\" അങ്ങനെയല്ല"
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "കോണ്‍സ്റ്റന്റ് \"%s\" നിലവില്‍ നിഷ്കര്‍ഷിച്ചിട്ടുണ്ടു്"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "<%s> എലമെന്‍റില്‍ \"%s\" ആട്ട്രിബ്യൂട്ട് ഇല്ല"
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "%d വരിയില്‍ %d എന്ന അക്ഷരം: %s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "\"%s\" രണ്ടു് തവണ <%s> എലമെന്റില്‍ ആവര്‍ത്തിച്ചു"
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "ഇവിടെ <%s> എന്ന എലമെന്‍റില്‍ \"%s\" ആട്ട്രിബ്യൂട്ട് അസാധുവാണ്."
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "%s നെ ഒരു സംഖ്യയായി വേര്‍തിരിക്കാന്‍ കഴിയുന്നില്ല"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "അവസാനമുള്ള \"%s\" അക്ഷരങ്ങള്‍, \"%s\" സ്ട്രിങില്‍ മനസ്സിലായില്ല"
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "ഇന്റിജര്‍ %ld പോസിറ്റീവായിരിക്കണം"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "ഇന്റിജര്‍ %ld വളരെ വലുതാണു്, നിലവില്‍ ഏറ്റവും കൂടുതല്‍ %d ആണു്"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "%s നെ ഒരു സംഖ്യയായി വേര്‍തിരിക്കാന്‍ കഴിയുന്നില്ല"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "ബൂളിയന്‍ മൂല്ല്യങ്ങള്‍ \"true\" അല്ലെങ്കില്‍ \"false\" ആയിരിക്കണം, \"%s\" അല്ല"
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "0.0-നും 360.0-യ്ക്കും ഇടയിലായിരിക്കണം കോണു്, %g ആയിരുന്നു\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "0.0-യ്ക്കും (അദൃശ്യം) 1.0-യ്ക്കും (കട്ടിയുള്ളതല്ല) ഇടയിലായിരിക്കണം ആല്‍ഫാ, "
 "%g ആയിരുന്നു\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2094,60 +2119,60 @@ msgstr ""
 "തലക്കെട്ടിനുള്ള തെറ്റായ അളവു് \"%s\" (xx-small,x-small,small,medium,large, "
 "-large,xx-large - ഇവയിലൊന്നാരിക്കണം)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> പേര് \"%s\" രണ്ടാം തവണ ഉപയോഗിച്ചിരിക്കുന്നു"
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> പേരന്റ് \"%s\" വ്യക്തമാക്കിയിട്ടില്ല"
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> ജോമെട്രി \"%s\" നിഷ്കര്‍ഷിച്ചിട്ടില്ല"
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> ഒരു ജോമെട്രി അല്ലെങ്കില്‍ ജോമെട്രിയുള്ള പേരന്റ് നല്‍കേണ്ടതുണ്ടു്"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr ""
 "ഒരു ആല്‍ഫാ മൂല്ല്യം അര്‍ത്ഥവത്താകുന്നതിനു് ഒരു പശ്ചാത്തലം നല്‍കേണ്ടതുണ്ടു്"
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "<%s> എലമെന്റില്‍ അപരിചിതമായ തരത്തിലുള്ള \"%s\""
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "അപരിചിതമായ style_set \"%s\", <%s> എലമെന്റില്‍ "
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "ജാലക രീതി \"%s\"-യ്ക്കു് നിലവില്‍ ഒരു ശൈലി കൂട്ടം നല്‍കിയിട്ടുണ്ടു്"
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "<%s>-ന്‍റെ കീഴില്‍ <%s> എന്ന എലമെന്‍റിന് അനുവാദമില്ല"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2155,127 +2180,127 @@ msgstr ""
 "ബട്ടണുകള്‍ക്കു് \"button_width\"/\"button_height\", \"aspect_ratio\" "
 "നല്‍കുവാന്‍ സാധ്യമല്ല"
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "\"%s\" എന്ന ദൂരം അപരിചിതമാണ്"
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "\"%s\" എന്ന ആസ്പെക്റ്റ് റേഷ്യോ അപരിചിതമാണ്"
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "\"%s\" എന്ന അതിര് അപരിചിതമാണ്"
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr ""
 "\"start_angle\" അല്ലെങ്കില്‍ \"എവിടെ നിന്നും\" <%s> എലമെന്റില്‍ വിശേഷത "
 "ലഭ്യമല്ല"
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "\"extent_angle\" അല്ലെങ്കില്‍ \"എങ്ങോട്ട്\" വിശേഷത <%s> എലമെന്റില്‍ ലഭ്യമല്ല"
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "മൂല്ല്യം \"%s\", ഗ്രേഡിയന്റ് രീതിയ്ക്കുള്ളതു് മനസ്സിലാകുവാന്‍ സാധ്യമല്ല"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "നിറയ്ക്കുന്ന രീതി \"%s\", <%s> എലമെന്റിനുള്ളതു് മനസ്സിലാകുവാന്‍ സാധ്യമല്ല"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "അവസ്ഥ \"%s\", <%s> എലമെന്റിനുള്ളതു് മനസ്സിലാകുവാന്‍ സാധ്യമല്ല"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "ഷാഡോ \"%s\", <%s> എലമെന്റിനുള്ളതു് മനസ്സിലാകുവാന്‍ സാധ്യമല്ല"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "ആരോ \"%s\", <%s> എലമെന്റിനുള്ളതു് മനസ്സിലാകുവാന്‍ സാധ്യമല്ല"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "ഒരു <draw_ops>-ഉം \"%s\" എന്ന പേരില്‍ ലഭ്യമല്ല"
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr ""
 "draw_ops \"%s\" ഇവിടെ ഉള്‍പ്പെടുത്തുന്നതു് ഒരു സെര്‍ക്കുലര്‍ "
 "റെഫറന്‍സുണ്ടാക്കുന്നു"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "ഫ്രെയിം പീസിനുള്ള അപരിചിതമായ സ്ഥാനം \"%s\""
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "%s സ്ഥാനത്തു് നിലവില്‍ ഫ്രെയിം ശൈലിയ്ക്കു് ഒരു പീസുണ്ടു്"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "ഒരു <draw_ops>-ഉം \"%s\" എന്ന പേരില്‍ ലഭ്യമല്ല"
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "ബട്ടണുള്ള അപരിചിതമായ ഫംഗ്ഷന്‍ \"%s\""
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "ബട്ടണ്‍ ഫംഗ്ഷന്‍ \"%s\" ഈ പതിപ്പില്‍ ലഭ്യമല്ല (%d, %d ആവശ്യമുണ്ടു്)"
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "ബട്ടണുള്ള അപരിചിതമായ അവസ്ഥ \"%s\""
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "ഫംഗ്ഷന്‍ %s അവസ്ഥ %s-നു് ഫ്രെയിം ശൈലിയില്‍ നിലവില്‍ ഒരു ബട്ടണുണ്ടു്"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "ഫോക്കസ് വിശേഷതയ്ക്കുള്ള ശരിയായ മൂല്ല്യമല്ല \"%s\""
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "അവസ്ഥ വിശേഷതയ്ക്കുള്ള ശരിയായ മൂല്ല്യമല്ല \"%s\""
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "\"%s\" എന്ന ശൈലി നിഷ്കര്‍ഷിച്ചിട്ടില്ല"
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "വ്യാപ്തി മാറ്റുക വിശേഷതയ്ക്കുള്ള ശരിയായ മൂല്ല്യമല്ല \"%s\""
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
@@ -2284,28 +2309,28 @@ msgstr ""
 "ഏറ്റവും വലുതാക്കിയ/ഷെയിഡഡ് അവസ്ഥകള്‍ക്കു് <%s> എലമെന്റില്‍ \"വ്യാപ്തി "
 "മാറ്റുക\" വിശേഷത ഉണ്ടായിരിക്കരുതു്"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr ""
 "ഏറ്റവും വലുതാക്കിയ അവസ്ഥകള്‍ക്കു് <%s> എലമെന്റില്‍ \"വ്യാപ്തി മാറ്റുക\" "
 "വിശേഷത ഉണ്ടായിരിക്കരുതു്"
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr ""
 "%s അവസ്ഥ വ്യാപ്തി മാറ്റുക%s %s ഫോക്കസിനായി ശൈലി നിലവില്‍ "
 "വ്യക്തമാക്കിയിട്ടുണ്ടു്"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "%s അവസ്ഥ %s ഫോക്കസിനായി ശൈലി നിലവില്‍ വ്യക്തമാക്കിയിട്ടുണ്ടു്"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
@@ -2314,7 +2339,7 @@ msgstr ""
 "വിശേഷതയ്ക്കുള്ള ഒരു വിശേഷത, ഒരു <draw_ops> എലമെന്റ് അല്ലെങ്കില്‍ രണ്ടു "
 "എലമെന്റുകള്‍ നല്‍കുക)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
@@ -2323,7 +2348,7 @@ msgstr ""
 "വിശേഷതയ്ക്കുള്ള ഒരു വിശേഷത, ഒരു <draw_ops> എലമെന്റ് അല്ലെങ്കില്‍ രണ്ടു "
 "എലമെന്റുകള്‍ നല്‍കുക)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
@@ -2332,62 +2357,78 @@ msgstr ""
 "വിശേഷതയ്ക്കുള്ള ഒരു വിശേഷത, ഒരു <draw_ops> എലമെന്റ് അല്ലെങ്കില്‍ രണ്ടു "
 "എലമെന്റുകള്‍ നല്‍കുക)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr ""
 "ഒരു name/author/date/description എലമെന്റില്‍ <%s> എലമെന്റ് അനുവദിക്കുന്നില്ല"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "<constant> എലമെന്റില്‍ <%s> എലമെന്റ് അനുവദിക്കുന്നില്ല"
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr ""
 "distance/border/aspect_ratio എലമെന്റില്‍ <%s> എലമെന്റ് അനുവദിക്കുന്നില്ല"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "ഒരു ഡ്രോ ഓപ്പറേഷന്‍ എലമെന്റില്‍ <%s> എലമെന്റ് അനുവദിക്കുന്നില്ല"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "എലമെന്‍റ് <%s> ഒരു <%s> എലമെന്‍റിനുളളില്‍ അനുവദിക്കുന്നതല്ല"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "ഫ്രെയിം പീസില്‍ draw_ops ലഭ്യമാക്കിയില്ല"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "ബട്ടണിനു് draw_ops ലഭ്യമാക്കിയില്ല"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "<%s> എലമെന്‍റിനുളളില്‍ വാചകം അനുവദിക്കുന്നതല്ല"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "ഈ പ്രമേയത്തിനു് <%s> രണ്ടു് തവണ പറഞ്ഞിരിക്കുന്നു"
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "%s ഥീമിന് യോജിക്കുന്ന ഒരു ഫയല്‍ ലഭ്യമാക്കുവാന്‍ സാധ്യമായില്ല\n"
@@ -2437,56 +2478,60 @@ msgstr "ടോണ്‍-ഓഫ് മെനു"
 msgid "Border"
 msgstr "അതിര്"
 
-#: ../src/ui/theme-viewer.c:784
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "ബട്ടണ്‍ ശൈലി പരീക്ഷണം %d"
 
-#: ../src/ui/theme-viewer.c:809
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "ഒരു ജാലക ഫ്രെയിം ലഭ്യമാക്കുന്നതിനായി %g മില്ലിസെക്കന്‍ഡുകള്‍"
 
-#: ../src/ui/theme-viewer.c:849
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "ഉപയോഗിക്കേണ്ട വിധം: marco-theme-viewer [THEMENAME]\n"
 
-#: ../src/ui/theme-viewer.c:856
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "പ്രമേയം ലോഡ് ചെയ്യുന്നതില്‍ പിശക്: %s\n"
 
-#: ../src/ui/theme-viewer.c:862
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" പ്രമേയം %g സെക്കന്‍ഡുകളില്‍ ലഭ്യമാക്കി\n"
 
-#: ../src/ui/theme-viewer.c:906
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "തലക്കെട്ടിനുള്ള സാധാരണ അക്ഷരസഞ്ചയം"
 
-#: ../src/ui/theme-viewer.c:912
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "തലക്കെട്ടിനുള്ള ചെറിയ  അക്ഷരസഞ്ചയം"
 
-#: ../src/ui/theme-viewer.c:918
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "തലക്കെട്ടിനുള്ള വലിയ അക്ഷരസഞ്ചയം"
 
-#: ../src/ui/theme-viewer.c:923
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "ബട്ടണ്‍ ശൈലികള്‍"
 
-#: ../src/ui/theme-viewer.c:928
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "പരീക്ഷണ നിലവാരം"
 
-#: ../src/ui/theme-viewer.c:985
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "ജാലകത്തിനുള്ള തലക്കെട്ടിവിടെ"
 
-#: ../src/ui/theme-viewer.c:1090
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

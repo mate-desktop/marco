@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-16 13:55+0100\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Assamese (https://www.transifex.com/mate/teams/13566/as/)\n"
@@ -1045,7 +1045,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "ঘন্টা সম্পৰ্কিত ঘটনা"
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Unknown window information request: %d"
@@ -1085,7 +1085,7 @@ msgstr "Missing %s extension required for compositing"
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X উইন্ডো ব্যৱস্থাপ্ৰণালী প্ৰদৰ্শন খোলোঁতে ব্যৰ্থ '%s'\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1095,7 +1095,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2381
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1103,31 +1103,31 @@ msgid ""
 "%s"
 msgstr "<tt>%s</tt> সঞ্চালনত সমস্যা:\\%s"
 
-#: ../src/core/keybindings.c:2470
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "%d আদেশ ব্যাখ্যা কৰা নহয়  ।\n"
 
-#: ../src/core/keybindings.c:3526
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "টাৰ্মিনেলত ব্যৱহাৰযোগ্য কোনো আদেশ ব্যাখ্যা কৰা নহয়  ।\n"
 
-#: ../src/core/keybindings.c:3666
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3667
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3678
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
 msgstr "বাতিল কৰক"
 
@@ -1208,12 +1208,12 @@ msgstr "পুনৰাৰম্ভ কৰোঁতে ব্যৰ্থ: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1221,26 +1221,26 @@ msgstr ""
 "ক্ষতিগ্ৰস্ত অনুপ্ৰয়োগেৰ ত্ৰুটি অগ্ৰাহ্য কৰাৰ প্ৰণালী নিষ্ক্ৰিয় কৰা হৈছে  । "
 "কয়েকটি অনুপ্ৰয়োগ সম্ভৱত সঠিকৰূপে চলোৱা সম্ভৱ হ'ব না  ।\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "বিন্যাস তথ্যভঁৰালত উপস্থিত \"%s\" মাউচ বুটাম পৰিবৰ্তকৰ বাবে বৈধ মান নহয়\n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "বিন্যাস তথ্যভঁৰালত উপলব্ধ \"%s\", \"%s\" কি-বাইন্ডিং'ৰ ক্ষেত্ৰত বৈধ মান নহয়\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
 msgstr "কৰ্মক্ষেত্ৰ %d"
@@ -1378,7 +1378,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5893
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1393,7 +1393,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6458
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1472,47 +1472,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "ব্যৱহাৰপদ্ধতি: %s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "সংযোগক্ষেত্ৰ বন্ধ কৰক"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "উইন্ডো মেনু"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "উইন্ডো আড়াল কৰক"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "উইন্ডো বড় কৰক"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr "উইন্ডো প্ৰদৰ্শন কৰক"
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr "গড়িয়ে দিন ওপৰত"
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr "Unroll Window"
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr "Keep Window On Top"
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr "আঁতৰাওঁক প্ৰৰক"
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr "সদায়ে দৃশ্যমান"
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr "শুধুমাত্ৰ এক"
 
@@ -1699,53 +1703,74 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "ওপৰত"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "তলত"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
 msgstr "বাম"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
 msgstr "ডান"
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "ফ্ৰেম জ্যামিতি দ্বাৰা \"%s\" পৰিমাপ নিৰ্ধাৰিত নহয়"
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "ফ্ৰেম জ্যামিতি দ্বাৰা \"%s\" পৰিমাপ  \"%s\" প্ৰান্তেৰ বাবে নিৰ্ধাৰিত নহয়"
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "বুটামৰ এপেক্ট অনুপাত %g যথাযথ নহয়"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "ফ্ৰেম জ্যামিতি দ্বাৰা বুটামৰ মাপ নিৰ্ধাৰিত নহয়"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "গ্ৰেডিয়েন্টেৰ ক্ষেত্ৰত দুটা ৰং নিৰ্ধাৰিত হোৱা আৱশ্যক"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr ""
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1754,7 +1779,7 @@ msgstr ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1763,17 +1788,17 @@ msgstr ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "ৰং নিৰ্ধাৰণৰ বাবে state \"%s\" বোধগম্য নহয়"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "ৰং নিৰ্ধাৰণৰ বাবে ৰং'ৰ বিষয়বস্তু \"%s\" বোধগম্য নহয়"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1782,42 +1807,42 @@ msgstr ""
 "ব্লেন্ড বিন্যাস \"blend/bg_color/fg_color/alpha\", \"%s\" বিন্যাসৰ সৈতে "
 "সুসংগত নহয়"
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "ব্লেন্ড কৰা ৰং'এ আল্ফা মান \"%s\" বিশ্লেষণ কৰোঁতে ব্যৰ্থ"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "ব্লেন্ড কৰা ৰং'এ আল্ফা মান \"%s\" 0.0 ও1.0 সীমাৰেখাত নহয়"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "ছায়াৰ বিন্যাস \"shade/base_color/factor\", \"%s\" বিন্যাসৰ সৈতে সুসংগত নহয়"
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "ছায়াযুক্ত ৰং'ৰ ক্ষেত্ৰত ছায়াৰ মাপ \"%s\" বিশ্লেষণ কৰোঁতে ব্যৰ্থ"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "ছায়াযুক্ত ৰং'ৰ ক্ষেত্ৰত ছায়াৰ মান \"%s\" শূণ্যেৰ কম"
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "\"%s\" ৰং বিশ্লেষণ কৰোঁতে ব্যৰ্থ"
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত '%s' অক্ষৰ উপস্থিত আৰু এৰ ব্যৱহাৰ অনুমোদিত নহয়"
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1826,29 +1851,29 @@ msgstr ""
 "কো-ওৰ্ডিনেট Xপ্ৰেশনেত '%s' ফ্লোটিং পয়েন্ট সংখ্যা উপস্থিত যি বিশ্লেষণ কৰা "
 "সম্ভৱ নহয়"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Coordinate expression contains integer '%s' which could not be parsed"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত টেক্সটেৰ প্ৰাৰম্ভিক স্থানে অজ্ঞাত অপাৰেটৰ: \"%s\""
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশন ফাঁকা বা বোধগম্য নহয়"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনৰ ফলাফলত শূণ্য দ্বাৰা ভাগ কৰাৰ অৱস্থা উৎপন্ন হয়"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
@@ -1856,23 +1881,23 @@ msgstr ""
 "কো-ওৰ্ডিনেট Xপ্ৰেশন দ্বাৰা ফ্লোটিং পয়েন্ট সংখ্যাৰ ওপৰত mod অপাৰেটৰ ব্যৱহাৰৰ "
 "প্ৰয়াস কৰা হৈছে"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত  \"%s\" অপাৰেটৰ উপস্থিত কিন্তু অপাৰেন্ড প্ৰত্যাশিত"
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত প্ৰত্যাশিত অপাৰেন্ডেৰ পৰিবৰ্তে অপাৰেটৰ উপস্থিত"
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr ""
 "কো-ওৰ্ডিনেট Xপ্ৰেশনৰ অন্তে প্ৰত্যাশিত অপাৰেন্ডেৰ পৰিবৰ্তে অপাৰেটৰ উপস্থিত"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1881,23 +1906,23 @@ msgstr ""
 "কো-ওৰ্ডিনেট Xপ্ৰেশনৰ ক্ষেত্ৰত \"%c\" অপাৰেটৰৰ পৰে \"%c\" অপাৰেটৰ উপস্থিত আৰু"
 " দুটাত কোনো অপাৰেন্ড উপস্থিত নেই"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত অজ্ঞাত ভেৰিয়েবল বা কনস্টেন্ট \"%s\" উপস্থিত"
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনৰ বিশ্লেষণাৰৰ বাফাৰৰ সীমা অতিক্ৰান্ত হৈছে  ।"
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr ""
 "কো-ওৰ্ডিনেট Xপ্ৰেশনেত শেষেৰ বন্ধনী চিহ্ন উপস্থিত, প্ৰাৰম্ভিক চিহ্ন অনুপস্থিত"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
@@ -1905,17 +1930,17 @@ msgstr ""
 "কো-ওৰ্ডিনেট Xপ্ৰেশনেত প্ৰাৰম্ভিক বন্ধনী চিহ্ন উপস্থিত শেষেৰ বন্ধনী চিহ্ন "
 "অনুপস্থিত"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "কো-ওৰ্ডিনেট Xপ্ৰেশনেত কোনো অপাৰেটৰ বা অপাৰেন্ড উপস্থিত নেই"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Theme contained an expression that resulted in an error: %s\n"
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1924,23 +1949,23 @@ msgstr ""
 "চিহ্নিত ফ্ৰেমৰ বিন্যাসৰ বাবে <button function=\"%s\" state=\"%s\" "
 "draw_ops=\"whatever\"/> উল্লেখ কৰা আৱশ্যক"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> অনুপস্থিত"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" থিম লোড কৰোঁতে ব্যৰ্থ: %s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "<%s> নিৰ্ধাৰিত নহয় \"%s\" থিমৰ বাবে"
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1949,83 +1974,83 @@ msgstr ""
 "\"%s\" ধৰণৰ উইন্ডোৰ বাবে \"%s\" থিমত ফ্ৰেমৰ বিন্যাস নিৰ্ধাৰিত নহয়, এটা "
 "<window type=\"%s\" style_set=\"whatever\"/> স্বত্বা যোগ কৰক"
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "ব্যৱহাৰকৰ্তা দ্বাৰা নিৰ্ধাৰিত কনস্টেন্টেৰ ক্ষেত্ৰত প্ৰাৰম্ভে বড় সৰু ডাঙৰেৰ "
 "হৰফ উপস্থিত থাকা আৱশ্যক; \"%s\"'এ ক্ষেত্ৰত এটি উপস্থিত নেই"
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "কনস্টেন্ট \"%s\" পূৰ্বে নিৰ্ধাৰিত হৈছে"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "<%s> বস্তুত কোনো \"%s\" বৈশিষ্ট্য উপস্থিত নাই"
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "পংক্তি %d অক্ষৰ %d: %s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "এক <%s> বস্তুত \"%s\" বৈশিষ্ট্য দুবাৰ উল্লিখিত হৈছে"
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "এই ক্ষেত্ৰত <%s> ত \"%s\" বৈশিষ্ট বৈধ নহয়"
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "পূৰ্ণসংখ্যা ৰূপে \"%s\" বিশ্লেষণ কৰোঁতে ব্যৰ্থ"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "অন্তিম অংশৰ \"%s\" অক্ষৰসমূহ \"%s\" পংক্তিত বোধগম্য নহয়"
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "পূৰ্ণসংখ্যা %ld অবশ্যই শণ্যেৰ অধিক হোৱা আৱশ্যক"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "পূৰ্ণসংখ্যা %ld অত্যাধিক বড়, বৰ্তমানে সৰ্বাধিক মান %d"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "\"%s\"কে দশমিকযুক্ত সংখ্যা ৰূপে বিশ্লেষণ কৰোঁতে ব্যৰ্থ"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "বুলিয়ান মান \"true\" বা \"false\" হোৱা আৱশ্যক, \"%s\" ব্যৱহাৰ কৰা সম্ভৱ নহয়"
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "কোণতৰ মান 0.0ৰ পৰা 360.0'ত হোৱা আৱশ্যক, %g উল্লিখিত\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "আলফাৰ মান 0.0 (অদৃশ্য)ৰ পৰা 1.0 (সম্পূৰ্ণ অস্বচ্ছ)'ত হোৱা আৱশ্যক, %g "
 "উল্লিখিত\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2034,61 +2059,61 @@ msgstr ""
 "শিৰোনামৰ মাত্ৰা \"%s\" বৈধ নহয় (xx-small,x-small,small,medium,large,x-large"
 ",xx-large মানসমূহত যে কোনো এটা হোৱা আৱশ্যক)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> নাম  \"%s\"'এ দ্বিতীয়বাৰ ব্যৱহৃত হৈছে "
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> উৰ্ধ্বতন বস্তু \"%s\" নিৰ্ধাৰিত নহয়"
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> জ্যামিতি  \"%s\" সুনিৰ্দিষ্ট নহয়"
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr ""
 "<%s> দ্বাৰা জ্যামিতি নিৰ্ধাৰিত হোৱা আৱশ্যক বা ঊৰ্ধ্বতন বস্তুৰ ক্ষেত্ৰত "
 "জ্যামিতিৰ উপস্থিতি আৱশ্যক"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "You a উল্লিখিত সময় অবধি মান"
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "অজ্ঞাত প্ৰকাৰ \"%s\", <%s> স্বত্বায় উপস্থিত  ।"
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "অজ্ঞাত style_set \"%s\", <%s> স্বত্বায় উপস্থিত"
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "\"%s\" প্ৰকাৰৰ উইন্ডোৰ বাবে এটা স্টাইল সেট নিৰ্ধাৰিত হৈছে"
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "<%s> বস্তু <%s> ৰ তলত স্থাপন কৰা নাযাব"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2096,125 +2121,125 @@ msgstr ""
 "বুটামৰ বাবে \"button_width\"/\"button_height\" আৰু \"aspect_ratio\" "
 "(এস্পেক্ট অনুপাত) উভয় একেলগে উল্লেখ কৰা সম্ভৱ নহয়"
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "দুৰত্ব \"%s\" অজ্ঞাত"
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "এস্পেক্ট অনুপাত \"%s\" অজ্ঞাত"
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "প্ৰান্ত \"%s\" অজ্ঞাত"
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "No \"start_angle\" or \"from\" attribute on element <%s>"
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "No \"extent_angle\" or \"to\" attribute on element <%s>"
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "গ্ৰেডিয়েন্টেৰ বাবেে \"%s\" মান বোধগম্য নহয়"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "ভৰাট কৰাৰ ধৰণ \"%s\"  <%s> স্বত্বাৰ বাবে বোধগম্য নহয়"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "অৱস্থা \"%s\", <%s> স্বত্বাৰ বাবে বোধগম্য নহয়"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "শেডো \"%s\", <%s> স্বত্বাৰ বাবে বোধগম্য নহয়"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "তীৰচিহ্ন \"%s\", <%s> স্বত্বাৰ বাবে বোধগম্য নহয়"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "\"%s\" নামক কোনো <draw_ops> নিৰ্ধাৰিত নহয়"
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Including draw_ops \"%s\" here would create a circular reference"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "ফ্ৰেমৰ অংশতৰ বাবে \"%s\" অৱস্থান অজ্ঞাত"
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "ফ্ৰেমৰ বিন্যাসেত %s অৱস্থানে এটা অংশ উপস্থিত আছে"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "\"%s\" নামৰ কোনো <draw_ops> নিৰ্ধাৰিত নহয়"
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "বুটামৰ অজ্ঞাত ফাংশান \"%s\""
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "Button function \"%s\" does not exist in this version (%d, need %d)"
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "বুটামৰ অজ্ঞাত অৱস্থা \"%s\""
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr ""
 "function %s state %s বৈশিষ্ট্যেৰ মানৰ ক্ষেত্ৰত ফ্ৰেম বিন্যাসেত এটা বুটাম "
 "উপস্থিত আছে"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "focus বৈশিষ্ট্যৰ মান হিচাপে \"%s\" গ্ৰহণযোগ্য নহয়"
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "state বৈশিষ্ট্যৰ মান হিচাপে \"%s\" গ্ৰহণযোগ্য নহয়"
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "\"%s\" নামক বিন্যাস নিৰ্ধাৰণ কৰা নহয়"
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "resize বৈশিষ্ট্যৰ মান হিচাপে \"%s\" গ্ৰহণযোগ্য নহয়"
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
@@ -2223,26 +2248,26 @@ msgstr ""
 "সৰ্বোচ্চ মাপ/ছায়াবৃত অৱস্থাৰ ক্ষেত্ৰত <%s> স্বত্বায় \"resize\" বৈশিষ্ট্য "
 "উপস্থিত থাকা উচিত নহয়"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr "Should not have \"resize\" attribute on <%s> element for maximized states"
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr ""
 "state %s resize %s focus %s বৈশিষ্ট্য সহ অৱস্থাৰ ক্ষেত্ৰত বিন্যাস নিৰ্ধাৰিত "
 "হৈছে"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "state %s focus %s অৱস্থাৰ বাবে বিন্যাস নিৰ্ধাৰিত হৈছে"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
@@ -2250,7 +2275,7 @@ msgstr ""
 "এটা <piece> স্বত্বাৰ সৈতে দুটা draw_ops উপস্থিত থাকা সম্ভৱ নহয় (থিম দ্বাৰা "
 "এটা draw_ops বৈশিষ্ট্য আৰু <draw_ops> স্বত্বা বা দুটা স্বত্বা উল্লিখিত হৈছে)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
@@ -2258,7 +2283,7 @@ msgstr ""
 "এটা <button> স্বত্বাৰ সৈতে দুটা draw_ops উপস্থিত থাকা সম্ভৱ নহয় (থিম দ্বাৰা "
 "এটা draw_ops বৈশিষ্ট্য আৰু <draw_ops> স্বত্বা বা দুটা স্বত্বা উল্লিখিত হৈছে)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
@@ -2266,63 +2291,79 @@ msgstr ""
 "এটা <menu> স্বত্বাৰ সৈতে দুটা draw_ops উপস্থিত থাকা সম্ভৱ নহয় (থিম দ্বাৰা "
 "এটা draw_ops বৈশিষ্ট্য আৰু <draw_ops> স্বত্বা বা দুটা স্বত্বা উল্লিখিত হৈছে)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr ""
 " name/author/date/description স্বত্বাত <%s> স্বত্বাৰ ব্যৱহাৰ অনুমোদিত নহয়"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "<constant> স্বত্বাত <%s> স্বত্বাৰ ব্যৱহাৰ অনুমোদিত নহয়"
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr ""
 "distance/border/aspect_ratio স্বত্বাত <%s> স্বত্বাৰ ব্যৱহাৰ অনুমোদিত নহয়"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr ""
 "draw operation (ড্ৰ অপাৰেশন) স্বত্বাত <%s> স্বত্বাৰ ব্যৱহাৰ অনুমোদিত নহয়"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "<%s> বস্তু <%s> বস্তুত স্থাপন কৰা সম্ভৱ নহয়"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "ফ্ৰেমৰ অংশতৰ বাবে draw_ops উপলব্ধ নেই"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "বুটামৰ বাবে draw_ops উপলব্ধ নেই"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "<%s> বস্তুত কোনো টেক্সট অন্তৰ্ভুক্ত কৰা নাযাব"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "এই থিমৰ ক্ষেত্ৰত <%s> দুবাৰ নিৰ্দিষ্ট কৰা হৈছে"
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Failed to find a valid file for theme %s\n"
@@ -2372,56 +2413,60 @@ msgstr "পৰিবৰ্তনশীল অৱস্থানৰ মেনু"
 msgid "Border"
 msgstr "Boৰdeৰ"
 
-#: ../src/ui/theme-viewer.c:784
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "বুটাম বিন্যাসৰ পৰীক্ষা %d"
 
-#: ../src/ui/theme-viewer.c:809
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "এটা উইন্ডো ফ্ৰেম নিৰ্মাণৰ বাবে %g মিলিসেকেন্ড"
 
-#: ../src/ui/theme-viewer.c:849
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "ব্যৱহাৰপদ্ধতি: marco-theme-viewer [THEMENAME]\n"
 
-#: ../src/ui/theme-viewer.c:856
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "থিম লোড কৰোঁতে সমস্যা: %s\n"
 
-#: ../src/ui/theme-viewer.c:862
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" থিম %g সেকেন্ডে লোড কৰা হৈছে\n"
 
-#: ../src/ui/theme-viewer.c:906
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "স্বাভাবিক মাপতৰ শিৰোনামে ব্যৱহৃত ফন্ট"
 
-#: ../src/ui/theme-viewer.c:912
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "ছোট মাপতৰ শিৰোনামে ব্যৱহৃত ফন্ট"
 
-#: ../src/ui/theme-viewer.c:918
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "বড় মাপতৰ শিৰোনামে ব্যৱহৃত ফন্ট"
 
-#: ../src/ui/theme-viewer.c:923
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "বুটামৰ বিন্যাস"
 
-#: ../src/ui/theme-viewer.c:928
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "Benchmark"
 
-#: ../src/ui/theme-viewer.c:985
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "উইন্ডো শিৰোনাম চিহ্নিত স্থানে স্থাপিত হ'ব"
 
-#: ../src/ui/theme-viewer.c:1090
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
