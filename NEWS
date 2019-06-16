@@ -1,5 +1,15 @@
 ### marco 1.22.2
 
+    tx: sync with transifex
+    bump LT_VERSION_INFO
+    libmarco-private: add version information
+    add support for invisible borders
+    frames: avoid deprecated 'gtk_widget_set_double_buffered'
+    window: avoid clang warning: garbage value
+    ui: always set the frame background to None
+    libmetacity: use cairo to render gradient
+    gradient: sync code with mutter before it was removed
+
 ### marco 1.22.1
 
   * update translations
