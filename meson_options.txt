@@ -1,0 +1,31 @@
+option('disable-verbose-mode',
+  type: 'boolean', value: true,
+  description: 'disable marco\'s ability to do verbose logging, for embedded/size-sensitive custom builds')
+
+option('disable-sm',
+  type: 'boolean', value: false,
+  description: 'disable marco\'s session management support, for embedded/size-sensitive custom non-MATE builds')
+
+option('disable-startup-notification',
+  type: 'boolean', value: false,
+  description: 'disable marco\'s startup notification support, for embedded/size-sensitive custom non-MATE builds')
+
+option('disable-compositor',
+  type: 'boolean', value: false,
+  description: 'disable marco\'s compositing manager')
+
+option('disable-xsync',
+  type: 'boolean', value: false,
+  description: 'disable marco\'s use of the XSync extension')
+
+option('disable-render',
+  type: 'boolean', value: false,
+  description: 'disable marco\'s use of the RENDER extension')
+
+option('disable-shape',
+  type: 'boolean', value: false,
+  description: 'disable marco\'s use of the shaped window extension')
+
+option('disable-xinerama',
+  type: 'boolean', value: false,
+  description: 'disable marco\'s use of the Xinerama extension')
