@@ -207,7 +207,6 @@ after_scripts:
   -   ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/mate-icon-theme/raw/master/mate/16x16/apps/preferences-system-windows.png
   - fi
   - make distcheck
-  - tar tf marco-*.tar.xz|grep po #just for view
 
 releases:
   draft: false
