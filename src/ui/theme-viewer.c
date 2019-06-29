@@ -366,6 +366,26 @@ menu_contents (void)
   return frame;
 }
 
+static void
+override_background_color (GtkWidget *widget,
+                           GdkRGBA   *rgba)
+{
+  gchar          *css;
+  GtkCssProvider *provider;
+
+  provider = gtk_css_provider_new ();
+
+  css = g_strdup_printf ("* { background-color: %s; }",
+                         gdk_rgba_to_string (rgba));
+  gtk_css_provider_load_from_data (provider, css, -1, NULL);
+  g_free (css);
+
+  gtk_style_context_add_provider (gtk_widget_get_style_context (widget),
+                                  GTK_STYLE_PROVIDER (provider),
+                                  GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  g_object_unref (provider);
+}
+
 static GtkWidget*
 border_only_contents (void)
 {
@@ -380,7 +400,7 @@ border_only_contents (void)
   color.green = 0;
   color.blue = 0.6;
   color.alpha = 1.0;
-  gtk_widget_override_background_color (event_box, 0, &color);
+  override_background_color (event_box, &color);
 
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 3);
@@ -545,7 +565,7 @@ preview_collection (int font_size,
   desktop_color.blue = 0.65;
   desktop_color.alpha = 1.0;
 
-  gtk_widget_override_background_color (eventbox, 0, &desktop_color);
+  override_background_color (eventbox, &desktop_color);
 
   i = 0;
   while (i < META_FRAME_TYPE_LAST)
@@ -771,7 +791,7 @@ previews_of_button_layouts (void)
   desktop_color.blue = 0.65;
   desktop_color.alpha = 1.0;
 
-  gtk_widget_override_background_color (eventbox, 0, &desktop_color);
+  override_background_color (eventbox, &desktop_color);
 
   i = 0;
   while (i < BUTTON_LAYOUT_COMBINATIONS)

@@ -3485,8 +3485,6 @@ meta_window_move_resize_internal (MetaWindow          *window,
   gboolean need_move_frame = FALSE;
   gboolean need_resize_client = FALSE;
   gboolean need_resize_frame = FALSE;
-  int frame_size_dx;
-  int frame_size_dy;
   int size_dx;
   int size_dy;
   gboolean frame_shape_changed = FALSE;
@@ -3591,7 +3589,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
 
   if (have_window_frame)
     {
-      int new_w, new_h;
+      int frame_size_dx, frame_size_dy, new_w, new_h;
 
       new_w = window->rect.width + borders.total.left + borders.total.right;
 
@@ -3612,11 +3610,6 @@ meta_window_move_resize_internal (MetaWindow          *window,
                   "Calculated frame size %dx%d\n",
                   window->frame->rect.width,
                   window->frame->rect.height);
-    }
-  else
-    {
-      frame_size_dx = 0;
-      frame_size_dy = 0;
     }
 
   /* For nice effect, when growing the window we want to move/resize
@@ -6111,6 +6104,8 @@ meta_window_update_icon_now (MetaWindow *window)
 
   icon = NULL;
   mini_icon = NULL;
+  
+  int icon_size = meta_prefs_get_icon_size();
 
   if (meta_read_icons (window->screen,
                        window->xwindow,
@@ -6118,7 +6113,8 @@ meta_window_update_icon_now (MetaWindow *window)
                        window->wm_hints_pixmap,
                        window->wm_hints_mask,
                        &icon,
-                       META_ICON_WIDTH, META_ICON_HEIGHT,
+                       icon_size, /* width  */
+                       icon_size, /* height */
                        &mini_icon,
                        META_MINI_ICON_WIDTH,
                        META_MINI_ICON_HEIGHT))

@@ -657,6 +657,9 @@ prefs_changed_callback (MetaPreference pref,
       meta_display_set_cursor_theme (meta_prefs_get_cursor_theme (),
 				     meta_prefs_get_cursor_size ());
       break;
+    case META_PREF_ICON_SIZE:
+      meta_invalidate_all_icons();
+      break;
     default:
       /* handled elsewhere or otherwise */
       break;

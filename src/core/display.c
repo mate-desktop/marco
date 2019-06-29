@@ -388,6 +388,8 @@ meta_display_open (void)
   /* FIXME copy the checks from GDK probably */
   the_display->static_gravity_works = g_getenv ("MARCO_USE_STATIC_GRAVITY") != NULL;
 
+  the_display->tab_popup_mouse_pressed = FALSE;
+
   meta_bell_init (the_display);
 
   meta_display_init_keys (the_display);
@@ -1592,6 +1594,49 @@ static gboolean maybe_send_event_to_gtk(MetaDisplay* display, XEvent* xevent)
 	return TRUE;
 }
 
+static gboolean
+mouse_event_is_in_tab_popup (MetaDisplay *display,
+                             MetaScreen  *screen,
+                             Window       event_window,
+                             int          event_x,
+                             int          event_y,
+                             int         *popup_x,
+                             int         *popup_y)
+{
+  if (screen && screen->tab_popup)
+    {
+      int x, y;
+      Window child1, child2;
+      gboolean ok1 = XTranslateCoordinates (display->xdisplay,
+                                            event_window, event_window,
+                                            event_x, event_y,
+                                            &x, &y, &child1);
+
+      GtkWidget *popup_widget = meta_ui_tab_popup_get_widget (screen->tab_popup);
+      if (ok1 && popup_widget != NULL) 
+        {
+          Window popup_xid = gdk_x11_window_get_xid (gtk_widget_get_window (popup_widget));
+  
+          gboolean ok2 = XTranslateCoordinates (display->xdisplay,
+                                                event_window, popup_xid,
+                                                event_x, event_y,
+                                                popup_x, popup_y, &child2);
+    
+          if (ok2 && child1 == popup_xid)
+            {
+              int scale = gtk_widget_get_scale_factor (popup_widget);
+              if (scale != 0)
+                {
+                  *popup_x /= scale;
+                  *popup_y /= scale;
+                }
+              return TRUE;
+            }
+        }
+    }
+  return FALSE;
+}
+
 /**
  * This is the most important function in the whole program. It is the heart,
  * it is the nexus, it is the Grand Central Station of Marco's world.
@@ -1803,26 +1848,47 @@ static gboolean event_callback(XEvent* event, gpointer data)
            display->grab_window == window) ||
           grab_op_is_keyboard (display->grab_op))
         {
-          meta_topic (META_DEBUG_WINDOW_OPS,
-                      "Ending grab op %u on window %s due to button press\n",
-                      display->grab_op,
-                      (display->grab_window ?
-                       display->grab_window->desc :
-                       "none"));
-          if (GRAB_OP_IS_WINDOW_SWITCH (display->grab_op))
+          gboolean is_in_tab_popup = FALSE;
+          if (grab_op_is_keyboard (display->grab_op))
             {
-              MetaScreen *screen;
-              meta_topic (META_DEBUG_WINDOW_OPS,
-                          "Syncing to old stack positions.\n");
-              screen =
-                meta_display_screen_for_root (display, event->xany.window);
-
-              if (screen!=NULL)
-                meta_stack_set_positions (screen->stack,
-                                          display->grab_old_window_stacking);
+              MetaScreen *screen = meta_display_screen_for_root (display, event->xany.window);
+              int popup_x, popup_y;
+              is_in_tab_popup = mouse_event_is_in_tab_popup (display,
+                                                             screen,
+                                                             event->xany.window,
+                                                             event->xbutton.x,
+                                                             event->xbutton.y,
+                                                             &popup_x,
+                                                             &popup_y);
+              if (is_in_tab_popup && event->xbutton.button == Button1) 
+                {
+                  display->tab_popup_mouse_pressed = TRUE;
+                  meta_ui_tab_popup_mouse_press(screen->tab_popup, popup_x, popup_y);
+                }
             }
-          meta_display_end_grab_op (display,
-                                    event->xbutton.time);
+          if (!is_in_tab_popup)
+            {
+              meta_topic (META_DEBUG_WINDOW_OPS,
+                          "Ending grab op %u on window %s due to button press\n",
+                          display->grab_op,
+                          (display->grab_window ?
+                           display->grab_window->desc :
+                           "none"));
+              if (GRAB_OP_IS_WINDOW_SWITCH (display->grab_op))
+                {
+                  MetaScreen *screen;
+                  meta_topic (META_DEBUG_WINDOW_OPS,
+                              "Syncing to old stack positions.\n");
+                  screen =
+                    meta_display_screen_for_root (display, event->xany.window);
+    
+                  if (screen!=NULL)
+                    meta_stack_set_positions (screen->stack,
+                                              display->grab_old_window_stacking);
+                }
+              meta_display_end_grab_op (display,
+                                        event->xbutton.time);
+            }
         }
       else if (window && display->grab_op == META_GRAB_OP_NONE)
         {
@@ -1990,11 +2056,27 @@ static gboolean event_callback(XEvent* event, gpointer data)
       if (display->grab_window == window &&
           grab_op_is_mouse (display->grab_op))
         meta_window_handle_mouse_grab_op_event (window, event);
+      if (event->xbutton.button == Button1) 
+        display->tab_popup_mouse_pressed = FALSE;
       break;
     case MotionNotify:
       if (display->grab_window == window &&
           grab_op_is_mouse (display->grab_op))
         meta_window_handle_mouse_grab_op_event (window, event);
+      else if (grab_op_is_keyboard (display->grab_op) && display->tab_popup_mouse_pressed)
+        {
+          MetaScreen *screen = meta_display_screen_for_root (display, event->xany.window);
+          int popup_x, popup_y;
+          gboolean is_in_tab_popup = mouse_event_is_in_tab_popup (display,
+                                                                  screen,
+                                                                  event->xany.window,
+                                                                  event->xbutton.x,
+                                                                  event->xbutton.y,
+                                                                  &popup_x,
+                                                                  &popup_y);
+          if (is_in_tab_popup) 
+            meta_ui_tab_popup_mouse_press (screen->tab_popup, popup_x, popup_y);
+        }
       break;
     case EnterNotify:
       if (display->grab_window == window &&
@@ -3555,6 +3637,7 @@ meta_display_begin_grab_op (MetaDisplay *display,
         }
     }
 
+  display->tab_popup_mouse_pressed = FALSE;
   display->grab_op = op;
   display->grab_window = window;
   display->grab_screen = screen;
@@ -3783,6 +3866,7 @@ meta_display_end_grab_op (MetaDisplay *display,
     {
       meta_ui_tab_popup_free (display->grab_screen->tab_popup);
       display->grab_screen->tab_popup = NULL;
+      display->tab_popup_mouse_pressed = FALSE;
 
       /* If the ungrab here causes an EnterNotify, ignore it for
        * sloppy focus

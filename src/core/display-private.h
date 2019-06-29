@@ -128,6 +128,8 @@ struct _MetaDisplay {
 
 	guint static_gravity_works: 1;
 
+        guint tab_popup_mouse_pressed : 1;
+
 	/*< private-ish >*/
 	guint error_trap_synced_at_last_pop: 1;
 	MetaEventQueue* events;

@@ -35,6 +35,7 @@
 #include "prefs.h"
 #include "workspace.h"
 #include "keybindings.h"
+#include "prefs.h"
 #include "stack.h"
 #include "xprops.h"
 #include "compositor.h"
@@ -118,14 +119,15 @@ set_supported_hint (MetaScreen *screen)
 static int
 set_wm_icon_size_hint (MetaScreen *screen)
 {
+  int icon_size = meta_prefs_get_icon_size();
 #define N_VALS 6
   gulong vals[N_VALS];
 
   /* min width, min height, max w, max h, width inc, height inc */
-  vals[0] = META_ICON_WIDTH;
-  vals[1] = META_ICON_HEIGHT;
-  vals[2] = META_ICON_WIDTH;
-  vals[3] = META_ICON_HEIGHT;
+  vals[0] = icon_size; /* width */
+  vals[1] = icon_size; /* height */
+  vals[2] = icon_size; /* width */
+  vals[3] = icon_size; /* height */
   vals[4] = 0;
   vals[5] = 0;
 
@@ -1339,11 +1341,25 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
           gdk_pixbuf_copy_area (win_pixbuf, 0, 0, width, height,
                                 entries[i].icon, 0, 0);
           g_object_unref (win_pixbuf);
+          
+          double icon_scale   = 1.0;
+          double max_coverage = 0.9;
+          
+          if (icon_width > t_width * max_coverage)
+            icon_scale = (t_width * max_coverage) / icon_width;
+            
+          if (icon_height * icon_scale > t_height * max_coverage)
+            icon_scale = (t_height * max_coverage) / icon_height;
+          
+          int t_icon_width  = (int)(icon_width  * icon_scale);
+          int t_icon_height = (int)(icon_height * icon_scale);
+          
           gdk_pixbuf_composite (window->icon, entries[i].icon,
-                                t_width - icon_width, t_height - icon_height,
-                                icon_width, icon_height,
-                                t_width - icon_width, t_height - icon_height,
-                                1.0, 1.0, GDK_INTERP_BILINEAR, 255);
+                                t_width  - t_icon_width, 
+                                t_height - t_icon_height,
+                                t_icon_width, t_icon_height,
+                                t_width - t_icon_width, t_height - t_icon_height,
+                                icon_scale, icon_scale, GDK_INTERP_BILINEAR, 255);
         }
 
       entries[i].blank = FALSE;
@@ -1385,7 +1401,8 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
 
   screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              len,
-                                             5, /* FIXME */
+                                             meta_prefs_get_alt_tab_max_columns(),
+                                             meta_prefs_get_alt_tab_expand_to_fit_title(),
                                              border);
 
   for (i = 0; i < len; i++)
@@ -1457,6 +1474,7 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
   screen->tab_popup = meta_ui_tab_popup_new (entries,
                                              len,
                                              layout.cols,
+                                             FALSE, /* expand_for_titles */
                                              BORDER_OUTLINE_WORKSPACE);
 
   g_free (entries);
@@ -2167,10 +2185,7 @@ meta_screen_calc_workspace_layout (MetaScreen          *screen,
 
   grid = g_new (int, grid_area);
 
-  current_row = -1;
-  current_col = -1;
   i = 0;
-
   switch (screen->starting_corner)
     {
     case META_SCREEN_TOPLEFT:

@@ -221,8 +221,6 @@ meta_preview_draw (GtkWidget *widget,
 
   if (preview->theme)
     {
-      border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
-
       meta_theme_draw_frame (preview->theme,
                              gtk_widget_get_style_context (widget),
                              cr,
@@ -440,13 +438,13 @@ meta_preview_get_icon (void)
       if (icon_exists)
           default_icon = gtk_icon_theme_load_icon (theme,
                                                    META_DEFAULT_ICON_NAME,
-                                                   META_ICON_WIDTH,
+                                                   META_DEFAULT_ICON_SIZE,
                                                    0,
                                                    NULL);
       else
           default_icon = gtk_icon_theme_load_icon (theme,
                                                    "image-missing",
-                                                   META_ICON_WIDTH,
+                                                   META_DEFAULT_ICON_SIZE,
                                                    0,
                                                    NULL);
 

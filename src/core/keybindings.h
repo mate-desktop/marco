@@ -35,6 +35,13 @@
 #define ARROW_RIGHT 114
 #define ARROW_RIGHT_PAD 85
 
+#define ARROW_UP 111
+#define ARROW_UP_PAD 80
+
+#define ARROW_DOWN 116
+#define ARROW_DOWN_PAD 88
+
+
 #include "display-private.h"
 #include "window.h"
 

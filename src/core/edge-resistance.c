@@ -285,7 +285,6 @@ find_nearest_position (const GArray        *edges,
           if (dist < best_dist)
             {
               best = compare;
-              best_dist = dist;
             }
           break;
         }
@@ -461,7 +460,6 @@ apply_edge_resistance (MetaWindow                *window,
            */
 
           /* First, determine the threshold */
-          threshold = 0;
           switch (edge->edge_type)
             {
             case META_EDGE_WINDOW:
@@ -482,6 +480,8 @@ apply_edge_resistance (MetaWindow                *window,
               else
                 threshold = PIXEL_DISTANCE_THRESHOLD_AWAYFROM_SCREEN;
               break;
+            default:
+              threshold = 0;
             }
 
           if (ABS (compare - new_pos) < threshold)

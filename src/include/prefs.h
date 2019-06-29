@@ -60,6 +60,9 @@ typedef enum
   META_PREF_MATE_ANIMATIONS,
   META_PREF_CURSOR_THEME,
   META_PREF_CURSOR_SIZE,
+  META_PREF_ICON_SIZE,
+  META_PREF_ALT_TAB_MAX_COLUMNS,
+  META_PREF_ALT_TAB_EXPAND_TO_FIT_TITLE,
   META_PREF_COMPOSITING_MANAGER,
   META_PREF_COMPOSITING_FAST_ALT_TAB,
   META_PREF_RESIZE_WITH_RIGHT_BUTTON,
@@ -129,6 +132,9 @@ void        meta_prefs_change_workspace_name (int         i,
 
 const char* meta_prefs_get_cursor_theme      (void);
 int         meta_prefs_get_cursor_size       (void);
+int         meta_prefs_get_icon_size         (void);
+int         meta_prefs_get_alt_tab_max_columns (void);
+gboolean    meta_prefs_get_alt_tab_expand_to_fit_title (void);
 gboolean    meta_prefs_get_compositing_manager (void);
 gboolean    meta_prefs_get_compositing_fast_alt_tab (void);
 gboolean    meta_prefs_get_center_new_windows  (void);

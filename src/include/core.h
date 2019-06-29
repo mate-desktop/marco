@@ -206,6 +206,8 @@ void meta_core_increment_event_serial (Display *display);
 
 void meta_invalidate_default_icons (void);
 
+void meta_invalidate_all_icons (void);
+
 #endif
 
 

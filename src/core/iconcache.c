@@ -523,6 +523,10 @@ meta_icon_cache_init (MetaIconCache *icon_cache)
   icon_cache->wm_hints_dirty = TRUE;
   icon_cache->kwm_win_icon_dirty = TRUE;
   icon_cache->net_wm_icon_dirty = TRUE;
+
+  icon_cache->wm_hints_dirty_forced = FALSE;
+  icon_cache->kwm_win_icon_dirty_forced = FALSE;
+  icon_cache->fallback_icon_dirty_forced = FALSE;
 }
 
 static void
@@ -553,6 +557,18 @@ void
 meta_icon_cache_free (MetaIconCache *icon_cache)
 {
   clear_icon_cache (icon_cache, FALSE);
+}
+
+void
+meta_icon_cache_invalidate (MetaIconCache *icon_cache)
+{
+  icon_cache->wm_hints_dirty = TRUE;
+  icon_cache->kwm_win_icon_dirty = TRUE;
+  icon_cache->net_wm_icon_dirty = TRUE;
+
+  icon_cache->wm_hints_dirty_forced = TRUE;
+  icon_cache->kwm_win_icon_dirty_forced = TRUE;
+  icon_cache->fallback_icon_dirty_forced = TRUE;
 }
 
 void
@@ -773,9 +789,12 @@ meta_read_icons (MetaScreen     *screen,
        * hints change
        */
       if ((pixmap != icon_cache->prev_pixmap ||
-           mask != icon_cache->prev_mask) &&
+           mask != icon_cache->prev_mask ||
+           icon_cache->wm_hints_dirty_forced) &&
           pixmap != None)
         {
+          icon_cache->wm_hints_dirty_forced = FALSE;
+          
           if (try_pixmap_and_mask (screen->display,
                                    pixmap, mask,
                                    iconp, ideal_width, ideal_height,
@@ -800,9 +819,12 @@ meta_read_icons (MetaScreen     *screen,
       get_kwm_win_icon (screen->display, xwindow, &pixmap, &mask);
 
       if ((pixmap != icon_cache->prev_pixmap ||
-           mask != icon_cache->prev_mask) &&
+           mask != icon_cache->prev_mask ||
+           icon_cache->kwm_win_icon_dirty_forced) &&
           pixmap != None)
         {
+          icon_cache->kwm_win_icon_dirty_forced = FALSE;
+          
           if (try_pixmap_and_mask (screen->display, pixmap, mask,
                                    iconp, ideal_width, ideal_height,
                                    mini_iconp, ideal_mini_width, ideal_mini_height))
@@ -818,9 +840,13 @@ meta_read_icons (MetaScreen     *screen,
         }
     }
 
-  if (icon_cache->want_fallback &&
-      icon_cache->origin < USING_FALLBACK_ICON)
+  if ((icon_cache->want_fallback &&
+      icon_cache->origin < USING_FALLBACK_ICON) 
+   || (icon_cache->fallback_icon_dirty_forced &&
+       icon_cache->origin == USING_FALLBACK_ICON))
     {
+      icon_cache->fallback_icon_dirty_forced = FALSE;
+      
       get_fallback_icons (screen,
                           iconp,
                           ideal_width,

@@ -2052,7 +2052,7 @@ process_tab_grab (MetaDisplay *display,
 {
   MetaKeyBindingAction action;
   gboolean popup_not_showing;
-  gboolean backward;
+  enum { NEXT, PREV, UP, DOWN, LEFT, RIGHT } direction;
   gboolean key_used;
   Window      prev_xwindow;
   MetaWindow *prev_window;
@@ -2198,7 +2198,7 @@ process_tab_grab (MetaDisplay *display,
 
   popup_not_showing = FALSE;
   key_used = FALSE;
-  backward = FALSE;
+  direction = NEXT;
 
   switch (action)
     {
@@ -2213,7 +2213,7 @@ process_tab_grab (MetaDisplay *display,
     case META_KEYBINDING_ACTION_CYCLE_GROUP_BACKWARD:
       popup_not_showing = TRUE;
       key_used = TRUE;
-      backward = TRUE;
+      direction = PREV;
       break;
     case META_KEYBINDING_ACTION_SWITCH_PANELS:
     case META_KEYBINDING_ACTION_SWITCH_WINDOWS:
@@ -2226,7 +2226,7 @@ process_tab_grab (MetaDisplay *display,
     case META_KEYBINDING_ACTION_SWITCH_WINDOWS_ALL_BACKWARD:
     case META_KEYBINDING_ACTION_SWITCH_GROUP_BACKWARD:
       key_used = TRUE;
-      backward = TRUE;
+      direction = PREV;
       break;
     default:
       break;
@@ -2234,11 +2234,24 @@ process_tab_grab (MetaDisplay *display,
 
   /* Allow use of arrows while in window switching mode */
   if (event->xkey.keycode == ARROW_RIGHT || event->xkey.keycode == ARROW_RIGHT_PAD)
-    key_used = TRUE;
+    {
+      key_used = TRUE;
+      direction = RIGHT;
+    }
   else if (event->xkey.keycode == ARROW_LEFT || event->xkey.keycode == ARROW_LEFT_PAD)
     {
       key_used = TRUE;
-      backward = TRUE;
+      direction = LEFT;
+    }
+  else if (event->xkey.keycode == ARROW_UP || event->xkey.keycode == ARROW_UP_PAD)
+    {
+      key_used = TRUE;
+      direction = UP;
+    }
+  else if (event->xkey.keycode == ARROW_DOWN || event->xkey.keycode == ARROW_DOWN_PAD)
+    {
+      key_used = TRUE;
+      direction = DOWN;
     }
 
   if (key_used)
@@ -2246,13 +2259,17 @@ process_tab_grab (MetaDisplay *display,
       meta_topic (META_DEBUG_KEYBINDINGS,
                   "Key pressed, moving tab focus in popup\n");
 
-      if (event->xkey.state & ShiftMask)
-        backward = !backward;
+      if ((event->xkey.state & ShiftMask) && (direction == NEXT || direction == PREV))
+        direction = (direction == NEXT) ? PREV : NEXT;
 
-      if (backward)
+      if (direction == PREV || direction == LEFT)
         meta_ui_tab_popup_backward (screen->tab_popup);
-      else
+      else if (direction == NEXT || direction == RIGHT)
         meta_ui_tab_popup_forward (screen->tab_popup);
+      else if (direction == DOWN)
+        meta_ui_tab_popup_down (screen->tab_popup);
+      else if (direction == UP)
+        meta_ui_tab_popup_up (screen->tab_popup);
 
       if (popup_not_showing)
         {
@@ -2874,7 +2891,6 @@ handle_panel (MetaDisplay    *display,
   Atom action_atom;
   XClientMessageEvent ev;
 
-  action_atom = None;
   switch (action)
     {
     /* FIXME: The numbers are wrong */
