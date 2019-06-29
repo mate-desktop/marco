@@ -427,6 +427,10 @@ get_window_contents (MetaFrameType  type,
       *title = _("Border");
       return border_only_contents ();
 
+    case META_FRAME_TYPE_ATTACHED:
+      *title = _("Attached Modal Dialog");
+      return dialog_contents ();
+
     case META_FRAME_TYPE_LAST:
       g_assert_not_reached ();
       break;
@@ -472,6 +476,9 @@ get_window_flags (MetaFrameType type)
       break;
 
     case META_FRAME_TYPE_BORDER:
+      break;
+
+    case META_FRAME_TYPE_ATTACHED:
       break;
 
     case META_FRAME_TYPE_LAST:
@@ -993,7 +1000,7 @@ run_theme_benchmark (void)
   GtkWidget* widget;
   cairo_surface_t *pixmap;
   cairo_t *cr;
-  int top_height, bottom_height, left_width, right_width;
+  MetaFrameBorders borders;
   MetaButtonState button_states[META_BUTTON_TYPE_LAST] =
   {
     META_BUTTON_STATE_NORMAL,
@@ -1019,10 +1026,7 @@ run_theme_benchmark (void)
                                 META_FRAME_TYPE_NORMAL,
                                 get_text_height (widget),
                                 get_flags (widget),
-                                &top_height,
-                                &bottom_height,
-                                &left_width,
-                                &right_width);
+                                &borders);
 
   layout = create_title_layout (widget);
 
@@ -1057,12 +1061,12 @@ run_theme_benchmark (void)
        */
       pixmap = gdk_window_create_similar_surface (gtk_widget_get_window (widget),
                                                   CAIRO_CONTENT_COLOR,
-                                                  client_width + left_width + right_width,
-                                                  client_height + top_height + bottom_height);
+                                                  client_width + borders.total.left + borders.total.right,
+                                                  client_height + borders.total.top + borders.total.bottom);
       cr = cairo_create (pixmap);
 
       meta_theme_draw_frame (global_theme,
-                             widget,
+                             gtk_widget_get_style_context (widget),
                              cr,
                              META_FRAME_TYPE_NORMAL,
                              get_flags (widget),

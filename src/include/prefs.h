@@ -34,6 +34,7 @@ typedef enum
   META_PREF_MOUSE_BUTTON_MODS,
   META_PREF_FOCUS_MODE,
   META_PREF_FOCUS_NEW_WINDOWS,
+  META_PREF_ATTACH_MODAL_DIALOGS,
   META_PREF_RAISE_ON_CLICK,
   META_PREF_ACTION_DOUBLE_CLICK_TITLEBAR,
   META_PREF_ACTION_MIDDLE_CLICK_TITLEBAR,
@@ -87,6 +88,7 @@ guint                       meta_prefs_get_mouse_button_resize (void);
 guint                       meta_prefs_get_mouse_button_menu  (void);
 MetaFocusMode               meta_prefs_get_focus_mode         (void);
 MetaFocusNewWindows         meta_prefs_get_focus_new_windows  (void);
+gboolean                    meta_prefs_get_attach_modal_dialogs (void);
 gboolean                    meta_prefs_get_raise_on_click     (void);
 const char*                 meta_prefs_get_theme              (void);
 /* returns NULL if GTK default should be used */
@@ -179,6 +181,8 @@ typedef enum _MetaKeyBindingAction
   META_KEYBINDING_ACTION_SWITCH_GROUP_BACKWARD,
   META_KEYBINDING_ACTION_SWITCH_WINDOWS,
   META_KEYBINDING_ACTION_SWITCH_WINDOWS_BACKWARD,
+  META_KEYBINDING_ACTION_SWITCH_WINDOWS_ALL,
+  META_KEYBINDING_ACTION_SWITCH_WINDOWS_ALL_BACKWARD,
   META_KEYBINDING_ACTION_SWITCH_PANELS,
   META_KEYBINDING_ACTION_SWITCH_PANELS_BACKWARD,
   META_KEYBINDING_ACTION_CYCLE_GROUP,

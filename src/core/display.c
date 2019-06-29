@@ -3405,7 +3405,7 @@ meta_display_set_grab_op_cursor (MetaDisplay *display,
 
   if (change_pointer)
     {
-      meta_error_trap_push_with_return (display);
+      meta_error_trap_push (display);
       XChangeActivePointerGrab (display->xdisplay,
                                 GRAB_MASK,
                                 cursor,
@@ -3617,7 +3617,7 @@ meta_display_begin_grab_op (MetaDisplay *display,
           XSyncAlarmAttributes values;
 	  XSyncValue init;
 
-          meta_error_trap_push_with_return (display);
+          meta_error_trap_push (display);
 
 	  /* Set the counter to 0, so we know that the application's
 	   * responses to the client messages will always trigger
@@ -3934,7 +3934,7 @@ meta_change_button_grab (MetaDisplay *display,
         }
 
       if (meta_is_debugging ())
-        meta_error_trap_push_with_return (display);
+        meta_error_trap_push (display);
 
       /* GrabModeSync means freeze until XAllowEvents */
 
@@ -4386,11 +4386,7 @@ process_request_frame_extents (MetaDisplay    *display,
                                          &hints);
   if ((hints_set && hints->decorations) || !hints_set)
     {
-      int top = 0;
-      int bottom = 0;
-      int left = 0;
-      int right = 0;
-
+      MetaFrameBorders borders;
       MetaScreen *screen;
 
       screen = meta_display_screen_for_xwindow (display,
@@ -4408,15 +4404,12 @@ process_request_frame_extents (MetaDisplay    *display,
       meta_ui_theme_get_frame_borders (screen->ui,
                                        META_FRAME_TYPE_NORMAL,
                                        0,
-                                       &top,
-                                       &bottom,
-                                       &left,
-                                       &right);
+                                       &borders);
 
-      data[0] = left;
-      data[1] = right;
-      data[2] = top;
-      data[3] = bottom;
+      data[0] = borders.visible.left;
+      data[1] = borders.visible.right;
+      data[2] = borders.visible.top;
+      data[3] = borders.visible.bottom;
     }
 
   meta_topic (META_DEBUG_GEOMETRY,
@@ -4877,7 +4870,7 @@ convert_property (MetaDisplay *display,
   conversion_targets[2] = display->atom_TIMESTAMP;
   conversion_targets[3] = display->atom_VERSION;
 
-  meta_error_trap_push_with_return (display);
+  meta_error_trap_push (display);
   if (target == display->atom_TARGETS)
     XChangeProperty (display->xdisplay, w, property,
 		     XA_ATOM, 32, PropModeReplace,
@@ -4955,7 +4948,7 @@ process_selection_request (MetaDisplay   *display,
           unsigned long num, rest;
           unsigned char *data;
 
-          meta_error_trap_push_with_return (display);
+          meta_error_trap_push (display);
           if (XGetWindowProperty (display->xdisplay,
                                   event->xselectionrequest.requestor,
                                   event->xselectionrequest.property, 0, 256, False,
@@ -5215,6 +5208,34 @@ prefs_changed_callback (MetaPreference pref,
         enable_compositor (display, TRUE);
       else
 	disable_compositor (display);
+    }
+  else if (pref == META_PREF_ATTACH_MODAL_DIALOGS)
+    {
+      MetaDisplay *display = data;
+      GSList *windows;
+      GSList *tmp;
+
+      windows = meta_display_list_windows (display);
+
+      for (tmp = windows; tmp != NULL; tmp = tmp->next)
+        {
+          MetaWindow *w = tmp->data;
+          MetaWindow *parent = meta_window_get_transient_for (w);
+          meta_window_recalc_features (w);
+
+          if (w->type == META_WINDOW_MODAL_DIALOG && parent && parent != w)
+            {
+              int x, y;
+              /* Forcing a call to move_resize() does two things: first, it handles
+               * resizing the dialog frame window to the correct size when we remove
+               * or add the decorations. Second, it will take care of positioning the
+               * dialog as "attached" to the parent when we turn the preference on
+               * via the constrain_modal_dialog() constraint.
+               **/
+              meta_window_get_position (w, &x, &y);
+              meta_window_move (w, FALSE, x, y);
+            }
+        }
     }
 }
 

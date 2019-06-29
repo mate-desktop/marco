@@ -68,7 +68,8 @@ static GtkWidget* selectable_image_new (GdkPixbuf *pixbuf);
 static void       select_image         (GtkWidget *widget);
 static void       unselect_image       (GtkWidget *widget);
 
-static GtkWidget* selectable_workspace_new (MetaWorkspace *workspace);
+static GtkWidget* selectable_workspace_new (MetaWorkspace *workspace,
+                                                           int entry_count);
 static void       select_workspace         (GtkWidget *widget);
 static void       unselect_workspace       (GtkWidget *widget);
 
@@ -148,8 +149,8 @@ dimm_icon (GdkPixbuf *pixbuf)
 
 static TabEntry*
 tab_entry_new (const MetaTabEntry *entry,
-               gint                screen_width,
-               gboolean            outline)
+               gboolean            outline,
+               gint                scale)
 {
   TabEntry *te;
 
@@ -200,15 +201,15 @@ tab_entry_new (const MetaTabEntry *entry,
 
   if (outline)
     {
-      te->rect.x = entry->rect.x;
-      te->rect.y = entry->rect.y;
-      te->rect.width = entry->rect.width;
-      te->rect.height = entry->rect.height;
+      te->rect.x = entry->rect.x / scale;
+      te->rect.y = entry->rect.y / scale;
+      te->rect.width = entry->rect.width / scale;
+      te->rect.height = entry->rect.height / scale;
 
-      te->inner_rect.x = entry->inner_rect.x;
-      te->inner_rect.y = entry->inner_rect.y;
-      te->inner_rect.width = entry->inner_rect.width;
-      te->inner_rect.height = entry->inner_rect.height;
+      te->inner_rect.x = entry->inner_rect.x / scale;
+      te->inner_rect.y = entry->inner_rect.y / scale;
+      te->inner_rect.width = entry->inner_rect.width / scale;
+      te->inner_rect.height = entry->inner_rect.height / scale;
     }
   return te;
 }
@@ -229,21 +230,34 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   int max_label_width; /* the actual max width of the labels we create */
   AtkObject *obj;
   GdkScreen *screen;
-  int screen_width;
+  int screen_width, scale;
 
   popup = g_new (MetaTabPopup, 1);
 
-  popup->outline_window = gtk_window_new (GTK_WINDOW_POPUP);
-
   screen = gdk_display_get_default_screen (gdk_display_get_default ());
-  gtk_window_set_screen (GTK_WINDOW (popup->outline_window),
-                         screen);
 
-  gtk_widget_set_app_paintable (popup->outline_window, TRUE);
-  gtk_widget_realize (popup->outline_window);
+  if (border & BORDER_OUTLINE_WINDOW)
+    {
+      GdkRGBA black = { 0.0, 0.0, 0.0, 1.0 };
 
-  g_signal_connect (G_OBJECT (popup->outline_window), "draw",
-                    G_CALLBACK (outline_window_draw), popup);
+      popup->outline_window = gtk_window_new (GTK_WINDOW_POPUP);
+
+      gtk_window_set_screen (GTK_WINDOW (popup->outline_window),
+                             screen);
+
+      gtk_widget_set_app_paintable (popup->outline_window, TRUE);
+      gtk_widget_realize (popup->outline_window);
+
+      gdk_window_set_background_rgba (gtk_widget_get_window (popup->outline_window),
+                                      &black);
+
+      g_signal_connect (G_OBJECT (popup->outline_window), "draw",
+                        G_CALLBACK (outline_window_draw), popup);
+
+      gtk_widget_show (popup->outline_window);
+    }
+  else
+    popup->outline_window = NULL;
 
   popup->window = gtk_window_new (GTK_WINDOW_POPUP);
 
@@ -260,11 +274,11 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   popup->current_selected_entry = NULL;
   popup->border = border;
 
+  scale = gtk_widget_get_scale_factor (GTK_WIDGET (popup->window));
   screen_width = WidthOfScreen (gdk_x11_screen_get_xscreen (screen));
   for (i = 0; i < entry_count; ++i)
     {
-      TabEntry* new_entry = tab_entry_new (&entries[i], screen_width,
-        border & BORDER_OUTLINE_WINDOW);
+      TabEntry* new_entry = tab_entry_new (&entries[i], border & BORDER_OUTLINE_WINDOW, scale);
       popup->entries = g_list_prepend (popup->entries, new_entry);
     }
 
@@ -348,7 +362,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
             }
           else
             {
-              image = selectable_workspace_new ((MetaWorkspace *) te->key);
+              image = selectable_workspace_new ((MetaWorkspace *) te->key, entry_count);
             }
 
           te->widget = image;
@@ -446,12 +460,6 @@ static void
 display_entry (MetaTabPopup *popup,
                TabEntry     *te)
 {
-  GdkRectangle rect;
-  cairo_region_t *region;
-  cairo_region_t *inner_region;
-  GdkWindow *window;
-
-
   if (popup->current_selected_entry)
   {
     if (popup->border & BORDER_OUTLINE_TAB)
@@ -469,8 +477,11 @@ display_entry (MetaTabPopup *popup,
 
   if (popup->border & BORDER_OUTLINE_WINDOW)
     {
-      window = gtk_widget_get_window (popup->outline_window);
+      GdkRectangle rect;
+      GdkWindow *window;
+      cairo_region_t *region;
 
+      window = gtk_widget_get_window (popup->outline_window);
       /* Do stuff behind gtk's back */
       gdk_window_hide (window);
       meta_core_increment_event_serial (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
@@ -479,30 +490,17 @@ display_entry (MetaTabPopup *popup,
       rect.x = 0;
       rect.y = 0;
 
-      gdk_window_move_resize (window,
-                              te->rect.x, te->rect.y,
-                              te->rect.width, te->rect.height);
-
-      GdkRGBA black = { 0.0, 0.0, 0.0, 1.0 };
-      gdk_window_set_background_rgba (window, &black);
+      gtk_window_move (GTK_WINDOW (popup->outline_window), te->rect.x, te->rect.y);
+      gtk_window_resize (GTK_WINDOW (popup->outline_window), te->rect.width, te->rect.height);
 
       region = cairo_region_create_rectangle (&rect);
-      inner_region = cairo_region_create_rectangle (&te->inner_rect);
-      cairo_region_subtract (region, inner_region);
-      cairo_region_destroy (inner_region);
+      cairo_region_subtract_rectangle (region, &te->inner_rect);
 
-      gdk_window_shape_combine_region (window,
+      gdk_window_shape_combine_region (gtk_widget_get_window (popup->outline_window),
                                        region,
                                        0, 0);
 
       cairo_region_destroy (region);
-
-      /* This should piss off gtk a bit, but we don't want to raise
-       * above the tab popup.  So, instead of calling gtk_widget_show,
-       * we manually set the window as mapped and then manually map it
-       * with gdk functions.
-       */
-      gtk_widget_set_mapped (popup->outline_window, TRUE);
       gdk_window_show_unraised (window);
     }
 
@@ -756,23 +754,37 @@ struct _MetaSelectWorkspaceClass
 static GType meta_select_workspace_get_type (void) G_GNUC_CONST;
 
 #define SELECT_OUTLINE_WIDTH 2
-#define MINI_WORKSPACE_WIDTH 48
+#define MINI_WORKSPACE_SCALE 2
 
 static GtkWidget*
-selectable_workspace_new (MetaWorkspace *workspace)
+selectable_workspace_new (MetaWorkspace *workspace, int entry_count)
 {
   GtkWidget *widget;
-  double screen_aspect;
+  const MetaXineramaScreenInfo *current;
+  int mini_workspace_width, mini_workspace_height;
+  double mini_workspace_ratio;
 
   widget = g_object_new (meta_select_workspace_get_type (), NULL);
 
-  screen_aspect = (double) workspace->screen->rect.height /
-                  (double) workspace->screen->rect.width;
+  current = meta_screen_get_current_xinerama (workspace->screen);
+
+  if (workspace->screen->rect.width < workspace->screen->rect.height)
+  {
+    mini_workspace_ratio = (double) workspace->screen->rect.width / (double) workspace->screen->rect.height;
+    mini_workspace_height = (int) ((double) current->rect.height / entry_count - SELECT_OUTLINE_WIDTH * 2);
+    mini_workspace_width = (int) ((double) mini_workspace_height * mini_workspace_ratio);
+  }
+  else
+  {
+    mini_workspace_ratio = (double) workspace->screen->rect.height / (double) workspace->screen->rect.width;
+    mini_workspace_width = (int) ((double) current->rect.width / entry_count - SELECT_OUTLINE_WIDTH * 2);
+    mini_workspace_height = (int) ((double) mini_workspace_width * mini_workspace_ratio);
+  }
 
   /* account for select rect */
   gtk_widget_set_size_request (widget,
-                               MINI_WORKSPACE_WIDTH + SELECT_OUTLINE_WIDTH * 2,
-                               MINI_WORKSPACE_WIDTH * screen_aspect + SELECT_OUTLINE_WIDTH * 2);
+                               mini_workspace_width / MINI_WORKSPACE_SCALE,
+                               mini_workspace_height / MINI_WORKSPACE_SCALE);
 
   META_SELECT_WORKSPACE (widget)->workspace = workspace;
 

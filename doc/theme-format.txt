@@ -4,6 +4,7 @@ of the theme format, and a given theme can support more than one format.
 Version 1:     THEMEDIR/metacity-1/metacity-theme-1.xml
   (original metacity format)
 Version 2:     THEMEDIR/metacity-1/metacity-theme-2.xml
+Version 3:     THEMEDIR/metacity-1/metacity-theme-3.xml
 
 The subdirectory name is "metacity-1" in all versions.
 
@@ -20,6 +21,77 @@ marco will get angry.
 This document has separate sections for each format version. You may
 want to read the document in reverse order, since the base features
 are discussed under version 1.
+
+New Features in Theme Format Version 3.5
+========================================
+
+Add support for app-menu button in window decorations. This was only
+used by Mutter and here is only to support this Theme Format Version.
+
+New Features in Theme Format Version 3.4
+========================================
+
+An additional color type is added to pick up custom colors defined
+in the GTK+ theme's CSS:
+
+  gtk:custom(name,fallback)
+
+where <name> refers to a custom color defined with @define-color in
+the GTK+ theme, and <fallback> provides an alternative color definition
+in case the color referenced by <name> is not found.
+
+New Features in Theme Format Version 3.3
+========================================
+
+Add two additional button background functions - left_single_background and
+right_single_background - for button groups with just a single button.
+
+There are now additional frame states to style left/right tiled windows
+differently ("tiled_left", "tiled_right", "tiled_left_and_shaded",
+"tiled_right_and_shaded")
+
+New Features in Theme Format Version 3.2
+========================================
+
+A new window type 'attached' is added for modal dialogs which are
+attached to their parent window. (When the attach_modal_dialogs preference
+is turned on.) If no style is defined for the 'attached' window type,
+the 'border' window type will be used instead.
+
+New Features in Theme Format Version 3.1
+========================================
+
+Additional predefined variables are added for positioning expressions:
+
+  frame_x_center: the X center of the entire frame, with respect to the
+      piece currently being drawn.
+  frame_y_center: the Y center of the entire frame, with respect to the
+      piece currently being drawn.
+
+The <title/> element now supports an "ellipsize_width" attribute. When
+specified, this gives a width at which to ellipsize the title. If not
+specified, the title will simply be clipped to the title area.
+
+New Features in Theme Format Version 3
+======================================
+
+Format version 3 has exactly one new feature; any element in the file
+can now have a version attribute:
+
+  version="[<|<=|=>|>] MAJOR.MINOR"
+
+(< and > should be to be entity escaped as &lt; and &gt;). If this
+version check is not met, then the element and its children will be
+ignored. This allows having alternate sections of the theme file for
+older and newer version of the Metacity theme format.
+
+When placed on the toplevel <metacity_theme> element, an unsatisfied
+version check will not just cause the contents of the file to be
+ignored, it will also cause the lookup of a theme file to proceed on
+and look for an older format 2 or format 1 file. This allows making a
+metacity-theme-3.xml file that is only used the format version 3.2 or
+newer is supported, and using metacity-theme-1.xml for older window
+managers.
 
 New Features in Theme Format Version 2
 ======================================

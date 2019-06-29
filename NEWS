@@ -1,3 +1,82 @@
+### marco 1.22.2
+
+    tx: sync with transifex
+    bump LT_VERSION_INFO
+    libmarco-private: add version information
+    add support for invisible borders
+    frames: avoid deprecated 'gtk_widget_set_double_buffered'
+    window: avoid clang warning: garbage value
+    ui: always set the frame background to None
+    libmetacity: use cairo to render gradient
+    gradient: sync code with mutter before it was removed
+
+### marco 1.22.1
+
+  * update translations
+  * window: set atom__NET_WM_STATE_FOCUSED for meta_window_appears_focused
+  * window: make docks and spashscreens appear focused
+  * Do not judge whether the window is decorated or not
+  * screen: Fix use of memory after it is freed
+  * [Security] Use 'g_strlcpy' instead of 'strcpy'
+  * compositor-xrender: Fix memory leak
+
+### marco 1.22.0
+
+  * update translations
+  * Initialize travis support
+  * screen: Remove get_current_monitor in favor of get_current_xinerama
+  * Increase icon size on tab and workspace popups
+  * screen: avoid 'NULL' in 'meta_error_trap...' functions
+  * prefs: avoid deprecated 'g_settings_list_keys'
+  * add git.mk to autogenerate .gitignore files
+  * enable silent output when building
+  * 'meta_error_trap_push' instead 'meta_error_trap_push_with_return'
+  * errors.c: avoid deprecated 'gdk_error_trap...' functions:
+  * frames.c: drop unused variables
+  * compositor-xrender: avoid deprecated 'gdk_error_trap_push/pop'
+
+### marco 1.21.1
+
+  * update translations
+  * theme: revert theme format version 3.6
+  * doc: add info for 3.5 and 3.6 theme format versions
+  * Convert frame region handling to cairo regions
+  * theme: add invisible_border to metacity theme
+  * add support for app-menu button in theme
+  * remove option to attach modal dialogs
+  * theme: replace mutter/metacity with marco
+  * theme: Replace char array element comparisons with strncmp
+  * tabpopup.c: always show 5px outline border
+  * tabpopup.c: improve
+  * Don't show the ws switcher if we only have one
+  * theme: Allow disabling fallback colors in gtk:custom()
+  * theme: Allow using custom colors from the GTK+ theme
+  * theme: Add tiled_left/tiled_right frame states
+  * theme: Add background functions for single buttons
+  * theme-parser: Use peek_required_version() for validation
+  * Add frame type for attached modal dialogs
+  * Optionally attach modal dialogs
+  * Add meta_window_get_transient_for() method
+  * Allow a theme to specify ellipsize width for a title
+  * Add frame_x_center/frame_y_center variables for themes
+  * metacity-theme-3.xml: Add a flexible version mechanism
+  * theme-parser: Remove unused define
+
+### marco 1.21.0
+
+  * update translations
+  * Correct resize popup position on HiDPI displays
+  * Fix frame geometry to avoid stuck resize cursor
+  * Scale cursor size for HiDPI
+  * tx: update config with branch specific resoures
+  * Use frame window to determine scale
+  * Support HiDPI window decorations
+  * Fix mismatched enums in keybinding detection for switch-panels and switch-panels-backward
+  * window: add _NET_WM_STATE_FOCUSED hint to _NET_WM_STATE
+  * avoid deprecated GtkButton:use-stock
+  * avoid deprecated GtkStock
+  * Fixes move_to_center moving window between monitors
+
 ### marco 1.20.0
 
   * Translations update

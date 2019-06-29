@@ -25,9 +25,10 @@
 #ifndef META_COMMON_H
 #define META_COMMON_H
 
-/* Don't include GTK or core headers here */
+/* Don't include core headers here */
 #include <X11/Xlib.h>
 #include <glib.h>
+#include <gtk/gtk.h>
 
 typedef struct _MetaResizePopup MetaResizePopup;
 
@@ -35,21 +36,22 @@ typedef enum
 {
   META_FRAME_ALLOWS_DELETE            = 1 << 0,
   META_FRAME_ALLOWS_MENU              = 1 << 1,
-  META_FRAME_ALLOWS_MINIMIZE          = 1 << 2,
-  META_FRAME_ALLOWS_MAXIMIZE          = 1 << 3,
-  META_FRAME_ALLOWS_VERTICAL_RESIZE   = 1 << 4,
-  META_FRAME_ALLOWS_HORIZONTAL_RESIZE = 1 << 5,
-  META_FRAME_HAS_FOCUS                = 1 << 6,
-  META_FRAME_SHADED                   = 1 << 7,
-  META_FRAME_STUCK                    = 1 << 8,
-  META_FRAME_MAXIMIZED                = 1 << 9,
-  META_FRAME_ALLOWS_SHADE             = 1 << 10,
-  META_FRAME_ALLOWS_MOVE              = 1 << 11,
-  META_FRAME_FULLSCREEN               = 1 << 12,
-  META_FRAME_IS_FLASHING              = 1 << 13,
-  META_FRAME_ABOVE                    = 1 << 14,
-  META_FRAME_TILED_LEFT               = 1 << 15,
-  META_FRAME_TILED_RIGHT              = 1 << 16
+  META_FRAME_ALLOWS_APPMENU           = 1 << 2,
+  META_FRAME_ALLOWS_MINIMIZE          = 1 << 3,
+  META_FRAME_ALLOWS_MAXIMIZE          = 1 << 4,
+  META_FRAME_ALLOWS_VERTICAL_RESIZE   = 1 << 5,
+  META_FRAME_ALLOWS_HORIZONTAL_RESIZE = 1 << 6,
+  META_FRAME_HAS_FOCUS                = 1 << 7,
+  META_FRAME_SHADED                   = 1 << 8,
+  META_FRAME_STUCK                    = 1 << 9,
+  META_FRAME_MAXIMIZED                = 1 << 10,
+  META_FRAME_ALLOWS_SHADE             = 1 << 11,
+  META_FRAME_ALLOWS_MOVE              = 1 << 12,
+  META_FRAME_FULLSCREEN               = 1 << 13,
+  META_FRAME_IS_FLASHING              = 1 << 14,
+  META_FRAME_ABOVE                    = 1 << 15,
+  META_FRAME_TILED_LEFT               = 1 << 16,
+  META_FRAME_TILED_RIGHT              = 1 << 17
 } MetaFrameFlags;
 
 typedef enum
@@ -143,6 +145,7 @@ typedef enum
   META_GRAB_OP_CLICKING_UNMAXIMIZE_HORIZONTAL,
   META_GRAB_OP_CLICKING_DELETE,
   META_GRAB_OP_CLICKING_MENU,
+  META_GRAB_OP_CLICKING_APPMENU,
   META_GRAB_OP_CLICKING_SHADE,
   META_GRAB_OP_CLICKING_UNSHADE,
   META_GRAB_OP_CLICKING_ABOVE,
@@ -208,6 +211,7 @@ typedef enum
   META_FRAME_TYPE_UTILITY,
   META_FRAME_TYPE_MENU,
   META_FRAME_TYPE_BORDER,
+  META_FRAME_TYPE_ATTACHED,
   META_FRAME_TYPE_LAST
 } MetaFrameType;
 
@@ -270,6 +274,7 @@ typedef enum
 typedef enum
 {
   META_BUTTON_FUNCTION_MENU,
+  META_BUTTON_FUNCTION_APPMENU,
   META_BUTTON_FUNCTION_MINIMIZE,
   META_BUTTON_FUNCTION_MAXIMIZE,
   META_BUTTON_FUNCTION_CLOSE,
@@ -296,9 +301,26 @@ struct _MetaButtonLayout
   gboolean right_buttons_has_spacer[MAX_BUTTONS_PER_CORNER];
 };
 
+typedef struct _MetaFrameBorders MetaFrameBorders;
+struct _MetaFrameBorders
+{
+  /* The frame border is made up of two pieces - an inner visible portion
+   * and an outer portion that is invisible but responds to events.
+   */
+  GtkBorder visible;
+  GtkBorder invisible;
+
+  /* For convenience, we have a "total" border which is equal to the sum
+   * of the two borders above. */
+  GtkBorder total;
+};
+
+/* sets all dimensions to zero */
+void meta_frame_borders_clear (MetaFrameBorders *self);
+
 /* should investigate changing these to whatever most apps use */
-#define META_ICON_WIDTH 32
-#define META_ICON_HEIGHT 32
+#define META_ICON_WIDTH 48
+#define META_ICON_HEIGHT 48
 #define META_MINI_ICON_WIDTH 16
 #define META_MINI_ICON_HEIGHT 16
 

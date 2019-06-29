@@ -1,16 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# Martin Wimpress <code@flexion.org>, 2019
+# exoos <mince.lesovski@gmail.com>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Macedonian (http://www.transifex.com/mate/MATE/language/mk/)\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"PO-Revision-Date: 2019-03-12 19:28+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
+"Language-Team: Macedonian (https://www.transifex.com/mate/teams/13566/mk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -208,7 +214,7 @@ msgstr "Промени ја состојбата на сенка"
 #: ../src/50-marco-window-key.xml.in.h:8
 #: ../src/org.mate.marco.gschema.xml.h:119
 msgid "Close window"
-msgstr "Затвори прозорец"
+msgstr "Затвори го прозорецот"
 
 #: ../src/50-marco-window-key.xml.in.h:9
 #: ../src/org.mate.marco.gschema.xml.h:118
@@ -428,7 +434,7 @@ msgstr "Премести прозорец за еден работен прос�
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Менувач за користење за изменети дејства за кликање на прозорецот"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -462,7 +468,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Уредување на копчиња на лентата со наслов"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -477,7 +483,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
-msgstr ""
+msgstr "Фокус на прозорци "
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -487,10 +493,16 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"Режимот за фокусирање на прозорци покажува колку прозорци се активни. Има "
+"три можни вредности; \"клик\" значи дека прозорецот мора да биде кликнат за "
+"да биде фокусиран , \"закос\" значи дека прозорецот е фокусиран кога "
+"глувчето ќе влезе во него, и \"глувче\" значи дека прозорецот ќе биде "
+"фокусиран кога глувчето ќе влезе во него, и излегува од фокус кога ќе го "
+"напушти прозорецот."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Контролирај како новите прозорци добиваат фокус"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -499,10 +511,14 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
+"Оваа опција овозможува додатна контрола врз тоа како новите прозорци "
+"добиваат фокус. Има две можни вредности: \"паметно\" го применува режимот на"
+" нормален фокус на корисникот и \"стриктно\" резултира во прозорци "
+"стартувани од терминал и без даден фокус."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Дали кревањето да биде ефект проследен од други кориснички дејствија"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -528,7 +544,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Дејство на лентата со наслов двоен-клик"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -544,7 +560,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Дејство на лентата со наслов среден клик"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -560,7 +576,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Дејство на лентата со наслов десен-клик"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -576,7 +592,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Автоматски го подигнува фокусираниот прозорец"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -585,40 +601,49 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
+"Ако е поставено како точно и режимот на фокус е или \"редок\" или \"глувче\""
+" тогаш фокусираниот прозорец автоматски ќе биде подигнат по задоцнување "
+"одредено од клучот auto_raise_delay. Ова не се однесува на кликнување на "
+"прозорецот за негово подигнување, ниту покажување на прозорецот при влечење-"
+"пуштање."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Прикажи во милисекунди за авто кревање опцијата"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
+"Времето се одложува пред кревање на прозорец ако авто_кревај опцијата е "
+"овозможена. Одложувањето е во илјадинки од секунда."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr ""
+msgstr "Тековна тема"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "Темата одлучува за изгледот на границите, лентата со наслов, и.т.н."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Користи стандарсен систем на фонт во насловите на прозорците"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
+"Ако точно, игнорирај ја линија со наслов_фонт опцијата, и користи го "
+"стандардниот апликациски фонт за насловите на прозорците."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
-msgstr ""
+msgstr "Фонт на лентата со наслов"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
@@ -627,10 +652,14 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
+"Променлива со опис на фонтот опишува фонт за лентата со наслов на "
+"прозорецот. Големината од описот ќе биде користена само ако "
+"titlebar_font_size option е поставено на 0. Исто така, оваа опција е "
+"оневозможена ако titlebar_uses_desktop_font опцијата е поставена на true."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Број на работни простори"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -638,6 +667,9 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
+"Број на работни површини. Мора да е број поголем од нула, а постои максимум "
+"со цел да се спречи случајно уништување на десктопот барајќи премногу "
+"површини."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -657,7 +689,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Овозможи визуелно ѕвонче"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
@@ -665,20 +697,25 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
+"Го вклучува визуелниот индикатор кога некоја апликација или системот ќе "
+"издаде 'ѕвоно' или 'бип'; корисно за луѓето со оштетен слух за користење во "
+"бучна околина."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Системското ѕвоно е Audible"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"Одлучува дали апликацијата или системот може да генерира звуци кои ќе бидат "
+"користени заедно со други"
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Визуелно ѕвоно тип"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid ""
@@ -690,14 +727,18 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"Објаснува како Marco да го имплементира визуелното прикажување на "
+"системското ѕвонче или друг тип на ѕвонче. Моментално постојат 2 можности: "
+"fullscreen за целосно трепнување на екранот и frame_flash што предизвикува "
+"трепнување на насловот на апликацијата која го испратила сигналот."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Менаџер за комбинирање"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Одредува дали Метасити е менаџер за комбинирање."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -712,7 +753,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "Ако е точно, намали ја користливоста за помалку ресурси"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -722,11 +763,20 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
+"Ако е точно метасити ќе му даде на корисникот повеќе информации а помалку "
+"смисол за директна манипулација преку користење на жични рамки и со "
+"избегнување на анимации. Ова ја влошува користливоста за многу корисници но "
+"може да дозволи функционирање на постари апликации и на терминални сервери "
+"кои што не би функционирале поинаку. Како и да е, за да се избегнат "
+"проблеми, опцијата за користење на жични рамки е исклучена кога "
+"пристапливоста е вклучена."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
 msgstr ""
+"(Не е имплементирано) Навигацијата работи во услови на апликација, не "
+"прозорец"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -738,10 +788,17 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
+"Ако е точно, Marco работи во услови на апликации отколку прозорци. Концептот"
+" е малку апстрактен, но генерално абликационо-базираното подесување е повеќе"
+" како Мас и помалку како Windows. Кога фокусирате прозорец во режимот за "
+"апликации, сите прозорци во апликацијата ќе се подигнат. Исто така во "
+"режимот за апликации, кликнувањата за фокус не се предаваат на прозорци од "
+"другите апликации. Режимот за апликации, сепак, не е целосно имплементиран "
+"во моментов."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "Оневозможи  можности кои се барани од стари или скршени апликации"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -750,6 +807,11 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
+"Некои апликации ги занемаруваат спецификациите на начин кој резултира во "
+"намалени карактеристики на менаџерот на прозорци. Оваа опција го става Marco"
+" во ригорозно точен режим кој дава позацврстен кориснички интерфејс, и со "
+"него нема потреба од извршување на било какви апликации кои се однесуваат "
+"несоодветно."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -808,15 +870,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
-msgstr ""
+msgstr "Име на работниот простор"
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Името на работниот простор"
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
-msgstr ""
+msgstr "Изврши друга команда"
 
 #: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
@@ -827,6 +889,12 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"Копчињата-кратенки што ја стартуваат соодветната означена наредба во "
+"/apps/marco/наредбите означени со кратенки, форматот изгледа како "
+"\"&It;Control&gt;a\" или \"&It;Shift&gt;&It;Alt&gt;F1. Парсерот дозволува "
+"мали и големи букви и исто така кратенки како \"&It;Ctl&gt;\" и "
+"\"&It;Ctrl&gt;\". Ако ја подесите опцијата до специјалниот стринг "
+"\"disabled\", тогаш ќе нема кратенки за оваа акција."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -878,11 +946,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Премести назад меѓу панел и работната околина одма"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Команди да се активираат како одговор на биндозите од копчината"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -890,20 +958,26 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"Датотеката /apps/marco/global_keybindings/run_command_N keys ги дефинира "
+"копчињата кои одговараат на соодветните команди. Притискањето на соодветното"
+" копче предизвикува соодветна акција."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
-msgstr ""
+msgstr "Командата за слика на екранот"
 
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"Датотеката /apps/marco/global_keybindings/run_command_screenshot го означува"
+" тастерот кој предизвикува командата специфицирана од ова подесување да биде"
+" повикана."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Командата за слика на екранот"
 
 #: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
@@ -911,6 +985,9 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"Датотеката /apps/marco/global_keybindings/run_command_window_screenshot го "
+"означува тастерот кој предизвикува командата специфицирана од ова подесување"
+" да биде повикана."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
@@ -936,7 +1013,7 @@ msgstr ""
 msgid "Bell event"
 msgstr ""
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Барање на информација за непознат прозорец: %d"
@@ -951,7 +1028,9 @@ msgstr ""
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Можете да одберете да причекате апликацијата да продолжи или да ја присилите да се исклучи целосно."
+msgstr ""
+"Можете да одберете да причекате апликацијата да продолжи или да ја присилите"
+" да се исклучи целосно."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -976,16 +1055,18 @@ msgstr "Недостасува %s проширување потребно за �
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Не успеав да го отворам приказот за X системот за прозорци '%s'\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Некоја друга програма веќе го користи тоа копче %s со изменувачи %x како биндинг\n"
+msgstr ""
+"Некоја друга програма веќе го користи тоа копче %s со изменувачи %x како "
+"биндинг\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -993,33 +1074,33 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Ниедна команда %d не е дефинирана.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Ниедна команда %d не е дефинирана.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3680
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
-msgstr ""
+msgstr "Откажи"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1032,7 +1113,7 @@ msgstr ""
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "Исклучи врска до менаџерот за сесии"
+msgstr "Исклучи ја врската до менаџерот за сесии"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1040,7 +1121,7 @@ msgstr "Замени го менаџерот за прозорци со Мета
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Одредете идентификација за менаџментот на сеисии"
+msgstr "Одредете ид. за менаџмент на сесиите"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1052,11 +1133,11 @@ msgstr "Иницијализирај сесија од зачуваната да
 
 #: ../src/core/main.c:298
 msgid "Print version"
-msgstr "Верзија за печатење"
+msgstr "Печатена верзија"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Направи ги повиците за X синхрони"
+msgstr "Направи ги X командите синхрони"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1080,7 +1161,9 @@ msgstr "Не успеав да го скенирам директориумот 
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Не можам да ја пронајдам темата! Осигурајте се дека %s постои и содржи вообичаени теми.\n"
+msgstr ""
+"Не можам да ја пронајдам темата! Осигурајте се дека %s постои и содржи "
+"вообичаени теми.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1090,37 +1173,43 @@ msgstr "Не успеав да рестартирам: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Работни околини за скршени апликации е оневозможено. Некои апликации можеби нема да работат добро.\n"
+msgstr ""
+"Работни околини за скршени апликации е оневозможено. Некои апликации можеби "
+"нема да работат добро.\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "\"%s\" пронајдено во конфигурацијата на базата не е валидна вредност за спец. копчиња на глувче \n"
+msgstr ""
+"\"%s\" пронајдено во конфигурацијата на базата не е валидна вредност за "
+"спец. копчиња на глувче \n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "\"%s\" пронајдено при конфигурирањето на базата не е валидна вредност за keybinding \"%s\"\n"
+msgstr ""
+"\"%s\" пронајдено при конфигурирањето на базата не е валидна вредност за "
+"keybinding \"%s\"\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
 msgstr "Работно место %d"
@@ -1135,7 +1224,9 @@ msgstr "Екран %d на приказ '%s' е невалиден\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Екран %d на приказ \"%s\" веќе има менџер на прозорци; пробај со --преклопи опција да го преклопиш моменталниот менаџер на прозорци.\n"
+msgstr ""
+"Екран %d на приказ \"%s\" веќе има менџер на прозорци; пробај со --преклопи "
+"опција да го преклопиш моменталниот менаџер на прозорци.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
@@ -1248,12 +1339,14 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Прозорецот %s намести SM_CLIENT_ID на себе, наместо на WM_CLIENT_LEADER прозорецот одреден во ICCCM.\n"
+msgstr ""
+"Прозорецот %s намести SM_CLIENT_ID на себе, наместо на WM_CLIENT_LEADER "
+"прозорецот одреден во ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1261,12 +1354,14 @@ msgstr "Прозорецот %s намести SM_CLIENT_ID на себе, на�
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Прозорец %s намести MWM совет кој што покажува дека ја менува големината но мести мин. големина %d x %d и макс. големина %d x %d; што нема смисла.\n"
+msgstr ""
+"Прозорец %s намести MWM совет кој што покажува дека ја менува големината но "
+"мести мин. големина %d x %d и макс. големина %d x %d; што нема смисла.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1312,7 +1407,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Прозорец 0x%lx има својсто %s\nкое што се очекува да има тип %s формат %d\nи всушност има тип %s формат %d n_предмети %d.\nОва е најверојатно бубачка , не е бубачка на менаџерот на прозорци.\nНасловот на лентата од прозорецот=\"%s\" класа=\"%s\" име=\"%s\"\n"
+msgstr ""
+"Прозорец 0x%lx има својсто %s\n"
+"кое што се очекува да има тип %s формат %d\n"
+"и всушност има тип %s формат %d n_предмети %d.\n"
+"Ова е најверојатно бубачка , не е бубачка на менаџерот на прозорци.\n"
+"Насловот на лентата од прозорецот=\"%s\" класа=\"%s\" име=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1324,61 +1424,67 @@ msgstr "Својство %s на прозорец 0x%lx содржи невал�
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Својствата %s на прозорецот 0x%lx содржи невалиден UTF-8 за предмет %d во листата\n"
+msgstr ""
+"Својствата %s на прозорецот 0x%lx содржи невалиден UTF-8 за предмет %d во "
+"листата\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
 msgid "Usage: %s\n"
 msgstr "Употреба: %s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "Затвори прозорец"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "Мени во прозорец"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "Спушти прозорец"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "Зголеми прозорец"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr "Завиткај го прозорецот"
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr "Одвиткај го прозорецот"
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr "Задржи го прозорецот најгоре"
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr "Отстрани го прозорецот од најгоре"
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr "Секогаш на видливиот работен простор"
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr "Стави го прозорецот на само една работна површина"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:65
 msgid "Mi_nimize"
-msgstr "Ми_нимизирај"
+msgstr "_Минимизирај"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:67
@@ -1388,7 +1494,7 @@ msgstr "Ма_ксимизирај"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "Нама_ли"
+msgstr "_Врати максимизирано"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1408,7 +1514,7 @@ msgstr "_Помести"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:77
 msgid "_Resize"
-msgstr "Промени големина"
+msgstr "_Промени големина"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:79
@@ -1424,7 +1530,7 @@ msgstr "_Најгоре"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
-msgstr "_Секогаш видлив на работниот простор"
+msgstr "_Секогаш на тековниот работен простор"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
@@ -1434,28 +1540,28 @@ msgstr "_Само на овој работен простор"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "Премести на _левиот работен простор"
+msgstr "Помести на левото _работно место"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "Премести на _десниот работен простор"
+msgstr "Помести на десното _работно место"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "Премести на _горниот работен простор"
+msgstr "Помести на горното _работно место"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "Премести на _долниот работен простор"
+msgstr "Помести на долното _работно место"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:100
 msgid "_Close"
-msgstr "Затвори"
+msgstr "_Затвори"
 
 #: ../src/ui/menu.c:197
 #, c-format
@@ -1474,7 +1580,7 @@ msgstr "Работно место %s%d"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
-msgstr "Премести на друг _работен простор"
+msgstr "Помести на друго _работно место"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the shift key. If the text on this key isn't typically
@@ -1558,683 +1664,770 @@ msgstr "Режим5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "горе"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "долу"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
 msgstr "лево"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
 msgstr "десно"
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "геометријата на рамката не одредува \"%s\" димензија"
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "геометријата на рамката не одредува димензија \"%s\" за граница \"%s\""
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "Аспектот на односот на копчето %g не е разумен"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Геометријата на рамката не одредува големина за копчињата"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Градиентите треба да имаат најмаку две бои"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr ""
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK спецификациите на боите мора да бидат во загради, пр. gtk:fg[НОРМАЛНО] каде што НОРМАЛНО е состојбата; не може да разложува \"%s\""
+msgstr ""
+"GTK спецификациите на боите мора да бидат во загради, пр. gtk:fg[НОРМАЛНО] "
+"каде што НОРМАЛНО е состојбата; не може да разложува \"%s\""
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK спецификациите на боите мора да имаат блиску заграда,после состојбата, пр. gtk:fg[НОРМАЛНО] каде што НОРМАЛНО е состојбата; не може да разложува \"%s\""
+msgstr ""
+"GTK спецификациите на боите мора да имаат блиску заграда,после состојбата, "
+"пр. gtk:fg[НОРМАЛНО] каде што НОРМАЛНО е состојбата; не може да разложува "
+"\"%s\""
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Не ја разбра состојбата \"%s\" во спецификациите на боите"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Не ја разбра компонентата на боја \"%s\" во спецификациите за боја"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Blend форматот е \"blend/bg_color/fg_color/alpha\", \"%s\" не го собира форматот"
+msgstr ""
+"Blend форматот е \"blend/bg_color/fg_color/alpha\", \"%s\" не го собира "
+"форматот"
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Не можам да ги разложам alpha вредностите \"%s\" во блендирани бои"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "Alpha вредност \"%s\" во блендираните бои не е помеѓу 0.0 и 1.0"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "Засенет формат е \"shade/base_color/factor\", \"%s\" не го собира форматот"
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Не може да го разложи факторот на засенување \"%s\" во засенетите бои"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Факторот на засенување \"%s\" во засенетите бои е негатив"
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "Не можам да ја разложам бојата \"%s\""
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Координираниот израз содржи карактери '%s' кои не се дозволени"
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "Координираниот израз содржи лебдечко поинт броеви '%s' кои не може да бидат разложени"
+msgstr ""
+"Координираниот израз содржи лебдечко поинт броеви '%s' кои не може да бидат "
+"разложени"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
-msgstr "Координираниот израз содржи цели броеви '%s' кои не може да бидат разложени"
+msgstr ""
+"Координираниот израз содржи цели броеви '%s' кои не може да бидат разложени"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Координираниот израз содржи непознат оператор на почетокот на овој текст: \"%s\""
+msgstr ""
+"Координираниот израз содржи непознат оператор на почетокот на овој текст: "
+"\"%s\""
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Координираниот израз беше празен или погрешно разбран"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Координираниот израз даде резултати поделени со нула"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "Координираниот израз пробува да користи оператор на режим на лебдечките поинт броеви"
+msgstr ""
+"Координираниот израз пробува да користи оператор на режим на лебдечките "
+"поинт броеви"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Координираниот израз има оператор \"%s\" каде што беше очекуван операнд"
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Координираниот израз имаше операнд каде што беше очекуван оператор"
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Координираниот израз беше завршен со оператор наместо со операнд"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Координираниот израз има оператор \"%c\" што следи оператор \"%c\" без операнд измеѓу"
+msgstr ""
+"Координираниот израз има оператор \"%c\" што следи оператор \"%c\" без "
+"операнд измеѓу"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "Координираниот израз имаше непозната променлија или константа \"%s\""
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Координираниот анализатор на израз си го преполни својот бафер."
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Координираниот израз имаше затворена заграда, но немаше отворена"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Координираниот израз имаше отворена заграда, но немаше затворена"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Координираниот израз нема оператори или операнди"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Темата содржи израз кој што резултираше со грешка: %s\n"
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> мора да биде одредено за овој стил на рамки"
+msgstr ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> мора да биде "
+"одредено за овој стил на рамки"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Недостасува <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Не успеав да ја вчитам темата \"%s\": %s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Нема <%s> подесено за темата \"%s\""
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Нема стил на рамката за овој тип на прозорец \"%s\" во темата \"%s\", додаде <window type=\"%s\" style_set=\"whatever\"/> елемент"
+msgstr ""
+"Нема стил на рамката за овој тип на прозорец \"%s\" во темата \"%s\", додаде"
+" <window type=\"%s\" style_set=\"whatever\"/> елемент"
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Корисничко дефинирана константа мора да започнува со прва голема буква, \"%s\" не"
+msgstr ""
+"Корисничко дефинирана константа мора да започнува со прва голема буква, "
+"\"%s\" не"
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Константата \"%s\" веќе беше дефинирана"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr ""
+msgstr "Нема „%s“ атрибут или елемент <%s>"
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "Линија %d карактер %d: %s"
+msgstr "Линија %d буква или број %d: %s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "Атрибутот %s се повторува два пати на истиот <%s> елемент"
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Атрибутот %s е невалиден во <%s> елемент во овој контекст"
+msgstr "Атрибутот „%s“ е невалиден во <%s> елементот во овој контекст"
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "Не можам да го парсирам \"%s\" како целосен број"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "Не ги разбирам трејлинг карактерите \"%s\" во стрингот \"%s\""
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "Целиот број %ld мора да биде позитивен"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "Целиот број %ld е преголем, максимумот изнесува %d"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "Не можам да го парсирам %s како децимален број"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "Логичките вредности мора бидат \"точно\" или \"неточно\" а не \"%s\""
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Аголот мора да е меѓу 0.0 и 360.0, а беше %g\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Алфа каналот мора да биде меѓу 0.0 (невидлив) и 1.0 (целосно видлив), беше %g\n"
+msgstr ""
+"Алфа каналот мора да биде меѓу 0.0 (невидлив) и 1.0 (целосно видлив), беше "
+"%g\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Невалидна големина на насловиоте \"%s\" (мора да биди една од xx-мало,x-мало,мало,средно,големо,x-големо,xx-големо)\n"
+msgstr ""
+"Невалидна големина на насловиоте \"%s\" (мора да биди една од xx-"
+"мало,x-мало,мало,средно,големо,x-големо,xx-големо)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> името %s употребено по вторпат"
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> родителот %s  не е дефиниран"
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> геометријата %s не е дефинирана"
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> морате да одредите геометрија или родител кој име геометрија"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "Мора да одредите позадина за вредноста на алфа да има смисла"
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "Непознат тип %s на <%s> елемент"
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "Непознат каскаден стил %s на <%s> елемент"
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "На прозорецот %s веќе е доделен сет од стилови"
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "Елементот <%s> не е дозволен под <%s>"
+msgstr "Елементот <%s> нема дозвола да оди под <%s>"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "Растојанието %s е непознато"
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "Степенот на приказ %s е непознат"
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "Границата %s е непозната"
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "Нема „почетен_агол“ или „од“ атрибут на елементот <%s>"
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "Нема „проширен_агол“или „до“ атрибут на елементот <%s>"
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Не ја разбирам вредноста \"%s\" како тип на градиент"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "Не го разбирам типот на поплнување \"%s\" за <%s> елемент"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "Не ја разбирам состојбата \"%s\" за <%s> елемент"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "Не ја разбирам сенката \"%s\" за <%s> елемент"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "Не го разбирам курсорот \"%s\" за <%s> елемент"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "Ниеден <draw_ops> повикан \"%s\" е дефиниран"
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Вклучува draw_ops \"%s\" тука ќе креира циркуларна референца"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Непозната позиција \"%s\" за дел од рамката"
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Стилот на рамката веќе има дел во позицијата %s"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "Нема <draw_ops> со името %s дефинирано"
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Непозната функција \"%s\" за копче"
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "Функцијата на копчето \"%s\" не постои во оваа верзија (%d, треба %d)"
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Непозната состојба \"%s\" за копче"
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Стилот на рамката има копче за функцијата %s состојба %s"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\" не е валидна вредност за атрибутот на фокусот"
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\" не е валидна вредност за состојбата на атрибутот"
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "Стил наречен \"%s\" не е дефинирано"
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "\"%s\" не е валидна вредност за атрибутот за менување на вредноста"
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Не треба да има \"смени големина\" атрибут на <%s> елемент за максимизирано/засенето"
+msgstr ""
+"Не треба да има \"смени големина\" атрибут на <%s> елемент за "
+"максимизирано/засенето"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Не треба да има „смени големина“ атрибут на <%s> елемент за максимизирани состојби"
+msgstr ""
+"Не треба да има „смени големина“ атрибут на <%s> елемент за максимизирани "
+"состојби"
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
-msgstr "Стилот веќе беше специфициран за состојба %s промени големина %s фокус %s"
+msgstr ""
+"Стилот веќе беше специфициран за состојба %s промени големина %s фокус %s"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "Стилот веќе беше специфициран за состојба %s фокус %s"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Не може да имаш две draw_ops за <piece> елемент (тема специфицирана за draw_ops и истотака за <draw_ops> елемент, или одредени два елементи)"
+msgstr ""
+"Не може да имаш две draw_ops за <piece> елемент (тема специфицирана за "
+"draw_ops и истотака за <draw_ops> елемент, или одредени два елементи)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Не може да имаш две draw_ops за <button> елемент (тема специфицирана за draw_ops и истотака за <draw_ops> елемент, или одредени два елементи)"
+msgstr ""
+"Не може да имаш две draw_ops за <button> елемент (тема специфицирана за "
+"draw_ops и истотака за <draw_ops> елемент, или одредени два елементи)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Не може да имаш две draw_ops за <menu_icon> елемент (тема специфицирана за draw_ops и истотака за <draw_ops> елемент, или одредени два елементи)"
+msgstr ""
+"Не може да имаш две draw_ops за <menu_icon> елемент (тема специфицирана за "
+"draw_ops и истотака за <draw_ops> елемент, или одредени два елементи)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
-msgstr "Елемент <%s> не е дозволено внатрешно име/автор/датум/опис на елементот"
+msgstr ""
+"Елемент <%s> не е дозволено внатрешно име/автор/датум/опис на елементот"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "Елемент <%s> не е дозволен во <constant> елемент"
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "Елемент <%s> не е дозволен во дистанца/граница/однос на аспект елемент"
+msgstr ""
+"Елемент <%s> не е дозволен во дистанца/граница/однос на аспект елемент"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "Елемент <%s> не е дозволен во операцијата на елементот на цртање"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "Елемент <%s> не е дозволен во <%s> елемент"
+msgstr "Елементот <%s> нема дозвола да влезе во <%s> елементот"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "Нема draw_ops овозможени за овој дел од рамката"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "Нема draw_ops овозможени за копче"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "Забранет е текстот во елементот <%s>"
+msgstr "Не е дозволен текст внатре во елементот <%s>"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Не успеав да најдам валидна датотека за темата %s\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "Ова е порака пример во дијалог за пример"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Предмет од лажното мени %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "Прозорец само со граници"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
 msgstr "Лента"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "Нормален прозорец за апликации"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "Кутија за дијалог"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "Модална кутија за дијалог"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "Палета на алатки"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "Откорни го менито"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
-msgstr "Граница"
+msgstr "Рамка"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "Тест за распоред на копчето %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g милисекунди за цртање на една рамка за прозорецот"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Употреба: marco-theme-viewer [ИМЕ НА ТЕМА]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Грешка при вчитување на темата: %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Ја вчитав темата \"%s\" за %g секунди\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "Нормален наслов за фонт"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "Мал наслов за фонт"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "Голем наслов за фонт"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "Распоред на копчиња"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "Бенчмарк"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "Насловот на прозорецот доаѓа тука"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "Повлече %d рамки во %g секунди за клиентот (%g милисекунди на рамка) и %g секунди од часовникот вклучувајќи ги и ресурсите на X серверот (%g милисекунди на рамка)\n"
+msgstr ""
+"Повлече %d рамки во %g секунди за клиентот (%g милисекунди на рамка) и %g "
+"секунди од часовникот вклучувајќи ги и ресурсите на X серверот (%g "
+"милисекунди на рамка)\n"

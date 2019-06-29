@@ -41,6 +41,7 @@
 #include "stack.h"
 #include "iconcache.h"
 #include <X11/Xutil.h>
+#include <cairo.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk/gtk.h>
 
@@ -117,6 +118,7 @@ struct _MetaWindow
   char *sm_client_id;
   char *wm_client_machine;
   char *startup_id;
+  char *gtk_theme_variant;
 
   int net_wm_pid;
 
@@ -323,6 +325,9 @@ struct _MetaWindow
   /* if TRUE, application is buggy and SYNC resizing is turned off */
   guint disable_sync : 1;
 
+  /* if non-NULL, the bounds of the window frame */
+  cairo_region_t *frame_bounds;
+
   /* Note: can be NULL */
   GSList *struts;
 
@@ -474,6 +479,8 @@ void        meta_window_update_fullscreen_monitors (MetaWindow    *window,
                                                     unsigned long  left,
                                                     unsigned long  right);
 
+gboolean    meta_window_appears_focused    (MetaWindow *window);
+
 /* args to move are window pos, not frame pos */
 void        meta_window_move               (MetaWindow  *window,
                                             gboolean     user_op,
@@ -535,6 +542,8 @@ void        meta_window_get_geometry         (MetaWindow  *window,
                                               int         *y,
                                               int         *width,
                                               int         *height);
+void        meta_window_get_input_rect       (const MetaWindow *window,
+                                              MetaRectangle    *rect);
 void        meta_window_get_outer_rect       (const MetaWindow *window,
                                               MetaRectangle    *rect);
 void        meta_window_get_xor_rect         (MetaWindow          *window,

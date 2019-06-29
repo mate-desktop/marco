@@ -35,6 +35,7 @@ typedef enum
   META_FRAME_CONTROL_TITLE,
   META_FRAME_CONTROL_DELETE,
   META_FRAME_CONTROL_MENU,
+  META_FRAME_CONTROL_APPMENU,
   META_FRAME_CONTROL_MINIMIZE,
   META_FRAME_CONTROL_MAXIMIZE,
   META_FRAME_CONTROL_UNMAXIMIZE,
@@ -77,7 +78,7 @@ struct _MetaUIFrame
   GdkWindow *window;
   GtkStyleContext *style;
   MetaFrameStyle *cache_style;
-  PangoLayout *layout;
+  PangoLayout *text_layout;
   int text_height;
   char *title; /* NULL once we have a layout */
   guint expose_delayed : 1;
@@ -98,6 +99,8 @@ struct _MetaFrames
   guint tooltip_timeout;
   MetaUIFrame *last_motion_frame;
 
+  GtkStyleContext *normal_style;
+  GHashTable *style_variants;
   int expose_delay_count;
 
   int invalidate_cache_timeout_id;
@@ -123,26 +126,32 @@ void meta_frames_set_title (MetaFrames *frames,
                             Window      xwindow,
                             const char *title);
 
+void meta_frames_update_frame_style (MetaFrames *frames,
+                                     Window      xwindow);
 void meta_frames_repaint_frame (MetaFrames *frames,
                                 Window      xwindow);
 
-void meta_frames_get_geometry (MetaFrames *frames,
-                               Window xwindow,
-                               int *top_height, int *bottom_height,
-                               int *left_width, int *right_width);
-
-void meta_frames_reset_bg     (MetaFrames *frames,
-                               Window      xwindow);
-void meta_frames_unflicker_bg (MetaFrames *frames,
-                               Window      xwindow,
-                               int         target_width,
-                               int         target_height);
+void meta_frames_get_borders (MetaFrames       *frames,
+                              Window            xwindow,
+                              MetaFrameBorders *borders);
 
 void meta_frames_apply_shapes (MetaFrames *frames,
                                Window      xwindow,
                                int         new_window_width,
                                int         new_window_height,
                                gboolean    window_has_shape);
+cairo_region_t *meta_frames_get_frame_bounds (MetaFrames *frames,
+                                              Window      xwindow,
+                                              int         window_width,
+                                              int         window_height);
+
+void meta_frames_get_corner_radiuses (MetaFrames *frames,
+                                      Window      xwindow,
+                                      float      *top_left,
+                                      float      *top_right,
+                                      float      *bottom_left,
+                                      float      *bottom_right);
+
 void meta_frames_move_resize_frame (MetaFrames *frames,
 				    Window      xwindow,
 				    int         x,

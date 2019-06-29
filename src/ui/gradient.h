@@ -27,6 +27,14 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdk.h>
 
+/**
+ * MetaGradientType:
+ * @META_GRADIENT_VERTICAL: Vertical gradient
+ * @META_GRADIENT_HORIZONTAL: Horizontal gradient
+ * @META_GRADIENT_DIAGONAL: Diagonal gradient
+ * @META_GRADIENT_LAST: Marks the end of the #MetaGradientType enumeration
+ *
+ */
 typedef enum
 {
   META_GRADIENT_VERTICAL,
@@ -51,6 +59,7 @@ GdkPixbuf* meta_gradient_create_interwoven (int               width,
                                             int               thickness1,
                                             const GdkRGBA     colors2[2],
                                             int               thickness2);
+
 
 /* Generate an alpha gradient and multiply it with the existing alpha
  * channel of the given pixbuf

@@ -1,44 +1,39 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Adrian Guniš <andygun@seznam.cz>, 2008-2010
-# huskyviking <husky.viking@seznam.cz>, 2014-2015
-# huskyviking <husky.viking@seznam.cz>, 2015
-# Jakub Friedl <jfriedl@suse.cz>, 2006
-# Jaroslav Lichtblau <dragonlord@seznam.cz>, 2016
-# Kamil Páral <ripper42@gmail.com>, 2008
-# LiberteCzech <liberte.czech@gmail.com>, 2015
-# Lucas Lommer <drom@kdyne.net>, 2016
-# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2013-2014
-# LiberteCzech <liberte.czech@gmail.com>, 2015-2016
-# LiberteCzech <liberte.czech@gmail.com>, 2015
-# Michal <sinope@seznam.cz>, 2014
-# Miloslav Trmač <mitr@volny.cz>, 2002-2005
-# Petr Kovar <pmkovar@gmail.com>, 2008,2010
-# Petr Šimáček <petr.simacek@gmail.com>, 2016
-# Petr Tomeš <ptomes@gmail.com>, 2006
-# Roman Horník <roman.hornik@debian-linux.cz>, 2016
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2015
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2015
+# Lucas Lommer <drom@kdyne.net>, 2019
+# Petr Šimáček <petr.simacek@gmail.com>, 2019
+# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2019
+# Michal <sinope@seznam.cz>, 2019
+# huskyviking <husky.viking@seznam.cz>, 2019
+# Jaroslav Lichtblau <jlichtblau@seznam.cz>, 2019
+# Roman Horník <roman.hornik@debian-linux.cz>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# ToMáš Marný, 2019
+# LiberteCzech <liberte.czech@gmail.com>, 2019
+# Stanislav Kučera <inactive+kacernator@transifex.com>, 2019
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-16 20:54+0000\n"
-"Last-Translator: ToMáš Marný\n"
-"Language-Team: Czech (http://www.transifex.com/mate/MATE/language/cs/)\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"PO-Revision-Date: 2019-03-12 19:28+0000\n"
+"Last-Translator: Stanislav Kučera <inactive+kacernator@transifex.com>, 2019\n"
+"Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
-msgstr "Pracovní prostředí"
+msgstr "Pracovní plocha"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:100
@@ -87,7 +82,8 @@ msgstr "Přepínat mezi okny aplikace pomocí automaticky otevíraného okna"
 #: ../src/50-marco-global-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:90
 msgid "Move between panels and the desktop, using a popup window"
-msgstr "Přepínat mezi panely a pracovní plochou pomocí automaticky otevíraného okna"
+msgstr ""
+"Přepínat mezi panely a pracovní plochou pomocí automaticky otevíraného okna"
 
 #: ../src/50-marco-global-key.xml.in.h:5
 #: ../src/org.mate.marco.gschema.xml.h:94
@@ -456,7 +452,12 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr "Kliknutí na okno za současného stisknutí tohoto modifikátoru okno přesune (levým tlačítkem), změní jeho velikost (prostředním tlačítkem), nebo zobrazí nabídku okna (pravým tlačítkem). Operace prostředního a pravého tlačítka mohou být zaměněny použitím klíče \"resize_with_right_button\". Modifikátor je vyjádřen např. jako \"&lt;Alt&gt;\" nebo \"&lt;Super&gt;\"."
+msgstr ""
+"Kliknutí na okno za současného stisknutí tohoto modifikátoru okno přesune "
+"(levým tlačítkem), změní jeho velikost (prostředním tlačítkem), nebo zobrazí"
+" nabídku okna (pravým tlačítkem). Operace prostředního a pravého tlačítka "
+"mohou být zaměněny použitím klíče \"resize_with_right_button\". Modifikátor "
+"je vyjádřen např. jako \"&lt;Alt&gt;\" nebo \"&lt;Super&gt;\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -467,17 +468,24 @@ msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr "Nastavte na \"true\", chcete-li změnit velikost pravým tlačítkem a zobrazit nabídku prostředním tlačítkem při držení klávesy zadané v \"mouse_button_modifier\"; nastavte na \"false\", požadujete-li opačnou funkci."
+msgstr ""
+"Nastavte na \"true\", chcete-li změnit velikost pravým tlačítkem a zobrazit "
+"nabídku prostředním tlačítkem při držení klávesy zadané v "
+"\"mouse_button_modifier\"; nastavte na \"false\", požadujete-li opačnou "
+"funkci."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
-msgstr "Zda chcete zobrazovat okraj předvoleného okna během přepínání tabulátorem"
+msgstr ""
+"Zda chcete zobrazovat okraj předvoleného okna během přepínání tabulátorem"
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
-msgstr "Nastavte na hodnotu FALSE, pokud chcete vypnout zobrazování okrajů předvoleného okna během přepínání tabulátorem."
+msgstr ""
+"Nastavte na hodnotu FALSE, pokud chcete vypnout zobrazování okrajů "
+"předvoleného okna během přepínání tabulátorem."
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
@@ -492,7 +500,14 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr "Uspořádání tlačítek na záhlaví okna. Hodnota by měla být řetězcem, např. \"menu:minimize,maximize,spacer,close\"; dvojtečka odděluje levý a pravý roh okna, názvy tlačítek jsou odděleny čárkami. Opakování tlačítka není dovoleno. Neznámé názvy tlačítek jsou v tichosti ignorovány, aby mohla být v budoucích verzích marco přidána tlačítka bez vlivu na starší verze. K vložení místa mezi dvě přiléhající tlačítka může být použito speciální značky (mezery)."
+msgstr ""
+"Uspořádání tlačítek na záhlaví okna. Hodnota by měla být řetězcem, např. "
+"\"menu:minimize,maximize,spacer,close\"; dvojtečka odděluje levý a pravý roh"
+" okna, názvy tlačítek jsou odděleny čárkami. Opakování tlačítka není "
+"dovoleno. Neznámé názvy tlačítek jsou v tichosti ignorovány, aby mohla být v"
+" budoucích verzích marco přidána tlačítka bez vlivu na starší verze. K "
+"vložení místa mezi dvě přiléhající tlačítka může být použito speciální "
+"značky (mezery)."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
@@ -505,7 +520,12 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr "Režim aktivace oken určuje, jak jsou okna aktivována. Má tři možnosti; \"click\" znamená, že okna jsou aktivována kliknutím, \"sloppy\" znamená, že okna jsou aktivována, když se do nich přesune myš, a \"mouse\" znamená, že okna jsou aktivována, když se do nich přesune myš a deaktivována, když je myš opustí."
+msgstr ""
+"Režim aktivace oken určuje, jak jsou okna aktivována. Má tři možnosti; "
+"\"click\" znamená, že okna jsou aktivována kliknutím, \"sloppy\" znamená, že"
+" okna jsou aktivována, když se do nich přesune myš, a \"mouse\" znamená, že "
+"okna jsou aktivována, když se do nich přesune myš a deaktivována, když je "
+"myš opustí."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
@@ -517,7 +537,11 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "Tato volba poskytuje dodatečnou kontrolu nad tím, jakým způsobem se nově vytvořená okna stanou aktivními. Má dvě možné hodnoty, \"smart\" použije běžný uživatelův režim aktivace, \"strict\" má za následek neaktivnost oken spouštěných z terminálu."
+msgstr ""
+"Tato volba poskytuje dodatečnou kontrolu nad tím, jakým způsobem se nově "
+"vytvořená okna stanou aktivními. Má dvě možné hodnoty, \"smart\" použije "
+"běžný uživatelův režim aktivace, \"strict\" má za následek neaktivnost oken "
+"spouštěných z terminálu."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -543,7 +567,25 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr "Nastavení této volby na hodnotu FALSE může vést k nespolehlivému chování, užívatelům je silně doporučeno neměnit hodnotu z předvoleného stavu TRUE. Mnoho akcí (např. kliknutí do klientské oblasti, přesunutí nebo změna velikosti okna) normálně mění okno jako vedlejší efekt. Nastavením této volby na hodnotu FALSE, která je nedoporučená, se oddělí změna od ostatních užívatelských akcí a ignorují se požadavky na změnu, generované aplikací. Viz http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Dokonce, i když je tato volba nastavena na FALSE, okna mohou ještě být měněna pomocí Alt + kliknutí levým myšítkem kamkoliv na okno, normálním kliknutím na okraj okna, nebo pomocí speciálních zpráv z pagers, jako jsou požadavky na aktivaci z tasklistu appletů. Tato volba je v současnosti zakázaná v režimu click-to-focus. Všimněte si, že seznam způsobů, jak změnit okno, když raise_on_click je nastaven na FALSE, nezahrnuje programové požadavky z aplikací na změnu okna; tyto žádosti budou ignorované bez ohledu na důvod žádosti. Jste-li vývojářem aplikace a uživatelé si stěžují, že aplikace nefunguje s tímto nastavením, sdělte jim, že je chyba _u nich_, že si zmršili okenního správce, a že buď musí tuto volbu změnit zpět na hodnotu true, nebo ať se naučí žít s touto \"chybou\"."
+msgstr ""
+"Nastavení této volby na hodnotu FALSE může vést k nespolehlivému chování, "
+"užívatelům je silně doporučeno neměnit hodnotu z předvoleného stavu TRUE. "
+"Mnoho akcí (např. kliknutí do klientské oblasti, přesunutí nebo změna "
+"velikosti okna) normálně mění okno jako vedlejší efekt. Nastavením této "
+"volby na hodnotu FALSE, která je nedoporučená, se oddělí změna od ostatních "
+"užívatelských akcí a ignorují se požadavky na změnu, generované aplikací. "
+"Viz http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Dokonce, i když je "
+"tato volba nastavena na FALSE, okna mohou ještě být měněna pomocí Alt + "
+"kliknutí levým myšítkem kamkoliv na okno, normálním kliknutím na okraj okna,"
+" nebo pomocí speciálních zpráv z pagers, jako jsou požadavky na aktivaci z "
+"tasklistu appletů. Tato volba je v současnosti zakázaná v režimu click-to-"
+"focus. Všimněte si, že seznam způsobů, jak změnit okno, když raise_on_click "
+"je nastaven na FALSE, nezahrnuje programové požadavky z aplikací na změnu "
+"okna; tyto žádosti budou ignorované bez ohledu na důvod žádosti. Jste-li "
+"vývojářem aplikace a uživatelé si stěžují, že aplikace nefunguje s tímto "
+"nastavením, sdělte jim, že je chyba _u nich_, že si zmršili okenního "
+"správce, a že buď musí tuto volbu změnit zpět na hodnotu true, nebo ať se "
+"naučí žít s touto \"chybou\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -559,7 +601,15 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Tato volba určuje důsledek dvojitého kliknutí na záhlaví okna. Momentálně platnými volbami jsou \"toggle_shade\", která okno svine/rozvine, \"toggle_maximize\", která okno maximalizuje nebo zruší maximalizaci, \"toggle_maximize_horizontally\" a \"toggle_maximize_vertically\", které maximalizují/zruší maximalizaci pouze v daném směru, \"minimize\", která okno minimalizuje, \"shade\", která okno svine, \"menu\", která zobrazí nabídku okna, \"lower\", která umístí okno za všechna ostatní, a \"none\", která nezpůsobí nic."
+msgstr ""
+"Tato volba určuje důsledek dvojitého kliknutí na záhlaví okna. Momentálně "
+"platnými volbami jsou \"toggle_shade\", která okno svine/rozvine, "
+"\"toggle_maximize\", která okno maximalizuje nebo zruší maximalizaci, "
+"\"toggle_maximize_horizontally\" a \"toggle_maximize_vertically\", které "
+"maximalizují/zruší maximalizaci pouze v daném směru, \"minimize\", která "
+"okno minimalizuje, \"shade\", která okno svine, \"menu\", která zobrazí "
+"nabídku okna, \"lower\", která umístí okno za všechna ostatní, a \"none\", "
+"která nezpůsobí nic."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
@@ -575,7 +625,15 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Tato volba určuje důsledek kliknutí prostředním tlačítkem myši na záhlaví okna. Momentálně platnými volbami jsou \"toggle_shade\", která okno svine/rozvine, \"toggle_maximize\", která okno maximalizuje nebo zruší maximalizaci, \"toggle_maximize_horizontally\" a \"toggle_maximize_vertically\", které maximalizují/zruší maximalizaci pouze v daném směru, \"minimize\", která okno minimalizuje, \"shade\", která okno svine, \"menu\", která zobrazí nabídku okna, \"lower\", která umístí okno za všechna ostatní, a \"none\", která nezpůsobí nic."
+msgstr ""
+"Tato volba určuje důsledek kliknutí prostředním tlačítkem myši na záhlaví "
+"okna. Momentálně platnými volbami jsou \"toggle_shade\", která okno "
+"svine/rozvine, \"toggle_maximize\", která okno maximalizuje nebo zruší "
+"maximalizaci, \"toggle_maximize_horizontally\" a "
+"\"toggle_maximize_vertically\", které maximalizují/zruší maximalizaci pouze "
+"v daném směru, \"minimize\", která okno minimalizuje, \"shade\", která okno "
+"svine, \"menu\", která zobrazí nabídku okna, \"lower\", která umístí okno za"
+" všechna ostatní, a \"none\", která nezpůsobí nic."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
@@ -591,7 +649,15 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "Tato volba určuje důsledek kliknutí pravým tlačítkem myši na záhlaví okna. Momentálně platnými volbami jsou \"toggle_shade\", která okno svine/rozvine, \"toggle_maximize\", která okno maximalizuje nebo zruší maximalizaci, \"toggle_maximize_horizontally\" a \"toggle_maximize_vertically\", které maximalizují/zruší maximalizaci pouze v daném směru, \"minimize\", která okno minimalizuje, \"shade\", která okno svine, \"menu\", která zobrazí nabídku okna, \"lower\", která umístí okno za všechna ostatní, a \"none\", která nezpůsobí nic."
+msgstr ""
+"Tato volba určuje důsledek kliknutí pravým tlačítkem myši na záhlaví okna. "
+"Momentálně platnými volbami jsou \"toggle_shade\", která okno svine/rozvine,"
+" \"toggle_maximize\", která okno maximalizuje nebo zruší maximalizaci, "
+"\"toggle_maximize_horizontally\" a \"toggle_maximize_vertically\", které "
+"maximalizují/zruší maximalizaci pouze v daném směru, \"minimize\", která "
+"okno minimalizuje, \"shade\", která okno svine, \"menu\", která zobrazí "
+"nabídku okna, \"lower\", která umístí okno za všechna ostatní, a \"none\", "
+"která nezpůsobí nic."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
@@ -603,7 +669,11 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr "Je-li \"true\" a režim aktivace je buď \"sloppy\" nebo \"mouse\", pak bude aktivní okno automaticky po zpoždění zvýšeno (zpoždění je určeno v klíči auto_raise_delay). Netýká se klikání na okno za účelem aktivace, ani přechodu na okno během akce táhnutí a puštění."
+msgstr ""
+"Je-li \"true\" a režim aktivace je buď \"sloppy\" nebo \"mouse\", pak bude "
+"aktivní okno automaticky po zpoždění zvýšeno (zpoždění je určeno v klíči "
+"auto_raise_delay). Netýká se klikání na okno za účelem aktivace, ani "
+"přechodu na okno během akce táhnutí a puštění."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
@@ -613,7 +683,9 @@ msgstr "Zpoždění v milisekundách u volby automatického zvýšení"
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
-msgstr "Zpoždění před zvýšením okna, je-li auto_raise nastaveno na \"true\". Zpoždění je uvedeno v tisícinách sekundy."
+msgstr ""
+"Zpoždění před zvýšením okna, je-li auto_raise nastaveno na \"true\". "
+"Zpoždění je uvedeno v tisícinách sekundy."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -633,7 +705,9 @@ msgstr "Použít v nadpisech oken standardní systémové písmo"
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
-msgstr "Je-li \"true\", ignorovat volbu titlebar_font a použít standardní písmo aplikací u nadpisů oken."
+msgstr ""
+"Je-li \"true\", ignorovat volbu titlebar_font a použít standardní písmo "
+"aplikací u nadpisů oken."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -645,7 +719,11 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr "Řetězec popisu písma popisující písmo záhlaví oken. Velikost z popisu bude použita jen pokud je volba titlebar_font_size nastavena na \"0\". Tato volba je dále zakázána, je-li volba titlebar_uses_desktop_font nastavena na \"true\"."
+msgstr ""
+"Řetězec popisu písma popisující písmo záhlaví oken. Velikost z popisu bude "
+"použita jen pokud je volba titlebar_font_size nastavena na \"0\". Tato volba"
+" je dále zakázána, je-li volba titlebar_uses_desktop_font nastavena na "
+"\"true\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -656,7 +734,8 @@ msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
-msgstr "Počet pracovních ploch. Musí být více než nula a maximální počet je omezen."
+msgstr ""
+"Počet pracovních ploch. Musí být více než nula a maximální počet je omezen."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -672,7 +751,16 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr "Wrap styl se používá k určení, jak přejít z jednoho prostoru do druhého na hranici přepínače pracovního prostoru. Je-li nastavena na \"no wrap\", nic se nestane, pokud se pokusíte přepnout do pracovního prostoru kolem hranice přepínače pracovního prostoru. Pokud je nastaven na \"klasické\", staré chování, používá se marco: konec jednoho řádku vede do začátku příštího a konec sloupce vede k začátku následujícího. Pokud je nastaven na \"toroidní - prstencové\", pracovní prostory jsou spojeny jako kobliha: konec každého řádku vede k jeho vlastnímu začátku a na konci každého sloupce vede k jeho vlastnímu začátku."
+msgstr ""
+"Wrap styl se používá k určení, jak přejít z jednoho prostoru do druhého na "
+"hranici přepínače pracovního prostoru. Je-li nastavena na \"no wrap\", nic "
+"se nestane, pokud se pokusíte přepnout do pracovního prostoru kolem hranice "
+"přepínače pracovního prostoru. Pokud je nastaven na \"klasické\", staré "
+"chování, používá se marco: konec jednoho řádku vede do začátku příštího a "
+"konec sloupce vede k začátku následujícího. Pokud je nastaven na \"toroidní "
+"- prstencové\", pracovní prostory jsou spojeny jako kobliha: konec každého "
+"řádku vede k jeho vlastnímu začátku a na konci každého sloupce vede k jeho "
+"vlastnímu začátku."
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
@@ -683,7 +771,9 @@ msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
-msgstr "Zapne vizuální indikaci zvukového pípnutí aplikací nebo systému. Vhodné pro lidi s vadami sluchu nebo pro práci v hlučném prostředí."
+msgstr ""
+"Zapne vizuální indikaci zvukového pípnutí aplikací nebo systému. Vhodné pro "
+"lidi s vadami sluchu nebo pro práci v hlučném prostředí."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
@@ -693,7 +783,10 @@ msgstr "Systémový zvonek je slyšet"
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
-msgstr "Určuje, jestli mohou aplikace nebo systém používat slyšitelné zvukové znamení; ve spojení s \"vizuálním zvonkem\" může být použito k povolení tichého - vizuálního zvukového znamení."
+msgstr ""
+"Určuje, jestli mohou aplikace nebo systém používat slyšitelné zvukové "
+"znamení; ve spojení s \"vizuálním zvonkem\" může být použito k povolení "
+"tichého - vizuálního zvukového znamení."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
@@ -708,7 +801,14 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr "Sděluje správci oken Marco, jak implementovat vizuální znamení o zazvonění systémového zvonku nebo jiného aplikačního znamení zvonku. Momentálně existují dvě platné hodnoty, \"fullscreen\", která způsobí černo-bílé bliknutí celé obrazovky, a \"frame_flash\", která způsobí blikání záhlaví aplikace posílající signál zvonku. Není-li aplikace, která poslala signál zvonku, známá (což je obvykle případ výchozího systémové zvukového znamení), bliká záhlaví aktuálního okna."
+msgstr ""
+"Sděluje správci oken Marco, jak implementovat vizuální znamení o zazvonění "
+"systémového zvonku nebo jiného aplikačního znamení zvonku. Momentálně "
+"existují dvě platné hodnoty, \"fullscreen\", která způsobí černo-bílé "
+"bliknutí celé obrazovky, a \"frame_flash\", která způsobí blikání záhlaví "
+"aplikace posílající signál zvonku. Není-li aplikace, která poslala signál "
+"zvonku, známá (což je obvykle případ výchozího systémové zvukového znamení),"
+" bliká záhlaví aktuálního okna."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
@@ -727,11 +827,16 @@ msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
-msgstr "Je-li nastaveno na 'true', pak, když je kompozitní vykreslování povoleno, namísto náhledů oken ve vyskakovacím okně při stisknutí Alt + Tab budou zobrazeny ikony aplikací."
+msgstr ""
+"Je-li nastaveno na 'true', pak, když je kompozitní vykreslování povoleno, "
+"namísto náhledů oken ve vyskakovacím okně při stisknutí Alt + Tab budou "
+"zobrazeny ikony aplikací."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
-msgstr "Je-li zapnuto, dávat přednost menšímu používání systémových prostředků před použitelností"
+msgstr ""
+"Je-li zapnuto, dávat přednost menšímu používání systémových prostředků před "
+"použitelností"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -740,7 +845,13 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr "Je-li \"true\", bude Marco dávat uživateli méně zpětné vazby používáním drátových rámů, nepoužíváním animací nebo jinými způsoby. Pro mnoho uživatelů to znamená výrazné snížení použitelnosti, ale také možnost, že staré aplikace budou nadále pracovat. I pro terminálové servery se může jednat o přístupný kompromis. Funkce drátových rámů je ale zakázána, pokud je povoleno zpřístupnění."
+msgstr ""
+"Je-li \"true\", bude Marco dávat uživateli méně zpětné vazby používáním "
+"drátových rámů, nepoužíváním animací nebo jinými způsoby. Pro mnoho "
+"uživatelů to znamená výrazné snížení použitelnosti, ale také možnost, že "
+"staré aplikace budou nadále pracovat. I pro terminálové servery se může "
+"jednat o přístupný kompromis. Funkce drátových rámů je ale zakázána, pokud "
+"je povoleno zpřístupnění."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
@@ -756,11 +867,19 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr "Je-li \"true\", pracuje Marco s aplikacemi namísto oken. Toto pojetí je trochu abstraktní, ale obecně systém založený na aplikacích připomíná více Mac a méně Windows. V případě aktivace okna v režimu založeném na aplikacích jsou zvýšena všechna okna aplikace. V režimu založeném na aplikacích také nejsou oknům v jiných aplikacích předávána aktivující kliknutí. Režim založený na aplikacích je ovšem momentálně povětšinou neimplementován."
+msgstr ""
+"Je-li \"true\", pracuje Marco s aplikacemi namísto oken. Toto pojetí je "
+"trochu abstraktní, ale obecně systém založený na aplikacích připomíná více "
+"Mac a méně Windows. V případě aktivace okna v režimu založeném na aplikacích"
+" jsou zvýšena všechna okna aplikace. V režimu založeném na aplikacích také "
+"nejsou oknům v jiných aplikacích předávána aktivující kliknutí. Režim "
+"založený na aplikacích je ovšem momentálně povětšinou neimplementován."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr "Zakázat \"pseudovlastnosti\", které jsou potřeba pro staré nebo chybné aplikace"
+msgstr ""
+"Zakázat \"pseudovlastnosti\", které jsou potřeba pro staré nebo chybné "
+"aplikace"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -768,17 +887,24 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr "Některé aplikace nerespektují specifikace způsobem, který má za následek chybné vlastnosti správce oken. Tato volba umístí Marco do zcela korektního režimu, což uživateli poskytne konzistentnější uživatelské rozhraní, pokud tedy není zapotřebí spouštět jakékoliv chybně se chovající aplikace."
+msgstr ""
+"Některé aplikace nerespektují specifikace způsobem, který má za následek "
+"chybné vlastnosti správce oken. Tato volba umístí Marco do zcela korektního "
+"režimu, což uživateli poskytne konzistentnější uživatelské rozhraní, pokud "
+"tedy není zapotřebí spouštět jakékoliv chybně se chovající aplikace."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
-msgstr "Určuje, zda-li se mají nově otevřená okna zobrazit ve středu obrazovky"
+msgstr ""
+"Určuje, zda-li se mají nově otevřená okna zobrazit ve středu obrazovky"
 
 #: ../src/org.mate.marco.gschema.xml.h:52
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
-msgstr "Pokud vybráno, jsou nová okna otevírána uprostřed obrazovky. Jinak jsou okna otevírána na obrazovce vlevo nahoře."
+msgstr ""
+"Pokud vybráno, jsou nová okna otevírána uprostřed obrazovky. Jinak jsou okna"
+" otevírána na obrazovce vlevo nahoře."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
@@ -789,7 +915,11 @@ msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
-msgstr "Je-li tato volba zapnuta, přetažení oken na okraje obrazovky je maximálně zvětší a změní jejich velikost vodorovně tak, aby pokryla polovinu dostupné plochy. Přetažení na horní okraj maximalizuje okno, pokud je tato možnost zapnuta."
+msgstr ""
+"Je-li tato volba zapnuta, přetažení oken na okraje obrazovky je maximálně "
+"zvětší a změní jejich velikost vodorovně tak, aby pokryla polovinu dostupné "
+"plochy. Přetažení na horní okraj maximalizuje okno, pokud je tato možnost "
+"zapnuta."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
@@ -799,7 +929,10 @@ msgstr "Zda se maximalizuje okno, když se přetáhne k horní části obrazovky
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
-msgstr "Pokud je tato volba zapnuta, přetažení okna do horní části obrazovky ho maximalizuje. Funkce funguje pouze tehdy, pokud je dlaždicové uspořádání oken povoleno."
+msgstr ""
+"Pokud je tato volba zapnuta, přetažení okna do horní části obrazovky ho "
+"maximalizuje. Funkce funguje pouze tehdy, pokud je dlaždicové uspořádání "
+"oken povoleno."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -813,7 +946,13 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr "Režim umístění okna ukazuje, jak jsou umístěna nová okna. \"automatické\" znamená, že systém automaticky zvolí polohu v závislosti na prostoru, která je k dispozici na ploše, nebo pokud není prostor, pomocí jednoduché kaskády; \"ukazatel\" znamená, že nová okna jsou umístěna v závislosti na pozici ukazatele myši; \"manuální\" znamená, že uživatel musí ručně umístit nové okno pomocí myši nebo klávesnice."
+msgstr ""
+"Režim umístění okna ukazuje, jak jsou umístěna nová okna. \"automatické\" "
+"znamená, že systém automaticky zvolí polohu v závislosti na prostoru, která "
+"je k dispozici na ploše, nebo pokud není prostor, pomocí jednoduché kaskády;"
+" \"ukazatel\" znamená, že nová okna jsou umístěna v závislosti na pozici "
+"ukazatele myši; \"manuální\" znamená, že uživatel musí ručně umístit nové "
+"okno pomocí myši nebo klávesnice."
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
@@ -823,7 +962,9 @@ msgstr "Seznam aplikací ignorovaných show-desktop"
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
-msgstr "Seznam tříd oddělených čárkami. Každá běžící GUI aplikace odkazovaná na danou třídu okenního správce bude ignorována funkcí \"Zobrazit plochu\"."
+msgstr ""
+"Seznam tříd oddělených čárkami. Každá běžící GUI aplikace odkazovaná na "
+"danou třídu okenního správce bude ignorována funkcí \"Zobrazit plochu\"."
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
@@ -845,7 +986,13 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "Klávesová zkratka, která spustí příkaz s odpovídajícím číslem v /apps/marco/keybinding_commands. Formát má podobu \"&lt;Control&gt;a\" nebo \"&lt;Shift&gt;&lt;Alt&gt;F1. Analyzátor je poměrně velkorysý a dovoluje malá i velká písmena a zkratky jako \"&lt;Ctl&gt;\" a \"&lt;Ctrl&gt;\". Pokud volbu nastavíte na speciální řetězec \"disabled\", pak pro tuto akci nebude žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka, která spustí příkaz s odpovídajícím číslem v "
+"/apps/marco/keybinding_commands. Formát má podobu \"&lt;Control&gt;a\" nebo "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1. Analyzátor je poměrně velkorysý a dovoluje "
+"malá i velká písmena a zkratky jako \"&lt;Ctl&gt;\" a \"&lt;Ctrl&gt;\". "
+"Pokud volbu nastavíte na speciální řetězec \"disabled\", pak pro tuto akci "
+"nebude žádná klávesová zkratka."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -854,7 +1001,12 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "Formát vypadá jako  \"&lt;Control&gt;a\" nebo \"&lt;Shift&gt;&lt;Alt&gt;F1\". Analyzátor je poměrně velkorysý a umožňuje malá i velká písmena a zkratky jako \"&lt;Ctl&gt;\". Pokud nastavíte možnost na speciální řetězec \"vypnuto\", pak u této akce nebude žádná klávesová zkratka."
+msgstr ""
+"Formát vypadá jako  \"&lt;Control&gt;a\" nebo "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\". Analyzátor je poměrně velkorysý a umožňuje "
+"malá i velká písmena a zkratky jako \"&lt;Ctl&gt;\". Pokud nastavíte možnost"
+" na speciální řetězec \"vypnuto\", pak u této akce nebude žádná klávesová "
+"zkratka."
 
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid ""
@@ -865,7 +1017,13 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr "Formát má podobu \"&lt;Control&gt;a\" nebo \"&lt;Shift&gt;&lt;Alt&gt;F1\". Analyzátor je poměrně velkorysý a dovoluje malá i velká písmena a zkratky jako \"&lt;Ctl&gt;\" a \"&lt;Ctrl&gt;\". Pokud volbu nastavíte na speciální řetězec \"disabled\", pak pro takovou akci nebude žádná klávesová zkratka. Tato klávesová zkratka může být obrácena podržením klávesy \"Shift\" a proto \"Shift\" nemůže být jedna z použitých kláves."
+msgstr ""
+"Formát má podobu \"&lt;Control&gt;a\" nebo \"&lt;Shift&gt;&lt;Alt&gt;F1\". "
+"Analyzátor je poměrně velkorysý a dovoluje malá i velká písmena a zkratky "
+"jako \"&lt;Ctl&gt;\" a \"&lt;Ctrl&gt;\". Pokud volbu nastavíte na speciální "
+"řetězec \"disabled\", pak pro takovou akci nebude žádná klávesová zkratka. "
+"Tato klávesová zkratka může být obrácena podržením klávesy \"Shift\" a proto"
+" \"Shift\" nemůže být jedna z použitých kláves."
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
@@ -877,15 +1035,21 @@ msgstr "Přepínat zpět mezi okny pomocí automaticky otevíraného okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr "Přepínat mezi okny na všech pracovních plochách, pomocí automaticky otevíraného okna"
+msgstr ""
+"Přepínat mezi okny na všech pracovních plochách, pomocí automaticky "
+"otevíraného okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:89
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr "Přepínat zpět mezi okny na všech pracovních plochách, pomocí automaticky otevíraného okna"
+msgstr ""
+"Přepínat zpět mezi okny na všech pracovních plochách, pomocí automaticky "
+"otevíraného okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr "Přepínat zpět mezi panely a pracovní plochou pomocí automaticky otevíraného okna"
+msgstr ""
+"Přepínat zpět mezi panely a pracovní plochou pomocí automaticky otevíraného "
+"okna"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
@@ -908,7 +1072,10 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr "Klíče /apps/marco/global_keybindings/run_command_N definují klávesové zkratky, které odpovídají těmto příkazům. Stisknutí klávesové zkratky pro run_command_N spustí command_N."
+msgstr ""
+"Klíče /apps/marco/global_keybindings/run_command_N definují klávesové "
+"zkratky, které odpovídají těmto příkazům. Stisknutí klávesové zkratky pro "
+"run_command_N spustí command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
@@ -918,7 +1085,10 @@ msgstr "Příkaz zachycení snímku obrazovky"
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr "Klíč /apps/marco/global_keybindings/run_command_screenshot definuje klávesovou zkratku, která způsobí spuštění příkazu určeného tímto nastavením."
+msgstr ""
+"Klíč /apps/marco/global_keybindings/run_command_screenshot definuje "
+"klávesovou zkratku, která způsobí spuštění příkazu určeného tímto "
+"nastavením."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
@@ -929,7 +1099,10 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr "Klíč /apps/marco/global_keybindings/run_command_window_screenshot definuje klávesovou zkratku, která způsobí spuštění příkazu určeného tímto nastavením."
+msgstr ""
+"Klíč /apps/marco/global_keybindings/run_command_window_screenshot definuje "
+"klávesovou zkratku, která způsobí spuštění příkazu určeného tímto "
+"nastavením."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
@@ -955,7 +1128,7 @@ msgstr "Dlaždice okna do jihozápadního (levého dolního) rohu obrazovky"
 msgid "Bell event"
 msgstr "Událost zvonku"
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Neznámý informační požadavek okna: %d"
@@ -970,7 +1143,9 @@ msgstr "<tt>%s</tt> neodpovídá."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Je možné chvíli počkat, aby aplikace mohla pokračovat, nebo si vynutit úplné ukončení aplikace."
+msgstr ""
+"Je možné chvíli počkat, aby aplikace mohla pokračovat, nebo si vynutit úplné"
+" ukončení aplikace."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -995,48 +1170,52 @@ msgstr "Schází rozšíření %s vyžadované funkcemi kompozitoru"
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Nelze otevřít displej X Window System \"%s\"\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Klávesu %s s modifikátory %x již jako zkratku používá nějaký jiný program\n"
+msgstr ""
+"Klávesu %s s modifikátory %x již jako zkratku používá nějaký jiný program\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Při spuštění <tt>%s</tt> se vyskytla chyba:\n\n%s"
+msgstr ""
+"Při spuštění <tt>%s</tt> se vyskytla chyba:\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Nebyl definován příkaz %d.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Nebyl definován příkaz terminálu.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Přejmenovat pracovní plochu</tt>"
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
 msgstr "Nový název pracovní plochy:"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3680
 msgid "OK"
 msgstr "Budiž"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -1047,11 +1226,15 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nCopyright (C) 2001-%s Havoc Pennington, Red Hat, Inc. a další.\nToto je svobodný software; podmínky kopírování a rozšiřování naleznete ve zdrojových textech.\nTento software je BEZ JAKÉKOLIV ZÁRUKY; neposkytují se ani záruky PRODEJNOSTI anebo VHODNOSTI PRO URČITÝ ÚČEL.\n"
+msgstr ""
+"marco %s\n"
+"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc. a další.\n"
+"Toto je svobodný software; podmínky kopírování a rozšiřování naleznete ve zdrojových textech.\n"
+"Tento software je BEZ JAKÉKOLIV ZÁRUKY; neposkytují se ani záruky PRODEJNOSTI anebo VHODNOSTI PRO URČITÝ ÚČEL.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "Vypnout spojení se správcem sezení"
+msgstr "Zakázat napojení na správce sezení"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1059,7 +1242,7 @@ msgstr "Nahradí běžícího správce oken správcem Marco"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Stanovit ID Správy sezení"
+msgstr "Zadejte ID správce sezení"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1071,11 +1254,11 @@ msgstr "Spustí sezení z uloženého souboru"
 
 #: ../src/core/main.c:298
 msgid "Print version"
-msgstr "Vypíše verzi"
+msgstr "Vypsat verzi"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Provede volání X synchronně"
+msgstr "Použít synchronní volání X"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1088,7 +1271,9 @@ msgstr "Vypnout funkci kompozitoru"
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Nevytvářet okna přes celou obrazovku, která jsou maximalizovaná a nemají dekorace"
+msgstr ""
+"Nevytvářet okna přes celou obrazovku, která jsou maximalizovaná a nemají "
+"dekorace"
 
 #: ../src/core/main.c:519
 #, c-format
@@ -1099,7 +1284,9 @@ msgstr "Nelze prohledat adresář motivů: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Nelze najít motiv! Ujistěte se prosím, že existuje %s a obsahuje obvyklé motivy.\n"
+msgstr ""
+"Nelze najít motiv! Ujistěte se prosím, že existuje %s a obsahuje obvyklé "
+"motivy.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1109,37 +1296,43 @@ msgstr "Nezdařil se restart: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr "%d uloženo v klíči GSettings %s je mimo rozsah %d až %d\n"
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Bylo zakázáno obcházení chyb aplikací. Některé aplikace se možná nebudou chovat správně.\n"
+msgstr ""
+"Bylo zakázáno obcházení chyb aplikací. Některé aplikace se možná nebudou "
+"chovat správně.\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "Nebylo možné zpracovat popis písma \"%s\" z klíče GSettings %s\n"
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "\"%s\" nalezené v databázi nastavení není platnou hodnotou modifikátoru tlačítka myši\n"
+msgstr ""
+"\"%s\" nalezené v databázi nastavení není platnou hodnotou modifikátoru "
+"tlačítka myši\n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "\"%s\" nalezené v databázi nastavení není platnou hodnotou klávesové zkratky \"%s\"\n"
+msgstr ""
+"\"%s\" nalezené v databázi nastavení není platnou hodnotou klávesové zkratky"
+" \"%s\"\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
 msgstr "Plocha %d"
@@ -1154,7 +1347,9 @@ msgstr "Obrazovka %d na displeji \"%s\" je neplatná\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Obrazovka %d na displeji \"%s\" již správce oken má; zkuste prosím nahradit aktuálního správce oken pomocí přepínače --replace.\n"
+msgstr ""
+"Obrazovka %d na displeji \"%s\" již správce oken má; zkuste prosím nahradit "
+"aktuálního správce oken pomocí přepínače --replace.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
@@ -1222,7 +1417,9 @@ msgstr "Neznámý prvek %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Tato okna nepodporují ukládání aktuálního nastavení a po vašem příštím přihlášení je budete muset znovu spustit ručně."
+msgstr ""
+"Tato okna nepodporují ukládání aktuálního nastavení a po vašem příštím "
+"přihlášení je budete muset znovu spustit ručně."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1267,12 +1464,14 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Okno %s nastavilo SM_CLIENT_ID samo na sebe, namísto okna WM_CLIENT_LEADER, jak je definováno v ICCCM.\n"
+msgstr ""
+"Okno %s nastavilo SM_CLIENT_ID samo na sebe, namísto okna WM_CLIENT_LEADER, "
+"jak je definováno v ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1280,12 +1479,15 @@ msgstr "Okno %s nastavilo SM_CLIENT_ID samo na sebe, namísto okna WM_CLIENT_LEA
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Okno %s nastavuje pokyn MWM, kterým naznačuje, že se nedá měnit jeho velikost, ale nastavuje min. velikost %d × %d a max. velikost %d × %d; to nedává smysl.\n"
+msgstr ""
+"Okno %s nastavuje pokyn MWM, kterým naznačuje, že se nedá měnit jeho "
+"velikost, ale nastavuje min. velikost %d × %d a max. velikost %d × %d; to "
+"nedává smysl.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1331,7 +1533,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Okno 0x%lx má vlastnost %s\nTa má mít typ %s formátu %d\na ve skutečnosti má typ %s formátu %d n_items %d.\nTo je pravděpodobně chyba aplikace, nikoliv správce oken.\nOkno má nadpis=\"%s\", třída=\"%s\", název=\"%s\".\n"
+msgstr ""
+"Okno 0x%lx má vlastnost %s\n"
+"Ta má mít typ %s formátu %d\n"
+"a ve skutečnosti má typ %s formátu %d n_items %d.\n"
+"To je pravděpodobně chyba aplikace, nikoliv správce oken.\n"
+"Okno má nadpis=\"%s\", třída=\"%s\", název=\"%s\".\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1343,54 +1550,59 @@ msgstr "Vlastnost %s okna 0x%lx obsahovala neplatné UTF-8\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Vlastnost %s okna 0x%lx obsahovala neplatné UTF-8 u položky %d seznamu\n"
+msgstr ""
+"Vlastnost %s okna 0x%lx obsahovala neplatné UTF-8 u položky %d seznamu\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
 msgid "Usage: %s\n"
 msgstr "Použití: %s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "Zavřít okno"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "Nabídka okna"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "Minimalizovat okno"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "Maximalizovat okno"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr "Obnovit okno"
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr "Svinout okno"
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr "Rozvinout okno"
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr "Držet okno navrchu"
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr "Odstranit okno svrchu"
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr "Vždy na viditelné ploše"
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr "Umístit okno jen na jednu plochu"
 
@@ -1427,7 +1639,7 @@ msgstr "_Přesunout"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:77
 msgid "_Resize"
-msgstr "Z_měnit velikost"
+msgstr "_Změnit velikost"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:79
@@ -1577,683 +1789,764 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
-msgstr "%d × %d"
+msgstr "%d x %d"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "nahoře"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "dole"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
-msgstr "vlevo"
+msgstr "levý"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
-msgstr "vpravo"
+msgstr "pravý"
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "geometrie rámu nedefinuje rozměr \"%s\""
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "geometrie rámu nedefinuje rozměr \"%s\" okraje \"%s\""
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "Poměr stran tlačítka %g není přiměřený"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Geometrie rámu nedefinuje velikost tlačítek"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Přechody by měly mít alespoň dvě barvy"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr ""
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "Specifikace GTK barvy musí mít stav v hranatých závorkách, např. gtk:fg[NORMAL], kde NORMAL je stav; nelze analyzovat \"%s\""
+msgstr ""
+"Specifikace GTK barvy musí mít stav v hranatých závorkách, např. "
+"gtk:fg[NORMAL], kde NORMAL je stav; nelze analyzovat \"%s\""
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "Specifikace GTK barvy musí mít za stavem hranatou závorku, např. gtk:fg[NORMAL], kde NORMAL je stav; nelze analyzovat \"%s\""
+msgstr ""
+"Specifikace GTK barvy musí mít za stavem hranatou závorku, např. "
+"gtk:fg[NORMAL], kde NORMAL je stav; nelze analyzovat \"%s\""
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Nerozuměno stavu \"%s\" ve specifikaci barvy"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Nerozuměno barevné složce \"%s\" ve specifikaci barvy"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Formát prolínání má podobu \"prolínání/barva_pozadí/barva_popředí/alfa\", \"%s\" tomuto formátu neodpovídá"
+msgstr ""
+"Formát prolínání má podobu \"prolínání/barva_pozadí/barva_popředí/alfa\", "
+"\"%s\" tomuto formátu neodpovídá"
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Nelze analyzovat hodnotu alfa \"%s\" v prolínající barvě"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "Hodnota alfa \"%s\" v prolínající barvě není mezi 0.0 a 1.0"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "Formát stínu má podobu \"stín/základní_barva/faktor\", \"%s\" tomuto formátu neodpovídá"
+msgstr ""
+"Formát stínu má podobu \"stín/základní_barva/faktor\", \"%s\" tomuto formátu"
+" neodpovídá"
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Nelze analyzovat faktor stínu \"%s\" ve stínované barvě"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Faktor stínu \"%s\" ve stínované barvě je záporný"
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "Nelze analyzovat barvu \"%s\""
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Souřadnicový výraz obsahuje nepovolený znak \"%s\""
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
-msgstr "Souřadnicový výraz obsahuje číslo s pohyblivou řádovou čárkou \"%s\", které nelze analyzovat"
+msgstr ""
+"Souřadnicový výraz obsahuje číslo s pohyblivou řádovou čárkou \"%s\", které "
+"nelze analyzovat"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Souřadnicový výraz obsahuje celé číslo \"%s\", které nelze analyzovat"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "Souřadnicový výraz obsahuje na začátku textu neznámý operátor: \"%s\""
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Souřadnicový výraz byl prázdný nebo mu nebylo rozuměno"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Souřadnicový výraz způsobil dělení nulou"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
-msgstr "Souřadnicový výraz chce použít operátor mod na číslo s pohyblivou řádovou čárkou"
+msgstr ""
+"Souřadnicový výraz chce použít operátor mod na číslo s pohyblivou řádovou "
+"čárkou"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Souřadnicový výraz má na místě, kde byl očekáván operand, operátor \"%s\""
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Souřadnicový výraz má operand tam, kde byl očekáván operátor"
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Souřadnicový výraz končí operátorem místo operandu"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Souřadnicový výraz má operátor \"%c\" za operátorem \"%c\" bez operandu umístěného mezi nimi"
+msgstr ""
+"Souřadnicový výraz má operátor \"%c\" za operátorem \"%c\" bez operandu "
+"umístěného mezi nimi"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "Souřadnicový výraz má neznámou proměnnou nebo konstantu \"%s\""
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Analyzátor souřadnicových výrazů přeplnil svou vyrovnávací paměť."
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Souřadnicový výraz má pravou závorku bez levé závorky"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Souřadnicový výraz má levou závorku bez pravé závorky"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Souřadnicový výraz zřejmě nemá žádné operátory nebo operandy"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Motiv obsahoval výraz, který způsobil chybu: %s\n"
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "U tohoto stylu rámu musí být zadáno <button function=\"%s\" state=\"%s\" draw_ops=\"cokoliv\"/>"
+msgstr ""
+"U tohoto stylu rámu musí být zadáno <button function=\"%s\" state=\"%s\" "
+"draw_ops=\"cokoliv\"/>"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Chybí <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"cokoliv\"/>"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Nelze načíst motiv \"%s\": %s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Není nastaveno <%s> motivu \"%s\""
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "U typu okna \"%s\" motivu \"%s\" není nastaven typ rámu, přidejte prosím prvek <window type=\"%s\" style_set=\"cokoliv\"/>"
+msgstr ""
+"U typu okna \"%s\" motivu \"%s\" není nastaven typ rámu, přidejte prosím "
+"prvek <window type=\"%s\" style_set=\"cokoliv\"/>"
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Uživatelem definované konstanty musí začínat velkým písmenem; \"%s\" toto nesplňuje"
+msgstr ""
+"Uživatelem definované konstanty musí začínat velkým písmenem; \"%s\" toto "
+"nesplňuje"
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Konstanta \"%s\" již byla definována"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "Chybí atribut \"%s\" v prvku <%s>"
+msgstr "Atribut „%s“ chybí v elementu <%s>"
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "Řádek %d znak %d: %s"
+msgstr "Řádek %d, znak %d: %s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "Atribut \"%s\" opakován dvakrát v jednom prvku <%s>"
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Atribut \"%s\" je v prvku <%s> v tomto kontextu neplatný"
+msgstr "Atribut „%s“ v elementu <%s> není v tomto kontextu platný"
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\" nelze analyzovat jako celé číslo"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "Nerozuměno koncovým znakům \"%s\" v řetězci \"%s\""
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "Celé číslo %ld musí být kladné"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "Celé číslo %ld je příliš velké, aktuální maximum je %d"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "Nelze analyzovat \"%s\" jako číslo s pohyblivou řádovou čárkou"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "Booleovské hodnoty musí být \"true\" nebo \"false\", nikoliv \"%s\""
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Úhel musí být mezi 0.0 a 360.0, měl hodnotu %g\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Alfa musí být mezi 0.0 (neviditelný) a 1.0 (zcela neprůhledný), měla hodnotu %g\n"
+msgstr ""
+"Alfa musí být mezi 0.0 (neviditelný) a 1.0 (zcela neprůhledný), měla hodnotu"
+" %g\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Neplatné měřítko nadpisu \"%s\" (musí být jedno z xx-small, x-small, medium, large, x-large, xx-large)\n"
+msgstr ""
+"Neplatné měřítko nadpisu \"%s\" (musí být jedno z xx-small, x-small, medium,"
+" large, x-large, xx-large)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s>: název \"%s\" použit podruhé"
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s>: rodič \"%s\" nebyl definován"
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s>: geometrie \"%s\" nebyla definována"
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> musí určit buď geometrii, nebo rodiče, který má geometrii"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "Aby měla hodnota alfa význam, je nutné určit pozadí"
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "Neznámý typ \"%s\" v prvku <%s>"
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "Neznámý style_set \"%s\" v prvku <%s>"
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "Typu okna \"%s\" již byla přiřazena sada stylů"
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "Prvek <%s> není povolen pod <%s>"
+msgstr "Element <%s> není povolen v <%s>"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "U tlačítek nelze zadat \"button_width\"/\"button_height\" a zároveň \"aspect_ratio\""
+msgstr ""
+"U tlačítek nelze zadat \"button_width\"/\"button_height\" a zároveň "
+"\"aspect_ratio\""
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "Vzdálenost \"%s\" není známa"
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "Poměr stran \"%s\" není znám"
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "Okraj \"%s\" není znám"
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "Chybí atribut \"start_angle\" nebo \"from\" v prvku <%s>"
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "Chybí atribut \"extent_angle\" nebo \"to\" v prvku <%s>"
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Nerozuměno hodnotě \"%s\" typu přechodu"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "Nerozuměno typu výplně \"%s\" prvku <%s>"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "Nerozuměno stavu \"%s\" prvku <%s>"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "Nerozuměno stínu \"%s\" prvku <%s>"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "Nerozuměno šipce \"%s\" prvku <%s>"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "Nebyly definovány žádné <draw_ops> nazvané \"%s\""
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Vložení draw_ops \"%s\" na tomto místě by vytvořilo zacyklený odkaz"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Neznámá pozice položky rámu \"%s\""
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Styl rámu již má položku na pozici %s"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "Nebyly definované žádné <draw_ops> s názvem \"%s\""
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Neznámá funkce tlačítka \"%s\""
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "Funkce tlačítka \"%s\" v této verzi neexistuje (%d, potřeba je %d)"
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Neznámý stav tlačítka \"%s\""
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Styl rámu již má tlačítko funkce %s stavu %s"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\" není platná hodnota atributu focus"
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\" není platná hodnota atributu state"
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "Nebyl definován styl \"%s\""
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "\"%s\" není platná hodnota atributu resize"
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Atribut \"resize\" by neměl být na prvku <%s> maximalizovaného/svinutého stavu"
+msgstr ""
+"Atribut \"resize\" by neměl být na prvku <%s> maximalizovaného/svinutého "
+"stavu"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr "Atribut \"resize\" by neměl být na prvku <%s> maximalizovaného stavu"
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr "U state %s resize %s focus %s již byl definován styl"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "U state %s focus %s již byl definován styl"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nelze mít dvě draw_ops u prvku <piece> (motiv definoval atribut draw_ops i prvek <draw_ops>, nebo definoval dva prvky)"
+msgstr ""
+"Nelze mít dvě draw_ops u prvku <piece> (motiv definoval atribut draw_ops i "
+"prvek <draw_ops>, nebo definoval dva prvky)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nelze mít dvě draw_ops u prvku <button> (motiv definoval atribut draw_ops i prvek <draw_ops>, nebo definoval dva prvky)"
+msgstr ""
+"Nelze mít dvě draw_ops u prvku <button> (motiv definoval atribut draw_ops i "
+"prvek <draw_ops>, nebo definoval dva prvky)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "Nelze mít dvě draw_ops u prvku <menu_icon> (motiv definoval atribut draw_ops i prvek <draw_ops>, nebo definoval dva prvky)"
+msgstr ""
+"Nelze mít dvě draw_ops u prvku <menu_icon> (motiv definoval atribut draw_ops"
+" i prvek <draw_ops>, nebo definoval dva prvky)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr "Vnější element tématu musí být <metacity_theme>, nikoliv <%s>"
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr "Prvek <%s> není dovolen v prvku name/author/date/description"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "Prvek <%s> není dovolen v prvku <constant>"
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr "Prvek <%s> není dovolen v prvku distance/border/aspect_ratio"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "Prvek <%s> není dovolen v prvku operace kreslení"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "Prvek <%s> není dovolen v prvku <%s>"
+msgstr "Element <%s> není uvnitř elementu <%s> povolen"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "U položky rámu neposkytnuty draw_ops"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "U tlačítka neposkytnuty draw_ops"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "V prvku <%s> není dovolen žádný text"
+msgstr "Uvnitř elementu <%s> není povolen text"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "<%s> u tohoto motivu definováno dvakrát"
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Nelze nalézt platný soubor motivu %s\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr "_OK"
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "Toto je ukázková zpráva v ukázkovém dialogu"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Falešná položka nabídky %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "Okno jen s okrajem"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
 msgstr "Lišta"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "Normální okno aplikace"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "Dialogové okno"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "Modální dialogové okno"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "Paleta nástrojů"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "Odtržení nabídky"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
-msgstr "Okraj"
+msgstr "Rámeček"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "Test rozložení tlačítek %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g milisekund na nakreslení jednoho rámu okna"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Použití: marco-theme-viewer [NÁZEVMOTIVU]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Chyba při načítání motivu: %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Načten motiv \"%s\" za %g sekund\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "Normální písmo nadpisu"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "Malé písmo nadpisu"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "Velké písmo nadpisu"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "Rozložení tlačítek"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "Test výkonnosti"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "Sem patří nadpis okna"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "Nakresleno %d rámů za %g sekund na straně klienta (%g milisekund na rám) a %g sekund reálného času včetně zdrojů serveru X (%g milisekund na rám)\n"
+msgstr ""
+"Nakresleno %d rámů za %g sekund na straně klienta (%g milisekund na rám) a "
+"%g sekund reálného času včetně zdrojů serveru X (%g milisekund na rám)\n"

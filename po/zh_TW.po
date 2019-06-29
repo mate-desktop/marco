@@ -1,18 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Jeff Huang <s8321414@gmail.com>, 2014-2018
-# 趙惟倫 <bluebat@member.fsf.org>, 2012-2013
+# 趙惟倫 <bluebat@member.fsf.org>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Jeff Huang <s8321414@gmail.com>, 2019
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-16 02:29+0000\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/mate/MATE/language/zh_TW/)\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"PO-Revision-Date: 2019-03-12 19:28+0000\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>, 2019\n"
+"Language-Team: Chinese (Taiwan) (https://www.transifex.com/mate/teams/13566/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -439,7 +443,8 @@ msgid ""
 "(right click). The middle and right click operations may be swapped using "
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
-msgstr "當在視窗中按下滑鼠按鈕及本特殊按鍵會：移動視窗（左鍵點擊）、調整視窗大小（中鍵點擊）或顯示視窗選單（右鍵點擊）。使用「resize_with_right_button」設定鍵可以交換中和右鍵的操作。特殊按鍵可以表示為「<Alt>」或「<Super>」那樣。"
+msgstr ""
+"當在視窗中按下滑鼠按鈕及本特殊按鍵會：移動視窗（左鍵點擊）、調整視窗大小（中鍵點擊）或顯示視窗選單（右鍵點擊）。使用「resize_with_right_button」設定鍵可以交換中和右鍵的操作。特殊按鍵可以表示為「<Alt>」或「<Super>」那樣。"
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -450,7 +455,9 @@ msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
-msgstr "將此項設為 true 則按下「mouse_button_modifier」指定的按鍵時，可用右鍵調整大小並以中鍵顯示選單；將它設為 false 則會以相反的方式運作。"
+msgstr ""
+"將此項設為 true 則按下「mouse_button_modifier」指定的按鍵時，可用右鍵調整大小並以中鍵顯示選單；將它設為 false "
+"則會以相反的方式運作。"
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -475,7 +482,9 @@ msgid ""
 "silently ignored so that buttons can be added in future marco versions "
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
-msgstr "標題列上的按鈕排列。設定值必須為字串，例如「menu:minimize,maximize,spacer,close」；冒號表示將視窗左上角及右上角分開，而按鈕名稱則以逗號分開。不會接受重複的按鈕名稱。不明的按鈕會忽略不理，使得在日後的 marco 版本增加新的按鈕時也不會令舊版本無法使用。特殊的 spacer 標籤則是用來在兩個相鄰的按鈕之間加入空白。"
+msgstr ""
+"標題列上的按鈕排列。設定值必須為字串，例如「menu:minimize,maximize,spacer,close」；冒號表示將視窗左上角及右上角分開，而按鈕名稱則以逗號分開。不會接受重複的按鈕名稱。不明的按鈕會忽略不理，使得在日後的"
+" marco 版本增加新的按鈕時也不會令舊版本無法使用。特殊的 spacer 標籤則是用來在兩個相鄰的按鈕之間加入空白。"
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
@@ -488,7 +497,11 @@ msgid ""
 "them, \"sloppy\" means windows are focused when the mouse enters the window,"
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
-msgstr "「視窗焦點模式」表示視窗如何對輸入產生反應。它有 3 個可接受的值：\n「click」表示必須在視窗按滑鼠按鈕才會令視窗獲取輸入焦點，\n「sloppy」表示當鼠標在某視窗上時會令該視窗獲取輸入焦點，最後\n「mouse」表示當鼠標在某視窗上時會令該視窗獲取輸入焦點，而且當鼠標移離視窗時輸入焦點也會脫離該視窗。"
+msgstr ""
+"「視窗焦點模式」表示視窗如何對輸入產生反應。它有 3 個可接受的值：\n"
+"「click」表示必須在視窗按滑鼠按鈕才會令視窗獲取輸入焦點，\n"
+"「sloppy」表示當鼠標在某視窗上時會令該視窗獲取輸入焦點，最後\n"
+"「mouse」表示當鼠標在某視窗上時會令該視窗獲取輸入焦點，而且當鼠標移離視窗時輸入焦點也會脫離該視窗。"
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
@@ -500,7 +513,8 @@ msgid ""
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
-msgstr "本選項會在新建視窗取得焦點上提供符加的控制。它有兩個可用的值：「smart」會套用使用者平常使用的焦點模式，及「strick」會導致在終端中執行的視窗在開始時不會取得焦點。"
+msgstr ""
+"本選項會在新建視窗取得焦點上提供符加的控制。它有兩個可用的值：「smart」會套用使用者平常使用的焦點模式，及「strick」會導致在終端中執行的視窗在開始時不會取得焦點。"
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -526,7 +540,16 @@ msgid ""
 "with this setting disabled, tell them it is _their_ fault for breaking their"
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
-msgstr "將此項設為 false 可能會導致錯誤，因此強烈不建議使用者去改變原為 true 的預設值。許多動作(例如：在客戶端區域中按一下、移動或調整視窗大小)通常會有前移視窗的副作用。強烈不建議將此項設為 false，否則會將前移與其他的使用者動作脫鉤，並忽略了由應用程式所產生的前移要求。請參看 http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 。即使此項被設為 false，仍然可以利用 alt 加上在視窗的任何地方按下滑鼠左鍵、在視窗的邊框上按下一般的滑鼠左鍵，或是來自工作區切換器的特殊訊息像是工作清單小程式的啟動要求，都可以將視窗前移。目前這個項目於按一下取得焦點的模式中是被停用的。請注意，當 raise_on_click 為 false 時，將視窗前移的方法列表並不包括來自應用軟體的視窗前移程式要求；此類的要求將會被忽略不論要求的理由為何。如果您是一位應用軟體開發者，曾經接到某位使用者抱怨說，您的應用軟體無法在此項設定為停用時正常工作。請告訴他們這是他們的錯誤而破壞了視窗管理器，而他們需要將此項改回 true，或是接受這個他們所要求的程式錯誤。"
+msgstr ""
+"將此項設為 false 可能會導致錯誤，因此強烈不建議使用者去改變原為 true "
+"的預設值。許多動作(例如：在客戶端區域中按一下、移動或調整視窗大小)通常會有前移視窗的副作用。強烈不建議將此項設為 "
+"false，否則會將前移與其他的使用者動作脫鉤，並忽略了由應用程式所產生的前移要求。請參看 "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 。即使此項被設為 false，仍然可以利用 "
+"alt "
+"加上在視窗的任何地方按下滑鼠左鍵、在視窗的邊框上按下一般的滑鼠左鍵，或是來自工作區切換器的特殊訊息像是工作清單小程式的啟動要求，都可以將視窗前移。目前這個項目於按一下取得焦點的模式中是被停用的。請注意，當"
+" raise_on_click 為 false "
+"時，將視窗前移的方法列表並不包括來自應用軟體的視窗前移程式要求；此類的要求將會被忽略不論要求的理由為何。如果您是一位應用軟體開發者，曾經接到某位使用者抱怨說，您的應用軟體無法在此項設定為停用時正常工作。請告訴他們這是他們的錯誤而破壞了視窗管理器，而他們需要將此項改回"
+" true，或是接受這個他們所要求的程式錯誤。"
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -542,7 +565,8 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "本選項決定在標題列上雙擊滑鼠按鈕的效果。目前有效的選項為：「toggle_shade」會收攏/鋪展視窗，「toggle_maximize」會切換是否將視窗最大化，「toggle_maximize_horizontally」和「toggle_maximize_vertically」會根據其方向決定最大化的方式。「minimize」會將視窗最小化，「shade」會收攏視窗，「menu」會顯示視窗選單，「lower」會把視窗置於所有其他視窗之後，而「none」則不會作出任何反應。"
+msgstr ""
+"本選項決定在標題列上雙擊滑鼠按鈕的效果。目前有效的選項為：「toggle_shade」會收攏/鋪展視窗，「toggle_maximize」會切換是否將視窗最大化，「toggle_maximize_horizontally」和「toggle_maximize_vertically」會根據其方向決定最大化的方式。「minimize」會將視窗最小化，「shade」會收攏視窗，「menu」會顯示視窗選單，「lower」會把視窗置於所有其他視窗之後，而「none」則不會作出任何反應。"
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
@@ -558,7 +582,8 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "本選項決定在標題列上按下滑鼠中鍵的效果。目前有效的選項為：「toggle_shade」會收攏/鋪展視窗，「toggle_maximize」會切換是否將視窗最大化，「toggle_maximize_horizontally」和「toggle_maximize_vertically」會根據其方向決定最大化的方式。「minimize」會將視窗最小化，「shade」會收攏視窗，「menu」會顯示視窗選單，「lower」會把視窗置於所有其他視窗之後，而「none」則不會作出任何反應。"
+msgstr ""
+"本選項決定在標題列上按下滑鼠中鍵的效果。目前有效的選項為：「toggle_shade」會收攏/鋪展視窗，「toggle_maximize」會切換是否將視窗最大化，「toggle_maximize_horizontally」和「toggle_maximize_vertically」會根據其方向決定最大化的方式。「minimize」會將視窗最小化，「shade」會收攏視窗，「menu」會顯示視窗選單，「lower」會把視窗置於所有其他視窗之後，而「none」則不會作出任何反應。"
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
@@ -574,7 +599,8 @@ msgid ""
 " minimize the window, 'shade' which will roll the window up, 'menu' which "
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
-msgstr "本選項決定在標題列上安下滑鼠右鍵的效果。目前有效的選項為：「toggle_shade」會收攏/鋪展視窗，「toggle_maximize」會切換是否將視窗最大化，「toggle_maximize_horizontally」和「toggle_maximize_vertically」會根據其方向決定最大化的方式。「minimize」會將視窗最小化，「shade」會收攏視窗，「menu」會顯示視窗選單，「lower」會把視窗置於所有其他視窗之後，而「none」則不會作出任何反應。"
+msgstr ""
+"本選項決定在標題列上安下滑鼠右鍵的效果。目前有效的選項為：「toggle_shade」會收攏/鋪展視窗，「toggle_maximize」會切換是否將視窗最大化，「toggle_maximize_horizontally」和「toggle_maximize_vertically」會根據其方向決定最大化的方式。「minimize」會將視窗最小化，「shade」會收攏視窗，「menu」會顯示視窗選單，「lower」會把視窗置於所有其他視窗之後，而「none」則不會作出任何反應。"
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
@@ -586,7 +612,9 @@ msgid ""
 "the focused window will be automatically raised after a delay specified by "
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
-msgstr "如設定為‘true’，而且焦點模式是「sloppy」或「mouse」的時候，輸入焦點所在的視窗經過某段時間後會自動完全顯示（auto_raise_delay 設定鍵值指定了延遲的時間）。這跟按下視窗將視窗升起，及以在拖曳時進入視窗無關。"
+msgstr ""
+"如設定為‘true’，而且焦點模式是「sloppy」或「mouse」的時候，輸入焦點所在的視窗經過某段時間後會自動完全顯示（auto_raise_delay"
+" 設定鍵值指定了延遲的時間）。這跟按下視窗將視窗升起，及以在拖曳時進入視窗無關。"
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
@@ -628,7 +656,9 @@ msgid ""
 "from the description will only be used if the titlebar_font_size option is "
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
-msgstr "視窗標題所使用的字型的描述字串。可是只有當 titlebar_font_size option 設定為 0 時才會採用本設定值中的字型大小。另外，當 titlebar_uses_desktop_font 設定為 true 時本設定值不會生效。"
+msgstr ""
+"視窗標題所使用的字型的描述字串。可是只有當 titlebar_font_size option 設定為 0 時才會採用本設定值中的字型大小。另外，當 "
+"titlebar_uses_desktop_font 設定為 true 時本設定值不會生效。"
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
@@ -655,7 +685,10 @@ msgid ""
 " column leads to the beginning of the next. If set to \"toroidal\", "
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
-msgstr "包裝風格被用於決定如何從一個工作區切換到另一個工作區切換區的邊界。當設定為「no wrap」，若您試圖切換工作區到前一個工作區的切換器邊界時，什麼事都不會發生。若設定為「classic」，將會使用舊版 marco 的行為：一排的末端引出下一個的起頭，一列的末端也會引出下一列的起頭。若設定為「toroidal」，工作區將會像甜甜圈一樣被連結，每一行的末端會導向自己的開頭，每列的末端也會導向自己的開頭。"
+msgstr ""
+"包裝風格被用於決定如何從一個工作區切換到另一個工作區切換區的邊界。當設定為「no "
+"wrap」，若您試圖切換工作區到前一個工作區的切換器邊界時，什麼事都不會發生。若設定為「classic」，將會使用舊版 marco "
+"的行為：一排的末端引出下一個的起頭，一列的末端也會引出下一列的起頭。若設定為「toroidal」，工作區將會像甜甜圈一樣被連結，每一行的末端會導向自己的開頭，每列的末端也會導向自己的開頭。"
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
@@ -691,7 +724,10 @@ msgid ""
 "the bell signal to flash. If the application which sent the bell is unknown "
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
-msgstr "讓 Marco 知道當系統或程式發出「鈴聲」時，如何顯示該「鈴聲」的視覺效果。目前可接受的值有兩個：\n「fullscreen」令整個畫面以黑白方式閃爍\n「frame_flash」令發出鈴聲的程式的視窗標題列閃動。如果不知道發出鈴聲的是哪一個視窗（主要的例子為預設的「系統聲響」），則會令目前輸入焦點所在的視窗閃動標題列。"
+msgstr ""
+"讓 Marco 知道當系統或程式發出「鈴聲」時，如何顯示該「鈴聲」的視覺效果。目前可接受的值有兩個：\n"
+"「fullscreen」令整個畫面以黑白方式閃爍\n"
+"「frame_flash」令發出鈴聲的程式的視窗標題列閃動。如果不知道發出鈴聲的是哪一個視窗（主要的例子為預設的「系統聲響」），則會令目前輸入焦點所在的視窗閃動標題列。"
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
@@ -723,7 +759,9 @@ msgid ""
 "usability for many users, but may allow legacy applications to continue "
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
-msgstr "如設定為「true」，marco 會給使用者更少的回饋：會使用線框、防止動畫或使用其它方法的使用。這很明顯會減低很多給使用者的可用性。但可能會使到在啟用此項前不能使用的舊程式及終端服務可以運作。但是，如果使用了無障礙環境，線框功能將會停用，以防止捆綁的桌面破損。"
+msgstr ""
+"如設定為「true」，marco "
+"會給使用者更少的回饋：會使用線框、防止動畫或使用其它方法的使用。這很明顯會減低很多給使用者的可用性。但可能會使到在啟用此項前不能使用的舊程式及終端服務可以運作。但是，如果使用了無障礙環境，線框功能將會停用，以防止捆綁的桌面破損。"
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
@@ -739,7 +777,9 @@ msgid ""
 "application-based mode, focus clicks are not passed through to windows in "
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
-msgstr "如設定為 true，Marco 會以應用程式而不是以視窗為主的方式運作。它的概念是比較抽象，但大致上，以應用程式為主的設定會類似 Mac 多於 Windows。在應用程式為主的模式中，當視窗獲得輸入焦點時，所有該程式的視窗都會完全顯示出來。另外，在應用程式為主的模式中，若在輸入焦點以外的視窗按滑鼠按鈕，只會令輸入焦點轉移，按該下按鈕不會令程式帶來其它變化。另外，應用程式為主的設定目前大致上仍未編寫完成。"
+msgstr ""
+"如設定為 true，Marco 會以應用程式而不是以視窗為主的方式運作。它的概念是比較抽象，但大致上，以應用程式為主的設定會類似 Mac 多於 "
+"Windows。在應用程式為主的模式中，當視窗獲得輸入焦點時，所有該程式的視窗都會完全顯示出來。另外，在應用程式為主的模式中，若在輸入焦點以外的視窗按滑鼠按鈕，只會令輸入焦點轉移，按該下按鈕不會令程式帶來其它變化。另外，應用程式為主的設定目前大致上仍未編寫完成。"
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
@@ -751,7 +791,8 @@ msgid ""
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
-msgstr "某些應用程式不符合規定，導致令視窗管理員要加入某些不應該有的功能。本選項會關閉對這些不合規格的程式的支援，如果您不需要執行任何不合規格的程式，這樣的使用者界面會較好。"
+msgstr ""
+"某些應用程式不符合規定，導致令視窗管理員要加入某些不應該有的功能。本選項會關閉對這些不合規格的程式的支援，如果您不需要執行任何不合規格的程式，這樣的使用者界面會較好。"
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -772,7 +813,8 @@ msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
-msgstr "若啟用，將視窗拖曳至螢幕邊緣將會把它們在垂直方向最大化，並在水平方向重新調整其大小以覆蓋可用區域的一半。當允許頂端平鋪啟用時，拖曳到頂端將會最大化視窗。"
+msgstr ""
+"若啟用，將視窗拖曳至螢幕邊緣將會把它們在垂直方向最大化，並在水平方向重新調整其大小以覆蓋可用區域的一半。當允許頂端平鋪啟用時，拖曳到頂端將會最大化視窗。"
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
@@ -796,7 +838,8 @@ msgid ""
 "space; \"pointer\" means that new windows are placed according to the mouse "
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
-msgstr "視窗擺放模式指定了新的視窗要如何放置。「自動」意味著系統將會基於桌面上的可用空間自動選擇位置，或是如果沒有空間的話就疊上去；「游標」意味著新視窗將會放置在滑鼠游標處；「手動」意味著使用者必須使用滑鼠或鍵盤手動放置。"
+msgstr ""
+"視窗擺放模式指定了新的視窗要如何放置。「自動」意味著系統將會基於桌面上的可用空間自動選擇位置，或是如果沒有空間的話就疊上去；「游標」意味著新視窗將會放置在滑鼠游標處；「手動」意味著使用者必須使用滑鼠或鍵盤手動放置。"
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
@@ -828,7 +871,9 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "本按鍵組合可以執行在 /apps/marco/keybinding_commands 中加上相應數字的指令。格式可以像「<Control>a」或是「<Shift><Alt>F1」。分析按鍵組合字串時是比較寬鬆的，允許使用大寫或小寫，也允許使用像「<Ctl>」及「<Ctrl>」等的縮寫。如果將此選項設定為字串「disabled」，則不會為該項操作安排任何按鍵組合。"
+msgstr ""
+"本按鍵組合可以執行在 /apps/marco/keybinding_commands "
+"中加上相應數字的指令。格式可以像「<Control>a」或是「<Shift><Alt>F1」。分析按鍵組合字串時是比較寬鬆的，允許使用大寫或小寫，也允許使用像「<Ctl>」及「<Ctrl>」等的縮寫。如果將此選項設定為字串「disabled」，則不會為該項操作安排任何按鍵組合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -837,7 +882,9 @@ msgid ""
 "lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
-msgstr "格式可以像「&lt;Control&gt;a」或是「&lt;Shift&gt;&lt;Alt&gt;F1」。\n分析按鍵組合字串時是比較寬鬆的，允許使用大寫或小寫，也允許使用像「&lt;Ctl&gt;」及「&lt;Ctrl&gt;」等的縮寫。如果將此選項設定為字串「disabled」，則不會為該項動作安排任何按鍵組合。"
+msgstr ""
+"格式可以像「&lt;Control&gt;a」或是「&lt;Shift&gt;&lt;Alt&gt;F1」。\n"
+"分析按鍵組合字串時是比較寬鬆的，允許使用大寫或小寫，也允許使用像「&lt;Ctl&gt;」及「&lt;Ctrl&gt;」等的縮寫。如果將此選項設定為字串「disabled」，則不會為該項動作安排任何按鍵組合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:84
 msgid ""
@@ -848,7 +895,9 @@ msgid ""
 "then there will be no keybinding for this action. This keybinding may be "
 "reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
 "one of the keys it uses."
-msgstr "格式可以像「&lt;Control&gt;a」或是「&lt;Shift&gt;&lt;Alt&gt;F1」。\n分析按鍵組合字串時是比較寬鬆的，允許使用大寫或小寫，也允許使用像「&lt;Ctl&gt;」及「&lt;Ctrl&gt;」等的縮寫。如果將此選項設定為字串「disabled」，則不會為該項動作安排任何按鍵組合。這個按鍵組合可按下「shift」按鍵讓它反轉；因此，「shift」不能成為它所使用的按鍵之一。"
+msgstr ""
+"格式可以像「&lt;Control&gt;a」或是「&lt;Shift&gt;&lt;Alt&gt;F1」。\n"
+"分析按鍵組合字串時是比較寬鬆的，允許使用大寫或小寫，也允許使用像「&lt;Ctl&gt;」及「&lt;Ctrl&gt;」等的縮寫。如果將此選項設定為字串「disabled」，則不會為該項動作安排任何按鍵組合。這個按鍵組合可按下「shift」按鍵讓它反轉；因此，「shift」不能成為它所使用的按鍵之一。"
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
@@ -891,7 +940,9 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
-msgstr "/apps/marco/global_keybindings/run_command_N 設定鍵值中定義了相應指令所使用的按鍵組合。按下 run_command_N 的按鍵組合會執行 command_N。"
+msgstr ""
+"/apps/marco/global_keybindings/run_command_N 設定鍵值中定義了相應指令所使用的按鍵組合。按下 "
+"run_command_N 的按鍵組合會執行 command_N。"
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
@@ -901,7 +952,8 @@ msgstr "螢幕截圖指令"
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
-msgstr "/apps/marco/global_keybindings/run_command_screenshot 設定鍵中定義了相應指令所使用的按鍵組合。"
+msgstr ""
+"/apps/marco/global_keybindings/run_command_screenshot 設定鍵中定義了相應指令所使用的按鍵組合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
@@ -912,7 +964,9 @@ msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
-msgstr "/apps/marco/global_keybindings/run_command_window_screenshot 設定鍵值中定義了相應指令所使用的按鍵組合。"
+msgstr ""
+"/apps/marco/global_keybindings/run_command_window_screenshot "
+"設定鍵值中定義了相應指令所使用的按鍵組合。"
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
@@ -938,7 +992,7 @@ msgstr "平鋪視窗到螢幕的西南（左下）角"
 msgid "Bell event"
 msgstr "響鈴事件"
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "未知的視窗資訊要求：%d"
@@ -978,7 +1032,7 @@ msgstr "遺失視窗管理所需的 %s 延伸功能"
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "無法開啟 X Window 畫面‘%s’\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -987,39 +1041,42 @@ msgstr "其它程式已經使用了按鍵 %s 加上特殊按鍵 %x 作為按鍵�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "執行 <tt>%s</tt> 時發生錯誤：\n\n%s"
+msgstr ""
+"執行 <tt>%s</tt> 時發生錯誤：\n"
+"\n"
+"%s"
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "並未定義任何指令 %d。\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "沒有定義任何終端機指令。\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>重新命名應用程式</tt>"
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
 msgstr "新工作空間名稱："
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3680
 msgid "OK"
 msgstr "確定"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
 msgstr "取消"
 
@@ -1030,7 +1087,11 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\n版權所有 (C) 2001-%s Havoc Pennington, Red Hat, Inc. 及其它開發者\n本程式是自由軟體；有關版權的詳情請參考源程式碼。\n本程式不負任何擔保責任；亦無對適售性或特定目的適用性所為的默示性擔保。\n"
+msgstr ""
+"marco %s\n"
+"版權所有 (C) 2001-%s Havoc Pennington, Red Hat, Inc. 及其它開發者\n"
+"本程式是自由軟體；有關版權的詳情請參考源程式碼。\n"
+"本程式不負任何擔保責任；亦無對適售性或特定目的適用性所為的默示性擔保。\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
@@ -1092,37 +1153,37 @@ msgstr "無法重新啟動：%s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr "GSettings 設定鍵 %2$s 的值 %1$d 超出範圍 %3$d 至 %4$d\n"
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr "關閉了對不合規格的程式的支援。某些程式可能無法正常運作。\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "無法從 GSettings 設定鍵 %2$s 分析字型描述文字“%1$s”\n"
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "組態資料庫中的“%s”設定值不是有效的滑鼠按鈕修改功能鍵\n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "組態資料庫中的“%s”不是按鍵組合“%s”的有效設定值\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
 msgstr "工作區 %d"
@@ -1250,7 +1311,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1263,7 +1324,7 @@ msgstr "視窗 %s 將 SM_CLIENT_ID 設定為該視窗本身，而不是 ICCCM �
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1314,7 +1375,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "視窗 0x%lx 的 %s 屬性應該是\ntype %s format %d，但實際上是\ntype %s format %d n_items %d。\n這極可能是程式方面的漏洞，而不是視窗總管的漏洞。\n該視窗的其它屬性為 title=\"%s\" class=\"%s\" name=\"%s\"\n"
+msgstr ""
+"視窗 0x%lx 的 %s 屬性應該是\n"
+"type %s format %d，但實際上是\n"
+"type %s format %d n_items %d。\n"
+"這極可能是程式方面的漏洞，而不是視窗總管的漏洞。\n"
+"該視窗的其它屬性為 title=\"%s\" class=\"%s\" name=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1333,47 +1399,51 @@ msgstr "視窗 0x%2$lx 的屬性清單 %1$s 的第 %3$d 個項目含有無效的
 msgid "Usage: %s\n"
 msgstr "用法：%s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "關閉視窗"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "視窗選單"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr "視窗應用程式選單"
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "視窗最小化"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "視窗最大化"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr "還原視窗"
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr "捲起視窗(_U)"
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr "放下視窗"
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr "視窗保留在最上層"
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr "視窗移離最上層"
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr "在所有工作區顯示"
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr "視窗只置於一個工作區"
 
@@ -1560,683 +1630,741 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "頂"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "底"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
 msgstr "左"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
 msgstr "右"
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "邊框的位置大小中沒有指定“%s”部分的大小"
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "邊框的位置大小中沒有指定“%2$s”邊框中的“%1$s”部分"
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "按鈕的長寬比 %g 不合理"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "邊框的位置大小規格內未有指定按鈕的大小"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "漸層至少應該有兩種顏色"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr "GTK 自訂色彩規範在括號中必須有色彩名稱與汰退機制，例如 gtk:custom(foo,bar); 無法解析為「%s」"
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr "在 gtk:custom 的 color_name 參數中有無效的字元「%c」，僅 A-Za-z0-9-_ 可用"
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr "Gtk:custom 格式為 \"gtk:custom(color_name,fallback)\", \"%s\" 並不符合其格式"
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
 msgstr "GTK 色彩規格規定必須在狀態外加上方括號，例如 gtk:fg[NORMAL]，這裡 NORMAL 表示狀態；無法分析“%s”"
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
 msgstr "GTK 色彩規格規定必須在狀態後加上閉方括號，例如 gtk:fg[NORMAL]，這裡 NORMAL 表示狀態；無法分析“%s”"
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "無法將“%s”理解為色彩規格中的狀態"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "無法將“%s”理解為色彩規格中的色彩部分"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
 msgstr "指定混色的格式是“blend/背景顏色/前景顏色/透明度”，“%s”不符合規格"
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "無法理解“%s”作為混色的透明度數值"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "混色的透明度數值“%s”不是在 0.0 至 1.0 之間"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "遮蔽的格式是“遮蔽/基本顏色/比重”，但“%s”不符合格式"
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "在遮蔽顏色中無法將“%s”理解為遮蔽比重"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "在遮蔽顏色中遮蔽比重“%s”是負數"
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "無法分析顏色“%s”"
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "座標表達式中出現不可接受的字元‘%s’"
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "座標表達式中出現無法分析的浮點小數‘%s’"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "座標表達式中出現無法分析的整數‘%s’"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "在座標表達式中，以下文字的開始部分含有不明的運算符：“%s”"
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "座標表達式是空白的或是無法分析"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "座標表達式中出現被 0 整除的錯誤"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "座標表達式中出現將浮點數使用於餘數運算符 (mod) 的錯誤"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "在座標表達式中，應該有運算子的地方出現了運算符“%s”"
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "在座標表達式中，應該有運算符的地方出現了運算子"
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "結束座標表達式的是一個運算符而非運算子"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "在座標表達式中，運算符“%c”緊隨運算符“%c”出現，但中間沒有任何運算子"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "座標表達式中出現不明的變數或常數“%s”"
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "座標表達式分析器令緩衝溢位。"
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "座標表達式中的閉括號沒有相應的開括號"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "座標表達式中的開括號沒有相應的閉括號"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "座標表達式中似乎沒有任何運算符或運算子"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "布景主題中含有引致錯誤的表達式：%s\n"
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
 msgstr "此邊框款式必須指定 <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/>"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "缺少了 <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "無法載入布景主題“%s”：%s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "布景主題“%s”未指定 <%s>"
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "在布景主題“%2$s”中，視窗類型“%1$s”沒有指定任何邊框款式。請加上 <window type=\"%3$s\" style_set=\"whatever\"/> 元素"
+msgstr ""
+"在布景主題“%2$s”中，視窗類型“%1$s”沒有指定任何邊框款式。請加上 <window type=\"%3$s\" "
+"style_set=\"whatever\"/> 元素"
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "自行定義的常數必須以大寫字母開始；但“%s”不是"
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "已定義了“%s”常數"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "在元素 <%2$s> 中沒有「%1$s」屬性"
+msgstr "<%2$s> 元素中缺少了“%1$s”屬性"
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "第 %d 列第 %d 字：%s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "屬性「%s」在同一個 <%s> 元素中重複了兩次"
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "在此關聯選單中，屬性「%s」在 <%s> 元素中是無效的"
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "無法以整數的方式分析“%s”"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "無法理解字串“%2$s”中的結束字元“%1$s”"
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "整數 %ld 必須為正數"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "整數 %ld 太大，目前可接受的最大值為 %d"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "無法以浮點小數的方式分析“%s”"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "布林值必須為“true”或“false”，不是“%s”"
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "角度必須在 0.0 至 360.0 之間，此處的值為 %g\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr "透明度必須在 0.0（完全透明）至 1.0（完全不透明）之間，此處的值為 %g\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "無效的標題大小“%s”(必須為 xx-small、x-small、small、medium、large、\nx-large、xx-large 其中一個)\n"
+msgstr ""
+"無效的標題大小“%s”(必須為 xx-small、x-small、small、medium、large、\n"
+"x-large、xx-large 其中一個)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> 的 name 屬性“%s”用了超過一次"
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> 的主元素“%s”沒有任何定義"
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> 元素的位置大小“%s”沒有任何定義"
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> 必須自己指定位置大小或指定有位置大小的主元素"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "必須指定背景使得透明 ( alpha) 值的變得有意義"
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "<%2$s> 元素之內出現不明的類型“%1$s”"
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "<%2$s> 元素之內出現不明的 style_set“%1$s”"
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "視窗類型“%s”已經分配了 style set"
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "元素 <%s> 不允許在 <%s> 之下"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
 msgstr "不可能同時指定按鈕的寬度/長度 (button_width/button_height) 及長寬比(aspect_ratio)"
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "不明的距離“%s”"
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "不明的長寬比“%s”"
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "不明的邊框“%s”"
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "元素 <%s> 中沒有“start_angle”或“from”屬性"
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "元素 <%s> 中沒有“extent_angle”或“to”屬性"
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "無法將“%s”理解為漸層的樣式"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "無法理解 <%2$s> 元素中的填充類型“%1$s”"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "無法將“%s”理解為 <%s> 元素的狀態"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "無法將“%s”理解為 <%s> 元素的陰影"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "無法將“%s”理解為 <%s> 元素的箭頭"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "沒有定義任何名稱為“%s”的 <draw_ops>"
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "這裡的 draw_ops“%s”會造成循環"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "邊框組件指定了不明的位置“%s”"
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "邊框款式已經在位置 %s 中指定了一件邊框組件"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "沒有定義任何名稱為“%s”的 <draw_ops>"
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "按鈕擁有不明的功能“%s”"
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "按鈕功能“%s”不存在於這個 版本（%d，要求 %d）"
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "無法理解“%s”為按鈕的狀態"
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "邊框款式已經指定了一個擁有 %s 功能及 %s 狀態的按鈕"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "“%s”不是 focus 屬性的有效設定值"
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "“%s”不是 state 屬性的有效設定值"
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "沒有定義任何稱為“%s”的款式"
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "“%s”不是 resize 屬性的有效設定值"
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
 msgstr "元素 <%s> 不應在最大化或收攏的狀態中指定“resize”屬性"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr "不應在元素 <%s> 最大化的狀態中指定“resize”屬性"
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr "當 state=%s resize=%s focus=%s 時，樣式早已經被指定了"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "當 state=%s focus=%s 時，樣式早已經被指定了"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一個 <piece> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> 元素，或是指定了兩個元素)"
+msgstr ""
+"一個 <piece> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> "
+"元素，或是指定了兩個元素)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一個 <button> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> 元素，或是指定了兩個元素)"
+msgstr ""
+"一個 <button> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> "
+"元素，或是指定了兩個元素)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "一個 <menu_icon> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> 元素，或是指定了兩個元素)"
+msgstr ""
+"一個 <menu_icon> 元素不可同時使用兩個 draw_ops (布景主題同時指定了一個 draw_ops 屬性及一個 <draw_ops> "
+"元素，或是指定了兩個元素)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr "不良的版本規範「%s」"
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr "\"version\" 屬性在 metacity-theme-1.xml 或 metacity-theme-2.xml 中無法使用"
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr "主題要求版本 %s 但最新支援的主題版本是 %d.%d"
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr "布景中最外層的元件必須為 <metacity_theme> 而非 <%s>"
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr "元素 <%s> 不許在名稱/作者/日期/描述元素內出現"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "<%s> 元素不可出現在 <constant> 元素內"
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr "<%s> 元素不可出現於 distance/border/aspect_ratio 元素之內"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "元素 <%s> 不允許在有關繪圖操作的元素內出現"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "<%s> 元素不可出現在 <%s> 元素內"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "邊框沒有提供任何 draw_ops 屬性"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "按鈕沒有提供任何 draw_ops 屬性"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "<%s> 元素內不可出現任何文字"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "<%s> 指定了此布景主題兩次"
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "無法布景主題的有效檔案 %s\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr "確定(_O)"
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "這是在樣版對話視窗中的樣版訊息"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "假的選單項目 %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "只有邊框的視窗"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
 msgstr "列"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "正常的程式視窗"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "對話盒"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "模態對話盒"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "公用程式控制板"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "關閉選單"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
 msgstr "邊框"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr "附加的組態對話框"
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "按鈕配置測試 %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "繪畫一個視窗需時 %g 毫秒"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "用法： marco-theme-viewer [布景主題名稱]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "載入布景主題失敗 %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "載入布景主題 “%s” 需時 %g 秒\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "正常標題列字型"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "小標題列字型"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "大標題列字型"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "按鈕配置"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "速度測試"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "這裡是視窗標題"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "繪畫 %d 幀需時：\n在客戶端是 %g 秒（每幀 %g 毫秒）\n包括 X 伺服器資源的實際消耗時間是 %g 秒（每幀 %g 毫秒）\n"
+msgstr ""
+"繪畫 %d 幀需時：\n"
+"在客戶端是 %g 秒（每幀 %g 毫秒）\n"
+"包括 X 伺服器資源的實際消耗時間是 %g 秒（每幀 %g 毫秒）\n"

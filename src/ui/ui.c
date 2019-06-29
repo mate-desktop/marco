@@ -62,11 +62,6 @@ void meta_ui_init(int* argc, char*** argv)
 	{
 		meta_fatal ("Unable to open X display %s\n", XDisplayName (NULL));
 	}
-
-  /* We need to be able to fully trust that the window and monitor sizes
-   * that GDK reports corresponds to the X ones, so we disable the automatic
-   * scale handling */
-  gdk_x11_display_set_window_scale (gdk_display_get_default (), 1);
 }
 
 Display* meta_ui_get_display(void)
@@ -300,14 +295,35 @@ meta_ui_free (MetaUI *ui)
 }
 
 void
-meta_ui_get_frame_geometry (MetaUI *ui,
-                            Window frame_xwindow,
-                            int *top_height, int *bottom_height,
-                            int *left_width, int *right_width)
+meta_ui_get_frame_borders (MetaUI *ui,
+                           Window frame_xwindow,
+                           MetaFrameBorders *borders)
 {
-  meta_frames_get_geometry (ui->frames, frame_xwindow,
-                            top_height, bottom_height,
-                            left_width, right_width);
+  meta_frames_get_borders (ui->frames, frame_xwindow, borders);
+}
+
+void
+meta_ui_get_corner_radiuses (MetaUI *ui,
+                             Window  xwindow,
+                             float  *top_left,
+                             float  *top_right,
+                             float  *bottom_left,
+                             float  *bottom_right)
+{
+  meta_frames_get_corner_radiuses (ui->frames, xwindow,
+                                   top_left, top_right,
+                                   bottom_left, bottom_right);
+}
+
+static void
+set_background_none (Display *xdisplay,
+                     Window   xwindow)
+{
+  XSetWindowAttributes attrs;
+
+  attrs.background_pixmap = None;
+  XChangeWindowAttributes (xdisplay, xwindow,
+                           CWBackPixmap, &attrs);
 }
 
 Window
@@ -368,6 +384,7 @@ meta_ui_create_frame_window (MetaUI *ui,
 		    &attrs, attributes_mask);
 
   gdk_window_resize (window, width, height);
+  set_background_none (xdisplay, GDK_WINDOW_XID (window));
 
   meta_frames_manage_window (ui->frames, GDK_WINDOW_XID (window), window);
 
@@ -423,13 +440,10 @@ meta_ui_unmap_frame (MetaUI *ui,
 }
 
 void
-meta_ui_unflicker_frame_bg (MetaUI *ui,
-                            Window  xwindow,
-                            int     target_width,
-                            int     target_height)
+meta_ui_update_frame_style (MetaUI *ui,
+                            Window  xwindow)
 {
-  meta_frames_unflicker_bg (ui->frames, xwindow,
-                            target_width, target_height);
+  meta_frames_update_frame_style (ui->frames, xwindow);
 }
 
 void
@@ -437,13 +451,6 @@ meta_ui_repaint_frame (MetaUI *ui,
                        Window xwindow)
 {
   meta_frames_repaint_frame (ui->frames, xwindow);
-}
-
-void
-meta_ui_reset_frame_bg (MetaUI *ui,
-                        Window xwindow)
-{
-  meta_frames_reset_bg (ui->frames, xwindow);
 }
 
 void
@@ -456,6 +463,18 @@ meta_ui_apply_frame_shape  (MetaUI  *ui,
   meta_frames_apply_shapes (ui->frames, xwindow,
                             new_window_width, new_window_height,
                             window_has_shape);
+}
+
+cairo_region_t *
+meta_ui_get_frame_bounds (MetaUI *ui,
+                          Window  xwindow,
+                          int     window_width,
+                          int     window_height)
+{
+  return meta_frames_get_frame_bounds (ui->frames,
+                                       xwindow,
+                                       window_width,
+                                       window_height);
 }
 
 void
@@ -574,7 +593,7 @@ meta_ui_pop_delay_exposes  (MetaUI *ui)
 }
 
 static GdkPixbuf *
-load_default_window_icon (int size)
+load_default_window_icon (int size, int scale)
 {
   GtkIconTheme *theme = gtk_icon_theme_get_default ();
   const char *icon_name;
@@ -584,17 +603,19 @@ load_default_window_icon (int size)
   else
     icon_name = "image-missing";
 
-  return gtk_icon_theme_load_icon (theme, icon_name, size, 0, NULL);
+  return gtk_icon_theme_load_icon_for_scale (theme, icon_name, size, scale, 0, NULL);
 }
 
 GdkPixbuf*
 meta_ui_get_default_window_icon (MetaUI *ui)
 {
   static GdkPixbuf *default_icon = NULL;
+  int scale;
 
   if (default_icon == NULL)
     {
-      default_icon = load_default_window_icon (META_ICON_WIDTH);
+      scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
+      default_icon = load_default_window_icon (META_ICON_WIDTH, scale);
       g_assert (default_icon);
     }
 
@@ -607,29 +628,12 @@ GdkPixbuf*
 meta_ui_get_default_mini_icon (MetaUI *ui)
 {
   static GdkPixbuf *default_icon = NULL;
+  int scale;
 
   if (default_icon == NULL)
     {
-      GtkIconTheme *theme;
-      gboolean icon_exists;
-
-      theme = gtk_icon_theme_get_default ();
-
-      icon_exists = gtk_icon_theme_has_icon (theme, META_DEFAULT_ICON_NAME);
-
-      if (icon_exists)
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   META_DEFAULT_ICON_NAME,
-                                                   META_MINI_ICON_WIDTH,
-                                                   0,
-                                                   NULL);
-      else
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "image-missing",
-                                                   META_MINI_ICON_WIDTH,
-                                                   0,
-                                                   NULL);
-
+      scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
+      default_icon = load_default_window_icon (META_MINI_ICON_WIDTH, scale);
       g_assert (default_icon);
     }
 
@@ -659,13 +663,10 @@ meta_ui_window_should_not_cause_focus (Display *xdisplay,
 }
 
 void
-meta_ui_theme_get_frame_borders (MetaUI *ui,
-                                 MetaFrameType      type,
-                                 MetaFrameFlags     flags,
-                                 int               *top_height,
-                                 int               *bottom_height,
-                                 int               *left_width,
-                                 int               *right_width)
+meta_ui_theme_get_frame_borders (MetaUI           *ui,
+                                 MetaFrameType     type,
+                                 MetaFrameFlags    flags,
+                                 MetaFrameBorders *borders)
 {
   int text_height;
   GtkStyleContext *style = NULL;
@@ -706,15 +707,14 @@ meta_ui_theme_get_frame_borders (MetaUI *ui,
 
       meta_theme_get_frame_borders (meta_theme_get_current (),
                                     type, text_height, flags,
-                                    top_height, bottom_height,
-                                    left_width, right_width);
+                                    borders);
 
       if (free_font_desc)
         pango_font_description_free (free_font_desc);
     }
   else
     {
-      *top_height = *bottom_height = *left_width = *right_width = 0;
+      meta_frame_borders_clear (borders);
     }
 
   if (style != NULL)

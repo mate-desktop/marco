@@ -490,11 +490,13 @@ meta_window_menu_new   (MetaFrames         *frames,
 void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int button, guint32 timestamp)
 {
 	GdkPoint* pt = g_new(GdkPoint, 1);
+	gint scale;
 
 	g_object_set_data_full(G_OBJECT(menu->menu), "destroy-point", pt, g_free);
 
-	pt->x = root_x;
-	pt->y = root_y;
+	scale = gtk_widget_get_scale_factor (menu->menu);
+	pt->x = root_x / scale;
+	pt->y = root_y / scale;
 
 	gtk_menu_popup(GTK_MENU (menu->menu), NULL, NULL, popup_position_func, pt, button, timestamp);
 

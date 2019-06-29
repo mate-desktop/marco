@@ -379,7 +379,7 @@ meta_screen_new (MetaDisplay *display,
         }
 
       /* We want to find out when the current selection owner dies */
-      meta_error_trap_push_with_return (display);
+      meta_error_trap_push (display);
       attrs.event_mask = StructureNotifyMask;
       XChangeWindowAttributes (xdisplay,
                                current_wm_sn_owner, CWEventMask, &attrs);
@@ -438,7 +438,7 @@ meta_screen_new (MetaDisplay *display,
     }
 
   /* select our root window events */
-  meta_error_trap_push_with_return (display);
+  meta_error_trap_push (display);
 
   /* We need to or with the existing event mask since
    * gtk+ may be interested in other events.
@@ -669,7 +669,7 @@ meta_screen_free (MetaScreen *screen,
 
   meta_stack_free (screen->stack);
 
-  meta_error_trap_push_with_return (screen->display);
+  meta_error_trap_push (screen->display);
   XSelectInput (screen->display->xdisplay, screen->xroot, 0);
   if (meta_error_trap_pop_with_return (screen->display, FALSE) != Success)
     meta_warning (_("Could not release screen %d on display \"%s\"\n"),
@@ -735,7 +735,7 @@ list_windows (MetaScreen *screen)
     {
       WindowInfo *info = g_new0 (WindowInfo, 1);
 
-      meta_error_trap_push_with_return (screen->display);
+      meta_error_trap_push (screen->display);
 
       XGetWindowAttributes (screen->display->xdisplay,
                             children[i], &info->attrs);
@@ -749,9 +749,8 @@ list_windows (MetaScreen *screen)
       else
         {
 	  info->xwindow = children[i];
+          result = g_list_prepend (result, info);
 	}
-
-      result = g_list_prepend (result, info);
     }
 
   if (children)
@@ -1214,28 +1213,31 @@ meta_screen_update_cursor (MetaScreen *screen)
   XFreeCursor (screen->display->xdisplay, xcursor);
 }
 
-#define MAX_PREVIEW_SIZE 150.0
+#define MAX_PREVIEW_SCALE 10.0
 
 static GdkPixbuf *
 get_window_pixbuf (MetaWindow *window,
                    int        *width,
                    int        *height)
 {
+  MetaDisplay *display;
   cairo_surface_t *surface;
   GdkPixbuf *pixbuf, *scaled;
+  const MetaXineramaScreenInfo *current;
   double ratio;
 
+  display = window->display;
   surface = meta_compositor_get_window_surface (window->display->compositor,
                                                 window);
   if (surface == None)
     return NULL;
 
-  meta_error_trap_push (NULL);
+  meta_error_trap_push (display);
 
   pixbuf = meta_ui_get_pixbuf_from_surface (surface);
   cairo_surface_destroy (surface);
 
-  if (meta_error_trap_pop_with_return (NULL, FALSE) != Success)
+  if (meta_error_trap_pop_with_return (display, FALSE) != Success)
     g_clear_object (&pixbuf);
 
   if (pixbuf == NULL)
@@ -1244,17 +1246,21 @@ get_window_pixbuf (MetaWindow *window,
   *width = gdk_pixbuf_get_width (pixbuf);
   *height = gdk_pixbuf_get_height (pixbuf);
 
-  /* Scale pixbuf to max dimension MAX_PREVIEW_SIZE */
+  current = meta_screen_get_current_xinerama (window->screen);
+
+  /* Scale pixbuf to max dimension based on monitor size */
   if (*width > *height)
     {
-      ratio = ((double) *width) / MAX_PREVIEW_SIZE;
-      *width = (int) MAX_PREVIEW_SIZE;
+      int max_preview_width = current->rect.width / MAX_PREVIEW_SCALE;
+      ratio = ((double) *width) / max_preview_width;
+      *width = (int) max_preview_width;
       *height = (int) (((double) *height) / ratio);
     }
   else
     {
-      ratio = ((double) *height) / MAX_PREVIEW_SIZE;
-      *height = (int) MAX_PREVIEW_SIZE;
+      int max_preview_height = current->rect.height / MAX_PREVIEW_SCALE;
+      ratio = ((double) *height) / max_preview_height;
+      *height = (int) max_preview_height;
       *width = (int) (((double) *width) / ratio);
     }
 
@@ -1358,42 +1364,20 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
        * edge.
        */
        if (border & BORDER_OUTLINE_WINDOW)
-         {
-           const gint border_outline_width = 5;
+       {
+#define OUTLINE_WIDTH 5
+         /* Top side */
+         entries[i].inner_rect.y = OUTLINE_WIDTH;
 
-           /* Top side */
-           if (!entries[i].hidden &&
-                window->frame && window->frame->bottom_height > 0 &&
-                window->frame->child_y >= window->frame->bottom_height)
-             entries[i].inner_rect.y = window->frame->bottom_height;
-           else
-              entries[i].inner_rect.y = border_outline_width;
+         /* Bottom side */
+         entries[i].inner_rect.height = r.height - entries[i].inner_rect.y - OUTLINE_WIDTH;
 
-            /* Bottom side */
-            if (!entries[i].hidden &&
-                window->frame && window->frame->bottom_height != 0)
-              entries[i].inner_rect.height = r.height
-                - entries[i].inner_rect.y - window->frame->bottom_height;
-            else
-              entries[i].inner_rect.height = r.height
-                - entries[i].inner_rect.y - border_outline_width;
+         /* Left side */
+         entries[i].inner_rect.x = OUTLINE_WIDTH;
 
-            /* Left side */
-            if (!entries[i].hidden && window->frame && window->frame->child_x != 0)
-                entries[i].inner_rect.x = window->frame->child_x;
-            else
-                entries[i].inner_rect.x = border_outline_width;
-
-            /* Right side */
-            if (!entries[i].hidden &&
-                    window->frame && window->frame->right_width != 0)
-              entries[i].inner_rect.width = r.width
-                - entries[i].inner_rect.x - window->frame->right_width;
-            else
-              entries[i].inner_rect.width = r.width
-                - entries[i].inner_rect.x - border_outline_width;
-        }
-
+         /* Right side */
+         entries[i].inner_rect.width = r.width - entries[i].inner_rect.x - OUTLINE_WIDTH;
+       }
 
       ++i;
       tmp = tmp->next;

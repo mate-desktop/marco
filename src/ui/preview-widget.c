@@ -98,10 +98,7 @@ meta_preview_init (MetaPreview *preview)
     META_FRAME_ALLOWS_SHADE |
     META_FRAME_ALLOWS_MOVE;
 
-  preview->left_width = -1;
-  preview->right_width = -1;
-  preview->top_height = -1;
-  preview->bottom_height = -1;
+  preview->borders_cached = FALSE;
 }
 
 GtkWidget*
@@ -172,26 +169,17 @@ ensure_info (MetaPreview *preview)
       pango_font_description_free (font_desc);
     }
 
-  if (preview->top_height < 0)
+  if (!preview->borders_cached)
     {
       if (preview->theme)
-        {
           meta_theme_get_frame_borders (preview->theme,
                                         preview->type,
                                         preview->text_height,
                                         preview->flags,
-                                        &preview->top_height,
-                                        &preview->bottom_height,
-                                        &preview->left_width,
-                                        &preview->right_width);
-        }
+                                        &preview->borders);
       else
-        {
-          preview->top_height = 0;
-          preview->bottom_height = 0;
-          preview->left_width = 0;
-          preview->right_width = 0;
-        }
+        meta_frame_borders_clear (&preview->borders);
+      preview->borders_cached = TRUE;
     }
 }
 
@@ -223,8 +211,8 @@ meta_preview_draw (GtkWidget *widget,
   border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
 
   gtk_widget_get_allocation (widget, &allocation);
-  client_width = allocation.width - preview->left_width - preview->right_width - border_width * 2;
-  client_height = allocation.height - preview->top_height - preview->bottom_height - border_width * 2;
+  client_width = allocation.width - preview->borders.total.left - preview->borders.total.right - border_width * 2;
+  client_height = allocation.height - preview->borders.total.top - preview->borders.total.bottom - border_width * 2;
 
   if (client_width < 0)
     client_width = 1;
@@ -236,7 +224,7 @@ meta_preview_draw (GtkWidget *widget,
       border_width = gtk_container_get_border_width (GTK_CONTAINER (widget));
 
       meta_theme_draw_frame (preview->theme,
-                             widget,
+                             gtk_widget_get_style_context (widget),
                              cr,
                              preview->type,
                              preview->flags,
@@ -268,7 +256,7 @@ meta_preview_get_preferred_width (GtkWidget *widget,
 
   ensure_info (preview);
 
-  *minimum = *natural = preview->left_width + preview->right_width;
+  *minimum = *natural = preview->borders.total.left + preview->borders.total.right;
 
   child = gtk_bin_get_child (GTK_BIN (preview));
   if (child && gtk_widget_get_visible (child))
@@ -304,7 +292,7 @@ meta_preview_get_preferred_height (GtkWidget *widget,
 
   ensure_info (preview);
 
-  *minimum = *natural = preview->top_height + preview->bottom_height;
+  *minimum = *natural = preview->borders.total.top + preview->borders.total.bottom;
 
   child = gtk_bin_get_child (GTK_BIN (preview));
   if (child && gtk_widget_get_visible (child))
@@ -349,11 +337,12 @@ meta_preview_size_allocate (GtkWidget         *widget,
       gtk_widget_get_visible (child))
     {
       gtk_widget_get_allocation (widget, &widget_allocation);
-      child_allocation.x = widget_allocation.x + border_width + preview->left_width;
-      child_allocation.y = widget_allocation.y + border_width + preview->top_height;
+      child_allocation.x = widget_allocation.x + border_width + preview->borders.total.left;
+      child_allocation.y = widget_allocation.y + border_width + preview->borders.total.top;
 
-      child_allocation.width = MAX (1, widget_allocation.width - border_width * 2 - preview->left_width - preview->right_width);
-      child_allocation.height = MAX (1, widget_allocation.height - border_width * 2 - preview->top_height - preview->bottom_height);
+      child_allocation.width = MAX (1, widget_allocation.width - border_width * 2 - preview->borders.total.left - preview->borders.total.right);
+      child_allocation.height = MAX (1, widget_allocation.height - border_width * 2 - preview->borders.total.top - preview->borders.total.bottom);
+
       gtk_widget_size_allocate (gtk_bin_get_child (GTK_BIN (widget)), &child_allocation);
     }
 }
@@ -367,10 +356,7 @@ clear_cache (MetaPreview *preview)
       preview->layout = NULL;
     }
 
-  preview->left_width = -1;
-  preview->right_width = -1;
-  preview->top_height = -1;
-  preview->bottom_height = -1;
+  preview->borders_cached = FALSE;
 }
 
 void

@@ -34,6 +34,7 @@
 #include <unistd.h>
 
 #include <gdk/gdk.h>
+#include <gdk/gdkx.h>
 #include <gtk/gtk.h>
 
 #include <cairo/cairo-xlib.h>
@@ -583,19 +584,101 @@ make_shadow (MetaDisplay   *display,
         }
     }
 
+  ximage->data = (char *) data;
+
   return ximage;
 }
 
+double shadow_offsets_x[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_X,
+                                             SHADOW_MEDIUM_OFFSET_X,
+                                             SHADOW_LARGE_OFFSET_X};
+double shadow_offsets_y[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_Y,
+                                             SHADOW_MEDIUM_OFFSET_Y,
+                                             SHADOW_LARGE_OFFSET_Y};
+
+static XserverRegion
+cairo_region_to_xserver_region (Display        *xdisplay,
+                                cairo_region_t *region)
+{
+  int n_rects, i;
+  XRectangle *rects;
+  XserverRegion xregion;
+
+  n_rects = cairo_region_num_rectangles (region);
+  rects = g_new (XRectangle, n_rects);
+
+  for (i = 0; i < n_rects; i++)
+    {
+      cairo_rectangle_int_t rect;
+
+      cairo_region_get_rectangle (region, i, &rect);
+
+      rects[i].x = rect.x;
+      rects[i].y = rect.y;
+      rects[i].width = rect.width;
+      rects[i].height = rect.height;
+    }
+
+  xregion = XFixesCreateRegion (xdisplay, rects, n_rects);
+  g_free (rects);
+
+  return xregion;
+}
+
+static void
+shadow_picture_clip (Display          *xdisplay,
+                     Picture           shadow_picture,
+                     MetaCompWindow   *cw,
+                     MetaFrameBorders  borders,
+                     int               width,
+                     int               height)
+{
+  int shadow_dx;
+  int shadow_dy;
+  cairo_region_t *visible_region;
+  XRectangle rect;
+  XserverRegion region1;
+  XserverRegion region2;
+
+  if (!cw->window)
+    return;
+
+  visible_region = meta_window_get_frame_bounds (cw->window);
+
+  if (!visible_region)
+    return;
+
+  shadow_dx = -1 * (int) shadow_offsets_x [cw->shadow_type] - borders.invisible.left;
+  shadow_dy = -1 * (int) shadow_offsets_y [cw->shadow_type] - borders.invisible.top;
+
+  rect.x = 0;
+  rect.y = 0;
+  rect.width = width;
+  rect.height = height;
+
+  region1 = XFixesCreateRegion (xdisplay, &rect, 1);
+  region2 = cairo_region_to_xserver_region (xdisplay, visible_region);
+
+  XFixesTranslateRegion (xdisplay, region2,
+                         shadow_dx, shadow_dy);
+
+  XFixesSubtractRegion (xdisplay, region1, region1, region2);
+  XFixesSetPictureClipRegion (xdisplay, shadow_picture, 0, 0, region1);
+
+  XFixesDestroyRegion (xdisplay, region1);
+  XFixesDestroyRegion (xdisplay, region2);
+}
+
 static Picture
-shadow_picture (MetaDisplay   *display,
-                MetaScreen    *screen,
-                MetaShadowType shadow_type,
-                double         opacity,
-                Picture        alpha_pict,
-                int            width,
-                int            height,
-                int           *wp,
-                int           *hp)
+shadow_picture (MetaDisplay      *display,
+                MetaScreen       *screen,
+                MetaCompWindow   *cw,
+                double            opacity,
+                MetaFrameBorders  borders,
+                int               width,
+                int               height,
+                int              *wp,
+                int              *hp)
 {
   Display *xdisplay = meta_display_get_xdisplay (display);
   XImage *shadow_image;
@@ -604,7 +687,7 @@ shadow_picture (MetaDisplay   *display,
   Window xroot = meta_screen_get_xroot (screen);
   GC gc;
 
-  shadow_image = make_shadow (display, screen, shadow_type,
+  shadow_image = make_shadow (display, screen, cw->shadow_type,
                               opacity, width, height);
   if (!shadow_image)
     return None;
@@ -618,8 +701,7 @@ shadow_picture (MetaDisplay   *display,
     }
 
   shadow_picture = XRenderCreatePicture (xdisplay, shadow_pixmap,
-                                         XRenderFindStandardFormat (xdisplay,
-PictStandardA8),
+                                         XRenderFindStandardFormat (xdisplay, PictStandardA8),
                                          0, 0);
   if (!shadow_picture)
     {
@@ -627,6 +709,9 @@ PictStandardA8),
       XFreePixmap (xdisplay, shadow_pixmap);
       return None;
     }
+
+  shadow_picture_clip (xdisplay, shadow_picture, cw, borders,
+                       shadow_image->width, shadow_image->height);
 
   gc = XCreateGC (xdisplay, shadow_pixmap, 0, 0);
   if (!gc)
@@ -981,12 +1066,6 @@ window_has_shadow (MetaCompWindow *cw)
   return FALSE;
 }
 
-double shadow_offsets_x[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_X,
-                                             SHADOW_MEDIUM_OFFSET_X,
-                                             SHADOW_LARGE_OFFSET_X};
-double shadow_offsets_y[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_Y,
-                                             SHADOW_MEDIUM_OFFSET_Y,
-                                             SHADOW_LARGE_OFFSET_Y};
 static XserverRegion
 win_extents (MetaCompWindow *cw)
 {
@@ -1002,21 +1081,34 @@ win_extents (MetaCompWindow *cw)
 
   if (cw->needs_shadow)
     {
+      MetaFrameBorders borders;
       XRectangle sr;
 
-      cw->shadow_dx = shadow_offsets_x [cw->shadow_type];
-      cw->shadow_dy = shadow_offsets_y [cw->shadow_type];
+      meta_frame_borders_clear (&borders);
+
+      if (cw->window)
+        {
+          MetaFrame *frame = meta_window_get_frame (cw->window);
+
+          if (frame)
+            meta_frame_calc_borders (frame, &borders);
+        }
+
+      cw->shadow_dx = (int) shadow_offsets_x [cw->shadow_type] + borders.invisible.left;
+      cw->shadow_dy = (int) shadow_offsets_y [cw->shadow_type] + borders.invisible.top;
 
       if (!cw->shadow)
         {
           double opacity = SHADOW_OPACITY;
+          int invisible_width = borders.invisible.left + borders.invisible.right;
+          int invisible_height = borders.invisible.top + borders.invisible.bottom;
+
           if (cw->opacity != (guint) OPAQUE)
             opacity = opacity * ((double) cw->opacity) / ((double) OPAQUE);
 
-          cw->shadow = shadow_picture (display, screen, cw->shadow_type,
-                                       opacity, cw->alpha_pict,
-                                       cw->attrs.width + cw->attrs.border_width * 2,
-                                       cw->attrs.height + cw->attrs.border_width * 2,
+          cw->shadow = shadow_picture (display, screen, cw, opacity, borders,
+                                       cw->attrs.width - invisible_width + cw->attrs.border_width * 2,
+                                       cw->attrs.height - invisible_height + cw->attrs.border_width * 2,
                                        &cw->shadow_width, &cw->shadow_height);
         }
 
@@ -1053,7 +1145,17 @@ border_size (MetaCompWindow *cw)
   MetaScreen *screen = cw->screen;
   MetaDisplay *display = meta_screen_get_display (screen);
   Display *xdisplay = meta_display_get_xdisplay (display);
+  cairo_region_t *visible_region;
+  XserverRegion visible = None;
   XserverRegion border;
+
+  if (cw->window)
+    {
+      visible_region = meta_window_get_frame_bounds (cw->window);
+
+      if (visible_region)
+        visible = cairo_region_to_xserver_region (xdisplay, visible_region);
+    }
 
   meta_error_trap_push (display);
   border = XFixesCreateRegionFromWindow (xdisplay, cw->id,
@@ -1064,6 +1166,19 @@ border_size (MetaCompWindow *cw)
   XFixesTranslateRegion (xdisplay, border,
                          cw->attrs.x + cw->attrs.border_width,
                          cw->attrs.y + cw->attrs.border_width);
+
+  if (visible != None)
+    {
+      XFixesTranslateRegion (xdisplay, visible,
+                         cw->attrs.x + cw->attrs.border_width,
+                         cw->attrs.y + cw->attrs.border_width);
+
+      XFixesIntersectRegion (xdisplay, visible, visible, border);
+      XFixesDestroyRegion (xdisplay, border);
+
+      return visible;
+    }
+
   return border;
 }
 
@@ -2722,6 +2837,7 @@ xrender_manage_screen (MetaCompositor *compositor,
   MetaCompScreen *info;
   MetaDisplay *display = meta_screen_get_display (screen);
   Display *xdisplay = meta_display_get_xdisplay (display);
+  GdkDisplay *gdk_display = gdk_x11_lookup_xdisplay (xdisplay);
   XRenderPictureAttributes pa;
   XRenderPictFormat *visual_format;
   int screen_number = meta_screen_get_screen_number (screen);
@@ -2732,11 +2848,11 @@ xrender_manage_screen (MetaCompositor *compositor,
   if (meta_screen_get_compositor_data (screen))
     return;
 
-  gdk_error_trap_push ();
+  gdk_x11_display_error_trap_push (gdk_display);
   XCompositeRedirectSubwindows (xdisplay, xroot, CompositeRedirectManual);
   XSync (xdisplay, FALSE);
 
-  if (gdk_error_trap_pop ())
+  if (gdk_x11_display_error_trap_pop (gdk_display))
     {
       g_warning ("Another compositing manager is running on screen %i",
                  screen_number);
@@ -2924,23 +3040,38 @@ xrender_end_move (MetaCompositor *compositor,
 #ifdef HAVE_COMPOSITE_EXTENSIONS
 #endif
 }
+#endif /* 0 */
 
 static void
 xrender_free_window (MetaCompositor *compositor,
                      MetaWindow     *window)
 {
 #ifdef HAVE_COMPOSITE_EXTENSIONS
-  /* FIXME: When an undecorated window is hidden this is called,
-     but the window does not get readded if it is subsequentally shown again
-     See http://bugzilla.gnome.org/show_bug.cgi?id=504876
+  MetaCompositorXRender *xrc;
+  MetaFrame *frame;
+  Window xwindow;
 
-     I don't *think* theres any need for this call anyway, leaving it out
-     does not seem to cause any side effects so far, but I should check with
-     someone who understands more. */
-  /* destroy_win (compositor->display, window->xwindow, FALSE); */
+  xrc = (MetaCompositorXRender *) compositor;
+  frame = meta_window_get_frame (window);
+  xwindow = None;
+
+  if (frame)
+    {
+      xwindow = meta_frame_get_xwindow (frame);
+    }
+  else
+    {
+      /* FIXME: When an undecorated window is hidden this is called, but the
+       * window does not get readded if it is subsequentally shown again. See:
+       * http://bugzilla.gnome.org/show_bug.cgi?id=504876
+       */
+      /* xwindow = meta_window_get_xwindow (window); */
+    }
+
+  if (xwindow != None)
+    destroy_win (xrc->display, xwindow, FALSE);
 #endif
 }
-#endif /* 0 */
 
 static void
 xrender_process_event (MetaCompositor *compositor,
@@ -3244,6 +3375,7 @@ static MetaCompositor comp_info = {
   xrender_process_event,
   xrender_get_window_surface,
   xrender_set_active_window,
+  xrender_free_window,
   xrender_maximize_window,
   xrender_unmaximize_window,
 };

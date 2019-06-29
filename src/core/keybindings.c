@@ -698,7 +698,8 @@ meta_change_keygrab (MetaDisplay *display,
         }
 
       if (meta_is_debugging ())
-        meta_error_trap_push_with_return (display);
+        meta_error_trap_push (display);
+
       if (grab)
         XGrabKey (display->xdisplay, keycode,
                   modmask | ignored_mask,
@@ -779,10 +780,7 @@ static void
 ungrab_all_keys (MetaDisplay *display,
                  Window       xwindow)
 {
-  if (meta_is_debugging ())
-    meta_error_trap_push_with_return (display);
-  else
-    meta_error_trap_push (display);
+  meta_error_trap_push (display);
 
   XUngrabKey (display->xdisplay, AnyKey, AnyModifier,
               xwindow);
@@ -913,7 +911,7 @@ grab_keyboard (MetaDisplay *display,
   /* Grab the keyboard, so we get key releases and all key
    * presses
    */
-  meta_error_trap_push_with_return (display);
+  meta_error_trap_push (display);
 
   grab_status = XGrabKeyboard (display->xdisplay,
                                xwindow, True,
@@ -2144,8 +2142,10 @@ process_tab_grab (MetaDisplay *display,
        break;
     case META_KEYBINDING_ACTION_SWITCH_PANELS:
     case META_KEYBINDING_ACTION_SWITCH_WINDOWS:
+    case META_KEYBINDING_ACTION_SWITCH_WINDOWS_ALL:
     case META_KEYBINDING_ACTION_SWITCH_PANELS_BACKWARD:
     case META_KEYBINDING_ACTION_SWITCH_WINDOWS_BACKWARD:
+    case META_KEYBINDING_ACTION_SWITCH_WINDOWS_ALL_BACKWARD:
       /* SWITCH_* are traditionally Tab-based actions,
        * and should cancel traditionally Escape-based ones.
        */
@@ -2217,11 +2217,13 @@ process_tab_grab (MetaDisplay *display,
       break;
     case META_KEYBINDING_ACTION_SWITCH_PANELS:
     case META_KEYBINDING_ACTION_SWITCH_WINDOWS:
+    case META_KEYBINDING_ACTION_SWITCH_WINDOWS_ALL:
     case META_KEYBINDING_ACTION_SWITCH_GROUP:
       key_used = TRUE;
       break;
     case META_KEYBINDING_ACTION_SWITCH_PANELS_BACKWARD:
     case META_KEYBINDING_ACTION_SWITCH_WINDOWS_BACKWARD:
+    case META_KEYBINDING_ACTION_SWITCH_WINDOWS_ALL_BACKWARD:
     case META_KEYBINDING_ACTION_SWITCH_GROUP_BACKWARD:
       key_used = TRUE;
       backward = TRUE;
@@ -3414,6 +3416,10 @@ handle_workspace_switch_or_move  (MetaDisplay    *display,
   unsigned int grab_mask;
 
   g_assert (motion < 0);
+
+  /* Don't show the ws switcher if we get just one ws */
+  if (meta_screen_get_n_workspaces(screen) == 1)
+    return;
 
   meta_topic (META_DEBUG_KEYBINDINGS,
               "Starting tab between workspaces, showing popup\n");

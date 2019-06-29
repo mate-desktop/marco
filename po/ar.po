@@ -1,22 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# مهدي السطيفي <chinoune.mehdi@gmail.com>, 2014
-# Mosaab Alzoubi <moceap@hotmail.com>, 2013
-# noureddin <noureddin@barid.com>, 2012
-# noureddin <noureddin@barid.com>, 2012
-# Tux-Tn <sarhanaissi@gmail.com>, 2013
-# Tux-Tn <sarhanaissi@gmail.com>, 2013
+# Tux-Tn <sarhanaissi@gmail.com>, 2019
+# noureddin <noureddin@barid.com>, 2019
+# Mosaab Alzoubi <moceap@hotmail.com>, 2019
+# مهدي السطيفي <chinoune.mehdi@gmail.com>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Arabic (http://www.transifex.com/mate/MATE/language/ar/)\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"PO-Revision-Date: 2019-03-12 19:28+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
+"Language-Team: Arabic (https://www.transifex.com/mate/teams/13566/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -179,7 +181,7 @@ msgstr "انتقل إلى مساحة العمل تحت الحالية"
 #: ../src/50-marco-global-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:82
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "التبديل إلى مساحة العمل المحددة سابقا"
 
 #: ../src/50-marco-window-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:111
@@ -214,7 +216,7 @@ msgstr "بدّل حالة الإخفاء"
 #: ../src/50-marco-window-key.xml.in.h:8
 #: ../src/org.mate.marco.gschema.xml.h:119
 msgid "Close window"
-msgstr "أغلق النّافذة"
+msgstr "أغلِق النافذة"
 
 #: ../src/50-marco-window-key.xml.in.h:9
 #: ../src/org.mate.marco.gschema.xml.h:118
@@ -434,7 +436,7 @@ msgstr "انقل النافذة مساحة عمل واحدة إلى الأسفل
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "المغير الذي سيُستعمل لعمليات نقر النوافذ المغيرة"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -468,7 +470,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "تنظيم الأزرار على شريط العنوان"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -480,10 +482,16 @@ msgid ""
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
 msgstr ""
+"تنظيم الأزرار على شريط العنوان. يجب أن تكون القيمة سلسلة "
+"نصيّة،مثل\"menu:minimize,maximize,spacer,close\"; تفصل النقطتان فوق بعضهما "
+"الجانب الأيسر للنافذة عن الجانب الأيمن، كما تُفصل أسماء الأزرار بفواصل. لا "
+"يسمح بالنسخ المطابقة للأزرار. يتم تجاهل الأزرار غير المعروفة حتى يمكن إضافة "
+"الأزرار إلى الإصدارادت المستقبلية من ميتاسيتي دون كسر الإصدارات القديمة. "
+"يمكن استخدام وسم فاصل خاص لإقحام فراغ بين زرين متجاورين."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
-msgstr ""
+msgstr "نمط تركيز النافذة"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -493,10 +501,14 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"نمط تركيز النافذة يبين طريقة تفعيل النوافذ. للنمط ثلاث قيم ممكنة، \"click\" "
+"يعني أنه يجب نقر النوافذ حتى تركز، \"sloppy\" يعني أن النافذة تركز عند دخول "
+"مؤشر الفأرة النافذة و \"mouse\" يعني أن النوافذ تركز عند دخول مؤشر الفأرة "
+"النافذة ثم يلغى التركيز عند خروج المؤشر من النافذة."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "تحكّم في كيف تحصل النافذة الجديدة على التركيز"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -505,10 +517,13 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
+"هذا الخيار يعطي تحكم كيفية تحصل النوافذ المنشأة جديدا على التركيز. هناك "
+"خياران: \"smart\" لإعطاء التركيز، و  \"strict\" لعدم إعطاء التركيز للنوافذ "
+"البادئة من شاشة طرفية."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "إذا كان التصعيد أثرا جانبيا لتفاعلات المستخدم الأخرى"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -534,7 +549,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "إجراء النقر المزدوج على شريط العناوين"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -547,10 +562,17 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"هذا الخيار يحدد نتائج النقر المزدوج على شريط العنوان. الخيارات الممكنة حاليا"
+" هي 'toggle_shaded'، مما سيخفي/يلغي إخفاء النافذة،  'toggle_maximized' مما "
+"سيكبر/يلغي تكبير النافذة، 'minimize' لإخفاء النافذة، و "
+"'toggle_maximize_horizontally' و 'toggle_maximize_vertically' اللذان سيقومان"
+" بتكبير/إلغاء تكبير النافذة بالاتجاه المحدد فقط، 'minimize' سيقوم بتصغير "
+"النافذة،  'shade' سيلف النافذة إلى الأعلى، 'menu' سيعرض قائمة النافذة، "
+"'lower' سيضع النافذة خلف بقية النوافذ، و 'none' لن يفعل أي شيء."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "إجراء النقر الأوسط على شريط العناوين"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -563,10 +585,17 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"هذا الخيار يحدد نتائج النقر الأوسط على شريط العنوان. الخيارات الممكنة حاليا "
+"هي 'toggle_shaded'، مما سيخفي/يلغي إخفاء النافذة،  'toggle_maximized' مما "
+"سيكبر/يلغي تكبير النافذة، 'minimize' لإخفاء النافذة، و "
+"'toggle_maximize_horizontally' و 'toggle_maximize_vertically' اللذان سيقومان"
+" بتكبير/إلغاء تكبير النافذة بالاتجاه المحدد فقط، 'minimize' سيقوم بتصغير "
+"النافذة،  'shade' سيلف النافذة إلى الأعلى، 'menu' سيعرض قائمة النافذة، "
+"'lower' سيضع النافذة خلف بقية النوافذ، و 'none' لن يفعل أي شيء."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "إجراء النقر الأيمن على شريط العناوين"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -579,10 +608,17 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"هذا الخيار يحدد نتائج النقر الأيمن على شريط العنوان. الخيارات الممكنة حاليا "
+"هي 'toggle_shaded'، مما سيخفي/يلغي إخفاء النافذة،  'toggle_maximized' مما "
+"سيكبر/يلغي تكبير النافذة، 'minimize' لإخفاء النافذة، و "
+"'toggle_maximize_horizontally' و 'toggle_maximize_vertically' اللذان سيقومان"
+" بتكبير/إلغاء تكبير النافذة بالاتجاه المحدد فقط، 'minimize' سيقوم بتصغير "
+"النافذة،  'shade' سيلف النافذة إلى الأعلى، 'menu' سيعرض قائمة النافذة، "
+"'lower' سيضع النافذة خلف بقية النوافذ، و 'none' لن يفعل أي شيء."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "ارفع النافذة المركزة آليا"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -591,40 +627,47 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
+"إذا كان صحيح، ونمط التركيز \"sloppy\"  أو \"mouse\" فسترفع النافذة المركزة "
+"آليا بعد تأخير محدد من قِبل مفتاح auto_raise_delay (التأخير يخصص بمفتاح "
+"auto_raise_delay)."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "التأخير بالملي ثانية لخيار الرفع الآلي"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
+"التأخير الوقتي قبل رفع نافذة اذا ضبط auto_raise لـ صحيح. التأخير معطى بآلاف "
+"الأجزاء من الثانية."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
-msgstr ""
+msgstr "السِمة الحالية"
 
 #: ../src/org.mate.marco.gschema.xml.h:26
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "تحدّد السِمة مظهر حدود النافذة و شريط العناوين، الخ."
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "استخدم خط النظام القياسي في عناوين النوافذ"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
+"إذا كان صحيح، تجاهل خيار titlebar_font، و استعمل خط التطبيق الافتراضي "
+"لعناوين النوافذ."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
-msgstr ""
+msgstr "خط عنوان النافذة"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
@@ -633,10 +676,13 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
+"سلسلة وصف الخطوط تصف خطا لأعمدة عناوين النوافذ. الحجم من الوصف سيستعمل فقط "
+"عند ضبط خيار titlebar_font_size ل‍ 0. كما يلغى هذا الخيار عند ضبط خيار "
+"titlebar_uses_desktop_font لـ صحيح. "
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "عدد مساحات العمل"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -644,6 +690,8 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
+"عدد مساحات العمل. يجب أن يكون مغايرا لصفر، و بحد أقصى مثبت للوقاية من تدمير "
+"سطح مكتبك عفويا بطلب عدد كبير جدا من أسطح عمل."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -663,7 +711,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "فعّل الناقوس المرئي"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
@@ -671,20 +719,24 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
+"يفعّل إشارة بصرية عند إرسال التطبيق أو النظام لـ 'ناقوس' أو 'صفير'، هذا مفيد"
+" للذين يسمعون يصعوبة أو للإستعمال في بيئات مفعمة بالضجيج."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "ناقوس النظام مسموع"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"يقرر فيما إذا ستنشأ التطبيقات أو النظام 'صفيرا' مسموعًا، يمكن استخدامه مع "
+"'الناقوس المرئي' للسماح 'بالصفير' الصامت."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "نوع الناقوس المرئي"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid ""
@@ -696,14 +748,20 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"يقول لمتاستي كيفية تنفيذ المؤشر المرئي عند عزف ناقوس النظام أو ناقوس أي "
+"تطبيق آخر. حاليا هناك قيمتان ممكنتان، \"fullscreen\" (كامل الشاشة) الذي "
+"يُنتج وميض أبيض و أسود و \"frame_flash\" الذي ينتج عنه وميض شريط عنوان "
+"التطبيق الذي أرسل إشارة الناقوس. إذا كان التطبيق الذي أرسل الجرس مجهولا "
+"(الذي هو الحال لـ \"بيب النظام\" الإفتراضي) فسيومض شريط عنوان التطبيق "
+"المركزّ حاليا."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "مدير التركيب"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "تحدّد ما إذا كان مِتسِتي مديرا للتركيب."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -718,7 +776,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "إذا ضبط لصحيح، سيُبادل تسهيل الاستخدام بتقليل استخدام الموارد"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -728,11 +786,15 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
+"إذا ضبط لصحيح، فسيعطي مِتسِتي المستخدم ردودا أقل ، باستخدام إطارات شبكية "
+"تتجنّب الرسوم المتحركة أو بطرق أخرى. هذا تخفيض هام لقابلية الاستخدام للعديد "
+"من المستخدمين، لكنه سيسمح بتطبيقات موروثة و خواديم الشاشات الطرفية أن تعمل "
+"عوض أن تكون غير عمليّة."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "(غير مضمن) التصفح يعمل باعتبار التطبيقات لا النوافذ"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -744,10 +806,15 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
+"اذا كان صحيح، فسيعمل متستي باعتبار التطبيقات عوض النوافذ. الفكرة مجردة، لكن "
+"عامة تعيين باعتبار التطبيق شبيه بالماكنتش أكثر منه بوندوز. عند تركيزك لنافذة"
+" في نمط اعتبار التطبيق سترفع جميع النوافذ في التطبيق، كما أن نقرات التركيز "
+"لا تمرر لنوافذ في تطبيقات أخرى. كما أن نمط اعتبار التطبيقات ما زال لم يضمن "
+"بكثافة حاليا."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
-msgstr ""
+msgstr "عطّل الميزات السيئة المطلوبة من تطبيقات قديمة أو معطوبة"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -756,6 +823,8 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
+"بعض التطبيقات تهمل المُوَاصفَات مما يؤدي لعطل بعض مزايا مِتسِتي. هذا الخيار "
+"يجعل مِتسِتي يعمل بطريقة عاتية، بشرط عدم تشغيل تطبيقات من ذلك الصنف."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -814,15 +883,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
-msgstr ""
+msgstr "اسم مساحة العمل"
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
-msgstr ""
+msgstr "اسم مساحة العمل."
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
-msgstr ""
+msgstr "شغّل أمرا معرّفا"
 
 #: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
@@ -833,6 +902,12 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"ارتباط المفتاح المشغّل للأمر ذو الرّقم المطابق في "
+"/apps/marco/keybinding_commands. النّسق شبيهٌ بـ \"&lt;Control&gt;a\" أو "
+"\"&lt;Shift&gt;&lt;Alt&gt;F1\". المحلّل مرنٌ نوعًا ما و يسمح بحروفٍ كبيرة أو"
+" صغيرة، و كذلك الاختصارات مثل \"&lt;Ctl&gt;\" و \"&lt;Ctrl&gt;\". إذا ضبطت "
+"الخيار للسّلسلة الخاصّة \"disabled\"، فلن يكون هناك رابط مفتاحٍ لهذا "
+"الإجراء."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -856,11 +931,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "تنقل إلى الوراء بين نوافذ تطبيق بنافذةٍ قافزة"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "تنقل إلى الوراء بين النوافذ بنافذةٍ قافزة"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
@@ -872,23 +947,23 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "تنقل إلى الوراء بين الأشرطة و سطح المكتب بنافذةٍ قافزة"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "تنقل إلى الوراء بين نوافذ تطبيق حالًا"
 
 #: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "تنقل إلى الوراء بين النوافذ حالًا"
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "تنقل إلى الوراء بين الأشرطة و سطح المكتب حالًا"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "الأوامر التي ستنفذ إستجابة لارتباطات المفاتيح"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -896,20 +971,24 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"مفاتيح /apps/marco/global_keybindings/run_command_N تعرف روابط مفاتيح تماثل "
+"هذه الأوامر. نقر ارتباط المفتاح لـ run_command_N سيشغل command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
-msgstr ""
+msgstr "أمر لقطة الشاشة"
 
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"مفتاح /apps/marco/global_keybindings/run_command_screenshot يحدد مفتاح رابط "
+"ينفّذ الأمر المحدد من قبل هذا التعيين."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
-msgstr ""
+msgstr "أمر لقطة النافذة"
 
 #: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
@@ -917,10 +996,12 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"مفتاح  /apps/marco/global_keybindings/run_command_window_screenshot يعرف "
+"مفتاحا رابطا ينفذ الأمر المحدد من قبل هذا التعيين."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "بدّل حالة ظهور النافذة فوق النوافذ الأخرى"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
@@ -942,7 +1023,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "حدث الجرس"
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "طلب مجهول لمعلومات نافذة: %d"
@@ -957,7 +1038,8 @@ msgstr "<tt>%s</tt> لا يستجيب"
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "ربما ترغب في الانتظار قليلًا ليُكمِل أو إجبار التطبيق على الإنهاء كُلّية."
+msgstr ""
+"ربما ترغب في الانتظار قليلًا ليُكمِل أو إجبار التطبيق على الإنهاء كُلّية."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -982,7 +1064,7 @@ msgstr "الامتداد %s مفقود، لكنه مطلوب للتمازج"
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "فشل فتح عرض نظام نوافذ X '%s'\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -991,41 +1073,44 @@ msgstr "يستعمل برنامج آخر المفتاح %s بالفعل مع ا�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "حصل خطأ عند تشغيل <tt>%s</tt>:\n\n%s."
+msgstr ""
+"حصل خطأ عند تشغيل <tt>%s</tt>:\n"
+"\n"
+"%s."
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "لم يُعرّف أمر %d.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "لم يُعرّف أمر طرفيّة.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3680
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
-msgstr ""
+msgstr "ألغ"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1034,11 +1119,15 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "ماركو %s\nحقوق النشر © 2001-%s هاڤوك بِنَِنجتون، شركة ردهات، وآخرون\nهذا برنامج حر، راجع المصدر لشروط النسخ.\nلا يوجد أي ضمان: و لا حتى ضمان قابلية التسويق أو المناسبة لأي هدف.\n"
+msgstr ""
+"ماركو %s\n"
+"حقوق النشر © 2001-%s هاڤوك بِنَِنجتون، شركة ردهات، وآخرون\n"
+"هذا برنامج حر، راجع المصدر لشروط النسخ.\n"
+"لا يوجد أي ضمان: و لا حتى ضمان قابلية التسويق أو المناسبة لأي هدف.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "عطّل الاتصال بمدير الجلسة"
+msgstr "عطّل الاتصال بمُدير الجلسات"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1046,7 +1135,7 @@ msgstr "استبدل مدير النوافذ الذي يعمل بماركو"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "حدّد رقم هويّة إدارة الجلسة"
+msgstr "حدد معرف إدارة الجلسة"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1062,7 +1151,7 @@ msgstr "اطبع الإصدارة"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "اجعل نداءات X متزامنة"
+msgstr "اجعل نداءات س متزامنة"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1096,40 +1185,47 @@ msgstr "فشلت إعادة التشغيل: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr "%d المحفوظ في مفتاح GSettings %s خارج المدى من %d إلى %d\n\n"
+msgstr ""
+"%d المحفوظ في مفتاح GSettings %s خارج المدى من %d إلى %d\n"
+"\n"
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "عطّلت الحلول الجزئيّة للتطبيقات المعطوبة . ربما لن تتصرف بعض التطبيقات بسلامة.\n"
+msgstr ""
+"عطّلت الحلول الجزئيّة للتطبيقات المعطوبة . ربما لن تتصرف بعض التطبيقات "
+"بسلامة.\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "لا يمكن تحليل وصف الخط \"%s\" من مفتاح GSettings %s \n"
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "\"%s\" الموجود في قاعدة بيانات الإعدادات ليس قيمة سليمة لمغير أزرار الفأرة\n"
+msgstr ""
+"\"%s\" الموجود في قاعدة بيانات الإعدادات ليس قيمة سليمة لمغير أزرار الفأرة\n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "\"%s\" الموجود في قاعدة بيانات الإعدادات ليس قيمة سليمة لارتباط المفتاح \"%s\"\n"
+msgstr ""
+"\"%s\" الموجود في قاعدة بيانات الإعدادات ليس قيمة سليمة لارتباط المفتاح "
+"\"%s\"\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
-msgstr "مساحة العمل %d"
+msgstr "مساحة العمل %Id"
 
 #: ../src/core/screen.c:359
 #, c-format
@@ -1141,7 +1237,9 @@ msgstr "الشاشة %d على العرض '%s' غير صحيحة\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "الشاشة %d على العرض \"%s\" لها مدير نوافذ بالفعل، حاول استعمال خيار التبديل --replace لتحُلّ محلّ مدير النوافذ الحالي.\n"
+msgstr ""
+"الشاشة %d على العرض \"%s\" لها مدير نوافذ بالفعل، حاول استعمال خيار التبديل "
+"--replace لتحُلّ محلّ مدير النوافذ الحالي.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
@@ -1209,7 +1307,9 @@ msgstr "عنصر مجهول %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "هذه النوافذ لا تدعم &quot;احفظ الضبط الحالي&quot; يجب إعادة تشغيلها يدويا عند التسجيل المرة القادمة."
+msgstr ""
+"هذه النوافذ لا تدعم &quot;احفظ الضبط الحالي&quot; يجب إعادة تشغيلها يدويا "
+"عند التسجيل المرة القادمة."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1254,12 +1354,14 @@ msgid "Marco"
 msgstr "ماركو"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "ضبطت النافذة %s SM_CLIENT_ID على نفسه، عوض ضبطه على نافذةWM_CLIENT_LEADER مثل ما هو محدد من طرف ال‍ ICCCM.\n"
+msgstr ""
+"ضبطت النافذة %s SM_CLIENT_ID على نفسه، عوض ضبطه على نافذةWM_CLIENT_LEADER "
+"مثل ما هو محدد من طرف ال‍ ICCCM.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1267,12 +1369,14 @@ msgstr "ضبطت النافذة %s SM_CLIENT_ID على نفسه، عوض ضبط�
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "ضبطت النافذة %s تلميحة MWM يدل على انه لا يمكن تحجيمها، لكنها تضبط الحجم الأدنى %d x %d و الحجم الأقصى %d x %d، هذا ليس له أي معنى.\n"
+msgstr ""
+"ضبطت النافذة %s تلميحة MWM يدل على انه لا يمكن تحجيمها، لكنها تضبط الحجم "
+"الأدنى %d x %d و الحجم الأقصى %d x %d، هذا ليس له أي معنى.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1318,7 +1422,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "للنافذة 0x%lx الخاصية %s\nالتي كام مرتقبا أن تكون لها النوع %s التهيئة %d\nلكنها فعليا لها النوع %s التهيئة %d n_items %d.\nهذا خلل تطبيق، لا خلل في مدير النوافذ.\nللنافذة العنوان =\"%s\" الطبقة=\"%s\" الاسم=\"%s\"\n"
+msgstr ""
+"للنافذة 0x%lx الخاصية %s\n"
+"التي كام مرتقبا أن تكون لها النوع %s التهيئة %d\n"
+"لكنها فعليا لها النوع %s التهيئة %d n_items %d.\n"
+"هذا خلل تطبيق، لا خلل في مدير النوافذ.\n"
+"للنافذة العنوان =\"%s\" الطبقة=\"%s\" الاسم=\"%s\"\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1330,54 +1439,59 @@ msgstr "الخاصية %s على النافذة 0x%lx تحتوي UTF-8 غير ص
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "الخاصية %s على النافذة 0x%lx تحتوي UTF-8 غير صحيح للعنصر %d في القائمة\n"
+msgstr ""
+"الخاصية %s على النافذة 0x%lx تحتوي UTF-8 غير صحيح للعنصر %d في القائمة\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
 msgid "Usage: %s\n"
 msgstr "الاستخدام: %s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "أغلق النافذة"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "قائمة النافذة"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "صغّر النافذة"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "كبّر النافذة"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr "استعد النّافذة"
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr "لُفّ النافذة الأعلى"
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr "ألغى لفّ النافذة"
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr "ابقي النافذة على القمة"
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr "احذف من القمّة"
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr "دائما مساحة العمل المرئية"
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr "ضع النافذة على مساحة عمل واحدة فقط"
 
@@ -1389,12 +1503,12 @@ msgstr "_صغّر"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:67
 msgid "Ma_ximize"
-msgstr "_كبّر"
+msgstr "ك_بّر"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "ألغي التكبي_ر"
+msgstr "اعكس الت_كبير"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1430,7 +1544,7 @@ msgstr "دائما في ال_قمّة"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
-msgstr "فقط على مساحة العمل ال_مرئيّة"
+msgstr "فقط على مساحة العمل الم_رئية"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
@@ -1440,28 +1554,28 @@ msgstr "فقط على مساحة العمل _هذه"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
 msgid "Move to Workspace _Left"
-msgstr "انقل لمساحة العمل على ال_يسار"
+msgstr "انقل لمساحة العمل نحو ال_يسار"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
-msgstr "انقل لمساحة العمل على الي_مين"
+msgstr "انقل ل_مساحة العمل نحو الي_مين"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "انقل لمساحة العمل إلى ال_أعلى"
+msgstr "انقل ل_مساحة العمل ف_وق"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
 msgid "Move to Workspace _Down"
-msgstr "انقل لمساحة العمل إلى الأ_سفل"
+msgstr "انقل ل_مساحة العمل _تحت"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:100
 msgid "_Close"
-msgstr "أ_غلق"
+msgstr "_إغلاق"
 
 #: ../src/ui/menu.c:197
 #, c-format
@@ -1476,7 +1590,7 @@ msgstr "مساحة العمل 1_0"
 #: ../src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
-msgstr "مساحة العمل %s%d"
+msgstr "مساحة العمل %s%Id"
 
 #: ../src/ui/menu.c:388
 msgid "Move to Another _Workspace"
@@ -1564,683 +1678,747 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
-msgstr "%d x %d"
+msgstr "%Id × %Id"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "أعلى"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "أسفل"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
-msgstr "يسار"
+msgstr "اليسار"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
-msgstr "يمين"
+msgstr "اليمين"
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "هندسة الاطار لا تخصص البعد \"%s\""
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "هندسة الاطار لا تخصص البعد \"%s\" للحد \"%s\""
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "النسبة الجانبية للزر %g غير معقولة"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "هندسة الاطار لا تخصص حجم الأزرار"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "يجب أن يكون للتّدرُّجات لونان على الأقل"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr ""
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "يجب أن تكون حالة تخصيصات ألوان GTK  في قوسان قائمان، مثال gtk:fg[NORMAL] NORMAL هنا هو الحالة، لا يمكن تحليل \"%s\""
+msgstr ""
+"يجب أن تكون حالة تخصيصات ألوان GTK  في قوسان قائمان، مثال gtk:fg[NORMAL] "
+"NORMAL هنا هو الحالة، لا يمكن تحليل \"%s\""
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "يحب أن يكون لتخصيص حالة ألوان GTK قوس غلق قائم بعد الحالة/ مثال gtk:fg[NORMAL]، NORMAL هنا هو الحالة، لا يمكن تحليل \"%s\""
+msgstr ""
+"يحب أن يكون لتخصيص حالة ألوان GTK قوس غلق قائم بعد الحالة/ مثال "
+"gtk:fg[NORMAL]، NORMAL هنا هو الحالة، لا يمكن تحليل \"%s\""
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "لم تفهم الحالة \"%s\" في تخصيص الألوان"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "لم يفهم جزء اللون \"%s\" في تخصيص اللون"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
 msgstr "تهيئة الخلط \"blend/bg_color/fg_color/alpha\"، \"%s\"لا يناسب التهيئة"
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "لا يمكن تحليل قيمة الشفافية \"%s\" في اللون المخلط"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "قيمة الشفافية \"%s\" في اللون المخلوط ليست بين 0.0 و 1.0"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "تهيئة التظليل هي \"تظليل/اللون_الأساسي/العامل\"، \"%s\" لا يناسب التهيئة"
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "لا يمكن تحليل عامل التظليل \"%s\" في اللون المظلل"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "عامل التظليل \"%s\" في اللون المظلل سلبي"
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "لا يمكن تحليل اللون \"%s\""
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "تعبير الإحداثيّات يحتوي على الرمز '%s' الممنوع"
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "تعبير الإحداثيّات يحتوي على عدد نقطة متغيرة '%s' تعذّر تحليله"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "تعبير الإحداثيّات يحتوي على عدد صحيح '%s' تعذّر تحليله"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "تعبير الإحداثيّات يحتوي على مقسوم مجهول عند بداية هذا النص: \"%s\""
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "تعبير الإحداثيّات فارغ أو لم يفهم"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "تعبير الإحداثيّات ينتُج عند القسمة على صفر"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "تعبير الإحداثيّاتيّات يحاول استعمال مقسوم mod على عدد فاصلة متحرّكة"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "تعبير الإحداثيّات له مقسوم \"%s\" بالرغم من ترقبه قاسم"
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "تعبير الإحداثيّات له قاسم بالرغم من ترقبه لمقسوم"
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "انتهى تعبير الإحداثيّات بمقسوم عوضا عن قاسم"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "لتعبير الإحداثيّات مقسوم \"%c\" يتبع القاسم \"%c\" بدون قاسم بينهما"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "كان لتعبير الإحداثيّات متغير أو ثابت \"%s\""
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "غمر محلّل تعبير الإحداثيّات مجاله"
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "كان لتعبير الإحداثيّات قوس غلق بدون قوس فتح"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "كان لتعبير الإحداثيات قوس فتح بدون قوس غلق"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "تعبير الإحداثيات لا يملك قاسمات و مقسومات"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "احتوت السِمة على تعبير ادى الى خطأ: %s\n"
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "يجب تخصيص <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> لأسلوب الإطار هذا"
+msgstr ""
+"يجب تخصيص <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> "
+"لأسلوب الإطار هذا"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> مفقود"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "فشل تحميل السِمة \"%s\": %s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "لا <%s> ضبط للسِمة \"%s\""
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "لا أسلوب إطار مضبوط لنوع النافذة \"%s\" في السِمة \"%s\"، اضف عنصر <window type=\"%s\" style_set=\"whatever\"/>"
+msgstr ""
+"لا أسلوب إطار مضبوط لنوع النافذة \"%s\" في السِمة \"%s\"، اضف عنصر <window "
+"type=\"%s\" style_set=\"whatever\"/>"
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "الثوابت المعرفة من طرف المستخدم يجب أن تبدأ بحروف كبيرة، \"%s\" لا يبدأ بذلك"
+msgstr ""
+"الثوابت المعرفة من طرف المستخدم يجب أن تبدأ بحروف كبيرة، \"%s\" لا يبدأ بذلك"
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "عُرِّف الثابت \"%s\" بالفعل"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "لا صفة \"%s\" على العنصر <%s>"
+msgstr "لا خاصية \"%s\" في العنصر <%s>"
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
-msgstr "سطر %d محْرف %d: %s"
+msgstr "سطر %Id محرف %Id: %s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "الصفة \"%s\" معادة مرتان في نفس العنصر <%s>"
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "الصفة \"%s\" مغلوطة في العنصر <%s> في هذا السياق"
+msgstr "الخاصّة \"%s\" غير صالحة على العنصر <%s> في هذا السياق"
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "تعذّر تحليل \"%s\" كعدد صحيح"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "لم أفهم المحارف المتدلية \"%s\" في السلسلة \"%s\""
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "العدد الصحيح %ld يجب أن يكون ايجابيا"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "العدد الصحيح %ld كبير جدا، الحد الأقصى هو %d"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "لا يمكن تحليل \"%s\" كعدد فاصلة متحرّكة"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "يجب أن تكون القيم البوليانيّة \"صحيح\" أو \"خاطئ\" لا \"%s\""
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "يجب أن تكون الزاوية بين 0.0 و 360.0،وهي كانت%g\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr "يجب أن تكون الشفافية بين 0.0 (مختف) و 1.0 (دامس تماما)، وهي كانت %g\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "حجم عنوان غير سليم \"%s\" (يجب أن يكون واحد من xx-small,x-small,small,medium,large,x-large,xx-large)\n"
+msgstr ""
+"حجم عنوان غير سليم \"%s\" (يجب أن يكون واحد من xx-"
+"small,x-small,small,medium,large,x-large,xx-large)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> استُعمل الاسم \"%s\" للمرّة الثانية"
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> لم يُعرّف الأب \"%s\""
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> لم تُعرّف الهندسة \"%s\""
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "يجب ان يخصص <%s> هندسة أو اب له هندسة"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "يجب أن تحدّد خلفية ليصبح لقيمة ألفا معنى"
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "نوع مجهول \"%s\" على عنصر <%s>"
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "style_set مجهول \"%s\" على العنصر <%s>"
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "اعطى لنوع النافذة \"%s\" مجموعة أساليب بالفعل"
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "العنصر <%s> غير مسموح به تحت <%s>"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
 msgstr "لا يمكن تخصيص \"button_width\"/\"button_height\" و \"aspect_ratio\" للأزرار"
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "المسافة \"%s\" مجهولة"
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "نسبة الجانب \"%s\" مجهولة"
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "الحدّ \"%s\" مجهول"
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "لا صفة \"start_angle\"  أو \"from\" على العنصر <%s>"
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "لا صفة \"extent_angle\" أو \"to\" على العنصر <%s>"
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "لم أفهم القيمة \"%s\" لنوع التدرّج"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "لم أفهم نوع الملأ \"%s\" للعنصر <%s>"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "لم أفهم حالة \"%s\" العنصر <%s>"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "لم أفهم ظل \"%s\" العنصر <%s>"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "لم أفهم السهم \"%s\" للعنصر <%s>"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "لم يعرف <draw_ops> مسمى \"%s\""
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "تضمين draw_ops \"%s\" هنا سينشئ مرجعا دائريا"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "موقع مجهول \"%s\" لقطعة الإطار"
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "أسلوب الإطار له قطعة في الموقع %s"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "لم تعرف <draw_ops> بالاسم \"%s\""
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "وظيفة مجهولة \"%s\" للزر"
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "لا وجود لوظيفة الزر  \"%s\" في هذه الإصدارة (%d، تحتاج %d)"
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "حالة مجهولة \"%s\" للزر"
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "أسلوب الإطار له بالفعل زر للوظيفة %s الحالة %s"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\" قيمة غير سليمة لصفة التركيز"
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\" قيمة غير سليمة لصفة الحالة"
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "لم يعرف أسلوب مسمى بـ \"%s\""
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "\"%s\" ليس قيمة سليمة لصفة التحجيم"
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
 msgstr "لا يجب أن تكون صفة \"التحجيم\" على عنصر <%s> لحالات التكبير/الاخفاء"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr "لا يجب أن تكون صفة \"التحجيم\" على عنصر <%s> لحالات التكبير"
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr "حُدّد بالفعل أسلوب للحالة %s التحجيم %s التركيز %s"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "حُدّد بالفعل أسلوب للحالة %s التركيز %s"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "لا يمكن ان يوجد draw_ops اثنان لعنصر <piece> (خصصت السِمة صفة draw_ops و عنصر <draw_ops>، أو عنصران محدّدان)"
+msgstr ""
+"لا يمكن ان يوجد draw_ops اثنان لعنصر <piece> (خصصت السِمة صفة draw_ops و "
+"عنصر <draw_ops>، أو عنصران محدّدان)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "لا يمكن ان يوجد draw_ops اثنان لعنصر <button> (خصصت السِمة صفة draw_ops و عنصر <draw_ops>، أو عنصران محدّدان)"
+msgstr ""
+"لا يمكن ان يوجد draw_ops اثنان لعنصر <button> (خصصت السِمة صفة draw_ops و "
+"عنصر <draw_ops>، أو عنصران محدّدان)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "لا يمكن ان يوجد draw_ops اثنان لعنصر<menu_icon>  (خصصت السِمة صفة draw_ops و عنصر <draw_ops>، أو عنصران محدّدان)"
+msgstr ""
+"لا يمكن ان يوجد draw_ops اثنان لعنصر<menu_icon>  (خصصت السِمة صفة draw_ops و"
+" عنصر <draw_ops>، أو عنصران محدّدان)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr "أبعد عنصر في السمة يجب أن يكون  <metacity_theme> ليس <%s>"
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr "العنصر <%s> غير مسموح به داخل عنصر اسم/كاتب/تاريخ/وصف"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "العنصر <%s> غير مسموح به داخل عنصر <constant>"
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr "العنصر <%s> غير مسموح به داخل عنصر مسافة/حد/aspect_ratio"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "العنصر <%s> غير مسموح به داخل عنصر عملية متعادلة"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "العنصر <%s> غير مسموح به داخل عنصر <%s>"
+msgstr "العنصر <%s> غير مسوح به ضمن عنصر <%s>"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "لا draw_ops مزودة لقطعة الاطار"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "لا draw_ops مزودة للزر"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
-msgstr "لا يُسمح بنص داخل العنصر <%s>"
+msgstr "غير مسموح بالنصّ ضمن العنصر <%s>"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "<%s> محدّد مرتان لهذه السِمة"
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "فشل العثو على سِمة صحيحة في %s\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "هذا رسالة عيّنة في حوار عيّنة"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "عنصر قائمة مستعار %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "نافذة ذات حدود فقط"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
 msgstr "شريط"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "نافذة تطبيق عادية"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "صندوق حوار"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "صندوق حوار سائد"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "لوحة الأدوات"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "قائمة مفصولة"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
-msgstr "حد"
+msgstr "حافة"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "تجربة تصميم الأزرار %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g ملي ثانية لرسم إظار واحد للنافذة"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "الإستعمال: marco-theme-viewer [THEMENAME]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "خطأ عند تحميل السِمة: %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "حُمِّلت السِمة \"%s\" في %g ثواني\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "خط عنوان عادي"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "خط عنوان صغير"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "خط عنوان كبير"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "تصاميم الأزرار"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "علامة إهتداء"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "عنوان النافذة يكون هنا"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "دفعت %d إطارات في %g ثوان بإتجاه العميل (%g ملي ثانية لكل إطار) و %g ثواني بوقت ساعة حائطية مع مصادر خادوم X (%g ملي ثانية لكل إطار)\n"
+msgstr ""
+"دفعت %d إطارات في %g ثوان بإتجاه العميل (%g ملي ثانية لكل إطار) و %g ثواني "
+"بوقت ساعة حائطية مع مصادر خادوم X (%g ملي ثانية لكل إطار)\n"

@@ -1,19 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lasse Liehu <larso@gmx.com>, 2015
-# nomen omen <vapoursoft@gmail.com>, 2017
-# Rauli L. <rauli.laine@iki.fi>, 2016
+# Eslam Ali <talvikahvi@gmail.com>, 2019
+# Ammuu5, 2019
+# Lasse Liehu <larso@gmx.com>, 2019
+# Rauli L. <rauli.laine@iki.fi>, 2019
+# nomen omen, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 17:36+0100\n"
-"PO-Revision-Date: 2018-01-15 16:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
-"Language-Team: Finnish (http://www.transifex.com/mate/MATE/language/fi/)\n"
+"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"PO-Revision-Date: 2019-03-12 19:28+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
+"Language-Team: Finnish (https://www.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +28,7 @@ msgstr ""
 
 #: ../src/50-marco-desktop-key.xml.in.h:1
 msgid "Desktop"
-msgstr "Työtila"
+msgstr "Työpöytä"
 
 #: ../src/50-marco-desktop-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:100
@@ -52,7 +58,7 @@ msgstr "Käynnistä pääte"
 #: ../src/50-marco-desktop-key.xml.in.h:7
 #: ../src/org.mate.marco.gschema.xml.h:104
 msgid "Rename current workspace"
-msgstr ""
+msgstr "Nimeä uudelleen nykyinen työtila"
 
 #: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
 msgid "Window Management"
@@ -287,42 +293,42 @@ msgstr ""
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
 msgid "Move window to north-west (top left) corner"
-msgstr ""
+msgstr "Siirrä ikkuna näytön vasempaan yläkulmaan"
 
 #: ../src/50-marco-window-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:151
 msgid "Move window to north-east (top right) corner"
-msgstr ""
+msgstr "Siirrä ikkuna näytön oikeaan yläkulmaan"
 
 #: ../src/50-marco-window-key.xml.in.h:26
 #: ../src/org.mate.marco.gschema.xml.h:152
 msgid "Move window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Siirrä ikkuna näytön vasempaan alakulmaan"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 #: ../src/org.mate.marco.gschema.xml.h:153
 msgid "Move window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Siirrä ikkuna näytön oikeaan alakulmaan"
 
 #: ../src/50-marco-window-key.xml.in.h:28
 #: ../src/org.mate.marco.gschema.xml.h:154
 msgid "Move window to north (top) side of screen"
-msgstr ""
+msgstr "Siirrä ikkuna näytön ylälaitaan"
 
 #: ../src/50-marco-window-key.xml.in.h:29
 #: ../src/org.mate.marco.gschema.xml.h:155
 msgid "Move window to south (bottom) side of screen"
-msgstr ""
+msgstr "Siirrä ikkuna näytön alalaitaan"
 
 #: ../src/50-marco-window-key.xml.in.h:30
 #: ../src/org.mate.marco.gschema.xml.h:156
 msgid "Move window to east (right) side of screen"
-msgstr ""
+msgstr "Siirrä ikkuna näytön oikeaan reunaan"
 
 #: ../src/50-marco-window-key.xml.in.h:31
 #: ../src/org.mate.marco.gschema.xml.h:157
 msgid "Move window to west (left) side of screen"
-msgstr ""
+msgstr "Siirrä ikkuna näytön vasempaan reunaan"
 
 #: ../src/50-marco-window-key.xml.in.h:32
 #: ../src/org.mate.marco.gschema.xml.h:158
@@ -431,7 +437,7 @@ msgstr "Siirrä ikkunaa yksi työtila alas"
 
 #: ../src/org.mate.marco.gschema.xml.h:1
 msgid "Modifier to use for modified window click actions"
-msgstr ""
+msgstr "Muunnosnäppäin ikkunoiden muunnettuja napsautustoimintoja varten"
 
 #: ../src/org.mate.marco.gschema.xml.h:2
 msgid ""
@@ -441,6 +447,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as "
 "\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
 msgstr ""
+"Ikkunan napsauttaminen tämän muunnospainikkeen ollessa pohjassa siirtää "
+"ikkunaa (vasen painike), muuttaa ikkunan kokoa (keskipainike) tai näyttää "
+"ikkunavalikon (oikea painike). Keskimmäisen ja oikean painikkeen toiminnot "
+"voi vaihtaa keskenään avaimella ”resize_with_right_button”. Muunnosnäppäintä"
+" merkitään esimerkiksi ”&lt;Alt&gt;” tai ”&lt;Super&gr;”."
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
@@ -452,6 +463,10 @@ msgid ""
 "middle button while holding down the key given in \"mouse_button_modifier\";"
 " set it to false to make it work the opposite way around."
 msgstr ""
+"Aseta tämä todeksi jos haluat muuttaa ikkunan kokoa oikealla painikkeella ja"
+" näyttää valikon keskipainikkeella silloin kun pidät pohjassa näppäintä "
+"”mouse_button_modifier”. Jos tämä on epätosi, niin näppäimet toimivat "
+"päinvastoin."
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
@@ -465,7 +480,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:7
 msgid "Arrangement of buttons on the titlebar"
-msgstr ""
+msgstr "Otsikkopalkin painikkeiden järjestys"
 
 #: ../src/org.mate.marco.gschema.xml.h:8
 msgid ""
@@ -477,10 +492,16 @@ msgid ""
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
 msgstr ""
+"Otsikkopalkin painikkeiden järjestys. Arvon täytyy olla merkkijono, kuten "
+"”menu:minimize,maximize,spacer,close”, jossa kaksoispiste erottaa vasemman "
+"nurkan oikeasta nurkasta ja painikkeiden nimet on pilkuin eroteltu. Kukin "
+"painike voi esiintyä vain kerran. Tuntemattomat painikkeiden nimet jäävät "
+"kokonaan huomiotta, joten uusia painikkeita voi lisätä tuleviin marcon "
+"versioihin rikkomatta yhteensopivuutta vanhojen kanssa."
 
 #: ../src/org.mate.marco.gschema.xml.h:9
 msgid "Window focus mode"
-msgstr ""
+msgstr "Windows-tyylinen kohdistus"
 
 #: ../src/org.mate.marco.gschema.xml.h:10
 msgid ""
@@ -490,10 +511,15 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
+"Ikkunoiden kohdistustapa ilmaisee, miten ikkunoita aktivoidaan. Sillä on "
+"kolme mahdollista arvoa: ”click”, eli ikkunat kohdistetaan niitä "
+"napsauttamalla; ”sloppy”, eli ikkunat kohdistuvat, kun hiiri liikkuu niiden "
+"päälle; ”mouse”, eli ikkunat kohdistuvat, kun hiiri liikkuu niiden päälle, "
+"ja menettävät kohdistuksen, kun hiiri liikkuu pois."
 
 #: ../src/org.mate.marco.gschema.xml.h:11
 msgid "Control how new windows get focus"
-msgstr ""
+msgstr "Määrittele kuinka uudet ikkunat kohdistetaan"
 
 #: ../src/org.mate.marco.gschema.xml.h:12
 msgid ""
@@ -502,10 +528,14 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
+"Tämä valitsin antaa lisämahdollisuuksia ohjata, kuinka uudet ikkunan "
+"kohdistetaan. Kentällä on kaksi mahdollista; ”smart” käyttää käyttäjän "
+"valitsemaa kohdistustilaa ja ”strict” estää pääteikkunasta käynnistettyjen "
+"ikkunoiden kohdistamisen."
 
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr ""
+msgstr "Tulisiko nostamisen olla muiden toimenpiteiden sivuvaikutus"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -531,7 +561,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
-msgstr ""
+msgstr "Toiminto otsikkopalkin kaksoisnapsautukselle"
 
 #: ../src/org.mate.marco.gschema.xml.h:16
 msgid ""
@@ -544,10 +574,18 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Tämä valinta määrittelee mitä tapahtuu kaksoisnapsautettaessa "
+"otsikkopalkkia. Tällä hetkellä mahdolliset toiminnot ovat ”toggle_shade”, "
+"joka rullaa ikkunan ylös tai avaa rullauksen, ”toggle_maximize”, joka "
+"suurentaa tai palauttaa ikkunan, ”toggle_maximize_horizontally” ja  "
+"”toggle_maximize_vertically”, jotka suurentavat ja palauttavat ikkunan vain "
+"pysty- tai vaakasuunnassa, ”minimize”, joka pienentää ikkunan, ”shade” joka "
+"rullaa ikkunan ylös, ”menu”, joka näyttää ikkunan valikon, ”lower” joka "
+"alentaa ikkunan, tai ”none” joka ei tee mitään."
 
 #: ../src/org.mate.marco.gschema.xml.h:17
 msgid "Action on title bar middle-click"
-msgstr ""
+msgstr "Toiminto otsikkopalkin napsautukselle keskinapilla"
 
 #: ../src/org.mate.marco.gschema.xml.h:18
 msgid ""
@@ -560,10 +598,18 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Tämä valinta määrittelee mitä tapahtuu otsikkopalkkia keskinapilla "
+"napsautettaessa. Tällä hetkellä mahdolliset toiminnot ovat ”toggle_shade”, "
+"joka rullaa ikkunan ylös tai avaa rullauksen, ”toggle_maximize”, joka "
+"suurentaa tai palauttaa ikkunan, ”toggle_maximize_horizontally” ja  "
+"”toggle_maximize_vertically”, jotka suurentavat ja palauttavat ikkunan vain "
+"pysty- tai vaakasuunnassa, ”minimize”, joka pienentää ikkunan, ”shade” joka "
+"rullaa ikkunan ylös, ”menu”, joka näyttää ikkunan valikon, ”lower” joka "
+"alentaa ikkunan, tai ”none” joka ei tee mitään."
 
 #: ../src/org.mate.marco.gschema.xml.h:19
 msgid "Action on title bar right-click"
-msgstr ""
+msgstr "Toiminto otsikkopalkin napsautukselle oikealla napilla"
 
 #: ../src/org.mate.marco.gschema.xml.h:20
 msgid ""
@@ -576,10 +622,18 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
+"Tämä valinta määrittelee mitä tapahtuu otsikkopalkkia oikealla napilla "
+"napsautettaessa. Tällä hetkellä mahdolliset toiminnot ovat ”toggle_shade”, "
+"joka rullaa ikkunan ylös tai avaa rullauksen, ”toggle_maximize”, joka "
+"suurentaa tai palauttaa ikkunan, ”toggle_maximize_horizontally” ja  "
+"”toggle_maximize_vertically”, jotka suurentavat ja palauttavat ikkunan vain "
+"pysty- tai vaakasuunnassa, ”minimize”, joka pienentää ikkunan, ”shade” joka "
+"rullaa ikkunan ylös, ”menu”, joka näyttää ikkunan valikon, ”lower” joka "
+"alentaa ikkunan, tai ”none” joka ei tee mitään."
 
 #: ../src/org.mate.marco.gschema.xml.h:21
 msgid "Automatically raises the focused window"
-msgstr ""
+msgstr "Nosta kohdistettu ikkuna itsestään"
 
 #: ../src/org.mate.marco.gschema.xml.h:22
 msgid ""
@@ -588,16 +642,22 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
+"Jos arvo on tosi ja kohdistustila on joko ”sloppy” tai ”mouse”, nostetaan "
+"kohdistettu ikkuna automaattisesti avaimessa auto_raise-delay määritellyn "
+"viiveen jälkeen. Tämä ei liity ikkunan napsauttamiseen sen nostamiseksi eikä"
+" ikkunan kohdistamiseen raahaustoiminnon aikana."
 
 #: ../src/org.mate.marco.gschema.xml.h:23
 msgid "Delay in milliseconds for the auto raise option"
-msgstr ""
+msgstr "Viive (millisekunteina) automaattista nostoa varten"
 
 #: ../src/org.mate.marco.gschema.xml.h:24
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
+"Viive ennen ikkunan nousemista, jos auto_raise on tosi. Viive on "
+"millisekunteina."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -607,21 +667,23 @@ msgstr "Nykyinen teema"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr ""
+msgstr "Teema määrittää ikkunoiden reunojen, valikkopalkkien yms. ulkonäön"
 
 #: ../src/org.mate.marco.gschema.xml.h:27
 msgid "Use standard system font in window titles"
-msgstr ""
+msgstr "Järjestelmän oletuskirjasin ikkunoiden otsikoissa"
 
 #: ../src/org.mate.marco.gschema.xml.h:28
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
+"Jos tosi, jätä titlebar_font-asetus huomiotta, ja käytä sovellusten "
+"tavallista kirjasinta ikkunoiden otsikoissa."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
-msgstr ""
+msgstr "Ikkunan otsikon kirjasin"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
@@ -630,10 +692,14 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
+"Kirjasinlajin kuvausmerkkijono otsikkopalkkeja varten. Kuvauksen "
+"määrittelemä koko vaikuttaa ainoastaan, jos asetuksen titlebar_font_size "
+"arvo on 0. Lisäksi tämä asetus ei ole käytössä, jos asetus "
+"titlebar_uses_desktop_font on tosi."
 
 #: ../src/org.mate.marco.gschema.xml.h:31
 msgid "Number of workspaces"
-msgstr ""
+msgstr "Työtilojen määrä"
 
 #: ../src/org.mate.marco.gschema.xml.h:32
 msgid ""
@@ -641,6 +707,9 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
+"Työtilojen lukumäärä. Arvon täytyy olla nollaa suurempi, ja sillä on kiinteä"
+" yläraja, jotta työpöytää ei vahingossa voi tehdä käyttökelvottomaksi "
+"pyytämällä liian monia työtiloja."
 
 #: ../src/org.mate.marco.gschema.xml.h:33
 msgid "Workspace wrap style"
@@ -660,7 +729,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:35
 msgid "Enable Visual Bell"
-msgstr ""
+msgstr "Käytä näkyviä piippauksia"
 
 #: ../src/org.mate.marco.gschema.xml.h:36
 msgid ""
@@ -668,20 +737,25 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
+"Ottaa käyttöön näkyvän ilmaisimen järjestelmän 'piippauksille'. Tämä on "
+"hyödyllistä, jos kuulo on heikko tai ympäristö on meluinen."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
-msgstr ""
+msgstr "Järjestelmän piippaus on kuultavissa"
 
 #: ../src/org.mate.marco.gschema.xml.h:38
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
+"Määrittelee, voivatko sovellukset tai järjestelmä päästää kuultavia "
+"”piippauksia”. Tätä voi käyttää yhdessä ”näkyvien piippausten” kanssa ja "
+"sallia ”hiljaiset piippaukset”."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
-msgstr ""
+msgstr "Näkyvän piippauksen tyyppi"
 
 #: ../src/org.mate.marco.gschema.xml.h:40
 msgid ""
@@ -693,14 +767,20 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
+"Kertoo Marcolle, miten ilmaista näkyvästi, että järjestelmä tai ohjelma on "
+"päästänyt äänimerkin. Mahdollisia arvoja on tällä hetkellä kaksi: "
+"”fullscreen”, joka saa koko ruudun välkähtämään mustasta valkoiseksi ja "
+"”frame_flash”, joka saa merkin päästäneen sovelluksen ikkunan otsikkopalkin "
+"välkähtämään. Jos merkin lähettäjä on tuntematon (kuten yleensä kun "
+"”järjestelmä piippaa”), nykyisen ikkunan otsikkopalkki välkähtää."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
-msgstr ""
+msgstr "Kerrostuksen hallintaohjelma"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr ""
+msgstr "Määrittää, tulisiko marcon toimia kerrostuksen hallintaohjelmana."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -715,7 +795,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
-msgstr ""
+msgstr "Jos tosi, käytä vähemmän resursseja käytettävyyden kustannuksella"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -725,11 +805,17 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
+"Jos tosi, marco antaa käyttäjälle vähemmän palautetta piirtämällä kehykset "
+"viivoina, välttämällä animaatioita ja muin keinoin. Tämä vähentää "
+"käytettävyyttä useimpien käyttäjien kohdalla, mutta saattaa saada "
+"vanhentuneet sovellukset toimimaan oikein tai mahdollistaa hitaiden "
+"päätepalvelimien käytön. Kehyksiä ei kuitenkaan piirretä viivoina, jos "
+"esteettömyysominaisuudet ovat käytössä."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
-msgstr ""
+msgstr "(Ei toteutettu) Navigointi toimii sovelluksittain, ei ikkunoittain."
 
 #: ../src/org.mate.marco.gschema.xml.h:48
 msgid ""
@@ -741,10 +827,18 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
+"Jos tosi, Marco toimii sovelluksiin keskittyvästi, ei ikkunoihin "
+"keskittyvästi. Tämä on hieman abstrakti käsite, mutta yleisesti sovelluksiin"
+" keskittyvä tila toimii enemmän Macin kuin Windowsin kaltaisesti. Kun ikkuna"
+" kohdistetaan sovellustilassa, kaikki sovelluksen ikkunat nousevat. Lisäksi "
+"kohdistusnapsautukset eivät välity muiden sovellusten ikkunoille. "
+"Sovellustilaa ei ole suurimmaksi osaksi vielä toteutettu kunnolla."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr ""
+"Poista käytöstä ”ominaisuuksia”, joita vanhat tai rikkinäiset sovellukset "
+"vaativat toimiakseen"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -753,6 +847,10 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
+"Jotkut sovellukset eivät kunnioita määrittelyjä ja tämä johtaa ongelmiin "
+"ikkunamanagerin kanssa. Tämä valitsin laittaa Marcon tarkalleen oikein "
+"toimivaan tilaan, joka takaa yhtenäisen käyttöliittymän jos voidaan olla "
+"varmoja ettei tällaisia väärin toimivia ohjelmia käytetä."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -811,15 +909,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
-msgstr ""
+msgstr "Työtilan nimi"
 
 #: ../src/org.mate.marco.gschema.xml.h:62
 msgid "The name of a workspace."
-msgstr ""
+msgstr "Työtilan nimi."
 
 #: ../src/org.mate.marco.gschema.xml.h:63
 msgid "Run a defined command"
-msgstr ""
+msgstr "Suorita annettu komento"
 
 #: ../src/org.mate.marco.gschema.xml.h:64
 msgid ""
@@ -830,6 +928,12 @@ msgid ""
 "\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
 "then there will be no keybinding for this action."
 msgstr ""
+"Pikanäppäin, joka suorittaa vastaavasti numeroidun komennon luettelosta "
+"/apps/marco/keybinding_commands. Pikanäppäimet ovat muotoa "
+"”&lt;Control&gt;a” tai ”&lt;Shift&gt;&lt;Alt&gt;F1”. Jäsennin on varsin "
+"vapaamielinen, ei välitä kirjainkoosta ja ymmärtää myös lyhenteitä, kuten "
+"”&lt;Ctl&gt;” ja ”&lt;Ctrl&gt;”. Jos vaihdat arvoksi erityisen merkkijonon "
+"”disabled”, niin tähän toimintoon ei liity pikanäppäintä."
 
 #: ../src/org.mate.marco.gschema.xml.h:66
 msgid ""
@@ -853,11 +957,11 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
-msgstr ""
+msgstr "Siirry taaksepäin sovelluksen ikkunoiden välillä ponnahdusikkunalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
 msgid "Move backward between windows, using a popup window"
-msgstr ""
+msgstr "Siirry taaksepäin ikkunoiden välillä ponnahdusikkunalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:88
 msgid "Move between windows on all workspaces, using a popup window"
@@ -869,23 +973,23 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:91
 msgid "Move backward between panels and the desktop, using a popup window"
-msgstr ""
+msgstr "Siirry taaksepäin paneeleiden ja työtilan välillä ponnahdusikkunalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
-msgstr ""
+msgstr "Siirry heti taaksepäin sovelluksen ikkunoiden välillä"
 
 #: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between windows immediately"
-msgstr ""
+msgstr "Siirry heti taaksepäin ikkunoiden välillä"
 
 #: ../src/org.mate.marco.gschema.xml.h:97
 msgid "Move backward between panels and the desktop immediately"
-msgstr ""
+msgstr "Siirry heti taaksepäin paneelien ja työpöydän välillä"
 
 #: ../src/org.mate.marco.gschema.xml.h:105
 msgid "Commands to run in response to keybindings"
-msgstr ""
+msgstr "Komennot, jotka käynnistyvät pikanäppäimin"
 
 #: ../src/org.mate.marco.gschema.xml.h:106
 msgid ""
@@ -893,20 +997,25 @@ msgid ""
 "that correspond to these commands. Pressing the keybinding for run_command_N"
 " will execute command_N."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_N-avaimet määrittelevät "
+"pikanäppäimet, jotka liittyvät näihin komentoihin. Avaimen run_command_N "
+"pikanäppäimen painaminen suorittaa komennon command_N."
 
 #: ../src/org.mate.marco.gschema.xml.h:107
 msgid "The screenshot command"
-msgstr ""
+msgstr "Kuvakaappauksen ottokomento"
 
 #: ../src/org.mate.marco.gschema.xml.h:108
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_screenshot-avain määrittelee "
+"pikanäppäimen, joka käynnistää tämän asetuksen määrittelemän ohjelman."
 
 #: ../src/org.mate.marco.gschema.xml.h:109
 msgid "The window screenshot command"
-msgstr ""
+msgstr "Ikkunan kuvakaappauksen ottokomento"
 
 #: ../src/org.mate.marco.gschema.xml.h:110
 msgid ""
@@ -914,10 +1023,13 @@ msgid ""
 " a keybinding which causes the command specified by this setting to be "
 "invoked."
 msgstr ""
+"/apps/marco/global_keybindings/run_command_window_screenshot-avain "
+"määrittelee pikanäppäimen, joka käynnistää tämän asetuksen määrittelemän "
+"ohjelman."
 
 #: ../src/org.mate.marco.gschema.xml.h:114
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr ""
+msgstr "Vaihda tilaa, jossa ikkuna on aina näkyvissä muiden ikkunoiden päällä"
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
@@ -939,7 +1051,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "Kellonsoitto"
 
-#: ../src/core/core.c:207
+#: ../src/core/core.c:211
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Tuntematon ikkunatietojen pyyntö: %d"
@@ -954,7 +1066,9 @@ msgstr "<tt>%s</tt> ei vastaa."
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
-msgstr "Voit odottaa sovellusta vielä hetken valitsemalla ”Odota”, tai sulkea sovelluksen väkisin heti."
+msgstr ""
+"Voit odottaa sovellusta vielä hetken valitsemalla ”Odota”, tai sulkea "
+"sovelluksen väkisin heti."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -979,50 +1093,54 @@ msgstr "Kerrostukseen vaadittava laajennos %s puuttuu"
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X-ikkunointijärjestelmän näytön ”%s” avaaminen epäonnistui\n"
 
-#: ../src/core/keybindings.c:722
+#: ../src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Jokin muu ohjelma käyttää jo näppäintä %s muunnoksin %x pikanäppäimenään\n"
+msgstr ""
+"Jokin muu ohjelma käyttää jo näppäintä %s muunnoksin %x pikanäppäimenään\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2377
+#: ../src/core/keybindings.c:2379
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
 "\n"
 "%s"
-msgstr "Komentoa <tt>%s</tt> suorittaessa tapahtui virhe:\n\n%s."
+msgstr ""
+"Komentoa <tt>%s</tt> suorittaessa tapahtui virhe:\n"
+"\n"
+"%s."
 
-#: ../src/core/keybindings.c:2466
+#: ../src/core/keybindings.c:2468
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Mitään komentoa %d ei ole määritelty.\n"
 
-#: ../src/core/keybindings.c:3518
+#: ../src/core/keybindings.c:3528
 #, c-format
 msgid "No terminal command has been defined.\n"
 msgstr "Mitään päätteen komentoa ei ole määritelty.\n"
 
-#: ../src/core/keybindings.c:3658
+#: ../src/core/keybindings.c:3668
 #, c-format
 msgid "<tt>Rename Workspace</tt>"
-msgstr ""
+msgstr "<tt>Nimeä uudelleen työtila</tt>"
 
-#: ../src/core/keybindings.c:3659
+#: ../src/core/keybindings.c:3669
 #, c-format
 msgid "New Workspace Name:"
-msgstr ""
+msgstr "Uuden työtilan nimi:"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3680
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
-#: ../src/core/keybindings.c:3670
+#: ../src/core/keybindings.c:3680
 msgid "Cancel"
-msgstr ""
+msgstr "Peru"
 
 #: ../src/core/main.c:131
 #, c-format
@@ -1031,11 +1149,16 @@ msgid ""
 "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr "marco %s\nTekijänoikeudet © 2001-%s Havoc Pennington, Red Hat, Inc., ja muut\nTämä on vapaata ohjelmistoa: katso kopiointiehdot lähdekoodista.\nEi MINKÄÄNLAISTA takuuta: ei edes takuuta MYYNTIKELPOISUUDESTA tai\nSOPIVUUDESTA JOHONKIN KÄYTTÖÖN.\n"
+msgstr ""
+"marco %s\n"
+"Tekijänoikeudet © 2001-%s Havoc Pennington, Red Hat, Inc., ja muut\n"
+"Tämä on vapaata ohjelmistoa: katso kopiointiehdot lähdekoodista.\n"
+"Ei MINKÄÄNLAISTA takuuta: ei edes takuuta MYYNTIKELPOISUUDESTA tai\n"
+"SOPIVUUDESTA JOHONKIN KÄYTTÖÖN.\n"
 
 #: ../src/core/main.c:269
 msgid "Disable connection to session manager"
-msgstr "Estä yhteys sessionhallintaan"
+msgstr "Estä yhteys istunnonhallintaan"
 
 #: ../src/core/main.c:275
 msgid "Replace the running window manager with Marco"
@@ -1043,7 +1166,7 @@ msgstr "Vaihda käytössä oleva ikkunointiohjelma marcoon"
 
 #: ../src/core/main.c:281
 msgid "Specify session management ID"
-msgstr "Anna sessionhallinnan ID"
+msgstr "Anna istunnonhallinan tunniste"
 
 #: ../src/core/main.c:286
 msgid "X Display to use"
@@ -1055,11 +1178,11 @@ msgstr "Alusta sessio tiedostosta"
 
 #: ../src/core/main.c:298
 msgid "Print version"
-msgstr "Näytä versio"
+msgstr "Näytä versiotiedot"
 
 #: ../src/core/main.c:304
 msgid "Make X calls synchronous"
-msgstr "Käytä synkronisia X-kutsuja"
+msgstr "Tee X-kutsut synkronisesti"
 
 #: ../src/core/main.c:310
 msgid "Turn compositing on"
@@ -1072,7 +1195,8 @@ msgstr "Älä käytä kerrostusta"
 #: ../src/core/main.c:322
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
-msgstr "Älä tee kokoruutuikkunoita, jotka on suurennettu ja joilla ei ole reunoja"
+msgstr ""
+"Älä tee kokoruutuikkunoita, jotka on suurennettu ja joilla ei ole reunoja"
 
 #: ../src/core/main.c:519
 #, c-format
@@ -1083,7 +1207,9 @@ msgstr "Teemakansion lukeminen epäonnistui: %s\n"
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
-msgstr "Teemaa ei löydy! Varmista, että %s on olemassa, ja sisältää tavalliset teemat.\n"
+msgstr ""
+"Teemaa ei löydy! Varmista, että %s on olemassa, ja sisältää tavalliset "
+"teemat.\n"
 
 #: ../src/core/main.c:594
 #, c-format
@@ -1093,37 +1219,42 @@ msgstr "Uudelleenkäynnistys epäonnistui: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:606 ../src/core/prefs.c:759
+#: ../src/core/prefs.c:608 ../src/core/prefs.c:761
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1053
+#: ../src/core/prefs.c:1055
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
-msgstr "Rikkinäisten sovellusten kiertotiet eivät ole käytössä. Jotkin sovellukset eivät välttämättä käyttäydy kunnolla.\n"
+msgstr ""
+"Rikkinäisten sovellusten kiertotiet eivät ole käytössä. Jotkin sovellukset "
+"eivät välttämättä käyttäydy kunnolla.\n"
 
-#: ../src/core/prefs.c:1132
+#: ../src/core/prefs.c:1143
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1194
+#: ../src/core/prefs.c:1205
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "Asetustietokannassa oleva ”%s” ei ole kelvollinen hiiren muunnosnäppäin\n"
+msgstr ""
+"Asetustietokannassa oleva ”%s” ei ole kelvollinen hiiren muunnosnäppäin\n"
 
-#: ../src/core/prefs.c:1753
+#: ../src/core/prefs.c:1781
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
-msgstr "”%s”, joka on asetustietokannassa, ei ole kelvollinen näppäinsidonnan ”%s” arvo\n"
+msgstr ""
+"”%s”, joka on asetustietokannassa, ei ole kelvollinen näppäinsidonnan ”%s” "
+"arvo\n"
 
-#: ../src/core/prefs.c:2056
+#: ../src/core/prefs.c:2084
 #, c-format
 msgid "Workspace %d"
 msgstr "Työtila %d"
@@ -1138,12 +1269,16 @@ msgstr "Näytön ”%2$s” ruutu %1$d ei ole kelvollinen\n"
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
-msgstr "Näytön ”%2$s” ruudulla %1$d on jo ikkunointiohjelma: kokeile valitsinta --replace, jos haluat korvata nykyisen ikkunointiohjelman.\n"
+msgstr ""
+"Näytön ”%2$s” ruudulla %1$d on jo ikkunointiohjelma: kokeile valitsinta "
+"--replace, jos haluat korvata nykyisen ikkunointiohjelman.\n"
 
 #: ../src/core/screen.c:402
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr "Näytön ”%2$s” ruudun %1$d ikkunointiohjelman valinnan hankkiminen epäonnistui\n"
+msgstr ""
+"Näytön ”%2$s” ruudun %1$d ikkunointiohjelman valinnan hankkiminen "
+"epäonnistui\n"
 
 #: ../src/core/screen.c:460
 #, c-format
@@ -1163,7 +1298,8 @@ msgstr "Kansion ”%s” luominen ei onnistunut: %s\n"
 #: ../src/core/session.c:859
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
-msgstr "Istuntotiedoston ”%s” avaaminen kirjoittamista varten ei onnistunut: %s\n"
+msgstr ""
+"Istuntotiedoston ”%s” avaaminen kirjoittamista varten ei onnistunut: %s\n"
 
 #: ../src/core/session.c:1000
 #, c-format
@@ -1206,7 +1342,9 @@ msgstr "Tuntematon elementti %s"
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
-msgstr "Nämä ikkunat eivät ymmärrä ”tallenna nykyinen tila”-komentoa, ja ne täytyy käynnistää käsin uudelleen kun kirjaudut seuraavan kerran sisään."
+msgstr ""
+"Nämä ikkunat eivät ymmärrä ”tallenna nykyinen tila”-komentoa, ja ne täytyy "
+"käynnistää käsin uudelleen kun kirjaudut seuraavan kerran sisään."
 
 #: ../src/core/util.c:101
 #, c-format
@@ -1251,12 +1389,14 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5880
+#: ../src/core/window.c:5932
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
 "window as specified in the ICCCM.\n"
-msgstr "Ikkuna %s asetti SM_CLIENT_ID:n itselleen, ei WM_CLIENT_LEADERia, kuten sen ICCCM:n mukaan olisi pitänyt tehdä.\n"
+msgstr ""
+"Ikkuna %s asetti SM_CLIENT_ID:n itselleen, ei WM_CLIENT_LEADERia, kuten sen "
+"ICCCM:n mukaan olisi pitänyt tehdä.\n"
 
 #. We ignore mwm_has_resize_func because WM_NORMAL_HINTS is the
 #. * authoritative source for that info. Some apps such as mplayer or
@@ -1264,12 +1404,15 @@ msgstr "Ikkuna %s asetti SM_CLIENT_ID:n itselleen, ei WM_CLIENT_LEADERia, kuten 
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6445
+#: ../src/core/window.c:6497
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
-msgstr "Ikkuna %s asetti MWM-vihjeen ilmoittaakseen, ettei sen kokoa voi muuttaa, mutta asetti myös minimikoon %d × %d ja maksimikoon %d × %d, mikä ei ole järkevää.\n"
+msgstr ""
+"Ikkuna %s asetti MWM-vihjeen ilmoittaakseen, ettei sen kokoa voi muuttaa, "
+"mutta asetti myös minimikoon %d × %d ja maksimikoon %d × %d, mikä ei ole "
+"järkevää.\n"
 
 #: ../src/core/window-props.c:306
 #, c-format
@@ -1315,7 +1458,12 @@ msgid ""
 "and actually has type %s format %d n_items %d.\n"
 "This is most likely an application bug, not a window manager bug.\n"
 "The window has title=\"%s\" class=\"%s\" name=\"%s\"\n"
-msgstr "Ikkunalla 0x%lx on ominaisuus %s\njonka odotettu tyyppi on %s ja muoto %d,\nmutta on todella tyyppi %s, muoto %d, n_items %d.\nVika on todennäköisesti sovelluksessa, ei ikkunointiohjelmassa.\nIkkunan otsikko on ”%s”, luokka ”%s” ja nimi ”%s”\n"
+msgstr ""
+"Ikkunalla 0x%lx on ominaisuus %s\n"
+"jonka odotettu tyyppi on %s ja muoto %d,\n"
+"mutta on todella tyyppi %s, muoto %d, n_items %d.\n"
+"Vika on todennäköisesti sovelluksessa, ei ikkunointiohjelmassa.\n"
+"Ikkunan otsikko on ”%s”, luokka ”%s” ja nimi ”%s”\n"
 
 #: ../src/core/xprops.c:411
 #, c-format
@@ -1327,54 +1475,60 @@ msgstr "Ikkunan 0x%2$lx ominaisuus %1$s sisälsi virheellistä UTF-8:aa\n"
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
-msgstr "Ikkunan 0x%2$lx ominaisuus %1$s sisälsi virheellistä UTF-8:aa luettelon kohdassa %3$d\n"
+msgstr ""
+"Ikkunan 0x%2$lx ominaisuus %1$s sisälsi virheellistä UTF-8:aa luettelon "
+"kohdassa %3$d\n"
 
 #: ../src/tools/marco-message.c:150
 #, c-format
 msgid "Usage: %s\n"
 msgstr "Käyttö: %s\n"
 
-#: ../src/ui/frames.c:1098
+#: ../src/ui/frames.c:1147
 msgid "Close Window"
 msgstr "Sulje ikkuna"
 
-#: ../src/ui/frames.c:1101
+#: ../src/ui/frames.c:1150
 msgid "Window Menu"
 msgstr "Ikkunavalikko"
 
-#: ../src/ui/frames.c:1104
+#: ../src/ui/frames.c:1153
+msgid "Window App Menu"
+msgstr ""
+
+#: ../src/ui/frames.c:1156
 msgid "Minimize Window"
 msgstr "Pienennä ikkuna"
 
-#: ../src/ui/frames.c:1107
+#: ../src/ui/frames.c:1159
 msgid "Maximize Window"
 msgstr "Suurenna ikkuna"
 
-#: ../src/ui/frames.c:1110
+#: ../src/ui/frames.c:1162
 msgid "Restore Window"
 msgstr "Palauta ikkuna"
 
-#: ../src/ui/frames.c:1113
+#: ../src/ui/frames.c:1165
 msgid "Roll Up Window"
 msgstr "_Rullaa ikkuna ylös"
 
-#: ../src/ui/frames.c:1116
+#: ../src/ui/frames.c:1168
 msgid "Unroll Window"
 msgstr "Avaa rullattu ikkuna"
 
-#: ../src/ui/frames.c:1119
+#: ../src/ui/frames.c:1171
 msgid "Keep Window On Top"
 msgstr "Pidä ikkuna päällimmäisenä"
 
-#: ../src/ui/frames.c:1122
+#: ../src/ui/frames.c:1174
 msgid "Remove Window From Top"
 msgstr "Poista ikkuna päältä"
 
-#: ../src/ui/frames.c:1125
+#: ../src/ui/frames.c:1177
 msgid "Always On Visible Workspace"
 msgstr "Näytä aina näkyvässä työtilassa"
 
-#: ../src/ui/frames.c:1128
+#: ../src/ui/frames.c:1180
 msgid "Put Window On Only One Workspace"
 msgstr "Näytä ikkuna vain yhdessä työtilassa"
 
@@ -1391,7 +1545,7 @@ msgstr "S_uurenna"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:69
 msgid "Unma_ximize"
-msgstr "_Palauta koko"
+msgstr "Pa_lauta koko"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:71
@@ -1427,7 +1581,7 @@ msgstr "Aina _päällimmäisenä"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
-msgstr "Näytä _aina tässä työtilassa"
+msgstr "Näytä _aina näkyvässä työtilassa"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
@@ -1447,7 +1601,7 @@ msgstr "Siirrä _oikeaan työtilaan"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:94
 msgid "Move to Workspace _Up"
-msgstr "Siirry _yllä olevaan työtilaan"
+msgstr "Siirrä _yllä olevaan työtilaan"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:96
@@ -1561,683 +1715,772 @@ msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:115
+#: ../src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d × %d"
 
-#: ../src/ui/theme.c:252
+#: ../src/ui/theme.c:257
 msgid "top"
 msgstr "ylä"
 
-#: ../src/ui/theme.c:254
+#: ../src/ui/theme.c:259
 msgid "bottom"
 msgstr "ala"
 
-#: ../src/ui/theme.c:256
+#: ../src/ui/theme.c:261
 msgid "left"
 msgstr "vasen"
 
-#: ../src/ui/theme.c:258
+#: ../src/ui/theme.c:263
 msgid "right"
 msgstr "oikea"
 
-#: ../src/ui/theme.c:285
+#: ../src/ui/theme.c:290
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "kehyksen mitat eivät määrittele ”%s”-kokoa"
 
-#: ../src/ui/theme.c:304
+#: ../src/ui/theme.c:309
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "kehyksen mitat eivät määrittele ”%2$s”-reunan ”%1$s”-kokoa"
 
-#: ../src/ui/theme.c:341
+#: ../src/ui/theme.c:346
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "Painikkeen sivusuhde %g ei ole järkevä"
 
-#: ../src/ui/theme.c:353
+#: ../src/ui/theme.c:358
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Kehyksen mitat eivät määrittele painikkeiden kokoa"
 
-#: ../src/ui/theme.c:1055
+#: ../src/ui/theme.c:1065
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Väriliu'uissa täytyy olla vähintään kaksi väriä"
 
-#: ../src/ui/theme.c:1181
+#: ../src/ui/theme.c:1203
+#, c-format
+msgid ""
+"GTK custom color specification must have color name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
+msgstr ""
+
+#: ../src/ui/theme.c:1219
+#, c-format
+msgid ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
+msgstr ""
+
+#: ../src/ui/theme.c:1233
+#, c-format
+msgid ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
+msgstr ""
+
+#: ../src/ui/theme.c:1277
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
 " where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK-värimääritteessä täytyy olla tila hakasuluissa. Esimerkiksi gtk:fg[NORMAL], jossa NORMAL on tila. ”%s” ei jäsentynyt."
+msgstr ""
+"GTK-värimääritteessä täytyy olla tila hakasuluissa. Esimerkiksi "
+"gtk:fg[NORMAL], jossa NORMAL on tila. ”%s” ei jäsentynyt."
 
-#: ../src/ui/theme.c:1195
+#: ../src/ui/theme.c:1291
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
 "gtk:fg[NORMAL] where NORMAL is the state; could not parse \"%s\""
-msgstr "GTK-värimääritteessä täytyy olla loppuhakasulku tilan jälkeen. Esimerkiksi gtk:fg[NORMAL], jossa NORMAL on tila. ”%s” ei jäsenny."
+msgstr ""
+"GTK-värimääritteessä täytyy olla loppuhakasulku tilan jälkeen. Esimerkiksi "
+"gtk:fg[NORMAL], jossa NORMAL on tila. ”%s” ei jäsenny."
 
-#: ../src/ui/theme.c:1206
+#: ../src/ui/theme.c:1302
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Tila ”%s” ei ole värimääritteessä järkevä"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1315
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Värikomponentti ”%s” ei ole värimääritteessä järkevä"
 
-#: ../src/ui/theme.c:1248
+#: ../src/ui/theme.c:1343
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
-msgstr "Sekoitusmuoto on ”blend/taustaväri/edustaväri/alfa”. ”%s” ei ole tätä muotoa."
+msgstr ""
+"Sekoitusmuoto on ”blend/taustaväri/edustaväri/alfa”. ”%s” ei ole tätä "
+"muotoa."
 
-#: ../src/ui/theme.c:1259
+#: ../src/ui/theme.c:1354
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Alfa-arvo ”%s” sekoitusvärissä ei jäsenny"
 
-#: ../src/ui/theme.c:1269
+#: ../src/ui/theme.c:1364
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "Alfa-arvo ”%s” sekoitusvärissä ei ole välillä 0.0 - 1.0"
 
-#: ../src/ui/theme.c:1316
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
-msgstr "Varjostusmuoto on ”shade/perusväri/kerroin”. ”%s” ei ole tämän muotoinen."
+msgstr ""
+"Varjostusmuoto on ”shade/perusväri/kerroin”. ”%s” ei ole tämän muotoinen."
 
-#: ../src/ui/theme.c:1327
+#: ../src/ui/theme.c:1421
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Varjostuskerroin ”%s” varjostetussa värissä ei jäsenny"
 
-#: ../src/ui/theme.c:1337
+#: ../src/ui/theme.c:1431
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Varjostuskerroin ”%s” varjostetussa värissä on negatiivinen"
 
-#: ../src/ui/theme.c:1366
+#: ../src/ui/theme.c:1460
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "Värin ”%s” jäsentäminen ei onnistunut"
 
-#: ../src/ui/theme.c:1706
+#: ../src/ui/theme.c:1809
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Koordinaattilauseke sisältää merkin ”%s”, joka ei ole sallittu"
 
-#: ../src/ui/theme.c:1733
+#: ../src/ui/theme.c:1836
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "Koordinaattilauseke sisältää liukuluvun ”%s”, joka ei jäsentynyt"
 
-#: ../src/ui/theme.c:1747
+#: ../src/ui/theme.c:1850
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Koordinaattilauseke sisältää kokonaisluvun ”%s”, joka ei jäsentynyt"
 
-#: ../src/ui/theme.c:1869
+#: ../src/ui/theme.c:1972
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
-msgstr "Koordinaattilauseke sisälsi tuntemattoman operaattorin seuraavan tekstin alussa: ”%s”"
+msgstr ""
+"Koordinaattilauseke sisälsi tuntemattoman operaattorin seuraavan tekstin "
+"alussa: ”%s”"
 
-#: ../src/ui/theme.c:1926
+#: ../src/ui/theme.c:2029
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Koordinaattilauseke oli tyhjä tai ei järkevä"
 
-#: ../src/ui/theme.c:2037 ../src/ui/theme.c:2047 ../src/ui/theme.c:2081
+#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Koordinaattilauseke johtaa nollalla jakamiseen"
 
-#: ../src/ui/theme.c:2089
+#: ../src/ui/theme.c:2192
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "Koordinaattilauseke yrittää soveltaa mod-operaattoria liukulukuun"
 
-#: ../src/ui/theme.c:2145
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
-msgstr "Koordinaattilausekkeessa on operaattori ”%s”, jonka paikalla pitäisi olla operandi"
+msgstr ""
+"Koordinaattilausekkeessa on operaattori ”%s”, jonka paikalla pitäisi olla "
+"operandi"
 
-#: ../src/ui/theme.c:2154
+#: ../src/ui/theme.c:2257
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
-msgstr "Koordinaattilauseke sisälsi operandin kohdassa, johon kuuluisi operaattori"
+msgstr ""
+"Koordinaattilauseke sisälsi operandin kohdassa, johon kuuluisi operaattori"
 
-#: ../src/ui/theme.c:2162
+#: ../src/ui/theme.c:2265
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Koordinaattilauseke päättyi operaattoriin, ei operandiin"
 
-#: ../src/ui/theme.c:2172
+#: ../src/ui/theme.c:2275
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
-msgstr "Koordinaattilausekkeessa on operaattori ”%c” operaattorin ”%c” perässä ilman operandia välissä"
+msgstr ""
+"Koordinaattilausekkeessa on operaattori ”%c” operaattorin ”%c” perässä ilman"
+" operandia välissä"
 
-#: ../src/ui/theme.c:2319 ../src/ui/theme.c:2360
+#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "Koordinaattilausekkeessa oli tuntematon muuttuja tai vakio ”%s”"
 
-#: ../src/ui/theme.c:2414
+#: ../src/ui/theme.c:2525
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Koordinaattilausekkeen tulkitsijan puskuri ylitettiin."
 
-#: ../src/ui/theme.c:2443
+#: ../src/ui/theme.c:2554
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
-msgstr "Koordinaattilausekkeessa oli lopetussulje ilman vastaavaa aloitussuljetta"
+msgstr ""
+"Koordinaattilausekkeessa oli lopetussulje ilman vastaavaa aloitussuljetta"
 
-#: ../src/ui/theme.c:2507
+#: ../src/ui/theme.c:2618
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Koordinaattilauseke oli aloitussulje ilman vastaavaa lopetussuljetta"
 
-#: ../src/ui/theme.c:2518
+#: ../src/ui/theme.c:2629
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
-msgstr "Koordinaattilausekkeessa ei vaikuta olevan operaattoreita eikä operandeja"
+msgstr ""
+"Koordinaattilausekkeessa ei vaikuta olevan operaattoreita eikä operandeja"
 
-#: ../src/ui/theme.c:2722 ../src/ui/theme.c:2742 ../src/ui/theme.c:2762
+#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Teema sisälsi lausekkeen, josta seurasi virhe: %s\n"
 
-#: ../src/ui/theme.c:4392
+#: ../src/ui/theme.c:4556
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
 "specified for this frame style"
-msgstr "<button function=\"%s\" state=\"%s\" draw_ops=\"mikä lienee\"/> täytyy olla määritelty tätä kehystyyliä varten"
+msgstr ""
+"<button function=\"%s\" state=\"%s\" draw_ops=\"mikä lienee\"/> täytyy olla "
+"määritelty tätä kehystyyliä varten"
 
-#: ../src/ui/theme.c:4913 ../src/ui/theme.c:4938
+#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"mikä lienee\"/> puuttuu"
 
-#: ../src/ui/theme.c:4982
+#: ../src/ui/theme.c:5158
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Teeman ”%s” lataaminen epäonnistui: %s\n"
 
-#: ../src/ui/theme.c:5112 ../src/ui/theme.c:5119 ../src/ui/theme.c:5126
-#: ../src/ui/theme.c:5133 ../src/ui/theme.c:5140
+#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
+#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "<%s> ei ole asetettu teemaa ”%s” varten"
 
-#: ../src/ui/theme.c:5148
+#: ../src/ui/theme.c:5326
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
-msgstr "Ikkunatyypille ”%s” ei ole asetettu kehystyyliä teemassa ”%s”. Lisää <window type=\"%s\" style_set=\"mikä lienee\"/>-elementti."
+msgstr ""
+"Ikkunatyypille ”%s” ei ole asetettu kehystyyliä teemassa ”%s”. Lisää <window"
+" type=\"%s\" style_set=\"mikä lienee\"/>-elementti."
 
-#: ../src/ui/theme.c:5589 ../src/ui/theme.c:5651 ../src/ui/theme.c:5714
+#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
-msgstr "Käyttäjän määrittelemien vakioiden täytyy alkaa isolla kirjaimella; ”%s” ei ala"
+msgstr ""
+"Käyttäjän määrittelemien vakioiden täytyy alkaa isolla kirjaimella; ”%s” ei "
+"ala"
 
-#: ../src/ui/theme.c:5597 ../src/ui/theme.c:5659 ../src/ui/theme.c:5722
+#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Vakio ”%s” on jo määritelty"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:226
+#: ../src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
-msgstr "Attribuuttia ”%s” ei löydy elementistä <%s>"
+msgstr "Elementillä <%2$s> ei ole määrettä \"%1$s\""
 
-#: ../src/ui/theme-parser.c:255 ../src/ui/theme-parser.c:273
+#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "Rivi %d, merkki %d: %s"
 
-#: ../src/ui/theme-parser.c:438
+#: ../src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "Määre ”%s” on toistettu kahdesti samassa <%s>-elementissä"
 
-#: ../src/ui/theme-parser.c:462 ../src/ui/theme-parser.c:505
+#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Määre ”%s” ei ole kelvollinen <%s>-elementissä tässä yhteydessä"
+msgstr "Määre \"%s\" ei kelpaa elementtiin <%s> tässä asiayhteydessä"
 
-#: ../src/ui/theme-parser.c:547
+#: ../src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "”%s” ei jäsentynyt kokonaisluvuksi"
 
-#: ../src/ui/theme-parser.c:556 ../src/ui/theme-parser.c:611
+#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "Perässä olevat merkit ”%s” merkkijonossa ”%s” eivät ole järkeviä"
 
-#: ../src/ui/theme-parser.c:566
+#: ../src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "Kokonaisluvun %ld täytyy olla positiivinen"
 
-#: ../src/ui/theme-parser.c:574
+#: ../src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "Kokonaisluku %ld on liian suuri, nykyinen maksimi on %d"
 
-#: ../src/ui/theme-parser.c:602 ../src/ui/theme-parser.c:718
+#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "”%s” ei jäsentynyt liukuluvuksi"
 
-#: ../src/ui/theme-parser.c:633 ../src/ui/theme-parser.c:661
+#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "Totuusarvojen täytyy olla ”true” tai ”false”, ei ”%s”"
 
-#: ../src/ui/theme-parser.c:688
+#: ../src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Kulman pitäisi olla välillä 0.0 - 360.0, mutta se oli %g\n"
 
-#: ../src/ui/theme-parser.c:751
+#: ../src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
-msgstr "Alfan täytyy olla välillä 0.0 (näkymätön) - 1.0 (täysin peittävä). Se oli %g\n"
+msgstr ""
+"Alfan täytyy olla välillä 0.0 (näkymätön) - 1.0 (täysin peittävä). Se oli "
+"%g\n"
 
-#: ../src/ui/theme-parser.c:816
+#: ../src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
-msgstr "Virheellinen otsikon skaala ”%s” (täytyy olla joko xx-small,x-small,small,medium,large,x-large tai xx-large)\n"
+msgstr ""
+"Virheellinen otsikon skaala ”%s” (täytyy olla joko xx-"
+"small,x-small,small,medium,large,x-large tai xx-large)\n"
 
-#: ../src/ui/theme-parser.c:972 ../src/ui/theme-parser.c:1035
-#: ../src/ui/theme-parser.c:1069 ../src/ui/theme-parser.c:1172
+#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
+#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s>-elementin nimeä ”%s” käytetty toisenkin kerran"
 
-#: ../src/ui/theme-parser.c:984 ../src/ui/theme-parser.c:1081
-#: ../src/ui/theme-parser.c:1184
+#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
+#: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s>-elementin emo ”%s” ei ole määritelty"
 
-#: ../src/ui/theme-parser.c:1094
+#: ../src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s>-elementin mitat ”%s” eivät ole määriteltyjä"
 
-#: ../src/ui/theme-parser.c:1107
+#: ../src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s>:n täytyy joko määritellä mitat, tai emo, jolla on jo mitat"
 
-#: ../src/ui/theme-parser.c:1149
+#: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "Tausta täytyy määritellä, jotta alfa-arvo olisi mielekäs"
 
-#: ../src/ui/theme-parser.c:1216
+#: ../src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "Tuntematon tyyppi ”%s” elementissä <%s>"
 
-#: ../src/ui/theme-parser.c:1227
+#: ../src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "Tuntematon style_set ”%s” elementissä <%s>"
 
-#: ../src/ui/theme-parser.c:1235
+#: ../src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "Ikkunatyyppiin ”%s” on jo liitetty tyylijoukko"
 
-#: ../src/ui/theme-parser.c:1265 ../src/ui/theme-parser.c:1329
-#: ../src/ui/theme-parser.c:1555 ../src/ui/theme-parser.c:2776
-#: ../src/ui/theme-parser.c:2822 ../src/ui/theme-parser.c:2980
-#: ../src/ui/theme-parser.c:3216 ../src/ui/theme-parser.c:3254
-#: ../src/ui/theme-parser.c:3292 ../src/ui/theme-parser.c:3310
-#: ../src/ui/theme-parser.c:3326 ../src/ui/theme-parser.c:3364
+#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
+#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
+#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
+#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
+#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
+#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
-msgstr "Elementti <%s> ei ole mahdollinen elementin <%s> alla"
+msgstr "Elementti <%s> ei käy elementin <%s> jälkeen"
 
-#: ../src/ui/theme-parser.c:1379 ../src/ui/theme-parser.c:1393
-#: ../src/ui/theme-parser.c:1438
+#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
+#: ../src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "Arvoja ”button_width”/”button_height” ja ”aspect_ratio” ei voi määritellä samalle painikkeille"
+msgstr ""
+"Arvoja ”button_width”/”button_height” ja ”aspect_ratio” ei voi määritellä "
+"samalle painikkeille"
 
-#: ../src/ui/theme-parser.c:1402
+#: ../src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "Etäisyys ”%s” on tuntematon"
 
-#: ../src/ui/theme-parser.c:1447
+#: ../src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "Sivusuhde ”%s” on tuntematon"
 
-#: ../src/ui/theme-parser.c:1509
+#: ../src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "Reuna ”%s” on tuntematon"
 
-#: ../src/ui/theme-parser.c:1820
+#: ../src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "Elementissä <%s> ei ole ”start_angle”- tai ”from”-määrettä"
 
-#: ../src/ui/theme-parser.c:1827
+#: ../src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "Elementissä <%s> ei ole ”extent_angle”- tai ”to”-määrettä"
 
-#: ../src/ui/theme-parser.c:2067
+#: ../src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Väriliu'un arvo ”%s” ei ole järkevä"
 
-#: ../src/ui/theme-parser.c:2145 ../src/ui/theme-parser.c:2520
+#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "Täyttötyyppi ”%s” ei ole järkevä elementissä <%s>"
 
-#: ../src/ui/theme-parser.c:2312 ../src/ui/theme-parser.c:2395
-#: ../src/ui/theme-parser.c:2458
+#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
+#: ../src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "Tila ”%s” ei ole järkevä elementissä <%s>"
 
-#: ../src/ui/theme-parser.c:2322 ../src/ui/theme-parser.c:2405
+#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "Varjo ”%s” ei ole järkevä elementissä <%s>"
 
-#: ../src/ui/theme-parser.c:2332
+#: ../src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "Nuoli ”%s” ei ole järkevä elementissä <%s>"
 
-#: ../src/ui/theme-parser.c:2632 ../src/ui/theme-parser.c:2728
+#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "<draw_ops> ”%s” ei ole määritelty"
 
-#: ../src/ui/theme-parser.c:2644 ../src/ui/theme-parser.c:2740
+#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Draw_opsin ”%s” sisällyttäminen tähän aiheuttaisi kehäviitteen"
 
-#: ../src/ui/theme-parser.c:2855
+#: ../src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Tuntematon kehyksen palan sijainti ”%s”"
 
-#: ../src/ui/theme-parser.c:2863
+#: ../src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Kehystyylissä on jo pala sijainnissa %s"
 
-#: ../src/ui/theme-parser.c:2880 ../src/ui/theme-parser.c:2955
+#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "”%s”-nimistä <draw_ops>:ia ei ole määritelty"
 
-#: ../src/ui/theme-parser.c:2909
+#: ../src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Tuntematon painikkeen toiminto ”%s”"
 
-#: ../src/ui/theme-parser.c:2918
+#: ../src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "Painiketoimintoa ”%s” ei ole tässä versiossa (%d, tarvitaan %d)"
 
-#: ../src/ui/theme-parser.c:2930
+#: ../src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Tuntematon painikkeen tila ”%s”"
 
-#: ../src/ui/theme-parser.c:2938
+#: ../src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Kehystyylillä on jo painike funktiota %s, tilaa %s varten"
 
-#: ../src/ui/theme-parser.c:3019
+#: ../src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "”%s” ei ole kelvollinen kohdistusmääreen arvo"
 
-#: ../src/ui/theme-parser.c:3028
+#: ../src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "”%s” ei ole kelvollinen tilamääreen arvo"
 
-#: ../src/ui/theme-parser.c:3038
+#: ../src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "”%s”-nimistä tyyliä ei ole määritelty"
 
-#: ../src/ui/theme-parser.c:3059 ../src/ui/theme-parser.c:3082
+#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "”%s” ei ole kelvollinen koonmuutosmääreen arvo"
 
-#: ../src/ui/theme-parser.c:3093
+#: ../src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
-msgstr "Elementissä <%s> pitäisi olla ”resize”-määre suurennettua ja rullattua tilaa varten"
+msgstr ""
+"Elementissä <%s> pitäisi olla ”resize”-määre suurennettua ja rullattua tilaa"
+" varten"
 
-#: ../src/ui/theme-parser.c:3107
+#: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
-msgstr "Elementissä <%s> ei pitäisi olla ”resize”-määrettä suurennetuilla tiloilla"
+msgstr ""
+"Elementissä <%s> ei pitäisi olla ”resize”-määrettä suurennetuilla tiloilla"
 
-#: ../src/ui/theme-parser.c:3121 ../src/ui/theme-parser.c:3165
+#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
-msgstr "Tyyli on jo määritelty tilaa %s, koonmuutosta %s, kohdistusta %s varten"
+msgstr ""
+"Tyyli on jo määritelty tilaa %s, koonmuutosta %s, kohdistusta %s varten"
 
-#: ../src/ui/theme-parser.c:3132 ../src/ui/theme-parser.c:3143
-#: ../src/ui/theme-parser.c:3154 ../src/ui/theme-parser.c:3176
-#: ../src/ui/theme-parser.c:3187 ../src/ui/theme-parser.c:3198
+#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
+#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
+#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "Tyyli on jo määritelty tilaa %s, kohdistusta %s varten"
 
-#: ../src/ui/theme-parser.c:3237
+#: ../src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "<piece>-elementissä ei voi olla kahta draw_opsia (teema määritteli joko draw_ops-määreen sekä <draw_ops>-elementin tai kaksi elementtiä)"
+msgstr ""
+"<piece>-elementissä ei voi olla kahta draw_opsia (teema määritteli joko "
+"draw_ops-määreen sekä <draw_ops>-elementin tai kaksi elementtiä)"
 
-#: ../src/ui/theme-parser.c:3275
+#: ../src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "<button>-elementissä ei voi olla kahta draw_opsia (teema määritteli joko draw_ops-määreen sekä <draw_ops>-elementin tai kaksi elementtiä)"
+msgstr ""
+"<button>-elementissä ei voi olla kahta draw_opsia (teema määritteli joko "
+"draw_ops-määreen sekä <draw_ops>-elementin tai kaksi elementtiä)"
 
-#: ../src/ui/theme-parser.c:3347
+#: ../src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
-msgstr "<menu_icon>-elementissä ei voi olla kahta draw_opsia (teema määritteli joko draw_ops-määreen sekä <draw_ops>-elementin tai kaksi elementtiä)"
+msgstr ""
+"<menu_icon>-elementissä ei voi olla kahta draw_opsia (teema määritteli joko "
+"draw_ops-määreen sekä <draw_ops>-elementin tai kaksi elementtiä)"
 
-#: ../src/ui/theme-parser.c:3395
+#: ../src/ui/theme-parser.c:3491
+#, c-format
+msgid "Bad version specification '%s'"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3562
+msgid ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3585
+#, c-format
+msgid "Theme requires version %s but latest supported theme version is %d.%d"
+msgstr ""
+
+#: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3415
+#: ../src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
-msgstr "Elementti <%s> ei voi olla nimi-, tekijä-, päiväys- tai kuvauselementin sisällä"
+msgstr ""
+"Elementti <%s> ei voi olla nimi-, tekijä-, päiväys- tai kuvauselementin "
+"sisällä"
 
-#: ../src/ui/theme-parser.c:3420
+#: ../src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "Elementti <%s> ei voi olla <constant>-elementin sisällä"
 
-#: ../src/ui/theme-parser.c:3432
+#: ../src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
-msgstr "Elementti <%s> ei voi olla etäisyys-, reuna- tai sivusuhde-elementin sisällä"
+msgstr ""
+"Elementti <%s> ei voi olla etäisyys-, reuna- tai sivusuhde-elementin sisällä"
 
-#: ../src/ui/theme-parser.c:3454
+#: ../src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "Elementti <%s> ei voi olla piirto-operaatioelementin sisällä"
 
-#: ../src/ui/theme-parser.c:3464 ../src/ui/theme-parser.c:3506
-#: ../src/ui/theme-parser.c:3511 ../src/ui/theme-parser.c:3516
+#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
+#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
-msgstr "Elementti <%s> ei voi olla elementin <%s> sisällä"
+msgstr "Elementti <%s> ei käy elementin <%s> sisään"
 
-#: ../src/ui/theme-parser.c:3738
+#: ../src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "Kehyksen palaa varten ei ole draw_opsia"
 
-#: ../src/ui/theme-parser.c:3753
+#: ../src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "Painiketta varten ei ole draw_opsia"
 
-#: ../src/ui/theme-parser.c:3815
+#: ../src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "Elementin <%s> sisällä ei voi olla tekstiä"
 
-#: ../src/ui/theme-parser.c:3870 ../src/ui/theme-parser.c:3882
-#: ../src/ui/theme-parser.c:3894 ../src/ui/theme-parser.c:3906
-#: ../src/ui/theme-parser.c:3918
+#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
+#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
+#: ../src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "<%s> määritelty kahdesti tälle teemalle"
 
-#: ../src/ui/theme-parser.c:4211
+#: ../src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Teemalle %s ei löytynyt kelvollista tiedostoa\n"
 
-#: ../src/ui/theme-viewer.c:266
+#: ../src/ui/theme-viewer.c:256
+msgid "_OK"
+msgstr "_OK"
+
+#: ../src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "Tämä on esimerkkiviesti esimerkkivalintaikkunassa"
 
-#: ../src/ui/theme-viewer.c:350
+#: ../src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Valikon kohta %d\n"
 
-#: ../src/ui/theme-viewer.c:386
+#: ../src/ui/theme-viewer.c:388
 msgid "Border-only window"
 msgstr "Ikkuna, jossa on vain reunat"
 
-#: ../src/ui/theme-viewer.c:388
+#: ../src/ui/theme-viewer.c:390
 msgid "Bar"
 msgstr "Palkki"
 
-#: ../src/ui/theme-viewer.c:405
+#: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
 msgstr "Tavallisen sovelluksen ikkuna"
 
-#: ../src/ui/theme-viewer.c:409
+#: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"
 msgstr "Valintaikkuna"
 
-#: ../src/ui/theme-viewer.c:413
+#: ../src/ui/theme-viewer.c:415
 msgid "Modal Dialog Box"
 msgstr "Modaalinen valintaikkuna"
 
-#: ../src/ui/theme-viewer.c:417
+#: ../src/ui/theme-viewer.c:419
 msgid "Utility Palette"
 msgstr "Palettityökalu"
 
-#: ../src/ui/theme-viewer.c:421
+#: ../src/ui/theme-viewer.c:423
 msgid "Torn-off Menu"
 msgstr "Irrotettu valikko"
 
-#: ../src/ui/theme-viewer.c:425
+#: ../src/ui/theme-viewer.c:427
 msgid "Border"
 msgstr "Reuna"
 
-#: ../src/ui/theme-viewer.c:782
+#: ../src/ui/theme-viewer.c:431
+msgid "Attached Modal Dialog"
+msgstr ""
+
+#: ../src/ui/theme-viewer.c:791
 #, c-format
 msgid "Button layout test %d"
 msgstr "Painikkeiden asettelutesti %d"
 
-#: ../src/ui/theme-viewer.c:807
+#: ../src/ui/theme-viewer.c:816
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g millisekuntia yhden ikkunan kehyksen piirtämiseen"
 
-#: ../src/ui/theme-viewer.c:847
+#: ../src/ui/theme-viewer.c:856
 #, c-format
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Käyttö: marco-theme-viewer [TEEMANIMI]\n"
 
-#: ../src/ui/theme-viewer.c:854
+#: ../src/ui/theme-viewer.c:863
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Virhe teeman lataamisessa: %s\n"
 
-#: ../src/ui/theme-viewer.c:860
+#: ../src/ui/theme-viewer.c:869
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Teema ”%s” latautui %g sekunnissa\n"
 
-#: ../src/ui/theme-viewer.c:904
+#: ../src/ui/theme-viewer.c:913
 msgid "Normal Title Font"
 msgstr "Tavallinen otsikon fontti"
 
-#: ../src/ui/theme-viewer.c:910
+#: ../src/ui/theme-viewer.c:919
 msgid "Small Title Font"
 msgstr "Pieni otsikon fontti"
 
-#: ../src/ui/theme-viewer.c:916
+#: ../src/ui/theme-viewer.c:925
 msgid "Large Title Font"
 msgstr "Suuri otsikon fontti"
 
-#: ../src/ui/theme-viewer.c:921
+#: ../src/ui/theme-viewer.c:930
 msgid "Button Layouts"
 msgstr "Painikkeiden asettelu"
 
-#: ../src/ui/theme-viewer.c:926
+#: ../src/ui/theme-viewer.c:935
 msgid "Benchmark"
 msgstr "Koesta"
 
-#: ../src/ui/theme-viewer.c:983
+#: ../src/ui/theme-viewer.c:992
 msgid "Window Title Goes Here"
 msgstr "Ikkunan otsikko tähän"
 
-#: ../src/ui/theme-viewer.c:1088
+#: ../src/ui/theme-viewer.c:1097
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
 "seconds wall clock time including X server resources (%g milliseconds per "
 "frame)\n"
-msgstr "%d kehystä piirtyi %g asiakaspuolen sekunnissa (%g millisekuntia per kehys) ja %g todellisessa sekunnissa, ottaen mukaan X-palvelimen resurssit (%g millisekuntia per kehys)\n"
+msgstr ""
+"%d kehystä piirtyi %g asiakaspuolen sekunnissa (%g millisekuntia per kehys) "
+"ja %g todellisessa sekunnissa, ottaen mukaan X-palvelimen resurssit (%g "
+"millisekuntia per kehys)\n"

@@ -131,7 +131,11 @@ meta_core_get (Display *xdisplay,
               break;
 
             case META_WINDOW_MODAL_DIALOG:
-              base_type = META_FRAME_TYPE_MODAL_DIALOG;
+              if (meta_prefs_get_attach_modal_dialogs () &&
+                  meta_window_get_transient_for (window) != NULL)
+                base_type = META_FRAME_TYPE_ATTACHED;
+              else
+                base_type = META_FRAME_TYPE_MODAL_DIALOG;
               break;
 
             case META_WINDOW_MENU:
@@ -157,7 +161,7 @@ meta_core_get (Display *xdisplay,
               /* can't add border if undecorated */
               *((MetaFrameType*)answer) = META_FRAME_TYPE_LAST;
             }
-          else if (window->border_only)
+          else if (window->border_only && base_type != META_FRAME_TYPE_ATTACHED)
             {
               /* override base frame type */
               *((MetaFrameType*)answer) = META_FRAME_TYPE_BORDER;
@@ -195,6 +199,9 @@ meta_core_get (Display *xdisplay,
         break;
       case META_CORE_GET_FRAME_HEIGHT:
         *((gint*)answer) = window->frame->rect.height;
+        break;
+      case META_CORE_GET_THEME_VARIANT:
+        *((char**)answer) = window->gtk_theme_variant;
         break;
       case META_CORE_GET_SCREEN_WIDTH:
         *((gint*)answer) = window->screen->rect.width;
@@ -264,8 +271,7 @@ meta_core_user_lower_and_unfocus (Display *xdisplay,
 
   meta_window_lower (window);
 
-  if (meta_prefs_get_focus_mode () == META_FOCUS_MODE_CLICK &&
-      meta_prefs_get_raise_on_click ())
+  if (meta_prefs_get_raise_on_click ())
     {
       /* Move window to the back of the focusing workspace's MRU list.
        * Do extra sanity checks to avoid possible race conditions.

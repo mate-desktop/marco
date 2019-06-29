@@ -62,17 +62,13 @@ MetaUI* meta_ui_new (Display *xdisplay,
                      Screen  *screen);
 void    meta_ui_free (MetaUI *ui);
 
-void meta_ui_theme_get_frame_borders (MetaUI *ui,
-                                      MetaFrameType      type,
-                                      MetaFrameFlags     flags,
-                                      int               *top_height,
-                                      int               *bottom_height,
-                                      int               *left_width,
-                                      int               *right_width);
-void meta_ui_get_frame_geometry (MetaUI *ui,
-                                 Window frame_xwindow,
-                                 int *top_height, int *bottom_height,
-                                 int *left_width, int *right_width);
+void meta_ui_theme_get_frame_borders (MetaUI           *ui,
+                                      MetaFrameType     type,
+                                      MetaFrameFlags    flags,
+                                      MetaFrameBorders *borders);
+void meta_ui_get_frame_borders (MetaUI           *ui,
+                                Window            frame_xwindow,
+                                MetaFrameBorders *borders);
 Window meta_ui_create_frame_window (MetaUI *ui,
                                     Display *xdisplay,
                                     Visual *xvisual,
@@ -95,18 +91,23 @@ void meta_ui_map_frame   (MetaUI *ui,
 void meta_ui_unmap_frame (MetaUI *ui,
                           Window  xwindow);
 
-void meta_ui_unflicker_frame_bg (MetaUI *ui,
-                                 Window  xwindow,
-                                 int     target_width,
-                                 int     target_height);
-void meta_ui_reset_frame_bg     (MetaUI *ui,
-                                 Window  xwindow);
-
 void meta_ui_apply_frame_shape  (MetaUI  *ui,
                                  Window   xwindow,
                                  int      new_window_width,
                                  int      new_window_height,
                                  gboolean window_has_shape);
+
+cairo_region_t *meta_ui_get_frame_bounds (MetaUI *ui,
+                                          Window  xwindow,
+                                          int     window_width,
+                                          int     window_height);
+
+void meta_ui_get_corner_radiuses (MetaUI *ui,
+                                  Window  xwindow,
+                                  float  *top_left,
+                                  float  *top_right,
+                                  float  *bottom_left,
+                                  float  *bottom_right);
 
 void meta_ui_queue_frame_draw (MetaUI *ui,
                                Window xwindow);
@@ -114,6 +115,9 @@ void meta_ui_queue_frame_draw (MetaUI *ui,
 void meta_ui_set_frame_title (MetaUI *ui,
                               Window xwindow,
                               const char *title);
+
+void meta_ui_update_frame_style (MetaUI *ui,
+                                 Window  window);
 
 void meta_ui_repaint_frame (MetaUI *ui,
                             Window xwindow);

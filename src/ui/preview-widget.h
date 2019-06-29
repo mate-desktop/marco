@@ -50,11 +50,8 @@ struct _MetaPreview
   PangoLayout *layout;
   int text_height;
 
-  int left_width;
-  int right_width;
-  int top_height;
-  int bottom_height;
-
+  MetaFrameBorders borders;
+  guint            borders_cached : 1;
   MetaButtonLayout button_layout;
 };
 

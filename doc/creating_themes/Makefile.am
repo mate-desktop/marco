@@ -18,3 +18,5 @@ HELP_LINGUAS =
 
 
 
+
+-include $(top_srcdir)/git.mk

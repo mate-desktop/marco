@@ -1,8 +1,8 @@
 AC_PREREQ(2.50)
 
 m4_define([marco_major_version], [1])
-m4_define([marco_minor_version], [20])
-m4_define([marco_micro_version], [0])
+m4_define([marco_minor_version], [22])
+m4_define([marco_micro_version], [2])
 
 m4_define([marco_version],
           [marco_major_version.marco_minor_version.marco_micro_version])
@@ -13,7 +13,19 @@ AC_CONFIG_HEADERS(config.h)
 AC_CONFIG_MACRO_DIR([m4])
 
 AM_INIT_AUTOMAKE([subdir-objects no-dist-gzip dist-xz check-news])
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AM_MAINTAINER_MODE
+
+dnl **************************************************************************
+dnl Library version information
+dnl **************************************************************************
+
+m4_define([lt_current], [2])
+m4_define([lt_revision], [0])
+m4_define([lt_age], [0])
+m4_define([lt_version_info], [lt_current:lt_revision:lt_age])
+
+AC_SUBST([LT_VERSION_INFO], [lt_version_info])
 
 # Honor aclocal flags
 AC_SUBST(ACLOCAL_AMFLAGS, "\${ACLOCAL_FLAGS}")

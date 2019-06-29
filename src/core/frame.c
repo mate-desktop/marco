@@ -28,10 +28,7 @@
 #include "bell.h"
 #include "errors.h"
 #include "keybindings.h"
-
-#ifdef HAVE_RENDER
-#include <X11/extensions/Xrender.h>
-#endif
+#include "prefs.h"
 
 #define EVENT_MASK (SubstructureRedirectMask |                     \
                     StructureNotifyMask | SubstructureNotifyMask | \
@@ -42,12 +39,34 @@
                     FocusChangeMask |                              \
                     ColormapChangeMask)
 
+static gboolean update_shape (MetaFrame *frame);
+
+static void
+prefs_changed_callback (MetaPreference preference,
+                        gpointer       data)
+{
+  MetaFrame *frame = (MetaFrame *) data;
+
+  switch (preference)
+    {
+      case META_PREF_COMPOSITING_MANAGER:
+        frame->need_reapply_frame_shape = TRUE;
+        update_shape (frame);
+        break;
+      default:
+        break;
+    }
+}
+
 void
 meta_window_ensure_frame (MetaWindow *window)
 {
   MetaFrame *frame;
+  MetaScreen *screen;
   XSetWindowAttributes attrs;
+  XVisualInfo visual_info;
   Visual *visual;
+  int status;
 
   if (window->frame)
     return;
@@ -90,13 +109,24 @@ meta_window_ensure_frame (MetaWindow *window)
    * the default of NULL.
    */
 
-  /* Special case for depth 32 windows (assumed to be ARGB),
-   * we use the window's visual. Otherwise we just use the system visual.
-   */
-  if (window->depth == 32)
-    visual = window->xvisual;
+  screen = meta_window_get_screen (window);
+  status = XMatchVisualInfo (window->display->xdisplay,
+                             XScreenNumberOfScreen (screen->xscreen),
+                             32, TrueColor,
+                             &visual_info);
+
+  if (!status)
+    {
+      /* Special case for depth 32 windows (assumed to be ARGB),
+       * we use the window's visual. Otherwise we just use the system visual.
+       */
+      if (window->depth == 32)
+        visual = window->xvisual;
+      else
+        visual = NULL;
+    }
   else
-    visual = NULL;
+    visual = visual_info.visual;
 
   frame->xwindow = meta_ui_create_frame_window (window->screen->ui,
                                                 window->display->xdisplay,
@@ -112,11 +142,6 @@ meta_window_ensure_frame (MetaWindow *window)
 			   frame->xwindow, CWEventMask, &attrs);
 
   meta_display_register_x_window (window->display, &frame->xwindow, window);
-
-  /* Now that frame->xwindow is registered with window, we can set its
-   * background.
-   */
-  meta_ui_reset_frame_bg (window->screen->ui, frame->xwindow);
 
   /* Reparent the client window; it may be destroyed,
    * thus the error trap. We'll get a destroy notify later
@@ -151,6 +176,10 @@ meta_window_ensure_frame (MetaWindow *window)
   /* stick frame to the window */
   window->frame = frame;
 
+  /* Now that frame->xwindow is registered with window, we can set its
+   * style.
+   */
+  meta_ui_update_frame_style (window->screen->ui, frame->xwindow);
   if (window->title)
     meta_ui_set_frame_title (window->screen->ui,
                              window->frame->xwindow,
@@ -168,12 +197,15 @@ meta_window_ensure_frame (MetaWindow *window)
   frame->need_reapply_frame_shape = FALSE;
 
   meta_display_ungrab (window->display);
+
+  meta_prefs_add_listener (prefs_changed_callback, frame);
 }
 
 void
 meta_window_destroy_frame (MetaWindow *window)
 {
   MetaFrame *frame;
+  MetaFrameBorders borders;
 
   if (window->frame == NULL)
     return;
@@ -181,6 +213,10 @@ meta_window_destroy_frame (MetaWindow *window)
   meta_verbose ("Unframing window %s\n", window->desc);
 
   frame = window->frame;
+
+  meta_prefs_remove_listener (prefs_changed_callback, frame);
+
+  meta_frame_calc_borders (frame, &borders);
 
   meta_bell_notify_frame_destroy (frame);
 
@@ -205,8 +241,8 @@ meta_window_destroy_frame (MetaWindow *window)
                     * coordinates here means we'll need to ensure a configure
                     * notify event is sent; see bug 399552.
                     */
-                   window->frame->rect.x,
-                   window->frame->rect.y);
+                   window->frame->rect.x + borders.invisible.left,
+                   window->frame->rect.y + borders.invisible.top);
   meta_error_trap_pop (window->display, FALSE);
 
   meta_ui_destroy_frame_window (window->screen->ui, frame->xwindow);
@@ -215,6 +251,11 @@ meta_window_destroy_frame (MetaWindow *window)
                                     frame->xwindow);
 
   window->frame = NULL;
+  if (window->frame_bounds)
+    {
+      cairo_region_destroy (window->frame_bounds);
+      window->frame_bounds = NULL;
+    }
 
   /* Move keybindings to window instead of frame */
   meta_window_grab_keys (window);
@@ -266,7 +307,7 @@ meta_frame_get_flags (MetaFrame *frame)
   if (META_WINDOW_ALLOWS_VERTICAL_RESIZE (frame->window))
     flags |= META_FRAME_ALLOWS_VERTICAL_RESIZE;
 
-  if (frame->window->has_focus)
+  if (meta_window_appears_focused (frame->window))
     flags |= META_FRAME_HAS_FOCUS;
 
   if (frame->window->shaded)
@@ -300,25 +341,24 @@ meta_frame_get_flags (MetaFrame *frame)
 }
 
 void
-meta_frame_calc_geometry (MetaFrame         *frame,
-                          MetaFrameGeometry *geomp)
+meta_frame_borders_clear (MetaFrameBorders *self)
 {
-  MetaFrameGeometry geom;
-  MetaWindow *window;
-
-  window = frame->window;
-
-  meta_ui_get_frame_geometry (window->screen->ui,
-                              frame->xwindow,
-                              &geom.top_height,
-                              &geom.bottom_height,
-                              &geom.left_width,
-                              &geom.right_width);
-
-  *geomp = geom;
+  self->visible.top = self->invisible.top = self->total.top = 0;
+  self->visible.bottom = self->invisible.bottom = self->total.bottom = 0;
+  self->visible.left = self->invisible.left = self->total.left = 0;
+  self->visible.right = self->invisible.right = self->total.right = 0;
 }
 
-static void
+void
+meta_frame_calc_borders (MetaFrame        *frame,
+                         MetaFrameBorders *borders)
+{
+  meta_ui_get_frame_borders (frame->window->screen->ui,
+                             frame->xwindow,
+                             borders);
+}
+
+static gboolean
 update_shape (MetaFrame *frame)
 {
   if (frame->need_reapply_frame_shape)
@@ -329,10 +369,26 @@ update_shape (MetaFrame *frame)
                                  frame->rect.height,
                                  frame->window->has_shape);
       frame->need_reapply_frame_shape = FALSE;
+      return TRUE;
     }
+  else
+    return FALSE;
 }
 
 void
+meta_frame_get_corner_radiuses (MetaFrame *frame,
+                                float     *top_left,
+                                float     *top_right,
+                                float     *bottom_left,
+                                float     *bottom_right)
+{
+  meta_ui_get_corner_radiuses (frame->window->screen->ui,
+                               frame->xwindow,
+                               top_left, top_right,
+                               bottom_left, bottom_right);
+}
+
+gboolean
 meta_frame_sync_to_window (MetaFrame *frame,
                            int        resize_gravity,
                            gboolean   need_move,
@@ -340,8 +396,7 @@ meta_frame_sync_to_window (MetaFrame *frame,
 {
   if (!(need_move || need_resize))
     {
-      update_shape (frame);
-      return;
+      return update_shape (frame);
     }
 
   meta_topic (META_DEBUG_GEOMETRY,
@@ -354,11 +409,6 @@ meta_frame_sync_to_window (MetaFrame *frame,
   /* set bg to none to avoid flicker */
   if (need_resize)
     {
-      meta_ui_unflicker_frame_bg (frame->window->screen->ui,
-                                  frame->xwindow,
-                                  frame->rect.width,
-                                  frame->rect.height);
-
       /* we need new shape if we're resized */
       frame->need_reapply_frame_shape = TRUE;
     }
@@ -380,9 +430,6 @@ meta_frame_sync_to_window (MetaFrame *frame,
 
   if (need_resize)
     {
-      meta_ui_reset_frame_bg (frame->window->screen->ui,
-                              frame->xwindow);
-
       /* If we're interactively resizing the frame, repaint
        * it immediately so we don't start to lag.
        */
@@ -391,6 +438,16 @@ meta_frame_sync_to_window (MetaFrame *frame,
         meta_ui_repaint_frame (frame->window->screen->ui,
                                frame->xwindow);
     }
+  return need_resize;
+}
+
+cairo_region_t *
+meta_frame_get_frame_bounds (MetaFrame *frame)
+{
+  return meta_ui_get_frame_bounds (frame->window->screen->ui,
+                                   frame->xwindow,
+                                   frame->rect.width,
+                                   frame->rect.height);
 }
 
 void

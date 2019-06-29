@@ -27,6 +27,7 @@
 #include "prefs.h"
 #include "ui.h"
 #include "util.h"
+#include <gdk/gdk.h>
 #include <gio/gio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -95,6 +96,7 @@ static MetaVirtualModifier mouse_button_mods = Mod1Mask;
 static MetaFocusMode focus_mode = META_FOCUS_MODE_CLICK;
 static MetaFocusNewWindows focus_new_windows = META_FOCUS_NEW_WINDOWS_SMART;
 static gboolean raise_on_click = TRUE;
+static gboolean attach_modal_dialogs = FALSE;
 static char* current_theme = NULL;
 static int num_workspaces = 4;
 static MetaWrapStyle wrap_style = META_WRAP_NONE;
@@ -1074,12 +1076,15 @@ meta_prefs_get_focus_new_windows (void)
 }
 
 gboolean
+meta_prefs_get_attach_modal_dialogs (void)
+{
+  return attach_modal_dialogs;
+}
+
+gboolean
 meta_prefs_get_raise_on_click (void)
 {
-  /* Force raise_on_click on for click-to-focus, as requested by Havoc
-   * in #326156.
-   */
-  return raise_on_click || focus_mode == META_FOCUS_MODE_CLICK;
+  return raise_on_click;
 }
 
 const char*
@@ -1097,7 +1102,10 @@ meta_prefs_get_cursor_theme (void)
 int
 meta_prefs_get_cursor_size (void)
 {
-  return cursor_size;
+  GdkWindow *window = gdk_get_default_root_window ();
+  gint scale = gdk_window_get_scale_factor (window);
+
+  return cursor_size * scale;
 }
 
 gboolean
@@ -1256,6 +1264,8 @@ button_function_from_string (const char *str)
 
   if (strcmp (str, "menu") == 0)
     return META_BUTTON_FUNCTION_MENU;
+  else if (strcmp (str, "appmenu") == 0)
+    return META_BUTTON_FUNCTION_APPMENU;
   else if (strcmp (str, "minimize") == 0)
     return META_BUTTON_FUNCTION_MINIMIZE;
   else if (strcmp (str, "maximize") == 0)
@@ -1532,6 +1542,9 @@ meta_preference_to_string (MetaPreference pref)
     case META_PREF_FOCUS_NEW_WINDOWS:
       return "FOCUS_NEW_WINDOWS";
 
+    case META_PREF_ATTACH_MODAL_DIALOGS:
+      return "ATTACH_MODAL_DIALOGS";
+
     case META_PREF_RAISE_ON_CLICK:
       return "RAISE_ON_CLICK";
 
@@ -1667,10 +1680,14 @@ static MetaKeyPref key_bindings[] = {
 static void
 init_bindings (GSettings *settings)
 {
+  GSettingsSchema *schema;
   gchar **list = NULL;
   gchar *str_val = NULL;
 
-  list = g_settings_list_keys (settings);
+  g_object_get (settings, "settings-schema", &schema, NULL);
+  list = g_settings_schema_list_keys (schema);
+  g_settings_schema_unref (schema);
+
   while (*list != NULL)
     {
       str_val = g_settings_get_string (settings, *list);
@@ -1696,10 +1713,14 @@ init_window_bindings (void)
 static void
 init_commands (void)
 {
+  GSettingsSchema *schema;
   gchar **list = NULL;
   gchar *str_val = NULL;
 
-  list = g_settings_list_keys (settings_command);
+  g_object_get (settings_command, "settings-schema", &schema, NULL);
+  list = g_settings_schema_list_keys (schema);
+  g_settings_schema_unref (schema);
+
   while (*list != NULL)
     {
       str_val = g_settings_get_string (settings_command, *list);
@@ -1713,10 +1734,14 @@ init_commands (void)
 static void
 init_workspace_names (void)
 {
+  GSettingsSchema *schema;
   gchar **list = NULL;
   gchar *str_val = NULL;
 
-  list = g_settings_list_keys (settings_workspace_names);
+  g_object_get (settings_workspace_names, "settings-schema", &schema, NULL);
+  list = g_settings_schema_list_keys (schema);
+  g_settings_schema_unref (schema);
+
   while (*list != NULL)
     {
       str_val = g_settings_get_string (settings_workspace_names, *list);
