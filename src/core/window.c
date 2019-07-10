@@ -66,7 +66,7 @@ static void     recalc_window_type        (MetaWindow     *window);
 static void     set_wm_state              (MetaWindow     *window,
                                            int             state);
 static void     set_net_wm_state          (MetaWindow     *window);
-
+static void     set_allowed_actions_hint  (MetaWindow     *window);
 static void     send_configure_notify     (MetaWindow     *window);
 static gboolean process_property_notify   (MetaWindow     *window,
                                            XPropertyEvent *event);
@@ -2469,6 +2469,8 @@ meta_window_minimize (MetaWindow  *window)
                                      queue_calc_showing_func,
                                      NULL);
 
+      set_allowed_actions_hint (window);
+
       if (window->has_focus)
         {
           meta_topic (META_DEBUG_FOCUS,
@@ -2496,6 +2498,8 @@ meta_window_unminimize (MetaWindow  *window)
       meta_window_foreach_transient (window,
                                      queue_calc_showing_func,
                                      NULL);
+
+      set_allowed_actions_hint (window);
     }
 }
 
@@ -2637,6 +2641,7 @@ meta_window_maximize_internal (MetaWindow        *window,
     window->frame->need_reapply_frame_shape = TRUE;
 
   recalc_window_features (window);
+  set_allowed_actions_hint (window);
   set_net_wm_state (window);
 }
 
@@ -2745,6 +2750,8 @@ meta_window_tile (MetaWindow *window)
   /* move_resize with new tiling constraints
    */
   meta_window_queue (window, META_QUEUE_MOVE_RESIZE);
+
+  set_allowed_actions_hint (window);
 }
 
 void
@@ -2753,7 +2760,6 @@ meta_window_untile (MetaWindow *window)
   window->tiled = FALSE;
 
   meta_window_unmaximize (window, META_MAXIMIZE_VERTICAL | META_MAXIMIZE_HORIZONTAL);
-  
 }
 
 static gboolean
@@ -2806,6 +2812,7 @@ meta_window_unmaximize (MetaWindow        *window,
     window->saved_maximize = FALSE;
 
   window->tile_mode = META_TILE_NONE;
+  window->tiled = FALSE;
 
   /* Only do something if the window isn't already maximized in the
    * given direction(s).
@@ -2874,6 +2881,7 @@ meta_window_unmaximize (MetaWindow        *window,
     }
 
   recalc_window_features (window);
+  set_allowed_actions_hint (window);
   set_net_wm_state (window);
 
   meta_compositor_unmaximize_window (window->display->compositor, window);
@@ -2991,6 +2999,7 @@ meta_window_make_fullscreen_internal (MetaWindow  *window)
       meta_stack_thaw (window->screen->stack);
 
       recalc_window_features (window);
+      set_allowed_actions_hint (window);
       set_net_wm_state (window);
     }
 }
@@ -3089,6 +3098,8 @@ meta_window_shade (MetaWindow  *window,
 
       meta_window_queue(window, META_QUEUE_MOVE_RESIZE | META_QUEUE_CALC_SHOWING);
 
+      set_allowed_actions_hint (window);
+
       /* After queuing the calc showing, since _focus flushes it,
        * and we need to focus the frame
        */
@@ -3111,6 +3122,8 @@ meta_window_unshade (MetaWindow  *window,
     {
       window->shaded = FALSE;
       meta_window_queue(window, META_QUEUE_MOVE_RESIZE | META_QUEUE_CALC_SHOWING);
+
+      set_allowed_actions_hint (window);
 
       /* focus the window */
       meta_topic (META_DEBUG_FOCUS,
@@ -6452,17 +6465,24 @@ set_allowed_actions_hint (MetaWindow *window)
   int i;
 
   i = 0;
-  if (window->has_move_func)
+  if (window->has_move_func &&
+      !window->minimized)
     {
       data[i] = window->display->atom__NET_WM_ACTION_MOVE;
       ++i;
     }
-  if (window->has_resize_func)
+  if (window->has_resize_func &&
+      !window->minimized      &&
+      !window->shaded         &&
+      !window->tiled          &&
+      !(window->maximized_horizontally && window->maximized_vertically))
     {
       data[i] = window->display->atom__NET_WM_ACTION_RESIZE;
       ++i;
     }
-  if (window->has_fullscreen_func)
+  if (window->has_fullscreen_func &&
+      !window->minimized          &&
+      !window->shaded)
     {
       data[i] = window->display->atom__NET_WM_ACTION_FULLSCREEN;
       ++i;
@@ -6472,7 +6492,8 @@ set_allowed_actions_hint (MetaWindow *window)
       data[i] = window->display->atom__NET_WM_ACTION_MINIMIZE;
       ++i;
     }
-  if (window->has_shade_func)
+  if (window->has_shade_func &&
+      !window->minimized)
     {
       data[i] = window->display->atom__NET_WM_ACTION_SHADE;
       ++i;
@@ -6480,7 +6501,9 @@ set_allowed_actions_hint (MetaWindow *window)
   /* sticky according to EWMH is different from marco's sticky;
    * marco doesn't support EWMH sticky
    */
-  if (window->has_maximize_func)
+  if (window->has_maximize_func &&
+      !window->minimized        &&
+      !window->shaded)
     {
       data[i] = window->display->atom__NET_WM_ACTION_MAXIMIZE_HORZ;
       ++i;
