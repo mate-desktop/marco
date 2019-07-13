@@ -1,20 +1,10 @@
-themes = [
-  'ClearlooksRe',
-  'eOS',
-  'DustBlue',
-  'WinMe',
-  'Splint-Left',
-  'Dopple',
-  'Spidey-Left',
-  'Splint',
-  'Dopple-Left',
-  'Spidey',
-]
-
-themedir = join_paths(datadir, 'themes')
-foreach theme: themes
-  install_subdir(theme,
-    install_dir : join_paths(themedir, theme, 'metacity-1'),
-    strip_directory : true
-  )
-endforeach
+subdir('ClearlooksRe')
+subdir('eOS')
+subdir('DustBlue')
+subdir('WinMe')
+subdir('Splint-Left')
+subdir('Dopple')
+subdir('Spidey-Left')
+subdir('Splint')
+subdir('Dopple-Left')
+subdir('Spidey')
