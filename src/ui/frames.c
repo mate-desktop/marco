@@ -50,8 +50,7 @@ static void meta_frames_class_init (MetaFramesClass *klass);
 static void meta_frames_init       (MetaFrames      *frames);
 static void meta_frames_destroy    (GtkWidget       *object);
 static void meta_frames_finalize   (GObject         *object);
-static void meta_frames_style_set  (GtkWidget       *widget,
-                                    GtkStyle        *prev_style);
+static void meta_frames_style_updated  (GtkWidget   *widget);
 static void meta_frames_realize    (GtkWidget       *widget);
 static void meta_frames_unrealize  (GtkWidget       *widget);
 
@@ -131,7 +130,7 @@ meta_frames_class_init (MetaFramesClass *class)
   gobject_class->constructor = meta_frames_constructor;
   gobject_class->finalize = meta_frames_finalize;
   widget_class->destroy = meta_frames_destroy;
-  widget_class->style_set = meta_frames_style_set;
+  widget_class->style_updated = meta_frames_style_updated;
   widget_class->realize = meta_frames_realize;
   widget_class->unrealize = meta_frames_unrealize;
 
@@ -483,8 +482,7 @@ reattach_style_func (gpointer key, gpointer value, gpointer data)
 }
 
 static void
-meta_frames_style_set  (GtkWidget *widget,
-                        GtkStyle  *prev_style)
+meta_frames_style_updated (GtkWidget *widget)
 {
   MetaFrames *frames;
 
@@ -496,7 +494,7 @@ meta_frames_style_set  (GtkWidget *widget,
   g_hash_table_foreach (frames->frames,
                         reattach_style_func, frames);
 
-  GTK_WIDGET_CLASS (meta_frames_parent_class)->style_set (widget, prev_style);
+  GTK_WIDGET_CLASS (meta_frames_parent_class)->style_updated (widget);
 }
 
 static void
