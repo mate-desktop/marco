@@ -90,7 +90,7 @@ struct _MetaUIFrame
 
 struct _MetaFrames
 {
-  GtkInvisible parent_instance;
+  GtkWindow parent_instance;
 
   GHashTable *text_heights;
 
@@ -110,7 +110,7 @@ struct _MetaFrames
 
 struct _MetaFramesClass
 {
-  GtkInvisibleClass parent_class;
+  GtkWindowClass parent_class;
 };
 
 GType        meta_frames_get_type               (void) G_GNUC_CONST;
