@@ -42,7 +42,7 @@
 
 #include <cairo-xlib.h>
 
-G_DEFINE_TYPE (MetaFrames, meta_frames, GTK_TYPE_INVISIBLE);
+G_DEFINE_TYPE (MetaFrames, meta_frames, GTK_TYPE_WINDOW);
 
 #define DEFAULT_INNER_BUTTON_BORDER 3
 
@@ -51,8 +51,6 @@ static void meta_frames_init       (MetaFrames      *frames);
 static void meta_frames_destroy    (GtkWidget       *object);
 static void meta_frames_finalize   (GObject         *object);
 static void meta_frames_style_updated  (GtkWidget   *widget);
-static void meta_frames_realize    (GtkWidget       *widget);
-static void meta_frames_unrealize  (GtkWidget       *widget);
 
 static void meta_frames_update_prelit_control (MetaFrames      *frames,
                                                MetaUIFrame     *frame,
@@ -131,8 +129,6 @@ meta_frames_class_init (MetaFramesClass *class)
   gobject_class->finalize = meta_frames_finalize;
   widget_class->destroy = meta_frames_destroy;
   widget_class->style_updated = meta_frames_style_updated;
-  widget_class->realize = meta_frames_realize;
-  widget_class->unrealize = meta_frames_unrealize;
 
   widget_class->draw = meta_frames_draw;
   widget_class->destroy_event = meta_frames_destroy_event;
@@ -620,12 +616,25 @@ MetaFrames*
 meta_frames_new (void)
 {
   GdkScreen *screen;
+  MetaFrames *frames;
 
   screen = gdk_display_get_default_screen (gdk_display_get_default ());
 
-  return g_object_new (META_TYPE_FRAMES,
-                       "screen", screen,
-                       NULL);
+  frames = g_object_new (META_TYPE_FRAMES,
+                         "screen", screen,
+                         "type", GTK_WINDOW_POPUP,
+                         NULL);
+
+  /* Put the window at an arbitrary offscreen location; the one place
+   * it can't be is at -100x-100, since the meta_window_new() will
+   * mistake it for a window created via meta_create_offscreen_window()
+   * and ignore it, and we need this window to get frame-synchronization
+   * messages so that GTK+'s style change handling works.
+   */
+  gtk_window_move (GTK_WINDOW (frames), -200, -200);
+  gtk_window_resize (GTK_WINDOW (frames), 1, 1);
+
+  return frames;
 }
 
 /* In order to use a style with a window it has to be attached to that
@@ -732,20 +741,6 @@ meta_frames_unmanage_window (MetaFrames *frames,
     }
   else
     meta_warning ("Frame 0x%lx not managed, can't unmanage\n", xwindow);
-}
-
-static void
-meta_frames_realize (GtkWidget *widget)
-{
-  if (GTK_WIDGET_CLASS (meta_frames_parent_class)->realize)
-    GTK_WIDGET_CLASS (meta_frames_parent_class)->realize (widget);
-}
-
-static void
-meta_frames_unrealize (GtkWidget *widget)
-{
-  if (GTK_WIDGET_CLASS (meta_frames_parent_class)->unrealize)
-    GTK_WIDGET_CLASS (meta_frames_parent_class)->unrealize (widget);
 }
 
 static MetaUIFrame*
