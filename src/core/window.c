@@ -264,7 +264,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   gulong existing_wm_state;
   gulong event_mask;
   MetaMoveResizeFlags flags;
-#define N_INITIAL_PROPS 19
+#define N_INITIAL_PROPS 20
   Atom initial_props[N_INITIAL_PROPS];
   int i;
   gboolean has_shape;
@@ -623,6 +623,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   initial_props[i++] = XA_WM_TRANSIENT_FOR;
   initial_props[i++] = display->atom__NET_WM_USER_TIME_WINDOW;
   initial_props[i++] = display->atom__NET_WM_FULLSCREEN_MONITORS;
+  initial_props[i++] = display->atom__GTK_THEME_VARIANT;
   g_assert (N_INITIAL_PROPS == i);
 
   meta_window_reload_properties (window, initial_props, N_INITIAL_PROPS, TRUE);
