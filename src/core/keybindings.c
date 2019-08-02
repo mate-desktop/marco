@@ -2533,28 +2533,31 @@ handle_move_to_corner_backend (MetaDisplay    *display,
   MetaRectangle work_area;
   MetaRectangle outer;
   int orig_x, orig_y;
+  int delta_x, delta_y;
   int new_x, new_y;
-  int frame_width, frame_height;
 
   meta_window_get_work_area_all_xineramas (window, &work_area);
   meta_window_get_outer_rect (window, &outer);
   meta_window_get_position (window, &orig_x, &orig_y);
 
-  frame_width = (window->frame ? window->frame->child_x : 0);
-  frame_height = (window->frame ? window->frame->child_y : 0);
-
   if (xchange) {
-    new_x = work_area.x + (to_right ?
-            (work_area.width + frame_width) - outer.width :
-            0);
+    if (to_right) {
+      delta_x = (work_area.x + work_area.width) - (outer.x + outer.width);
+    } else {
+      delta_x = work_area.x - outer.x;
+    }
+    new_x = orig_x + delta_x;
   } else {
     new_x = orig_x;
   }
 
   if (ychange) {
-    new_y = work_area.y + (to_bottom ?
-            (work_area.height + frame_height) - outer.height :
-            0);
+    if (to_bottom) {
+      delta_y = (work_area.y + work_area.height) - (outer.y + outer.height);
+    } else {
+      delta_y = work_area.y - outer.y;
+    }
+    new_y = orig_y + delta_y;
   } else {
     new_y = orig_y;
   }
