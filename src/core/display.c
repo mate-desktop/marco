@@ -3809,7 +3809,7 @@ meta_display_begin_grab_op (MetaDisplay *display,
       meta_screen_ensure_tab_popup (screen,
                                     META_TAB_LIST_GROUP,
                                     META_TAB_SHOW_INSTANTLY);
-
+      break;
     case META_GRAB_OP_KEYBOARD_WORKSPACE_SWITCHING:
     case META_GRAB_OP_KEYBOARD_WORKSPACE_MOVING:
       meta_screen_ensure_workspace_popup (screen);
