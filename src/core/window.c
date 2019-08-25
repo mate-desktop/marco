@@ -1593,7 +1593,6 @@ idle_calc_showing (gpointer data)
   GSList *should_show;
   GSList *should_hide;
   GSList *unplaced;
-  GSList *displays;
   MetaWindow *first_window;
   guint queue_index = GPOINTER_TO_INT (data);
 
@@ -1619,7 +1618,6 @@ idle_calc_showing (gpointer data)
   should_show = NULL;
   should_hide = NULL;
   unplaced = NULL;
-  displays = NULL;
 
   tmp = copy;
   while (tmp != NULL)
@@ -1728,7 +1726,6 @@ idle_calc_showing (gpointer data)
   g_slist_free (unplaced);
   g_slist_free (should_show);
   g_slist_free (should_hide);
-  g_slist_free (displays);
 
   destroying_windows_disallowed -= 1;
 
