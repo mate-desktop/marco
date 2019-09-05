@@ -164,16 +164,10 @@ tab_entry_new (const MetaTabEntry *entry,
     {
       gchar *str;
       gchar *tmp;
-      gchar *formatter = "%s";
 
       str = meta_g_utf8_strndup (entry->title, 4096);
 
-      if (entry->hidden)
-        {
-          formatter = "[%s]";
-        }
-
-      tmp = g_markup_printf_escaped (formatter, str);
+      tmp = g_markup_printf_escaped (entry->hidden ? "[%s]" : "%s", str);
       g_free (str);
       str = tmp;
 
