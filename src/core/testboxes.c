@@ -31,7 +31,7 @@
 #define NUM_RANDOM_RUNS 10000
 
 static void
-init_random_ness ()
+init_random_ness (void)
 {
   srand(time(NULL));
 }
@@ -100,7 +100,7 @@ new_xinerama_edge (int x, int y, int width, int height, int side_type)
 }
 
 static void
-test_area ()
+test_area (void)
 {
   MetaRectangle temp;
   int i;
@@ -117,7 +117,7 @@ test_area ()
 }
 
 static void
-test_intersect ()
+test_intersect (void)
 {
   MetaRectangle a = {100, 200,  50,  40};
   MetaRectangle b = {  0,  50, 110, 152};
@@ -145,7 +145,7 @@ test_intersect ()
 }
 
 static void
-test_equal ()
+test_equal (void)
 {
   MetaRectangle a = {10, 12, 4, 18};
   MetaRectangle b = a;
@@ -164,7 +164,7 @@ test_equal ()
 }
 
 static void
-test_overlap_funcs ()
+test_overlap_funcs (void)
 {
   MetaRectangle temp1, temp2;
   int i;
@@ -187,7 +187,7 @@ test_overlap_funcs ()
 }
 
 static void
-test_basic_fitting ()
+test_basic_fitting (void)
 {
   MetaRectangle temp1, temp2, temp3;
   int i;
@@ -586,7 +586,7 @@ verify_lists_are_equal (GList *code, GList *answer)
 }
 
 static void
-test_regions_okay ()
+test_regions_okay (void)
 {
   GList* region;
   GList* tmp;
@@ -678,7 +678,7 @@ test_regions_okay ()
 }
 
 static void
-test_region_fitting ()
+test_region_fitting (void)
 {
   GList* region;
   MetaRectangle rect;
@@ -722,7 +722,7 @@ test_region_fitting ()
 }
 
 static void
-test_clamping_to_region ()
+test_clamping_to_region (void)
 {
   GList* region;
   MetaRectangle rect;
@@ -839,7 +839,7 @@ rect_overlaps_region (const GList         *spanning_rects,
 gboolean time_to_print = FALSE;
 
 static void
-test_clipping_to_region ()
+test_clipping_to_region (void)
 {
   GList* region;
   MetaRectangle rect, temp;
@@ -901,7 +901,7 @@ test_clipping_to_region ()
 }
 
 static void
-test_shoving_into_region ()
+test_shoving_into_region (void)
 {
   GList* region;
   MetaRectangle rect, temp;
@@ -1018,7 +1018,7 @@ verify_edge_lists_are_equal (GList *code, GList *answer)
 }
 
 static void
-test_find_onscreen_edges ()
+test_find_onscreen_edges (void)
 {
   GList* edges;
   GList* tmp;
@@ -1151,7 +1151,7 @@ test_find_onscreen_edges ()
 }
 
 static void
-test_find_nonintersected_xinerama_edges ()
+test_find_nonintersected_xinerama_edges (void)
 {
   GList* edges;
   GList* tmp;
@@ -1240,7 +1240,7 @@ test_find_nonintersected_xinerama_edges ()
 }
 
 static void
-test_gravity_resize ()
+test_gravity_resize (void)
 {
   MetaRectangle oldrect, rect, temp;
 
@@ -1341,7 +1341,7 @@ test_gravity_resize ()
 }
 
 static void
-test_find_closest_point_to_line ()
+test_find_closest_point_to_line (void)
 {
   double x1, y1, x2, y2, px, py, rx, ry;
   double answer_x, answer_y;
@@ -1393,7 +1393,7 @@ test_find_closest_point_to_line ()
 }
 
 int
-main()
+main(void)
 {
   init_random_ness ();
   test_area ();
