@@ -62,10 +62,7 @@ void
 meta_window_ensure_frame (MetaWindow *window)
 {
   MetaFrame *frame;
-  MetaScreen *screen;
   XSetWindowAttributes attrs;
-  XVisualInfo visual_info;
-  Visual *visual;
   int status;
 
   if (window->frame)
@@ -90,47 +87,14 @@ meta_window_ensure_frame (MetaWindow *window)
   frame->need_reapply_frame_shape = TRUE;
   frame->is_flashing = FALSE;
 
-  meta_verbose ("Framing window %s: visual %s default, depth %d default depth %d\n",
-                window->desc,
-                XVisualIDFromVisual (window->xvisual) ==
-                XVisualIDFromVisual (window->screen->default_xvisual) ?
-                "is" : "is not",
-                window->depth, window->screen->default_depth);
   meta_verbose ("Frame geometry %d,%d  %dx%d\n",
                 frame->rect.x, frame->rect.y,
                 frame->rect.width, frame->rect.height);
 
-  /* Default depth/visual handles clients with weird visuals; they can
-   * always be children of the root depth/visual obviously, but
-   * e.g. DRI games can't be children of a parent that has the same
-   * visual as the client. NULL means default visual.
-   *
-   * We look for an ARGB visual if we can find one, otherwise use
-   * the default of NULL.
-   */
-
-  screen = meta_window_get_screen (window);
-  status = XMatchVisualInfo (window->display->xdisplay,
-                             XScreenNumberOfScreen (screen->xscreen),
-                             32, TrueColor,
-                             &visual_info);
-
-  if (!status)
-    {
-      /* Special case for depth 32 windows (assumed to be ARGB),
-       * we use the window's visual. Otherwise we just use the system visual.
-       */
-      if (window->depth == 32)
-        visual = window->xvisual;
-      else
-        visual = NULL;
-    }
-  else
-    visual = visual_info.visual;
 
   frame->xwindow = meta_ui_create_frame_window (window->screen->ui,
                                                 window->display->xdisplay,
-                                                visual,
+                                                window->xvisual,
                                                 frame->rect.x,
                                                 frame->rect.y,
 						frame->rect.width,
