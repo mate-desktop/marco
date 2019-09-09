@@ -56,6 +56,7 @@ test_args = [
   #'-Wformat=2',
   #'-Wformat-nonliteral',
   #'-Wformat-security',
+  ['-Werror=format-security', '-Werror=format=2'],
   #'-Wformat-signedness',
   #'-Wignored-qualifiers',
   #'-Wimplicit-function-declaration',
@@ -90,13 +91,13 @@ test_args = [
   #'-Wunused-but-set-variable',
   #'-Wwrite-strings'
   '-Wall',
-  '-ansi',
+  #'-ansi',
   ]
 
 cc = meson.get_compiler('c')
 
 foreach arg: test_args
-  if cc.has_argument(arg)
+  if cc.has_multi_arguments(arg)
     add_project_arguments(arg, language : 'c')
   endif
 endforeach
