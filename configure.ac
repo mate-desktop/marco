@@ -15,6 +15,7 @@ AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([subdir-objects no-dist-gzip dist-xz check-news])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AM_MAINTAINER_MODE
+AX_CHECK_ENABLE_DEBUG()
 
 dnl **************************************************************************
 dnl Library version information
@@ -54,67 +55,15 @@ AC_CHECK_SIZEOF(__int64)
 AC_C_BIGENDIAN
 
 #### Warnings
-
-changequote(,)dnl
-if test "x$GCC" = "xyes"; then
-  case " $CFLAGS " in
-  *[\ \	]-Wall[\ \	]*) ;;
-  *) CFLAGS="$CFLAGS -Wall" ;;
-  esac
-
-#  case " $CFLAGS " in
-#  *[\ \	]-Wshadow[\ \	]*) ;;
-#  *) CFLAGS="$CFLAGS -Wshadow" ;;
-#  esac
-
-  case " $CFLAGS " in
-  *[\ \	]-Wchar-subscripts[\ \	]*) ;;
-  *) CFLAGS="$CFLAGS -Wchar-subscripts" ;;
-  esac
-
-  case " $CFLAGS " in
-  *[\ \	]-Wmissing-declarations[\ \	]*) ;;
-  *) CFLAGS="$CFLAGS -Wmissing-declarations" ;;
-  esac
-
-  case " $CFLAGS " in
-  *[\ \	]-Wmissing-prototypes[\ \	]*) ;;
-  *) CFLAGS="$CFLAGS -Wmissing-prototypes" ;;
-  esac
-
-  case " $CFLAGS " in
-  *[\ \	]-Wnested-externs[\ \	]*) ;;
-  *) CFLAGS="$CFLAGS -Wnested-externs" ;;
-  esac
-
-  case " $CFLAGS " in
-  *[\ \	]-Wpointer-arith[\ \	]*) ;;
-  *) CFLAGS="$CFLAGS -Wpointer-arith" ;;
-  esac
-
-  case " $CFLAGS " in
-  *[\ \	]-Wcast-align[\ \	]*) ;;
-  *) CFLAGS="$CFLAGS -Wcast-align" ;;
-  esac
-
-  case " $CFLAGS " in
-  *[\ \	]-Wsign-compare[\ \	]*) ;;
-  *) CFLAGS="$CFLAGS -Wsign-compare" ;;
-  esac
-
-  if test "x$enable_ansi" = "xyes"; then
-    case " $CFLAGS " in
-    *[\ \	]-ansi[\ \	]*) ;;
-    *) CFLAGS="$CFLAGS -ansi" ;;
-    esac
-
-    case " $CFLAGS " in
-    *[\ \	]-pedantic[\ \	]*) ;;
-    *) CFLAGS="$CFLAGS -pedantic" ;;
-    esac
-  fi
+AX_APPEND_COMPILE_FLAGS([-Wall -Wcast-align -Wchar-subscripts -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wsign-compare -Wshadow], [CFLAGS])
+AC_ARG_ENABLE(more-warnings,
+  AC_HELP_STRING([--enable-more-warnings], [Maximum compiler warnings]),
+    set_more_warnings="$enableval",
+    set_more_warnings=no
+)
+if test "$set_more_warnings" != "no"; then
+  AX_APPEND_COMPILE_FLAGS([-Wextra], [CFLAGS])
 fi
-changequote([,])dnl
 
 GIO_MIN_VERSION=2.25.10
 GTK_MIN_VERSION=3.22.0
@@ -481,21 +430,6 @@ AC_SUBST(GDK_PIXBUF_CSOURCE)
 AC_PATH_PROG(ZENITY, zenity, no)
 if test x"$ZENITY" = xno; then
   AC_MSG_ERROR([zenity not found in your path - needed for dialogs])
-fi
-
-AC_ARG_ENABLE(debug,
-	[  --enable-debug		enable debugging],,
-	enable_debug=no)
-if test "x$enable_debug" = "xyes"; then
-	CFLAGS="$CFLAGS -g -O"
-fi
-
-# Warnings are there for a reason
-if test "x$GCC" = "xyes"; then
-  CFLAGS="$CFLAGS -Wall -ansi"
-  if test "x$enable_maintainer_mode" = "xyes"; then
-    CFLAGS="$CFLAGS"
-  fi
 fi
 
 # Use yelp-tools:

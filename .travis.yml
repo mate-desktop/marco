@@ -64,6 +64,7 @@ env:
 requires:
   archlinux:
     # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/marco/trunk/PKGBUILD
+    - autoconf-archive
     - clang
     - gcc
     - git
@@ -83,6 +84,7 @@ requires:
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/marco
+    - autoconf-archive
     - autopoint
     - clang
     - clang-tools
@@ -117,6 +119,7 @@ requires:
 
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/marco.git
+    - autoconf-archive
     - clang-analyzer
     - clang
     - cppcheck-htmlreport
@@ -139,6 +142,7 @@ requires:
     - zenity
 
   ubuntu:
+    - autoconf-archive
     - autopoint
     - clang
     - clang-tools
@@ -170,7 +174,7 @@ requires:
     - zenity
 
 variables:
-  - CFLAGS="-Wall -Werror=format-security"
+  - CFLAGS="-Wall -Wcast-align -Wchar-subscripts -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wsign-compare -Wshadow"
   - 'CHECKERS="
     -enable-checker deadcode.DeadStores
     -enable-checker alpha.deadcode.UnreachableCode
