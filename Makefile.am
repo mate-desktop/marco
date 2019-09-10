@@ -3,7 +3,7 @@ SUBDIRS = po src doc
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-EXTRA_DIST = its autogen.sh HACKING rationales.txt
+EXTRA_DIST = its autogen.sh HACKING
 
 DISTCLEANFILES = po/stamp-it
 
