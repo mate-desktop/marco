@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Benjamin Perez Carrillo <benperezc@gmail.com>, 2019
-# Fito JB, 2019
+# Adolfo Jayme-Barrientos, 2019
 # Lluís Tusquellas <lutusq@gmail.com>, 2019
 # ebray187 <ebray187@gmail.com>, 2019
 # Wolfgang Ulbrich <mate@raveit.de>, 2019
@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"POT-Creation-Date: 2019-06-16 18:37+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
@@ -482,7 +482,8 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:5
 msgid "Whether to display preselected tab window border"
-msgstr "Si se debe mostrar el borde de la ventana de pestaña preseleccionada"
+msgstr ""
+"Si se debe mostrar el borde de la ventana de la pestaña preseleccionada"
 
 #: ../src/org.mate.marco.gschema.xml.h:6
 msgid ""
@@ -596,7 +597,7 @@ msgstr ""
 "motivo. Si es un desarrollador de aplicaciones y un usuario se queja de que "
 "su aplicación no funciona con este ajuste desactivado, dígale que la culpa "
 "es suya por desconfigurar el gestor de ventanas y que debe activar esta "
-"opción de nuevo o sufrir el error que detectó."
+"opción de nuevo o sufrir el error que ha detectado."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -824,9 +825,9 @@ msgstr ""
 "Actualmente hay dos valores válidos, «fullscreen» —el cual produce un "
 "parpadeo blanco/negro— y «frame_flash» —el cual hace que que parpadee la "
 "barra de título de una aplicación que ha enviado una señal de campana. Si la"
-" aplicación que envió la campana es desconocida (como ocurre usualmente en "
-"el caso de del «beep» predeterminado del sistema), la barra de título de la "
-"ventana enfocada en ese momento parpadeará."
+" aplicación que ha enviado la campana es desconocida (como ocurre usualmente"
+" en el caso de del «beep» predeterminado del sistema), la barra de título de"
+" la ventana enfocada en ese momento parpadeará."
 
 #: ../src/org.mate.marco.gschema.xml.h:41
 msgid "Compositing Manager"
@@ -869,7 +870,7 @@ msgstr ""
 "reducción de la facilidad de uso para muchos usuarios, pero puede permitir "
 "que las aplicaciones heredadas sigan funcionando y también puede ser útil "
 "para que los servidores de terminal mejoren su rendimiento. No obstante, la "
-"función de rejilla se desactiva cuando se activan las funciones de "
+"función de rejilla se desactiva cuando se activan las características de "
 "accesibilidad."
 
 #: ../src/org.mate.marco.gschema.xml.h:47
@@ -901,8 +902,8 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr ""
-"Desactivar características antiguas que son requeridas por aplicaciones "
-"antiguas o rotas"
+"Desactivar características defectuosas que requieren aplicaciones antiguas o"
+" rotas"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -911,11 +912,11 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
-"Algunas aplicaciones hacen caso omiso de las especificaciones por lo que se "
-"pueden producir fallos en el gestor de ventanas. Esta opción hace que Marco "
-"se comporte de un modo rigurosamente correcto, lo que proporciona una "
-"interfaz de usuario más consistente, siempre que no se necesite ejecutar "
-"aplicaciones que se comportan incorrectamente."
+"Algunas aplicaciones hacen caso omiso de las especificaciones de manera que "
+"se producen fallos en el gestor de ventanas. Esta opción hace que Marco se "
+"comporte de un modo estricto, lo que proporciona una interfaz de usuario más"
+" coherente, siempre que no sea necesario ejecutar aplicaciones que se "
+"comporten incorrectamente."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -940,10 +941,10 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
-"Si se ha activado, al soltar las ventanas en los bordes de la pantalla las "
+"Si se activa, al soltar las ventanas en los bordes de la pantalla las "
 "maximiza verticalmente y cambia su tamaño horizontalmente para cubrir la "
-"mitad del área disponible. Al arrastrar y soltar al borde superior maximiza "
-"la ventana."
+"mitad del área disponible. Al arrastrar y soltar al borde superior, maximiza"
+" la ventana."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
@@ -956,9 +957,9 @@ msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
-"Si se ha activado, arrastrar una ventana al borde superior de la pantalla y "
-"soltarla la maximizará. Solo funciona cuando está activado el permitir poner"
-" las ventanas en mosaico."
+"Si se activa, arrastrar una ventana al borde superior de la pantalla y "
+"soltarla la maximizará. Solo funciona si se activa la opciónde poner las "
+"ventanas en mosaico."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -1161,7 +1162,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "Evento de campana"
 
-#: ../src/core/core.c:211
+#: ../src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Solicitud de información de ventana desconocida: %d"
@@ -1210,7 +1211,7 @@ msgid ""
 "binding\n"
 msgstr ""
 "Otro programa ya está usando la tecla %s con las teclas modificadoras %x en "
-"una combinación de teclas\n"
+"una combinación\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
@@ -1247,7 +1248,7 @@ msgstr "Nombre de la nueva área de trabajo:"
 
 #: ../src/core/keybindings.c:3680
 msgid "OK"
-msgstr "De acuerdo"
+msgstr "Aceptar"
 
 #: ../src/core/keybindings.c:3680
 msgid "Cancel"
@@ -1345,14 +1346,14 @@ msgstr ""
 "Los arreglos para aplicaciones rotas se han desactivado. Algunas "
 "aplicaciones podrían no comportarse correctamente.\n"
 
-#: ../src/core/prefs.c:1143
+#: ../src/core/prefs.c:1140
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 "No se ha podido analizar la descripción de la tipografía «%s» de la clave de"
 " GSettings %s\n"
 
-#: ../src/core/prefs.c:1205
+#: ../src/core/prefs.c:1202
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1361,7 +1362,7 @@ msgstr ""
 "«%s» encontrado en la base de datos de configuración no es un valor válido "
 "para la tecla modificador del botón del ratón\n"
 
-#: ../src/core/prefs.c:1781
+#: ../src/core/prefs.c:1778
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1370,7 +1371,7 @@ msgstr ""
 "«%s» encontrado en la base de datos de configuración no es un valor válido "
 "para la combinación de teclas «%s»\n"
 
-#: ../src/core/prefs.c:2084
+#: ../src/core/prefs.c:2081
 #, c-format
 msgid "Workspace %d"
 msgstr "Área de trabajo %d"
@@ -1435,7 +1436,7 @@ msgstr "No se ha podido interpretar el archivo de sesión guardado: %s\n"
 #, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr ""
-"El atributo <marco_session> ha sido visto pero ya tenemos el ID de la sesión"
+"Se ha visto el atributo <marco_session> pero ya tenemos el ID de la sesión"
 
 #: ../src/core/session.c:1197 ../src/core/session.c:1272
 #: ../src/core/session.c:1304 ../src/core/session.c:1376
@@ -1505,7 +1506,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5932
+#: ../src/core/window.c:6000
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1520,14 +1521,14 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6497
+#: ../src/core/window.c:6565
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
 msgstr ""
 "La ventana %s ha establecido la propiedad MWM indicando que no es "
-"redimensionable, pero configuró el tamaño mínimo a %d x %d y el tamaño "
+"redimensionable, pero ha configurado el tamaño mínimo a %d x %d y el tamaño "
 "máximo a %d x %d ; esto no tiene mucho sentido.\n"
 
 #: ../src/core/window-props.c:306
@@ -1601,51 +1602,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "Uso: %s\n"
 
-#: ../src/ui/frames.c:1147
+#: ../src/ui/frames.c:1345
 msgid "Close Window"
 msgstr "Cerrar ventana"
 
-#: ../src/ui/frames.c:1150
+#: ../src/ui/frames.c:1348
 msgid "Window Menu"
 msgstr "Menú de la ventana"
 
-#: ../src/ui/frames.c:1153
+#: ../src/ui/frames.c:1351
 msgid "Window App Menu"
 msgstr "Menú de aplicación de la ventana"
 
-#: ../src/ui/frames.c:1156
+#: ../src/ui/frames.c:1354
 msgid "Minimize Window"
 msgstr "Minimizar la ventana"
 
-#: ../src/ui/frames.c:1159
+#: ../src/ui/frames.c:1357
 msgid "Maximize Window"
 msgstr "Maximizar la ventana"
 
-#: ../src/ui/frames.c:1162
+#: ../src/ui/frames.c:1360
 msgid "Restore Window"
 msgstr "Restaurar la ventana"
 
-#: ../src/ui/frames.c:1165
+#: ../src/ui/frames.c:1363
 msgid "Roll Up Window"
 msgstr "Enrollar la ventana"
 
-#: ../src/ui/frames.c:1168
+#: ../src/ui/frames.c:1366
 msgid "Unroll Window"
 msgstr "Desenrollar la ventana"
 
-#: ../src/ui/frames.c:1171
+#: ../src/ui/frames.c:1369
 msgid "Keep Window On Top"
 msgstr "Mantener la ventana encima"
 
-#: ../src/ui/frames.c:1174
+#: ../src/ui/frames.c:1372
 msgid "Remove Window From Top"
 msgstr "Eliminar ventana de encima"
 
-#: ../src/ui/frames.c:1177
+#: ../src/ui/frames.c:1375
 msgid "Always On Visible Workspace"
 msgstr "Siempre en el área de trabajo visible"
 
-#: ../src/ui/frames.c:1180
+#: ../src/ui/frames.c:1378
 msgid "Put Window On Only One Workspace"
 msgstr "Poner la ventana solo en un área de trabajo"
 
@@ -1703,7 +1704,7 @@ msgstr "Siempre en el área de trabajo _visible"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:88
 msgid "_Only on This Workspace"
-msgstr "_Sólo en esta área de trabajo"
+msgstr "_Solo en esta área de trabajo"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: ../src/ui/menu.c:90
@@ -1837,49 +1838,49 @@ msgstr "Mod5"
 msgid "%d x %d"
 msgstr "%d × %d"
 
-#: ../src/ui/theme.c:257
+#: ../src/ui/theme.c:258
 msgid "top"
 msgstr "superior"
 
-#: ../src/ui/theme.c:259
+#: ../src/ui/theme.c:260
 msgid "bottom"
 msgstr "inferior"
 
-#: ../src/ui/theme.c:261
+#: ../src/ui/theme.c:262
 msgid "left"
 msgstr "izquierda"
 
-#: ../src/ui/theme.c:263
+#: ../src/ui/theme.c:264
 msgid "right"
 msgstr "derecha"
 
-#: ../src/ui/theme.c:290
+#: ../src/ui/theme.c:291
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "La geometría del marco no especifica la dimensión «%s»"
 
-#: ../src/ui/theme.c:309
+#: ../src/ui/theme.c:310
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr ""
 "La geometría del marco no especifica la dimensión «%s» para el borde «%s»"
 
-#: ../src/ui/theme.c:346
+#: ../src/ui/theme.c:347
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "La proporción del botón %g no es razonable"
 
-#: ../src/ui/theme.c:358
+#: ../src/ui/theme.c:359
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "La geometría del marco no especifica el tamaño de los botones"
 
-#: ../src/ui/theme.c:1065
+#: ../src/ui/theme.c:1121
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Los degradados deben tener al menos dos colores"
 
-#: ../src/ui/theme.c:1203
+#: ../src/ui/theme.c:1259
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
@@ -1889,7 +1890,7 @@ msgstr ""
 "color y el respaldo entre paréntesis, por ejemplo, gtk:custom(foo,bar); no "
 "se ha podido interpretar «%s»"
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1275
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
@@ -1898,7 +1899,7 @@ msgstr ""
 "Carácter no válido «%c» en el parámetro color_name de gtk:custom, solo "
 "A-Za-z0-9-_ son válidos"
 
-#: ../src/ui/theme.c:1233
+#: ../src/ui/theme.c:1289
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
@@ -1907,7 +1908,7 @@ msgstr ""
 "El formato de gtk:custom es «gtk: custom (color_name, fallback)», «%s» no se"
 " ajusta al formato"
 
-#: ../src/ui/theme.c:1277
+#: ../src/ui/theme.c:1333
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1917,7 +1918,7 @@ msgstr ""
 "ejemplo. gtk:fg[NORMAL] donde NORMAL es el estado ; no se ha podido "
 "interpretar «%s»"
 
-#: ../src/ui/theme.c:1291
+#: ../src/ui/theme.c:1347
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1927,18 +1928,18 @@ msgstr ""
 " estado, por ejemplo gtk:fg[NORMAL] donde NORMAL es el estado ; no se ha "
 "podido interpretar «%s»"
 
-#: ../src/ui/theme.c:1302
+#: ../src/ui/theme.c:1358
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "No se entiende el estado «%s» en la especificación del color"
 
-#: ../src/ui/theme.c:1315
+#: ../src/ui/theme.c:1371
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr ""
 "No se entiende el componente de color «%s» en la especificación del color"
 
-#: ../src/ui/theme.c:1343
+#: ../src/ui/theme.c:1399
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1947,48 +1948,48 @@ msgstr ""
 "El formato de la mezcla es «blend/bg_color/fg_color/alpha», «%s» no se "
 "ajusta al formato"
 
-#: ../src/ui/theme.c:1354
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "No se ha podido interpretar el valor alfa «%s» en el color mezclado"
 
-#: ../src/ui/theme.c:1364
+#: ../src/ui/theme.c:1420
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "El valor alfa «%s» en el color mezclado no está entre 0.0 y 1.0"
 
-#: ../src/ui/theme.c:1410
+#: ../src/ui/theme.c:1466
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr ""
 "El formato de sombreado es «shade/base_color/factor», «%s» no se ajusta al "
 "formato"
 
-#: ../src/ui/theme.c:1421
+#: ../src/ui/theme.c:1477
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr ""
 "No se ha podido interpretar el factor de sombreado «%s» en el color del "
 "sombreado"
 
-#: ../src/ui/theme.c:1431
+#: ../src/ui/theme.c:1487
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "El factor de sombreado «%s» en el color sombreado es negativo"
 
-#: ../src/ui/theme.c:1460
+#: ../src/ui/theme.c:1516
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "No se ha podido interpretar el color «%s»"
 
-#: ../src/ui/theme.c:1809
+#: ../src/ui/theme.c:1865
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr ""
 "La expresión de coordenadas contenía un carácter «%s» en cual no está "
 "permitido"
 
-#: ../src/ui/theme.c:1836
+#: ../src/ui/theme.c:1892
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1997,14 +1998,14 @@ msgstr ""
 "La expresión de coordenadas contenía un número de coma flotante «%s» en cual"
 " no ha podido ser analizado"
 
-#: ../src/ui/theme.c:1850
+#: ../src/ui/theme.c:1906
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr ""
 "La expresión de coordenadas contenía un entero «%s» que no ha podido ser "
 "analizado"
 
-#: ../src/ui/theme.c:1972
+#: ../src/ui/theme.c:2028
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
@@ -2013,44 +2014,44 @@ msgstr ""
 "La expresión de coordenadas contenía un operador no válido al inicio de su "
 "texto: «%s»"
 
-#: ../src/ui/theme.c:2029
+#: ../src/ui/theme.c:2085
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "La expresión de coordenadas estaba vacía o no fue entendida"
 
-#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
+#: ../src/ui/theme.c:2196 ../src/ui/theme.c:2206 ../src/ui/theme.c:2240
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "La expresión de coordenadas resultó en un error de división por cero"
 
-#: ../src/ui/theme.c:2192
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr ""
-"La expresión de coordenadas intentó usar un operador mod con un número de "
-"coma flotante"
+"La expresión de coordenadas intenta usar un operdor de modo con un número de"
+" coma flotante"
 
-#: ../src/ui/theme.c:2248
+#: ../src/ui/theme.c:2304
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr ""
 "La expresión de coordenadas tiene un operador «%s» donde se esperaba un "
 "operando"
 
-#: ../src/ui/theme.c:2257
+#: ../src/ui/theme.c:2313
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr ""
 "La expresión de coordenadas tiene un operando donde se esperaba un operador"
 
-#: ../src/ui/theme.c:2265
+#: ../src/ui/theme.c:2321
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr ""
 "La expresión de coordenadas termina con una operador en vez de un operando"
 
-#: ../src/ui/theme.c:2275
+#: ../src/ui/theme.c:2331
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -2059,44 +2060,44 @@ msgstr ""
 "La expresión de coordenadas tiene el operador «%c» seguido del operador «%c»"
 " sin un operando entre ellos"
 
-#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
+#: ../src/ui/theme.c:2482 ../src/ui/theme.c:2527
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr ""
 "La expresión de coordenadas tenía una variable o constante desconocida «%s»"
 
-#: ../src/ui/theme.c:2525
+#: ../src/ui/theme.c:2581
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "El analizador de la expresión de coordenadas desbordó su búfer."
 
-#: ../src/ui/theme.c:2554
+#: ../src/ui/theme.c:2610
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr ""
-"La expresión de coordenadas tenía un paréntesis cerrado sin un paréntesis "
-"abierto"
+"La expresión de coordenadas tiene un paréntesis de cierre sin un paréntesis "
+"de apertura"
 
-#: ../src/ui/theme.c:2618
+#: ../src/ui/theme.c:2674
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr ""
-"La expresión de coordenadas tenía un paréntesis abierto sin un paréntesis "
-"cerrado"
+"La expresión de coordenadas tiene un paréntesis de apertura sin un "
+"paréntesis de cierre"
 
-#: ../src/ui/theme.c:2629
+#: ../src/ui/theme.c:2685
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr ""
 "La expresión de coordenadas no parece tener ni operadores ni operandos"
 
-#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
+#: ../src/ui/theme.c:2889 ../src/ui/theme.c:2909 ../src/ui/theme.c:2929
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "El tema contenía una expresión que ha resultado en un error: %s\n"
 
-#: ../src/ui/theme.c:4556
+#: ../src/ui/theme.c:4593
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2105,23 +2106,23 @@ msgstr ""
 "<button function=«%s» state=«%s» draw_ops=\"whatever\"/> debe ser "
 "especificado para este estilo de marco"
 
-#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
+#: ../src/ui/theme.c:5129 ../src/ui/theme.c:5154
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Falta <frame state=«%s» resize=«%s» focus=«%s» style=\"whatever\"/>"
 
-#: ../src/ui/theme.c:5158
+#: ../src/ui/theme.c:5198
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "No se ha podido cargar el tema «%s»: %s\n"
 
-#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
-#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
+#: ../src/ui/theme.c:5330 ../src/ui/theme.c:5337 ../src/ui/theme.c:5344
+#: ../src/ui/theme.c:5351 ../src/ui/theme.c:5358
 #, c-format
 msgid "No <%s> set for theme \"%s\""
-msgstr "No se configuró <%s> para el tema «%s»"
+msgstr "No se ha configurado <%s> para el tema «%s»"
 
-#: ../src/ui/theme.c:5326
+#: ../src/ui/theme.c:5366
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2130,14 +2131,14 @@ msgstr ""
 "No hay un estilo de marco para el tipo de ventana «%s» en el tema «%s», "
 "añada un elemento <window type=«%s» style_set=\"whatever\"/>"
 
-#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
+#: ../src/ui/theme.c:5781 ../src/ui/theme.c:5843 ../src/ui/theme.c:5906
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Las constantes definidas por el usuario deben comenzar con una letra "
 "mayúscula; «%s» no lo hace"
 
-#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
+#: ../src/ui/theme.c:5789 ../src/ui/theme.c:5851 ../src/ui/theme.c:5914
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "La constante «%s» ya ha sido definida"
@@ -2225,7 +2226,7 @@ msgstr "<%s> nombre «%s» usado una segunda vez"
 #: ../src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
-msgstr "El <%s> padre «%s» no ha sido definido"
+msgstr "El elemento superior «%s» de <%s> no ha sido definido"
 
 #: ../src/ui/theme-parser.c:1161
 #, c-format
@@ -2236,7 +2237,8 @@ msgstr "La <%s> geometría «%s» no ha sido definida"
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr ""
-"<%s> debe especificar o una geometría o un padre que tenga una geometría"
+"<%s> debe especificar una geometría o un elemento superior que tenga una "
+"geometría"
 
 #: ../src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
@@ -2399,15 +2401,15 @@ msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
 msgstr ""
-"No debería figurar el atributo «resize» en el elemento <%s> para los estados"
-" de maximizar/enrollar"
+"El atributo «resize» no debe figurar en el elemento <%s> para los estados "
+"maximizar/enrollar"
 
 #: ../src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr ""
-"No debería tener un atributo «resize» en el elemento <%s> para los estados "
-"maximizados."
+"El atributo «resize» no debe figurar en el elemento <%s> para los estados "
+"maximizados"
 
 #: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
 #, c-format
@@ -2631,7 +2633,7 @@ msgstr "Banco de pruebas"
 msgid "Window Title Goes Here"
 msgstr "El título de la ventana va aquí"
 
-#: ../src/ui/theme-viewer.c:1097
+#: ../src/ui/theme-viewer.c:1094
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

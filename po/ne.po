@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"POT-Creation-Date: 2019-06-16 18:37+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Nepali (https://www.transifex.com/mate/teams/13566/ne/)\n"
@@ -1018,7 +1018,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "घण्टी बजेको घटना"
 
-#: ../src/core/core.c:211
+#: ../src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "अज्ञात सञ्झ्याल सूचना अनुरोध: %d"
@@ -1191,12 +1191,12 @@ msgstr ""
 "विच्छेद अनुप्रयोगका लागि वर्कअराउन्ड अक्षम पारियो । केही अनुप्रयोगले उचित "
 "रूपमा कार्य नगर्न सक्दछन् ।\n"
 
-#: ../src/core/prefs.c:1143
+#: ../src/core/prefs.c:1140
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1205
+#: ../src/core/prefs.c:1202
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1205,7 +1205,7 @@ msgstr ""
 "माउस बटन परिमार्जकका लागि कन्फिगरेसन डाटाबेसमा फेला परेको \"%s\" मान्य मान "
 "होइन\n"
 
-#: ../src/core/prefs.c:1781
+#: ../src/core/prefs.c:1778
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1214,7 +1214,7 @@ msgstr ""
 "कन्फिगरेसन डाटाबेसमा भेटिएको \"%s\" कुञ्जी बाइन्डिङ \"%s\" का लागि मान्य मान"
 " होइन\n"
 
-#: ../src/core/prefs.c:2084
+#: ../src/core/prefs.c:2081
 #, c-format
 msgid "Workspace %d"
 msgstr "कार्यस्थान %d"
@@ -1344,7 +1344,7 @@ msgid "Marco"
 msgstr "मेटासिटि"
 
 #. first time through
-#: ../src/core/window.c:5932
+#: ../src/core/window.c:6000
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1359,7 +1359,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6497
+#: ../src/core/window.c:6565
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1441,51 +1441,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "प्रयोग: %s\n"
 
-#: ../src/ui/frames.c:1147
+#: ../src/ui/frames.c:1345
 msgid "Close Window"
 msgstr "सञ्झ्याल बन्द गर्नुहोस्"
 
-#: ../src/ui/frames.c:1150
+#: ../src/ui/frames.c:1348
 msgid "Window Menu"
 msgstr "सञ्झ्याल मेनु"
 
-#: ../src/ui/frames.c:1153
+#: ../src/ui/frames.c:1351
 msgid "Window App Menu"
 msgstr ""
 
-#: ../src/ui/frames.c:1156
+#: ../src/ui/frames.c:1354
 msgid "Minimize Window"
 msgstr "सञ्झ्याल घटाउनुहोस्"
 
-#: ../src/ui/frames.c:1159
+#: ../src/ui/frames.c:1357
 msgid "Maximize Window"
 msgstr "सञ्झ्याल बढाउनुहोस्"
 
-#: ../src/ui/frames.c:1162
+#: ../src/ui/frames.c:1360
 msgid "Restore Window"
 msgstr ""
 
-#: ../src/ui/frames.c:1165
+#: ../src/ui/frames.c:1363
 msgid "Roll Up Window"
 msgstr "सञ्झ्याल माथि रोल गर्नुहोस्"
 
-#: ../src/ui/frames.c:1168
+#: ../src/ui/frames.c:1366
 msgid "Unroll Window"
 msgstr "सञ्झ्याल रोल नगर्नुहोस्"
 
-#: ../src/ui/frames.c:1171
+#: ../src/ui/frames.c:1369
 msgid "Keep Window On Top"
 msgstr "सञ्झ्याललाई माथि राख्नुहोस्"
 
-#: ../src/ui/frames.c:1174
+#: ../src/ui/frames.c:1372
 msgid "Remove Window From Top"
 msgstr "सञ्झ्याललाई माथिबाट हटाउनुहोस्"
 
-#: ../src/ui/frames.c:1177
+#: ../src/ui/frames.c:1375
 msgid "Always On Visible Workspace"
 msgstr "जहिलेपनि दृश्यात्मक कार्यक्षेत्रमा"
 
-#: ../src/ui/frames.c:1180
+#: ../src/ui/frames.c:1378
 msgid "Put Window On Only One Workspace"
 msgstr "सञ्झ्याललाई एउटा कार्यक्षेत्रमा मात्र राख्नुहोस्"
 
@@ -1677,69 +1677,69 @@ msgstr "Mod5"
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:257
+#: ../src/ui/theme.c:258
 msgid "top"
 msgstr "माथि"
 
-#: ../src/ui/theme.c:259
+#: ../src/ui/theme.c:260
 msgid "bottom"
 msgstr "तल"
 
-#: ../src/ui/theme.c:261
+#: ../src/ui/theme.c:262
 msgid "left"
 msgstr "बायाँ"
 
-#: ../src/ui/theme.c:263
+#: ../src/ui/theme.c:264
 msgid "right"
 msgstr "दायाँ"
 
-#: ../src/ui/theme.c:290
+#: ../src/ui/theme.c:291
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "फ्रेम जमेट्रीले \"%s\" आयाम निर्दिष्ट गर्दैन"
 
-#: ../src/ui/theme.c:309
+#: ../src/ui/theme.c:310
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "फ्रेम जमेट्रीले किनारा \"%s\" का लागि आयाम \"%s\" निर्दिष्ट गर्दैन"
 
-#: ../src/ui/theme.c:346
+#: ../src/ui/theme.c:347
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "बटन आकार अनुपात %g उचित छैन"
 
-#: ../src/ui/theme.c:358
+#: ../src/ui/theme.c:359
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "फ्रेम जमेट्रीले बटनको साइज निर्दिष्ट गर्दैन"
 
-#: ../src/ui/theme.c:1065
+#: ../src/ui/theme.c:1121
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "ग्रेडियन्टमा कम्तिमा पनि दुई रङ हुनुपर्दछ"
 
-#: ../src/ui/theme.c:1203
+#: ../src/ui/theme.c:1259
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1275
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
 
-#: ../src/ui/theme.c:1233
+#: ../src/ui/theme.c:1289
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
 
-#: ../src/ui/theme.c:1277
+#: ../src/ui/theme.c:1333
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1748,7 +1748,7 @@ msgstr ""
 "जीटीके (GTK) रङ विशिष्टिकरणमा कोष्ठक स्थिति हुनुपर्दछ, जस्तै; gtk:fg[NORMAL]"
 " जहाँ NORMAL स्थिति हो; पद वर्णन गर्न सकेन \"%s\""
 
-#: ../src/ui/theme.c:1291
+#: ../src/ui/theme.c:1347
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1757,59 +1757,59 @@ msgstr ""
 "जीटीके (GTK) रङ विशिष्टिकरणमा अवस्थिति पछाडी बन्द कोष्ठक हुनुपर्दछ, जस्तै "
 "gtk:fg[NORMAL] जहाँ NORMAL स्थिति हो; पद वर्णन गर् सकेन \"%s\""
 
-#: ../src/ui/theme.c:1302
+#: ../src/ui/theme.c:1358
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "रङ विशिष्टिकरणमा स्थिति \"%s\" पहिचान गरेन"
 
-#: ../src/ui/theme.c:1315
+#: ../src/ui/theme.c:1371
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "रङ विशिष्टिकरणमा रङ अवयव \"%s\" पहिचान गरने"
 
-#: ../src/ui/theme.c:1343
+#: ../src/ui/theme.c:1399
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
 msgstr "मिश्रण ढाँचा \"blend/bg_color/fg_color/alpha\" हो, \"%s\" ढाँचामा मिल्दैन"
 
-#: ../src/ui/theme.c:1354
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "मिश्रण गरिएको रङमा अल्फा मान \"%s\" पद वर्णन गर्न सकेन"
 
-#: ../src/ui/theme.c:1364
+#: ../src/ui/theme.c:1420
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "मिश्रण गरिएको रङमा अल्फा मान \"%s\" ०.० र १.० को बीचमा छैन"
 
-#: ../src/ui/theme.c:1410
+#: ../src/ui/theme.c:1466
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "छाया ढाँचा \"shade/base_color/factor\" हो, \"%s\" ढाँचामा मिल्दैन"
 
-#: ../src/ui/theme.c:1421
+#: ../src/ui/theme.c:1477
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "छाया पारिएको रङमा छाया तत्व \"%s\" पद वर्णन गर्न सकेन"
 
-#: ../src/ui/theme.c:1431
+#: ../src/ui/theme.c:1487
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "छाया पारिएको रङको छाया तत्व \"%s\" ऋणात्मक छ"
 
-#: ../src/ui/theme.c:1460
+#: ../src/ui/theme.c:1516
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "रङ \"%s\" पद वर्णन गर्न सकेन"
 
-#: ../src/ui/theme.c:1809
+#: ../src/ui/theme.c:1865
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "संयोजन अभिव्यक्तिले अनुमति नभएको क्यारेक्टर '%s' समाविष्ट गर्दछ"
 
-#: ../src/ui/theme.c:1836
+#: ../src/ui/theme.c:1892
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1818,29 +1818,29 @@ msgstr ""
 "संयोजन अभिव्यक्तिले पद वर्णन गर्न नसकिने उत्प्लावन बिन्दु नम्बर '%s' "
 "समाविष्ट गर्दछ"
 
-#: ../src/ui/theme.c:1850
+#: ../src/ui/theme.c:1906
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "संयोजन अभिव्यक्तिले पद वर्णन गर्न नसकिने इन्टिजर '%s' समाविष्ट गर्दछ"
 
-#: ../src/ui/theme.c:1972
+#: ../src/ui/theme.c:2028
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "संयोजन अभिव्यक्तिले यसो पाठकोसुुरूमा अज्ञातञ्चालक  राखेको छ: \"%s\""
 
-#: ../src/ui/theme.c:2029
+#: ../src/ui/theme.c:2085
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "संयोजन अभिव्यक्ति खाली वा नबुझिने थियो"
 
-#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
+#: ../src/ui/theme.c:2196 ../src/ui/theme.c:2206 ../src/ui/theme.c:2240
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "संयोजन अभिव्यक्ति परिणाम शून्यद्वारा भाग जाने हुन्छ"
 
-#: ../src/ui/theme.c:2192
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
@@ -1848,22 +1848,22 @@ msgstr ""
 "संयोजन अभिव्यक्तिले उत्प्लाव बिन्दु नम्बरमा मोड सञ्चालनकर्ता प्रयोग गर्ने "
 "प्रयास गर्दछ"
 
-#: ../src/ui/theme.c:2248
+#: ../src/ui/theme.c:2304
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "संयोजन अभिव्यक्तिमा अपेक्षित अपरेन्डको साटोमा सञ्चालनकर्ता \"%s\" छ"
 
-#: ../src/ui/theme.c:2257
+#: ../src/ui/theme.c:2313
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "संयोजन अभिव्यक्तिमा अपेक्षित सञ्चालनकर्ताको साटोमा अपरेन्ड थियो"
 
-#: ../src/ui/theme.c:2265
+#: ../src/ui/theme.c:2321
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "संयोजन अभिव्यक्ति ओपरन्डको साटोमा सञ्चालनकर्तासँग समाप्त भयो"
 
-#: ../src/ui/theme.c:2275
+#: ../src/ui/theme.c:2331
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1872,38 +1872,38 @@ msgstr ""
 "संयोजन अभिव्यक्तिसँग सञ्चालनकर्ता \"%c\" पछ्याउने सञ्चालनकर्ता \"%c\" छ जसको"
 " बीचमा अपरेन्ड छैन"
 
-#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
+#: ../src/ui/theme.c:2482 ../src/ui/theme.c:2527
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "संयोजन अभिव्यक्तिमा अज्ञात चल वा अचल \"%s\" थियो ।"
 
-#: ../src/ui/theme.c:2525
+#: ../src/ui/theme.c:2581
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "संयोजन अभिव्यक्ति पद वर्णकले यसको बफरलाई अतिप्रवाह गर्यो ।"
 
-#: ../src/ui/theme.c:2554
+#: ../src/ui/theme.c:2610
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "संयोजन अभिव्यक्तिमा खुला कोष्ठक नभएको खुला कोष्ठक थियो"
 
-#: ../src/ui/theme.c:2618
+#: ../src/ui/theme.c:2674
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "संयोजन अभिव्यक्तिमा बन्द गर्ने कोष्ठक नभएको खुला कोष्ठक थियो"
 
-#: ../src/ui/theme.c:2629
+#: ../src/ui/theme.c:2685
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "संयोजन अभिव्यक्तिमा कुनै सञ्चालक वा अपरेन्ड नभएको देखिन्छ"
 
-#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
+#: ../src/ui/theme.c:2889 ../src/ui/theme.c:2909 ../src/ui/theme.c:2929
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr ""
 
-#: ../src/ui/theme.c:4556
+#: ../src/ui/theme.c:4593
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1912,23 +1912,23 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> यो फ्रेम शैलीका"
 " लागि निर्दिष्ट गरिएको हुनुपर्दछ"
 
-#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
+#: ../src/ui/theme.c:5129 ../src/ui/theme.c:5154
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "हराइराखेको <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: ../src/ui/theme.c:5158
+#: ../src/ui/theme.c:5198
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\": %s विषयवस्तु लोड गर्न असफल\n"
 
-#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
-#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
+#: ../src/ui/theme.c:5330 ../src/ui/theme.c:5337 ../src/ui/theme.c:5344
+#: ../src/ui/theme.c:5351 ../src/ui/theme.c:5358
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "\"%s\" विषयको लागी <%s> सेट भएन"
 
-#: ../src/ui/theme.c:5326
+#: ../src/ui/theme.c:5366
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1937,12 +1937,12 @@ msgstr ""
 "विन्डो प्रकार \"%s\" को लागी विषय \"%s\" मा खाका शैली सेट भएको छैन, "
 "<windowtype=\"%s\"style_set=\"whatever\"/> तत्व थप्नुहोस्"
 
-#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
+#: ../src/ui/theme.c:5781 ../src/ui/theme.c:5843 ../src/ui/theme.c:5906
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "प्रयोगकर्ताको वर्णन  ठूलो अक्षरबाट सुरू हुनुपर्छ, \"%s\" होइन"
 
-#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
+#: ../src/ui/theme.c:5789 ../src/ui/theme.c:5851 ../src/ui/theme.c:5914
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "अचर \"%s\" पहिले नै परिभाषित गरिएको छ"
@@ -2417,7 +2417,7 @@ msgstr "बेन्चमार्क"
 msgid "Window Title Goes Here"
 msgstr "सञ्झ्याल शीर्षक यहाँ देखिन्छ"
 
-#: ../src/ui/theme-viewer.c:1097
+#: ../src/ui/theme-viewer.c:1094
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

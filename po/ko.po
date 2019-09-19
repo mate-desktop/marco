@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"POT-Creation-Date: 2019-06-16 18:37+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
@@ -1037,7 +1037,7 @@ msgstr "화면의 왼쪽 아래 코너에 창 타일링 하기"
 msgid "Bell event"
 msgstr "삑소리 이벤트"
 
-#: ../src/core/core.c:211
+#: ../src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "알 수 없는 창 정보 요청: %d"
@@ -1208,26 +1208,26 @@ msgid ""
 "behave properly.\n"
 msgstr "응용 프로그램에 대한 임시 방편을 막았습니다. 몇몇 응용프로그램들이 제대로 동작하지 않을것입니다.\n"
 
-#: ../src/core/prefs.c:1143
+#: ../src/core/prefs.c:1140
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "%s GSettings 키의 글꼴 특성  \"%s\"을 분석할 수 없습니다⏎\n"
 
-#: ../src/core/prefs.c:1205
+#: ../src/core/prefs.c:1202
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "설정 데이터베이스에서 찾은 \"%s\"이(가) 마우스 단추 설정 키의 올바른 값이 아닙니다\n"
 
-#: ../src/core/prefs.c:1781
+#: ../src/core/prefs.c:1778
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "설정 데이터베이스에서 찾은 \"%s\"이(가) 단축키 \"%s\"에 대한 올바른 값이 아닙니다\n"
 
-#: ../src/core/prefs.c:2084
+#: ../src/core/prefs.c:2081
 #, c-format
 msgid "Workspace %d"
 msgstr "작업 공간 %d"
@@ -1358,7 +1358,7 @@ msgid "Marco"
 msgstr "마르코"
 
 #. first time through
-#: ../src/core/window.c:5932
+#: ../src/core/window.c:6000
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1371,7 +1371,7 @@ msgstr "%s 창이 WM_CLIENT_LEADER 창 대신 자신에게 ICCCM에 지정한대
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6497
+#: ../src/core/window.c:6565
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1448,51 +1448,51 @@ msgstr "창 0x%2$lx의 등록 정보 %1$s은(는) 목록안의 항목 %3$d에 �
 msgid "Usage: %s\n"
 msgstr "사용법: %s\n"
 
-#: ../src/ui/frames.c:1147
+#: ../src/ui/frames.c:1345
 msgid "Close Window"
 msgstr "창 닫기"
 
-#: ../src/ui/frames.c:1150
+#: ../src/ui/frames.c:1348
 msgid "Window Menu"
 msgstr "창 메뉴"
 
-#: ../src/ui/frames.c:1153
+#: ../src/ui/frames.c:1351
 msgid "Window App Menu"
 msgstr ""
 
-#: ../src/ui/frames.c:1156
+#: ../src/ui/frames.c:1354
 msgid "Minimize Window"
 msgstr "창 최소화"
 
-#: ../src/ui/frames.c:1159
+#: ../src/ui/frames.c:1357
 msgid "Maximize Window"
 msgstr "창 최대화"
 
-#: ../src/ui/frames.c:1162
+#: ../src/ui/frames.c:1360
 msgid "Restore Window"
 msgstr "창 복귀"
 
-#: ../src/ui/frames.c:1165
+#: ../src/ui/frames.c:1363
 msgid "Roll Up Window"
 msgstr "창 말아올리기"
 
-#: ../src/ui/frames.c:1168
+#: ../src/ui/frames.c:1366
 msgid "Unroll Window"
 msgstr "창 펼치기"
 
-#: ../src/ui/frames.c:1171
+#: ../src/ui/frames.c:1369
 msgid "Keep Window On Top"
 msgstr "창을 맨 위에 두기"
 
-#: ../src/ui/frames.c:1174
+#: ../src/ui/frames.c:1372
 msgid "Remove Window From Top"
 msgstr "창을 맨 위에서 빼기"
 
-#: ../src/ui/frames.c:1177
+#: ../src/ui/frames.c:1375
 msgid "Always On Visible Workspace"
 msgstr "항상 현재 작업 공간에 놓기"
 
-#: ../src/ui/frames.c:1180
+#: ../src/ui/frames.c:1378
 msgid "Put Window On Only One Workspace"
 msgstr "창을 한 개 작업 공간에만 두기"
 
@@ -1684,69 +1684,69 @@ msgstr "Mod5"
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:257
+#: ../src/ui/theme.c:258
 msgid "top"
 msgstr "맨 위"
 
-#: ../src/ui/theme.c:259
+#: ../src/ui/theme.c:260
 msgid "bottom"
 msgstr "맨 아래"
 
-#: ../src/ui/theme.c:261
+#: ../src/ui/theme.c:262
 msgid "left"
 msgstr "왼쪽"
 
-#: ../src/ui/theme.c:263
+#: ../src/ui/theme.c:264
 msgid "right"
 msgstr "오른쪽"
 
-#: ../src/ui/theme.c:290
+#: ../src/ui/theme.c:291
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "프레임 위치가 \"%s\"차원으로 지정되지 않았습니다"
 
-#: ../src/ui/theme.c:309
+#: ../src/ui/theme.c:310
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "프레임 위치가 가장자리 \"%2$s\" 가장자리의 \"%1$s\"차원으로 지정되지 않았습니다."
 
-#: ../src/ui/theme.c:346
+#: ../src/ui/theme.c:347
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "단추의 가로세로 비 %g이(가) 적당하지 않습니다"
 
-#: ../src/ui/theme.c:358
+#: ../src/ui/theme.c:359
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "프레임 위치가 단추의 크기로 지정되지 않았습니다"
 
-#: ../src/ui/theme.c:1065
+#: ../src/ui/theme.c:1121
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "서서히 변하는 색으로 지정하려면 최소 2색이 필요합니다"
 
-#: ../src/ui/theme.c:1203
+#: ../src/ui/theme.c:1259
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1275
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
 
-#: ../src/ui/theme.c:1233
+#: ../src/ui/theme.c:1289
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
 
-#: ../src/ui/theme.c:1277
+#: ../src/ui/theme.c:1333
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1754,7 +1754,7 @@ msgid ""
 msgstr ""
 "GTK 색상 지정은 중괄호안에 있어야 합니다, 예: gtk:fg[NORMAL] NORMAL은 값; \"%s\"을(를) 분석할 수 없습니다"
 
-#: ../src/ui/theme.c:1291
+#: ../src/ui/theme.c:1347
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1763,147 +1763,147 @@ msgstr ""
 "GTK 색상 지정은 값 뒤에 중괄호로 닫혀 있어야 합니다, 예: gtk:fg[NORMAL]NORMAL은 값; \"%s\"을(를) 분석할 "
 "수 없습니다"
 
-#: ../src/ui/theme.c:1302
+#: ../src/ui/theme.c:1358
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "색상 지정의 \"%s\" 값을 이해할 수 없습니다"
 
-#: ../src/ui/theme.c:1315
+#: ../src/ui/theme.c:1371
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "색상 지정의 색상 구성요소 \"%s\"을(를) 이해할 수 없습니다"
 
-#: ../src/ui/theme.c:1343
+#: ../src/ui/theme.c:1399
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
 msgstr "섞기 형식은 \"blend/bg_color/fg_color/alpha\"입니다, \"%s\"은(는) 형식에 맞지 않습니다"
 
-#: ../src/ui/theme.c:1354
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "색상 섞기에서 알파 값 \"%s\"을(를) 분석할 수 없습니다"
 
-#: ../src/ui/theme.c:1364
+#: ../src/ui/theme.c:1420
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "색상 섞기에서 알파 값 \"%s\"은(는) 0.0 과 1.0사이의 값이 아닙니다"
 
-#: ../src/ui/theme.c:1410
+#: ../src/ui/theme.c:1466
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "그림자 형식은 \"shade/base_color/format\"입니다, \"%s\"(은)는 형식에 맞지 않습니다"
 
-#: ../src/ui/theme.c:1421
+#: ../src/ui/theme.c:1477
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "그림자색에서 그림자 인자 \"%s\"(을)를 해석할 수 없습니다"
 
-#: ../src/ui/theme.c:1431
+#: ../src/ui/theme.c:1487
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "그림자색에서 그림자 인자 \"%s\"(은)는 음수입니다"
 
-#: ../src/ui/theme.c:1460
+#: ../src/ui/theme.c:1516
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "색상 \"%s\"을(를) 해석할 수 없습니다"
 
-#: ../src/ui/theme.c:1809
+#: ../src/ui/theme.c:1865
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "좌표식에 허용되지 않는 문자 '%s'(이)가 포함되어 있습니다"
 
-#: ../src/ui/theme.c:1836
+#: ../src/ui/theme.c:1892
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "좌표식에 분석할 수 없는 부동소수점 숫자 '%s'이(가) 포함되어 있습니다"
 
-#: ../src/ui/theme.c:1850
+#: ../src/ui/theme.c:1906
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "좌표식에 분석할 수 없는 정수 '%s'이(가) 포함되어 있습니다"
 
-#: ../src/ui/theme.c:1972
+#: ../src/ui/theme.c:2028
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "좌표식에 이 글자 시작부분에 알 수 없는 연산자가 포함되어 있습니다: \"%s\""
 
-#: ../src/ui/theme.c:2029
+#: ../src/ui/theme.c:2085
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "좌표식이 비어있거나 이해할 수 없습니다"
 
-#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
+#: ../src/ui/theme.c:2196 ../src/ui/theme.c:2206 ../src/ui/theme.c:2240
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "좌표식의 결과 값이 0로 나누었습니다"
 
-#: ../src/ui/theme.c:2192
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "좌표식에서 부동소수점 수에 나머지 연산을 하려 합니다"
 
-#: ../src/ui/theme.c:2248
+#: ../src/ui/theme.c:2304
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "좌표식에서 피연산자가 들어갈 곳에 연산자 \"%s\"이(가) 있습니다"
 
-#: ../src/ui/theme.c:2257
+#: ../src/ui/theme.c:2313
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "좌표식에서 연산자가 들어갈 곳에 피연산자가 있습니다"
 
-#: ../src/ui/theme.c:2265
+#: ../src/ui/theme.c:2321
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "좌표식에서 피연산자 대신에 연산자로 끝나있습니다"
 
-#: ../src/ui/theme.c:2275
+#: ../src/ui/theme.c:2331
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "좌표식에서 피연산자가 없는 연산자 \"%2$c\"다음에 연산자 \"%1$c\"이(가) 있습니다"
 
-#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
+#: ../src/ui/theme.c:2482 ../src/ui/theme.c:2527
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "좌표식에 알 수 없는 변수나 상수 \"%s\"이(가) 있습니다"
 
-#: ../src/ui/theme.c:2525
+#: ../src/ui/theme.c:2581
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "좌표 계산 파서의 버퍼가 크기를 넘어갔습니다."
 
-#: ../src/ui/theme.c:2554
+#: ../src/ui/theme.c:2610
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "좌표식에 닫는 괄호는 있지만 여는 괄호가 없습니다"
 
-#: ../src/ui/theme.c:2618
+#: ../src/ui/theme.c:2674
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "좌표식에 여는 괄호는 있지만 닫는 괄호가 없습니다"
 
-#: ../src/ui/theme.c:2629
+#: ../src/ui/theme.c:2685
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "좌표식에 어떠한 연산자나 피연산자가 없습니다"
 
-#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
+#: ../src/ui/theme.c:2889 ../src/ui/theme.c:2909 ../src/ui/theme.c:2929
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "테마가 오류 값을 내는 표현식이 들어 있습니다: %s\n"
 
-#: ../src/ui/theme.c:4556
+#: ../src/ui/theme.c:4593
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1912,23 +1912,23 @@ msgstr ""
 "이 프레임 스타일에는 <button function=\"%s\" style=\"%s\" draw_ops=\"whatever\"/>가 "
 "지정되어야 합니다"
 
-#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
+#: ../src/ui/theme.c:5129 ../src/ui/theme.c:5154
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" state=\"whatever\"/> 가 없습니다"
 
-#: ../src/ui/theme.c:5158
+#: ../src/ui/theme.c:5198
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "테마 \"%s\"을(를) 읽을 수 없습니다: %s\n"
 
-#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
-#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
+#: ../src/ui/theme.c:5330 ../src/ui/theme.c:5337 ../src/ui/theme.c:5344
+#: ../src/ui/theme.c:5351 ../src/ui/theme.c:5358
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "테마 \"%2$s\"의 <%1$s>(이)가 설정되지 않았습니다"
 
-#: ../src/ui/theme.c:5326
+#: ../src/ui/theme.c:5366
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1937,12 +1937,12 @@ msgstr ""
 "테마 \"%2$s\"의 창 형식 \"%1$s\"에 대한 프레임 스타일이 없습니다,<window type=\"%3$s\" "
 "style_set=\"whatever\"/> 요소를 추가하십시오"
 
-#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
+#: ../src/ui/theme.c:5781 ../src/ui/theme.c:5843 ../src/ui/theme.c:5906
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "사용자 정의 상수는 대문자로 시작되어야 합니다; \"%s\"은(는) 그렇지 않습니다"
 
-#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
+#: ../src/ui/theme.c:5789 ../src/ui/theme.c:5851 ../src/ui/theme.c:5914
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "상수 \"%s\"은(는) 이미 지정되어 있습니다"
@@ -2412,7 +2412,7 @@ msgstr "벤치마크"
 msgid "Window Title Goes Here"
 msgstr "창 제목이 여기에 들어갑니다"
 
-#: ../src/ui/theme-viewer.c:1097
+#: ../src/ui/theme-viewer.c:1094
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"POT-Creation-Date: 2019-06-16 18:37+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Thai (https://www.transifex.com/mate/teams/13566/th/)\n"
@@ -1053,7 +1053,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "การเตือนเหตุการณ์"
 
-#: ../src/core/core.c:211
+#: ../src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "คำร้องขอข้อมูลหน้าต่างที่ไม่รู้จัก: %d"
@@ -1230,26 +1230,26 @@ msgstr ""
 "ปิดการแก้ขัดที่เตรียมไว้สำหรับโปรแกรมเสียๆ บางโปรแกรมแล้ว "
 "ซึ่งอาจทำให้โปรแกรมเหล่านี้ทำงานไม่ปกติ\n"
 
-#: ../src/core/prefs.c:1143
+#: ../src/core/prefs.c:1140
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1205
+#: ../src/core/prefs.c:1202
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "\"%s\" ที่พบในฐานข้อมูลข้อปรับแต่ง ใช้เป็นปุ่มใช้ร่วมสำหรับเมาส์ไม่ได้\n"
 
-#: ../src/core/prefs.c:1781
+#: ../src/core/prefs.c:1778
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "\"%s\" ที่พบในฐานข้อมูลค่าปรับแต่ง ไม่สามารถใช้เป็นปุ่มลัด \"%s\"\n"
 
-#: ../src/core/prefs.c:2084
+#: ../src/core/prefs.c:2081
 #, c-format
 msgid "Workspace %d"
 msgstr "พื้นที่ทำงาน %d"
@@ -1381,7 +1381,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5932
+#: ../src/core/window.c:6000
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1396,7 +1396,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6497
+#: ../src/core/window.c:6565
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1476,51 +1476,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "วิธีใช้: %s\n"
 
-#: ../src/ui/frames.c:1147
+#: ../src/ui/frames.c:1345
 msgid "Close Window"
 msgstr "ปิดหน้าต่าง"
 
-#: ../src/ui/frames.c:1150
+#: ../src/ui/frames.c:1348
 msgid "Window Menu"
 msgstr "เมนูหน้าต่าง"
 
-#: ../src/ui/frames.c:1153
+#: ../src/ui/frames.c:1351
 msgid "Window App Menu"
 msgstr ""
 
-#: ../src/ui/frames.c:1156
+#: ../src/ui/frames.c:1354
 msgid "Minimize Window"
 msgstr "ย่อเก็บหน้าต่าง"
 
-#: ../src/ui/frames.c:1159
+#: ../src/ui/frames.c:1357
 msgid "Maximize Window"
 msgstr "ขยายแผ่หน้าต่าง"
 
-#: ../src/ui/frames.c:1162
+#: ../src/ui/frames.c:1360
 msgid "Restore Window"
 msgstr "คืนขนาดหน้าต่าง"
 
-#: ../src/ui/frames.c:1165
+#: ../src/ui/frames.c:1363
 msgid "Roll Up Window"
 msgstr "_ม้วนหน้าต่างขึ้น"
 
-#: ../src/ui/frames.c:1168
+#: ../src/ui/frames.c:1366
 msgid "Unroll Window"
 msgstr "คลี่หน้าต่างกลับ"
 
-#: ../src/ui/frames.c:1171
+#: ../src/ui/frames.c:1369
 msgid "Keep Window On Top"
 msgstr "วางหน้าต่างไว้บนสุด"
 
-#: ../src/ui/frames.c:1174
+#: ../src/ui/frames.c:1372
 msgid "Remove Window From Top"
 msgstr "เลิกวางหน้าต่างไว้บนสุด"
 
-#: ../src/ui/frames.c:1177
+#: ../src/ui/frames.c:1375
 msgid "Always On Visible Workspace"
 msgstr "แสดงบนพื้นที่ทำงานเสมอ"
 
-#: ../src/ui/frames.c:1180
+#: ../src/ui/frames.c:1378
 msgid "Put Window On Only One Workspace"
 msgstr "วางหน้าต่างบนพื้นที่ทำงานเดียวเท่านั้น"
 
@@ -1712,69 +1712,69 @@ msgstr "Mod5"
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:257
+#: ../src/ui/theme.c:258
 msgid "top"
 msgstr "บน"
 
-#: ../src/ui/theme.c:259
+#: ../src/ui/theme.c:260
 msgid "bottom"
 msgstr "ล่าง"
 
-#: ../src/ui/theme.c:261
+#: ../src/ui/theme.c:262
 msgid "left"
 msgstr "ซ้าย"
 
-#: ../src/ui/theme.c:263
+#: ../src/ui/theme.c:264
 msgid "right"
 msgstr "ขวา"
 
-#: ../src/ui/theme.c:290
+#: ../src/ui/theme.c:291
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "ค่าเรขาคณิตของเฟรมไม่ได้ระบุขนาด \"%s\""
 
-#: ../src/ui/theme.c:309
+#: ../src/ui/theme.c:310
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "ค่าเรขาคณิตของเฟรมไม่ได้ระบุขนาด \"%s\" สำหรับกรอบ \"%s\""
 
-#: ../src/ui/theme.c:346
+#: ../src/ui/theme.c:347
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "ค่า aspect ratio %g ของปุ่มไม่สมเหตุสมผล"
 
-#: ../src/ui/theme.c:358
+#: ../src/ui/theme.c:359
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "ค่าเรขาคณิตของเฟรมไม่ได้ระบุขนาดของปุ่ม"
 
-#: ../src/ui/theme.c:1065
+#: ../src/ui/theme.c:1121
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "การไล่สีควรใช้อย่างน้อยสองสี"
 
-#: ../src/ui/theme.c:1203
+#: ../src/ui/theme.c:1259
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1275
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
 
-#: ../src/ui/theme.c:1233
+#: ../src/ui/theme.c:1289
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
 
-#: ../src/ui/theme.c:1277
+#: ../src/ui/theme.c:1333
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1783,7 +1783,7 @@ msgstr ""
 "การกำหนดสี GTK ต้องเขียนสถานะในวงเล็บเหลี่ยม เช่น gtk:fg[NORMAL] เมื่อ "
 "NORMAL เป็นสถานะ; ไม่สามารถแจงค่า \"%s\""
 
-#: ../src/ui/theme.c:1291
+#: ../src/ui/theme.c:1347
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1792,17 +1792,17 @@ msgstr ""
 "การกำหนดสี GTK ต้องมีวงเล็บเหลี่ยมปิดหลังสถานะด้วย เช่น gtk:fg[NORMAL] เมื่อ"
 " NORMAL เป็นสถานะ; ไม่สามารถแจงค่า \"%s\""
 
-#: ../src/ui/theme.c:1302
+#: ../src/ui/theme.c:1358
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "ไม่เข้าใจสถานะ \"%s\" ในการระบุสี"
 
-#: ../src/ui/theme.c:1315
+#: ../src/ui/theme.c:1371
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "ไม่เข้าใจองค์ประกอบ \"%s\" ในการระบุสี"
 
-#: ../src/ui/theme.c:1343
+#: ../src/ui/theme.c:1399
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1811,92 +1811,92 @@ msgstr ""
 "รูปแบบการเกลี่ยสีคือ \"blend/bg_color/fg_color/alpha\", ค่า \"%s\" "
 "ไม่ตรงกับรูปแบบ"
 
-#: ../src/ui/theme.c:1354
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "ไม่สามารถแจงค่าอัลฟา \"%s\" ในการเกลี่ยสี"
 
-#: ../src/ui/theme.c:1364
+#: ../src/ui/theme.c:1420
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "ค่าอัลฟา \"%s\" ในการเกลี่ยสีไม่อยู่ระหว่าง 0.0 และ 1.0"
 
-#: ../src/ui/theme.c:1410
+#: ../src/ui/theme.c:1466
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "รูปแบบของเฉดสีคือ \"shade/base_color/factor \", \"%s\" ไม่ตรงกับรูปแบบ"
 
-#: ../src/ui/theme.c:1421
+#: ../src/ui/theme.c:1477
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "ไม่สามารถแจงค่าตัวคูณของเฉด \"%s\" ในเฉดสี"
 
-#: ../src/ui/theme.c:1431
+#: ../src/ui/theme.c:1487
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "ตัวคูณเฉดสี \"%s\" ในเฉดสีเป็นค่าลบ"
 
-#: ../src/ui/theme.c:1460
+#: ../src/ui/theme.c:1516
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "ไม่เข้าใจสี \"%s\""
 
-#: ../src/ui/theme.c:1809
+#: ../src/ui/theme.c:1865
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "นิพจน์พิกัดมีอักขระ'%s' ซึ่งไม่อนุญาตให้ใช้"
 
-#: ../src/ui/theme.c:1836
+#: ../src/ui/theme.c:1892
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "นิพจน์พิกัดมีเลขจุดทศนิยม '%s' ที่แจงค่าไม่ได้"
 
-#: ../src/ui/theme.c:1850
+#: ../src/ui/theme.c:1906
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "นิพจน์พิกัดมีเลขจำนวนเต็ม '%s' ที่แจงค่าไม่ได้"
 
-#: ../src/ui/theme.c:1972
+#: ../src/ui/theme.c:2028
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "นิพจน์พิกัดมีเครื่องหมายดำเนินการที่ไม่รู้จัก เริ่มจากตำแหน่ง \"%s\""
 
-#: ../src/ui/theme.c:2029
+#: ../src/ui/theme.c:2085
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "นิพจน์พิกัดว่างเปล่าหรือไม่สามารถเข้าใจ"
 
-#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
+#: ../src/ui/theme.c:2196 ../src/ui/theme.c:2206 ../src/ui/theme.c:2240
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "นิพจน์พิกัดมีผลลัพธ์ที่เป็นการหารด้วยศูนย์"
 
-#: ../src/ui/theme.c:2192
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "นิพจน์พิกัดพยายามใช้ตัวดำเนินการ mod กับตัวเลขจุดทศนิยม"
 
-#: ../src/ui/theme.c:2248
+#: ../src/ui/theme.c:2304
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "นิพจน์พิกัดมีตัวดำเนินการ\"%s\" ในที่ที่ควรจะเป็นตัวถูกดำเนินการ"
 
-#: ../src/ui/theme.c:2257
+#: ../src/ui/theme.c:2313
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "นิพจน์พิกัดมีตัวถูกดำเนินการในที่ที่ควรจะเป็นตัวดำเนินการ"
 
-#: ../src/ui/theme.c:2265
+#: ../src/ui/theme.c:2321
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "นิพจน์พิกัดจบด้วยตัวดำเนินการแทนที่จะเป็นตัวถูกดำเนินการ"
 
-#: ../src/ui/theme.c:2275
+#: ../src/ui/theme.c:2331
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1905,38 +1905,38 @@ msgstr ""
 "นิพจน์พิกัดมีตัวดำเนินการ\"%c\" ตามหลังตัวดำเนินการ \"%c\" "
 "โดยไม่มีตัวถูกดำเนินการคั่นกลาง"
 
-#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
+#: ../src/ui/theme.c:2482 ../src/ui/theme.c:2527
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "นิพจน์พิกัดมีตัวแปรหรือค่าคงที่ \"%s\" ที่ไม่รู้จัก"
 
-#: ../src/ui/theme.c:2525
+#: ../src/ui/theme.c:2581
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "ตัวแจงค่านิพจน์พิกัดทำข้อมูลล้น"
 
-#: ../src/ui/theme.c:2554
+#: ../src/ui/theme.c:2610
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "นิพจน์พิกัดมีวงเล็บปิดโดยไม่มีวงเล็บเปิด"
 
-#: ../src/ui/theme.c:2618
+#: ../src/ui/theme.c:2674
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "นิพจน์พิกัดมีวงเล็บเปิดโดยไม่มีวงเล็บปิด"
 
-#: ../src/ui/theme.c:2629
+#: ../src/ui/theme.c:2685
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "นิพจน์พิกัดท่าทางจะไม่มีตัวดำเนินการหรือตัวถูกดำเนินการเลย"
 
-#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
+#: ../src/ui/theme.c:2889 ../src/ui/theme.c:2909 ../src/ui/theme.c:2929
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "ชุดตกแต่งมีนิพจน์ซึ่งทำให้เกิดข้อผิดพลาด: %s\n"
 
-#: ../src/ui/theme.c:4556
+#: ../src/ui/theme.c:4593
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1945,23 +1945,23 @@ msgstr ""
 "ต้องระบุ <button function =\"%s\" state=\"%s\" draw_ops=\"อะไรก็ตามแต่\"/> "
 "สำหรับรูปแบบเฟรมด้วย"
 
-#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
+#: ../src/ui/theme.c:5129 ../src/ui/theme.c:5154
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "ขาด <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"อะไรก็ตามแต่\"/>"
 
-#: ../src/ui/theme.c:5158
+#: ../src/ui/theme.c:5198
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "โหลดชุดตกแต่ง \"%s\" ล้มเหลว: %s\n"
 
-#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
-#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
+#: ../src/ui/theme.c:5330 ../src/ui/theme.c:5337 ../src/ui/theme.c:5344
+#: ../src/ui/theme.c:5351 ../src/ui/theme.c:5358
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "ไม่ได้กำหนดค่า <%s> สำหรับชุดตกแต่ง \"%s\""
 
-#: ../src/ui/theme.c:5326
+#: ../src/ui/theme.c:5366
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1970,14 +1970,14 @@ msgstr ""
 "ไม่ได้กำหนดรูปแบบเฟรมสำหรับชนิดหน้าต่าง \"%s\" ในชุดตกแต่ง \"%s\", "
 "กรุณาเพิ่มอิลิเมนต์ <window type=\"%s\" style_set=\"อะไรก็ตามแต่\"/>"
 
-#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
+#: ../src/ui/theme.c:5781 ../src/ui/theme.c:5843 ../src/ui/theme.c:5906
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "ค่าคงที่ที่ผู้ใช้กำหนดเองต้องเริ่มต้นด้วยอักษรตัวใหญ่; แต่ \"%s\" "
 "ไม่ได้เป็นตามนั้น"
 
-#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
+#: ../src/ui/theme.c:5789 ../src/ui/theme.c:5851 ../src/ui/theme.c:5914
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "ค่าคงที่ \"%s\" ถูกกำหนดไว้แล้ว"
@@ -2455,7 +2455,7 @@ msgstr "ความเร็ว"
 msgid "Window Title Goes Here"
 msgstr "ชื่อหน้าต่างอยู่ตรงนี้"
 
-#: ../src/ui/theme-viewer.c:1097
+#: ../src/ui/theme-viewer.c:1094
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

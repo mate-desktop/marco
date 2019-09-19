@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"POT-Creation-Date: 2019-06-16 18:37+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Bengali (India) (https://www.transifex.com/mate/teams/13566/bn_IN/)\n"
@@ -1069,7 +1069,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "ঘন্টা সম্পর্কিত ইভেন্ট"
 
-#: ../src/core/core.c:211
+#: ../src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "উইন্ডোর তথ্য সম্বন্ধে অজানা অনুরোধ: %d"
@@ -1249,12 +1249,12 @@ msgstr ""
 "ক্ষতিগ্রস্ত অ্যাপ্লিকেশনের ত্রুটি অগ্রাহ্য করার প্রণালী নিষ্ক্রিয় করা হয়েছে।"
 " কয়েকটি অ্যাপ্লিকেশন সম্ভবত সঠিকরূপে চালানো সম্ভব হবে না।\n"
 
-#: ../src/core/prefs.c:1143
+#: ../src/core/prefs.c:1140
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1205
+#: ../src/core/prefs.c:1202
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1263,7 +1263,7 @@ msgstr ""
 "কনফিগারেশন ডাটাবেসের মধ্যে উপস্থিত \"%s\" মাউস বাটন পরিবর্তকের জন্য বৈধ মান "
 "নয়\n"
 
-#: ../src/core/prefs.c:1781
+#: ../src/core/prefs.c:1778
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1272,7 +1272,7 @@ msgstr ""
 "কনফিগারেশন ডাটাবেসের মধ্যে উপলব্ধ \"%s\", \"%s\" কি-বাইন্ডিং'র ক্ষেত্রে বৈধ "
 "মান নয়\n"
 
-#: ../src/core/prefs.c:2084
+#: ../src/core/prefs.c:2081
 #, c-format
 msgid "Workspace %d"
 msgstr "কর্মক্ষেত্র %d"
@@ -1410,7 +1410,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5932
+#: ../src/core/window.c:6000
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1425,7 +1425,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6497
+#: ../src/core/window.c:6565
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1507,51 +1507,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "ব্যবহারপদ্ধতি: %s\n"
 
-#: ../src/ui/frames.c:1147
+#: ../src/ui/frames.c:1345
 msgid "Close Window"
 msgstr "উইন্ডো বন্ধ করুন"
 
-#: ../src/ui/frames.c:1150
+#: ../src/ui/frames.c:1348
 msgid "Window Menu"
 msgstr "উইন্ডো মেনু"
 
-#: ../src/ui/frames.c:1153
+#: ../src/ui/frames.c:1351
 msgid "Window App Menu"
 msgstr ""
 
-#: ../src/ui/frames.c:1156
+#: ../src/ui/frames.c:1354
 msgid "Minimize Window"
 msgstr "উইন্ডো আড়াল করুন"
 
-#: ../src/ui/frames.c:1159
+#: ../src/ui/frames.c:1357
 msgid "Maximize Window"
 msgstr "উইন্ডো বড় করুন"
 
-#: ../src/ui/frames.c:1162
+#: ../src/ui/frames.c:1360
 msgid "Restore Window"
 msgstr "উইন্ডো প্রদর্শন করুন"
 
-#: ../src/ui/frames.c:1165
+#: ../src/ui/frames.c:1363
 msgid "Roll Up Window"
 msgstr "উইন্ডো গুটিয়ে ফেলুন"
 
-#: ../src/ui/frames.c:1168
+#: ../src/ui/frames.c:1366
 msgid "Unroll Window"
 msgstr "উইন্ডো বিস্তার করুন"
 
-#: ../src/ui/frames.c:1171
+#: ../src/ui/frames.c:1369
 msgid "Keep Window On Top"
 msgstr "উইন্ডো সর্বোচ্চ স্তরে স্থাপন করা হবে"
 
-#: ../src/ui/frames.c:1174
+#: ../src/ui/frames.c:1372
 msgid "Remove Window From Top"
 msgstr "উইন্ডো সর্বোচ্চ স্তর থেকে সরিয়ে ফেলা হবে"
 
-#: ../src/ui/frames.c:1177
+#: ../src/ui/frames.c:1375
 msgid "Always On Visible Workspace"
 msgstr "দৃশ্যমান কর্মক্ষেত্রে সর্বদা উপস্থিত"
 
-#: ../src/ui/frames.c:1180
+#: ../src/ui/frames.c:1378
 msgid "Put Window On Only One Workspace"
 msgstr "শুধুমাত্র একটি কর্মক্ষেত্রের মধ্যে উইন্ডো স্থাপন করা হবে"
 
@@ -1743,69 +1743,69 @@ msgstr "Mod5"
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:257
+#: ../src/ui/theme.c:258
 msgid "top"
 msgstr "উপরে"
 
-#: ../src/ui/theme.c:259
+#: ../src/ui/theme.c:260
 msgid "bottom"
 msgstr "নীচে"
 
-#: ../src/ui/theme.c:261
+#: ../src/ui/theme.c:262
 msgid "left"
 msgstr "বাঁদিকে"
 
-#: ../src/ui/theme.c:263
+#: ../src/ui/theme.c:264
 msgid "right"
 msgstr "ডানদিকে"
 
-#: ../src/ui/theme.c:290
+#: ../src/ui/theme.c:291
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "ফ্রেম জ্যামিতি দ্বারা \"%s\" পরিমাপ নির্ধারিত হয়নি"
 
-#: ../src/ui/theme.c:309
+#: ../src/ui/theme.c:310
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "ফ্রেম জ্যামিতি দ্বারা \"%s\" পরিমাপ  \"%s\" প্রান্তের জন্য নির্ধারিত হয়নি"
 
-#: ../src/ui/theme.c:346
+#: ../src/ui/theme.c:347
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "বাটনের অ্যাপেক্ট অনুপাত %g যথাযথ নয়"
 
-#: ../src/ui/theme.c:358
+#: ../src/ui/theme.c:359
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "ফ্রেম জ্যামিতি দ্বারা বাটনের মাপ নির্ধারিত হয়নি"
 
-#: ../src/ui/theme.c:1065
+#: ../src/ui/theme.c:1121
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "গ্রেডিয়েন্টের ক্ষেত্রে দুটি রং নির্ধারিত হওয়া আবশ্যক"
 
-#: ../src/ui/theme.c:1203
+#: ../src/ui/theme.c:1259
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1275
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
 
-#: ../src/ui/theme.c:1233
+#: ../src/ui/theme.c:1289
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
 
-#: ../src/ui/theme.c:1277
+#: ../src/ui/theme.c:1333
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1815,7 +1815,7 @@ msgstr ""
 "আবশ্যক। উদাহরণ: gtk:fg[NORMAL], এই ক্ষেত্রে NORMAL একটি অবস্থা চিহ্নিত করে; "
 "\"%s\" পার্স করতে ব্যর্থ"
 
-#: ../src/ui/theme.c:1291
+#: ../src/ui/theme.c:1347
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1825,17 +1825,17 @@ msgstr ""
 "আবশ্যক। উদাহরণ: gtk:fg[NORMAL], এই ক্ষেত্রে NORMAL একটি অবস্থা চিহ্নিত করে; "
 "\"%s\" পার্স করতে ব্যর্থ"
 
-#: ../src/ui/theme.c:1302
+#: ../src/ui/theme.c:1358
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "রং নির্ধারণের জন্য state \"%s\" বোধগম্য হয়নি"
 
-#: ../src/ui/theme.c:1315
+#: ../src/ui/theme.c:1371
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "রং নির্ধারণের জন্য রং'র বিষয়বস্তু \"%s\" বোধগম্য হয়নি"
 
-#: ../src/ui/theme.c:1343
+#: ../src/ui/theme.c:1399
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1844,43 +1844,43 @@ msgstr ""
 "ব্লেন্ড বিন্যাস \"blend/bg_color/fg_color/alpha\", \"%s\" বিন্যাসের সাথে "
 "সুসংগত নয়"
 
-#: ../src/ui/theme.c:1354
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "ব্লেন্ড করা রং'এ আল্ফা মান \"%s\" পার্স করতে ব্যর্থ"
 
-#: ../src/ui/theme.c:1364
+#: ../src/ui/theme.c:1420
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "ব্লেন্ড করা রং'এ আল্ফা মান \"%s\" 0.0 ও1.0 সীমারেখার মধ্যে নয়"
 
-#: ../src/ui/theme.c:1410
+#: ../src/ui/theme.c:1466
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "ছায়ার বিন্যাস \"shade/base_color/factor\", \"%s\" বিন্যাসের সাথে সুসংগত নয়"
 
-#: ../src/ui/theme.c:1421
+#: ../src/ui/theme.c:1477
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "ছায়াযুক্ত রং'র ক্ষেত্রে ছায়ার মাপ \"%s\" পার্স করতে ব্যর্থ"
 
-#: ../src/ui/theme.c:1431
+#: ../src/ui/theme.c:1487
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "ছায়াযুক্ত রং'র ক্ষেত্রে ছায়ার মান \"%s\" শূণ্যের কম"
 
-#: ../src/ui/theme.c:1460
+#: ../src/ui/theme.c:1516
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "\"%s\" রং পার্স করতে ব্যর্থ"
 
-#: ../src/ui/theme.c:1809
+#: ../src/ui/theme.c:1865
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr ""
 "স্থানাঙ্কের এক্সপ্রেশনের মধ্যে '%s' অক্ষর উপস্থিত এবং এর ব্যবহার অনুমোদিত নয়"
 
-#: ../src/ui/theme.c:1836
+#: ../src/ui/theme.c:1892
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1889,14 +1889,14 @@ msgstr ""
 "স্থানাঙ্কের এক্সপ্রেশনের মধ্যে '%s' ফ্লোটিং পয়েন্ট সংখ্যা উপস্থিত যা পার্স "
 "করা সম্ভব হয়নি"
 
-#: ../src/ui/theme.c:1850
+#: ../src/ui/theme.c:1906
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr ""
 "স্থানাঙ্কের এক্সপ্রেশনের মধ্যে পূর্ণসংখ্যা '%s' উপস্থিত রয়েছে যা পার্স করা "
 "সম্ভব হয়নি"
 
-#: ../src/ui/theme.c:1972
+#: ../src/ui/theme.c:2028
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
@@ -1905,18 +1905,18 @@ msgstr ""
 "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে টেক্সটের প্রারম্ভিক স্থানে অজানা অপারেটর: "
 "\"%s\""
 
-#: ../src/ui/theme.c:2029
+#: ../src/ui/theme.c:2085
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশন ফাঁকা অথবা বোধগম্য নয়"
 
-#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
+#: ../src/ui/theme.c:2196 ../src/ui/theme.c:2206 ../src/ui/theme.c:2240
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr ""
 "কো-ওর্ডিনেট এক্সপ্রেশনের ফলাফলে শূণ্য দ্বারা ভাগ করার অবস্থা উৎপন্ন হয়"
 
-#: ../src/ui/theme.c:2192
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
@@ -1924,28 +1924,28 @@ msgstr ""
 "কো-ওর্ডিনেট এক্সপ্রেশন দ্বারা ফ্লোটিং পয়েন্ট সংখ্যার উপর mod অপারেটর "
 "ব্যবহারের প্রয়াস করা হয়েছে"
 
-#: ../src/ui/theme.c:2248
+#: ../src/ui/theme.c:2304
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr ""
 "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে  \"%s\" অপারেটর উপস্থিত কিন্তু অপারেন্ড "
 "প্রত্যাশিত"
 
-#: ../src/ui/theme.c:2257
+#: ../src/ui/theme.c:2313
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr ""
 "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে প্রত্যাশিত অপারেন্ডের পরিবর্তে অপারেটর "
 "উপস্থিত"
 
-#: ../src/ui/theme.c:2265
+#: ../src/ui/theme.c:2321
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr ""
 "কো-ওর্ডিনেট এক্সপ্রেশনের অন্তে প্রত্যাশিত অপারেন্ডের পরিবর্তে অপারেটর "
 "উপস্থিত"
 
-#: ../src/ui/theme.c:2275
+#: ../src/ui/theme.c:2331
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1954,26 +1954,26 @@ msgstr ""
 "কো-ওর্ডিনেট এক্সপ্রেশনের ক্ষেত্রে \"%c\" অপারেটরের পরে \"%c\" অপারেটর "
 "উপস্থিত এবং দুটির মধ্যে কোনো অপারেন্ড উপস্থিত নেই"
 
-#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
+#: ../src/ui/theme.c:2482 ../src/ui/theme.c:2527
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr ""
 "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে অজানা ভেরিয়েবল অথবা কনস্ট্যান্ট \"%s\" "
 "উপস্থিত"
 
-#: ../src/ui/theme.c:2525
+#: ../src/ui/theme.c:2581
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের পার্সারের বাফারের সীমা অতিক্রান্ত হয়েছে।"
 
-#: ../src/ui/theme.c:2554
+#: ../src/ui/theme.c:2610
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr ""
 "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে শেষের বন্ধনী চিহ্ন উপস্থিত, প্রারম্ভিক চিহ্ন "
 "অনুপস্থিত"
 
-#: ../src/ui/theme.c:2618
+#: ../src/ui/theme.c:2674
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
@@ -1981,17 +1981,17 @@ msgstr ""
 "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে প্রারম্ভিক বন্ধনী চিহ্ন উপস্থিত শেষের বন্ধনী "
 "চিহ্ন অনুপস্থিত"
 
-#: ../src/ui/theme.c:2629
+#: ../src/ui/theme.c:2685
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "কো-ওর্ডিনেট এক্সপ্রেশনের মধ্যে কোনো অপারেটর অথবা অপারেন্ড উপস্থিত নেই"
 
-#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
+#: ../src/ui/theme.c:2889 ../src/ui/theme.c:2909 ../src/ui/theme.c:2929
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "থিমের মধ্যে উপস্থিত এক্সপ্রেশনের ফলে সমস্যা উৎপন্ন হয়েছে: %s\n"
 
-#: ../src/ui/theme.c:4556
+#: ../src/ui/theme.c:4593
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2000,23 +2000,23 @@ msgstr ""
 "চিহ্নিত ফ্রেমের বিন্যাসের জন্য <button function=\"%s\" state=\"%s\" "
 "draw_ops=\"whatever\"/> উল্লেখ করা আবশ্যক"
 
-#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
+#: ../src/ui/theme.c:5129 ../src/ui/theme.c:5154
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> অনুপস্থিত"
 
-#: ../src/ui/theme.c:5158
+#: ../src/ui/theme.c:5198
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" থিম লোড করতে ব্যর্থ: %s\n"
 
-#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
-#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
+#: ../src/ui/theme.c:5330 ../src/ui/theme.c:5337 ../src/ui/theme.c:5344
+#: ../src/ui/theme.c:5351 ../src/ui/theme.c:5358
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "<%s> নির্ধারিত হয়নি \"%s\" থিমের জন্য"
 
-#: ../src/ui/theme.c:5326
+#: ../src/ui/theme.c:5366
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2025,14 +2025,14 @@ msgstr ""
 "\"%s\" ধরনের উইন্ডোর জন্য \"%s\" থিমের মধ্যে ফ্রেমের বিন্যাস নির্ধারিত হয়নি,"
 " একটি <window type=\"%s\" style_set=\"whatever\"/> স্বত্বা যোগ করুন"
 
-#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
+#: ../src/ui/theme.c:5781 ../src/ui/theme.c:5843 ../src/ui/theme.c:5906
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "ব্যবহারকারী দ্বারা নির্ধারিত কনস্ট্যান্টের ক্ষেত্রে প্রারম্ভে বড় ছাঁদের হরফ "
 "উপস্থিত থাকা আবশ্যক; \"%s\"'এ ক্ষেত্রে এটি উপস্থিত নেই"
 
-#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
+#: ../src/ui/theme.c:5789 ../src/ui/theme.c:5851 ../src/ui/theme.c:5914
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "কনস্ট্যান্ট \"%s\" পূর্বে নির্ধারিত হয়েছে"
@@ -2526,7 +2526,7 @@ msgstr "মাপকাঠি"
 msgid "Window Title Goes Here"
 msgstr "উইন্ডো শিরোনাম চিহ্নিত স্থানে স্থাপিত হবে"
 
-#: ../src/ui/theme-viewer.c:1097
+#: ../src/ui/theme-viewer.c:1094
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

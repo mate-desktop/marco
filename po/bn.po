@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"POT-Creation-Date: 2019-06-16 18:37+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Bengali (https://www.transifex.com/mate/teams/13566/bn/)\n"
@@ -1056,7 +1056,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "ঘন্টা সম্পর্কিত ইভেন্ট"
 
-#: ../src/core/core.c:211
+#: ../src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "উইন্ডোর তথ্য সম্বন্ধে অজানা অনুরোধ: %d"
@@ -1237,12 +1237,12 @@ msgstr ""
 "ভগ্ন প্রোগ্রামের জন্য এড়িয়ে যাওয়ার ব্যবস্থা নিষ্ক্রিয় করা আছে। কিছু "
 "প্রোগ্রাম ঠিকভাবে ব্যবহার নাও করতে পারে\n"
 
-#: ../src/core/prefs.c:1143
+#: ../src/core/prefs.c:1140
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1205
+#: ../src/core/prefs.c:1202
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1251,7 +1251,7 @@ msgstr ""
 "কন্‌ফিগারেশন ডাটাবেস-এ পাওয়া  \"%s\" মাউস বোতামের পরিবর্তক হিসাবে কার্যকরমান"
 " নয়\n"
 
-#: ../src/core/prefs.c:1781
+#: ../src/core/prefs.c:1778
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1260,7 +1260,7 @@ msgstr ""
 "\"%s\" যা কন্‌ফিগারেশন ডাটাবেসে পাওয়া গেছে সেটি কীবাইন্ডিং\"%s\" র জন্য সঠিক"
 " মান নয়\n"
 
-#: ../src/core/prefs.c:2084
+#: ../src/core/prefs.c:2081
 #, c-format
 msgid "Workspace %d"
 msgstr "কর্মক্ষেত্র %d"
@@ -1395,7 +1395,7 @@ msgid "Marco"
 msgstr "মেটাসিটি"
 
 #. first time through
-#: ../src/core/window.c:5932
+#: ../src/core/window.c:6000
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1410,7 +1410,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6497
+#: ../src/core/window.c:6565
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1490,51 +1490,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "ব্যবহার: %s\n"
 
-#: ../src/ui/frames.c:1147
+#: ../src/ui/frames.c:1345
 msgid "Close Window"
 msgstr "উইন্ডো বন্ধ করুন"
 
-#: ../src/ui/frames.c:1150
+#: ../src/ui/frames.c:1348
 msgid "Window Menu"
 msgstr "উইন্ডো পছন্দতালিকা"
 
-#: ../src/ui/frames.c:1153
+#: ../src/ui/frames.c:1351
 msgid "Window App Menu"
 msgstr ""
 
-#: ../src/ui/frames.c:1156
+#: ../src/ui/frames.c:1354
 msgid "Minimize Window"
 msgstr "ছোটো কর"
 
-#: ../src/ui/frames.c:1159
+#: ../src/ui/frames.c:1357
 msgid "Maximize Window"
 msgstr "পুরো পর্দা জুড়ে কর"
 
-#: ../src/ui/frames.c:1162
+#: ../src/ui/frames.c:1360
 msgid "Restore Window"
 msgstr "উইন্ডো নতুন আকার করো"
 
-#: ../src/ui/frames.c:1165
+#: ../src/ui/frames.c:1363
 msgid "Roll Up Window"
 msgstr "গোটাও (_ও)"
 
-#: ../src/ui/frames.c:1168
+#: ../src/ui/frames.c:1366
 msgid "Unroll Window"
 msgstr "উইন্ডো বন্ধ করো"
 
-#: ../src/ui/frames.c:1171
+#: ../src/ui/frames.c:1369
 msgid "Keep Window On Top"
 msgstr "উইন্ডো সর্বোচ্চ স্তরে স্থাপন করা হবে"
 
-#: ../src/ui/frames.c:1174
+#: ../src/ui/frames.c:1372
 msgid "Remove Window From Top"
 msgstr "উইন্ডো সর্বোচ্চ স্তর থেকে সরিয়ে ফেলা হবে"
 
-#: ../src/ui/frames.c:1177
+#: ../src/ui/frames.c:1375
 msgid "Always On Visible Workspace"
 msgstr "শুধুমাত্র দৃশ্যমান কার্যক্ষেত্রে (_দ)"
 
-#: ../src/ui/frames.c:1180
+#: ../src/ui/frames.c:1378
 msgid "Put Window On Only One Workspace"
 msgstr "উইন্ডো সমস্ত কার্যক্ষেত্রে রাখা বদল কর"
 
@@ -1726,69 +1726,69 @@ msgstr "মড ৫"
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:257
+#: ../src/ui/theme.c:258
 msgid "top"
 msgstr "শীর্ষ"
 
-#: ../src/ui/theme.c:259
+#: ../src/ui/theme.c:260
 msgid "bottom"
 msgstr "তলা"
 
-#: ../src/ui/theme.c:261
+#: ../src/ui/theme.c:262
 msgid "left"
 msgstr "বামদিকে"
 
-#: ../src/ui/theme.c:263
+#: ../src/ui/theme.c:264
 msgid "right"
 msgstr "ডানদিকে"
 
-#: ../src/ui/theme.c:290
+#: ../src/ui/theme.c:291
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "কাঠামোর জ্যামিতি মাপ \"%s\" সুনির্দিষ্ট করে নি"
 
-#: ../src/ui/theme.c:309
+#: ../src/ui/theme.c:310
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "কাঠামোর জ্যামিতি মাপ \"%s\" প্রান্ত \"%s\"র জন্য সুনির্দিষ্ট করে নি"
 
-#: ../src/ui/theme.c:346
+#: ../src/ui/theme.c:347
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "বোতামের আকার অনুপাত %g যুক্তিযুক্ত নয়"
 
-#: ../src/ui/theme.c:358
+#: ../src/ui/theme.c:359
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "কাঠামোর জ্যামিতি বোতামের আকার বলে নি"
 
-#: ../src/ui/theme.c:1065
+#: ../src/ui/theme.c:1121
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "গ্রেডিয়েন্টে অন্ততঃ দুটি রং থাকতে হবে"
 
-#: ../src/ui/theme.c:1203
+#: ../src/ui/theme.c:1259
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1275
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
 
-#: ../src/ui/theme.c:1233
+#: ../src/ui/theme.c:1289
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
 
-#: ../src/ui/theme.c:1277
+#: ../src/ui/theme.c:1333
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1797,7 +1797,7 @@ msgstr ""
 "জিটিকে রঙের স্পেসিফোকেশন -এ স্টেটটি বন্ধনীর মধ্যে থাকতেই হবে, যেমন "
 "gtk:fg[NORMAL]  যেখানে NORMAL হল স্টেট, \"%s\" প্রক্রিয়ণ করতে পারলাম না"
 
-#: ../src/ui/theme.c:1291
+#: ../src/ui/theme.c:1347
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1806,17 +1806,17 @@ msgstr ""
 "জিটিকে রঙের স্পেসিফোকেশন -এ স্টেটটির শেষে একটি বন্ধনী থাকতেই হবে, যেমন "
 "gtk:fg[NORMAL]  যেখানে NORMAL হল স্টেট, \"%s\" প্রক্রিয়ণ করতে পারলাম না"
 
-#: ../src/ui/theme.c:1302
+#: ../src/ui/theme.c:1358
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "রঙের স্পেসিফোকেশন -এ স্টেট \"%s\" বুঝতে পারলাম না"
 
-#: ../src/ui/theme.c:1315
+#: ../src/ui/theme.c:1371
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "রঙের স্পেসিফোকেশন -এ রঙ উপাদান  \"%s\" বুঝতে পারলাম না"
 
-#: ../src/ui/theme.c:1343
+#: ../src/ui/theme.c:1399
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1825,92 +1825,92 @@ msgstr ""
 "মিশ্রিত রঙের বিন্যাস হল \"blend/bg_color/fg_color/alpha\",  \"%s\" এই "
 "বিন্যাসে খাপ খায় না"
 
-#: ../src/ui/theme.c:1354
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "মিশ্রিত রঙের আলফা মান  \"%s\"কে প্রক্রিয়ণ করতে পারি নি"
 
-#: ../src/ui/theme.c:1364
+#: ../src/ui/theme.c:1420
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "মিশ্রিত রঙের আলফা মান  \"%s\" 0.0 এবং 1.0 মধ্যে নয়"
 
-#: ../src/ui/theme.c:1410
+#: ../src/ui/theme.c:1466
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "ছায়ার বিন্যাস হল \"shade/base_color/factor\",  \"%s\" এই বিন্যাসে খাপ খায় না "
 
-#: ../src/ui/theme.c:1421
+#: ../src/ui/theme.c:1477
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "ছায়াবৃত রঙের শেড ফ্যক্টর \"%s\" কে প্রক্রিয়ণ করতে পারি নি"
 
-#: ../src/ui/theme.c:1431
+#: ../src/ui/theme.c:1487
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "শেড ফ্যক্টর \"%s\" যা ছায়াবৃত রঙে আছে তা ঋনাত্মক"
 
-#: ../src/ui/theme.c:1460
+#: ../src/ui/theme.c:1516
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr " রং \"%s\" কে প্রক্রিয়ণ করতে পারি নি"
 
-#: ../src/ui/theme.c:1809
+#: ../src/ui/theme.c:1865
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "অবস্থানের সমীকরণ এ অক্ষর '%s' আছে যা চলবে না"
 
-#: ../src/ui/theme.c:1836
+#: ../src/ui/theme.c:1892
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "অবস্থানের সমীকরণ এ দশমিকযুক্ত সংখ্যা '%s' আছে যাপ্রক্রিয়া করা যায় নি"
 
-#: ../src/ui/theme.c:1850
+#: ../src/ui/theme.c:1906
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "অবস্থানের সমীকরণ এ পূর্ণসংখ্যা '%s' আছে যা প্রক্রিয়া করা যায় নি"
 
-#: ../src/ui/theme.c:1972
+#: ../src/ui/theme.c:2028
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "অবস্থানের সমীকরণ এ এই লেখার শুরুতে একটি অজানা কার্য আছে:\"%s\""
 
-#: ../src/ui/theme.c:2029
+#: ../src/ui/theme.c:2085
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "অবস্থানের সমীকরণ খালি বা বোঝা যাচ্ছে না"
 
-#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
+#: ../src/ui/theme.c:2196 ../src/ui/theme.c:2206 ../src/ui/theme.c:2240
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "অবস্থানের সমীকরণ এ শুন্য দ্বারা বিভাজন হচ্ছে"
 
-#: ../src/ui/theme.c:2192
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "অবস্থানের সমীকরণ দশমিকযুক্ত সংখ্যায় mod কার্য করার চেষ্টা করে"
 
-#: ../src/ui/theme.c:2248
+#: ../src/ui/theme.c:2304
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "অবস্থানের সমীকরণ এ একটি কার্য \"%s\" রয়েছে যেখানে একটি কারক অপেক্ষিত ছিল"
 
-#: ../src/ui/theme.c:2257
+#: ../src/ui/theme.c:2313
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "অবস্থানের সমীকরণ এ একটি কারক রয়েছে যেখানে কার্য অপেক্ষিত ছিল"
 
-#: ../src/ui/theme.c:2265
+#: ../src/ui/theme.c:2321
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "অবস্থানের সমীকরণ কারকের পরিবর্তে কার্য দিয়ে শেষ হয়েছে"
 
-#: ../src/ui/theme.c:2275
+#: ../src/ui/theme.c:2331
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1919,38 +1919,38 @@ msgstr ""
 "অবস্থানের সমীকরণ এ কার্য  \"%c\" এর আগে কার্য \"%c\" আছে এবংতার মধ্যে কোনও "
 "কারক নেই"
 
-#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
+#: ../src/ui/theme.c:2482 ../src/ui/theme.c:2527
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "অবস্থানের সমীকরণ এ একটি অজানা পরিবর্তক বা ধ্রুবক  \"%s\" আছে"
 
-#: ../src/ui/theme.c:2525
+#: ../src/ui/theme.c:2581
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "অবস্থানের সমীকরণ খালি বা বোঝা যাচ্ছে না"
 
-#: ../src/ui/theme.c:2554
+#: ../src/ui/theme.c:2610
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "অবস্থানের সমীকরণ এ একটি শেষের বন্ধনী আছে কিন্তু শুরুর বন্ধনী নেই"
 
-#: ../src/ui/theme.c:2618
+#: ../src/ui/theme.c:2674
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "অবস্থানের সমীকরণ এ একটি শুরুর বন্ধনী আছে কিন্তু শেষের বন্ধনী নেই"
 
-#: ../src/ui/theme.c:2629
+#: ../src/ui/theme.c:2685
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "অবস্থানের সমীকরণ এ কোনও কারক বা কার্য আছে বলে মনে হচ্ছে না"
 
-#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
+#: ../src/ui/theme.c:2889 ../src/ui/theme.c:2909 ../src/ui/theme.c:2929
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "থীমে একটি সমীকরণ  আছে যা একটি গন্ডগোল করেছে: %s\n"
 
-#: ../src/ui/theme.c:4556
+#: ../src/ui/theme.c:4593
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1959,23 +1959,23 @@ msgstr ""
 "এই থীমের জন্য <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> "
 "অবশ্যই নির্ধারিত করতে হবে"
 
-#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
+#: ../src/ui/theme.c:5129 ../src/ui/theme.c:5154
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> নিখোঁজ"
 
-#: ../src/ui/theme.c:5158
+#: ../src/ui/theme.c:5198
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "থীম \"%s\" লোড করতে পারি নি: %s\n"
 
-#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
-#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
+#: ../src/ui/theme.c:5330 ../src/ui/theme.c:5337 ../src/ui/theme.c:5344
+#: ../src/ui/theme.c:5351 ../src/ui/theme.c:5358
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr " <%s> টি থীম  \"%s\" এর জন্য স্থির করা নেই"
 
-#: ../src/ui/theme.c:5326
+#: ../src/ui/theme.c:5366
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1984,14 +1984,14 @@ msgstr ""
 "উইন্ডো প্রকার  \"%s\" যা থীম \"%s\"তে আছে তাতে কোন ফ্রেমের প্রকার ঠিক করা "
 "নেই,একটি  <window type=\"%s\" style_set=\"whatever\"/> অংশ যোগ করতে হবে"
 
-#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
+#: ../src/ui/theme.c:5781 ../src/ui/theme.c:5843 ../src/ui/theme.c:5906
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "ব্যবহারকারী দ্বারা স্থির করা ধ্রুবক সব সময় বড় হাতের অক্ষর দিয়ে শুরু হবে; "
 "\"%s\" তা হয় নি"
 
-#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
+#: ../src/ui/theme.c:5789 ../src/ui/theme.c:5851 ../src/ui/theme.c:5914
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "ধ্রুবক \"%s\" ইতিমধ্যেই স্থির করা আছে"
@@ -2474,7 +2474,7 @@ msgstr "বেঞ্চমার্ক"
 msgid "Window Title Goes Here"
 msgstr "উইন্ডো শিরোনাম এখানে বসবে"
 
-#: ../src/ui/theme-viewer.c:1097
+#: ../src/ui/theme-viewer.c:1094
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

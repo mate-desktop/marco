@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:24+0200\n"
+"POT-Creation-Date: 2019-06-16 18:37+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
 "Last-Translator: Siranush <ss.m.95@mail.ru>, 2019\n"
 "Language-Team: Armenian (https://www.transifex.com/mate/teams/13566/hy/)\n"
@@ -1131,7 +1131,7 @@ msgstr ""
 msgid "Bell event"
 msgstr "Իրադարձության զանգ"
 
-#: ../src/core/core.c:211
+#: ../src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Անհայտ պատուհանի տեղեկությունների հարցում: %d"
@@ -1313,13 +1313,13 @@ msgstr ""
 "Աշխատանքային փուլը ընդհատած ծրագրի անջատման համար։ Որոշ դիմումները չեն կարող"
 " վարվեն ինչպես հարկն է:\n"
 
-#: ../src/core/prefs.c:1143
+#: ../src/core/prefs.c:1140
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 "Չհաջողվեց վերլուծել տառատեսակի նկարագրությունը \"%s\" GSettings ստեղնից %s\n"
 
-#: ../src/core/prefs.c:1205
+#: ../src/core/prefs.c:1202
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1328,7 +1328,7 @@ msgstr ""
 "\"%s\" հայտնաբերված կոնֆիգորացիոն տվյալների բազայում անվավեր արժեքը մկնիկը "
 "կոճակի ձեւափոխիչի համար\n"
 
-#: ../src/core/prefs.c:1781
+#: ../src/core/prefs.c:1778
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1337,7 +1337,7 @@ msgstr ""
 "\"%s\" հայտնաբերված կոնֆիգորացիոն տվյալների բազայում անվավեր արժեքը "
 "ստեղնաշարի համար \"%s\"\n"
 
-#: ../src/core/prefs.c:2084
+#: ../src/core/prefs.c:2081
 #, c-format
 msgid "Workspace %d"
 msgstr "Աշխատանքային տարածք %d"
@@ -1472,7 +1472,7 @@ msgid "Marco"
 msgstr "Մետասիթի"
 
 #. first time through
-#: ../src/core/window.c:5932
+#: ../src/core/window.c:6000
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1487,7 +1487,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6497
+#: ../src/core/window.c:6565
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1566,51 +1566,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "Օգտագործում։%s\n"
 
-#: ../src/ui/frames.c:1147
+#: ../src/ui/frames.c:1345
 msgid "Close Window"
 msgstr "Փակել Պատուհանը"
 
-#: ../src/ui/frames.c:1150
+#: ../src/ui/frames.c:1348
 msgid "Window Menu"
 msgstr "Պատուհանի մենյու"
 
-#: ../src/ui/frames.c:1153
+#: ../src/ui/frames.c:1351
 msgid "Window App Menu"
 msgstr ""
 
-#: ../src/ui/frames.c:1156
+#: ../src/ui/frames.c:1354
 msgid "Minimize Window"
 msgstr "Պատուհանը իջեցնել"
 
-#: ../src/ui/frames.c:1159
+#: ../src/ui/frames.c:1357
 msgid "Maximize Window"
 msgstr "Պատուհանը մեծացնել"
 
-#: ../src/ui/frames.c:1162
+#: ../src/ui/frames.c:1360
 msgid "Restore Window"
 msgstr "Վերականգնել Պատուհան"
 
-#: ../src/ui/frames.c:1165
+#: ../src/ui/frames.c:1363
 msgid "Roll Up Window"
 msgstr "Պտտել Պատուհանը"
 
-#: ../src/ui/frames.c:1168
+#: ../src/ui/frames.c:1366
 msgid "Unroll Window"
 msgstr "Չպտտել Պատուհանը"
 
-#: ../src/ui/frames.c:1171
+#: ../src/ui/frames.c:1369
 msgid "Keep Window On Top"
 msgstr "Պահպանել պատուհանը վերևում"
 
-#: ../src/ui/frames.c:1174
+#: ../src/ui/frames.c:1372
 msgid "Remove Window From Top"
 msgstr "Ջնջել պատուհանը Վերևից"
 
-#: ../src/ui/frames.c:1177
+#: ../src/ui/frames.c:1375
 msgid "Always On Visible Workspace"
 msgstr "Միշտ տեսանելի աշխատատարածքի վրա"
 
-#: ../src/ui/frames.c:1180
+#: ../src/ui/frames.c:1378
 msgid "Put Window On Only One Workspace"
 msgstr "Ներդրեք Պատուհան Միայն Մեկ Աշխատատարածքի վրա"
 
@@ -1802,71 +1802,71 @@ msgstr "Mod5"
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:257
+#: ../src/ui/theme.c:258
 msgid "top"
 msgstr "վերև"
 
-#: ../src/ui/theme.c:259
+#: ../src/ui/theme.c:260
 msgid "bottom"
 msgstr "ներքև"
 
-#: ../src/ui/theme.c:261
+#: ../src/ui/theme.c:262
 msgid "left"
 msgstr "Ձախ"
 
-#: ../src/ui/theme.c:263
+#: ../src/ui/theme.c:264
 msgid "right"
 msgstr "աջ"
 
-#: ../src/ui/theme.c:290
+#: ../src/ui/theme.c:291
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "շրջանակի երկրաչափությունը չի նշում \"%s\" չափայնությունը "
 
-#: ../src/ui/theme.c:309
+#: ../src/ui/theme.c:310
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr ""
 "շրջանակի երկրաչափությունը չի նշում չափայնությունը \"%s\" սահմանի համար  "
 "\"%s\""
 
-#: ../src/ui/theme.c:346
+#: ../src/ui/theme.c:347
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "Կոճակի չափերի հարաբերությունը %g նպատակային չէ"
 
-#: ../src/ui/theme.c:358
+#: ../src/ui/theme.c:359
 #, c-format
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Երկրաչափության շրջանը չունի կոճակների նշված չափ"
 
-#: ../src/ui/theme.c:1065
+#: ../src/ui/theme.c:1121
 #, c-format
 msgid "Gradients should have at least two colors"
 msgstr "Գրադիենտը պետք է ունենա առնվազն երկու գույներ"
 
-#: ../src/ui/theme.c:1203
+#: ../src/ui/theme.c:1259
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
 
-#: ../src/ui/theme.c:1219
+#: ../src/ui/theme.c:1275
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
 
-#: ../src/ui/theme.c:1233
+#: ../src/ui/theme.c:1289
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
 
-#: ../src/ui/theme.c:1277
+#: ../src/ui/theme.c:1333
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1875,7 +1875,7 @@ msgstr ""
 "GTK գույնի բնորոշումները պետք է ունենա վիճակիը փակագծերի մեջ e.g. "
 "gtk:fg[NORMAL]  , որտեղ ՆՈՐՄԱԼ վիճակն է, չի կարող վերլուծվել \"%s\""
 
-#: ../src/ui/theme.c:1291
+#: ../src/ui/theme.c:1347
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1884,17 +1884,17 @@ msgstr ""
 "GTK գույնի բնորոշումները պետք է ունենա փակվող փակագիծ վիճակից հետո, e.g. "
 "gtk:fg[ՆՈՐՄԱԼ] , որտեղ ՆՈՐՄԱԼ վիճակն է, չի կարող վերլուծվել \"%s\""
 
-#: ../src/ui/theme.c:1302
+#: ../src/ui/theme.c:1358
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Չհասկացված \"%s\" վիճակ գույների որոշակիացման մեջ"
 
-#: ../src/ui/theme.c:1315
+#: ../src/ui/theme.c:1371
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Չի հասկանում գույնի բաղադրիչը \"%s\" գույնի ճշգրտման մեջ"
 
-#: ../src/ui/theme.c:1343
+#: ../src/ui/theme.c:1399
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1903,46 +1903,46 @@ msgstr ""
 "Խառնուրդ ձևաչափն է \"blend/bg_color/fg_color/alpha\", \"%s\" չի "
 "համապատասխանեցնում ձևաչափը"
 
-#: ../src/ui/theme.c:1354
+#: ../src/ui/theme.c:1410
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Չի կարող վերլուծել ալֆա արժեք \"%s\" խառնված գույների մեջ"
 
-#: ../src/ui/theme.c:1364
+#: ../src/ui/theme.c:1420
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "Ալֆա արժեքը \"%s\" խառնված գույների մեջ 0.0 և 1.0 միջև չէ"
 
-#: ../src/ui/theme.c:1410
+#: ../src/ui/theme.c:1466
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr ""
 "Երանգ ձև աչափը\"shade/base_color/factor\" է, \"%s\" չի համապատասխանում "
 "ձևաչափին"
 
-#: ../src/ui/theme.c:1421
+#: ../src/ui/theme.c:1477
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Չհաջողվեց վերլուծել երանգ գործոնը \"%s\" ստվերային գույնի մեջ"
 
-#: ../src/ui/theme.c:1431
+#: ../src/ui/theme.c:1487
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Երանգ գործոնը \"%s\" ստվերային գույնի մեջ բացասական է"
 
-#: ../src/ui/theme.c:1460
+#: ../src/ui/theme.c:1516
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "Չհաջողվեց վերլուծել գույնը \"%s\""
 
-#: ../src/ui/theme.c:1809
+#: ../src/ui/theme.c:1865
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr ""
 "Կոորդինատային արտահայտությունը պարունակում է սիմվոլներ '%s', որը չի "
 "թույլատրվում"
 
-#: ../src/ui/theme.c:1836
+#: ../src/ui/theme.c:1892
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1951,14 +1951,14 @@ msgstr ""
 "Կոորդինատային արտահայտությունը պարունակում է լողացող ստորակետով թիվ '%s' , "
 "որոնք չեն կարող վերլուծվել"
 
-#: ../src/ui/theme.c:1850
+#: ../src/ui/theme.c:1906
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr ""
 "Կոորդինատային արտահայտությունը պարունակում է ամբողջ թիվ '%s' , որոնք չեն "
 "կարող վերլուծվել"
 
-#: ../src/ui/theme.c:1972
+#: ../src/ui/theme.c:2028
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
@@ -1967,17 +1967,17 @@ msgstr ""
 "Կոորդինատային արտահայտությունը պարունակում է անհայտ օպերատոր այս տեքստի "
 "սկզբում : \"%s\""
 
-#: ../src/ui/theme.c:2029
+#: ../src/ui/theme.c:2085
 #, c-format
 msgid "Coordinate expression was empty or not understood"
 msgstr "Կոորդինատային արտահայտությունը դատարկ է կամ անհասկանալի"
 
-#: ../src/ui/theme.c:2140 ../src/ui/theme.c:2150 ../src/ui/theme.c:2184
+#: ../src/ui/theme.c:2196 ../src/ui/theme.c:2206 ../src/ui/theme.c:2240
 #, c-format
 msgid "Coordinate expression results in division by zero"
 msgstr "Կոորդինատային արտահայտությունը բաժանվում է զրոյի վրա"
 
-#: ../src/ui/theme.c:2192
+#: ../src/ui/theme.c:2248
 #, c-format
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
@@ -1985,25 +1985,25 @@ msgstr ""
 "Կոորդինատային արտահայտությունը փորձում է օգտագործել mod օպերատորը լողացող "
 "կետով թվի համար"
 
-#: ../src/ui/theme.c:2248
+#: ../src/ui/theme.c:2304
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr ""
 "Կոորդինատային արտահայտությունը ունի օպերատորը \"%s\" , որտեղ օպերանդը "
 "ակնկալվում էր"
 
-#: ../src/ui/theme.c:2257
+#: ../src/ui/theme.c:2313
 #, c-format
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr ""
 "Կոորդինատային արտահայտությունը ունի օպերանդ, որտեղ օպերատորը ակնկալվում էր"
 
-#: ../src/ui/theme.c:2265
+#: ../src/ui/theme.c:2321
 #, c-format
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Կոորդինատային արտահայտությունը ավարտվում է օպերատրով օպերանդի փոխարեն"
 
-#: ../src/ui/theme.c:2275
+#: ../src/ui/theme.c:2331
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -2012,43 +2012,43 @@ msgstr ""
 "Կոորդինատային արտահայտությունը ունի օպերատոր \"%c\" հետևյալ օպերատորը \"%c\""
 " առանց օպերանդի արանքում"
 
-#: ../src/ui/theme.c:2426 ../src/ui/theme.c:2471
+#: ../src/ui/theme.c:2482 ../src/ui/theme.c:2527
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr ""
 "Կոորդինատային արտահայտությունը ուներ անհայտ փոփոխական կամ հաստատուն \"%s\""
 
-#: ../src/ui/theme.c:2525
+#: ../src/ui/theme.c:2581
 #, c-format
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr ""
 "Կոորդինատային արտահայտության վերլուծիչ ծրագիրը գերլցրել է նրա բուֆերը։"
 
-#: ../src/ui/theme.c:2554
+#: ../src/ui/theme.c:2610
 #, c-format
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr ""
 "Կոորդինատային արտահայտությունը ուներ փակվող փակագիծ առանց բաց փակագծերի"
 
-#: ../src/ui/theme.c:2618
+#: ../src/ui/theme.c:2674
 #, c-format
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr ""
 "Կոորդինատային արտահայտությունը ունի բացված փակագծեր առանց փակվող փակագծերի"
 
-#: ../src/ui/theme.c:2629
+#: ../src/ui/theme.c:2685
 #, c-format
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr ""
 "Կոորդինատային արտահայտությունը կարծես թե չունի որևէ օպերատոր կամ օպերանդ"
 
-#: ../src/ui/theme.c:2833 ../src/ui/theme.c:2853 ../src/ui/theme.c:2873
+#: ../src/ui/theme.c:2889 ../src/ui/theme.c:2909 ../src/ui/theme.c:2929
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Թեման պարունակում է արտահայտությունը, որը հանգեցրել է սխալի: %s\n"
 
-#: ../src/ui/theme.c:4556
+#: ../src/ui/theme.c:4593
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2057,23 +2057,23 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> պետք է նշված "
 "լինել այս շրջանակի ոճի համար"
 
-#: ../src/ui/theme.c:5089 ../src/ui/theme.c:5114
+#: ../src/ui/theme.c:5129 ../src/ui/theme.c:5154
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Բացակայում է <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: ../src/ui/theme.c:5158
+#: ../src/ui/theme.c:5198
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Ձախողվեց բեռնել թեման \"%s\": %s\n"
 
-#: ../src/ui/theme.c:5290 ../src/ui/theme.c:5297 ../src/ui/theme.c:5304
-#: ../src/ui/theme.c:5311 ../src/ui/theme.c:5318
+#: ../src/ui/theme.c:5330 ../src/ui/theme.c:5337 ../src/ui/theme.c:5344
+#: ../src/ui/theme.c:5351 ../src/ui/theme.c:5358
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "<%s> չի սահմանվել \"%s\" թեմայի համար"
 
-#: ../src/ui/theme.c:5326
+#: ../src/ui/theme.c:5366
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2082,12 +2082,12 @@ msgstr ""
 "Ոչ շրջանակ ոճը սահմանվել է պատուհանի տեսակի համար \"%s\" թեմայի մեջ \"%s\", "
 "ավելացնել <window type=\"%s\" style_set=\"whatever\"/> էլեմենտը"
 
-#: ../src/ui/theme.c:5774 ../src/ui/theme.c:5836 ../src/ui/theme.c:5899
+#: ../src/ui/theme.c:5781 ../src/ui/theme.c:5843 ../src/ui/theme.c:5906
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "Օգտագործողի սահմանած հաստատաունները պետք է սկսել մեծատառով, \"%s\""
 
-#: ../src/ui/theme.c:5782 ../src/ui/theme.c:5844 ../src/ui/theme.c:5907
+#: ../src/ui/theme.c:5789 ../src/ui/theme.c:5851 ../src/ui/theme.c:5914
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "\"%s\" հաստատունը արդեն սահմանվել է"
@@ -2567,7 +2567,7 @@ msgstr "Հենանիշ"
 msgid "Window Title Goes Here"
 msgstr "Պատուհանի Վերնագիրը Գնում է Այստեղ"
 
-#: ../src/ui/theme-viewer.c:1097
+#: ../src/ui/theme-viewer.c:1094
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
