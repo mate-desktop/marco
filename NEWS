@@ -1,14 +1,29 @@
+### marco 1.22.3
+
+  * update translations
+  * frames: bump priority of style providers
+  * window: add _GTK_THEME_VARIANT to initial window properties
+  * frames: apply modified hack from Mutter/Metacity
+  * frames: avoid infinite loop on the variants GList
+  * frames: use style_updated instead of style_set
+  * Fixed moving windows to edges to work with CSD clients.
+  * window: Update allowed action hints
+  * build: Remove rationales.txt from EXTRA_DIST target
+  * Fix use of RBGA visual in frame.c when compositing is not in use
+  * drop old and obsolete rationales.txt
+  * boxes: Actually check for rectangle containment
+
 ### marco 1.22.2
 
-    tx: sync with transifex
-    bump LT_VERSION_INFO
-    libmarco-private: add version information
-    add support for invisible borders
-    frames: avoid deprecated 'gtk_widget_set_double_buffered'
-    window: avoid clang warning: garbage value
-    ui: always set the frame background to None
-    libmetacity: use cairo to render gradient
-    gradient: sync code with mutter before it was removed
+  * update translations
+  * bump LT_VERSION_INFO
+  * libmarco-private: add version information
+  * add support for invisible borders
+  * frames: avoid deprecated 'gtk_widget_set_double_buffered'
+  * window: avoid clang warning: garbage value
+  * ui: always set the frame background to None
+  * libmetacity: use cairo to render gradient
+  * gradient: sync code with mutter before it was removed
 
 ### marco 1.22.1
 
