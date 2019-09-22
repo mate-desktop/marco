@@ -1,14 +1,19 @@
 THEMES= \
+	Atlanta \
 	ClearlooksRe \
-	eOS \
-	DustBlue \
-	WinMe \
-	Splint-Left \
 	Dopple \
+	Dopple-Left \
+	DustBlue \
+	Esco \
+	eOS \
+	Gorilla \
+	Motif \
+	Raleigh \
+	Spidey \
 	Spidey-Left \
 	Splint \
-	Dopple-Left \
-	Spidey
+	Splint-Left \
+	WinMe
 
 THEME_DIR=$(datadir)/themes
 THEME_SUBDIR=metacity-1
