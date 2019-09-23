@@ -27,6 +27,7 @@
 #include <stdio.h>
 #include <X11/Xutil.h> /* Just for the definition of the various gravities */
 #include <time.h>      /* To initialize random seed */
+#include <math.h>
 
 #define NUM_RANDOM_RUNS 10000
 
@@ -1340,6 +1341,7 @@ test_gravity_resize ()
   printf ("%s passed.\n", G_STRFUNC);
 }
 
+#define EPSILON 0.000000001
 static void
 test_find_closest_point_to_line ()
 {
@@ -1354,7 +1356,7 @@ test_find_closest_point_to_line ()
                                                   x2,  y2,
                                                   px,  py,
                                                   &rx, &ry);
-  g_assert (rx == answer_x && ry == answer_y);
+  g_assert (fabs (rx - answer_x) < EPSILON && fabs (ry - answer_y) < EPSILON);
 
   /* Special test for x1 == x2, so that slop of line is infinite */
   x1 =  3.0;  y1 =  49.0;
@@ -1365,7 +1367,7 @@ test_find_closest_point_to_line ()
                                                   x2,  y2,
                                                   px,  py,
                                                   &rx, &ry);
-  g_assert (rx == answer_x && ry == answer_y);
+  g_assert (fabs (rx - answer_x) < EPSILON && fabs (ry - answer_y) < EPSILON);
 
   /* Special test for y1 == y2, so perp line has slope of infinity */
   x1 =  3.14;  y1 =   7.0;
@@ -1376,7 +1378,7 @@ test_find_closest_point_to_line ()
                                                   x2,  y2,
                                                   px,  py,
                                                   &rx, &ry);
-  g_assert (rx == answer_x && ry == answer_y);
+  g_assert (fabs (rx - answer_x) < EPSILON && fabs (ry - answer_y) < EPSILON);
 
   /* Test when we the point we want to be closest to is actually on the line */
   x1 =  3.0;  y1 =  49.0;
@@ -1387,7 +1389,7 @@ test_find_closest_point_to_line ()
                                                   x2,  y2,
                                                   px,  py,
                                                   &rx, &ry);
-  g_assert (rx == answer_x && ry == answer_y);
+  g_assert (fabs (rx - answer_x) < EPSILON && fabs (ry - answer_y) < EPSILON);
 
   printf ("%s passed.\n", G_STRFUNC);
 }
