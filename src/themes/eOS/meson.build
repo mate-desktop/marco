@@ -8,6 +8,7 @@ install_data(
   'menu.png',
   'menu_prelight.png',
   'metacity-theme-1.xml',
+  'metacity-theme-3.xml',
   'minimize.png',
   'minimize_unfocused_over.png',
   'minimize_unfocused.png',
