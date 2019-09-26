@@ -11,7 +11,8 @@ AM_CPPFLAGS = \
 	-DMARCO_DATADIR=\"$(datadir)\" \
 	-DG_LOG_DOMAIN=\"marco\" \
 	-DSN_API_NOT_YET_FROZEN=1 \
-	@MARCO_CFLAGS@
+	@MARCO_CFLAGS@ \
+	$(WARN_CFLAGS)
 
 marco_SOURCES= 				\
 	core/main.c				\

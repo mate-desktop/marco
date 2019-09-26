@@ -16,6 +16,7 @@ AM_INIT_AUTOMAKE([subdir-objects no-dist-gzip dist-xz check-news])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AM_MAINTAINER_MODE
 AX_CHECK_ENABLE_DEBUG()
+MATE_COMPILE_WARNINGS
 
 dnl **************************************************************************
 dnl Library version information
@@ -53,17 +54,6 @@ AC_CHECK_SIZEOF(__int64)
 
 ## byte order
 AC_C_BIGENDIAN
-
-#### Warnings
-AX_APPEND_COMPILE_FLAGS([-Wall -Wcast-align -Wchar-subscripts -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wsign-compare -Wshadow], [CFLAGS])
-AC_ARG_ENABLE(more-warnings,
-  AC_HELP_STRING([--enable-more-warnings], [Maximum compiler warnings]),
-    set_more_warnings="$enableval",
-    set_more_warnings=no
-)
-if test "$set_more_warnings" != "no"; then
-  AX_APPEND_COMPILE_FLAGS([-Wextra], [CFLAGS])
-fi
 
 GIO_MIN_VERSION=2.25.10
 GTK_MIN_VERSION=3.22.0
