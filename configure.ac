@@ -15,7 +15,7 @@ AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([subdir-objects no-dist-gzip dist-xz check-news])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AM_MAINTAINER_MODE
-AX_CHECK_ENABLE_DEBUG()
+MATE_DEBUG_CHECK([no])
 MATE_COMPILE_WARNINGS([yes])
 
 dnl **************************************************************************
