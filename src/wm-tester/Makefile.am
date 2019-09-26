@@ -1,5 +1,7 @@
 
-AM_CPPFLAGS=@MARCO_CFLAGS@
+AM_CPPFLAGS = \
+	@MARCO_CFLAGS@ \
+	$(WARN_CFLAGS)
 
 wm_tester_SOURCES= 				\
 	main.c
