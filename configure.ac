@@ -455,6 +455,8 @@ marco-$VERSION:
 	prefix:                   ${prefix}
 	source code location:     ${srcdir}
 	compiler:                 ${CC}
+        compiler flags:           ${CFLAGS}
+        compiler warnings:        ${WARN_CFLAGS}
 
 	XFree86 Xinerama:         ${use_xfree_xinerama}
 	Solaris Xinerama:         ${use_solaris_xinerama}
