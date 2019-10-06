@@ -96,6 +96,114 @@ static void hls_to_rgb			(gdouble	 *h,
  */
 static MetaTheme *meta_current_theme = NULL;
 
+static cairo_surface_t *
+scale_surface (cairo_surface_t *surface,
+               gdouble          old_width,
+               gdouble          old_height,
+               gdouble          new_width,
+               gdouble          new_height,
+               gboolean         vertical_stripes,
+               gboolean         horizontal_stripes)
+{
+  gdouble scale_x;
+  gdouble scale_y;
+  cairo_content_t content;
+  gint width;
+  gint height;
+  cairo_surface_t *scaled;
+  cairo_t *cr;
+
+  scale_x = new_width / old_width;
+  scale_y = new_height / old_height;
+
+  if (horizontal_stripes && !vertical_stripes)
+    {
+      new_width = old_width;
+      scale_x = 1.0;
+    }
+  else if (vertical_stripes && !horizontal_stripes)
+    {
+      new_height = old_height;
+      scale_y = 1.0;
+    }
+
+  content = CAIRO_CONTENT_COLOR_ALPHA;
+  width = ceil (new_width);
+  height = ceil (new_height);
+
+  scaled = cairo_surface_create_similar (surface, content, width, height);
+  cr = cairo_create (scaled);
+
+  cairo_scale (cr, scale_x, scale_y);
+  cairo_set_source_surface (cr, surface, 0, 0);
+
+  cairo_pattern_set_extend (cairo_get_source (cr), CAIRO_EXTEND_PAD);
+
+  cairo_paint (cr);
+  cairo_destroy (cr);
+
+  return scaled;
+}
+
+static cairo_surface_t *
+get_surface_from_pixbuf (GdkPixbuf         *pixbuf,
+                         MetaImageFillType  fill_type,
+                         gdouble            width,
+                         gdouble            height,
+                         gboolean           vertical_stripes,
+                         gboolean           horizontal_stripes)
+{
+  gdouble pixbuf_width;
+  gdouble pixbuf_height;
+  cairo_surface_t *surface;
+  cairo_content_t content;
+  cairo_surface_t *copy;
+  cairo_t *cr;
+
+  pixbuf_width = gdk_pixbuf_get_width (pixbuf);
+  pixbuf_height = gdk_pixbuf_get_height (pixbuf);
+  surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, 1, NULL);
+
+  if (pixbuf_width == width && pixbuf_height == height)
+    {
+      return surface;
+    }
+
+  if (fill_type != META_IMAGE_FILL_TILE)
+    {
+      cairo_surface_t *scaled;
+
+      scaled = scale_surface (surface, pixbuf_width, pixbuf_height,
+                              width, height, vertical_stripes,
+                              horizontal_stripes);
+
+      cairo_surface_destroy (surface);
+      surface = scaled;
+    }
+
+  content = CAIRO_CONTENT_COLOR_ALPHA;
+  width = ceil (width);
+  height = ceil (height);
+
+  copy = cairo_surface_create_similar (surface, content, width, height);
+  cr = cairo_create (copy);
+
+  cairo_set_source_surface (cr, surface, 0, 0);
+
+  if (fill_type == META_IMAGE_FILL_TILE ||
+      vertical_stripes || horizontal_stripes)
+    {
+      cairo_pattern_set_extend (cairo_get_source (cr), CAIRO_EXTEND_REPEAT);
+    }
+
+  cairo_paint (cr);
+  cairo_destroy (cr);
+
+  cairo_surface_destroy (surface);
+
+  return copy;
+}
+
 static GdkPixbuf *
 colorize_pixbuf (GdkPixbuf *orig,
                  GdkRGBA   *new_color)
@@ -1149,6 +1257,38 @@ meta_alpha_gradient_spec_free (MetaAlphaGradientSpec *spec)
 
   g_free (spec->alphas);
   g_free (spec);
+}
+
+cairo_pattern_t *
+meta_alpha_gradient_spec_get_mask (const MetaAlphaGradientSpec *spec)
+{
+  gint n_alphas;
+  cairo_pattern_t *pattern;
+  gint i;
+
+  /* Hardcoded in theme-parser.c */
+  g_assert (spec->type == META_GRADIENT_HORIZONTAL);
+
+  n_alphas = spec->n_alphas;
+  if (n_alphas == 0)
+    return NULL;
+
+  if (n_alphas == 1)
+    return cairo_pattern_create_rgba (0, 0, 0, spec->alphas[0] / 255.0);
+
+  pattern = cairo_pattern_create_linear (0, 0, 1, 0);
+
+  for (i = 0; i < n_alphas; i++)
+    cairo_pattern_add_color_stop_rgba (pattern, i / (gfloat) (n_alphas - 1),
+                                       0, 0, 0, spec->alphas[i] / 255.0);
+
+  if (cairo_pattern_status (pattern) != CAIRO_STATUS_SUCCESS)
+    {
+      cairo_pattern_destroy (pattern);
+      return NULL;
+    }
+
+  return pattern;
 }
 
 MetaColorSpec*
@@ -3627,6 +3767,94 @@ draw_op_as_pixbuf (const MetaDrawOp    *op,
   return pixbuf;
 }
 
+static cairo_surface_t *
+draw_op_as_surface (const MetaDrawOp   *op,
+                    GtkStyleContext    *style,
+                    const MetaDrawInfo *info,
+                    gdouble             width,
+                    gdouble             height)
+{
+  cairo_surface_t *surface;
+
+  surface = NULL;
+
+  switch (op->type)
+    {
+    case META_DRAW_IMAGE:
+      {
+        if (op->data.image.colorize_spec)
+          {
+            GdkRGBA color;
+
+            meta_color_spec_render (op->data.image.colorize_spec,
+                                    style, &color);
+
+            if (op->data.image.colorize_cache_pixbuf == NULL ||
+                op->data.image.colorize_cache_pixel != GDK_COLOR_RGB (color))
+              {
+                if (op->data.image.colorize_cache_pixbuf)
+                  g_object_unref (G_OBJECT (op->data.image.colorize_cache_pixbuf));
+
+                /* const cast here */
+                ((MetaDrawOp*)op)->data.image.colorize_cache_pixbuf =
+                  colorize_pixbuf (op->data.image.pixbuf,
+                                   &color);
+                ((MetaDrawOp*)op)->data.image.colorize_cache_pixel =
+                  GDK_COLOR_RGB (color);
+              }
+
+            if (op->data.image.colorize_cache_pixbuf)
+              {
+                surface = get_surface_from_pixbuf (op->data.image.colorize_cache_pixbuf,
+                                                   op->data.image.fill_type,
+                                                   width, height,
+                                                   op->data.image.vertical_stripes,
+                                                   op->data.image.horizontal_stripes);
+              }
+          }
+        else
+          {
+            surface = get_surface_from_pixbuf (op->data.image.pixbuf,
+                                               op->data.image.fill_type,
+                                               width, height,
+                                               op->data.image.vertical_stripes,
+                                               op->data.image.horizontal_stripes);
+          }
+        break;
+      }
+
+    case META_DRAW_ICON:
+      if (info->mini_icon &&
+          width <= gdk_pixbuf_get_width (info->mini_icon) &&
+          height <= gdk_pixbuf_get_height (info->mini_icon))
+        surface = get_surface_from_pixbuf (info->mini_icon, op->data.icon.fill_type,
+                                           width, height, FALSE, FALSE);
+      else if (info->icon)
+        surface = get_surface_from_pixbuf (info->icon, op->data.icon.fill_type,
+                                           width, height, FALSE, FALSE);
+      break;
+
+    case META_DRAW_TINT:
+    case META_DRAW_LINE:
+    case META_DRAW_RECTANGLE:
+    case META_DRAW_ARC:
+    case META_DRAW_CLIP:
+    case META_DRAW_GRADIENT:
+    case META_DRAW_GTK_ARROW:
+    case META_DRAW_GTK_BOX:
+    case META_DRAW_GTK_VLINE:
+    case META_DRAW_TITLE:
+    case META_DRAW_OP_LIST:
+    case META_DRAW_TILE:
+      break;
+
+    default:
+      break;
+    }
+
+  return surface;
+}
+
 static void
 fill_env (MetaPositionExprEnv *env,
           const MetaDrawInfo  *info,
@@ -3899,8 +4127,12 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
 
     case META_DRAW_IMAGE:
       {
-        int rx, ry, rwidth, rheight;
-        GdkPixbuf *pixbuf;
+        gint scale;
+        gdouble rx, ry, rwidth, rheight;
+        cairo_surface_t *surface;
+
+        scale = gdk_window_get_scale_factor (gdk_get_default_root_window ());
+        cairo_scale (cr, 1.0 / scale, 1.0 / scale);
 
         if (op->data.image.pixbuf)
           {
@@ -3908,21 +4140,36 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
             env->object_height = gdk_pixbuf_get_height (op->data.image.pixbuf);
           }
 
-        rwidth = parse_size_unchecked (op->data.image.width, env);
-        rheight = parse_size_unchecked (op->data.image.height, env);
+        rwidth = parse_size_unchecked (op->data.image.width, env) * scale;
+        rheight = parse_size_unchecked (op->data.image.height, env) * scale;
 
-        pixbuf = draw_op_as_pixbuf (op, style_gtk, info,
-                                    rwidth, rheight);
+        surface = draw_op_as_surface (op, style_gtk, info, rwidth, rheight);
 
-        if (pixbuf)
+        if (surface)
           {
-            rx = parse_x_position_unchecked (op->data.image.x, env);
-            ry = parse_y_position_unchecked (op->data.image.y, env);
+            rx = parse_x_position_unchecked (op->data.image.x, env) * scale;
+            ry = parse_y_position_unchecked (op->data.image.y, env) * scale;
 
-            gdk_cairo_set_source_pixbuf (cr, pixbuf, rx, ry);
-            cairo_paint (cr);
+            cairo_set_source_surface (cr, surface, rx, ry);
 
-            g_object_unref (G_OBJECT (pixbuf));
+            if (op->data.image.alpha_spec)
+              {
+                cairo_pattern_t *pattern;
+
+                cairo_translate (cr, rx, ry);
+                cairo_scale (cr, rwidth, rheight);
+
+                pattern = meta_alpha_gradient_spec_get_mask (op->data.image.alpha_spec);
+                cairo_mask (cr, pattern);
+
+                cairo_pattern_destroy (pattern);
+              }
+            else
+              {
+                cairo_paint (cr);
+              }
+
+            cairo_surface_destroy (surface);
           }
       }
       break;
@@ -3991,24 +4238,43 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
 
     case META_DRAW_ICON:
       {
-        int rx, ry, rwidth, rheight;
-        GdkPixbuf *pixbuf;
+        gint scale;
+        gdouble rx, ry, rwidth, rheight;
+        cairo_surface_t *surface;
 
-        rwidth = parse_size_unchecked (op->data.icon.width, env);
-        rheight = parse_size_unchecked (op->data.icon.height, env);
+        scale = gdk_window_get_scale_factor (gdk_get_default_root_window ());
+        cairo_scale (cr, 1.0 / scale, 1.0 / scale);
 
-        pixbuf = draw_op_as_pixbuf (op, style_gtk, info,
-                                    rwidth, rheight);
+        rwidth = parse_size_unchecked (op->data.icon.width, env) * scale;
+        rheight = parse_size_unchecked (op->data.icon.height, env) * scale;
 
-        if (pixbuf)
+        surface = draw_op_as_surface (op, style_gtk, info, rwidth, rheight);
+
+        if (surface)
           {
-            rx = parse_x_position_unchecked (op->data.icon.x, env);
-            ry = parse_y_position_unchecked (op->data.icon.y, env);
+            rx = parse_x_position_unchecked (op->data.icon.x, env) * scale;
+            ry = parse_y_position_unchecked (op->data.icon.y, env) * scale;
 
-            gdk_cairo_set_source_pixbuf (cr, pixbuf, rx, ry);
-            cairo_paint (cr);
+            cairo_set_source_surface (cr, surface, rx, ry);
 
-            g_object_unref (G_OBJECT (pixbuf));
+            if (op->data.icon.alpha_spec)
+              {
+                cairo_pattern_t *pattern;
+
+                cairo_translate (cr, rx, ry);
+                cairo_scale (cr, rwidth, rheight);
+
+                pattern = meta_alpha_gradient_spec_get_mask (op->data.icon.alpha_spec);
+                cairo_mask (cr, pattern);
+
+                cairo_pattern_destroy (pattern);
+              }
+            else
+              {
+                cairo_paint (cr);
+              }
+
+            cairo_surface_destroy (surface);
           }
       }
       break;
