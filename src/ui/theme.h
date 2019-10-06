@@ -964,6 +964,7 @@ gboolean          meta_gradient_spec_validate (MetaGradientSpec     *spec,
 MetaAlphaGradientSpec* meta_alpha_gradient_spec_new  (MetaGradientType       type,
                                                       int                    n_alphas);
 void                   meta_alpha_gradient_spec_free (MetaAlphaGradientSpec *spec);
+cairo_pattern_t *      meta_alpha_gradient_spec_get_mask (const MetaAlphaGradientSpec *spec);
 
 
 MetaFrameStyle* meta_frame_style_new   (MetaFrameStyle *parent);
