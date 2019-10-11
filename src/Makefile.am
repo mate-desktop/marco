@@ -6,7 +6,7 @@ AM_CPPFLAGS = \
 	-I$(srcdir)/include \
 	-DMARCO_LIBEXECDIR=\"$(libexecdir)\" \
 	-DHOST_ALIAS=\"@HOST_ALIAS@\" \
-	-DMARCO_LOCALEDIR=\"$(prefix)/@DATADIRNAME@/locale\" \
+	-DMARCO_LOCALEDIR=\""$(datadir)/locale"\" \
 	-DMARCO_PKGDATADIR=\"$(pkgdatadir)\" \
 	-DMARCO_DATADIR=\"$(datadir)\" \
 	-DG_LOG_DOMAIN=\"marco\" \
