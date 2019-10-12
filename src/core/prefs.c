@@ -1137,7 +1137,10 @@ meta_prefs_get_cursor_size (void)
 int
 meta_prefs_get_icon_size (void)
 {
-  return icon_size;
+  GdkWindow *window = gdk_get_default_root_window ();
+  gint scale = gdk_window_get_scale_factor (window);
+
+  return icon_size * scale;
 }
 
 int

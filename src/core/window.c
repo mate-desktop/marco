@@ -6115,7 +6115,7 @@ meta_window_update_icon_now (MetaWindow *window)
 
   icon = NULL;
   mini_icon = NULL;
-  
+
   int icon_size = meta_prefs_get_icon_size();
 
   if (meta_read_icons (window->screen,

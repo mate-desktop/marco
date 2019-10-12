@@ -28,8 +28,9 @@
 #include "util.h"
 #include "core.h"
 #include "tabpopup.h"
-/* FIXME these two includes are 100% broken ...
- */
+#include "theme.h"
+#include "prefs.h"
+/* FIXME these two includes are 100% broken... */
 #include "../core/workspace.h"
 #include "../core/frame-private.h"
 #include "draw-workspace.h"
@@ -37,8 +38,8 @@
 #include <gdk/gdkx.h>
 #include <math.h>
 
-#define OUTSIDE_SELECT_RECT 2
-#define INSIDE_SELECT_RECT 2
+#define OUTSIDE_SELECT_RECT 8
+#define INSIDE_SELECT_RECT 8
 
 typedef struct _TabEntry TabEntry;
 
@@ -110,6 +111,21 @@ outline_window_draw (GtkWidget *widget,
   cairo_stroke (cr);
 
   return FALSE;
+}
+
+static void
+popup_window_screen_changed (GtkWidget *widget,
+                             GdkScreen *old_screen G_GNUC_UNUSED,
+                             gpointer   data G_GNUC_UNUSED)
+{
+  /* To check if the display supports alpha channels, get the visual */
+  GdkScreen *screen = gtk_widget_get_screen (widget);
+  GdkVisual *visual = gdk_screen_get_rgba_visual (screen);
+
+  if (!visual)
+    visual = gdk_screen_get_system_visual (screen);
+
+  gtk_widget_set_visual(widget, visual);
 }
 
 static GdkPixbuf*
@@ -230,6 +246,8 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   GdkScreen *screen;
   int scale;
 
+  GtkShadowType frame_shadow = GTK_SHADOW_OUT;
+
   popup = g_new (MetaTabPopup, 1);
 
   screen = gdk_display_get_default_screen (gdk_display_get_default ());
@@ -259,14 +277,25 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
   popup->window = gtk_window_new (GTK_WINDOW_POPUP);
 
-  gtk_window_set_screen (GTK_WINDOW (popup->window),
-                         screen);
+  gtk_window_set_screen (GTK_WINDOW (popup->window), screen);
+  gtk_window_set_position (GTK_WINDOW (popup->window), GTK_WIN_POS_CENTER_ALWAYS);
 
-  gtk_window_set_position (GTK_WINDOW (popup->window),
-                           GTK_WIN_POS_CENTER_ALWAYS);
   /* enable resizing, to get never-shrink behavior */
-  gtk_window_set_resizable (GTK_WINDOW (popup->window),
-                            TRUE);
+  gtk_window_set_resizable (GTK_WINDOW (popup->window), TRUE);
+
+  /* This style should only be set for composited mode. */
+  if (meta_prefs_get_compositing_manager ())
+    {
+      frame_shadow = GTK_SHADOW_NONE;
+      gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (popup->window)),
+                                   GTK_STYLE_CLASS_OSD);
+    }
+
+  g_signal_connect (G_OBJECT (popup->window), "screen-changed",
+                    G_CALLBACK (popup_window_screen_changed), NULL);
+
+  popup_window_screen_changed (popup->window, NULL, NULL);
+
   popup->current = NULL;
   popup->entries = NULL;
   popup->current_selected_entry = NULL;
@@ -292,12 +321,10 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   grid = popup->grid;
 
   frame = gtk_frame_new (NULL);
-  gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_OUT);
-  gtk_container_set_border_width (GTK_CONTAINER (grid), 1);
-  gtk_container_add (GTK_CONTAINER (popup->window),
-                     frame);
-  gtk_container_add (GTK_CONTAINER (frame),
-                     vbox);
+  gtk_frame_set_shadow_type (GTK_FRAME (frame), frame_shadow);
+  gtk_container_set_border_width (GTK_CONTAINER (grid), 16);
+  gtk_container_add (GTK_CONTAINER (popup->window), frame);
+  gtk_container_add (GTK_CONTAINER (frame), vbox);
 
   gtk_box_pack_start (GTK_BOX (vbox), grid, TRUE, TRUE, 0);
 
@@ -310,10 +337,10 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   obj = gtk_widget_get_accessible (popup->label);
   atk_object_set_role (obj, ATK_ROLE_STATUSBAR);
 
-  gtk_widget_set_margin_start (popup->label, 3);
-  gtk_widget_set_margin_end (popup->label, 3);
-  gtk_widget_set_margin_top (popup->label, 3);
-  gtk_widget_set_margin_bottom (popup->label, 3);
+  gtk_widget_set_margin_start (popup->label, 16);
+  gtk_widget_set_margin_end (popup->label, 16);
+  gtk_widget_set_margin_top (popup->label, 0);
+  gtk_widget_set_margin_bottom (popup->label, 16);
 
   gtk_box_pack_end (GTK_BOX (vbox), popup->label, FALSE, FALSE, 0);
 
@@ -322,8 +349,8 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   left = 0;
   tmp = popup->entries;
 
-  gtk_widget_show(popup->label); /* for gtk_widget_get_preferred_size() */
-  
+  gtk_widget_show (popup->label); /* for gtk_widget_get_preferred_size() */
+
   while (tmp && top < height)
     {
       left = 0;
@@ -370,8 +397,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
           gtk_grid_attach (GTK_GRID (grid), te->widget, left, top, 1, 1);
 
           /* Efficiency rules! */
-          gtk_label_set_markup (GTK_LABEL (popup->label),
-                              te->title);
+          gtk_label_set_markup (GTK_LABEL (popup->label), te->title);
           gtk_widget_get_preferred_size (popup->label, &req, NULL);
           max_label_width = MAX (max_label_width, req.width);
 
@@ -394,31 +420,32 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
     {
       /* only one row partially filled with columns and additional_columns given
          => calculate default_window_width to fit max_label_width if possible */
-      
-      GtkWidget **dummies = g_try_malloc(sizeof(GtkWidget*) * (width - left));
+
+      GtkWidget **dummies = g_try_malloc (sizeof (GtkWidget*) * (width - left));
       if (dummies)
         {
           int j;
-          for (j = 0; j < width - left; ++j) 
+          for (j = 0; j < width - left; ++j)
             {
               GtkWidget *dummy = gtk_label_new ("");
               dummies[j] = dummy;
               gtk_grid_attach (GTK_GRID (grid), dummy, left + j, top, 1, 1);
             }
-            
-          gtk_grid_set_column_homogeneous(GTK_GRID(grid), TRUE);
+
+          gtk_grid_set_column_homogeneous (GTK_GRID(grid), TRUE);
           gtk_widget_set_halign (grid, GTK_ALIGN_CENTER);
-          gtk_widget_show_all(grid); /* for gtk_widget_get_preferred_size */
-    
+          gtk_widget_show_all (grid); /* for gtk_widget_get_preferred_size */
+
           GtkRequisition req;
           gtk_widget_get_preferred_size (grid, &req, NULL);
           default_window_width = req.width;
-    
-          for (j = 0; j < width - left; ++j) 
+
+          for (j = 0; j < width - left; ++j)
             {
-              gtk_container_remove(GTK_CONTAINER(grid), dummies[j]);
+              gtk_container_remove (GTK_CONTAINER (grid), dummies[j]);
             }
-          g_free(dummies);
+          g_free (dummies);
+
           /* Limit the window size to no bigger than max_label_width */
           if (max_label_width < default_window_width)
             {
@@ -428,8 +455,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
     }
 
   gtk_window_set_default_size (GTK_WINDOW (popup->window),
-                               default_window_width,
-                               -1);
+                               default_window_width, -1);
 
   return popup;
 }
@@ -667,8 +693,8 @@ meta_ui_tab_popup_select (MetaTabPopup *popup,
 GtkWidget*
 meta_ui_tab_popup_get_widget (MetaTabPopup *popup)
 {
-  if (popup != NULL) 
-    return popup->window; 
+  if (popup != NULL)
+    return popup->window;
   else
     return NULL;
 }
@@ -685,8 +711,8 @@ meta_ui_tab_popup_mouse_press (MetaTabPopup       *popup,
       TabEntry *te = tmp->data;
       gint wx, wy;
       if (gtk_widget_translate_coordinates(popup->window,
-                                           te->widget, 
-                                           x, y, 
+                                           te->widget,
+                                           x, y,
                                            &wx, &wy))
         {
           GtkAllocation alloc;
@@ -727,12 +753,18 @@ static GType meta_select_image_get_type (void) G_GNUC_CONST;
 static GtkWidget*
 selectable_image_new (GdkPixbuf *pixbuf)
 {
-  GtkWidget *w;
+  GtkWidget *widget;
+  int scale;
+  cairo_surface_t *surface;
 
-  w = g_object_new (meta_select_image_get_type (), NULL);
-  gtk_image_set_from_pixbuf (GTK_IMAGE (w), pixbuf);
+  widget = g_object_new (meta_select_image_get_type (), NULL);
+  scale = gtk_widget_get_scale_factor (widget);
+  surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, scale, NULL);
 
-  return w;
+  gtk_image_set_from_surface (GTK_IMAGE (widget), surface);
+
+  cairo_surface_destroy (surface);
+  return widget;
 }
 
 static void
@@ -799,15 +831,15 @@ static gboolean
 meta_select_image_draw (GtkWidget *widget,
                         cairo_t   *cr)
 {
-  GtkAllocation allocation;
+  GtkStyleContext *context;
 
-  gtk_widget_get_allocation (widget, &allocation);
+  context = gtk_widget_get_style_context (widget);
 
   if (META_SELECT_IMAGE (widget)->selected)
     {
       GtkMisc *misc;
+      GtkAllocation allocation;
       GtkRequisition requisition;
-      GtkStyleContext *context;
       GdkRGBA color;
       int x, y, w, h;
       gint xpad, ypad;
@@ -815,6 +847,7 @@ meta_select_image_draw (GtkWidget *widget,
 
       misc = GTK_MISC (widget);
 
+      gtk_widget_get_allocation (widget, &allocation);
       gtk_widget_get_preferred_size (widget, &requisition, NULL);
       gtk_misc_get_alignment (misc, &xalign, &yalign);
       gtk_misc_get_padding (misc, &xpad, &ypad);
@@ -828,20 +861,20 @@ meta_select_image_draw (GtkWidget *widget,
       w = requisition.width - OUTSIDE_SELECT_RECT * 2 - 1;
       h = requisition.height - OUTSIDE_SELECT_RECT * 2 - 1;
 
-      context = gtk_widget_get_style_context (widget);
+      gtk_style_context_set_state (context, GTK_STATE_FLAG_SELECTED);
+      meta_gtk_style_get_light_color (context, GTK_STATE_FLAG_SELECTED, &color);
 
-      gtk_style_context_set_state (context,
-                                   gtk_widget_get_state_flags (widget));
-
-      gtk_style_context_lookup_color (context, "color", &color);
-
-      cairo_set_line_width (cr, 2.0);
+      /* We set the line width absurdly high to overflow it behind the icon. */
+      cairo_set_line_width (cr, 256.0);
       cairo_set_source_rgb (cr, color.red, color.green, color.blue);
 
       cairo_rectangle (cr, x, y, w + 1, h + 1);
       cairo_stroke (cr);
-
       cairo_set_line_width (cr, 1.0);
+    }
+  else
+    {
+      gtk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
     }
 
   return GTK_WIDGET_CLASS (parent_class)->draw (widget, cr);
