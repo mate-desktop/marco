@@ -91,8 +91,8 @@ draw_window (GtkWidget                   *widget,
              const GdkRectangle          *winrect,
              GtkStateType                state)
 {
-  GdkPixbuf *icon;
-  int icon_x, icon_y, icon_w, icon_h;
+  cairo_surface_t *icon;
+  int icon_x, icon_y, icon_w, icon_h, scale;
   gboolean is_active;
   GdkRGBA color;
   GtkStyleContext *style;
@@ -117,32 +117,28 @@ draw_window (GtkWidget                   *widget,
                    MAX (0, winrect->width - 2), MAX (0, winrect->height - 2));
   cairo_fill (cr);
 
+  scale = gtk_widget_get_scale_factor (widget);
 
-  icon = win->icon;
+  icon = gdk_cairo_surface_create_from_pixbuf (win->icon, scale, NULL);
 
   icon_w = icon_h = 0;
 
   if (icon)
     {
-      icon_w = gdk_pixbuf_get_width (icon);
-      icon_h = gdk_pixbuf_get_height (icon);
+      icon_w = cairo_image_surface_get_width (icon) / scale;
+      icon_h = cairo_image_surface_get_height (icon) / scale;
 
-      /* If the icon is too big, fall back to mini icon.
-       * We don't arbitrarily scale the icon, because it's
-       * just too slow on my Athlon 850.
-       */
-      if (icon_w > (winrect->width - 2) ||
-          icon_h > (winrect->height - 2))
+      /* If the icon is too big, fall back to mini icon. */
+      if (icon_w > (winrect->width - 2) || icon_h > (winrect->height - 2))
         {
-          icon = win->mini_icon;
+          icon = gdk_cairo_surface_create_from_pixbuf (win->mini_icon, scale, NULL);
           if (icon)
             {
-              icon_w = gdk_pixbuf_get_width (icon);
-              icon_h = gdk_pixbuf_get_height (icon);
+              icon_w = cairo_image_surface_get_width (icon) / scale;
+              icon_h = cairo_image_surface_get_height (icon) / scale;
 
               /* Give up. */
-              if (icon_w > (winrect->width - 2) ||
-                  icon_h > (winrect->height - 2))
+              if (icon_w > (winrect->width - 2) || icon_h > (winrect->height - 2))
                 icon = NULL;
             }
         }
@@ -154,7 +150,7 @@ draw_window (GtkWidget                   *widget,
       icon_y = winrect->y + (winrect->height - icon_h) / 2;
 
       cairo_save (cr);
-      gdk_cairo_set_source_pixbuf (cr, icon, icon_x, icon_y);
+      cairo_set_source_surface (cr, icon, icon_x, icon_y);
       cairo_rectangle (cr, icon_x, icon_y, icon_w, icon_h);
       cairo_clip (cr);
       cairo_paint (cr);
@@ -216,7 +212,9 @@ wnck_draw_workspace (GtkWidget                   *widget,
     {
       GdkRGBA color;
 
-      meta_gtk_style_get_dark_color (style,state, &color);
+      meta_gtk_style_get_dark_color (style, state, &color);
+      color.alpha = 0.25;
+
       gdk_cairo_set_source_rgba (cr, &color);
       cairo_rectangle (cr, x, y, width, height);
       cairo_fill (cr);
