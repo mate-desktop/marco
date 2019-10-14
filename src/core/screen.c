@@ -48,6 +48,7 @@
 #endif
 
 #include <X11/Xatom.h>
+#include <cairo/cairo-xlib.h>
 #include <locale.h>
 #include <string.h>
 #include <stdio.h>
@@ -1212,60 +1213,60 @@ meta_screen_update_cursor (MetaScreen *screen)
   XFreeCursor (screen->display->xdisplay, xcursor);
 }
 
-#define MAX_PREVIEW_SCALE 10.0
+#define MAX_PREVIEW_SCREEN_FRACTION 0.33
+#define MAX_PREVIEW_SIZE 300
 
-static GdkPixbuf *
-get_window_pixbuf (MetaWindow *window,
-                   int        *width,
-                   int        *height)
+static cairo_surface_t *
+get_window_surface (MetaWindow *window)
 {
-  MetaDisplay *display;
-  cairo_surface_t *surface;
-  GdkPixbuf *pixbuf, *scaled;
+  cairo_surface_t *surface, *scaled;
+  cairo_t *cr;
   const MetaXineramaScreenInfo *current;
+  int width, height, max_columns, max_size;
   double ratio;
 
-  display = window->display;
-  surface = meta_compositor_get_window_surface (window->display->compositor,
-                                                window);
-  if (surface == None)
+  surface = meta_compositor_get_window_surface (window->display->compositor, window);
+
+  if (surface == NULL)
     return NULL;
 
-  meta_error_trap_push (display);
-
-  pixbuf = meta_ui_get_pixbuf_from_surface (surface);
-  cairo_surface_destroy (surface);
-
-  if (meta_error_trap_pop_with_return (display, FALSE) != Success)
-    g_clear_object (&pixbuf);
-
-  if (pixbuf == NULL)
-    return NULL;
-
-  *width = gdk_pixbuf_get_width (pixbuf);
-  *height = gdk_pixbuf_get_height (pixbuf);
+  width = cairo_xlib_surface_get_width (surface);
+  height = cairo_xlib_surface_get_height (surface);
 
   current = meta_screen_get_current_xinerama (window->screen);
+  max_columns = meta_prefs_get_alt_tab_max_columns ();
 
-  /* Scale pixbuf to max dimension based on monitor size */
-  if (*width > *height)
+  /* Scale surface to fit current screen */
+  if (width > height)
     {
-      int max_preview_width = current->rect.width / MAX_PREVIEW_SCALE;
-      ratio = ((double) *width) / max_preview_width;
-      *width = (int) max_preview_width;
-      *height = (int) (((double) *height) / ratio);
+      max_size = MIN (MAX_PREVIEW_SIZE, current->rect.width / max_columns * MAX_PREVIEW_SCREEN_FRACTION);
+      ratio = ((double) width) / max_size;
+      width = (int) max_size;
+      height = (int) (((double) height) / ratio);
     }
   else
     {
-      int max_preview_height = current->rect.height / MAX_PREVIEW_SCALE;
-      ratio = ((double) *height) / max_preview_height;
-      *height = (int) max_preview_height;
-      *width = (int) (((double) *width) / ratio);
+      max_size = MIN (MAX_PREVIEW_SIZE, current->rect.height / max_columns * MAX_PREVIEW_SCREEN_FRACTION);
+      ratio = ((double) height) / max_size;
+      height = (int) max_size;
+      width = (int) (((double) width) / ratio);
     }
 
-  scaled = gdk_pixbuf_scale_simple (pixbuf, *width, *height,
-                                    GDK_INTERP_BILINEAR);
-  g_object_unref (pixbuf);
+  meta_error_trap_push (window->display);
+  scaled = cairo_surface_create_similar (surface,
+                                         cairo_surface_get_content (surface),
+                                         width, height);
+  if (meta_error_trap_pop_with_return (window->display, FALSE) != Success)
+    return NULL;
+
+  cr = cairo_create (scaled);
+  cairo_scale (cr, 1/ratio, 1/ratio);
+  cairo_set_source_surface (cr, surface, 0, 0);
+  cairo_paint (cr);
+
+  cairo_destroy (cr);
+  cairo_surface_destroy (surface);
+
   return scaled;
 }
 
@@ -1280,6 +1281,7 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
   int len;
   int i;
   gint border;
+  int scale;
 
   if (screen->tab_popup)
     return;
@@ -1290,11 +1292,13 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
                                         screen->active_workspace);
 
   len = g_list_length (tab_list);
+  scale = gdk_window_get_scale_factor (gdk_get_default_root_window ());
 
   entries = g_new (MetaTabEntry, len + 1);
   entries[len].key = NULL;
   entries[len].title = NULL;
   entries[len].icon = NULL;
+  entries[len].win_surface = NULL;
 
   border = meta_prefs_show_tab_border() ? BORDER_OUTLINE_TAB |
     BORDER_OUTLINE_WINDOW : BORDER_OUTLINE_TAB;
@@ -1304,59 +1308,64 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
     {
       MetaWindow *window;
       MetaRectangle r;
-      GdkPixbuf *win_pixbuf = NULL;
-      int width = 0, height = 0;
 
       window = tmp->data;
 
       entries[i].key = (MetaTabEntryKey) window->xwindow;
       entries[i].title = window->title;
+      entries[i].win_surface = NULL;
 
-      /* Only get the pixbuf if the user does NOT have
-         compositing-fast-alt-tab-set to true
-         in GSettings. There is an obvious lag when the pixbuf is
-         retrieved. */
-      if (!meta_prefs_get_compositing_fast_alt_tab())
-        win_pixbuf = get_window_pixbuf (window, &width, &height);
+      entries[i].icon = g_object_ref (window->icon);
 
-      if (win_pixbuf == NULL)
-        entries[i].icon = g_object_ref (window->icon);
-      else
+      /* Only get the window thumbnail surface if the user has a compositor
+       * enabled and does NOT have compositing-fast-alt-tab-set to true in
+       * GSettings. There is an obvious lag when the surface is retrieved. */
+      if (meta_prefs_get_compositing_manager() && !meta_prefs_get_compositing_fast_alt_tab())
         {
-          int icon_width, icon_height, t_width, t_height;
+          cairo_surface_t *win_surface;
+
+          /* Get window thumbnail */
+          win_surface = get_window_surface (window);
+
+          if (win_surface != NULL)
+            {
+              cairo_surface_t *surface, *icon;
+              cairo_t *cr;
+              int width, height, icon_width, icon_height;
+
 #define ICON_OFFSET 6
 
-          icon_width = gdk_pixbuf_get_width (window->icon);
-          icon_height = gdk_pixbuf_get_height (window->icon);
+              width = cairo_xlib_surface_get_width (win_surface);
+              height = cairo_xlib_surface_get_height (win_surface);
 
-          t_width = width + ICON_OFFSET;
-          t_height = height + ICON_OFFSET;
+              /* Create a new surface to overlap the window icon into */
+              surface = cairo_surface_create_similar (win_surface,
+                                                      cairo_surface_get_content (win_surface),
+                                                      width, height);
 
-          entries[i].icon = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8,
-                                            t_width, t_height);
-          gdk_pixbuf_fill (entries[i].icon, 0x00000000);
-          gdk_pixbuf_copy_area (win_pixbuf, 0, 0, width, height,
-                                entries[i].icon, 0, 0);
-          g_object_unref (win_pixbuf);
-          
-          double icon_scale   = 1.0;
-          double max_coverage = 0.9;
-          
-          if (icon_width > t_width * max_coverage)
-            icon_scale = (t_width * max_coverage) / icon_width;
-            
-          if (icon_height * icon_scale > t_height * max_coverage)
-            icon_scale = (t_height * max_coverage) / icon_height;
-          
-          int t_icon_width  = (int)(icon_width  * icon_scale);
-          int t_icon_height = (int)(icon_height * icon_scale);
-          
-          gdk_pixbuf_composite (window->icon, entries[i].icon,
-                                t_width  - t_icon_width, 
-                                t_height - t_icon_height,
-                                t_icon_width, t_icon_height,
-                                t_width - t_icon_width, t_height - t_icon_height,
-                                icon_scale, icon_scale, GDK_INTERP_BILINEAR, 255);
+              cr = cairo_create (surface);
+              cairo_set_source_surface (cr, win_surface, 0, 0);
+              cairo_paint (cr);
+
+              /* Get the window icon as a surface */
+              icon = gdk_cairo_surface_create_from_pixbuf (window->icon, scale, NULL);
+
+              icon_width = cairo_image_surface_get_width (icon) / scale;
+              icon_height = cairo_image_surface_get_height (icon) / scale;
+
+              /* Overlap the window icon surface over the window thumbnail */
+              cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
+              cairo_set_source_surface (cr, icon,
+                                        width  - icon_width - ICON_OFFSET,
+                                        height - icon_height - ICON_OFFSET);
+              cairo_paint (cr);
+
+              entries[i].win_surface = surface;
+
+              cairo_destroy (cr);
+              cairo_surface_destroy (icon);
+              cairo_surface_destroy (win_surface);
+            }
         }
 
       entries[i].blank = FALSE;
@@ -1403,7 +1412,11 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
                                              border);
 
   for (i = 0; i < len; i++)
-    g_object_unref (entries[i].icon);
+    {
+      g_object_unref (entries[i].icon);
+      if (entries[i].win_surface)
+        cairo_surface_destroy (entries[i].win_surface);
+    }
 
   g_free (entries);
 
@@ -1437,6 +1450,7 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
   entries[len].key = NULL;
   entries[len].title = NULL;
   entries[len].icon = NULL;
+  entries[len].win_surface = NULL;
 
   i = 0;
   while (i < len)
@@ -1451,6 +1465,7 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
           entries[i].key = (MetaTabEntryKey) workspace;
           entries[i].title = meta_workspace_get_name (workspace);
           entries[i].icon = NULL;
+          entries[i].win_surface = NULL;
           entries[i].blank = FALSE;
 
           g_assert (entries[i].title != NULL);
@@ -1460,6 +1475,7 @@ meta_screen_ensure_workspace_popup (MetaScreen *screen)
           entries[i].key = NULL;
           entries[i].title = NULL;
           entries[i].icon = NULL;
+          entries[i].win_surface = NULL;
           entries[i].blank = TRUE;
         }
       entries[i].hidden = FALSE;
