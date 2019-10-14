@@ -154,7 +154,7 @@
     <key name="compositing-fast-alt-tab" type="b">
       <default>false</default>
       <summary>Fast Alt-Tab with compositing manager (disable thumbnails)</summary>
-      <description>If set to true, no window thumbnails will be displayed in the alt-tab popup window when the compositing manager is enabled. Application icons will be displayed instead.</description>
+      <description>If set to true, no window thumbnails will be displayed in the alt-tab popup window when the compositing manager is enabled. Application icons will be displayed instead. Note that on high resolution screens with many visible windows there can be a perceptible lag in rendering.</description>
     </key>
     <key name="reduced-resources" type="b">
       <default>false</default>
@@ -197,13 +197,13 @@
         <description>Comma separated class list. Each running GUI application referenced to given windows manager class will be ignored by 'Show Desktop' functionality.</description>
     </key>
     <key name="icon-size" type="i">
-        <range min="6" max="480"/>
+        <range min="8" max="256"/>
         <default>48</default>
-        <summary>Icon size</summary>
+        <summary>Icon size in alt-tab popup window</summary>
         <description>Size of the application icons displayed in alt-tab popup window. The screen's scale factor is applied to this value.</description>
     </key>
     <key name="alt-tab-max-columns" type="i">
-        <range min="1" max="1024"/>
+        <range min="1" max="16"/>
         <default>5</default>
         <summary>Maximum number of columns in alt-tab popup window</summary>
         <description>The popup window will be expanded to fit up to these many entries per row.</description>
