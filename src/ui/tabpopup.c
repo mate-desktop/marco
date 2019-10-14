@@ -50,6 +50,7 @@ struct _TabEntry
   gint             grid_left;
   gint             grid_top;
   GdkPixbuf       *icon, *dimmed_icon;
+  cairo_surface_t *win_surface;
   GtkWidget       *widget;
   GdkRectangle     rect;
   GdkRectangle     inner_rect;
@@ -68,7 +69,7 @@ struct _MetaTabPopup
   gint border;
 };
 
-static GtkWidget* selectable_image_new (GdkPixbuf *pixbuf);
+static GtkWidget* selectable_image_new (GdkPixbuf *pixbuf, cairo_surface_t *win_surface);
 static void       select_image         (GtkWidget *widget);
 static void       unselect_image       (GtkWidget *widget);
 
@@ -203,6 +204,7 @@ tab_entry_new (const MetaTabEntry *entry,
     }
   te->widget = NULL;
   te->icon = entry->icon;
+  te->win_surface = entry->win_surface;
   te->blank = entry->blank;
   te->dimmed_icon = NULL;
   if (te->icon)
@@ -373,11 +375,11 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
             {
               if (te->dimmed_icon)
                 {
-                  image = selectable_image_new (te->dimmed_icon);
+                  image = selectable_image_new (te->dimmed_icon, NULL);
                 }
               else
                 {
-                  image = selectable_image_new (te->icon);
+                  image = selectable_image_new (te->icon, te->win_surface);
                 }
 
               gtk_misc_set_padding (GTK_MISC (image),
@@ -751,19 +753,27 @@ struct _MetaSelectImageClass
 static GType meta_select_image_get_type (void) G_GNUC_CONST;
 
 static GtkWidget*
-selectable_image_new (GdkPixbuf *pixbuf)
+selectable_image_new (GdkPixbuf *pixbuf, cairo_surface_t *win_surface)
 {
   GtkWidget *widget;
-  int scale;
-  cairo_surface_t *surface;
 
   widget = g_object_new (meta_select_image_get_type (), NULL);
-  scale = gtk_widget_get_scale_factor (widget);
-  surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, scale, NULL);
 
-  gtk_image_set_from_surface (GTK_IMAGE (widget), surface);
+  if (win_surface == NULL)
+    {
+      int scale;
+      cairo_surface_t *surface;
 
-  cairo_surface_destroy (surface);
+      scale = gtk_widget_get_scale_factor (widget);
+      surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, scale, NULL);
+
+      gtk_image_set_from_surface (GTK_IMAGE (widget), surface);
+
+      cairo_surface_destroy (surface);
+    }
+  else
+    gtk_image_set_from_surface (GTK_IMAGE (widget), win_surface);
+
   return widget;
 }
 
