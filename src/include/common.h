@@ -320,8 +320,8 @@ void meta_frame_borders_clear (MetaFrameBorders *self);
 
 /* should investigate changing these to whatever most apps use */
 #define META_DEFAULT_ICON_SIZE 48
-#define META_MIN_ICON_SIZE 6
-#define META_MAX_ICON_SIZE 480
+#define META_MIN_ICON_SIZE 8
+#define META_MAX_ICON_SIZE 256
 
 #define META_MINI_ICON_WIDTH 16
 #define META_MINI_ICON_HEIGHT 16
@@ -349,7 +349,7 @@ typedef enum
 
 #define META_DEFAULT_ALT_TAB_MAX_COLUMNS 5
 #define META_MIN_ALT_TAB_MAX_COLUMNS 1
-#define META_MAX_ALT_TAB_MAX_COLUMNS 1024
+#define META_MAX_ALT_TAB_MAX_COLUMNS 16
 
 #define META_DEFAULT_ALT_TAB_EXPAND_TO_FIT_TITLE FALSE
 
