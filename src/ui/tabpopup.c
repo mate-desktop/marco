@@ -912,7 +912,7 @@ struct _MetaSelectWorkspaceClass
 static GType meta_select_workspace_get_type (void) G_GNUC_CONST;
 
 #define SELECT_OUTLINE_WIDTH 2
-#define MINI_WORKSPACE_SCALE 2
+#define MINI_WORKSPACE_SCREEN_FRACTION 0.33
 
 static GtkWidget*
 selectable_workspace_new (MetaWorkspace *workspace, int entry_count)
@@ -929,20 +929,20 @@ selectable_workspace_new (MetaWorkspace *workspace, int entry_count)
   if (workspace->screen->rect.width < workspace->screen->rect.height)
   {
     mini_workspace_ratio = (double) workspace->screen->rect.width / (double) workspace->screen->rect.height;
-    mini_workspace_height = (int) ((double) current->rect.height / entry_count - SELECT_OUTLINE_WIDTH * 2);
+    mini_workspace_height = (int) ((double) current->rect.height * MINI_WORKSPACE_SCREEN_FRACTION / entry_count);
     mini_workspace_width = (int) ((double) mini_workspace_height * mini_workspace_ratio);
   }
   else
   {
     mini_workspace_ratio = (double) workspace->screen->rect.height / (double) workspace->screen->rect.width;
-    mini_workspace_width = (int) ((double) current->rect.width / entry_count - SELECT_OUTLINE_WIDTH * 2);
+    mini_workspace_width = (int) ((double) current->rect.width * MINI_WORKSPACE_SCREEN_FRACTION / entry_count);
     mini_workspace_height = (int) ((double) mini_workspace_width * mini_workspace_ratio);
   }
 
   /* account for select rect */
   gtk_widget_set_size_request (widget,
-                               mini_workspace_width / MINI_WORKSPACE_SCALE,
-                               mini_workspace_height / MINI_WORKSPACE_SCALE);
+                               mini_workspace_width + SELECT_OUTLINE_WIDTH * 2,
+                               mini_workspace_height + SELECT_OUTLINE_WIDTH * 2);
 
   META_SELECT_WORKSPACE (widget)->workspace = workspace;
 
@@ -1114,7 +1114,7 @@ meta_select_workspace_draw (GtkWidget *widget,
       gtk_style_context_set_state (context,
                                    gtk_widget_get_state_flags (widget));
 
-      gtk_style_context_lookup_color (context, "color", &color);
+      meta_gtk_style_get_light_color (context, GTK_STATE_FLAG_SELECTED, &color);
 
       cairo_set_line_width (cr, SELECT_OUTLINE_WIDTH);
       cairo_set_source_rgb (cr, color.red, color.green, color.blue);
