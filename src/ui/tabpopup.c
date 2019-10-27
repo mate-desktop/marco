@@ -83,6 +83,7 @@ outline_window_draw (GtkWidget *widget,
                      cairo_t   *cr,
                      gpointer   data)
 {
+  GdkRGBA black = { 0.0, 0.0, 0.0, 1.0 };
   MetaTabPopup *popup;
   TabEntry *te;
 
@@ -95,6 +96,9 @@ outline_window_draw (GtkWidget *widget,
   }
 
   te = popup->current_selected_entry;
+
+  gdk_cairo_set_source_rgba (cr, &black);
+  cairo_paint (cr);
 
   cairo_set_line_width (cr, 1.0);
   cairo_set_source_rgb (cr, 1.0, 1.0, 1.0);
@@ -256,8 +260,6 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
   if (border & BORDER_OUTLINE_WINDOW)
     {
-      GdkRGBA black = { 0.0, 0.0, 0.0, 1.0 };
-
       popup->outline_window = gtk_window_new (GTK_WINDOW_POPUP);
 
       gtk_window_set_screen (GTK_WINDOW (popup->outline_window),
@@ -265,9 +267,6 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
       gtk_widget_set_app_paintable (popup->outline_window, TRUE);
       gtk_widget_realize (popup->outline_window);
-
-      gdk_window_set_background_rgba (gtk_widget_get_window (popup->outline_window),
-                                      &black);
 
       g_signal_connect (G_OBJECT (popup->outline_window), "draw",
                         G_CALLBACK (outline_window_draw), popup);
@@ -382,9 +381,6 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
                   image = selectable_image_new (te->icon, te->win_surface);
                 }
 
-              gtk_misc_set_padding (GTK_MISC (image),
-                                    INSIDE_SELECT_RECT + OUTSIDE_SELECT_RECT + 1,
-                                    INSIDE_SELECT_RECT + OUTSIDE_SELECT_RECT + 1);
               gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
               gtk_widget_set_valign (image, GTK_ALIGN_CENTER);
             }
@@ -826,6 +822,32 @@ meta_select_image_get_type (void)
 }
 
 static void
+meta_select_image_get_preferred_width (GtkWidget *widget,
+                                       gint      *minimum_width,
+                                       gint      *natural_width)
+{
+  GTK_WIDGET_CLASS (parent_class)->get_preferred_width (widget,
+                                                        minimum_width,
+                                                        natural_width);
+
+  *minimum_width += (INSIDE_SELECT_RECT + OUTSIDE_SELECT_RECT) * 2;
+  *natural_width += (INSIDE_SELECT_RECT + OUTSIDE_SELECT_RECT) * 2;
+}
+
+static void
+meta_select_image_get_preferred_height (GtkWidget *widget,
+                                        gint      *minimum_height,
+                                        gint      *natural_height)
+{
+  GTK_WIDGET_CLASS (parent_class)->get_preferred_height (widget,
+                                                         minimum_height,
+                                                         natural_height);
+
+  *minimum_height += (INSIDE_SELECT_RECT + OUTSIDE_SELECT_RECT) * 2;
+  *natural_height += (INSIDE_SELECT_RECT + OUTSIDE_SELECT_RECT) * 2;
+}
+
+static void
 meta_select_image_class_init (MetaSelectImageClass *klass, void *data)
 {
   GtkWidgetClass *widget_class;
@@ -835,6 +857,8 @@ meta_select_image_class_init (MetaSelectImageClass *klass, void *data)
   widget_class = GTK_WIDGET_CLASS (klass);
 
   widget_class->draw = meta_select_image_draw;
+  widget_class->get_preferred_width = meta_select_image_get_preferred_width;
+  widget_class->get_preferred_height = meta_select_image_get_preferred_height;
 }
 
 static gboolean
@@ -847,29 +871,17 @@ meta_select_image_draw (GtkWidget *widget,
 
   if (META_SELECT_IMAGE (widget)->selected)
     {
-      GtkMisc *misc;
-      GtkAllocation allocation;
       GtkRequisition requisition;
       GdkRGBA color;
       int x, y, w, h;
-      gint xpad, ypad;
-      gfloat xalign, yalign;
 
-      misc = GTK_MISC (widget);
+      gtk_widget_get_preferred_size (widget, &requisition, 0);
 
-      gtk_widget_get_allocation (widget, &allocation);
-      gtk_widget_get_preferred_size (widget, &requisition, NULL);
-      gtk_misc_get_alignment (misc, &xalign, &yalign);
-      gtk_misc_get_padding (misc, &xpad, &ypad);
+      x = INSIDE_SELECT_RECT;
+      y = INSIDE_SELECT_RECT;
 
-      x = (allocation.width - (requisition.width - xpad * 2)) * xalign + 0.5;
-      y = (allocation.height - (requisition.height - ypad * 2)) * yalign + 0.5;
-
-      x -= INSIDE_SELECT_RECT + 1;
-      y -= INSIDE_SELECT_RECT + 1;
-
-      w = requisition.width - OUTSIDE_SELECT_RECT * 2 - 1;
-      h = requisition.height - OUTSIDE_SELECT_RECT * 2 - 1;
+      w = requisition.width - OUTSIDE_SELECT_RECT * 2;
+      h = requisition.height - OUTSIDE_SELECT_RECT * 2;
 
       gtk_style_context_set_state (context, GTK_STATE_FLAG_SELECTED);
       meta_gtk_style_get_light_color (context, GTK_STATE_FLAG_SELECTED, &color);
@@ -878,7 +890,7 @@ meta_select_image_draw (GtkWidget *widget,
       cairo_set_line_width (cr, 256.0);
       cairo_set_source_rgb (cr, color.red, color.green, color.blue);
 
-      cairo_rectangle (cr, x, y, w + 1, h + 1);
+      cairo_rectangle (cr, x, y, w, h);
       cairo_stroke (cr);
       cairo_set_line_width (cr, 1.0);
     }
