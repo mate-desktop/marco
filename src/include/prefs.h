@@ -70,6 +70,7 @@ typedef enum
   META_PREF_CENTER_NEW_WINDOWS,
   META_PREF_ALLOW_TILING,
   META_PREF_ALLOW_TOP_TILING,
+  META_PREF_ALLOW_TILE_CYCLING,
   META_PREF_FORCE_FULLSCREEN,
   META_PREF_PLACEMENT_MODE,
   META_PREF_SHOW_DESKTOP_SKIP_LIST
@@ -107,6 +108,7 @@ gboolean                    meta_prefs_get_mate_accessibility (void);
 gboolean                    meta_prefs_get_mate_animations    (void);
 gboolean                    meta_prefs_get_allow_tiling       (void);
 gboolean                    meta_prefs_get_allow_top_tiling   (void);
+gboolean                    meta_prefs_get_allow_tile_cycling (void);
 
 const char*                 meta_prefs_get_command            (int i);
 

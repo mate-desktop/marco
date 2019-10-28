@@ -3161,15 +3161,63 @@ handle_toggle_tiled (MetaDisplay *display,
                      MetaKeyBinding *binding)
 {
   MetaTileMode mode = binding->handler->data;
+  MetaTileCycle next_cycle;
 
-  if (mode == window->tile_mode && META_WINDOW_TILED(window))
+  /* Check if we're cycling through tile ratios */
+  if (meta_prefs_get_allow_tile_cycling ())
+    {
+      if (window->tile_mode != mode)
+        {
+          /* If changing tile mode, reset to first tile size */
+          next_cycle = META_TILE_CYCLE_50;
+        }
+      else
+        {
+          /* Cycle through the different tile sizes: 1/2 -> 1/3 -> 1/4 -> 3/4 -> 2/3 -> Untiled */
+          switch (window->tile_cycle)
+          {
+            case META_TILE_CYCLE_NONE:
+              next_cycle = META_TILE_CYCLE_50;
+              break;
+            case META_TILE_CYCLE_50:
+              next_cycle = META_TILE_CYCLE_33;
+              break;
+            case META_TILE_CYCLE_33:
+              next_cycle = META_TILE_CYCLE_25;
+              break;
+            case META_TILE_CYCLE_25:
+              next_cycle = META_TILE_CYCLE_75;
+              break;
+            case META_TILE_CYCLE_75:
+              next_cycle = META_TILE_CYCLE_66;
+              break;
+            case META_TILE_CYCLE_66:
+              next_cycle = META_TILE_CYCLE_NONE;
+              break;
+            default:
+              g_assert_not_reached ();
+              break;
+          }
+        }
+    }
+  else
+    {
+      if (META_WINDOW_TILED(window))
+        next_cycle = META_TILE_CYCLE_NONE;
+      else
+        next_cycle = META_TILE_CYCLE_50;
+    }
+
+  if (mode == window->tile_mode && next_cycle == META_TILE_CYCLE_NONE)
     {
       window->tile_mode = META_TILE_NONE;
       window->tile_monitor_number = -1;
+      window->tile_cycle = META_TILE_CYCLE_NONE;
       meta_window_untile(window);
     }
   else if (meta_window_can_tile (window))
     {
+      window->tile_cycle = next_cycle;
       window->tile_mode = mode;
       window->tile_resized = FALSE;
       window->tile_monitor_number = meta_screen_get_xinerama_for_window (window->screen, window)->number;

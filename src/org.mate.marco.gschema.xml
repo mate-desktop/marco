@@ -186,6 +186,11 @@
       <summary>Whether to maximize the window when dragged to the top of the screen</summary>
       <description>If enabled, drag-dropping a window to the top of the screen will maximize it. Only works when allow-tiling is enabled.</description>
     </key>
+    <key name="allow-tile-cycling" type="b">
+      <default>true</default>
+      <summary>Whether to enable cycling through different tile sizes</summary>
+      <description>If enabled, tiling a window will cycle through multiple different sizes by using the same keyboard shortcut multiple times in a row.</description>
+    </key>
     <key name="placement-mode" enum="org.mate.Marco.placement_type">
       <default>'automatic'</default>
       <summary>Window placement mode</summary>

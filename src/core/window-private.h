@@ -83,6 +83,15 @@ typedef enum {
   META_QUEUE_UPDATE_ICON  = 1 << 2,
 } MetaQueueType;
 
+typedef enum {
+  META_TILE_CYCLE_NONE,
+  META_TILE_CYCLE_50,
+  META_TILE_CYCLE_33,
+  META_TILE_CYCLE_25,
+  META_TILE_CYCLE_75,
+  META_TILE_CYCLE_66
+} MetaTileCycle;
+
 #define NUMBER_OF_QUEUES 3
 
 struct _MetaWindow
@@ -150,6 +159,7 @@ struct _MetaWindow
   guint tile_mode : 3;
   guint tile_resized : 1;
   guint tiled : 1;
+  guint tile_cycle : 3;
 
   /* The last "full" maximized/unmaximized state. We need to keep track of
    * that to toggle between normal/tiled or maximized/tiled states. */
