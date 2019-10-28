@@ -130,6 +130,7 @@ static gboolean center_new_windows = FALSE;
 static gboolean force_fullscreen = TRUE;
 static gboolean allow_tiling = FALSE;
 static gboolean allow_top_tiling = TRUE;
+static gboolean allow_tile_cycling = TRUE;
 static GList *show_desktop_skip_list = NULL;
 
 static MetaVisualBellType visual_bell_type = META_VISUAL_BELL_FULLSCREEN_FLASH;
@@ -441,6 +442,12 @@ static MetaBoolPreference preferences_bool[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_ALLOW_TOP_TILING,
       &allow_top_tiling,
+      FALSE,
+    },
+    { "allow-tile-cycling",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ALLOW_TILE_CYCLING,
+      &allow_tile_cycling,
       FALSE,
     },
     { "alt-tab-expand-to-fit-title",
@@ -1700,6 +1707,9 @@ meta_preference_to_string (MetaPreference pref)
     case META_PREF_ALLOW_TOP_TILING:
       return "ALLOW_TOP_TILING";
 
+    case META_PREF_ALLOW_TILE_CYCLING:
+      return "ALLOW_TILE_CYCLING";
+
     case META_PREF_PLACEMENT_MODE:
       return "PLACEMENT_MODE";
 
@@ -2388,6 +2398,12 @@ gboolean
 meta_prefs_get_allow_top_tiling ()
 {
   return allow_top_tiling;
+}
+
+gboolean
+meta_prefs_get_allow_tile_cycling ()
+{
+  return allow_tile_cycling;
 }
 
 guint

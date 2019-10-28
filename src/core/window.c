@@ -7259,13 +7259,13 @@ update_move (MetaWindow  *window,
   shake_threshold = meta_ui_get_drag_threshold (window->screen->ui) *
     DRAG_THRESHOLD_TO_SHAKE_THRESHOLD_FACTOR;
 
-  
   if (snap)
     {
       /* We don't want to tile while snapping. Also, clear any previous tile
          request. */
       window->tile_mode = META_TILE_NONE;
       window->tile_monitor_number = -1;
+      window->tile_cycle = META_TILE_CYCLE_NONE;
     }
   else if (meta_prefs_get_allow_tiling () &&
            !META_WINDOW_MAXIMIZED (window) &&
@@ -7298,15 +7298,17 @@ update_move (MetaWindow  *window,
       MetaTileMode old_tile_mode = window->tile_mode;
       window->tile_mode = calculate_tiling_mode(x, y, window, monitor,
                                                 work_area, shake_threshold);
-      
-      
+
       if (window->tile_mode != META_TILE_NONE)
         window->tile_monitor_number = monitor->number;
 
-      /* Reset resized flag when changing tile mode */
+      /* Reset resized and cycle flags when changing tile mode */
       if (old_tile_mode != window->tile_mode)
-        window->tile_resized = FALSE;
-    }  
+        {
+          window->tile_resized = FALSE;
+          window->tile_cycle = META_TILE_CYCLE_NONE;
+        }
+    }
 
   /* shake loose (unmaximize) maximized or tiled window if dragged beyond
    * the threshold in the Y direction. Tiled windows can also be pulled
@@ -7324,6 +7326,7 @@ update_move (MetaWindow  *window,
        */
       window->shaken_loose = META_WINDOW_MAXIMIZED (window);
       window->tile_mode = META_TILE_NONE;
+      window->tile_cycle = META_TILE_CYCLE_NONE;
       window->tiled = FALSE;
 
       /* move the unmaximized window to the cursor */
@@ -7399,7 +7402,8 @@ update_move (MetaWindow  *window,
               display->grab_anchor_root_y = y;
               window->shaken_loose = FALSE;
 
-	      window->tile_mode = META_TILE_NONE;
+              window->tile_mode = META_TILE_NONE;
+              window->tile_cycle = META_TILE_CYCLE_NONE;
 
               meta_window_maximize (window,
                                     META_MAXIMIZE_HORIZONTAL |
@@ -7410,13 +7414,11 @@ update_move (MetaWindow  *window,
         }
     }
 
-  
-
   /* Delay showing the tile preview slightly to make it more unlikely to
    * trigger it unwittingly, e.g. when shaking loose the window or moving
    * it to another monitor.
    */
-  
+
   meta_screen_tile_preview_update (window->screen,
                                    window->tile_mode != META_TILE_NONE);
 
@@ -8087,6 +8089,8 @@ meta_window_get_current_tile_area (MetaWindow    *window,
                                    MetaRectangle *tile_area)
 {
   int tile_monitor_number;
+  int width;
+  double tile_ratio;
 
   g_return_if_fail (window->tile_mode != META_TILE_NONE);
 
@@ -8110,9 +8114,32 @@ meta_window_get_current_tile_area (MetaWindow    *window,
 
   meta_window_get_work_area_for_xinerama (window, tile_monitor_number, tile_area);
 
+  width = tile_area->width;
+
+  switch (window->tile_cycle)
+    {
+      case META_TILE_CYCLE_33:
+        tile_ratio = 1 / 3.0;
+        break;
+      case META_TILE_CYCLE_25:
+        tile_ratio = 1 / 4.0;
+        break;
+      case META_TILE_CYCLE_75:
+        tile_ratio = 3 / 4.0;
+        break;
+      case META_TILE_CYCLE_66:
+        tile_ratio = 2 / 3.0;
+        break;
+      case META_TILE_CYCLE_50:
+      case META_TILE_CYCLE_NONE:
+      default:
+        tile_ratio = 1 / 2.0;
+        break;
+    }
+
   if (window->tile_mode != META_TILE_NONE  &&
       window->tile_mode != META_TILE_MAXIMIZED)
-    tile_area->width /= 2;
+    width = (int)(tile_area->width * tile_ratio);
 
   if(window->tile_mode == META_TILE_BOTTOM_LEFT ||
      window->tile_mode == META_TILE_BOTTOM_RIGHT ||
@@ -8123,11 +8150,13 @@ meta_window_get_current_tile_area (MetaWindow    *window,
   if (window->tile_mode == META_TILE_RIGHT ||
       window->tile_mode == META_TILE_TOP_RIGHT ||
       window->tile_mode == META_TILE_BOTTOM_RIGHT)
-    tile_area->x += tile_area->width;
+    tile_area->x += tile_area->width - width;
 
   if(window->tile_mode == META_TILE_BOTTOM_LEFT ||
      window->tile_mode == META_TILE_BOTTOM_RIGHT)
     tile_area->y += tile_area->height;
+
+  tile_area->width = width;
 }
 
 gboolean
