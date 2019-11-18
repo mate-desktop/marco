@@ -3,3 +3,5 @@
 PACKAGE=marco;
 
 rm -f po/$PACKAGE.pot && make -C po $PACKAGE.pot && mv po/$PACKAGE.pot .
+sed -i "/#, fuzzy/d" $PACKAGE.pot
+sed -i 's/charset=CHARSET/charset=UTF-8/g' $PACKAGE.pot
