@@ -208,7 +208,7 @@
         <description>Size of the application icons displayed in alt-tab popup window. The screen's scale factor is applied to this value.</description>
     </key>
     <key name="alt-tab-max-columns" type="i">
-        <range min="1" max="16"/>
+        <range min="1" max="64"/>
         <default>5</default>
         <summary>Maximum number of columns in alt-tab popup window</summary>
         <description>The popup window will be expanded to fit up to these many entries per row.</description>
