@@ -4134,8 +4134,8 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
 
         if (op->data.image.pixbuf)
           {
-            env->object_width = gdk_pixbuf_get_width (op->data.image.pixbuf);
-            env->object_height = gdk_pixbuf_get_height (op->data.image.pixbuf);
+            env->object_width = gdk_pixbuf_get_width (op->data.image.pixbuf) / scale;
+            env->object_height = gdk_pixbuf_get_height (op->data.image.pixbuf) / scale;
           }
 
         rwidth = parse_size_unchecked (op->data.image.width, env) * scale;
@@ -5672,7 +5672,19 @@ meta_theme_load_image (MetaTheme  *theme,
           char *full_path;
           full_path = g_build_filename (theme->dirname, filename, NULL);
 
-          pixbuf = gdk_pixbuf_new_from_file (full_path, error);
+          gint width, height;
+
+          if (gdk_pixbuf_get_file_info (full_path, &width, &height) == NULL)
+            {
+              g_free (full_path);
+              return NULL;
+            }
+
+          width *= scale;
+          height *= scale;
+
+          pixbuf = gdk_pixbuf_new_from_file_at_size (full_path, width, height, error);
+
           if (pixbuf == NULL)
             {
               g_free (full_path);
