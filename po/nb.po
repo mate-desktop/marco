@@ -5,9 +5,9 @@
 # 
 # Translators:
 # Kim Malmo <berencamlost@msn.com>, 2019
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Allan Nordhøy <epost@anotheragency.no>, 2019
+# Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-16 18:37+0200\n"
 "PO-Revision-Date: 2019-03-12 19:28+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>, 2019\n"
+"Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -270,43 +270,43 @@ msgstr "Flislegg vinduet til skjermens østre (høyre) kant"
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:145
 msgid "Tile window to west (left) side of screen"
-msgstr "Flytt vindu til skjermens vestre (venstre) kant"
+msgstr "Flislegg vinduet til skjermens vestre (venstre) kant"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "Flislegg vinduet til nordvestre hjørne (øverst til venstre)"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Flislegg vinduet til nordøstre hjørne (øverst til høyre)"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Flislegg vinduet til sørvestre hjørne (nederst til venstre)"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Flislegg vinduet til sørøstre hjørne (nederst til høyre)"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
 msgid "Move window to north-west (top left) corner"
-msgstr "Flytt vindu til nord-vestlig hjørne (øverst til venstre)"
+msgstr "Flytt vinduet til nordvestre hjørne (øverst til venstre)"
 
 #: ../src/50-marco-window-key.xml.in.h:25
 #: ../src/org.mate.marco.gschema.xml.h:151
 msgid "Move window to north-east (top right) corner"
-msgstr "Flytt vinduet til det nordøstlige (øverst til høyre) hjørne"
+msgstr "Flytt vinduet til nordøstre hjørne (øverst til høyre)"
 
 #: ../src/50-marco-window-key.xml.in.h:26
 #: ../src/org.mate.marco.gschema.xml.h:152
 msgid "Move window to south-west (bottom left) corner"
-msgstr "Flytt vindu til syd-østlig hjørne (nederst til venstre)"
+msgstr "Flytt vindu til sørøstre hjørne (nederst til venstre)"
 
 #: ../src/50-marco-window-key.xml.in.h:27
 #: ../src/org.mate.marco.gschema.xml.h:153
 msgid "Move window to south-east (bottom right) corner"
-msgstr "Flytt vinduet til sydøstre (nederst i høyre) hjørne"
+msgstr "Flytt vinduet til sørøstre hjørne (nederst til høyre)"
 
 #: ../src/50-marco-window-key.xml.in.h:28
 #: ../src/org.mate.marco.gschema.xml.h:154
@@ -331,27 +331,27 @@ msgstr "Flytt vinduet til skjermens vestre (venstre) kant"
 #: ../src/50-marco-window-key.xml.in.h:32
 #: ../src/org.mate.marco.gschema.xml.h:158
 msgid "Move window to center of screen"
-msgstr "Flytt vindu til midten av skjermen"
+msgstr "Flytt vinduet til midten av skjermen"
 
 #: ../src/50-marco-window-key.xml.in.h:33
 #: ../src/org.mate.marco.gschema.xml.h:159
 msgid "Move window to north (top) monitor"
-msgstr ""
+msgstr "Flytt vinduet til nordre skjerm (øverst)"
 
 #: ../src/50-marco-window-key.xml.in.h:34
 #: ../src/org.mate.marco.gschema.xml.h:160
 msgid "Move window to south (bottom) monitor"
-msgstr ""
+msgstr "Flytt vinduet til søndre skjerm (nederst)"
 
 #: ../src/50-marco-window-key.xml.in.h:35
 #: ../src/org.mate.marco.gschema.xml.h:161
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Flytt vinduet til østre skjerm (høyre)"
 
 #: ../src/50-marco-window-key.xml.in.h:36
 #: ../src/org.mate.marco.gschema.xml.h:162
 msgid "Move window to west (left) monitor"
-msgstr ""
+msgstr "Flytt vinduet til vestre skjerm (venstre)"
 
 #: ../src/50-marco-window-key.xml.in.h:37
 #: ../src/org.mate.marco.gschema.xml.h:123
@@ -897,7 +897,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Hvorvidt flislegging skal slås på"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -905,16 +905,22 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Hvis denne er aktivert så vil vinduer maksimeres loddrett og størrelsen "
+"vannrett vil dekke halvparten av tilgjengelig areal når vinduer slippes på "
+"skjermkanter. Dra-og-slipp til toppen vil maksimere vinduet hvis «allow-top-"
+"tiling» er aktivert."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
-msgstr ""
+msgstr "Hvorvidt vinduer skal maksimeres når de dras til toppen av skjermen"
 
 #: ../src/org.mate.marco.gschema.xml.h:56
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"Hvis denne er aktivert så vil vinduer maksimeres når de dras og slippes over"
+" toppen av skjermen. Dette vil kun virke når «allow-tiling» er aktivert."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
 msgid "Window placement mode"
@@ -1089,18 +1095,20 @@ msgstr "Slå av/på om vinduet skal vises over alle andre vinduer"
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
 msgstr ""
+"Flislegg vinduet til nordvestre hjørne av skjermen (øverst til venstre)"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "Flislegg vinduet til nordøstre hjørne av skjermen (øverst til høyre)"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Flislegg vinduet til sørøstre hjørne av skjermen (nederst til høyre)"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
+"Flislegg vinduet til sørvestre hjørne av skjermen (nederst til venstre)"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -1547,7 +1555,7 @@ msgstr "Vindumeny"
 
 #: ../src/ui/frames.c:1351
 msgid "Window App Menu"
-msgstr ""
+msgstr "Vinduets programmeny"
 
 #: ../src/ui/frames.c:1354
 msgid "Minimize Window"
@@ -1820,6 +1828,8 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"Tilpasset GTK-fargespesifikasjon må ha fargenavn og alternativ i parentes, "
+"f.eks. gtk:custom(foo,bar); klarte ikke tolke «%s»"
 
 #: ../src/ui/theme.c:1275
 #, c-format
@@ -1827,6 +1837,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Ugyldig tegn «%c» i parameteren «color_name» til «gtk:custom». Kun "
+"«A-Za-z0-9-_» er gyldige."
 
 #: ../src/ui/theme.c:1289
 #, c-format
@@ -1834,6 +1846,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Gtk:custom-formatet er «gtk:custom(fargenavn,alternativ)», «%s» passer ikke "
+"dette formatet"
 
 #: ../src/ui/theme.c:1333
 #, c-format
@@ -2357,18 +2371,20 @@ msgstr ""
 #: ../src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Ugyldig versjonsspesifikasjon «%s»"
 
 #: ../src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"attributtet «version» kan ikke brukes i metacity-theme-1.xml or metacity-"
+"theme-2.xml"
 
 #: ../src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
-msgstr ""
+msgstr "Temaet krever versjon %s, men sist støttet temaversjon er %d.%d"
 
 #: ../src/ui/theme-parser.c:3617
 #, c-format
@@ -2477,7 +2493,7 @@ msgstr "Kant"
 
 #: ../src/ui/theme-viewer.c:431
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Fastlåst modal dialogboks"
 
 #: ../src/ui/theme-viewer.c:791
 #, c-format

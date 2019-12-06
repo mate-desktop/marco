@@ -6,7 +6,6 @@
 # Translators:
 # Martin Wimpress <code@flexion.org>, 2019
 # André Rivero Castillo <hab130@gmail.com>, 2019
-# manuel meixide <m.meixide@gmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Miguel Anxo Bouzada <mbouzada@gmail.com>, 2019
 # 
@@ -32,7 +31,7 @@ msgstr "Escritorio"
 #: ../src/50-marco-desktop-key.xml.in.h:2
 #: ../src/org.mate.marco.gschema.xml.h:100
 msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "Amosar a caixa de diálogo «Executar un aplicativo» do panel"
+msgstr "Amosar a caixa de diálogo «Executar unha aplicación» do panel"
 
 #: ../src/50-marco-desktop-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:99
@@ -71,7 +70,7 @@ msgstr "Moverse entre xanelas usando unha xanela emerxente"
 #: ../src/50-marco-global-key.xml.in.h:3
 #: ../src/org.mate.marco.gschema.xml.h:83
 msgid "Move between windows of an application, using a popup window"
-msgstr "Moverse entre xanelas dun aplicativo usando unha xanela emerxente"
+msgstr "Moverse entre xanelas dunha aplicación usando unha xanela emerxente"
 
 #: ../src/50-marco-global-key.xml.in.h:4
 #: ../src/org.mate.marco.gschema.xml.h:90
@@ -86,7 +85,7 @@ msgstr "Moverse inmediatamente entre xanelas"
 #: ../src/50-marco-global-key.xml.in.h:6
 #: ../src/org.mate.marco.gschema.xml.h:92
 msgid "Move between windows of an application immediately"
-msgstr "Moverse inmediatamente entre xanelas dun aplicativo"
+msgstr "Moverse inmediatamente entre xanelas dunha aplicación"
 
 #: ../src/50-marco-global-key.xml.in.h:7
 #: ../src/org.mate.marco.gschema.xml.h:96
@@ -574,19 +573,19 @@ msgstr ""
 "xanela) elevan a xanela coma un efecto secundario. Poñer este axuste a "
 "«false» (falso), o que insistimos que está absolutamente desaconsellado, "
 "desacoplará a elevación doutras accións de usuario e ignorará as peticións "
-"de elevación xeradas por aplicativos. Véxase "
+"de elevación xeradas por aplicacións. Véxase "
 "http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Incluso cando esta "
 "opción estea posta como «false» (falso), as xanelas aínda poden ser elevadas"
 " mediante unha pulsación co botón esquerdo ao premer a tecla «Alt» en "
 "calquera sitio da xanela, mediante unha pulsación normal nas decoracións da "
 "xanela, ou mediante mensaxes especiais dos paxinadores tales como as "
-"peticións dun miniaplicativo de lista de tarefas. Este axuste está "
+"peticións dunha miniaplicación de lista de tarefas. Este axuste está "
 "normalmente desactivad0 co modo «click-to-focus» (premer para poñer en "
 "foco). Nótese que a lista de formas de elevar a xanela cando o modo "
 "«raise_on_click» (erguer ao premer) é «false» (falso) non inclúe peticións "
-"programáticas de aplicativos para elevar xanelas; tales peticións serán "
+"programáticas de aplicacións para elevar xanelas; tales peticións serán "
 "ignoradas sen importar a razón da petición. Se vostede é un desenvolvedor e "
-"ten algún usuario queixándose de que o seu aplicativo non funciona con este "
+"ten algún usuario queixándose de que a súa aplicación non funciona con este "
 "axuste desactivado, sinálelle entón que a culpa é _súa_ por rachar o xestor "
 "de xanelas e que debe reverter esta opción a «true» (verdadeiro) ou convivir"
 " co fallo que sinala."
@@ -672,8 +671,8 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
-"Se se define como true, e o modo de foco é «sloppy» ou «mouse», entón a "
-"xanela enfocada elevarase automaticamente após un atraso especificado na "
+"Se se define como verdadeiro, e o modo de foco é «sloppy» ou «mouse», entón "
+"a xanela enfocada elevarase automaticamente após un atraso especificado na "
 "chave «auto_raise_delay». Isto non está relacionado con premer nunha xanela "
 "para elevala, nin con entrar nunha xanela durante unha operación de "
 "arrastrar e soltar."
@@ -688,7 +687,7 @@ msgid ""
 "delay is given in thousandths of a second."
 msgstr ""
 "O atraso antes de elevar unha xanela se «auto_raise» está configurado como "
-"«true». O atraso está indicado en milésimas de segundo."
+"«true» (verdadeiro). O atraso está indicado en milésimas de segundo."
 
 #: ../src/org.mate.marco.gschema.xml.h:25
 msgid "Current theme"
@@ -710,8 +709,8 @@ msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
-"Se é true, ignora a opción titlebar_font e usa o tipo de letra estándar do "
-"aplicativo para os títulos das xanelas."
+"Se é verdadeiro, ignora a opción titlebar_font e usa o tipo de letra "
+"estándar da aplicación para os títulos das xanelas."
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
@@ -780,9 +779,9 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
-"Activa unha indicación visual cando un aplicativo ou o sistema emite un «ton"
-" de campá» ou un «ton de aviso»; é moi útil para os contornos ruidosos e "
-"para as persoas con dificultades auditivas."
+"Activa unha indicación visual cando unha aplicación ou o sistema emite un "
+"«ton de campá» ou un «ton de aviso»; é moi útil para os contornos ruidosos e"
+" para as persoas con dificultades auditivas."
 
 #: ../src/org.mate.marco.gschema.xml.h:37
 msgid "System Bell is Audible"
@@ -793,9 +792,9 @@ msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
-"Determina se os aplicativos ou o sistema poden xerar 'tons de aviso' "
+"Determina se as aplicacións ou o sistema poden xerar «tons de aviso» "
 "audíbeis; pode usarse en conxunto co 'ton de campá visual' para permitir "
-"'tons de aviso' silenciosos."
+"«tons de aviso» silenciosos."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
@@ -812,10 +811,10 @@ msgid ""
 "focused window's titlebar is flashed."
 msgstr ""
 "Dílle ao Marco como implementar a indicación visual de que soou a campá do "
-"sistema ou a campá de indicación doutro aplicativo. Actualmente hai dous "
-"valores válidos, «fullscreen», que causa un escintilo en branco e negro en "
+"sistema ou a campá de indicación doutra aplicación. Actualmente hai dous "
+"valores válidos, «fullscreen», que causa un escintileo en branco e negro en "
 "toda a pantalla e «frame_flash» que provoca que a barra de títulos da xanela"
-" de aplicativos que enviou o sinal de campá escintile. Se o aplicativo que "
+" de aplicacións que enviou o sinal de campá escintile. Se a aplicación que "
 "enviou o ton de campá é descoñecido (como é normalmente para o «ton de aviso"
 " do sistema» predefinido), a barra de título da xanela actual enfocada "
 "escintilará."
@@ -838,13 +837,13 @@ msgid ""
 "window when the compositing manager is enabled. Application icons will be "
 "displayed instead."
 msgstr ""
-"Se é «true» (verdadeiro), entón non se amosarán as miniaturas na xanela "
-"emerxente con Alt-Tab cando o xestor de composición estea activado. "
-"Amosaranse as iconas dos aplicativos no seu lugar."
+"Se é verdadeiro, entón non se amosarán as miniaturas na xanela emerxente con"
+" Alt-Tab cando o xestor de composición estea activado. Amosaranse as iconas "
+"das aplicacións no seu lugar."
 
 #: ../src/org.mate.marco.gschema.xml.h:45
 msgid "If true, trade off usability for less resource usage"
-msgstr "Se é true, reducir a usabilidade para aforrar recursos recursos"
+msgstr "Se é verdadeiro, reducir a usabilidade para aforrar recursos recursos"
 
 #: ../src/org.mate.marco.gschema.xml.h:46
 msgid ""
@@ -854,10 +853,10 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
-"Se é true, o Marco daralle ao usuario unha menor retroacción usando "
+"Se é verdadeiro, o Marco daralle ao usuario unha menor retroacción usando "
 "contornos de liña, evitando animacións ou outros medios. Isto é unha "
 "redución significativa da usabilidade para moitos usuarios, mais pode "
-"permitir funcionar os aplicativos antigos e tamén é unha boa solución de "
+"permitir funcionar as aplicacións antigas e tamén é unha boa solución de "
 "compromiso para servidores de terminal. Con todo, a característica de "
 "contorno de liña desactívase cando a accesibilidade está activa."
 
@@ -865,7 +864,7 @@ msgstr ""
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
 msgstr ""
-"(Non implementado) A navegación funciona en termos de aplicativos, non de "
+"(Non implementado) A navegación funciona en termos de aplicacións, non de "
 "xanelas"
 
 #: ../src/org.mate.marco.gschema.xml.h:48
@@ -878,19 +877,19 @@ msgid ""
 "other applications. Application-based mode is, however, largely "
 "unimplemented at the moment."
 msgstr ""
-"Se é true, entón o Marco funciona en termos de aplicativos en vez de en "
-"xanelas. O concepto é un pouco abstracto, mais en xeral unha configuración "
-"baseada en aplicativos é máis parecida a un Mac e menos a un Windows. Cando "
-"enfoca unha xanela no modo baseado en aplicativo, elevaranse todas as "
-"xanelas do aplicativo. Tamén no modo baseado en aplicativo as pulsacións do "
-"foco non se pasan a través das xanelas noutros aplicativos. Porén, este modo"
-" baseado en aplicativo non está implementado neste momento."
+"Se é verdadeiro, entón o Marco funciona en termos de aplicacións en vez de "
+"en xanelas. O concepto é un pouco abstracto, mais en xeral unha "
+"configuración baseada en aplicacións é máis parecida a un Mac e menos a un "
+"Windows. Cando enfoca unha xanela no modo baseado en aplicación, elevaranse "
+"todas as xanelas da aplicación. Tamén no modo baseado en aplicación as "
+"pulsacións do foco non se pasan a través das xanelas noutras aplicacións. "
+"Porén, este modo baseado en aplicación non está implementado neste momento."
 
 #: ../src/org.mate.marco.gschema.xml.h:49
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr ""
 "Desactivar as características non adecuadas que son requiridas por "
-"aplicativos antigos ou danados"
+"aplicacións antigas ou danadas"
 
 #: ../src/org.mate.marco.gschema.xml.h:50
 msgid ""
@@ -899,11 +898,11 @@ msgid ""
 "which gives a more consistent user interface, provided one does not need to "
 "run any misbehaving applications."
 msgstr ""
-"Algúns aplicativos non consideran as especificacións en formas que teñen "
+"Algunhas aplicacións non consideran as especificacións en formas que teñen "
 "como resultado un comportamento incorrecto do xestor de xanelas. Esta opción"
 " pon ao Marco nun modo rigorosamente correcto, o que dá unha interface de "
-"usuario máis consistente, sempre que non se necesite executar ningún "
-"aplicativo que sexa problemático."
+"usuario máis consistente, sempre que non se necesite executar ningunha "
+"aplicación que sexa problemática."
 
 #: ../src/org.mate.marco.gschema.xml.h:51
 msgid "Determines if new windows are created on the center of the screen"
@@ -914,9 +913,8 @@ msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
 msgstr ""
-"Se é «true» (verdadeiro), entón abrirase unha nova xanela no centro da "
-"pantalla. No caso contrario, abrirase na parte superior esquerda da "
-"pantalla."
+"Se é verdadeiro, entón abrirase unha nova xanela no centro da pantalla. No "
+"caso contrario, abrirase na parte superior esquerda da pantalla."
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
@@ -971,15 +969,15 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
-msgstr "Lista de aplicativos ignorados por «amosar escritorio»"
+msgstr "Lista de aplicacións ignoradas por «amosar escritorio»"
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
 msgstr ""
-"Lista de clases separada por comas. Cada aplicativo de interface gráfica de "
-"usuario referido a unha clase dada do xestor de xanelas será ignorado pola "
+"Lista de clases separada por comas. Cada aplicación de interface gráfica de "
+"usuario referida a unha clase dada do xestor de xanelas será ignorada pola "
 "función «Amosar escritorio»."
 
 #: ../src/org.mate.marco.gschema.xml.h:61
@@ -1046,7 +1044,7 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:85
 msgid "Move backward between windows of an application, using a popup window"
 msgstr ""
-"Moverse cara a atrás entre xanelas dun aplicativo usando unha xanela "
+"Moverse cara a atrás entre xanelas dunha aplicación usando unha xanela "
 "emerxente"
 
 #: ../src/org.mate.marco.gschema.xml.h:87
@@ -1073,7 +1071,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:93
 msgid "Move backward between windows of an application immediately"
-msgstr "Moverse cara a atrás entre xanelas dun aplicativo inmediatamente"
+msgstr "Moverse cara a atrás entre xanelas dunha aplicación inmediatamente"
 
 #: ../src/org.mate.marco.gschema.xml.h:95
 msgid "Move backward between windows immediately"
@@ -1166,8 +1164,8 @@ msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
 msgstr ""
-"Escolla entre agardar un chisco a que continúe ou forzar a saída do "
-"aplicativo."
+"Escolla entre agardar un chisco a que continúe ou forzar a saída da "
+"aplicación."
 
 #: ../src/core/delete.c:110
 msgid "_Wait"
@@ -1329,8 +1327,8 @@ msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr ""
-"Desactiváronse os arranxos para aplicativos danados. É probábel que algúns "
-"aplicativos non se comporten correctamente.\n"
+"Desactiváronse os arranxos para aplicacións danadas. É probábel que algunhas"
+" aplicacións non se comporten correctamente.\n"
 
 #: ../src/core/prefs.c:1140
 #, c-format
@@ -1519,7 +1517,7 @@ msgstr ""
 #: ../src/core/window-props.c:306
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
-msgstr "O aplicativo configurou un _NET_WM_PID %lu falso\n"
+msgstr "A aplicación configurou un _NET_WM_PID %lu falso\n"
 
 #. Translators: the title of a window from another machine
 #: ../src/core/window-props.c:457
@@ -1565,7 +1563,7 @@ msgstr ""
 "A xanela 0x%lx ten a propiedade %s\n"
 "que se agardaba que tivese o tipo %s co formato %d\n"
 "e actualmente ten un tipo %s co formato %d e n_items %d.\n"
-"Isto non parece ser un fallo do aplicativo nin do xestor de xanelas.\n"
+"Isto non parece ser un fallo da aplicación nin do xestor de xanelas.\n"
 "A xanela ten título=«%s» a clase=«%s» e o nome=«%s»\n"
 
 #: ../src/core/xprops.c:411
@@ -1597,7 +1595,7 @@ msgstr "Menú da xanela"
 
 #: ../src/ui/frames.c:1351
 msgid "Window App Menu"
-msgstr "Menú da xanela de aplicativos"
+msgstr "Menú da xanela de aplicacións"
 
 #: ../src/ui/frames.c:1354
 msgid "Minimize Window"
@@ -2449,7 +2447,7 @@ msgstr ""
 #: ../src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr "O elemento máis externo no tema  <metacity_theme> non <%s> debe ser"
+msgstr "O elemento máis externo no tema debe ser <metacity_theme> non <%s> "
 
 #: ../src/ui/theme-parser.c:3637
 #, c-format
@@ -2532,7 +2530,7 @@ msgstr "Barra"
 
 #: ../src/ui/theme-viewer.c:407
 msgid "Normal Application Window"
-msgstr "Xanela de aplicativo normal"
+msgstr "Xanela de aplicación normal"
 
 #: ../src/ui/theme-viewer.c:411
 msgid "Dialog Box"

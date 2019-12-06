@@ -15,8 +15,8 @@
 # Emiliano Fascetti, 2019
 # Joel Barrios <darkshram@gmail.com>, 2019
 # Arcenio Cid <gusty.miliki@gmail.com>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # ZenWalker <scow@riseup.net>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Toni Estévez <toni.estevez@gmail.com>, 2019
 # 
 #, fuzzy
@@ -253,13 +253,13 @@ msgstr "Colocar la ventana en todas las áreas de trabajo o solo en una"
 #: ../src/org.mate.marco.gschema.xml.h:139
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr ""
-"Levantar la ventana si está cubierta por otra ventana, minimizarla en otro "
+"Elevar la ventana si está cubierta por otra ventana, minimizarla en otro "
 "caso"
 
 #: ../src/50-marco-window-key.xml.in.h:14
 #: ../src/org.mate.marco.gschema.xml.h:140
 msgid "Raise window above other windows"
-msgstr "Levanta la ventana por encima de otras ventanas"
+msgstr "Eleva la ventana por encima de otras ventanas"
 
 #: ../src/50-marco-window-key.xml.in.h:15
 #: ../src/org.mate.marco.gschema.xml.h:141
@@ -279,28 +279,28 @@ msgstr "Maximizar la ventana horizontalmente"
 #: ../src/50-marco-window-key.xml.in.h:18
 #: ../src/org.mate.marco.gschema.xml.h:144
 msgid "Tile window to east (right) side of screen"
-msgstr "Pestaña hacia el lado este (derecho) de la pantalla"
+msgstr "Ajustar la ventana al lado derecho de la pantalla"
 
 #: ../src/50-marco-window-key.xml.in.h:19
 #: ../src/org.mate.marco.gschema.xml.h:145
 msgid "Tile window to west (left) side of screen"
-msgstr "Pestaña hacia el lado oeste (izquierdo) de la pantalla"
+msgstr "Ajustar la ventana al lado izquierdo de la pantalla"
 
 #: ../src/50-marco-window-key.xml.in.h:20
 msgid "Tile window to north-west (top left) corner"
-msgstr "Mover la ventana hacia la esquina noroeste (arriba a la derecha)"
+msgstr "Ajustar la ventana a la esquina superior derecha"
 
 #: ../src/50-marco-window-key.xml.in.h:21
 msgid "Tile window to north-east (top right) corner"
-msgstr "Mover la ventana hacia la esquina noreste (arriba a la izquierda)"
+msgstr "Ajustar la ventana a la esquina superior izquierda"
 
 #: ../src/50-marco-window-key.xml.in.h:22
 msgid "Tile window to south-west (bottom left) corner"
-msgstr "Mover la ventana hacia la esquina sudoeste (abajo a la izquierda)"
+msgstr "Ajustar la ventana a la esquina inferior izquierda"
 
 #: ../src/50-marco-window-key.xml.in.h:23
 msgid "Tile window to south-east (bottom right) corner"
-msgstr "Mover la ventana hacia la esquina sudeste (abajo a la derecha)"
+msgstr "Ajustar la ventana a la esquina inferior derecha"
 
 #: ../src/50-marco-window-key.xml.in.h:24
 #: ../src/org.mate.marco.gschema.xml.h:150
@@ -468,7 +468,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:3
 msgid "Whether to resize with the right button"
-msgstr "Indica si se debe redimensionar con el botón derecho"
+msgstr "Si se debe redimensionar con el botón derecho"
 
 #: ../src/org.mate.marco.gschema.xml.h:4
 msgid ""
@@ -554,8 +554,7 @@ msgstr ""
 #: ../src/org.mate.marco.gschema.xml.h:13
 msgid "Whether raising should be a side-effect of other user interactions"
 msgstr ""
-"Indica si elevar debe ser un efecto colateral de otras interacciones del "
-"usuario"
+"Si elevar debe ser un efecto colateral de otras interacciones del usuario"
 
 #: ../src/org.mate.marco.gschema.xml.h:14
 msgid ""
@@ -589,15 +588,15 @@ msgstr ""
 "desactiva esta acción, las ventanas pueden elevarse con un clic izquierdo en"
 " cualquier parte de la ventana mientras se pulsa Alt, un clic normal en la "
 "decoración de la ventana o un mensaje del páginador, como una solicitud de "
-"la miniaplicación de la lista de tareas. Esta opción está desactivada "
+"la miniaplicación de lista de tareas. Esta opción está desactivada "
 "actualmente en el modo de hacer clic para enfocar. Tenga en cuenta que la "
-"lista de formas de elevar la ventana cuando la opción de levantar con un "
-"clic está desactivada no incluye las solicitudes programadas de las "
-"aplicaciones; dichas solicitudes se ignorarán independientemente de su "
-"motivo. Si es un desarrollador de aplicaciones y un usuario se queja de que "
-"su aplicación no funciona con este ajuste desactivado, dígale que la culpa "
-"es suya por desconfigurar el gestor de ventanas y que debe activar esta "
-"opción de nuevo o sufrir el error que ha detectado."
+"lista de formas de elevar la ventana cuando la opción de elevar con un clic "
+"está desactivada no incluye las solicitudes programadas de las aplicaciones;"
+" dichas solicitudes se ignorarán independientemente de su motivo. Si es un "
+"desarrollador de aplicaciones y un usuario se queja de que su aplicación no "
+"funciona con este ajuste desactivado, dígale que la culpa es suya por "
+"desconfigurar el gestor de ventanas y que debe activar esta opción de nuevo "
+"o sufrir el error que ha detectado."
 
 #: ../src/org.mate.marco.gschema.xml.h:15
 msgid "Action on title bar double-click"
@@ -726,7 +725,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:29
 msgid "Window title font"
-msgstr "Fuente del título de la ventana"
+msgstr "Tipografía del título de la ventana"
 
 #: ../src/org.mate.marco.gschema.xml.h:30
 msgid ""
@@ -802,9 +801,8 @@ msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
-"Determina si las aplicaciones o el sistema pueden generar «bips» audibles; "
-"podría usarse en conjunto con «la campana visual» para permitir «bips» "
-"silenciosos."
+"Si las aplicaciones o el sistema pueden generar «bips» audibles; podría "
+"usarse junto con la «campana visual» para permitir «bips» silenciosos."
 
 #: ../src/org.mate.marco.gschema.xml.h:39
 msgid "Visual Bell Type"
@@ -835,7 +833,7 @@ msgstr "Gestor de composición"
 
 #: ../src/org.mate.marco.gschema.xml.h:42
 msgid "Determines whether Marco is a compositing manager."
-msgstr "Determina si Marco es un gestor de composición."
+msgstr "Si Marco es un gestor de composición."
 
 #: ../src/org.mate.marco.gschema.xml.h:43
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
@@ -933,7 +931,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:53
 msgid "Whether to enable window tiling"
-msgstr "Si se debe activar el mosaico de ventanas"
+msgstr "Si se activan las ventanas en mosaico"
 
 #: ../src/org.mate.marco.gschema.xml.h:54
 msgid ""
@@ -941,10 +939,11 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
-"Si se activa, al soltar las ventanas en los bordes de la pantalla las "
-"maximiza verticalmente y cambia su tamaño horizontalmente para cubrir la "
-"mitad del área disponible. Al arrastrar y soltar al borde superior, maximiza"
-" la ventana."
+"Si se activa, al soltar las ventanas en los bordes de la pantalla, se "
+"maximizan verticalmente y se redimensionan horizontalmente para cubrir la "
+"mitad del área disponible. Al arrastrar y soltar las ventanas en la parte "
+"superior de la pantalla, se maximizan si se ha activado la opción de "
+"ventanas en mosaico en la parte superior."
 
 #: ../src/org.mate.marco.gschema.xml.h:55
 msgid "Whether to maximize the window when dragged to the top of the screen"
@@ -957,8 +956,8 @@ msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
-"Si se activa, arrastrar una ventana al borde superior de la pantalla y "
-"soltarla la maximizará. Solo funciona si se activa la opciónde poner las "
+"Si se activa, al arrastrar y soltar una ventana en la parte superior de la "
+"pantalla, se maximizará. Solo funciona cuando se ha activado la opción de "
 "ventanas en mosaico."
 
 #: ../src/org.mate.marco.gschema.xml.h:57
@@ -984,7 +983,7 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:59
 msgid "List of applications ignored by show-desktop"
-msgstr "Lista de aplicaciones ignoradas por «mostrar escritorio»"
+msgstr "Lista de aplicaciones ignoradas por «mostrar el escritorio»"
 
 #: ../src/org.mate.marco.gschema.xml.h:60
 msgid ""
@@ -993,7 +992,7 @@ msgid ""
 msgstr ""
 "Lista de clases separada por comas. Cada aplicación con una interfaz gráfica"
 " de usuario referida a una clase dada del gestor de ventanas será ignorada "
-"por la función «Mostrar Escritorio»."
+"por la función de mostrar el escritorio."
 
 #: ../src/org.mate.marco.gschema.xml.h:61
 msgid "Name of workspace"
@@ -1140,23 +1139,19 @@ msgstr ""
 
 #: ../src/org.mate.marco.gschema.xml.h:146
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
-"Ventana de mosaico al noroeste (esquina superior izquierda) de la pantalla"
+msgstr "Ajustar la ventana a la esquina inferior izquierda de la pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:147
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
-"Ventana de mosaico al noreste (esquina superior derecha) de la pantalla"
+msgstr "Ajustar la ventana a la esquina superior derecha de la pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:148
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
-"Ventana de mosaico al sudeste (esquina inferior derecha) de la pantalla"
+msgstr "Ajustar la ventana a la esquina inferior derecha de la pantalla"
 
 #: ../src/org.mate.marco.gschema.xml.h:149
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
-"Ventana de mosaico al sudoeste (esquina inferior izquierda) de la pantalla"
+msgstr "Ajustar la ventana a la esquina inferior izquierda de la pantalla"
 
 #: ../src/core/bell.c:294
 msgid "Bell event"
@@ -1263,7 +1258,7 @@ msgid ""
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 msgstr ""
 "Marco %s\n"
-"Copyright © 2001-%s Havoc Pennington, Red Hat, Inc., y otros\n"
+"Copyright © 2001-%s Havoc Pennington, Red Hat, Inc. y otros\n"
 "Este programa es software libre; consulte el código fuente para obtener las condiciones de copia.\n"
 "No se proporciona NINGUNA garantía, ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR.\n"
 
@@ -1436,7 +1431,7 @@ msgstr "No se ha podido interpretar el archivo de sesión guardado: %s\n"
 #, c-format
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr ""
-"Se ha visto el atributo <marco_session> pero ya tenemos el ID de la sesión"
+"Se ha visto el atributo <marco_session> pero ya se tiene el ID de la sesión"
 
 #: ../src/core/session.c:1197 ../src/core/session.c:1272
 #: ../src/core/session.c:1304 ../src/core/session.c:1376
