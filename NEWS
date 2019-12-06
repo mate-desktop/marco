@@ -1,6 +1,56 @@
+### marco 1.23.2
+
+  * update translations
+  * Revert "compositor: fix possible crash closing/destroying window"
+  * theme.c: Fix window control hidpi rendering for all themes.
+  * tabpopup: Increase max number of columns
+  * window: Add optional tile size cycling
+  * DustBlue: strip image of all profiles and comments
+  * tabpopup: Fix deprecation warnings
+  * tabpopup: Change schema value ranges
+  * tabpopup: Make workspaces compatible with OSD popup
+  * tabpopup: Render window thumbnail as cairo surface
+  * tabpopup: Draw transparent OSD-style popups
+  * Fix MARCO_LOCALEDIR displaying the translated messages
+  * WinMe theme: strip png images of all profiles and comments
+  * eOS theme: Add single button backgrounds
+  * eOS theme: strip png images of all profiles and comments
+  * eOS theme: make transparent the button-box outer region
+  * theme: Render window control buttons and icons as surfaces
+  * Set compiler debug flags using MATE_DEBUG_CHECK
+  * window decoration themes: Add Atlanta, Esco, Gorilla, Motif, Raleigh
+  * Print CFLAGS and WARN_CFLAGS in configure summary
+  * Set --enable-compile-warnings=yes by default
+  * Use WARN_CFLAGS which are only set with --enable-compiler-warnings
+  * testboxes: Fix find_closest_point_to_line() test
+  * remove warnings: function declaration isn’t a prototype
+  * Remove warning: format not a string literal, argument types not checked
+  * build: add --enable-more-warnings configure flag
+  * build: Remove rationales.txt from EXTRA_DIST target
+  * Fix use of RBGA visual in frame.c when compositing is not in use
+  * Use the window's visual in all cases
+  * window.c: remove unused variable
+  * display.c: add missing "break"
+  * Fix build warning about xgettext
+  * async-getprop: Fix cast from non-struct type to struct type
+  * xprops: Fix cast from non-struct type to struct type
+  * frames: bump priority of style providers
+  * window: add _GTK_THEME_VARIANT to initial window properties
+  * frames: apply modified hack from Mutter/Metacity
+  * frames: avoid infinite loop on the variants GList
+  * frames: use style_updated instead of style_set
+  * Fixed moving windows to edges to work with CSD clients.
+  * meson: use install_data to replace install_dir
+  * switch to use meson build system
+  * window: Update allowed action hints
+  * remove line for debug
+  * fix make dist to remove .gmo files
+  * bump LT_VERSION_INFO
+  * libmarco-private: add version information
+
 ### marco 1.23.1
 
-  * tx: sync with transifex
+  * update translations
   * Make alt+tab max columns configurable and consider window label width
   * add invisible-border
   * theme: Fix window state when tiling from maximized
@@ -66,7 +116,7 @@
 
 ### marco 1.23.0
 
-  * tx: sync with transifex
+  * update translations
   * ui: always set the frame background to None
   * theme-viewer: avoid deprecated gtk_widget_override_background_color
   * window: set atom__NET_WM_STATE_FOCUSED for meta_window_appears_focused
