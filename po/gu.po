@@ -1,17 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the marco package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:57+0200\n"
+"Project-Id-Version: marco 1.23.1\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
+"POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Gujarati (https://www.transifex.com/mate/teams/13566/gu/)\n"
@@ -21,434 +20,357 @@ msgstr ""
 "Language: gu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/50-marco-desktop-key.xml.in.h:1
+#: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
 msgstr "ડેસ્કટોપ"
 
-#: ../src/50-marco-desktop-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:102
-msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "પેનલનો \"કાર્યક્રમ ચલાવો\" સંવાદ બોક્સ બતાવો"
+#: src/50-marco-desktop-key.xml.in:4
+msgid "Show the panel's &quot;Run Application&quot; dialog box"
+msgstr ""
 
-#: ../src/50-marco-desktop-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:101
+#: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
 msgstr "પેનલનું મુખ્ય મેનુ બતાવો"
 
-#: ../src/50-marco-desktop-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:103
+#: src/50-marco-desktop-key.xml.in:8 src/org.mate.marco.gschema.xml:639
 msgid "Take a screenshot"
 msgstr "ફોટો લો"
 
-#: ../src/50-marco-desktop-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:104
+#: src/50-marco-desktop-key.xml.in:10 src/org.mate.marco.gschema.xml:644
 msgid "Take a screenshot of a window"
 msgstr "વિન્ડોનો ફોટો લો"
 
-#: ../src/50-marco-desktop-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:105
+#: src/50-marco-desktop-key.xml.in:12 src/org.mate.marco.gschema.xml:649
 msgid "Run a terminal"
 msgstr "ટર્મિનલમાં ચલાવો"
 
-#: ../src/50-marco-desktop-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:106
+#: src/50-marco-desktop-key.xml.in:14 src/org.mate.marco.gschema.xml:654
 msgid "Rename current workspace"
 msgstr ""
 
-#: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
+#: src/50-marco-global-key.xml.in:2 src/50-marco-window-key.xml.in:2
 msgid "Window Management"
 msgstr "વિન્ડો વ્યવસ્થાપન"
 
-#: ../src/50-marco-global-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:88
+#: src/50-marco-global-key.xml.in:4 src/org.mate.marco.gschema.xml:564
 msgid "Move between windows, using a popup window"
 msgstr "વિન્ડો વચ્ચે ખસો, પોપઅપ વિન્ડોની મદદથી"
 
-#: ../src/50-marco-global-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:85
+#: src/50-marco-global-key.xml.in:6 src/org.mate.marco.gschema.xml:554
 msgid "Move between windows of an application, using a popup window"
 msgstr "કાર્યક્રમની વિન્ડોમાં ખસો, પોપઅપ વિન્ડોની મદદથી"
 
-#: ../src/50-marco-global-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:92
+#: src/50-marco-global-key.xml.in:8 src/org.mate.marco.gschema.xml:584
 msgid "Move between panels and the desktop, using a popup window"
 msgstr "પેનલો અને ડેસ્કટોપ વચ્ચે ખસો, પોપઅપ વિન્ડોની મદદથી"
 
-#: ../src/50-marco-global-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:96
+#: src/50-marco-global-key.xml.in:10 src/org.mate.marco.gschema.xml:604
 msgid "Move between windows immediately"
 msgstr "તરત જ બધી વિન્ડો વચ્ચે ખસો"
 
-#: ../src/50-marco-global-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:94
+#: src/50-marco-global-key.xml.in:12 src/org.mate.marco.gschema.xml:594
 msgid "Move between windows of an application immediately"
 msgstr "કાર્યક્રમની વિન્ડો વચ્ચે તુરંત જ ખસેડો"
 
-#: ../src/50-marco-global-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:98
+#: src/50-marco-global-key.xml.in:14 src/org.mate.marco.gschema.xml:614
 msgid "Move between panels and the desktop immediately"
 msgstr "તરત જ પેનલ તથા ડેસ્કટોપ વચ્ચે ખસો"
 
-#: ../src/50-marco-global-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:100
+#: src/50-marco-global-key.xml.in:16 src/org.mate.marco.gschema.xml:624
 msgid "Hide all normal windows and set focus to the desktop"
 msgstr "બધી સામાન્ય વિન્ડો છુપાવો અને ડેસ્કટોપને ફોકસ સુયોજીત કરો"
 
-#: ../src/50-marco-global-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:67
+#: src/50-marco-global-key.xml.in:23 src/org.mate.marco.gschema.xml:469
 msgid "Switch to workspace 1"
 msgstr "કામ કરવાની જગ્યા ૧ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:69
+#: src/50-marco-global-key.xml.in:30 src/org.mate.marco.gschema.xml:474
 msgid "Switch to workspace 2"
 msgstr "કામ કરવાની જગ્યા ૨ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:70
+#: src/50-marco-global-key.xml.in:37 src/org.mate.marco.gschema.xml:479
 msgid "Switch to workspace 3"
 msgstr "કામ કરવાની જગ્યા ૩ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:71
+#: src/50-marco-global-key.xml.in:44 src/org.mate.marco.gschema.xml:484
 msgid "Switch to workspace 4"
 msgstr "કામ કરવાની જગ્યા ૪ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:72
+#: src/50-marco-global-key.xml.in:51 src/org.mate.marco.gschema.xml:489
 msgid "Switch to workspace 5"
 msgstr "કામ કરવાની જગ્યા ૫ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:73
+#: src/50-marco-global-key.xml.in:58 src/org.mate.marco.gschema.xml:494
 msgid "Switch to workspace 6"
 msgstr "કામ કરવાની જગ્યા ૬ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:74
+#: src/50-marco-global-key.xml.in:65 src/org.mate.marco.gschema.xml:499
 msgid "Switch to workspace 7"
 msgstr "કામ કરવાની જગ્યા ૭ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:75
+#: src/50-marco-global-key.xml.in:72 src/org.mate.marco.gschema.xml:504
 msgid "Switch to workspace 8"
 msgstr "કામ કરવાની જગ્યા ૮ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:76
+#: src/50-marco-global-key.xml.in:79 src/org.mate.marco.gschema.xml:509
 msgid "Switch to workspace 9"
 msgstr "કામ કરવાની જગ્યા ૯ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:77
+#: src/50-marco-global-key.xml.in:86 src/org.mate.marco.gschema.xml:514
 msgid "Switch to workspace 10"
 msgstr "કામ કરવાની જગ્યા ૧૦ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:78
+#: src/50-marco-global-key.xml.in:93 src/org.mate.marco.gschema.xml:519
 msgid "Switch to workspace 11"
 msgstr "કામ કરવાની જગ્યા ૧૧ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:20
-#: ../src/org.mate.marco.gschema.xml.h:79
+#: src/50-marco-global-key.xml.in:100 src/org.mate.marco.gschema.xml:524
 msgid "Switch to workspace 12"
 msgstr "કામ કરવાની જગ્યા ૧૨ માં જાઓ"
 
-#: ../src/50-marco-global-key.xml.in.h:21
-#: ../src/org.mate.marco.gschema.xml.h:80
+#: src/50-marco-global-key.xml.in:107 src/org.mate.marco.gschema.xml:529
 msgid "Switch to workspace on the left of the current workspace"
 msgstr "વર્તમાન કામ કરવાની જગ્યાની ડાબી બાજુની કામ કરવાની જગ્યામાં બદલાવ"
 
-#: ../src/50-marco-global-key.xml.in.h:22
-#: ../src/org.mate.marco.gschema.xml.h:81
+#: src/50-marco-global-key.xml.in:114 src/org.mate.marco.gschema.xml:534
 msgid "Switch to workspace on the right of the current workspace"
 msgstr "વર્તમાન કામ કરવાની જગ્યાની જમણી બાજુની કામ કરવાની જગ્યામાં બદલાવ"
 
-#: ../src/50-marco-global-key.xml.in.h:23
-#: ../src/org.mate.marco.gschema.xml.h:82
+#: src/50-marco-global-key.xml.in:121 src/org.mate.marco.gschema.xml:539
 msgid "Switch to workspace above the current workspace"
 msgstr "વર્તમાન કામ કરવાની જગ્યાની ઉપરની કામ કરવાની જગ્યામાં બદલાવ"
 
-#: ../src/50-marco-global-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:83
+#: src/50-marco-global-key.xml.in:128 src/org.mate.marco.gschema.xml:544
 msgid "Switch to workspace below the current workspace"
 msgstr "વર્તમાન કામ કરવાની જગ્યાની નીચેની કામ કરવાની જગ્યામાં બદલાવ"
 
-#: ../src/50-marco-global-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:84
+#: src/50-marco-global-key.xml.in:131 src/org.mate.marco.gschema.xml:549
 msgid "Switch to previously selected workspace"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:113
+#: src/50-marco-window-key.xml.in:6 src/org.mate.marco.gschema.xml:735
 msgid "Activate the window menu"
 msgstr "વિન્ડો મેનુ સક્રિય કરો"
 
-#: ../src/50-marco-window-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:114
+#: src/50-marco-window-key.xml.in:10 src/org.mate.marco.gschema.xml:740
 msgid "Toggle fullscreen mode"
 msgstr "આખી સ્ક્રીન કરવાની સ્થિતિમાં ફેરબદલી"
 
-#: ../src/50-marco-window-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:115
+#: src/50-marco-window-key.xml.in:14 src/org.mate.marco.gschema.xml:745
 msgid "Toggle maximization state"
 msgstr "મહત્તમ કરવાની સ્થિતિમાં ફેરબદલી"
 
-#: ../src/50-marco-window-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:117
+#: src/50-marco-window-key.xml.in:18 src/org.mate.marco.gschema.xml:755
 msgid "Maximize window"
 msgstr "વિન્ડોને મહત્તમ સ્થિતિમાં લાવો"
 
-#: ../src/50-marco-window-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:118
+#: src/50-marco-window-key.xml.in:22 src/org.mate.marco.gschema.xml:760
 msgid "Restore window"
 msgstr "વિન્ડો પુનઃસંગ્રહિત કરો"
 
-#: ../src/50-marco-window-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:119
+#: src/50-marco-window-key.xml.in:26 src/org.mate.marco.gschema.xml:765
 msgid "Toggle shaded state"
 msgstr "છાયાંકિત કરવાની સ્થિતિમાં ફેરબદલી"
 
-#: ../src/50-marco-window-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:121
+#: src/50-marco-window-key.xml.in:30 src/org.mate.marco.gschema.xml:775
 msgid "Close window"
 msgstr "વિન્ડો બંધ કરો"
 
-#: ../src/50-marco-window-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:120
+#: src/50-marco-window-key.xml.in:34 src/org.mate.marco.gschema.xml:770
 msgid "Minimize window"
 msgstr "વિન્ડોને ન્યૂનત્તમ સ્થિતિમાં લાવો"
 
-#: ../src/50-marco-window-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:122
+#: src/50-marco-window-key.xml.in:38 src/org.mate.marco.gschema.xml:780
 msgid "Move window"
 msgstr "વિન્ડોને ખસાડો"
 
-#: ../src/50-marco-window-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:123
+#: src/50-marco-window-key.xml.in:42 src/org.mate.marco.gschema.xml:785
 msgid "Resize window"
 msgstr "વિન્ડોનુ માપ બદલો"
 
-#: ../src/50-marco-window-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:124
+#: src/50-marco-window-key.xml.in:50 src/org.mate.marco.gschema.xml:790
 msgid "Toggle whether window is on all workspaces or just one"
 msgstr "શું વિન્ડો એ બધી કામ કરવાની જગ્યાઓ ઉપર છે કે ખાલી એક પર છે તે બદલો"
 
-#: ../src/50-marco-window-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:141
+#: src/50-marco-window-key.xml.in:54 src/org.mate.marco.gschema.xml:875
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr ""
 "જો વિન્ડો અન્ય વિન્ડો દ્વારા આવરાયેલ હોય, અથવા તેની નીચે હોય તો તેને વધારો"
 
-#: ../src/50-marco-window-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:142
+#: src/50-marco-window-key.xml.in:58 src/org.mate.marco.gschema.xml:880
 msgid "Raise window above other windows"
 msgstr "વિન્ડોને બીજી બધી વિન્ડોની ઉપર લાવો"
 
-#: ../src/50-marco-window-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:143
+#: src/50-marco-window-key.xml.in:62 src/org.mate.marco.gschema.xml:885
 msgid "Lower window below other windows"
 msgstr "બીજી વિન્ડો નીચેની વિન્ડોને નાની કરો"
 
-#: ../src/50-marco-window-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:144
+#: src/50-marco-window-key.xml.in:66 src/org.mate.marco.gschema.xml:890
 msgid "Maximize window vertically"
 msgstr "વિન્ડોને ઉભી દિશામાં મોટી કરો"
 
-#: ../src/50-marco-window-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:145
+#: src/50-marco-window-key.xml.in:70 src/org.mate.marco.gschema.xml:895
 msgid "Maximize window horizontally"
 msgstr "વિન્ડોને આડી દિશામાં મોટી કરો"
 
-#: ../src/50-marco-window-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:146
+#: src/50-marco-window-key.xml.in:74 src/org.mate.marco.gschema.xml:900
 msgid "Tile window to east (right) side of screen"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:147
+#: src/50-marco-window-key.xml.in:78 src/org.mate.marco.gschema.xml:905
 msgid "Tile window to west (left) side of screen"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:20
+#: src/50-marco-window-key.xml.in:82
 msgid "Tile window to north-west (top left) corner"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:21
+#: src/50-marco-window-key.xml.in:86
 msgid "Tile window to north-east (top right) corner"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:22
+#: src/50-marco-window-key.xml.in:90
 msgid "Tile window to south-west (bottom left) corner"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:23
+#: src/50-marco-window-key.xml.in:94
 msgid "Tile window to south-east (bottom right) corner"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:152
+#: src/50-marco-window-key.xml.in:98 src/org.mate.marco.gschema.xml:930
 msgid "Move window to north-west (top left) corner"
 msgstr "વિન્ડોને ઉત્તર-પશ્ચિમ (ટોચે ડાબે) ખૂણે ખસેડો"
 
-#: ../src/50-marco-window-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:153
+#: src/50-marco-window-key.xml.in:102 src/org.mate.marco.gschema.xml:935
 msgid "Move window to north-east (top right) corner"
 msgstr "વિન્ડોને ઉત્તર-પૂર્વ (ટોચે જમણે) ખૂણે ખસેડો"
 
-#: ../src/50-marco-window-key.xml.in.h:26
-#: ../src/org.mate.marco.gschema.xml.h:154
+#: src/50-marco-window-key.xml.in:106 src/org.mate.marco.gschema.xml:940
 msgid "Move window to south-west (bottom left) corner"
 msgstr "વિન્ડોને દક્ષિણ-પશ્ચિમ (તળિયે ડાબે) ખૂણે ખસેડો"
 
-#: ../src/50-marco-window-key.xml.in.h:27
-#: ../src/org.mate.marco.gschema.xml.h:155
+#: src/50-marco-window-key.xml.in:110 src/org.mate.marco.gschema.xml:945
 msgid "Move window to south-east (bottom right) corner"
 msgstr "વિન્ડોને દક્ષિણ-પૂર્વ (તળિયે જમણે) ખૂણે ખસેડો"
 
-#: ../src/50-marco-window-key.xml.in.h:28
-#: ../src/org.mate.marco.gschema.xml.h:156
+#: src/50-marco-window-key.xml.in:114 src/org.mate.marco.gschema.xml:950
 msgid "Move window to north (top) side of screen"
 msgstr "વિન્ડોને સ્ક્રીનની ઉત્તર (ટોચ) બાજુએ ખસેડો"
 
-#: ../src/50-marco-window-key.xml.in.h:29
-#: ../src/org.mate.marco.gschema.xml.h:157
+#: src/50-marco-window-key.xml.in:118 src/org.mate.marco.gschema.xml:955
 msgid "Move window to south (bottom) side of screen"
 msgstr "વિન્ડોને સ્ક્રીનની દક્ષિણ (તળિયે) બાજુએ ખસેડો"
 
-#: ../src/50-marco-window-key.xml.in.h:30
-#: ../src/org.mate.marco.gschema.xml.h:158
+#: src/50-marco-window-key.xml.in:122 src/org.mate.marco.gschema.xml:960
 msgid "Move window to east (right) side of screen"
 msgstr "વિન્ડોને સ્ક્રીનની પૂર્વ (જમણી) બાજુએ ખસેડો"
 
-#: ../src/50-marco-window-key.xml.in.h:31
-#: ../src/org.mate.marco.gschema.xml.h:159
+#: src/50-marco-window-key.xml.in:126 src/org.mate.marco.gschema.xml:965
 msgid "Move window to west (left) side of screen"
 msgstr "વિન્ડોને સ્ક્રીનની પશ્ચિમ (ડાબી) બાજુએ ખસેડો"
 
-#: ../src/50-marco-window-key.xml.in.h:32
-#: ../src/org.mate.marco.gschema.xml.h:160
+#: src/50-marco-window-key.xml.in:130 src/org.mate.marco.gschema.xml:970
 msgid "Move window to center of screen"
 msgstr "વિન્ડોને સ્ક્રીનના કેન્દ્રમાં ખસેડો"
 
-#: ../src/50-marco-window-key.xml.in.h:33
-#: ../src/org.mate.marco.gschema.xml.h:161
+#: src/50-marco-window-key.xml.in:134 src/org.mate.marco.gschema.xml:975
 msgid "Move window to north (top) monitor"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:34
-#: ../src/org.mate.marco.gschema.xml.h:162
+#: src/50-marco-window-key.xml.in:138 src/org.mate.marco.gschema.xml:980
 msgid "Move window to south (bottom) monitor"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:35
-#: ../src/org.mate.marco.gschema.xml.h:163
+#: src/50-marco-window-key.xml.in:142 src/org.mate.marco.gschema.xml:985
 msgid "Move window to east (right) monitor"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:36
-#: ../src/org.mate.marco.gschema.xml.h:164
+#: src/50-marco-window-key.xml.in:146 src/org.mate.marco.gschema.xml:990
 msgid "Move window to west (left) monitor"
 msgstr ""
 
-#: ../src/50-marco-window-key.xml.in.h:37
-#: ../src/org.mate.marco.gschema.xml.h:125
+#: src/50-marco-window-key.xml.in:154 src/org.mate.marco.gschema.xml:795
 msgid "Move window to workspace 1"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૧ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:38
-#: ../src/org.mate.marco.gschema.xml.h:126
+#: src/50-marco-window-key.xml.in:162 src/org.mate.marco.gschema.xml:800
 msgid "Move window to workspace 2"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૨ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:39
-#: ../src/org.mate.marco.gschema.xml.h:127
+#: src/50-marco-window-key.xml.in:170 src/org.mate.marco.gschema.xml:805
 msgid "Move window to workspace 3"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૩ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:40
-#: ../src/org.mate.marco.gschema.xml.h:128
+#: src/50-marco-window-key.xml.in:178 src/org.mate.marco.gschema.xml:810
 msgid "Move window to workspace 4"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૪ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:41
-#: ../src/org.mate.marco.gschema.xml.h:129
+#: src/50-marco-window-key.xml.in:186 src/org.mate.marco.gschema.xml:815
 msgid "Move window to workspace 5"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૫ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:42
-#: ../src/org.mate.marco.gschema.xml.h:130
+#: src/50-marco-window-key.xml.in:194 src/org.mate.marco.gschema.xml:820
 msgid "Move window to workspace 6"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૬ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:43
-#: ../src/org.mate.marco.gschema.xml.h:131
+#: src/50-marco-window-key.xml.in:202 src/org.mate.marco.gschema.xml:825
 msgid "Move window to workspace 7"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૭ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:44
-#: ../src/org.mate.marco.gschema.xml.h:132
+#: src/50-marco-window-key.xml.in:210 src/org.mate.marco.gschema.xml:830
 msgid "Move window to workspace 8"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૮ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:45
-#: ../src/org.mate.marco.gschema.xml.h:133
+#: src/50-marco-window-key.xml.in:218 src/org.mate.marco.gschema.xml:835
 msgid "Move window to workspace 9"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૯ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:46
-#: ../src/org.mate.marco.gschema.xml.h:134
+#: src/50-marco-window-key.xml.in:226 src/org.mate.marco.gschema.xml:840
 msgid "Move window to workspace 10"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૧૦ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:47
-#: ../src/org.mate.marco.gschema.xml.h:135
+#: src/50-marco-window-key.xml.in:234 src/org.mate.marco.gschema.xml:845
 msgid "Move window to workspace 11"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૧૧ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:48
-#: ../src/org.mate.marco.gschema.xml.h:136
+#: src/50-marco-window-key.xml.in:242 src/org.mate.marco.gschema.xml:850
 msgid "Move window to workspace 12"
 msgstr "વિન્ડોને કામ કરવાની જગ્યા ૧૨ માં લઈ જાઓ"
 
-#: ../src/50-marco-window-key.xml.in.h:49
-#: ../src/org.mate.marco.gschema.xml.h:137
+#: src/50-marco-window-key.xml.in:250 src/org.mate.marco.gschema.xml:855
 msgid "Move window one workspace to the left"
 msgstr "વિન્ડોને ડાબી બાજુની કામ કરવાની જગ્યામાં લાવો"
 
-#: ../src/50-marco-window-key.xml.in.h:50
-#: ../src/org.mate.marco.gschema.xml.h:138
+#: src/50-marco-window-key.xml.in:258 src/org.mate.marco.gschema.xml:860
 msgid "Move window one workspace to the right"
 msgstr "વિન્ડોને જમણી બાજુની કામ કરવાની જગ્યામાં લાવો"
 
-#: ../src/50-marco-window-key.xml.in.h:51
-#: ../src/org.mate.marco.gschema.xml.h:139
+#: src/50-marco-window-key.xml.in:266 src/org.mate.marco.gschema.xml:865
 msgid "Move window one workspace up"
 msgstr "વિન્ડોને ઉપરની બાજુની કામ કરવાની જગ્યામાં લાવો"
 
-#: ../src/50-marco-window-key.xml.in.h:52
-#: ../src/org.mate.marco.gschema.xml.h:140
+#: src/50-marco-window-key.xml.in:274 src/org.mate.marco.gschema.xml:870
 msgid "Move window one workspace down"
 msgstr "વિન્ડોને નીચેની કામ કરવાની જગ્ચામાં લાવો"
 
-#: ../src/org.mate.marco.gschema.xml.h:1
+#: src/org.mate.marco.gschema.xml:50
 msgid "Modifier to use for modified window click actions"
 msgstr "બદલેલી વિન્ડોની ક્લિક ક્રિયાઓ માટે વાપરવાનું બદલનાર"
 
-#: ../src/org.mate.marco.gschema.xml.h:2
+#: src/org.mate.marco.gschema.xml:51
 msgid ""
 "Clicking a window while holding down this modifier key will move the window "
 "(left click), resize the window (middle click), or show the window menu "
 "(right click). The middle and right click operations may be swapped using "
-"the \"resize_with_right_button\" key. Modifier is expressed as "
-"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
+"the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
+"\"<Super>\" for example."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:3
+#: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
 msgstr "શું જમણા બટન વડે માપ બદલવું છે"
 
-#: ../src/org.mate.marco.gschema.xml.h:4
+#: src/org.mate.marco.gschema.xml:56
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
@@ -458,21 +380,21 @@ msgstr ""
 "\"mouse_button_modifier\" માં અપાયેલ કી દબાવી રાખતી વખતે વચ્ચેનું બટન સાથે "
 "મેનુ બતાવો; તેને કામ કરાવવા માટે ખોટા તરીકે સુયોજીત કરો ઊંધા રસ્તે."
 
-#: ../src/org.mate.marco.gschema.xml.h:5
+#: src/org.mate.marco.gschema.xml:60
 msgid "Whether to display preselected tab window border"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:6
+#: src/org.mate.marco.gschema.xml:61
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:7
+#: src/org.mate.marco.gschema.xml:65
 msgid "Arrangement of buttons on the titlebar"
 msgstr "શીર્ષકપટ્ટી પર બટનોની ગોઠવણી"
 
-#: ../src/org.mate.marco.gschema.xml.h:8
+#: src/org.mate.marco.gschema.xml:66
 msgid ""
 "Arrangement of buttons on the titlebar. The value should be a string, such "
 "as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
@@ -489,11 +411,11 @@ msgstr ""
 "મેટાસીટીની જૂની આવૃત્તિ તોડ્યા વગર ભવિષ્યની આવૃત્તિમાં ઉમેરી શકાય. વિશિષ્ટ "
 "spacer ટેગ બે પાસપાસેના બટનો વચ્ચે અમુક જગ્યા મૂકવા માટે વાપરી શકાય છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:9
+#: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
 msgstr "વિન્ડોની પ્રકાશન સ્થિતિ"
 
-#: ../src/org.mate.marco.gschema.xml.h:10
+#: src/org.mate.marco.gschema.xml:71
 msgid ""
 "The window focus mode indicates how windows are activated. It has three "
 "possible values; \"click\" means windows must be clicked in order to focus "
@@ -507,11 +429,11 @@ msgstr ""
 "\"mouse\" એટલે કે વિન્ડોમાં માઉસ આપતા તે પ્રકાશનમાં આવે છે. અને માઉસ જતુ "
 "રહેતાં તે પ્રકાશનમાં નથી રહેતી."
 
-#: ../src/org.mate.marco.gschema.xml.h:11
+#: src/org.mate.marco.gschema.xml:75
 msgid "Control how new windows get focus"
 msgstr "કેવી રીતે નવી વિન્ડો ફોકસ મેળવે તે નિયંત્રિત કરે છે"
 
-#: ../src/org.mate.marco.gschema.xml.h:12
+#: src/org.mate.marco.gschema.xml:76
 msgid ""
 "This option provides additional control over how newly created windows get "
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
@@ -523,11 +445,11 @@ msgstr ""
 "સ્થિતિને લાગુ પડે છે, અને \"સખ્ત\" એ ટર્મિનલમાંથી શરૂ થયેલ અને નહિં ફોકસ "
 "થયેલ વિન્ડોમાં પરિણમે છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:13
+#: src/org.mate.marco.gschema.xml:80
 msgid "Whether raising should be a side-effect of other user interactions"
 msgstr "શું વધારવાનું અન્ય વપરાશકર્તા સંપર્કોની આડ-અસર હોવી જોઈએ"
 
-#: ../src/org.mate.marco.gschema.xml.h:14
+#: src/org.mate.marco.gschema.xml:81
 msgid ""
 "Setting this option to false can lead to buggy behavior, so users are "
 "strongly discouraged from changing it from the default of true. Many actions"
@@ -549,11 +471,11 @@ msgid ""
 "live with the \"bug\" they requested."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:15
+#: src/org.mate.marco.gschema.xml:85
 msgid "Action on title bar double-click"
 msgstr "શીર્ષકપટ્ટી પર બે વખત ક્લિક કરવા પર કરવામાં આવતી ક્રિયા"
 
-#: ../src/org.mate.marco.gschema.xml.h:16
+#: src/org.mate.marco.gschema.xml:86
 msgid ""
 "This option determines the effects of double-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -573,11 +495,11 @@ msgstr ""
 "વિન્ડોને બાકી બધાની પાછળ મૂકશે, અને 'none' કે જે કંઈ કરશે નહિં, એ વર્તમાન "
 "માન્ય વિકલ્પો છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:17
+#: src/org.mate.marco.gschema.xml:90
 msgid "Action on title bar middle-click"
 msgstr "શીર્ષક પટ્ટી પર ક્રિયા વચ્ચેનું-ક્લિક"
 
-#: ../src/org.mate.marco.gschema.xml.h:18
+#: src/org.mate.marco.gschema.xml:91
 msgid ""
 "This option determines the effects of middle-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -597,11 +519,11 @@ msgstr ""
 "વિન્ડોને બાકી બધાની પાછળ મૂકશે, અને 'none' કે જે કંઈ કરશે નહિં, એ વર્તમાન "
 "માન્ય વિકલ્પો છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:19
+#: src/org.mate.marco.gschema.xml:95
 msgid "Action on title bar right-click"
 msgstr "શીર્ષક પટ્ટી પર ક્રિયા જમણું-ક્લિક"
 
-#: ../src/org.mate.marco.gschema.xml.h:20
+#: src/org.mate.marco.gschema.xml:96
 msgid ""
 "This option determines the effects of right-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -621,11 +543,11 @@ msgstr ""
 "વિન્ડોને બાકી બધાની પાછળ મૂકશે, અને 'none' કે જે કંઈ કરશે નહિં, એ વર્તમાન "
 "માન્ય વિકલ્પો છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:21
+#: src/org.mate.marco.gschema.xml:100
 msgid "Automatically raises the focused window"
 msgstr "પ્રકાશન વિન્ડોને આપોઆપ મોટી કરે છે"
 
-#: ../src/org.mate.marco.gschema.xml.h:22
+#: src/org.mate.marco.gschema.xml:101
 msgid ""
 "If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
 "the focused window will be automatically raised after a delay specified by "
@@ -637,11 +559,11 @@ msgstr ""
 "થયેલ વિલંબ પછી મોટી થઈ જશે. આ વિન્ડોને વધારવા માટે તેના પર ક્લિક કરવાને "
 "સંબંધિત નથી, નહિં કે તે ખેંચો-અને-મૂકો દરમ્યાન વિન્ડો દાખલ કરવા જેવું છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:23
+#: src/org.mate.marco.gschema.xml:105
 msgid "Delay in milliseconds for the auto raise option"
 msgstr "'આપોઆપ વધારો' વિકલ્પ માટે મિલિસેકન્ડોમાં વિલંબ"
 
-#: ../src/org.mate.marco.gschema.xml.h:24
+#: src/org.mate.marco.gschema.xml:106
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
@@ -649,22 +571,22 @@ msgstr ""
 "જો auto_raise એ સાચું હોય એ રીતે ગોઠવાયેલુ હોય તો વિન્ડોનો વધારો કરવામાં "
 "લાગતો વિલંબ. વિલંબને સેકન્ડના હજારમા ભાગમાં આપેલો છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:25
+#: src/org.mate.marco.gschema.xml:110
 msgid "Current theme"
 msgstr "વર્તમાન થીમ"
 
-#: ../src/org.mate.marco.gschema.xml.h:26
+#: src/org.mate.marco.gschema.xml:111
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
 msgstr ""
 "થીમ વિન્ડોની કિનારી, શીર્ષકપટ્ટી અને બીજી બધી વસ્તુઓના દેખાવને નક્કી કરે છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:27
+#: src/org.mate.marco.gschema.xml:115
 msgid "Use standard system font in window titles"
 msgstr "વિન્ડોના શીર્ષક માટે મૂળભૂત સિસ્ટમના ફોન્ટનો ઉપયોગ કરો"
 
-#: ../src/org.mate.marco.gschema.xml.h:28
+#: src/org.mate.marco.gschema.xml:116
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
@@ -672,11 +594,11 @@ msgstr ""
 "જો ખરુ હોય તો, શીર્ષકપટ્ટી_ફોન્ટ વિકલ્પને અવગણી દો અને વિન્ડો શીર્ષકો માટે "
 "મૂળભૂત કાર્યક્રમ ફોન્ટ વાપરો."
 
-#: ../src/org.mate.marco.gschema.xml.h:29
+#: src/org.mate.marco.gschema.xml:120
 msgid "Window title font"
 msgstr "વિન્ડોના શીર્ષકના ફોન્ટ"
 
-#: ../src/org.mate.marco.gschema.xml.h:30
+#: src/org.mate.marco.gschema.xml:121
 msgid ""
 "A font description string describing a font for window titlebars. The size "
 "from the description will only be used if the titlebar_font_size option is "
@@ -688,11 +610,11 @@ msgstr ""
 "હોય. અને, આ વિકલ્પ એ નિષ્ક્રિય કરેલ છે જો titlebar_uses_desktop_font વિકલ્પ "
 "એ true તરીકે સુયોજિત થયેલ હોય."
 
-#: ../src/org.mate.marco.gschema.xml.h:31
+#: src/org.mate.marco.gschema.xml:126
 msgid "Number of workspaces"
 msgstr "કામ કરવા માટેની જગ્યાઓની સંખ્યા"
 
-#: ../src/org.mate.marco.gschema.xml.h:32
+#: src/org.mate.marco.gschema.xml:127
 msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
@@ -702,11 +624,11 @@ msgstr ""
 "મહત્તમ હોવી જ જોઈએ ડેસ્કટોપને નહિં વાપરી શકાય તેવું બનાવવા માટે ઘણી બધી કામ "
 "કરવાની જગ્યાઓ માટે અચાનક પૂછીને."
 
-#: ../src/org.mate.marco.gschema.xml.h:33
+#: src/org.mate.marco.gschema.xml:131
 msgid "Workspace wrap style"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:34
+#: src/org.mate.marco.gschema.xml:132
 msgid ""
 "The wrap style is used to determine how to switch from one workspace to "
 "another at the border of the workspace switcher. When set to \"no wrap\", "
@@ -718,11 +640,11 @@ msgid ""
 "own beginning and the end of each column leads to its own beginning."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:35
+#: src/org.mate.marco.gschema.xml:136
 msgid "Enable Visual Bell"
 msgstr "'દેખીતી ઘંટડી' ને સક્રિય કરો"
 
-#: ../src/org.mate.marco.gschema.xml.h:36
+#: src/org.mate.marco.gschema.xml:137
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
@@ -732,11 +654,11 @@ msgstr ""
 "અવાજ પેદા કરે; સાંભળવાના-સખ્ત માટે ઉપયોગી છે અને ઘોંઘાટીયા પર્યાવરણોના વપરાશ"
 " માટે."
 
-#: ../src/org.mate.marco.gschema.xml.h:37
+#: src/org.mate.marco.gschema.xml:141
 msgid "System Bell is Audible"
 msgstr "સિસ્ટમની ઘંટડી સાંભળી શકાય તેવી છે"
 
-#: ../src/org.mate.marco.gschema.xml.h:38
+#: src/org.mate.marco.gschema.xml:142
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
@@ -744,11 +666,11 @@ msgstr ""
 "નક્કી કરો કે કાર્યક્રમ કે પછી સિસ્ટમ સાંભળી શકાય તેવા 'બીપ' ઉત્પન્ન કરી શકે "
 "છે કે નહિં; શાંત 'બીપ' ચલાવવા માટે 'દેખીતી ઘંટડી' સાથે કદાચ વાપરી શકાય."
 
-#: ../src/org.mate.marco.gschema.xml.h:39
+#: src/org.mate.marco.gschema.xml:146
 msgid "Visual Bell Type"
 msgstr "દેખાતી ઘંટડીનો પ્રકાર"
 
-#: ../src/org.mate.marco.gschema.xml.h:40
+#: src/org.mate.marco.gschema.xml:147
 msgid ""
 "Tells Marco how to implement the visual indication that the system bell or "
 "another application 'bell' indicator has been rung. Currently there are two "
@@ -766,30 +688,31 @@ msgstr ""
 "(જેમકે ખાસ કરીને મૂળભૂત કિસ્સા માટે \"સિસ્ટમ બીપ\" હોય છે), વર્તમાન પ્રકાશન "
 "વિન્ડોની શિર્ષકપટ્ટી પર ફ્લેશ કરશે."
 
-#: ../src/org.mate.marco.gschema.xml.h:41
+#: src/org.mate.marco.gschema.xml:151
 msgid "Compositing Manager"
 msgstr "કમ્પોઝીશન વ્યવસ્થાપક"
 
-#: ../src/org.mate.marco.gschema.xml.h:42
+#: src/org.mate.marco.gschema.xml:152
 msgid "Determines whether Marco is a compositing manager."
 msgstr "શું મેટાસીટી એ કમ્પોઝીટીંગ વ્યવસ્થાપક છે કે નહિં તે નક્કી કરે છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:43
+#: src/org.mate.marco.gschema.xml:156
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:44
+#: src/org.mate.marco.gschema.xml:157
 msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
-"displayed instead."
+"displayed instead. Note that on high resolution screens with many visible "
+"windows there can be a perceptible lag in rendering."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:45
+#: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
 msgstr "જો સાચુ હોય તો, સ્રોતોના ઓછો વપરાશ કરવાથી ઉપયોગિતા ઘટશે"
 
-#: ../src/org.mate.marco.gschema.xml.h:46
+#: src/org.mate.marco.gschema.xml:162
 msgid ""
 "If true, marco will give the user less feedback by using wireframes, "
 "avoiding animations, or other means. This is a significant reduction in "
@@ -804,12 +727,12 @@ msgstr ""
 " રહેશે. છતાં, જ્યારે સુલભતા ચાલુ હોય ત્યારે વાયરફ્રેમ લક્ષ્ણ એ નિષ્ક્રિય "
 "કરેલ હોય છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:47
+#: src/org.mate.marco.gschema.xml:166
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
 msgstr "(અમલમાં નથી મૂકાયુ) શોધખોળ કાર્યક્રમ અનુસાર થાય છે વિન્ડો અનુસાર નહિં"
 
-#: ../src/org.mate.marco.gschema.xml.h:48
+#: src/org.mate.marco.gschema.xml:167
 msgid ""
 "If true, then Marco works in terms of applications rather than windows. The "
 "concept is a bit abstract, but in general an application-based setup is more"
@@ -826,11 +749,11 @@ msgstr ""
 " કાર્યક્રમોમાં વિન્ડો મારફતે ફોકસ ક્લિક પસાર થતા નથી. કાર્યક્રમ-આધારિત "
 "સ્થિતિ એ, છતાં, આ ક્ષણે મોટા પ્રમણમાં અમલમાં મૂકાયેલ નથી."
 
-#: ../src/org.mate.marco.gschema.xml.h:49
+#: src/org.mate.marco.gschema.xml:171
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr "જૂના અથવા બગડેલા કાર્યક્રમ દ્વારા જરુરી ખરાબ લક્ષણોને નિષ્ક્રિય કરો"
 
-#: ../src/org.mate.marco.gschema.xml.h:50
+#: src/org.mate.marco.gschema.xml:172
 msgid ""
 "Some applications disregard specifications in ways that result in window "
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
@@ -842,42 +765,52 @@ msgstr ""
 "સ્થિતિમાં મૂકે છે, કે જે વધુ અચળ વપરાશકર્તા ઈન્ટરફેસ આપે છે, પૂરું પાડવામાં "
 "આવેલ એકને કોઈપણ ખોટા વર્તાવના કાર્યક્રમોની જરૂર રહેતી નથી."
 
-#: ../src/org.mate.marco.gschema.xml.h:51
+#: src/org.mate.marco.gschema.xml:176
 msgid "Determines if new windows are created on the center of the screen"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:52
+#: src/org.mate.marco.gschema.xml:177
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:53
+#: src/org.mate.marco.gschema.xml:181
 msgid "Whether to enable window tiling"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:54
+#: src/org.mate.marco.gschema.xml:182
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:55
+#: src/org.mate.marco.gschema.xml:186
 msgid "Whether to maximize the window when dragged to the top of the screen"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:56
+#: src/org.mate.marco.gschema.xml:187
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:57
+#: src/org.mate.marco.gschema.xml:191
+msgid "Whether to enable cycling through different tile sizes"
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:192
+msgid ""
+"If enabled, tiling a window will cycle through multiple different sizes by "
+"using the same keyboard shortcut multiple times in a row."
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:58
+#: src/org.mate.marco.gschema.xml:197
 msgid ""
 "The window placement mode indicates how new windows are positioned. "
 "\"automatic\" means the system chooses a location automatically based on the"
@@ -887,111 +820,223 @@ msgid ""
 " window with the mouse or keyboard."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:59
+#: src/org.mate.marco.gschema.xml:201
 msgid "List of applications ignored by show-desktop"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:60
+#: src/org.mate.marco.gschema.xml:202
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:61
-msgid "Icon size"
+#: src/org.mate.marco.gschema.xml:207
+msgid "Icon size in alt-tab popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:62
+#: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:63
+#: src/org.mate.marco.gschema.xml:213
+msgid "Maximum number of columns in alt-tab popup window"
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:214
+msgid ""
+"The popup window will be expanded to fit up to these many entries per row."
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:218
+msgid "Expand the alt-tab popup window to fit longer window titles"
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:219
+msgid ""
+"The popup window may be expanded up to the width determined by the config "
+"parameter 'alt-tab-max-columns'."
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
+#: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
+#: src/org.mate.marco.gschema.xml:246 src/org.mate.marco.gschema.xml:251
+#: src/org.mate.marco.gschema.xml:256 src/org.mate.marco.gschema.xml:261
+#: src/org.mate.marco.gschema.xml:266 src/org.mate.marco.gschema.xml:271
+#: src/org.mate.marco.gschema.xml:276 src/org.mate.marco.gschema.xml:281
+#: src/org.mate.marco.gschema.xml:286 src/org.mate.marco.gschema.xml:291
+#: src/org.mate.marco.gschema.xml:296 src/org.mate.marco.gschema.xml:301
+#: src/org.mate.marco.gschema.xml:306 src/org.mate.marco.gschema.xml:311
+#: src/org.mate.marco.gschema.xml:316 src/org.mate.marco.gschema.xml:321
+#: src/org.mate.marco.gschema.xml:326 src/org.mate.marco.gschema.xml:331
+#: src/org.mate.marco.gschema.xml:336 src/org.mate.marco.gschema.xml:341
+#: src/org.mate.marco.gschema.xml:346 src/org.mate.marco.gschema.xml:351
+#: src/org.mate.marco.gschema.xml:356 src/org.mate.marco.gschema.xml:361
+#: src/org.mate.marco.gschema.xml:366 src/org.mate.marco.gschema.xml:371
+#: src/org.mate.marco.gschema.xml:376 src/org.mate.marco.gschema.xml:381
+#: src/org.mate.marco.gschema.xml:386 src/org.mate.marco.gschema.xml:391
+#: src/org.mate.marco.gschema.xml:396 src/org.mate.marco.gschema.xml:401
 msgid "Name of workspace"
 msgstr "કામ કરવાની જગ્યાનુ નામ"
 
-#: ../src/org.mate.marco.gschema.xml.h:64
+#: src/org.mate.marco.gschema.xml:227 src/org.mate.marco.gschema.xml:232
+#: src/org.mate.marco.gschema.xml:237 src/org.mate.marco.gschema.xml:242
+#: src/org.mate.marco.gschema.xml:247 src/org.mate.marco.gschema.xml:252
+#: src/org.mate.marco.gschema.xml:257 src/org.mate.marco.gschema.xml:262
+#: src/org.mate.marco.gschema.xml:267 src/org.mate.marco.gschema.xml:272
+#: src/org.mate.marco.gschema.xml:277 src/org.mate.marco.gschema.xml:282
+#: src/org.mate.marco.gschema.xml:287 src/org.mate.marco.gschema.xml:292
+#: src/org.mate.marco.gschema.xml:297 src/org.mate.marco.gschema.xml:302
+#: src/org.mate.marco.gschema.xml:307 src/org.mate.marco.gschema.xml:312
+#: src/org.mate.marco.gschema.xml:317 src/org.mate.marco.gschema.xml:322
+#: src/org.mate.marco.gschema.xml:327 src/org.mate.marco.gschema.xml:332
+#: src/org.mate.marco.gschema.xml:337 src/org.mate.marco.gschema.xml:342
+#: src/org.mate.marco.gschema.xml:347 src/org.mate.marco.gschema.xml:352
+#: src/org.mate.marco.gschema.xml:357 src/org.mate.marco.gschema.xml:362
+#: src/org.mate.marco.gschema.xml:367 src/org.mate.marco.gschema.xml:372
+#: src/org.mate.marco.gschema.xml:377 src/org.mate.marco.gschema.xml:382
+#: src/org.mate.marco.gschema.xml:387 src/org.mate.marco.gschema.xml:392
+#: src/org.mate.marco.gschema.xml:397 src/org.mate.marco.gschema.xml:402
 msgid "The name of a workspace."
 msgstr "કામ કરવાની જગ્યાનું નામ."
 
-#: ../src/org.mate.marco.gschema.xml.h:65
+#: src/org.mate.marco.gschema.xml:409 src/org.mate.marco.gschema.xml:414
+#: src/org.mate.marco.gschema.xml:419 src/org.mate.marco.gschema.xml:424
+#: src/org.mate.marco.gschema.xml:429 src/org.mate.marco.gschema.xml:434
+#: src/org.mate.marco.gschema.xml:439 src/org.mate.marco.gschema.xml:444
+#: src/org.mate.marco.gschema.xml:449 src/org.mate.marco.gschema.xml:454
+#: src/org.mate.marco.gschema.xml:459 src/org.mate.marco.gschema.xml:464
 msgid "Run a defined command"
 msgstr "વ્યાખ્યાયિત આદેશ ચલાવો"
 
-#: ../src/org.mate.marco.gschema.xml.h:66
+#: src/org.mate.marco.gschema.xml:410 src/org.mate.marco.gschema.xml:415
+#: src/org.mate.marco.gschema.xml:420 src/org.mate.marco.gschema.xml:425
+#: src/org.mate.marco.gschema.xml:430 src/org.mate.marco.gschema.xml:435
+#: src/org.mate.marco.gschema.xml:440 src/org.mate.marco.gschema.xml:445
+#: src/org.mate.marco.gschema.xml:450 src/org.mate.marco.gschema.xml:455
+#: src/org.mate.marco.gschema.xml:460 src/org.mate.marco.gschema.xml:465
 msgid ""
 "The keybinding that runs the correspondingly-numbered command in "
-"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
-"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action."
+"/apps/marco/keybinding_commands The format looks like \"<Control>a\" or "
+"\"<Shift><Alt>F1\". The parser is fairly liberal and allows lower or upper "
+"case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set "
+"the option to the special string \"disabled\", then there will be no "
+"keybinding for this action."
 msgstr ""
-"કી જોડાણ કે જે /apps/marco/keybinding_commands માં રહેલા અંકો સાથે સંકળાયેલા"
-" આદેશને ચલાવે છે. માળખું આ રીતે હશે \"&lt;Control&gt;\" અથવા "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". આ પદચ્છેદ કરનાર ઘણું ઉદાર છે અને નાના અથવા "
-"મોટા બંને અક્ષર સ્વીકારે છે, ટૂંકુ નામ કે જે-  \"&lt;Ctl&gt;\" અને "
-"\"&lt;Ctrl&gt;\". જો તમે વિકલ્પને વિશિષ્ટ શબ્દમાળા તરીકે સુયોજિત કરેલી હશે "
-"\"disabled\", તો આ ક્રિયા માટે કોઈપણ કી જોડાણ નહિં હોય."
 
-#: ../src/org.mate.marco.gschema.xml.h:68
+#: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
+#: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
+#: src/org.mate.marco.gschema.xml:490 src/org.mate.marco.gschema.xml:495
+#: src/org.mate.marco.gschema.xml:500 src/org.mate.marco.gschema.xml:505
+#: src/org.mate.marco.gschema.xml:510 src/org.mate.marco.gschema.xml:515
+#: src/org.mate.marco.gschema.xml:520 src/org.mate.marco.gschema.xml:525
+#: src/org.mate.marco.gschema.xml:530 src/org.mate.marco.gschema.xml:535
+#: src/org.mate.marco.gschema.xml:540 src/org.mate.marco.gschema.xml:545
+#: src/org.mate.marco.gschema.xml:550 src/org.mate.marco.gschema.xml:625
+#: src/org.mate.marco.gschema.xml:630 src/org.mate.marco.gschema.xml:635
+#: src/org.mate.marco.gschema.xml:640 src/org.mate.marco.gschema.xml:645
+#: src/org.mate.marco.gschema.xml:650 src/org.mate.marco.gschema.xml:655
+#: src/org.mate.marco.gschema.xml:736 src/org.mate.marco.gschema.xml:741
+#: src/org.mate.marco.gschema.xml:746 src/org.mate.marco.gschema.xml:751
+#: src/org.mate.marco.gschema.xml:756 src/org.mate.marco.gschema.xml:761
+#: src/org.mate.marco.gschema.xml:766 src/org.mate.marco.gschema.xml:771
+#: src/org.mate.marco.gschema.xml:776 src/org.mate.marco.gschema.xml:781
+#: src/org.mate.marco.gschema.xml:786 src/org.mate.marco.gschema.xml:791
+#: src/org.mate.marco.gschema.xml:796 src/org.mate.marco.gschema.xml:801
+#: src/org.mate.marco.gschema.xml:806 src/org.mate.marco.gschema.xml:811
+#: src/org.mate.marco.gschema.xml:816 src/org.mate.marco.gschema.xml:821
+#: src/org.mate.marco.gschema.xml:826 src/org.mate.marco.gschema.xml:831
+#: src/org.mate.marco.gschema.xml:836 src/org.mate.marco.gschema.xml:841
+#: src/org.mate.marco.gschema.xml:846 src/org.mate.marco.gschema.xml:851
+#: src/org.mate.marco.gschema.xml:856 src/org.mate.marco.gschema.xml:861
+#: src/org.mate.marco.gschema.xml:866 src/org.mate.marco.gschema.xml:871
+#: src/org.mate.marco.gschema.xml:876 src/org.mate.marco.gschema.xml:881
+#: src/org.mate.marco.gschema.xml:886 src/org.mate.marco.gschema.xml:891
+#: src/org.mate.marco.gschema.xml:896 src/org.mate.marco.gschema.xml:901
+#: src/org.mate.marco.gschema.xml:906 src/org.mate.marco.gschema.xml:911
+#: src/org.mate.marco.gschema.xml:916 src/org.mate.marco.gschema.xml:921
+#: src/org.mate.marco.gschema.xml:926 src/org.mate.marco.gschema.xml:931
+#: src/org.mate.marco.gschema.xml:936 src/org.mate.marco.gschema.xml:941
+#: src/org.mate.marco.gschema.xml:946 src/org.mate.marco.gschema.xml:951
+#: src/org.mate.marco.gschema.xml:956 src/org.mate.marco.gschema.xml:961
+#: src/org.mate.marco.gschema.xml:966 src/org.mate.marco.gschema.xml:971
+#: src/org.mate.marco.gschema.xml:976 src/org.mate.marco.gschema.xml:981
+#: src/org.mate.marco.gschema.xml:986 src/org.mate.marco.gschema.xml:991
 msgid ""
-"The format looks like \"&lt;Control&gt;a\" or "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action."
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
+"fairly liberal and allows lower or upper case, and also abbreviations such "
+"as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
+"\"disabled\", then there will be no keybinding for this action."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:86
+#: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
+#: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
+#: src/org.mate.marco.gschema.xml:575 src/org.mate.marco.gschema.xml:580
+#: src/org.mate.marco.gschema.xml:585 src/org.mate.marco.gschema.xml:590
+#: src/org.mate.marco.gschema.xml:595 src/org.mate.marco.gschema.xml:600
+#: src/org.mate.marco.gschema.xml:605 src/org.mate.marco.gschema.xml:610
+#: src/org.mate.marco.gschema.xml:615 src/org.mate.marco.gschema.xml:620
 msgid ""
-"The format looks like \"&lt;Control&gt;a\" or "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action. This keybinding may be "
-"reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
-"one of the keys it uses."
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
+"fairly liberal and allows lower or upper case, and also abbreviations such "
+"as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
+"\"disabled\", then there will be no keybinding for this action. This "
+"keybinding may be reversed by holding down the \"shift\" key; therefore, "
+"\"shift\" cannot be one of the keys it uses."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:87
+#: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
 msgstr "કાર્યક્રમની વિન્ડો વચ્ચે પાછળ ખસો, પોપઅપ વિન્ડોની મદદથી"
 
-#: ../src/org.mate.marco.gschema.xml.h:89
+#: src/org.mate.marco.gschema.xml:569
 msgid "Move backward between windows, using a popup window"
 msgstr "વિન્ડો વચ્ચે પાછળ ખસો, પોપઅપ વિન્ડોની મદદથી"
 
-#: ../src/org.mate.marco.gschema.xml.h:90
+#: src/org.mate.marco.gschema.xml:574
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:91
+#: src/org.mate.marco.gschema.xml:579
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:93
+#: src/org.mate.marco.gschema.xml:589
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr "પેનલો અને ડેસ્કટોપ વચ્ચે પાછળ ખસો, પોપઅપ વિન્ડોની મદદથી"
 
-#: ../src/org.mate.marco.gschema.xml.h:95
+#: src/org.mate.marco.gschema.xml:599
 msgid "Move backward between windows of an application immediately"
 msgstr "કાર્યક્રમની વિન્ડો વચ્ચે તુરંત જ પાછળ ખસો"
 
-#: ../src/org.mate.marco.gschema.xml.h:97
+#: src/org.mate.marco.gschema.xml:609
 msgid "Move backward between windows immediately"
 msgstr "વિન્ડો વચ્ચે પાછળ તરત જ ખસો"
 
-#: ../src/org.mate.marco.gschema.xml.h:99
+#: src/org.mate.marco.gschema.xml:619
 msgid "Move backward between panels and the desktop immediately"
 msgstr "તરત જ પેનલ તથા ડેસ્કટોપ વચ્ચે પાછા ફરો"
 
-#: ../src/org.mate.marco.gschema.xml.h:107
+#: src/org.mate.marco.gschema.xml:634
+msgid "Show the panel's \"Run Application\" dialog box"
+msgstr "પેનલનો \"કાર્યક્રમ ચલાવો\" સંવાદ બોક્સ બતાવો"
+
+#: src/org.mate.marco.gschema.xml:662 src/org.mate.marco.gschema.xml:667
+#: src/org.mate.marco.gschema.xml:672 src/org.mate.marco.gschema.xml:677
+#: src/org.mate.marco.gschema.xml:682 src/org.mate.marco.gschema.xml:687
+#: src/org.mate.marco.gschema.xml:692 src/org.mate.marco.gschema.xml:697
+#: src/org.mate.marco.gschema.xml:702 src/org.mate.marco.gschema.xml:707
+#: src/org.mate.marco.gschema.xml:712 src/org.mate.marco.gschema.xml:717
 msgid "Commands to run in response to keybindings"
 msgstr "કી જોડાણના વળતા જવાબમાં ચલાવવા માટેનો આદેશ"
 
-#: ../src/org.mate.marco.gschema.xml.h:108
+#: src/org.mate.marco.gschema.xml:663 src/org.mate.marco.gschema.xml:668
+#: src/org.mate.marco.gschema.xml:673 src/org.mate.marco.gschema.xml:678
+#: src/org.mate.marco.gschema.xml:683 src/org.mate.marco.gschema.xml:688
+#: src/org.mate.marco.gschema.xml:693 src/org.mate.marco.gschema.xml:698
+#: src/org.mate.marco.gschema.xml:703 src/org.mate.marco.gschema.xml:708
+#: src/org.mate.marco.gschema.xml:713 src/org.mate.marco.gschema.xml:718
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
@@ -1001,11 +1046,11 @@ msgstr ""
 "જોડાણને વ્યાખ્યાયિત કરે છે. run_command_N માટેના કી જોડાણ દબાવતાં command_N "
 "ને ચલાવશે."
 
-#: ../src/org.mate.marco.gschema.xml.h:109
+#: src/org.mate.marco.gschema.xml:722
 msgid "The screenshot command"
 msgstr "ફોટો પાડવા માટેનો આદેશ"
 
-#: ../src/org.mate.marco.gschema.xml.h:110
+#: src/org.mate.marco.gschema.xml:723
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
@@ -1013,11 +1058,11 @@ msgstr ""
 "/apps/marco/global_keybindings/run_command_screenshot કી જોડાણને વ્યાખ્યાયિત"
 " કરે છે જે આ સુયોજન દ્વારા સ્પષ્ટ કરાયેલા આદેશને જગાડે છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:111
+#: src/org.mate.marco.gschema.xml:727
 msgid "The window screenshot command"
 msgstr "વિન્ડોના ફોટો પાડવા માટેનાે આદેશ"
 
-#: ../src/org.mate.marco.gschema.xml.h:112
+#: src/org.mate.marco.gschema.xml:728
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
@@ -1026,71 +1071,71 @@ msgstr ""
 "/apps/marco/global_keybindings/run_command_window_screenshot કી જોડાણને  "
 "વ્યાખ્યાયિત કરે છે જે આ સુયોજન દ્વારા સ્પષ્ટ કરાયેલા આદેશને જગાડે છે."
 
-#: ../src/org.mate.marco.gschema.xml.h:116
+#: src/org.mate.marco.gschema.xml:750
 msgid "Toggle whether a window will always be visible over other windows"
 msgstr "શું વિન્ડો હંમેશા અન્ય વિન્ડો ઉપર દેખાતી રહેશે તે બદલો"
 
-#: ../src/org.mate.marco.gschema.xml.h:148
+#: src/org.mate.marco.gschema.xml:910
 msgid "Tile window to north-west (upper left) corner of screen"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:149
+#: src/org.mate.marco.gschema.xml:915
 msgid "Tile window to north-east (upper right) corner of screen"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:150
+#: src/org.mate.marco.gschema.xml:920
 msgid "Tile window to south-east (lower right) corner of screen"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:151
+#: src/org.mate.marco.gschema.xml:925
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
 
-#: ../src/core/bell.c:294
+#: src/core/bell.c:294
 msgid "Bell event"
 msgstr "Bell ઘટના"
 
-#: ../src/core/core.c:211
+#: src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "અજ્ઞાત વિન્ડો જાણકારી અરજી: %d"
 
 #. Translators: %s is a window title
-#: ../src/core/delete.c:96
+#: src/core/delete.c:96
 #, c-format
 msgid "<tt>%s</tt> is not responding."
 msgstr ""
 
-#: ../src/core/delete.c:101
+#: src/core/delete.c:101
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
 msgstr ""
 
-#: ../src/core/delete.c:110
+#: src/core/delete.c:110
 msgid "_Wait"
 msgstr "રાહ જુઓ (_W)"
 
-#: ../src/core/delete.c:110
+#: src/core/delete.c:110
 msgid "_Force Quit"
 msgstr "જબરદસ્તી બહાર કાઢો (_F)"
 
-#: ../src/core/delete.c:180
+#: src/core/delete.c:180
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "યજમાનનું નામ મેળવવામાં નિષ્ફળ: %s\n"
 
-#: ../src/core/display.c:270
+#: src/core/display.c:270
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "કમ્પોઝીટીંગ માટે ગુમ થયેલ %s એક્સટેન્સન જરૂરી"
 
-#: ../src/core/display.c:348
+#: src/core/display.c:348
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X વિન્ડો સિસ્ટમ ડિસ્પ્લે '%s' ને ખોલવામાં નિષ્ફળ\n"
 
-#: ../src/core/keybindings.c:723
+#: src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1101,7 +1146,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2379
+#: src/core/keybindings.c:2396
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1112,35 +1157,32 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/core/keybindings.c:2468
+#: src/core/keybindings.c:2485
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "કોઈ આદેશ %d વ્યાખ્યાયિત કરાયો નથી.\n"
 
-#: ../src/core/keybindings.c:3527
-#, c-format
+#: src/core/keybindings.c:3595
 msgid "No terminal command has been defined.\n"
 msgstr "કોઈ ટર્મિનલ આદેશ વ્યાખ્યાયિત નથી.\n"
 
-#: ../src/core/keybindings.c:3667
-#, c-format
+#: src/core/keybindings.c:3735
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3668
-#, c-format
+#: src/core/keybindings.c:3736
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3679
+#: src/core/keybindings.c:3747
 msgid "OK"
 msgstr ""
 
-#: ../src/core/keybindings.c:3679
+#: src/core/keybindings.c:3747
 msgid "Cancel"
 msgstr "રદ કરો"
 
-#: ../src/core/main.c:132
+#: src/core/main.c:132
 #, c-format
 msgid ""
 "marco %s\n"
@@ -1153,54 +1195,54 @@ msgstr ""
 "This is free software; see the source for copying conditions.\n"
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 
-#: ../src/core/main.c:270
+#: src/core/main.c:270
 msgid "Disable connection to session manager"
 msgstr "સત્ર વ્યવસ્થાપકમાં જોડાણ નિષ્ક્રિય કરો"
 
-#: ../src/core/main.c:276
+#: src/core/main.c:276
 msgid "Replace the running window manager with Marco"
 msgstr "ચાલી રહેલ વિન્ડો વ્યવસ્થાપક મેટાસીટી વડે બદલો"
 
-#: ../src/core/main.c:282
+#: src/core/main.c:282
 msgid "Specify session management ID"
 msgstr "સત્ર વ્યવસ્થાપન ID સ્પષ્ટ કરો"
 
-#: ../src/core/main.c:287
+#: src/core/main.c:287
 msgid "X Display to use"
 msgstr "વાપરવા માટેનું X ડિસ્પ્લે"
 
-#: ../src/core/main.c:293
+#: src/core/main.c:293
 msgid "Initialize session from savefile"
 msgstr "સંગ્રહાયેલ ફાઈલમાંથી સત્રનો પ્રારંભ કરો"
 
-#: ../src/core/main.c:299
+#: src/core/main.c:299
 msgid "Print version"
 msgstr "છાપકામની આવૃત્તિ"
 
-#: ../src/core/main.c:305
+#: src/core/main.c:305
 msgid "Make X calls synchronous"
 msgstr "X કોલ ને એકસમયમાં થાય તે રીતે બનાવો"
 
-#: ../src/core/main.c:311
+#: src/core/main.c:311
 msgid "Turn compositing on"
 msgstr "કમ્પોઝીટીંગ ચાલુ કરો"
 
-#: ../src/core/main.c:317
+#: src/core/main.c:317
 msgid "Turn compositing off"
 msgstr "કમ્પોઝીટીંગ બંધ કરો"
 
-#: ../src/core/main.c:323
+#: src/core/main.c:323
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "સંપૂર્ણસ્ક્રીન વિન્ડોને બનાવો નહિં કે જે મહત્તમ થયેલ છે અને સુશોભિત નથી"
 
-#: ../src/core/main.c:522
+#: src/core/main.c:522
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "થીમની ડિરેક્ટરી જોવામાં નિષ્ફળ: %s\n"
 
-#: ../src/core/main.c:538
+#: src/core/main.c:538
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1208,7 +1250,7 @@ msgstr ""
 "થીમ શોધી શકાઈ નહિં! ખાતરી કરો કે %s અસ્તિત્વ ધરાવે છે અને તેમાં સામાન્ય થીમ "
 "છે.\n"
 
-#: ../src/core/main.c:597
+#: src/core/main.c:597
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "ફરીથી શરુ કરવામાં નિષ્ફળ: %s\n"
@@ -1216,12 +1258,12 @@ msgstr "ફરીથી શરુ કરવામાં નિષ્ફળ: %s\n
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:616 ../src/core/prefs.c:769
+#: src/core/prefs.c:641 src/core/prefs.c:794
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1063
+#: src/core/prefs.c:1088
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1229,12 +1271,12 @@ msgstr ""
 "બગડેલા કાર્યક્રમો માટે આસપાસના કાર્યો નિષ્ક્રિય કરેલા છે. કદાચ કેટલાક "
 "કાર્યક્રમો યોગ્ય રીતે નહિ વર્તતા હોય.\n"
 
-#: ../src/core/prefs.c:1157
+#: src/core/prefs.c:1194
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1219
+#: src/core/prefs.c:1256
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1243,24 +1285,24 @@ msgstr ""
 "માઉસ બટનની કિંમત બદલવા માટે રુપરેખાના ડેટાબેઝમાંથી મળેલ કિંમત \"%s\" એ યોગ્ય"
 " નથી\n"
 
-#: ../src/core/prefs.c:1798
+#: src/core/prefs.c:1844
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "કી જોડાણ \"%s\" માટે રુપરેખાના ડેટાબેઝ \"%s\" માં મળેલ કિંમત યોગ્ય નથી\n"
 
-#: ../src/core/prefs.c:2101
+#: src/core/prefs.c:2147
 #, c-format
 msgid "Workspace %d"
 msgstr "કામ કરવાની જગ્યા %d"
 
-#: ../src/core/screen.c:361
+#: src/core/screen.c:362
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "સ્ક્રીન %d કે જે ડિસ્પ્લે '%s' પર છે એ અયોગ્ય છે\n"
 
-#: ../src/core/screen.c:377
+#: src/core/screen.c:378
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1269,72 +1311,69 @@ msgstr ""
 "સ્ક્રીન %d કે જે ડિસ્પ્લે \"%s\" પર છે ત્યાં પહેલેથીજ વિન્ડો વ્યવસ્થાપક છે, "
 "--replace વિક્લ્પનો ઉપયોગ કરીને વિન્ડો વ્યવસ્થાપકને બદલવાનો પ્રયત્ન કરો.\n"
 
-#: ../src/core/screen.c:404
+#: src/core/screen.c:405
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "સ્ક્રીન %d કે જે ડિસ્પ્લે \"%s\" પર છે તે વિન્ડો વ્યવસ્થાપકની પસંદગીને મેળવી"
 " શકાતી નથી\n"
 
-#: ../src/core/screen.c:462
+#: src/core/screen.c:463
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr ""
 "સ્ક્રીન %d કે જે ડિસ્પ્લે \"%s\" પર છે ત્યાં પહેલેથીજ વિન્ડો વ્યવસ્થાપક છે\n"
 
-#: ../src/core/screen.c:676
+#: src/core/screen.c:677
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "સ્ક્રીન %d કે જે ડિસ્પ્લે \"%s\" પર છે તેને દૂર કરી શકાતી નથી\n"
 
-#: ../src/core/session.c:842 ../src/core/session.c:849
+#: src/core/session.c:842 src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "ડિરેક્ટરી '%s' બનાવી શકાતી નથી: %s\n"
 
-#: ../src/core/session.c:859
+#: src/core/session.c:859
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "સત્રની ફાઈલ '%s' ને લખવા માટે ખોલી શકાતી નથી: %s\n"
 
-#: ../src/core/session.c:999
+#: src/core/session.c:999
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "સત્રની ફાઈલ '%s' ને લખવામાં ભૂલ: %s\n"
 
-#: ../src/core/session.c:1004
+#: src/core/session.c:1004
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "સત્રની ફાઈલ '%s' ને બંધ કરવામાં ભૂલ: %s\n"
 
-#: ../src/core/session.c:1134
+#: src/core/session.c:1134
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "સંગ્રહિત સત્રની ફાઈલ ને પદચ્છેદ કરવામાં ભૂલ: %s\n"
 
-#: ../src/core/session.c:1183
-#, c-format
+#: src/core/session.c:1183
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr "<marco_session> લક્ષણ દેખાય છે પરંતુ આપણી પાસે પહેલેથી જ સત્ર ID છે"
 
-#: ../src/core/session.c:1196 ../src/core/session.c:1271
-#: ../src/core/session.c:1303 ../src/core/session.c:1375
-#: ../src/core/session.c:1435
+#: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
+#: src/core/session.c:1375 src/core/session.c:1435
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "અજ્ઞાત લક્ષણ %s એ ઘટક <%s> પર"
 
-#: ../src/core/session.c:1213
-#, c-format
+#: src/core/session.c:1213
 msgid "nested <window> tag"
 msgstr "પુનરાવર્તિત <window> નિશાની"
 
-#: ../src/core/session.c:1455
+#: src/core/session.c:1455
 #, c-format
 msgid "Unknown element %s"
 msgstr "અજાણી વસ્તુ %s"
 
-#: ../src/core/session.c:1807
+#: src/core/session.c:1807
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
@@ -1342,50 +1381,49 @@ msgstr ""
 "આ વિન્ડો &quot;વર્તમાન સુયોજનનો સંગ્રહ કરો&quot; ને આધાર આપતી નથી અને બીજી "
 "વખત તમે પ્રવેશ કરો ત્યારે જાતે જ ફરી શરુ કરવું પડશે."
 
-#: ../src/core/util.c:101
+#: src/core/util.c:101
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "ભૂલ શોધવા માટેનું નોંધપત્ર ખોલવામાં નિષ્ફળ: %s\n"
 
-#: ../src/core/util.c:111
+#: src/core/util.c:111
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "fdopen() નોંધપત્ર ફાઈલ %s ખોલવામાં નિષ્ફળ: %s\n"
 
-#: ../src/core/util.c:117
+#: src/core/util.c:117
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "પ્રવેશ ફાઈલ %s ખૂલેલી છે\n"
 
-#: ../src/core/util.c:136 ../src/tools/marco-message.c:176
-#, c-format
+#: src/core/util.c:136 src/tools/marco-message.c:176
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "મેટાસીટીને વર્ણનિય પદ્ધતિના આધાર વગર કમ્પાઈલ કરાયુ હતુ\n"
 
-#: ../src/core/util.c:227
+#: src/core/util.c:227
 msgid "Window manager: "
 msgstr "વિન્ડો વ્યવસ્થાપક: "
 
-#: ../src/core/util.c:379
+#: src/core/util.c:379
 msgid "Bug in window manager: "
 msgstr "વિન્ડો વ્યવસ્થાપકમાં ભૂલ: "
 
-#: ../src/core/util.c:412
+#: src/core/util.c:412
 msgid "Window manager warning: "
 msgstr "વિન્ડો વ્યવસ્થાપકની ચેતવણી: "
 
-#: ../src/core/util.c:440
+#: src/core/util.c:440
 msgid "Window manager error: "
 msgstr "વિન્ડો વ્યવસ્થાપકની ભૂલ: "
 
 #. Translators: This is the title used on dialog boxes
-#: ../src/core/util.c:560 ../src/core/util.c:658 ../src/marco.desktop.in.h:1
-#: ../src/marco-wm.desktop.in.h:1
+#: src/core/util.c:560 src/core/util.c:658 src/marco.desktop.in:4
+#: src/marco-wm.desktop.in:4
 msgid "Marco"
 msgstr "મેટાસીટી"
 
 #. first time through
-#: ../src/core/window.c:5931
+#: src/core/window.c:6004
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1400,7 +1438,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6499
+#: src/core/window.c:6582
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1410,43 +1448,43 @@ msgstr ""
 "પરંતુ ન્યૂનત્તમ માપ %d x %d અને મહત્તમ માપ %d x %d ગોઠવાયેલુ છે; તેનો કોઈ "
 "ખાસ અર્થ નીકળતો નથી.\n"
 
-#: ../src/core/window-props.c:306
+#: src/core/window-props.c:306
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "કાર્યક્રમ એ ખોટું _NET_WM_PID %lu સુયોજિત કર્યું છે\n"
 
 #. Translators: the title of a window from another machine
-#: ../src/core/window-props.c:457
+#: src/core/window-props.c:457
 #, c-format
 msgid "%s (on %s)"
 msgstr "%s (%s પર)"
 
 #. Simple case-- don't bother to look it up.  It's root.
-#: ../src/core/window-props.c:489
+#: src/core/window-props.c:489
 #, c-format
 msgid "%s (as superuser)"
 msgstr "%s (મુખ્ય વપરાશકર્તા તરીકે)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
-#: ../src/core/window-props.c:507
+#: src/core/window-props.c:507
 #, c-format
 msgid "%s (as %s)"
 msgstr "%s (%s તરીકે)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
-#: ../src/core/window-props.c:513
+#: src/core/window-props.c:513
 #, c-format
 msgid "%s (as another user)"
 msgstr "%s (બીજા વપરાશકર્તા તરીકે)"
 
-#: ../src/core/window-props.c:1499
+#: src/core/window-props.c:1499
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "અયોગ્ય WM_TRANSIENT_FOR વિન્ડો 0x%lx એ %s માટે સ્પષ્ટ થયેલ છે.\n"
 
-#: ../src/core/xprops.c:155
+#: src/core/xprops.c:155
 #, c-format
 msgid ""
 "Window 0x%lx has property %s\n"
@@ -1461,169 +1499,168 @@ msgstr ""
 "આ મોટે ભાગે કાર્યક્રમની ભૂલ હોવી જોઈએ, નહિ કે વિન્ડો વ્યવસ્થાપકની ભૂલ.\n"
 "વિન્ડોને શીર્ષક=\"%s\" વર્ગ=\"%s\" નામ=\"%s\"\n"
 
-#: ../src/core/xprops.c:411
+#: src/core/xprops.c:411
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgstr "ગુણધર્મ %s વિન્ડો 0x%lx પર અયોગ્ય UTF-8 ધરાવે છે\n"
 
-#: ../src/core/xprops.c:494
+#: src/core/xprops.c:494
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
 msgstr "ગુણધર્મ %s વિન્ડો 0x%lx પર યાદીમાં %d વસ્તુ પર અયોગ્ય UTF-8 ધરાવે છે\n"
 
-#: ../src/tools/marco-message.c:150
+#: src/tools/marco-message.c:150
 #, c-format
 msgid "Usage: %s\n"
 msgstr "વપરાશ: %s\n"
 
-#: ../src/ui/frames.c:1079
+#: src/ui/frames.c:1338
 msgid "Close Window"
 msgstr "વિન્ડો બંધ કરો"
 
-#: ../src/ui/frames.c:1082
+#: src/ui/frames.c:1341
 msgid "Window Menu"
 msgstr "વિન્ડોનું મેનુ"
 
-#: ../src/ui/frames.c:1085
+#: src/ui/frames.c:1344
 msgid "Window App Menu"
 msgstr ""
 
-#: ../src/ui/frames.c:1088
+#: src/ui/frames.c:1347
 msgid "Minimize Window"
 msgstr "વિન્ડોને ન્યૂનત્તમ સ્થિતિમાં લાવો"
 
-#: ../src/ui/frames.c:1091
+#: src/ui/frames.c:1350
 msgid "Maximize Window"
 msgstr "વિન્ડોને મહત્તમ સ્થિતિમાં લાવો"
 
-#: ../src/ui/frames.c:1094
+#: src/ui/frames.c:1353
 msgid "Restore Window"
 msgstr "વિન્ડો પુનઃસંગ્રહો"
 
-#: ../src/ui/frames.c:1097
+#: src/ui/frames.c:1356
 msgid "Roll Up Window"
 msgstr "વિન્ડો વીંટી લો"
 
-#: ../src/ui/frames.c:1100
+#: src/ui/frames.c:1359
 msgid "Unroll Window"
 msgstr "વિન્ડોનું વીંટેલુ પાછુ લો"
 
-#: ../src/ui/frames.c:1103
+#: src/ui/frames.c:1362
 msgid "Keep Window On Top"
 msgstr "વિન્ડોને ટોચે રાખો"
 
-#: ../src/ui/frames.c:1106
+#: src/ui/frames.c:1365
 msgid "Remove Window From Top"
 msgstr "વિન્ડોને ટોચથી દૂર કરો"
 
-#: ../src/ui/frames.c:1109
+#: src/ui/frames.c:1368
 msgid "Always On Visible Workspace"
 msgstr "હંમેશા દૃશ્ય કામ કરવાની જગ્યા પર"
 
-#: ../src/ui/frames.c:1112
+#: src/ui/frames.c:1371
 msgid "Put Window On Only One Workspace"
 msgstr "વિન્ડોને માત્ર એક કાર્યસ્થળ પર મૂકો"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:65
+#: src/ui/menu.c:65
 msgid "Mi_nimize"
 msgstr "ન્યૂનતમ કરો (_n)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:67
+#: src/ui/menu.c:67
 msgid "Ma_ximize"
 msgstr "મહત્તમ કરો (_x)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:69
+#: src/ui/menu.c:69
 msgid "Unma_ximize"
 msgstr "મહત્તમમાંથી પાછુ લાવો (_x)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:71
+#: src/ui/menu.c:71
 msgid "Roll _Up"
 msgstr "વીંટી લો (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:73
+#: src/ui/menu.c:73
 msgid "_Unroll"
 msgstr "ખોલી કાઢો (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:75
+#: src/ui/menu.c:75
 msgid "_Move"
 msgstr "ખસેડો (_M)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:77
+#: src/ui/menu.c:77
 msgid "_Resize"
 msgstr "માપ બદલો (_R)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:79
+#: src/ui/menu.c:79
 msgid "Move Titlebar On_screen"
 msgstr "શીર્ષકપટ્ટી સ્ક્રીન પર ખસેડો (_s)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:82 ../src/ui/menu.c:84
+#: src/ui/menu.c:82 src/ui/menu.c:84
 msgid "Always on _Top"
 msgstr "હંમેશા ટોચ પર (_T)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:86
+#: src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
 msgstr "હંમેશા દેખીતી કામ કરવાની જગ્યા પર (_A)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:88
+#: src/ui/menu.c:88
 msgid "_Only on This Workspace"
 msgstr "માત્ર આ કામ કરવાની જગ્યા પર (_O)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:90
+#: src/ui/menu.c:90
 msgid "Move to Workspace _Left"
 msgstr "ડાબી કામ કરવાની જગ્યામાં ખસો (_L)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:92
+#: src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
 msgstr "જમણી કામ કરવાની જગ્યામાં ખસો (_i)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:94
+#: src/ui/menu.c:94
 msgid "Move to Workspace _Up"
 msgstr "ઉપરની કામ કરવાની જગ્યામાં ખસો (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:96
+#: src/ui/menu.c:96
 msgid "Move to Workspace _Down"
 msgstr "નીચેની કામ કરવાની જગ્યામાં ખસો (_D)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:100
+#: src/ui/menu.c:100
 msgid "_Close"
 msgstr "બંધ કરો (_C)"
 
-#: ../src/ui/menu.c:197
+#: src/ui/menu.c:197
 #, c-format
 msgid "Workspace %d%n"
 msgstr "કામ કરવાની જગ્યા %d%n"
 
-#: ../src/ui/menu.c:207
-#, c-format
+#: src/ui/menu.c:207
 msgid "Workspace 1_0"
 msgstr "કામ કરવાની જગ્યા ૧_૦"
 
-#: ../src/ui/menu.c:209
+#: src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
 msgstr "કામ કરવાની જગ્યા %s%d"
 
-#: ../src/ui/menu.c:388
+#: src/ui/menu.c:388
 msgid "Move to Another _Workspace"
 msgstr "બીજી કામ કરવાની જગ્યામાં ખસો (_W)"
 
@@ -1631,7 +1668,7 @@ msgstr "બીજી કામ કરવાની જગ્યામાં ખ�
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:80
+#: src/ui/metaaccellabel.c:80
 msgid "Shift"
 msgstr "Shift"
 
@@ -1639,7 +1676,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:86
+#: src/ui/metaaccellabel.c:86
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -1647,7 +1684,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:92
+#: src/ui/metaaccellabel.c:92
 msgid "Alt"
 msgstr "Alt"
 
@@ -1655,7 +1692,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:98
+#: src/ui/metaaccellabel.c:98
 msgid "Meta"
 msgstr "Meta"
 
@@ -1663,7 +1700,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:104
+#: src/ui/metaaccellabel.c:104
 msgid "Super"
 msgstr "Super"
 
@@ -1671,7 +1708,7 @@ msgstr "Super"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:110
+#: src/ui/metaaccellabel.c:110
 msgid "Hyper"
 msgstr "Hyper"
 
@@ -1679,7 +1716,7 @@ msgstr "Hyper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:116
+#: src/ui/metaaccellabel.c:116
 msgid "Mod2"
 msgstr "Mod2"
 
@@ -1687,7 +1724,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:122
+#: src/ui/metaaccellabel.c:122
 msgid "Mod3"
 msgstr "Mod3"
 
@@ -1695,7 +1732,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:128
+#: src/ui/metaaccellabel.c:128
 msgid "Mod4"
 msgstr "Mod4"
 
@@ -1703,80 +1740,78 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:134
+#: src/ui/metaaccellabel.c:134
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:117
+#: src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:257
+#: src/ui/theme.c:366
 msgid "top"
 msgstr "ઉપર"
 
-#: ../src/ui/theme.c:259
+#: src/ui/theme.c:368
 msgid "bottom"
 msgstr "નીચે"
 
-#: ../src/ui/theme.c:261
+#: src/ui/theme.c:370
 msgid "left"
 msgstr "ડાબું"
 
-#: ../src/ui/theme.c:263
+#: src/ui/theme.c:372
 msgid "right"
 msgstr "જમણું"
 
-#: ../src/ui/theme.c:290
+#: src/ui/theme.c:399
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "ચોકઠાની ભૂમિતિ માપ \"%s\" સ્પષ્ટ કરતી નથી"
 
-#: ../src/ui/theme.c:309
+#: src/ui/theme.c:418
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "ચોકઠાની ભૂમિતિ કિનારી \"%s\" માટે માપ \"%s\" સ્પષ્ટ કરતી નથી"
 
-#: ../src/ui/theme.c:346
+#: src/ui/theme.c:455
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "બટન માટે ધારેલુ પ્રમાણ %g એ વ્યવસ્થિત નથી"
 
-#: ../src/ui/theme.c:358
-#, c-format
+#: src/ui/theme.c:467
 msgid "Frame geometry does not specify size of buttons"
 msgstr "ચોકઠાની ભૂમિતિ બટનોનું માપ સ્પષ્ટ કરતી નથી"
 
-#: ../src/ui/theme.c:1063
-#, c-format
+#: src/ui/theme.c:1227
 msgid "Gradients should have at least two colors"
 msgstr "ઢાળમાં ઓછામાં ઓછા બે રંગ હોવા જોઈએ"
 
-#: ../src/ui/theme.c:1201
+#: src/ui/theme.c:1397
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
 
-#: ../src/ui/theme.c:1217
+#: src/ui/theme.c:1413
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
 
-#: ../src/ui/theme.c:1231
+#: src/ui/theme.c:1427
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
 
-#: ../src/ui/theme.c:1275
+#: src/ui/theme.c:1471
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1785,7 +1820,7 @@ msgstr ""
 "GTK રંગના સ્પષ્ટીકરણમાં કૌંસમાં સ્થિતિ હોવી જોઈએ દા.ત. gtk:fg[NORMAL] જ્યાં "
 "NORMAL સ્થિતિ છે; \"%s\" નો પદચ્છેદ કરી શકાય નહિં"
 
-#: ../src/ui/theme.c:1289
+#: src/ui/theme.c:1485
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1794,17 +1829,17 @@ msgstr ""
 "GTK રંગના સ્પષ્ટીકરણમાં સ્થિતિ પછી કૌંસ બંધ થવો જોઈએ દા.ત. gtk:fg[NORMAL] "
 "જ્યાં NORMAL સ્થિતિ છે; \"%s\" નો પદચ્છેદ કરી શકાય નહિં"
 
-#: ../src/ui/theme.c:1300
+#: src/ui/theme.c:1496
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "રંગના સ્પષ્ટીકરણમાં સ્થિતિ \"%s\" સમજી શકાઈ નહિં"
 
-#: ../src/ui/theme.c:1313
+#: src/ui/theme.c:1509
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "રંગના સ્પષ્ટીકરણમાં રંગની વસ્તુ \"%s\" સમજી શકાયો નહિં"
 
-#: ../src/ui/theme.c:1341
+#: src/ui/theme.c:1537
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1813,42 +1848,42 @@ msgstr ""
 "\"blend/bg_color/fg_color/alpha\" એ મિશ્રિત માળખું છે, \"%s\" માળખામાં "
 "બેસતું નથી "
 
-#: ../src/ui/theme.c:1352
+#: src/ui/theme.c:1548
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "મિશ્રિત રંગમાં આલ્ફાની કિંમત \"%s\" નું પદચ્છેદ કરી શકાતુ નથી"
 
-#: ../src/ui/theme.c:1362
+#: src/ui/theme.c:1558
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "મિશ્રિત રંગમાં આલ્ફાની કિંમત \"%s\" ૦.૦ અને ૧.૦ ની વચ્ચે નથી"
 
-#: ../src/ui/theme.c:1408
+#: src/ui/theme.c:1604
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "છાયાનું માળખું \"shade/base_color/factor\" છે, \"%s\" માળખામાં બેસતુ નથી"
 
-#: ../src/ui/theme.c:1419
+#: src/ui/theme.c:1615
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "છાયાંકિત રંગમાં છાયાનો અવયવ \"%s\" નું પદચ્છેદ કરી શકાતુ નથી"
 
-#: ../src/ui/theme.c:1429
+#: src/ui/theme.c:1625
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "છાયાનો અવયવ \"%s\" છાયાના રંગમાં ઋણ છે"
 
-#: ../src/ui/theme.c:1458
+#: src/ui/theme.c:1654
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "રંગ \"%s\" નુ પદચ્છેદ કરી શકાતુ નથી"
 
-#: ../src/ui/theme.c:1807
+#: src/ui/theme.c:2003
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "યામાક્ષ સમીકરણ અક્ષર '%s' ધરાવે છે જે સ્વીકાર્ય નથી"
 
-#: ../src/ui/theme.c:1834
+#: src/ui/theme.c:2030
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1856,52 +1891,47 @@ msgid ""
 msgstr ""
 "યામાક્ષ સમીકરણ અપૂર્ણાંક સંખ્યા '%s' ધરાવે છે જેનું પદચ્છેદ કરી શકાતું નથી"
 
-#: ../src/ui/theme.c:1848
+#: src/ui/theme.c:2044
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr ""
 "યામાક્ષ સમીકરણ પૂર્ણાંક સંખ્યા '%s' ધરાવે છે જેનું પદચ્છેદ કરી શકાતું નથી"
 
-#: ../src/ui/theme.c:1970
+#: src/ui/theme.c:2166
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "યામાક્ષ સમીકરણમાં આ લખાણની શરુઆતમાં અજાણ્યા કારકો ધરાવે છે: \"%s\""
 
-#: ../src/ui/theme.c:2027
-#, c-format
+#: src/ui/theme.c:2223
 msgid "Coordinate expression was empty or not understood"
 msgstr "યામાક્ષ સમીકરણ ખાલી છે અથવા સમજી શકાય એવું નથી"
 
-#: ../src/ui/theme.c:2138 ../src/ui/theme.c:2148 ../src/ui/theme.c:2182
-#, c-format
+#: src/ui/theme.c:2334 src/ui/theme.c:2344 src/ui/theme.c:2378
 msgid "Coordinate expression results in division by zero"
 msgstr "યામાક્ષ સમીકરણ શૂન્ય વડે ભાગાકારમાં પરિણમશે"
 
-#: ../src/ui/theme.c:2190
-#, c-format
+#: src/ui/theme.c:2386
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr ""
 "યામાક્ષ સમીકરણ અપૂર્ણાંક સંખ્યાની ઉપર શેષ કારકનો ઉપયોગ કરવાનો પ્રયત્ન કરે છે"
 
-#: ../src/ui/theme.c:2246
+#: src/ui/theme.c:2442
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "યામાક્ષ સમીકરણ માટે \"%s\" કારક છે જેના માટે ઓપરન્ડ હોવા જોઈએ"
 
-#: ../src/ui/theme.c:2255
-#, c-format
+#: src/ui/theme.c:2451
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "યામાક્ષ સમીકરણમાં ઓપરન્ડ છે જ્યાં કારક હોવુ જોઈતું હતું"
 
-#: ../src/ui/theme.c:2263
-#, c-format
+#: src/ui/theme.c:2459
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "યામાક્ષ સમીકરણનો અંત ઓપરન્ડની જગ્યાએ કારકથી થાય છે"
 
-#: ../src/ui/theme.c:2273
+#: src/ui/theme.c:2469
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -1910,38 +1940,34 @@ msgstr ""
 "યામાક્ષ સમીકરણમાં \"%c\" કારક પછી તરત જ \"%c\" કારક છે જેમની વચ્ચે કોઈ "
 "ઓપરન્ડ નથી"
 
-#: ../src/ui/theme.c:2424 ../src/ui/theme.c:2469
+#: src/ui/theme.c:2620 src/ui/theme.c:2665
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "યામાક્ષ સમીકરણમાં અજાણ્યો ચલ કે અચલ \"%s\" છે"
 
-#: ../src/ui/theme.c:2523
-#, c-format
+#: src/ui/theme.c:2719
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "યામાક્ષ સમીકરણ પદચ્છેદકે તેનું બફર ઓવરફ્લો કરી નાંખ્યું."
 
-#: ../src/ui/theme.c:2552
-#, c-format
+#: src/ui/theme.c:2748
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "યામાક્ષ સમીકરણ પાસે ખુલ્લા કૌંસની વગર જ બંધ કૌંસ છે"
 
-#: ../src/ui/theme.c:2616
-#, c-format
+#: src/ui/theme.c:2812
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "યામાક્ષ સમીકરણ પાસે બંધ કૌંસની વગર જ ખુલ્લો કૌંસ હતો"
 
-#: ../src/ui/theme.c:2627
-#, c-format
+#: src/ui/theme.c:2823
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "યામાક્ષ સમીકરણમાં કોઈ કારક કે ઓપરન્ડ હોય તેવુ લાગતુ નથી"
 
-#: ../src/ui/theme.c:2831 ../src/ui/theme.c:2851 ../src/ui/theme.c:2871
+#: src/ui/theme.c:3027 src/ui/theme.c:3047 src/ui/theme.c:3067
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "થીમે સમાવેલ સમીકરણને કારણે ભૂલમાં પરિણમ્યું: %s\n"
 
-#: ../src/ui/theme.c:4554
+#: src/ui/theme.c:4857
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1950,23 +1976,23 @@ msgstr ""
 "આ માળખાની શૈલી માટે <button function=\"%s\" state=\"%s\" "
 "draw_ops=\"whatever\"/> સ્પષ્ટ કરેલી હોવી જરુરી છે"
 
-#: ../src/ui/theme.c:5087 ../src/ui/theme.c:5112
+#: src/ui/theme.c:5393 src/ui/theme.c:5418
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> ખોવાય છે"
 
-#: ../src/ui/theme.c:5156
+#: src/ui/theme.c:5462
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "થીમ \"%s\" લાવવામાં નિષ્ફળ: %s\n"
 
-#: ../src/ui/theme.c:5288 ../src/ui/theme.c:5295 ../src/ui/theme.c:5302
-#: ../src/ui/theme.c:5309 ../src/ui/theme.c:5316
+#: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
+#: src/ui/theme.c:5615 src/ui/theme.c:5622
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "કોઈ <%s> ગોઠવણ થીમ \"%s\" માટે નથી"
 
-#: ../src/ui/theme.c:5324
+#: src/ui/theme.c:5630
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1975,81 +2001,81 @@ msgstr ""
 "થીમ \"%s\" માં વિન્ડોના પ્રકાર \"%s\" માટે કોઈ માળખાની શૈલી ગોઠવાયેલી નથી, "
 "<window type=\"%s\" style_set=\"whatever\"/> વસ્તુ ઊમેરો"
 
-#: ../src/ui/theme.c:5772 ../src/ui/theme.c:5834 ../src/ui/theme.c:5897
+#: src/ui/theme.c:6045 src/ui/theme.c:6107 src/ui/theme.c:6170
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "વપરાશકર્તા દ્વારા વ્યાખ્યાયિત અચલો મોટા અક્ષરથી જ શરુ થવા જોઈએ; \"%s\" નહિં"
 
-#: ../src/ui/theme.c:5780 ../src/ui/theme.c:5842 ../src/ui/theme.c:5905
+#: src/ui/theme.c:6053 src/ui/theme.c:6115 src/ui/theme.c:6178
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "અચલ \"%s\" પહેલેથી જ વ્યાખ્યાયિત છે"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:252
+#: src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "કોઈ \"%s\" લક્ષણ વસ્તુ <%s> પર નથી"
 
-#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
+#: src/ui/theme-parser.c:281 src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "લીટી %d અક્ષર %d: %s"
 
-#: ../src/ui/theme-parser.c:499
+#: src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "લક્ષણ \"%s\" સરખી <%s> વસ્તુઓ પર બે વખત પુનરાવરર્તિત થાય છે"
 
-#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
+#: src/ui/theme-parser.c:523 src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "લક્ષણ \"%s\" એ વસ્તુ <%s> પર આ સંદર્ભે અયોગ્ય છે"
 
-#: ../src/ui/theme-parser.c:614
+#: src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\" ને પૂર્ણાંક તરીકે પદચ્છેદ કરી શકાયુ નહિ"
 
-#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
+#: src/ui/theme-parser.c:623 src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "શબ્દમાળા \"%s\" માં પૂંછડિયા અક્ષરો \"%s\" સમજી શકાયા નહિં"
 
-#: ../src/ui/theme-parser.c:633
+#: src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "પૂર્ણાંક %ld ધન હોવું જોઈએ"
 
-#: ../src/ui/theme-parser.c:641
+#: src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "પૂર્ણાંક %ld બહુ મોટો છે, વર્તમાન મહત્તમ %d છે"
 
-#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
+#: src/ui/theme-parser.c:669 src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "\"%s\" ને અપૂર્ણાંક સંખ્યા તરીકે પદચ્છેદ કરી શકાયો નહિં"
 
-#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
+#: src/ui/theme-parser.c:700 src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "બુલિયન કિંમતો \"ખરુ\" અથવા \"ખોટુ\" હોવી જોઈએ નહિં કે \"%s\""
 
-#: ../src/ui/theme-parser.c:755
+#: src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "ખૂણો ૦.૦ અને ૩૬૦.૦ ની વચ્ચે હોવો જોઈએ, જે %g હતો\n"
 
-#: ../src/ui/theme-parser.c:818
+#: src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "ખૂણો ૦.૦ (અદ્રશ્ય) અને ૧.૦ (પૂર્ણ અપારદર્શક) ની વચ્ચે હોવો જોઈએ, જે %g હતો\n"
 
-#: ../src/ui/theme-parser.c:883
+#: src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2058,60 +2084,60 @@ msgstr ""
 "શીર્ષક \"%s\" નું અયોગ્ય માપ (આમાંથી જ એક હોવું જોઈએ- xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
 
-#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
-#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
+#: src/ui/theme-parser.c:1039 src/ui/theme-parser.c:1102
+#: src/ui/theme-parser.c:1136 src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> નામ \"%s\" નો બીજી વાર ઉપયોગ થયો"
 
-#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
-#: ../src/ui/theme-parser.c:1251
+#: src/ui/theme-parser.c:1051 src/ui/theme-parser.c:1148
+#: src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> પિતૃ \"%s\" વ્યાખ્યાયિત નથી"
 
-#: ../src/ui/theme-parser.c:1161
+#: src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> ભૂમિતિ \"%s\" વ્યાખ્યાયિત નથી"
 
-#: ../src/ui/theme-parser.c:1174
+#: src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr ""
 "<%s> ને ભૂમિતિ અથવા પિતૃ કે જેની પાસે ભૂમિતિ હોય તે સ્પષ્ટ કરવો જ પડે છે"
 
-#: ../src/ui/theme-parser.c:1216
+#: src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "આલ્ફા કિંમત ઉપયોગી હોય તે માટે તમારે પાશ્વભાગ સ્પષ્ટ કરવો જ પડશે"
 
-#: ../src/ui/theme-parser.c:1284
+#: src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "<%s> વસ્તુ પર અજાણ્યો પ્રકાર \"%s\""
 
-#: ../src/ui/theme-parser.c:1295
+#: src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "<%s> વસ્તુ પર અજાણી શૈલીની ગોઠવણી \"%s\""
 
-#: ../src/ui/theme-parser.c:1303
+#: src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "વિન્ડોના પ્રકાર \"%s\" માટે પહેલેથી જ શૈલીની ગોઠવણીની નિમણૂક કરેલી છે"
 
-#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
-#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
-#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
-#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
-#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
-#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
+#: src/ui/theme-parser.c:1333 src/ui/theme-parser.c:1397
+#: src/ui/theme-parser.c:1623 src/ui/theme-parser.c:2858
+#: src/ui/theme-parser.c:2904 src/ui/theme-parser.c:3062
+#: src/ui/theme-parser.c:3298 src/ui/theme-parser.c:3336
+#: src/ui/theme-parser.c:3374 src/ui/theme-parser.c:3391
+#: src/ui/theme-parser.c:3407 src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "વસ્તુ <%s> એ <%s> ની નીચે માન્ય નથી"
 
-#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
-#: ../src/ui/theme-parser.c:1506
+#: src/ui/theme-parser.c:1447 src/ui/theme-parser.c:1461
+#: src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2119,123 +2145,123 @@ msgstr ""
 "બટનો માટે \"button_width\"/\"button_height\" અને \"aspect_ratio\" બંને "
 "સ્પષ્ટ કરી શકતા નથી"
 
-#: ../src/ui/theme-parser.c:1470
+#: src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "અંતર \"%s\" અજાણ છે"
 
-#: ../src/ui/theme-parser.c:1515
+#: src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "ધારેલુ પ્રમાણ \"%s\" અજાણ છે"
 
-#: ../src/ui/theme-parser.c:1577
+#: src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "કિનારી \"%s\" અજાણી છે"
 
-#: ../src/ui/theme-parser.c:1888
+#: src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "ઘટક <%s> પર કોઈ \"start_angle\" અથવા \"from\" લક્ષણ નથી"
 
-#: ../src/ui/theme-parser.c:1895
+#: src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "ઘટક <%s> પર કોઈ \"extent_angle\" અથવા \"to\" લક્ષણ નથી"
 
-#: ../src/ui/theme-parser.c:2135
+#: src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "ઢાળના પ્રકાર માટે કિંમત \"%s\" ને સમજી શકાતી નથી"
 
-#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
+#: src/ui/theme-parser.c:2213 src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "વસ્તુ <%s> માટે ફિલનો પ્રકાર \"%s\" સમજી શકાતો નથી"
 
-#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
-#: ../src/ui/theme-parser.c:2526
+#: src/ui/theme-parser.c:2380 src/ui/theme-parser.c:2463
+#: src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "સ્થિતિ \"%s\" વસ્તુ <%s> માટે સમજી શકાતી નથી"
 
-#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
+#: src/ui/theme-parser.c:2390 src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "છાયા \"%s\" વસ્તુ <%s> માટે સમજી શકાતી નથી"
 
-#: ../src/ui/theme-parser.c:2400
+#: src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "તીર \"%s\" વસ્તુ <%s> માટે સમજી શકાતુ નથી"
 
-#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
+#: src/ui/theme-parser.c:2714 src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "કોઈ <draw_ops> બોલાવાયેલ \"%s\" વ્યાખ્યાયિત નથી"
 
-#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
+#: src/ui/theme-parser.c:2726 src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "draw_ops ની સાથે \"%s\" વર્તુળાકાર નિર્દેશ બની જશે"
 
-#: ../src/ui/theme-parser.c:2937
+#: src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "તકતીના ટુકડા માટે અજાણી સ્થિતિ \"%s\" છે"
 
-#: ../src/ui/theme-parser.c:2945
+#: src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "તકતીની શૈલી પાસે પહેલેથી જ સ્થિતિ %s પાસે ટુકડો છે"
 
-#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
+#: src/ui/theme-parser.c:2962 src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "કોઈ પણ <draw_ops> નામ \"%s\" સાથે વ્યાખ્યાયિત નથી"
 
-#: ../src/ui/theme-parser.c:2992
+#: src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "\"%s\" એ બટન માટે અજાણ્યું વિધેય છે"
 
-#: ../src/ui/theme-parser.c:3002
+#: src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "બટન વિધેય \"%s\" આ આવૃત્તિમાં અસ્તિત્વમાં નથી (%d, %d જરૂર)"
 
-#: ../src/ui/theme-parser.c:3014
+#: src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "\"%s\" એ બટન માટે અજાણી સ્થિતિ છે"
 
-#: ../src/ui/theme-parser.c:3022
+#: src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "વિધેય %s ની સ્થિતિ %s માટેના ચોકઠાની શૈલી પાસે પહેલેથી જ બટન છે"
 
-#: ../src/ui/theme-parser.c:3101
+#: src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "પ્રકાશન લક્ષણ માટે \"%s\" એ યોગ્ય કિંમત નથી"
 
-#: ../src/ui/theme-parser.c:3110
+#: src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "સ્થિતિ લક્ષણ માટે \"%s\" એ યોગ્ય કિંમત નથી"
 
-#: ../src/ui/theme-parser.c:3120
+#: src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "શૈલી જે \"%s\" તરીકે ઓળખાય છે તે હજુ સુધી વ્યાખ્યાયિત થઈ નથી"
 
-#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
+#: src/ui/theme-parser.c:3141 src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "માપ બદલવાના લક્ષણ માટે \"%s\" એ યોગ્ય કિંમત નથી"
 
-#: ../src/ui/theme-parser.c:3175
+#: src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
@@ -2243,25 +2269,25 @@ msgid ""
 msgstr ""
 "મહત્તમ/છાયાંકિત સ્થિતિઓ માટે <%s> વસ્તુ પર \"માપ બદલો\" એવું કોઈ લક્ષણ નથી"
 
-#: ../src/ui/theme-parser.c:3189
+#: src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr "મહત્તમ સ્થિતિઓ માટે ઘટક <%s> પર \"resize\" એવું કોઈ લક્ષણ નથી"
 
-#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
+#: src/ui/theme-parser.c:3203 src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr ""
 "સ્થિતિ %s માપ બદલનાર %s પ્રકાશન %s માટે પહેલેથી જ શૈલી સ્પષ્ટ કરાયેલી છે"
 
-#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
-#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
-#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
+#: src/ui/theme-parser.c:3214 src/ui/theme-parser.c:3225
+#: src/ui/theme-parser.c:3236 src/ui/theme-parser.c:3258
+#: src/ui/theme-parser.c:3269 src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "સ્થિતિ %s પ્રકાશન %s માટે પહેલેથી જ શૈલી સ્પષ્ટ કરાયેલી છે"
 
-#: ../src/ui/theme-parser.c:3319
+#: src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
@@ -2269,7 +2295,7 @@ msgstr ""
 "<piece> વસ્તુ માટે બે draw_ops ના હોઈ શકે (થીમે draw_ops લક્ષણ તથા "
 "<draw_ops> વસ્તુ પણ સ્પષ્ટ કર્યો, અથવા બંને વસ્તુઓ સ્પષ્ટ કર્યા)"
 
-#: ../src/ui/theme-parser.c:3357
+#: src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
@@ -2277,7 +2303,7 @@ msgstr ""
 "<button> વસ્તુ માટે બે draw_ops ના હોઈ શકે (થીમે draw_ops લક્ષણ તથા "
 "<draw_ops> વસ્તુ પણ સ્પષ્ટ કર્યો, અથવા બંને વસ્તુઓ સ્પષ્ટ કર્યા)"
 
-#: ../src/ui/theme-parser.c:3427
+#: src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
@@ -2285,179 +2311,178 @@ msgstr ""
 "<menu_icon> વસ્તુ માટે બે draw_ops ના હોઈ શકે (થીમે draw_ops લક્ષણ તથા "
 "<draw_ops> વસ્તુ પણ સ્પષ્ટ કર્યો, અથવા બંને વસ્તુઓ સ્પષ્ટ કર્યા)"
 
-#: ../src/ui/theme-parser.c:3491
+#: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3562
+#: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3585
+#: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3617
+#: src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3637
+#: src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr "વસ્તુ <%s> name/author/date/description ની અંદર સ્વીકાર્ય નથી"
 
-#: ../src/ui/theme-parser.c:3642
+#: src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "વસ્તુ <%s> એ <constant> વસ્તુની અંદર સ્વીકાર્ય નથી"
 
-#: ../src/ui/theme-parser.c:3654
+#: src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr "વસ્તુ <%s> એ distance/border/aspect_ratio વસ્તુની અંદર સ્વીકાર્ય નથી"
 
-#: ../src/ui/theme-parser.c:3676
+#: src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "વસ્તુ <%s> એ દોરવાની પ્રક્રિયાના વસ્તુની અંદર સ્વીકાર્ય નથી"
 
-#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
-#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
+#: src/ui/theme-parser.c:3686 src/ui/theme-parser.c:3726
+#: src/ui/theme-parser.c:3731 src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "વસ્તુ <%s> એ વસ્તુ <%s> અંદર માન્ય નથી"
 
-#: ../src/ui/theme-parser.c:3964
+#: src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "ચોકઠાના ટુકડા માટે કોઈ draw_ops આપેલ નથી"
 
-#: ../src/ui/theme-parser.c:3979
+#: src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "બટન માટે કોઈ draw_ops આપેલ નથી"
 
-#: ../src/ui/theme-parser.c:4041
+#: src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "વસ્તુ <%s> ની અંદર કોઈ લખાણ માન્ય નથી"
 
-#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
-#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
-#: ../src/ui/theme-parser.c:4147
+#: src/ui/theme-parser.c:4099 src/ui/theme-parser.c:4111
+#: src/ui/theme-parser.c:4123 src/ui/theme-parser.c:4135
+#: src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "આ થીમ માટે <%s> બે વખત સ્પષ્ટ કરેલ છે"
 
-#: ../src/ui/theme-parser.c:4426
+#: src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "થીમ %s માટે માન્ય ફાઈલ શોધવામાં નિષ્ફળ\n"
 
-#: ../src/ui/theme-viewer.c:256
+#: src/ui/theme-viewer.c:256
 msgid "_OK"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:268
+#: src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "આ નમબના સંવાદમાં સરળ સંદેશો છે"
 
-#: ../src/ui/theme-viewer.c:352
+#: src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "ખોટી મેનુ વસ્તુ %d\n"
 
-#: ../src/ui/theme-viewer.c:408
+#: src/ui/theme-viewer.c:408
 msgid "Border-only window"
 msgstr "વિન્ડો માટે માત્ર કિનારી"
 
-#: ../src/ui/theme-viewer.c:410
+#: src/ui/theme-viewer.c:410
 msgid "Bar"
 msgstr "પટ્ટી"
 
-#: ../src/ui/theme-viewer.c:427
+#: src/ui/theme-viewer.c:427
 msgid "Normal Application Window"
 msgstr "કાર્યક્રમની સામાન્ય વિન્ડો"
 
-#: ../src/ui/theme-viewer.c:431
+#: src/ui/theme-viewer.c:431
 msgid "Dialog Box"
 msgstr "સંવાદ પેટી"
 
-#: ../src/ui/theme-viewer.c:435
+#: src/ui/theme-viewer.c:435
 msgid "Modal Dialog Box"
 msgstr "નમુના સંવાદ પેટી"
 
-#: ../src/ui/theme-viewer.c:439
+#: src/ui/theme-viewer.c:439
 msgid "Utility Palette"
 msgstr "ઉપયોગિતા પેલેટ"
 
-#: ../src/ui/theme-viewer.c:443
+#: src/ui/theme-viewer.c:443
 msgid "Torn-off Menu"
 msgstr "કાઢી નાખેલ મેનુ"
 
-#: ../src/ui/theme-viewer.c:447
+#: src/ui/theme-viewer.c:447
 msgid "Border"
 msgstr "કિનારી"
 
-#: ../src/ui/theme-viewer.c:451
+#: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:811
+#: src/ui/theme-viewer.c:811
 #, c-format
 msgid "Button layout test %d"
 msgstr "બટનના દેખાવની ચકાસણી %d"
 
-#: ../src/ui/theme-viewer.c:836
+#: src/ui/theme-viewer.c:836
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "એક વિન્ડોનું ચોકઠુ દોરવા માટે %g મિલિસેકન્ડો"
 
-#: ../src/ui/theme-viewer.c:876
-#, c-format
+#: src/ui/theme-viewer.c:876
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "વપરાશઃ  મેટાસીટી-થીમ-દર્શક [થીમનુ નામ]\n"
 
-#: ../src/ui/theme-viewer.c:883
+#: src/ui/theme-viewer.c:883
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "થીમ લાવવામાં ભૂલ: %s\n"
 
-#: ../src/ui/theme-viewer.c:889
+#: src/ui/theme-viewer.c:889
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "લવાયેલ થીમ \"%s\" %g સેકન્ડોમાં\n"
 
-#: ../src/ui/theme-viewer.c:933
+#: src/ui/theme-viewer.c:933
 msgid "Normal Title Font"
 msgstr "સામાન્ય શીર્ષક ફોન્ટ"
 
-#: ../src/ui/theme-viewer.c:939
+#: src/ui/theme-viewer.c:939
 msgid "Small Title Font"
 msgstr "નાના શીર્ષક ફોન્ટ"
 
-#: ../src/ui/theme-viewer.c:945
+#: src/ui/theme-viewer.c:945
 msgid "Large Title Font"
 msgstr "મોટા શીર્ષક ફોન્ટ"
 
-#: ../src/ui/theme-viewer.c:950
+#: src/ui/theme-viewer.c:950
 msgid "Button Layouts"
 msgstr "બટનના દેખાવો"
 
-#: ../src/ui/theme-viewer.c:955
+#: src/ui/theme-viewer.c:955
 msgid "Benchmark"
 msgstr "બેન્ચમાર્ક"
 
-#: ../src/ui/theme-viewer.c:1012
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "વિન્ડોનુ શીર્ષક અંહિ જાય છે"
 
-#: ../src/ui/theme-viewer.c:1117
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

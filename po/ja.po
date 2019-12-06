@@ -1,24 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the marco package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # mauron, 2018
 # shinmili <rmsk.pl.ur.lpt@gmail.com>, 2018
+# ABE Tsunehiko, 2018
 # Mika Kobayashi, 2018
 # Rockers <sumorock@hotmail.com>, 2018
 # Ikuru K <kanumaiku@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# ABE Tsunehiko, 2018
 # 323484, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:57+0200\n"
+"Project-Id-Version: marco 1.23.1\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
+"POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: 323484, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
@@ -28,437 +27,356 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/50-marco-desktop-key.xml.in.h:1
+#: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
 msgstr "デスクトップ"
 
-#: ../src/50-marco-desktop-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:102
-msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "パネルの「アプリケーションの実行」ダイアログ・ボックスを表示する"
+#: src/50-marco-desktop-key.xml.in:4
+msgid "Show the panel's &quot;Run Application&quot; dialog box"
+msgstr ""
 
-#: ../src/50-marco-desktop-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:101
+#: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
 msgstr "パネルのメイン・メニューを表示する"
 
-#: ../src/50-marco-desktop-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:103
+#: src/50-marco-desktop-key.xml.in:8 src/org.mate.marco.gschema.xml:639
 msgid "Take a screenshot"
 msgstr "スクリーンショットを撮る"
 
-#: ../src/50-marco-desktop-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:104
+#: src/50-marco-desktop-key.xml.in:10 src/org.mate.marco.gschema.xml:644
 msgid "Take a screenshot of a window"
 msgstr "ウィンドウのスクリーンショットを撮る"
 
-#: ../src/50-marco-desktop-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:105
+#: src/50-marco-desktop-key.xml.in:12 src/org.mate.marco.gschema.xml:649
 msgid "Run a terminal"
 msgstr "端末の起動"
 
-#: ../src/50-marco-desktop-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:106
+#: src/50-marco-desktop-key.xml.in:14 src/org.mate.marco.gschema.xml:654
 msgid "Rename current workspace"
 msgstr "現在のワークスペースの名前を変更する"
 
-#: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
+#: src/50-marco-global-key.xml.in:2 src/50-marco-window-key.xml.in:2
 msgid "Window Management"
 msgstr "ウィンドウの管理"
 
-#: ../src/50-marco-global-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:88
+#: src/50-marco-global-key.xml.in:4 src/org.mate.marco.gschema.xml:564
 msgid "Move between windows, using a popup window"
 msgstr "ポップアップ・ウィンドウを利用して、ウィンドウ間を移動する"
 
-#: ../src/50-marco-global-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:85
+#: src/50-marco-global-key.xml.in:6 src/org.mate.marco.gschema.xml:554
 msgid "Move between windows of an application, using a popup window"
 msgstr "ポップアップ・ウインドウを利用してアプリケーションのウィンドウの間を移動する"
 
-#: ../src/50-marco-global-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:92
+#: src/50-marco-global-key.xml.in:8 src/org.mate.marco.gschema.xml:584
 msgid "Move between panels and the desktop, using a popup window"
 msgstr "ポップアップ・ウィンドウを使ってパネルとデスクトップの間を移動する"
 
-#: ../src/50-marco-global-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:96
+#: src/50-marco-global-key.xml.in:10 src/org.mate.marco.gschema.xml:604
 msgid "Move between windows immediately"
 msgstr "ウィンドウ間のフォーカスを切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:94
+#: src/50-marco-global-key.xml.in:12 src/org.mate.marco.gschema.xml:594
 msgid "Move between windows of an application immediately"
 msgstr "アプリケーションが持つ複数のウィンドウの間をすばやく移動する"
 
-#: ../src/50-marco-global-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:98
+#: src/50-marco-global-key.xml.in:14 src/org.mate.marco.gschema.xml:614
 msgid "Move between panels and the desktop immediately"
 msgstr "パネルとデスクトップとのフォーカスを切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:100
+#: src/50-marco-global-key.xml.in:16 src/org.mate.marco.gschema.xml:624
 msgid "Hide all normal windows and set focus to the desktop"
 msgstr "すべての通常のウィンドウを隠してデスクトップにフォーカスを移す"
 
-#: ../src/50-marco-global-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:67
+#: src/50-marco-global-key.xml.in:23 src/org.mate.marco.gschema.xml:469
 msgid "Switch to workspace 1"
 msgstr "ワークスペース 1 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:69
+#: src/50-marco-global-key.xml.in:30 src/org.mate.marco.gschema.xml:474
 msgid "Switch to workspace 2"
 msgstr "ワークスペース 2 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:70
+#: src/50-marco-global-key.xml.in:37 src/org.mate.marco.gschema.xml:479
 msgid "Switch to workspace 3"
 msgstr "ワークスペース 3 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:71
+#: src/50-marco-global-key.xml.in:44 src/org.mate.marco.gschema.xml:484
 msgid "Switch to workspace 4"
 msgstr "ワークスペース 4 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:72
+#: src/50-marco-global-key.xml.in:51 src/org.mate.marco.gschema.xml:489
 msgid "Switch to workspace 5"
 msgstr "ワークスペース 5 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:73
+#: src/50-marco-global-key.xml.in:58 src/org.mate.marco.gschema.xml:494
 msgid "Switch to workspace 6"
 msgstr "ワークスペース 6 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:74
+#: src/50-marco-global-key.xml.in:65 src/org.mate.marco.gschema.xml:499
 msgid "Switch to workspace 7"
 msgstr "ワークスペース 7 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:75
+#: src/50-marco-global-key.xml.in:72 src/org.mate.marco.gschema.xml:504
 msgid "Switch to workspace 8"
 msgstr "ワークスペース 8 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:76
+#: src/50-marco-global-key.xml.in:79 src/org.mate.marco.gschema.xml:509
 msgid "Switch to workspace 9"
 msgstr "ワークスペース 9 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:77
+#: src/50-marco-global-key.xml.in:86 src/org.mate.marco.gschema.xml:514
 msgid "Switch to workspace 10"
 msgstr "ワークスペース 10 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:78
+#: src/50-marco-global-key.xml.in:93 src/org.mate.marco.gschema.xml:519
 msgid "Switch to workspace 11"
 msgstr "ワークスペース 11 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:20
-#: ../src/org.mate.marco.gschema.xml.h:79
+#: src/50-marco-global-key.xml.in:100 src/org.mate.marco.gschema.xml:524
 msgid "Switch to workspace 12"
 msgstr "ワークスペース 12 へ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:21
-#: ../src/org.mate.marco.gschema.xml.h:80
+#: src/50-marco-global-key.xml.in:107 src/org.mate.marco.gschema.xml:529
 msgid "Switch to workspace on the left of the current workspace"
 msgstr "左側のワークスペースへ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:22
-#: ../src/org.mate.marco.gschema.xml.h:81
+#: src/50-marco-global-key.xml.in:114 src/org.mate.marco.gschema.xml:534
 msgid "Switch to workspace on the right of the current workspace"
 msgstr "右側のワークスペースへ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:23
-#: ../src/org.mate.marco.gschema.xml.h:82
+#: src/50-marco-global-key.xml.in:121 src/org.mate.marco.gschema.xml:539
 msgid "Switch to workspace above the current workspace"
 msgstr "上側のワークスペースへ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:83
+#: src/50-marco-global-key.xml.in:128 src/org.mate.marco.gschema.xml:544
 msgid "Switch to workspace below the current workspace"
 msgstr "下側のワークスペースへ切り替える"
 
-#: ../src/50-marco-global-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:84
+#: src/50-marco-global-key.xml.in:131 src/org.mate.marco.gschema.xml:549
 msgid "Switch to previously selected workspace"
 msgstr "直前にいたワークスペースへ切り替える"
 
-#: ../src/50-marco-window-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:113
+#: src/50-marco-window-key.xml.in:6 src/org.mate.marco.gschema.xml:735
 msgid "Activate the window menu"
 msgstr "ウィンドウ・メニューをアクティブにする"
 
-#: ../src/50-marco-window-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:114
+#: src/50-marco-window-key.xml.in:10 src/org.mate.marco.gschema.xml:740
 msgid "Toggle fullscreen mode"
 msgstr "フル・スクリーン表示を切り替える"
 
-#: ../src/50-marco-window-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:115
+#: src/50-marco-window-key.xml.in:14 src/org.mate.marco.gschema.xml:745
 msgid "Toggle maximization state"
 msgstr "最大化/最小化の状態を切り替える"
 
-#: ../src/50-marco-window-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:117
+#: src/50-marco-window-key.xml.in:18 src/org.mate.marco.gschema.xml:755
 msgid "Maximize window"
 msgstr "ウィンドウを最大化する"
 
-#: ../src/50-marco-window-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:118
+#: src/50-marco-window-key.xml.in:22 src/org.mate.marco.gschema.xml:760
 msgid "Restore window"
 msgstr "ウィンドウを戻す"
 
-#: ../src/50-marco-window-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:119
+#: src/50-marco-window-key.xml.in:26 src/org.mate.marco.gschema.xml:765
 msgid "Toggle shaded state"
 msgstr "シェードの状態を切り替える"
 
-#: ../src/50-marco-window-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:121
+#: src/50-marco-window-key.xml.in:30 src/org.mate.marco.gschema.xml:775
 msgid "Close window"
 msgstr "ウィンドウを閉じる"
 
-#: ../src/50-marco-window-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:120
+#: src/50-marco-window-key.xml.in:34 src/org.mate.marco.gschema.xml:770
 msgid "Minimize window"
 msgstr "ウィンドウを最小化する"
 
-#: ../src/50-marco-window-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:122
+#: src/50-marco-window-key.xml.in:38 src/org.mate.marco.gschema.xml:780
 msgid "Move window"
 msgstr "ウィンドウを移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:123
+#: src/50-marco-window-key.xml.in:42 src/org.mate.marco.gschema.xml:785
 msgid "Resize window"
 msgstr "ウィンドウ・サイズを変更する"
 
-#: ../src/50-marco-window-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:124
+#: src/50-marco-window-key.xml.in:50 src/org.mate.marco.gschema.xml:790
 msgid "Toggle whether window is on all workspaces or just one"
 msgstr "ウィンドウを常にすべてのワークスペースに配置するかどうかを切り替える"
 
-#: ../src/50-marco-window-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:141
+#: src/50-marco-window-key.xml.in:54 src/org.mate.marco.gschema.xml:875
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr "ウィンドウが他のウィンドウに隠れていれば前面に出し、さもなくば下にします"
 
-#: ../src/50-marco-window-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:142
+#: src/50-marco-window-key.xml.in:58 src/org.mate.marco.gschema.xml:880
 msgid "Raise window above other windows"
 msgstr "ウィンドウを前面に出す"
 
-#: ../src/50-marco-window-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:143
+#: src/50-marco-window-key.xml.in:62 src/org.mate.marco.gschema.xml:885
 msgid "Lower window below other windows"
 msgstr "ウィンドウを一番奥に移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:144
+#: src/50-marco-window-key.xml.in:66 src/org.mate.marco.gschema.xml:890
 msgid "Maximize window vertically"
 msgstr "ウィンドウを垂直方向に最大化する"
 
-#: ../src/50-marco-window-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:145
+#: src/50-marco-window-key.xml.in:70 src/org.mate.marco.gschema.xml:895
 msgid "Maximize window horizontally"
 msgstr "ウィンドウを水平方向に最大化する"
 
-#: ../src/50-marco-window-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:146
+#: src/50-marco-window-key.xml.in:74 src/org.mate.marco.gschema.xml:900
 msgid "Tile window to east (right) side of screen"
 msgstr "ウィンドウを画面の東 (右側) に並べる"
 
-#: ../src/50-marco-window-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:147
+#: src/50-marco-window-key.xml.in:78 src/org.mate.marco.gschema.xml:905
 msgid "Tile window to west (left) side of screen"
 msgstr "ウィンドウを画面の西 (左側) に並べる"
 
-#: ../src/50-marco-window-key.xml.in.h:20
+#: src/50-marco-window-key.xml.in:82
 msgid "Tile window to north-west (top left) corner"
 msgstr "ウィンドウを北西 (左側の上) に並べる"
 
-#: ../src/50-marco-window-key.xml.in.h:21
+#: src/50-marco-window-key.xml.in:86
 msgid "Tile window to north-east (top right) corner"
 msgstr "ウィンドウを北東 (右側の上) に並べる"
 
-#: ../src/50-marco-window-key.xml.in.h:22
+#: src/50-marco-window-key.xml.in:90
 msgid "Tile window to south-west (bottom left) corner"
 msgstr "ウィンドウを南西 (左側の下) に並べる"
 
-#: ../src/50-marco-window-key.xml.in.h:23
+#: src/50-marco-window-key.xml.in:94
 msgid "Tile window to south-east (bottom right) corner"
 msgstr "ウィンドウを南東 (右側の下) に並べる"
 
-#: ../src/50-marco-window-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:152
+#: src/50-marco-window-key.xml.in:98 src/org.mate.marco.gschema.xml:930
 msgid "Move window to north-west (top left) corner"
 msgstr "ウィンドウを左上に移動"
 
-#: ../src/50-marco-window-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:153
+#: src/50-marco-window-key.xml.in:102 src/org.mate.marco.gschema.xml:935
 msgid "Move window to north-east (top right) corner"
 msgstr "ウィンドウを右上に移動"
 
-#: ../src/50-marco-window-key.xml.in.h:26
-#: ../src/org.mate.marco.gschema.xml.h:154
+#: src/50-marco-window-key.xml.in:106 src/org.mate.marco.gschema.xml:940
 msgid "Move window to south-west (bottom left) corner"
 msgstr "ウィンドウを左下に移動"
 
-#: ../src/50-marco-window-key.xml.in.h:27
-#: ../src/org.mate.marco.gschema.xml.h:155
+#: src/50-marco-window-key.xml.in:110 src/org.mate.marco.gschema.xml:945
 msgid "Move window to south-east (bottom right) corner"
 msgstr "ウィンドウを右下に移動"
 
-#: ../src/50-marco-window-key.xml.in.h:28
-#: ../src/org.mate.marco.gschema.xml.h:156
+#: src/50-marco-window-key.xml.in:114 src/org.mate.marco.gschema.xml:950
 msgid "Move window to north (top) side of screen"
 msgstr "ウィンドウを画面上端に移動"
 
-#: ../src/50-marco-window-key.xml.in.h:29
-#: ../src/org.mate.marco.gschema.xml.h:157
+#: src/50-marco-window-key.xml.in:118 src/org.mate.marco.gschema.xml:955
 msgid "Move window to south (bottom) side of screen"
 msgstr "ウィンドウを画面下端に移動"
 
-#: ../src/50-marco-window-key.xml.in.h:30
-#: ../src/org.mate.marco.gschema.xml.h:158
+#: src/50-marco-window-key.xml.in:122 src/org.mate.marco.gschema.xml:960
 msgid "Move window to east (right) side of screen"
 msgstr "ウィンドウを画面右端に移動"
 
-#: ../src/50-marco-window-key.xml.in.h:31
-#: ../src/org.mate.marco.gschema.xml.h:159
+#: src/50-marco-window-key.xml.in:126 src/org.mate.marco.gschema.xml:965
 msgid "Move window to west (left) side of screen"
 msgstr "ウィンドウを画面左端に移動"
 
-#: ../src/50-marco-window-key.xml.in.h:32
-#: ../src/org.mate.marco.gschema.xml.h:160
+#: src/50-marco-window-key.xml.in:130 src/org.mate.marco.gschema.xml:970
 msgid "Move window to center of screen"
 msgstr "ウィンドウを画面中央に移動"
 
-#: ../src/50-marco-window-key.xml.in.h:33
-#: ../src/org.mate.marco.gschema.xml.h:161
+#: src/50-marco-window-key.xml.in:134 src/org.mate.marco.gschema.xml:975
 msgid "Move window to north (top) monitor"
 msgstr "ウィンドウを北 (上側) モニターへ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:34
-#: ../src/org.mate.marco.gschema.xml.h:162
+#: src/50-marco-window-key.xml.in:138 src/org.mate.marco.gschema.xml:980
 msgid "Move window to south (bottom) monitor"
 msgstr "ウィンドウを南 (下側) モニターへ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:35
-#: ../src/org.mate.marco.gschema.xml.h:163
+#: src/50-marco-window-key.xml.in:142 src/org.mate.marco.gschema.xml:985
 msgid "Move window to east (right) monitor"
 msgstr "ウィンドウを東 (右側) モニターへ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:36
-#: ../src/org.mate.marco.gschema.xml.h:164
+#: src/50-marco-window-key.xml.in:146 src/org.mate.marco.gschema.xml:990
 msgid "Move window to west (left) monitor"
 msgstr "ウィンドウを西 (左側) モニターへ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:37
-#: ../src/org.mate.marco.gschema.xml.h:125
+#: src/50-marco-window-key.xml.in:154 src/org.mate.marco.gschema.xml:795
 msgid "Move window to workspace 1"
 msgstr "ウィンドウをワークスペース 1 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:38
-#: ../src/org.mate.marco.gschema.xml.h:126
+#: src/50-marco-window-key.xml.in:162 src/org.mate.marco.gschema.xml:800
 msgid "Move window to workspace 2"
 msgstr "ウィンドウをワークスペース 2 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:39
-#: ../src/org.mate.marco.gschema.xml.h:127
+#: src/50-marco-window-key.xml.in:170 src/org.mate.marco.gschema.xml:805
 msgid "Move window to workspace 3"
 msgstr "ウィンドウをワークスペース 3 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:40
-#: ../src/org.mate.marco.gschema.xml.h:128
+#: src/50-marco-window-key.xml.in:178 src/org.mate.marco.gschema.xml:810
 msgid "Move window to workspace 4"
 msgstr "ウィンドウをワークスペース 4 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:41
-#: ../src/org.mate.marco.gschema.xml.h:129
+#: src/50-marco-window-key.xml.in:186 src/org.mate.marco.gschema.xml:815
 msgid "Move window to workspace 5"
 msgstr "ウィンドウをワークスペース 5 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:42
-#: ../src/org.mate.marco.gschema.xml.h:130
+#: src/50-marco-window-key.xml.in:194 src/org.mate.marco.gschema.xml:820
 msgid "Move window to workspace 6"
 msgstr "ウィンドウをワークスペース 6 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:43
-#: ../src/org.mate.marco.gschema.xml.h:131
+#: src/50-marco-window-key.xml.in:202 src/org.mate.marco.gschema.xml:825
 msgid "Move window to workspace 7"
 msgstr "ウィンドウをワークスペース 7 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:44
-#: ../src/org.mate.marco.gschema.xml.h:132
+#: src/50-marco-window-key.xml.in:210 src/org.mate.marco.gschema.xml:830
 msgid "Move window to workspace 8"
 msgstr "ウィンドウをワークスペース 8 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:45
-#: ../src/org.mate.marco.gschema.xml.h:133
+#: src/50-marco-window-key.xml.in:218 src/org.mate.marco.gschema.xml:835
 msgid "Move window to workspace 9"
 msgstr "ウィンドウをワークスペース 9 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:46
-#: ../src/org.mate.marco.gschema.xml.h:134
+#: src/50-marco-window-key.xml.in:226 src/org.mate.marco.gschema.xml:840
 msgid "Move window to workspace 10"
 msgstr "ウィンドウをワークスペース 10 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:47
-#: ../src/org.mate.marco.gschema.xml.h:135
+#: src/50-marco-window-key.xml.in:234 src/org.mate.marco.gschema.xml:845
 msgid "Move window to workspace 11"
 msgstr "ウィンドウをワークスペース 11 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:48
-#: ../src/org.mate.marco.gschema.xml.h:136
+#: src/50-marco-window-key.xml.in:242 src/org.mate.marco.gschema.xml:850
 msgid "Move window to workspace 12"
 msgstr "ウィンドウをワークスペース 12 へ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:49
-#: ../src/org.mate.marco.gschema.xml.h:137
+#: src/50-marco-window-key.xml.in:250 src/org.mate.marco.gschema.xml:855
 msgid "Move window one workspace to the left"
 msgstr "ウィンドウを左側のワークスペースへ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:50
-#: ../src/org.mate.marco.gschema.xml.h:138
+#: src/50-marco-window-key.xml.in:258 src/org.mate.marco.gschema.xml:860
 msgid "Move window one workspace to the right"
 msgstr "ウィンドウを右側のワークスペースへ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:51
-#: ../src/org.mate.marco.gschema.xml.h:139
+#: src/50-marco-window-key.xml.in:266 src/org.mate.marco.gschema.xml:865
 msgid "Move window one workspace up"
 msgstr "ウィンドウを上側のワークスペースへ移動する"
 
-#: ../src/50-marco-window-key.xml.in.h:52
-#: ../src/org.mate.marco.gschema.xml.h:140
+#: src/50-marco-window-key.xml.in:274 src/org.mate.marco.gschema.xml:870
 msgid "Move window one workspace down"
 msgstr "ウィンドウを下側のワークスペースへ移動する"
 
-#: ../src/org.mate.marco.gschema.xml.h:1
+#: src/org.mate.marco.gschema.xml:50
 msgid "Modifier to use for modified window click actions"
 msgstr "変更したウィンドウ・クリック操作の修飾キー"
 
-#: ../src/org.mate.marco.gschema.xml.h:2
+#: src/org.mate.marco.gschema.xml:51
 msgid ""
 "Clicking a window while holding down this modifier key will move the window "
 "(left click), resize the window (middle click), or show the window menu "
 "(right click). The middle and right click operations may be swapped using "
-"the \"resize_with_right_button\" key. Modifier is expressed as "
-"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
+"the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
+"\"<Super>\" for example."
 msgstr ""
-"この修飾キーを押したままの状態でウィンドウをクリックすると、ウィンドウを移動させたり (左クリック)、ウィンドウ・サイズを変更したり "
-"(中クリック)、ウィンドウ・メニューを表示させたり(右クリック)することができます。中クリックと右クリックの操作は "
-"\"resize_with_right_button\" キーを使えば交換できます。修飾キーは、例えば、\"<Alt>\" や \"<Super>\" "
-"のように表されます。"
 
-#: ../src/org.mate.marco.gschema.xml.h:3
+#: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
 msgstr "右ボタンで大きさを変更するかどうか"
 
-#: ../src/org.mate.marco.gschema.xml.h:4
+#: src/org.mate.marco.gschema.xml:56
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
@@ -467,21 +385,21 @@ msgstr ""
 "これを TRUE に設定すると、\"mouse_button_modifier\" "
 "で設定したキーを押しながら右のボタンでサイズ変更し、真ん中のボタンでメニューを表示します。"
 
-#: ../src/org.mate.marco.gschema.xml.h:5
+#: src/org.mate.marco.gschema.xml:60
 msgid "Whether to display preselected tab window border"
 msgstr "前回選択したタブウィンドウに枠を表示するかどうか"
 
-#: ../src/org.mate.marco.gschema.xml.h:6
+#: src/org.mate.marco.gschema.xml:61
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
 msgstr "FALSE にすると、タブスイッチ中に前回選択したウィンドウに枠が表示されなくなります。"
 
-#: ../src/org.mate.marco.gschema.xml.h:7
+#: src/org.mate.marco.gschema.xml:65
 msgid "Arrangement of buttons on the titlebar"
 msgstr "タイトルバーのボタンの配置"
 
-#: ../src/org.mate.marco.gschema.xml.h:8
+#: src/org.mate.marco.gschema.xml:66
 msgid ""
 "Arrangement of buttons on the titlebar. The value should be a string, such "
 "as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
@@ -496,11 +414,11 @@ msgstr ""
 "コロンでウィンドウの右上隅と左上隅を分割し、ボタン名はコンマで区切ります。ボタンを重複させることはできません。不明なボタン名は単に無視されるだけなので、marco"
 " の新しいバージョンが旧バージョンに影響を与えることはありません。spacer というタグはボタンとボタンの間に挿入する空白を意味します。"
 
-#: ../src/org.mate.marco.gschema.xml.h:9
+#: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
 msgstr "ウィンドウフォーカスモード"
 
-#: ../src/org.mate.marco.gschema.xml.h:10
+#: src/org.mate.marco.gschema.xml:71
 msgid ""
 "The window focus mode indicates how windows are activated. It has three "
 "possible values; \"click\" means windows must be clicked in order to focus "
@@ -512,11 +430,11 @@ msgstr ""
 "はクリックするとフォーカスします。\"sloppy\" はマウスがウィンドウ内に入るとフォーカスします。\"mouse\" "
 "はマウスがウィンドウ内に入るとフォーカスし、マウスがウィンドウから出るとフォーカスが外れます。"
 
-#: ../src/org.mate.marco.gschema.xml.h:11
+#: src/org.mate.marco.gschema.xml:75
 msgid "Control how new windows get focus"
 msgstr "新しいウィンドウに対するフォーカスの当て方"
 
-#: ../src/org.mate.marco.gschema.xml.h:12
+#: src/org.mate.marco.gschema.xml:76
 msgid ""
 "This option provides additional control over how newly created windows get "
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
@@ -526,11 +444,11 @@ msgstr ""
 "このオプションを使い、新しく生成したウィンドウに対して、どのようにフォーカスを与えるかを制御します。設定可能なオプション: \"smart\" "
 "(ユーザが定義したフォーカスモードを適用します)、\"strict\" (端末から起動したアプリのウィンドウにはフォーカスを与えないようにします)"
 
-#: ../src/org.mate.marco.gschema.xml.h:13
+#: src/org.mate.marco.gschema.xml:80
 msgid "Whether raising should be a side-effect of other user interactions"
 msgstr "他のユーザ操作による副作用としてウィンドウを前面に出すかどうか"
 
-#: ../src/org.mate.marco.gschema.xml.h:14
+#: src/org.mate.marco.gschema.xml:81
 msgid ""
 "Setting this option to false can lead to buggy behavior, so users are "
 "strongly discouraged from changing it from the default of true. Many actions"
@@ -564,11 +482,11 @@ msgstr ""
 "にするとアプリケーションが動作しないバグがあると主張するユーザーが現れた場合、ユーザー自身が自分のウィンドウマネージャーを壊したということと、バグを解決するためにこのオプションを"
 " TRUE に戻す必要があることを伝えてください。"
 
-#: ../src/org.mate.marco.gschema.xml.h:15
+#: src/org.mate.marco.gschema.xml:85
 msgid "Action on title bar double-click"
 msgstr "タイトルバーをダブルクリックした時のアクション"
 
-#: ../src/org.mate.marco.gschema.xml.h:16
+#: src/org.mate.marco.gschema.xml:86
 msgid ""
 "This option determines the effects of double-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -586,11 +504,11 @@ msgstr ""
 "(垂直方向にのみウィンドウを最大化/通常サイズ化する)、'minimize' (ウィンドウを最小化する)、'shade' "
 "(ウィンドウを巻き上げる)、'menu' (ウィンドウメニューを表示する)、'lower' (ウィンドウを一番後ろに回す)、'none' (何もしない)"
 
-#: ../src/org.mate.marco.gschema.xml.h:17
+#: src/org.mate.marco.gschema.xml:90
 msgid "Action on title bar middle-click"
 msgstr "タイトルバーを中クリックした時のアクション"
 
-#: ../src/org.mate.marco.gschema.xml.h:18
+#: src/org.mate.marco.gschema.xml:91
 msgid ""
 "This option determines the effects of middle-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -608,11 +526,11 @@ msgstr ""
 "(垂直方向にのみウィンドウを最大化/通常サイズ化する)、'minimize' (ウィンドウを最小化する)、'shade' "
 "(ウィンドウを巻き上げる)、'menu' (ウィンドウメニューを表示する)、'lower' (ウィンドウを一番後ろに回す)、'none' (何もしない)"
 
-#: ../src/org.mate.marco.gschema.xml.h:19
+#: src/org.mate.marco.gschema.xml:95
 msgid "Action on title bar right-click"
 msgstr "タイトルバーを右クリックした時のアクション"
 
-#: ../src/org.mate.marco.gschema.xml.h:20
+#: src/org.mate.marco.gschema.xml:96
 msgid ""
 "This option determines the effects of right-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -630,11 +548,11 @@ msgstr ""
 "(垂直方向にのみウィンドウを最大化/通常サイズ化する)、'minimize' (ウィンドウを最小化する)、'shade' "
 "(ウィンドウを巻き上げる)、'menu' (ウィンドウメニューを表示する)、'lower' (ウィンドウを一番後ろに回す)、'none' (何もしない)"
 
-#: ../src/org.mate.marco.gschema.xml.h:21
+#: src/org.mate.marco.gschema.xml:100
 msgid "Automatically raises the focused window"
 msgstr "フォーカスされたウィンドウを自動的に前面に移動する"
 
-#: ../src/org.mate.marco.gschema.xml.h:22
+#: src/org.mate.marco.gschema.xml:101
 msgid ""
 "If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
 "the focused window will be automatically raised after a delay specified by "
@@ -645,43 +563,43 @@ msgstr ""
 "auto_raise_delay "
 "キーに指定した時間が経過した後に自動的に前面に表示されます。これはウィンドウをクリックして前面に表示する場合とは関係はなく、ドラッグアンドドロップ中にポインタがウィンドウ内に入った場合とも関係はありません。"
 
-#: ../src/org.mate.marco.gschema.xml.h:23
+#: src/org.mate.marco.gschema.xml:105
 msgid "Delay in milliseconds for the auto raise option"
 msgstr "自動的に全面に移動するオプションの遅延時間 (ミリ秒)"
 
-#: ../src/org.mate.marco.gschema.xml.h:24
+#: src/org.mate.marco.gschema.xml:106
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
 msgstr ""
 "auto_raise が TRUE に設定されている際、ウィンドウを全面に移動するまでの遅延時間を指定します。この遅延はミリ秒単位で指定します。"
 
-#: ../src/org.mate.marco.gschema.xml.h:25
+#: src/org.mate.marco.gschema.xml:110
 msgid "Current theme"
 msgstr "現在使用しているテーマ"
 
-#: ../src/org.mate.marco.gschema.xml.h:26
+#: src/org.mate.marco.gschema.xml:111
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
 msgstr "テーマはウィンドウの境界やタイトルバーなどの外観を決定します。"
 
-#: ../src/org.mate.marco.gschema.xml.h:27
+#: src/org.mate.marco.gschema.xml:115
 msgid "Use standard system font in window titles"
 msgstr "ウィンドウのタイトルに標準のシステムフォントを使う"
 
-#: ../src/org.mate.marco.gschema.xml.h:28
+#: src/org.mate.marco.gschema.xml:116
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
 "この値が TRUE の場合、titlebar_font オプションを無視してウィンドウのタイトルに標準のアプリケーションフォントを使用します。"
 
-#: ../src/org.mate.marco.gschema.xml.h:29
+#: src/org.mate.marco.gschema.xml:120
 msgid "Window title font"
 msgstr "ウィンドウタイトルのフォント"
 
-#: ../src/org.mate.marco.gschema.xml.h:30
+#: src/org.mate.marco.gschema.xml:121
 msgid ""
 "A font description string describing a font for window titlebars. The size "
 "from the description will only be used if the titlebar_font_size option is "
@@ -692,11 +610,11 @@ msgstr ""
 " オプションが 0 の場合だけです。また titlebar_uses_desktop_font オプションが TRUE "
 "の場合でも、このオプションは無効になります。"
 
-#: ../src/org.mate.marco.gschema.xml.h:31
+#: src/org.mate.marco.gschema.xml:126
 msgid "Number of workspaces"
 msgstr "ワークスペースの数"
 
-#: ../src/org.mate.marco.gschema.xml.h:32
+#: src/org.mate.marco.gschema.xml:127
 msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
@@ -705,11 +623,11 @@ msgstr ""
 "ワークスペースの数です。ワークスペースの数を 0 "
 "にしないでください。また、誤って大量のワークスペースを指定してしまいデスクトップが使いにくくなることを防ぐため、最大値は固定になっています。"
 
-#: ../src/org.mate.marco.gschema.xml.h:33
+#: src/org.mate.marco.gschema.xml:131
 msgid "Workspace wrap style"
 msgstr "ワークスペースのラップ形式"
 
-#: ../src/org.mate.marco.gschema.xml.h:34
+#: src/org.mate.marco.gschema.xml:132
 msgid ""
 "The wrap style is used to determine how to switch from one workspace to "
 "another at the border of the workspace switcher. When set to \"no wrap\", "
@@ -725,22 +643,22 @@ msgstr ""
 "の古い挙動と同じになります。すなわち、行の終わりは次の行の先頭とつながっているとみなされます。\"toroidal\" "
 "を選択すると、ワークスペースはドーナツ形に接続します。すなわち、行の終わりはその行の先頭と、列の終わりはその列の先頭とつながっているとみなされます。"
 
-#: ../src/org.mate.marco.gschema.xml.h:35
+#: src/org.mate.marco.gschema.xml:136
 msgid "Enable Visual Bell"
 msgstr "視覚的なベルを有効にする"
 
-#: ../src/org.mate.marco.gschema.xml.h:36
+#: src/org.mate.marco.gschema.xml:137
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr "アプリケーションやシステムがベルやビープ音を鳴らそうとした際、視覚的に表示します。耳が不自由な方や、騒音の中での使用に便利です。"
 
-#: ../src/org.mate.marco.gschema.xml.h:37
+#: src/org.mate.marco.gschema.xml:141
 msgid "System Bell is Audible"
 msgstr "システムベルを鳴らす"
 
-#: ../src/org.mate.marco.gschema.xml.h:38
+#: src/org.mate.marco.gschema.xml:142
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
@@ -748,11 +666,11 @@ msgstr ""
 "アプリケーションもしくはシステムが聴覚的なビープ音を生成できるか決定します。これは、無音のビープを許可する '視覚的なベルを有効にする' "
 "と共に用いられます。"
 
-#: ../src/org.mate.marco.gschema.xml.h:39
+#: src/org.mate.marco.gschema.xml:146
 msgid "Visual Bell Type"
 msgstr "視覚的なベルの種類"
 
-#: ../src/org.mate.marco.gschema.xml.h:40
+#: src/org.mate.marco.gschema.xml:147
 msgid ""
 "Tells Marco how to implement the visual indication that the system bell or "
 "another application 'bell' indicator has been rung. Currently there are two "
@@ -767,32 +685,31 @@ msgstr ""
 "はベルのシグナルを通知したアプリケーションのタイトルバーを点滅させます。どのアプリケーションがベルのシグナルを鳴らしたのか分からないとき "
 "(デフォルトのシステムビープではよくあるケースです) は、その時点でフォーカスされているウィンドウのタイトルバーを点滅させます。"
 
-#: ../src/org.mate.marco.gschema.xml.h:41
+#: src/org.mate.marco.gschema.xml:151
 msgid "Compositing Manager"
 msgstr "コンポジットマネージャー"
 
-#: ../src/org.mate.marco.gschema.xml.h:42
+#: src/org.mate.marco.gschema.xml:152
 msgid "Determines whether Marco is a compositing manager."
 msgstr "Marco がコンポジットマネージャーになれるかどうかを設定します。"
 
-#: ../src/org.mate.marco.gschema.xml.h:43
+#: src/org.mate.marco.gschema.xml:156
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
 msgstr "コンポジットマネージャー時の高速な Alt-Tab (サムネイルを無効化する)"
 
-#: ../src/org.mate.marco.gschema.xml.h:44
+#: src/org.mate.marco.gschema.xml:157
 msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
-"displayed instead."
+"displayed instead. Note that on high resolution screens with many visible "
+"windows there can be a perceptible lag in rendering."
 msgstr ""
-"TRUE にすると、コンポジットマネージャーとして動作している際、Alt-Tab "
-"のポップアップにウィンドウのサムネイルを表示しなくなります。アプリケーションのアイコンが代わりに表示されます。"
 
-#: ../src/org.mate.marco.gschema.xml.h:45
+#: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
 msgstr "TRUE にすると、リソースの消費が少なくなりますが、代わりに操作性が低下します。"
 
-#: ../src/org.mate.marco.gschema.xml.h:46
+#: src/org.mate.marco.gschema.xml:162
 msgid ""
 "If true, marco will give the user less feedback by using wireframes, "
 "avoiding animations, or other means. This is a significant reduction in "
@@ -804,12 +721,12 @@ msgstr ""
 "はワイヤーフレームを使ったり、アニメーションをしなくなったりするなど、ユーザーへのフィードバックが少なくなり、\"直感的な操作\" "
 "という点で操作性が落ちます。これは多くのユーザーにとってユーザビリティの重大な低下につながりますが、そうしないと操作に困るような旧式のアプリケーションやターミナル・サーバーもうまく使えるようになります。しかしながら、アクセシビリティの機能が有効な場合はワイヤーフレームの機能は無効になります。"
 
-#: ../src/org.mate.marco.gschema.xml.h:47
+#: src/org.mate.marco.gschema.xml:166
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
 msgstr "ウィンドウを利用しないアプリの動作をナビゲートする条件 (未実装) "
 
-#: ../src/org.mate.marco.gschema.xml.h:48
+#: src/org.mate.marco.gschema.xml:167
 msgid ""
 "If true, then Marco works in terms of applications rather than windows. The "
 "concept is a bit abstract, but in general an application-based setup is more"
@@ -824,11 +741,11 @@ msgstr ""
 " "
 "にはあまり似ていません。アプリケーション固定モードでウィンドウがフォーカスされると、アプリケーションのすべてのウィンドウが手前に表示されます。また、アプリケーション固定モードでは、フォーカス・クリックが他のアプリケーションのウィンドウに渡されることはありません。しかしながら、アプリケーション固定モードは現在のところ大部分が未実装です。"
 
-#: ../src/org.mate.marco.gschema.xml.h:49
+#: src/org.mate.marco.gschema.xml:171
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr "古い、あるいは仕様に準拠していないアプリケーションが要求する不要な機能を無効にする"
 
-#: ../src/org.mate.marco.gschema.xml.h:50
+#: src/org.mate.marco.gschema.xml:172
 msgid ""
 "Some applications disregard specifications in ways that result in window "
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
@@ -838,42 +755,52 @@ msgstr ""
 "いくつかのアプリケーションではウィンドウマネージャーの間違った動きや機能の結果、仕様を無視します。このオプションは Marco "
 "を厳格に正しいモードにし、さらに一貫したユーザーインタフェースを提供することで、何かおかしな動きをするアプリケーションを実行することがないようにします。"
 
-#: ../src/org.mate.marco.gschema.xml.h:51
+#: src/org.mate.marco.gschema.xml:176
 msgid "Determines if new windows are created on the center of the screen"
 msgstr "新しいウィンドウが画面中央に作成されたかを確認する"
 
-#: ../src/org.mate.marco.gschema.xml.h:52
+#: src/org.mate.marco.gschema.xml:177
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
 msgstr "TRUE にすると、新しいウィンドウは画面の中央に開きます。FALSE の場合は画面の左上に開きます。"
 
-#: ../src/org.mate.marco.gschema.xml.h:53
+#: src/org.mate.marco.gschema.xml:181
 msgid "Whether to enable window tiling"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:54
+#: src/org.mate.marco.gschema.xml:182
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:55
+#: src/org.mate.marco.gschema.xml:186
 msgid "Whether to maximize the window when dragged to the top of the screen"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:56
+#: src/org.mate.marco.gschema.xml:187
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:57
+#: src/org.mate.marco.gschema.xml:191
+msgid "Whether to enable cycling through different tile sizes"
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:192
+msgid ""
+"If enabled, tiling a window will cycle through multiple different sizes by "
+"using the same keyboard shortcut multiple times in a row."
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
 msgstr "ウィンドウの配置モード"
 
-#: ../src/org.mate.marco.gschema.xml.h:58
+#: src/org.mate.marco.gschema.xml:197
 msgid ""
 "The window placement mode indicates how new windows are positioned. "
 "\"automatic\" means the system chooses a location automatically based on the"
@@ -886,109 +813,223 @@ msgstr ""
 "は、デスクトップに空きがある場合その位置に、空きがない場合は単純に重なる位置にシステムが自動配置します。\"pointer\" "
 "はマウスポインターの位置に配置します。\"manual\"はユーザーがマウスやキーボードを使って配置位置を決定します。"
 
-#: ../src/org.mate.marco.gschema.xml.h:59
+#: src/org.mate.marco.gschema.xml:201
 msgid "List of applications ignored by show-desktop"
 msgstr "デスクトップを表示時に無視するアプリケーションのリスト"
 
-#: ../src/org.mate.marco.gschema.xml.h:60
+#: src/org.mate.marco.gschema.xml:202
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
 msgstr "カンマ区切りのクラスのリストです。デスクトップを表示する際、このリスト内にあるウィンドウマネージャークラスは無視され、最小化されません。"
 
-#: ../src/org.mate.marco.gschema.xml.h:61
-msgid "Icon size"
+#: src/org.mate.marco.gschema.xml:207
+msgid "Icon size in alt-tab popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:62
+#: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:63
+#: src/org.mate.marco.gschema.xml:213
+msgid "Maximum number of columns in alt-tab popup window"
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:214
+msgid ""
+"The popup window will be expanded to fit up to these many entries per row."
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:218
+msgid "Expand the alt-tab popup window to fit longer window titles"
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:219
+msgid ""
+"The popup window may be expanded up to the width determined by the config "
+"parameter 'alt-tab-max-columns'."
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
+#: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
+#: src/org.mate.marco.gschema.xml:246 src/org.mate.marco.gschema.xml:251
+#: src/org.mate.marco.gschema.xml:256 src/org.mate.marco.gschema.xml:261
+#: src/org.mate.marco.gschema.xml:266 src/org.mate.marco.gschema.xml:271
+#: src/org.mate.marco.gschema.xml:276 src/org.mate.marco.gschema.xml:281
+#: src/org.mate.marco.gschema.xml:286 src/org.mate.marco.gschema.xml:291
+#: src/org.mate.marco.gschema.xml:296 src/org.mate.marco.gschema.xml:301
+#: src/org.mate.marco.gschema.xml:306 src/org.mate.marco.gschema.xml:311
+#: src/org.mate.marco.gschema.xml:316 src/org.mate.marco.gschema.xml:321
+#: src/org.mate.marco.gschema.xml:326 src/org.mate.marco.gschema.xml:331
+#: src/org.mate.marco.gschema.xml:336 src/org.mate.marco.gschema.xml:341
+#: src/org.mate.marco.gschema.xml:346 src/org.mate.marco.gschema.xml:351
+#: src/org.mate.marco.gschema.xml:356 src/org.mate.marco.gschema.xml:361
+#: src/org.mate.marco.gschema.xml:366 src/org.mate.marco.gschema.xml:371
+#: src/org.mate.marco.gschema.xml:376 src/org.mate.marco.gschema.xml:381
+#: src/org.mate.marco.gschema.xml:386 src/org.mate.marco.gschema.xml:391
+#: src/org.mate.marco.gschema.xml:396 src/org.mate.marco.gschema.xml:401
 msgid "Name of workspace"
 msgstr "ワークスペースの名前"
 
-#: ../src/org.mate.marco.gschema.xml.h:64
+#: src/org.mate.marco.gschema.xml:227 src/org.mate.marco.gschema.xml:232
+#: src/org.mate.marco.gschema.xml:237 src/org.mate.marco.gschema.xml:242
+#: src/org.mate.marco.gschema.xml:247 src/org.mate.marco.gschema.xml:252
+#: src/org.mate.marco.gschema.xml:257 src/org.mate.marco.gschema.xml:262
+#: src/org.mate.marco.gschema.xml:267 src/org.mate.marco.gschema.xml:272
+#: src/org.mate.marco.gschema.xml:277 src/org.mate.marco.gschema.xml:282
+#: src/org.mate.marco.gschema.xml:287 src/org.mate.marco.gschema.xml:292
+#: src/org.mate.marco.gschema.xml:297 src/org.mate.marco.gschema.xml:302
+#: src/org.mate.marco.gschema.xml:307 src/org.mate.marco.gschema.xml:312
+#: src/org.mate.marco.gschema.xml:317 src/org.mate.marco.gschema.xml:322
+#: src/org.mate.marco.gschema.xml:327 src/org.mate.marco.gschema.xml:332
+#: src/org.mate.marco.gschema.xml:337 src/org.mate.marco.gschema.xml:342
+#: src/org.mate.marco.gschema.xml:347 src/org.mate.marco.gschema.xml:352
+#: src/org.mate.marco.gschema.xml:357 src/org.mate.marco.gschema.xml:362
+#: src/org.mate.marco.gschema.xml:367 src/org.mate.marco.gschema.xml:372
+#: src/org.mate.marco.gschema.xml:377 src/org.mate.marco.gschema.xml:382
+#: src/org.mate.marco.gschema.xml:387 src/org.mate.marco.gschema.xml:392
+#: src/org.mate.marco.gschema.xml:397 src/org.mate.marco.gschema.xml:402
 msgid "The name of a workspace."
 msgstr "ワークスペースの名前です。"
 
-#: ../src/org.mate.marco.gschema.xml.h:65
+#: src/org.mate.marco.gschema.xml:409 src/org.mate.marco.gschema.xml:414
+#: src/org.mate.marco.gschema.xml:419 src/org.mate.marco.gschema.xml:424
+#: src/org.mate.marco.gschema.xml:429 src/org.mate.marco.gschema.xml:434
+#: src/org.mate.marco.gschema.xml:439 src/org.mate.marco.gschema.xml:444
+#: src/org.mate.marco.gschema.xml:449 src/org.mate.marco.gschema.xml:454
+#: src/org.mate.marco.gschema.xml:459 src/org.mate.marco.gschema.xml:464
 msgid "Run a defined command"
 msgstr "指定されたコマンドの実行"
 
-#: ../src/org.mate.marco.gschema.xml.h:66
+#: src/org.mate.marco.gschema.xml:410 src/org.mate.marco.gschema.xml:415
+#: src/org.mate.marco.gschema.xml:420 src/org.mate.marco.gschema.xml:425
+#: src/org.mate.marco.gschema.xml:430 src/org.mate.marco.gschema.xml:435
+#: src/org.mate.marco.gschema.xml:440 src/org.mate.marco.gschema.xml:445
+#: src/org.mate.marco.gschema.xml:450 src/org.mate.marco.gschema.xml:455
+#: src/org.mate.marco.gschema.xml:460 src/org.mate.marco.gschema.xml:465
 msgid ""
 "The keybinding that runs the correspondingly-numbered command in "
-"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
-"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action."
+"/apps/marco/keybinding_commands The format looks like \"<Control>a\" or "
+"\"<Shift><Alt>F1\". The parser is fairly liberal and allows lower or upper "
+"case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set "
+"the option to the special string \"disabled\", then there will be no "
+"keybinding for this action."
 msgstr ""
-"/apps/marco/keybinding_commands に対応する数字のコマンドを実行するキーバインドを指定します。フォーマットは "
-"\"&lt;Control&gt;a\" や \"&lt;Shift&gt;&lt;Alt&gt;F1\" "
-"のようにします。パーサは完全に自由で大文字や小文字を許可します。そして \"&lt;Ctl&gt;\" や \"&lt;Ctrl&gt;\" "
-"のような省略もできます。もし特別な文字 \"disabled\" をオプションに設定した場合は、この動作のキーバインドはなくなります。"
 
-#: ../src/org.mate.marco.gschema.xml.h:68
+#: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
+#: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
+#: src/org.mate.marco.gschema.xml:490 src/org.mate.marco.gschema.xml:495
+#: src/org.mate.marco.gschema.xml:500 src/org.mate.marco.gschema.xml:505
+#: src/org.mate.marco.gschema.xml:510 src/org.mate.marco.gschema.xml:515
+#: src/org.mate.marco.gschema.xml:520 src/org.mate.marco.gschema.xml:525
+#: src/org.mate.marco.gschema.xml:530 src/org.mate.marco.gschema.xml:535
+#: src/org.mate.marco.gschema.xml:540 src/org.mate.marco.gschema.xml:545
+#: src/org.mate.marco.gschema.xml:550 src/org.mate.marco.gschema.xml:625
+#: src/org.mate.marco.gschema.xml:630 src/org.mate.marco.gschema.xml:635
+#: src/org.mate.marco.gschema.xml:640 src/org.mate.marco.gschema.xml:645
+#: src/org.mate.marco.gschema.xml:650 src/org.mate.marco.gschema.xml:655
+#: src/org.mate.marco.gschema.xml:736 src/org.mate.marco.gschema.xml:741
+#: src/org.mate.marco.gschema.xml:746 src/org.mate.marco.gschema.xml:751
+#: src/org.mate.marco.gschema.xml:756 src/org.mate.marco.gschema.xml:761
+#: src/org.mate.marco.gschema.xml:766 src/org.mate.marco.gschema.xml:771
+#: src/org.mate.marco.gschema.xml:776 src/org.mate.marco.gschema.xml:781
+#: src/org.mate.marco.gschema.xml:786 src/org.mate.marco.gschema.xml:791
+#: src/org.mate.marco.gschema.xml:796 src/org.mate.marco.gschema.xml:801
+#: src/org.mate.marco.gschema.xml:806 src/org.mate.marco.gschema.xml:811
+#: src/org.mate.marco.gschema.xml:816 src/org.mate.marco.gschema.xml:821
+#: src/org.mate.marco.gschema.xml:826 src/org.mate.marco.gschema.xml:831
+#: src/org.mate.marco.gschema.xml:836 src/org.mate.marco.gschema.xml:841
+#: src/org.mate.marco.gschema.xml:846 src/org.mate.marco.gschema.xml:851
+#: src/org.mate.marco.gschema.xml:856 src/org.mate.marco.gschema.xml:861
+#: src/org.mate.marco.gschema.xml:866 src/org.mate.marco.gschema.xml:871
+#: src/org.mate.marco.gschema.xml:876 src/org.mate.marco.gschema.xml:881
+#: src/org.mate.marco.gschema.xml:886 src/org.mate.marco.gschema.xml:891
+#: src/org.mate.marco.gschema.xml:896 src/org.mate.marco.gschema.xml:901
+#: src/org.mate.marco.gschema.xml:906 src/org.mate.marco.gschema.xml:911
+#: src/org.mate.marco.gschema.xml:916 src/org.mate.marco.gschema.xml:921
+#: src/org.mate.marco.gschema.xml:926 src/org.mate.marco.gschema.xml:931
+#: src/org.mate.marco.gschema.xml:936 src/org.mate.marco.gschema.xml:941
+#: src/org.mate.marco.gschema.xml:946 src/org.mate.marco.gschema.xml:951
+#: src/org.mate.marco.gschema.xml:956 src/org.mate.marco.gschema.xml:961
+#: src/org.mate.marco.gschema.xml:966 src/org.mate.marco.gschema.xml:971
+#: src/org.mate.marco.gschema.xml:976 src/org.mate.marco.gschema.xml:981
+#: src/org.mate.marco.gschema.xml:986 src/org.mate.marco.gschema.xml:991
 msgid ""
-"The format looks like \"&lt;Control&gt;a\" or "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action."
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
+"fairly liberal and allows lower or upper case, and also abbreviations such "
+"as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
+"\"disabled\", then there will be no keybinding for this action."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:86
+#: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
+#: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
+#: src/org.mate.marco.gschema.xml:575 src/org.mate.marco.gschema.xml:580
+#: src/org.mate.marco.gschema.xml:585 src/org.mate.marco.gschema.xml:590
+#: src/org.mate.marco.gschema.xml:595 src/org.mate.marco.gschema.xml:600
+#: src/org.mate.marco.gschema.xml:605 src/org.mate.marco.gschema.xml:610
+#: src/org.mate.marco.gschema.xml:615 src/org.mate.marco.gschema.xml:620
 msgid ""
-"The format looks like \"&lt;Control&gt;a\" or "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action. This keybinding may be "
-"reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
-"one of the keys it uses."
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
+"fairly liberal and allows lower or upper case, and also abbreviations such "
+"as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
+"\"disabled\", then there will be no keybinding for this action. This "
+"keybinding may be reversed by holding down the \"shift\" key; therefore, "
+"\"shift\" cannot be one of the keys it uses."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:87
+#: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
 msgstr "ポップアップ・ウインドウを利用して後方のアプリケーションのウィンドウへ移動する"
 
-#: ../src/org.mate.marco.gschema.xml.h:89
+#: src/org.mate.marco.gschema.xml:569
 msgid "Move backward between windows, using a popup window"
 msgstr "ポップアップ・ウインドウを利用して後方のウィンドウへ移動する"
 
-#: ../src/org.mate.marco.gschema.xml.h:90
+#: src/org.mate.marco.gschema.xml:574
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:91
+#: src/org.mate.marco.gschema.xml:579
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:93
+#: src/org.mate.marco.gschema.xml:589
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr "ポップアップ・ウィンドウを使ってパネルとデスクトップの間を後方に移動する"
 
-#: ../src/org.mate.marco.gschema.xml.h:95
+#: src/org.mate.marco.gschema.xml:599
 msgid "Move backward between windows of an application immediately"
 msgstr "アプリケーションが持つ複数のウィンドウの間を後方にすばやく移動する"
 
-#: ../src/org.mate.marco.gschema.xml.h:97
+#: src/org.mate.marco.gschema.xml:609
 msgid "Move backward between windows immediately"
 msgstr "ウィンドウ間を後方にすばやく移動する"
 
-#: ../src/org.mate.marco.gschema.xml.h:99
+#: src/org.mate.marco.gschema.xml:619
 msgid "Move backward between panels and the desktop immediately"
 msgstr "後方のパネルとデスクトップとの間を切り替える"
 
-#: ../src/org.mate.marco.gschema.xml.h:107
+#: src/org.mate.marco.gschema.xml:634
+msgid "Show the panel's \"Run Application\" dialog box"
+msgstr "パネルの「アプリケーションの実行」ダイアログ・ボックスを表示する"
+
+#: src/org.mate.marco.gschema.xml:662 src/org.mate.marco.gschema.xml:667
+#: src/org.mate.marco.gschema.xml:672 src/org.mate.marco.gschema.xml:677
+#: src/org.mate.marco.gschema.xml:682 src/org.mate.marco.gschema.xml:687
+#: src/org.mate.marco.gschema.xml:692 src/org.mate.marco.gschema.xml:697
+#: src/org.mate.marco.gschema.xml:702 src/org.mate.marco.gschema.xml:707
+#: src/org.mate.marco.gschema.xml:712 src/org.mate.marco.gschema.xml:717
 msgid "Commands to run in response to keybindings"
 msgstr "キーバインドの応答として実行されるコマンド"
 
-#: ../src/org.mate.marco.gschema.xml.h:108
+#: src/org.mate.marco.gschema.xml:663 src/org.mate.marco.gschema.xml:668
+#: src/org.mate.marco.gschema.xml:673 src/org.mate.marco.gschema.xml:678
+#: src/org.mate.marco.gschema.xml:683 src/org.mate.marco.gschema.xml:688
+#: src/org.mate.marco.gschema.xml:693 src/org.mate.marco.gschema.xml:698
+#: src/org.mate.marco.gschema.xml:703 src/org.mate.marco.gschema.xml:708
+#: src/org.mate.marco.gschema.xml:713 src/org.mate.marco.gschema.xml:718
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
@@ -997,11 +1038,11 @@ msgstr ""
 "/apps/marco/global_keybindings/runs_command_N "
 "キーは、これらのコマンドに対応するキーバインドを定義します。run_command_N のキーバインドを押すとcommand_Nが実行されます。"
 
-#: ../src/org.mate.marco.gschema.xml.h:109
+#: src/org.mate.marco.gschema.xml:722
 msgid "The screenshot command"
 msgstr "スクリーンショットのためのコマンド"
 
-#: ../src/org.mate.marco.gschema.xml.h:110
+#: src/org.mate.marco.gschema.xml:723
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
@@ -1009,11 +1050,11 @@ msgstr ""
 "/apps/marco/global_keybindings/runs_command_screenshot "
 "キーは。この設定で実行するよう指定されたコマンドに対応するキーバインドを定義します。"
 
-#: ../src/org.mate.marco.gschema.xml.h:111
+#: src/org.mate.marco.gschema.xml:727
 msgid "The window screenshot command"
 msgstr "ウィンドウのスクリーンショットのためのコマンド"
 
-#: ../src/org.mate.marco.gschema.xml.h:112
+#: src/org.mate.marco.gschema.xml:728
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
@@ -1022,71 +1063,71 @@ msgstr ""
 "/apps/marco/global_keybindings/runs_command_window_screenshot "
 "キーは、この設定で実行するよう指定されたコマンドに対応するキーバインドを定義します。"
 
-#: ../src/org.mate.marco.gschema.xml.h:116
+#: src/org.mate.marco.gschema.xml:750
 msgid "Toggle whether a window will always be visible over other windows"
 msgstr "ウィンドウを常に他のウィンドウの上に表示するかどうかを切り替える"
 
-#: ../src/org.mate.marco.gschema.xml.h:148
+#: src/org.mate.marco.gschema.xml:910
 msgid "Tile window to north-west (upper left) corner of screen"
 msgstr "ウィンドウを画面の北西 (左側の上) に並べる"
 
-#: ../src/org.mate.marco.gschema.xml.h:149
+#: src/org.mate.marco.gschema.xml:915
 msgid "Tile window to north-east (upper right) corner of screen"
 msgstr "ウィンドウを画面の北東 (右側の上) に並べる"
 
-#: ../src/org.mate.marco.gschema.xml.h:150
+#: src/org.mate.marco.gschema.xml:920
 msgid "Tile window to south-east (lower right) corner of screen"
 msgstr "ウィンドウを画面の南東 (右側の下) に並べる"
 
-#: ../src/org.mate.marco.gschema.xml.h:151
+#: src/org.mate.marco.gschema.xml:925
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr "ウィンドウを画面の南西 (左側の下) に並べる"
 
-#: ../src/core/bell.c:294
+#: src/core/bell.c:294
 msgid "Bell event"
 msgstr "ベル・イベント"
 
-#: ../src/core/core.c:211
+#: src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "ウィンドウ情報の要求が不明です: %d"
 
 #. Translators: %s is a window title
-#: ../src/core/delete.c:96
+#: src/core/delete.c:96
 #, c-format
 msgid "<tt>%s</tt> is not responding."
 msgstr "<tt>%s</tt> から応答がありません。"
 
-#: ../src/core/delete.c:101
+#: src/core/delete.c:101
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
 msgstr "応答があるまで少し待つか、または強制的にアプリケーションを終了するか選択してください。"
 
-#: ../src/core/delete.c:110
+#: src/core/delete.c:110
 msgid "_Wait"
 msgstr "待機する(_W)"
 
-#: ../src/core/delete.c:110
+#: src/core/delete.c:110
 msgid "_Force Quit"
 msgstr "強制終了する(_F)"
 
-#: ../src/core/delete.c:180
+#: src/core/delete.c:180
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "ホスト名の取得に失敗しました: %s\n"
 
-#: ../src/core/display.c:270
+#: src/core/display.c:270
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "ウィンドウの合成に必要な %s という拡張モジュールが存在しません"
 
-#: ../src/core/display.c:348
+#: src/core/display.c:348
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Xウィンドウ・システムのディスプレイ '%s' のオープンに失敗しました\n"
 
-#: ../src/core/keybindings.c:723
+#: src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1095,7 +1136,7 @@ msgstr "既にバインディングとして別のプログラムでキー %s (�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2379
+#: src/core/keybindings.c:2396
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1106,35 +1147,32 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/core/keybindings.c:2468
+#: src/core/keybindings.c:2485
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "コマンド %d は定義されていません。\n"
 
-#: ../src/core/keybindings.c:3527
-#, c-format
+#: src/core/keybindings.c:3595
 msgid "No terminal command has been defined.\n"
 msgstr "端末を起動するコマンドが定義されていません。\n"
 
-#: ../src/core/keybindings.c:3667
-#, c-format
+#: src/core/keybindings.c:3735
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: ../src/core/keybindings.c:3668
-#, c-format
+#: src/core/keybindings.c:3736
 msgid "New Workspace Name:"
 msgstr ""
 
-#: ../src/core/keybindings.c:3679
+#: src/core/keybindings.c:3747
 msgid "OK"
 msgstr "OK"
 
-#: ../src/core/keybindings.c:3679
+#: src/core/keybindings.c:3747
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: ../src/core/main.c:132
+#: src/core/main.c:132
 #, c-format
 msgid ""
 "marco %s\n"
@@ -1147,59 +1185,59 @@ msgstr ""
 "これはフリーソフトウェアです; 複製する際の条件はソース・ファイルを参照してください。\n"
 "このソフトウェアは無保証です; 商用や特定目的への適用についても保証しません。\n"
 
-#: ../src/core/main.c:270
+#: src/core/main.c:270
 msgid "Disable connection to session manager"
 msgstr "セッションマネージャーに接続しない"
 
-#: ../src/core/main.c:276
+#: src/core/main.c:276
 msgid "Replace the running window manager with Marco"
 msgstr "実行中のウィンドウ・マネージャを Marco で置き換える"
 
-#: ../src/core/main.c:282
+#: src/core/main.c:282
 msgid "Specify session management ID"
 msgstr "セッション管理 ID を指定する"
 
-#: ../src/core/main.c:287
+#: src/core/main.c:287
 msgid "X Display to use"
 msgstr "使用するXディスプレイを指定する"
 
-#: ../src/core/main.c:293
+#: src/core/main.c:293
 msgid "Initialize session from savefile"
 msgstr "保存ファイルからセッションを初期化する"
 
-#: ../src/core/main.c:299
+#: src/core/main.c:299
 msgid "Print version"
 msgstr "バージョンを表示する"
 
-#: ../src/core/main.c:305
+#: src/core/main.c:305
 msgid "Make X calls synchronous"
 msgstr "X の呼び出しを同期する"
 
-#: ../src/core/main.c:311
+#: src/core/main.c:311
 msgid "Turn compositing on"
 msgstr "合成マネージャをオン"
 
-#: ../src/core/main.c:317
+#: src/core/main.c:317
 msgid "Turn compositing off"
 msgstr "合成マネージャをオフ"
 
-#: ../src/core/main.c:323
+#: src/core/main.c:323
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "最大化されて、装飾のない全画面のウィンドウを作成しない"
 
-#: ../src/core/main.c:522
+#: src/core/main.c:522
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "テーマ・フォルダのスキャンに失敗しました: %s\n"
 
-#: ../src/core/main.c:538
+#: src/core/main.c:538
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
 msgstr "テーマが見つかりませんでした! %s の存在と通常のテーマが含まれていることを確認してください。\n"
 
-#: ../src/core/main.c:597
+#: src/core/main.c:597
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "再起動に失敗しました: %s\n"
@@ -1207,47 +1245,47 @@ msgstr "再起動に失敗しました: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:616 ../src/core/prefs.c:769
+#: src/core/prefs.c:641 src/core/prefs.c:794
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr "GSettings の %2$s キーの値 %1$d は %3$d〜%4$d の範囲内にありません\n"
 
-#: ../src/core/prefs.c:1063
+#: src/core/prefs.c:1088
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
 msgstr "仕様に準拠していないアプリケーションに対する次善策は無効になっています。一部のアプリケーションは正常に動作しない可能性があります\n"
 
-#: ../src/core/prefs.c:1157
+#: src/core/prefs.c:1194
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "GSettings の %2$s キーのフォントの説明 \"%1$s\" を解析できませんでした\n"
 
-#: ../src/core/prefs.c:1219
+#: src/core/prefs.c:1256
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
 msgstr "MateConf の \"%s\" はマウス・ボタンの修飾キーとして妥当な値ではありません\n"
 
-#: ../src/core/prefs.c:1798
+#: src/core/prefs.c:1844
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "設定データベースで発見した \"%s\" はキーバインド \"%s\" に有効な値ではありません\n"
 
-#: ../src/core/prefs.c:2101
+#: src/core/prefs.c:2147
 #, c-format
 msgid "Workspace %d"
 msgstr "ワークスペース %d"
 
-#: ../src/core/screen.c:361
+#: src/core/screen.c:362
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "ディスプレイ '%2$s' 上のスクリーン %1$d は無効です\n"
 
-#: ../src/core/screen.c:377
+#: src/core/screen.c:378
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1256,118 +1294,114 @@ msgstr ""
 "ディスプレイ \"%2$s\" 上のスクリーン %1$d はすでにウィンドウマネージャを持っています; 現在のウィンドウマネージャを上書きするために--"
 "replace オプションの使用を試してください。\n"
 
-#: ../src/core/screen.c:404
+#: src/core/screen.c:405
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr "ディスプレイ \"%2$s\" 上のスクリーン %1$d でウィンドウマネージャの選択を取得できませんでした\n"
 
-#: ../src/core/screen.c:462
+#: src/core/screen.c:463
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "ディスプレイ \"%2$s\" 上のスクリーン %1$d はすでにウィンドウマネージャを持っています\n"
 
-#: ../src/core/screen.c:676
+#: src/core/screen.c:677
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "ディスプレイ \"%2$s\" 上のスクリーン %1$d を解放できませんでした\n"
 
-#: ../src/core/session.c:842 ../src/core/session.c:849
+#: src/core/session.c:842 src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "ディレクトリ '%s' を作成できませんでした : %s\n"
 
-#: ../src/core/session.c:859
+#: src/core/session.c:859
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "書き込みのためのセッションファイル '%s' をオープンできませんでした: %s\n"
 
-#: ../src/core/session.c:999
+#: src/core/session.c:999
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "セッションファイル '%s' を書き込み中にエラーが発生しました: %s\n"
 
-#: ../src/core/session.c:1004
+#: src/core/session.c:1004
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "セッションファイル '%s' のクローズ中にエラーが発生しました: %s\n"
 
-#: ../src/core/session.c:1134
+#: src/core/session.c:1134
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "保存されたセッションファイルの解析に失敗しました: %s\n"
 
-#: ../src/core/session.c:1183
-#, c-format
+#: src/core/session.c:1183
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr "<marco_session> 属性は見られますが、すでにセッションIDを持っています"
 
-#: ../src/core/session.c:1196 ../src/core/session.c:1271
-#: ../src/core/session.c:1303 ../src/core/session.c:1375
-#: ../src/core/session.c:1435
+#: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
+#: src/core/session.c:1375 src/core/session.c:1435
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "<%2$s> エレメントに不明な属性 %1$s があります"
 
-#: ../src/core/session.c:1213
-#, c-format
+#: src/core/session.c:1213
 msgid "nested <window> tag"
 msgstr "<window> タグがネストされています"
 
-#: ../src/core/session.c:1455
+#: src/core/session.c:1455
 #, c-format
 msgid "Unknown element %s"
 msgstr "不明なエレメント %s があります"
 
-#: ../src/core/session.c:1807
+#: src/core/session.c:1807
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
 msgstr "これらのウィンドウは \"現在の設定を保存する\" 機能をサポートしません。次回ログインする時に手動で再起動してください。"
 
-#: ../src/core/util.c:101
+#: src/core/util.c:101
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "デバッグ・ログのオープンに失敗しました: %s\n"
 
-#: ../src/core/util.c:111
+#: src/core/util.c:111
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "ログ・ファイル %s の fdopen() に失敗しました: %s\n"
 
-#: ../src/core/util.c:117
+#: src/core/util.c:117
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "ログ・ファイル %s をオープンしました\n"
 
-#: ../src/core/util.c:136 ../src/tools/marco-message.c:176
-#, c-format
+#: src/core/util.c:136 src/tools/marco-message.c:176
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "この marco は詳細ログ・モードをサポートしていません\n"
 
-#: ../src/core/util.c:227
+#: src/core/util.c:227
 msgid "Window manager: "
 msgstr "ウィンドウ・マネージャ: "
 
-#: ../src/core/util.c:379
+#: src/core/util.c:379
 msgid "Bug in window manager: "
 msgstr "ウィンドウ・マネージャのバグ: "
 
-#: ../src/core/util.c:412
+#: src/core/util.c:412
 msgid "Window manager warning: "
 msgstr "ウィンドウ・マネージャの警告: "
 
-#: ../src/core/util.c:440
+#: src/core/util.c:440
 msgid "Window manager error: "
 msgstr "ウィンドウ・マネージャのエラー: "
 
 #. Translators: This is the title used on dialog boxes
-#: ../src/core/util.c:560 ../src/core/util.c:658 ../src/marco.desktop.in.h:1
-#: ../src/marco-wm.desktop.in.h:1
+#: src/core/util.c:560 src/core/util.c:658 src/marco.desktop.in:4
+#: src/marco-wm.desktop.in:4
 msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5931
+#: src/core/window.c:6004
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1382,7 +1416,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6499
+#: src/core/window.c:6582
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1391,43 +1425,43 @@ msgstr ""
 "ウィンドウ %s はリサイズ可能ではない MWM ヒント指示を設定していますが、最小サイズ %d x %d と最大サイズ %d x "
 "%dも設定しています。これはあまり意味がありません\n"
 
-#: ../src/core/window-props.c:306
+#: src/core/window-props.c:306
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "アプリケーションが間違った _NET_WM_PID %lu を設定しました\n"
 
 #. Translators: the title of a window from another machine
-#: ../src/core/window-props.c:457
+#: src/core/window-props.c:457
 #, c-format
 msgid "%s (on %s)"
 msgstr "%s (%s)"
 
 #. Simple case-- don't bother to look it up.  It's root.
-#: ../src/core/window-props.c:489
+#: src/core/window-props.c:489
 #, c-format
 msgid "%s (as superuser)"
 msgstr "%s (スーパーユーザで)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
-#: ../src/core/window-props.c:507
+#: src/core/window-props.c:507
 #, c-format
 msgid "%s (as %s)"
 msgstr "%s (%s で)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
-#: ../src/core/window-props.c:513
+#: src/core/window-props.c:513
 #, c-format
 msgid "%s (as another user)"
 msgstr "%s (他のユーザで)"
 
-#: ../src/core/window-props.c:1499
+#: src/core/window-props.c:1499
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "%2$s で指定したウィンドウ 0x%1$lx の WM_TRANSIENT_FOR が間違っています\n"
 
-#: ../src/core/xprops.c:155
+#: src/core/xprops.c:155
 #, c-format
 msgid ""
 "Window 0x%lx has property %s\n"
@@ -1442,169 +1476,168 @@ msgstr ""
 "ウィンドウマネージャのバグではありません。\n"
 "ウィンドウの属性は title=\"%8$s\" class=\"%9$s\" name=\"%10$s\"です。\n"
 
-#: ../src/core/xprops.c:411
+#: src/core/xprops.c:411
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgstr "ウィンドウ 0x%2$lx 上のプロパティ %1$s は無効なUTF-8を含んでいました\n"
 
-#: ../src/core/xprops.c:494
+#: src/core/xprops.c:494
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
 msgstr "ウィンドウ 0x%2$lx 上のプロパティ %1$s はリスト内のアイテム %3$d で無効な UTF-8を含んでいました\n"
 
-#: ../src/tools/marco-message.c:150
+#: src/tools/marco-message.c:150
 #, c-format
 msgid "Usage: %s\n"
 msgstr "用法: %s\n"
 
-#: ../src/ui/frames.c:1079
+#: src/ui/frames.c:1338
 msgid "Close Window"
 msgstr "ウィンドウを閉じる"
 
-#: ../src/ui/frames.c:1082
+#: src/ui/frames.c:1341
 msgid "Window Menu"
 msgstr "ウィンドウ・メニューを表示します"
 
-#: ../src/ui/frames.c:1085
+#: src/ui/frames.c:1344
 msgid "Window App Menu"
 msgstr ""
 
-#: ../src/ui/frames.c:1088
+#: src/ui/frames.c:1347
 msgid "Minimize Window"
 msgstr "ウィンドウを最小化します"
 
-#: ../src/ui/frames.c:1091
+#: src/ui/frames.c:1350
 msgid "Maximize Window"
 msgstr "ウィンドウを最大化します"
 
-#: ../src/ui/frames.c:1094
+#: src/ui/frames.c:1353
 msgid "Restore Window"
 msgstr "ウィンドウを復帰する"
 
-#: ../src/ui/frames.c:1097
+#: src/ui/frames.c:1356
 msgid "Roll Up Window"
 msgstr "ウィンドウを巻き上げます"
 
-#: ../src/ui/frames.c:1100
+#: src/ui/frames.c:1359
 msgid "Unroll Window"
 msgstr "ウィンドウの巻き上げを解除します"
 
-#: ../src/ui/frames.c:1103
+#: src/ui/frames.c:1362
 msgid "Keep Window On Top"
 msgstr "ウィンドウを最前面に維持します"
 
-#: ../src/ui/frames.c:1106
+#: src/ui/frames.c:1365
 msgid "Remove Window From Top"
 msgstr "ウィンドウを最前面の維持から解除します"
 
-#: ../src/ui/frames.c:1109
+#: src/ui/frames.c:1368
 msgid "Always On Visible Workspace"
 msgstr "すべてのワークスペースに配置します"
 
-#: ../src/ui/frames.c:1112
+#: src/ui/frames.c:1371
 msgid "Put Window On Only One Workspace"
 msgstr "現在のワークスペースにのみ配置します"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:65
+#: src/ui/menu.c:65
 msgid "Mi_nimize"
 msgstr "最小化(_N)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:67
+#: src/ui/menu.c:67
 msgid "Ma_ximize"
 msgstr "最大化(_X)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:69
+#: src/ui/menu.c:69
 msgid "Unma_ximize"
 msgstr "最大化解除(_X)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:71
+#: src/ui/menu.c:71
 msgid "Roll _Up"
 msgstr "巻き上げる(_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:73
+#: src/ui/menu.c:73
 msgid "_Unroll"
 msgstr "展開する(_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:75
+#: src/ui/menu.c:75
 msgid "_Move"
 msgstr "移動(_M)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:77
+#: src/ui/menu.c:77
 msgid "_Resize"
 msgstr "サイズの変更(_R)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:79
+#: src/ui/menu.c:79
 msgid "Move Titlebar On_screen"
 msgstr "画面上でタイトルバーを移動する(_S)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:82 ../src/ui/menu.c:84
+#: src/ui/menu.c:82 src/ui/menu.c:84
 msgid "Always on _Top"
 msgstr "最前面へ(_T)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:86
+#: src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
 msgstr "すべてのワークスペースに配置する(_A)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:88
+#: src/ui/menu.c:88
 msgid "_Only on This Workspace"
 msgstr "現在のワークスペースのみ(_O)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:90
+#: src/ui/menu.c:90
 msgid "Move to Workspace _Left"
 msgstr "左側のワークスペースへ移動する(_L)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:92
+#: src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
 msgstr "右側のワークスペースへ移動する(_I)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:94
+#: src/ui/menu.c:94
 msgid "Move to Workspace _Up"
 msgstr "上側のワークスペースへ移動する(_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:96
+#: src/ui/menu.c:96
 msgid "Move to Workspace _Down"
 msgstr "下側のワークスペースへ移動する(_D)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:100
+#: src/ui/menu.c:100
 msgid "_Close"
 msgstr "閉じる(_C)"
 
-#: ../src/ui/menu.c:197
+#: src/ui/menu.c:197
 #, c-format
 msgid "Workspace %d%n"
 msgstr "ワークスペース %d%n"
 
-#: ../src/ui/menu.c:207
-#, c-format
+#: src/ui/menu.c:207
 msgid "Workspace 1_0"
 msgstr "ワークスペース 1_0"
 
-#: ../src/ui/menu.c:209
+#: src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
 msgstr "ワークスペース %s%d"
 
-#: ../src/ui/menu.c:388
+#: src/ui/menu.c:388
 msgid "Move to Another _Workspace"
 msgstr "別のワークスペースへ移動する(_W)"
 
@@ -1612,7 +1645,7 @@ msgstr "別のワークスペースへ移動する(_W)"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:80
+#: src/ui/metaaccellabel.c:80
 msgid "Shift"
 msgstr "Shift"
 
@@ -1620,7 +1653,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:86
+#: src/ui/metaaccellabel.c:86
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -1628,7 +1661,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:92
+#: src/ui/metaaccellabel.c:92
 msgid "Alt"
 msgstr "Alt"
 
@@ -1636,7 +1669,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:98
+#: src/ui/metaaccellabel.c:98
 msgid "Meta"
 msgstr "Meta"
 
@@ -1644,7 +1677,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:104
+#: src/ui/metaaccellabel.c:104
 msgid "Super"
 msgstr "Super"
 
@@ -1652,7 +1685,7 @@ msgstr "Super"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:110
+#: src/ui/metaaccellabel.c:110
 msgid "Hyper"
 msgstr "Hyper"
 
@@ -1660,7 +1693,7 @@ msgstr "Hyper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:116
+#: src/ui/metaaccellabel.c:116
 msgid "Mod2"
 msgstr "Mod2"
 
@@ -1668,7 +1701,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:122
+#: src/ui/metaaccellabel.c:122
 msgid "Mod3"
 msgstr "Mod3"
 
@@ -1676,7 +1709,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:128
+#: src/ui/metaaccellabel.c:128
 msgid "Mod4"
 msgstr "Mod4"
 
@@ -1684,80 +1717,78 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:134
+#: src/ui/metaaccellabel.c:134
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:117
+#: src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:257
+#: src/ui/theme.c:366
 msgid "top"
 msgstr "上"
 
-#: ../src/ui/theme.c:259
+#: src/ui/theme.c:368
 msgid "bottom"
 msgstr "下"
 
-#: ../src/ui/theme.c:261
+#: src/ui/theme.c:370
 msgid "left"
 msgstr "左側"
 
-#: ../src/ui/theme.c:263
+#: src/ui/theme.c:372
 msgid "right"
 msgstr "右側"
 
-#: ../src/ui/theme.c:290
+#: src/ui/theme.c:399
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "フレームジオメトリは \"%s\" のサイズを指定しません"
 
-#: ../src/ui/theme.c:309
+#: src/ui/theme.c:418
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "境界 \"%2$s\" 用のフレームジオメトリは大きさ \"%1$s\" を指定しません"
 
-#: ../src/ui/theme.c:346
+#: src/ui/theme.c:455
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "ボタンのアスペクト比 %g は妥当ではありません"
 
-#: ../src/ui/theme.c:358
-#, c-format
+#: src/ui/theme.c:467
 msgid "Frame geometry does not specify size of buttons"
 msgstr "フレームジオメトリはボタンのサイズを指定しません"
 
-#: ../src/ui/theme.c:1063
-#, c-format
+#: src/ui/theme.c:1227
 msgid "Gradients should have at least two colors"
 msgstr "階調度は少なくとも2つの色をもつべきです"
 
-#: ../src/ui/theme.c:1201
+#: src/ui/theme.c:1397
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
 
-#: ../src/ui/theme.c:1217
+#: src/ui/theme.c:1413
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
 
-#: ../src/ui/theme.c:1231
+#: src/ui/theme.c:1427
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
 
-#: ../src/ui/theme.c:1275
+#: src/ui/theme.c:1471
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1766,7 +1797,7 @@ msgstr ""
 "\"%s\" を解析できませんでした; GTK の色指定では gtk:fg[NORMAL] のように状態を大括弧で囲み指定する必要があります "
 "(NORMAL は状態を示す)"
 
-#: ../src/ui/theme.c:1289
+#: src/ui/theme.c:1485
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1775,147 +1806,138 @@ msgstr ""
 "\"%s\" を解析できませんでした; GTK の色指定では gtk:fg[NORMAL] のように状態の後に右大括弧をつける必要があります "
 "(NORMAL は状態を示す)"
 
-#: ../src/ui/theme.c:1300
+#: src/ui/theme.c:1496
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "色指定で状態 \"%s\" は理解しませんでした"
 
-#: ../src/ui/theme.c:1313
+#: src/ui/theme.c:1509
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "色指定でカラーコンポーネント \"%s\" は理解しませんでした"
 
-#: ../src/ui/theme.c:1341
+#: src/ui/theme.c:1537
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
 "format"
 msgstr "混合色のフォーマットは \"blend/bg_color/fg_color/alpha\" で、\"%s\" はこのフォーマットに適合していません"
 
-#: ../src/ui/theme.c:1352
+#: src/ui/theme.c:1548
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "混合色のアルファ値 \"%s\" を解析できませんでした"
 
-#: ../src/ui/theme.c:1362
+#: src/ui/theme.c:1558
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "混合色のアルファ値 \"%s\" は 0.0 から 1.0 の間ではありません"
 
-#: ../src/ui/theme.c:1408
+#: src/ui/theme.c:1604
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr "シェードのフォーマットは \"shade/base_color/factor\" で、\"%s\" はこのフォーマットに適合していません"
 
-#: ../src/ui/theme.c:1419
+#: src/ui/theme.c:1615
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "シェードカラーのシェード係数 \"%s\" をパスできませんでした"
 
-#: ../src/ui/theme.c:1429
+#: src/ui/theme.c:1625
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "シェードカラーのシェード係数 \"%s\" が負の値です"
 
-#: ../src/ui/theme.c:1458
+#: src/ui/theme.c:1654
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "色 \"%s\" を解析できませんでした"
 
-#: ../src/ui/theme.c:1807
+#: src/ui/theme.c:2003
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "許可されていない文字 '%s' が座標式に含まれています"
 
-#: ../src/ui/theme.c:1834
+#: src/ui/theme.c:2030
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
 " parsed"
 msgstr "解析できない浮動小数点数 '%s' が座標式に含まれています"
 
-#: ../src/ui/theme.c:1848
+#: src/ui/theme.c:2044
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "解析できない整数 '%s' が座標式に含まれています"
 
-#: ../src/ui/theme.c:1970
+#: src/ui/theme.c:2166
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "座標式は次のテキストの先頭に無効な演算子を含んでいました: \"%s\""
 
-#: ../src/ui/theme.c:2027
-#, c-format
+#: src/ui/theme.c:2223
 msgid "Coordinate expression was empty or not understood"
 msgstr "座標式が空か解析不能です"
 
-#: ../src/ui/theme.c:2138 ../src/ui/theme.c:2148 ../src/ui/theme.c:2182
-#, c-format
+#: src/ui/theme.c:2334 src/ui/theme.c:2344 src/ui/theme.c:2378
 msgid "Coordinate expression results in division by zero"
 msgstr "座標式はゼロで除算しました"
 
-#: ../src/ui/theme.c:2190
-#, c-format
+#: src/ui/theme.c:2386
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr "座標式は浮動小数点で mod 演算子を使用しようとしています"
 
-#: ../src/ui/theme.c:2246
+#: src/ui/theme.c:2442
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "座標式はオペランドが必要な場所に演算子 \"%s\" を使用しています"
 
-#: ../src/ui/theme.c:2255
-#, c-format
+#: src/ui/theme.c:2451
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "座標式は演算子が必要な場所でオペランドを使用しています"
 
-#: ../src/ui/theme.c:2263
-#, c-format
+#: src/ui/theme.c:2459
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "座標式はオペランドの代わりに演算子で終わっています"
 
-#: ../src/ui/theme.c:2273
+#: src/ui/theme.c:2469
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr "座標式は演算子 \"%2$c\" の後に演算子 \"%1$c\" が続いており、これらの間にオペランドがありません"
 
-#: ../src/ui/theme.c:2424 ../src/ui/theme.c:2469
+#: src/ui/theme.c:2620 src/ui/theme.c:2665
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "座標式は無効な値または定数 \"%s\" が使用されていました"
 
-#: ../src/ui/theme.c:2523
-#, c-format
+#: src/ui/theme.c:2719
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "座標式を解析する際にオーバーフローが発生しました"
 
-#: ../src/ui/theme.c:2552
-#, c-format
+#: src/ui/theme.c:2748
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "座標式は左括弧がなしに右括弧が指定されています"
 
-#: ../src/ui/theme.c:2616
-#, c-format
+#: src/ui/theme.c:2812
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "座標式は左括弧が指定されていますが、右括弧がありません"
 
-#: ../src/ui/theme.c:2627
-#, c-format
+#: src/ui/theme.c:2823
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "座標式は演算子もオペランドも使用していないようです"
 
-#: ../src/ui/theme.c:2831 ../src/ui/theme.c:2851 ../src/ui/theme.c:2871
+#: src/ui/theme.c:3027 src/ui/theme.c:3047 src/ui/theme.c:3067
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "テーマにエラーを引き起こす式が含まれていました: %s\n"
 
-#: ../src/ui/theme.c:4554
+#: src/ui/theme.c:4857
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1924,23 +1946,23 @@ msgstr ""
 "このフレームスタイルは <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> "
 "を指定する必要があります"
 
-#: ../src/ui/theme.c:5087 ../src/ui/theme.c:5112
+#: src/ui/theme.c:5393 src/ui/theme.c:5418
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>がありません"
 
-#: ../src/ui/theme.c:5156
+#: src/ui/theme.c:5462
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "テーマ \"%s\" の読み込みに失敗しました: %s\n"
 
-#: ../src/ui/theme.c:5288 ../src/ui/theme.c:5295 ../src/ui/theme.c:5302
-#: ../src/ui/theme.c:5309 ../src/ui/theme.c:5316
+#: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
+#: src/ui/theme.c:5615 src/ui/theme.c:5622
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "テーマ \"%1$s\" の <%2$s> が設定されていません"
 
-#: ../src/ui/theme.c:5324
+#: src/ui/theme.c:5630
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1949,79 +1971,79 @@ msgstr ""
 "テーマ \"%2$s\" にウィンドウタイプ \"%1$s\" のフレームスタイルが設定されていません。<window type=\"%3$s\" "
 "style_set=\"whatever\"/> エレメントを追加してください"
 
-#: ../src/ui/theme.c:5772 ../src/ui/theme.c:5834 ../src/ui/theme.c:5897
+#: src/ui/theme.c:6045 src/ui/theme.c:6107 src/ui/theme.c:6170
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "ユーザ定義の定数は大文字で始まらなければなりません; \"%s\" は違います"
 
-#: ../src/ui/theme.c:5780 ../src/ui/theme.c:5842 ../src/ui/theme.c:5905
+#: src/ui/theme.c:6053 src/ui/theme.c:6115 src/ui/theme.c:6178
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "定数 \"%s\" は既に定義されています"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:252
+#: src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "属性 \"%s\" が要素 <%s> にありません"
 
-#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
+#: src/ui/theme-parser.c:281 src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "%d 行 %d 桁: %s"
 
-#: ../src/ui/theme-parser.c:499
+#: src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "同じ <%2$s> エレメント上で属性 \"%1$s\" が 2 度繰り返されました"
 
-#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
+#: src/ui/theme-parser.c:523 src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "属性 \"%s\" はこのコンテキストの要素 <%s> には不適切です"
 
-#: ../src/ui/theme-parser.c:614
+#: src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\"を整数として構文解釈できませんでした"
 
-#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
+#: src/ui/theme-parser.c:623 src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "末尾の文字列 \"%s\" (文字列 \"%s\") を理解できませんでした"
 
-#: ../src/ui/theme-parser.c:633
+#: src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "整数 %ld は正数でなければなりません"
 
-#: ../src/ui/theme-parser.c:641
+#: src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "整数 %ld は大きすぎます、現在の最大は %d です"
 
-#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
+#: src/ui/theme-parser.c:669 src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "浮動小数点として \"%s\" を解析できませんでした"
 
-#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
+#: src/ui/theme-parser.c:700 src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "ブール値は \"true\" か \"false\" でなければならず \"%s\" ではありません"
 
-#: ../src/ui/theme-parser.c:755
+#: src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "角度は 0.0 から 360.0 の間でなければなりませんが、%g でした\n"
 
-#: ../src/ui/theme-parser.c:818
+#: src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr "アルファ値は 0.0 (不可視)と 1.0 (完全に不透明) の間でなければなりませんが、%g でした\n"
 
-#: ../src/ui/theme-parser.c:883
+#: src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2030,207 +2052,207 @@ msgstr ""
 "無効なタイトルスケール \"%s\" です (xx-small,x-small,small,medium,large,x-large,xx-large "
 "のひとつでなければなりません)\n"
 
-#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
-#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
+#: src/ui/theme-parser.c:1039 src/ui/theme-parser.c:1102
+#: src/ui/theme-parser.c:1136 src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> の名前 \"%s\"が2回使われています"
 
-#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
-#: ../src/ui/theme-parser.c:1251
+#: src/ui/theme-parser.c:1051 src/ui/theme-parser.c:1148
+#: src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> の親 \"%s\" は定義されていません"
 
-#: ../src/ui/theme-parser.c:1161
+#: src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> のジオメトリ \"%s\" は定義されていません"
 
-#: ../src/ui/theme-parser.c:1174
+#: src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> はジオメトリ、またはジオメトリを持つ親のどちらかを指定しなければなりません"
 
-#: ../src/ui/theme-parser.c:1216
+#: src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "背景色の妥当なアルファ値を指定してください"
 
-#: ../src/ui/theme-parser.c:1284
+#: src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "<%2$s> エレメント上に不明なタイプ \"%1$s\" があります"
 
-#: ../src/ui/theme-parser.c:1295
+#: src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "<%2$s> エレメント上に不明な style_set \"%1$s\" があります"
 
-#: ../src/ui/theme-parser.c:1303
+#: src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "ウィンドウタイプ \"%s\" はすでにスタイル設定に割り当てられています"
 
-#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
-#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
-#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
-#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
-#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
-#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
+#: src/ui/theme-parser.c:1333 src/ui/theme-parser.c:1397
+#: src/ui/theme-parser.c:1623 src/ui/theme-parser.c:2858
+#: src/ui/theme-parser.c:2904 src/ui/theme-parser.c:3062
+#: src/ui/theme-parser.c:3298 src/ui/theme-parser.c:3336
+#: src/ui/theme-parser.c:3374 src/ui/theme-parser.c:3391
+#: src/ui/theme-parser.c:3407 src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "要素 <%s> は <%s> の下に格納できません"
 
-#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
-#: ../src/ui/theme-parser.c:1506
+#: src/ui/theme-parser.c:1447 src/ui/theme-parser.c:1461
+#: src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
 msgstr "\"button_width\"/\"button_height\" と \"aspect_ratio\" の両方のプロパティを指定することはできません"
 
-#: ../src/ui/theme-parser.c:1470
+#: src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "間隔 \"%s\" は不明です"
 
-#: ../src/ui/theme-parser.c:1515
+#: src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "アスペクト比\"%s\"は不明です"
 
-#: ../src/ui/theme-parser.c:1577
+#: src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "境界 \"%s\" は不明です"
 
-#: ../src/ui/theme-parser.c:1888
+#: src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "エレメント <%s> に \"start_angle\" または \"from\" 属性はありません"
 
-#: ../src/ui/theme-parser.c:1895
+#: src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr ""
 "エレメント <%s> に \"extent_angle\" または \"to\" 属性はありません\n"
 "               "
 
-#: ../src/ui/theme-parser.c:2135
+#: src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "階調度のタイプの値 \"%s\" は解釈されませんでした"
 
-#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
+#: src/ui/theme-parser.c:2213 src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "<%2$s>エレメント用のフィルタイプ \"%1$s\"は解釈されませんでした"
 
-#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
-#: ../src/ui/theme-parser.c:2526
+#: src/ui/theme-parser.c:2380 src/ui/theme-parser.c:2463
+#: src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "<%2$s> エレメント用の状態 \"%1$s\" は解釈されませんでした"
 
-#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
+#: src/ui/theme-parser.c:2390 src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "<%2$s> エレメント用の影 \"%1$s\" は解釈されませんでした"
 
-#: ../src/ui/theme-parser.c:2400
+#: src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "<%2$s> エレメント用の矢印 \"%1$s\" は解釈されませんでした"
 
-#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
+#: src/ui/theme-parser.c:2714 src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "\"%s\"を呼ぶ <draw_ops> は定義されていません"
 
-#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
+#: src/ui/theme-parser.c:2726 src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "ここに draw_ops \"%s\" を含めると循環参照が生成されます"
 
-#: ../src/ui/theme-parser.c:2937
+#: src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "フレーム要素の場所 \"%s\" は不明です"
 
-#: ../src/ui/theme-parser.c:2945
+#: src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "フレームスタイルはすでに場所 %s に要素を持っています"
 
-#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
+#: src/ui/theme-parser.c:2962 src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "名前 \"%s\" で <draw_ops>が定義されていません"
 
-#: ../src/ui/theme-parser.c:2992
+#: src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "ボタンのための機能 \"%s\" は不明です"
 
-#: ../src/ui/theme-parser.c:3002
+#: src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "このバージョンでは \"%s\" というボタンの機能は提供していません (現 %d, 要 %d)"
 
-#: ../src/ui/theme-parser.c:3014
+#: src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "ボタンのための状態 \"%s\" は不明です"
 
-#: ../src/ui/theme-parser.c:3022
+#: src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "フレームスタイルはすでに機能 %s 状態 %s のボタンを持っています"
 
-#: ../src/ui/theme-parser.c:3101
+#: src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\" はフォーカス属性のためには有効な値ではありません"
 
-#: ../src/ui/theme-parser.c:3110
+#: src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\" は状態の属性のためには有効な値ではありません"
 
-#: ../src/ui/theme-parser.c:3120
+#: src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "\"%s\" に呼ばれるスタイルは定義されていません"
 
-#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
+#: src/ui/theme-parser.c:3141 src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "\"%s\" はリサイズ属性のためには有効な値ではありません"
 
-#: ../src/ui/theme-parser.c:3175
+#: src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
 "states"
 msgstr "最大化/シェード化のための <%s> エレメントには \"resize\" 属性を指定できません"
 
-#: ../src/ui/theme-parser.c:3189
+#: src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr "最大化のための <%s> エレメントには \"resize\" 属性を指定できません"
 
-#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
+#: src/ui/theme-parser.c:3203 src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr "状態 %s リサイズ %s フォーカス %s のためのスタイルはすでに指定されています"
 
-#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
-#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
-#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
+#: src/ui/theme-parser.c:3214 src/ui/theme-parser.c:3225
+#: src/ui/theme-parser.c:3236 src/ui/theme-parser.c:3258
+#: src/ui/theme-parser.c:3269 src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "状態 %s フォーカス %s のためのスタイルはすでに指定されています"
 
-#: ../src/ui/theme-parser.c:3319
+#: src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
@@ -2238,7 +2260,7 @@ msgstr ""
 "<piece> エレメントは2つの draw_ops を持つことができません (テーマで draw_ops 属性と <draw_ops> "
 "エレメントが指定されたか、あるいは 2 つのエレメントが指定されました)"
 
-#: ../src/ui/theme-parser.c:3357
+#: src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
@@ -2246,7 +2268,7 @@ msgstr ""
 "<button> エレメントは 2 つの draw_ops を持つことができません (テーマで draw_ops 属性と <draw_ops> "
 "エレメントが指定されたか、あるいは 2 つのエレメントが指定されました)"
 
-#: ../src/ui/theme-parser.c:3427
+#: src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
@@ -2254,179 +2276,178 @@ msgstr ""
 "<menu_icon> エレメントは 2 つの draw_ops を持つことができません (テーマで draw_ops 属性と <draw_ops> "
 "エレメントが指定されたか、あるいは 2 つのエレメントが指定されました)"
 
-#: ../src/ui/theme-parser.c:3491
+#: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3562
+#: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3585
+#: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3617
+#: src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr "一番外側の要素は <%s> ではなく <metacity_theme> にする必要があります"
 
-#: ../src/ui/theme-parser.c:3637
+#: src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr "エレメント <%s> は name/author/date/description エレメントの内側に許可されていません"
 
-#: ../src/ui/theme-parser.c:3642
+#: src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "エレメント <%s> は <constant> エレメントの内側に許可されていません"
 
-#: ../src/ui/theme-parser.c:3654
+#: src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr "エレメント <%s> はdistance/border/aspect_ratioエレメントの内側に許可されていません"
 
-#: ../src/ui/theme-parser.c:3676
+#: src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "エレメント <%s> は描画処理エレメントの内側に許可されていません"
 
-#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
-#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
+#: src/ui/theme-parser.c:3686 src/ui/theme-parser.c:3726
+#: src/ui/theme-parser.c:3731 src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "要素 <%s> は要素 <%s> の内側に格納できません"
 
-#: ../src/ui/theme-parser.c:3964
+#: src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "フレームのための draw_ops は提供されていません"
 
-#: ../src/ui/theme-parser.c:3979
+#: src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "ボタンのための draw_ops は提供されていません"
 
-#: ../src/ui/theme-parser.c:4041
+#: src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "要素 <%s> の内側にテキストを格納できません"
 
-#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
-#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
-#: ../src/ui/theme-parser.c:4147
+#: src/ui/theme-parser.c:4099 src/ui/theme-parser.c:4111
+#: src/ui/theme-parser.c:4123 src/ui/theme-parser.c:4135
+#: src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "このテーマで <%s> が二回指定しました"
 
-#: ../src/ui/theme-parser.c:4426
+#: src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "%s というテーマの妥当なファイルが見つかりませんでした\n"
 
-#: ../src/ui/theme-viewer.c:256
+#: src/ui/theme-viewer.c:256
 msgid "_OK"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:268
+#: src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "これはサンプルダイアログの中のサンプルメッセージです"
 
-#: ../src/ui/theme-viewer.c:352
+#: src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "見せかけのメニュー・アイテム %d\n"
 
-#: ../src/ui/theme-viewer.c:408
+#: src/ui/theme-viewer.c:408
 msgid "Border-only window"
 msgstr "ボーダーのみのウィンドウ"
 
-#: ../src/ui/theme-viewer.c:410
+#: src/ui/theme-viewer.c:410
 msgid "Bar"
 msgstr "バー"
 
-#: ../src/ui/theme-viewer.c:427
+#: src/ui/theme-viewer.c:427
 msgid "Normal Application Window"
 msgstr "通常のアプリケーションウィンドウ"
 
-#: ../src/ui/theme-viewer.c:431
+#: src/ui/theme-viewer.c:431
 msgid "Dialog Box"
 msgstr "ダイアログボックス"
 
-#: ../src/ui/theme-viewer.c:435
+#: src/ui/theme-viewer.c:435
 msgid "Modal Dialog Box"
 msgstr "モーダルダイアログボックス"
 
-#: ../src/ui/theme-viewer.c:439
+#: src/ui/theme-viewer.c:439
 msgid "Utility Palette"
 msgstr "ユーティリティパレット"
 
-#: ../src/ui/theme-viewer.c:443
+#: src/ui/theme-viewer.c:443
 msgid "Torn-off Menu"
 msgstr "トーンオフ メニュー"
 
-#: ../src/ui/theme-viewer.c:447
+#: src/ui/theme-viewer.c:447
 msgid "Border"
 msgstr "境界線を付ける"
 
-#: ../src/ui/theme-viewer.c:451
+#: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:811
+#: src/ui/theme-viewer.c:811
 #, c-format
 msgid "Button layout test %d"
 msgstr "ボタン・レイアウトのテスト %d"
 
-#: ../src/ui/theme-viewer.c:836
+#: src/ui/theme-viewer.c:836
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "一つのウィンドウ・フレームの描画時間: %g ミリ秒"
 
-#: ../src/ui/theme-viewer.c:876
-#, c-format
+#: src/ui/theme-viewer.c:876
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "用法: marco-theme-viewer [テーマ名]\n"
 
-#: ../src/ui/theme-viewer.c:883
+#: src/ui/theme-viewer.c:883
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "テーマのロードでエラーが発生しました: %s\n"
 
-#: ../src/ui/theme-viewer.c:889
+#: src/ui/theme-viewer.c:889
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" というテーマを %g秒で読み込みました\n"
 
-#: ../src/ui/theme-viewer.c:933
+#: src/ui/theme-viewer.c:933
 msgid "Normal Title Font"
 msgstr "通常のタイトルフォント"
 
-#: ../src/ui/theme-viewer.c:939
+#: src/ui/theme-viewer.c:939
 msgid "Small Title Font"
 msgstr "小さいタイトルフォント"
 
-#: ../src/ui/theme-viewer.c:945
+#: src/ui/theme-viewer.c:945
 msgid "Large Title Font"
 msgstr "大きいタイトルフォント"
 
-#: ../src/ui/theme-viewer.c:950
+#: src/ui/theme-viewer.c:950
 msgid "Button Layouts"
 msgstr "ボタンレイアウト"
 
-#: ../src/ui/theme-viewer.c:955
+#: src/ui/theme-viewer.c:955
 msgid "Benchmark"
 msgstr "ベンチマーク"
 
-#: ../src/ui/theme-viewer.c:1012
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "ここにウィンドウのタイトルが表示されます"
 
-#: ../src/ui/theme-viewer.c:1117
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

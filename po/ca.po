@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the marco package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -8,12 +8,11 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:57+0200\n"
+"Project-Id-Version: marco 1.23.1\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
+"POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019\n"
 "Language-Team: Catalan (https://www.transifex.com/mate/teams/13566/ca/)\n"
@@ -23,429 +22,352 @@ msgstr ""
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/50-marco-desktop-key.xml.in.h:1
+#: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
 msgstr "Escriptori"
 
-#: ../src/50-marco-desktop-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:102
-msgid "Show the panel's \"Run Application\" dialog box"
+#: src/50-marco-desktop-key.xml.in:4
+msgid "Show the panel's &quot;Run Application&quot; dialog box"
 msgstr "Mostra el quadre de diàleg d'execució d'aplicacions del tauler"
 
-#: ../src/50-marco-desktop-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:101
+#: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
 msgstr "Mostra el menú principal del tauler"
 
-#: ../src/50-marco-desktop-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:103
+#: src/50-marco-desktop-key.xml.in:8 src/org.mate.marco.gschema.xml:639
 msgid "Take a screenshot"
 msgstr "Fes una captura de pantalla"
 
-#: ../src/50-marco-desktop-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:104
+#: src/50-marco-desktop-key.xml.in:10 src/org.mate.marco.gschema.xml:644
 msgid "Take a screenshot of a window"
 msgstr "Fes una captura de pantalla d'una finestra"
 
-#: ../src/50-marco-desktop-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:105
+#: src/50-marco-desktop-key.xml.in:12 src/org.mate.marco.gschema.xml:649
 msgid "Run a terminal"
 msgstr "Executa un terminal"
 
-#: ../src/50-marco-desktop-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:106
+#: src/50-marco-desktop-key.xml.in:14 src/org.mate.marco.gschema.xml:654
 msgid "Rename current workspace"
 msgstr "Canvia el nom de l'espai de treball actual"
 
-#: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
+#: src/50-marco-global-key.xml.in:2 src/50-marco-window-key.xml.in:2
 msgid "Window Management"
 msgstr "Gestió de les finestres"
 
-#: ../src/50-marco-global-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:88
+#: src/50-marco-global-key.xml.in:4 src/org.mate.marco.gschema.xml:564
 msgid "Move between windows, using a popup window"
 msgstr "Mou-te entre finestres amb un diàleg emergent"
 
-#: ../src/50-marco-global-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:85
+#: src/50-marco-global-key.xml.in:6 src/org.mate.marco.gschema.xml:554
 msgid "Move between windows of an application, using a popup window"
 msgstr "Mou-te entre finestres d'una aplicació amb un diàleg emergent"
 
-#: ../src/50-marco-global-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:92
+#: src/50-marco-global-key.xml.in:8 src/org.mate.marco.gschema.xml:584
 msgid "Move between panels and the desktop, using a popup window"
 msgstr "Mou-te entre els taulers i l'escriptori amb una finestra emergent"
 
-#: ../src/50-marco-global-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:96
+#: src/50-marco-global-key.xml.in:10 src/org.mate.marco.gschema.xml:604
 msgid "Move between windows immediately"
 msgstr "Mou-te entre finestres immediatament"
 
-#: ../src/50-marco-global-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:94
+#: src/50-marco-global-key.xml.in:12 src/org.mate.marco.gschema.xml:594
 msgid "Move between windows of an application immediately"
 msgstr "Mou-te entre les finestres d'una aplicació immediatament"
 
-#: ../src/50-marco-global-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:98
+#: src/50-marco-global-key.xml.in:14 src/org.mate.marco.gschema.xml:614
 msgid "Move between panels and the desktop immediately"
 msgstr "Mou-te immediatament entre els taulers i l'escriptori"
 
-#: ../src/50-marco-global-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:100
+#: src/50-marco-global-key.xml.in:16 src/org.mate.marco.gschema.xml:624
 msgid "Hide all normal windows and set focus to the desktop"
 msgstr "Oculta totes les finestres normals i dóna el focus a l'escriptori"
 
-#: ../src/50-marco-global-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:67
+#: src/50-marco-global-key.xml.in:23 src/org.mate.marco.gschema.xml:469
 msgid "Switch to workspace 1"
 msgstr "Canvia a l'espai de treball 1"
 
-#: ../src/50-marco-global-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:69
+#: src/50-marco-global-key.xml.in:30 src/org.mate.marco.gschema.xml:474
 msgid "Switch to workspace 2"
 msgstr "Canvia a l'espai de treball 2"
 
-#: ../src/50-marco-global-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:70
+#: src/50-marco-global-key.xml.in:37 src/org.mate.marco.gschema.xml:479
 msgid "Switch to workspace 3"
 msgstr "Canvia a l'espai de treball 3"
 
-#: ../src/50-marco-global-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:71
+#: src/50-marco-global-key.xml.in:44 src/org.mate.marco.gschema.xml:484
 msgid "Switch to workspace 4"
 msgstr "Canvia a l'espai de treball 4"
 
-#: ../src/50-marco-global-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:72
+#: src/50-marco-global-key.xml.in:51 src/org.mate.marco.gschema.xml:489
 msgid "Switch to workspace 5"
 msgstr "Canvia a l'espai de treball 5"
 
-#: ../src/50-marco-global-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:73
+#: src/50-marco-global-key.xml.in:58 src/org.mate.marco.gschema.xml:494
 msgid "Switch to workspace 6"
 msgstr "Canvia a l'espai de treball 6"
 
-#: ../src/50-marco-global-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:74
+#: src/50-marco-global-key.xml.in:65 src/org.mate.marco.gschema.xml:499
 msgid "Switch to workspace 7"
 msgstr "Canvia a l'espai de treball 7"
 
-#: ../src/50-marco-global-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:75
+#: src/50-marco-global-key.xml.in:72 src/org.mate.marco.gschema.xml:504
 msgid "Switch to workspace 8"
 msgstr "Canvia a l'espai de treball 8"
 
-#: ../src/50-marco-global-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:76
+#: src/50-marco-global-key.xml.in:79 src/org.mate.marco.gschema.xml:509
 msgid "Switch to workspace 9"
 msgstr "Canvia a l'espai de treball 9"
 
-#: ../src/50-marco-global-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:77
+#: src/50-marco-global-key.xml.in:86 src/org.mate.marco.gschema.xml:514
 msgid "Switch to workspace 10"
 msgstr "Canvia a l'espai de treball 10"
 
-#: ../src/50-marco-global-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:78
+#: src/50-marco-global-key.xml.in:93 src/org.mate.marco.gschema.xml:519
 msgid "Switch to workspace 11"
 msgstr "Canvia a l'espai de treball 11"
 
-#: ../src/50-marco-global-key.xml.in.h:20
-#: ../src/org.mate.marco.gschema.xml.h:79
+#: src/50-marco-global-key.xml.in:100 src/org.mate.marco.gschema.xml:524
 msgid "Switch to workspace 12"
 msgstr "Canvia a l'espai de treball 12"
 
-#: ../src/50-marco-global-key.xml.in.h:21
-#: ../src/org.mate.marco.gschema.xml.h:80
+#: src/50-marco-global-key.xml.in:107 src/org.mate.marco.gschema.xml:529
 msgid "Switch to workspace on the left of the current workspace"
 msgstr "Canvia a l'espai de treball a l'esquerra de l'actual"
 
-#: ../src/50-marco-global-key.xml.in.h:22
-#: ../src/org.mate.marco.gschema.xml.h:81
+#: src/50-marco-global-key.xml.in:114 src/org.mate.marco.gschema.xml:534
 msgid "Switch to workspace on the right of the current workspace"
 msgstr "Canvia a l'espai de treball a la dreta de l'actual"
 
-#: ../src/50-marco-global-key.xml.in.h:23
-#: ../src/org.mate.marco.gschema.xml.h:82
+#: src/50-marco-global-key.xml.in:121 src/org.mate.marco.gschema.xml:539
 msgid "Switch to workspace above the current workspace"
 msgstr "Canvia a l'espai de treball a damunt de l'actual"
 
-#: ../src/50-marco-global-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:83
+#: src/50-marco-global-key.xml.in:128 src/org.mate.marco.gschema.xml:544
 msgid "Switch to workspace below the current workspace"
 msgstr "Canvia a l'espai de treball a sota de l'actual"
 
-#: ../src/50-marco-global-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:84
+#: src/50-marco-global-key.xml.in:131 src/org.mate.marco.gschema.xml:549
 msgid "Switch to previously selected workspace"
 msgstr "Canvia a l'espai de treball seleccionat anteriorment"
 
-#: ../src/50-marco-window-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:113
+#: src/50-marco-window-key.xml.in:6 src/org.mate.marco.gschema.xml:735
 msgid "Activate the window menu"
 msgstr "Activa el menú de finestra"
 
-#: ../src/50-marco-window-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:114
+#: src/50-marco-window-key.xml.in:10 src/org.mate.marco.gschema.xml:740
 msgid "Toggle fullscreen mode"
 msgstr "Commuta el mode de pantalla completa"
 
-#: ../src/50-marco-window-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:115
+#: src/50-marco-window-key.xml.in:14 src/org.mate.marco.gschema.xml:745
 msgid "Toggle maximization state"
 msgstr "Commuta l'estat de maximització"
 
-#: ../src/50-marco-window-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:117
+#: src/50-marco-window-key.xml.in:18 src/org.mate.marco.gschema.xml:755
 msgid "Maximize window"
 msgstr "Maximitza la finestra"
 
-#: ../src/50-marco-window-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:118
+#: src/50-marco-window-key.xml.in:22 src/org.mate.marco.gschema.xml:760
 msgid "Restore window"
 msgstr "Restaura la finestra"
 
-#: ../src/50-marco-window-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:119
+#: src/50-marco-window-key.xml.in:26 src/org.mate.marco.gschema.xml:765
 msgid "Toggle shaded state"
 msgstr "Commuta l'estat d'ombreig"
 
-#: ../src/50-marco-window-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:121
+#: src/50-marco-window-key.xml.in:30 src/org.mate.marco.gschema.xml:775
 msgid "Close window"
 msgstr "Tanca la finestra"
 
-#: ../src/50-marco-window-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:120
+#: src/50-marco-window-key.xml.in:34 src/org.mate.marco.gschema.xml:770
 msgid "Minimize window"
 msgstr "Minimitza la finestra"
 
-#: ../src/50-marco-window-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:122
+#: src/50-marco-window-key.xml.in:38 src/org.mate.marco.gschema.xml:780
 msgid "Move window"
 msgstr "Mou la finestra"
 
-#: ../src/50-marco-window-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:123
+#: src/50-marco-window-key.xml.in:42 src/org.mate.marco.gschema.xml:785
 msgid "Resize window"
 msgstr "Redimensiona la finestra"
 
-#: ../src/50-marco-window-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:124
+#: src/50-marco-window-key.xml.in:50 src/org.mate.marco.gschema.xml:790
 msgid "Toggle whether window is on all workspaces or just one"
 msgstr ""
 "Commuta la funció que fa que la finestra estigui en tots els espais de "
 "treball o només en un"
 
-#: ../src/50-marco-window-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:141
+#: src/50-marco-window-key.xml.in:54 src/org.mate.marco.gschema.xml:875
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr "Alça la finestra si està coberta per una altra, altrament l'abaixa."
 
-#: ../src/50-marco-window-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:142
+#: src/50-marco-window-key.xml.in:58 src/org.mate.marco.gschema.xml:880
 msgid "Raise window above other windows"
 msgstr "Alça la finestra per damunt de les altres"
 
-#: ../src/50-marco-window-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:143
+#: src/50-marco-window-key.xml.in:62 src/org.mate.marco.gschema.xml:885
 msgid "Lower window below other windows"
 msgstr "Baixa la finestra sota les altres"
 
-#: ../src/50-marco-window-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:144
+#: src/50-marco-window-key.xml.in:66 src/org.mate.marco.gschema.xml:890
 msgid "Maximize window vertically"
 msgstr "Maximitza la finestra verticalment"
 
-#: ../src/50-marco-window-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:145
+#: src/50-marco-window-key.xml.in:70 src/org.mate.marco.gschema.xml:895
 msgid "Maximize window horizontally"
 msgstr "Maximitza la finestra horitzontalment"
 
-#: ../src/50-marco-window-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:146
+#: src/50-marco-window-key.xml.in:74 src/org.mate.marco.gschema.xml:900
 msgid "Tile window to east (right) side of screen"
 msgstr "Títol de la finestra a la part est (dreta) de la pantalla"
 
-#: ../src/50-marco-window-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:147
+#: src/50-marco-window-key.xml.in:78 src/org.mate.marco.gschema.xml:905
 msgid "Tile window to west (left) side of screen"
 msgstr "Títol de la finestra a la part oest (esquerra) de la pantalla"
 
-#: ../src/50-marco-window-key.xml.in.h:20
+#: src/50-marco-window-key.xml.in:82
 msgid "Tile window to north-west (top left) corner"
 msgstr "Enrajola la finestra al cantó nord-oest (part superior esquerra)"
 
-#: ../src/50-marco-window-key.xml.in.h:21
+#: src/50-marco-window-key.xml.in:86
 msgid "Tile window to north-east (top right) corner"
 msgstr "Enrajola la finestra al cantó nord-est (part superior dreta)"
 
-#: ../src/50-marco-window-key.xml.in.h:22
+#: src/50-marco-window-key.xml.in:90
 msgid "Tile window to south-west (bottom left) corner"
 msgstr "Enrajola la finestra al cantó sud-oest (part inferior esquerra)"
 
-#: ../src/50-marco-window-key.xml.in.h:23
+#: src/50-marco-window-key.xml.in:94
 msgid "Tile window to south-east (bottom right) corner"
 msgstr "Enrajola la finestra al cantó sud-est (part inferior dreta)"
 
-#: ../src/50-marco-window-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:152
+#: src/50-marco-window-key.xml.in:98 src/org.mate.marco.gschema.xml:930
 msgid "Move window to north-west (top left) corner"
 msgstr "Mou la finestra al cantó nord-oest (part superior esquerra)"
 
-#: ../src/50-marco-window-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:153
+#: src/50-marco-window-key.xml.in:102 src/org.mate.marco.gschema.xml:935
 msgid "Move window to north-east (top right) corner"
 msgstr "Mou la finestra al cantó nord-est (part superior dreta)"
 
-#: ../src/50-marco-window-key.xml.in.h:26
-#: ../src/org.mate.marco.gschema.xml.h:154
+#: src/50-marco-window-key.xml.in:106 src/org.mate.marco.gschema.xml:940
 msgid "Move window to south-west (bottom left) corner"
 msgstr "Mou la finestra al cantó sud-oest (part inferior esquerra)"
 
-#: ../src/50-marco-window-key.xml.in.h:27
-#: ../src/org.mate.marco.gschema.xml.h:155
+#: src/50-marco-window-key.xml.in:110 src/org.mate.marco.gschema.xml:945
 msgid "Move window to south-east (bottom right) corner"
 msgstr "Mou la finestra al cantó sud-est (part inferior dreta)"
 
-#: ../src/50-marco-window-key.xml.in.h:28
-#: ../src/org.mate.marco.gschema.xml.h:156
+#: src/50-marco-window-key.xml.in:114 src/org.mate.marco.gschema.xml:950
 msgid "Move window to north (top) side of screen"
 msgstr "Mou la finestra a la part nord (superior) de la pantalla"
 
-#: ../src/50-marco-window-key.xml.in.h:29
-#: ../src/org.mate.marco.gschema.xml.h:157
+#: src/50-marco-window-key.xml.in:118 src/org.mate.marco.gschema.xml:955
 msgid "Move window to south (bottom) side of screen"
 msgstr "Mou la finestra a la part del sud (inferior) de la pantalla"
 
-#: ../src/50-marco-window-key.xml.in.h:30
-#: ../src/org.mate.marco.gschema.xml.h:158
+#: src/50-marco-window-key.xml.in:122 src/org.mate.marco.gschema.xml:960
 msgid "Move window to east (right) side of screen"
 msgstr "Mou la finestra a la part est (dreta) de la pantalla"
 
-#: ../src/50-marco-window-key.xml.in.h:31
-#: ../src/org.mate.marco.gschema.xml.h:159
+#: src/50-marco-window-key.xml.in:126 src/org.mate.marco.gschema.xml:965
 msgid "Move window to west (left) side of screen"
 msgstr "Mou la finestra a la part oest (esquerra) de la pantalla"
 
-#: ../src/50-marco-window-key.xml.in.h:32
-#: ../src/org.mate.marco.gschema.xml.h:160
+#: src/50-marco-window-key.xml.in:130 src/org.mate.marco.gschema.xml:970
 msgid "Move window to center of screen"
 msgstr "Mou la finestra al centre de la pantalla"
 
-#: ../src/50-marco-window-key.xml.in.h:33
-#: ../src/org.mate.marco.gschema.xml.h:161
+#: src/50-marco-window-key.xml.in:134 src/org.mate.marco.gschema.xml:975
 msgid "Move window to north (top) monitor"
 msgstr "Mou la finestra al monitor del nord (superior)"
 
-#: ../src/50-marco-window-key.xml.in.h:34
-#: ../src/org.mate.marco.gschema.xml.h:162
+#: src/50-marco-window-key.xml.in:138 src/org.mate.marco.gschema.xml:980
 msgid "Move window to south (bottom) monitor"
 msgstr "Mou la finestra al monitor del sud (inferior)"
 
-#: ../src/50-marco-window-key.xml.in.h:35
-#: ../src/org.mate.marco.gschema.xml.h:163
+#: src/50-marco-window-key.xml.in:142 src/org.mate.marco.gschema.xml:985
 msgid "Move window to east (right) monitor"
 msgstr "Mou la finestra al monitor de l'est (dret)"
 
-#: ../src/50-marco-window-key.xml.in.h:36
-#: ../src/org.mate.marco.gschema.xml.h:164
+#: src/50-marco-window-key.xml.in:146 src/org.mate.marco.gschema.xml:990
 msgid "Move window to west (left) monitor"
 msgstr "Mou la finestra al monitor de l'oest (esquerre)"
 
-#: ../src/50-marco-window-key.xml.in.h:37
-#: ../src/org.mate.marco.gschema.xml.h:125
+#: src/50-marco-window-key.xml.in:154 src/org.mate.marco.gschema.xml:795
 msgid "Move window to workspace 1"
 msgstr "Mou la finestra a l'espai de treball 1"
 
-#: ../src/50-marco-window-key.xml.in.h:38
-#: ../src/org.mate.marco.gschema.xml.h:126
+#: src/50-marco-window-key.xml.in:162 src/org.mate.marco.gschema.xml:800
 msgid "Move window to workspace 2"
 msgstr "Mou la finestra a l'espai de treball 2"
 
-#: ../src/50-marco-window-key.xml.in.h:39
-#: ../src/org.mate.marco.gschema.xml.h:127
+#: src/50-marco-window-key.xml.in:170 src/org.mate.marco.gschema.xml:805
 msgid "Move window to workspace 3"
 msgstr "Mou la finestra a l'espai de treball 3"
 
-#: ../src/50-marco-window-key.xml.in.h:40
-#: ../src/org.mate.marco.gschema.xml.h:128
+#: src/50-marco-window-key.xml.in:178 src/org.mate.marco.gschema.xml:810
 msgid "Move window to workspace 4"
 msgstr "Mou la finestra a l'espai de treball 4"
 
-#: ../src/50-marco-window-key.xml.in.h:41
-#: ../src/org.mate.marco.gschema.xml.h:129
+#: src/50-marco-window-key.xml.in:186 src/org.mate.marco.gschema.xml:815
 msgid "Move window to workspace 5"
 msgstr "Mou la finestra a l'espai de treball 5"
 
-#: ../src/50-marco-window-key.xml.in.h:42
-#: ../src/org.mate.marco.gschema.xml.h:130
+#: src/50-marco-window-key.xml.in:194 src/org.mate.marco.gschema.xml:820
 msgid "Move window to workspace 6"
 msgstr "Mou la finestra a l'espai de treball 6"
 
-#: ../src/50-marco-window-key.xml.in.h:43
-#: ../src/org.mate.marco.gschema.xml.h:131
+#: src/50-marco-window-key.xml.in:202 src/org.mate.marco.gschema.xml:825
 msgid "Move window to workspace 7"
 msgstr "Mou la finestra a l'espai de treball 7"
 
-#: ../src/50-marco-window-key.xml.in.h:44
-#: ../src/org.mate.marco.gschema.xml.h:132
+#: src/50-marco-window-key.xml.in:210 src/org.mate.marco.gschema.xml:830
 msgid "Move window to workspace 8"
 msgstr "Mou la finestra a l'espai de treball 8"
 
-#: ../src/50-marco-window-key.xml.in.h:45
-#: ../src/org.mate.marco.gschema.xml.h:133
+#: src/50-marco-window-key.xml.in:218 src/org.mate.marco.gschema.xml:835
 msgid "Move window to workspace 9"
 msgstr "Mou la finestra a l'espai de treball 9"
 
-#: ../src/50-marco-window-key.xml.in.h:46
-#: ../src/org.mate.marco.gschema.xml.h:134
+#: src/50-marco-window-key.xml.in:226 src/org.mate.marco.gschema.xml:840
 msgid "Move window to workspace 10"
 msgstr "Mou la finestra a l'espai de treball 10"
 
-#: ../src/50-marco-window-key.xml.in.h:47
-#: ../src/org.mate.marco.gschema.xml.h:135
+#: src/50-marco-window-key.xml.in:234 src/org.mate.marco.gschema.xml:845
 msgid "Move window to workspace 11"
 msgstr "Mou la finestra a l'espai de treball 11"
 
-#: ../src/50-marco-window-key.xml.in.h:48
-#: ../src/org.mate.marco.gschema.xml.h:136
+#: src/50-marco-window-key.xml.in:242 src/org.mate.marco.gschema.xml:850
 msgid "Move window to workspace 12"
 msgstr "Mou la finestra a l'espai de treball 12"
 
-#: ../src/50-marco-window-key.xml.in.h:49
-#: ../src/org.mate.marco.gschema.xml.h:137
+#: src/50-marco-window-key.xml.in:250 src/org.mate.marco.gschema.xml:855
 msgid "Move window one workspace to the left"
 msgstr "Mou la finestra un espai de treball a l'esquerra"
 
-#: ../src/50-marco-window-key.xml.in.h:50
-#: ../src/org.mate.marco.gschema.xml.h:138
+#: src/50-marco-window-key.xml.in:258 src/org.mate.marco.gschema.xml:860
 msgid "Move window one workspace to the right"
 msgstr "Mou la finestra un espai de treball a la dreta"
 
-#: ../src/50-marco-window-key.xml.in.h:51
-#: ../src/org.mate.marco.gschema.xml.h:139
+#: src/50-marco-window-key.xml.in:266 src/org.mate.marco.gschema.xml:865
 msgid "Move window one workspace up"
 msgstr "Mou la finestra un espai de treball amunt"
 
-#: ../src/50-marco-window-key.xml.in.h:52
-#: ../src/org.mate.marco.gschema.xml.h:140
+#: src/50-marco-window-key.xml.in:274 src/org.mate.marco.gschema.xml:870
 msgid "Move window one workspace down"
 msgstr "Mou la finestra un espai de treball avall"
 
-#: ../src/org.mate.marco.gschema.xml.h:1
+#: src/org.mate.marco.gschema.xml:50
 msgid "Modifier to use for modified window click actions"
 msgstr ""
 "Modificador a utilitzar per a les accions modificades de clic de la finestra"
 
-#: ../src/org.mate.marco.gschema.xml.h:2
+#: src/org.mate.marco.gschema.xml:51
 msgid ""
 "Clicking a window while holding down this modifier key will move the window "
 "(left click), resize the window (middle click), or show the window menu "
 "(right click). The middle and right click operations may be swapped using "
-"the \"resize_with_right_button\" key. Modifier is expressed as "
-"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
+"the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
+"\"<Super>\" for example."
 msgstr ""
 "En fer clic en una finestra mentre es manté premuda aquesta tecla "
 "modificadora, es mourà la finestra (botó esquerre), es redimensionarà la "
@@ -454,11 +376,11 @@ msgstr ""
 "intercanviar amb la clau «resize_with_right_button». El modificador "
 "s'expressa com a «<Alt;>» o com a «<Super>», per exemple."
 
-#: ../src/org.mate.marco.gschema.xml.h:3
+#: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
 msgstr "Si es redimensiona amb el botó dret"
 
-#: ../src/org.mate.marco.gschema.xml.h:4
+#: src/org.mate.marco.gschema.xml:56
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
@@ -468,11 +390,11 @@ msgstr ""
 "menú amb el botó del mig mentre es premi la tecla especificada al paràmetre "
 "«mouse_button_modifier». Establiu-ho a false perquè funcioni a la inversa."
 
-#: ../src/org.mate.marco.gschema.xml.h:5
+#: src/org.mate.marco.gschema.xml:60
 msgid "Whether to display preselected tab window border"
 msgstr "Si es mostra el contorn de la finestra de la pestanya preseleccionada"
 
-#: ../src/org.mate.marco.gschema.xml.h:6
+#: src/org.mate.marco.gschema.xml:61
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
@@ -480,11 +402,11 @@ msgstr ""
 "Establiu-ho a fals per inhabilitar el contorn de la finestra preseleccionada"
 " mentre es realitza el canvi de pestanya."
 
-#: ../src/org.mate.marco.gschema.xml.h:7
+#: src/org.mate.marco.gschema.xml:65
 msgid "Arrangement of buttons on the titlebar"
 msgstr "Arranjament dels botons a la barra de títol"
 
-#: ../src/org.mate.marco.gschema.xml.h:8
+#: src/org.mate.marco.gschema.xml:66
 msgid ""
 "Arrangement of buttons on the titlebar. The value should be a string, such "
 "as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
@@ -503,11 +425,11 @@ msgstr ""
 "antigues. Es pot afegir una etiqueta especial d'espaiament («spacer») per "
 "inserir una determinada quantitat d'espai entre dos botons adjacents."
 
-#: ../src/org.mate.marco.gschema.xml.h:9
+#: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
 msgstr "Mode de focus de les finestres"
 
-#: ../src/org.mate.marco.gschema.xml.h:10
+#: src/org.mate.marco.gschema.xml:71
 msgid ""
 "The window focus mode indicates how windows are activated. It has three "
 "possible values; \"click\" means windows must be clicked in order to focus "
@@ -521,11 +443,11 @@ msgstr ""
 " entra a dins, i «mouse» vol dir que la finestra s'enfoca quan el punter hi "
 "entra a dins, i es desenfoca quan el punter abandona la finestra."
 
-#: ../src/org.mate.marco.gschema.xml.h:11
+#: src/org.mate.marco.gschema.xml:75
 msgid "Control how new windows get focus"
 msgstr "Controla com reben l'enfocament les noves finestres"
 
-#: ../src/org.mate.marco.gschema.xml.h:12
+#: src/org.mate.marco.gschema.xml:76
 msgid ""
 "This option provides additional control over how newly created windows get "
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
@@ -537,13 +459,13 @@ msgstr ""
 "normal d'usuari, i «strict», que fa que no es doni el focus a les finestres "
 "que s'iniciïn des d'un terminal."
 
-#: ../src/org.mate.marco.gschema.xml.h:13
+#: src/org.mate.marco.gschema.xml:80
 msgid "Whether raising should be a side-effect of other user interactions"
 msgstr ""
 "Si l'alçat hauria de ser un efecte secundari d'altres interaccions de "
 "l'usuari"
 
-#: ../src/org.mate.marco.gschema.xml.h:14
+#: src/org.mate.marco.gschema.xml:81
 msgid ""
 "Setting this option to false can lead to buggy behavior, so users are "
 "strongly discouraged from changing it from the default of true. Many actions"
@@ -586,11 +508,11 @@ msgstr ""
 " culpa _seva_ per haver trencat el gestor de finestres, i que ha de tornar a"
 " canviar aquesta opció a «true» o conviure amb l'«error»."
 
-#: ../src/org.mate.marco.gschema.xml.h:15
+#: src/org.mate.marco.gschema.xml:85
 msgid "Action on title bar double-click"
 msgstr "Acció en fer doble clic en la barra de títol"
 
-#: ../src/org.mate.marco.gschema.xml.h:16
+#: src/org.mate.marco.gschema.xml:86
 msgid ""
 "This option determines the effects of double-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -613,11 +535,11 @@ msgstr ""
 " (abaixa), que situarà la finestra darrere de totes les altres, i «none» "
 "(res), que no farà res."
 
-#: ../src/org.mate.marco.gschema.xml.h:17
+#: src/org.mate.marco.gschema.xml:90
 msgid "Action on title bar middle-click"
 msgstr "Acció en fer clic amb el botó del mig en la barra de títol"
 
-#: ../src/org.mate.marco.gschema.xml.h:18
+#: src/org.mate.marco.gschema.xml:91
 msgid ""
 "This option determines the effects of middle-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -640,11 +562,11 @@ msgstr ""
 "menú de la finestra, «lower» (abaixa), que situarà la finestra darrere de "
 "totes les altres, i «none» (res), que no farà res."
 
-#: ../src/org.mate.marco.gschema.xml.h:19
+#: src/org.mate.marco.gschema.xml:95
 msgid "Action on title bar right-click"
 msgstr "Acció en fer clic amb el botó secundari en la barra de títol"
 
-#: ../src/org.mate.marco.gschema.xml.h:20
+#: src/org.mate.marco.gschema.xml:96
 msgid ""
 "This option determines the effects of right-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -667,11 +589,11 @@ msgstr ""
 "mostrarà el menú de la finestra, «lower» (abaixa), que situarà la finestra "
 "darrere de totes les altres, i «none» (res), que no farà res."
 
-#: ../src/org.mate.marco.gschema.xml.h:21
+#: src/org.mate.marco.gschema.xml:100
 msgid "Automatically raises the focused window"
 msgstr "Alça automàticament la finestra amb focus"
 
-#: ../src/org.mate.marco.gschema.xml.h:22
+#: src/org.mate.marco.gschema.xml:101
 msgid ""
 "If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
 "the focused window will be automatically raised after a delay specified by "
@@ -684,11 +606,11 @@ msgstr ""
 "relacionat amb l'acció de fer clic a una finestra per alçar-la, ni tampoc "
 "amb l'entrada a una finestra en arrossegar i deixar anar."
 
-#: ../src/org.mate.marco.gschema.xml.h:23
+#: src/org.mate.marco.gschema.xml:105
 msgid "Delay in milliseconds for the auto raise option"
 msgstr "Retard en mil·lisegons per a l'opció d'alçament automàtic"
 
-#: ../src/org.mate.marco.gschema.xml.h:24
+#: src/org.mate.marco.gschema.xml:106
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
@@ -696,11 +618,11 @@ msgstr ""
 "El retard de temps abans d'alçar una finestra si auto_raise està establert a"
 " cert. El retard es dóna en mil·lèssimes de segon."
 
-#: ../src/org.mate.marco.gschema.xml.h:25
+#: src/org.mate.marco.gschema.xml:110
 msgid "Current theme"
 msgstr "Tema actual"
 
-#: ../src/org.mate.marco.gschema.xml.h:26
+#: src/org.mate.marco.gschema.xml:111
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
@@ -708,12 +630,12 @@ msgstr ""
 "El tema determina l'aspecte dels contorns de la finestra, la barra de títol,"
 " etc."
 
-#: ../src/org.mate.marco.gschema.xml.h:27
+#: src/org.mate.marco.gschema.xml:115
 msgid "Use standard system font in window titles"
 msgstr ""
 "Utilitza la lletra estàndard del sistema en els títols de les finestres"
 
-#: ../src/org.mate.marco.gschema.xml.h:28
+#: src/org.mate.marco.gschema.xml:116
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
@@ -721,11 +643,11 @@ msgstr ""
 "En cas que fos cert, s'ignora l'opció «titlebar_font» i s'utilitza la lletra"
 " estàndard de les aplicacions per als títols de les finestres."
 
-#: ../src/org.mate.marco.gschema.xml.h:29
+#: src/org.mate.marco.gschema.xml:120
 msgid "Window title font"
 msgstr "Lletra del títol de les finestres"
 
-#: ../src/org.mate.marco.gschema.xml.h:30
+#: src/org.mate.marco.gschema.xml:121
 msgid ""
 "A font description string describing a font for window titlebars. The size "
 "from the description will only be used if the titlebar_font_size option is "
@@ -737,11 +659,11 @@ msgstr ""
 "«titlebar_font_size» està establerta a 0. A més, aquesta opció està "
 "inhabilitada si «titlebar_uses_desktop_font» està establerta a cert."
 
-#: ../src/org.mate.marco.gschema.xml.h:31
+#: src/org.mate.marco.gschema.xml:126
 msgid "Number of workspaces"
 msgstr "Nombre d'espais de treball"
 
-#: ../src/org.mate.marco.gschema.xml.h:32
+#: src/org.mate.marco.gschema.xml:127
 msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
@@ -751,11 +673,11 @@ msgstr ""
 "fix per prevenir la destrucció del vostre escriptori en cas que demaneu "
 "accidentalment massa espais de treball."
 
-#: ../src/org.mate.marco.gschema.xml.h:33
+#: src/org.mate.marco.gschema.xml:131
 msgid "Workspace wrap style"
 msgstr "Estil d'ajustament de l'espai de treball"
 
-#: ../src/org.mate.marco.gschema.xml.h:34
+#: src/org.mate.marco.gschema.xml:132
 msgid ""
 "The wrap style is used to determine how to switch from one workspace to "
 "another at the border of the workspace switcher. When set to \"no wrap\", "
@@ -777,11 +699,11 @@ msgstr ""
 "condueix al seu propi començament, i el final de cada columna condueix al "
 "seu propi començament."
 
-#: ../src/org.mate.marco.gschema.xml.h:35
+#: src/org.mate.marco.gschema.xml:136
 msgid "Enable Visual Bell"
 msgstr "Habilita la campana visual"
 
-#: ../src/org.mate.marco.gschema.xml.h:36
+#: src/org.mate.marco.gschema.xml:137
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
@@ -791,11 +713,11 @@ msgstr ""
 "de «campana» o «sons»; és útil per als durs d'orella i per a l'ús en "
 "ambients amb soroll."
 
-#: ../src/org.mate.marco.gschema.xml.h:37
+#: src/org.mate.marco.gschema.xml:141
 msgid "System Bell is Audible"
 msgstr "La campana del sistema és audible"
 
-#: ../src/org.mate.marco.gschema.xml.h:38
+#: src/org.mate.marco.gschema.xml:142
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
@@ -804,11 +726,11 @@ msgstr ""
 "pot utilitzar en conjunció amb «visual bell» per permetre «sons» "
 "silenciosos."
 
-#: ../src/org.mate.marco.gschema.xml.h:39
+#: src/org.mate.marco.gschema.xml:146
 msgid "Visual Bell Type"
 msgstr "Tipus de campana visual"
 
-#: ../src/org.mate.marco.gschema.xml.h:40
+#: src/org.mate.marco.gschema.xml:147
 msgid ""
 "Tells Marco how to implement the visual indication that the system bell or "
 "another application 'bell' indicator has been rung. Currently there are two "
@@ -827,34 +749,32 @@ msgstr ""
 "defecte, la barra del títol de la finestra que tingui el focus en aquell "
 "moment rep un flaix."
 
-#: ../src/org.mate.marco.gschema.xml.h:41
+#: src/org.mate.marco.gschema.xml:151
 msgid "Compositing Manager"
 msgstr "Gestor de composició"
 
-#: ../src/org.mate.marco.gschema.xml.h:42
+#: src/org.mate.marco.gschema.xml:152
 msgid "Determines whether Marco is a compositing manager."
 msgstr "Determina si Marco és un gestor de composició."
 
-#: ../src/org.mate.marco.gschema.xml.h:43
+#: src/org.mate.marco.gschema.xml:156
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
 msgstr "Alt-Tab sense gestor de composició (inhabilita les miniatures)"
 
-#: ../src/org.mate.marco.gschema.xml.h:44
+#: src/org.mate.marco.gschema.xml:157
 msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
-"displayed instead."
+"displayed instead. Note that on high resolution screens with many visible "
+"windows there can be a perceptible lag in rendering."
 msgstr ""
-"En cas que estigués establert a cert, no es mostraran les miniatures de les "
-"finestres amb la finestra emergent alt-tab quan estigui habilitat el gestor "
-"de composició. En lloc seu es mostraran les icones de les aplicacions."
 
-#: ../src/org.mate.marco.gschema.xml.h:45
+#: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
 msgstr ""
 "En cas que fos cert, se sacrifica la usabilitat per utilitzar menys recursos"
 
-#: ../src/org.mate.marco.gschema.xml.h:46
+#: src/org.mate.marco.gschema.xml:162
 msgid ""
 "If true, marco will give the user less feedback by using wireframes, "
 "avoiding animations, or other means. This is a significant reduction in "
@@ -869,14 +789,14 @@ msgstr ""
 "terminals. No obstant això, la funcionalitat dels marcs amb fils està "
 "desactivada, quan l'accessibilitat està habilitada."
 
-#: ../src/org.mate.marco.gschema.xml.h:47
+#: src/org.mate.marco.gschema.xml:166
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
 msgstr ""
 "(No implementat) La navegació funciona en termes d'aplicacions, no en "
 "finestres"
 
-#: ../src/org.mate.marco.gschema.xml.h:48
+#: src/org.mate.marco.gschema.xml:167
 msgid ""
 "If true, then Marco works in terms of applications rather than windows. The "
 "concept is a bit abstract, but in general an application-based setup is more"
@@ -895,13 +815,13 @@ msgstr ""
 "aplicacions. Tanmateix, el mode basat en aplicacions encara no està massa "
 "implementat."
 
-#: ../src/org.mate.marco.gschema.xml.h:49
+#: src/org.mate.marco.gschema.xml:171
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr ""
 "Inhabilita les funcionalitats que siguin requerides per les aplicacions "
 "velles o trencades"
 
-#: ../src/org.mate.marco.gschema.xml.h:50
+#: src/org.mate.marco.gschema.xml:172
 msgid ""
 "Some applications disregard specifications in ways that result in window "
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
@@ -914,11 +834,11 @@ msgstr ""
 "d'usuari més consistent, sempre que no s'hagin d'executar aplicacions que no"
 " actuïn correctament."
 
-#: ../src/org.mate.marco.gschema.xml.h:51
+#: src/org.mate.marco.gschema.xml:176
 msgid "Determines if new windows are created on the center of the screen"
 msgstr "Determina si les noves finestres es creen al centre de la pantalla"
 
-#: ../src/org.mate.marco.gschema.xml.h:52
+#: src/org.mate.marco.gschema.xml:177
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
@@ -927,11 +847,11 @@ msgstr ""
 "de la pantalla. Altrament, s'obren a la part superior esquerra de la "
 "pantalla."
 
-#: ../src/org.mate.marco.gschema.xml.h:53
+#: src/org.mate.marco.gschema.xml:181
 msgid "Whether to enable window tiling"
 msgstr "Si s'habilita l'enrajolat de la finestra"
 
-#: ../src/org.mate.marco.gschema.xml.h:54
+#: src/org.mate.marco.gschema.xml:182
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
@@ -943,13 +863,13 @@ msgstr ""
 "superior, maximitza la finestra si l'enrajolat de la finestra està "
 "habilitat."
 
-#: ../src/org.mate.marco.gschema.xml.h:55
+#: src/org.mate.marco.gschema.xml:186
 msgid "Whether to maximize the window when dragged to the top of the screen"
 msgstr ""
 "Si s'ha de maximitzar la finestra quan s'arrossega a la part superior de la "
 "pantalla"
 
-#: ../src/org.mate.marco.gschema.xml.h:56
+#: src/org.mate.marco.gschema.xml:187
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
@@ -957,11 +877,21 @@ msgstr ""
 "Si està habilitat, si s'arrossega una finestra a la part superior de la "
 "pantalla, la maximitzarà. Només funciona quan està habilitat l'enrajolament."
 
-#: ../src/org.mate.marco.gschema.xml.h:57
+#: src/org.mate.marco.gschema.xml:191
+msgid "Whether to enable cycling through different tile sizes"
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:192
+msgid ""
+"If enabled, tiling a window will cycle through multiple different sizes by "
+"using the same keyboard shortcut multiple times in a row."
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
 msgstr "Mode de col·locació de la finestra"
 
-#: ../src/org.mate.marco.gschema.xml.h:58
+#: src/org.mate.marco.gschema.xml:197
 msgid ""
 "The window placement mode indicates how new windows are positioned. "
 "\"automatic\" means the system chooses a location automatically based on the"
@@ -978,11 +908,11 @@ msgstr ""
 "significa que l'usuari ha de col·locar manualment la finestra nova amb el "
 "ratolí o el teclat."
 
-#: ../src/org.mate.marco.gschema.xml.h:59
+#: src/org.mate.marco.gschema.xml:201
 msgid "List of applications ignored by show-desktop"
 msgstr "Llista d'aplicacions ignorades per show-desktop"
 
-#: ../src/org.mate.marco.gschema.xml.h:60
+#: src/org.mate.marco.gschema.xml:202
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
@@ -991,11 +921,11 @@ msgstr ""
 "IGU en execució que faci referència a la classe del gestor de finestres "
 "indicada serà ignorada per la funcionalitat «Mostra l'escriptori»."
 
-#: ../src/org.mate.marco.gschema.xml.h:61
-msgid "Icon size"
-msgstr "Mida de la icona"
+#: src/org.mate.marco.gschema.xml:207
+msgid "Icon size in alt-tab popup window"
+msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:62
+#: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
@@ -1004,110 +934,232 @@ msgstr ""
 "d'alt-tab. S'aplica el factor de canvi d'escala de la pantalla a aquest "
 "valor."
 
-#: ../src/org.mate.marco.gschema.xml.h:63
+#: src/org.mate.marco.gschema.xml:213
+msgid "Maximum number of columns in alt-tab popup window"
+msgstr "Nombre màxim de columnes a la finestra emergent alt-tab"
+
+#: src/org.mate.marco.gschema.xml:214
+msgid ""
+"The popup window will be expanded to fit up to these many entries per row."
+msgstr ""
+"La finestra emergent s'expandirà per adaptar-se a aquest nombre d'entrades "
+"per fila."
+
+#: src/org.mate.marco.gschema.xml:218
+msgid "Expand the alt-tab popup window to fit longer window titles"
+msgstr ""
+"Expandeix la finestra emergent alt-tab per adaptar-la a la mida dels títols "
+"de les finestres"
+
+#: src/org.mate.marco.gschema.xml:219
+msgid ""
+"The popup window may be expanded up to the width determined by the config "
+"parameter 'alt-tab-max-columns'."
+msgstr ""
+"La finestra emergent es pot expandir fins a l'amplada determinada pel "
+"paràmetre de configuració «alt-tab-max-columns»."
+
+#: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
+#: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
+#: src/org.mate.marco.gschema.xml:246 src/org.mate.marco.gschema.xml:251
+#: src/org.mate.marco.gschema.xml:256 src/org.mate.marco.gschema.xml:261
+#: src/org.mate.marco.gschema.xml:266 src/org.mate.marco.gschema.xml:271
+#: src/org.mate.marco.gschema.xml:276 src/org.mate.marco.gschema.xml:281
+#: src/org.mate.marco.gschema.xml:286 src/org.mate.marco.gschema.xml:291
+#: src/org.mate.marco.gschema.xml:296 src/org.mate.marco.gschema.xml:301
+#: src/org.mate.marco.gschema.xml:306 src/org.mate.marco.gschema.xml:311
+#: src/org.mate.marco.gschema.xml:316 src/org.mate.marco.gschema.xml:321
+#: src/org.mate.marco.gschema.xml:326 src/org.mate.marco.gschema.xml:331
+#: src/org.mate.marco.gschema.xml:336 src/org.mate.marco.gschema.xml:341
+#: src/org.mate.marco.gschema.xml:346 src/org.mate.marco.gschema.xml:351
+#: src/org.mate.marco.gschema.xml:356 src/org.mate.marco.gschema.xml:361
+#: src/org.mate.marco.gschema.xml:366 src/org.mate.marco.gschema.xml:371
+#: src/org.mate.marco.gschema.xml:376 src/org.mate.marco.gschema.xml:381
+#: src/org.mate.marco.gschema.xml:386 src/org.mate.marco.gschema.xml:391
+#: src/org.mate.marco.gschema.xml:396 src/org.mate.marco.gschema.xml:401
 msgid "Name of workspace"
 msgstr "Nom de l'espai de treball"
 
-#: ../src/org.mate.marco.gschema.xml.h:64
+#: src/org.mate.marco.gschema.xml:227 src/org.mate.marco.gschema.xml:232
+#: src/org.mate.marco.gschema.xml:237 src/org.mate.marco.gschema.xml:242
+#: src/org.mate.marco.gschema.xml:247 src/org.mate.marco.gschema.xml:252
+#: src/org.mate.marco.gschema.xml:257 src/org.mate.marco.gschema.xml:262
+#: src/org.mate.marco.gschema.xml:267 src/org.mate.marco.gschema.xml:272
+#: src/org.mate.marco.gschema.xml:277 src/org.mate.marco.gschema.xml:282
+#: src/org.mate.marco.gschema.xml:287 src/org.mate.marco.gschema.xml:292
+#: src/org.mate.marco.gschema.xml:297 src/org.mate.marco.gschema.xml:302
+#: src/org.mate.marco.gschema.xml:307 src/org.mate.marco.gschema.xml:312
+#: src/org.mate.marco.gschema.xml:317 src/org.mate.marco.gschema.xml:322
+#: src/org.mate.marco.gschema.xml:327 src/org.mate.marco.gschema.xml:332
+#: src/org.mate.marco.gschema.xml:337 src/org.mate.marco.gschema.xml:342
+#: src/org.mate.marco.gschema.xml:347 src/org.mate.marco.gschema.xml:352
+#: src/org.mate.marco.gschema.xml:357 src/org.mate.marco.gschema.xml:362
+#: src/org.mate.marco.gschema.xml:367 src/org.mate.marco.gschema.xml:372
+#: src/org.mate.marco.gschema.xml:377 src/org.mate.marco.gschema.xml:382
+#: src/org.mate.marco.gschema.xml:387 src/org.mate.marco.gschema.xml:392
+#: src/org.mate.marco.gschema.xml:397 src/org.mate.marco.gschema.xml:402
 msgid "The name of a workspace."
 msgstr "El nom de l'espai de treball."
 
-#: ../src/org.mate.marco.gschema.xml.h:65
+#: src/org.mate.marco.gschema.xml:409 src/org.mate.marco.gschema.xml:414
+#: src/org.mate.marco.gschema.xml:419 src/org.mate.marco.gschema.xml:424
+#: src/org.mate.marco.gschema.xml:429 src/org.mate.marco.gschema.xml:434
+#: src/org.mate.marco.gschema.xml:439 src/org.mate.marco.gschema.xml:444
+#: src/org.mate.marco.gschema.xml:449 src/org.mate.marco.gschema.xml:454
+#: src/org.mate.marco.gschema.xml:459 src/org.mate.marco.gschema.xml:464
 msgid "Run a defined command"
 msgstr "Executa una ordre definida"
 
-#: ../src/org.mate.marco.gschema.xml.h:66
+#: src/org.mate.marco.gschema.xml:410 src/org.mate.marco.gschema.xml:415
+#: src/org.mate.marco.gschema.xml:420 src/org.mate.marco.gschema.xml:425
+#: src/org.mate.marco.gschema.xml:430 src/org.mate.marco.gschema.xml:435
+#: src/org.mate.marco.gschema.xml:440 src/org.mate.marco.gschema.xml:445
+#: src/org.mate.marco.gschema.xml:450 src/org.mate.marco.gschema.xml:455
+#: src/org.mate.marco.gschema.xml:460 src/org.mate.marco.gschema.xml:465
 msgid ""
 "The keybinding that runs the correspondingly-numbered command in "
-"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
-"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action."
+"/apps/marco/keybinding_commands The format looks like \"<Control>a\" or "
+"\"<Shift><Alt>F1\". The parser is fairly liberal and allows lower or upper "
+"case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set "
+"the option to the special string \"disabled\", then there will be no "
+"keybinding for this action."
 msgstr ""
 "La vinculació de tecles que executa l'ordre amb la numeració corresponent a "
-"/apps/marco/keybinding_commands. El format és semblant a «&lt;Control&gt;a» "
-"o «&lt;Shift&gt;&lt;Alt&gt;F1». L'analitzador és prou flexible i permet "
-"minúscules i majúscules, i també abreviacions com ara «&lt;Ctl&gt;» o "
-"«&lt;Ctrl&gt;». Si establiu l'opció a la cadena de text especial «disabled»,"
-" no hi haurà cap vinculació per a aquesta acció."
+"/apps/marco/keybinding_commands. El format és semblant a «<Control>a» o "
+"«<Shift><Alt>F1». L'analitzador és prou flexible i permet minúscules i "
+"majúscules, i també abreviacions com ara «<Ctl>» o «<Ctrl>». Si establiu "
+"l'opció a la cadena de text especial «disabled», no hi haurà cap vinculació "
+"per a aquesta acció."
 
-#: ../src/org.mate.marco.gschema.xml.h:68
+#: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
+#: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
+#: src/org.mate.marco.gschema.xml:490 src/org.mate.marco.gschema.xml:495
+#: src/org.mate.marco.gschema.xml:500 src/org.mate.marco.gschema.xml:505
+#: src/org.mate.marco.gschema.xml:510 src/org.mate.marco.gschema.xml:515
+#: src/org.mate.marco.gschema.xml:520 src/org.mate.marco.gschema.xml:525
+#: src/org.mate.marco.gschema.xml:530 src/org.mate.marco.gschema.xml:535
+#: src/org.mate.marco.gschema.xml:540 src/org.mate.marco.gschema.xml:545
+#: src/org.mate.marco.gschema.xml:550 src/org.mate.marco.gschema.xml:625
+#: src/org.mate.marco.gschema.xml:630 src/org.mate.marco.gschema.xml:635
+#: src/org.mate.marco.gschema.xml:640 src/org.mate.marco.gschema.xml:645
+#: src/org.mate.marco.gschema.xml:650 src/org.mate.marco.gschema.xml:655
+#: src/org.mate.marco.gschema.xml:736 src/org.mate.marco.gschema.xml:741
+#: src/org.mate.marco.gschema.xml:746 src/org.mate.marco.gschema.xml:751
+#: src/org.mate.marco.gschema.xml:756 src/org.mate.marco.gschema.xml:761
+#: src/org.mate.marco.gschema.xml:766 src/org.mate.marco.gschema.xml:771
+#: src/org.mate.marco.gschema.xml:776 src/org.mate.marco.gschema.xml:781
+#: src/org.mate.marco.gschema.xml:786 src/org.mate.marco.gschema.xml:791
+#: src/org.mate.marco.gschema.xml:796 src/org.mate.marco.gschema.xml:801
+#: src/org.mate.marco.gschema.xml:806 src/org.mate.marco.gschema.xml:811
+#: src/org.mate.marco.gschema.xml:816 src/org.mate.marco.gschema.xml:821
+#: src/org.mate.marco.gschema.xml:826 src/org.mate.marco.gschema.xml:831
+#: src/org.mate.marco.gschema.xml:836 src/org.mate.marco.gschema.xml:841
+#: src/org.mate.marco.gschema.xml:846 src/org.mate.marco.gschema.xml:851
+#: src/org.mate.marco.gschema.xml:856 src/org.mate.marco.gschema.xml:861
+#: src/org.mate.marco.gschema.xml:866 src/org.mate.marco.gschema.xml:871
+#: src/org.mate.marco.gschema.xml:876 src/org.mate.marco.gschema.xml:881
+#: src/org.mate.marco.gschema.xml:886 src/org.mate.marco.gschema.xml:891
+#: src/org.mate.marco.gschema.xml:896 src/org.mate.marco.gschema.xml:901
+#: src/org.mate.marco.gschema.xml:906 src/org.mate.marco.gschema.xml:911
+#: src/org.mate.marco.gschema.xml:916 src/org.mate.marco.gschema.xml:921
+#: src/org.mate.marco.gschema.xml:926 src/org.mate.marco.gschema.xml:931
+#: src/org.mate.marco.gschema.xml:936 src/org.mate.marco.gschema.xml:941
+#: src/org.mate.marco.gschema.xml:946 src/org.mate.marco.gschema.xml:951
+#: src/org.mate.marco.gschema.xml:956 src/org.mate.marco.gschema.xml:961
+#: src/org.mate.marco.gschema.xml:966 src/org.mate.marco.gschema.xml:971
+#: src/org.mate.marco.gschema.xml:976 src/org.mate.marco.gschema.xml:981
+#: src/org.mate.marco.gschema.xml:986 src/org.mate.marco.gschema.xml:991
 msgid ""
-"The format looks like \"&lt;Control&gt;a\" or "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action."
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
+"fairly liberal and allows lower or upper case, and also abbreviations such "
+"as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
+"\"disabled\", then there will be no keybinding for this action."
 msgstr ""
-"El format és semblant a «&lt;Control&gt;a» o «&lt;Shift&gt;&lt;Alt&gt;F1». "
-"L'analitzador és prou flexible i permet minúscules i majúscules, i també "
-"abreviacions com ara «&lt;Ctl&gt;» o «&lt;Ctrl&gt;». Si establiu l'opció a "
-"la cadena especial «disabled», no hi haurà cap vinculació per a aquesta "
-"acció."
+"El format és «<Control>a» o «<Shift><Alt>F1». L'analitzador és prou flexible"
+" i permet minúscules i majúscules, i també abreviacions com «<Ctl>» i "
+"«<Ctrl>». Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap vinculació per a aquesta acció."
 
-#: ../src/org.mate.marco.gschema.xml.h:86
+#: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
+#: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
+#: src/org.mate.marco.gschema.xml:575 src/org.mate.marco.gschema.xml:580
+#: src/org.mate.marco.gschema.xml:585 src/org.mate.marco.gschema.xml:590
+#: src/org.mate.marco.gschema.xml:595 src/org.mate.marco.gschema.xml:600
+#: src/org.mate.marco.gschema.xml:605 src/org.mate.marco.gschema.xml:610
+#: src/org.mate.marco.gschema.xml:615 src/org.mate.marco.gschema.xml:620
 msgid ""
-"The format looks like \"&lt;Control&gt;a\" or "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action. This keybinding may be "
-"reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
-"one of the keys it uses."
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
+"fairly liberal and allows lower or upper case, and also abbreviations such "
+"as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
+"\"disabled\", then there will be no keybinding for this action. This "
+"keybinding may be reversed by holding down the \"shift\" key; therefore, "
+"\"shift\" cannot be one of the keys it uses."
 msgstr ""
-"El format és semblant a «&lt;Control&gt;a» o «&lt;Shift&gt;&lt;Alt&gt;F1». "
-"L'analitzador és prou flexible i permet minúscules i majúscules, i també "
-"abreviacions com ara «&lt;Ctl&gt;» o «&lt;Ctrl&gt;». Si establiu l'opció a "
-"la cadena especial «disabled», no hi haurà cap vinculació per a aquesta "
-"acció. Aquesta vinculació es pot invertir en prémer la «tecla de majúscules»"
-" («shift» en anglès); de manera que «shift» no és una de les tecles que es "
-"poden utilitzar."
+"El format és «<Control>a» o «<Shift><Alt>F1». L'analitzador és prou flexible"
+" i permet minúscules i majúscules, i també abreviacions com «<Ctl>» i "
+"«<Ctrl>». Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap vinculació per a aquesta acció. Aquesta vinculació es pot invertir en "
+"prémer la tecla «Shift»; de manera que no es podrà utilitzar la tecla "
+"«Shift»."
 
-#: ../src/org.mate.marco.gschema.xml.h:87
+#: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
 msgstr ""
 "Mou-te cap enrere entre les finestres d'una aplicació amb una finestra "
 "emergent"
 
-#: ../src/org.mate.marco.gschema.xml.h:89
+#: src/org.mate.marco.gschema.xml:569
 msgid "Move backward between windows, using a popup window"
 msgstr "Mou-te cap enrere entre les finestres amb una finestra emergent"
 
-#: ../src/org.mate.marco.gschema.xml.h:90
+#: src/org.mate.marco.gschema.xml:574
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr ""
 "Mou-te entre les finestres en tots els espais de treball amb una finestra "
 "emergent"
 
-#: ../src/org.mate.marco.gschema.xml.h:91
+#: src/org.mate.marco.gschema.xml:579
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr ""
 "Mou-te cap enrere entre les finestres en tots els espais de treball amb una "
 "finestra emergent"
 
-#: ../src/org.mate.marco.gschema.xml.h:93
+#: src/org.mate.marco.gschema.xml:589
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr ""
 "Mou-te cap enrere entre els taulers i l'escriptori amb una finestra emergent"
 
-#: ../src/org.mate.marco.gschema.xml.h:95
+#: src/org.mate.marco.gschema.xml:599
 msgid "Move backward between windows of an application immediately"
 msgstr "Mou-te immediatament cap enrere entre les finestres d'una aplicació"
 
-#: ../src/org.mate.marco.gschema.xml.h:97
+#: src/org.mate.marco.gschema.xml:609
 msgid "Move backward between windows immediately"
 msgstr "Mou-te immediatament cap enrere entre les finestres"
 
-#: ../src/org.mate.marco.gschema.xml.h:99
+#: src/org.mate.marco.gschema.xml:619
 msgid "Move backward between panels and the desktop immediately"
 msgstr "Mou-te immediatament entre els taulers i l'escriptori"
 
-#: ../src/org.mate.marco.gschema.xml.h:107
+#: src/org.mate.marco.gschema.xml:634
+msgid "Show the panel's \"Run Application\" dialog box"
+msgstr "Mostra el quadre de diàleg d'execució d'aplicacions del tauler"
+
+#: src/org.mate.marco.gschema.xml:662 src/org.mate.marco.gschema.xml:667
+#: src/org.mate.marco.gschema.xml:672 src/org.mate.marco.gschema.xml:677
+#: src/org.mate.marco.gschema.xml:682 src/org.mate.marco.gschema.xml:687
+#: src/org.mate.marco.gschema.xml:692 src/org.mate.marco.gschema.xml:697
+#: src/org.mate.marco.gschema.xml:702 src/org.mate.marco.gschema.xml:707
+#: src/org.mate.marco.gschema.xml:712 src/org.mate.marco.gschema.xml:717
 msgid "Commands to run in response to keybindings"
 msgstr "Ordres a executar en resposta a les vinculacions de tecles"
 
-#: ../src/org.mate.marco.gschema.xml.h:108
+#: src/org.mate.marco.gschema.xml:663 src/org.mate.marco.gschema.xml:668
+#: src/org.mate.marco.gschema.xml:673 src/org.mate.marco.gschema.xml:678
+#: src/org.mate.marco.gschema.xml:683 src/org.mate.marco.gschema.xml:688
+#: src/org.mate.marco.gschema.xml:693 src/org.mate.marco.gschema.xml:698
+#: src/org.mate.marco.gschema.xml:703 src/org.mate.marco.gschema.xml:708
+#: src/org.mate.marco.gschema.xml:713 src/org.mate.marco.gschema.xml:718
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
@@ -1117,11 +1169,11 @@ msgstr ""
 "vinculacions de tecles que corresponen a aquestes ordres. Si es prem la "
 "vinculació per a «run_command_N», s'executarà «command_N»."
 
-#: ../src/org.mate.marco.gschema.xml.h:109
+#: src/org.mate.marco.gschema.xml:722
 msgid "The screenshot command"
 msgstr "L'ordre de captura de pantalla"
 
-#: ../src/org.mate.marco.gschema.xml.h:110
+#: src/org.mate.marco.gschema.xml:723
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
@@ -1130,11 +1182,11 @@ msgstr ""
 "vinculació de tecles que fa que s'invoqui l'ordre especificada en aquest "
 "ajust."
 
-#: ../src/org.mate.marco.gschema.xml.h:111
+#: src/org.mate.marco.gschema.xml:727
 msgid "The window screenshot command"
 msgstr "L'ordre de captura de pantalla de la finestra"
 
-#: ../src/org.mate.marco.gschema.xml.h:112
+#: src/org.mate.marco.gschema.xml:728
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
@@ -1144,50 +1196,50 @@ msgstr ""
 "estableix una vinculació de tecles que fa que s'invoqui l'ordre especificada"
 " en aquest ajust."
 
-#: ../src/org.mate.marco.gschema.xml.h:116
+#: src/org.mate.marco.gschema.xml:750
 msgid "Toggle whether a window will always be visible over other windows"
 msgstr ""
 "Commuta la funció que fa que una finestra sempre sigui visible per sobre de "
 "les altres"
 
-#: ../src/org.mate.marco.gschema.xml.h:148
+#: src/org.mate.marco.gschema.xml:910
 msgid "Tile window to north-west (upper left) corner of screen"
 msgstr ""
 "Enrajola la finestra al cantó nord-oest (part superior esquerra) de la "
 "pantalla"
 
-#: ../src/org.mate.marco.gschema.xml.h:149
+#: src/org.mate.marco.gschema.xml:915
 msgid "Tile window to north-east (upper right) corner of screen"
 msgstr ""
 "Enrajola la finestra al cantó nord-est (part superior dreta) de la pantalla"
 
-#: ../src/org.mate.marco.gschema.xml.h:150
+#: src/org.mate.marco.gschema.xml:920
 msgid "Tile window to south-east (lower right) corner of screen"
 msgstr ""
 "Enrajola la finestra al cantó sud-est (part inferior dreta) de la pantalla"
 
-#: ../src/org.mate.marco.gschema.xml.h:151
+#: src/org.mate.marco.gschema.xml:925
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
 "Enrajola la finestra al cantó sud-oest (part inferior esquerra) de la "
 "pantalla"
 
-#: ../src/core/bell.c:294
+#: src/core/bell.c:294
 msgid "Bell event"
 msgstr "Esdeveniment de to del sistema"
 
-#: ../src/core/core.c:211
+#: src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Es desconeix la informació demanada sobre la finestra: %d"
 
 #. Translators: %s is a window title
-#: ../src/core/delete.c:96
+#: src/core/delete.c:96
 #, c-format
 msgid "<tt>%s</tt> is not responding."
 msgstr "<tt>%s</tt> no està responent."
 
-#: ../src/core/delete.c:101
+#: src/core/delete.c:101
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
@@ -1195,31 +1247,31 @@ msgstr ""
 "Podeu esperar un moment per veure si continua o forçar la sortida completa "
 "de l'aplicació."
 
-#: ../src/core/delete.c:110
+#: src/core/delete.c:110
 msgid "_Wait"
 msgstr "_Espera"
 
-#: ../src/core/delete.c:110
+#: src/core/delete.c:110
 msgid "_Force Quit"
 msgstr "_Força'n la sortida"
 
-#: ../src/core/delete.c:180
+#: src/core/delete.c:180
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "No s'ha pogut obtenir el nom d'amfitrió: %s\n"
 
-#: ../src/core/display.c:270
+#: src/core/display.c:270
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "Manca l'extensió %s necessària per a la composició"
 
-#: ../src/core/display.c:348
+#: src/core/display.c:348
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr ""
 "S'ha produït un error en obrir la pantalla del sistema de finestres X «%s»\n"
 
-#: ../src/core/keybindings.c:723
+#: src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1230,7 +1282,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2379
+#: src/core/keybindings.c:2396
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1241,35 +1293,32 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/core/keybindings.c:2468
+#: src/core/keybindings.c:2485
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "No s'ha definit cap ordre %d.\n"
 
-#: ../src/core/keybindings.c:3527
-#, c-format
+#: src/core/keybindings.c:3595
 msgid "No terminal command has been defined.\n"
 msgstr "No s'ha definit cap ordre de terminal.\n"
 
-#: ../src/core/keybindings.c:3667
-#, c-format
+#: src/core/keybindings.c:3735
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Canvia el nom de l'espai de treball</tt>"
 
-#: ../src/core/keybindings.c:3668
-#, c-format
+#: src/core/keybindings.c:3736
 msgid "New Workspace Name:"
 msgstr "Nom de l'espai de treball nou:"
 
-#: ../src/core/keybindings.c:3679
+#: src/core/keybindings.c:3747
 msgid "OK"
 msgstr "D'acord"
 
-#: ../src/core/keybindings.c:3679
+#: src/core/keybindings.c:3747
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: ../src/core/main.c:132
+#: src/core/main.c:132
 #, c-format
 msgid ""
 "marco %s\n"
@@ -1284,55 +1333,55 @@ msgstr ""
 "No hi ha CAP garantia; ni tan sols la garantia implícita de COMERCIALITZACIÓ\n"
 "o ADEQUACIÓ A PER UN PROPÒSIT PARTICULAR.\n"
 
-#: ../src/core/main.c:270
+#: src/core/main.c:270
 msgid "Disable connection to session manager"
 msgstr "Inhabilita la connexió al gestor de sessions"
 
-#: ../src/core/main.c:276
+#: src/core/main.c:276
 msgid "Replace the running window manager with Marco"
 msgstr "Substitueix el gestor de finestres en execució amb Marco"
 
-#: ../src/core/main.c:282
+#: src/core/main.c:282
 msgid "Specify session management ID"
 msgstr "Especifica l'ID de gestió de la sessió"
 
-#: ../src/core/main.c:287
+#: src/core/main.c:287
 msgid "X Display to use"
 msgstr "Visualització de les X a utilitzar"
 
-#: ../src/core/main.c:293
+#: src/core/main.c:293
 msgid "Initialize session from savefile"
 msgstr "Inicialitza la sessió des del fitxer desat"
 
-#: ../src/core/main.c:299
+#: src/core/main.c:299
 msgid "Print version"
 msgstr "Imprimeix la versió"
 
-#: ../src/core/main.c:305
+#: src/core/main.c:305
 msgid "Make X calls synchronous"
 msgstr "Fes que les crides a les X siguin síncrones"
 
-#: ../src/core/main.c:311
+#: src/core/main.c:311
 msgid "Turn compositing on"
 msgstr "Habilita la composició"
 
-#: ../src/core/main.c:317
+#: src/core/main.c:317
 msgid "Turn compositing off"
 msgstr "Inhabilita la composició"
 
-#: ../src/core/main.c:323
+#: src/core/main.c:323
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "No creïs finestres a pantalla completa que estiguin maximitzades i no "
 "tinguin decoracions"
 
-#: ../src/core/main.c:522
+#: src/core/main.c:522
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "No s'ha pogut analitzar el directori de temes: %s\n"
 
-#: ../src/core/main.c:538
+#: src/core/main.c:538
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1340,7 +1389,7 @@ msgstr ""
 "No s'ha trobat cap tema. Assegureu-vos que %s existeix i conté els temes "
 "habituals.\n"
 
-#: ../src/core/main.c:597
+#: src/core/main.c:597
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "No s'ha pogut reiniciar: %s\n"
@@ -1348,14 +1397,14 @@ msgstr "No s'ha pogut reiniciar: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:616 ../src/core/prefs.c:769
+#: src/core/prefs.c:641 src/core/prefs.c:794
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 "%d, emmagatzemat a la clau GSettings %s, està fora de l'interval de %d a "
 "%d\n"
 
-#: ../src/core/prefs.c:1063
+#: src/core/prefs.c:1088
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1363,14 +1412,14 @@ msgstr ""
 "Les solucions temporals per a aplicacions amb errors estan inhabilitades. "
 "Pot ser que certes aplicacions no funcionin correctament.\n"
 
-#: ../src/core/prefs.c:1157
+#: src/core/prefs.c:1194
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 "No s'ha pogut analitzar la descripció de la lletra «%s» de la clau GSettings"
 " %s\n"
 
-#: ../src/core/prefs.c:1219
+#: src/core/prefs.c:1256
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1379,7 +1428,7 @@ msgstr ""
 "«%s», trobat a la base de dades de la configuració, no és un valor vàlid per"
 " al modificador del botó del ratolí\n"
 
-#: ../src/core/prefs.c:1798
+#: src/core/prefs.c:1844
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1388,17 +1437,17 @@ msgstr ""
 "«%s» trobat a la base de dades de la configuració no és un valor vàlid per a"
 " la vinculació de tecles «%s»\n"
 
-#: ../src/core/prefs.c:2101
+#: src/core/prefs.c:2147
 #, c-format
 msgid "Workspace %d"
 msgstr "Espai de treball %d"
 
-#: ../src/core/screen.c:361
+#: src/core/screen.c:362
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "La pantalla %d en la visualització «%s» no és vàlida\n"
 
-#: ../src/core/screen.c:377
+#: src/core/screen.c:378
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1407,71 +1456,68 @@ msgstr ""
 "La pantalla %d en la visualització «%s» ja té un gestor de finestres; proveu"
 " l'opció --replace per a substituir el gestor de finestres actual.\n"
 
-#: ../src/core/screen.c:404
+#: src/core/screen.c:405
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "No s'ha pogut adquirir la selecció del gestor de finestres en la pantalla %d"
 " visualització «%s»\n"
 
-#: ../src/core/screen.c:462
+#: src/core/screen.c:463
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "La pantalla %d en la visualització «%s» ja té un gestor de finestres\n"
 
-#: ../src/core/screen.c:676
+#: src/core/screen.c:677
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "No s'ha pogut alliberar la pantalla %d en la visualització «%s»\n"
 
-#: ../src/core/session.c:842 ../src/core/session.c:849
+#: src/core/session.c:842 src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "No s'ha pogut crear el directori «%s»: %s\n"
 
-#: ../src/core/session.c:859
+#: src/core/session.c:859
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "No s'ha pogut obrir el fitxer de sessió «%s» per a l'escriptura: %s\n"
 
-#: ../src/core/session.c:999
+#: src/core/session.c:999
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "S'ha produït un error en escriure el fitxer de sessió «%s»: %s\n"
 
-#: ../src/core/session.c:1004
+#: src/core/session.c:1004
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "S'ha produït un error en tancar el fitxer de sessió «%s»: %s\n"
 
-#: ../src/core/session.c:1134
+#: src/core/session.c:1134
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "No s'ha pogut analitzar el fitxer de sessió desat: %s\n"
 
-#: ../src/core/session.c:1183
-#, c-format
+#: src/core/session.c:1183
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr "S'ha vist l'atribut <marco_session> però encara hi ha l'id. de sessió"
 
-#: ../src/core/session.c:1196 ../src/core/session.c:1271
-#: ../src/core/session.c:1303 ../src/core/session.c:1375
-#: ../src/core/session.c:1435
+#: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
+#: src/core/session.c:1375 src/core/session.c:1435
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "Atribut desconegut %s a l'element <%s>"
 
-#: ../src/core/session.c:1213
-#, c-format
+#: src/core/session.c:1213
 msgid "nested <window> tag"
 msgstr "etiqueta <window> imbricada"
 
-#: ../src/core/session.c:1455
+#: src/core/session.c:1455
 #, c-format
 msgid "Unknown element %s"
 msgstr "Element %s desconegut"
 
-#: ../src/core/session.c:1807
+#: src/core/session.c:1807
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
@@ -1479,50 +1525,49 @@ msgstr ""
 "Aquestes finestres no admeten la funció «desa la configuració actual» i "
 "s'hauran de reiniciar manualment la pròxima vegada que entreu."
 
-#: ../src/core/util.c:101
+#: src/core/util.c:101
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "No s'ha pogut obrir el registre de depuració: %s\n"
 
-#: ../src/core/util.c:111
+#: src/core/util.c:111
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "No s'ha pogut executar fdopen() sobre el fitxer de registre %s: %s\n"
 
-#: ../src/core/util.c:117
+#: src/core/util.c:117
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "S'ha obert el fitxer de registre %s\n"
 
-#: ../src/core/util.c:136 ../src/tools/marco-message.c:176
-#, c-format
+#: src/core/util.c:136 src/tools/marco-message.c:176
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "Marco es va compilar sense compatibilitat per al mode detallat\n"
 
-#: ../src/core/util.c:227
+#: src/core/util.c:227
 msgid "Window manager: "
 msgstr "Gestor de finestres: "
 
-#: ../src/core/util.c:379
+#: src/core/util.c:379
 msgid "Bug in window manager: "
 msgstr "Error en el gestor de finestres: "
 
-#: ../src/core/util.c:412
+#: src/core/util.c:412
 msgid "Window manager warning: "
 msgstr "Advertència del gestor de finestres: "
 
-#: ../src/core/util.c:440
+#: src/core/util.c:440
 msgid "Window manager error: "
 msgstr "Error del gestor de finestres: "
 
 #. Translators: This is the title used on dialog boxes
-#: ../src/core/util.c:560 ../src/core/util.c:658 ../src/marco.desktop.in.h:1
-#: ../src/marco-wm.desktop.in.h:1
+#: src/core/util.c:560 src/core/util.c:658 src/marco.desktop.in:4
+#: src/marco-wm.desktop.in:4
 msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5931
+#: src/core/window.c:6004
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1537,7 +1582,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6499
+#: src/core/window.c:6582
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1547,44 +1592,44 @@ msgstr ""
 "redimensionar, però estableix la mida mínima %d x %d i la mida màxima %d x "
 "%d; això no té massa sentit.\n"
 
-#: ../src/core/window-props.c:306
+#: src/core/window-props.c:306
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "L'aplicació ha establert un fals _NET_WM_PID %lu\n"
 
 #. Translators: the title of a window from another machine
-#: ../src/core/window-props.c:457
+#: src/core/window-props.c:457
 #, c-format
 msgid "%s (on %s)"
 msgstr "%s (a %s)"
 
 #. Simple case-- don't bother to look it up.  It's root.
-#: ../src/core/window-props.c:489
+#: src/core/window-props.c:489
 #, c-format
 msgid "%s (as superuser)"
 msgstr "%s (com a superusuari)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
-#: ../src/core/window-props.c:507
+#: src/core/window-props.c:507
 #, c-format
 msgid "%s (as %s)"
 msgstr "%s (com a %s)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
-#: ../src/core/window-props.c:513
+#: src/core/window-props.c:513
 #, c-format
 msgid "%s (as another user)"
 msgstr "%s (com a un altre usuari)"
 
-#: ../src/core/window-props.c:1499
+#: src/core/window-props.c:1499
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr ""
 "WM_TRANSIENT_FOR no vàlid per a la finestra 0x%lx especificat per a %s.\n"
 
-#: ../src/core/xprops.c:155
+#: src/core/xprops.c:155
 #, c-format
 msgid ""
 "Window 0x%lx has property %s\n"
@@ -1599,12 +1644,12 @@ msgstr ""
 "És molt possible que sigui un error en l'aplicació, no pas del gestor de finestres.\n"
 "La finestra té el títol=«%s» classe=«%s» nom=«%s»\n"
 
-#: ../src/core/xprops.c:411
+#: src/core/xprops.c:411
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgstr "La propietat %s en la finestra 0x%lx contenia un UTF-8 invàlid\n"
 
-#: ../src/core/xprops.c:494
+#: src/core/xprops.c:494
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
@@ -1613,157 +1658,156 @@ msgstr ""
 "La propietat %s en la finestra 0x%lx contenia UTF-8 invàlid per a l'element "
 "%d en la llista\n"
 
-#: ../src/tools/marco-message.c:150
+#: src/tools/marco-message.c:150
 #, c-format
 msgid "Usage: %s\n"
 msgstr "Ús: %s\n"
 
-#: ../src/ui/frames.c:1079
+#: src/ui/frames.c:1338
 msgid "Close Window"
 msgstr "Tanca la finestra"
 
-#: ../src/ui/frames.c:1082
+#: src/ui/frames.c:1341
 msgid "Window Menu"
 msgstr "Menú de la finestra"
 
-#: ../src/ui/frames.c:1085
+#: src/ui/frames.c:1344
 msgid "Window App Menu"
 msgstr ""
 
-#: ../src/ui/frames.c:1088
+#: src/ui/frames.c:1347
 msgid "Minimize Window"
 msgstr "Minimitza la finestra"
 
-#: ../src/ui/frames.c:1091
+#: src/ui/frames.c:1350
 msgid "Maximize Window"
 msgstr "Maximitza la finestra"
 
-#: ../src/ui/frames.c:1094
+#: src/ui/frames.c:1353
 msgid "Restore Window"
 msgstr "Restaura la finestra"
 
-#: ../src/ui/frames.c:1097
+#: src/ui/frames.c:1356
 msgid "Roll Up Window"
 msgstr "Enrotlla la finestra"
 
-#: ../src/ui/frames.c:1100
+#: src/ui/frames.c:1359
 msgid "Unroll Window"
 msgstr "Desenrotlla la finestra"
 
-#: ../src/ui/frames.c:1103
+#: src/ui/frames.c:1362
 msgid "Keep Window On Top"
 msgstr "Mantén la finestra per damunt"
 
-#: ../src/ui/frames.c:1106
+#: src/ui/frames.c:1365
 msgid "Remove Window From Top"
 msgstr "Treu la finestra de damunt"
 
-#: ../src/ui/frames.c:1109
+#: src/ui/frames.c:1368
 msgid "Always On Visible Workspace"
 msgstr "Sempre en l'espai de treball visible"
 
-#: ../src/ui/frames.c:1112
+#: src/ui/frames.c:1371
 msgid "Put Window On Only One Workspace"
 msgstr "Posa la finestra només a un espai de treball"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:65
+#: src/ui/menu.c:65
 msgid "Mi_nimize"
 msgstr "Mi_nimitza"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:67
+#: src/ui/menu.c:67
 msgid "Ma_ximize"
 msgstr "Ma_ximitza"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:69
+#: src/ui/menu.c:69
 msgid "Unma_ximize"
 msgstr "Desma_ximitza"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:71
+#: src/ui/menu.c:71
 msgid "Roll _Up"
 msgstr "_Enrotlla"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:73
+#: src/ui/menu.c:73
 msgid "_Unroll"
 msgstr "Desenro_tlla"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:75
+#: src/ui/menu.c:75
 msgid "_Move"
 msgstr "_Mou"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:77
+#: src/ui/menu.c:77
 msgid "_Resize"
 msgstr "_Redimensiona"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:79
+#: src/ui/menu.c:79
 msgid "Move Titlebar On_screen"
 msgstr "Mou la _barra de títol en pantalla"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:82 ../src/ui/menu.c:84
+#: src/ui/menu.c:82 src/ui/menu.c:84
 msgid "Always on _Top"
 msgstr "Sempre per _damunt"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:86
+#: src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
 msgstr "Sempre en l'espai de treball _visible"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:88
+#: src/ui/menu.c:88
 msgid "_Only on This Workspace"
 msgstr "N_omés en aquest espai de treball"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:90
+#: src/ui/menu.c:90
 msgid "Move to Workspace _Left"
 msgstr "Mou a l'espai de treball de l'es_querra"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:92
+#: src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
 msgstr "Mou a l'espai de treball de la _dreta"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:94
+#: src/ui/menu.c:94
 msgid "Move to Workspace _Up"
 msgstr "Mou a l'espai de treball de _sobre"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:96
+#: src/ui/menu.c:96
 msgid "Move to Workspace _Down"
 msgstr "Mou a l'espai de treball de s_ota"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:100
+#: src/ui/menu.c:100
 msgid "_Close"
 msgstr "Tan_ca"
 
-#: ../src/ui/menu.c:197
+#: src/ui/menu.c:197
 #, c-format
 msgid "Workspace %d%n"
 msgstr "Espai de treball %d%n"
 
-#: ../src/ui/menu.c:207
-#, c-format
+#: src/ui/menu.c:207
 msgid "Workspace 1_0"
 msgstr "Espai de treball 1_0"
 
-#: ../src/ui/menu.c:209
+#: src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
 msgstr "Espai de treball %s%d"
 
-#: ../src/ui/menu.c:388
+#: src/ui/menu.c:388
 msgid "Move to Another _Workspace"
 msgstr "Mou a un altre es_pai de treball"
 
@@ -1771,7 +1815,7 @@ msgstr "Mou a un altre es_pai de treball"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:80
+#: src/ui/metaaccellabel.c:80
 msgid "Shift"
 msgstr "Maj"
 
@@ -1779,7 +1823,7 @@ msgstr "Maj"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:86
+#: src/ui/metaaccellabel.c:86
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -1787,7 +1831,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:92
+#: src/ui/metaaccellabel.c:92
 msgid "Alt"
 msgstr "Alt"
 
@@ -1795,7 +1839,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:98
+#: src/ui/metaaccellabel.c:98
 msgid "Meta"
 msgstr "Meta"
 
@@ -1803,7 +1847,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:104
+#: src/ui/metaaccellabel.c:104
 msgid "Super"
 msgstr "Súper"
 
@@ -1811,7 +1855,7 @@ msgstr "Súper"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:110
+#: src/ui/metaaccellabel.c:110
 msgid "Hyper"
 msgstr "Hiper"
 
@@ -1819,7 +1863,7 @@ msgstr "Hiper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:116
+#: src/ui/metaaccellabel.c:116
 msgid "Mod2"
 msgstr "Mod2"
 
@@ -1827,7 +1871,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:122
+#: src/ui/metaaccellabel.c:122
 msgid "Mod3"
 msgstr "Mod3"
 
@@ -1835,7 +1879,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:128
+#: src/ui/metaaccellabel.c:128
 msgid "Mod4"
 msgstr "Mod4"
 
@@ -1843,81 +1887,79 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:134
+#: src/ui/metaaccellabel.c:134
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:117
+#: src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:257
+#: src/ui/theme.c:366
 msgid "top"
 msgstr "superior"
 
-#: ../src/ui/theme.c:259
+#: src/ui/theme.c:368
 msgid "bottom"
 msgstr "inferior"
 
-#: ../src/ui/theme.c:261
+#: src/ui/theme.c:370
 msgid "left"
 msgstr "esquerre"
 
-#: ../src/ui/theme.c:263
+#: src/ui/theme.c:372
 msgid "right"
 msgstr "dret"
 
-#: ../src/ui/theme.c:290
+#: src/ui/theme.c:399
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "la geometria del marc no especifica la dimensió «%s»"
 
-#: ../src/ui/theme.c:309
+#: src/ui/theme.c:418
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr ""
 "la geometria del marc no especifica la dimensió «%s» per al contorn «%s»"
 
-#: ../src/ui/theme.c:346
+#: src/ui/theme.c:455
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "La relació d'aspecte del botó %g no és raonable"
 
-#: ../src/ui/theme.c:358
-#, c-format
+#: src/ui/theme.c:467
 msgid "Frame geometry does not specify size of buttons"
 msgstr "La geometria del marc no especifica la mida dels botons"
 
-#: ../src/ui/theme.c:1063
-#, c-format
+#: src/ui/theme.c:1227
 msgid "Gradients should have at least two colors"
 msgstr "Els degradats han de tenir almenys dos colors"
 
-#: ../src/ui/theme.c:1201
+#: src/ui/theme.c:1397
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
 
-#: ../src/ui/theme.c:1217
+#: src/ui/theme.c:1413
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
 
-#: ../src/ui/theme.c:1231
+#: src/ui/theme.c:1427
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
 
-#: ../src/ui/theme.c:1275
+#: src/ui/theme.c:1471
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1926,7 +1968,7 @@ msgstr ""
 "L'especificació de color GTK ha de tenir l'estat entre claudàtors, p. ex. "
 "gtk:fg[NORMAL] on NORMAL és l'estat; no s'ha pogut analitzar \"%s\""
 
-#: ../src/ui/theme.c:1289
+#: src/ui/theme.c:1485
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1936,17 +1978,17 @@ msgstr ""
 "de l'estat, p. ex. gtk:fg[NORMAL] on NORMAL és l'estat; no s'ha pogut "
 "analitzar «%s»"
 
-#: ../src/ui/theme.c:1300
+#: src/ui/theme.c:1496
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "No s'entén l'estat «%s» en l'especificació del color"
 
-#: ../src/ui/theme.c:1313
+#: src/ui/theme.c:1509
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "No s'entén l'element de color «%s» en l'especificació del color"
 
-#: ../src/ui/theme.c:1341
+#: src/ui/theme.c:1537
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1955,43 +1997,43 @@ msgstr ""
 "El format de barreja és «blend/bg_color/fg_color/alpha», «%s» no s'ajusta al"
 " format"
 
-#: ../src/ui/theme.c:1352
+#: src/ui/theme.c:1548
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "No s'ha pogut analitzar el valor d'opacitat «%s» en el color barrejat"
 
-#: ../src/ui/theme.c:1362
+#: src/ui/theme.c:1558
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "El valor alfa «%s» en el color barrejat no està entre 0,0 i 1,0"
 
-#: ../src/ui/theme.c:1408
+#: src/ui/theme.c:1604
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr ""
 "El format d'ombreig és «shade/base_color/factor», «%s» no s'ajusta al format"
 
-#: ../src/ui/theme.c:1419
+#: src/ui/theme.c:1615
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "No s'ha pogut analitzar el factor d'ombreig «%s» en el color ombrejat"
 
-#: ../src/ui/theme.c:1429
+#: src/ui/theme.c:1625
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "El factor d'ombreig «%s» en el color ombrejat és negatiu"
 
-#: ../src/ui/theme.c:1458
+#: src/ui/theme.c:1654
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "No s'ha pogut analitzar el color «%s»"
 
-#: ../src/ui/theme.c:1807
+#: src/ui/theme.c:2003
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "L'expressió coordinada conté el caràcter «%s», el qual no està permès"
 
-#: ../src/ui/theme.c:1834
+#: src/ui/theme.c:2030
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -2000,12 +2042,12 @@ msgstr ""
 "L'expressió coordinada conté el número «%s» de punt flotant el qual no es "
 "pot analitzar"
 
-#: ../src/ui/theme.c:1848
+#: src/ui/theme.c:2044
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "L'expressió coordinada conté l'enter «%s» el qual no es pot analitzar"
 
-#: ../src/ui/theme.c:1970
+#: src/ui/theme.c:2166
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
@@ -2014,42 +2056,37 @@ msgstr ""
 "L'expressió coordinada conté un operador desconegut a l'inici d'aquest text:"
 " «%s»"
 
-#: ../src/ui/theme.c:2027
-#, c-format
+#: src/ui/theme.c:2223
 msgid "Coordinate expression was empty or not understood"
 msgstr "L'expressió coordinada estava buida o no s'ha entès"
 
-#: ../src/ui/theme.c:2138 ../src/ui/theme.c:2148 ../src/ui/theme.c:2182
-#, c-format
+#: src/ui/theme.c:2334 src/ui/theme.c:2344 src/ui/theme.c:2378
 msgid "Coordinate expression results in division by zero"
 msgstr "L'expressió coordinada dóna una divisió per zero"
 
-#: ../src/ui/theme.c:2190
-#, c-format
+#: src/ui/theme.c:2386
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr ""
 "L'expressió coordinada intenta utilitzar l'operador de mode en un número de "
 "punt flotant"
 
-#: ../src/ui/theme.c:2246
+#: src/ui/theme.c:2442
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr ""
 "L'expressió coordinada té un operador «%s» on hi hauria d'anar un operand"
 
-#: ../src/ui/theme.c:2255
-#, c-format
+#: src/ui/theme.c:2451
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "L'expressió coordinada té un operand on hi hauria d'anar un operador"
 
-#: ../src/ui/theme.c:2263
-#, c-format
+#: src/ui/theme.c:2459
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr ""
 "L'expressió coordinada ha finalitzat amb un operador en lloc d'un operand"
 
-#: ../src/ui/theme.c:2273
+#: src/ui/theme.c:2469
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -2058,40 +2095,36 @@ msgstr ""
 "L'expressió coordinada té un operador «%c» seguit de l'operador «%c» sense "
 "cap operand enmig"
 
-#: ../src/ui/theme.c:2424 ../src/ui/theme.c:2469
+#: src/ui/theme.c:2620 src/ui/theme.c:2665
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr "L'expressió coordinada té una variable o constant desconeguda «%s»"
 
-#: ../src/ui/theme.c:2523
-#, c-format
+#: src/ui/theme.c:2719
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr ""
 "L'analitzador d'expressions coordinades ha desbordat la seva àrea "
 "d'emmagatzematge temporal."
 
-#: ../src/ui/theme.c:2552
-#, c-format
+#: src/ui/theme.c:2748
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "L'expressió coordinada té un parèntesi de tancament i cap d'obertura"
 
-#: ../src/ui/theme.c:2616
-#, c-format
+#: src/ui/theme.c:2812
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "L'expressió coordinada té un parèntesi d'obertura i cap de tancament"
 
-#: ../src/ui/theme.c:2627
-#, c-format
+#: src/ui/theme.c:2823
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "L'expressió coordinada no sembla tenir cap operador o operand"
 
-#: ../src/ui/theme.c:2831 ../src/ui/theme.c:2851 ../src/ui/theme.c:2871
+#: src/ui/theme.c:3027 src/ui/theme.c:3047 src/ui/theme.c:3067
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "El tema conté una expressió que ha provocat un error: %s\n"
 
-#: ../src/ui/theme.c:4554
+#: src/ui/theme.c:4857
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2100,23 +2133,23 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"qualsevol\"/> s'ha "
 "d'especificar per a aquest estil de marc"
 
-#: ../src/ui/theme.c:5087 ../src/ui/theme.c:5112
+#: src/ui/theme.c:5393 src/ui/theme.c:5418
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "No s'ha trobat <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"qualsevol\"/>"
 
-#: ../src/ui/theme.c:5156
+#: src/ui/theme.c:5462
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "No s'ha pogut carregar el tema \"%s\": %s\n"
 
-#: ../src/ui/theme.c:5288 ../src/ui/theme.c:5295 ../src/ui/theme.c:5302
-#: ../src/ui/theme.c:5309 ../src/ui/theme.c:5316
+#: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
+#: src/ui/theme.c:5615 src/ui/theme.c:5622
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "No s'ha definit <%s> per al tema «%s»"
 
-#: ../src/ui/theme.c:5324
+#: src/ui/theme.c:5630
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2125,84 +2158,84 @@ msgstr ""
 "No s'ha definit cap estil de marc per al tipus de finestra \"%s\" en el tema"
 " \"%s\", afegiu un element <window type=\"%s\" style_set=\"qualsevol\"/>"
 
-#: ../src/ui/theme.c:5772 ../src/ui/theme.c:5834 ../src/ui/theme.c:5897
+#: src/ui/theme.c:6045 src/ui/theme.c:6107 src/ui/theme.c:6170
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Les constants de la definició d'usuari han de començar per una majúscula; "
 "«%s» no ho és"
 
-#: ../src/ui/theme.c:5780 ../src/ui/theme.c:5842 ../src/ui/theme.c:5905
+#: src/ui/theme.c:6053 src/ui/theme.c:6115 src/ui/theme.c:6178
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "La constant «%s» ja s'ha definit"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:252
+#: src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "No hi ha cap atribut «%s» a l'element <%s>"
 
-#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
+#: src/ui/theme-parser.c:281 src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "Línia %d caràcter %d: %s"
 
-#: ../src/ui/theme-parser.c:499
+#: src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "S'ha repetit l'atribut «%s» dues vegades en el mateix element <%s>"
 
-#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
+#: src/ui/theme-parser.c:523 src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "L'atribut «%s» no és vàlid en el context de l'element <%s>"
 
-#: ../src/ui/theme-parser.c:614
+#: src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "No s'ha pogut analitzar «%s» com a enter"
 
-#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
+#: src/ui/theme-parser.c:623 src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "No s'entenen els caràcters finals «%s» de la cadena «%s»"
 
-#: ../src/ui/theme-parser.c:633
+#: src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "L'enter %ld ha de ser positiu"
 
-#: ../src/ui/theme-parser.c:641
+#: src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "L'enter %ld és massa gran, el màxim actual és %d"
 
-#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
+#: src/ui/theme-parser.c:669 src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "No s'ha pogut analitzar «%s» com a un número de coma flotant"
 
-#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
+#: src/ui/theme-parser.c:700 src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr ""
 "Els valors booleans han de ser «true» (cert) o «false» (fals), no «%s»"
 
-#: ../src/ui/theme-parser.c:755
+#: src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "L'angle ha d'estar entre 0,0 i 360,0, era %g\n"
 
-#: ../src/ui/theme-parser.c:818
+#: src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "L'opacitat ha d'estar entre 0,0 (invisible) i 1,0 (totalment opac), era a "
 "%g\n"
 
-#: ../src/ui/theme-parser.c:883
+#: src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2211,60 +2244,60 @@ msgstr ""
 "Escala de títol no vàlida «%s» (ha de ser una d'aquestes: xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
 
-#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
-#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
+#: src/ui/theme-parser.c:1039 src/ui/theme-parser.c:1102
+#: src/ui/theme-parser.c:1136 src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> amb nom «%s» s'ha utilitzat dues vegades"
 
-#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
-#: ../src/ui/theme-parser.c:1251
+#: src/ui/theme-parser.c:1051 src/ui/theme-parser.c:1148
+#: src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "El pare de <%s>, «%s», no s'ha definit"
 
-#: ../src/ui/theme-parser.c:1161
+#: src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "La geometria de <%s>, «%s», no s'ha definit"
 
-#: ../src/ui/theme-parser.c:1174
+#: src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr ""
 "<%s> ha d'especificar bé una geometria o un pare que tingui una geometria"
 
-#: ../src/ui/theme-parser.c:1216
+#: src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "El valor alfa requereix que també s'especifiqui un fons de pantalla"
 
-#: ../src/ui/theme-parser.c:1284
+#: src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "Tipus desconegut «%s» en l'element <%s>"
 
-#: ../src/ui/theme-parser.c:1295
+#: src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "style_set «%s» desconegut en l'element <%s>"
 
-#: ../src/ui/theme-parser.c:1303
+#: src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "El tipus de finestra «%s» ja té assignat un joc d'estil"
 
-#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
-#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
-#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
-#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
-#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
-#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
+#: src/ui/theme-parser.c:1333 src/ui/theme-parser.c:1397
+#: src/ui/theme-parser.c:1623 src/ui/theme-parser.c:2858
+#: src/ui/theme-parser.c:2904 src/ui/theme-parser.c:3062
+#: src/ui/theme-parser.c:3298 src/ui/theme-parser.c:3336
+#: src/ui/theme-parser.c:3374 src/ui/theme-parser.c:3391
+#: src/ui/theme-parser.c:3407 src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "L'element <%s> no es permet sota <%s>"
 
-#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
-#: ../src/ui/theme-parser.c:1506
+#: src/ui/theme-parser.c:1447 src/ui/theme-parser.c:1461
+#: src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2272,124 +2305,124 @@ msgstr ""
 "No es pot especificar «button_width»/«button_height» i l'«aspect_ratio» a la"
 " vegada per als botons"
 
-#: ../src/ui/theme-parser.c:1470
+#: src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "La distància «%s» és desconeguda"
 
-#: ../src/ui/theme-parser.c:1515
+#: src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "La relació d'aspecte «%s» és desconeguda"
 
-#: ../src/ui/theme-parser.c:1577
+#: src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "El contorn «%s» és desconegut"
 
-#: ../src/ui/theme-parser.c:1888
+#: src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "No hi ha cap atribut «start_angle» o «from» en l'element <%s>"
 
-#: ../src/ui/theme-parser.c:1895
+#: src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "No hi ha cap atribut «extent_angle» o «to» en l'element <%s>"
 
-#: ../src/ui/theme-parser.c:2135
+#: src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "No s'entén el valor «%s» per al tipus de degradat"
 
-#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
+#: src/ui/theme-parser.c:2213 src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "No s'entén el tipus de farciment «%s» per a l'element <%s>"
 
-#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
-#: ../src/ui/theme-parser.c:2526
+#: src/ui/theme-parser.c:2380 src/ui/theme-parser.c:2463
+#: src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "No s'entén l'estat «%s» per a l'element <%s>"
 
-#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
+#: src/ui/theme-parser.c:2390 src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "No s'entén l'ombra «%s» per a l'element <%s>"
 
-#: ../src/ui/theme-parser.c:2400
+#: src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "No s'entén la fletxa «%s» per a l'element <%s>"
 
-#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
+#: src/ui/theme-parser.c:2714 src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "No s'ha definit cap <draw_ops> amb el nom «%s»"
 
-#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
+#: src/ui/theme-parser.c:2726 src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "La inclusió de draw_ops «%s» aquí crearà una referència circular"
 
-#: ../src/ui/theme-parser.c:2937
+#: src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Posició «%s» desconeguda per a la peça del marc"
 
-#: ../src/ui/theme-parser.c:2945
+#: src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "L'estil del marc ja té una peça a posició %s"
 
-#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
+#: src/ui/theme-parser.c:2962 src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "No s'ha definit cap <draw_ops> amb el nom «%s»"
 
-#: ../src/ui/theme-parser.c:2992
+#: src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Funció «%s» desconeguda per al botó"
 
-#: ../src/ui/theme-parser.c:3002
+#: src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr ""
 "La funció de botó «%s» no existeix en aquesta versió (%d, es necessita %d)"
 
-#: ../src/ui/theme-parser.c:3014
+#: src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Estat «%s» desconegut per al botó"
 
-#: ../src/ui/theme-parser.c:3022
+#: src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "L'estil del marc ja té un botó per a l'estat %s de la funció %s"
 
-#: ../src/ui/theme-parser.c:3101
+#: src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "«%s» no és un valor vàlid per a l'atribut «focus»"
 
-#: ../src/ui/theme-parser.c:3110
+#: src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "«%s» no és un valor vàlid per a l'atribut «state»"
 
-#: ../src/ui/theme-parser.c:3120
+#: src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "No s'ha definit un estil amb el nom «%s»"
 
-#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
+#: src/ui/theme-parser.c:3141 src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "«%s» no és un valor vàlid per a l'atribut «resize»"
 
-#: ../src/ui/theme-parser.c:3175
+#: src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
@@ -2398,26 +2431,26 @@ msgstr ""
 "No hauria de tenir l'atribut «resize» en l'element <%s> per als estats "
 "maximitzat/ombrejat"
 
-#: ../src/ui/theme-parser.c:3189
+#: src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr ""
 "No hauria de tenir l'atribut «resize» en l'element <%s> per als estats "
 "maximitzats"
 
-#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
+#: src/ui/theme-parser.c:3203 src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr "L'estil ja s'ha especificat per a l'estat %s redimensiona %s focus %s"
 
-#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
-#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
-#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
+#: src/ui/theme-parser.c:3214 src/ui/theme-parser.c:3225
+#: src/ui/theme-parser.c:3236 src/ui/theme-parser.c:3258
+#: src/ui/theme-parser.c:3269 src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "L'estil ja s'ha especificat per a l'estat %s focus %s"
 
-#: ../src/ui/theme-parser.c:3319
+#: src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
@@ -2426,7 +2459,7 @@ msgstr ""
 "especificat un atribut draw_ops i també un element <draw_ops>, o ha "
 "especificat ambdós elements)"
 
-#: ../src/ui/theme-parser.c:3357
+#: src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
@@ -2435,7 +2468,7 @@ msgstr ""
 "especificat un atribut draw_ops i també un element <draw_ops>, o ha "
 "especificat ambdós elements)"
 
-#: ../src/ui/theme-parser.c:3427
+#: src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
@@ -2444,181 +2477,180 @@ msgstr ""
 "especificat un atribut draw_ops i també un element <draw_ops>, o ha "
 "especificat ambdós elements)"
 
-#: ../src/ui/theme-parser.c:3491
+#: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3562
+#: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3585
+#: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3617
+#: src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr "L'element més extern del tema ha de ser <metacity_theme>, no <%s>"
 
-#: ../src/ui/theme-parser.c:3637
+#: src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr ""
 "L'element <%s> no està permès dins d'un element name/author/date/description"
 
-#: ../src/ui/theme-parser.c:3642
+#: src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "L'element <%s> no està permès dins d'un element <constant>"
 
-#: ../src/ui/theme-parser.c:3654
+#: src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr ""
 "L'element <%s> no està permès dins d'un element distance/border/aspect_ratio"
 
-#: ../src/ui/theme-parser.c:3676
+#: src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "L'element <%s> no està permès dins d'un element d'operació de dibuix"
 
-#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
-#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
+#: src/ui/theme-parser.c:3686 src/ui/theme-parser.c:3726
+#: src/ui/theme-parser.c:3731 src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "L'element <%s> no està permès dins d'un element <%s>"
 
-#: ../src/ui/theme-parser.c:3964
+#: src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "No s'ha proveït cap draw_ops per a la peça del marc"
 
-#: ../src/ui/theme-parser.c:3979
+#: src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "No s'ha proveït cap draw_ops per al botó"
 
-#: ../src/ui/theme-parser.c:4041
+#: src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "No es permet text dins d'un element <%s>"
 
-#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
-#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
-#: ../src/ui/theme-parser.c:4147
+#: src/ui/theme-parser.c:4099 src/ui/theme-parser.c:4111
+#: src/ui/theme-parser.c:4123 src/ui/theme-parser.c:4135
+#: src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "S'ha especificat <%s> dues vegades per a aquest tema"
 
-#: ../src/ui/theme-parser.c:4426
+#: src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "No s'ha trobat un fitxer vàlid per al tema %s\n"
 
-#: ../src/ui/theme-viewer.c:256
+#: src/ui/theme-viewer.c:256
 msgid "_OK"
 msgstr "D'ac_ord"
 
-#: ../src/ui/theme-viewer.c:268
+#: src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "Aquest és un exemple de missatge en un diàleg d'exemple"
 
-#: ../src/ui/theme-viewer.c:352
+#: src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Element fals de menú %d\n"
 
-#: ../src/ui/theme-viewer.c:408
+#: src/ui/theme-viewer.c:408
 msgid "Border-only window"
 msgstr "Finestra amb només contorn"
 
-#: ../src/ui/theme-viewer.c:410
+#: src/ui/theme-viewer.c:410
 msgid "Bar"
 msgstr "Barra"
 
-#: ../src/ui/theme-viewer.c:427
+#: src/ui/theme-viewer.c:427
 msgid "Normal Application Window"
 msgstr "Finestra d'aplicació normal"
 
-#: ../src/ui/theme-viewer.c:431
+#: src/ui/theme-viewer.c:431
 msgid "Dialog Box"
 msgstr "Caixa de diàleg"
 
-#: ../src/ui/theme-viewer.c:435
+#: src/ui/theme-viewer.c:435
 msgid "Modal Dialog Box"
 msgstr "Caixa de diàleg modal"
 
-#: ../src/ui/theme-viewer.c:439
+#: src/ui/theme-viewer.c:439
 msgid "Utility Palette"
 msgstr "Paleta d'utilitat"
 
-#: ../src/ui/theme-viewer.c:443
+#: src/ui/theme-viewer.c:443
 msgid "Torn-off Menu"
 msgstr "Menú arrossegable"
 
-#: ../src/ui/theme-viewer.c:447
+#: src/ui/theme-viewer.c:447
 msgid "Border"
 msgstr "Contorn"
 
-#: ../src/ui/theme-viewer.c:451
+#: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
 msgstr ""
 
-#: ../src/ui/theme-viewer.c:811
+#: src/ui/theme-viewer.c:811
 #, c-format
 msgid "Button layout test %d"
 msgstr "Prova de disposició de botons %d"
 
-#: ../src/ui/theme-viewer.c:836
+#: src/ui/theme-viewer.c:836
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g mil·lisegons per dibuixar un marc de finestra"
 
-#: ../src/ui/theme-viewer.c:876
-#, c-format
+#: src/ui/theme-viewer.c:876
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Ús: marco-theme-viewer [NOMDELTEMA]\n"
 
-#: ../src/ui/theme-viewer.c:883
+#: src/ui/theme-viewer.c:883
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "S'ha produït un error en carregar el tema: %s\n"
 
-#: ../src/ui/theme-viewer.c:889
+#: src/ui/theme-viewer.c:889
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "S'ha carregat el tema «%s» en %g segons\n"
 
-#: ../src/ui/theme-viewer.c:933
+#: src/ui/theme-viewer.c:933
 msgid "Normal Title Font"
 msgstr "Lletra del títol normal"
 
-#: ../src/ui/theme-viewer.c:939
+#: src/ui/theme-viewer.c:939
 msgid "Small Title Font"
-msgstr "Lletra del títol petit"
+msgstr "Lletra del títol petita"
 
-#: ../src/ui/theme-viewer.c:945
+#: src/ui/theme-viewer.c:945
 msgid "Large Title Font"
 msgstr "Lletra del títol gran"
 
-#: ../src/ui/theme-viewer.c:950
+#: src/ui/theme-viewer.c:950
 msgid "Button Layouts"
 msgstr "Disposicions de botons"
 
-#: ../src/ui/theme-viewer.c:955
+#: src/ui/theme-viewer.c:955
 msgid "Benchmark"
 msgstr "Test de referència"
 
-#: ../src/ui/theme-viewer.c:1012
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "El títol de la finestra va aquí"
 
-#: ../src/ui/theme-viewer.c:1117
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

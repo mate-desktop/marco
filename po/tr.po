@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the marco package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -8,19 +8,18 @@
 # tarakbumba <tarakbumba@gmail.com>, 2018
 # Emre FIRAT <emrefirat93@gmail.com>, 2018
 # Mehmet, 2018
-# Butterfly <gokhanlnx@gmail.com>, 2018
 # Kudret <kudretemre@hotmail.com.tr>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # mauron, 2018
+# Butterfly <gokhanlnx@gmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 14:57+0200\n"
+"Project-Id-Version: marco 1.23.1\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
+"POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: mauron, 2018\n"
+"Last-Translator: Butterfly <gokhanlnx@gmail.com>, 2019\n"
 "Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,439 +27,357 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../src/50-marco-desktop-key.xml.in.h:1
+#: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
 msgstr "Masaüstü"
 
-#: ../src/50-marco-desktop-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:102
-msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "Panel \"Uygulama Çalıştır\" penceresini göster"
+#: src/50-marco-desktop-key.xml.in:4
+msgid "Show the panel's &quot;Run Application&quot; dialog box"
+msgstr ""
 
-#: ../src/50-marco-desktop-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:101
+#: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
 msgstr "Panel ana menüsünü göster"
 
-#: ../src/50-marco-desktop-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:103
+#: src/50-marco-desktop-key.xml.in:8 src/org.mate.marco.gschema.xml:639
 msgid "Take a screenshot"
 msgstr "Ekran görüntüsü al"
 
-#: ../src/50-marco-desktop-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:104
+#: src/50-marco-desktop-key.xml.in:10 src/org.mate.marco.gschema.xml:644
 msgid "Take a screenshot of a window"
 msgstr "Pencerenin ekran görüntüsünü al"
 
-#: ../src/50-marco-desktop-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:105
+#: src/50-marco-desktop-key.xml.in:12 src/org.mate.marco.gschema.xml:649
 msgid "Run a terminal"
 msgstr "Bir uçbirim çalıştır"
 
-#: ../src/50-marco-desktop-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:106
+#: src/50-marco-desktop-key.xml.in:14 src/org.mate.marco.gschema.xml:654
 msgid "Rename current workspace"
 msgstr "Güncel çalışma alanının ismini değiştir"
 
-#: ../src/50-marco-global-key.xml.in.h:1 ../src/50-marco-window-key.xml.in.h:1
+#: src/50-marco-global-key.xml.in:2 src/50-marco-window-key.xml.in:2
 msgid "Window Management"
 msgstr "Pencere Yönetimi"
 
-#: ../src/50-marco-global-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:88
+#: src/50-marco-global-key.xml.in:4 src/org.mate.marco.gschema.xml:564
 msgid "Move between windows, using a popup window"
 msgstr "Pencereler arası taşımayı beliren pencere ile yap"
 
-#: ../src/50-marco-global-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:85
+#: src/50-marco-global-key.xml.in:6 src/org.mate.marco.gschema.xml:554
 msgid "Move between windows of an application, using a popup window"
 msgstr "Uygulamanın pencereleri arasında beliren pencere ile taşı"
 
-#: ../src/50-marco-global-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:92
+#: src/50-marco-global-key.xml.in:8 src/org.mate.marco.gschema.xml:584
 msgid "Move between panels and the desktop, using a popup window"
 msgstr "Panellerle ve masaüstü arasında beliren pencere ile taşı"
 
-#: ../src/50-marco-global-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:96
+#: src/50-marco-global-key.xml.in:10 src/org.mate.marco.gschema.xml:604
 msgid "Move between windows immediately"
 msgstr "Pencereler arası geçişi anında yap"
 
-#: ../src/50-marco-global-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:94
+#: src/50-marco-global-key.xml.in:12 src/org.mate.marco.gschema.xml:594
 msgid "Move between windows of an application immediately"
 msgstr "Uygulamanın pencereleri arasında anında geç"
 
-#: ../src/50-marco-global-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:98
+#: src/50-marco-global-key.xml.in:14 src/org.mate.marco.gschema.xml:614
 msgid "Move between panels and the desktop immediately"
 msgstr "Panellerle masaüstü arasındaki geçişi anında yap"
 
-#: ../src/50-marco-global-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:100
+#: src/50-marco-global-key.xml.in:16 src/org.mate.marco.gschema.xml:624
 msgid "Hide all normal windows and set focus to the desktop"
 msgstr "Tüm pencereleri gizleyip masaüstüne odaklan"
 
-#: ../src/50-marco-global-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:67
+#: src/50-marco-global-key.xml.in:23 src/org.mate.marco.gschema.xml:469
 msgid "Switch to workspace 1"
 msgstr "Çalışma alanı 1'e geç"
 
-#: ../src/50-marco-global-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:69
+#: src/50-marco-global-key.xml.in:30 src/org.mate.marco.gschema.xml:474
 msgid "Switch to workspace 2"
 msgstr "Çalışma alanı 2'ye geç"
 
-#: ../src/50-marco-global-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:70
+#: src/50-marco-global-key.xml.in:37 src/org.mate.marco.gschema.xml:479
 msgid "Switch to workspace 3"
 msgstr "Çalışma alanı 3'e geç"
 
-#: ../src/50-marco-global-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:71
+#: src/50-marco-global-key.xml.in:44 src/org.mate.marco.gschema.xml:484
 msgid "Switch to workspace 4"
 msgstr "Çalışma alanı 4'e geç"
 
-#: ../src/50-marco-global-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:72
+#: src/50-marco-global-key.xml.in:51 src/org.mate.marco.gschema.xml:489
 msgid "Switch to workspace 5"
 msgstr "Çalışma alanı 5'e geç"
 
-#: ../src/50-marco-global-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:73
+#: src/50-marco-global-key.xml.in:58 src/org.mate.marco.gschema.xml:494
 msgid "Switch to workspace 6"
 msgstr "Çalışma alanı 6'ya geç"
 
-#: ../src/50-marco-global-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:74
+#: src/50-marco-global-key.xml.in:65 src/org.mate.marco.gschema.xml:499
 msgid "Switch to workspace 7"
 msgstr "Çalışma alanı 7'ye geç"
 
-#: ../src/50-marco-global-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:75
+#: src/50-marco-global-key.xml.in:72 src/org.mate.marco.gschema.xml:504
 msgid "Switch to workspace 8"
 msgstr "Çalışma alanı 8'e geç"
 
-#: ../src/50-marco-global-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:76
+#: src/50-marco-global-key.xml.in:79 src/org.mate.marco.gschema.xml:509
 msgid "Switch to workspace 9"
 msgstr "Çalışma alanı 9'a geç"
 
-#: ../src/50-marco-global-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:77
+#: src/50-marco-global-key.xml.in:86 src/org.mate.marco.gschema.xml:514
 msgid "Switch to workspace 10"
 msgstr "Çalışma alanı 10'a geç"
 
-#: ../src/50-marco-global-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:78
+#: src/50-marco-global-key.xml.in:93 src/org.mate.marco.gschema.xml:519
 msgid "Switch to workspace 11"
 msgstr "Çalışma alanı 11'e geç"
 
-#: ../src/50-marco-global-key.xml.in.h:20
-#: ../src/org.mate.marco.gschema.xml.h:79
+#: src/50-marco-global-key.xml.in:100 src/org.mate.marco.gschema.xml:524
 msgid "Switch to workspace 12"
 msgstr "Çalışma alanı 12'ye geç"
 
-#: ../src/50-marco-global-key.xml.in.h:21
-#: ../src/org.mate.marco.gschema.xml.h:80
+#: src/50-marco-global-key.xml.in:107 src/org.mate.marco.gschema.xml:529
 msgid "Switch to workspace on the left of the current workspace"
 msgstr "Mevcut çalışma alanının solundaki çalışma alanına geç"
 
-#: ../src/50-marco-global-key.xml.in.h:22
-#: ../src/org.mate.marco.gschema.xml.h:81
+#: src/50-marco-global-key.xml.in:114 src/org.mate.marco.gschema.xml:534
 msgid "Switch to workspace on the right of the current workspace"
 msgstr "Mevcut çalışma alanının sağındaki çalışma alanına geç"
 
-#: ../src/50-marco-global-key.xml.in.h:23
-#: ../src/org.mate.marco.gschema.xml.h:82
+#: src/50-marco-global-key.xml.in:121 src/org.mate.marco.gschema.xml:539
 msgid "Switch to workspace above the current workspace"
 msgstr "Mevcut çalışma alanının üstündeki çalışma alanına geç"
 
-#: ../src/50-marco-global-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:83
+#: src/50-marco-global-key.xml.in:128 src/org.mate.marco.gschema.xml:544
 msgid "Switch to workspace below the current workspace"
 msgstr "Mevcut çalışma alanının altındaki çalışma alanına geç"
 
-#: ../src/50-marco-global-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:84
+#: src/50-marco-global-key.xml.in:131 src/org.mate.marco.gschema.xml:549
 msgid "Switch to previously selected workspace"
 msgstr "Önceki seçilmiş çalışma alanına geçin"
 
-#: ../src/50-marco-window-key.xml.in.h:2
-#: ../src/org.mate.marco.gschema.xml.h:113
+#: src/50-marco-window-key.xml.in:6 src/org.mate.marco.gschema.xml:735
 msgid "Activate the window menu"
 msgstr "Pencere menüsünü etkinleştir"
 
-#: ../src/50-marco-window-key.xml.in.h:3
-#: ../src/org.mate.marco.gschema.xml.h:114
+#: src/50-marco-window-key.xml.in:10 src/org.mate.marco.gschema.xml:740
 msgid "Toggle fullscreen mode"
 msgstr "Tam ekran kipini aç veya kapat"
 
-#: ../src/50-marco-window-key.xml.in.h:4
-#: ../src/org.mate.marco.gschema.xml.h:115
+#: src/50-marco-window-key.xml.in:14 src/org.mate.marco.gschema.xml:745
 msgid "Toggle maximization state"
 msgstr "Ekranı kaplama durumunu aç veya kapat"
 
-#: ../src/50-marco-window-key.xml.in.h:5
-#: ../src/org.mate.marco.gschema.xml.h:117
+#: src/50-marco-window-key.xml.in:18 src/org.mate.marco.gschema.xml:755
 msgid "Maximize window"
 msgstr "Pencereyi büyült"
 
-#: ../src/50-marco-window-key.xml.in.h:6
-#: ../src/org.mate.marco.gschema.xml.h:118
+#: src/50-marco-window-key.xml.in:22 src/org.mate.marco.gschema.xml:760
 msgid "Restore window"
 msgstr "Pencereyi eskiye getir"
 
-#: ../src/50-marco-window-key.xml.in.h:7
-#: ../src/org.mate.marco.gschema.xml.h:119
+#: src/50-marco-window-key.xml.in:26 src/org.mate.marco.gschema.xml:765
 msgid "Toggle shaded state"
 msgstr "Toplanmış durumu aç veya kapat"
 
-#: ../src/50-marco-window-key.xml.in.h:8
-#: ../src/org.mate.marco.gschema.xml.h:121
+#: src/50-marco-window-key.xml.in:30 src/org.mate.marco.gschema.xml:775
 msgid "Close window"
 msgstr "Pencereyi kapat"
 
-#: ../src/50-marco-window-key.xml.in.h:9
-#: ../src/org.mate.marco.gschema.xml.h:120
+#: src/50-marco-window-key.xml.in:34 src/org.mate.marco.gschema.xml:770
 msgid "Minimize window"
 msgstr "Pencereyi küçült"
 
-#: ../src/50-marco-window-key.xml.in.h:10
-#: ../src/org.mate.marco.gschema.xml.h:122
+#: src/50-marco-window-key.xml.in:38 src/org.mate.marco.gschema.xml:780
 msgid "Move window"
 msgstr "Pencere taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:11
-#: ../src/org.mate.marco.gschema.xml.h:123
+#: src/50-marco-window-key.xml.in:42 src/org.mate.marco.gschema.xml:785
 msgid "Resize window"
 msgstr "Pencereyi yeniden boyutlandır"
 
-#: ../src/50-marco-window-key.xml.in.h:12
-#: ../src/org.mate.marco.gschema.xml.h:124
+#: src/50-marco-window-key.xml.in:50 src/org.mate.marco.gschema.xml:790
 msgid "Toggle whether window is on all workspaces or just one"
 msgstr "Pencerenin tüm çalışma alanlarında ya da sadece birine olmasını seçer"
 
-#: ../src/50-marco-window-key.xml.in.h:13
-#: ../src/org.mate.marco.gschema.xml.h:141
+#: src/50-marco-window-key.xml.in:54 src/org.mate.marco.gschema.xml:875
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr ""
 "Pencere başka pencere tarafından kaplanmışsa en üste al, yoksa aşağı gönder"
 
-#: ../src/50-marco-window-key.xml.in.h:14
-#: ../src/org.mate.marco.gschema.xml.h:142
+#: src/50-marco-window-key.xml.in:58 src/org.mate.marco.gschema.xml:880
 msgid "Raise window above other windows"
 msgstr "Pencereyi diğerlerinin üstüne çıkar"
 
-#: ../src/50-marco-window-key.xml.in.h:15
-#: ../src/org.mate.marco.gschema.xml.h:143
+#: src/50-marco-window-key.xml.in:62 src/org.mate.marco.gschema.xml:885
 msgid "Lower window below other windows"
 msgstr "Pencereyi diğerlerinin altına gönder"
 
-#: ../src/50-marco-window-key.xml.in.h:16
-#: ../src/org.mate.marco.gschema.xml.h:144
+#: src/50-marco-window-key.xml.in:66 src/org.mate.marco.gschema.xml:890
 msgid "Maximize window vertically"
 msgstr "Pencereyi dikey olarak büyült"
 
-#: ../src/50-marco-window-key.xml.in.h:17
-#: ../src/org.mate.marco.gschema.xml.h:145
+#: src/50-marco-window-key.xml.in:70 src/org.mate.marco.gschema.xml:895
 msgid "Maximize window horizontally"
 msgstr "Pencereyi yatay olarak büyült"
 
-#: ../src/50-marco-window-key.xml.in.h:18
-#: ../src/org.mate.marco.gschema.xml.h:146
+#: src/50-marco-window-key.xml.in:74 src/org.mate.marco.gschema.xml:900
 msgid "Tile window to east (right) side of screen"
 msgstr "Pencereyi ekranın doğu (sağ) tarafına döşe"
 
-#: ../src/50-marco-window-key.xml.in.h:19
-#: ../src/org.mate.marco.gschema.xml.h:147
+#: src/50-marco-window-key.xml.in:78 src/org.mate.marco.gschema.xml:905
 msgid "Tile window to west (left) side of screen"
 msgstr "Pencereyi ekranın batı (sol) tarafına döşe"
 
-#: ../src/50-marco-window-key.xml.in.h:20
+#: src/50-marco-window-key.xml.in:82
 msgid "Tile window to north-west (top left) corner"
 msgstr "Pencereyi  Kuzey Batı (en üst sol) köşeye döşe"
 
-#: ../src/50-marco-window-key.xml.in.h:21
+#: src/50-marco-window-key.xml.in:86
 msgid "Tile window to north-east (top right) corner"
 msgstr "Pencereyi Kuzey Doğu (en üst sağ) köşeye döşe"
 
-#: ../src/50-marco-window-key.xml.in.h:22
+#: src/50-marco-window-key.xml.in:90
 msgid "Tile window to south-west (bottom left) corner"
 msgstr "Pencereyi Güney Batı (en alt sol) köşeye döşe"
 
-#: ../src/50-marco-window-key.xml.in.h:23
+#: src/50-marco-window-key.xml.in:94
 msgid "Tile window to south-east (bottom right) corner"
 msgstr "Pencereyi Güney Doğu (en alt sağ) köşeye döşe"
 
-#: ../src/50-marco-window-key.xml.in.h:24
-#: ../src/org.mate.marco.gschema.xml.h:152
+#: src/50-marco-window-key.xml.in:98 src/org.mate.marco.gschema.xml:930
 msgid "Move window to north-west (top left) corner"
 msgstr "Pencereyi ekranın Kuzey Batı (en üst sol) tarafına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:25
-#: ../src/org.mate.marco.gschema.xml.h:153
+#: src/50-marco-window-key.xml.in:102 src/org.mate.marco.gschema.xml:935
 msgid "Move window to north-east (top right) corner"
 msgstr "Pencereyi ekranın Kuzey Doğu (en üst sağ) tarafına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:26
-#: ../src/org.mate.marco.gschema.xml.h:154
+#: src/50-marco-window-key.xml.in:106 src/org.mate.marco.gschema.xml:940
 msgid "Move window to south-west (bottom left) corner"
 msgstr "Pencereyi ekranın Güney Batı (en alt sol) tarafına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:27
-#: ../src/org.mate.marco.gschema.xml.h:155
+#: src/50-marco-window-key.xml.in:110 src/org.mate.marco.gschema.xml:945
 msgid "Move window to south-east (bottom right) corner"
 msgstr "Pencereyi ekranın Güney Doğu (en alt sağ) tarafına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:28
-#: ../src/org.mate.marco.gschema.xml.h:156
+#: src/50-marco-window-key.xml.in:114 src/org.mate.marco.gschema.xml:950
 msgid "Move window to north (top) side of screen"
 msgstr "Pencereyi ekranın Kuzey (en üst) tarafına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:29
-#: ../src/org.mate.marco.gschema.xml.h:157
+#: src/50-marco-window-key.xml.in:118 src/org.mate.marco.gschema.xml:955
 msgid "Move window to south (bottom) side of screen"
 msgstr "Pencereyi ekranın Güney (en alt) tarafına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:30
-#: ../src/org.mate.marco.gschema.xml.h:158
+#: src/50-marco-window-key.xml.in:122 src/org.mate.marco.gschema.xml:960
 msgid "Move window to east (right) side of screen"
 msgstr "Pencereyi ekranın doğu (sağ) tarafına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:31
-#: ../src/org.mate.marco.gschema.xml.h:159
+#: src/50-marco-window-key.xml.in:126 src/org.mate.marco.gschema.xml:965
 msgid "Move window to west (left) side of screen"
 msgstr "Pencereyi ekranın batı (sol) tarafına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:32
-#: ../src/org.mate.marco.gschema.xml.h:160
+#: src/50-marco-window-key.xml.in:130 src/org.mate.marco.gschema.xml:970
 msgid "Move window to center of screen"
 msgstr "Pencereyi ekranın ortasına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:33
-#: ../src/org.mate.marco.gschema.xml.h:161
+#: src/50-marco-window-key.xml.in:134 src/org.mate.marco.gschema.xml:975
 msgid "Move window to north (top) monitor"
 msgstr "Pencereyi Kuzey (üst) ekrana taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:34
-#: ../src/org.mate.marco.gschema.xml.h:162
+#: src/50-marco-window-key.xml.in:138 src/org.mate.marco.gschema.xml:980
 msgid "Move window to south (bottom) monitor"
 msgstr "Pencereyi Güney (alt) ekrana taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:35
-#: ../src/org.mate.marco.gschema.xml.h:163
+#: src/50-marco-window-key.xml.in:142 src/org.mate.marco.gschema.xml:985
 msgid "Move window to east (right) monitor"
 msgstr "Pencereyi Doğu (sağ) ekrana taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:36
-#: ../src/org.mate.marco.gschema.xml.h:164
+#: src/50-marco-window-key.xml.in:146 src/org.mate.marco.gschema.xml:990
 msgid "Move window to west (left) monitor"
 msgstr "Pencereyi Batı (sol) ekrana taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:37
-#: ../src/org.mate.marco.gschema.xml.h:125
+#: src/50-marco-window-key.xml.in:154 src/org.mate.marco.gschema.xml:795
 msgid "Move window to workspace 1"
 msgstr "Pencereyi çalışma alanı 1'e taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:38
-#: ../src/org.mate.marco.gschema.xml.h:126
+#: src/50-marco-window-key.xml.in:162 src/org.mate.marco.gschema.xml:800
 msgid "Move window to workspace 2"
 msgstr "Pencereyi çalışma alanı 2'ye taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:39
-#: ../src/org.mate.marco.gschema.xml.h:127
+#: src/50-marco-window-key.xml.in:170 src/org.mate.marco.gschema.xml:805
 msgid "Move window to workspace 3"
 msgstr "Pencereyi çalışma alanı 3'e taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:40
-#: ../src/org.mate.marco.gschema.xml.h:128
+#: src/50-marco-window-key.xml.in:178 src/org.mate.marco.gschema.xml:810
 msgid "Move window to workspace 4"
 msgstr "Pencereyi çalışma alanı 4'e taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:41
-#: ../src/org.mate.marco.gschema.xml.h:129
+#: src/50-marco-window-key.xml.in:186 src/org.mate.marco.gschema.xml:815
 msgid "Move window to workspace 5"
 msgstr "Pencereyi çalışma alanı 5'e taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:42
-#: ../src/org.mate.marco.gschema.xml.h:130
+#: src/50-marco-window-key.xml.in:194 src/org.mate.marco.gschema.xml:820
 msgid "Move window to workspace 6"
 msgstr "Pencereyi çalışma alanı 6'ya taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:43
-#: ../src/org.mate.marco.gschema.xml.h:131
+#: src/50-marco-window-key.xml.in:202 src/org.mate.marco.gschema.xml:825
 msgid "Move window to workspace 7"
 msgstr "Pencereyi çalışma alanı 7'ye taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:44
-#: ../src/org.mate.marco.gschema.xml.h:132
+#: src/50-marco-window-key.xml.in:210 src/org.mate.marco.gschema.xml:830
 msgid "Move window to workspace 8"
 msgstr "Pencereyi çalışma alanı 8'e taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:45
-#: ../src/org.mate.marco.gschema.xml.h:133
+#: src/50-marco-window-key.xml.in:218 src/org.mate.marco.gschema.xml:835
 msgid "Move window to workspace 9"
 msgstr "Pencereyi çalışma alanı 9'a taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:46
-#: ../src/org.mate.marco.gschema.xml.h:134
+#: src/50-marco-window-key.xml.in:226 src/org.mate.marco.gschema.xml:840
 msgid "Move window to workspace 10"
 msgstr "Pencereyi çalışma alanı 2'ye taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:47
-#: ../src/org.mate.marco.gschema.xml.h:135
+#: src/50-marco-window-key.xml.in:234 src/org.mate.marco.gschema.xml:845
 msgid "Move window to workspace 11"
 msgstr "Pencereyi çalışma alanı 11'e taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:48
-#: ../src/org.mate.marco.gschema.xml.h:136
+#: src/50-marco-window-key.xml.in:242 src/org.mate.marco.gschema.xml:850
 msgid "Move window to workspace 12"
 msgstr "Pencereyi çalışma alanı 12'ye taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:49
-#: ../src/org.mate.marco.gschema.xml.h:137
+#: src/50-marco-window-key.xml.in:250 src/org.mate.marco.gschema.xml:855
 msgid "Move window one workspace to the left"
 msgstr "Pencereyi soldaki çalışma alanına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:50
-#: ../src/org.mate.marco.gschema.xml.h:138
+#: src/50-marco-window-key.xml.in:258 src/org.mate.marco.gschema.xml:860
 msgid "Move window one workspace to the right"
 msgstr "Pencereyi sağdaki çalışma alanına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:51
-#: ../src/org.mate.marco.gschema.xml.h:139
+#: src/50-marco-window-key.xml.in:266 src/org.mate.marco.gschema.xml:865
 msgid "Move window one workspace up"
 msgstr "Pencereyi üstteki çalışma alanına taşı"
 
-#: ../src/50-marco-window-key.xml.in.h:52
-#: ../src/org.mate.marco.gschema.xml.h:140
+#: src/50-marco-window-key.xml.in:274 src/org.mate.marco.gschema.xml:870
 msgid "Move window one workspace down"
 msgstr "Pencereyi alttaki çalışma alanına taşı"
 
-#: ../src/org.mate.marco.gschema.xml.h:1
+#: src/org.mate.marco.gschema.xml:50
 msgid "Modifier to use for modified window click actions"
 msgstr "Değiştirilmiş pencere tıklama işlemleri için kullanılacak değiştirici"
 
-#: ../src/org.mate.marco.gschema.xml.h:2
+#: src/org.mate.marco.gschema.xml:51
 msgid ""
 "Clicking a window while holding down this modifier key will move the window "
 "(left click), resize the window (middle click), or show the window menu "
 "(right click). The middle and right click operations may be swapped using "
-"the \"resize_with_right_button\" key. Modifier is expressed as "
-"\"&lt;Alt&gt;\" or \"&lt;Super&gt;\" for example."
+"the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
+"\"<Super>\" for example."
 msgstr ""
-"Bu değiştirici tuşunu basılı tutarak bir pencereye tıklamak pencereyi sola "
-"kaydıracak (sol fare düğmesi), pencereyi yeniden boyutlandıracak (sağ düğme)"
-" ya da menü pencere menüsünü gösterecektir (orta düğme). Sağ ve orta tıklama"
-" işlemleri \"resize_with_right_button\" anahtarı ile yer değiştirebilirler. "
-"Değiştirici mesela \"<Alt>\" veya \"<Super>\" olarak ifade edilir. "
 
-#: ../src/org.mate.marco.gschema.xml.h:3
+#: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
 msgstr "Sağ tuşla yeniden boyutlandırma olup olmayacağı"
 
-#: ../src/org.mate.marco.gschema.xml.h:4
+#: src/org.mate.marco.gschema.xml:56
 msgid ""
 "Set this to true to resize with the right button and show a menu with the "
 "middle button while holding down the key given in \"mouse_button_modifier\";"
@@ -471,11 +388,11 @@ msgstr ""
 "göstermek için doğru olarak atayın; tam tersi çalışması için bunu yanlış "
 "olarak atayın."
 
-#: ../src/org.mate.marco.gschema.xml.h:5
+#: src/org.mate.marco.gschema.xml:60
 msgid "Whether to display preselected tab window border"
 msgstr "Araç çubuğunun sınırlarını göster/gösterme"
 
-#: ../src/org.mate.marco.gschema.xml.h:6
+#: src/org.mate.marco.gschema.xml:61
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
@@ -483,11 +400,11 @@ msgstr ""
 "Sekme değiştirme işlemi gerçekleştirilirken, önceden seçilmiş pencerenin "
 "sınırlarını gizlemek için bunu doğru değil olarak işaretleyin"
 
-#: ../src/org.mate.marco.gschema.xml.h:7
+#: src/org.mate.marco.gschema.xml:65
 msgid "Arrangement of buttons on the titlebar"
 msgstr "Başlık çubuğundaki düğmelerin düzeni"
 
-#: ../src/org.mate.marco.gschema.xml.h:8
+#: src/org.mate.marco.gschema.xml:66
 msgid ""
 "Arrangement of buttons on the titlebar. The value should be a string, such "
 "as \"menu:minimize,maximize,spacer,close\"; the colon separates the left "
@@ -505,11 +422,11 @@ msgstr ""
 "hata vermeden göz ardı edilecektir. Art arda iki düğme arasında biraz boşluk"
 " eklemek için özel spacer etiketi kullanılabilir."
 
-#: ../src/org.mate.marco.gschema.xml.h:9
+#: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
 msgstr "Pencere odaklanma kipi"
 
-#: ../src/org.mate.marco.gschema.xml.h:10
+#: src/org.mate.marco.gschema.xml:71
 msgid ""
 "The window focus mode indicates how windows are activated. It has three "
 "possible values; \"click\" means windows must be clicked in order to focus "
@@ -523,11 +440,11 @@ msgstr ""
 "\"mouse\" olursa fare pencereye girince odaklanır ama fare çıktığında "
 "odaklama kaybolur."
 
-#: ../src/org.mate.marco.gschema.xml.h:11
+#: src/org.mate.marco.gschema.xml:75
 msgid "Control how new windows get focus"
 msgstr "Yeni pencerelerin nasıl odaklanacağını kontrol etme"
 
-#: ../src/org.mate.marco.gschema.xml.h:12
+#: src/org.mate.marco.gschema.xml:76
 msgid ""
 "This option provides additional control over how newly created windows get "
 "focus. It has two possible values; \"smart\" applies the user's normal focus"
@@ -539,11 +456,11 @@ msgstr ""
 " uygulanır ve \"strict\" uçbirimden başlatılan uygulamaların odaklanmaması "
 "ile sonuçlanır."
 
-#: ../src/org.mate.marco.gschema.xml.h:13
+#: src/org.mate.marco.gschema.xml:80
 msgid "Whether raising should be a side-effect of other user interactions"
 msgstr "Yukarı çıkartmanın diğer kullanıcı etkileşimleri için yan etki olması"
 
-#: ../src/org.mate.marco.gschema.xml.h:14
+#: src/org.mate.marco.gschema.xml:81
 msgid ""
 "Setting this option to false can lead to buggy behavior, so users are "
 "strongly discouraged from changing it from the default of true. Many actions"
@@ -585,11 +502,11 @@ msgstr ""
 "değerine atamaları gerektiğini ya da talep ettikleri \"hata\" ile yaşamaları"
 " gerektiğini söyleyin."
 
-#: ../src/org.mate.marco.gschema.xml.h:15
+#: src/org.mate.marco.gschema.xml:85
 msgid "Action on title bar double-click"
 msgstr "Başlık çubuğuna çift tıklama eylemi"
 
-#: ../src/org.mate.marco.gschema.xml.h:16
+#: src/org.mate.marco.gschema.xml:86
 msgid ""
 "This option determines the effects of double-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -608,11 +525,11 @@ msgstr ""
 "'menu' pencere menüsünü gösterir, 'lower' pencereyi diğerlerinin arkasına "
 "koyar ve 'none' hiçbir şey yapmaz. "
 
-#: ../src/org.mate.marco.gschema.xml.h:17
+#: src/org.mate.marco.gschema.xml:90
 msgid "Action on title bar middle-click"
 msgstr "Başlık çubuğuna orta tıklama eylemi"
 
-#: ../src/org.mate.marco.gschema.xml.h:18
+#: src/org.mate.marco.gschema.xml:91
 msgid ""
 "This option determines the effects of middle-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -631,11 +548,11 @@ msgstr ""
 "'menu' pencere menüsünü gösterir, 'lower' pencereyi diğerlerinin arkasına "
 "koyar ve 'none' hiçbir şey yapmaz. "
 
-#: ../src/org.mate.marco.gschema.xml.h:19
+#: src/org.mate.marco.gschema.xml:95
 msgid "Action on title bar right-click"
 msgstr "Başlık çubuğuna sağ tıklama eylemi"
 
-#: ../src/org.mate.marco.gschema.xml.h:20
+#: src/org.mate.marco.gschema.xml:96
 msgid ""
 "This option determines the effects of right-clicking on the title bar. "
 "Current valid options are 'toggle_shade', which will shade/unshade the "
@@ -654,11 +571,11 @@ msgstr ""
 "'menu' pencere menüsünü gösterir, 'lower' pencereyi diğerlerinin arkasına "
 "koyar ve 'none' hiçbir şey yapmaz. "
 
-#: ../src/org.mate.marco.gschema.xml.h:21
+#: src/org.mate.marco.gschema.xml:100
 msgid "Automatically raises the focused window"
 msgstr "Odaklanılan pencere otomatik öne gelir"
 
-#: ../src/org.mate.marco.gschema.xml.h:22
+#: src/org.mate.marco.gschema.xml:101
 msgid ""
 "If set to true, and the focus mode is either \"sloppy\" or \"mouse\" then "
 "the focused window will be automatically raised after a delay specified by "
@@ -671,11 +588,11 @@ msgstr ""
 "için tıklamak ya da sürükle ve bırak sırasında pencere sınırlarına girmek "
 "ile alakalı değildir."
 
-#: ../src/org.mate.marco.gschema.xml.h:23
+#: src/org.mate.marco.gschema.xml:105
 msgid "Delay in milliseconds for the auto raise option"
 msgstr "Otomatik öne gelme seçeneği için milisaniye olarak gecikme"
 
-#: ../src/org.mate.marco.gschema.xml.h:24
+#: src/org.mate.marco.gschema.xml:106
 msgid ""
 "The time delay before raising a window if auto_raise is set to true. The "
 "delay is given in thousandths of a second."
@@ -683,22 +600,22 @@ msgstr ""
 "Pencereyi auto_raise ayarı seçiliyse yükseltmeden önceki gecikme. Bu gecikme"
 " saniyenin binde biri cinsinden verilir."
 
-#: ../src/org.mate.marco.gschema.xml.h:25
+#: src/org.mate.marco.gschema.xml:110
 msgid "Current theme"
 msgstr "Geçerli tema"
 
-#: ../src/org.mate.marco.gschema.xml.h:26
+#: src/org.mate.marco.gschema.xml:111
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
 msgstr ""
 "Tema; pencere kenarları, başlık çubuğu gibi öğelerin görünümünü belirler."
 
-#: ../src/org.mate.marco.gschema.xml.h:27
+#: src/org.mate.marco.gschema.xml:115
 msgid "Use standard system font in window titles"
 msgstr "Pencere başlıklarında standart sistem yazıtipini kullan"
 
-#: ../src/org.mate.marco.gschema.xml.h:28
+#: src/org.mate.marco.gschema.xml:116
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
@@ -706,11 +623,11 @@ msgstr ""
 "Eğer seçiliyse, titlebar_font seçeneğini göz ardı edip pencere başlıklarında"
 " standart uygulama yazıtipi kullanılır."
 
-#: ../src/org.mate.marco.gschema.xml.h:29
+#: src/org.mate.marco.gschema.xml:120
 msgid "Window title font"
 msgstr "Pencere başlığı yazıtipi"
 
-#: ../src/org.mate.marco.gschema.xml.h:30
+#: src/org.mate.marco.gschema.xml:121
 msgid ""
 "A font description string describing a font for window titlebars. The size "
 "from the description will only be used if the titlebar_font_size option is "
@@ -723,11 +640,11 @@ msgstr ""
 "titlebar_uses_desktop_font, başlık çubuğu masaüstü yazıtipini kullanır, "
 "seçeneği seçilmişse bu seçenek kapalı kabul edilir."
 
-#: ../src/org.mate.marco.gschema.xml.h:31
+#: src/org.mate.marco.gschema.xml:126
 msgid "Number of workspaces"
 msgstr "Çalışma alanlarının sayısı"
 
-#: ../src/org.mate.marco.gschema.xml.h:32
+#: src/org.mate.marco.gschema.xml:127
 msgid ""
 "Number of workspaces. Must be more than zero, and has a fixed maximum to "
 "prevent making the desktop unusable by accidentally asking for too many "
@@ -737,11 +654,11 @@ msgstr ""
 "fazla sayıda çalışma alanı talep edip masaüstünü kullanışsız hale "
 "getirmemeniz için bir üst sınırı vardır."
 
-#: ../src/org.mate.marco.gschema.xml.h:33
+#: src/org.mate.marco.gschema.xml:131
 msgid "Workspace wrap style"
 msgstr "Çalışma alanı sarma biçimi"
 
-#: ../src/org.mate.marco.gschema.xml.h:34
+#: src/org.mate.marco.gschema.xml:132
 msgid ""
 "The wrap style is used to determine how to switch from one workspace to "
 "another at the border of the workspace switcher. When set to \"no wrap\", "
@@ -762,11 +679,11 @@ msgstr ""
 "bağlanır: her sıranın sonu kendi başlangıcına ve her sütunun sonu kendi "
 "başlangıcına ulaştırır."
 
-#: ../src/org.mate.marco.gschema.xml.h:35
+#: src/org.mate.marco.gschema.xml:136
 msgid "Enable Visual Bell"
 msgstr "Görsel Zili Etkinleştir"
 
-#: ../src/org.mate.marco.gschema.xml.h:36
+#: src/org.mate.marco.gschema.xml:137
 msgid ""
 "Turns on a visual indication when an application or the system issues a "
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
@@ -776,11 +693,11 @@ msgstr ""
 "uyarıcıları da açar; duymanın zor olduğu gürültülü ortamlar için çok "
 "kullanışlıdır."
 
-#: ../src/org.mate.marco.gschema.xml.h:37
+#: src/org.mate.marco.gschema.xml:141
 msgid "System Bell is Audible"
 msgstr "Sistem Zili Duyulabilir"
 
-#: ../src/org.mate.marco.gschema.xml.h:38
+#: src/org.mate.marco.gschema.xml:142
 msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
@@ -788,11 +705,11 @@ msgstr ""
 "Uygulamaların veya sistemin sesli zil çıkarıp çıkartamayacaklarını belirler,"
 " sessiz zil sesleri için 'görsel zil' ile ilişkili de kullanılabilir."
 
-#: ../src/org.mate.marco.gschema.xml.h:39
+#: src/org.mate.marco.gschema.xml:146
 msgid "Visual Bell Type"
 msgstr "Görsel Zil Türü"
 
-#: ../src/org.mate.marco.gschema.xml.h:40
+#: src/org.mate.marco.gschema.xml:147
 msgid ""
 "Tells Marco how to implement the visual indication that the system bell or "
 "another application 'bell' indicator has been rung. Currently there are two "
@@ -809,35 +726,33 @@ msgstr ""
 "sinyalini gönderen uygulama bilinmiyorsa (ön tanımlı \"sistem zili\" için "
 "geçerli olan durum), güncel odaklanmış pencerenin başlık çubuğu flaşlanır."
 
-#: ../src/org.mate.marco.gschema.xml.h:41
+#: src/org.mate.marco.gschema.xml:151
 msgid "Compositing Manager"
 msgstr "Görüntü Birleştirme Yöneticisi"
 
-#: ../src/org.mate.marco.gschema.xml.h:42
+#: src/org.mate.marco.gschema.xml:152
 msgid "Determines whether Marco is a compositing manager."
 msgstr "Marco'nun bir kompozisyon yöneticisi olmasına karar verir."
 
-#: ../src/org.mate.marco.gschema.xml.h:43
+#: src/org.mate.marco.gschema.xml:156
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
 msgstr ""
 "Kompozisyon yöneticisi ile hızlı Alt-Tab (pul imgeleri devre dışı bırak)"
 
-#: ../src/org.mate.marco.gschema.xml.h:44
+#: src/org.mate.marco.gschema.xml:157
 msgid ""
 "If set to true, no window thumbnails will be displayed in the alt-tab popup "
 "window when the compositing manager is enabled. Application icons will be "
-"displayed instead."
+"displayed instead. Note that on high resolution screens with many visible "
+"windows there can be a perceptible lag in rendering."
 msgstr ""
-"Eğer doğru olarak ayarlanırsa, kompozisyon yöneticisi etkinleştirildiğinde "
-"alt-tab penceresinde hiçbir pencere pul imgesi görüntülenmeyecektir. Yerine "
-"uygulama ikonları görüntülenecektir."
 
-#: ../src/org.mate.marco.gschema.xml.h:45
+#: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
 msgstr ""
 "Eğer seçiliyse, daha az kaynak kullanımı için kullanılabilirliği azaltır"
 
-#: ../src/org.mate.marco.gschema.xml.h:46
+#: src/org.mate.marco.gschema.xml:162
 msgid ""
 "If true, marco will give the user less feedback by using wireframes, "
 "avoiding animations, or other means. This is a significant reduction in "
@@ -853,13 +768,13 @@ msgstr ""
 "işleyebilirlik sağlayabilir. Ancak tel çerçeve özelliği erişilebilirlik açık"
 " olduğunda etkisizleştirilecektir."
 
-#: ../src/org.mate.marco.gschema.xml.h:47
+#: src/org.mate.marco.gschema.xml:166
 msgid ""
 "(Not implemented) Navigation works in terms of applications not windows"
 msgstr ""
 "(Henüz uygulanmamış) Gezinme, pencerelere göre değil uygulamalara göre işler"
 
-#: ../src/org.mate.marco.gschema.xml.h:48
+#: src/org.mate.marco.gschema.xml:167
 msgid ""
 "If true, then Marco works in terms of applications rather than windows. The "
 "concept is a bit abstract, but in general an application-based setup is more"
@@ -876,11 +791,11 @@ msgstr ""
 "kipte odaklama amaçlı tıklamalar odaklamadan sonra bir de uygulamaya "
 "geçilmez. Uygulama tabanlı kipin büyük bölümü henüz tamamlanmadı."
 
-#: ../src/org.mate.marco.gschema.xml.h:49
+#: src/org.mate.marco.gschema.xml:171
 msgid "Disable misfeatures that are required by old or broken applications"
 msgstr "Eski ya da hatalı uygulamaların gerektirdiği hatalı özellikleri kapat"
 
-#: ../src/org.mate.marco.gschema.xml.h:50
+#: src/org.mate.marco.gschema.xml:172
 msgid ""
 "Some applications disregard specifications in ways that result in window "
 "manager misfeatures. This option puts Marco in a rigorously correct mode, "
@@ -892,12 +807,12 @@ msgstr ""
 "kipe sokar, bu şayet kullanıcının hatalı işleyen bir uygulama çalıştırmaya "
 "ihtiyacı yoksa kullanıcı arayüzünün daha tutarlı olmasını sağlar."
 
-#: ../src/org.mate.marco.gschema.xml.h:51
+#: src/org.mate.marco.gschema.xml:176
 msgid "Determines if new windows are created on the center of the screen"
 msgstr ""
 "Yeni pencerelerin ekranın ortasında oluşturulup oluşturulmayacağını ayarlar"
 
-#: ../src/org.mate.marco.gschema.xml.h:52
+#: src/org.mate.marco.gschema.xml:177
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
@@ -905,11 +820,11 @@ msgstr ""
 "Doğru olarak ayarlanmışsa yeni pencereler ekranın ortasında açılır. Aksi "
 "halde yeni pencereler ekranın üst solunda açılır."
 
-#: ../src/org.mate.marco.gschema.xml.h:53
+#: src/org.mate.marco.gschema.xml:181
 msgid "Whether to enable window tiling"
 msgstr "Pencere döşemesinin etkinleştirilip etkinleştirilmeyeceği"
 
-#: ../src/org.mate.marco.gschema.xml.h:54
+#: src/org.mate.marco.gschema.xml:182
 msgid ""
 "If enabled, dropping windows on screen edges maximizes them vertically and "
 "resizes them horizontally to cover half of the available area. Drag-dropping"
@@ -920,11 +835,11 @@ msgstr ""
 "tekrar boyutlandıracaktır. Pencereyi üst köşeye taşıyıp bırakmak, eğer üste "
 "döşeme izini etkinse pencereyi büyültecektir."
 
-#: ../src/org.mate.marco.gschema.xml.h:55
+#: src/org.mate.marco.gschema.xml:186
 msgid "Whether to maximize the window when dragged to the top of the screen"
 msgstr "Ekranın üstüne taşındığında pencerenin büyültülüp büyültülmeyeceği"
 
-#: ../src/org.mate.marco.gschema.xml.h:56
+#: src/org.mate.marco.gschema.xml:187
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
@@ -932,11 +847,21 @@ msgstr ""
 "Eğer etkinleştirildiyse, herhangi bir pencereyi ekranın üstüne taşıyıp "
 "bırakmak onu büyültecektir. Sadece döşeme izni etkinse çalışır."
 
-#: ../src/org.mate.marco.gschema.xml.h:57
+#: src/org.mate.marco.gschema.xml:191
+msgid "Whether to enable cycling through different tile sizes"
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:192
+msgid ""
+"If enabled, tiling a window will cycle through multiple different sizes by "
+"using the same keyboard shortcut multiple times in a row."
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
 msgstr "Pencere yerleştirme kipi"
 
-#: ../src/org.mate.marco.gschema.xml.h:58
+#: src/org.mate.marco.gschema.xml:197
 msgid ""
 "The window placement mode indicates how new windows are positioned. "
 "\"automatic\" means the system chooses a location automatically based on the"
@@ -952,11 +877,11 @@ msgstr ""
 "yerleştirilir. \"Elle\" seçiminde ise kullanıcının fare veya klavye "
 "yardımıyla yeni pencerenin konumunu belirlemesi gerekir."
 
-#: ../src/org.mate.marco.gschema.xml.h:59
+#: src/org.mate.marco.gschema.xml:201
 msgid "List of applications ignored by show-desktop"
 msgstr "show-desktop tarafından göz ardı edilecek uygulama listesi"
 
-#: ../src/org.mate.marco.gschema.xml.h:60
+#: src/org.mate.marco.gschema.xml:202
 msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
@@ -965,115 +890,217 @@ msgstr ""
 "atıfta bulunulan her çalışan grafik arayüzlü uygulama, 'Show Desktop' yani "
 "'Masaüstünü Göster' işlevselliği tarafından göz ardı edilir."
 
-#: ../src/org.mate.marco.gschema.xml.h:61
-msgid "Icon size"
+#: src/org.mate.marco.gschema.xml:207
+msgid "Icon size in alt-tab popup window"
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:62
+#: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
 
-#: ../src/org.mate.marco.gschema.xml.h:63
+#: src/org.mate.marco.gschema.xml:213
+msgid "Maximum number of columns in alt-tab popup window"
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:214
+msgid ""
+"The popup window will be expanded to fit up to these many entries per row."
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:218
+msgid "Expand the alt-tab popup window to fit longer window titles"
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:219
+msgid ""
+"The popup window may be expanded up to the width determined by the config "
+"parameter 'alt-tab-max-columns'."
+msgstr ""
+
+#: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
+#: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
+#: src/org.mate.marco.gschema.xml:246 src/org.mate.marco.gschema.xml:251
+#: src/org.mate.marco.gschema.xml:256 src/org.mate.marco.gschema.xml:261
+#: src/org.mate.marco.gschema.xml:266 src/org.mate.marco.gschema.xml:271
+#: src/org.mate.marco.gschema.xml:276 src/org.mate.marco.gschema.xml:281
+#: src/org.mate.marco.gschema.xml:286 src/org.mate.marco.gschema.xml:291
+#: src/org.mate.marco.gschema.xml:296 src/org.mate.marco.gschema.xml:301
+#: src/org.mate.marco.gschema.xml:306 src/org.mate.marco.gschema.xml:311
+#: src/org.mate.marco.gschema.xml:316 src/org.mate.marco.gschema.xml:321
+#: src/org.mate.marco.gschema.xml:326 src/org.mate.marco.gschema.xml:331
+#: src/org.mate.marco.gschema.xml:336 src/org.mate.marco.gschema.xml:341
+#: src/org.mate.marco.gschema.xml:346 src/org.mate.marco.gschema.xml:351
+#: src/org.mate.marco.gschema.xml:356 src/org.mate.marco.gschema.xml:361
+#: src/org.mate.marco.gschema.xml:366 src/org.mate.marco.gschema.xml:371
+#: src/org.mate.marco.gschema.xml:376 src/org.mate.marco.gschema.xml:381
+#: src/org.mate.marco.gschema.xml:386 src/org.mate.marco.gschema.xml:391
+#: src/org.mate.marco.gschema.xml:396 src/org.mate.marco.gschema.xml:401
 msgid "Name of workspace"
 msgstr "Çalışma alanının adı"
 
-#: ../src/org.mate.marco.gschema.xml.h:64
+#: src/org.mate.marco.gschema.xml:227 src/org.mate.marco.gschema.xml:232
+#: src/org.mate.marco.gschema.xml:237 src/org.mate.marco.gschema.xml:242
+#: src/org.mate.marco.gschema.xml:247 src/org.mate.marco.gschema.xml:252
+#: src/org.mate.marco.gschema.xml:257 src/org.mate.marco.gschema.xml:262
+#: src/org.mate.marco.gschema.xml:267 src/org.mate.marco.gschema.xml:272
+#: src/org.mate.marco.gschema.xml:277 src/org.mate.marco.gschema.xml:282
+#: src/org.mate.marco.gschema.xml:287 src/org.mate.marco.gschema.xml:292
+#: src/org.mate.marco.gschema.xml:297 src/org.mate.marco.gschema.xml:302
+#: src/org.mate.marco.gschema.xml:307 src/org.mate.marco.gschema.xml:312
+#: src/org.mate.marco.gschema.xml:317 src/org.mate.marco.gschema.xml:322
+#: src/org.mate.marco.gschema.xml:327 src/org.mate.marco.gschema.xml:332
+#: src/org.mate.marco.gschema.xml:337 src/org.mate.marco.gschema.xml:342
+#: src/org.mate.marco.gschema.xml:347 src/org.mate.marco.gschema.xml:352
+#: src/org.mate.marco.gschema.xml:357 src/org.mate.marco.gschema.xml:362
+#: src/org.mate.marco.gschema.xml:367 src/org.mate.marco.gschema.xml:372
+#: src/org.mate.marco.gschema.xml:377 src/org.mate.marco.gschema.xml:382
+#: src/org.mate.marco.gschema.xml:387 src/org.mate.marco.gschema.xml:392
+#: src/org.mate.marco.gschema.xml:397 src/org.mate.marco.gschema.xml:402
 msgid "The name of a workspace."
 msgstr "Çalışma alanının adı."
 
-#: ../src/org.mate.marco.gschema.xml.h:65
+#: src/org.mate.marco.gschema.xml:409 src/org.mate.marco.gschema.xml:414
+#: src/org.mate.marco.gschema.xml:419 src/org.mate.marco.gschema.xml:424
+#: src/org.mate.marco.gschema.xml:429 src/org.mate.marco.gschema.xml:434
+#: src/org.mate.marco.gschema.xml:439 src/org.mate.marco.gschema.xml:444
+#: src/org.mate.marco.gschema.xml:449 src/org.mate.marco.gschema.xml:454
+#: src/org.mate.marco.gschema.xml:459 src/org.mate.marco.gschema.xml:464
 msgid "Run a defined command"
 msgstr "Tanımlı bir komut çalıştır"
 
-#: ../src/org.mate.marco.gschema.xml.h:66
+#: src/org.mate.marco.gschema.xml:410 src/org.mate.marco.gschema.xml:415
+#: src/org.mate.marco.gschema.xml:420 src/org.mate.marco.gschema.xml:425
+#: src/org.mate.marco.gschema.xml:430 src/org.mate.marco.gschema.xml:435
+#: src/org.mate.marco.gschema.xml:440 src/org.mate.marco.gschema.xml:445
+#: src/org.mate.marco.gschema.xml:450 src/org.mate.marco.gschema.xml:455
+#: src/org.mate.marco.gschema.xml:460 src/org.mate.marco.gschema.xml:465
 msgid ""
 "The keybinding that runs the correspondingly-numbered command in "
-"/apps/marco/keybinding_commands The format looks like \"&lt;Control&gt;a\" "
-"or \"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action."
+"/apps/marco/keybinding_commands The format looks like \"<Control>a\" or "
+"\"<Shift><Alt>F1\". The parser is fairly liberal and allows lower or upper "
+"case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set "
+"the option to the special string \"disabled\", then there will be no "
+"keybinding for this action."
 msgstr ""
-"/apps/marco/keybinding_commands içinde ilgili numaraya sahip komutu "
-"çalıştırmak üzere atanmış tuş bağlarını tanımlar. Biçimi şunun gibi "
-"olmalıdır: \"<Control>a\" ya da \"<Shift><Alt>F1\". Ayrıştırıcı büyük veya "
-"küçük harf farkı gözetmez; ayrıca \"<Ctl>\" ya da \"<Ctrl>\" gibi "
-"kısaltmalara izin verir. Seçeneğe \"disabled\" özel dizgisini değer olarak "
-"atarsanız, o eylem için tuş bağı yapılmamış olur."
 
-#: ../src/org.mate.marco.gschema.xml.h:68
+#: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
+#: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
+#: src/org.mate.marco.gschema.xml:490 src/org.mate.marco.gschema.xml:495
+#: src/org.mate.marco.gschema.xml:500 src/org.mate.marco.gschema.xml:505
+#: src/org.mate.marco.gschema.xml:510 src/org.mate.marco.gschema.xml:515
+#: src/org.mate.marco.gschema.xml:520 src/org.mate.marco.gschema.xml:525
+#: src/org.mate.marco.gschema.xml:530 src/org.mate.marco.gschema.xml:535
+#: src/org.mate.marco.gschema.xml:540 src/org.mate.marco.gschema.xml:545
+#: src/org.mate.marco.gschema.xml:550 src/org.mate.marco.gschema.xml:625
+#: src/org.mate.marco.gschema.xml:630 src/org.mate.marco.gschema.xml:635
+#: src/org.mate.marco.gschema.xml:640 src/org.mate.marco.gschema.xml:645
+#: src/org.mate.marco.gschema.xml:650 src/org.mate.marco.gschema.xml:655
+#: src/org.mate.marco.gschema.xml:736 src/org.mate.marco.gschema.xml:741
+#: src/org.mate.marco.gschema.xml:746 src/org.mate.marco.gschema.xml:751
+#: src/org.mate.marco.gschema.xml:756 src/org.mate.marco.gschema.xml:761
+#: src/org.mate.marco.gschema.xml:766 src/org.mate.marco.gschema.xml:771
+#: src/org.mate.marco.gschema.xml:776 src/org.mate.marco.gschema.xml:781
+#: src/org.mate.marco.gschema.xml:786 src/org.mate.marco.gschema.xml:791
+#: src/org.mate.marco.gschema.xml:796 src/org.mate.marco.gschema.xml:801
+#: src/org.mate.marco.gschema.xml:806 src/org.mate.marco.gschema.xml:811
+#: src/org.mate.marco.gschema.xml:816 src/org.mate.marco.gschema.xml:821
+#: src/org.mate.marco.gschema.xml:826 src/org.mate.marco.gschema.xml:831
+#: src/org.mate.marco.gschema.xml:836 src/org.mate.marco.gschema.xml:841
+#: src/org.mate.marco.gschema.xml:846 src/org.mate.marco.gschema.xml:851
+#: src/org.mate.marco.gschema.xml:856 src/org.mate.marco.gschema.xml:861
+#: src/org.mate.marco.gschema.xml:866 src/org.mate.marco.gschema.xml:871
+#: src/org.mate.marco.gschema.xml:876 src/org.mate.marco.gschema.xml:881
+#: src/org.mate.marco.gschema.xml:886 src/org.mate.marco.gschema.xml:891
+#: src/org.mate.marco.gschema.xml:896 src/org.mate.marco.gschema.xml:901
+#: src/org.mate.marco.gschema.xml:906 src/org.mate.marco.gschema.xml:911
+#: src/org.mate.marco.gschema.xml:916 src/org.mate.marco.gschema.xml:921
+#: src/org.mate.marco.gschema.xml:926 src/org.mate.marco.gschema.xml:931
+#: src/org.mate.marco.gschema.xml:936 src/org.mate.marco.gschema.xml:941
+#: src/org.mate.marco.gschema.xml:946 src/org.mate.marco.gschema.xml:951
+#: src/org.mate.marco.gschema.xml:956 src/org.mate.marco.gschema.xml:961
+#: src/org.mate.marco.gschema.xml:966 src/org.mate.marco.gschema.xml:971
+#: src/org.mate.marco.gschema.xml:976 src/org.mate.marco.gschema.xml:981
+#: src/org.mate.marco.gschema.xml:986 src/org.mate.marco.gschema.xml:991
 msgid ""
-"The format looks like \"&lt;Control&gt;a\" or "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action."
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
+"fairly liberal and allows lower or upper case, and also abbreviations such "
+"as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
+"\"disabled\", then there will be no keybinding for this action."
 msgstr ""
-"Biçim \"&lt;Control&gt;a\" veya \"&lt;Shift&gt;&lt;Alt&gt;F1\" gibi "
-"olmalıdır. Ayrıştırıcı büyük veya küçük harf farkı gözetmez ve ayrıca "
-"\"&lt;Ctl&gt;\" ve \"&lt;Ctrl&gt;\" gib kısaltmalara izin verir. Seçeneğe "
-"\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-"yapılmamış olur."
 
-#: ../src/org.mate.marco.gschema.xml.h:86
+#: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
+#: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
+#: src/org.mate.marco.gschema.xml:575 src/org.mate.marco.gschema.xml:580
+#: src/org.mate.marco.gschema.xml:585 src/org.mate.marco.gschema.xml:590
+#: src/org.mate.marco.gschema.xml:595 src/org.mate.marco.gschema.xml:600
+#: src/org.mate.marco.gschema.xml:605 src/org.mate.marco.gschema.xml:610
+#: src/org.mate.marco.gschema.xml:615 src/org.mate.marco.gschema.xml:620
 msgid ""
-"The format looks like \"&lt;Control&gt;a\" or "
-"\"&lt;Shift&gt;&lt;Alt&gt;F1\". The parser is fairly liberal and allows "
-"lower or upper case, and also abbreviations such as \"&lt;Ctl&gt;\" and "
-"\"&lt;Ctrl&gt;\". If you set the option to the special string \"disabled\", "
-"then there will be no keybinding for this action. This keybinding may be "
-"reversed by holding down the \"shift\" key; therefore, \"shift\" cannot be "
-"one of the keys it uses."
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
+"fairly liberal and allows lower or upper case, and also abbreviations such "
+"as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
+"\"disabled\", then there will be no keybinding for this action. This "
+"keybinding may be reversed by holding down the \"shift\" key; therefore, "
+"\"shift\" cannot be one of the keys it uses."
 msgstr ""
-"Biçim \"&lt;Control&gt;a\" veya \"&lt;Shift&gt;&lt;Alt&gt;F1\" gibi "
-"olmalıdır. Ayrıştırıcı büyük veya küçük harf farkı gözetmez ve ayrıca "
-"\"&lt;Ctl&gt;\" ve \"&lt;Ctrl&gt;\" gib kısaltmalara izin verir. Seçeneğe "
-"\"disabled\" özel dizgisini değer olarak atarsanız, o eylem için tuş bağı "
-"yapılmamış olur. "
 
-#: ../src/org.mate.marco.gschema.xml.h:87
+#: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
 msgstr ""
 "Uygulamanın pencereleri arasında geriye doğru beliren pencere ile taşı"
 
-#: ../src/org.mate.marco.gschema.xml.h:89
+#: src/org.mate.marco.gschema.xml:569
 msgid "Move backward between windows, using a popup window"
 msgstr "Pencereler arasında geriye doğru beliren pencere aracılığıyla taşı"
 
-#: ../src/org.mate.marco.gschema.xml.h:90
+#: src/org.mate.marco.gschema.xml:574
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr ""
 "Tüm çalışma alanlarında pencereler arası taşımayı beliren pencere ile yap"
 
-#: ../src/org.mate.marco.gschema.xml.h:91
+#: src/org.mate.marco.gschema.xml:579
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr ""
 "Tüm çalışma alanlarında pencereler arasında geriye doğru beliren pencere "
 "aracılığıyla taşı"
 
-#: ../src/org.mate.marco.gschema.xml.h:93
+#: src/org.mate.marco.gschema.xml:589
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr "Panellerle ve masaüstü arasında geriye doğru beliren pencere ile taşı"
 
-#: ../src/org.mate.marco.gschema.xml.h:95
+#: src/org.mate.marco.gschema.xml:599
 msgid "Move backward between windows of an application immediately"
 msgstr "Uygulamanın pencereleri arasında geriye doğru anında taşı"
 
-#: ../src/org.mate.marco.gschema.xml.h:97
+#: src/org.mate.marco.gschema.xml:609
 msgid "Move backward between windows immediately"
 msgstr "Pencereler arası anında taşıma geçici"
 
-#: ../src/org.mate.marco.gschema.xml.h:99
+#: src/org.mate.marco.gschema.xml:619
 msgid "Move backward between panels and the desktop immediately"
 msgstr "Panellerle masaüstü arasındaki geri geçişi anında yap"
 
-#: ../src/org.mate.marco.gschema.xml.h:107
+#: src/org.mate.marco.gschema.xml:634
+msgid "Show the panel's \"Run Application\" dialog box"
+msgstr "Panel \"Uygulama Çalıştır\" penceresini göster"
+
+#: src/org.mate.marco.gschema.xml:662 src/org.mate.marco.gschema.xml:667
+#: src/org.mate.marco.gschema.xml:672 src/org.mate.marco.gschema.xml:677
+#: src/org.mate.marco.gschema.xml:682 src/org.mate.marco.gschema.xml:687
+#: src/org.mate.marco.gschema.xml:692 src/org.mate.marco.gschema.xml:697
+#: src/org.mate.marco.gschema.xml:702 src/org.mate.marco.gschema.xml:707
+#: src/org.mate.marco.gschema.xml:712 src/org.mate.marco.gschema.xml:717
 msgid "Commands to run in response to keybindings"
 msgstr "Tuş kısayollarına karşılık olan çalıştırılacak komutlar"
 
-#: ../src/org.mate.marco.gschema.xml.h:108
+#: src/org.mate.marco.gschema.xml:663 src/org.mate.marco.gschema.xml:668
+#: src/org.mate.marco.gschema.xml:673 src/org.mate.marco.gschema.xml:678
+#: src/org.mate.marco.gschema.xml:683 src/org.mate.marco.gschema.xml:688
+#: src/org.mate.marco.gschema.xml:693 src/org.mate.marco.gschema.xml:698
+#: src/org.mate.marco.gschema.xml:703 src/org.mate.marco.gschema.xml:708
+#: src/org.mate.marco.gschema.xml:713 src/org.mate.marco.gschema.xml:718
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
@@ -1083,11 +1110,11 @@ msgstr ""
 "karşılık gelen tuş kısayollarını tanımlar. run_command_N için tuş kısayoluna"
 " basınca command_N çalışır."
 
-#: ../src/org.mate.marco.gschema.xml.h:109
+#: src/org.mate.marco.gschema.xml:722
 msgid "The screenshot command"
 msgstr "Ekran görüntüsü komutu"
 
-#: ../src/org.mate.marco.gschema.xml.h:110
+#: src/org.mate.marco.gschema.xml:723
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
@@ -1095,11 +1122,11 @@ msgstr ""
 "/apps/marco/global_keybindings/run_command_screenshot anahtarı bu ayara "
 "atanmış komutun çalıştırılması için gereken tuş kısayolunu tanımlar."
 
-#: ../src/org.mate.marco.gschema.xml.h:111
+#: src/org.mate.marco.gschema.xml:727
 msgid "The window screenshot command"
 msgstr "Pencere ekran görüntüsü komutu"
 
-#: ../src/org.mate.marco.gschema.xml.h:112
+#: src/org.mate.marco.gschema.xml:728
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
@@ -1108,43 +1135,43 @@ msgstr ""
 "/apps/marco/global_keybindings/run_command_window_screenshot anahtarı bu "
 "ayara atanmış komutun çalıştırılması için gereken tuş kısayolunu tanımlar."
 
-#: ../src/org.mate.marco.gschema.xml.h:116
+#: src/org.mate.marco.gschema.xml:750
 msgid "Toggle whether a window will always be visible over other windows"
 msgstr ""
 "Bir pencerenin her zaman diğer pencerelerin üzerinde görünmeyeceği geçişi"
 
-#: ../src/org.mate.marco.gschema.xml.h:148
+#: src/org.mate.marco.gschema.xml:910
 msgid "Tile window to north-west (upper left) corner of screen"
 msgstr "Pencereyi Kuzey Batı (üst sol) köşeye döşe"
 
-#: ../src/org.mate.marco.gschema.xml.h:149
+#: src/org.mate.marco.gschema.xml:915
 msgid "Tile window to north-east (upper right) corner of screen"
 msgstr "Pencereyi Kuzey Doğu (üst sağ) köşeye döşe"
 
-#: ../src/org.mate.marco.gschema.xml.h:150
+#: src/org.mate.marco.gschema.xml:920
 msgid "Tile window to south-east (lower right) corner of screen"
 msgstr "Pencereyi Güney Doğu (alt sağ) köşeye döşe"
 
-#: ../src/org.mate.marco.gschema.xml.h:151
+#: src/org.mate.marco.gschema.xml:925
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr "Pencereyi Güney Batı (alt sol) köşeye döşe"
 
-#: ../src/core/bell.c:294
+#: src/core/bell.c:294
 msgid "Bell event"
 msgstr "Zil olayı"
 
-#: ../src/core/core.c:211
+#: src/core/core.c:214
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Bilinmeyen pencere bilgi isteği: %d"
 
 #. Translators: %s is a window title
-#: ../src/core/delete.c:96
+#: src/core/delete.c:96
 #, c-format
 msgid "<tt>%s</tt> is not responding."
 msgstr "<tt>%s</tt> cevap vermiyor."
 
-#: ../src/core/delete.c:101
+#: src/core/delete.c:101
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
@@ -1152,30 +1179,30 @@ msgstr ""
 "Devam etmesi için kısa bir süre bekleyebilir ya da uygulamanın çıkmasını "
 "zorlayabilirsiniz."
 
-#: ../src/core/delete.c:110
+#: src/core/delete.c:110
 msgid "_Wait"
 msgstr "_Bekle"
 
-#: ../src/core/delete.c:110
+#: src/core/delete.c:110
 msgid "_Force Quit"
 msgstr "_Sonlandır"
 
-#: ../src/core/delete.c:180
+#: src/core/delete.c:180
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "Makine adı alınamadı: %s\n"
 
-#: ../src/core/display.c:270
+#: src/core/display.c:270
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "Kompozisyon için gerekli olan %s eklentisi eksik"
 
-#: ../src/core/display.c:348
+#: src/core/display.c:348
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X Pencere Sistemi '%s' ekranı açılamadı\n"
 
-#: ../src/core/keybindings.c:723
+#: src/core/keybindings.c:723
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1186,7 +1213,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: ../src/core/keybindings.c:2379
+#: src/core/keybindings.c:2396
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1197,35 +1224,32 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/core/keybindings.c:2468
+#: src/core/keybindings.c:2485
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "%d komutu tanımlanmamış.\n"
 
-#: ../src/core/keybindings.c:3527
-#, c-format
+#: src/core/keybindings.c:3595
 msgid "No terminal command has been defined.\n"
 msgstr "Hiçbir terminal komutu tanımlanmamış.\n"
 
-#: ../src/core/keybindings.c:3667
-#, c-format
+#: src/core/keybindings.c:3735
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Çalışma alanının ismini değiştir</tt>"
 
-#: ../src/core/keybindings.c:3668
-#, c-format
+#: src/core/keybindings.c:3736
 msgid "New Workspace Name:"
 msgstr "Yeni Çalışm Alanı Adı:"
 
-#: ../src/core/keybindings.c:3679
+#: src/core/keybindings.c:3747
 msgid "OK"
 msgstr "Tamam"
 
-#: ../src/core/keybindings.c:3679
+#: src/core/keybindings.c:3747
 msgid "Cancel"
 msgstr "İptal"
 
-#: ../src/core/main.c:132
+#: src/core/main.c:132
 #, c-format
 msgid ""
 "marco %s\n"
@@ -1238,53 +1262,53 @@ msgstr ""
 "Bu, özgür yazılımdır; telif koşullarını öğrenmek için kaynak koda bakın.\n"
 "Hiç bir garantisi, BELİRLİ BİR AMACA UYGUNLUĞU için dahi, YOKTUR.\n"
 
-#: ../src/core/main.c:270
+#: src/core/main.c:270
 msgid "Disable connection to session manager"
 msgstr "Ortam yöneticisiyle bağlantıyı kapat"
 
-#: ../src/core/main.c:276
+#: src/core/main.c:276
 msgid "Replace the running window manager with Marco"
 msgstr "Çalışan pencere yöneticisini Marco ile değiştir"
 
-#: ../src/core/main.c:282
+#: src/core/main.c:282
 msgid "Specify session management ID"
 msgstr "Ortam yönetici ID belirtin"
 
-#: ../src/core/main.c:287
+#: src/core/main.c:287
 msgid "X Display to use"
 msgstr "Kullanılacak X Ekranı"
 
-#: ../src/core/main.c:293
+#: src/core/main.c:293
 msgid "Initialize session from savefile"
 msgstr "Ortamı kayıtlı dosyadan başlat"
 
-#: ../src/core/main.c:299
+#: src/core/main.c:299
 msgid "Print version"
 msgstr "Sürümü yazdır"
 
-#: ../src/core/main.c:305
+#: src/core/main.c:305
 msgid "Make X calls synchronous"
 msgstr "X çağrılarını eş zamanlı yap"
 
-#: ../src/core/main.c:311
+#: src/core/main.c:311
 msgid "Turn compositing on"
 msgstr "Kompozisyonları aç"
 
-#: ../src/core/main.c:317
+#: src/core/main.c:317
 msgid "Turn compositing off"
 msgstr "Kompozisyonları kapat"
 
-#: ../src/core/main.c:323
+#: src/core/main.c:323
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "Büyütülmüş ve dekorasyonları olmayan pencereleri tam ekran yapma"
 
-#: ../src/core/main.c:522
+#: src/core/main.c:522
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Tema dizini taranırken hata oluştu: %s\n"
 
-#: ../src/core/main.c:538
+#: src/core/main.c:538
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1292,7 +1316,7 @@ msgstr ""
 "Hiç tema bulunamadı! %s varlığından ve bildiğimiz temaları içerdiğinden emin"
 " olun.\n"
 
-#: ../src/core/main.c:597
+#: src/core/main.c:597
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Yeniden başlatılamadı: %s\n"
@@ -1300,12 +1324,12 @@ msgstr "Yeniden başlatılamadı: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: ../src/core/prefs.c:616 ../src/core/prefs.c:769
+#: src/core/prefs.c:641 src/core/prefs.c:794
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: ../src/core/prefs.c:1063
+#: src/core/prefs.c:1088
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1313,12 +1337,12 @@ msgstr ""
 "Hatalı uygulamalara yönelik çözümler devre dışı. Bazı uygulamalar düzgün "
 "işlemeyebilir.\n"
 
-#: ../src/core/prefs.c:1157
+#: src/core/prefs.c:1194
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "\"%s\" yazıtipi açıklaması %s GSettings anahtarından ayrıştırılamadı\n"
 
-#: ../src/core/prefs.c:1219
+#: src/core/prefs.c:1256
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1327,7 +1351,7 @@ msgstr ""
 "Yapılandırma veritabanında bulunan \"%s\", fare düğme düzenleyicisi olarak "
 "geçerli bir değer değil\n"
 
-#: ../src/core/prefs.c:1798
+#: src/core/prefs.c:1844
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1336,17 +1360,17 @@ msgstr ""
 "Yapılandırma veritabanında bulunan \"%s\", \"%s\" tuş bağı olarak geçerli "
 "bir değer değil\n"
 
-#: ../src/core/prefs.c:2101
+#: src/core/prefs.c:2147
 #, c-format
 msgid "Workspace %d"
 msgstr "Çalışma Alanı %d"
 
-#: ../src/core/screen.c:361
+#: src/core/screen.c:362
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "'%2$s' X oturumundaki ekran %1$d geçersiz\n"
 
-#: ../src/core/screen.c:377
+#: src/core/screen.c:378
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1356,73 +1380,70 @@ msgstr ""
 "geçerli pencere yöneticisinin yerine bir başkasını koymak için --replace "
 "seçeneğini kullanmayı deneyin.\n"
 
-#: ../src/core/screen.c:404
+#: src/core/screen.c:405
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "\"%2$s\" X oturumundaki ekran %1$d hangi pencere yöneticisine sahip "
 "öğrenilemedi\n"
 
-#: ../src/core/screen.c:462
+#: src/core/screen.c:463
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "\"%2$s\" X oturumundaki ekran %1$d bir pencere yöneticisine zaten sahip\n"
 
-#: ../src/core/screen.c:676
+#: src/core/screen.c:677
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "\"%2$s\" X oturumundaki ekran %1$d serbest bırakılamadı\n"
 
-#: ../src/core/session.c:842 ../src/core/session.c:849
+#: src/core/session.c:842 src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "'%s' dizini oluşturulamadı: %s\n"
 
-#: ../src/core/session.c:859
+#: src/core/session.c:859
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "'%s' oturum dosyası yazma için açılamadı: %s\n"
 
-#: ../src/core/session.c:999
+#: src/core/session.c:999
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "'%s' oturum dosyasına yazmada hata: %s\n"
 
-#: ../src/core/session.c:1004
+#: src/core/session.c:1004
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "'%s' oturum dosyasını kapamada hata: %s\n"
 
-#: ../src/core/session.c:1134
+#: src/core/session.c:1134
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "Kaydedilmiş oturum dosyası ayrıştırırken hata: %s\n"
 
-#: ../src/core/session.c:1183
-#, c-format
+#: src/core/session.c:1183
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr ""
 "Geçerli bir oturum kimliği bulunmasına karşın <marco_session> özniteliğiyle "
 "karşılaşıldı"
 
-#: ../src/core/session.c:1196 ../src/core/session.c:1271
-#: ../src/core/session.c:1303 ../src/core/session.c:1375
-#: ../src/core/session.c:1435
+#: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
+#: src/core/session.c:1375 src/core/session.c:1435
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "Bilinmeyen öznitelik %s <%s> öğesinde"
 
-#: ../src/core/session.c:1213
-#, c-format
+#: src/core/session.c:1213
 msgid "nested <window> tag"
 msgstr "iç içe <window> imi"
 
-#: ../src/core/session.c:1455
+#: src/core/session.c:1455
 #, c-format
 msgid "Unknown element %s"
 msgstr "Bilinmeyen öğe %s"
 
-#: ../src/core/session.c:1807
+#: src/core/session.c:1807
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
@@ -1430,50 +1451,49 @@ msgstr ""
 "Bu pencereler, &quot;geçerli durumu kaydet&quot; özelliğini desteklemiyorlar"
 " ve gelecek girişte kendiniz yeniden başlatmalısınız."
 
-#: ../src/core/util.c:101
+#: src/core/util.c:101
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "Hata ayıklama günlüğü açılamadı: %s\n"
 
-#: ../src/core/util.c:111
+#: src/core/util.c:111
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "fdopen() günlük dosyası %s açılamadı: %s\n"
 
-#: ../src/core/util.c:117
+#: src/core/util.c:117
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "%s günlük dosyası açıldı\n"
 
-#: ../src/core/util.c:136 ../src/tools/marco-message.c:176
-#, c-format
+#: src/core/util.c:136 src/tools/marco-message.c:176
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "Marco, ayrıntılı kip desteği olmadan derlenmiş\n"
 
-#: ../src/core/util.c:227
+#: src/core/util.c:227
 msgid "Window manager: "
 msgstr "Pencere yöneticisi: "
 
-#: ../src/core/util.c:379
+#: src/core/util.c:379
 msgid "Bug in window manager: "
 msgstr "Pencere yöneticisinde hata: "
 
-#: ../src/core/util.c:412
+#: src/core/util.c:412
 msgid "Window manager warning: "
 msgstr "Pencere yöneticisi uyarısı: "
 
-#: ../src/core/util.c:440
+#: src/core/util.c:440
 msgid "Window manager error: "
 msgstr "Pencere yöneticisi hatası: "
 
 #. Translators: This is the title used on dialog boxes
-#: ../src/core/util.c:560 ../src/core/util.c:658 ../src/marco.desktop.in.h:1
-#: ../src/marco-wm.desktop.in.h:1
+#: src/core/util.c:560 src/core/util.c:658 src/marco.desktop.in:4
+#: src/marco-wm.desktop.in:4
 msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: ../src/core/window.c:5931
+#: src/core/window.c:6004
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1488,7 +1508,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: ../src/core/window.c:6499
+#: src/core/window.c:6582
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1498,43 +1518,43 @@ msgstr ""
 "ipucu verirken anlamsız bir biçimde en küçük (%d x %d) ve en büyük (%d x %d)"
 " boyut sınırlarını da atıyor.\n"
 
-#: ../src/core/window-props.c:306
+#: src/core/window-props.c:306
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "Uygulama geçersiz _NET_WM_PID %lu atadı\n"
 
 #. Translators: the title of a window from another machine
-#: ../src/core/window-props.c:457
+#: src/core/window-props.c:457
 #, c-format
 msgid "%s (on %s)"
 msgstr "%s (%s üzerinde)"
 
 #. Simple case-- don't bother to look it up.  It's root.
-#: ../src/core/window-props.c:489
+#: src/core/window-props.c:489
 #, c-format
 msgid "%s (as superuser)"
 msgstr "%s (superuser olarak)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
-#: ../src/core/window-props.c:507
+#: src/core/window-props.c:507
 #, c-format
 msgid "%s (as %s)"
 msgstr "%s (%s olarak)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
-#: ../src/core/window-props.c:513
+#: src/core/window-props.c:513
 #, c-format
 msgid "%s (as another user)"
 msgstr "%s (diğer kullanıcı olarak)"
 
-#: ../src/core/window-props.c:1499
+#: src/core/window-props.c:1499
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "Geçersiz WM_TRANSIENT_FOR pencere 0x%lx belirtilen %s.\n"
 
-#: ../src/core/xprops.c:155
+#: src/core/xprops.c:155
 #, c-format
 msgid ""
 "Window 0x%lx has property %s\n"
@@ -1549,12 +1569,12 @@ msgstr ""
 "Bu büyük olasılıkla uygulamanın bir hatası, pencere yöneticisinin değil.\n"
 "Pencerenin başlığı=\"%s\", sınıfı=\"%s\", adı=\"%s\"\n"
 
-#: ../src/core/xprops.c:411
+#: src/core/xprops.c:411
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgstr "0x%2$lx penceresinin %1$s özelliği geçersiz UTF-8 içeriyor\n"
 
-#: ../src/core/xprops.c:494
+#: src/core/xprops.c:494
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
@@ -1563,157 +1583,156 @@ msgstr ""
 "0x%2$lx penceresinin %1$s özelliği listedeki öğe %3$d için geçersiz UTF-8 "
 "içeriyor\n"
 
-#: ../src/tools/marco-message.c:150
+#: src/tools/marco-message.c:150
 #, c-format
 msgid "Usage: %s\n"
 msgstr "Kullanım: %s\n"
 
-#: ../src/ui/frames.c:1079
+#: src/ui/frames.c:1338
 msgid "Close Window"
 msgstr "Pencereyi Kapat"
 
-#: ../src/ui/frames.c:1082
+#: src/ui/frames.c:1341
 msgid "Window Menu"
 msgstr "Pencere Menüsü"
 
-#: ../src/ui/frames.c:1085
+#: src/ui/frames.c:1344
 msgid "Window App Menu"
-msgstr ""
+msgstr "Pencere Uygulama Menüsü"
 
-#: ../src/ui/frames.c:1088
+#: src/ui/frames.c:1347
 msgid "Minimize Window"
 msgstr "Pencereyi Küçült"
 
-#: ../src/ui/frames.c:1091
+#: src/ui/frames.c:1350
 msgid "Maximize Window"
 msgstr "Pencereyi Büyült"
 
-#: ../src/ui/frames.c:1094
+#: src/ui/frames.c:1353
 msgid "Restore Window"
 msgstr "Pencereyi Eski Boyutuna Getir"
 
-#: ../src/ui/frames.c:1097
+#: src/ui/frames.c:1356
 msgid "Roll Up Window"
 msgstr "Pencereyi Yukarı Sar"
 
-#: ../src/ui/frames.c:1100
+#: src/ui/frames.c:1359
 msgid "Unroll Window"
 msgstr "Pencereyi Geri Sar"
 
-#: ../src/ui/frames.c:1103
+#: src/ui/frames.c:1362
 msgid "Keep Window On Top"
 msgstr "Pencereyi Üstte Tut"
 
-#: ../src/ui/frames.c:1106
+#: src/ui/frames.c:1365
 msgid "Remove Window From Top"
 msgstr "Pencereyi Üstten Kaldır"
 
-#: ../src/ui/frames.c:1109
+#: src/ui/frames.c:1368
 msgid "Always On Visible Workspace"
 msgstr "Her Zaman Görünen Çalışma Alanında"
 
-#: ../src/ui/frames.c:1112
+#: src/ui/frames.c:1371
 msgid "Put Window On Only One Workspace"
 msgstr "Pencereyi Sadece Bir Çalışma Alanına Yerleştir"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:65
+#: src/ui/menu.c:65
 msgid "Mi_nimize"
 msgstr "_Küçült"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:67
+#: src/ui/menu.c:67
 msgid "Ma_ximize"
 msgstr "Bü_yült"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:69
+#: src/ui/menu.c:69
 msgid "Unma_ximize"
 msgstr "_Büyültmeyi geri al"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:71
+#: src/ui/menu.c:71
 msgid "Roll _Up"
 msgstr "Yukarı _Sar"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:73
+#: src/ui/menu.c:73
 msgid "_Unroll"
 msgstr "_Sarmayı Geri Al"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:75
+#: src/ui/menu.c:75
 msgid "_Move"
 msgstr "_Taşı"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:77
+#: src/ui/menu.c:77
 msgid "_Resize"
 msgstr "Yeniden _boyutlandır"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:79
+#: src/ui/menu.c:79
 msgid "Move Titlebar On_screen"
 msgstr "Başlık Çubuğunu _Ekranda Taşı"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:82 ../src/ui/menu.c:84
+#: src/ui/menu.c:82 src/ui/menu.c:84
 msgid "Always on _Top"
 msgstr "Her Zaman Ü_stte"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:86
+#: src/ui/menu.c:86
 msgid "_Always on Visible Workspace"
 msgstr "Her Zaman _Görünen Çalışma Alanında"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:88
+#: src/ui/menu.c:88
 msgid "_Only on This Workspace"
 msgstr "Sadece _Bu Çalışma Alanında"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:90
+#: src/ui/menu.c:90
 msgid "Move to Workspace _Left"
 msgstr "_Soldaki Çalışma Alanına Taşı"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:92
+#: src/ui/menu.c:92
 msgid "Move to Workspace R_ight"
 msgstr "S_ağdaki Çalışma Alanına Taşı"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:94
+#: src/ui/menu.c:94
 msgid "Move to Workspace _Up"
 msgstr "_Yukarıdaki Çalışma Alanına Taşı"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:96
+#: src/ui/menu.c:96
 msgid "Move to Workspace _Down"
 msgstr "_Aşağıdaki Çalışma Alanına Taşı"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: ../src/ui/menu.c:100
+#: src/ui/menu.c:100
 msgid "_Close"
 msgstr "_Kapat"
 
-#: ../src/ui/menu.c:197
+#: src/ui/menu.c:197
 #, c-format
 msgid "Workspace %d%n"
 msgstr "Çalışma Alanı %d%n"
 
-#: ../src/ui/menu.c:207
-#, c-format
+#: src/ui/menu.c:207
 msgid "Workspace 1_0"
 msgstr "Çalışma Alanı 1_0"
 
-#: ../src/ui/menu.c:209
+#: src/ui/menu.c:209
 #, c-format
 msgid "Workspace %s%d"
 msgstr "Çalışma Alanı %s%d"
 
-#: ../src/ui/menu.c:388
+#: src/ui/menu.c:388
 msgid "Move to Another _Workspace"
 msgstr "_Başka bir Çalışma Alanına Taşı"
 
@@ -1721,7 +1740,7 @@ msgstr "_Başka bir Çalışma Alanına Taşı"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:80
+#: src/ui/metaaccellabel.c:80
 msgid "Shift"
 msgstr "Shift"
 
@@ -1729,7 +1748,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:86
+#: src/ui/metaaccellabel.c:86
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -1737,7 +1756,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:92
+#: src/ui/metaaccellabel.c:92
 msgid "Alt"
 msgstr "Alt"
 
@@ -1745,7 +1764,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:98
+#: src/ui/metaaccellabel.c:98
 msgid "Meta"
 msgstr "Meta"
 
@@ -1753,7 +1772,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:104
+#: src/ui/metaaccellabel.c:104
 msgid "Super"
 msgstr "Süper"
 
@@ -1761,7 +1780,7 @@ msgstr "Süper"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:110
+#: src/ui/metaaccellabel.c:110
 msgid "Hyper"
 msgstr "Hyper"
 
@@ -1769,7 +1788,7 @@ msgstr "Hyper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:116
+#: src/ui/metaaccellabel.c:116
 msgid "Mod2"
 msgstr "Mod2"
 
@@ -1777,7 +1796,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:122
+#: src/ui/metaaccellabel.c:122
 msgid "Mod3"
 msgstr "Mod3"
 
@@ -1785,7 +1804,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:128
+#: src/ui/metaaccellabel.c:128
 msgid "Mod4"
 msgstr "Mod4"
 
@@ -1793,80 +1812,78 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: ../src/ui/metaaccellabel.c:134
+#: src/ui/metaaccellabel.c:134
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: ../src/ui/resizepopup.c:117
+#: src/ui/resizepopup.c:117
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/ui/theme.c:257
+#: src/ui/theme.c:366
 msgid "top"
 msgstr "üst"
 
-#: ../src/ui/theme.c:259
+#: src/ui/theme.c:368
 msgid "bottom"
 msgstr "alt"
 
-#: ../src/ui/theme.c:261
+#: src/ui/theme.c:370
 msgid "left"
 msgstr "sol"
 
-#: ../src/ui/theme.c:263
+#: src/ui/theme.c:372
 msgid "right"
 msgstr "sağ"
 
-#: ../src/ui/theme.c:290
+#: src/ui/theme.c:399
 #, c-format
 msgid "frame geometry does not specify \"%s\" dimension"
 msgstr "çerçeve geometrisi \"%s\" boyutunu tanımlamıyor"
 
-#: ../src/ui/theme.c:309
+#: src/ui/theme.c:418
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr "çerçeve geometrisi \"%s\" boyutunu \"%s\" pencere kenarı için tanımlamıyor"
 
-#: ../src/ui/theme.c:346
+#: src/ui/theme.c:455
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
 msgstr "%g kabul edilebilir bir düğme en-boy oranı değil"
 
-#: ../src/ui/theme.c:358
-#, c-format
+#: src/ui/theme.c:467
 msgid "Frame geometry does not specify size of buttons"
 msgstr "Çerçeve geometrisi düğmelerin boyutunu tanımlamıyor"
 
-#: ../src/ui/theme.c:1063
-#, c-format
+#: src/ui/theme.c:1227
 msgid "Gradients should have at least two colors"
 msgstr "Renk geçişlerinde en az iki renk olmalı"
 
-#: ../src/ui/theme.c:1201
+#: src/ui/theme.c:1397
 #, c-format
 msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
 
-#: ../src/ui/theme.c:1217
+#: src/ui/theme.c:1413
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
 
-#: ../src/ui/theme.c:1231
+#: src/ui/theme.c:1427
 #, c-format
 msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
 
-#: ../src/ui/theme.c:1275
+#: src/ui/theme.c:1471
 #, c-format
 msgid ""
 "GTK color specification must have the state in brackets, e.g. gtk:fg[NORMAL]"
@@ -1876,7 +1893,7 @@ msgstr ""
 "örneğin, gtk:fg[NORMAL] belirtiminde NORMAL, durumu gösterir; \"%s\" "
 "ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1289
+#: src/ui/theme.c:1485
 #, c-format
 msgid ""
 "GTK color specification must have a close bracket after the state, e.g. "
@@ -1886,17 +1903,17 @@ msgstr ""
 "örneğin, gtk:fg[NORMAL] belirtiminde NORMAL, durumu gösterir; \"%s\" "
 "ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1300
+#: src/ui/theme.c:1496
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
 msgstr "Renk belirtimindeki \"%s\" durumu anlaşılamadı"
 
-#: ../src/ui/theme.c:1313
+#: src/ui/theme.c:1509
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr "Renk belirtimindeki \"%s\" renk bileşeni anlaşılamadı"
 
-#: ../src/ui/theme.c:1341
+#: src/ui/theme.c:1537
 #, c-format
 msgid ""
 "Blend format is \"blend/bg_color/fg_color/alpha\", \"%s\" does not fit the "
@@ -1905,44 +1922,44 @@ msgstr ""
 "Renk karışımının doğru biçimi \"blend/bg_color/fg_color/alpha\"dır; \"%s\" "
 "bu biçime uymuyor"
 
-#: ../src/ui/theme.c:1352
+#: src/ui/theme.c:1548
 #, c-format
 msgid "Could not parse alpha value \"%s\" in blended color"
 msgstr "Renk karışımındaki \"%s\" alfa değeri ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1362
+#: src/ui/theme.c:1558
 #, c-format
 msgid "Alpha value \"%s\" in blended color is not between 0.0 and 1.0"
 msgstr "Renk karışımının alfa değeri \"%s\", 0.0 ile 1.0 arasında değil"
 
-#: ../src/ui/theme.c:1408
+#: src/ui/theme.c:1604
 #, c-format
 msgid "Shade format is \"shade/base_color/factor\", \"%s\" does not fit the format"
 msgstr ""
 "Gölgelendirmenin doğru biçimi \"shade/bas_color/factor\"dır; \"%s\" bu "
 "biçime uymuyor"
 
-#: ../src/ui/theme.c:1419
+#: src/ui/theme.c:1615
 #, c-format
 msgid "Could not parse shade factor \"%s\" in shaded color"
 msgstr "Gölgeli rengin gölge katsayısı olan \"%s\" ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1429
+#: src/ui/theme.c:1625
 #, c-format
 msgid "Shade factor \"%s\" in shaded color is negative"
 msgstr "Gölgeli rengin gölge katsayısı olan \"%s\", negatif"
 
-#: ../src/ui/theme.c:1458
+#: src/ui/theme.c:1654
 #, c-format
 msgid "Could not parse color \"%s\""
 msgstr "\"%s\" rengi ayrıştırılamadı"
 
-#: ../src/ui/theme.c:1807
+#: src/ui/theme.c:2003
 #, c-format
 msgid "Coordinate expression contains character '%s' which is not allowed"
 msgstr "Koordinat ifadesi izin verilmeyen '%s' karakterini içeriyor"
 
-#: ../src/ui/theme.c:1834
+#: src/ui/theme.c:2030
 #, c-format
 msgid ""
 "Coordinate expression contains floating point number '%s' which could not be"
@@ -1950,52 +1967,47 @@ msgid ""
 msgstr ""
 "Koordinat ifadesi '%s' gerçel sayısını içeriyor ve bu sayı ayrıştırılamıyor"
 
-#: ../src/ui/theme.c:1848
+#: src/ui/theme.c:2044
 #, c-format
 msgid "Coordinate expression contains integer '%s' which could not be parsed"
 msgstr "Koordinat ifadesi ayrıştırılamayan '%s' tamsayısını içeriyor"
 
-#: ../src/ui/theme.c:1970
+#: src/ui/theme.c:2166
 #, c-format
 msgid ""
 "Coordinate expression contained unknown operator at the start of this text: "
 "\"%s\""
 msgstr "Koordinat ifadesi bu metnin başında bilinmeyen bir işleç içeriyor: \"%s\""
 
-#: ../src/ui/theme.c:2027
-#, c-format
+#: src/ui/theme.c:2223
 msgid "Coordinate expression was empty or not understood"
 msgstr "Koordinat ifadesi boş ya da anlaşılamadı"
 
-#: ../src/ui/theme.c:2138 ../src/ui/theme.c:2148 ../src/ui/theme.c:2182
-#, c-format
+#: src/ui/theme.c:2334 src/ui/theme.c:2344 src/ui/theme.c:2378
 msgid "Coordinate expression results in division by zero"
 msgstr "Koordinat ifadesi sıfıra bölümle sonuçlanıyor"
 
-#: ../src/ui/theme.c:2190
-#, c-format
+#: src/ui/theme.c:2386
 msgid ""
 "Coordinate expression tries to use mod operator on a floating-point number"
 msgstr ""
 "Koordinat ifadesi bir gerçel sayı üzerinde mod (kalan bulma) işlecini "
 "kullanmaya çalıştı"
 
-#: ../src/ui/theme.c:2246
+#: src/ui/theme.c:2442
 #, c-format
 msgid "Coordinate expression has an operator \"%s\" where an operand was expected"
 msgstr "Koordinat ifadesi işleneni beklenen \"%s\", işlecini içeriyor"
 
-#: ../src/ui/theme.c:2255
-#, c-format
+#: src/ui/theme.c:2451
 msgid "Coordinate expression had an operand where an operator was expected"
 msgstr "Koordinat ifadesi işleci beklenen bir işlenen içeriyor"
 
-#: ../src/ui/theme.c:2263
-#, c-format
+#: src/ui/theme.c:2459
 msgid "Coordinate expression ended with an operator instead of an operand"
 msgstr "Koordinat ifadesi bir işlenen yerine işleçle bitiyor"
 
-#: ../src/ui/theme.c:2273
+#: src/ui/theme.c:2469
 #, c-format
 msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
@@ -2004,39 +2016,35 @@ msgstr ""
 "Koordinat ifadesi birbirlerinin izleyen ve aralarında işlenen olmayan "
 "\"%2$c\" ve \"%1$c\" işleçlerini içeriyor"
 
-#: ../src/ui/theme.c:2424 ../src/ui/theme.c:2469
+#: src/ui/theme.c:2620 src/ui/theme.c:2665
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr ""
 "Koordinat ifadesi bilinmeyen bir değişken ya da sabit olan \"%s\" içeriyor"
 
-#: ../src/ui/theme.c:2523
-#, c-format
+#: src/ui/theme.c:2719
 msgid "Coordinate expression parser overflowed its buffer."
 msgstr "Koordinat belirtim ayrıştırıcısı tamponundan taştı."
 
-#: ../src/ui/theme.c:2552
-#, c-format
+#: src/ui/theme.c:2748
 msgid "Coordinate expression had a close parenthesis with no open parenthesis"
 msgstr "Koordinat ifadesi sol parantezi olmayan bir sağ parantez içeriyor"
 
-#: ../src/ui/theme.c:2616
-#, c-format
+#: src/ui/theme.c:2812
 msgid ""
 "Coordinate expression had an open parenthesis with no close parenthesis"
 msgstr "Koordinat ifadesi sağ parantezi olmayan bir sol parantez içeriyor"
 
-#: ../src/ui/theme.c:2627
-#, c-format
+#: src/ui/theme.c:2823
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Koordinat ifadesi göründüğü kadarıyla ne işleç ne de işlenen içeriyor"
 
-#: ../src/ui/theme.c:2831 ../src/ui/theme.c:2851 ../src/ui/theme.c:2871
+#: src/ui/theme.c:3027 src/ui/theme.c:3047 src/ui/theme.c:3067
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Tema bir hata ile sonuçlanan ifadeye sahip: %s\n"
 
-#: ../src/ui/theme.c:4554
+#: src/ui/theme.c:4857
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2045,23 +2053,23 @@ msgstr ""
 "Bu çerçeve biçeminde <button function=\"%s\" state=\"%s\" draw_ops=\"her "
 "neyse\"/> belirtilmek zorunda"
 
-#: ../src/ui/theme.c:5087 ../src/ui/theme.c:5112
+#: src/ui/theme.c:5393 src/ui/theme.c:5418
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Eksik <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"her neyse\"/>"
 
-#: ../src/ui/theme.c:5156
+#: src/ui/theme.c:5462
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" teması yüklenemedi: %s\n"
 
-#: ../src/ui/theme.c:5288 ../src/ui/theme.c:5295 ../src/ui/theme.c:5302
-#: ../src/ui/theme.c:5309 ../src/ui/theme.c:5316
+#: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
+#: src/ui/theme.c:5615 src/ui/theme.c:5622
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "\"%2$s\" temasında hiç <%1$s> atanmamış"
 
-#: ../src/ui/theme.c:5324
+#: src/ui/theme.c:5630
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2070,82 +2078,82 @@ msgstr ""
 "\"%2$s\" temasında \"%1$s\" pencere türüne çerçeve biçemi atanmamış, bir "
 "<window type=\"%3$s\" style_set=\"her neyse\"/> öğesi ekleyin"
 
-#: ../src/ui/theme.c:5772 ../src/ui/theme.c:5834 ../src/ui/theme.c:5897
+#: src/ui/theme.c:6045 src/ui/theme.c:6107 src/ui/theme.c:6170
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "Kullanıcı tanımlı sabitler büyük harfle başlamalıdır; \"%s\" buna uymuyor"
 
-#: ../src/ui/theme.c:5780 ../src/ui/theme.c:5842 ../src/ui/theme.c:5905
+#: src/ui/theme.c:6053 src/ui/theme.c:6115 src/ui/theme.c:6178
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "\"%s\" sabit değeri zaten tanımlanmış"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: ../src/ui/theme-parser.c:252
+#: src/ui/theme-parser.c:252
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "<%2$s> öğesinde \"%1$s\" özniteliği yok"
 
-#: ../src/ui/theme-parser.c:281 ../src/ui/theme-parser.c:299
+#: src/ui/theme-parser.c:281 src/ui/theme-parser.c:299
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "Satır %d karakter %d: %s"
 
-#: ../src/ui/theme-parser.c:499
+#: src/ui/theme-parser.c:499
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "\"%s\" özniteliği aynı <%s> öğesinde iki kez kullanılmış"
 
-#: ../src/ui/theme-parser.c:523 ../src/ui/theme-parser.c:572
+#: src/ui/theme-parser.c:523 src/ui/theme-parser.c:572
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "\"%s\" özniteliği bu <%s> öğesi içinde geçerli değil"
 
-#: ../src/ui/theme-parser.c:614
+#: src/ui/theme-parser.c:614
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\" bir tamsayı olarak ayrıştırılamadı"
 
-#: ../src/ui/theme-parser.c:623 ../src/ui/theme-parser.c:678
+#: src/ui/theme-parser.c:623 src/ui/theme-parser.c:678
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "\"%2$s\" dizgisinin sonundaki \"%1$s\" karakterleri anlaşılmadı"
 
-#: ../src/ui/theme-parser.c:633
+#: src/ui/theme-parser.c:633
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "%ld tamsayısı pozitif olmalı"
 
-#: ../src/ui/theme-parser.c:641
+#: src/ui/theme-parser.c:641
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "%ld tamsayısı çok büyük, şu anda üst sınır %d"
 
-#: ../src/ui/theme-parser.c:669 ../src/ui/theme-parser.c:785
+#: src/ui/theme-parser.c:669 src/ui/theme-parser.c:785
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "\"%s\" bir gerçel sayı olarak ayrıştırılamadı"
 
-#: ../src/ui/theme-parser.c:700 ../src/ui/theme-parser.c:728
+#: src/ui/theme-parser.c:700 src/ui/theme-parser.c:728
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr ""
 "Mantıksal değerler ancak \"true\" (doğru) ya da \"false\" (yanlış) "
 "değerlerini alabilir; \"%s\" olamaz"
 
-#: ../src/ui/theme-parser.c:755
+#: src/ui/theme-parser.c:755
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Açı 0.0 ile 360.0 arasında olmalı, %g verilmiş\n"
 
-#: ../src/ui/theme-parser.c:818
+#: src/ui/theme-parser.c:818
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "Alfa 0.0 (görünmez) ile 1.0 (düz renk) arasında olmalıydı ama %g verilmiş\n"
 
-#: ../src/ui/theme-parser.c:883
+#: src/ui/theme-parser.c:883
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2154,59 +2162,59 @@ msgstr ""
 "Geçersiz öğe ölçüsü \"%s\" (şunlardan biri olmalıdır: xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
 
-#: ../src/ui/theme-parser.c:1039 ../src/ui/theme-parser.c:1102
-#: ../src/ui/theme-parser.c:1136 ../src/ui/theme-parser.c:1239
+#: src/ui/theme-parser.c:1039 src/ui/theme-parser.c:1102
+#: src/ui/theme-parser.c:1136 src/ui/theme-parser.c:1239
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> adı \"%s\" ikinci kez kullanılmış"
 
-#: ../src/ui/theme-parser.c:1051 ../src/ui/theme-parser.c:1148
-#: ../src/ui/theme-parser.c:1251
+#: src/ui/theme-parser.c:1051 src/ui/theme-parser.c:1148
+#: src/ui/theme-parser.c:1251
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> üst değeri \"%s\" tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:1161
+#: src/ui/theme-parser.c:1161
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> geometrisi \"%s\" tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:1174
+#: src/ui/theme-parser.c:1174
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s>, ya bir geometri ya da geometrisi olan bir üst öğe belirtmeli"
 
-#: ../src/ui/theme-parser.c:1216
+#: src/ui/theme-parser.c:1216
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "Arkaplanı anlamlı olabilmesi için bir alfa değeri ile belirtmelisiniz"
 
-#: ../src/ui/theme-parser.c:1284
+#: src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "<%2$s> öğesinde bilinmeyen type \"%1$s\""
 
-#: ../src/ui/theme-parser.c:1295
+#: src/ui/theme-parser.c:1295
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "<%2$s> öğesinde bilinmeyen style_set \"%1$s\""
 
-#: ../src/ui/theme-parser.c:1303
+#: src/ui/theme-parser.c:1303
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "\"%s\" pencere türünün önceden atanmış bir biçem kümesi var"
 
-#: ../src/ui/theme-parser.c:1333 ../src/ui/theme-parser.c:1397
-#: ../src/ui/theme-parser.c:1623 ../src/ui/theme-parser.c:2858
-#: ../src/ui/theme-parser.c:2904 ../src/ui/theme-parser.c:3062
-#: ../src/ui/theme-parser.c:3298 ../src/ui/theme-parser.c:3336
-#: ../src/ui/theme-parser.c:3374 ../src/ui/theme-parser.c:3391
-#: ../src/ui/theme-parser.c:3407 ../src/ui/theme-parser.c:3444
+#: src/ui/theme-parser.c:1333 src/ui/theme-parser.c:1397
+#: src/ui/theme-parser.c:1623 src/ui/theme-parser.c:2858
+#: src/ui/theme-parser.c:2904 src/ui/theme-parser.c:3062
+#: src/ui/theme-parser.c:3298 src/ui/theme-parser.c:3336
+#: src/ui/theme-parser.c:3374 src/ui/theme-parser.c:3391
+#: src/ui/theme-parser.c:3407 src/ui/theme-parser.c:3444
 #, c-format
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "<%2$s> altında <%1$s> öğesi kullanılamaz"
 
-#: ../src/ui/theme-parser.c:1447 ../src/ui/theme-parser.c:1461
-#: ../src/ui/theme-parser.c:1506
+#: src/ui/theme-parser.c:1447 src/ui/theme-parser.c:1461
+#: src/ui/theme-parser.c:1506
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2214,123 +2222,123 @@ msgstr ""
 "Düğmelere hem \"button_width\"/\"button_height\" (en-boy) değerleri hem de "
 "\"aspect_ratio\" değeri verilemez"
 
-#: ../src/ui/theme-parser.c:1470
+#: src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "\"%s\" uzaklığı bilinmiyor"
 
-#: ../src/ui/theme-parser.c:1515
+#: src/ui/theme-parser.c:1515
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "\"%s\" en-boy oranı bilinmiyor"
 
-#: ../src/ui/theme-parser.c:1577
+#: src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "\"%s\" pencere kenarı bilinmiyor"
 
-#: ../src/ui/theme-parser.c:1888
+#: src/ui/theme-parser.c:1888
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "<%s> öğesinde \"start_angle\" (başlama açısı) ya da \"from\" özniteliği yok"
 
-#: ../src/ui/theme-parser.c:1895
+#: src/ui/theme-parser.c:1895
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "<%s> öğesinde \"extent_angle\" (genişletme açısı) ya da \"to\" özniteliği yok"
 
-#: ../src/ui/theme-parser.c:2135
+#: src/ui/theme-parser.c:2135
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Renk geçişi türü olarak verilen \"%s\" değeri anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2213 ../src/ui/theme-parser.c:2588
+#: src/ui/theme-parser.c:2213 src/ui/theme-parser.c:2588
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "<%2$s> öğesinin doldurma türü \"%1$s\" anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2380 ../src/ui/theme-parser.c:2463
-#: ../src/ui/theme-parser.c:2526
+#: src/ui/theme-parser.c:2380 src/ui/theme-parser.c:2463
+#: src/ui/theme-parser.c:2526
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "<%2$s> öğesi için \"%1$s\" durumu anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2390 ../src/ui/theme-parser.c:2473
+#: src/ui/theme-parser.c:2390 src/ui/theme-parser.c:2473
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "<%2$s> öğesi için \"%1$s\" gölgesi anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2400
+#: src/ui/theme-parser.c:2400
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "<%2$s> öğesi için \"%1$s\" oku anlaşılamadı"
 
-#: ../src/ui/theme-parser.c:2714 ../src/ui/theme-parser.c:2810
+#: src/ui/theme-parser.c:2714 src/ui/theme-parser.c:2810
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "\"%s\" adında hiç <draw_ops> tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:2726 ../src/ui/theme-parser.c:2822
+#: src/ui/theme-parser.c:2726 src/ui/theme-parser.c:2822
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Burada \"%s\" draw_ops'unu içermek çevrimsel gönderime yol açar"
 
-#: ../src/ui/theme-parser.c:2937
+#: src/ui/theme-parser.c:2937
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Çerçeve parçası için bilinmeyen konum \"%s\""
 
-#: ../src/ui/theme-parser.c:2945
+#: src/ui/theme-parser.c:2945
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Çerçeve biçeminin %s konumunda zaten bir parça var"
 
-#: ../src/ui/theme-parser.c:2962 ../src/ui/theme-parser.c:3039
+#: src/ui/theme-parser.c:2962 src/ui/theme-parser.c:3039
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "\"%s\" adında hiç <draw_ops> tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:2992
+#: src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Düğme için geçersiz işlev \"%s\""
 
-#: ../src/ui/theme-parser.c:3002
+#: src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "Düğme işlevi \"%s\" bu sürümde mevcut değil (%d, gereken %d)"
 
-#: ../src/ui/theme-parser.c:3014
+#: src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Düğme için geçersiz durum \"%s\""
 
-#: ../src/ui/theme-parser.c:3022
+#: src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Çerçeve biçeminde %s işlevi, %s durumu için zaten bir düğme var"
 
-#: ../src/ui/theme-parser.c:3101
+#: src/ui/theme-parser.c:3101
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\", odak özniteliği için geçerli bir değer değil"
 
-#: ../src/ui/theme-parser.c:3110
+#: src/ui/theme-parser.c:3110
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\", durum özniteliği için geçerli bir değer değil"
 
-#: ../src/ui/theme-parser.c:3120
+#: src/ui/theme-parser.c:3120
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "\"%s\" adlı bir biçem tanımlanmamış"
 
-#: ../src/ui/theme-parser.c:3141 ../src/ui/theme-parser.c:3164
+#: src/ui/theme-parser.c:3141 src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
 msgstr "\"%s\", yeniden boyutlandırma özniteliği için geçerli bir değer değil"
 
-#: ../src/ui/theme-parser.c:3175
+#: src/ui/theme-parser.c:3175
 #, c-format
 msgid ""
 "Should not have \"resize\" attribute on <%s> element for maximized/shaded "
@@ -2339,25 +2347,25 @@ msgstr ""
 "<%s> öğesinin büyütülmüş/toplanmış durumlarında \"resize\" özniteliği "
 "bulunmamalı"
 
-#: ../src/ui/theme-parser.c:3189
+#: src/ui/theme-parser.c:3189
 #, c-format
 msgid "Should not have \"resize\" attribute on <%s> element for maximized states"
 msgstr "<%s> öğesinin büyütülmüş durumlarında \"resize\" özniteliği bulunmamalı"
 
-#: ../src/ui/theme-parser.c:3203 ../src/ui/theme-parser.c:3247
+#: src/ui/theme-parser.c:3203 src/ui/theme-parser.c:3247
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr ""
 "%s durumu, %s yeniden boyutlandırma, %s odak için biçem zaten belirtilmiş"
 
-#: ../src/ui/theme-parser.c:3214 ../src/ui/theme-parser.c:3225
-#: ../src/ui/theme-parser.c:3236 ../src/ui/theme-parser.c:3258
-#: ../src/ui/theme-parser.c:3269 ../src/ui/theme-parser.c:3280
+#: src/ui/theme-parser.c:3214 src/ui/theme-parser.c:3225
+#: src/ui/theme-parser.c:3236 src/ui/theme-parser.c:3258
+#: src/ui/theme-parser.c:3269 src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
 msgstr "%s durumu, odak %s için biçem zaten belirtilmiş"
 
-#: ../src/ui/theme-parser.c:3319
+#: src/ui/theme-parser.c:3319
 msgid ""
 "Can't have a two draw_ops for a <piece> element (theme specified a draw_ops "
 "attribute and also a <draw_ops> element, or specified two elements)"
@@ -2365,7 +2373,7 @@ msgstr ""
 "Bir <piece> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops "
 "özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
 
-#: ../src/ui/theme-parser.c:3357
+#: src/ui/theme-parser.c:3357
 msgid ""
 "Can't have a two draw_ops for a <button> element (theme specified a draw_ops"
 " attribute and also a <draw_ops> element, or specified two elements)"
@@ -2373,7 +2381,7 @@ msgstr ""
 "Bir <button> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops "
 "özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
 
-#: ../src/ui/theme-parser.c:3427
+#: src/ui/theme-parser.c:3427
 msgid ""
 "Can't have a two draw_ops for a <menu_icon> element (theme specified a "
 "draw_ops attribute and also a <draw_ops> element, or specified two elements)"
@@ -2381,181 +2389,180 @@ msgstr ""
 "Bir <menu_icon> öğesi içinde iki draw_ops olamaz (tema, ya bir draw_ops "
 "özniteliğiyle bir <draw_ops> öğesi, ya da iki öğe belirtmiş)"
 
-#: ../src/ui/theme-parser.c:3491
+#: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Kötü sürüm özellikleri '%s'"
 
-#: ../src/ui/theme-parser.c:3562
+#: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3585
+#: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
 
-#: ../src/ui/theme-parser.c:3617
+#: src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr "En dıştaki tema unsuru <%s> değil <metacity_theme> olmalıdır"
 
-#: ../src/ui/theme-parser.c:3637
+#: src/ui/theme-parser.c:3637
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a name/author/date/description element"
 msgstr ""
 "name/author/date/description öğelerinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3642
+#: src/ui/theme-parser.c:3642
 #, c-format
 msgid "Element <%s> is not allowed inside a <constant> element"
 msgstr "<constant> öğesinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3654
+#: src/ui/theme-parser.c:3654
 #, c-format
 msgid ""
 "Element <%s> is not allowed inside a distance/border/aspect_ratio element"
 msgstr ""
 "distance/border/aspect_ratio öğelerinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3676
+#: src/ui/theme-parser.c:3676
 #, c-format
 msgid "Element <%s> is not allowed inside a draw operation element"
 msgstr "draw operation öğesinin içinde <%s> öğesi bulunmamalıdır"
 
-#: ../src/ui/theme-parser.c:3686 ../src/ui/theme-parser.c:3726
-#: ../src/ui/theme-parser.c:3731 ../src/ui/theme-parser.c:3736
+#: src/ui/theme-parser.c:3686 src/ui/theme-parser.c:3726
+#: src/ui/theme-parser.c:3731 src/ui/theme-parser.c:3736
 #, c-format
 msgid "Element <%s> is not allowed inside a <%s> element"
 msgstr "<%s> öğesi <%s> öğesi içinde kullanılamaz"
 
-#: ../src/ui/theme-parser.c:3964
+#: src/ui/theme-parser.c:3964
 msgid "No draw_ops provided for frame piece"
 msgstr "Çerçeve parçası için hiç draw_ops sağlanmamış"
 
-#: ../src/ui/theme-parser.c:3979
+#: src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
 msgstr "Düğme için hiç draw_ops sağlanmamış"
 
-#: ../src/ui/theme-parser.c:4041
+#: src/ui/theme-parser.c:4041
 #, c-format
 msgid "No text is allowed inside element <%s>"
 msgstr "<%s> öğesi içinde hiçbir metin kullanılamaz"
 
-#: ../src/ui/theme-parser.c:4099 ../src/ui/theme-parser.c:4111
-#: ../src/ui/theme-parser.c:4123 ../src/ui/theme-parser.c:4135
-#: ../src/ui/theme-parser.c:4147
+#: src/ui/theme-parser.c:4099 src/ui/theme-parser.c:4111
+#: src/ui/theme-parser.c:4123 src/ui/theme-parser.c:4135
+#: src/ui/theme-parser.c:4147
 #, c-format
 msgid "<%s> specified twice for this theme"
 msgstr "Bu temada <%s> iki kez belirtilmiş"
 
-#: ../src/ui/theme-parser.c:4426
+#: src/ui/theme-parser.c:4426
 #, c-format
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Tema %s için geçerli bir dosya bulunamadı\n"
 
-#: ../src/ui/theme-viewer.c:256
+#: src/ui/theme-viewer.c:256
 msgid "_OK"
 msgstr "_Tamam"
 
-#: ../src/ui/theme-viewer.c:268
+#: src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
 msgstr "Bu örnek iletişim penceresi için örnek bir iletidir"
 
-#: ../src/ui/theme-viewer.c:352
+#: src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Sahte menü öğesi %d\n"
 
-#: ../src/ui/theme-viewer.c:408
+#: src/ui/theme-viewer.c:408
 msgid "Border-only window"
 msgstr "Sadece kenarı olan pencere"
 
-#: ../src/ui/theme-viewer.c:410
+#: src/ui/theme-viewer.c:410
 msgid "Bar"
 msgstr "Çubuk"
 
-#: ../src/ui/theme-viewer.c:427
+#: src/ui/theme-viewer.c:427
 msgid "Normal Application Window"
 msgstr "Normal Uygulama Penceresi"
 
-#: ../src/ui/theme-viewer.c:431
+#: src/ui/theme-viewer.c:431
 msgid "Dialog Box"
 msgstr "İletişim Kutusu"
 
-#: ../src/ui/theme-viewer.c:435
+#: src/ui/theme-viewer.c:435
 msgid "Modal Dialog Box"
 msgstr "Yardımcı İletişim Kutusu"
 
-#: ../src/ui/theme-viewer.c:439
+#: src/ui/theme-viewer.c:439
 msgid "Utility Palette"
 msgstr "Araç Paleti"
 
-#: ../src/ui/theme-viewer.c:443
+#: src/ui/theme-viewer.c:443
 msgid "Torn-off Menu"
 msgstr "Kesilebilir Menü"
 
-#: ../src/ui/theme-viewer.c:447
+#: src/ui/theme-viewer.c:447
 msgid "Border"
 msgstr "Köşelik"
 
-#: ../src/ui/theme-viewer.c:451
+#: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Bağlı Yardımcı İletişim Penceresi"
 
-#: ../src/ui/theme-viewer.c:811
+#: src/ui/theme-viewer.c:811
 #, c-format
 msgid "Button layout test %d"
 msgstr "Düğme düzeni testi %d"
 
-#: ../src/ui/theme-viewer.c:836
+#: src/ui/theme-viewer.c:836
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "bir pencere çerçevesi çizmek için %g milisaniye"
 
-#: ../src/ui/theme-viewer.c:876
-#, c-format
+#: src/ui/theme-viewer.c:876
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Kullanım: marco-theme-viewer [TEMAİSMİ]\n"
 
-#: ../src/ui/theme-viewer.c:883
+#: src/ui/theme-viewer.c:883
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Tema yüklenirken hata: %s\n"
 
-#: ../src/ui/theme-viewer.c:889
+#: src/ui/theme-viewer.c:889
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" teması %g saniye içerisinde yüklendi\n"
 
-#: ../src/ui/theme-viewer.c:933
+#: src/ui/theme-viewer.c:933
 msgid "Normal Title Font"
 msgstr "Normal Başlık Yazıtipi"
 
-#: ../src/ui/theme-viewer.c:939
+#: src/ui/theme-viewer.c:939
 msgid "Small Title Font"
 msgstr "Küçük Başlık Yazıtipi"
 
-#: ../src/ui/theme-viewer.c:945
+#: src/ui/theme-viewer.c:945
 msgid "Large Title Font"
 msgstr "Büyük Başlık Yazıtipi"
 
-#: ../src/ui/theme-viewer.c:950
+#: src/ui/theme-viewer.c:950
 msgid "Button Layouts"
 msgstr "Düğme Düzenleri"
 
-#: ../src/ui/theme-viewer.c:955
+#: src/ui/theme-viewer.c:955
 msgid "Benchmark"
 msgstr "Karşılaştırma"
 
-#: ../src/ui/theme-viewer.c:1012
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "Pencere Başlığı Buraya Gelir"
 
-#: ../src/ui/theme-viewer.c:1117
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
