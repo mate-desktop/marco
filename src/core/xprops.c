@@ -652,21 +652,27 @@ text_property_to_utf8 (Display             *xdisplay,
 {
   char *ret = NULL;
   char **local_list = NULL;
+  const char *charset = NULL;
   int count = 0;
   int res;
 
   res = XmbTextPropertyToTextList (xdisplay, prop, &local_list, &count);
   if (res == XNoMemory || res == XLocaleNotSupported || res == XConverterNotFound)
-    goto out;
+    return NULL;
 
   if (count == 0)
-    goto out;
+  {
+	XFreeStringList (local_list);
+	return NULL;
+  }
+	
+  if (g_get_charset (&charset))
+    ret = g_strdup (local_list[0]);
+  else
+    ret = g_convert (local_list[0], -1, "UTF-8", charset, NULL, NULL, NULL);
 
-  ret = g_strdup (local_list[0]);
-
-  out:
-    meta_XFree (local_list);
-    return ret;
+  XFreeStringList (local_list);
+  return ret;
 }
 
 static gboolean
