@@ -4991,14 +4991,16 @@ meta_window_move_resize_request (MetaWindow *window,
                      "fullscreen request", window->desc);
           meta_window_make_fullscreen_internal (window);
         }
-	  
-	  meta_window_move_resize_internal (window,
+	 meta_window_move_resize_internal (window,
                                       flags,
                                       gravity,
                                       x,
                                       y,
                                       width,
                                       height);
+  
+	}
+   
   
 	}
     
