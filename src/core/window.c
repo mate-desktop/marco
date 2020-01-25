@@ -4974,13 +4974,42 @@ meta_window_move_resize_request (MetaWindow *window,
     flags |= META_IS_RESIZE_ACTION;
 
   if (flags & (META_IS_MOVE_ACTION | META_IS_RESIZE_ACTION))
-    meta_window_move_resize_internal (window,
+   {
+      const MetaXineramaScreenInfo *xinerama_info;
+      MetaRectangle rect;
+
+      rect.x = x;
+      rect.y = y;
+      rect.width = width;
+      rect.height = height;
+
+      xinerama_info = meta_screen_get_xinerama_for_rect (window->screen, &rect);
+
+      /* Workaround braindead legacy apps that don't know how to
+       * fullscreen themselves properly - don't get fooled by
+       * windows which are client decorated; that's not the same
+       * as fullscreen, even if there are no struts making the
+       * workarea smaller than the monitor.
+       */
+      if (meta_prefs_get_force_fullscreen() &&
+          (window->decorated || !meta_window_is_client_decorated (window)) &&
+          meta_rectangle_equal (&rect, &xinerama_info->rect) &&
+          window->has_fullscreen_func &&
+          !window->fullscreen)
+        {
+          g_warning ("Treating resize request of legacy application %s as a "
+                     "fullscreen request", window->desc);
+          meta_window_make_fullscreen_internal (window);
+        }
+      meta_window_move_resize_internal (window,
                                       flags,
                                       gravity,
                                       x,
                                       y,
                                       width,
                                       height);
+  
+   }    
 
   /* window->user_rect exists to allow "snapping-back" the window if a
    * new strut is set (causing the window to move) and then the strut
