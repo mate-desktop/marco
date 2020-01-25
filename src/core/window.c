@@ -4999,11 +4999,7 @@ meta_window_move_resize_request (MetaWindow *window,
                                       width,
                                       height);
   
-   }
-   
-  
-}
-    
+   }    
 
   /* window->user_rect exists to allow "snapping-back" the window if a
    * new strut is set (causing the window to move) and then the strut
