@@ -4991,16 +4991,17 @@ meta_window_move_resize_request (MetaWindow *window,
                      "fullscreen request", window->desc);
           meta_window_make_fullscreen_internal (window);
         }
-
-  
-	}
-    meta_window_move_resize_internal (window,
+	  
+	  meta_window_move_resize_internal (window,
                                       flags,
                                       gravity,
                                       x,
                                       y,
                                       width,
                                       height);
+  
+	}
+    
 
   /* window->user_rect exists to allow "snapping-back" the window if a
    * new strut is set (causing the window to move) and then the strut
