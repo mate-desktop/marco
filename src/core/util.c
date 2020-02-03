@@ -372,7 +372,7 @@ meta_bug (const char *format, ...)
   gchar *str;
   FILE *out;
 
-  g_return_if_fail (format != NULL);
+  g_assert (format != NULL);
 
   va_start (args, format);
   str = g_strdup_vprintf (format, args);
