@@ -345,7 +345,7 @@ struct _MetaWindow
   /* XSync update counter */
   XSyncCounter sync_request_counter;
   guint sync_request_serial;
-  GTimeVal sync_request_time;
+  gint64 sync_request_time;
 #endif
 
   /* Number of UnmapNotify that are caused by us, if

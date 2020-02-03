@@ -184,7 +184,7 @@ struct _MetaDisplay {
 	int         grab_initial_x, grab_initial_y;  /* These are only relevant for */
 	gboolean    grab_threshold_movement_reached; /* raise_on_click == FALSE.    */
 	MetaResizePopup* grab_resize_popup;
-	GTimeVal    grab_last_moveresize_time;
+	gint64      grab_last_moveresize_time;
 	guint32     grab_motion_notify_time;
 	int         grab_wireframe_last_display_width;
 	int         grab_wireframe_last_display_height;
