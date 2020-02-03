@@ -43,7 +43,7 @@ void meta_verbose_real    (const char *format,
                            ...) G_GNUC_PRINTF (1, 2);
 
 void meta_bug        (const char *format,
-                      ...) G_GNUC_PRINTF (1, 2);
+                      ...) G_GNUC_PRINTF (1, 2) G_GNUC_NORETURN G_ANALYZER_NORETURN;
 void meta_warning    (const char *format,
                       ...) G_GNUC_PRINTF (1, 2);
 void meta_fatal      (const char *format,
