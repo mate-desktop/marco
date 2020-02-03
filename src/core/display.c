@@ -3658,8 +3658,7 @@ meta_display_begin_grab_op (MetaDisplay *display,
   display->grab_anchor_root_y = root_y;
   display->grab_latest_motion_x = root_x;
   display->grab_latest_motion_y = root_y;
-  display->grab_last_moveresize_time.tv_sec = 0;
-  display->grab_last_moveresize_time.tv_usec = 0;
+  display->grab_last_moveresize_time = 0;
   display->grab_motion_notify_time = 0;
   display->grab_old_window_stacking = NULL;
 #ifdef HAVE_XSYNC
@@ -3712,9 +3711,7 @@ meta_display_begin_grab_op (MetaDisplay *display,
 			   display->grab_window->sync_request_counter, init);
 
 	  display->grab_window->sync_request_serial = 0;
-	  display->grab_window->sync_request_time.tv_sec = 0;
-	  display->grab_window->sync_request_time.tv_usec = 0;
-
+	  display->grab_window->sync_request_time = 0;
           values.trigger.counter = display->grab_window->sync_request_counter;
           values.trigger.value_type = XSyncAbsolute;
           values.trigger.test_type = XSyncPositiveTransition;
