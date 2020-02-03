@@ -63,7 +63,6 @@ meta_window_ensure_frame (MetaWindow *window)
 {
   MetaFrame *frame;
   XSetWindowAttributes attrs;
-  int status;
 
   if (window->frame)
     return;
