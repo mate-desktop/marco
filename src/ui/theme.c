@@ -1008,7 +1008,7 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
 
         }
       else
-        g_memmove (&(rect->clickable), &(rect->visible), sizeof(rect->clickable));
+        memmove (&(rect->clickable), &(rect->visible), sizeof(rect->clickable));
 
       *(right_bg_rects[i]) = rect->visible;
 
@@ -1043,7 +1043,7 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
           rect->clickable.height = button_height;
         }
       else
-        g_memmove (&(rect->clickable), &(rect->visible), sizeof(rect->clickable));
+        memmove (&(rect->clickable), &(rect->visible), sizeof(rect->clickable));
 
       x = rect->visible.x + rect->visible.width + layout->button_border.right;
       if (left_buttons_has_spacer[i])
@@ -2530,7 +2530,7 @@ do_operations (PosExpr *exprs,
            */
           if ((i+2) < *n_exprs)
             {
-              g_memmove (&exprs[i], &exprs[i+2],
+              memmove (&exprs[i], &exprs[i+2],
                          sizeof (PosExpr) * (*n_exprs - i - 2));
             }
 
