@@ -199,6 +199,7 @@ typedef struct _MetaCompWindow
   Picture shadow_pict;
 
   XserverRegion border_size;
+  XserverRegion window_size;
   XserverRegion extents;
 
   Picture shadow;
@@ -1145,6 +1146,27 @@ border_size (MetaCompWindow *cw)
   MetaScreen *screen = cw->screen;
   MetaDisplay *display = meta_screen_get_display (screen);
   Display *xdisplay = meta_display_get_xdisplay (display);
+  XserverRegion border;
+
+  meta_error_trap_push (display);
+  border = XFixesCreateRegionFromWindow (xdisplay, cw->id,
+                                         WindowRegionBounding);
+  meta_error_trap_pop (display, FALSE);
+
+  g_return_val_if_fail (border != None, None);
+  XFixesTranslateRegion (xdisplay, border,
+                         cw->attrs.x + cw->attrs.border_width,
+                         cw->attrs.y + cw->attrs.border_width);
+
+  return border;
+}
+
+static XserverRegion
+window_size (MetaCompWindow *cw)
+{
+  MetaScreen *screen = cw->screen;
+  MetaDisplay *display = meta_screen_get_display (screen);
+  Display *xdisplay = meta_display_get_xdisplay (display);
   cairo_region_t *visible_region;
   XserverRegion visible = None;
   XserverRegion border;
@@ -1157,15 +1179,7 @@ border_size (MetaCompWindow *cw)
         visible = cairo_region_to_xserver_region (xdisplay, visible_region);
     }
 
-  meta_error_trap_push (display);
-  border = XFixesCreateRegionFromWindow (xdisplay, cw->id,
-                                         WindowRegionBounding);
-  meta_error_trap_pop (display, FALSE);
-
-  g_return_val_if_fail (border != None, None);
-  XFixesTranslateRegion (xdisplay, border,
-                         cw->attrs.x + cw->attrs.border_width,
-                         cw->attrs.y + cw->attrs.border_width);
+  border = border_size (cw);
 
   if (visible != None)
     {
@@ -1407,6 +1421,12 @@ paint_windows (MetaScreen   *screen,
               cw->border_size = None;
             }
 
+          if (cw->window_size)
+            {
+              XFixesDestroyRegion (xdisplay, cw->window_size);
+              cw->window_size = None;
+            }
+
 #if 0
           if (cw->extents)
             {
@@ -1418,6 +1438,9 @@ paint_windows (MetaScreen   *screen,
 
       if (cw->border_size == None)
         cw->border_size = border_size (cw);
+
+      if (cw->window_size == None)
+        cw->window_size = window_size (cw);
 
       if (cw->extents == None)
         cw->extents = win_extents (cw);
@@ -1484,7 +1507,7 @@ paint_windows (MetaScreen   *screen,
 
               shadow_clip = XFixesCreateRegion (xdisplay, NULL, 0);
               XFixesSubtractRegion (xdisplay, shadow_clip, cw->border_clip,
-                                    cw->border_size);
+                                    cw->window_size);
               XFixesSetPictureClipRegion (xdisplay, root_buffer, 0, 0,
                                           shadow_clip);
 
@@ -1824,6 +1847,12 @@ free_win (MetaCompWindow *cw,
       cw->border_size = None;
     }
 
+  if (cw->window_size)
+    {
+      XFixesDestroyRegion (xdisplay, cw->window_size);
+      cw->window_size = None;
+    }
+
   if (cw->border_clip)
     {
       XFixesDestroyRegion (xdisplay, cw->border_clip);
@@ -2092,6 +2121,7 @@ add_win (MetaScreen *screen,
   cw->alpha_pict = None;
   cw->shadow_pict = None;
   cw->border_size = None;
+  cw->window_size = None;
   cw->extents = None;
   cw->shadow = None;
   cw->shadow_dx = 0;
