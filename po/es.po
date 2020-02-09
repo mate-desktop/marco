@@ -16,7 +16,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # David García-Abad <dgarciabad@gmail.com>, 2018
 # Joel Barrios <darkshram@gmail.com>, 2018
-# Toni Estévez <toni.estevez@gmail.com>, 2019
+# Toni Estévez <toni.estevez@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -24,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2019\n"
+"Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -168,11 +168,11 @@ msgstr "Activar el menú de la ventana"
 
 #: src/50-marco-window-key.xml.in:10 src/org.mate.marco.gschema.xml:740
 msgid "Toggle fullscreen mode"
-msgstr "Cambiar a modo de pantalla completa"
+msgstr "Activar o desactivar el modo de pantalla completa"
 
 #: src/50-marco-window-key.xml.in:14 src/org.mate.marco.gschema.xml:745
 msgid "Toggle maximization state"
-msgstr "Cambiar el estado de maximización"
+msgstr "Maximizar o desmaximizar"
 
 #: src/50-marco-window-key.xml.in:18 src/org.mate.marco.gschema.xml:755
 msgid "Maximize window"
@@ -429,13 +429,13 @@ msgid ""
 "some space between two adjacent buttons."
 msgstr ""
 "Distribución de botones en la barra de título. El valor debe ser una cadena,"
-" como \"menu:minimize,maximize,spacer,close\" ; los dos puntos separan la "
+" como «menu:minimize,maximize,spacer,close» ; los dos puntos separan la "
 "esquina izquierda de la ventana de la esquina derecha y los nombres de los "
 "botones están separados por comas. No se permiten botones duplicados. Los "
-"nombres desconocidos de botones se ignoran ignorados sin avisar de este modo"
-" esos botones puedan añadirse en las versiones futuras de Marco sin "
-"problemas con las versiones más antiguas. Se puede usar una etiqueta "
-"espaciadora para insertar algunos espacios entre dos botones adyacentes."
+"nombres de botones desconocidos se ignoran sin avisar para que se puedan "
+"añadir botones en futuras versiones de Marco sin romper las versiones "
+"anteriores. Se puede usar la etiqueta especial «espaciador» para insertar "
+"espacio entre dos botones adyacentes."
 
 #: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
@@ -691,13 +691,13 @@ msgid ""
 msgstr ""
 "El estilo de ajuste se usa para determinar cómo cambiar de un área de "
 "trabajo a otra en el borde del selector de áreas de trabajo. Cuando se "
-"establece en \"no wrap\", no pasará nada si intenta cambiar a un área de "
-"trabajo más allá del borde del selector de áreas de trabajo. Si se establece"
-" en \"classic\", se usa el comportamiento antiguo: el final de una fila "
-"conduce al comienzo de la siguiente y el final de una columna conduce al "
-"comienzo de la siguiente. Si se establece en \"toroidal\", las áreas de "
-"trabajo están conectadas como una rosquilla: el final de cada fila conduce a"
-" su propio principio y el final de cada columna lleva a su propio principio."
+"establece en no ajustar, no pasará nada si intenta cambiar a un área de "
+"trabajo traspasando el borde del selector de áreas de trabajo. Si se "
+"establece en clásico, se usa el comportamiento antiguo de Marco: el final de"
+" una fila lleva al inicio de la siguiente y el final de una columna lleva al"
+" inicio de la siguiente. Si se establece en toroidal, las áreas de trabajo "
+"se conectan como una rosquilla: el final de cada fila lleva a su inicio y el"
+" final de cada columna lleva a su inicio."
 
 #: src/org.mate.marco.gschema.xml:136
 msgid "Enable Visual Bell"
@@ -741,12 +741,12 @@ msgid ""
 msgstr ""
 "Indica a Marco cómo implementar la indicación visual de que la campana de "
 "sistema u otro indicador de 'campana' de aplicación ha sido invocado. "
-"Actualmente hay dos valores válidos, «fullscreen» —el cual produce un "
-"parpadeo blanco/negro— y «frame_flash» —el cual hace que que parpadee la "
-"barra de título de una aplicación que ha enviado una señal de campana. Si la"
-" aplicación que ha enviado la campana es desconocida (como ocurre usualmente"
-" en el caso de del «beep» predeterminado del sistema), la barra de título de"
-" la ventana enfocada en ese momento parpadeará."
+"Actualmente hay dos valores válidos, «fullscreen», que produce un parpadeo "
+"blanco/negro, y «frame_flash», que parpadee la barra de títuo de la "
+"aplicación que ha enviado una señal de campana. Si la aplicación que ha "
+"enviado la campana es desconocida (como ocurre usualmente en el caso de del "
+"«beep» predeterminado del sistema), la barra de título de la ventana "
+"enfocada en ese momento parpadeará."
 
 #: src/org.mate.marco.gschema.xml:151
 msgid "Compositing Manager"
@@ -817,7 +817,7 @@ msgstr ""
 "configuración basada en aplicaciones es más parecida a un Mac y menos a un "
 "Windows. Cuando enfoca a una ventana en el modo basado en aplicación todas "
 "las ventanas en la aplicación se elevan. También en el modo basado en "
-"aplicación las clics del foco no se pasan a través de las ventanas en otras "
+"aplicación los clics del foco no se pasan a través de las ventanas en otras "
 "aplicaciones. El modo basado en aplicaciones está, sin embargo, no "
 "implementado en gran parte en este momento."
 
@@ -1544,7 +1544,7 @@ msgstr "Archivo de registro %s abierto\n"
 
 #: src/core/util.c:136 src/tools/marco-message.c:176
 msgid "Marco was compiled without support for verbose mode\n"
-msgstr "Marco fue compilado sin compatibilidad para modo prolijo\n"
+msgstr "Marco fue compilado sin compatibilidad para modo detallado\n"
 
 #: src/core/util.c:227
 msgid "Window manager: "
