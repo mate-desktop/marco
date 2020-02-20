@@ -3199,7 +3199,13 @@ xrender_unmanage_screen (MetaCompositor *compositor,
       int i;
 
       for (i = 0; i < LAST_SHADOW_TYPE; i++)
-        g_free (info->shadows[i]->gaussian_map);
+        {
+          g_clear_pointer (&info->shadows[i]->gaussian_map, g_free);
+          g_clear_pointer (&info->shadows[i]->shadow_corner, g_free);
+          g_clear_pointer (&info->shadows[i]->shadow_top, g_free);
+
+          g_clear_pointer (&info->shadows[i], g_free);
+        }
     }
 
   XCompositeUnredirectSubwindows (xdisplay, xroot,
