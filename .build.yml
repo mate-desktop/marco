@@ -1,0 +1,118 @@
+##########################################################
+# THE FOLLOWING LINES IS USED BY docker-build
+##########################################################
+requires:
+  archlinux:
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/trunk?h=packages/marco
+    - gcc
+    - git
+    - glib2
+    - gtk3
+    - intltool
+    - libcanberra
+    - libgtop
+    - libxpresent
+    - make
+    - mate-common
+    - mate-desktop
+    - which
+    - yelp-tools
+    - zenity
+
+  debian:
+    # Useful URL: https://github.com/mate-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-mate-team/marco
+    - git
+    - intltool
+    - libcanberra-gtk3-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libgtop2-dev
+    - libice-dev
+    - libpango1.0-dev
+    - libsm-dev
+    - libstartup-notification0-dev
+    - libx11-dev
+    - libxcomposite-dev
+    - libxcursor-dev
+    - libxdamage-dev
+    - libxext-dev
+    - libxfixes-dev
+    - libxinerama-dev
+    - libxpresent-dev
+    - libxrandr-dev
+    - libxrender-dev
+    - libxt-dev
+    - make
+    - mate-common
+    - x11proto-present-dev
+    - yelp-tools
+    - zenity
+
+  fedora:
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/marco.git
+    - desktop-file-utils
+    - gcc
+    - git
+    - gtk3-devel
+    - libSM-devel
+    - libXdamage-devel
+    - libXpresent-devel
+    - libcanberra-devel
+    - libgtop2-devel
+    - libsoup-devel
+    - make
+    - mate-common
+    - mate-desktop-devel
+    - redhat-rpm-config
+    - startup-notification-devel
+    - yelp-tools
+    - zenity
+
+  ubuntu:
+    - git
+    - intltool
+    - libcanberra-gtk3-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libgtop2-dev
+    - libice-dev
+    - libpango1.0-dev
+    - libsm-dev
+    - libstartup-notification0-dev
+    - libx11-dev
+    - libxcomposite-dev
+    - libxcursor-dev
+    - libxdamage-dev
+    - libxext-dev
+    - libxfixes-dev
+    - libxinerama-dev
+    - libxpresent-dev
+    - libxrandr-dev
+    - libxrender-dev
+    - libxt-dev
+    - make
+    - mate-common
+    - x11proto-present-dev
+    - yelp-tools
+    - zenity
+
+variables:
+  - CFLAGS="-Wall -Werror=format-security"
+
+after_scripts:
+  - make distcheck
+
+releases:
+  draft: false
+  prerelease: false
+  checksum: true
+  file_glob: true
+  files: marco-*.tar.xz
+  github_release:
+    tags: true
+    overwrite: true
+    base_version: 1.20.0
+    notify_servers:
+      - https://release.mate-desktop.org/release
+
