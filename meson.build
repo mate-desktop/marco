@@ -191,8 +191,7 @@ xpresent_dep = dependency('xpresent', required: false)
 xinerama_dep = dependency('xinerama', required: false)
 sm_dep = dependency('sm', required: false)
 
-verbose_mode = not get_option('disable-verbose-mode')
-if verbose_mode
+if get_option('verbose-mode')
   config_h.set('WITH_VERBOSE_MODE', 1, description: 'Build with verbose mode support')
 endif
 
@@ -200,36 +199,33 @@ if cc.has_function('backtrace', prefix : '#include <execinfo.h>')
   config_h.set('HAVE_BACKTRACE', 1)
 endif
 
-build_startup_notification = not get_option('disable-startup-notification')
-if build_startup_notification and not startup_notification_dep.found()
-  build_startup_notification = false
-else
+build_startup_notification = false
+if get_option('startup-notification') and startup_notification_dep.found()
+  build_startup_notification = true
   config_h.set('HAVE_STARTUP_NOTIFICATION', 1, description: 'Building with startup notification support')
   config_h.set('SN_API_NOT_YET_FROZEN', 1)
   marco_deps += [ startup_notification_dep ]
 endif
 
-build_xcomposite = not get_option('disable-compositor')
-if build_xcomposite and not xcomposite_dep.found()
-  build_xcomposite = false
-else
+build_xcomposite = false
+if get_option('compositor') and xcomposite_dep.found()
+  build_xcomposite = true
   marco_deps += [ xcomposite_dep, dependency('xfixes'), xrender_dep, dependency('xdamage')]
   config_h.set('HAVE_COMPOSITE_EXTENSIONS', 1)
 endif
 
-build_render = not get_option('disable-render')
-if build_render and not xrender_dep.found()
-  build_render = false
-else
+build_render = false
+if get_option('render') and xrender_dep.found()
+  build_render = true
   marco_deps += [xrender_dep]
   config_h.set('HAVE_RENDER', 1, description: 'Building with Render extension support')
 endif
 
 build_xcursor = false
 if xcursor_dep.found()
+  build_xcursor = true
   marco_deps += [xcursor_dep]
   config_h.set('HAVE_XCURSOR', 1, description: 'Building with Render extension support')
-  build_xcursor = true
 endif
 
 if libgtop_dep.found()
@@ -237,18 +233,19 @@ if libgtop_dep.found()
   config_h.set('HAVE_GTOP', 1, description: 'Building with libgtop')
 endif
 
-build_xinerama = not get_option('disable-xinerama')
-if build_xinerama and not xinerama_dep.found()
+build_xinerama = false
+if get_option('xinerama') and xinerama_dep.found()
+  build_xinerama = true
   config_h.set('HAVE_XFREE_XINERAMA', 1)
   config_h.set('HAVE_XINERAMA', 1)
-  marco_message_deps += [ xinerama_dep ]
+  marco_deps += [xinerama_dep]
 endif
 
 #xext
 build_shape = false
 if cc.has_header('X11/extensions/shape.h')
-  config_h.set('HAVE_SHAPE', 1)
   build_shape = true
+  config_h.set('HAVE_SHAPE', 1)
 endif
 
 if cc.has_header('X11/XKBlib.h')
@@ -257,16 +254,15 @@ endif
 
 build_randr = false
 if xrandr_dep.found()
-  config_h.set('HAVE_RANDR', 1, description: 'Have the Xrandr extension library')
   build_randr = true
+  config_h.set('HAVE_RANDR', 1, description: 'Have the Xrandr extension library')
   marco_deps += [ xrandr_dep ]
 endif
 
 #xext
-build_xsync = not get_option('disable-xsync')
-if build_xsync and not cc.has_header('X11/extensions/sync.h')
-  build_xsync = false
-else
+build_xsync = false
+if get_option('xsync') and cc.has_header('X11/extensions/sync.h')
+  build_xsync = true
   config_h.set('HAVE_XSYNC', 1)
 endif
 
@@ -281,14 +277,13 @@ if libm.found()
   marco_deps += [libm]
 endif
 
-build_sm = not get_option('disable-sm')
-if build_sm and not sm_dep.found()
+build_sm = false
+ice_dep = dependency('ice', required: false)
+if get_option('sm') and sm_dep.found() and ice_dep.found()
+  build_sm = true
   config_h.set('HAVE_SM', 1)
-  marco_deps += [ sm_dep ]
-  marco_message_deps += [ sm_dep ]
-else
-  build_sm = false
-  message('--enable-sm forced and -lSM not found')
+  marco_deps += [ sm_dep, ice_dep ]
+  marco_message_deps += [ sm_dep, ice_dep ]
 endif
 
 gdk_pixbuf_csource = find_program('gdk-pixbuf-csource')
