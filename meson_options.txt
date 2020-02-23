@@ -1,31 +1,31 @@
-option('disable-verbose-mode',
+option('verbose-mode',
+  type: 'boolean', value: false,
+  description: 'verbose logging, for embedded/size-sensitive custom builds')
+
+option('sm',
   type: 'boolean', value: true,
-  description: 'disable marco\'s ability to do verbose logging, for embedded/size-sensitive custom builds')
+  description: 'session management support, for embedded/size-sensitive custom non-MATE builds')
 
-option('disable-sm',
-  type: 'boolean', value: false,
-  description: 'disable marco\'s session management support, for embedded/size-sensitive custom non-MATE builds')
+option('startup-notification',
+  type: 'boolean', value: true,
+  description: 'startup notification support, for embedded/size-sensitive custom non-MATE builds')
 
-option('disable-startup-notification',
-  type: 'boolean', value: false,
-  description: 'disable marco\'s startup notification support, for embedded/size-sensitive custom non-MATE builds')
+option('compositor',
+  type: 'boolean', value: true,
+  description: 'compositing manager')
 
-option('disable-compositor',
-  type: 'boolean', value: false,
-  description: 'disable marco\'s compositing manager')
+option('xsync',
+  type: 'boolean', value: true,
+  description: 'use of the XSync extension')
 
-option('disable-xsync',
-  type: 'boolean', value: false,
-  description: 'disable marco\'s use of the XSync extension')
+option('render',
+  type: 'boolean', value: true,
+  description: 'use the RENDER extension')
 
-option('disable-render',
-  type: 'boolean', value: false,
-  description: 'disable marco\'s use of the RENDER extension')
+option('shape',
+  type: 'boolean', value: true,
+  description: 'use the shaped window extension')
 
-option('disable-shape',
-  type: 'boolean', value: false,
-  description: 'disable marco\'s use of the shaped window extension')
-
-option('disable-xinerama',
-  type: 'boolean', value: false,
-  description: 'disable marco\'s use of the Xinerama extension')
+option('xinerama',
+  type: 'boolean', value: true,
+  description: 'use the Xinerama extension')
