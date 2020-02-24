@@ -19,7 +19,9 @@ bin_PROGRAMS=marco-message marco-window-demo
 marco_message_LDADD= @MARCO_MESSAGE_LIBS@
 marco_window_demo_LDADD= @MARCO_WINDOW_DEMO_LIBS@
 
-EXTRA_DIST=$(icon_DATA)
+EXTRA_DIST= \
+	meson.build \
+	$(icon_DATA)
 
 
 -include $(top_srcdir)/git.mk

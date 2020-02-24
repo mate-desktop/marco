@@ -18,6 +18,24 @@ THEMES= \
 THEME_DIR=$(datadir)/themes
 THEME_SUBDIR=metacity-1
 
+EXTRA_DIST= \
+	meson.build \
+	Atlanta/meson.build \
+	ClearlooksRe/meson.build \
+	Dopple/meson.build \
+	Dopple-Left/meson.build \
+	DustBlue/meson.build \
+	eOS/meson.build \
+	Esco/meson.build \
+	Gorilla/meson.build \
+	Motif/meson.build \
+	Raleigh/meson.build \
+	Spidey/meson.build \
+	Spidey-Left/meson.build \
+	Splint/meson.build \
+	Splint-Left/meson.build \
+	WinMe/meson.build
+
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(THEME_DIR); \
 	for THEME in $(THEMES); do \

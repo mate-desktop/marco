@@ -26,4 +26,7 @@ test_resizing_LDADD= @MARCO_LIBS@
 test_size_hints_LDADD= @MARCO_LIBS@
 focus_window_LDADD= @MARCO_LIBS@
 
+EXTRA_DIST= \
+	meson.build
+
 -include $(top_srcdir)/git.mk
