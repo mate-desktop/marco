@@ -187,14 +187,16 @@ pkgconfigdir = $(libdir)/pkgconfig
 
 pkgconfig_DATA = libmarco-private.pc
 
-EXTRA_DIST=$(desktopfiles_files) \
+EXTRA_DIST= \
+	$(desktopfiles_files) \
 	$(wmproperties_files) \
 	$(IMAGES) \
 	$(gsettings_SCHEMAS) \
 	$(desktopfiles_in_files) \
 	$(wmproperties_in_files) \
 	$(xml_in_files) \
-	libmarco-private.pc.in
+	libmarco-private.pc.in \
+	meson.build
 
 
 -include $(top_srcdir)/git.mk

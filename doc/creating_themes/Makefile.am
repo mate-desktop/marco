@@ -16,7 +16,8 @@ HELP_MEDIA =
 # The names of any locales for which documentation translations exist:
 HELP_LINGUAS =
 
-
+EXTRA_DIST= \
+	meson.build
 
 
 -include $(top_srcdir)/git.mk
