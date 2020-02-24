@@ -645,7 +645,7 @@ shadow_picture_clip (Display          *xdisplay,
 
   visible_region = meta_window_get_frame_bounds (cw->window);
 
-  if (!visible_region)
+  if (visible_region == NULL)
     return;
 
   shadow_dx = -1 * (int) shadow_offsets_x [cw->shadow_type] - borders.invisible.left;
@@ -1152,10 +1152,14 @@ border_size (MetaCompWindow *cw)
   if (cw->window)
     {
       visible_region = meta_window_get_frame_bounds (cw->window);
-
-      if (visible_region)
+                 
+      if (visible_region != NULL) {
         visible = cairo_region_to_xserver_region (xdisplay, visible_region);
+      }
+      else {
+        g_warning ("Visible region is null");
     }
+  }
 
   meta_error_trap_push (display);
   border = XFixesCreateRegionFromWindow (xdisplay, cw->id,
