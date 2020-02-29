@@ -2098,9 +2098,10 @@ windows_overlap (const MetaWindow *w1, const MetaWindow *w2)
 static gboolean
 window_would_be_covered (const MetaWindow *newbie)
 {
-  MetaWorkspace *workspace = newbie->workspace;
+  MetaWorkspace *workspace;
   GList *tmp, *windows;
 
+  workspace = meta_window_get_workspace ((MetaWindow *) newbie);
   windows = meta_workspace_list_windows (workspace);
 
   tmp = windows;
