@@ -237,7 +237,6 @@ meta_stack_freeze (MetaStack *stack)
   stack->freeze_count += 1;
 }
 
-
 void
 meta_stack_thaw (MetaStack *stack)
 {
