@@ -6214,7 +6214,6 @@ idle_update_icon (gpointer data)
   return FALSE;
 }
 
-
 MetaWorkspace *
 meta_window_get_workspace (MetaWindow *window)
 {
@@ -6223,7 +6222,6 @@ meta_window_get_workspace (MetaWindow *window)
   else
     return window->workspace;
 }
-
 
 GList*
 meta_window_get_workspaces (MetaWindow *window)
