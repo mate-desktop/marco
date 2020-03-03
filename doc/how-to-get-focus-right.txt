@@ -7,7 +7,7 @@ end of the discussion for how these special cases are handled.)  The
 basics are easy:
 
 Focus method  Behavior
-    click     When a user clicks on a window, focus it
+    click     Focus the window on top
    sloppy     When an EnterNotify is received, focus the window
     mouse     Same as sloppy, but also defocus when mouse enters DESKTOP
               window
