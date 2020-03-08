@@ -1152,7 +1152,7 @@ border_size (MetaCompWindow *cw)
   if (cw->window)
     {
       visible_region = meta_window_get_frame_bounds (cw->window);
-                 
+
       if (visible_region != NULL) {
         visible = cairo_region_to_xserver_region (xdisplay, visible_region);
       }
