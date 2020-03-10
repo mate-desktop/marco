@@ -1362,6 +1362,53 @@ window_contains_point (MetaWindow *window,
   return POINT_IN_RECT (root_x, root_y, rect);
 }
 
+static int
+compare_default_focus_window_layer (MetaWindow *a,
+                                    MetaWindow *b)
+{
+  if (a->layer == META_LAYER_DESKTOP ||
+      b->layer == META_LAYER_DESKTOP)
+    {
+      if (a->layer < b->layer)
+        return 1;
+      else if (a->layer > b->layer)
+        return -1;
+    }
+
+  return 0;
+}
+
+static int
+compare_default_focus_window_position (MetaWindow *a,
+                                       MetaWindow *b)
+{
+  if (a->stack_position < b->stack_position)
+    return 1;
+  else if (a->stack_position > b->stack_position)
+    return -1;
+
+  return 0;
+}
+
+static int
+compare_default_focus_window_func (gconstpointer a,
+                                   gconstpointer b)
+{
+  MetaWindow *window_a;
+  MetaWindow *window_b;
+  int result;
+
+  window_a = (MetaWindow *) a;
+  window_b = (MetaWindow *) b;
+
+  result = compare_default_focus_window_layer (window_a, window_b);
+
+  if (result == 0)
+    result = compare_default_focus_window_position (window_a, window_b);
+
+  return result;
+}
+
 static MetaWindow*
 get_default_focus_window (MetaStack     *stack,
                           MetaWorkspace *workspace,
@@ -1370,92 +1417,73 @@ get_default_focus_window (MetaStack     *stack,
                           int            root_x,
                           int            root_y)
 {
+  MetaWindow *default_focus_window;
+  GList *tmp;
+  GList *l;
+
   /* Find the topmost, focusable, mapped, window.
    * not_this_one is being unfocused or going away, so exclude it.
-   * Also, prefer to focus transient parent of not_this_one,
-   * or top window in same group as not_this_one.
    */
 
-  MetaWindow *topmost_dock;
-  MetaWindow *transient_parent;
-  MetaWindow *topmost_in_group;
-  MetaWindow *topmost_overall;
-  MetaGroup *not_this_one_group;
-  GList *link;
-
-  topmost_dock = NULL;
-  transient_parent = NULL;
-  topmost_in_group = NULL;
-  topmost_overall = NULL;
-  if (not_this_one)
-    not_this_one_group = meta_window_get_group (not_this_one);
-  else
-    not_this_one_group = NULL;
+  default_focus_window = NULL;
 
   stack_ensure_sorted (stack);
 
-  /* top of this layer is at the front of the list */
-  link = stack->sorted;
+  tmp = g_list_copy (stack->sorted);
+  tmp = g_list_sort (tmp, compare_default_focus_window_func);
 
-  while (link)
+  for (l = tmp; l != NULL; l = l->next)
     {
-      MetaWindow *window = link->data;
+      MetaWindow *window;
 
-      if (window &&
-          window != not_this_one &&
-          (window->unmaps_pending == 0) &&
-          !window->minimized &&
-          (window->input || window->take_focus) &&
-          (workspace == NULL ||
-           meta_window_located_on_workspace (window, workspace)))
+      window = l->data;
+
+      if (window == NULL)
+        continue;
+
+      if (window == not_this_one)
+        continue;
+
+      if (window->unmaps_pending != 0)
+        continue;
+
+      if (window->unmanaging)
+        continue;
+
+      if (!(window->input || window->take_focus))
+        continue;
+
+      if (!meta_window_should_be_showing (window))
+        continue;
+
+      if (must_be_at_point && !window_contains_point (window, root_x, root_y))
+        continue;
+
+      if (window->type == META_WINDOW_DOCK)
+        continue;
+
+      if (window->fullscreen &&
+          not_this_one != NULL &&
+          default_focus_window == NULL &&
+          windows_on_different_xinerama (window, not_this_one))
         {
-          if (topmost_dock == NULL &&
-              window->type == META_WINDOW_DOCK)
-            topmost_dock = window;
-
-          if (not_this_one != NULL)
-            {
-              if (transient_parent == NULL &&
-                  not_this_one->xtransient_for != None &&
-                  not_this_one->xtransient_for == window->xwindow &&
-                  (!must_be_at_point ||
-                   window_contains_point (window, root_x, root_y)))
-                transient_parent = window;
-
-              if (topmost_in_group == NULL &&
-                  not_this_one_group != NULL &&
-                  not_this_one_group == meta_window_get_group (window) &&
-                  (!must_be_at_point ||
-                   window_contains_point (window, root_x, root_y)))
-                topmost_in_group = window;
-            }
-
-          /* Note that DESKTOP windows can be topmost_overall so
-           * we prefer focusing desktop or other windows over
-           * focusing dock, even though docks are stacked higher.
-           */
-          if (topmost_overall == NULL &&
-              window->type != META_WINDOW_DOCK &&
-              (!must_be_at_point ||
-               window_contains_point (window, root_x, root_y)))
-            topmost_overall = window;
-
-          /* We could try to bail out early here for efficiency in
-           * some cases, but it's just not worth the code.
-           */
+          default_focus_window = window;
+          continue;
         }
 
-      link = link->next;
+      if (default_focus_window != NULL &&
+          (!windows_on_different_xinerama (window, default_focus_window) ||
+           window->layer == META_LAYER_DESKTOP))
+        continue;
+
+      default_focus_window = window;
+      break;
     }
 
-  if (transient_parent)
-    return transient_parent;
-  else if (topmost_in_group)
-    return topmost_in_group;
-  else if (topmost_overall)
-    return topmost_overall;
-  else
-    return topmost_dock;
+  g_list_free (tmp);
+
+  return default_focus_window;
+
 }
 
 MetaWindow*
