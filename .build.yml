@@ -62,7 +62,6 @@ requires:
     - autoconf-archive
     - clang-analyzer
     - clang
-    - cppcheck-htmlreport
     - desktop-file-utils
     - gcc
     - git
@@ -158,11 +157,6 @@ build_scripts:
   - fi
 
 after_scripts:
-  - if [ ${DISTRO_NAME} == "fedora" ];then
-  -   cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude --force -D'PACKAGE' -D'WITH_VERBOSE_MODE' .
-  -   cppcheck-htmlreport --title=${REPO_NAME} --file=cppcheck.xml --report-dir=cppcheck-htmlreport
-  -   ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/mate-icon-theme/raw/master/mate/16x16/apps/preferences-system-windows.png
-  - fi
   - make distcheck
 
 releases:
@@ -177,4 +171,3 @@ releases:
     base_version: 1.20.0
     notify_servers:
       - https://release.mate-desktop.org/release
-
