@@ -17,6 +17,7 @@ requires:
     - make
     - mate-common
     - mate-desktop
+    - meson
     - which
     - yelp-tools
     - zenity
@@ -53,6 +54,7 @@ requires:
     - libxt-dev
     - make
     - mate-common
+    - meson
     - x11proto-present-dev
     - yelp-tools
     - zenity
@@ -76,6 +78,7 @@ requires:
     - make
     - mate-common
     - mate-desktop-devel
+    - meson
     - redhat-rpm-config
     - startup-notification-devel
     - yelp-tools
@@ -110,6 +113,7 @@ requires:
     - libxt-dev
     - make
     - mate-common
+    - meson
     - x11proto-present-dev
     - yelp-tools
     - zenity
