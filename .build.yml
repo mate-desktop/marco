@@ -119,7 +119,6 @@ requires:
     - zenity
 
 variables:
-  - CFLAGS="-Wall -Wcast-align -Wchar-subscripts -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wredundant-decls -Wsign-compare -Wshadow"
   - 'CHECKERS="
     -enable-checker deadcode.DeadStores
     -enable-checker alpha.deadcode.UnreachableCode
