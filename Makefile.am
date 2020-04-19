@@ -12,6 +12,10 @@ EXTRA_DIST = \
 	meson_post_install.py \
 	po/meson.build
 
+DISTCHECK_CONFIGURE_FLAGS =  \
+	--enable-compile-warnings=no \
+	CFLAGS='-Wno-deprecated-declarations'
+
 DISTCLEANFILES = po/stamp-it
 
 # Build ChangeLog from GIT  history
