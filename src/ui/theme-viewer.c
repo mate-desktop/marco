@@ -207,7 +207,7 @@ normal_contents (void)
 
   contents = gtk_text_view_new ();
   gtk_text_view_set_wrap_mode (GTK_TEXT_VIEW (contents),
-                               PANGO_WRAP_WORD);
+                               GTK_WRAP_WORD);
 
   gtk_container_add (GTK_CONTAINER (sw),
                      contents);

@@ -89,7 +89,7 @@ draw_window (GtkWidget                   *widget,
              cairo_t                     *cr,
              const WnckWindowDisplayInfo *win,
              const GdkRectangle          *winrect,
-             GtkStateType                state)
+             GtkStateFlags                state)
 {
   cairo_surface_t *icon;
   int icon_x, icon_y, icon_w, icon_h, scale;
