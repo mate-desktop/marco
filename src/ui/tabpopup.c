@@ -1126,7 +1126,16 @@ meta_select_workspace_draw (GtkWidget *widget,
       gtk_style_context_set_state (context,
                                    gtk_widget_get_state_flags (widget));
 
-      meta_gtk_style_get_light_color (context, GTK_STATE_FLAG_SELECTED, &color);
+      if (meta_prefs_get_compositing_manager ())
+        {
+          /* compositing manager creates a dark background: show the selection in a light color */
+          meta_gtk_style_get_light_color (context, GTK_STATE_FLAG_SELECTED, &color);
+        }
+      else
+        {
+          /* non-compositing creates a light background: show the selection in a dark color */
+          meta_gtk_style_get_dark_color (context, GTK_STATE_FLAG_SELECTED, &color);
+        }
 
       cairo_set_line_width (cr, SELECT_OUTLINE_WIDTH);
       cairo_set_source_rgb (cr, color.red, color.green, color.blue);
