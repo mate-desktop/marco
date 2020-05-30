@@ -41,6 +41,8 @@
 
 #include "display.h"
 #include "../core/display-private.h"
+#include "../core/screen-private.h"
+#include "../core/workspace.h"
 #include "screen.h"
 #include "frame.h"
 #include "errors.h"
@@ -48,6 +50,7 @@
 #include "compositor-private.h"
 #include "compositor-xrender.h"
 #include "xprops.h"
+#include "core.h"
 #include <X11/Xatom.h>
 #include <X11/extensions/shape.h>
 #include <X11/extensions/Xcomposite.h>
@@ -1856,6 +1859,87 @@ free_win (MetaCompWindow *cw,
 }
 
 static void
+constrain_tooltip_onscreen (MetaDisplay    *display,
+                            MetaScreen     *screen,
+                            MetaCompWindow *cw,
+                            Window          id)
+{
+  MetaWorkspace *workspace;
+  MetaRectangle work_area, win_rect;
+  const MetaXineramaScreenInfo* xinerama;
+  gint new_x, new_y;
+  gint active_workspace_num;
+
+  /* Why this is here:
+   * As of gtk 3.24, tooltips are positioned differently, and can end up off the
+   * screen in certain situations in hidpi.
+   *
+   * See: https://github.com/GNOME/gtk/commit/14d22cb3233e
+   *
+   * If the panel is too tall (around > 25 or so), tooltip positioning fails both
+   * tests in gdkwindowimpl.c (maybe_flip_position()) skipping repositioning of the
+   * tooltip inside the workarea. This only occurs on bottom panels.
+   *
+   * Since the calculations are based upon the monitor's workarea and the 'attach'
+   * (gdk) window's rectangle, there's no way to compensate for or fool gtk into
+   * displaying it correctly.  So here, we do our own check and adjustment. */
+
+  active_workspace_num = meta_core_get_active_workspace (cw->attrs.screen);
+
+  workspace = meta_screen_get_workspace_by_index (screen,
+                                                  active_workspace_num);
+
+  win_rect.x = cw->attrs.x;
+  win_rect.y = cw->attrs.y;
+  win_rect.width = cw->attrs.width;
+  win_rect.height = cw->attrs.height;
+
+  xinerama = meta_screen_get_xinerama_for_rect (screen,
+                                                &win_rect);
+
+  meta_workspace_get_work_area_for_xinerama (workspace,
+                                             xinerama->number,
+                                             &work_area);
+
+  new_x = win_rect.x;
+  new_y = win_rect.y;
+
+  /* Valid tooltip positions seem to cheat into the panel by a few pixels - maybe
+   * accounting for shadow margin.  There's no reason the fix these, but they'd
+   * be caught here otherwise, so 10px of overshoot in the direction of the panel
+   * is allowed. The tooltips we're out to catch are the ones on the complete other
+   * side of the panel (off screren), so there won't be any confusion. */
+  if (win_rect.y < work_area.y - 10)
+    {
+      new_y = work_area.y;
+    }
+  else if (win_rect.y + win_rect.height > work_area.y + work_area.height + 10)
+    {
+      new_y = (work_area.y + work_area.height - win_rect.height);
+    }
+
+  if (win_rect.x < work_area.x - 10)
+    {
+      new_x = work_area.x;
+    }
+  else if (win_rect.x + win_rect.width > work_area.x + work_area.width + 10)
+    {
+      new_x = (work_area.x + work_area.width - win_rect.width);
+    }
+
+  if (new_x != win_rect.x || new_y != win_rect.y)
+    {
+      if (DISPLAY_COMPOSITOR (display)->debug)
+        {
+          fprintf(stderr, "Constraining tooltip onscreen   x:%d -> %d, y:%d -> %d\n",
+                win_rect.x,new_x, win_rect.y,new_y);
+        }
+
+      XMoveWindow (display->xdisplay, cw->id, new_x, new_y);
+    }
+}
+
+static void
 map_win (MetaDisplay *display,
          MetaScreen  *screen,
          Window       id)
@@ -1865,6 +1949,11 @@ map_win (MetaDisplay *display,
 
   if (cw == NULL)
     return;
+
+  if (cw->type == META_COMP_WINDOW_TOOLTIP)
+    {
+      constrain_tooltip_onscreen (display, screen, cw, id);
+    }
 
   /* The reason we deallocate this here and not in unmap
      is so that we will still have a valid pixmap for
