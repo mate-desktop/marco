@@ -6274,8 +6274,7 @@ meta_pango_font_desc_get_text_height (const PangoFontDescription *font_desc,
   lang = pango_context_get_language (context);
   metrics = pango_context_get_metrics (context, font_desc, lang);
 
-  retval = PANGO_PIXELS (pango_font_metrics_get_ascent (metrics) +
-                         pango_font_metrics_get_descent (metrics));
+  retval = PANGO_PIXELS (pango_font_metrics_get_height (metrics));
 
   pango_font_metrics_unref (metrics);
 
