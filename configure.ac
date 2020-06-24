@@ -1,7 +1,7 @@
 AC_PREREQ(2.50)
 
 m4_define([marco_major_version], [1])
-m4_define([marco_minor_version], [24])
+m4_define([marco_minor_version], [25])
 m4_define([marco_micro_version], [0])
 
 m4_define([marco_version],
