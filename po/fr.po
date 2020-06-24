@@ -11,6 +11,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Étienne Deparis <etienne@depar.is>, 2018
 # Rox fr <roxfr@outlook.fr>, 2019
+# Laurent Napias, 2020
 # 
 msgid ""
 msgstr ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Rox fr <roxfr@outlook.fr>, 2019\n"
+"Last-Translator: Laurent Napias, 2020\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -696,9 +697,9 @@ msgstr ""
 "espace de travail à un autre au bord du changement d'espace de travail. "
 "Quand il est fixé à \"pas de déformation\", il ne se passera rien quand vous"
 " essayerez de changer d'espace de travail. Si vous le fixez à \"classique\","
-" l'ancien comportement sera utilisé : la fin d'une ligne mène au début de la"
+" l'ancien comportement sera utilisé : la fin d'une ligne mène au début de la"
 " prochaine et la fin d'une colonne mène au début de la suivante. Si vous le "
-"fixez à \"toroidal\", les espaces de travail sont connectés comme un donut :"
+"fixez à \"toroidal\", les espaces de travail sont connectés comme un donut :"
 " la fin de chaque ligne mène au début de la suivante et la fin de chaque "
 "colonne mène au début de la suivante."
 
@@ -1291,7 +1292,7 @@ msgstr "<tt>Renommer l'espace de travail</tt>"
 
 #: src/core/keybindings.c:3736
 msgid "New Workspace Name:"
-msgstr "Nom du nouvel espace de travail :"
+msgstr "Nom du nouvel espace de travail :"
 
 #: src/core/keybindings.c:3747
 msgid "OK"

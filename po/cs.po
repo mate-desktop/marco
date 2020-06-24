@@ -8,13 +8,13 @@
 # Michal <sinope@seznam.cz>, 2018
 # huskyviking <husky.viking@seznam.cz>, 2018
 # Petr Šimáček <petr.simacek@gmail.com>, 2018
-# ToMáš Marný, 2018
-# Lucas Lommer <drom@kdyne.net>, 2018
 # Jaroslav Lichtblau <jlichtblau@seznam.cz>, 2018
 # LiberteCzech <liberte.czech@gmail.com>, 2018
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
+# 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Roman Horník <roman.hornik@debian-linux.cz>, 2018
+# Lucas Lommer <drom@kdyne.net>, 2020
+# ToMáš Marný, 2020
 # 
 msgid ""
 msgstr ""
@@ -22,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2018\n"
+"Last-Translator: ToMáš Marný, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +36,7 @@ msgstr "Pracovní plocha"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Zobrazit okno „Spustit aplikaci” umístěné na panelu"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -375,6 +375,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Klepnutí na okno za současného držení tohoto modifikátoru okno přesune "
+"(levým tlačítkem), změní jeho velikost (prostředním tlačítkem), nebo zobrazí"
+" nabídku okna (pravým tlačítkem). Operace prostředního a pravého tlačítka "
+"mohou být prohozeny úpravou klíče \"resize_with_right_button\". Modifikátor "
+"je například vyjádřen jako „<Alt>” či „<Super>”."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -746,6 +751,11 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"Je-li nastaveno na pravda (true) a pokud je kompozitní vykreslování "
+"povoleno, budou namísto náhledů oken ve vyskakovacím okně při stisknutí Alt "
+"+ Tab zobrazeny ikony aplikací. Pamatujte, že na obrazovkách s vysokým "
+"rozlišením a mnoha viditelnými okny může docházet ke zpoždění při "
+"vykreslování."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -851,13 +861,15 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Zda povolit cyklické procházení různých velikostí dlaždic"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"Pokud je povoleno, dlaždice okna bude cyklicky procházet různé velikosti za "
+"opakovaného použití stejné klávesové zkratky."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -893,32 +905,40 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Velikost ikony ve vyskakovacím okně po stisknutí Alt+Tab"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Velikost ikony aplikace zobrazené ve vyskakovacím okně po stisknutí Alt+Tab."
+" Na tuto hodnotu bude aplikován faktor škálování velikosti obrazovky."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Maximální počet sloupců vyskakovacího okna po stisknutí Alt+Tab"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
 msgstr ""
+"Vyskakovací okno bude rozšířeno tak, aby pojalo zadaný počet sloupců na "
+"řádku."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
 msgstr ""
+"Rozšířit vyskakovací okno po stisknutí Alt+Tab tak aby pojmulo delší názvy "
+"oken"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"Vyskakovací okno může být rozšířeno maximálně na šířku odvozenou z "
+"konfiguračního parametru „alt-tab-max-columns”."
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -1597,7 +1617,7 @@ msgstr "Nabídka okna"
 
 #: src/ui/frames.c:1344
 msgid "Window App Menu"
-msgstr ""
+msgstr "Aplikační nabídka okna"
 
 #: src/ui/frames.c:1347
 msgid "Minimize Window"
@@ -1867,6 +1887,8 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"Specifikace vlastní barvy GTK musí mít v parametrech název barvy a fallback,"
+"  například gtk:custom(foo,bar); nelze zpracovat „%s”"
 
 #: src/ui/theme.c:1413
 #, c-format
@@ -1874,6 +1896,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Neplatný znak „%c” parametru color_name v gtk:custom, povoleny jsou pouze "
+"znaky A-Za-z0-9-_"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1881,6 +1905,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Formát Gtk:custom je „gtk:custom(color_name,fallback)” avšak „%s” formátu "
+"neodpovídá"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2389,18 +2415,21 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Chybná specifikace verze „%s”"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"Atribut „version” nelze použít v metacity-theme-1.xml či metacity-"
+"theme-2.xml"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
+"Motiv vyžaduje verzi %s avšak poslední podporovaná verze motivu je %d. %d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
@@ -2507,7 +2536,7 @@ msgstr "Rámeček"
 
 #: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Připojené modální dialogové okno"
 
 #: src/ui/theme-viewer.c:811
 #, c-format

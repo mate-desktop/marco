@@ -9,6 +9,7 @@
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Микола Ткач <chistomov@gmail.com>, 2019
+# Oleksii Khalikov <oleksii.khalikov@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2019\n"
+"Last-Translator: Oleksii Khalikov <oleksii.khalikov@gmail.com>, 2020\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -200,16 +201,16 @@ msgstr ""
 #: src/50-marco-window-key.xml.in:54 src/org.mate.marco.gschema.xml:875
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr ""
-"Підняти вікно на передній план, якщо воно затінене иншим, інакше опустити "
+"Підняти вікно на передній план, якщо воно затінене іншим, інакше опустити "
 "його"
 
 #: src/50-marco-window-key.xml.in:58 src/org.mate.marco.gschema.xml:880
 msgid "Raise window above other windows"
-msgstr "Підняти вікно над иншими"
+msgstr "Підняти вікно над іншими"
 
 #: src/50-marco-window-key.xml.in:62 src/org.mate.marco.gschema.xml:885
 msgid "Lower window below other windows"
-msgstr "Помістити вікно під иншими вікнами"
+msgstr "Помістити вікно під іншими вікнами"
 
 #: src/50-marco-window-key.xml.in:66 src/org.mate.marco.gschema.xml:890
 msgid "Maximize window vertically"
@@ -458,7 +459,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:80
 msgid "Whether raising should be a side-effect of other user interactions"
-msgstr "Чи повинне підняття вікна бути побічним ефектом инших дій користувача"
+msgstr "Чи повинне підняття вікна бути побічним ефектом інших дій користувача"
 
 #: src/org.mate.marco.gschema.xml:81
 msgid ""
@@ -486,7 +487,7 @@ msgstr ""
 "«істина». Багато дій (як натискання на клієнтську область, пересування або "
 "зміна розміру вікна) зазвичай піднімають вікно як побічний ефект. "
 "Встановлення цього параметру на «неправда», що дуже не радиться, буде "
-"відокремлювати підняття від инших користувацьких дій та нехтувати запити на "
+"відокремлювати підняття від інших користувацьких дій та нехтувати запити на "
 "підвищення від додатків. Дивіться "
 "http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Навіть коли параметр на"
 " «неправда», вікна можуть усе ще бути піднятими з Alt+ЛКМ у області вікна, "
@@ -522,7 +523,7 @@ msgstr ""
 "«toggle_maximize_horizontally» (розгортає вікно лише у одному напрямку або "
 "відновлює звичайний розмір), «minimize» (згортає вікно), «shade» (згортає "
 "вікно вгору), «menu» (показує меню вікна), «lower» (розташовує вікно під "
-"иншими) і «none» (не робить нічого)."
+"іншими) і «none» (не робить нічого)."
 
 #: src/org.mate.marco.gschema.xml:90
 msgid "Action on title bar middle-click"
@@ -546,7 +547,7 @@ msgstr ""
 "«toggle_maximize_horizontally» (розгортає вікно лише у одному напрямку або "
 "відновлює звичайний розмір), «minimize» (згортає вікно), «shade» (згортає "
 "вікно вгору), «menu» (показує меню вікна), «lower» (розташовує вікно під "
-"иншими) і «none» (не робить нічого)."
+"іншими) і «none» (не робить нічого)."
 
 #: src/org.mate.marco.gschema.xml:95
 msgid "Action on title bar right-click"
@@ -570,7 +571,7 @@ msgstr ""
 "«toggle_maximize_horizontally» (розгортає вікно лише у одному напрямку або "
 "відновлює звичайний розмір), «minimize» (згортає вікно), «shade» (згортає "
 "вікно вгору), «menu» (показує меню вікна), «lower» (розташовує вікно під "
-"иншими) і «none» (не робить нічого)."
+"іншими) і «none» (не робить нічого)."
 
 #: src/org.mate.marco.gschema.xml:100
 msgid "Automatically raises the focused window"
@@ -609,7 +610,7 @@ msgstr "Поточна тема"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr "Тема визначає вигляд рамки вікна, заголовку та таке инше."
+msgstr "Тема визначає вигляд рамки вікна, заголовку та таке інше."
 
 #: src/org.mate.marco.gschema.xml:115
 msgid "Use standard system font in window titles"
@@ -669,7 +670,7 @@ msgid ""
 "own beginning and the end of each column leads to its own beginning."
 msgstr ""
 "Стиль прокручування визначає, яким чином гортати від одного робочого "
-"простору до иншого на межі перемикача робочих просторів. Якщо вказано \"no "
+"простору до іншого на межі перемикача робочих просторів. Якщо вказано \"no "
 "wrap\", то при спробі прогорнути робочий простір за межу перемикача нічого "
 "не станеться. Якщо вказано \"classic\", то використовується стара поведінка "
 "marco: кінець одного рядка веде на початок наступного і кінець одного "
@@ -758,10 +759,10 @@ msgid ""
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
 "Якщо цей ключ встановлено, Marco надає користувачу менше зворотнього зв’язку"
-" за рахунок використання контурних рамок, вимикання анімації та у инші "
+" за рахунок використання контурних рамок, вимикання анімації та у інші "
 "способи. Це суттєво знижує зручність для багатьох користувачів, але дозволяє"
 " подовжити термін служби старих застосунків, а також може бути корисно для "
-"термінальних серверів. Варто зауважити, що відображення контурної рамки "
+"термінальних серверів. Варто зауважити, що зображення контурної рамки "
 "вимикається при увімкненні спеціальних можливостей."
 
 #: src/org.mate.marco.gschema.xml:166
@@ -783,8 +784,8 @@ msgstr ""
 "Архітектура, заснована на застосуках, більше схожа на системи Mac, ніж на "
 "Windows. При активуванні вікна у режимі, заснованому на додатках, "
 "підіймаються усі вікна застосунку. Окрім того, у режимі, заснованому на "
-"додатках, клаци мишею для перемикання фокусу не передаються у вікна инших "
-"застосунків. Реалізація режиму, заснованного на додатках, на сьогодні ще "
+"додатках, клаци мишею для перемикання фокусу не передаються у вікна інших "
+"застосунків. Реалізація режиму, заснованого на додатках, на сьогодні ще "
 "вельми далека від завершення."
 
 #: src/org.mate.marco.gschema.xml:171
@@ -1140,7 +1141,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:750
 msgid "Toggle whether a window will always be visible over other windows"
-msgstr "Чи буде вікно завжди розташоване поверх инших вікон"
+msgstr "Чи буде вікно завжди розташоване поверх інших вікон"
 
 #: src/org.mate.marco.gschema.xml:910
 msgid "Tile window to north-west (upper left) corner of screen"
@@ -1209,7 +1210,7 @@ msgstr "Не вдається відкрити дисплей X Window System \"
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
 "binding\n"
-msgstr "Клавішу \"%s\" з модифікаторами \"%x\" вже використовує инша програма\n"
+msgstr "Клавішу \"%s\" з модифікаторами \"%x\" вже використовує інша програма\n"
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
@@ -1258,9 +1259,9 @@ msgid ""
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 msgstr ""
 "marco %s\n"
-"Авторське право (C) 2001-%s Гаос Пеннінгтон, Red Hat, Inc., та инші\n"
+"Авторське право (C) 2001-%s Гаос Пеннінгтон, Red Hat, Inc., та інші\n"
 "Це - вільне програмне забезпечення; умови копіювання дивіться у текстах програми.\n"
-"Не надається НІЯКИХ запорук; навіть ПРИДАТНОСТИ ДЛЯ ПРОДАЖУ чи ВІДПОВІДНОСТИ ПЕВНІЙ МЕТІ.\n"
+"Не надається НІЯКИХ запорук; навіть ПРИДАТНОСТІ ДЛЯ ПРОДАЖУ чи ВІДПОВІДНОСТІ ПЕВНІЙ МЕТІ.\n"
 
 #: src/core/main.c:270
 msgid "Disable connection to session manager"
@@ -1550,7 +1551,7 @@ msgstr "%s (від %s)"
 #: src/core/window-props.c:513
 #, c-format
 msgid "%s (as another user)"
-msgstr "%s (від иншого користувача)"
+msgstr "%s (від іншого користувача)"
 
 #: src/core/window-props.c:1499
 #, c-format
@@ -1624,7 +1625,7 @@ msgstr "Розкотити вікно"
 
 #: src/ui/frames.c:1362
 msgid "Keep Window On Top"
-msgstr "Тримати вікно поверх инших"
+msgstr "Тримати вікно поверх інших"
 
 #: src/ui/frames.c:1365
 msgid "Remove Window From Top"
@@ -1682,7 +1683,7 @@ msgstr "Перемістити заголовок на _екран"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: src/ui/menu.c:82 src/ui/menu.c:84
 msgid "Always on _Top"
-msgstr "Завжди по_верх инших"
+msgstr "Завжди по_верх інших"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: src/ui/menu.c:86

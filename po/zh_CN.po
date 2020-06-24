@@ -4,15 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Wylmer Wang, 2018
+# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2018
 # gtrslower, 2018
-# 玉堂白鹤 <yjwork@qq.com>, 2018
 # Mingcong Bai <jeffbai@aosc.xyz>, 2018
 # Mingye Wang <arthur200126@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# liushuyu011 <liushuyu011@gmail.com>, 2018
+# shuyu liu <liushuyu011@gmail.com>, 2018
 # Wenbin Lv <wenbin816@gmail.com>, 2019
 # zhineng404 <zhinengge@gmail.com>, 2019
+# 玉堂白鹤 <yjwork@qq.com>, 2020
+# liulitchi <xingzuo88@qq.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -20,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: zhineng404 <zhinengge@gmail.com>, 2019\n"
+"Last-Translator: liulitchi <xingzuo88@qq.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -669,6 +670,8 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"如果设置此选项, 当混成器启用时, 将不会在 alt-tab "
+"弹出窗口显示缩略图。将仅显示应用图标。请注意，在具有许多可见窗口的高分辨率屏幕上，渲染时可能会出现明显的滞后。"
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -751,13 +754,13 @@ msgstr "如果该选项被启用，将窗口拖拽到屏幕顶部将最大化该
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "是否启用窗口平铺循环"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
-msgstr ""
+msgstr "启用后，通过连续使用同一快捷键，可让平铺窗口在不同的尺寸间循环。"
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -787,7 +790,7 @@ msgstr "用逗号分隔的类列表。每个正在运行的图形应用程序引
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "alt-tab 弹出窗口中的图标大小"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""

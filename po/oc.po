@@ -6,8 +6,9 @@
 # Translators:
 # Cédric Valmary <cvalmary@yahoo.fr>, 2018
 # Sébastien Denux <sebcxjo@gmail.com>, 2018
-# Cfpo Miègjorn-Pirenèus <inactive+cfpomp@transifex.com>, 2018
+# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Quentin PAGÈS, 2020
 # 
 msgid ""
 msgstr ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Last-Translator: Quentin PAGÈS, 2020\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +50,7 @@ msgstr "Executar un terminal"
 
 #: src/50-marco-desktop-key.xml.in:14 src/org.mate.marco.gschema.xml:654
 msgid "Rename current workspace"
-msgstr ""
+msgstr "Renommar l’espaci de trabalh acual"
 
 #: src/50-marco-global-key.xml.in:2 src/50-marco-window-key.xml.in:2
 msgid "Window Management"
@@ -153,7 +154,7 @@ msgstr "Anar a l'espaci de trabalh endessós de l'espaci de trabalh actual"
 
 #: src/50-marco-global-key.xml.in:131 src/org.mate.marco.gschema.xml:549
 msgid "Switch to previously selected workspace"
-msgstr ""
+msgstr "Bascular a l’espaci de trabalh precedentament seleccionat"
 
 #: src/50-marco-window-key.xml.in:6 src/org.mate.marco.gschema.xml:735
 msgid "Activate the window menu"
@@ -1210,15 +1211,15 @@ msgstr "Pas cap de comanda de terminal definida.\n"
 
 #: src/core/keybindings.c:3735
 msgid "<tt>Rename Workspace</tt>"
-msgstr ""
+msgstr "<tt>Renommar espaci de trabalh</tt>"
 
 #: src/core/keybindings.c:3736
 msgid "New Workspace Name:"
-msgstr ""
+msgstr "Nom del novèl espaci de trabalh :"
 
 #: src/core/keybindings.c:3747
 msgid "OK"
-msgstr ""
+msgstr "D’acòrdi"
 
 #: src/core/keybindings.c:3747
 msgid "Cancel"
@@ -2412,6 +2413,8 @@ msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
@@ -2481,7 +2484,7 @@ msgstr "Impossible de trobar un fichièr valid pel tèma %s\n"
 
 #: src/ui/theme-viewer.c:256
 msgid "_OK"
-msgstr ""
+msgstr "_D’acòrdi"
 
 #: src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"

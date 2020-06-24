@@ -5,11 +5,11 @@
 # 
 # Translators:
 # worm <thewormhole@gmail.com>, 2018
-# Helena S <ele@tutamail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Damir Jerovšek <jierro@windowslive.com>, 2018
 # Damir Mevkić <damir.mevkic@gmail.com>, 2018
 # Arnold Marko <arnold.marko@gmail.com>, 2019
+# Helena S <ele@tutamail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2019\n"
+"Last-Translator: Helena S <ele@tutamail.com>, 2020\n"
 "Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
-msgstr "Namizje:"
+msgstr "Namizje"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
@@ -385,7 +385,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:60
 msgid "Whether to display preselected tab window border"
-msgstr ""
+msgstr "Ali naj se prikaže izbrana meja okna na zavihku"
 
 #: src/org.mate.marco.gschema.xml:61
 msgid ""
@@ -635,7 +635,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:131
 msgid "Workspace wrap style"
-msgstr ""
+msgstr "Prelomni slog delovne površine"
 
 #: src/org.mate.marco.gschema.xml:132
 msgid ""
@@ -833,7 +833,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:201
 msgid "List of applications ignored by show-desktop"
-msgstr ""
+msgstr "Seznam aplikacij, ki jih prikaži-namizje ne upošteva"
 
 #: src/org.mate.marco.gschema.xml:202
 msgid ""
@@ -843,7 +843,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Velikost ikon v pojavnem oknu alt-tab"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
@@ -2333,18 +2333,21 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Slaba specifikacija različice '%s'"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"atribut \"različica\" ne more biti uporabljen pri metacity-theme-1.xml ali "
+"metacity-theme-2.xml "
 
 #: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
+"Tema zahteva različico %s, vendar je zadnja podprta različica teme %d.%d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
