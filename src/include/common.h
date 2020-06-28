@@ -326,7 +326,7 @@ void meta_frame_borders_clear (MetaFrameBorders *self);
 #define META_MINI_ICON_WIDTH 16
 #define META_MINI_ICON_HEIGHT 16
 
-#define META_DEFAULT_ICON_NAME "window"
+#define META_DEFAULT_ICON_NAME "preferences-desktop-theme"
 
 #define META_PRIORITY_PREFS_NOTIFY   (G_PRIORITY_DEFAULT_IDLE + 10)
 #define META_PRIORITY_WORK_AREA_HINT (G_PRIORITY_DEFAULT_IDLE + 15)
