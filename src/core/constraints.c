@@ -541,15 +541,15 @@ place_window_if_needed(MetaWindow     *window,
            */
           if (info->current.width >= info->work_area_xinerama.width)
             {
-              info->current.width = .75 * info->work_area_xinerama.width;
+              info->current.width = (int) (.75 * info->work_area_xinerama.width + 0.5);
               info->current.x = info->work_area_xinerama.x +
-                       .125 * info->work_area_xinerama.width;
+                       (int)(.125 * info->work_area_xinerama.width + 0.5);
             }
           if (info->current.height >= info->work_area_xinerama.height)
             {
-              info->current.height = .75 * info->work_area_xinerama.height;
+              info->current.height = (int)(.75 * info->work_area_xinerama.height + 0.5);
               info->current.y = info->work_area_xinerama.y +
-                       .083 * info->work_area_xinerama.height;
+                       (int)(.083 * info->work_area_xinerama.height + 0.5);
             }
 
           if (window->maximize_horizontally_after_placement ||
@@ -1293,14 +1293,12 @@ constrain_aspect_ratio (MetaWindow         *window,
     {
     case WestGravity:
     case EastGravity:
-      /* Yeah, I suck for doing implicit rounding -- sue me */
-      new_height = CLAMP (new_height, new_width / maxr,  new_width / minr);
+      new_height = CLAMP (new_height, (int)((new_width / maxr) + 0.5),  (int)((new_width / minr) + 0.5));
       break;
 
     case NorthGravity:
     case SouthGravity:
-      /* Yeah, I suck for doing implicit rounding -- sue me */
-      new_width  = CLAMP (new_width,  new_height * minr, new_height * maxr);
+      new_width  = CLAMP (new_width,  (int)((new_height * minr) + 0.5), (int)((new_height * maxr) + 0.5));
       break;
 
     case NorthWestGravity:
@@ -1312,8 +1310,8 @@ constrain_aspect_ratio (MetaWindow         *window,
     default:
       /* Find what width would correspond to new_height, and what height would
        * correspond to new_width */
-      alt_width  = CLAMP (new_width,  new_height * minr, new_height * maxr);
-      alt_height = CLAMP (new_height, new_width / maxr,  new_width / minr);
+      alt_width  = CLAMP (new_width,  (int)((new_height * minr) + 0.5), (int)((new_height * maxr) + 0.5));
+      alt_height = CLAMP (new_height, (int)((new_width / maxr) + 0.5),  (int)((new_width / minr) + 0.5));
 
       /* The line connecting the points (alt_width, new_height) and
        * (new_width, alt_height) provide a range of
@@ -1327,8 +1325,8 @@ constrain_aspect_ratio (MetaWindow         *window,
                                                       new_width, new_height,
                                                       &best_width, &best_height);
 
-      new_width  = round (best_width);
-      new_height = round (best_height);
+      new_width  = (int) (best_width + 0.5);
+      new_height = (int) (best_height + 0.5);
 
       break;
     }

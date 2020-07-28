@@ -371,10 +371,10 @@ effects_draw_box_animation_timeout (BoxAnimationContext *context)
   draw_rect = context->start_rect;
 
   /* Now add a delta proportional to elapsed time. */
-  draw_rect.x += (context->end_rect.x - context->start_rect.x) * fraction;
-  draw_rect.y += (context->end_rect.y - context->start_rect.y) * fraction;
-  draw_rect.width += (context->end_rect.width - context->start_rect.width) * fraction;
-  draw_rect.height += (context->end_rect.height - context->start_rect.height) * fraction;
+  draw_rect.x += (int)((context->end_rect.x - context->start_rect.x) * fraction + 0.5);
+  draw_rect.y += (int)((context->end_rect.y - context->start_rect.y) * fraction + 0.5);
+  draw_rect.width += (int)((context->end_rect.width - context->start_rect.width) * fraction + 0.5);
+  draw_rect.height += (int)((context->end_rect.height - context->start_rect.height) * fraction + 0.5);
 
   /* don't confuse X or gdk-pixbuf with bogus rectangles */
   if (draw_rect.width < 1)

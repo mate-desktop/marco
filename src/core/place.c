@@ -31,6 +31,7 @@
 #include "prefs.h"
 #include <gdk/gdk.h>
 #include <math.h>
+#include <float.h>
 #include <stdlib.h>
 
 typedef enum
@@ -46,8 +47,8 @@ northwestcmp (gconstpointer a, gconstpointer b)
 {
   MetaWindow *aw = (gpointer) a;
   MetaWindow *bw = (gpointer) b;
-  int from_origin_a;
-  int from_origin_b;
+  float from_origin_a;
+  float from_origin_b;
   int ax, ay, bx, by;
 
   /* we're interested in the frame position for cascading,
@@ -76,8 +77,8 @@ northwestcmp (gconstpointer a, gconstpointer b)
     }
 
   /* probably there's a fast good-enough-guess we could use here. */
-  from_origin_a = sqrt (ax * ax + ay * ay);
-  from_origin_b = sqrt (bx * bx + by * by);
+  from_origin_a = sqrtf ((float)(ax * ax + ay * ay));
+  from_origin_b = sqrtf ((float)(bx * bx + by * by));
 
   if (from_origin_a < from_origin_b)
     return -1;

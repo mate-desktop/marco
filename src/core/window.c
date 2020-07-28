@@ -2914,27 +2914,27 @@ meta_window_move_to_monitor(MetaWindow *window,
                           target_rect.height);
 }
 
-static void meta_window_transform_to_monitor(MetaRectangle *target_rect,
-                                           const MetaRectangle *from_monitor,
-                                           const MetaRectangle *to_monitor)
+static void
+meta_window_transform_to_monitor (MetaRectangle       *target_rect,
+                                  const MetaRectangle *from_monitor,
+                                  const MetaRectangle *to_monitor)
 {
-  double horizontal_ratio;
-  double vertical_ratio;
+  float horizontal_ratio;
+  float vertical_ratio;
 
-  horizontal_ratio = (double)to_monitor->width / from_monitor->width;
-  vertical_ratio = (double)to_monitor->height / from_monitor->height;
+  horizontal_ratio = (float)to_monitor->width / from_monitor->width;
+  vertical_ratio = (float)to_monitor->height / from_monitor->height;
 
   target_rect->x -= from_monitor->x;
   target_rect->y -= from_monitor->y;
 
-  target_rect->width *= horizontal_ratio;
-  target_rect->height *= vertical_ratio;
-  target_rect->x *= horizontal_ratio;
-  target_rect->y *= vertical_ratio;
+  target_rect->width  = (int)(target_rect->width  * horizontal_ratio + 0.5f);
+  target_rect->height = (int)(target_rect->height * vertical_ratio   + 0.5f);
+  target_rect->x = (int)(target_rect->x * horizontal_ratio + 0.5f);
+  target_rect->y = (int)(target_rect->y * vertical_ratio   + 0.5f);
 
   target_rect->x += to_monitor->x;
   target_rect->y += to_monitor->y;
-
 }
 
 void
@@ -7101,7 +7101,7 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
   gboolean       is_onscreen;
 
   const int min_height_needed  = 8;
-  const int min_width_percent  = 0.5;
+  const float min_width_percent  = 0.5f;
   const int min_width_absolute = 50;
 
   /* Titlebar can't be offscreen if there is no titlebar... */
@@ -7124,7 +7124,7 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
 
       meta_rectangle_intersect (&titlebar_rect, spanning_rect, &overlap);
       if (overlap.height > MIN (titlebar_rect.height, min_height_needed) &&
-          overlap.width  > MIN (titlebar_rect.width * min_width_percent,
+          overlap.width  > MIN ((int)(titlebar_rect.width * min_width_percent + 0.5f),
                                 min_width_absolute))
         {
           is_onscreen = TRUE;

@@ -833,10 +833,10 @@ solid_picture (MetaDisplay *display,
       return None;
     }
 
-  c.alpha = a * 0xffff;
-  c.red = r * 0xffff;
-  c.green = g * 0xffff;
-  c.blue = b * 0xffff;
+  c.alpha = (guint16)(a * 65535 + 0.5);
+  c.red   = (guint16)(r * 65535 + 0.5);
+  c.green = (guint16)(g * 65535 + 0.5);
+  c.blue  = (guint16)(b * 65535 + 0.5);
 
   XRenderFillRectangle (xdisplay, PictOpSrc, picture, &c, 0, 0, 1, 1);
   XFreePixmap (xdisplay, pixmap);

@@ -779,25 +779,25 @@ meta_gradient_create_interwoven (int            width,
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
 
-  r1 = (long)(colors1[0].red*0xffffff);
-  g1 = (long)(colors1[0].green*0xffffff);
-  b1 = (long)(colors1[0].blue*0xffffff);
-  a1 = (long)(colors1[0].alpha*0xffffff);
+  r1 = (long)(colors1[0].red   * 0xffffff + 0.5);
+  g1 = (long)(colors1[0].green * 0xffffff + 0.5);
+  b1 = (long)(colors1[0].blue  * 0xffffff + 0.5);
+  a1 = (long)(colors1[0].alpha * 0xffffff + 0.5);
 
-  r2 = (long)(colors2[0].red*0xffffff);
-  g2 = (long)(colors2[0].green*0xffffff);
-  b2 = (long)(colors2[0].blue*0xffffff);
-  a2 = (long)(colors2[0].alpha*0xffffff);
+  r2 = (long)(colors2[0].red   * 0xffffff + 0.5);
+  g2 = (long)(colors2[0].green * 0xffffff + 0.5);
+  b2 = (long)(colors2[0].blue  * 0xffffff + 0.5);
+  a2 = (long)(colors2[0].alpha * 0xffffff + 0.5);
 
-  dr1 = ((colors1[1].red-colors1[0].red)*0xffffff)/(int)height;
-  dg1 = ((colors1[1].green-colors1[0].green)*0xffffff)/(int)height;
-  db1 = ((colors1[1].blue-colors1[0].blue)*0xffffff)/(int)height;
-  da1 = ((colors1[1].alpha-colors1[0].alpha)*0xffffff)/(int)height;
+  dr1 = (long)((colors1[1].red   - colors1[0].red)   * 0xffffff + 0.5) / (long)height;
+  dg1 = (long)((colors1[1].green - colors1[0].green) * 0xffffff + 0.5) / (long)height;
+  db1 = (long)((colors1[1].blue  - colors1[0].blue)  * 0xffffff + 0.5) / (long)height;
+  da1 = (long)((colors1[1].alpha - colors1[0].alpha) * 0xffffff + 0.5) / (long)height;
 
-  dr2 = ((colors2[1].red-colors2[0].red)*0xffffff)/(int)height;
-  dg2 = ((colors2[1].green-colors2[0].green)*0xffffff)/(int)height;
-  db2 = ((colors2[1].blue-colors2[0].blue)*0xffffff)/(int)height;
-  da2 = ((colors2[1].alpha-colors2[0].alpha)*0xffffff)/(int)height;
+  dr2 = (long)((colors2[1].red   - colors2[0].red)   * 0xffffff + 0.5) / (long)height;
+  dg2 = (long)((colors2[1].green - colors2[0].green) * 0xffffff + 0.5) / (long)height;
+  db2 = (long)((colors2[1].blue  - colors2[0].blue)  * 0xffffff + 0.5) / (long)height;
+  da2 = (long)((colors2[1].alpha - colors2[0].alpha) * 0xffffff + 0.5) / (long)height;
 
   for (i=0,k=0,l=0,ll=thickness1; i<height; i++)
     {

@@ -628,10 +628,13 @@ preview_collection (int font_size,
 
       if (scale != 1.0)
         {
+          gint font_size_local;
+
           font_desc = pango_font_description_new ();
 
+          font_size_local = pango_font_description_get_size (base_desc);
           pango_font_description_set_size (font_desc,
-                                           MAX (pango_font_description_get_size (base_desc) * scale, 1));
+                                           MAX ((gint)(font_size_local * scale + 0.5), 1));
 
           font_string = pango_font_description_to_string (font_desc);
           override_font (preview, font_string);

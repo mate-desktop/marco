@@ -1211,7 +1211,7 @@ meta_screen_update_cursor (MetaScreen *screen)
 }
 
 #define MAX_PREVIEW_SCREEN_FRACTION 0.33
-#define MAX_PREVIEW_SIZE 300
+#define MAX_PREVIEW_SIZE 300.0
 
 static cairo_surface_t *
 get_window_surface (MetaWindow *window)
@@ -1219,7 +1219,8 @@ get_window_surface (MetaWindow *window)
   cairo_surface_t *surface, *scaled;
   cairo_t *cr;
   const MetaXineramaScreenInfo *current;
-  int width, height, max_columns, max_size;
+  int width, height, max_columns;
+  double max_size;
   double ratio;
 
   surface = meta_compositor_get_window_surface (window->display->compositor, window);
@@ -1237,16 +1238,16 @@ get_window_surface (MetaWindow *window)
   if (width > height)
     {
       max_size = MIN (MAX_PREVIEW_SIZE, current->rect.width / max_columns * MAX_PREVIEW_SCREEN_FRACTION);
-      ratio = ((double) width) / max_size;
+      ratio = max_size / width;
       width = (int) max_size;
-      height = (int) (((double) height) / ratio);
+      height = (int) (height * ratio + 0.5);
     }
   else
     {
       max_size = MIN (MAX_PREVIEW_SIZE, current->rect.height / max_columns * MAX_PREVIEW_SCREEN_FRACTION);
-      ratio = ((double) height) / max_size;
+      ratio = max_size / height;
       height = (int) max_size;
-      width = (int) (((double) width) / ratio);
+      width = (int) (width * ratio + 0.5);
     }
 
   meta_error_trap_push (window->display);
@@ -1257,7 +1258,7 @@ get_window_surface (MetaWindow *window)
     return NULL;
 
   cr = cairo_create (scaled);
-  cairo_scale (cr, 1/ratio, 1/ratio);
+  cairo_scale (cr, ratio, ratio);
   cairo_set_source_surface (cr, surface, 0, 0);
   cairo_paint (cr);
 

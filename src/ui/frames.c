@@ -838,13 +838,13 @@ meta_ui_frame_get_corner_radiuses (MetaFrames  *frames,
    */
 
   if (top_left)
-    *top_left = fgeom.top_left_corner_rounded_radius + sqrt(fgeom.top_left_corner_rounded_radius);
+    *top_left = fgeom.top_left_corner_rounded_radius + sqrtf (fgeom.top_left_corner_rounded_radius);
   if (top_right)
-    *top_right = fgeom.top_right_corner_rounded_radius + sqrt(fgeom.top_right_corner_rounded_radius);
+    *top_right = fgeom.top_right_corner_rounded_radius + sqrtf (fgeom.top_right_corner_rounded_radius);
   if (bottom_left)
-    *bottom_left = fgeom.bottom_left_corner_rounded_radius + sqrt(fgeom.bottom_left_corner_rounded_radius);
+    *bottom_left = fgeom.bottom_left_corner_rounded_radius + sqrtf (fgeom.bottom_left_corner_rounded_radius);
   if (bottom_right)
-    *bottom_right = fgeom.bottom_right_corner_rounded_radius + sqrt(fgeom.bottom_right_corner_rounded_radius);
+    *bottom_right = fgeom.bottom_right_corner_rounded_radius + sqrtf (fgeom.bottom_right_corner_rounded_radius);
 }
 
 void
@@ -953,12 +953,12 @@ get_visible_region (MetaFrames        *frames,
   if (fgeom->top_left_corner_rounded_radius != 0)
     {
       const int corner = fgeom->top_left_corner_rounded_radius * scale;
-      const float radius = sqrt(corner) + corner;
+      const float radius = sqrtf (corner) + corner;
       int i;
 
       for (i=0; i<corner; i++)
         {
-          const int width = floor(0.5 + radius - sqrt(radius*radius - (radius-(i+0.5))*(radius-(i+0.5))));
+          const int width = (int)(0.5f + radius - sqrtf (radius*radius - (radius-(i+0.5f))*(radius-(i+0.5f))));
           rect.x = frame_rect.x;
           rect.y = frame_rect.y + i;
           rect.width = width;
@@ -971,12 +971,12 @@ get_visible_region (MetaFrames        *frames,
   if (fgeom->top_right_corner_rounded_radius != 0)
     {
       const int corner = fgeom->top_right_corner_rounded_radius * scale;
-      const float radius = sqrt(corner) + corner;
+      const float radius = sqrtf (corner) + corner;
       int i;
 
       for (i=0; i<corner; i++)
         {
-          const int width = floor(0.5 + radius - sqrt(radius*radius - (radius-(i+0.5))*(radius-(i+0.5))));
+          const int width = (int)(0.5f + radius - sqrtf (radius*radius - (radius-(i+0.5f))*(radius-(i+0.5f))));
           rect.x = frame_rect.x + frame_rect.width - width;
           rect.y = frame_rect.y + i;
           rect.width = width;
@@ -989,12 +989,12 @@ get_visible_region (MetaFrames        *frames,
   if (fgeom->bottom_left_corner_rounded_radius != 0)
     {
       const int corner = fgeom->bottom_left_corner_rounded_radius * scale;
-      const float radius = sqrt(corner) + corner;
+      const float radius = sqrtf (corner) + corner;
       int i;
 
       for (i=0; i<corner; i++)
         {
-          const int width = floor(0.5 + radius - sqrt(radius*radius - (radius-(i+0.5))*(radius-(i+0.5))));
+          const int width = (int)(0.5f + radius - sqrtf (radius*radius - (radius-(i+0.5f))*(radius-(i+0.5f))));
           rect.x = frame_rect.x;
           rect.y = frame_rect.y + frame_rect.height - i - 1;
           rect.width = width;
@@ -1007,12 +1007,12 @@ get_visible_region (MetaFrames        *frames,
   if (fgeom->bottom_right_corner_rounded_radius != 0)
     {
       const int corner = fgeom->bottom_right_corner_rounded_radius * scale;
-      const float radius = sqrt(corner) + corner;
+      const float radius = sqrtf (corner) + corner;
       int i;
 
       for (i=0; i<corner; i++)
         {
-          const int width = floor(0.5 + radius - sqrt(radius*radius - (radius-(i+0.5))*(radius-(i+0.5))));
+          const int width = (int)(0.5f + radius - sqrtf (radius*radius - (radius-(i+0.5f))*(radius-(i+0.5f))));
           rect.x = frame_rect.x + frame_rect.width - width;
           rect.y = frame_rect.y + frame_rect.height - i - 1;
           rect.width = width;
