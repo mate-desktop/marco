@@ -1,3 +1,23 @@
+### marco 1.24.1
+
+  * update translations
+  * common: window icon (META_DEFAULT_ICON_NAME) is no longer available
+  * workspace: Don't try to use per-workspace MRU lists as a hint for focusing
+  * stack: make meta_window_raise() and meta_window_lower() smarter
+  * compositor: fix possible crash closing/destroying window . Fixes to previous commit.
+  * window: fix crash if workspace is null
+  * workspace-switcher: fix colors of selected workspace when compositing is disabled.
+  * build: silent build warnings for distcheck
+  * Remove unnecessary warnings about visible region
+  * meson: improvements
+  * Guard against null changes introduced by previous commit
+  * Introduce nullpointer checks and return null if validation fails
+  * util: meta_bug raises SIGABRT so it shouldn't return
+  * add meson build files to EXTRA_DIST
+  * remove warning: 'GTimeVal' is deprecated
+  * theme: avoid deprecated g_memmove
+  * frames: don't bother painting the background
+
 ### marco 1.24.0
 
   * update translations
