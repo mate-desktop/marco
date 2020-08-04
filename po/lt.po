@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# brennus <jonas.ska@gmail.com>, 2018
-# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Moo, 2018
+# brennus <jonas.ska@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Moo, 2020
+# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Moo, 2018\n"
+"PO-Revision-Date: 2020-02-15 11:16+0000\n"
+"Last-Translator: Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2020\n"
 "Language-Team: Lithuanian (https://www.transifex.com/mate/teams/13566/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +29,7 @@ msgstr "Darbalaukis"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Rodyti skydelio &quot;programų paleidimo&quot; langą"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -370,6 +370,12 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Spustelėjus ant lango, kai yra paspaustas šis specialusis klavišas, langas "
+"bus perkeltas (kairysis spustelėjimas), keičiamas jo dydis (vidurinis "
+"spustelėjimas), arba rodomas lango meniu (dešinysis spustelėjimas). "
+"Viduriniojo ir dešiniojo mygtuko operacijos gali būti sukeistos "
+"„resize_with_right_button“ nustatymu. Specialus klavišas gali būti "
+"nustatytas kaip, pavyzdžiui, „<Alt>“ arba „<Super>“."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -742,6 +748,10 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"Jei teisinga, tuomet, komponavimo tvarkytuvei esant įjungtai, alt-tab "
+"iškylančiajame lange nebus rodomos langų miniatiūros. Vietoj jų, bus rodomos"
+" programų piktogramos. Atkreipkite dėmesį, kad didelės raiškos ekranuose su "
+"daug matomų langų gali pasitakyti atvaizdavimo delsa."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -844,13 +854,15 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Ar įjungti ėjimą per skirtingus išklojimo dydžius"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"Įjungus, išklojant langą bus einama per daug skirtingų dydžių naudojant tą "
+"pačią klavišų kombinaciją keliskart iš eilės."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -887,32 +899,39 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Piktogramų dydis alt-tab iškylančiame lange"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Alt-tab iškylančiajame lange rodomų programų piktogramų dydis. Ekrano "
+"mastelis pritaikomas pagal šią vertę."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Maksimalus stulpelių skaičius alt-tab iškylančiajame lange"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
 msgstr ""
+"Išklylantysis langas bus išplėstas, kad į jį eilutėje tilptų šie elementai."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
 msgstr ""
+"Išplėsti alt-tab iškylantįjį langą, kad jame tilptų ilgesni langų "
+"pavadinimai"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"Iškylantysis langas gali būti išplečiamas iki nustatytojo pločio, "
+"reguliuojamo config parametru „alt-tab-max-columns“."
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -979,6 +998,12 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Klavišų susiejimas, kuris paleidžia atitinkamą sunumeruotą komandą iš "
+"/apps/marco/keybinding_commands raktų. Klavišų susiejimo formatas gali būti "
+"panašus į „<Control>a“ arba „<Shift><Alt>F1“. Sistema apdorojanti aprašymą "
+"yra gana laisva ir leidžia maišyti didžiąsias bei mažąsias raides ir naudoti"
+" tokius sutrumpinimus kaip „<Ctl>“ ir „<Ctrl>“. Nustačius specialų požymį "
+"\"disabled\", su šiuo veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -1024,6 +1049,9 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Formatas maždaug toks: „<Control>a“ arba „<Shift><Alt>F1“.\n"
+"\n"
+"Sistema apdorojanti aprašymą yra gana laisva ir leidžia maišyti didžiąsias bei mažąsias raides ir naudoti tokius sutrumpinimus kaip „<Ctl>“ ir „<Ctrl>“. Nustačius specialų požymį „disabled“, su šiuo veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -1040,6 +1068,11 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Formatas maždaug toks: „<Control>a“ arba „<Shift><Alt>F1“.\n"
+"\n"
+"Sistema, apdorojanti aprašymą, yra gana laisva ir leidžia maišyti didžiąsias bei mažąsias raides ir naudoti tokius sutrumpinimus kaip „<Ctl>“ ir „<Ctrl>“. Nustačius specialų požymį „disabled“, su šiuo veiksmu nebus susieta jokia klavišų kombinacija.\n"
+"\n"
+"Šis klavišų susiejimas gali būti apsuktas nuspaudus „Lyg2“  klavišą, taigi jame negalima naudoti „Lyg2“."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1591,7 +1624,7 @@ msgstr "Lango meniu"
 
 #: src/ui/frames.c:1344
 msgid "Window App Menu"
-msgstr ""
+msgstr "Lango programos meniu"
 
 #: src/ui/frames.c:1347
 msgid "Minimize Window"
@@ -1861,6 +1894,8 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"GTK pasirinktų spalvų aprašymas turi turėti palvos pavadinimą ir atsarginę "
+"spalvą skliaustuose, pvz. gtk:custom(foo,bar); could not parse \"%s\""
 
 #: src/ui/theme.c:1413
 #, c-format
@@ -1868,6 +1903,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Netinkamas simbolis „%c“ gtk:custom color_name parametre, tinka tik "
+"A-Za-z0-9-_"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1875,6 +1912,7 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Gtk:custom formatas yra „gtk:custom(color_name,fallback“, „%s“ netinka"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2404,18 +2442,20 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Blogas versijos aprašymas „%s“"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"„version“ atributas negali būti naudojamas metacity-theme-1.xml arba "
+"metacity-theme-2.xml"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
-msgstr ""
+msgstr "Temai reikia versijos %s, bet vėliausia palaikoma versija yra %d.%d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
@@ -2524,7 +2564,7 @@ msgstr "Kraštinė"
 
 #: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Pridėtas modalinis dialogas"
 
 #: src/ui/theme-viewer.c:811
 #, c-format

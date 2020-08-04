@@ -4,28 +4,31 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Fabrizzio Alphonsus Soares <fabrizzio.soares@gmail.com>, 2018
-# Alberto Federman Neto <mrtabac@gmail.com>, 2018
-# Felipe Rozelio <feliperozelio@gmail.com>, 2018
-# Enrico Nicoletto <enrico.BR@gmx.co.uk>, 2018
-# Matheus Macabu <mkbu95@gmail.com>, 2018
-# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2018
-# Victor Gonçalves <hotcyv@gmail.com>, 2018
-# Samuel Henrique <samueloph@debian.org>, 2018
-# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2018
-# 642cf48d39bca7f9ad9d185d4bcea8c8, 2018
-# Roger Araújo <roger.rf@gmail.com>, 2018
-# 710a500dd1d5560bb05c8b24814b8c26, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 18ab4449a00621534598e84a949423ea, 2018
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Samuel Henrique <samueloph@debian.org>, 2020
+# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2020
+# 642cf48d39bca7f9ad9d185d4bcea8c8, 2020
+# Fabrizzio Alphonsus Soares <fabrizzio.soares@gmail.com>, 2020
+# Alberto Federman Neto <mrtabac@gmail.com>, 2020
+# Felipe Rozelio <feliperozelio@gmail.com>, 2020
+# Matheus Macabu <mkbu95@gmail.com>, 2020
+# Enrico Nicoletto <enrico.BR@gmx.co.uk>, 2020
+# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
+# Roger Araújo <roger.rf@gmail.com>, 2020
+# 710a500dd1d5560bb05c8b24814b8c26, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Victor Gonçalves <hotcyv@gmail.com>, 2020
+# 18ab4449a00621534598e84a949423ea, 2020
+# Rafael Oliveira <rsachetto@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: 18ab4449a00621534598e84a949423ea, 2018\n"
+"PO-Revision-Date: 2020-02-15 11:16+0000\n"
+"Last-Translator: Rafael Oliveira <rsachetto@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,7 +66,7 @@ msgstr "Renomear a área de trabalho atual"
 
 #: src/50-marco-global-key.xml.in:2 src/50-marco-window-key.xml.in:2
 msgid "Window Management"
-msgstr "Gerenciamento de janelas"
+msgstr "Gerenciamento de Janelas"
 
 #: src/50-marco-global-key.xml.in:4 src/org.mate.marco.gschema.xml:564
 msgid "Move between windows, using a popup window"
@@ -381,6 +384,12 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Clicar em uma janela enquanto pressiona esta tecla modificadora moverá a "
+"janela (botão esquerdo), redimensionará a janela (botão do meio), ou "
+"mostrará o menu da janela (botão direito). As operações dos botões do meio e"
+" direito podem ser trocadas usando a tecla \"resize_with_right_button\". O "
+"modificador é expresso como \"&lt;Alt&gt;\" ou \"&lt;Super&gt;\" por "
+"exemplo."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -762,6 +771,11 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"Se definido como verdadeiro, as miniaturas de janelas não serão exibidas na "
+"janela do alt-tab quando o gerente de composição estiver habilitado. Em vez "
+"disso, será exibido o ícone do aplicativo. Note que em telas com alta "
+"resolução com muitas janelas visíveis pode haver um atraso perceptível na "
+"renderização. "
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -910,7 +924,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Tamanho do ícone na janela do alt-tab"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
@@ -920,7 +934,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Número máximo de colunas na janela do alt-tab"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
@@ -1900,6 +1914,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Caractere inválido '%c' no parâmetro color_name de gtk:custom, somente "
+"A-Za-z0-9-_ são válidos"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -2447,6 +2463,7 @@ msgstr ""
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
+"O tema requer a versão %s mas a versão mais recente suportada é %d. %d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format

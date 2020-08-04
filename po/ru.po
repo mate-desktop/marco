@@ -4,28 +4,30 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Aleksey Kabanov <ak099@mail.ru>, 2018
-# Alexei Sorokin <sor.alexei@meowr.ru>, 2018
-# Дмитрий Михирев, 2018
-# AlexL <loginov.alex.valer@gmail.com>, 2018
-# Evolve32 <evolve32@yandex.ru>, 2018
-# monsta <monsta@inbox.ru>, 2018
-# Ivan, 2018
-# Andreï Victorovitch Kostyrka, 2018
-# Dmitry Kireev <dinimito@mail.ru>, 2018
-# theirix <theirix@gmail.com>, 2018
-# Oldboy Boyold <boyoldboyold@gmail.com>, 2018
-# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Alex Putz, 2018
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Olesya Gerasimenko <gammaray@basealt.ru>, 2020
+# Alexei Sorokin, 2020
+# AlexL <loginov.alex.valer@gmail.com>, 2020
+# Evolve32 <evolve32@yandex.ru>, 2020
+# Andreï Victorovitch Kostyrka, 2020
+# Dmitry Kireev <dinimito@mail.ru>, 2020
+# theirix <theirix@gmail.com>, 2020
+# Oldboy Boyold <boyoldboyold@gmail.com>, 2020
+# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2020
+# Alex Putz, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Дмитрий Михирев, 2020
+# monsta <monsta@inbox.ru>, 2020
+# Ivan Kuzmenko, 2020
+# Anna Vyalkova <cybertailor@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Alex Putz, 2018\n"
+"PO-Revision-Date: 2020-02-15 11:16+0000\n"
+"Last-Translator: Anna Vyalkova <cybertailor@gmail.com>, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,7 +41,7 @@ msgstr "Рабочий стол"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Показать диалоговое окно панели &quot;Выполнить программу&quot;"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -379,6 +381,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Щёлкнув по окну при нажатии этой клавиши-модификатора, вы сможете "
+"переместить окно (левая кнопка), изменить его размер (средняя кнопка), или "
+"показать меню окна (правая кнопка). Функции левой и правой кнопок меняются, "
+"если включён параметр &quot;resize_with_right_button&quot; Модификатор "
+"определяется, например, как «<Alt>» или «<Super>»."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -755,6 +762,9 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"С данной опцией миниатюры предварительного просмотра не будут отображаться "
+"во всплывающем окне Alt+Tab, когда включён композитный менеджер. Вместо них,"
+" будут отображаться значки приложений."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -858,13 +868,15 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Включить ли цикличное изменение размеров окна при тайлинге"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"С данной опцией при тайлинге окна будут перебираться различные размеры, если"
+" одна и та же комбинация клавиш будет нажата несколько раз подряд."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -902,32 +914,39 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Размер значков во всплывающем окне alt-tab"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Размер значков приложений, отображаемых во всплывающем окне alt-tab. К этому"
+" значению применяется множитель масштаба экрана."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Максимальное число столбцов во всплывающем окне alt-tab"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
 msgstr ""
+"Всплывающее окно будет увеличено, чтобы вместить заданное число значков в "
+"строке."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
 msgstr ""
+"Увеличить всплывающее окно alt-tab, чтобы вместить длинные заголовки окон."
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"Всплывающее окно может быть расширено до значения, определяемого параметром "
+"конфигурации 'alt-tab-max-columns'."
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -994,6 +1013,12 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Комбинация клавиш, которая запускает соответствующую номеру команду в "
+"/apps/marco/keybinding_commands Формат выглядит как \"<Control>a\" или "
+"\"<Shift><Alt>;F1\". Парсер достаточно либерален и допускает нижний или "
+"верхний регистр, а также такие сокращения как \"<Ctl>\" и \"<Ctrl>\". Если "
+"вы зададите этот параметр специальной строкой \"disabled\", то для данного "
+"действие не будет назначено комбинаций клавиш."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -1039,6 +1064,10 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Используется формат «<Control>a» или «<Shift><Alt>F1». Формат выражения не "
+"очень строг, можно использовать верхний и нижний регистр и сокращения, "
+"например «<Ctl>» и «<Ctrl>». Если параметру установить значение «disabled», "
+"для этого действия не будет использоваться никакая комбинация клавиш."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -1055,6 +1084,12 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Используется формат «<Control>a» или «<Shift><Alt>F1». Формат выражения не "
+"очень строг, можно использовать верхний и нижний регистр и сокращения, "
+"например «<Ctl>» и «<Ctrl>». Если параметру установить значение «disabled», "
+"для этого действия не будет использоваться никакая комбинация клавиш. "
+"Действие этой комбинации клавиш может быть изменено путём удержания клавиши "
+"«shift», поэтому «shift» не может быть одной из клавиш этой комбинации."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1275,7 +1310,7 @@ msgstr ""
 
 #: src/core/main.c:270
 msgid "Disable connection to session manager"
-msgstr "Не соединиться с менеджером сеансов"
+msgstr "Не соединяться с менеджером сеансов"
 
 #: src/core/main.c:276
 msgid "Replace the running window manager with Marco"
@@ -1295,7 +1330,7 @@ msgstr "Инициализировать сеанс из сохранённог�
 
 #: src/core/main.c:299
 msgid "Print version"
-msgstr "Версия для печати"
+msgstr "Вывести версию"
 
 #: src/core/main.c:305
 msgid "Make X calls synchronous"
@@ -1605,7 +1640,7 @@ msgstr "Меню окна"
 
 #: src/ui/frames.c:1344
 msgid "Window App Menu"
-msgstr ""
+msgstr "Меню окна приложения"
 
 #: src/ui/frames.c:1347
 msgid "Minimize Window"
@@ -1875,6 +1910,9 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"В пользовательской спецификации цвета GTK название цвета и запасное значение"
+" должны быть указаны скобках, например gtk:custom(foo,bar); не удалось "
+"разобрать «%s»"
 
 #: src/ui/theme.c:1413
 #, c-format
@@ -1882,6 +1920,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Неверный символ '%c' в параметре color_name gtk:custom, разрешается "
+"использовать только символы A-Za-z0-9-_"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1889,6 +1929,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Формат Gtk:custom — «gtk:custom(color_name,fallback)»; «%s» не соответствует"
+" формату"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2415,18 +2457,21 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Неверный номер версии '%s'"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"Атрибут \"version\" не может быть использован в metacity-theme-1.xml или "
+"metacity-theme-2.xml"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
+"Тема требует версию %s, но последняя поддерживаемая версия темы — %d.%d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
@@ -2539,7 +2584,7 @@ msgstr "Рамка"
 
 #: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Прикреплённое модальное диалоговое окно"
 
 #: src/ui/theme-viewer.c:811
 #, c-format

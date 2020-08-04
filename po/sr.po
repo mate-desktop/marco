@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"PO-Revision-Date: 2020-02-15 11:16+0000\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "Радна површ"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Приказује прозорче за покретање програма на панелу"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -365,6 +365,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Клик на прозор за време држања овог тастера ће преместити прозор (леви "
+"клик), променити величину прозора (средњи клик), или приказати изборник "
+"прозора (десни клик). Дејства средњег и десног клика могу бити размењена "
+"употребом кључа „resize_with_right_button“ (промени величину десним "
+"дугметом). Измењивач је изражен као „<Alt>“ или „<Super>“ на пример."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -734,6 +739,10 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"Ако је изабрано, сличице прозора се неће приказивати у искачућем „алт-таб“ "
+"прозору када је укључен управник слагања. Уместо тога биће приказане иконице"
+" програма. Знајте да се на екранима високе резолуције са превише отворених "
+"видљивих прозора може приметити кашњење у исцртавању."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -833,13 +842,15 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Да ли ће омогућити кружење по различитим величинама плочица"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"Ако је укључено, поплочавање прозора ће кружити кроз више различитих "
+"величина коришћењем исте пречице тастатуре више пута у реду."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -876,32 +887,36 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Величина иконице у икачућем „алт-таб“ прозору"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Величина иконице програма приказане у искачућем „алт-таб“ прозору. Чинилац "
+"сразмере екрана се примењује на ову вредност."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Највећи број колона у искачућем „алт-таб“ прозору"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
-msgstr ""
+msgstr "Искачући прозор биће раширен да попуни толики број уноса у реду."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
-msgstr ""
+msgstr "Ширење искачућег „алт-таб“ прозора до попуне дужих наслова прозора"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"Искачући прозор може бити раширен све до ширине одређене параметром "
+"подешавања „alt-tab-max-columns“ (највише колона за алт-таб)."
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -968,6 +983,11 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Пречица која покреће одговарајуће-набројану наредбу у "
+"„/apps/marco/keybinding“. Запис изгледа као „<Control>a“ или "
+"„<Shift><Alt>F1“. Обрађивач је прилично слободан и омогућава мала или велика"
+" слова, а такође и скраћенице као „<Ctl>“ и „<Ctrl>“. Ако подесите опцију на"
+" посебну ниску „disabled“ (искључено), тада неће бити пречице за ову радњу."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -1013,6 +1033,10 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Запис изгледа као „<Control>a“ или „<Shift><Alt>F1“. Обрађивач је прилично "
+"слободан и омогућава мала или велика слова, а такође и скраћенице као "
+"„<Ctl>“ и „<Ctrl>“. Ако подесите опцију на посебну ниску „disabled“ "
+"(искључено), тада неће бити пречице за ову радњу."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -1029,6 +1053,12 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Запис изгледа као „<Control>a“ или „<Shift><Alt>F1“. Обрађивач је прилично "
+"слободан и омогућава мала или велика слова, а такође и скраћенице као "
+"„<Ctl>“ и „<Ctrl>“. Ако подесите опцију на посебну ниску „disabled“ "
+"(искључено), тада неће бити пречице за ову радњу. Ова пречица се може "
+"преокренути држањем тастера „shift“; међутим, „shift“ не може бити један од "
+"тастера које садржи пречица."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1577,7 +1607,7 @@ msgstr "Изборник прозора"
 
 #: src/ui/frames.c:1344
 msgid "Window App Menu"
-msgstr ""
+msgstr "Изборник програма прозора"
 
 #: src/ui/frames.c:1347
 msgid "Minimize Window"
@@ -1847,6 +1877,8 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"Спецификација произвољне ГТК боје мора имати назив боје и пребацивање у "
+"загради, на пример gtk:custom(foo,bar); не могу да обрадим „%s“"
 
 #: src/ui/theme.c:1413
 #, c-format
@@ -1854,6 +1886,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Неисправан знак „%c“ параметра назив_боје у „gtk:custom“, иасправни су само "
+"A-Za-z0-9-_"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1861,6 +1895,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Гтк:произвољни формат је „gtk:custom(назив_боје,пребацивање)“, „%s“ се не "
+"уклапа у формат"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2368,18 +2404,20 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Издање је лоше одређено „%s“"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"Не могу да користим „version“ (издање) у „metacity-theme-1.xml“ или "
+"„metacity-theme-2.xml“"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
-msgstr ""
+msgstr "За ову тему је неопходно издање %s, а последња подржана тема је %d.%d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
@@ -2445,7 +2483,7 @@ msgstr "Нисам успео да пронађем исправну датот�
 
 #: src/ui/theme-viewer.c:256
 msgid "_OK"
-msgstr ""
+msgstr "У _реду"
 
 #: src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
@@ -2490,7 +2528,7 @@ msgstr "Ивица"
 
 #: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Приложено важно прозорче"
 
 #: src/ui/theme-viewer.c:811
 #, c-format

@@ -4,18 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Alan Lee <bkrhlim@aol.com>, 2018
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Alan Lee <bkrhlim@aol.com>, 2020
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
+"PO-Revision-Date: 2020-02-15 11:16+0000\n"
+"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1242,7 +1243,7 @@ msgstr "다시 시작 실패: %s\n"
 #: src/core/prefs.c:641 src/core/prefs.c:794
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "%s GSettings 키에 저장된 %d는 %d ~ %d까지의 범위를 벗어납니다\n"
 
 #: src/core/prefs.c:1088
 msgid ""

@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lluís Tusquellas <lutusq@gmail.com>, 2018
-# ebray187 <ebray187@gmail.com>, 2018
-# difusion, 2018
-# ZenWalker <scow@riseup.net>, 2018
-# Benjamin Perez Carrillo <benperezc@gmail.com>, 2018
-# Juan Sánchez <jsrmadrid@gmail.com>, 2018
-# Emiliano Fascetti, 2018
-# Arcenio Cid <gusty.miliki@gmail.com>, 2018
-# Adolfo Jayme-Barrientos, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# David García-Abad <dgarciabad@gmail.com>, 2018
-# Joel Barrios <darkshram@gmail.com>, 2018
+# Lluís Tusquellas <lutusq@gmail.com>, 2020
+# Benjamin Perez Carrillo <benperezc@gmail.com>, 2020
+# difusion, 2020
+# Juan Sánchez <jsrmadrid@gmail.com>, 2020
+# David García-Abad <dgarciabad@gmail.com>, 2020
+# Emiliano Fascetti, 2020
+# Arcenio Cid <gusty.miliki@gmail.com>, 2020
+# ZenWalker <scow@riseup.net>, 2020
+# Adolfo Jayme-Barrientos, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# ebray187 <ebray187@gmail.com>, 2020
+# Joel Barrios <darkshram@gmail.com>, 2020
 # Toni Estévez <toni.estevez@gmail.com>, 2020
 # 
 msgid ""
@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: marco 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
+"PO-Revision-Date: 2020-02-15 11:16+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
@@ -670,9 +670,9 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
-"Número de áreas de trabajo. Debe ser mayor que cero y tiene un máximo fijado"
-" para evitar que el escritorio quede inservible al pedir accidentalmente "
-"demasiadas áreas de trabajo."
+"Número de áreas de trabajo. Debe ser mayor que cero y tiene un límite máximo"
+" para evitar que el escritorio resulte inservible por solicitar "
+"accidentalmente demasiadas áreas de trabajo."
 
 #: src/org.mate.marco.gschema.xml:131
 msgid "Workspace wrap style"
@@ -787,13 +787,13 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
-"Si se activa, Marco proporcionará al usuario menos información de retorno "
-"usando rejillas, evitando animaciones o por otros medios. Esto implica una "
-"reducción de la facilidad de uso para muchos usuarios, pero puede permitir "
-"que las aplicaciones heredadas sigan funcionando y también puede ser útil "
-"para que los servidores de terminal mejoren su rendimiento. No obstante, la "
-"función de rejilla se desactiva cuando se activan las características de "
-"accesibilidad."
+"Si se activa, Marco proporcionará al usuario menos retroalimentación "
+"mostrando solo el contorno de las ventanas, evitando las animaciones o por "
+"otros medios. Esto implica una reducción de la facilidad de uso para muchos "
+"usuarios, pero puede permitir que las aplicaciones heredadas sigan "
+"funcionando y también puede mejorar el rendimiento de los servidores de "
+"terminal. No obstante, la función de contorno se desactiva cuando se activan"
+" las características de accesibilidad."
 
 #: src/org.mate.marco.gschema.xml:166
 msgid ""
@@ -881,7 +881,7 @@ msgid ""
 "it. Only works when allow-tiling is enabled."
 msgstr ""
 "Si se activa, al arrastrar y soltar una ventana en la parte superior de la "
-"pantalla, se maximizará. Solo funciona cuando se ha activado la opción de "
+"pantalla, se maximizará. Solo funciona cuando se activa la opción de "
 "ventanas en mosaico."
 
 #: src/org.mate.marco.gschema.xml:191
@@ -1119,7 +1119,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:569
 msgid "Move backward between windows, using a popup window"
-msgstr "Retroceder entre ventanas usando una ventana emergente"
+msgstr "Retroceder entre las ventanas usando una ventana emergente"
 
 #: src/org.mate.marco.gschema.xml:574
 msgid "Move between windows on all workspaces, using a popup window"
@@ -1130,13 +1130,13 @@ msgstr ""
 #: src/org.mate.marco.gschema.xml:579
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr ""
-"Retroceder entre ventanas de todas las áreas de trabajo usando una ventana "
-"emergente"
+"Retroceder entre las ventanas de todas las áreas de trabajo usando una "
+"ventana emergente"
 
 #: src/org.mate.marco.gschema.xml:589
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr ""
-"Retroceder entre los paneles y escritorio usando una ventana emergente"
+"Retroceder entre los paneles y el escritorio usando una ventana emergente"
 
 #: src/org.mate.marco.gschema.xml:599
 msgid "Move backward between windows of an application immediately"

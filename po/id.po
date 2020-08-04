@@ -4,26 +4,26 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# airinuxazis <azis.naufal@gmail.com>, 2018
-# Muhammad Herdiansyah <herdiansyah@openmailbox.org>, 2018
-# Ibnu Daru Aji, 2018
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
-# La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2018
-# Anton Toni Agung <vdrive6@gmail.com>, 2018
-# Febrian Setianto (Feber) <febrian.setianto@gmail.com>, 2018
-# hpiece 8 <hpiece8@gmail.com>, 2018
-# Ari Prabowo <ariprabowo03@gmail.com>, 2018
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Andika Triwidada <andika@gmail.com>, 2018
+# La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2020
+# Febrian Setianto (Feber) <febrian.setianto@gmail.com>, 2020
+# hpiece 8 <hpiece8@gmail.com>, 2020
+# airinuxazis <azis.naufal@gmail.com>, 2020
+# Ibnu Daru Aji, 2020
+# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2020
+# Anton Toni Agung <vdrive6@gmail.com>, 2020
+# Ari Prabowo <ariprabowo03@gmail.com>, 2020
+# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Muhammad Herdiansyah <herdiansyah@openmailbox.org>, 2020
+# Andika Triwidada <andika@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>, 2018\n"
+"PO-Revision-Date: 2020-02-15 11:16+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
 "Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgstr "Desktop"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Tampilkan kotak dialog &quot;Jalankan Aplikasi&quot; milik panel"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -235,19 +235,19 @@ msgstr "Geser jendela ke bagian barat (kiri) layar"
 
 #: src/50-marco-window-key.xml.in:82
 msgid "Tile window to north-west (top left) corner"
-msgstr ""
+msgstr "Ubinkan jendela ke pojok barat laut (kiri atas)"
 
 #: src/50-marco-window-key.xml.in:86
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Ubinkan jendela ke pojok timur laut (kanan atas)"
 
 #: src/50-marco-window-key.xml.in:90
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Ubinkan jendela ke pojok barat daya (kiri bawah)"
 
 #: src/50-marco-window-key.xml.in:94
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Ubinkan jendela ke pojok tenggara (kanan bawah)"
 
 #: src/50-marco-window-key.xml.in:98 src/org.mate.marco.gschema.xml:930
 msgid "Move window to north-west (top left) corner"
@@ -287,19 +287,19 @@ msgstr "Pindahkan jendela ke tengah layar"
 
 #: src/50-marco-window-key.xml.in:134 src/org.mate.marco.gschema.xml:975
 msgid "Move window to north (top) monitor"
-msgstr ""
+msgstr "Pindahkan jendela ke utara (puncak) monitor"
 
 #: src/50-marco-window-key.xml.in:138 src/org.mate.marco.gschema.xml:980
 msgid "Move window to south (bottom) monitor"
-msgstr ""
+msgstr "Pindahkan jendela ke selatan (dasar) monitor"
 
 #: src/50-marco-window-key.xml.in:142 src/org.mate.marco.gschema.xml:985
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Pindahkan jendela ke timur (kanan) monitor"
 
 #: src/50-marco-window-key.xml.in:146 src/org.mate.marco.gschema.xml:990
 msgid "Move window to west (left) monitor"
-msgstr ""
+msgstr "Pindahkan jendela ke barat (kiri) monitor"
 
 #: src/50-marco-window-key.xml.in:154 src/org.mate.marco.gschema.xml:795
 msgid "Move window to workspace 1"
@@ -379,6 +379,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Mengklik sebuah jendela sambil menekan tombol pengubah ini akan memindahkan "
+"jendela (klik kiri), mengubah ukuran jendela (klik tengah), atau menampilkan"
+" menu jendela (klik kanan). Operasi klik tengah dan kanan dapat ditukar "
+"dengan menggunakan kunci \"resize_with_right_button\". Pengubah dinyatakan "
+"misalnya sebagai \"<Alt>\" atau \"<Super>\"."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -762,6 +767,11 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"Bila diisi true, tidak ada gambar mini jendela yang ditampilkan dalam "
+"jendela popup alt-tab ketika manajer pengkomposisian difungsikan. Ikon "
+"aplikasi akan ditampilkan sebagai pengganti. Perhatikan bahwa pada layar "
+"resolusi tinggi dengan banyak jendela yang tampak akan ada lag yang terrasa "
+"saat merender."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -837,7 +847,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:181
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Apakah memfungsikan pengubinan jendela"
 
 #: src/org.mate.marco.gschema.xml:182
 msgid ""
@@ -845,26 +855,34 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Bila difungsikan, menjatuhkan jendela pada tepi layar memaksimalkan mereka "
+"ke arah vertikal dan mengubah ukuran secara horisontal sehingga mencakup "
+"setengah dari area yang tersedia. Menyeret-dan-jatuhkan ke puncak "
+"memaksimalkan jendela bila allow-top-tiling difungsikan."
 
 #: src/org.mate.marco.gschema.xml:186
 msgid "Whether to maximize the window when dragged to the top of the screen"
-msgstr ""
+msgstr "Apakah memaksimalkan jendela ketika diseret ke puncak layar"
 
 #: src/org.mate.marco.gschema.xml:187
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"Bila difungsikan, menyeret-dan-jatuhkan suatu jendela ke puncak layar akan "
+"memaksimalkannya. Hanya bekerja bila allow-tiling difungsikan."
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Apakah memfungsikan bergantian melalui ukuran ubin yang berbeda"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"Bila difungsikan, mengubinkan suatu jendela akan memutar melalui ukuran "
+"berbeda memakai pintasan papan tik yang sama beberapa kali berturutan."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -901,32 +919,39 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Ukuran ikon dalam jendela popup alt-tab"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Ukuran ikon aplikasi yang ditampilkan dalam jendela popup alt-tab. Faktor "
+"skala layar diberlakukan ke nilai ini."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Banyaknya kolom maksimum dalam jendela popup alt-tab"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
 msgstr ""
+"Jendela popup akan dikembangkan agar pas ke entri sebanyak ini per baris."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
 msgstr ""
+"Mengembangkan jendela popup alt-tab agar pas judul jendela yang lebih "
+"panjang"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"Jendela popup dapat dikembangkan sampai lebar yang ditentukan oleh parameter"
+" konfig 'alt-tab-max-columns'."
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -993,6 +1018,12 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Kombinasi tombol yang menjalankan perintah yang sesuai dengan nomor "
+"panggilnya pada /apps/marco/keybinding_commands. Format penulisannya seperti"
+" \"<Control>a\" atau \"<Shift><Alt>F1\". Pengurainya sangat liberal dan "
+"memperbolehkan digunakannya huruf besar dan huruf kecil, juga singkatan "
+"seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda menentukan opsinya pada kata"
+" \"disabled\" maka tidak akan ada pengikatan tombol bagi aksi ini."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -1038,6 +1069,11 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Format penulisannya seperti \"<Control>a\" atau \"<Shift><Alt>F1\". Pengurai"
+" ini cukup liberal dan memperbolehkan digunakannya huruf besar dan huruf "
+"kecil, juga   singkatan seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda "
+"menata opsi ke string khusus \"disabled\", maka tidak akan ada pengikatan "
+"tombol bagi aksi ini."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -1054,6 +1090,8 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Format penulisannya seperti \"<Control>a\" atau \"<Shift><Alt>F1\". Pengurai ini cukup liberal dan memperbolehkan digunakannya huruf besar dan huruf kecil, juga   singkatan seperti \"<Ctl>\" atau \"<Ctrl>\". Apabila Anda menata opsi ke string khusus \"disabled\", maka tidak akan ada pengikatan tombol bagi aksi ini.\n"
+"Pengikatan tombol ini bisa dibalik dengan menahan \"shift\"; maka, \"shift\" tak bisa menjadi salah satu tombol yang dipakai."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1153,19 +1191,19 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:910
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
+msgstr "Ubinkan jendela ke pojok barat laut (kiri atas) layar"
 
 #: src/org.mate.marco.gschema.xml:915
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "Ubinkan jendela ke pojok timur laut (kanan atas) layar"
 
 #: src/org.mate.marco.gschema.xml:920
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Ubinkan jendela ke pojok tenggara (kanan bawah) layar"
 
 #: src/org.mate.marco.gschema.xml:925
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Ubinkan jendela ke pojok barat daya (kiri bawah) layar"
 
 #: src/core/bell.c:294
 msgid "Bell event"
@@ -1605,7 +1643,7 @@ msgstr "Menu Jendela"
 
 #: src/ui/frames.c:1344
 msgid "Window App Menu"
-msgstr ""
+msgstr "Menu Apl Jendela"
 
 #: src/ui/frames.c:1347
 msgid "Minimize Window"
@@ -1875,6 +1913,8 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"Spesifikasi warna ubahan GTK harus memiliki nama warna dan cadangan dalam "
+"kurung, mis. gtk:custom(foo,bar); tidak dapat mengurai \"%s\""
 
 #: src/ui/theme.c:1413
 #, c-format
@@ -1882,6 +1922,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Karakter tidak valid '%c' dalam parameter color_name dari gtk:custom, hanya "
+"A-Za-z0-9-_ yang valid"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1889,6 +1931,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Format Gtk:custom adalah \"gtk:custom(color_name,fallback)\", \"%s\" tidak "
+"cocok dengan format"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2405,18 +2449,21 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Spesifikasi versi buruk '%s'1"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"atribut \"version\" tidak dapat dipakai dalam metacity-theme-1.xml atau "
+"metacity-theme-2.xml"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
+"Tema memerlukan versi %s tapi versi tema terakhir yang didukung adalah %d.%d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
@@ -2525,7 +2572,7 @@ msgstr "Batas"
 
 #: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Dialog Modal Terlampir"
 
 #: src/ui/theme-viewer.c:811
 #, c-format

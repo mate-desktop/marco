@@ -4,22 +4,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Luis Filipe Teixeira <lufilte@gmail.com>, 2018
-# Manuela Silva <manuelarodsilva@gmail.com>, 2018
-# José Vieira <jvieira33@sapo.pt>, 2018
-# Sérgio Marques <smarquespt@gmail.com>, 2018
-# Carlos Moreira, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Manel Tinoco <maneltinoco@gmail.com>, 2018
-# Rui <xymarior@yandex.com>, 2018
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2020
+# Manel Tinoco <maneltinoco@gmail.com>, 2020
+# Manuela Silva <manuelarodsilva@gmail.com>, 2020
+# Sérgio Marques <smarquespt@gmail.com>, 2020
+# Carlos Moreira, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Rui <xymarior@yandex.com>, 2020
+# Luis Filipe Teixeira <lufilte@gmail.com>, 2020
+# José Vieira <jvieira33@sapo.pt>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Rui <xymarior@yandex.com>, 2018\n"
+"PO-Revision-Date: 2020-02-15 11:16+0000\n"
+"Last-Translator: José Vieira <jvieira33@sapo.pt>, 2020\n"
 "Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +30,7 @@ msgstr ""
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
-msgstr "Área de Trabalho"
+msgstr "Ambiente de Trabalho"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
@@ -1353,7 +1354,7 @@ msgstr "Falha ao reiniciar: %s\n"
 #: src/core/prefs.c:641 src/core/prefs.c:794
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr "%d armazenado na chave GSettings %s está fora do intervalo de %d a %d\n"
+msgstr "%d guardado na chave GSettings %s está fora do intervalo de %d a %d\n"
 
 #: src/core/prefs.c:1088
 msgid ""
@@ -1366,7 +1367,9 @@ msgstr ""
 #: src/core/prefs.c:1194
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr "Incapaz de processar descrição da letra \"%s\" da chave GSettings %s\n"
+msgstr ""
+"Não foi possível analisar a descrição do tipo de letra \"%s\" da chave "
+"GSettings %s\n"
 
 #: src/core/prefs.c:1256
 #, c-format

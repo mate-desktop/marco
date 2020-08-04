@@ -4,30 +4,31 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Marcin Mikołajczak <me@mkljczk.pl>, 2018
-# Piotr Strębski <strebski@gmail.com>, 2018
-# Marcin Kralka <marcink96@gmail.com>, 2018
-# emariusek <wisniowy@g.pl>, 2018
-# Paweł Bandura <gawelx@gmail.com>, 2018
-# Jan Bońkowski <bonkowskijan@gmail.com>, 2018
-# Darek Witkowski, 2018
-# Marcin Sedlak <fdmarcin@gmail.com>, 2018
-# Lukasz Kaminski <inactive+elpikej@transifex.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Marcin GTriderXC <gtriderxc@yahoo.com>, 2018
-# Piotr Drąg <piotrdrag@gmail.com>, 2018
-# pietrasagh <pietrasagh@gmail.com>, 2018
-# Przemek P <ppjg@dami.pl>, 2019
-# Dominik Adrian Grzywak, 2019
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Jan Bońkowski <bonkowskijan@gmail.com>, 2020
+# Marcin GTriderXC <gtriderxc@yahoo.com>, 2020
+# Przemek P <ppjg@dami.pl>, 2020
 # Marcin Net <marcin.net@linux.pl>, 2020
+# Marcin Kralka <marcink96@gmail.com>, 2020
+# emariusek <wisniowy@g.pl>, 2020
+# 161bd750cc8572440963b84e861d7973_ed8d533 <cbd6230593fe094da208a2693be73f8f_459393>, 2020
+# Marcin Mikołajczak <me@mkljczk.pl>, 2020
+# Piotr Drąg <piotrdrag@gmail.com>, 2020
+# Piotr Strębski <strebski@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Darek Witkowski, 2020
+# Marcin Sedlak <fdmarcin@gmail.com>, 2020
+# pietrasagh <pietrasagh@gmail.com>, 2020
+# Dominik Adrian Grzywak, 2020
+# Daniel Tokarzewski <bezimo@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Marcin Net <marcin.net@linux.pl>, 2020\n"
+"PO-Revision-Date: 2020-02-15 11:16+0000\n"
+"Last-Translator: Daniel Tokarzewski <bezimo@gmail.com>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,7 +42,7 @@ msgstr "Pulpit"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Pokarz panele &quot;Uruchom aplikację&quot; okno dialogowe"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -382,6 +383,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Kliknięcie okna przy wciśniętym klawiszu modyfikatora spowoduje przesunięcie"
+" okna (lewym przyciskiem), zmianę rozmiaru okna (środkowym przyciskiem) lub "
+"wyświetlenie menu okna (prawym przyciskiem). Operacje środkowego i prawego "
+"kliknięcia można zamieniać za pomocą przycisku „resize_with_right_button”. "
+"Modyfikator wyrażony jest na przykład jako <Alt> lub <Super>."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -685,7 +691,13 @@ msgid ""
 msgstr ""
 "Styl obramowania jest używany do określenia jak przełączać z jednego obszaru"
 " roboczego do innego na krawędzi przełącznika obszaru roboczego. Kiedy jest "
-"ustawiona "
+"ustawione \"brak obramowania\", nic się nie wydarzy jeżeli spróbujesz "
+"przełączyć poza granicę przełącznika obszarów roboczych. Jeżeli ustawisz "
+"\"klasyczny\", będzie użyte stare zachowanie macro: koniec jednego rzędu "
+"prowadzi na początek następnego a koniec kolumny prowadzi do początku "
+"następnej. Jeżeli ustawisz \"toroidalny\", przestrzenie robocze będą "
+"połączone jak obarzanek: koniec jednego rzędu prowadzi na początek jego "
+"samego a koniec każdej kolumny początku jej samej."
 
 #: src/org.mate.marco.gschema.xml:136
 msgid "Enable Visual Bell"
@@ -756,6 +768,8 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+" \n"
+"Jeśli ustawione na true, miniatury okien nie będą wyświetlane w wyskakującym oknie Alt-Tab, gdy menedżer tworzenia kompozycji jest włączony. Zamiast tego zostaną wyświetlone ikony aplikacji. Pamiętaj, że na ekranach o wysokiej rozdzielczości z wieloma widocznymi oknami może wystąpić zauważalne opóźnienie w renderowaniu."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -858,12 +872,17 @@ msgstr ""
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
 msgstr ""
+" \n"
+"Określa czy włączyć cykliczne przewijanie różnych rozmiarów płytek"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"Jeśli ta opcja jest włączona, kafelkowanie okna będzie przebiegać przez "
+"wiele różnych rozmiarów przy użyciu tego samego skrótu klawiaturowego wiele "
+"razy z rzędu."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -900,32 +919,39 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Rozmiar ikon w wyskakującym oknie alt-tab"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Rozmiar ikon aplikacji wyświetlanych w wyskakującym oknie alt-tab. Do tej "
+"wartości stosuje się współczynnik skali ekranu."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Maksymalna liczba kolumn w wyskakującym oknie alt-tab"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
 msgstr ""
+"Wyskakujące okno zostanie rozszerzone, aby zmieściło się w nich tyle wpisów "
+"w wierszu."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
 msgstr ""
+"Rozszerz wyskakujące okno alt-tab, aby pasowało do dłuższych tytułów okna"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"Wyskakujące okno można rozszerzyć do szerokości określonej parametrem "
+"konfiguracyjnym „alt-tab-max-columns”."
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -992,6 +1018,13 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Skrót klawiszowy, który wykonuje polecenie o odpowiadającym mu numerze, "
+"pobrane z ustawienia o kluczu /apps/marco/keybinding_commands. Przykładowy "
+"zapis skrótu ma postać \"<Control>a\" lub \"<Shift><Alt>F1\". Analiza "
+"składniowa jest niezbyt restrykcyjna - pozwala to na używanie małych i "
+"wielkich liter oraz skrótów, takich jak \"<Ctl>\" oraz \"<Ctrl>\". Jeśli "
+"opcji zostanie przypisana wartość \"disabled\" (ang. nieaktywne), wówczas z "
+"czynnością nie będzie powiązany żaden skrót klawiszowy. "
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -1037,6 +1070,11 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+" Przykładowy zapis skrótu ma postać \"<Control>a\" lub \"<Shift><Alt>F1\". "
+"Analiza składniowa jest niezbyt restrykcyjna - pozwala to na używanie małych"
+" i wielkich liter oraz skrótów, takich jak \"<Ctl>\" oraz \"<Ctrl>\". Jeśli "
+"opcji zostanie przypisany specjalny napis \"disabled\" (ang. nieaktywne), "
+"wówczas z czynnością nie będzie powiązany żaden skrót klawiszowy."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -1053,6 +1091,13 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Przykładowy zapis ma postać \"<Control>a\" lub \"<Shift><Alt>F1. Analiza "
+"składniowa jest niezbyt restrykcyjna - pozwala to na używanie małych i "
+"wielkich liter oraz skrótów, takich jak \"<Ctl>\" oraz \"<Ctrl>\". Jeśli "
+"opcji zostanie przypisany specjalny napis \"disabled\" (wyłączone), wówczas "
+"z czynnością nie będzie powiązany żaden skrót klawiszowy. Działanie skrótu "
+"może zostać odwrócone poprzez naciśnięcie klawisza \"Shift\"; z tego powodu,"
+" do skrótu nie można przypisać klawisza \"Shift\"."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1889,6 +1934,9 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"Niestandardowa specyfikacja kolorów biblioteki GTK musi mieć nazwę koloru, "
+"oraz kolor zapasowy w nawiasie, np. gtk:custom(foo,bar); nie można "
+"przetworzyć \"%s\""
 
 #: src/ui/theme.c:1413
 #, c-format
@@ -1896,6 +1944,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Niepoprawny znak '%c' w parametrze color_name od gtk:custom, tylko "
+"A-Za-z0-9-_ są prawidłowe."
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1903,6 +1953,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Formatem Gtk:custom jest \"gtk:custom(color_name,fallback)\", \"%s\" nie "
+"pasuje do formatu"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2442,11 +2494,14 @@ msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"Atrybut \"version\" nie może zostać użyty w metacity-theme-1.xml ani "
+"metacity-theme-2.xml"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
+"Motyw wymaga wersji %s jednak najnowszą wspieraną wersją motywu jest %d.%d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
@@ -2560,7 +2615,7 @@ msgstr "Krawędź"
 
 #: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Dołączone Modalne Okno"
 
 #: src/ui/theme-viewer.c:811
 #, c-format
