@@ -640,13 +640,13 @@ meta_show_entry_dialog(const char *message,
   meta_topic (META_DEBUG_KEYBINDINGS,
               "meta_show_entry_dialog: called. active_workspace_id=%d message=%s entry_text=%s\n",
               *active_workspace_id, message, entry_text);
-  
+
   GError *error = NULL;
   int i = 0;
   GPid child_pid;
   gint stdout_fd;
   const char **argvl = g_malloc (sizeof (char *) * (17));
-  
+
   argvl[i++] = "zenity";
   argvl[i++] = "--entry";
   argvl[i++] = "--display";
@@ -658,27 +658,27 @@ meta_show_entry_dialog(const char *message,
   argvl[i++] = _ ("Marco");
   argvl[i++] = "--text";
   argvl[i++] = message;
-  
+
   if (entry_text)
     {
       argvl[i++] = "--entry-text";
       argvl[i++] = entry_text;
     }
-    
+
   if (ok_text)
     {
       argvl[i++] = "--ok-label";
       argvl[i++] = ok_text;
     }
-  
+
   if (cancel_text)
     {
       argvl[i++] = "--cancel-label";
       argvl[i++] = cancel_text;
     }
   argvl[i] = NULL;
-  
-  
+
+
   unsetenv ("WINDOWID"); /* start in current workspace */
   g_spawn_async_with_pipes (
                             "/",
@@ -693,9 +693,9 @@ meta_show_entry_dialog(const char *message,
                             NULL,
                             &error
   );
-  
+
   g_free (argvl);
-  
+
   if (error)
     {
       meta_warning ("%s\n", error->message);
@@ -711,7 +711,7 @@ meta_show_entry_dialog(const char *message,
       g_io_add_watch(ioc,  G_IO_IN | G_IO_PRI | G_IO_ERR | G_IO_HUP | G_IO_NVAL, stdio_func_cb, active_workspace_id);
       g_io_channel_unref(ioc);
     }
-  
+
   return child_pid;
 }
 /* eof util.c */

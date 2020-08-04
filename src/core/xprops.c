@@ -665,7 +665,7 @@ text_property_to_utf8 (Display             *xdisplay,
 	XFreeStringList (local_list);
 	return NULL;
   }
-	
+
   if (g_get_charset (&charset))
     ret = g_strdup (local_list[0]);
   else

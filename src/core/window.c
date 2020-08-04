@@ -2743,7 +2743,7 @@ meta_window_tile (MetaWindow *window)
   else
     meta_window_save_rect(window);
 
-    
+
   window->tiled = TRUE;
   /* move_resize with new tiling constraints
    */
@@ -2892,7 +2892,7 @@ meta_window_move_to_monitor(MetaWindow *window,
                             const MetaXineramaScreenInfo *to_monitor)
 {
   MetaRectangle target_rect;
-  
+
   if(META_WINDOW_TILED (window))
     {
       window->tile_monitor_number = to_monitor->number;
@@ -2911,11 +2911,11 @@ meta_window_move_to_monitor(MetaWindow *window,
 
   /* Normally, just transform the window itself */
   meta_window_get_client_root_coords(window, &target_rect);
-  
+
   meta_window_transform_to_monitor(&target_rect,
                                  &from_monitor->rect,
                                  &to_monitor->rect);
-  
+
   meta_window_move_resize(window, TRUE,
                           target_rect.x,
                           target_rect.y,
@@ -2929,7 +2929,7 @@ static void meta_window_transform_to_monitor(MetaRectangle *target_rect,
 {
   double horizontal_ratio;
   double vertical_ratio;
-  
+
   horizontal_ratio = (double)to_monitor->width / from_monitor->width;
   vertical_ratio = (double)to_monitor->height / from_monitor->height;
 
@@ -4997,8 +4997,8 @@ meta_window_move_resize_request (MetaWindow *window,
                                       y,
                                       width,
                                       height);
-  
-   }    
+
+   }
 
   /* window->user_rect exists to allow "snapping-back" the window if a
    * new strut is set (causing the window to move) and then the strut
@@ -7454,17 +7454,17 @@ update_move (MetaWindow  *window,
     meta_window_get_client_root_coords (window, &old);
 
   /* Don't allow movement in the maximized directions or while tiled */
-  
+
   if (window->maximized_horizontally || META_WINDOW_TILED (window))
     {
       new_x = old.x;
     }
-    
+
   if (window->maximized_vertically || META_WINDOW_CORNER_TILED(window))
     {
       new_y = old.y;
     }
-    
+
 
   /* Do any edge resistance/snapping */
   meta_window_edge_resistance_for_move (window,
@@ -7500,39 +7500,39 @@ static MetaTileMode calculate_tiling_mode(int x,
                                           const MetaXineramaScreenInfo *monitor,
                                           MetaRectangle work_area,
                                           int shake_threshold)
-{  
+{
   if (meta_window_can_tile (window) &&
       x >= monitor->rect.x
       && x < (work_area.x + shake_threshold))
     {
       if(y >= monitor->rect.y && y < work_area.y + shake_threshold)
-        return META_TILE_TOP_LEFT; 
+        return META_TILE_TOP_LEFT;
       else if(y < monitor->rect.y + monitor->rect.height
               && y > work_area.y + work_area.height - shake_threshold)
-        return META_TILE_BOTTOM_LEFT; 
+        return META_TILE_BOTTOM_LEFT;
       else
-        return META_TILE_LEFT; 
+        return META_TILE_LEFT;
     }
-  
+
   else if (meta_window_can_tile (window) &&
            x >= work_area.x + work_area.width - shake_threshold &&
            x < (monitor->rect.x + monitor->rect.width))
     {
       if(y >= monitor->rect.y && y < work_area.y + shake_threshold)
-        return META_TILE_TOP_RIGHT; 
+        return META_TILE_TOP_RIGHT;
       else if(y < monitor->rect.y + monitor->rect.height
               && y > work_area.y + work_area.height - shake_threshold)
-        return META_TILE_BOTTOM_RIGHT; 
+        return META_TILE_BOTTOM_RIGHT;
       else
-        return META_TILE_RIGHT; 
+        return META_TILE_RIGHT;
     }
   else if (meta_window_can_tile_maximized (window) &&
            y >= monitor->rect.y && y <= work_area.y &&
            meta_prefs_get_allow_top_tiling ())
-    return META_TILE_MAXIMIZED; 
+    return META_TILE_MAXIMIZED;
   else
     return META_TILE_NONE;
-  
+
 }
 
 

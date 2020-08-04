@@ -541,8 +541,8 @@ static MetaIntPreference preferences_int[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_ALT_TAB_MAX_COLUMNS,
       &alt_tab_max_columns,
-      META_MIN_ALT_TAB_MAX_COLUMNS, 
-      META_MAX_ALT_TAB_MAX_COLUMNS, 
+      META_MIN_ALT_TAB_MAX_COLUMNS,
+      META_MAX_ALT_TAB_MAX_COLUMNS,
       META_DEFAULT_ALT_TAB_MAX_COLUMNS,
     },
     { NULL, NULL, 0, NULL, 0, 0, 0, },
@@ -1166,7 +1166,7 @@ gboolean
 meta_prefs_is_in_skip_list (char *class)
 {
   GList *item;
-    
+
   for (item = show_desktop_skip_list; item; item = item->next)
     {
       if (!g_ascii_strcasecmp (class, item->data))

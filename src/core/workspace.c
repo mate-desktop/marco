@@ -388,7 +388,7 @@ meta_workspace_activate_with_focus (MetaWorkspace *workspace,
 
   /* Note that old can be NULL; e.g. when starting up */
   old = workspace->screen->active_workspace;
-  
+
   /* Save old workspace, to be able to switch back. */
   workspace->screen->prev_workspace = old;
 

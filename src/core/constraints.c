@@ -953,7 +953,7 @@ constrain_tiling (MetaWindow         *window,
                        info->resize_gravity,
                        &allow_resize_horizontally,
                        &allow_resize_vertically);
-      
+
       window->tile_resized = TRUE;
     }
 
@@ -974,11 +974,11 @@ constrain_tiling (MetaWindow         *window,
     }
 
   if(!allow_resize_horizontally)
-    {    
+    {
       info->current.x      = target_size.x;
       info->current.width  = target_size.width;
     }
-  
+
   return TRUE;
 }
 

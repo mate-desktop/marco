@@ -1613,15 +1613,15 @@ mouse_event_is_in_tab_popup (MetaDisplay *display,
                                             &x, &y, &child1);
 
       GtkWidget *popup_widget = meta_ui_tab_popup_get_widget (screen->tab_popup);
-      if (ok1 && popup_widget != NULL) 
+      if (ok1 && popup_widget != NULL)
         {
           Window popup_xid = gdk_x11_window_get_xid (gtk_widget_get_window (popup_widget));
-  
+
           gboolean ok2 = XTranslateCoordinates (display->xdisplay,
                                                 event_window, popup_xid,
                                                 event_x, event_y,
                                                 popup_x, popup_y, &child2);
-    
+
           if (ok2 && child1 == popup_xid)
             {
               int scale = gtk_widget_get_scale_factor (popup_widget);
@@ -1860,7 +1860,7 @@ static gboolean event_callback(XEvent* event, gpointer data)
                                                              event->xbutton.y,
                                                              &popup_x,
                                                              &popup_y);
-              if (is_in_tab_popup && event->xbutton.button == Button1) 
+              if (is_in_tab_popup && event->xbutton.button == Button1)
                 {
                   display->tab_popup_mouse_pressed = TRUE;
                   meta_ui_tab_popup_mouse_press(screen->tab_popup, popup_x, popup_y);
@@ -1881,7 +1881,7 @@ static gboolean event_callback(XEvent* event, gpointer data)
                               "Syncing to old stack positions.\n");
                   screen =
                     meta_display_screen_for_root (display, event->xany.window);
-    
+
                   if (screen!=NULL)
                     meta_stack_set_positions (screen->stack,
                                               display->grab_old_window_stacking);
@@ -2056,7 +2056,7 @@ static gboolean event_callback(XEvent* event, gpointer data)
       if (display->grab_window == window &&
           grab_op_is_mouse (display->grab_op))
         meta_window_handle_mouse_grab_op_event (window, event);
-      if (event->xbutton.button == Button1) 
+      if (event->xbutton.button == Button1)
         display->tab_popup_mouse_pressed = FALSE;
       break;
     case MotionNotify:
@@ -2074,7 +2074,7 @@ static gboolean event_callback(XEvent* event, gpointer data)
                                                                   event->xbutton.y,
                                                                   &popup_x,
                                                                   &popup_y);
-          if (is_in_tab_popup) 
+          if (is_in_tab_popup)
             meta_ui_tab_popup_mouse_press (screen->tab_popup, popup_x, popup_y);
         }
       break;
