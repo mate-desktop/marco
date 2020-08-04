@@ -148,7 +148,6 @@ meta_window_delete (MetaWindow  *window,
                             window);
 }
 
-
 void
 meta_window_kill (MetaWindow *window)
 {

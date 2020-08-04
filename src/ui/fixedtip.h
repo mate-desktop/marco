@@ -60,5 +60,4 @@ void meta_fixed_tip_show (int root_x, int root_y,
  */
 void meta_fixed_tip_hide (void);
 
-
 #endif

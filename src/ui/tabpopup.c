@@ -727,7 +727,6 @@ meta_ui_tab_popup_mouse_press (MetaTabPopup       *popup,
     }
 }
 
-
 #define META_TYPE_SELECT_IMAGE            (meta_select_image_get_type ())
 #define META_SELECT_IMAGE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), META_TYPE_SELECT_IMAGE, MetaSelectImage))
 
@@ -744,7 +743,6 @@ struct _MetaSelectImageClass
 {
   GtkImageClass parent_class;
 };
-
 
 static GType meta_select_image_get_type (void) G_GNUC_CONST;
 
@@ -919,7 +917,6 @@ struct _MetaSelectWorkspaceClass
 {
   GtkDrawingAreaClass parent_class;
 };
-
 
 static GType meta_select_workspace_get_type (void) G_GNUC_CONST;
 

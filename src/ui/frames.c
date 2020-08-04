@@ -90,7 +90,6 @@ static MetaUIFrame* meta_frames_lookup_window (MetaFrames *frames,
 static void meta_frames_font_changed          (MetaFrames *frames);
 static void meta_frames_button_layout_changed (MetaFrames *frames);
 
-
 static GdkRectangle*    control_rect (MetaFrameControl   control,
                                       MetaFrameGeometry *fgeom);
 static MetaFrameControl get_control  (MetaFrames        *frames,
@@ -2026,7 +2025,6 @@ meta_frames_update_prelit_control (MetaFrames      *frames,
 {
   MetaFrameControl old_control;
   MetaCursor cursor;
-
 
   meta_verbose ("Updating prelit control from %u to %u\n",
                 frame->prelit_control, control);

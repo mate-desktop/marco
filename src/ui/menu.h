@@ -31,8 +31,6 @@
 #define MARCO_STOCK_MINIMIZE "go-down"
 #define MARCO_STOCK_MAXIMIZE "view-fullscreen"
 
-
-
 struct _MetaWindowMenu {
 	MetaFrames* frames;
 	Window client_xwindow;
@@ -46,6 +44,5 @@ struct _MetaWindowMenu {
 MetaWindowMenu* meta_window_menu_new(MetaFrames* frames, MetaMenuOp ops, MetaMenuOp insensitive, Window client_xwindow, unsigned long active_workspace, int n_workspaces, MetaWindowMenuFunc func, gpointer data);
 void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int button, guint32 timestamp);
 void meta_window_menu_free(MetaWindowMenu* menu);
-
 
 #endif

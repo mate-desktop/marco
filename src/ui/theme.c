@@ -2934,7 +2934,6 @@ meta_parse_position_expression (MetaDrawSpec              *spec,
   return TRUE;
 }
 
-
 gboolean
 meta_parse_size_expression (MetaDrawSpec              *spec,
                             const MetaPositionExprEnv *env,
@@ -5284,7 +5283,6 @@ meta_frame_style_set_unref (MetaFrameStyleSet *style_set)
     }
 }
 
-
 static MetaFrameStyle*
 get_style (MetaFrameStyleSet *style_set,
            MetaFrameState     state,
@@ -5531,7 +5529,6 @@ meta_theme_new (void)
   theme->quark_frame_y_center = g_quark_from_static_string ("frame_y_center");
   return theme;
 }
-
 
 void
 meta_theme_free (MetaTheme *theme)
@@ -6233,7 +6230,6 @@ meta_theme_lookup_color_constant (MetaTheme   *theme,
       return FALSE;
     }
 }
-
 
 PangoFontDescription*
 meta_gtk_widget_get_font_desc (GtkWidget *widget,

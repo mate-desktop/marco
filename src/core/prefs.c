@@ -627,7 +627,6 @@ handle_preference_init_int (void)
 {
   MetaIntPreference *cursor = preferences_int;
 
-
   while (cursor->key!=NULL)
     {
       gint value;
@@ -809,7 +808,6 @@ handle_preference_update_int (const gchar *key, GSettings *settings)
 
 }
 
-
 /****************************************************************************/
 /* Listeners.                                                               */
 /****************************************************************************/
@@ -924,7 +922,6 @@ queue_changed (MetaPreference pref)
     changed_idle = g_idle_add_full (META_PRIORITY_PREFS_NOTIFY,
                                     changed_idle_handler, NULL, NULL);
 }
-
 
 /****************************************************************************/
 /* Initialisation.                                                          */

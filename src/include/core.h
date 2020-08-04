@@ -190,7 +190,6 @@ MetaGrabOp meta_core_get_grab_op     (Display    *xdisplay);
 Window     meta_core_get_grab_frame  (Display   *xdisplay);
 int        meta_core_get_grab_button (Display  *xdisplay);
 
-
 void       meta_core_grab_buttons  (Display *xdisplay,
                                     Window   frame_xwindow);
 
@@ -209,7 +208,4 @@ void meta_invalidate_default_icons (void);
 void meta_invalidate_all_icons (void);
 
 #endif
-
-
-
 

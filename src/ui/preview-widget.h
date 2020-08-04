@@ -60,7 +60,6 @@ struct _MetaPreviewClass
   GtkBinClass parent_class;
 };
 
-
 GType    meta_preview_get_type (void) G_GNUC_CONST;
 GtkWidget* meta_preview_new	 (void);
 

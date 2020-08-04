@@ -721,7 +721,6 @@ meta_rectangle_expand_to_avoiding_struts (MetaRectangle       *rect,
       rect->height = expand_to->height;
     }
 
-
   /* Run over all struts */
   for (strut_iter = all_struts; strut_iter; strut_iter = strut_iter->next)
     {
@@ -817,7 +816,6 @@ meta_rectangle_overlaps_with_region (const GList         *spanning_rects,
 
   return overlaps;
 }
-
 
 void
 meta_rectangle_clamp_to_fit_into_region (const GList         *spanning_rects,

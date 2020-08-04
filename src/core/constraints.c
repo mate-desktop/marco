@@ -449,7 +449,6 @@ setup_constraint_info (ConstraintInfo      *info,
     meta_workspace_get_onxinerama_region (cur_workspace,
                                           xinerama_info->number);
 
-
   /* Log all this information for debugging */
   meta_topic (META_DEBUG_GEOMETRY,
               "Setting up constraint info:\n"
@@ -521,7 +520,6 @@ place_window_if_needed(MetaWindow     *window,
       info->usable_xinerama_region =
         meta_workspace_get_onxinerama_region (cur_workspace,
                                               xinerama_info->number);
-
 
       info->current.x = placed_rect.x;
       info->current.y = placed_rect.y;

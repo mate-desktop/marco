@@ -46,7 +46,6 @@ void meta_window_reload_property   (MetaWindow *window,
                                     Atom        property,
                                     gboolean    initial);
 
-
 /**
  * Requests the current values of a set of properties for a given
  * window from the server, and deals with them appropriately.

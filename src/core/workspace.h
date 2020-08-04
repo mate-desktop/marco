@@ -97,7 +97,6 @@ GList*         meta_workspace_list_windows  (MetaWorkspace *workspace);
 
 void meta_workspace_invalidate_work_area (MetaWorkspace *workspace);
 
-
 void meta_workspace_get_work_area_for_xinerama  (MetaWorkspace *workspace,
                                                  int            which_xinerama,
                                                  MetaRectangle *area);
@@ -117,7 +116,4 @@ MetaWorkspace* meta_workspace_get_neighbor (MetaWorkspace      *workspace,
 const char* meta_workspace_get_name (MetaWorkspace *workspace);
 
 #endif
-
-
-
 

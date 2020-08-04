@@ -755,7 +755,6 @@ init_layouts (void)
 #endif
 }
 
-
 static GtkWidget*
 previews_of_button_layouts (void)
 {
@@ -973,7 +972,6 @@ main (int argc, char **argv)
 
   return 0;
 }
-
 
 static MetaFrameFlags
 get_flags (GtkWidget *widget)

@@ -29,7 +29,6 @@
 #define _(x) dgettext (GETTEXT_PACKAGE, x)
 #define N_(x) x
 
-
 static void
 send_restart (void)
 {

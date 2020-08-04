@@ -540,7 +540,6 @@ save_yourself_callback (SmcConn   smc_conn,
   save_yourself_possibly_done (shutdown, successful);
 }
 
-
 static void
 die_callback (SmcConn smc_conn, SmPointer client_data)
 {
@@ -662,7 +661,6 @@ set_clone_restart_commands (void)
       ++i;
     }
   prop3.num_vals = i;
-
 
   props[0] = &prop1;
   props[1] = &prop2;
@@ -1119,7 +1117,6 @@ load_state (const char *previous_save_file)
                                      length,
                                      &error))
     goto error;
-
 
   error = NULL;
   if (!g_markup_parse_context_end_parse (context, &error))

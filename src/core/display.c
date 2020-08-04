@@ -233,7 +233,6 @@ remove_pending_pings_for_window (MetaDisplay *display, Window xwindow)
   g_slist_free (dead);
 }
 
-
 #ifdef HAVE_STARTUP_NOTIFICATION
 static void
 sn_error_trap_push (SnDisplay *sn_display,
@@ -506,7 +505,6 @@ meta_display_open (void)
 #else  /* HAVE_XSYNC */
   meta_verbose ("Not compiled with Xsync support\n");
 #endif /* !HAVE_XSYNC */
-
 
 #ifdef HAVE_SHAPE
   {
@@ -1721,7 +1719,6 @@ static gboolean event_callback(XEvent* event, gpointer data)
       property_for_window = window;
       window = NULL;
     }
-
 
   frame_was_receiver = FALSE;
   if (window &&
@@ -5097,7 +5094,6 @@ process_selection_clear (MetaDisplay   *display,
   screen = find_screen_for_selection (display,
                                       event->xselectionclear.window,
                                       event->xselectionclear.selection);
-
 
   if (screen != NULL)
     {

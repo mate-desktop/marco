@@ -77,6 +77,3 @@ void meta_frame_set_screen_cursor (MetaFrame        *frame,
 
 #endif
 
-
-
-

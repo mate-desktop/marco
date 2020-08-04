@@ -79,7 +79,6 @@ from The Open Group.
 
 */
 
-
 #include <config.h>
 #include "xprops.h"
 #include "errors.h"

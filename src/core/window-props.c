@@ -76,7 +76,6 @@ typedef struct MetaWindowPropHooks
 static MetaWindowPropHooks* find_hooks (MetaDisplay *display,
                                         Atom         property);
 
-
 void
 meta_window_reload_property (MetaWindow *window,
                              Atom        property,
@@ -344,7 +343,6 @@ reload_net_wm_user_time_window (MetaWindow    *window,
                         window->user_time_window,
                         NoEventMask);
         }
-
 
       /* Obtain the new NET_WM_USER_TIME_WINDOW and register it */
       window->user_time_window = value->v.xwindow;

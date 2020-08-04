@@ -48,8 +48,6 @@ static void                reload_prop_value (MetaGroup     *group,
 static MetaGroupPropHooks* find_hooks        (MetaDisplay   *display,
                                               Atom           property);
 
-
-
 void
 meta_group_reload_property (MetaGroup *group,
                             Atom       property)

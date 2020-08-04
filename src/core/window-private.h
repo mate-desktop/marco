@@ -512,7 +512,6 @@ void        meta_window_resize_with_gravity (MetaWindow  *window,
                                              int          h,
                                              int          gravity);
 
-
 /* Return whether the window would be showing if we were on its workspace */
 gboolean    meta_window_showing_on_its_workspace (MetaWindow *window);
 
@@ -581,7 +580,6 @@ void        meta_window_update_unfocused_button_grabs (MetaWindow *window);
 void meta_window_send_icccm_message (MetaWindow *window,
                                      Atom        atom,
                                      guint32     timestamp);
-
 
 void     meta_window_move_resize_request(MetaWindow *window,
                                          guint       value_mask,
@@ -662,7 +660,6 @@ void     meta_window_foreach_ancestor         (MetaWindow            *window,
                                                MetaWindowForeachFunc  func,
                                                void                  *data);
 MetaWindow* meta_window_find_root_ancestor    (MetaWindow *window);
-
 
 void meta_window_begin_grab_op (MetaWindow *window,
                                 MetaGrabOp  op,

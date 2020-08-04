@@ -489,7 +489,6 @@ main (int argc, char **argv)
   meta_prefs_init ();
   meta_prefs_add_listener (prefs_changed_callback, NULL);
 
-
 #if 1
 
   for (i=0; i<G_N_ELEMENTS(log_domains); i++)

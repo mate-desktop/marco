@@ -678,7 +678,6 @@ meta_show_entry_dialog(const char *message,
     }
   argvl[i] = NULL;
 
-
   unsetenv ("WINDOWID"); /* start in current workspace */
   g_spawn_async_with_pipes (
                             "/",

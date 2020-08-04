@@ -307,7 +307,6 @@ reload_modifiers (MetaDisplay *display)
     }
 }
 
-
 static int
 count_bindings (const MetaKeyPref *prefs,
                 int                n_prefs)
@@ -553,7 +552,6 @@ meta_display_process_mapping_event (MetaDisplay *display,
        * even when only the keymap changes */
       reload_modmap (display);
 
-
       if (keymap_changed)
         reload_keycodes (display);
 
@@ -583,7 +581,6 @@ bindings_changed_callback (MetaPreference pref,
       break;
     }
 }
-
 
 void
 meta_display_init_keys (MetaDisplay *display)
@@ -2460,7 +2457,6 @@ meta_spawn_command_line_async_on_screen (const gchar *command_line,
   return retval;
 }
 
-
 static void
 handle_run_command (MetaDisplay    *display,
                     MetaScreen     *screen,
@@ -2498,7 +2494,6 @@ handle_run_command (MetaDisplay    *display,
       g_error_free (err);
     }
 }
-
 
 static void
 handle_maximize_vertically (MetaDisplay    *display,
@@ -2698,7 +2693,6 @@ handle_move_to_center  (MetaDisplay    *display,
           window->rect.height);
 }
 
-
 static void
 handle_move_to_monitor  (MetaDisplay    *display,
                          MetaScreen     *screen,
@@ -2753,7 +2747,6 @@ process_workspace_switch_grab (MetaDisplay *display,
           meta_topic (META_DEBUG_KEYBINDINGS,
                       "Ending grab so we can focus on the target workspace\n");
           meta_display_end_grab_op (display, event->xkey.time);
-
 
           if(display->grab_op == META_GRAB_OP_KEYBOARD_WORKSPACE_SWITCHING)
             {
@@ -2846,8 +2839,6 @@ process_workspace_switch_grab (MetaDisplay *display,
                                                   window,
                                                   event->xkey.time);
             }
-
-
 
           return TRUE; /* we already ended the grab */
         }
@@ -3125,7 +3116,6 @@ handle_cycle (MetaDisplay    *display,
   do_choose_window (display, screen, event_window, event, binding,
                     backwards, FALSE);
 }
-
 
 static void
 handle_toggle_fullscreen  (MetaDisplay    *display,
@@ -3632,7 +3622,6 @@ handle_rename_workspace_callback(GIOChannel *ioc, GIOCondition cond, gpointer da
       return FALSE;
     }
 
-
   if (cond & G_IO_ERR )
     {
       meta_warning ("handle_rename_workspace_callback: error. G_IO_ERR.\n");
@@ -3649,7 +3638,6 @@ handle_rename_workspace_callback(GIOChannel *ioc, GIOCondition cond, gpointer da
       return FALSE;
     }
 
-
   meta_topic (META_DEBUG_KEYBINDINGS, "handle_rename_workspace_callback: workspace_index=%d\n", *workspace_index);
   if (*workspace_index < 0 || *workspace_index > 36)
     {
@@ -3658,7 +3646,6 @@ handle_rename_workspace_callback(GIOChannel *ioc, GIOCondition cond, gpointer da
       already_displaying_rename_workspace = FALSE;
       return FALSE;
     }
-
 
   if (cond & (!G_IO_IN & !G_IO_PRI))
     {

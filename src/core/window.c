@@ -56,7 +56,6 @@
 
 static int destroying_windows_disallowed = 0;
 
-
 static void     update_sm_hints           (MetaWindow     *window);
 static void     update_net_frame_extents  (MetaWindow     *window);
 static void     recalc_window_type        (MetaWindow     *window);
@@ -91,7 +90,6 @@ static void meta_window_move_resize_internal (MetaWindow         *window,
 static void     ensure_mru_position_after (MetaWindow *window,
                                            MetaWindow *after_this_one);
 
-
 static void meta_window_move_resize_now (MetaWindow  *window);
 
 static void meta_window_unqueue (MetaWindow *window, guint queuebits);
@@ -118,9 +116,7 @@ static void         meta_window_transform_to_monitor (MetaRectangle *target_rect
                                                     const MetaRectangle *from_monitor,
                                                     const MetaRectangle *to_monitor);
 
-
 static gboolean update_resize_timeout (gpointer data);
-
 
 static void meta_window_flush_calc_showing   (MetaWindow *window);
 
@@ -244,7 +240,6 @@ meta_window_new (MetaDisplay *display,
          meta_display_ungrab (display);
          return NULL;
    }
-
 
   meta_error_trap_pop (display, FALSE);
   meta_display_ungrab (display);
@@ -589,7 +584,6 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->initial_timestamp = 0; /* not used */
 
   meta_display_register_x_window (display, &window->xwindow, window);
-
 
   /* assign the window to its group, or create a new group if needed
    */
@@ -1179,7 +1173,6 @@ meta_window_free (MetaWindow  *window,
   meta_display_ungrab_focus_window_button (window->display, window);
 
   meta_display_unregister_x_window (window->display, window->xwindow);
-
 
   meta_error_trap_push (window->display);
 
@@ -2743,7 +2736,6 @@ meta_window_tile (MetaWindow *window)
   else
     meta_window_save_rect(window);
 
-
   window->tiled = TRUE;
   /* move_resize with new tiling constraints
    */
@@ -2885,7 +2877,6 @@ meta_window_unmaximize (MetaWindow        *window,
   meta_compositor_unmaximize_window (window->display->compositor, window);
 }
 
-
 void
 meta_window_move_to_monitor(MetaWindow *window,
                             const MetaXineramaScreenInfo *from_monitor,
@@ -2945,8 +2936,6 @@ static void meta_window_transform_to_monitor(MetaRectangle *target_rect,
   target_rect->y += to_monitor->y;
 
 }
-
-
 
 void
 meta_window_make_above (MetaWindow  *window)
@@ -7465,7 +7454,6 @@ update_move (MetaWindow  *window,
       new_y = old.y;
     }
 
-
   /* Do any edge resistance/snapping */
   meta_window_edge_resistance_for_move (window,
                                         old.x,
@@ -7492,7 +7480,6 @@ update_move (MetaWindow  *window,
   else
     meta_window_move (window, TRUE, new_x, new_y);
 }
-
 
 static MetaTileMode calculate_tiling_mode(int x,
                                           int y,
@@ -7534,7 +7521,6 @@ static MetaTileMode calculate_tiling_mode(int x,
     return META_TILE_NONE;
 
 }
-
 
 static gboolean
 update_resize_timeout (gpointer data)

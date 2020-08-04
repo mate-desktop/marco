@@ -41,7 +41,6 @@
 #define ARROW_DOWN 116
 #define ARROW_DOWN_PAD 88
 
-
 #include "display-private.h"
 #include "window.h"
 
@@ -67,7 +66,4 @@ void     meta_display_process_mapping_event (MetaDisplay *display,
                                              XEvent      *event);
 
 #endif
-
-
-
 

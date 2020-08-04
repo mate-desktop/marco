@@ -151,7 +151,6 @@ static void       push_state (ParseInfo  *info,
 static void       pop_state  (ParseInfo  *info);
 static ParseState peek_state (ParseInfo  *info);
 
-
 static void parse_toplevel_element  (GMarkupParseContext  *context,
                                      const gchar          *element_name,
                                      const gchar         **attribute_names,
@@ -3132,7 +3131,6 @@ parse_style_set_element (GMarkupParseContext  *context,
                          "resize", element_name);
               return;
             }
-
 
           frame_resize = meta_frame_resize_from_string (resize);
           if (frame_resize == META_FRAME_RESIZE_LAST)

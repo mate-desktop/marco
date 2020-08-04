@@ -265,6 +265,3 @@ MetaVisualBellType meta_prefs_get_visual_bell_type (void);
 
 #endif
 
-
-
-
