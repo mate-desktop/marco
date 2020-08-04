@@ -1376,7 +1376,7 @@ meta_color_spec_new_from_string (const char *str,
   MetaColorSpec *spec;
 
   spec = NULL;
-  
+
   if (strncmp (str, "gtk:custom", 10) == 0)
     {
       const char *color_name_start, *fallback_str_start, *end;

@@ -603,12 +603,12 @@ static void
 display_widget (MetaTabPopup *popup,
                 GtkWidget    *w)
 {
-  if (w != NULL) 
+  if (w != NULL)
     {
       GList *c = popup->entries;
       while (c != NULL && ((TabEntry*)c->data)->widget != w)
         c = c->next;
-      if (c != NULL) 
+      if (c != NULL)
         {
           popup->current = c;
           TabEntry *te = c->data;
@@ -623,7 +623,7 @@ meta_ui_tab_popup_down (MetaTabPopup *popup)
   if (popup->current != NULL)
     {
       TabEntry *te = popup->current->data;
-      GtkWidget* w = gtk_grid_get_child_at (GTK_GRID(popup->grid), 
+      GtkWidget* w = gtk_grid_get_child_at (GTK_GRID(popup->grid),
                                             te->grid_left,
                                             te->grid_top + 1);
       display_widget (popup, w);
@@ -636,7 +636,7 @@ meta_ui_tab_popup_up (MetaTabPopup *popup)
   if (popup->current != NULL)
     {
       TabEntry *te = popup->current->data;
-      GtkWidget* w = gtk_grid_get_child_at (GTK_GRID(popup->grid), 
+      GtkWidget* w = gtk_grid_get_child_at (GTK_GRID(popup->grid),
                                             te->grid_left,
                                             te->grid_top - 1);
       display_widget (popup, w);
