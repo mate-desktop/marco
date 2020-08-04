@@ -34,7 +34,6 @@ Except as contained in this notice, the name of The Open Group shall not be
 used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from The Open Group.
 
-
 Copyright 1987 by Digital Equipment Corporation, Maynard, Massachusetts.
 
                         All Rights Reserved
@@ -64,7 +63,6 @@ SOFTWARE.
 #define SIGNEDINT long
 #define UNSIGNEDINT unsigned long
 #define RESOURCEID unsigned long
-
 
 /* this structure may be extended, but do not change the order */
 typedef struct {
@@ -97,7 +95,6 @@ typedef struct {
 } xPropStandardColormap;
 #define OldNumPropStandardColormapElements 8  /* pre-ICCCM */
 #define NumPropStandardColormapElements 10  /* ICCCM version 1 */
-
 
 /* this structure may be extended, but do not change the order */
 typedef struct {

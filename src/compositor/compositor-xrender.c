@@ -1531,7 +1531,6 @@ paint_windows (MetaScreen   *screen,
         }
     }
 
-
   XFixesSetPictureClipRegion (xdisplay, root_buffer, 0, 0, region);
 
 #ifdef HAVE_PRESENT
@@ -2597,7 +2596,6 @@ process_unmap (MetaCompositorXRender *compositor,
       return;
     }
 
-
   cw = find_window_in_display (compositor->display, event->window);
   if (cw)
     unmap_win (compositor->display, cw->screen, event->window);
@@ -3073,7 +3071,6 @@ xrender_free_window (MetaCompositor *compositor,
     destroy_win (xrc->display, xwindow, FALSE);
 #endif
 }
-
 
 static void
 xrender_process_event (MetaCompositor *compositor,

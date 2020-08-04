@@ -33,7 +33,6 @@
 
 #define OUTLINE_WIDTH 5  /* frame width in non-composite case */
 
-
 struct _MetaTilePreview {
   GtkWidget     *preview_window;
 

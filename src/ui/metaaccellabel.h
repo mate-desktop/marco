@@ -41,14 +41,12 @@
 extern "C" {
 #endif /* __cplusplus */
 
-
 #define META_TYPE_ACCEL_LABEL		(meta_accel_label_get_type ())
 #define META_ACCEL_LABEL(obj)		(G_TYPE_CHECK_INSTANCE_CAST ((obj), META_TYPE_ACCEL_LABEL, MetaAccelLabel))
 #define META_ACCEL_LABEL_CLASS(klass)	(G_TYPE_CHECK_CLASS_CAST ((klass), META_TYPE_ACCEL_LABEL, MetaAccelLabelClass))
 #define META_IS_ACCEL_LABEL(obj)	 (G_TYPE_CHECK_INSTANCE_TYPE ((obj), META_TYPE_ACCEL_LABEL))
 #define META_IS_ACCEL_LABEL_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), META_TYPE_ACCEL_LABEL))
 #define META_ACCEL_LABEL_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), META_TYPE_ACCEL_LABEL, MetaAccelLabelClass))
-
 
 typedef struct _MetaAccelLabel	    MetaAccelLabel;
 typedef struct _MetaAccelLabelClass  MetaAccelLabelClass;
@@ -97,10 +95,8 @@ void       meta_accel_label_set_accelerator   (MetaAccelLabel         *accel_lab
                                                guint                   accelerator_key,
                                                MetaVirtualModifier     accelerator_mods);
 
-
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */
-
 
 #endif /* __META_ACCEL_LABEL_H__ */

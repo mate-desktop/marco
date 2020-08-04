@@ -53,7 +53,6 @@ static void     meta_accel_label_get_preferred_height (GtkWidget *widget,
 static gboolean meta_accel_label_draw         (GtkWidget           *widget,
                                                cairo_t             *cr);
 
-
 G_DEFINE_TYPE (MetaAccelLabel, meta_accel_label, GTK_TYPE_LABEL);
 
 static void
@@ -165,7 +164,6 @@ static void
 meta_accel_label_destroy (GtkWidget *object)
 {
   MetaAccelLabel *accel_label = META_ACCEL_LABEL (object);
-
 
   g_free (accel_label->accel_string);
   accel_label->accel_string = NULL;

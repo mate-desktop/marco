@@ -170,7 +170,6 @@ atom_name (Display *display,
     }
 }
 
-
 #define ELAPSED(start_time, current_time) \
     (((((double)current_time.tv_sec - start_time.tv_sec) * 1000000 + \
        (current_time.tv_usec - start_time.tv_usec))) / 1000.0)

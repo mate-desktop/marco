@@ -283,7 +283,6 @@ reload_xinerama_infos (MetaScreen *screen)
               "Marco compiled without Solaris Xinerama support\n");
 #endif /* HAVE_SOLARIS_XINERAMA */
 
-
   /* If no Xinerama, fill in the single screen info so
    * we can use the field unconditionally
    */
@@ -685,7 +684,6 @@ meta_screen_free (MetaScreen *screen,
   if (screen->work_area_idle != 0)
     g_source_remove (screen->work_area_idle);
 
-
   if (XGetGCValues (screen->display->xdisplay,
                     screen->root_xor_gc,
                     GCFont,
@@ -880,7 +878,6 @@ prefs_changed_callback (MetaPreference pref,
       set_workspace_names (screen);
     }
 }
-
 
 static char*
 get_screen_name (MetaDisplay *display,
@@ -2104,7 +2101,6 @@ meta_screen_queue_workarea_recalc (MetaScreen *screen)
     }
 }
 
-
 #ifdef WITH_VERBOSE_MODE
 static char *
 meta_screen_corner_to_string (MetaScreenCorner corner)
@@ -2194,7 +2190,6 @@ meta_screen_calc_workspace_layout (MetaScreen          *screen,
   /* keep in mind that we could have a ragged layout, e.g. the "8"
    * in the above grids could be missing
    */
-
 
   grid = g_new (int, grid_area);
 
@@ -2522,7 +2517,6 @@ meta_screen_show_desktop (MetaScreen *screen,
       windows = windows->next;
     }
 
-
   meta_screen_update_showing_desktop_hint (screen);
 }
 
@@ -2538,7 +2532,6 @@ meta_screen_unshow_desktop (MetaScreen *screen)
 
   meta_screen_update_showing_desktop_hint (screen);
 }
-
 
 #ifdef HAVE_STARTUP_NOTIFICATION
 static gboolean startup_sequence_timeout (void *data);

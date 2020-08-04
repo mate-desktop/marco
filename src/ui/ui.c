@@ -487,7 +487,6 @@ meta_ui_queue_frame_draw (MetaUI *ui,
   meta_frames_queue_draw (ui->frames, xwindow);
 }
 
-
 void
 meta_ui_set_frame_title (MetaUI     *ui,
                          Window      xwindow,

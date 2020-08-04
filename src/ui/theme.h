@@ -966,7 +966,6 @@ MetaAlphaGradientSpec* meta_alpha_gradient_spec_new  (MetaGradientType       typ
 void                   meta_alpha_gradient_spec_free (MetaAlphaGradientSpec *spec);
 cairo_pattern_t *      meta_alpha_gradient_spec_get_mask (const MetaAlphaGradientSpec *spec);
 
-
 MetaFrameStyle* meta_frame_style_new   (MetaFrameStyle *parent);
 void            meta_frame_style_ref   (MetaFrameStyle *style);
 void            meta_frame_style_unref (MetaFrameStyle *style);
@@ -983,7 +982,6 @@ void meta_frame_style_draw (MetaFrameStyle          *style,
                             GdkPixbuf               *mini_icon,
                             GdkPixbuf               *icon);
 
-
 void meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                                        GtkStyleContext         *style_gtk,
                                        cairo_t                 *cr,
@@ -995,7 +993,6 @@ void meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                                        MetaButtonState          button_states[META_BUTTON_TYPE_LAST],
                                        GdkPixbuf               *mini_icon,
                                        GdkPixbuf               *icon);
-
 
 gboolean       meta_frame_style_validate (MetaFrameStyle    *style,
                                           guint              current_theme_version,
@@ -1056,7 +1053,6 @@ void meta_theme_draw_frame_by_name (MetaTheme              *theme,
                                     MetaButtonState         button_states[META_BUTTON_TYPE_LAST],
                                     GdkPixbuf              *mini_icon,
                                     GdkPixbuf              *icon);
-
 
 void meta_theme_get_frame_borders (MetaTheme         *theme,
                                    MetaFrameType      type,
@@ -1128,7 +1124,6 @@ PangoFontDescription* meta_gtk_widget_get_font_desc        (GtkWidget           
 int                   meta_pango_font_desc_get_text_height (const PangoFontDescription *font_desc,
                                                             PangoContext         *context);
 
-
 /* Enum converters */
 MetaGtkColorComponent meta_color_component_from_string (const char            *str);
 const char*           meta_color_component_to_string   (MetaGtkColorComponent  component);
@@ -1164,7 +1159,6 @@ void                  meta_gtk_style_get_dark_color    (GtkStyleContext      *st
                                                         GdkRGBA              *color);
 
 guint meta_theme_earliest_version_with_button (MetaButtonType type);
-
 
 #define META_THEME_ALLOWS(theme, feature) (theme->format_version >= feature)
 

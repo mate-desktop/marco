@@ -45,5 +45,4 @@ void      meta_error_trap_pop  (MetaDisplay *display,
 int       meta_error_trap_pop_with_return  (MetaDisplay *display,
                                             gboolean     last_request_was_roundtrip);
 
-
 #endif

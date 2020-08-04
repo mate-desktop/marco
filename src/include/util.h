@@ -140,4 +140,3 @@ meta_show_entry_dialog (const char *message,
 
 #endif /* META_UTIL_H */
 
-

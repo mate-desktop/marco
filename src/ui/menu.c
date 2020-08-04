@@ -52,7 +52,6 @@ struct _MenuItem {
 	const char* label;
 };
 
-
 struct _MenuData {
 	MetaWindowMenu* menu;
 	MetaMenuOp op;

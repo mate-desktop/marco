@@ -90,7 +90,6 @@ meta_window_ensure_frame (MetaWindow *window)
                 frame->rect.x, frame->rect.y,
                 frame->rect.width, frame->rect.height);
 
-
   frame->xwindow = meta_ui_create_frame_window (window->screen->ui,
                                                 window->display->xdisplay,
                                                 window->xvisual,
@@ -229,7 +228,6 @@ meta_window_destroy_frame (MetaWindow *window)
   meta_window_queue (window, META_QUEUE_CALC_SHOWING);
   meta_window_queue (window, META_QUEUE_MOVE_RESIZE);
 }
-
 
 MetaFrameFlags
 meta_frame_get_flags (MetaFrame *frame)

@@ -211,7 +211,6 @@ meta_gradient_create_vertical (int width, int height,
   return pixbuf;
 }
 
-
 /*
  *----------------------------------------------------------------------
  * meta_gradient_create_diagonal--
@@ -225,7 +224,6 @@ meta_gradient_create_vertical (int width, int height,
  *      None
  *----------------------------------------------------------------------
  */
-
 
 static GdkPixbuf*
 meta_gradient_create_diagonal (int width, int height,
@@ -273,7 +271,6 @@ meta_gradient_create_diagonal (int width, int height,
   g_object_unref (G_OBJECT (tmp));
   return pixbuf;
 }
-
 
 static GdkPixbuf*
 meta_gradient_create_multi_horizontal (int width, int height,
@@ -447,7 +444,6 @@ meta_gradient_create_multi_vertical (int width, int height,
 
   return pixbuf;
 }
-
 
 static GdkPixbuf*
 meta_gradient_create_multi_diagonal (int width, int height,

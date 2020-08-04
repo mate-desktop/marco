@@ -257,7 +257,6 @@ meta_effect_run_close (MetaWindow         *window,
     run_handler (effect);
 }
 
-
 /* old ugly minimization effect */
 
 #ifdef HAVE_SHAPE
@@ -575,7 +574,6 @@ draw_xor_rect (MetaScreen          *screen,
 
               box_width = text_width + 2 * LINE_WIDTH;
               box_height = text_height + 2 * LINE_WIDTH;
-
 
               box_x = shrunk_rect.x + (shrunk_rect.width - box_width) / 2;
               box_y = shrunk_rect.y + (shrunk_rect.height - box_height) / 2;

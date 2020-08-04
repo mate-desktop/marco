@@ -487,7 +487,6 @@ focus_in_event_cb (GtkWidget *window,
   return TRUE;
 }
 
-
 static gboolean
 focus_out_event_cb (GtkWidget *window,
                     GdkEvent  *event,

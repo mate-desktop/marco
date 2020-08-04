@@ -38,6 +38,3 @@ struct _MetaGroup
 
 #endif
 
-
-
-

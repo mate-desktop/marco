@@ -79,6 +79,3 @@ gboolean meta_read_icons         (MetaScreen     *screen,
 
 #endif
 
-
-
-

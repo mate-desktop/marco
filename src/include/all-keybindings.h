@@ -279,7 +279,6 @@ keybind (move-to-corner-sw, handle_move_to_corner_sw, 0,
 keybind (move-to-corner-se, handle_move_to_corner_se, 0,
         BINDING_PER_WINDOW)
 
-
 keybind (move-to-side-n, handle_move_to_side_n, 0,
         BINDING_PER_WINDOW)
 keybind (move-to-side-s, handle_move_to_side_s, 0,
@@ -299,10 +298,6 @@ keybind (move-to-monitor-e, handle_move_to_monitor, META_SCREEN_RIGHT,
         BINDING_PER_WINDOW)
 keybind (move-to-monitor-w, handle_move_to_monitor, META_SCREEN_LEFT,
         BINDING_PER_WINDOW)
-
-
-
-
 
 keybind (switch-to-workspace-prev, handle_switch_to_workspace,
          META_MOTION_PREV, 0)

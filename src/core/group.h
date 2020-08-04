@@ -48,6 +48,3 @@ gboolean meta_group_property_notify   (MetaGroup  *group,
 
 #endif
 
-
-
-

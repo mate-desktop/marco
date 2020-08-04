@@ -181,7 +181,6 @@ const MetaXineramaScreenInfo* meta_screen_get_xinerama_for_rect   (MetaScreen   
 const MetaXineramaScreenInfo* meta_screen_get_xinerama_for_window (MetaScreen    *screen,
                                                                    MetaWindow    *window);
 
-
 const MetaXineramaScreenInfo* meta_screen_get_xinerama_neighbor (MetaScreen *screen,
                                                                  int         which_xinerama,
                                                                  MetaScreenDirection dir);

@@ -222,6 +222,3 @@ void meta_prop_free_values (MetaPropValue *values,
 
 #endif
 
-
-
-
