@@ -7101,7 +7101,6 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
   gboolean       is_onscreen;
 
   const int min_height_needed  = 8;
-  const int min_width_percent  = 0.5;
   const int min_width_absolute = 50;
 
   /* Titlebar can't be offscreen if there is no titlebar... */
@@ -7124,8 +7123,7 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
 
       meta_rectangle_intersect (&titlebar_rect, spanning_rect, &overlap);
       if (overlap.height > MIN (titlebar_rect.height, min_height_needed) &&
-          overlap.width  > MIN (titlebar_rect.width * min_width_percent,
-                                min_width_absolute))
+          overlap.width  > MIN (titlebar_rect.width / 2, min_width_absolute))
         {
           is_onscreen = TRUE;
           break;
