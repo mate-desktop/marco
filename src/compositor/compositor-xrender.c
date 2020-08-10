@@ -30,6 +30,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 #include <math.h>
 #include <unistd.h>
 
@@ -833,10 +834,10 @@ solid_picture (MetaDisplay *display,
       return None;
     }
 
-  c.alpha = (unsigned short)(a * 0xffff);
-  c.red   = (unsigned short)(r * 0xffff);
-  c.green = (unsigned short)(g * 0xffff);
-  c.blue  = (unsigned short)(b * 0xffff);
+  c.alpha = (unsigned short)(a * USHRT_MAX);
+  c.red   = (unsigned short)(r * USHRT_MAX);
+  c.green = (unsigned short)(g * USHRT_MAX);
+  c.blue  = (unsigned short)(b * USHRT_MAX);
 
   XRenderFillRectangle (xdisplay, PictOpSrc, picture, &c, 0, 0, 1, 1);
   XFreePixmap (xdisplay, pixmap);
@@ -912,7 +913,7 @@ root_tile (MetaScreen *screen)
       c.red = 0x0000;
       c.green = 0x0000;
       c.blue = 0x0000;
-      c.alpha = 0xffff;
+      c.alpha = USHRT_MAX;
 
       XRenderFillRectangle (xdisplay, PictOpSrc, picture, &c, 0, 0, 1, 1);
       XFreePixmap (xdisplay, pixmap);
