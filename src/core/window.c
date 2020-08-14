@@ -8136,6 +8136,9 @@ meta_window_get_current_tile_area (MetaWindow    *window,
       case META_TILE_CYCLE_25:
         tile_ratio = 1 / 4.0;
         break;
+      case META_TILE_CYCLE_100:
+        tile_ratio = 1 / 1.0;
+        break;
       case META_TILE_CYCLE_75:
         tile_ratio = 3 / 4.0;
         break;
