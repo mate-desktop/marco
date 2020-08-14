@@ -3163,7 +3163,7 @@ handle_toggle_tiled (MetaDisplay *display,
         }
       else
         {
-          /* Cycle through the different tile sizes: 1/2 -> 1/3 -> 1/4 -> 3/4 -> 2/3 -> Untiled */
+          /* Cycle through the different tile sizes: 1/2 -> 1/3 -> 1/4 -> 1/1 -> 3/4 -> 2/3 -> Untiled */
           switch (window->tile_cycle)
           {
             case META_TILE_CYCLE_NONE:
@@ -3176,6 +3176,9 @@ handle_toggle_tiled (MetaDisplay *display,
               next_cycle = META_TILE_CYCLE_25;
               break;
             case META_TILE_CYCLE_25:
+              next_cycle = META_TILE_CYCLE_100;
+              break;
+            case META_TILE_CYCLE_100:
               next_cycle = META_TILE_CYCLE_75;
               break;
             case META_TILE_CYCLE_75:
