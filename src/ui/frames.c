@@ -2282,8 +2282,6 @@ generate_pixmap (MetaFrames            *frames,
   cr = cairo_create (result);
   cairo_translate (cr, -rect->x, -rect->y);
 
-  cairo_paint (cr);
-
   meta_frames_paint_to_drawable (frames, frame, cr);
 
   cairo_destroy (cr);
