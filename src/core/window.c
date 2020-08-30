@@ -2168,23 +2168,7 @@ meta_window_show (MetaWindow *window)
       ( (!place_on_top_on_map && !takes_focus_on_map) ||
       will_be_covered )
     ) {
-      if (meta_window_is_ancestor_of_transient (focus_window, window))
-        {
-          /* This happens for error dialogs or alerts; these need to remain on
-           * top, but it would be confusing to have its ancestor remain
-           * focused.
-           */
-          meta_topic (META_DEBUG_STARTUP,
-                      "The focus window %s is an ancestor of the newly mapped "
-                      "window %s which isn't being focused.  Unfocusing the "
-                      "ancestor.\n",
-                      focus_window->desc, window->desc);
-
-          meta_display_focus_the_no_focus_window (window->display,
-                                                  window->screen,
-                                                  timestamp);
-        }
-      else
+      if (!meta_window_is_ancestor_of_transient (focus_window, window))
         {
           needs_stacking_adjustment = TRUE;
           if (!window->placed)
@@ -4400,6 +4384,7 @@ meta_window_focus (MetaWindow  *window,
               window->desc, window->input, window->take_focus);
 
   if (window->display->grab_window &&
+      window->display->grab_window != window &&
       window->display->grab_window->all_keys_grabbed)
     {
       meta_topic (META_DEBUG_FOCUS,
@@ -4465,11 +4450,34 @@ meta_window_focus (MetaWindow  *window,
                                                timestamp);
         }
 
-      if (window->take_focus)
+        if (window->take_focus)
         {
           meta_topic (META_DEBUG_FOCUS,
                       "Sending WM_TAKE_FOCUS to %s since take_focus = true\n",
                       window->desc);
+                      
+           if (!window->input)
+           {
+               meta_topic (META_DEBUG_FOCUS,
+                      "Globally Active  Input window case %s",
+                      window->desc);
+              /* The "Globally Active Input" window case, where the window
+               * doesn't want us to call XSetInputFocus on it, but does
+               * want us to send a WM_TAKE_FOCUS.
+               *
+               * Normally, we want to just leave the focus undisturbed until
+               * the window respnds to WM_TAKE_FOCUS, but if we're unmanaging
+               * the current focus window we *need* to move the focus away, so
+               * we focus the no_focus_window now (and set
+               * display->focus_window to that) before sending WM_TAKE_FOCUS.
+               */
+              if (window->display->focus_window != NULL &&
+                  window->display->focus_window->unmanaging)
+                meta_display_focus_the_no_focus_window (window->display,
+                                                        window->screen,
+                                                        timestamp);
+          }
+
           meta_window_send_icccm_message (window,
                                           window->display->atom_WM_TAKE_FOCUS,
                                           timestamp);
