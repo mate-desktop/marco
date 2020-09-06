@@ -1411,7 +1411,6 @@ compare_default_focus_window_func (gconstpointer a,
 
 static MetaWindow*
 get_default_focus_window (MetaStack     *stack,
-                          MetaWorkspace *workspace,
                           MetaWindow    *not_this_one,
                           gboolean       must_be_at_point,
                           int            root_x,
@@ -1488,21 +1487,19 @@ get_default_focus_window (MetaStack     *stack,
 
 MetaWindow*
 meta_stack_get_default_focus_window_at_point (MetaStack     *stack,
-                                              MetaWorkspace *workspace,
                                               MetaWindow    *not_this_one,
                                               int            root_x,
                                               int            root_y)
 {
-  return get_default_focus_window (stack, workspace, not_this_one,
+  return get_default_focus_window (stack, not_this_one,
                                    TRUE, root_x, root_y);
 }
 
 MetaWindow*
 meta_stack_get_default_focus_window (MetaStack     *stack,
-                                     MetaWorkspace *workspace,
                                      MetaWindow    *not_this_one)
 {
-  return get_default_focus_window (stack, workspace, not_this_one,
+  return get_default_focus_window (stack, not_this_one,
                                    FALSE, 0, 0);
 }
 

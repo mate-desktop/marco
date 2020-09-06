@@ -303,7 +303,6 @@ MetaWindow* meta_stack_get_below  (MetaStack  *stack,
  * \bug Never called!
   */
 MetaWindow* meta_stack_get_default_focus_window          (MetaStack     *stack,
-                                                          MetaWorkspace *workspace,
                                                           MetaWindow    *not_this_one);
 
 /**
@@ -327,7 +326,6 @@ MetaWindow* meta_stack_get_default_focus_window          (MetaStack     *stack,
  * \return The window matching all these constraints or NULL if none does.
  */
 MetaWindow* meta_stack_get_default_focus_window_at_point (MetaStack     *stack,
-                                                          MetaWorkspace *workspace,
                                                           MetaWindow    *not_this_one,
                                                           int            root_x,
                                                           int            root_y);

@@ -1601,7 +1601,6 @@ meta_screen_get_mouse_window (MetaScreen  *screen,
   meta_error_trap_pop (screen->display, TRUE);
 
   window = meta_stack_get_default_focus_window_at_point (screen->stack,
-                                                         screen->active_workspace,
                                                          not_this_one,
                                                          root_x_return,
                                                          root_y_return);

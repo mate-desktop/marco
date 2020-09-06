@@ -1069,8 +1069,7 @@ focus_ancestor_or_top_window (MetaWorkspace *workspace,
         }
     }
 
-  window = meta_stack_get_default_focus_window (workspace->screen->stack,
-                                                workspace, NULL);
+  window = meta_stack_get_default_focus_window (workspace->screen->stack,NULL);
 
   if (window)
     {
