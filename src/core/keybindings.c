@@ -1553,7 +1553,7 @@ process_keyboard_move_grab (MetaDisplay *display,
     case XK_KP_Prior:
     case XK_Up:
     case XK_KP_Up:
-	 case XK_k:
+    case XK_k:
       y -= incr;
       handled = TRUE;
       break;
@@ -1561,7 +1561,7 @@ process_keyboard_move_grab (MetaDisplay *display,
     case XK_KP_Next:
     case XK_Down:
     case XK_KP_Down:
-	 case XK_j:
+    case XK_j:
       y += incr;
       handled = TRUE;
       break;
@@ -1573,7 +1573,7 @@ process_keyboard_move_grab (MetaDisplay *display,
     case XK_KP_End:
     case XK_Left:
     case XK_KP_Left:
-	 case XK_h:
+    case XK_h:
       x -= incr;
       handled = TRUE;
       break;
@@ -1581,7 +1581,7 @@ process_keyboard_move_grab (MetaDisplay *display,
     case XK_KP_Next:
     case XK_Right:
     case XK_KP_Right:
-	 case XK_l:
+    case XK_l:
       x += incr;
       handled = TRUE;
       break;
@@ -1642,25 +1642,25 @@ process_keyboard_resize_grab_op_change (MetaDisplay *display,
         {
         case XK_Up:
         case XK_KP_Up:
-		  case XK_k:
+        case XK_k:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_N;
           handled = TRUE;
           break;
         case XK_Down:
         case XK_KP_Down:
-		  case XK_j:
+        case XK_j:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_S;
           handled = TRUE;
           break;
         case XK_Left:
         case XK_KP_Left:
-		  case XK_h:
+        case XK_h:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_W;
           handled = TRUE;
           break;
         case XK_Right:
         case XK_KP_Right:
-		  case XK_l:
+        case XK_l:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_E;
           handled = TRUE;
           break;
@@ -1672,13 +1672,13 @@ process_keyboard_resize_grab_op_change (MetaDisplay *display,
         {
         case XK_Left:
         case XK_KP_Left:
-		  case XK_h:
+        case XK_h:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_W;
           handled = TRUE;
           break;
         case XK_Right:
         case XK_KP_Right:
-		  case XK_l:
+        case XK_l:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_E;
           handled = TRUE;
           break;
@@ -1690,13 +1690,13 @@ process_keyboard_resize_grab_op_change (MetaDisplay *display,
         {
         case XK_Left:
         case XK_KP_Left:
-		  case XK_h:
+        case XK_h:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_W;
           handled = TRUE;
           break;
         case XK_Right:
         case XK_KP_Right:
-		  case XK_l:
+        case XK_l:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_E;
           handled = TRUE;
           break;
@@ -1708,13 +1708,13 @@ process_keyboard_resize_grab_op_change (MetaDisplay *display,
         {
         case XK_Up:
         case XK_KP_Up:
-		  case XK_k:
+        case XK_k:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_N;
           handled = TRUE;
           break;
         case XK_Down:
         case XK_KP_Down:
-		  case XK_j:
+        case XK_j:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_S;
           handled = TRUE;
           break;
@@ -1726,13 +1726,13 @@ process_keyboard_resize_grab_op_change (MetaDisplay *display,
         {
         case XK_Up:
         case XK_KP_Up:
-		  case XK_k:
+        case XK_k:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_N;
           handled = TRUE;
           break;
         case XK_Down:
         case XK_KP_Down:
-		  case XK_j:
+        case XK_j:
           display->grab_op = META_GRAB_OP_KEYBOARD_RESIZING_S;
           handled = TRUE;
           break;
@@ -1854,7 +1854,7 @@ process_keyboard_resize_grab (MetaDisplay *display,
     {
     case XK_Up:
     case XK_KP_Up:
-	 case XK_k:
+    case XK_k:
       switch (gravity)
         {
         case NorthGravity:
@@ -1883,7 +1883,7 @@ process_keyboard_resize_grab (MetaDisplay *display,
 
     case XK_Down:
     case XK_KP_Down:
-	 case XK_j:
+    case XK_j:
       switch (gravity)
         {
         case NorthGravity:
@@ -1912,7 +1912,7 @@ process_keyboard_resize_grab (MetaDisplay *display,
 
     case XK_Left:
     case XK_KP_Left:
-	 case XK_h:
+    case XK_h:
       switch (gravity)
         {
         case EastGravity:
@@ -1941,7 +1941,7 @@ process_keyboard_resize_grab (MetaDisplay *display,
 
     case XK_Right:
     case XK_KP_Right:
-	 case XK_l:
+    case XK_l:
       switch (gravity)
         {
         case EastGravity:
