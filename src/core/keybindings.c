@@ -1561,6 +1561,7 @@ process_keyboard_move_grab (MetaDisplay *display,
     case XK_KP_Next:
     case XK_Down:
     case XK_KP_Down:
+	 case XK_j:
       y += incr;
       handled = TRUE;
       break;
