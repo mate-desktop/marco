@@ -45,6 +45,8 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk/gtk.h>
 
+G_BEGIN_DECLS
+
 typedef struct _MetaGroup MetaGroup;
 typedef struct _MetaWindowQueue MetaWindowQueue;
 
@@ -97,6 +99,8 @@ typedef enum {
 
 struct _MetaWindow
 {
+  GObject parent;
+
   MetaDisplay *display;
   MetaScreen *screen;
   MetaWorkspace *workspace;
@@ -700,4 +704,6 @@ void meta_window_update_net_wm_type (MetaWindow *window);
 
 gboolean meta_window_can_tile (MetaWindow *window);
 
-#endif
+G_END_DECLS
+
+#endif /* META_WINDOW_PRIVATE_H */
