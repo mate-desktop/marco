@@ -23,11 +23,17 @@
 #define META_WINDOW_H
 
 #include <glib.h>
+#include <glib-object.h>
 #include <cairo.h>
 #include <X11/Xlib.h>
 
 #include "boxes.h"
 #include "types.h"
+
+G_BEGIN_DECLS
+
+#define META_TYPE_WINDOW meta_window_get_type ()
+G_DECLARE_FINAL_TYPE (MetaWindow, meta_window, META, WINDOW, GObject)
 
 MetaFrame *meta_window_get_frame (MetaWindow *window);
 gboolean meta_window_has_focus (MetaWindow *window);
@@ -39,5 +45,7 @@ Window meta_window_get_xwindow (MetaWindow *window);
 MetaWindow *meta_window_get_transient_for (MetaWindow *window);
 gboolean meta_window_is_maximized (MetaWindow *window);
 cairo_region_t *meta_window_get_frame_bounds (MetaWindow *window);
+
+G_END_DECLS
 
 #endif
