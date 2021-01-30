@@ -8855,6 +8855,18 @@ meta_window_is_maximized (MetaWindow *window)
   return META_WINDOW_MAXIMIZED (window);
 }
 
+gboolean
+meta_window_is_tiled_left (MetaWindow *window)
+{
+  return META_WINDOW_TILED_LEFT (window);
+}
+
+gboolean
+meta_window_is_tiled_right (MetaWindow *window)
+{
+  return META_WINDOW_TILED_RIGHT (window);
+}
+
 /**
  * meta_window_is_client_decorated:
  *
