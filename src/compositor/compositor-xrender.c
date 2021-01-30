@@ -1022,6 +1022,19 @@ window_has_shadow (MetaCompWindow *cw)
           return FALSE;
         }
 
+      /* Do not add shadows for left/right tiled windows */
+      if (meta_window_is_tiled_left (cw->window))
+        {
+          meta_verbose ("Window has no shadow because it is tiled left\n");
+          return FALSE;
+        }
+
+      if (meta_window_is_tiled_right (cw->window))
+        {
+          meta_verbose ("Window has no shadow because it is tiled right\n");
+          return FALSE;
+        }
+
       if (meta_window_get_frame (cw->window)) {
         meta_verbose ("Window has shadow because it has a frame\n");
         return TRUE;
