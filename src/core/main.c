@@ -111,33 +111,6 @@ log_handler (const gchar   *log_domain,
 }
 
 /**
- * Prints the version notice. This is shown when Marco is called
- * with the --version switch.
- */
-static void
-version (void)
-{
-  const int latest_year = 2009;
-  char yearbuffer[256];
-  GDate date;
-
-  /* this is all so the string to translate stays constant.
-   * see how much we love the translators.
-   */
-  g_date_set_dmy (&date, 1, G_DATE_JANUARY, latest_year);
-  if (g_date_strftime (yearbuffer, sizeof (yearbuffer), "%Y", &date)==0)
-    /* didn't work?  fall back to decimal representation */
-    g_sprintf (yearbuffer, "%d", latest_year);
-
-  g_print (_("marco %s\n"
-             "Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
-             "This is free software; see the source for copying conditions.\n"
-             "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"),
-           VERSION, yearbuffer);
-  exit (0);
-}
-
-/**
  * Prints a list of which configure script options were used to
  * build this copy of Marco. This is actually always called
  * on startup, but it's all no-op unless we're in verbose mode
@@ -471,7 +444,10 @@ main (int argc, char **argv)
   meta_set_syncing (meta_args.sync || (g_getenv ("MARCO_SYNC") != NULL));
 
   if (meta_args.print_version)
-    version ();
+    {
+      g_print ("%s\n", PACKAGE_STRING);
+      exit (EXIT_SUCCESS);
+    }
 
   meta_select_display (meta_args.display_name);
 
