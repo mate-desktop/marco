@@ -471,4 +471,6 @@ marco-$VERSION:
 	Xpresent:                 ${found_xpresent}
 	Render:                   ${have_xrender}
 	Xcursor:                  ${have_xcursor}
+	Verbose logging:          ${enable_verbose_mode}
+	Debug:                    ${ax_enable_debug}
 "
