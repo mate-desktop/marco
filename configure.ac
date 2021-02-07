@@ -65,9 +65,9 @@ MARCO_PC_MODULES="gtk+-3.0 >= $GTK_MIN_VERSION gio-2.0 >= $GIO_MIN_VERSION pango
 GLIB_GSETTINGS
 
 AC_ARG_ENABLE(verbose-mode,
-  AC_HELP_STRING([--disable-verbose-mode],
-                 [disable marco's ability to do verbose logging, for embedded/size-sensitive custom builds]),,
-  enable_verbose_mode=yes)
+  AC_HELP_STRING([--enable-verbose-mode],
+                 [enable marco's ability to do verbose logging, for embedded/size-sensitive custom builds]),,
+  enable_verbose_mode=no)
 
 if test x$enable_verbose_mode = xyes; then
     AC_DEFINE(WITH_VERBOSE_MODE,1,[Build with verbose mode support])
