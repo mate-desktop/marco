@@ -25,6 +25,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "window-private.h"
 #include "edge-resistance.h"
 #include "util.h"

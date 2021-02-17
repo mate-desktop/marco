@@ -90,10 +90,6 @@ void meta_print_backtrace (void);
 
 const char* meta_gravity_to_string (int gravity);
 
-#include <libintl.h>
-#define _(x) dgettext (GETTEXT_PACKAGE, x)
-#define N_(x) x
-
 char* meta_g_utf8_strndup (const gchar *src, gsize n);
 
 GPid meta_show_dialog (const char *type,

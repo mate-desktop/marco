@@ -80,6 +80,8 @@ from The Open Group.
 */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "xprops.h"
 #include "errors.h"
 #include "util.h"

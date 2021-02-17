@@ -32,6 +32,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "metaaccellabel.h"
 #include <gtk/gtk.h>
 #include <string.h>

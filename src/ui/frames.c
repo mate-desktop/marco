@@ -24,6 +24,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include <math.h>
 #include <string.h>
 #include "boxes.h"

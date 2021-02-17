@@ -20,14 +20,11 @@
  */
 
 #include <config.h>
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 #include <stdlib.h>
 #include <string.h>
-
-#include <libintl.h>
-#define _(x) dgettext (GETTEXT_PACKAGE, x)
-#define N_(x) x
 
 static void
 send_restart (void)

@@ -24,6 +24,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "prefs.h"
 #include "ui.h"
 #include "util.h"

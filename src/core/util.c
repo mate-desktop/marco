@@ -26,6 +26,8 @@
 #define _POSIX_C_SOURCE 200112L /* for fdopen() */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "util.h"
 #include "main.h"
 

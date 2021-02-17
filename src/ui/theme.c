@@ -53,6 +53,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "prefs.h"
 #include "theme.h"
 #include "theme-parser.h"

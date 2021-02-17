@@ -24,6 +24,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "core.h"
 #include "frame-private.h"
 #include "workspace.h"

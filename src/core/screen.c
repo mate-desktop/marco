@@ -27,6 +27,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "screen-private.h"
 #include "util.h"
 #include "errors.h"

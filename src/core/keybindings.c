@@ -27,6 +27,8 @@
 #define _XOPEN_SOURCE /* for putenv() */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "keybindings.h"
 #include "workspace.h"
 #include "errors.h"

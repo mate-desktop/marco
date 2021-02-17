@@ -22,6 +22,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "theme-parser.h"
 #include "util.h"
 #include <string.h>

@@ -39,6 +39,8 @@
 #define _XOPEN_SOURCE /* for gethostname() */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "window-props.h"
 #include "errors.h"
 #include "xprops.h"
