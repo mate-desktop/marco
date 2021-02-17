@@ -49,6 +49,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "bell.h"
 #include "screen-private.h"
 #include "prefs.h"

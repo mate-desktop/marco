@@ -29,6 +29,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "display-private.h"
 #include "util.h"
 #include "main.h"

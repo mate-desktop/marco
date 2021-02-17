@@ -50,4 +50,3 @@ meta_error_trap_pop_with_return  (MetaDisplay *display,
 {
   return gdk_x11_display_error_trap_pop (gdk_x11_lookup_xdisplay (meta_display_get_xdisplay (display)));
 }
-

@@ -24,6 +24,7 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
 
 #include "session.h"
 #include <X11/Xatom.h>

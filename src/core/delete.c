@@ -26,6 +26,8 @@
 #define _XOPEN_SOURCE /* for gethostname() and kill() */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "util.h"
 #include "window-private.h"
 #include "errors.h"

@@ -22,6 +22,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include "resizepopup.h"
 #include "util.h"
 #include <gtk/gtk.h>
