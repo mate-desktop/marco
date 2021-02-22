@@ -193,7 +193,7 @@ try_get_reply (Display           *xdisplay,
 
       gettimeofday (&current_time, NULL);
 
-      printf (" %gms (we have a reply for property %ld)\n",
+      printf (" %gms (we have a reply for property %lu)\n",
               ELAPSED (program_start_time, current_time),
               ag_task_get_property (task));
 
@@ -295,7 +295,7 @@ main (int argc, char **argv)
   while (i < n_props)
     {
       gettimeofday (&current_time, NULL);
-      printf (" %gms (sending request for property %ld)\n",
+      printf (" %gms (sending request for property %lu)\n",
               ELAPSED (program_start_time, current_time),
               props[i]);
       if (ag_task_create (xdisplay,
