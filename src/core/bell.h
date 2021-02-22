@@ -38,6 +38,9 @@
 #include "display-private.h"
 #include "frame-private.h"
 
+#ifndef __BELL_H__
+#define __BELL_H__
+
 #ifdef HAVE_XKB
 /**
  * Gives the user some kind of visual bell; in fact, this is our response
@@ -106,3 +109,5 @@ void meta_bell_shutdown (MetaDisplay *display);
  * \param frame  The frame which is being destroyed
  */
 void meta_bell_notify_frame_destroy (MetaFrame *frame);
+
+#endif /* __BELL_H__ */
