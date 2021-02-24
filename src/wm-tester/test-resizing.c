@@ -196,7 +196,7 @@ main (int argc, char **argv)
           if (ev.xbutton.button == 3)
             {
               g_print ("Exiting on button 3 press\n");
-              exit (0);
+              exit (EXIT_SUCCESS);
             }
           break;
 

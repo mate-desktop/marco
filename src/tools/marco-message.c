@@ -145,7 +145,7 @@ usage (void)
 {
   g_printerr (_("Usage: %s\n"),
               "marco-message (restart|reload-theme|enable-keybindings|disable-keybindings|toggle-verbose)");
-  exit (1);
+  exit (EXIT_FAILURE);
 }
 
 int
@@ -178,6 +178,5 @@ main (int argc, char **argv)
   else
     usage ();
 
-  return 0;
+  return EXIT_SUCCESS;
 }
-

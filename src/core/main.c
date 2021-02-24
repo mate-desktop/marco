@@ -75,7 +75,7 @@
 /**
  * The exit code we'll return to our parent process when we eventually die.
  */
-static MetaExitCode meta_exit_code = META_EXIT_SUCCESS;
+static int meta_exit_code = EXIT_SUCCESS;
 
 /**
  * Handle on the main loop, so that we have an easy way of shutting Marco
@@ -308,7 +308,7 @@ meta_parse_options (int *argc, char ***argv,
   if (!g_option_context_parse (ctx, argc, argv, &error))
     {
       g_print ("marco: %s\n", error->message);
-      exit(1);
+      exit(EXIT_FAILURE);
     }
   g_option_context_free (ctx);
   /* Return the parsed options through the meta_args param. */
@@ -365,7 +365,7 @@ on_sigterm (GIOChannel   *source,
             GIOCondition condition,
             gpointer     user_data)
 {
-  meta_quit (META_EXIT_SUCCESS);
+  meta_quit (EXIT_SUCCESS);
   return FALSE;
 }
 
@@ -551,7 +551,7 @@ main (int argc, char **argv)
     meta_prefs_set_force_fullscreen (FALSE);
 
   if (!meta_display_open ())
-    meta_exit (META_EXIT_ERROR);
+    exit (EXIT_FAILURE);
 
   g_main_loop_run (meta_main_loop);
 
@@ -574,7 +574,7 @@ main (int argc, char **argv)
           meta_fatal (_("Failed to restart: %s\n"),
                       err->message);
           g_error_free (err); /* not reached anyhow */
-          meta_exit_code = META_EXIT_ERROR;
+          meta_exit_code = EXIT_FAILURE;
         }
     }
 
@@ -591,7 +591,7 @@ main (int argc, char **argv)
  * \param code The success or failure code to return to the calling process.
  */
 void
-meta_quit (MetaExitCode code)
+meta_quit (int code)
 {
   meta_exit_code = code;
 
@@ -609,7 +609,7 @@ void
 meta_restart (void)
 {
   meta_restart_after_quit = TRUE;
-  meta_quit (META_EXIT_SUCCESS);
+  meta_quit (EXIT_SUCCESS);
 }
 
 /**

@@ -113,7 +113,7 @@ process_ice_messages (GIOChannel *channel,
        * being cleaned up, since it is owned by libSM.
        */
       disconnect ();
-      meta_quit (META_EXIT_SUCCESS);
+      meta_quit (EXIT_SUCCESS);
 
       return FALSE;
     }
@@ -546,7 +546,7 @@ die_callback (SmcConn smc_conn, SmPointer client_data)
 {
   meta_topic (META_DEBUG_SM, "Exiting at request of session manager\n");
   disconnect ();
-  meta_quit (META_EXIT_SUCCESS);
+  meta_quit (EXIT_SUCCESS);
 }
 
 static void

@@ -35,7 +35,7 @@ static void
 usage (void)
 {
   g_print ("wm-tester [--evil] [--icon-windows]\n");
-  exit (0);
+  exit (EXIT_SUCCESS);
 }
 
 int
@@ -81,7 +81,7 @@ main (int argc, char **argv)
 
   gtk_main ();
 
-  return 0;
+  return EXIT_SUCCESS;
 }
 
 static GSList *evil_windows = NULL;

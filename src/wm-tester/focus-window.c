@@ -13,7 +13,7 @@ int main (int argc, char **argv)
   if (argc != 2)
     {
       fprintf (stderr, "Usage: focus-window WINDOWID\n");
-      exit (1);
+      exit (EXIT_FAILURE);
     }
 
   d = XOpenDisplay (NULL);
@@ -25,13 +25,13 @@ int main (int argc, char **argv)
   if (end == w_str)
     {
       fprintf (stderr, "Usage: focus-window WINDOWID\n");
-      exit (1);
+      exit (EXIT_FAILURE);
     }
 
   printf ("Setting input focus to 0x%lx\n", w);
   XSetInputFocus (d, w, RevertToPointerRoot, CurrentTime);
   XFlush (d);
 
-  return 0;
+  return EXIT_SUCCESS;
 }
 

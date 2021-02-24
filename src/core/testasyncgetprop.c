@@ -103,7 +103,7 @@ x_error_handler (Display     *xdisplay,
                error->request_code,
                error->minor_code);
 
-      exit (1);
+      exit (EXIT_FAILURE);
     }
 
   return 1; /* return value is meaningless */
@@ -121,7 +121,7 @@ error_trap_pop (Display   *xdisplay)
   if (error_trap_depth == 0)
     {
       fprintf (stderr, "Error trap underflow!\n");
-      exit (1);
+      exit (EXIT_FAILURE);
     }
 
   XSync (xdisplay, False); /* get all errors out of the queue */
@@ -137,7 +137,7 @@ my_strdup (const char *str)
   if (s == NULL)
     {
       fprintf (stderr, "malloc failed\n");
-      exit (1);
+      exit (EXIT_FAILURE);
     }
   g_strlcpy (s, str, (strlen (str) + 1));
 
@@ -359,7 +359,7 @@ main (int argc, char **argv)
 
   run_speed_comparison (xdisplay, window);
 
-  return 0;
+  return EXIT_SUCCESS;
 }
 
 /* This function doesn't have all the printf's
@@ -395,7 +395,7 @@ run_speed_comparison (Display *xdisplay,
                           AnyPropertyType) == NULL)
         {
           fprintf (stderr, "Failed to send request\n");
-          exit (1);
+          exit (EXIT_FAILURE);
         }
 
       ++i;
