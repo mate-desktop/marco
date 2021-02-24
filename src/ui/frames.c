@@ -1029,6 +1029,7 @@ get_visible_region (MetaFrames        *frames,
   return visible_region;
 }
 
+#ifdef HAVE_SHAPE
 static cairo_region_t *
 get_client_region (MetaFrameGeometry *fgeom,
                    int                window_width,
@@ -1057,6 +1058,7 @@ get_frame_region (int window_width,
 
   return cairo_region_create_rectangle (&rect);
 }
+#endif /* HAVE_SHAPE */
 
 void
 meta_frames_apply_shapes (MetaFrames *frames,
