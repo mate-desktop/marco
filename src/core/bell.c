@@ -54,6 +54,7 @@
 #include "prefs.h"
 #include <canberra-gtk.h>
 
+#ifdef HAVE_XKB
 /**
  * Flashes one entire screen.  This is done by making a window the size of the
  * whole screen (or reusing the old one, if it's still around), mapping it,
@@ -133,6 +134,7 @@ bell_flash_screen (MetaDisplay *display,
     meta_display_increment_focus_sentinel (display);
   XFlush (display->xdisplay);
 }
+#endif /* HAVE_XKB */
 
 /**
  * Flashes one screen, or all screens, in response to a bell event.
