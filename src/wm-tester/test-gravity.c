@@ -66,7 +66,7 @@ window_gravity_to_string (int gravity)
 }
 
 static void
-calculate_position (int i, int doubled, int *x, int *y)
+calculate_position (int i, int is_doubled, int *x, int *y)
 {
   if (i == 9)
     {
@@ -77,7 +77,7 @@ calculate_position (int i, int doubled, int *x, int *y)
     {
       int xoff = x_offset[i % 3];
       int yoff = y_offset[i / 3];
-      if (doubled)
+      if (is_doubled)
         {
           xoff *= 2;
           yoff *= 2;
