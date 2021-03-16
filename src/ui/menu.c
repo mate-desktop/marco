@@ -351,9 +351,6 @@ meta_window_menu_new   (MetaFrames         *frames,
       if (ops & menuitem.op || menuitem.op == 0)
         {
           GtkWidget *mi;
-          MenuData *md;
-          unsigned int key;
-          MetaVirtualModifier mods;
 
           mi = menu_item_new (&menuitem, -1);
 
@@ -455,6 +452,10 @@ meta_window_menu_new   (MetaFrames         *frames,
             }
           else if (menuitem.type != MENU_ITEM_SEPARATOR)
             {
+              MenuData *md;
+              unsigned int key;
+              MetaVirtualModifier mods;
+
               meta_core_get_menu_accelerator (menuitems[i].op, -1,
                                               &key, &mods);
 

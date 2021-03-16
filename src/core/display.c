@@ -403,8 +403,8 @@ meta_display_open (void)
   XInternAtoms (the_display->xdisplay, atom_names, G_N_ELEMENTS (atom_names),
                 False, atoms);
   {
-    int i = 0;
-#define item(x) the_display->atom_##x = atoms[i++];
+    int idx = 0;
+#define item(x) the_display->atom_##x = atoms[idx++];
 #include "atomnames.h"
 #undef item
   }
@@ -5240,7 +5240,6 @@ prefs_changed_callback (MetaPreference pref,
   if (pref == META_PREF_MOUSE_BUTTON_MODS ||
       pref == META_PREF_FOCUS_MODE)
     {
-      MetaDisplay *display = data;
       GSList *windows;
       GSList *tmp;
 
@@ -5290,7 +5289,6 @@ prefs_changed_callback (MetaPreference pref,
     }
   else if (pref == META_PREF_ATTACH_MODAL_DIALOGS)
     {
-      MetaDisplay *display = data;
       GSList *windows;
       GSList *tmp;
 
