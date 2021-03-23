@@ -672,8 +672,8 @@ msgid ""
 "environments."
 msgstr ""
 "Activa una indicacion visuala quand una aplicacion o lo sistèma emet un bip "
-"; util pels malentendents e per una utilizacion dins d'environaments "
-"bruchoses."
+"; util pels mal-entendents e per una utilizacion dins d'environaments "
+"brusents."
 
 #: src/org.mate.marco.gschema.xml:141
 msgid "System Bell is Audible"
@@ -1234,15 +1234,15 @@ msgid ""
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 msgstr ""
 "marco %s\n"
-"Copyright © 2001-%s Havoc Pennington, Red Hat, Inc., e autres.\n"
+"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., e autres.\n"
 "Aquò es un logicial liure ; consultatz lo còde font per las\n"
 "condicions de còpia.\n"
-"I a PAS CAP de garantia ; quitament pas de VALOR MERCANDA o\n"
+"I a PAS CAP de garantida ; quitament pas de VALOR MERCANDA o\n"
 "d'ADEQÜACION A UN USATGE PARTICULAR.\n"
 
 #: src/core/main.c:270
 msgid "Disable connection to session manager"
-msgstr "Desactivar la connexion al gestionari de sesilhas"
+msgstr "Desactivar la connexion al gestionari de sessions"
 
 #: src/core/main.c:276
 msgid "Replace the running window manager with Marco"
@@ -1380,7 +1380,7 @@ msgstr "Impossible de liberar l'ecran %d sul visual « %s »\n"
 #: src/core/session.c:842 src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr "Impossible de crear lo repertòri '%s' : %s\n"
+msgstr "Creacion impossibla del repertòri « %s » : %s\n"
 
 #: src/core/session.c:859
 #, c-format
@@ -1390,12 +1390,12 @@ msgstr "Impossible de dobrir lo fichièr de sesilha « %s » en escritura : %
 #: src/core/session.c:999
 #, c-format
 msgid "Error writing session file '%s': %s\n"
-msgstr "Error al moment d'escriure lo fichièr de session '%s' : %s\n"
+msgstr "Error al moment d'escriure lo fichièr de session « %s » : %s\n"
 
 #: src/core/session.c:1004
 #, c-format
 msgid "Error closing session file '%s': %s\n"
-msgstr "Error al moment de la tampadura del fichièr de sesilha « %s » : %s\n"
+msgstr "Error al moment de la tampadura del fichièr de session « %s » : %s\n"
 
 #: src/core/session.c:1134
 #, c-format
@@ -1405,7 +1405,7 @@ msgstr "L'analsi del fichièr de sesilha enregistrat a fracassat : %s\n"
 #: src/core/session.c:1183
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr ""
-"L'atribut <marco_session> es estat trobat, mas avèm ja l'ID de sesilha"
+"L'atribut <marco_session> es estat trobat, mas avèm ja l'ID de session"
 
 #: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
 #: src/core/session.c:1375 src/core/session.c:1435
@@ -2066,7 +2066,7 @@ msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>  man
 #: src/ui/theme.c:5462
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
-msgstr "Impossible de cargar lo tèma \"%s\" : %s\n"
+msgstr "Cargament impossible del tèma « %s » : %s\n"
 
 #: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
 #: src/ui/theme.c:5615 src/ui/theme.c:5622
@@ -2198,7 +2198,7 @@ msgstr "Vos cal indicar una valor pel paramètre alfa."
 #: src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
-msgstr "Tipe desconegut \"%s\" sul element <%s>"
+msgstr "Tipe desconegut « %s » sul element <%s>"
 
 #: src/ui/theme-parser.c:1295
 #, c-format
@@ -2232,7 +2232,7 @@ msgstr ""
 #: src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
-msgstr "Distància \"%s\" desconeguda"
+msgstr "Distància « %s » desconeguda"
 
 #: src/ui/theme-parser.c:1515
 #, c-format
@@ -2242,7 +2242,7 @@ msgstr "Proporcion « %s » desconeguda"
 #: src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
-msgstr "La bordadura \"%s\" es desconeguda"
+msgstr "La bordadura « %s » es desconeguda"
 
 #: src/ui/theme-parser.c:1888
 #, c-format
@@ -2312,7 +2312,7 @@ msgstr "Cap de <draw_ops> amb lo nom « %s » es pas estat definit"
 #: src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
-msgstr "Foncion \"%s\" desconeguda pel boton"
+msgstr "Foncion « %s » desconeguda pel boton"
 
 #: src/ui/theme-parser.c:3002
 #, c-format
@@ -2323,7 +2323,7 @@ msgstr ""
 #: src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
-msgstr "Estat \"%s\" desconegut pel boton"
+msgstr "Estat « %s » desconegut pel boton"
 
 #: src/ui/theme-parser.c:3022
 #, c-format
