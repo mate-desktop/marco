@@ -1605,8 +1605,14 @@ meta_display_init_window_prop_hooks (MetaDisplay *display)
     { 0 },
   };
 
-  MetaWindowPropHooks *table = g_memdup (hooks, sizeof (hooks)),
-    *cursor = table;
+  MetaWindowPropHooks *table, *cursor;
+
+#if GLIB_CHECK_VERSION (2, 68, 0)
+  table = g_memdup2 (hooks, sizeof (hooks));
+#else
+  table = g_memdup (hooks, sizeof (hooks));
+#endif
+  cursor = table;
 
   g_assert (display->prop_hooks == NULL);
 
