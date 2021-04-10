@@ -108,6 +108,7 @@ set_supported_hint (MetaScreen *screen)
 #undef EWMH_ATOMS_ONLY
     screen->display->atom__GTK_FRAME_EXTENTS,
     screen->display->atom__GTK_SHOW_WINDOW_MENU,
+    screen->display->atom__GTK_WORKAREAS
   };
 
   XChangeProperty (screen->display->xdisplay, screen->xroot,
@@ -2035,6 +2036,48 @@ meta_create_offscreen_window (Display *xdisplay,
 }
 
 static void
+set_workspace_work_area_hint (MetaWorkspace *workspace,
+                              MetaScreen    *screen)
+{
+  unsigned long *data;
+  unsigned long *tmp;
+  int i;
+  gchar *workarea_name;
+  Atom workarea_atom;
+
+  data = g_new (unsigned long, screen->n_xinerama_infos * 4);
+  tmp = data;
+
+  for (i = 0; i < screen->n_xinerama_infos; i++)
+    {
+      MetaRectangle area;
+
+      meta_workspace_get_work_area_for_xinerama (workspace, i, &area);
+
+      tmp[0] = area.x;
+      tmp[1] = area.y;
+      tmp[2] = area.width;
+      tmp[3] = area.height;
+
+      tmp += 4;
+    }
+
+  workarea_name = g_strdup_printf ("_GTK_WORKAREAS_D%d",
+                                   meta_workspace_index (workspace));
+
+  workarea_atom = XInternAtom (screen->display->xdisplay, workarea_name, False);
+  g_free (workarea_name);
+
+  meta_error_trap_push (screen->display);
+  XChangeProperty (screen->display->xdisplay, screen->xroot, workarea_atom,
+                   XA_CARDINAL, 32, PropModeReplace,
+                   (guchar*) data, screen->n_xinerama_infos * 4);
+  meta_error_trap_pop (screen->display, TRUE);
+
+  g_free (data);
+}
+
+static void
 set_work_area_hint (MetaScreen *screen)
 {
   int num_workspaces;
@@ -2054,6 +2097,7 @@ set_work_area_hint (MetaScreen *screen)
       if (workspace->screen == screen)
         {
           meta_workspace_get_work_area_all_xineramas (workspace, &area);
+          set_workspace_work_area_hint (workspace, screen);
           tmp[0] = area.x;
           tmp[1] = area.y;
           tmp[2] = area.width;
