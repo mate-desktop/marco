@@ -635,12 +635,14 @@ ensure_work_areas_validated (MetaWorkspace *workspace)
       workspace->xinerama_region[i] =
         meta_rectangle_get_minimal_spanning_set_for_region (
           &workspace->screen->xinerama_infos[i].rect,
-          workspace->all_struts);
+          workspace->all_struts,
+          FALSE);
     }
   workspace->screen_region =
     meta_rectangle_get_minimal_spanning_set_for_region (
       &workspace->screen->rect,
-      workspace->all_struts);
+      workspace->all_struts,
+      TRUE);
 
   /* STEP 3: Get the work areas (region-to-maximize-to) for the screen and
    *         xineramas.

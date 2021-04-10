@@ -1593,6 +1593,7 @@ meta_display_init_window_prop_hooks (MetaDisplay *display)
     { display->atom__NET_WM_DESKTOP,   META_PROP_VALUE_CARDINAL, reload_net_wm_desktop },
     { display->atom__NET_WM_STRUT,         META_PROP_VALUE_INVALID, reload_struts },
     { display->atom__NET_WM_STRUT_PARTIAL, META_PROP_VALUE_INVALID, reload_struts },
+    { display->atom__GNOME_WM_STRUT_AREA, META_PROP_VALUE_INVALID, reload_struts },
     { display->atom__NET_STARTUP_ID,  META_PROP_VALUE_UTF8,     reload_net_startup_id },
     { display->atom__NET_WM_SYNC_REQUEST_COUNTER, META_PROP_VALUE_SYNC_COUNTER, reload_update_counter },
     { XA_WM_NORMAL_HINTS,              META_PROP_VALUE_SIZE_HINTS, reload_normal_hints },

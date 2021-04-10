@@ -522,7 +522,9 @@ compare_rect_areas (gconstpointer a, gconstpointer b)
 GList*
 meta_rectangle_get_minimal_spanning_set_for_region (
   const MetaRectangle *basic_rect,
-  const GSList  *all_struts)
+  const GSList        *all_struts,
+  gboolean             skip_middle_struts)
+
 {
   /* NOTE FOR OPTIMIZERS: This function *might* be somewhat slow,
    * especially due to the call to merge_spanning_rects_in_region() (which
@@ -583,7 +585,23 @@ meta_rectangle_get_minimal_spanning_set_for_region (
   for (strut_iter = all_struts; strut_iter; strut_iter = strut_iter->next)
     {
       GList *rect_iter;
-      MetaRectangle *strut_rect = &((MetaStrut*)strut_iter->data)->rect;
+      MetaStrut *strut = (MetaStrut *) strut_iter->data;
+      MetaRectangle *strut_rect = &strut->rect;
+
+      if (skip_middle_struts && strut->edge == META_EDGE_XINERAMA)
+        {
+          if ((strut->side == META_SIDE_LEFT &&
+               strut_rect->x != basic_rect->x) ||
+              (strut->side == META_SIDE_RIGHT &&
+               strut_rect->x + strut_rect->width != basic_rect->width) ||
+              (strut->side == META_SIDE_TOP &&
+               strut_rect->y != basic_rect->y) ||
+              (strut->side == META_SIDE_BOTTOM &&
+               strut_rect->y + strut_rect->height != basic_rect->height))
+            {
+              continue;
+            }
+        }
 
       tmp_list = ret;
       ret = NULL;
