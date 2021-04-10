@@ -66,6 +66,7 @@ new_meta_strut (int x, int y, int width, int height, int side)
   temporary = g_new (MetaStrut, 1);
   temporary->rect = meta_rect(x, y, width, height);
   temporary->side = side;
+  temporary->edge = META_EDGE_SCREEN;
 
   return temporary;
 }
@@ -294,7 +295,10 @@ get_screen_region (int which)
   ret = NULL;
 
   struts = get_strut_list (which);
-  ret = meta_rectangle_get_minimal_spanning_set_for_region (&basic_rect, struts);
+  ret = meta_rectangle_get_minimal_spanning_set_for_region (&basic_rect,
+                                                            struts,
+                                                            FALSE);
+
   free_strut_list (struts);
 
   return ret;

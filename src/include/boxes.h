@@ -27,6 +27,13 @@
 #include <glib.h>
 #include "common.h"
 
+typedef enum
+{
+  META_EDGE_WINDOW,
+  META_EDGE_XINERAMA,
+  META_EDGE_SCREEN
+} MetaEdgeType;
+
 typedef struct _MetaRectangle MetaRectangle;
 struct _MetaRectangle
 {
@@ -41,6 +48,7 @@ struct _MetaStrut
 {
   MetaRectangle rect;
   MetaSide side;
+  MetaEdgeType edge;
 };
 
 #define BOX_LEFT(box)    ((box).x)                /* Leftmost pixel of rect */
@@ -54,13 +62,6 @@ typedef enum
   FIXED_DIRECTION_X    = 1 << 0,
   FIXED_DIRECTION_Y    = 1 << 1,
 } FixedDirections;
-
-typedef enum
-{
-  META_EDGE_WINDOW,
-  META_EDGE_XINERAMA,
-  META_EDGE_SCREEN
-} MetaEdgeType;
 
 typedef struct _MetaEdge MetaEdge;
 struct _MetaEdge
@@ -158,7 +159,8 @@ void meta_rectangle_resize_with_gravity (const MetaRectangle *old_rect,
  */
 GList*   meta_rectangle_get_minimal_spanning_set_for_region (
                                          const MetaRectangle *basic_rect,
-                                         const GSList        *all_struts);
+                                         const GSList        *all_struts,
+                                         gboolean             skip_middle_struts);
 
 /* Expand all rectangles in region by the given amount on each side */
 GList*   meta_rectangle_expand_region   (GList               *region,
