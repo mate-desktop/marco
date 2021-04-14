@@ -2771,77 +2771,81 @@ meta_window_unmaximize (MetaWindow        *window,
   window->tile_mode = META_TILE_NONE;
   window->tiled = FALSE;
 
-  /* Only do something if the window isn't already maximized in the
+  /* Only do something if the window is already maximized in the
    * given direction(s).
    */
-  MetaRectangle target_rect;
-
-  meta_topic (META_DEBUG_WINDOW_OPS,
-              "Unmaximizing %s%s\n",
-              window->desc,
-              unmaximize_horizontally && unmaximize_vertically ? "" :
-              unmaximize_horizontally ? " horizontally" :
-              unmaximize_vertically ? " vertically" : "BUGGGGG");
-
-  window->maximized_horizontally =
-    window->maximized_horizontally && !unmaximize_horizontally;
-  window->maximized_vertically =
-    window->maximized_vertically   && !unmaximize_vertically;
-
-  /* Unmaximize to the saved_rect position in the direction(s)
-   * being unmaximized.
-   */
-  meta_window_get_client_root_coords (window, &target_rect);
-  if (unmaximize_horizontally)
+  if ((unmaximize_horizontally && window->maximized_horizontally) ||
+      (unmaximize_vertically   && window->maximized_vertically))
     {
-      target_rect.x     = window->saved_rect.x;
-      target_rect.width = window->saved_rect.width;
-    }
-  if (unmaximize_vertically)
-    {
-      target_rect.y      = window->saved_rect.y;
-      target_rect.height = window->saved_rect.height;
-    }
+      MetaRectangle target_rect;
 
-  /* Window's size hints may have changed while maximized, making
-   * saved_rect invalid.  #329152
-   */
-  ensure_size_hints_satisfied (&target_rect, &window->size_hints);
+      meta_topic (META_DEBUG_WINDOW_OPS,
+                  "Unmaximizing %s%s\n",
+                  window->desc,
+                  unmaximize_horizontally && unmaximize_vertically ? "" :
+                  unmaximize_horizontally ? " horizontally" :
+                  unmaximize_vertically ? " vertically" : "BUGGGGG");
 
-  meta_window_move_resize (window,
-                           FALSE,
-                           target_rect.x,
-                           target_rect.y,
-                           target_rect.width,
-                           target_rect.height);
+      window->maximized_horizontally =
+        window->maximized_horizontally && !unmaximize_horizontally;
+      window->maximized_vertically =
+        window->maximized_vertically   && !unmaximize_vertically;
 
-  /* Make sure user_rect is current.
-   */
-  force_save_user_window_placement (window);
+      /* Unmaximize to the saved_rect position in the direction(s)
+       * being unmaximized.
+       */
+      meta_window_get_client_root_coords (window, &target_rect);
+      if (unmaximize_horizontally)
+        {
+          target_rect.x     = window->saved_rect.x;
+          target_rect.width = window->saved_rect.width;
+        }
+      if (unmaximize_vertically)
+        {
+          target_rect.y      = window->saved_rect.y;
+          target_rect.height = window->saved_rect.height;
+        }
 
-  /* When we unmaximize, if we're doing a mouse move also we could
-   * get the window suddenly jumping to the upper left corner of
-   * the workspace, since that's where it was when the grab op
-   * started.  So we need to update the grab state. We have to do
-   * it after the actual operation, as the window may have been moved
-   * by constraints.
-   */
-  if (meta_grab_op_is_moving (window->display->grab_op) &&
-      window->display->grab_window == window)
-    {
-      window->display->grab_anchor_window_pos = window->user_rect;
-    }
+      /* Window's size hints may have changed while maximized, making
+       * saved_rect invalid.  #329152
+       */
+      ensure_size_hints_satisfied (&target_rect, &window->size_hints);
 
-  if (window->display->grab_wireframe_active)
-    {
-      window->display->grab_wireframe_rect = target_rect;
-    }
+      meta_window_move_resize (window,
+                               FALSE,
+                               target_rect.x,
+                               target_rect.y,
+                               target_rect.width,
+                               target_rect.height);
 
-  recalc_window_features (window);
-  set_allowed_actions_hint (window);
-  set_net_wm_state (window);
+      /* Make sure user_rect is current.
+       */
+      force_save_user_window_placement (window);
 
-  meta_compositor_unmaximize_window (window->display->compositor, window);
+      /* When we unmaximize, if we're doing a mouse move also we could
+       * get the window suddenly jumping to the upper left corner of
+       * the workspace, since that's where it was when the grab op
+       * started.  So we need to update the grab state. We have to do
+       * it after the actual operation, as the window may have been moved
+       * by constraints.
+       */
+      if (meta_grab_op_is_moving (window->display->grab_op) &&
+          window->display->grab_window == window)
+        {
+          window->display->grab_anchor_window_pos = window->user_rect;
+        }
+
+      if (window->display->grab_wireframe_active)
+        {
+          window->display->grab_wireframe_rect = target_rect;
+        }
+
+      recalc_window_features (window);
+      set_allowed_actions_hint (window);
+      set_net_wm_state (window);
+
+      meta_compositor_unmaximize_window (window->display->compositor, window);
+  }
 }
 
 void
