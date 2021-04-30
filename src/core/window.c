@@ -2699,7 +2699,11 @@ meta_window_tile (MetaWindow *window)
     return;
 
   if(window->tile_mode == META_TILE_LEFT || window->tile_mode == META_TILE_RIGHT)
-    meta_window_maximize_internal (window, META_MAXIMIZE_VERTICAL, NULL);
+    {
+      MetaRectangle *saved_rect = NULL;
+      saved_rect = &window->saved_rect;
+      meta_window_maximize_internal (window, META_MAXIMIZE_VERTICAL, saved_rect);
+    }
   else
     meta_window_save_rect(window);
 
