@@ -25,6 +25,7 @@
 #include "iconcache.h"
 #include "ui.h"
 #include "errors.h"
+#include "window-private.h"
 
 #include <X11/Xatom.h>
 
@@ -690,6 +691,7 @@ scaled_from_pixdata (guchar *pixdata,
 gboolean
 meta_read_icons (MetaScreen     *screen,
                  Window          xwindow,
+                 char           *res_name,
                  MetaIconCache  *icon_cache,
                  Pixmap          wm_hints_pixmap,
                  Pixmap          wm_hints_mask,
@@ -847,13 +849,20 @@ meta_read_icons (MetaScreen     *screen,
     {
       icon_cache->fallback_icon_dirty_forced = FALSE;
 
-      get_fallback_icons (screen,
-                          iconp,
-                          ideal_width,
-                          ideal_height,
-                          mini_iconp,
-                          ideal_mini_width,
-                          ideal_mini_height);
+      if (res_name != NULL)
+        {
+          *iconp = meta_ui_get_window_icon_from_name (screen->ui, res_name);
+          *mini_iconp = meta_ui_get_mini_icon_from_name (screen->ui, res_name);
+        }
+
+      if (*iconp == NULL || *mini_iconp == NULL)
+        get_fallback_icons (screen,
+                            iconp,
+                            ideal_width,
+                            ideal_height,
+                            mini_iconp,
+                            ideal_mini_width,
+                            ideal_mini_height);
 
       replace_cache (icon_cache, USING_FALLBACK_ICON,
                      *iconp, *mini_iconp);
