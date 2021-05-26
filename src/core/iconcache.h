@@ -67,6 +67,7 @@ gboolean       meta_icon_cache_get_icon_invalidated (MetaIconCache *icon_cache);
 
 gboolean meta_read_icons         (MetaScreen     *screen,
                                   Window          xwindow,
+                                  char           *res_name,
                                   MetaIconCache  *icon_cache,
                                   Pixmap          wm_hints_pixmap,
                                   Pixmap          wm_hints_mask,

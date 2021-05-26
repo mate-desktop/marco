@@ -6124,6 +6124,7 @@ meta_window_update_icon_now (MetaWindow *window)
 
   if (meta_read_icons (window->screen,
                        window->xwindow,
+                       window->res_name,
                        &window->icon_cache,
                        window->wm_hints_pixmap,
                        window->wm_hints_mask,
