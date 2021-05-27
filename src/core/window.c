@@ -2497,8 +2497,10 @@ ensure_size_hints_satisfied (MetaRectangle    *rect,
 static void
 meta_window_save_rect (MetaWindow *window)
 {
-  if (!(META_WINDOW_MAXIMIZED (window) || META_WINDOW_SIDE_TILED (window) ||
-        META_WINDOW_CORNER_TILED(window) || window->fullscreen))
+  if (!(META_WINDOW_MAXIMIZED (window) ||
+        META_WINDOW_SIDE_TILED (window) ||
+        META_WINDOW_CORNER_TILED(window) ||
+        window->fullscreen))
     {
       /* save size/pos as appropriate args for move_resize */
       if (!window->maximized_horizontally)
@@ -2698,14 +2700,24 @@ meta_window_tile (MetaWindow *window)
   if (window->tile_mode == META_TILE_NONE)
     return;
 
-  if(window->tile_mode == META_TILE_LEFT || window->tile_mode == META_TILE_RIGHT)
+  if (window->tile_mode == META_TILE_LEFT ||
+      window->tile_mode == META_TILE_RIGHT)
     {
       MetaRectangle *saved_rect = NULL;
       saved_rect = &window->saved_rect;
       meta_window_maximize_internal (window, META_MAXIMIZE_VERTICAL, saved_rect);
     }
+  else if (window->tile_mode == META_TILE_BOTTOM_RIGHT ||
+           window->tile_mode == META_TILE_BOTTOM_LEFT ||
+           window->tile_mode == META_TILE_TOP_RIGHT ||
+           window->tile_mode == META_TILE_TOP_LEFT)
+    {
+      MetaRectangle *saved_rect = NULL;
+      saved_rect = &window->saved_rect;
+      meta_window_maximize_internal (window, META_MAXIMIZE_HORIZONTAL, saved_rect);
+    }
   else
-    meta_window_save_rect(window);
+    meta_window_save_rect (window);
 
   window->tiled = TRUE;
   /* move_resize with new tiling constraints
