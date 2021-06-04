@@ -8,7 +8,7 @@
 # Sébastien Denux <sebcxjo@gmail.com>, 2018
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Quentin PAGÈS, 2020
+# Quentin PAGÈS, 2021
 # 
 msgid ""
 msgstr ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Quentin PAGÈS, 2020\n"
+"Last-Translator: Quentin PAGÈS, 2021\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
-msgstr "Visualizar lo menut principal del panèl"
+msgstr "Visualizar lo menú principal del panèl"
 
 #: src/50-marco-desktop-key.xml.in:8 src/org.mate.marco.gschema.xml:639
 msgid "Take a screenshot"
@@ -158,7 +158,7 @@ msgstr "Bascular a l’espaci de trabalh precedentament seleccionat"
 
 #: src/50-marco-window-key.xml.in:6 src/org.mate.marco.gschema.xml:735
 msgid "Activate the window menu"
-msgstr "Activar lo menut fenèstra"
+msgstr "Activar lo menú fenèstra"
 
 #: src/50-marco-window-key.xml.in:10 src/org.mate.marco.gschema.xml:740
 msgid "Toggle fullscreen mode"
@@ -672,8 +672,8 @@ msgid ""
 "environments."
 msgstr ""
 "Activa una indicacion visuala quand una aplicacion o lo sistèma emet un bip "
-"; util pels malentendents e per una utilizacion dins d'environaments "
-"bruchoses."
+"; util pels mal-entendents e per una utilizacion dins d'environaments "
+"brusents."
 
 #: src/org.mate.marco.gschema.xml:141
 msgid "System Bell is Audible"
@@ -746,10 +746,10 @@ msgid ""
 msgstr ""
 "Se VERAI, Marco donarà a l'utilizaire mens de retorn d'informacions en "
 "utilizant de contorns en fial de fèrre, evitant d'animacions o autras "
-"floriduras. Aquò significa una baissa d'ergonomia per fòrça utilisatzaires "
-"mas pòt permetre a las vièlhas aplicacions de contunhar de foncionar, e pòt "
+"floriduras. Aquò significa una baissa d'ergonomia per fòrça utilizaires mas "
+"pòt permetre a las vièlhas aplicacions de contunhar de foncionar, e pòt "
 "tanben èsser util als servidors de terminals X per melhorar las "
-"performàncias. Çaquelà, la foncion fial de fèrre es desactivat quand "
+"performanças. Çaquelà, la foncion fial de fèrre es desactivat quand "
 "l'accessibilitat es activada."
 
 #: src/org.mate.marco.gschema.xml:166
@@ -1234,15 +1234,15 @@ msgid ""
 "There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 msgstr ""
 "marco %s\n"
-"Copyright © 2001-%s Havoc Pennington, Red Hat, Inc., e autres.\n"
+"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., e autres.\n"
 "Aquò es un logicial liure ; consultatz lo còde font per las\n"
 "condicions de còpia.\n"
-"I a PAS CAP de garantia ; quitament pas de VALOR MERCANDA o\n"
+"I a PAS CAP de garantida ; quitament pas de VALOR MERCANDA o\n"
 "d'ADEQÜACION A UN USATGE PARTICULAR.\n"
 
 #: src/core/main.c:270
 msgid "Disable connection to session manager"
-msgstr "Desactivar la connexion al gestionari de sesilhas"
+msgstr "Desactivar la connexion al gestionari de sessions"
 
 #: src/core/main.c:276
 msgid "Replace the running window manager with Marco"
@@ -1250,7 +1250,7 @@ msgstr "Remplaçar lo gestionari de fenèstras actiu per Marco"
 
 #: src/core/main.c:282
 msgid "Specify session management ID"
-msgstr "Indicar l'ID de gestion de sesilha"
+msgstr "Indicar l'ID de gestion de session"
 
 #: src/core/main.c:287
 msgid "X Display to use"
@@ -1258,7 +1258,7 @@ msgstr "Visual X d'utilizar"
 
 #: src/core/main.c:293
 msgid "Initialize session from savefile"
-msgstr "Inicializar la sesilha dempuèi lo fichièr de salvament"
+msgstr "Inicializar la session a partir del fichièr de salvament"
 
 #: src/core/main.c:299
 msgid "Print version"
@@ -1380,32 +1380,32 @@ msgstr "Impossible de liberar l'ecran %d sul visual « %s »\n"
 #: src/core/session.c:842 src/core/session.c:849
 #, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr "Impossible de crear lo repertòri '%s' : %s\n"
+msgstr "Creacion impossibla del repertòri « %s » : %s\n"
 
 #: src/core/session.c:859
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
-msgstr "Impossible de dobrir lo fichièr de sesilha « %s » en escritura : %s\n"
+msgstr "Impossible de dobrir lo fichièr de session « %s » en escritura : %s\n"
 
 #: src/core/session.c:999
 #, c-format
 msgid "Error writing session file '%s': %s\n"
-msgstr "Error al moment d'escriure lo fichièr de session '%s' : %s\n"
+msgstr "Error al moment d'escriure lo fichièr de session « %s » : %s\n"
 
 #: src/core/session.c:1004
 #, c-format
 msgid "Error closing session file '%s': %s\n"
-msgstr "Error al moment de la tampadura del fichièr de sesilha « %s » : %s\n"
+msgstr "Error al moment de la tampadura del fichièr de session « %s » : %s\n"
 
 #: src/core/session.c:1134
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
-msgstr "L'analsi del fichièr de sesilha enregistrat a fracassat : %s\n"
+msgstr "L'analsi del fichièr de session enregistrat a fracassat : %s\n"
 
 #: src/core/session.c:1183
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr ""
-"L'atribut <marco_session> es estat trobat, mas avèm ja l'ID de sesilha"
+"L'atribut <marco_session> es estat trobat, mas avèm ja l'ID de session"
 
 #: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
 #: src/core/session.c:1375 src/core/session.c:1435
@@ -1576,7 +1576,7 @@ msgstr "Tampar la fenèstra"
 
 #: src/ui/frames.c:1341
 msgid "Window Menu"
-msgstr "Menut Fenèstra"
+msgstr "Menú Fenèstra"
 
 #: src/ui/frames.c:1344
 msgid "Window App Menu"
@@ -2066,7 +2066,7 @@ msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>  man
 #: src/ui/theme.c:5462
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
-msgstr "Impossible de cargar lo tèma \"%s\" : %s\n"
+msgstr "Cargament impossible del tèma « %s » : %s\n"
 
 #: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
 #: src/ui/theme.c:5615 src/ui/theme.c:5622
@@ -2198,7 +2198,7 @@ msgstr "Vos cal indicar una valor pel paramètre alfa."
 #: src/ui/theme-parser.c:1284
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
-msgstr "Tipe desconegut \"%s\" sul element <%s>"
+msgstr "Tipe desconegut « %s » sul element <%s>"
 
 #: src/ui/theme-parser.c:1295
 #, c-format
@@ -2232,7 +2232,7 @@ msgstr ""
 #: src/ui/theme-parser.c:1470
 #, c-format
 msgid "Distance \"%s\" is unknown"
-msgstr "Distància \"%s\" desconeguda"
+msgstr "Distància « %s » desconeguda"
 
 #: src/ui/theme-parser.c:1515
 #, c-format
@@ -2242,7 +2242,7 @@ msgstr "Proporcion « %s » desconeguda"
 #: src/ui/theme-parser.c:1577
 #, c-format
 msgid "Border \"%s\" is unknown"
-msgstr "La bordadura \"%s\" es desconeguda"
+msgstr "La bordadura « %s » es desconeguda"
 
 #: src/ui/theme-parser.c:1888
 #, c-format
@@ -2312,7 +2312,7 @@ msgstr "Cap de <draw_ops> amb lo nom « %s » es pas estat definit"
 #: src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
-msgstr "Foncion \"%s\" desconeguda pel boton"
+msgstr "Foncion « %s » desconeguda pel boton"
 
 #: src/ui/theme-parser.c:3002
 #, c-format
@@ -2323,7 +2323,7 @@ msgstr ""
 #: src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
-msgstr "Estat \"%s\" desconegut pel boton"
+msgstr "Estat « %s » desconegut pel boton"
 
 #: src/ui/theme-parser.c:3022
 #, c-format
@@ -2493,7 +2493,7 @@ msgstr "Es un messatge d'exemple dins una bóstia de dialòg d'exemple"
 #: src/ui/theme-viewer.c:352
 #, c-format
 msgid "Fake menu item %d\n"
-msgstr "Element de menut factici %d\n"
+msgstr "Element de menú factici %d\n"
 
 #: src/ui/theme-viewer.c:408
 msgid "Border-only window"
@@ -2521,7 +2521,7 @@ msgstr "Paleta utilitari"
 
 #: src/ui/theme-viewer.c:443
 msgid "Torn-off Menu"
-msgstr "Menut destacat"
+msgstr "Menú destacat"
 
 #: src/ui/theme-viewer.c:447
 msgid "Border"
@@ -2573,7 +2573,7 @@ msgstr "Agençaments dels botons"
 
 #: src/ui/theme-viewer.c:955
 msgid "Benchmark"
-msgstr "Performància"
+msgstr "Performança"
 
 #: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"

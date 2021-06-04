@@ -14,7 +14,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Roman Horník <roman.hornik@debian-linux.cz>, 2018
 # Lucas Lommer <drom@kdyne.net>, 2020
-# ToMáš Marný, 2020
+# ToMáš Marný, 2021
 # 
 msgid ""
 msgstr ""
@@ -22,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: ToMáš Marný, 2020\n"
+"Last-Translator: ToMáš Marný, 2021\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1005,6 +1005,12 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Klávesová zkratka, která spouští odpovídající očíslovaný příkaz v "
+"/apps/marco/keybinding_commands. Formát vypadá jako „<Control> a“ nebo "
+"„<Shift> <Alt> F1“. Analyzátor je poměrně liberální a umožňuje malá nebo "
+"velká písmena a také zkratky jako „<Ctl>“ a „<Ctrl>“. Pokud nastavíte "
+"možnost na speciální řetězec „vypnuto (disabled)“, nebude pro tuto akci "
+"existovat žádná vazba kláves."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -1050,6 +1056,10 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Formát vypadá jako „<Control> a“ nebo „<Shift> <Alt> F1“. Analyzátor je "
+"poměrně liberální a umožňuje malá nebo velká písmena a také zkratky jako "
+"„<Ctl>“ a „<Ctrl>“. Pokud nastavíte možnost na speciální řetězec „vypnuto "
+"(disabled)“, nebude pro tuto akci existovat žádná vazba kláves."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -1066,6 +1076,12 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Formát vypadá jako „<Control> a“ nebo „<Shift> <Alt> F1“. Analyzátor je "
+"poměrně liberální a umožňuje malá nebo velká písmena a také zkratky jako "
+"„<Ctl>“ a „<Ctrl>“. Pokud nastavíte možnost na speciální řetězec „vypnuto "
+"(disabled)“, nebude pro tuto akci existovat žádná vazba kláves. Tuto "
+"klávesovou zkratku lze zvrátit podržením klávesy „shift“; „shift“ proto "
+"nemůže být jedním z klíčů, které používá."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"

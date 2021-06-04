@@ -12,6 +12,8 @@
 # Ikuru K <kanumaiku@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 323484, 2018
+# pivo thusr, 2020
+# Green, 2021
 # 
 msgid ""
 msgstr ""
@@ -19,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: 323484, 2018\n"
+"Last-Translator: Green, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +35,7 @@ msgstr "デスクトップ"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "パネルの &quot;Run Application&quot; ダイアログ・ボックスを表示する"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -371,6 +373,9 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"この修飾キーを押したままの状態でウィンドウをクリックすると、ウィンドウを移動させたり (左クリック)、ウィンドウ・サイズを変更したり "
+"(中クリック)、ウィンドウ・メニューを表示させたり(右クリック)することができます。中クリックと右クリックの操作は \"右ボタンでサイズ変更\" "
+"キーを使えば交換できます。修飾キーは、例えば、\"<Alt>\" や \"<Super>\" のように表されます。"
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -416,7 +421,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
-msgstr "ウィンドウフォーカスモード"
+msgstr "ウィンドウのフォーカスモード"
 
 #: src/org.mate.marco.gschema.xml:71
 msgid ""
@@ -432,7 +437,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:75
 msgid "Control how new windows get focus"
-msgstr "新しいウィンドウに対するフォーカスの当て方"
+msgstr "新しいウィンドウのフォーカスを制御"
 
 #: src/org.mate.marco.gschema.xml:76
 msgid ""
@@ -704,6 +709,8 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"TRUE にすると、コンポジットマネージャーとして動作している際、Alt-Tab "
+"のポップアップにウィンドウのサムネイルを表示しなくなります。アプリケーションのアイコンが代わりに表示されます。ただし、高解像度の画面で多くのウィンドウが表示されている場合、レンダリングに遅延が発生するかも知れません。"
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -767,7 +774,7 @@ msgstr "TRUE にすると、新しいウィンドウは画面の中央に開き�
 
 #: src/org.mate.marco.gschema.xml:181
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "ウインドウタイルを有効にするかどうか"
 
 #: src/org.mate.marco.gschema.xml:182
 msgid ""
@@ -775,26 +782,29 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"有効にすると、ウィンドウを画面の左右端にドラッグしたとき、ウィンドウの縦幅を最大化、横幅を画面の半分にします。また、allow-top-tiling "
+"が有効な場合には、ウィンドウを画面の上端にドラッグした時ウィンドウを最大化します。"
 
 #: src/org.mate.marco.gschema.xml:186
 msgid "Whether to maximize the window when dragged to the top of the screen"
-msgstr ""
+msgstr "画面の上部にドラッグしたときにウィンドウを最大化するかどうか"
 
 #: src/org.mate.marco.gschema.xml:187
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
-msgstr ""
+msgstr "有効にすると、ウィンドウを画面の上部にドラッグドロップすると最大化されます。allow-tiling が有効な場合のみ動作します。"
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "異なるタイルサイズの循環を可能にするか否か"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"これを有効にすると、同じキーボードショートカットを複数回連続して使用することで、ウィンドウのタイリングが複数の異なるサイズに切り替わります。"
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -825,32 +835,32 @@ msgstr "カンマ区切りのクラスのリストです。デスクトップを
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "alt-tab ポップアップウィンドウのアイコンサイズ"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
-msgstr ""
+msgstr "alt-tab ポップアップウィンドウに表示されるアプリケーションアイコンのサイズ。画面の拡大率がこの値に適用されます。"
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "alt-tab ポップアップウィンドウの最大カラム数"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
-msgstr ""
+msgstr "ポップアップウィンドウは、1行の中にこの数のエントリーが収まるよう拡張されます。"
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
-msgstr ""
+msgstr "alt-tab ポップアップウィンドウを拡張して、長いウィンドウタイトルに対応します"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
-msgstr ""
+msgstr "ポップアップウィンドウは、設定パラメータ alt-tab-max-columns で指定した幅まで拡張することが可能です。"
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -917,6 +927,10 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"/apps/marco/keybinding_commands に対応する数字のコマンドを実行するキーバインドを指定します。フォーマットは "
+"\"<Control>a\" or \"<Shift><Alt>F1\" のようにします。パーサは完全に自由で大文字や小文字を許可します。そして "
+"\"<Ctl>\" や \"<Ctrl>\" のような省略もできます。もし特別な文字 \"disabled\" "
+"をオプションに設定した場合、この動作のキーバインドはなくなります。"
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -962,6 +976,9 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"フォーマットは \"<Control>a\" あるいは \"<Shift><Alt>F1\" "
+"のようにします。パーサはとてもに自由で大文字や小文字を許可します。そして \"<Ctl>\" や \"<Ctrl>\" "
+"のような省略もできます。もし特別な文字列を \"disabled\" に設定した場合、この動作のキーバインドはなくなります。"
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -978,6 +995,10 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"フォーマットは \"<Control>a\" あるいは \"<Shift><Alt>F1\" "
+"のようにします。パーサはとてもに自由で大文字や小文字を許可します。そして \"<Ctl>\" や \"<Ctrl>\" "
+"のような省略もできます。もし特別な文字列を \"disabled\" に設定した場合は、この動作のキーバインドはなくなります。このキーバインドは "
+"\"Shift\" キーを押しっぱなしにすることで反転できます。そのため、\"Shift\" は使用できないキーです。"
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -989,11 +1010,11 @@ msgstr "ポップアップ・ウインドウを利用して後方のウィンド
 
 #: src/org.mate.marco.gschema.xml:574
 msgid "Move between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "ポップアップ・ウィンドウを利用して、すべてのワークスペースでウィンドウ間を移動する"
 
 #: src/org.mate.marco.gschema.xml:579
 msgid "Move backward between windows on all workspaces, using a popup window"
-msgstr ""
+msgstr "ポップアップ・ウインドウを利用してすべてのワークスペースで後方のウィンドウへ移動する"
 
 #: src/org.mate.marco.gschema.xml:589
 msgid "Move backward between panels and the desktop, using a popup window"
@@ -1158,11 +1179,11 @@ msgstr "端末を起動するコマンドが定義されていません。\n"
 
 #: src/core/keybindings.c:3735
 msgid "<tt>Rename Workspace</tt>"
-msgstr ""
+msgstr "<tt>ワークスペースの名前変更</tt>"
 
 #: src/core/keybindings.c:3736
 msgid "New Workspace Name:"
-msgstr ""
+msgstr "新規ワークスペース名："
 
 #: src/core/keybindings.c:3747
 msgid "OK"
@@ -1491,7 +1512,7 @@ msgstr "ウィンドウ 0x%2$lx 上のプロパティ %1$s はリスト内のア
 #: src/tools/marco-message.c:150
 #, c-format
 msgid "Usage: %s\n"
-msgstr "用法: %s\n"
+msgstr "使い方: %s\n"
 
 #: src/ui/frames.c:1338
 msgid "Close Window"
@@ -1503,7 +1524,7 @@ msgstr "ウィンドウ・メニューを表示します"
 
 #: src/ui/frames.c:1344
 msgid "Window App Menu"
-msgstr ""
+msgstr "ウィンドウアプリのメニュー"
 
 #: src/ui/frames.c:1347
 msgid "Minimize Window"
@@ -1773,13 +1794,15 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"GTKのカスタムカラー指定では、カラー名とフォールバックを括弧で囲む必要があります。例：gtk:custom(foo,bar); could not "
+"parse \"%s\""
 
 #: src/ui/theme.c:1413
 #, c-format
 msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
-msgstr ""
+msgstr "gtk:custom の color_nameパラメータの文字'%c'が無効です: A-Za-z0-9-_ のみ有効です"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1787,6 +1810,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Gtk:custom のフォーマットは \"gtk:custom(color_name,fallback) \"であって "
+"\"%s\"はフォーマットに適合しません"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2279,18 +2304,18 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "不正なバージョン指定 '%s'"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
-msgstr ""
+msgstr "\"version \"属性は、metacity-theme-1.xml や metacity-theme-2.xml では使用できません"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
-msgstr ""
+msgstr "テーマには%sバージョンが必要ですが、最新の対応テーマバージョンは%d.%d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
@@ -2352,7 +2377,7 @@ msgstr "%s というテーマの妥当なファイルが見つかりませんで
 
 #: src/ui/theme-viewer.c:256
 msgid "_OK"
-msgstr ""
+msgstr "OK(_O)"
 
 #: src/ui/theme-viewer.c:268
 msgid "This is a sample message in a sample dialog"
@@ -2397,7 +2422,7 @@ msgstr "境界線を付ける"
 
 #: src/ui/theme-viewer.c:451
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "付属のモーダルダイアログ"
 
 #: src/ui/theme-viewer.c:811
 #, c-format

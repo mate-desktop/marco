@@ -8,6 +8,8 @@
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018
+# Jung Hee Lee <daemul72@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
 # 
 msgid ""
 msgstr ""
@@ -15,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -405,9 +407,9 @@ msgid ""
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
 msgstr ""
-"제목 위에 있는 단추의 배치. 이 값은, 문자열로\"menu:minimize,maximize,spacer,close\";와 같이 씁니다 "
+"제목 위에 있는 버튼의 배치. 이 값은, 문자열로\"menu:minimize,maximize,spacer,close\";와 같이 씁니다 "
 "콜론으로 창의 왼쪽 끝과 오른쪽 끝을 구분하며, 각 버튼은 쉼표로 구분합니다. 같은 버튼을 중복해서 쓸 수 없습니다. 알 수 없는 버튼 "
-"이름은 그냥 무시되며 다음 버전의 메타시티에서 그 단추가 새로 생길 경우에도 문제 없이 쓸 수 있습니다. spacer 태그는 연속한 단추"
+"이름은 그냥 무시되며 다음 버전의 메타시티에서 그 버튼이 새로 생길 경우에도 문제 없이 쓸 수 있습니다. spacer 태그는 연속한 버튼"
 " 사이에 공백을 넣고 싶을 때 사용합니다."
 
 #: src/org.mate.marco.gschema.xml:70
@@ -423,7 +425,7 @@ msgid ""
 "and unfocused when the mouse leaves the window."
 msgstr ""
 "창 포커스 모드는 창을 활성화하는 방법을 지정합니다. 세 가지 값을 쓸 수 있습니다; \"click\"은 창에 포커스를 놓으려면 마우스 "
-"단추를 눌러야 하는 것이고, \"sloppy\"는 마우스가 창 안에 들어갈 때 포커스되는 것이고, \"mouse\"는 마우스가 창 안에 "
+"버튼을 눌러야 하는 것이고, \"sloppy\"는 마우스가 창 안에 들어갈 때 포커스되는 것이고, \"mouse\"는 마우스가 창 안에 "
 "들어가면 포커스되고 마우스가 창 밖으로 나갈 때 포커스가 없어지는 것입니다."
 
 #: src/org.mate.marco.gschema.xml:75
@@ -642,7 +644,7 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
-"프로그램이나 시스템이 '벨' 혹은 '삑소리'를 낼 때 눈에 보이도록 표현합니다. 듣는데 어려움이 있거나, 주위가 시끄러운 경우 "
+"프로그램이나 시스템이 '벨' 또는 '삑소리'를 낼 때 눈에 보이도록 표현합니다. 듣는데 어려움이 있거나, 주위가 시끄러운 경우 "
 "유용합니다."
 
 #: src/org.mate.marco.gschema.xml:141
@@ -654,7 +656,7 @@ msgid ""
 "Determines whether applications or the system can generate audible 'beeps'; "
 "may be used in conjunction with 'visual bell' to allow silent 'beeps'."
 msgstr ""
-"프로그램 혹은 시스템에서 들을 수 있는 '삑소리'를 낼 지 여부를 결정합니다; 조용한 '삑소리'를 내려면 '비주얼 벨'과 함께 쓸 수 "
+"프로그램 또는 시스템에서 들을 수 있는 '삑소리'를 낼 지 여부를 결정합니다; 조용한 '삑소리'를 내려면 '비주얼 벨'과 함께 쓸 수 "
 "있습니다."
 
 #: src/org.mate.marco.gschema.xml:146
@@ -671,7 +673,7 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
-"시스템 벨 혹은 그 외 프로그램의 '벨' 소리를 어떻게 비주얼 하게 표현할지 결정합니다. 두 가지 값을 쓸 수 있습니다; "
+"시스템 벨 또는 그 외 프로그램의 '벨' 소리를 어떻게 비주얼 하게 표현할지 결정합니다. 두 가지 값을 쓸 수 있습니다; "
 "\"fullscreen\"은 전체 화면이 흰색-검은색으로 깜박이고, \"frame_flash\"는 벨 소리를 보낸 프로그램의 제목이 "
 "깜박입니다. 벨 소리를 보낸 프로그램을 알 수 없는 경우 (\"시스템 벨 소리 \"인 경우 \"), 현재 포커스 된 창의 제목이 "
 "깜박입니다."
@@ -1242,7 +1244,7 @@ msgstr "다시 시작 실패: %s\n"
 #: src/core/prefs.c:641 src/core/prefs.c:794
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr ""
+msgstr "%d GSettings%s 키에 저장된 는 %d ~ %d까지의 범위를 벗어납니다\n"
 
 #: src/core/prefs.c:1088
 msgid ""
@@ -1260,7 +1262,7 @@ msgstr "%s GSettings 키의 글꼴 특성  \"%s\"을 분석할 수 없습니다�
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
 " modifier\n"
-msgstr "설정 데이터베이스에서 찾은 \"%s\"이(가) 마우스 단추 설정 키의 올바른 값이 아닙니다\n"
+msgstr "설정 데이터베이스에서 찾은 \"%s\"이(가) 마우스 버튼 설정 키의 올바른 값이 아닙니다\n"
 
 #: src/core/prefs.c:1844
 #, c-format
@@ -1750,11 +1752,11 @@ msgstr "프레임 위치가 가장자리 \"%2$s\" 가장자리의 \"%1$s\"차원
 #: src/ui/theme.c:455
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
-msgstr "단추의 가로세로 비 %g이(가) 적당하지 않습니다"
+msgstr "버튼의 가로세로 비 %g이(가) 적당하지 않습니다"
 
 #: src/ui/theme.c:467
 msgid "Frame geometry does not specify size of buttons"
-msgstr "프레임 위치가 단추의 크기로 지정되지 않았습니다"
+msgstr "프레임 위치가 버튼의 크기로 지정되지 않았습니다"
 
 #: src/ui/theme.c:1227
 msgid "Gradients should have at least two colors"
@@ -2100,7 +2102,7 @@ msgstr "<%2$s> 아래에 <%1$s> 원소가 올 수 없습니다"
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
-msgstr "단추의 button_width/button_height 와 \"aspect_ratio\"를 한꺼번에 지정할 수 없습니다"
+msgstr "버튼의 button_width/button_height 와 \"aspect_ratio\"를 한꺼번에 지정할 수 없습니다"
 
 #: src/ui/theme-parser.c:1470
 #, c-format
@@ -2181,22 +2183,22 @@ msgstr "이름 \"%s\"을(를) 가지는 <draw_ops>가 지정되지 않았습니�
 #: src/ui/theme-parser.c:2992
 #, c-format
 msgid "Unknown function \"%s\" for button"
-msgstr "단추에 알 수 없는 기능 \"%s\""
+msgstr "버튼에 알 수 없는 기능 \"%s\""
 
 #: src/ui/theme-parser.c:3002
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
-msgstr "이 버전에는 \"%s\" 단추 함수가 없습니다 (버전은 %d, 버전 %d 필요)"
+msgstr "이 버전에는 \"%s\" 버튼 함수가 없습니다 (버전은 %d, 버전 %d 필요)"
 
 #: src/ui/theme-parser.c:3014
 #, c-format
 msgid "Unknown state \"%s\" for button"
-msgstr "단추에 알 수 없는 상태 \"%s\""
+msgstr "버튼에 알 수 없는 상태 \"%s\""
 
 #: src/ui/theme-parser.c:3022
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
-msgstr "프레임 스타일에 단추의 기능 %s 상태 %s이(가) 이미 있습니다"
+msgstr "프레임 스타일에 버튼의 기능 %s 상태 %s이(가) 이미 있습니다"
 
 #: src/ui/theme-parser.c:3101
 #, c-format
@@ -2321,7 +2323,7 @@ msgstr "프레임 조각에 draw_ops가 제공하지 않습니다"
 
 #: src/ui/theme-parser.c:3979
 msgid "No draw_ops provided for button"
-msgstr "단추에 draw_ops가 제공되지 않습니다"
+msgstr "버튼에 draw_ops가 제공되지 않습니다"
 
 #: src/ui/theme-parser.c:4041
 #, c-format
@@ -2392,7 +2394,7 @@ msgstr ""
 #: src/ui/theme-viewer.c:811
 #, c-format
 msgid "Button layout test %d"
-msgstr "단추 배치 테스트 %d"
+msgstr "버튼 배치 테스트 %d"
 
 #: src/ui/theme-viewer.c:836
 #, c-format
@@ -2427,7 +2429,7 @@ msgstr "큰 제목 글꼴"
 
 #: src/ui/theme-viewer.c:950
 msgid "Button Layouts"
-msgstr "단추 배치"
+msgstr "버튼 배치"
 
 #: src/ui/theme-viewer.c:955
 msgid "Benchmark"

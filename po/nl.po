@@ -10,7 +10,7 @@
 # 8c3c560621f92e66455793da7b85eff0_8989672 <0e181aafae430e5c919398b6a7bba462_109266>, 2018
 # Tom van den Brink <tomracing79@hotmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Pjotr <pjotrvertaalt@gmail.com>, 2019
+# Pjotr <pjotrvertaalt@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2019\n"
+"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/mate/teams/13566/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,11 +32,11 @@ msgstr "Bureaublad"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr "Toon het dialoogvenster voor &quot;Toepassing uitvoeren&quot;"
+msgstr "Toon het werkbalkdialoogvenster voor &quot;Toepassing uitvoeren&quot;"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
-msgstr "Toon het hoofdmenu van het paneel"
+msgstr "Toon het hoofdmenu van de werkbalk"
 
 #: src/50-marco-desktop-key.xml.in:8 src/org.mate.marco.gschema.xml:639
 msgid "Take a screenshot"
@@ -71,7 +71,8 @@ msgstr ""
 #: src/50-marco-global-key.xml.in:8 src/org.mate.marco.gschema.xml:584
 msgid "Move between panels and the desktop, using a popup window"
 msgstr ""
-"Wisselen tussen panelen en het bureaublad, met behulp van een opduikvenster"
+"Wisselen tussen werkbalken en het bureaublad, met behulp van een "
+"opduikvenster"
 
 #: src/50-marco-global-key.xml.in:10 src/org.mate.marco.gschema.xml:604
 msgid "Move between windows immediately"
@@ -83,7 +84,7 @@ msgstr "Wissel direct van vensters binnen een toepassing"
 
 #: src/50-marco-global-key.xml.in:14 src/org.mate.marco.gschema.xml:614
 msgid "Move between panels and the desktop immediately"
-msgstr "Wissel direct tussen panelen en het bureaublad"
+msgstr "Wissel direct tussen werkbalken en het bureaublad"
 
 #: src/50-marco-global-key.xml.in:16 src/org.mate.marco.gschema.xml:624
 msgid "Hide all normal windows and set focus to the desktop"
@@ -498,25 +499,25 @@ msgid ""
 "live with the \"bug\" they requested."
 msgstr ""
 "Het uitschakelen van deze optie kan tot foutief gedrag leiden, dus wordt "
-"gebruikers aangeraden het ingeschakeld te laten. Veel acties (zoals klikken "
-"in de client area, het verplaatsen van een venster of het aanpassen van de "
+"gebruikers aangeraden haar ingeschakeld te laten. Veel acties (zoals klikken"
+" in de client area, het verplaatsen van een venster of het aanpassen van de "
 "venstergrootte) halen normaal gesproken het venster omhoog als neveneffect. "
 "Het uitschakelen van deze optie, hetgeen sterk wordt afgeraden, zal het "
-"omhoog halen ontkoppelen van andere gebruikersacties en verzoeken van "
+"omhoog halen ontkoppelen van andere gebruikersacties en zal verzoeken van "
 "programma's om omhoog te komen negeren. Zie "
 "http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Zelfs wanneer deze "
 "optie uitgeschakeld is kunnen vensters nog omhoog worden gehaald met "
 "Alt+Linkerklik op het venster, een normale klik op de vensterdecoratie, of "
-"door speciale pagerberichten, zoals activatieverzoeken van applets uit de "
-"takenlijst. Deze optie is momenteel uitgeschakeld in de click-to-focus-"
+"door speciale pagerberichten, zoals activatieverzoeken van takenlijst-"
+"werkbalkhulpjes. Deze optie is momenteel uitgeschakeld in de click-to-focus-"
 "modus. Let erop dat de lijst met manieren om vensters omhoog te halen "
 "wanneer raise_on_click uitgeschakeld is, geen programmatische verzoeken van "
-"applicaties om vensters omhoog te halen bevat; zulke verzoeken zullen worden"
-" genegeerd, ongeacht de reden hiervoor. Als u een applicatieontwikkelaar "
-"bent en een klacht ontvangt van een gebruiker dat uw applicatie niet werkt "
-"met deze instelling uitgeschakeld, leg hem/haar dan uit dat het zijn/haar "
-"fout is dat hun vensterbeheerder niet goed werkt en dat ze deze optie "
-"opnieuw moeten activeren of moeten leven met de 'fout'. "
+"toepassingen om vensters omhoog te halen bevat; zulke verzoeken zullen "
+"worden genegeerd, ongeacht de reden hiervoor. Als u een "
+"toepassingsontwikkelaar bent en een klacht ontvangt van een gebruiker dat uw"
+" toepassing niet werkt met deze instelling uitgeschakeld, leg hem dan uit "
+"dat het zijn fout is dat zijn vensterbeheerder niet goed werkt en dat hij "
+"deze optie opnieuw moet activeren of moet leren leven met de 'fout'. "
 
 #: src/org.mate.marco.gschema.xml:85
 msgid "Action on title bar double-click"
@@ -1132,7 +1133,7 @@ msgstr ""
 #: src/org.mate.marco.gschema.xml:589
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr ""
-"Achterwaarts wisselen tussen panelen en het bureaublad, met een "
+"Achterwaarts wisselen tussen werkbalken en het bureaublad, met een "
 "opduikvenster"
 
 #: src/org.mate.marco.gschema.xml:599
@@ -1145,11 +1146,11 @@ msgstr "Direct achterwaarts wisselen van vensters"
 
 #: src/org.mate.marco.gschema.xml:619
 msgid "Move backward between panels and the desktop immediately"
-msgstr "Direct achterwaarts wisselen tussen panelen en het bureaublad"
+msgstr "Direct achterwaarts wisselen tussen werkbalken en het bureaublad"
 
 #: src/org.mate.marco.gschema.xml:634
 msgid "Show the panel's \"Run Application\" dialog box"
-msgstr "Toon het paneeldialoogvenster ‘Toepassing uitvoeren’"
+msgstr "Toon het werkbalkdialoogdialoogvenster ‘Toepassing uitvoeren’"
 
 #: src/org.mate.marco.gschema.xml:662 src/org.mate.marco.gschema.xml:667
 #: src/org.mate.marco.gschema.xml:672 src/org.mate.marco.gschema.xml:677

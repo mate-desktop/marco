@@ -5,13 +5,15 @@
 # 
 # Translators:
 # mauron, 2018
-# Tubuntu <tubuntu@testimonium.be>, 2018
+# Tubuntu, 2018
 # Charles Monzat <c.monzat@laposte.net>, 2018
 # yoplait <yoplait@tememe.org>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Étienne Deparis <etienne@depar.is>, 2018
-# Rox fr <roxfr@outlook.fr>, 2019
+# roxfr <roxfr@outlook.fr>, 2019
 # Laurent Napias, 2020
+# Yoan Mollard <yoan@aubrune.eu>, 2020
+# David D, 2021
 # 
 msgid ""
 msgstr ""
@@ -19,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2019-11-18 19:44+0100\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Laurent Napias, 2020\n"
+"Last-Translator: David D, 2021\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +36,7 @@ msgstr "Bureau"
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
 msgstr ""
+"Afficher la boîte de dialogue « Lancer une application » du tableau de bord"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -381,6 +384,12 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Cliquer sur une fenêtre en maintenant enfoncée cette touche de modification "
+"déplacera la fenêtre (clic gauche), redimensionnera la fenêtre (clic du "
+"milieu), ou affichera le menu de la fenêtre (clic droit). Les opérations "
+"milieu et droite peuvent être inversées en utilisant la clé « "
+"resize_with_right_button ». Le modificateur est défini comme «<Alt>» ou "
+"«<Super>» par exemple.."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -774,6 +783,11 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"Si réglé sur vrai, aucune vignette ne sera affichée dans la fenêtre pop-up "
+"alt-tab lorsque le gestionnaire de composition sera activée. Les icônes "
+"d'application seront affichées à la place. Notez que sur des écrans à haute "
+"résolution ayant plusieurs fenêtres visibles un lag (ralenti) perceptible "
+"peut être visible lors du rendu."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
