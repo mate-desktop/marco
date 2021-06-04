@@ -1,3 +1,36 @@
+### marco 1.25.1
+
+  * update translations
+  * window: Do not render shadows on left/right tiled windows
+  * iconcache: Use GDesktopAppInfo to find correct application icons
+  * window: Track window rectangle before corner tiling
+  * window: Track window rectangle before tiling
+  * window: Only unmaximize when the window is already maximized.
+  * window-props: g_memdup is dreprecated from glib 2.68
+  * warning: declaration of a variable shadows a previous local
+  * testasyncgetprop: Mismatching the argument type 'unsigned long'
+  * bell: Unused static function 'bell_flash_screen'
+  * frames: Unused static functions 'get_client_region', 'get_frame_region'
+  * compositor-xrender.c: Make sure tooltips are visible when the source
+  * bell: missing include guard
+  * i18n: Use glib's gettext support macros
+  * window: turn into a GObject
+  * build: autoconf/meson use the same value for PACKAGE_STRING
+  * Remove the copyright information when printing the version from the command line
+  * build: show verbose logging and debug status in configuration summary
+  * build: by default disable also the verbose mode for autoconf
+  * Remove USE_MATE2_MACROS from autogen.sh (legacy)
+  * Added VI keys (hjkl) for moving and resizing windows
+  * window: do not unfocus on new window.
+  * Do not call cairo paint on generate_pixmaps.
+  * compositor-xrender: Use USHRT_MAX macro from limits.h
+  * compositor-xrender: Remove float-conversion warning
+  * theme: macro "ALPHA_TO_UCHAR" is not used
+  * window: expand tile size cycling support
+  * Remove multiple empty lines
+  * Remove trailing spaces/tabs
+  * common: window icon (META_DEFAULT_ICON_NAME) is no longer available
+
 ### marco 1.25.0
 
   * update translations
