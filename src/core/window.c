@@ -6126,11 +6126,9 @@ meta_window_update_icon_now (MetaWindow *window)
                        window->wm_hints_pixmap,
                        window->wm_hints_mask,
                        &icon,
-                       icon_size, /* width  */
-                       icon_size, /* height */
+                       icon_size,
                        &mini_icon,
-                       META_MINI_ICON_WIDTH,
-                       META_MINI_ICON_HEIGHT))
+                       META_MINI_ICON_SIZE))
     {
       if (window->icon)
         g_object_unref (G_OBJECT (window->icon));

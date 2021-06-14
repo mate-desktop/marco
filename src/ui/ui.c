@@ -639,7 +639,7 @@ meta_ui_get_default_mini_icon (MetaUI *ui)
   if (default_icon == NULL)
     {
       scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
-      default_icon = load_default_window_icon (META_MINI_ICON_WIDTH, scale);
+      default_icon = load_default_window_icon (META_MINI_ICON_SIZE, scale);
       g_assert (default_icon);
     }
 
@@ -718,7 +718,7 @@ meta_ui_get_mini_icon_from_name (MetaUI *ui, char *name)
   int size;
 
   scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
-  size = META_MINI_ICON_WIDTH / scale;
+  size = META_MINI_ICON_SIZE / scale;
 
   return load_window_icon_from_name (name, size, scale);
 }

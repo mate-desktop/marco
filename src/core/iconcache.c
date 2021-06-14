@@ -32,13 +32,9 @@
 /* The icon-reading code is also in libwnck, please sync bugfixes */
 
 static void
-get_fallback_icons (MetaScreen     *screen,
-                    GdkPixbuf     **iconp,
-                    int             ideal_width,
-                    int             ideal_height,
-                    GdkPixbuf     **mini_iconp,
-                    int             ideal_mini_width,
-                    int             ideal_mini_height)
+get_fallback_icons (MetaScreen  *screen,
+                    GdkPixbuf  **iconp,
+                    GdkPixbuf  **mini_iconp)
 {
   /* we don't scale, should be fixed if we ever un-hardcode the icon
    * size
@@ -48,42 +44,9 @@ get_fallback_icons (MetaScreen     *screen,
 }
 
 static gboolean
-find_largest_sizes (gulong *data,
-                    gulong  nitems,
-                    int    *width,
-                    int    *height)
-{
-  *width = 0;
-  *height = 0;
-
-  while (nitems > 0)
-    {
-      int w, h;
-
-      if (nitems < 3)
-        return FALSE; /* no space for w, h */
-
-      w = data[0];
-      h = data[1];
-
-      if (nitems < ((gulong)(w * h) + 2))
-        return FALSE; /* not enough data */
-
-      *width = MAX (w, *width);
-      *height = MAX (h, *height);
-
-      data += (w * h) + 2;
-      nitems -= (w * h) + 2;
-    }
-
-  return TRUE;
-}
-
-static gboolean
 find_best_size (gulong  *data,
                 gulong   nitems,
-                int      ideal_width,
-                int      ideal_height,
+                int      ideal_size,
                 int     *width,
                 int     *height,
                 gulong **start)
@@ -91,19 +54,10 @@ find_best_size (gulong  *data,
   int best_w;
   int best_h;
   gulong *best_start;
-  int max_width, max_height;
 
   *width = 0;
   *height = 0;
   *start = NULL;
-
-  if (!find_largest_sizes (data, nitems, &max_width, &max_height))
-    return FALSE;
-
-  if (ideal_width < 0)
-    ideal_width = max_width;
-  if (ideal_height < 0)
-    ideal_height = max_height;
 
   best_w = 0;
   best_h = 0;
@@ -132,7 +86,6 @@ find_best_size (gulong  *data,
       else
         {
           /* work with averages */
-          const int ideal_size = (ideal_width + ideal_height) / 2;
           int best_size = (best_w + best_h) / 2;
           int this_size = (w + h) / 2;
 
@@ -208,18 +161,16 @@ argbdata_to_pixdata (gulong *argb_data, int len, guchar **pixdata)
 }
 
 static gboolean
-read_rgb_icon (MetaDisplay   *display,
-               Window         xwindow,
-               int            ideal_width,
-               int            ideal_height,
-               int            ideal_mini_width,
-               int            ideal_mini_height,
-               int           *width,
-               int           *height,
-               guchar       **pixdata,
-               int           *mini_width,
-               int           *mini_height,
-               guchar       **mini_pixdata)
+read_rgb_icon (MetaDisplay *display,
+               Window       xwindow,
+               int          ideal_size,
+               int          ideal_mini_size,
+               int         *width,
+               int         *height,
+               guchar     **pixdata,
+               int         *mini_width,
+               int         *mini_height,
+               guchar     **mini_pixdata)
 {
   Atom type;
   int format;
@@ -256,16 +207,14 @@ read_rgb_icon (MetaDisplay   *display,
 
   data_as_long = (gulong *)data;
 
-  if (!find_best_size (data_as_long, nitems,
-                       ideal_width, ideal_height,
-                       &w, &h, &best))
+  if (!find_best_size (data_as_long, nitems, ideal_size, &w, &h, &best))
     {
       XFree (data);
       return FALSE;
     }
 
   if (!find_best_size (data_as_long, nitems,
-                       ideal_mini_width, ideal_mini_height,
+                       ideal_mini_size,
                        &mini_w, &mini_h, &best_mini))
     {
       XFree (data);
@@ -378,11 +327,9 @@ try_pixmap_and_mask (MetaDisplay *display,
                      Pixmap       src_pixmap,
                      Pixmap       src_mask,
                      GdkPixbuf  **iconp,
-                     int          ideal_width,
-                     int          ideal_height,
+                     int          ideal_size,
                      GdkPixbuf  **mini_iconp,
-                     int          ideal_mini_width,
-                     int          ideal_mini_height)
+                     int          ideal_mini_size)
 {
   GdkPixbuf *unscaled = NULL;
   GdkPixbuf *mask = NULL;
@@ -427,17 +374,13 @@ try_pixmap_and_mask (MetaDisplay *display,
     {
       *iconp =
         gdk_pixbuf_scale_simple (unscaled,
-                                 ideal_width > 0 ? ideal_width :
-                                 gdk_pixbuf_get_width (unscaled),
-                                 ideal_height > 0 ? ideal_height :
-                                 gdk_pixbuf_get_height (unscaled),
+                                 ideal_size,
+                                 ideal_size,
                                  GDK_INTERP_BILINEAR);
       *mini_iconp =
         gdk_pixbuf_scale_simple (unscaled,
-                                 ideal_mini_width > 0 ? ideal_mini_width :
-                                 gdk_pixbuf_get_width (unscaled),
-                                 ideal_mini_height > 0 ? ideal_mini_height :
-                                 gdk_pixbuf_get_height (unscaled),
+                                 ideal_mini_size,
+                                 ideal_mini_size,
                                  GDK_INTERP_BILINEAR);
 
       g_object_unref (G_OBJECT (unscaled));
@@ -515,10 +458,8 @@ meta_icon_cache_init (MetaIconCache *icon_cache)
 #if 0
   icon_cache->icon = NULL;
   icon_cache->mini_icon = NULL;
-  icon_cache->ideal_width = -1; /* won't be a legit width */
-  icon_cache->ideal_height = -1;
-  icon_cache->ideal_mini_width = -1;
-  icon_cache->ideal_mini_height = -1;
+  icon_cache->ideal_size = -1; /* won't be a legit size */
+  icon_cache->ideal_mini_size = -1;
 #endif
   icon_cache->want_fallback = TRUE;
   icon_cache->wm_hints_dirty = TRUE;
@@ -696,11 +637,9 @@ meta_read_icons (MetaScreen     *screen,
                  Pixmap          wm_hints_pixmap,
                  Pixmap          wm_hints_mask,
                  GdkPixbuf     **iconp,
-                 int             ideal_width,
-                 int             ideal_height,
+                 int             ideal_size,
                  GdkPixbuf     **mini_iconp,
-                 int             ideal_mini_width,
-                 int             ideal_mini_height)
+                 int             ideal_mini_size)
 {
   guchar *pixdata;
   int w, h;
@@ -715,19 +654,6 @@ meta_read_icons (MetaScreen     *screen,
 
   *iconp = NULL;
   *mini_iconp = NULL;
-
-#if 0
-  if (ideal_width != icon_cache->ideal_width ||
-      ideal_height != icon_cache->ideal_height ||
-      ideal_mini_width != icon_cache->ideal_mini_width ||
-      ideal_mini_height != icon_cache->ideal_mini_height)
-    clear_icon_cache (icon_cache, TRUE);
-
-  icon_cache->ideal_width = ideal_width;
-  icon_cache->ideal_height = ideal_height;
-  icon_cache->ideal_mini_width = ideal_mini_width;
-  icon_cache->ideal_mini_height = ideal_mini_height;
-#endif
 
   if (!meta_icon_cache_get_icon_invalidated (icon_cache))
     return FALSE; /* we have no new info to use */
@@ -750,16 +676,15 @@ meta_read_icons (MetaScreen     *screen,
       icon_cache->net_wm_icon_dirty = FALSE;
 
       if (read_rgb_icon (screen->display, xwindow,
-                         ideal_width, ideal_height,
-                         ideal_mini_width, ideal_mini_height,
+                         ideal_size,
+                         ideal_mini_size,
                          &w, &h, &pixdata,
                          &mini_w, &mini_h, &mini_pixdata))
         {
-          *iconp = scaled_from_pixdata (pixdata, w, h,
-                                        ideal_width, ideal_height);
+          *iconp = scaled_from_pixdata (pixdata, w, h, ideal_size, ideal_size);
 
           *mini_iconp = scaled_from_pixdata (mini_pixdata, mini_w, mini_h,
-                                             ideal_mini_width, ideal_mini_height);
+                                             ideal_mini_size, ideal_mini_size);
 
           if (*iconp && *mini_iconp)
             {
@@ -797,10 +722,9 @@ meta_read_icons (MetaScreen     *screen,
         {
           icon_cache->wm_hints_dirty_forced = FALSE;
 
-          if (try_pixmap_and_mask (screen->display,
-                                   pixmap, mask,
-                                   iconp, ideal_width, ideal_height,
-                                   mini_iconp, ideal_mini_width, ideal_mini_height))
+          if (try_pixmap_and_mask (screen->display, pixmap, mask,
+                                   iconp, ideal_size,
+                                   mini_iconp, ideal_mini_size))
             {
               icon_cache->prev_pixmap = pixmap;
               icon_cache->prev_mask = mask;
@@ -828,8 +752,8 @@ meta_read_icons (MetaScreen     *screen,
           icon_cache->kwm_win_icon_dirty_forced = FALSE;
 
           if (try_pixmap_and_mask (screen->display, pixmap, mask,
-                                   iconp, ideal_width, ideal_height,
-                                   mini_iconp, ideal_mini_width, ideal_mini_height))
+                                   iconp, ideal_size,
+                                   mini_iconp, ideal_mini_size))
             {
               icon_cache->prev_pixmap = pixmap;
               icon_cache->prev_mask = mask;
@@ -856,13 +780,7 @@ meta_read_icons (MetaScreen     *screen,
         }
 
       if (*iconp == NULL || *mini_iconp == NULL)
-        get_fallback_icons (screen,
-                            iconp,
-                            ideal_width,
-                            ideal_height,
-                            mini_iconp,
-                            ideal_mini_width,
-                            ideal_mini_height);
+        get_fallback_icons (screen, iconp, mini_iconp);
 
       replace_cache (icon_cache, USING_FALLBACK_ICON,
                      *iconp, *mini_iconp);

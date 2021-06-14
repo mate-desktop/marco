@@ -323,8 +323,7 @@ void meta_frame_borders_clear (MetaFrameBorders *self);
 #define META_MIN_ICON_SIZE 8
 #define META_MAX_ICON_SIZE 256
 
-#define META_MINI_ICON_WIDTH 16
-#define META_MINI_ICON_HEIGHT 16
+#define META_MINI_ICON_SIZE 16
 
 #define META_DEFAULT_ICON_NAME "preferences-desktop-theme"
 

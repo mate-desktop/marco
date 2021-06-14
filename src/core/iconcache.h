@@ -72,11 +72,9 @@ gboolean meta_read_icons         (MetaScreen     *screen,
                                   Pixmap          wm_hints_pixmap,
                                   Pixmap          wm_hints_mask,
                                   GdkPixbuf     **iconp,
-                                  int             ideal_width,
-                                  int             ideal_height,
+                                  int             ideal_size,
                                   GdkPixbuf     **mini_iconp,
-                                  int             ideal_mini_width,
-                                  int             ideal_mini_height);
+                                  int             ideal_mini_size);
 
 #endif
 
