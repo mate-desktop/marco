@@ -6111,13 +6111,11 @@ redraw_icon (MetaWindow *window)
 void
 meta_window_update_icon_now (MetaWindow *window)
 {
-  GdkPixbuf *icon;
-  GdkPixbuf *mini_icon;
-
-  icon = NULL;
-  mini_icon = NULL;
+  cairo_surface_t *icon = NULL;
+  cairo_surface_t *mini_icon = NULL;
 
   int icon_size = meta_prefs_get_icon_size();
+  int scale = gdk_window_get_scale_factor (gdk_get_default_root_window ());
 
   if (meta_read_icons (window->screen,
                        window->xwindow,
@@ -6128,7 +6126,8 @@ meta_window_update_icon_now (MetaWindow *window)
                        &icon,
                        icon_size,
                        &mini_icon,
-                       META_MINI_ICON_SIZE))
+                       META_MINI_ICON_SIZE,
+                       scale))
     {
       if (window->icon)
         g_object_unref (G_OBJECT (window->icon));
@@ -6136,8 +6135,15 @@ meta_window_update_icon_now (MetaWindow *window)
       if (window->mini_icon)
         g_object_unref (G_OBJECT (window->mini_icon));
 
-      window->icon = icon;
-      window->mini_icon = mini_icon;
+      window->icon = gdk_pixbuf_get_from_surface (icon,
+                                                  0, 0,
+                                                  icon_size, icon_size);
+      cairo_surface_destroy (icon);
+
+      window->mini_icon = gdk_pixbuf_get_from_surface (mini_icon,
+                                                       0, 0,
+                                                       META_MINI_ICON_SIZE, META_MINI_ICON_SIZE);
+      cairo_surface_destroy (mini_icon);
 
       redraw_icon (window);
     }

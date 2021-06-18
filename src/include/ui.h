@@ -137,14 +137,15 @@ void            meta_ui_window_menu_popup (MetaWindowMenu     *menu,
                                            guint32             timestamp);
 void            meta_ui_window_menu_free  (MetaWindowMenu     *menu);
 
-GdkPixbuf* meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
-                                            Pixmap       xpixmap,
-                                            int          src_x,
-                                            int          src_y,
-                                            int          dest_x,
-                                            int          dest_y,
-                                            int          width,
-                                            int          height);
+cairo_surface_t* meta_cairo_surface_get_from_pixmap (Display *display,
+                                                     Pixmap   xpixmap,
+                                                     int      scale);
+
+GdkPixbuf* meta_gdk_pixbuf_get_from_pixmap (Pixmap xpixmap,
+                                            int    src_x,
+                                            int    src_y,
+                                            int    width,
+                                            int    height);
 
 /* Used when we have a server grab and draw all over everything,
  * then we need to handle exposes after doing that, instead of
@@ -153,10 +154,10 @@ GdkPixbuf* meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
 void      meta_ui_push_delay_exposes (MetaUI *ui);
 void      meta_ui_pop_delay_exposes  (MetaUI *ui);
 
-GdkPixbuf* meta_ui_get_default_window_icon (MetaUI *ui);
-GdkPixbuf* meta_ui_get_default_mini_icon (MetaUI *ui);
-GdkPixbuf* meta_ui_get_window_icon_from_name (MetaUI *ui, char *name);
-GdkPixbuf* meta_ui_get_mini_icon_from_name (MetaUI *ui, char *name);
+cairo_surface_t* meta_ui_get_default_window_icon (MetaUI *ui);
+cairo_surface_t* meta_ui_get_default_mini_icon (MetaUI *ui);
+cairo_surface_t* meta_ui_get_window_icon_from_name (MetaUI *ui, char *name);
+cairo_surface_t* meta_ui_get_mini_icon_from_name (MetaUI *ui, char *name);
 
 gboolean  meta_ui_window_should_not_cause_focus (Display *xdisplay,
                                                  Window   xwindow);

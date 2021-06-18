@@ -530,29 +530,23 @@ meta_ui_window_menu_free (MetaWindowMenu *menu)
   meta_window_menu_free (menu);
 }
 
-GdkPixbuf*
-meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
-                                 Pixmap       xpixmap,
-                                 int          src_x,
-                                 int          src_y,
-                                 int          dest_x,
-                                 int          dest_y,
-                                 int          width,
-                                 int          height)
+cairo_surface_t*
+meta_cairo_surface_get_from_pixmap (Display *display,
+                                    Pixmap   xpixmap,
+                                    int      scale)
 {
   cairo_surface_t *surface;
-  Display *display;
   Window root_return;
   int x_ret, y_ret;
   unsigned int w_ret, h_ret, bw_ret, depth_ret;
   XWindowAttributes attrs;
-  GdkPixbuf *retval;
-
-  display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
 
   if (!XGetGeometry (display, xpixmap, &root_return,
                      &x_ret, &y_ret, &w_ret, &h_ret, &bw_ret, &depth_ret))
     return NULL;
+
+  w_ret *= scale;
+  h_ret *= scale;
 
   if (depth_ret == 1)
     {
@@ -572,6 +566,24 @@ meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,
                                            attrs.visual,
                                            w_ret, h_ret);
     }
+
+  return surface;
+}
+
+GdkPixbuf*
+meta_gdk_pixbuf_get_from_pixmap (Pixmap xpixmap,
+                                 int    src_x,
+                                 int    src_y,
+                                 int    width,
+                                 int    height)
+{
+  Display *display;
+  cairo_surface_t *surface;
+  GdkPixbuf *retval;
+
+  display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+
+  surface = meta_cairo_surface_get_from_pixmap (display, xpixmap, 1);
 
   retval = gdk_pixbuf_get_from_surface (surface,
                                         src_x,
@@ -595,7 +607,7 @@ meta_ui_pop_delay_exposes  (MetaUI *ui)
   meta_frames_pop_delay_exposes (ui->frames);
 }
 
-static GdkPixbuf *
+static cairo_surface_t *
 load_default_window_icon (int size, int scale)
 {
   GtkIconTheme *theme = gtk_icon_theme_get_default ();
@@ -606,13 +618,13 @@ load_default_window_icon (int size, int scale)
   else
     icon_name = "image-missing";
 
-  return gtk_icon_theme_load_icon_for_scale (theme, icon_name, size, scale, 0, NULL);
+  return gtk_icon_theme_load_surface (theme, icon_name, size, scale, NULL, 0, NULL);
 }
 
-GdkPixbuf*
+cairo_surface_t*
 meta_ui_get_default_window_icon (MetaUI *ui)
 {
-  static GdkPixbuf *default_icon = NULL;
+  static cairo_surface_t *default_icon = NULL;
   static int icon_size = 0;
   int current_icon_size = meta_prefs_get_icon_size();
 
@@ -625,15 +637,15 @@ meta_ui_get_default_window_icon (MetaUI *ui)
       icon_size = current_icon_size;
     }
 
-  g_object_ref (G_OBJECT (default_icon));
+  cairo_surface_reference (default_icon);
 
   return default_icon;
 }
 
-GdkPixbuf*
+cairo_surface_t*
 meta_ui_get_default_mini_icon (MetaUI *ui)
 {
-  static GdkPixbuf *default_icon = NULL;
+  static cairo_surface_t *default_icon = NULL;
   int scale;
 
   if (default_icon == NULL)
@@ -643,21 +655,25 @@ meta_ui_get_default_mini_icon (MetaUI *ui)
       g_assert (default_icon);
     }
 
-  g_object_ref (G_OBJECT (default_icon));
+  cairo_surface_reference (default_icon);
 
   return default_icon;
 }
 
-static GdkPixbuf *
+static cairo_surface_t *
 load_window_icon_from_name (char *name, int size, int scale)
 {
   GtkIconTheme *theme = gtk_icon_theme_get_default ();
-  GdkPixbuf *pixbuf = NULL;
+  cairo_surface_t *surface = NULL;
 
   /* If the res_name window property maps to an icon, use that */
-  pixbuf = gtk_icon_theme_load_icon_for_scale (theme, name, size, scale, GTK_ICON_LOOKUP_FORCE_SIZE, NULL);
-  if (pixbuf != NULL)
-    return pixbuf;
+  surface = gtk_icon_theme_load_surface (theme, name,
+                                        size, scale,
+                                        NULL,
+                                        GTK_ICON_LOOKUP_FORCE_SIZE,
+                                        NULL);
+  if (surface != NULL)
+    return surface;
 
   char ***results;
   gchar *desktop_id = NULL;
@@ -690,16 +706,16 @@ load_window_icon_from_name (char *name, int size, int scale)
   icon_info = gtk_icon_theme_lookup_by_gicon_for_scale (theme, gicon, size, scale, GTK_ICON_LOOKUP_FORCE_SIZE);
   if (icon_info)
     {
-      pixbuf = gtk_icon_info_load_icon (icon_info, NULL);
+      surface = gtk_icon_info_load_surface (icon_info, NULL, NULL);
       g_object_unref (icon_info);
     }
 
   g_free (desktop_id);
 
-  return pixbuf;
+  return surface;
 }
 
-GdkPixbuf*
+cairo_surface_t*
 meta_ui_get_window_icon_from_name (MetaUI *ui, char *name)
 {
   int scale;
@@ -711,7 +727,7 @@ meta_ui_get_window_icon_from_name (MetaUI *ui, char *name)
   return load_window_icon_from_name (name, size, scale);
 }
 
-GdkPixbuf*
+cairo_surface_t*
 meta_ui_get_mini_icon_from_name (MetaUI *ui, char *name)
 {
   int scale;
