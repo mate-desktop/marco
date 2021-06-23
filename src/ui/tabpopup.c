@@ -49,8 +49,7 @@ struct _TabEntry
   char            *title;
   gint             grid_left;
   gint             grid_top;
-  GdkPixbuf       *icon, *dimmed_icon;
-  cairo_surface_t *win_surface;
+  cairo_surface_t *icon, *dimmed_icon, *win_surface;
   GtkWidget       *widget;
   GdkRectangle     rect;
   GdkRectangle     inner_rect;
@@ -69,7 +68,7 @@ struct _MetaTabPopup
   gint border;
 };
 
-static GtkWidget* selectable_image_new (GdkPixbuf *pixbuf, cairo_surface_t *win_surface);
+static GtkWidget* selectable_image_new (cairo_surface_t *surface, cairo_surface_t *win_surface);
 static void       select_image         (GtkWidget *widget);
 static void       unselect_image       (GtkWidget *widget);
 
@@ -133,42 +132,45 @@ popup_window_screen_changed (GtkWidget *widget,
   gtk_widget_set_visual(widget, visual);
 }
 
-static GdkPixbuf*
-dimm_icon (GdkPixbuf *pixbuf)
+static cairo_surface_t*
+dimm_icon (cairo_surface_t *orig, gint scale)
 {
-  int x, y, pixel_stride, row_stride;
-  guchar *row, *pixels;
-  int w, h;
-  GdkPixbuf *dimmed_pixbuf;
+  cairo_surface_t *dimmed, *temp;
+  cairo_t *dimmed_cr, *cr;
 
-  if (gdk_pixbuf_get_has_alpha (pixbuf))
-    {
-      dimmed_pixbuf = gdk_pixbuf_copy (pixbuf);
-    }
-  else
-    {
-      dimmed_pixbuf = gdk_pixbuf_add_alpha (pixbuf, FALSE, 0, 0, 0);
-    }
+  g_assert (orig != NULL);
+  g_assert (cairo_surface_get_content (orig) != CAIRO_CONTENT_COLOR);
 
-  w = gdk_pixbuf_get_width (dimmed_pixbuf);
-  h = gdk_pixbuf_get_height (dimmed_pixbuf);
+  /* Create a new surface based on the original icon */
+  dimmed = cairo_surface_create_similar (orig,
+                                         cairo_surface_get_content (orig),
+                                         cairo_image_surface_get_width (orig) / scale,
+                                         cairo_image_surface_get_height (orig) / scale);
 
-  pixel_stride = 4;
+  dimmed_cr = cairo_create (dimmed);
 
-  row = gdk_pixbuf_get_pixels (dimmed_pixbuf);
-  row_stride = gdk_pixbuf_get_rowstride (dimmed_pixbuf);
+  cairo_set_source_surface (dimmed_cr, orig, 0, 0);
+  cairo_paint (dimmed_cr);
 
-  for (y = 0; y < h; y++)
-    {
-      pixels = row;
-      for (x = 0; x < w; x++)
-        {
-          pixels[3] /= 2;
-          pixels += pixel_stride;
-        }
-      row += row_stride;
-    }
-  return dimmed_pixbuf;
+  /* Create a new temporary surface to use for creating the dimming effect */
+  temp = cairo_surface_create_similar (dimmed,
+                                       cairo_surface_get_content (dimmed),
+                                       cairo_image_surface_get_width (dimmed),
+                                       cairo_image_surface_get_height (dimmed));
+
+  cr = cairo_create (temp);
+
+  cairo_set_source_surface (cr, dimmed, 0, 0);
+  cairo_paint_with_alpha (cr, 0.5);
+
+  cairo_set_operator (dimmed_cr, CAIRO_OPERATOR_IN);
+  cairo_set_source_surface (dimmed_cr, temp, 0, 0);
+  cairo_paint (dimmed_cr);
+
+  cairo_destroy (dimmed_cr);
+  cairo_surface_destroy (temp);
+
+  return dimmed;
 }
 
 static TabEntry*
@@ -213,9 +215,9 @@ tab_entry_new (const MetaTabEntry *entry,
   te->dimmed_icon = NULL;
   if (te->icon)
     {
-      g_object_ref (G_OBJECT (te->icon));
+      cairo_surface_reference (te->icon);
       if (entry->hidden)
-        te->dimmed_icon = dimm_icon (entry->icon);
+        te->dimmed_icon = dimm_icon (entry->icon, scale);
     }
 
   if (outline)
@@ -466,10 +468,9 @@ free_tab_entry (gpointer data, gpointer user_data)
   te = data;
 
   g_free (te->title);
-  if (te->icon)
-    g_object_unref (G_OBJECT (te->icon));
-  if (te->dimmed_icon)
-    g_object_unref (G_OBJECT (te->dimmed_icon));
+
+  g_clear_pointer (&te->icon, cairo_surface_destroy);
+  g_clear_pointer (&te->dimmed_icon, cairo_surface_destroy);
 
   g_free (te);
 }
@@ -747,24 +748,14 @@ struct _MetaSelectImageClass
 static GType meta_select_image_get_type (void) G_GNUC_CONST;
 
 static GtkWidget*
-selectable_image_new (GdkPixbuf *pixbuf, cairo_surface_t *win_surface)
+selectable_image_new (cairo_surface_t *surface, cairo_surface_t *win_surface)
 {
   GtkWidget *widget;
 
   widget = g_object_new (meta_select_image_get_type (), NULL);
 
   if (win_surface == NULL)
-    {
-      int scale;
-      cairo_surface_t *surface;
-
-      scale = gtk_widget_get_scale_factor (widget);
-      surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, scale, NULL);
-
-      gtk_image_set_from_surface (GTK_IMAGE (widget), surface);
-
-      cairo_surface_destroy (surface);
-    }
+    gtk_image_set_from_surface (GTK_IMAGE (widget), surface);
   else
     gtk_image_set_from_surface (GTK_IMAGE (widget), win_surface);
 

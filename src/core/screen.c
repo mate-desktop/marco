@@ -1282,7 +1282,6 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
   int len;
   int i;
   gint border;
-  int scale;
 
   if (screen->tab_popup)
     return;
@@ -1293,7 +1292,6 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
                                         screen->active_workspace);
 
   len = g_list_length (tab_list);
-  scale = gdk_window_get_scale_factor (gdk_get_default_root_window ());
 
   entries = g_new (MetaTabEntry, len + 1);
   entries[len].key = NULL;
@@ -1316,7 +1314,7 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
       entries[i].title = window->title;
       entries[i].win_surface = NULL;
 
-      entries[i].icon = g_object_ref (window->icon);
+      entries[i].icon = cairo_surface_reference (window->icon);
 
       /* Only get the window thumbnail surface if the user has a compositor
        * enabled and does NOT have compositing-fast-alt-tab-set to true in
@@ -1330,7 +1328,7 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
 
           if (win_surface != NULL)
             {
-              cairo_surface_t *surface, *icon;
+              cairo_surface_t *surface;
               cairo_t *cr;
               int width, height, icon_width, icon_height;
 
@@ -1348,15 +1346,12 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
               cairo_set_source_surface (cr, win_surface, 0, 0);
               cairo_paint (cr);
 
-              /* Get the window icon as a surface */
-              icon = gdk_cairo_surface_create_from_pixbuf (window->icon, scale, NULL);
-
-              icon_width = cairo_image_surface_get_width (icon) / scale;
-              icon_height = cairo_image_surface_get_height (icon) / scale;
+              icon_width = cairo_image_surface_get_width (window->icon);
+              icon_height = cairo_image_surface_get_height (window->icon);
 
               /* Overlap the window icon surface over the window thumbnail */
               cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
-              cairo_set_source_surface (cr, icon,
+              cairo_set_source_surface (cr, window->icon,
                                         width  - icon_width - ICON_OFFSET,
                                         height - icon_height - ICON_OFFSET);
               cairo_paint (cr);
@@ -1364,7 +1359,6 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
               entries[i].win_surface = surface;
 
               cairo_destroy (cr);
-              cairo_surface_destroy (icon);
               cairo_surface_destroy (win_surface);
             }
         }
@@ -1414,7 +1408,8 @@ meta_screen_ensure_tab_popup (MetaScreen      *screen,
 
   for (i = 0; i < len; i++)
     {
-      g_object_unref (entries[i].icon);
+      if (entries[i].icon)
+        cairo_surface_destroy (entries[i].icon);
       if (entries[i].win_surface)
         cairo_surface_destroy (entries[i].win_surface);
     }

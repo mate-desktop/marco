@@ -626,12 +626,12 @@ meta_ui_get_default_window_icon (MetaUI *ui)
 {
   static cairo_surface_t *default_icon = NULL;
   static int icon_size = 0;
-  int current_icon_size = meta_prefs_get_icon_size();
 
-  int scale;
+  int scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
+  int current_icon_size = meta_prefs_get_icon_size() / scale;
+
   if (default_icon == NULL || current_icon_size != icon_size)
     {
-      scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
       default_icon = load_default_window_icon (current_icon_size, scale);
       g_assert (default_icon);
       icon_size = current_icon_size;
@@ -734,7 +734,7 @@ meta_ui_get_mini_icon_from_name (MetaUI *ui, char *name)
   int size;
 
   scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
-  size = META_MINI_ICON_SIZE / scale;
+  size = META_MINI_ICON_SIZE;
 
   return load_window_icon_from_name (name, size, scale);
 }

@@ -296,8 +296,8 @@ struct _MetaAlphaGradientSpec
 
 struct _MetaDrawInfo
 {
-  GdkPixbuf   *mini_icon;
-  GdkPixbuf   *icon;
+  cairo_surface_t *mini_icon;
+  cairo_surface_t *icon;
   PangoLayout *title_layout;
   int title_layout_width;
   int title_layout_height;
@@ -979,8 +979,8 @@ void meta_frame_style_draw (MetaFrameStyle          *style,
                             PangoLayout             *title_layout,
                             int                      text_height,
                             MetaButtonState          button_states[META_BUTTON_TYPE_LAST],
-                            GdkPixbuf               *mini_icon,
-                            GdkPixbuf               *icon);
+                            cairo_surface_t         *mini_icon,
+                            cairo_surface_t         *icon);
 
 void meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                                        GtkStyleContext         *style_gtk,
@@ -991,8 +991,8 @@ void meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                                        PangoLayout             *title_layout,
                                        int                      text_height,
                                        MetaButtonState          button_states[META_BUTTON_TYPE_LAST],
-                                       GdkPixbuf               *mini_icon,
-                                       GdkPixbuf               *icon);
+                                       cairo_surface_t         *mini_icon,
+                                       cairo_surface_t         *icon);
 
 gboolean       meta_frame_style_validate (MetaFrameStyle    *style,
                                           guint              current_theme_version,
@@ -1037,8 +1037,8 @@ void meta_theme_draw_frame (MetaTheme              *theme,
                             int                     text_height,
                             const MetaButtonLayout *button_layout,
                             MetaButtonState         button_states[META_BUTTON_TYPE_LAST],
-                            GdkPixbuf              *mini_icon,
-                            GdkPixbuf              *icon);
+                            cairo_surface_t        *mini_icon,
+                            cairo_surface_t        *icon);
 
 void meta_theme_draw_frame_by_name (MetaTheme              *theme,
                                     GtkWidget              *widget,
@@ -1051,8 +1051,8 @@ void meta_theme_draw_frame_by_name (MetaTheme              *theme,
                                     int                     text_height,
                                     const MetaButtonLayout *button_layout,
                                     MetaButtonState         button_states[META_BUTTON_TYPE_LAST],
-                                    GdkPixbuf              *mini_icon,
-                                    GdkPixbuf              *icon);
+                                    cairo_surface_t        *mini_icon,
+                                    cairo_surface_t        *icon);
 
 void meta_theme_get_frame_borders (MetaTheme         *theme,
                                    MetaFrameType      type,

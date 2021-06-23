@@ -192,6 +192,7 @@ meta_preview_draw (GtkWidget *widget,
   int border_width;
   int client_width;
   int client_height;
+  int scale;
   MetaButtonState button_states[META_BUTTON_TYPE_LAST] =
   {
     META_BUTTON_STATE_NORMAL,
@@ -219,6 +220,8 @@ meta_preview_draw (GtkWidget *widget,
   if (client_height < 0)
     client_height = 1;
 
+  scale = gtk_widget_get_scale_factor (widget);
+
   if (preview->theme)
     {
       meta_theme_draw_frame (preview->theme,
@@ -231,8 +234,8 @@ meta_preview_draw (GtkWidget *widget,
                              preview->text_height,
                              &preview->button_layout,
                              button_states,
-                             meta_preview_get_mini_icon (),
-                             meta_preview_get_icon ());
+                             meta_preview_get_mini_icon (scale),
+                             meta_preview_get_icon (scale));
     }
 
   cairo_restore (cr);
@@ -421,10 +424,10 @@ meta_preview_set_button_layout (MetaPreview            *preview,
   gtk_widget_queue_draw (GTK_WIDGET (preview));
 }
 
-GdkPixbuf*
-meta_preview_get_icon (void)
+cairo_surface_t*
+meta_preview_get_icon (int scale)
 {
-  static GdkPixbuf *default_icon = NULL;
+  static cairo_surface_t *default_icon = NULL;
 
   if (default_icon == NULL)
     {
@@ -436,17 +439,21 @@ meta_preview_get_icon (void)
       icon_exists = gtk_icon_theme_has_icon (theme, META_DEFAULT_ICON_NAME);
 
       if (icon_exists)
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   META_DEFAULT_ICON_NAME,
-                                                   META_DEFAULT_ICON_SIZE,
-                                                   0,
-                                                   NULL);
+          default_icon = gtk_icon_theme_load_surface (theme,
+                                                      META_DEFAULT_ICON_NAME,
+                                                      META_DEFAULT_ICON_SIZE,
+                                                      scale,
+                                                      NULL,
+                                                      0,
+                                                      NULL);
       else
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "image-missing",
-                                                   META_DEFAULT_ICON_SIZE,
-                                                   0,
-                                                   NULL);
+          default_icon = gtk_icon_theme_load_surface (theme,
+                                                      "image-missing",
+                                                      META_DEFAULT_ICON_SIZE,
+                                                      scale,
+                                                      NULL,
+                                                      0,
+                                                      NULL);
 
       g_assert (default_icon);
     }
@@ -454,10 +461,10 @@ meta_preview_get_icon (void)
   return default_icon;
 }
 
-GdkPixbuf*
-meta_preview_get_mini_icon (void)
+cairo_surface_t*
+meta_preview_get_mini_icon (int scale)
 {
-  static GdkPixbuf *default_icon = NULL;
+  static cairo_surface_t *default_icon = NULL;
 
   if (default_icon == NULL)
     {
@@ -469,17 +476,21 @@ meta_preview_get_mini_icon (void)
       icon_exists = gtk_icon_theme_has_icon (theme, META_DEFAULT_ICON_NAME);
 
       if (icon_exists)
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   META_DEFAULT_ICON_NAME,
-                                                   META_MINI_ICON_SIZE,
-                                                   0,
-                                                   NULL);
+          default_icon = gtk_icon_theme_load_surface (theme,
+                                                      META_DEFAULT_ICON_NAME,
+                                                      META_MINI_ICON_SIZE,
+                                                      scale,
+                                                      NULL,
+                                                      0,
+                                                      NULL);
       else
-          default_icon = gtk_icon_theme_load_icon (theme,
-                                                   "image-missing",
-                                                   META_MINI_ICON_SIZE,
-                                                   0,
-                                                   NULL);
+          default_icon = gtk_icon_theme_load_surface (theme,
+                                                      "image-missing",
+                                                      META_MINI_ICON_SIZE,
+                                                      scale,
+                                                      NULL,
+                                                      0,
+                                                      NULL);
 
       g_assert (default_icon);
     }

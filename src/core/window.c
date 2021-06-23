@@ -6126,24 +6126,14 @@ meta_window_update_icon_now (MetaWindow *window)
                        &icon,
                        icon_size,
                        &mini_icon,
-                       META_MINI_ICON_SIZE,
+                       META_MINI_ICON_SIZE * scale,
                        scale))
     {
-      if (window->icon)
-        g_object_unref (G_OBJECT (window->icon));
+      g_clear_pointer (&window->icon, cairo_surface_destroy);
+      g_clear_pointer (&window->mini_icon, cairo_surface_destroy);
 
-      if (window->mini_icon)
-        g_object_unref (G_OBJECT (window->mini_icon));
-
-      window->icon = gdk_pixbuf_get_from_surface (icon,
-                                                  0, 0,
-                                                  icon_size, icon_size);
-      cairo_surface_destroy (icon);
-
-      window->mini_icon = gdk_pixbuf_get_from_surface (mini_icon,
-                                                       0, 0,
-                                                       META_MINI_ICON_SIZE, META_MINI_ICON_SIZE);
-      cairo_surface_destroy (mini_icon);
+      window->icon = icon;
+      window->mini_icon = mini_icon;
 
       redraw_icon (window);
     }
@@ -9003,8 +8993,8 @@ meta_window_finalize (GObject *object)
 
   window = META_WINDOW (object);
 
-  g_clear_object (&window->icon);
-  g_clear_object (&window->mini_icon);
+  g_clear_pointer (&window->icon, cairo_surface_destroy);
+  g_clear_pointer (&window->mini_icon, cairo_surface_destroy);
 
   g_clear_pointer (&window->frame_bounds, cairo_region_destroy);
 

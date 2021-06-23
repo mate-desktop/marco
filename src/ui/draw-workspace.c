@@ -119,7 +119,7 @@ draw_window (GtkWidget                   *widget,
 
   scale = gtk_widget_get_scale_factor (widget);
 
-  icon = gdk_cairo_surface_create_from_pixbuf (win->icon, scale, NULL);
+  icon = cairo_surface_reference (win->icon);
 
   icon_w = icon_h = 0;
 
@@ -132,7 +132,7 @@ draw_window (GtkWidget                   *widget,
       if (icon_w > (winrect->width - 2) || icon_h > (winrect->height - 2))
         {
           cairo_surface_destroy (icon);
-          icon = gdk_cairo_surface_create_from_pixbuf (win->mini_icon, scale, NULL);
+          icon = cairo_surface_reference (win->mini_icon);
           if (icon)
             {
               icon_w = cairo_image_surface_get_width (icon) / scale;

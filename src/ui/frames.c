@@ -2563,8 +2563,8 @@ meta_frames_paint_to_drawable (MetaFrames   *frames,
 {
   MetaFrameFlags flags;
   MetaFrameType type;
-  GdkPixbuf *mini_icon;
-  GdkPixbuf *icon;
+  cairo_surface_t *mini_icon;
+  cairo_surface_t *icon;
   int w, h, scale;
   MetaButtonState button_states[META_BUTTON_TYPE_LAST];
   Window grab_frame;

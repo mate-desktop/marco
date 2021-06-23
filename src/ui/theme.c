@@ -3732,20 +3732,6 @@ draw_op_as_pixbuf (const MetaDrawOp    *op,
       break;
 
     case META_DRAW_ICON:
-      if (info->mini_icon &&
-          width <= gdk_pixbuf_get_width (info->mini_icon) &&
-          height <= gdk_pixbuf_get_height (info->mini_icon))
-        pixbuf = scale_and_alpha_pixbuf (info->mini_icon,
-                                         op->data.icon.alpha_spec,
-                                         op->data.icon.fill_type,
-                                         width, height,
-                                         FALSE, FALSE);
-      else if (info->icon)
-        pixbuf = scale_and_alpha_pixbuf (info->icon,
-                                         op->data.icon.alpha_spec,
-                                         op->data.icon.fill_type,
-                                         width, height,
-                                         FALSE, FALSE);
       break;
 
     case META_DRAW_TITLE:
@@ -3819,13 +3805,11 @@ draw_op_as_surface (const MetaDrawOp   *op,
 
     case META_DRAW_ICON:
       if (info->mini_icon &&
-          width <= gdk_pixbuf_get_width (info->mini_icon) &&
-          height <= gdk_pixbuf_get_height (info->mini_icon))
-        surface = get_surface_from_pixbuf (info->mini_icon, op->data.icon.fill_type,
-                                           width, height, FALSE, FALSE);
+          width <= cairo_image_surface_get_width (info->mini_icon) &&
+          height <= cairo_image_surface_get_height (info->mini_icon))
+        surface = cairo_surface_reference (info->mini_icon);
       else if (info->icon)
-        surface = get_surface_from_pixbuf (info->icon, op->data.icon.fill_type,
-                                           width, height, FALSE, FALSE);
+        surface = cairo_surface_reference (info->icon);
       break;
 
     case META_DRAW_TINT:
@@ -3878,10 +3862,10 @@ fill_env (MetaPositionExprEnv *env,
       env->frame_y_center = 0;
     }
 
-  env->mini_icon_width = info->mini_icon ? gdk_pixbuf_get_width (info->mini_icon) : 0;
-  env->mini_icon_height = info->mini_icon ? gdk_pixbuf_get_height (info->mini_icon) : 0;
-  env->icon_width = info->icon ? gdk_pixbuf_get_width (info->icon) : 0;
-  env->icon_height = info->icon ? gdk_pixbuf_get_height (info->icon) : 0;
+  env->mini_icon_width = info->mini_icon ? cairo_image_surface_get_width (info->mini_icon) : 0;
+  env->mini_icon_height = info->mini_icon ? cairo_image_surface_get_height (info->mini_icon) : 0;
+  env->icon_width = info->icon ? cairo_image_surface_get_width (info->icon) : 0;
+  env->icon_height = info->icon ? cairo_image_surface_get_height (info->icon) : 0;
 
   env->title_width = info->title_layout_width;
   env->title_height = info->title_layout_height;
@@ -4237,10 +4221,9 @@ meta_draw_op_draw_with_env (const MetaDrawOp    *op,
         cairo_surface_t *surface;
 
         scale = gdk_window_get_scale_factor (gdk_get_default_root_window ());
-        cairo_scale (cr, 1.0 / scale, 1.0 / scale);
 
-        rwidth = parse_size_unchecked (op->data.icon.width, env) * scale;
-        rheight = parse_size_unchecked (op->data.icon.height, env) * scale;
+        rwidth = parse_size_unchecked (op->data.icon.width, env);
+        rheight = parse_size_unchecked (op->data.icon.height, env);
 
         surface = draw_op_as_surface (op, style_gtk, info, rwidth, rheight);
 
@@ -4962,8 +4945,8 @@ meta_frame_style_draw_with_style (MetaFrameStyle          *style,
                                   PangoLayout             *title_layout,
                                   int                      text_height,
                                   MetaButtonState          button_states[META_BUTTON_TYPE_LAST],
-                                  GdkPixbuf               *mini_icon,
-                                  GdkPixbuf               *icon)
+                                  cairo_surface_t         *mini_icon,
+                                  cairo_surface_t         *icon)
 {
     /* BOOKMARK */
   int i, j;
@@ -5202,8 +5185,8 @@ meta_frame_style_draw (MetaFrameStyle          *style,
                        PangoLayout             *title_layout,
                        int                      text_height,
                        MetaButtonState          button_states[META_BUTTON_TYPE_LAST],
-                       GdkPixbuf               *mini_icon,
-                       GdkPixbuf               *icon)
+                       cairo_surface_t         *mini_icon,
+                       cairo_surface_t         *icon)
 {
   meta_frame_style_draw_with_style (style,
                                     gtk_widget_get_style_context (widget),
@@ -5833,8 +5816,8 @@ meta_theme_draw_frame (MetaTheme              *theme,
                        int                     text_height,
                        const MetaButtonLayout *button_layout,
                        MetaButtonState         button_states[META_BUTTON_TYPE_LAST],
-                       GdkPixbuf              *mini_icon,
-                       GdkPixbuf              *icon)
+                       cairo_surface_t        *mini_icon,
+                       cairo_surface_t        *icon)
 {
   MetaFrameGeometry fgeom;
   MetaFrameStyle *style;
@@ -5878,8 +5861,8 @@ meta_theme_draw_frame_by_name (MetaTheme              *theme,
                                int                     text_height,
                                const MetaButtonLayout *button_layout,
                                MetaButtonState         button_states[META_BUTTON_TYPE_LAST],
-                               GdkPixbuf              *mini_icon,
-                               GdkPixbuf              *icon)
+                               cairo_surface_t        *mini_icon,
+                               cairo_surface_t        *icon)
 {
   MetaFrameGeometry fgeom;
   MetaFrameStyle *style;

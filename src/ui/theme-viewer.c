@@ -1038,9 +1038,12 @@ run_theme_benchmark (void)
   int client_width;
   int client_height;
   int inc;
+  int scale;
 
   widget = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_widget_realize (widget);
+
+  scale = gtk_widget_get_scale_factor (widget);
 
   meta_theme_get_frame_borders (global_theme,
                                 META_FRAME_TYPE_NORMAL,
@@ -1095,8 +1098,8 @@ run_theme_benchmark (void)
                              get_text_height (widget),
                              &button_layout,
                              button_states,
-                             meta_preview_get_mini_icon (),
-                             meta_preview_get_icon ());
+                             meta_preview_get_mini_icon (scale),
+                             meta_preview_get_icon (scale));
 
       cairo_destroy (cr);
       cairo_surface_destroy (pixmap);
