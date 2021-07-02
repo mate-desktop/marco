@@ -131,6 +131,7 @@ draw_window (GtkWidget                   *widget,
       /* If the icon is too big, fall back to mini icon. */
       if (icon_w > (winrect->width - 2) || icon_h > (winrect->height - 2))
         {
+          cairo_surface_destroy (icon);
           icon = gdk_cairo_surface_create_from_pixbuf (win->mini_icon, scale, NULL);
           if (icon)
             {
@@ -139,7 +140,10 @@ draw_window (GtkWidget                   *widget,
 
               /* Give up. */
               if (icon_w > (winrect->width - 2) || icon_h > (winrect->height - 2))
-                icon = NULL;
+                {
+                  cairo_surface_destroy (icon);
+                  icon = NULL;
+                }
             }
         }
     }
@@ -155,6 +159,8 @@ draw_window (GtkWidget                   *widget,
       cairo_clip (cr);
       cairo_paint (cr);
       cairo_restore (cr);
+
+      cairo_surface_destroy (icon);
     }
 
   gtk_style_context_get_color (style, state, &color);
