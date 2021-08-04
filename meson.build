@@ -1,6 +1,6 @@
 project(
   'marco', 'c',
-  version: '1.25.0',
+  version: '1.26.0',
   meson_version: '>=0.47.0',
   license: 'GPL2',
   default_options : [ 'warning_level=1', 'buildtype=debugoptimized', 'c_std=gnu11'],
