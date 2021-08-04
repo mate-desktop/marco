@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.23.1\n"
+"Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2019-11-18 19:44+0100\n"
+"POT-Creation-Date: 2021-06-04 17:32+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Yoruba (https://www.transifex.com/mate/teams/13566/yo/)\n"
@@ -1042,51 +1042,51 @@ msgstr ""
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
 
-#: src/core/bell.c:294
+#: src/core/bell.c:298
 msgid "Bell event"
 msgstr ""
 
-#: src/core/core.c:214
+#: src/core/core.c:216
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr ""
 
 #. Translators: %s is a window title
-#: src/core/delete.c:96
+#: src/core/delete.c:98
 #, c-format
 msgid "<tt>%s</tt> is not responding."
 msgstr ""
 
-#: src/core/delete.c:101
+#: src/core/delete.c:103
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
 msgstr ""
 
-#: src/core/delete.c:110
+#: src/core/delete.c:112
 msgid "_Wait"
 msgstr ""
 
-#: src/core/delete.c:110
+#: src/core/delete.c:112
 msgid "_Force Quit"
 msgstr "_Ìjáde Ipá"
 
-#: src/core/delete.c:180
+#: src/core/delete.c:181
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "Ó kùnà láti rí orúkọ-agbàlejò: %s\n"
 
-#: src/core/display.c:270
+#: src/core/display.c:271
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr ""
 
-#: src/core/display.c:348
+#: src/core/display.c:349
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Ó kùnà láti ṣí ìṣàfihàn Ètò Fèrèsé X '%s'\n"
 
-#: src/core/keybindings.c:723
+#: src/core/keybindings.c:722
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1097,7 +1097,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2396
+#: src/core/keybindings.c:2415
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1105,93 +1105,84 @@ msgid ""
 "%s"
 msgstr ""
 
-#: src/core/keybindings.c:2485
+#: src/core/keybindings.c:2503
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "A kò tíì soríkì àṣe %d kankan.\n"
 
-#: src/core/keybindings.c:3595
+#: src/core/keybindings.c:3610
 msgid "No terminal command has been defined.\n"
 msgstr "A kò tíì soríkì àṣẹ támínà kankan.\n"
 
-#: src/core/keybindings.c:3735
+#: src/core/keybindings.c:3747
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: src/core/keybindings.c:3736
+#: src/core/keybindings.c:3748
 msgid "New Workspace Name:"
 msgstr ""
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3759
 msgid "OK"
 msgstr ""
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3759
 msgid "Cancel"
 msgstr "Parẹ́̀"
 
-#: src/core/main.c:132
-#, c-format
-msgid ""
-"marco %s\n"
-"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
-"This is free software; see the source for copying conditions.\n"
-"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-
-#: src/core/main.c:270
+#: src/core/main.c:245
 msgid "Disable connection to session manager"
 msgstr ""
 
-#: src/core/main.c:276
+#: src/core/main.c:251
 msgid "Replace the running window manager with Marco"
 msgstr ""
 
-#: src/core/main.c:282
+#: src/core/main.c:257
 msgid "Specify session management ID"
 msgstr ""
 
-#: src/core/main.c:287
+#: src/core/main.c:262
 msgid "X Display to use"
 msgstr ""
 
-#: src/core/main.c:293
+#: src/core/main.c:268
 msgid "Initialize session from savefile"
 msgstr ""
 
-#: src/core/main.c:299
+#: src/core/main.c:274
 msgid "Print version"
 msgstr ""
 
-#: src/core/main.c:305
+#: src/core/main.c:280
 msgid "Make X calls synchronous"
 msgstr ""
 
-#: src/core/main.c:311
+#: src/core/main.c:286
 msgid "Turn compositing on"
 msgstr ""
 
-#: src/core/main.c:317
+#: src/core/main.c:292
 msgid "Turn compositing off"
 msgstr ""
 
-#: src/core/main.c:323
+#: src/core/main.c:298
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 
-#: src/core/main.c:522
+#: src/core/main.c:499
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Ó kùnà láti síkáànì atọ́nà àwọn kókó: %s\n"
 
-#: src/core/main.c:538
+#: src/core/main.c:515
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
 msgstr ""
 
-#: src/core/main.c:597
+#: src/core/main.c:574
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Ó kùnà láti tún bẹ̀rẹ̀: %s\n"
@@ -1199,12 +1190,12 @@ msgstr "Ó kùnà láti tún bẹ̀rẹ̀: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: src/core/prefs.c:641 src/core/prefs.c:794
+#: src/core/prefs.c:642 src/core/prefs.c:795
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: src/core/prefs.c:1088
+#: src/core/prefs.c:1087
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1212,12 +1203,12 @@ msgstr ""
 "Àwọn workaround fún àwọn ìṣàmúlò-ètò tó dàrú kò ṣiṣẹ́. "
 "Ọ̀pọ̀lọpọ̀ àwọn ìṣàmúlò-ètò kò hùwà dáadáa.\n"
 
-#: src/core/prefs.c:1194
+#: src/core/prefs.c:1193
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: src/core/prefs.c:1256
+#: src/core/prefs.c:1255
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1226,7 +1217,7 @@ msgstr ""
 "\"%s\" tí a rí nínú èròjà ìwádìí àtòpọ̀ kìí ṣe fálù tó "
 "fẹsẹ̀múlẹ̀ fún aṣàtúntò bọ́tìnì ohun-èlò aṣèkúté\n"
 
-#: src/core/prefs.c:1844
+#: src/core/prefs.c:1843
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1235,17 +1226,17 @@ msgstr ""
 "\"%s\" tí a rí nínú èròjà ìwádìí àtòpọ̀ kìí ṣe fálu tó "
 "fẹsẹ̀múlẹ̀ fún aṣẹ̀dá-ìtọ́ka \"%s\"\n"
 
-#: src/core/prefs.c:2147
+#: src/core/prefs.c:2146
 #, c-format
 msgid "Workspace %d"
 msgstr "Ààyè-iṣẹ́ %d"
 
-#: src/core/screen.c:362
+#: src/core/screen.c:363
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "Ojú kọ̀ǹpútà %d tí a ̀ṣàfihàn '%s' kò fẹsẹ̀múlẹ̀\n"
 
-#: src/core/screen.c:378
+#: src/core/screen.c:379
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1255,119 +1246,119 @@ msgstr ""
 "tẹ́lẹ̀; gbìyànjú lílo --ẹ̀yàn ìpààrọ̀ láti pà́àrọ̀ "
 "alábòójútó lọ́wọ́lọ́wọ́.\n"
 
-#: src/core/screen.c:405
+#: src/core/screen.c:406
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "Kò lè gba ẹ̀yàn alábòójútó fèrèsé lórí ojú kọ̀ǹpútà %d "
 "ìṣàfihàn \"%s\"\n"
 
-#: src/core/screen.c:463
+#: src/core/screen.c:464
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr ""
 "Ojú kọ̀ǹpútà %d tí a ̀ṣàfihàn \"%s\" ti ní alábòójútó fèrèsé"
 " tẹ́lẹ̀\n"
 
-#: src/core/screen.c:677
+#: src/core/screen.c:678
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Kò lè fi ojú kọ̀ǹpútà %d tí a ṣàfihàn sílẹ̀\"%s\"\n"
 
-#: src/core/session.c:842 src/core/session.c:849
+#: src/core/session.c:841 src/core/session.c:848
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "Kò lè ṣẹ̀dá atọ́nà '%s': %s\n"
 
-#: src/core/session.c:859
+#: src/core/session.c:858
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "Kò lè ṣí fáìlì sáà '%s' fún kíkọ: %s\n"
 
-#: src/core/session.c:999
+#: src/core/session.c:998
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "Àṣìṣe kíkọ fáìlì sáà '%s': %s\n"
 
-#: src/core/session.c:1004
+#: src/core/session.c:1003
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "Aṣìse títi fáìlì sáà '%s': %s\n"
 
-#: src/core/session.c:1134
+#: src/core/session.c:1132
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "Ó kùnà láti páàsì fáìlì sáà tí a fi pamọ́: %s\n"
 
-#: src/core/session.c:1183
+#: src/core/session.c:1181
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr ""
 "àbùdá <sáà_marco> tí a rí ṣùgbọ́n tí a ti ní sáà ID náà tẹ́lẹ̀"
 
-#: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
-#: src/core/session.c:1375 src/core/session.c:1435
+#: src/core/session.c:1194 src/core/session.c:1269 src/core/session.c:1301
+#: src/core/session.c:1373 src/core/session.c:1433
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr ""
 
-#: src/core/session.c:1213
+#: src/core/session.c:1211
 msgid "nested <window> tag"
 msgstr "nested <window> tag"
 
-#: src/core/session.c:1455
+#: src/core/session.c:1453
 #, c-format
 msgid "Unknown element %s"
 msgstr "Fọ́nrán àìmọ̀ %s"
 
-#: src/core/session.c:1807
+#: src/core/session.c:1805
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
 msgstr ""
 
-#: src/core/util.c:101
+#: src/core/util.c:103
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "Ó kùnà láti ṣí ìpamọ́ ìwáṣìṣe bárakú: %s\n"
 
-#: src/core/util.c:111
+#: src/core/util.c:113
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "Ó kùnà láti fdṣí () fáìlì ìpamọ́ %s: %s\n"
 
-#: src/core/util.c:117
+#: src/core/util.c:119
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "Fáìlì ìpamọ́ tí a ṣí %s\n"
 
-#: src/core/util.c:136 src/tools/marco-message.c:176
+#: src/core/util.c:138 src/tools/marco-message.c:172
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "A ṣàmúpọ̀ marco láì sí àtìlẹ́yìn fún móòdù verbose\n"
 
-#: src/core/util.c:227
+#: src/core/util.c:229
 msgid "Window manager: "
 msgstr "Alábòójútó fèrèsé: "
 
-#: src/core/util.c:379
+#: src/core/util.c:381
 msgid "Bug in window manager: "
 msgstr "Àsìṣe bárakú nínú alábòójútó fèrèsé: "
 
-#: src/core/util.c:412
+#: src/core/util.c:414
 msgid "Window manager warning: "
 msgstr "Ìkìlọ̀ alábòójútó fèrèsé: "
 
-#: src/core/util.c:440
+#: src/core/util.c:442
 msgid "Window manager error: "
 msgstr "Àṣìṣe alábòójútó fèrèsé: "
 
 #. Translators: This is the title used on dialog boxes
-#: src/core/util.c:560 src/core/util.c:658 src/marco.desktop.in:4
+#: src/core/util.c:562 src/core/util.c:660 src/marco.desktop.in:4
 #: src/marco-wm.desktop.in:4
 msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6004
+#: src/core/window.c:6008
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1382,7 +1373,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6582
+#: src/core/window.c:6596
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1392,7 +1383,7 @@ msgstr ""
 "tún wọ̀n, ṣùgbọ́n ó gbé ìwọ̀n %d x %d kalẹ̀ fún min, ó sì gbé %d x "
 "%d kalẹ̀ fún ìwọ̀n max; èyí kò fi bẹ́ẹ̀ ní ọpọlọ.\n"
 
-#: src/core/window-props.c:306
+#: src/core/window-props.c:307
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr ""
@@ -1428,7 +1419,7 @@ msgstr ""
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr ""
 
-#: src/core/xprops.c:155
+#: src/core/xprops.c:156
 #, c-format
 msgid ""
 "Window 0x%lx has property %s\n"
@@ -1443,13 +1434,13 @@ msgstr ""
 "Àṣìṣe bárakú ìṣàmúlò-ètò ni yóò jẹ́ kìí ṣe àṣìṣe bárakú alábòójútó fèrèsé.\n"
 "Fèrèsé náà ní àkọ́lé=\"%s\" kíláàsì=\"%s\" orúkọ=\"%s\"\n"
 
-#: src/core/xprops.c:411
+#: src/core/xprops.c:412
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgstr ""
 "Àbùdá %s lórí fèrèsé 0x%lx ní UTF-8 tí kò fẹsẹ̀múlẹ̀ nínú̀\n"
 
-#: src/core/xprops.c:494
+#: src/core/xprops.c:495
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
@@ -1458,156 +1449,156 @@ msgstr ""
 "Àbùdá %s lórí fèrèsé 0x%lx ní UTF-8 tí kò fẹsẹ̀múlẹ̀ fún "
 "wúnrẹ̀n %d nínú àtòjọ náà\n"
 
-#: src/tools/marco-message.c:150
+#: src/tools/marco-message.c:146
 #, c-format
 msgid "Usage: %s\n"
 msgstr "Ìlò: %s\n"
 
-#: src/ui/frames.c:1338
+#: src/ui/frames.c:1341
 msgid "Close Window"
 msgstr "Ti Fèrèsé"
 
-#: src/ui/frames.c:1341
+#: src/ui/frames.c:1344
 msgid "Window Menu"
 msgstr "Àtròjọ-ẹ̀yàn Fèrèsé"
 
-#: src/ui/frames.c:1344
+#: src/ui/frames.c:1347
 msgid "Window App Menu"
 msgstr ""
 
-#: src/ui/frames.c:1347
+#: src/ui/frames.c:1350
 msgid "Minimize Window"
 msgstr "Pa Fèrèsé Dé"
 
-#: src/ui/frames.c:1350
+#: src/ui/frames.c:1353
 msgid "Maximize Window"
 msgstr "Fẹ Fèrèsé"
 
-#: src/ui/frames.c:1353
+#: src/ui/frames.c:1356
 msgid "Restore Window"
 msgstr ""
 
-#: src/ui/frames.c:1356
+#: src/ui/frames.c:1359
 msgid "Roll Up Window"
 msgstr ""
 
-#: src/ui/frames.c:1359
+#: src/ui/frames.c:1362
 msgid "Unroll Window"
 msgstr ""
 
-#: src/ui/frames.c:1362
+#: src/ui/frames.c:1365
 msgid "Keep Window On Top"
 msgstr ""
 
-#: src/ui/frames.c:1365
+#: src/ui/frames.c:1368
 msgid "Remove Window From Top"
 msgstr ""
 
-#: src/ui/frames.c:1368
+#: src/ui/frames.c:1371
 msgid "Always On Visible Workspace"
 msgstr ""
 
-#: src/ui/frames.c:1371
+#: src/ui/frames.c:1374
 msgid "Put Window On Only One Workspace"
 msgstr ""
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:65
+#: src/ui/menu.c:66
 msgid "Mi_nimize"
 msgstr "Ìp_ajúdé"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:67
+#: src/ui/menu.c:68
 msgid "Ma_ximize"
 msgstr "Fẹ̀_ẹ́lójú"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:69
+#: src/ui/menu.c:70
 msgid "Unma_ximize"
 msgstr "Ma fẹ̀_ẹ́lójú"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:71
+#: src/ui/menu.c:72
 msgid "Roll _Up"
 msgstr "Ka _Sókè"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:73
+#: src/ui/menu.c:74
 msgid "_Unroll"
 msgstr "_Máka"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:75
+#: src/ui/menu.c:76
 msgid "_Move"
 msgstr "_Gbe"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:77
+#: src/ui/menu.c:78
 msgid "_Resize"
 msgstr "_Ìṣòdíwọ̀n"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:79
+#: src/ui/menu.c:80
 msgid "Move Titlebar On_screen"
 msgstr ""
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:82 src/ui/menu.c:84
+#: src/ui/menu.c:83 src/ui/menu.c:85
 msgid "Always on _Top"
 msgstr ""
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:86
+#: src/ui/menu.c:87
 msgid "_Always on Visible Workspace"
 msgstr "_Ó máa ń wà lórí Ààyè-iṣẹ́ tí a le Rí"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:88
+#: src/ui/menu.c:89
 msgid "_Only on This Workspace"
 msgstr "_Lórí Ààyè-iṣẹ́ Yìí Nìkan"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:90
+#: src/ui/menu.c:91
 msgid "Move to Workspace _Left"
 msgstr "Gbe lọ sí Ààyè-iṣẹ́ _Òsì"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:92
+#: src/ui/menu.c:93
 msgid "Move to Workspace R_ight"
 msgstr "Gbe lọ sí Ààyè-iṣẹ́ Ọ̀_tún"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:94
+#: src/ui/menu.c:95
 msgid "Move to Workspace _Up"
 msgstr "Gbe lọ sí Ààyè-iṣẹ́ _Òkè"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:96
+#: src/ui/menu.c:97
 msgid "Move to Workspace _Down"
 msgstr "Gbe lọ sí ààyè-iṣẹ́ _Ìsàlẹ̀"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:100
+#: src/ui/menu.c:101
 msgid "_Close"
 msgstr "_Ti"
 
-#: src/ui/menu.c:197
+#: src/ui/menu.c:198
 #, c-format
 msgid "Workspace %d%n"
 msgstr ""
 
-#: src/ui/menu.c:207
+#: src/ui/menu.c:208
 msgid "Workspace 1_0"
 msgstr "Ààyè-iṣẹ́ 1_0"
 
-#: src/ui/menu.c:209
+#: src/ui/menu.c:210
 #, c-format
 msgid "Workspace %s%d"
 msgstr "Ààyè-iṣẹ́ %s%d"
 
-#: src/ui/menu.c:388
+#: src/ui/menu.c:386
 msgid "Move to Another _Workspace"
 msgstr "Gbé sí Ààyè-iṣẹ́_Mìíràn"
 
@@ -1615,7 +1606,7 @@ msgstr "Gbé sí Ààyè-iṣẹ́_Mìíràn"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:80
+#: src/ui/metaaccellabel.c:81
 msgid "Shift"
 msgstr "Shift"
 
@@ -1623,7 +1614,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:86
+#: src/ui/metaaccellabel.c:87
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -1631,7 +1622,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:92
+#: src/ui/metaaccellabel.c:93
 msgid "Alt"
 msgstr "Alt"
 
@@ -1639,7 +1630,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:98
+#: src/ui/metaaccellabel.c:99
 msgid "Meta"
 msgstr "Meta"
 
@@ -1647,7 +1638,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:104
+#: src/ui/metaaccellabel.c:105
 msgid "Super"
 msgstr "Super"
 
@@ -1655,7 +1646,7 @@ msgstr "Super"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:110
+#: src/ui/metaaccellabel.c:111
 msgid "Hyper"
 msgstr "Hyper"
 
@@ -1663,7 +1654,7 @@ msgstr "Hyper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:116
+#: src/ui/metaaccellabel.c:117
 msgid "Mod2"
 msgstr "Mod2"
 
@@ -1671,7 +1662,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:122
+#: src/ui/metaaccellabel.c:123
 msgid "Mod3"
 msgstr "Mod3"
 
@@ -1679,7 +1670,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:128
+#: src/ui/metaaccellabel.c:129
 msgid "Mod4"
 msgstr "Mod4"
 
@@ -1687,13 +1678,13 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:134
+#: src/ui/metaaccellabel.c:135
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: src/ui/resizepopup.c:117
+#: src/ui/resizepopup.c:119
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -1927,12 +1918,12 @@ msgstr ""
 "Ó jọ pé ìsọ ìfètò sí nǹkan kò ní àwọn ọpirétọ̀ tàbí àwọn "
 "operand"
 
-#: src/ui/theme.c:3027 src/ui/theme.c:3047 src/ui/theme.c:3067
+#: src/ui/theme.c:3026 src/ui/theme.c:3046 src/ui/theme.c:3066
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr ""
 
-#: src/ui/theme.c:4857
+#: src/ui/theme.c:4856
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1941,25 +1932,25 @@ msgstr ""
 "<ojúṣe bọ́tìnì=\"%s\" ipò=\"%s\" ya_ops=\"ohunkóhun\"/> a gbọ́dọ̀ sọ "
 "ní pàtó fún sítáì férémù"
 
-#: src/ui/theme.c:5393 src/ui/theme.c:5418
+#: src/ui/theme.c:5391 src/ui/theme.c:5416
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr ""
 "A kò ri <ipò férémù=\"%s\" ìṣòdíwọ̀n=\"%s\" òye=\"%s\" "
 "sítáì=\"ohunkóhun\"/>"
 
-#: src/ui/theme.c:5462
+#: src/ui/theme.c:5460
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Ó kùnà láti ki kókó \"%s\": %s\n"
 
-#: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
-#: src/ui/theme.c:5615 src/ui/theme.c:5622
+#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
+#: src/ui/theme.c:5612 src/ui/theme.c:5619
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Kòsí <%s> àgbékalẹ̀ fún kókó \"%s\""
 
-#: src/ui/theme.c:5630
+#: src/ui/theme.c:5627
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1969,84 +1960,84 @@ msgstr ""
 "\"%s\" nínú kókó \"%s\", ṣàfikún <irúfẹ́ fèrèsé=\"%s\" "
 "àgbékalẹ̀_sítáì=\"ohunkóhun\"/> fọ́nrán"
 
-#: src/ui/theme.c:6045 src/ui/theme.c:6107 src/ui/theme.c:6170
+#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Àwọn kọ́nsítáǹtì òǹlò gbọ́dọ̀ bẹ̀rẹ̀ pẹ̀lú lẹ́tà ńlá; \"%s\" kò"
 " ní"
 
-#: src/ui/theme.c:6053 src/ui/theme.c:6115 src/ui/theme.c:6178
+#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "A ti soríkì kọ́nsítáǹtì \"%s\" tẹ́lẹ̀"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: src/ui/theme-parser.c:252
+#: src/ui/theme-parser.c:253
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "Kò sí àbùdá \"%s\" lórí fọ́nrán <%s>"
 
-#: src/ui/theme-parser.c:281 src/ui/theme-parser.c:299
+#: src/ui/theme-parser.c:282 src/ui/theme-parser.c:300
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "Ilà %d àmì-ìkọ %d: %s"
 
-#: src/ui/theme-parser.c:499
+#: src/ui/theme-parser.c:500
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "Àbùdá \"%s\" tí a tún ṣe lẹ́ẹ̀mejì lórí fọ́nrán <%s. kan náà"
 
-#: src/ui/theme-parser.c:523 src/ui/theme-parser.c:572
+#: src/ui/theme-parser.c:524 src/ui/theme-parser.c:573
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr ""
 "Àbùdá \"%s\" kò fẹsẹ̀múlẹ̀ lórí fọ́nrán <%s> ní ọ̀gangan ipò yìí"
 
-#: src/ui/theme-parser.c:614
+#: src/ui/theme-parser.c:615
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "Kò lè ṣètò \"%s\" gẹ́gẹ́ bíi ítíjà"
 
-#: src/ui/theme-parser.c:623 src/ui/theme-parser.c:678
+#: src/ui/theme-parser.c:624 src/ui/theme-parser.c:679
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "Àwọn àmì-ìkọ tírélìn kò yé \"%s\" nínú fọ́nrán \"%s\""
 
-#: src/ui/theme-parser.c:633
+#: src/ui/theme-parser.c:634
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "Ítíjà %ld gbọ́dọ̀ jẹ́ àròpọ̀"
 
-#: src/ui/theme-parser.c:641
+#: src/ui/theme-parser.c:642
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "Ítíjà %ld ti tóbi jù, max lọ́wọ́lọ́wọ́ jẹ́ %d"
 
-#: src/ui/theme-parser.c:669 src/ui/theme-parser.c:785
+#: src/ui/theme-parser.c:670 src/ui/theme-parser.c:786
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "Kò lé páàsì \"%s\" gẹ́gẹ́ bíi nọ́ńbà floating point"
 
-#: src/ui/theme-parser.c:700 src/ui/theme-parser.c:728
+#: src/ui/theme-parser.c:701 src/ui/theme-parser.c:729
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "Àwọn fálù Boolean gbọ́dọ̀ jẹ́ \"òótọ́\" tàbí \"irọ́ kìí ṣe \"%s\""
 
-#: src/ui/theme-parser.c:755
+#: src/ui/theme-parser.c:756
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Áńgù gbọ́dọ̀ wà láàrin 0.0 àti 360.0, ó jẹ́ %g\n"
 
-#: src/ui/theme-parser.c:818
+#: src/ui/theme-parser.c:819
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "Áfà gbọ́dọ̀ wà láàrin 0.0 (àìfojúrí) àti 1.0 (dídí "
 "pátápátá), ó jẹ́ %g\n"
 
-#: src/ui/theme-parser.c:883
+#: src/ui/theme-parser.c:884
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2055,52 +2046,52 @@ msgstr ""
 "Òṣùwọ̀n àkọ́lé tí kò fẹsẹ̀múlẹ̀ \"%s\" (ó gbọ́dọ̀ jẹ́ ọ̀kan lára "
 "kékeré gan,kékeré díẹ̀,àárín,ńlá,ńlá díẹ̀, ńlá púpọ̀)\n"
 
-#: src/ui/theme-parser.c:1039 src/ui/theme-parser.c:1102
-#: src/ui/theme-parser.c:1136 src/ui/theme-parser.c:1239
+#: src/ui/theme-parser.c:1040 src/ui/theme-parser.c:1103
+#: src/ui/theme-parser.c:1137 src/ui/theme-parser.c:1240
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> orúkọ \"%s\" tí a lò lẹ́ẹ̀kejì"
 
-#: src/ui/theme-parser.c:1051 src/ui/theme-parser.c:1148
-#: src/ui/theme-parser.c:1251
+#: src/ui/theme-parser.c:1052 src/ui/theme-parser.c:1149
+#: src/ui/theme-parser.c:1252
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> a kò tíi soríkì òbí \"%s\""
 
-#: src/ui/theme-parser.c:1161
+#: src/ui/theme-parser.c:1162
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> a kò tíì soríkì \"%s\" jiọmítírì"
 
-#: src/ui/theme-parser.c:1174
+#: src/ui/theme-parser.c:1175
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr ""
 "<%s> gbọ́dọ̀ sọ ní pàtó bóyá jiọmítírì tàbí òbí tó ní "
 "jiọmítírì"
 
-#: src/ui/theme-parser.c:1216
+#: src/ui/theme-parser.c:1217
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr ""
 
-#: src/ui/theme-parser.c:1284
+#: src/ui/theme-parser.c:1285
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "Irúfẹ́ àìmọ̀ \"%s\" lórí <%s> fọ́nrán"
 
-#: src/ui/theme-parser.c:1295
+#: src/ui/theme-parser.c:1296
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "Sẹ́ẹ̀tì_sítàì àìmọ̀ \"%s\" lórí <%s> fọ́nrán"
 
-#: src/ui/theme-parser.c:1303
+#: src/ui/theme-parser.c:1304
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "Irúfẹ́ fèrèsé \"%s\" ti ní sẹ́ètì sítàì ná"
 
-#: src/ui/theme-parser.c:1333 src/ui/theme-parser.c:1397
-#: src/ui/theme-parser.c:1623 src/ui/theme-parser.c:2858
-#: src/ui/theme-parser.c:2904 src/ui/theme-parser.c:3062
+#: src/ui/theme-parser.c:1334 src/ui/theme-parser.c:1398
+#: src/ui/theme-parser.c:1624 src/ui/theme-parser.c:2859
+#: src/ui/theme-parser.c:2905 src/ui/theme-parser.c:3063
 #: src/ui/theme-parser.c:3298 src/ui/theme-parser.c:3336
 #: src/ui/theme-parser.c:3374 src/ui/theme-parser.c:3391
 #: src/ui/theme-parser.c:3407 src/ui/theme-parser.c:3444
@@ -2108,120 +2099,120 @@ msgstr "Irúfẹ́ fèrèsé \"%s\" ti ní sẹ́ètì sítàì ná"
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "A kò fàyè gba <%s> fọ́nrán nísàlẹ̀ <%s>"
 
-#: src/ui/theme-parser.c:1447 src/ui/theme-parser.c:1461
-#: src/ui/theme-parser.c:1506
+#: src/ui/theme-parser.c:1448 src/ui/theme-parser.c:1462
+#: src/ui/theme-parser.c:1507
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
 msgstr ""
 
-#: src/ui/theme-parser.c:1470
+#: src/ui/theme-parser.c:1471
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "A kò mọ ìjìnsí \"%s\""
 
-#: src/ui/theme-parser.c:1515
+#: src/ui/theme-parser.c:1516
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "A kò mọ réṣíò aspect \"%s\""
 
-#: src/ui/theme-parser.c:1577
+#: src/ui/theme-parser.c:1578
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "Àìmọ̀ ni ìpàlà \"%s\""
 
-#: src/ui/theme-parser.c:1888
+#: src/ui/theme-parser.c:1889
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr ""
 
-#: src/ui/theme-parser.c:1895
+#: src/ui/theme-parser.c:1896
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr ""
 
-#: src/ui/theme-parser.c:2135
+#: src/ui/theme-parser.c:2136
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Fálù \"%s\" fún irúfẹ́ ìdàgẹ̀rẹ̀ kò ye"
 
-#: src/ui/theme-parser.c:2213 src/ui/theme-parser.c:2588
+#: src/ui/theme-parser.c:2214 src/ui/theme-parser.c:2589
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "Irúfẹ́ \"%s\" fún fọ́nrán <%s> kò ye"
 
-#: src/ui/theme-parser.c:2380 src/ui/theme-parser.c:2463
-#: src/ui/theme-parser.c:2526
+#: src/ui/theme-parser.c:2381 src/ui/theme-parser.c:2464
+#: src/ui/theme-parser.c:2527
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "Ipò \"%s\" fún fọ́nrán <%s> kò ye"
 
-#: src/ui/theme-parser.c:2390 src/ui/theme-parser.c:2473
+#: src/ui/theme-parser.c:2391 src/ui/theme-parser.c:2474
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "Òjìji \"%s\" fún  fọ́nrán <%s> kò ye"
 
-#: src/ui/theme-parser.c:2400
+#: src/ui/theme-parser.c:2401
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "Atọ́ka árò \"%s\" fún fọ́nrán <%s> kò ye"
 
-#: src/ui/theme-parser.c:2714 src/ui/theme-parser.c:2810
+#: src/ui/theme-parser.c:2715 src/ui/theme-parser.c:2811
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "Kò sí <draw_ops> tí a pè ní \"%s\" tí a ti kì"
 
-#: src/ui/theme-parser.c:2726 src/ui/theme-parser.c:2822
+#: src/ui/theme-parser.c:2727 src/ui/theme-parser.c:2823
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Ṣíṣàfikún draw_ops \"%s\" níbí á ṣẹ̀dá ìtọ́kasí òbìrìkìtí"
 
-#: src/ui/theme-parser.c:2937
+#: src/ui/theme-parser.c:2938
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Ipò àìmọ̀ \"%s\" fún férémù"
 
-#: src/ui/theme-parser.c:2945
+#: src/ui/theme-parser.c:2946
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Sítàì férémù ti ní ẹyọ ipò %s tẹ́lẹ̀"
 
-#: src/ui/theme-parser.c:2962 src/ui/theme-parser.c:3039
+#: src/ui/theme-parser.c:2963 src/ui/theme-parser.c:3040
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "Kò sí <draw_ops> pẹ̀lú orúkọ \"%s\" tí a ti kì"
 
-#: src/ui/theme-parser.c:2992
+#: src/ui/theme-parser.c:2993
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Ojúṣe àìmọ̀ \"%s\" fún bọ́tìnì"
 
-#: src/ui/theme-parser.c:3002
+#: src/ui/theme-parser.c:3003
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr ""
 
-#: src/ui/theme-parser.c:3014
+#: src/ui/theme-parser.c:3015
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Ipò àìmọ̀\"%s\" fún bọ́tìnì"
 
-#: src/ui/theme-parser.c:3022
+#: src/ui/theme-parser.c:3023
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Sítàì férémù ti ni bọ́tìnì fún ojúṣe %s ipò %s tẹ́lẹ̀"
 
-#: src/ui/theme-parser.c:3101
+#: src/ui/theme-parser.c:3102
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\" kìí ṣe fálù tó fesẹ̀múlẹ̀ fún àbùdá òye"
 
-#: src/ui/theme-parser.c:3110
+#: src/ui/theme-parser.c:3111
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\" kìí ṣe fálù tó fẹsẹ̀múlẹ̀ fún àbùdá ipò"
 
-#: src/ui/theme-parser.c:3120
+#: src/ui/theme-parser.c:3121
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "A kò tíì soríkì sítàì tí a pè ní \"%s\""
@@ -2362,104 +2353,104 @@ msgstr ""
 msgid "Failed to find a valid file for theme %s\n"
 msgstr ""
 
-#: src/ui/theme-viewer.c:256
+#: src/ui/theme-viewer.c:254
 msgid "_OK"
 msgstr ""
 
-#: src/ui/theme-viewer.c:268
+#: src/ui/theme-viewer.c:266
 msgid "This is a sample message in a sample dialog"
 msgstr "Èyí ni àpẹẹrẹ iṣẹ́ rírán nínú onísọ̀rọ̀gbèsì àpẹẹrẹ"
 
-#: src/ui/theme-viewer.c:352
+#: src/ui/theme-viewer.c:350
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Wúnrẹ̀n àtòjọ-ẹ̀yàn ayédèrú %d\n"
 
-#: src/ui/theme-viewer.c:408
+#: src/ui/theme-viewer.c:406
 msgid "Border-only window"
 msgstr "Fèrèsé Ìpàlà nìkan"
 
-#: src/ui/theme-viewer.c:410
+#: src/ui/theme-viewer.c:408
 msgid "Bar"
 msgstr "Àká"
 
-#: src/ui/theme-viewer.c:427
+#: src/ui/theme-viewer.c:425
 msgid "Normal Application Window"
 msgstr "Fèrèsé Ìṣàmúlò-ètò Déédéé"
 
-#: src/ui/theme-viewer.c:431
+#: src/ui/theme-viewer.c:429
 msgid "Dialog Box"
 msgstr "Àpótí Onísọ̀rọ̀gbèsì"
 
-#: src/ui/theme-viewer.c:435
+#: src/ui/theme-viewer.c:433
 msgid "Modal Dialog Box"
 msgstr "Àpótí Onísọ̀rọ̀gbèsì Aṣèrànwọ́"
 
-#: src/ui/theme-viewer.c:439
+#: src/ui/theme-viewer.c:437
 msgid "Utility Palette"
 msgstr "Pálẹ́ẹ̀tì Ohun-èlò"
 
-#: src/ui/theme-viewer.c:443
+#: src/ui/theme-viewer.c:441
 msgid "Torn-off Menu"
 msgstr "Pa Àtòjọ-ẹ̀yàn"
 
-#: src/ui/theme-viewer.c:447
+#: src/ui/theme-viewer.c:445
 msgid "Border"
 msgstr "Ìpàlà"
 
-#: src/ui/theme-viewer.c:451
+#: src/ui/theme-viewer.c:449
 msgid "Attached Modal Dialog"
 msgstr ""
 
-#: src/ui/theme-viewer.c:811
+#: src/ui/theme-viewer.c:808
 #, c-format
 msgid "Button layout test %d"
 msgstr "Àyẹ̀wò ìlàálẹ̀ bọ́tìnì %d"
 
-#: src/ui/theme-viewer.c:836
+#: src/ui/theme-viewer.c:833
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g ọ̀kẹ́-ìṣísẹ̀ láti ya férémù fèrèsé kan"
 
-#: src/ui/theme-viewer.c:876
+#: src/ui/theme-viewer.c:873
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Ìlò: awòye-kókó-marco [ORÚKỌ-KÓKÓ]\n"
 
-#: src/ui/theme-viewer.c:883
+#: src/ui/theme-viewer.c:880
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Àṣìṣe kíki kókó: %s\n"
 
-#: src/ui/theme-viewer.c:889
+#: src/ui/theme-viewer.c:886
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Kókó tí a ti kì\"%s\" ní %g ìṣísẹ̀\n"
 
-#: src/ui/theme-viewer.c:933
+#: src/ui/theme-viewer.c:930
 msgid "Normal Title Font"
 msgstr "Ìrísí-lẹ́tà Àkọ́lé déédéé"
 
-#: src/ui/theme-viewer.c:939
+#: src/ui/theme-viewer.c:936
 msgid "Small Title Font"
 msgstr "Ìrísí-lẹ́tà Àkọ́lé Kékeré"
 
-#: src/ui/theme-viewer.c:945
+#: src/ui/theme-viewer.c:942
 msgid "Large Title Font"
 msgstr "Ìrísí-lẹ́tà Àkọ́lé Ńlá"
 
-#: src/ui/theme-viewer.c:950
+#: src/ui/theme-viewer.c:947
 msgid "Button Layouts"
 msgstr "Àwọn Ìlàálẹ̀ Bọ́tìnì"
 
-#: src/ui/theme-viewer.c:955
+#: src/ui/theme-viewer.c:952
 msgid "Benchmark"
 msgstr "Ìdíwọ̀n"
 
-#: src/ui/theme-viewer.c:1012
+#: src/ui/theme-viewer.c:1008
 msgid "Window Title Goes Here"
 msgstr "Ibí ni Àkọ́lé Fèrèsé Máa Lọ"
 
-#: src/ui/theme-viewer.c:1114
+#: src/ui/theme-viewer.c:1110
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

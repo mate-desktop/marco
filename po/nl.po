@@ -14,9 +14,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.23.1\n"
+"Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2019-11-18 19:44+0100\n"
+"POT-Creation-Date: 2021-06-04 17:32+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/mate/teams/13566/nl/)\n"
@@ -1227,22 +1227,22 @@ msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
 "Tegel het venster naar de zuidwestelijke hoek van het scherm (linksonder)"
 
-#: src/core/bell.c:294
+#: src/core/bell.c:298
 msgid "Bell event"
 msgstr "Belgebeurtenis"
 
-#: src/core/core.c:214
+#: src/core/core.c:216
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "Onbekende vensterinformatieaanvraag: %d"
 
 #. Translators: %s is a window title
-#: src/core/delete.c:96
+#: src/core/delete.c:98
 #, c-format
 msgid "<tt>%s</tt> is not responding."
 msgstr "<tt>%s</tt> reageert niet."
 
-#: src/core/delete.c:101
+#: src/core/delete.c:103
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
@@ -1250,30 +1250,30 @@ msgstr ""
 "U kunt ervoor kiezen even te wachten totdat het doorgaat of de toepassing "
 "dwingen om helemaal af te sluiten."
 
-#: src/core/delete.c:110
+#: src/core/delete.c:112
 msgid "_Wait"
 msgstr "_Wachten"
 
-#: src/core/delete.c:110
+#: src/core/delete.c:112
 msgid "_Force Quit"
 msgstr "Ge_forceerd afsluiten"
 
-#: src/core/delete.c:180
+#: src/core/delete.c:181
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "Ophalen computernaam mislukt: %s\n"
 
-#: src/core/display.c:270
+#: src/core/display.c:271
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "Benodigde extensie '%s' voor beeldcompositie ontbreekt"
 
-#: src/core/display.c:348
+#: src/core/display.c:349
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Openen van X Window System display ‘%s’ mislukt\n"
 
-#: src/core/keybindings.c:723
+#: src/core/keybindings.c:722
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1284,7 +1284,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2396
+#: src/core/keybindings.c:2415
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1295,93 +1295,80 @@ msgstr ""
 "\n"
 "%s."
 
-#: src/core/keybindings.c:2485
+#: src/core/keybindings.c:2503
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Er is geen opdracht %d gedefinieerd.\n"
 
-#: src/core/keybindings.c:3595
+#: src/core/keybindings.c:3610
 msgid "No terminal command has been defined.\n"
 msgstr "Er is geen terminalopdracht gedefinieerd.\n"
 
-#: src/core/keybindings.c:3735
+#: src/core/keybindings.c:3747
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Werkblad hernoemen</tt>"
 
-#: src/core/keybindings.c:3736
+#: src/core/keybindings.c:3748
 msgid "New Workspace Name:"
 msgstr "Nieuwe werkbladnaam:"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3759
 msgid "OK"
 msgstr "Oké"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3759
 msgid "Cancel"
 msgstr "Afbreken"
 
-#: src/core/main.c:132
-#, c-format
-msgid ""
-"marco %s\n"
-"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
-"This is free software; see the source for copying conditions.\n"
-"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"marco %s\n"
-"Auteursrecht © 2001-%s Havoc Pennington, Red Hat, Inc., en anderen\n"
-"Dit is vrije programmatuur; zie de broncode voor de kopieervoorwaarden.\n"
-"Er is GEEN garantie; zelfs niet voor VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.\n"
-
-#: src/core/main.c:270
+#: src/core/main.c:245
 msgid "Disable connection to session manager"
 msgstr "Verbinding met de sessiebeheerder uitschakelen"
 
-#: src/core/main.c:276
+#: src/core/main.c:251
 msgid "Replace the running window manager with Marco"
 msgstr "Vervang het huidige schermbeheer door Marco"
 
-#: src/core/main.c:282
+#: src/core/main.c:257
 msgid "Specify session management ID"
 msgstr "Sessiebeheer-ID opgeven"
 
-#: src/core/main.c:287
+#: src/core/main.c:262
 msgid "X Display to use"
 msgstr "De te gebruiken X-weergave"
 
-#: src/core/main.c:293
+#: src/core/main.c:268
 msgid "Initialize session from savefile"
 msgstr "Initialiseer de sessie vanuit savefile"
 
-#: src/core/main.c:299
+#: src/core/main.c:274
 msgid "Print version"
 msgstr "Versie weergeven"
 
-#: src/core/main.c:305
+#: src/core/main.c:280
 msgid "Make X calls synchronous"
 msgstr "X-calls synchroon maken"
 
-#: src/core/main.c:311
+#: src/core/main.c:286
 msgid "Turn compositing on"
 msgstr "Beeldcompositie inschakelen"
 
-#: src/core/main.c:317
+#: src/core/main.c:292
 msgid "Turn compositing off"
 msgstr "Beeldcompositie uitschakelen"
 
-#: src/core/main.c:323
+#: src/core/main.c:298
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "Geen gemaximaliseerde vensters op het volledige scherm maken zonder "
 "vensterdecoratie"
 
-#: src/core/main.c:522
+#: src/core/main.c:499
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Kon themamap niet doorzoeken: %s\n"
 
-#: src/core/main.c:538
+#: src/core/main.c:515
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1389,7 +1376,7 @@ msgstr ""
 "Kon geen thema vinden! Zorg ervoor dat %s bestaat en de gebruikelijke "
 "thema's bevat.\n"
 
-#: src/core/main.c:597
+#: src/core/main.c:574
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Herstarten mislukt: %s\n"
@@ -1397,13 +1384,13 @@ msgstr "Herstarten mislukt: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: src/core/prefs.c:641 src/core/prefs.c:794
+#: src/core/prefs.c:642 src/core/prefs.c:795
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 "%d opgeslagen in GSettings-sleutel %s valt buiten het bereik %d tot %d\n"
 
-#: src/core/prefs.c:1088
+#: src/core/prefs.c:1087
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1411,13 +1398,13 @@ msgstr ""
 "Noodoplossingen voor gebroken toepassingen zijn uitgezet. Bepaalde "
 "toepassingen zullen mogelijk niet naar behoren functioneren.\n"
 
-#: src/core/prefs.c:1194
+#: src/core/prefs.c:1193
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 "Kon lettertypebeschrijving ‘%s’ niet lezen vanuit GSettings-sleutel %s\n"
 
-#: src/core/prefs.c:1256
+#: src/core/prefs.c:1255
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1426,7 +1413,7 @@ msgstr ""
 "‘%s’, gevonden in de configuratiegegevensbank, is geen geldige waarde voor "
 "de muisknop-optietoets\n"
 
-#: src/core/prefs.c:1844
+#: src/core/prefs.c:1843
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1435,17 +1422,17 @@ msgstr ""
 "‘%s’ in de configuratiegegevensbank is geen geldige waarde voor toetsbinding"
 " ‘%s’\n"
 
-#: src/core/prefs.c:2147
+#: src/core/prefs.c:2146
 #, c-format
 msgid "Workspace %d"
 msgstr "Werkblad %d"
 
-#: src/core/screen.c:362
+#: src/core/screen.c:363
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "Scherm %d op display '%s' is ongeldig\n"
 
-#: src/core/screen.c:378
+#: src/core/screen.c:379
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1454,68 +1441,68 @@ msgstr ""
 "Scherm %d op display ‘%s’ heeft al een vensterbeheerder; probeer de optie: "
 "--replace te gebruiken om de huidige vensterbeheerder te vervangen.\n"
 
-#: src/core/screen.c:405
+#: src/core/screen.c:406
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "Kon selectie van vensterbeheerder niet verkrijgen op scherm %d display "
 "‘%s’\n"
 
-#: src/core/screen.c:463
+#: src/core/screen.c:464
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "Scherm %d op display ‘%s’ heeft al een vensterbeheerder\n"
 
-#: src/core/screen.c:677
+#: src/core/screen.c:678
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Kon scherm %d op display ‘%s’ niet vrijmaken\n"
 
-#: src/core/session.c:842 src/core/session.c:849
+#: src/core/session.c:841 src/core/session.c:848
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "Kon map '%s' niet aanmaken: %s\n"
 
-#: src/core/session.c:859
+#: src/core/session.c:858
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "Kon sessiebestand '%s' niet openen voor schrijven: %s\n"
 
-#: src/core/session.c:999
+#: src/core/session.c:998
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "Fout bij schrijven sessiebestand '%s': %s\n"
 
-#: src/core/session.c:1004
+#: src/core/session.c:1003
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "Fout bij sluiten sessiebestand '%s': %s\n"
 
-#: src/core/session.c:1134
+#: src/core/session.c:1132
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "Lezen van opgeslagen sessiebestand mislukt: %s\n"
 
-#: src/core/session.c:1183
+#: src/core/session.c:1181
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr "<marco_session>-attribuut opgemerkt maar we hebben reeds de sessie-ID"
 
-#: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
-#: src/core/session.c:1375 src/core/session.c:1435
+#: src/core/session.c:1194 src/core/session.c:1269 src/core/session.c:1301
+#: src/core/session.c:1373 src/core/session.c:1433
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "Onbekend attribuut ‘%s’ op <%s>-element"
 
-#: src/core/session.c:1213
+#: src/core/session.c:1211
 msgid "nested <window> tag"
 msgstr "ingebedde <window>-markering"
 
-#: src/core/session.c:1455
+#: src/core/session.c:1453
 #, c-format
 msgid "Unknown element %s"
 msgstr "Onbekend element %s"
 
-#: src/core/session.c:1807
+#: src/core/session.c:1805
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
@@ -1523,49 +1510,49 @@ msgstr ""
 "Deze vensters ondersteunen het opslaan van de huidige instellingen niet en "
 "zullen bij een volgende sessie opnieuw moeten worden opgestart."
 
-#: src/core/util.c:101
+#: src/core/util.c:103
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "Foutopsporingslogboek openen mislukt: %s\n"
 
-#: src/core/util.c:111
+#: src/core/util.c:113
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "Logboek %s openen via fdopen() mislukt: %s\n"
 
-#: src/core/util.c:117
+#: src/core/util.c:119
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "Logboek %s geopend\n"
 
-#: src/core/util.c:136 src/tools/marco-message.c:176
+#: src/core/util.c:138 src/tools/marco-message.c:172
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "Marco is gecompileerd zonder ondersteuning voor spraakzame modus\n"
 
-#: src/core/util.c:227
+#: src/core/util.c:229
 msgid "Window manager: "
 msgstr "Vensterbeheerder:"
 
-#: src/core/util.c:379
+#: src/core/util.c:381
 msgid "Bug in window manager: "
 msgstr "Fout in vensterbeheerder:"
 
-#: src/core/util.c:412
+#: src/core/util.c:414
 msgid "Window manager warning: "
 msgstr "Vensterbeheerder-waarschuwing:"
 
-#: src/core/util.c:440
+#: src/core/util.c:442
 msgid "Window manager error: "
 msgstr "Vensterbeheerder-fout:"
 
 #. Translators: This is the title used on dialog boxes
-#: src/core/util.c:560 src/core/util.c:658 src/marco.desktop.in:4
+#: src/core/util.c:562 src/core/util.c:660 src/marco.desktop.in:4
 #: src/marco-wm.desktop.in:4
 msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6004
+#: src/core/window.c:6008
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1580,7 +1567,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6582
+#: src/core/window.c:6596
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1590,7 +1577,7 @@ msgstr ""
 " stelt wel min-grootte %d x %d en max-grootte %d x %d in; dit is niet "
 "logisch.\n"
 
-#: src/core/window-props.c:306
+#: src/core/window-props.c:307
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "Toepassing heeft een overbodige _NET_WM_PID %lu ingesteld\n"
@@ -1626,7 +1613,7 @@ msgstr "%s (als een andere gebruiker)"
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "Ongeldig WM_TRANSIENT_FOR venster 0x%lx opgegeven voor %s.\n"
 
-#: src/core/xprops.c:155
+#: src/core/xprops.c:156
 #, c-format
 msgid ""
 "Window 0x%lx has property %s\n"
@@ -1641,12 +1628,12 @@ msgstr ""
 "Dit is waarschijnlijk een fout van de toepassing, niet van de vensterbeheerder.\n"
 "Het venster heeft title=‘%s’ class=‘%s’ naam=‘%s’\n"
 
-#: src/core/xprops.c:411
+#: src/core/xprops.c:412
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgstr "Eigenschap %s bij venster 0x%lx bevat ongeldige UTF-8\n"
 
-#: src/core/xprops.c:494
+#: src/core/xprops.c:495
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
@@ -1655,156 +1642,156 @@ msgstr ""
 "Eigenschap %s bij venster 0x%lx bevat ongeldige UTF-8 voor item %d van de "
 "lijst\n"
 
-#: src/tools/marco-message.c:150
+#: src/tools/marco-message.c:146
 #, c-format
 msgid "Usage: %s\n"
 msgstr "Gebruik: %s\n"
 
-#: src/ui/frames.c:1338
+#: src/ui/frames.c:1341
 msgid "Close Window"
 msgstr "Venster sluiten"
 
-#: src/ui/frames.c:1341
+#: src/ui/frames.c:1344
 msgid "Window Menu"
 msgstr "Venstermenu"
 
-#: src/ui/frames.c:1344
+#: src/ui/frames.c:1347
 msgid "Window App Menu"
 msgstr "Venster App-menu"
 
-#: src/ui/frames.c:1347
+#: src/ui/frames.c:1350
 msgid "Minimize Window"
 msgstr "Venster minimaliseren"
 
-#: src/ui/frames.c:1350
+#: src/ui/frames.c:1353
 msgid "Maximize Window"
 msgstr "Venster maximaliseren"
 
-#: src/ui/frames.c:1353
+#: src/ui/frames.c:1356
 msgid "Restore Window"
 msgstr "Venster herstellen"
 
-#: src/ui/frames.c:1356
+#: src/ui/frames.c:1359
 msgid "Roll Up Window"
 msgstr "Venster oprollen"
 
-#: src/ui/frames.c:1359
+#: src/ui/frames.c:1362
 msgid "Unroll Window"
 msgstr "Venster afrollen"
 
-#: src/ui/frames.c:1362
+#: src/ui/frames.c:1365
 msgid "Keep Window On Top"
 msgstr "Venster bovenop houden"
 
-#: src/ui/frames.c:1365
+#: src/ui/frames.c:1368
 msgid "Remove Window From Top"
 msgstr "Venster van boven weghalen"
 
-#: src/ui/frames.c:1368
+#: src/ui/frames.c:1371
 msgid "Always On Visible Workspace"
 msgstr "Altijd op zichtbaar werkblad"
 
-#: src/ui/frames.c:1371
+#: src/ui/frames.c:1374
 msgid "Put Window On Only One Workspace"
 msgstr "Zet venster op slechts één werkblad"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:65
+#: src/ui/menu.c:66
 msgid "Mi_nimize"
 msgstr "_Minimaliseren"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:67
+#: src/ui/menu.c:68
 msgid "Ma_ximize"
 msgstr "Ma_ximaliseren"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:69
+#: src/ui/menu.c:70
 msgid "Unma_ximize"
 msgstr "Ontmaximaliseren"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:71
+#: src/ui/menu.c:72
 msgid "Roll _Up"
 msgstr "_Oprollen"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:73
+#: src/ui/menu.c:74
 msgid "_Unroll"
 msgstr "_Uitrollen"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:75
+#: src/ui/menu.c:76
 msgid "_Move"
 msgstr "_Verplaatsen"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:77
+#: src/ui/menu.c:78
 msgid "_Resize"
 msgstr "He_rschalen"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:79
+#: src/ui/menu.c:80
 msgid "Move Titlebar On_screen"
 msgstr "_Titelbalk op scherm verplaatsen"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:82 src/ui/menu.c:84
+#: src/ui/menu.c:83 src/ui/menu.c:85
 msgid "Always on _Top"
 msgstr "Altijd _bovenop"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:86
+#: src/ui/menu.c:87
 msgid "_Always on Visible Workspace"
 msgstr "_Altijd op zichtbare werkblad"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:88
+#: src/ui/menu.c:89
 msgid "_Only on This Workspace"
 msgstr "_Alleen op dit werkblad"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:90
+#: src/ui/menu.c:91
 msgid "Move to Workspace _Left"
 msgstr "Verplaatsen naar werkblad lin_ks"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:92
+#: src/ui/menu.c:93
 msgid "Move to Workspace R_ight"
 msgstr "Verplaatsen naar werkblad _rechts"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:94
+#: src/ui/menu.c:95
 msgid "Move to Workspace _Up"
 msgstr "Verplaatsen naar werkblad hierbov_en"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:96
+#: src/ui/menu.c:97
 msgid "Move to Workspace _Down"
 msgstr "Verplaatsen naar werkblad hier_onder"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:100
+#: src/ui/menu.c:101
 msgid "_Close"
 msgstr "Sl_uiten"
 
-#: src/ui/menu.c:197
+#: src/ui/menu.c:198
 #, c-format
 msgid "Workspace %d%n"
 msgstr "Werkblad %d%n"
 
-#: src/ui/menu.c:207
+#: src/ui/menu.c:208
 msgid "Workspace 1_0"
 msgstr "Werkblad 1_0"
 
-#: src/ui/menu.c:209
+#: src/ui/menu.c:210
 #, c-format
 msgid "Workspace %s%d"
 msgstr "Werkblad %s%d"
 
-#: src/ui/menu.c:388
+#: src/ui/menu.c:386
 msgid "Move to Another _Workspace"
 msgstr "_Verplaatsen naar ander werkblad"
 
@@ -1812,7 +1799,7 @@ msgstr "_Verplaatsen naar ander werkblad"
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:80
+#: src/ui/metaaccellabel.c:81
 msgid "Shift"
 msgstr "Shift"
 
@@ -1820,7 +1807,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:86
+#: src/ui/metaaccellabel.c:87
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -1828,7 +1815,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:92
+#: src/ui/metaaccellabel.c:93
 msgid "Alt"
 msgstr "Alt"
 
@@ -1836,7 +1823,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:98
+#: src/ui/metaaccellabel.c:99
 msgid "Meta"
 msgstr "Meta"
 
@@ -1844,7 +1831,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:104
+#: src/ui/metaaccellabel.c:105
 msgid "Super"
 msgstr "Super"
 
@@ -1852,7 +1839,7 @@ msgstr "Super"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:110
+#: src/ui/metaaccellabel.c:111
 msgid "Hyper"
 msgstr "Hyper"
 
@@ -1860,7 +1847,7 @@ msgstr "Hyper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:116
+#: src/ui/metaaccellabel.c:117
 msgid "Mod2"
 msgstr "Mod2"
 
@@ -1868,7 +1855,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:122
+#: src/ui/metaaccellabel.c:123
 msgid "Mod3"
 msgstr "Mod3"
 
@@ -1876,7 +1863,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:128
+#: src/ui/metaaccellabel.c:129
 msgid "Mod4"
 msgstr "Mod4"
 
@@ -1884,13 +1871,13 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:134
+#: src/ui/metaaccellabel.c:135
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: src/ui/resizepopup.c:117
+#: src/ui/resizepopup.c:119
 #, c-format
 msgid "%d x %d"
 msgstr "%d × %d"
@@ -2122,12 +2109,12 @@ msgstr "Coördinaatuitdrukking bevat een openingshaakje zonder sluithaakje"
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "Coördinaatuitdrukking bevat schijnbaar geen functies of argumenten"
 
-#: src/ui/theme.c:3027 src/ui/theme.c:3047 src/ui/theme.c:3067
+#: src/ui/theme.c:3026 src/ui/theme.c:3046 src/ui/theme.c:3066
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Expressie in thema resulteerde in een foutmelding: %s\n"
 
-#: src/ui/theme.c:4857
+#: src/ui/theme.c:4856
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2136,23 +2123,23 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"iets\"/> moet voor deze "
 "kaderstijl gespecificeerd worden"
 
-#: src/ui/theme.c:5393 src/ui/theme.c:5418
+#: src/ui/theme.c:5391 src/ui/theme.c:5416
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Ontbrekende <frame state=\"%s\" resize=\"%s\" docus=\"%s\" style=\"iets\"/>"
 
-#: src/ui/theme.c:5462
+#: src/ui/theme.c:5460
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Laden thema ‘%s’ mislukt: %s\n"
 
-#: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
-#: src/ui/theme.c:5615 src/ui/theme.c:5622
+#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
+#: src/ui/theme.c:5612 src/ui/theme.c:5619
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Geen <%s> ingesteld voor thema ‘%s’ "
 
-#: src/ui/theme.c:5630
+#: src/ui/theme.c:5627
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2161,83 +2148,83 @@ msgstr ""
 "Geen kaderstijl ingesteld voor venstertype ‘%s’ in thema ‘%s’, voeg een "
 "<window type=\"%s\" style_set=\"iets\"/> element toe"
 
-#: src/ui/theme.c:6045 src/ui/theme.c:6107 src/ui/theme.c:6170
+#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Door de gebruiker gedefinieerde constanten moeten met een hoofdletter "
 "beginnen; ‘%s’ doet dat niet"
 
-#: src/ui/theme.c:6053 src/ui/theme.c:6115 src/ui/theme.c:6178
+#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Constante ‘%s’ is reeds gedefinieerd"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: src/ui/theme-parser.c:252
+#: src/ui/theme-parser.c:253
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "Geen attribuut \"%s\" op knooppunt <%s>"
 
-#: src/ui/theme-parser.c:281 src/ui/theme-parser.c:299
+#: src/ui/theme-parser.c:282 src/ui/theme-parser.c:300
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "Regel %d teken %d: %s"
 
-#: src/ui/theme-parser.c:499
+#: src/ui/theme-parser.c:500
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "Attribuut ‘%s’ twee keer herhaald op hetzelfde <%s>-element"
 
-#: src/ui/theme-parser.c:523 src/ui/theme-parser.c:572
+#: src/ui/theme-parser.c:524 src/ui/theme-parser.c:573
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "Attribuut \"%s\" is ongeldig op <%s> element in deze context"
 
-#: src/ui/theme-parser.c:614
+#: src/ui/theme-parser.c:615
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "Kon ‘%s’ niet lezen als geheel getal"
 
-#: src/ui/theme-parser.c:623 src/ui/theme-parser.c:678
+#: src/ui/theme-parser.c:624 src/ui/theme-parser.c:679
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "Niet begrepen: de laatste tekens ‘%s’ in ‘%s’"
 
-#: src/ui/theme-parser.c:633
+#: src/ui/theme-parser.c:634
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "Geheel getal %ld moet positief zijn"
 
-#: src/ui/theme-parser.c:641
+#: src/ui/theme-parser.c:642
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "Geheel getal %ld is te groot, huidige maximum is %d"
 
-#: src/ui/theme-parser.c:669 src/ui/theme-parser.c:785
+#: src/ui/theme-parser.c:670 src/ui/theme-parser.c:786
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "Kon ‘%s’ niet als 'floating-point'-getal lezen"
 
-#: src/ui/theme-parser.c:700 src/ui/theme-parser.c:728
+#: src/ui/theme-parser.c:701 src/ui/theme-parser.c:729
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "Booleaanse waarde moet ‘true’ of ‘false’ zijn, niet ‘%s’"
 
-#: src/ui/theme-parser.c:755
+#: src/ui/theme-parser.c:756
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "Hoek moet liggen tussen 0.0 en 360.0, maar was %g\n"
 
-#: src/ui/theme-parser.c:818
+#: src/ui/theme-parser.c:819
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "Alpha moet liggen tussen 0.0 (onzichtbaar) en 1.0 (volledig ondoorzichtig), "
 "maar was %g\n"
 
-#: src/ui/theme-parser.c:883
+#: src/ui/theme-parser.c:884
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2246,52 +2233,52 @@ msgstr ""
 "Ongeldige titelschaal ‘%s’ (u kunt kiezen uit: xx-small, x-small, small, "
 "medium, large, x-large, xx-large)\n"
 
-#: src/ui/theme-parser.c:1039 src/ui/theme-parser.c:1102
-#: src/ui/theme-parser.c:1136 src/ui/theme-parser.c:1239
+#: src/ui/theme-parser.c:1040 src/ui/theme-parser.c:1103
+#: src/ui/theme-parser.c:1137 src/ui/theme-parser.c:1240
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s>-naam ‘%s’ een tweede keer gebruikt"
 
-#: src/ui/theme-parser.c:1051 src/ui/theme-parser.c:1148
-#: src/ui/theme-parser.c:1251
+#: src/ui/theme-parser.c:1052 src/ui/theme-parser.c:1149
+#: src/ui/theme-parser.c:1252
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s>-ouder ‘%s’ is niet gedefinieerd"
 
-#: src/ui/theme-parser.c:1161
+#: src/ui/theme-parser.c:1162
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s>-afmetingen ‘%s’ is niet gedefinieerd"
 
-#: src/ui/theme-parser.c:1174
+#: src/ui/theme-parser.c:1175
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> moet ofwel afmetingen specificeren, of een ouder met afmetingen"
 
-#: src/ui/theme-parser.c:1216
+#: src/ui/theme-parser.c:1217
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr ""
 "U dient een achtergrond te specificeren voordat een alphawaarde betekenis "
 "heeft"
 
-#: src/ui/theme-parser.c:1284
+#: src/ui/theme-parser.c:1285
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "Onbekend type ‘%s’ op <%s>-element"
 
-#: src/ui/theme-parser.c:1295
+#: src/ui/theme-parser.c:1296
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "Onbekende style_set ‘%s’ op <%s>-element"
 
-#: src/ui/theme-parser.c:1303
+#: src/ui/theme-parser.c:1304
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "Venstertype ‘%s’ heeft reeds een stijlset toegewezen gekregen"
 
-#: src/ui/theme-parser.c:1333 src/ui/theme-parser.c:1397
-#: src/ui/theme-parser.c:1623 src/ui/theme-parser.c:2858
-#: src/ui/theme-parser.c:2904 src/ui/theme-parser.c:3062
+#: src/ui/theme-parser.c:1334 src/ui/theme-parser.c:1398
+#: src/ui/theme-parser.c:1624 src/ui/theme-parser.c:2859
+#: src/ui/theme-parser.c:2905 src/ui/theme-parser.c:3063
 #: src/ui/theme-parser.c:3298 src/ui/theme-parser.c:3336
 #: src/ui/theme-parser.c:3374 src/ui/theme-parser.c:3391
 #: src/ui/theme-parser.c:3407 src/ui/theme-parser.c:3444
@@ -2299,8 +2286,8 @@ msgstr "Venstertype ‘%s’ heeft reeds een stijlset toegewezen gekregen"
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "Element <%s> is niet toegestaan onder <%s>"
 
-#: src/ui/theme-parser.c:1447 src/ui/theme-parser.c:1461
-#: src/ui/theme-parser.c:1506
+#: src/ui/theme-parser.c:1448 src/ui/theme-parser.c:1462
+#: src/ui/theme-parser.c:1507
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2308,113 +2295,113 @@ msgstr ""
 "Kan niet tegelijk ‘button_width’/‘button_height’ en ‘aspect_ratio’ voor "
 "knoppen opgeven."
 
-#: src/ui/theme-parser.c:1470
+#: src/ui/theme-parser.c:1471
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "Afstand ‘%s’ is onbekend"
 
-#: src/ui/theme-parser.c:1515
+#: src/ui/theme-parser.c:1516
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "Verhouding ‘%s’ is onbekend"
 
-#: src/ui/theme-parser.c:1577
+#: src/ui/theme-parser.c:1578
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "Rand ‘%s’ is onbekend"
 
-#: src/ui/theme-parser.c:1888
+#: src/ui/theme-parser.c:1889
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "Geen ‘start_angle’- of ‘from’-attribuut op element <%s>"
 
-#: src/ui/theme-parser.c:1895
+#: src/ui/theme-parser.c:1896
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "Geen ‘extent_angle’- of ‘to’-attribuut op element <%s>"
 
-#: src/ui/theme-parser.c:2135
+#: src/ui/theme-parser.c:2136
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "Niet begrepen: de waarde ‘%s’ voor type kleurverloop"
 
-#: src/ui/theme-parser.c:2213 src/ui/theme-parser.c:2588
+#: src/ui/theme-parser.c:2214 src/ui/theme-parser.c:2589
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "Niet begrepen: vul-type ‘%s’ voor <%s>-element"
 
-#: src/ui/theme-parser.c:2380 src/ui/theme-parser.c:2463
-#: src/ui/theme-parser.c:2526
+#: src/ui/theme-parser.c:2381 src/ui/theme-parser.c:2464
+#: src/ui/theme-parser.c:2527
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "Niet begrepen: status ‘%s’ voor <%s>-element"
 
-#: src/ui/theme-parser.c:2390 src/ui/theme-parser.c:2473
+#: src/ui/theme-parser.c:2391 src/ui/theme-parser.c:2474
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "Niet begrepen: schaduw ‘%s’ voor <%s>-element"
 
-#: src/ui/theme-parser.c:2400
+#: src/ui/theme-parser.c:2401
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "Niet begrepen: pijl ‘%s’ voor <%s>-element"
 
-#: src/ui/theme-parser.c:2714 src/ui/theme-parser.c:2810
+#: src/ui/theme-parser.c:2715 src/ui/theme-parser.c:2811
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "Er zijn geen <draw_ops> genaamd ‘%s’ gedefinieerd"
 
-#: src/ui/theme-parser.c:2726 src/ui/theme-parser.c:2822
+#: src/ui/theme-parser.c:2727 src/ui/theme-parser.c:2823
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "Hier ‘draw_ops’ ‘%s’ meenemen zou een circulaire verwijzing creëren"
 
-#: src/ui/theme-parser.c:2937
+#: src/ui/theme-parser.c:2938
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "Onbekende positie ‘%s’ voor kaderonderdeel"
 
-#: src/ui/theme-parser.c:2945
+#: src/ui/theme-parser.c:2946
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "Kaderstijl heeft al een onderdeel op positie %s"
 
-#: src/ui/theme-parser.c:2962 src/ui/theme-parser.c:3039
+#: src/ui/theme-parser.c:2963 src/ui/theme-parser.c:3040
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "Er is geen <draw_ops> met naam ‘%s’ gedefinieerd"
 
-#: src/ui/theme-parser.c:2992
+#: src/ui/theme-parser.c:2993
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "Onbekende functie ‘%s’ voor knop"
 
-#: src/ui/theme-parser.c:3002
+#: src/ui/theme-parser.c:3003
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "Knopfunctie ‘%s’ bestaat niet in deze versie (%d, %d benodigd)"
 
-#: src/ui/theme-parser.c:3014
+#: src/ui/theme-parser.c:3015
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "Onbekende status ‘%s’ voor knop"
 
-#: src/ui/theme-parser.c:3022
+#: src/ui/theme-parser.c:3023
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "Kaderstijl heeft reeds een knop voor functie %s status %s"
 
-#: src/ui/theme-parser.c:3101
+#: src/ui/theme-parser.c:3102
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "‘%s’ is geen geldige waarde voor ‘focus’-attribuut"
 
-#: src/ui/theme-parser.c:3110
+#: src/ui/theme-parser.c:3111
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "‘%s’ is geen geldige waarde voor ‘state’-attribuut"
 
-#: src/ui/theme-parser.c:3120
+#: src/ui/theme-parser.c:3121
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "Een stijl genaamd ‘%s’ is niet gedefinieerd"
@@ -2563,104 +2550,104 @@ msgstr "<%s> twee keer gegeven voor dit thema"
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "Geen geldig bestand gevonden voor thema %s\n"
 
-#: src/ui/theme-viewer.c:256
+#: src/ui/theme-viewer.c:254
 msgid "_OK"
 msgstr "_Oké"
 
-#: src/ui/theme-viewer.c:268
+#: src/ui/theme-viewer.c:266
 msgid "This is a sample message in a sample dialog"
 msgstr "Dit is een voorbeeldbericht in een voorbeelddialoogvenster"
 
-#: src/ui/theme-viewer.c:352
+#: src/ui/theme-viewer.c:350
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "Nep-menu-onderdeel %d\n"
 
-#: src/ui/theme-viewer.c:408
+#: src/ui/theme-viewer.c:406
 msgid "Border-only window"
 msgstr "Venster met alleen randen"
 
-#: src/ui/theme-viewer.c:410
+#: src/ui/theme-viewer.c:408
 msgid "Bar"
 msgstr "Balk"
 
-#: src/ui/theme-viewer.c:427
+#: src/ui/theme-viewer.c:425
 msgid "Normal Application Window"
 msgstr "Normaal programmavenster"
 
-#: src/ui/theme-viewer.c:431
+#: src/ui/theme-viewer.c:429
 msgid "Dialog Box"
 msgstr "Dialoogvenster"
 
-#: src/ui/theme-viewer.c:435
+#: src/ui/theme-viewer.c:433
 msgid "Modal Dialog Box"
 msgstr "Modaal dialoogvenster"
 
-#: src/ui/theme-viewer.c:439
+#: src/ui/theme-viewer.c:437
 msgid "Utility Palette"
 msgstr "Gereedschapskist"
 
-#: src/ui/theme-viewer.c:443
+#: src/ui/theme-viewer.c:441
 msgid "Torn-off Menu"
 msgstr "Losgescheurd menu"
 
-#: src/ui/theme-viewer.c:447
+#: src/ui/theme-viewer.c:445
 msgid "Border"
 msgstr "Rand"
 
-#: src/ui/theme-viewer.c:451
+#: src/ui/theme-viewer.c:449
 msgid "Attached Modal Dialog"
 msgstr "Bijgevoegde modale dialoog"
 
-#: src/ui/theme-viewer.c:811
+#: src/ui/theme-viewer.c:808
 #, c-format
 msgid "Button layout test %d"
 msgstr "Knopopmaakproef %d"
 
-#: src/ui/theme-viewer.c:836
+#: src/ui/theme-viewer.c:833
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "%g milliseconden om één vensterraamwerk te tekenen"
 
-#: src/ui/theme-viewer.c:876
+#: src/ui/theme-viewer.c:873
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Gebruik: marco-theme-viewer [THEMANAAM]\n"
 
-#: src/ui/theme-viewer.c:883
+#: src/ui/theme-viewer.c:880
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "Fout bij laden van thema: %s\n"
 
-#: src/ui/theme-viewer.c:889
+#: src/ui/theme-viewer.c:886
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Thema ‘%s’ werd in %g seconden geladen\n"
 
-#: src/ui/theme-viewer.c:933
+#: src/ui/theme-viewer.c:930
 msgid "Normal Title Font"
 msgstr "Normaal titel-lettertype"
 
-#: src/ui/theme-viewer.c:939
+#: src/ui/theme-viewer.c:936
 msgid "Small Title Font"
 msgstr "Klein titel-lettertype"
 
-#: src/ui/theme-viewer.c:945
+#: src/ui/theme-viewer.c:942
 msgid "Large Title Font"
 msgstr "Groot titel-lettertype"
 
-#: src/ui/theme-viewer.c:950
+#: src/ui/theme-viewer.c:947
 msgid "Button Layouts"
 msgstr "Knopopmaak"
 
-#: src/ui/theme-viewer.c:955
+#: src/ui/theme-viewer.c:952
 msgid "Benchmark"
 msgstr "Prestatievergelijking"
 
-#: src/ui/theme-viewer.c:1012
+#: src/ui/theme-viewer.c:1008
 msgid "Window Title Goes Here"
 msgstr "Hier komt de venstertitel"
 
-#: src/ui/theme-viewer.c:1114
+#: src/ui/theme-viewer.c:1110
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

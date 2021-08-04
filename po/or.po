@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.23.1\n"
+"Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2019-11-18 19:44+0100\n"
+"POT-Creation-Date: 2021-06-04 17:32+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Oriya (https://www.transifex.com/mate/teams/13566/or/)\n"
@@ -1102,51 +1102,51 @@ msgstr ""
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
 
-#: src/core/bell.c:294
+#: src/core/bell.c:298
 msgid "Bell event"
 msgstr "ବେଲ ଘଟଣା"
 
-#: src/core/core.c:214
+#: src/core/core.c:216
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "ଅଜଣା ୱିଣ୍ଡୋ ସୂଚନା ଅନୁରୋଧ କରାଯାଇଛି: %d"
 
 #. Translators: %s is a window title
-#: src/core/delete.c:96
+#: src/core/delete.c:98
 #, c-format
 msgid "<tt>%s</tt> is not responding."
 msgstr ""
 
-#: src/core/delete.c:101
+#: src/core/delete.c:103
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
 msgstr ""
 
-#: src/core/delete.c:110
+#: src/core/delete.c:112
 msgid "_Wait"
 msgstr "_ଅପେକ୍ଷା କର"
 
-#: src/core/delete.c:110
+#: src/core/delete.c:112
 msgid "_Force Quit"
 msgstr "ବିଦାୟ ନେବାକୁ ବାଧ୍ଯ କରନ୍ତୁ (_F)"
 
-#: src/core/delete.c:180
+#: src/core/delete.c:181
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "ହୋଷ୍ଟ ନାମ ପାଇବାରେ ଅସମର୍ଥ: %s\n"
 
-#: src/core/display.c:270
+#: src/core/display.c:271
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "ମିଶ୍ରଣ ପାଇଁ ଅନୁପସ୍ଥିତ %s ଅନୁଲଗ୍ନ ଆବଶ୍ୟକ"
 
-#: src/core/display.c:348
+#: src/core/display.c:349
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "ଏକ୍ସ ୱିଣ୍ଡୋ ତନ୍ତ୍ରର ପ୍ରଦର୍ଶିକା '%s' ଖୋଲିବାରେ ଅସମର୍ଥ\n"
 
-#: src/core/keybindings.c:723
+#: src/core/keybindings.c:722
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1157,7 +1157,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2396
+#: src/core/keybindings.c:2415
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1168,93 +1168,80 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2485
+#: src/core/keybindings.c:2503
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "%d ନିର୍ଦ୍ଦେଶ ବ୍ଯାଖ୍ଯା କରାଯାଇ ନାହିଁ.\n"
 
-#: src/core/keybindings.c:3595
+#: src/core/keybindings.c:3610
 msgid "No terminal command has been defined.\n"
 msgstr "କୌଣସି ଟର୍ମିନାଲ ନିର୍ଦ୍ଦେଶ ବ୍ଯାଖ୍ଯା କରାଯାଇ ନାହିଁ.\n"
 
-#: src/core/keybindings.c:3735
+#: src/core/keybindings.c:3747
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: src/core/keybindings.c:3736
+#: src/core/keybindings.c:3748
 msgid "New Workspace Name:"
 msgstr ""
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3759
 msgid "OK"
 msgstr ""
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3759
 msgid "Cancel"
 msgstr "ବାତିଲ କରନ୍ତୁ"
 
-#: src/core/main.c:132
-#, c-format
-msgid ""
-"marco %s\n"
-"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
-"This is free software; see the source for copying conditions.\n"
-"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"marco %s\n"
-"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
-"This is free software; see the source for copying conditions.\n"
-"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-
-#: src/core/main.c:270
+#: src/core/main.c:245
 msgid "Disable connection to session manager"
 msgstr "ଅଧିବେଶନ ପରିଚାଳକଙ୍କ ସହିତ ସଂଯୋଗକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
 
-#: src/core/main.c:276
+#: src/core/main.c:251
 msgid "Replace the running window manager with Marco"
 msgstr "ଚଳନ୍ତା ୱିଣ୍ଡୋ ପରିଚାଳକକୁ ମେଟାସିଟି ସହିତ ବଦଳାନ୍ତୁ"
 
-#: src/core/main.c:282
+#: src/core/main.c:257
 msgid "Specify session management ID"
 msgstr "ଅଧିବେଶନ ପରିଚାଳକ ID ଉଲ୍ଲେଖ କରନ୍ତୁ"
 
-#: src/core/main.c:287
+#: src/core/main.c:262
 msgid "X Display to use"
 msgstr "ବ୍ଯବହାର ପାଇଁ ଏକ୍ସ ପ୍ରଦର୍ଶକ"
 
-#: src/core/main.c:293
+#: src/core/main.c:268
 msgid "Initialize session from savefile"
 msgstr "ଅଧିବେଶନକୁ ସଞ୍ଚିତ ଫାଇଲଠାରୁ ପ୍ରାରମ୍ଭ କରନ୍ତୁ"
 
-#: src/core/main.c:299
+#: src/core/main.c:274
 msgid "Print version"
 msgstr "ସଂସକରଣ ମୁଦ୍ରଣ"
 
-#: src/core/main.c:305
+#: src/core/main.c:280
 msgid "Make X calls synchronous"
 msgstr "ଏକ୍ସ ଡାକରାଗୁଡିକୁ ସମକାଳୀନ କରନ୍ତୁ"
 
-#: src/core/main.c:311
+#: src/core/main.c:286
 msgid "Turn compositing on"
 msgstr "ମିଶ୍ରଣ ପ୍ରକ୍ରିୟାକୁ ଅନ କରନ୍ତୁ"
 
-#: src/core/main.c:317
+#: src/core/main.c:292
 msgid "Turn compositing off"
 msgstr "ମିଶ୍ରଣ ପ୍ରକ୍ରିୟାକୁ ଅଫକରନ୍ତୁ"
 
-#: src/core/main.c:323
+#: src/core/main.c:298
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "ୱିଣ୍ଡୋଗୁଡ଼ିକୁ ସମ୍ପୂର୍ଣ୍ଣ ପରଦା କରନ୍ତୁ ନାହିଁ ଯାହାକି ବର୍ଦ୍ଧିତ ହୋଇଥାଏ ଏବଂ କୌଣସି "
 "ବିଭୁଷଣ ନଥାଏ"
 
-#: src/core/main.c:522
+#: src/core/main.c:499
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "ପ୍ରସଙ୍ଗ ଡିରେକ୍ଟୋରି: %sକୁ କ୍ରମବୀକ୍ଷଣ କରିବାରେ ଅସମର୍ଥ\n"
 
-#: src/core/main.c:538
+#: src/core/main.c:515
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1262,7 +1249,7 @@ msgstr ""
 "ଏକ ପ୍ରସଙ୍ଗ ମିଳିଲା ନାହିଁ! ନିଶ୍ଚିତ କରନ୍ତୁ କି %s ବାସ୍ତବରେ ଅଛି ଓ ତାହା ଭିତରେ "
 "ସାଧାରଣ ପ୍ରସଙ୍ଗଗୁଡ଼ିକ ରହିଛି।\n"
 
-#: src/core/main.c:597
+#: src/core/main.c:574
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "ପୁନଃ ପ୍ରାରମ୍ଭ କରିବାରେ ଅସମର୍ଥ: %s\n"
@@ -1270,12 +1257,12 @@ msgstr "ପୁନଃ ପ୍ରାରମ୍ଭ କରିବାରେ ଅସମର
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: src/core/prefs.c:641 src/core/prefs.c:794
+#: src/core/prefs.c:642 src/core/prefs.c:795
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: src/core/prefs.c:1088
+#: src/core/prefs.c:1087
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1283,12 +1270,12 @@ msgstr ""
 "ଅବୈଧ ପ୍ରୟୋଗ ପାଇଁ ଅନ୍ଯତର ଉପାୟଗୁଡ଼ିକ ଅସମର୍ଥ କରାଯାଇଛି. କିଛି ପ୍ରୟୋଗ ଠିକ ଭାବେ ନ "
 "ଚଳିପାରନ୍ତି.\n"
 
-#: src/core/prefs.c:1194
+#: src/core/prefs.c:1193
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: src/core/prefs.c:1256
+#: src/core/prefs.c:1255
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1297,7 +1284,7 @@ msgstr ""
 "ବିନ୍ଯାସ ତଥ୍ଯାଧାରରେ ପାୟାଯାଇଥିବା \"%s\" ମାଉସ ଚାବି ରୂପାନ୍ତରକ ପାଇଁ ଗୋଟିଏ ବୈଧ "
 "ମୂଲ୍ଯ ନୁହେଁ\n"
 
-#: src/core/prefs.c:1844
+#: src/core/prefs.c:1843
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1306,17 +1293,17 @@ msgstr ""
 "ବିନ୍ଯାସ ତଥ୍ଯାଧାରରେ ପାୟାଯାଇଥିବା \"%s\" ଚାବିବନ୍ଧନୀ \"%s\" ପାଇଁ ଗୋଟିଏ ବୈଧ ମୂଲ୍ଯ"
 " ନୁହେଁ\n"
 
-#: src/core/prefs.c:2147
+#: src/core/prefs.c:2146
 #, c-format
 msgid "Workspace %d"
 msgstr "କାର୍ଯ୍ଯକ୍ଷେତ୍ର %d"
 
-#: src/core/screen.c:362
+#: src/core/screen.c:363
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "ପ୍ରଦର୍ଶକ '%2$s'ରେ ପରଦା %1$d ଅବୈଧ\n"
 
-#: src/core/screen.c:378
+#: src/core/screen.c:379
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1325,67 +1312,67 @@ msgstr ""
 "ପ୍ରଦର୍ଶକ \"%2$s\"ରେ ପରଦା %1$dର ପୂର୍ବରୁ ଗୋଟିଏ ୱିଣ୍ଢୋ ପରିଚାଳକ ଅଛି; ସାମ୍ପ୍ରତିକ "
 "ୱିଣ୍ଢୋ ପରିଚାଳକକୁ ବଦଳାଇବା ପାଇଁ, ବଦଳ ଚୟନ ବ୍ଯବହାର କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ.\n"
 
-#: src/core/screen.c:405
+#: src/core/screen.c:406
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr "ପ୍ରଦର୍ଶକ \"%2$s\"ରେ ପରଦା %1$dର ୱିଣ୍ଢୋ ପରିଚାଳକ ଚୟନ ବୁଝିହେଲା ନାହିଁ\n"
 
-#: src/core/screen.c:463
+#: src/core/screen.c:464
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "ପ୍ରଦର୍ଶକ \"%2$s\"ରେ ପରଦା %1$dର ପୂର୍ବରୁ ଗୋଟିଏ ୱିଣ୍ଢୋ ପରିଚାଳକ ଅଛି\n"
 
-#: src/core/screen.c:677
+#: src/core/screen.c:678
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "ପ୍ରଦର୍ଶକ \"%2$s\"ରେ ପରଦା %1$dକୁ ନୁକ୍ତ କରିହେଲା ନାହିଁ\n"
 
-#: src/core/session.c:842 src/core/session.c:849
+#: src/core/session.c:841 src/core/session.c:848
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "'%s' ଡିରେକ୍ଟୋରି ସୃଷ୍ଟି କରିହେଲା ନାହିଁ: %s\n"
 
-#: src/core/session.c:859
+#: src/core/session.c:858
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "ଅଧିବେଶନ ଫାଇଲ '%s' ଲିଖନ ପାଇଁ ଖୋଲିହେଲା ନାହିଁ: %s\n"
 
-#: src/core/session.c:999
+#: src/core/session.c:998
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "ଅଧିବେଶନ ଫାଇଲ '%s' ଲେଖିବାରେ ତ୍ରୁଟି: %s\n"
 
-#: src/core/session.c:1004
+#: src/core/session.c:1003
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "ଅଧିବେଶନ ଫାଇଲ '%s' ବନ୍ଦ କରିବାରେ ତ୍ରୁଟି: %s\n"
 
-#: src/core/session.c:1134
+#: src/core/session.c:1132
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "ସଞ୍ଚିତ ଅଧିବେଶନ ଫାଇଲ ବିଶ୍ଳେଷଣ କରିବାରେ ଅସଫଳ: %s\n"
 
-#: src/core/session.c:1183
+#: src/core/session.c:1181
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr ""
 "<marco_session> ଗୁଣ ଦେଖାଗଲା, କିନ୍ତୁ ଆମ ପାଖରେ ଅଧିବେଶନ ପରିଚୟ ପୂର୍ବରୁ ଅଛି"
 
-#: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
-#: src/core/session.c:1375 src/core/session.c:1435
+#: src/core/session.c:1194 src/core/session.c:1269 src/core/session.c:1301
+#: src/core/session.c:1373 src/core/session.c:1433
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "ଅଜଣା ଗୁଣ %s <%s> ଉପାଦାନ ଉପରେ"
 
-#: src/core/session.c:1213
+#: src/core/session.c:1211
 msgid "nested <window> tag"
 msgstr "ଘେରାଯାଇଥିବା <window> ସୂଚକ"
 
-#: src/core/session.c:1455
+#: src/core/session.c:1453
 #, c-format
 msgid "Unknown element %s"
 msgstr "ଅଜଣା ଉପାଦାନ %s"
 
-#: src/core/session.c:1807
+#: src/core/session.c:1805
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
@@ -1394,49 +1381,49 @@ msgstr ""
 "କରିନଥାଏ, ଏବଂ ପୁଣିଥରେ ଲଗଇନ ହେବା ସମୟରେ ହସ୍ତକୃତ ଭାବରେ ପୁନଃ ପ୍ରାରମ୍ଭ କରିବାକୁ "
 "ହେବ।"
 
-#: src/core/util.c:101
+#: src/core/util.c:103
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "ତ୍ରୁଟିମୁକ୍ତ ବିବରଣୀ ଖୋଲିବାରେ ଅସଫଳ: %s\n"
 
-#: src/core/util.c:111
+#: src/core/util.c:113
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "%s ବିବରଣୀ ଫାଇଲକୁ fdopen() କରିବୋରେ ଅସଫଳ: %s\n"
 
-#: src/core/util.c:117
+#: src/core/util.c:119
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "%s ବିବରଣୀ ଫାଇଲ ଖୋଲାହେଲା\n"
 
-#: src/core/util.c:136 src/tools/marco-message.c:176
+#: src/core/util.c:138 src/tools/marco-message.c:172
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "ମେଟାସିଟି ଦୃଷ୍ଟ ସୂଚନା ଧାରାର ସହାୟକ ବିନା ସଂକଳିତ ହୋଇଥିଲା.\n"
 
-#: src/core/util.c:227
+#: src/core/util.c:229
 msgid "Window manager: "
 msgstr "ୱିଣ୍ଡୋ ପରିଚାଳକ"
 
-#: src/core/util.c:379
+#: src/core/util.c:381
 msgid "Bug in window manager: "
 msgstr "ୱିଣ୍ଡୋ ପରିଚାଳକରେ ତ୍ରୁଟି"
 
-#: src/core/util.c:412
+#: src/core/util.c:414
 msgid "Window manager warning: "
 msgstr "ୱିଣ୍ଡୋ ପରିଚାଳକ ଚେତାବନୀ"
 
-#: src/core/util.c:440
+#: src/core/util.c:442
 msgid "Window manager error: "
 msgstr "ୱିଣ୍ଡୋ ପରିଚାଳକ ତ୍ରୁଟି"
 
 #. Translators: This is the title used on dialog boxes
-#: src/core/util.c:560 src/core/util.c:658 src/marco.desktop.in:4
+#: src/core/util.c:562 src/core/util.c:660 src/marco.desktop.in:4
 #: src/marco-wm.desktop.in:4
 msgid "Marco"
 msgstr "ମେଟାସିଟି"
 
 #. first time through
-#: src/core/window.c:6004
+#: src/core/window.c:6008
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1451,7 +1438,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6582
+#: src/core/window.c:6596
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1461,7 +1448,7 @@ msgstr ""
 "କିନ୍ତୁ ସର୍ବନିମ୍ନ ଆକାର %d x %d ଓ ସର୍ବାଧିକ ଆକାର %d x %d ବିନ୍ଯାସ କରେ; ଏହାର "
 "ବିଶେଷ ମାନେ ନାହିଁ.\n"
 
-#: src/core/window-props.c:306
+#: src/core/window-props.c:307
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "ପ୍ରୟୋଗ ଗୋଟିଏ ନକଲି _NET_WM_PID %lu ବିନ୍ଯାସ କଲା\n"
@@ -1497,7 +1484,7 @@ msgstr "%s (ଅନ୍ୟ ଏକ ଚାଳକ ଭାବରେ)"
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "ଅବୈଧ WM_TRANSIENT_FOR ୱିଣ୍ଡୋ 0x%lx। ଯାହାକି %s ପାଇଁ ଉଲ୍ଲିଖିତ ।\n"
 
-#: src/core/xprops.c:155
+#: src/core/xprops.c:156
 #, c-format
 msgid ""
 "Window 0x%lx has property %s\n"
@@ -1512,12 +1499,12 @@ msgstr ""
 "ସବୁଠାରୁ ସମ୍ଭବତଃ କି ଏହା ପ୍ରୟୋଗର ତ୍ରୁଟି, ୱିଣ୍ଡୋ ପରିଚାଳକର ନୁହେଁ.\n"
 "ୱିଣ୍ଡୋର ଶୀର୍ଷକ ହେଲା \"%s\" class=\"%s\" name=\"%s\"\n"
 
-#: src/core/xprops.c:411
+#: src/core/xprops.c:412
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgstr "ୱିଣ୍ଡୋ 0x%2$lxର %1$s ଗୁଣଧର୍ମରେ ଅବୈଧ ୟି.ଟି.ଏଫ.-୮ ଅଛି\n"
 
-#: src/core/xprops.c:494
+#: src/core/xprops.c:495
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
@@ -1525,156 +1512,156 @@ msgid ""
 msgstr ""
 "ୱିଣ୍ଡୋ 0x%2$lxର %1$s ଗୁଣଧର୍ମର ତାଲିକାରେ %3$d ବସ୍ତୁରେ ଅବୈଧ ୟି.ଟି.ଏଫ.-୮ ଅଛି\n"
 
-#: src/tools/marco-message.c:150
+#: src/tools/marco-message.c:146
 #, c-format
 msgid "Usage: %s\n"
 msgstr "ବ୍ଯବହାର: %s\n"
 
-#: src/ui/frames.c:1338
+#: src/ui/frames.c:1341
 msgid "Close Window"
 msgstr "ଉଇଣ୍ଡୋ ବନ୍ଦକର"
 
-#: src/ui/frames.c:1341
+#: src/ui/frames.c:1344
 msgid "Window Menu"
 msgstr "ୱିଣ୍ଡୋ ମେନୁ"
 
-#: src/ui/frames.c:1344
+#: src/ui/frames.c:1347
 msgid "Window App Menu"
 msgstr ""
 
-#: src/ui/frames.c:1347
+#: src/ui/frames.c:1350
 msgid "Minimize Window"
 msgstr "ୱିଣ୍ଡୋକୁ କ୍ଷୁଦ୍ରତମ କରନ୍ତୁ"
 
-#: src/ui/frames.c:1350
+#: src/ui/frames.c:1353
 msgid "Maximize Window"
 msgstr "ୱିଣ୍ଡୋକୁ ବୃହତ୍ତମ କରନ୍ତୁ"
 
-#: src/ui/frames.c:1353
+#: src/ui/frames.c:1356
 msgid "Restore Window"
 msgstr "ୱିଣ୍ଡୋକୁ ପୁନଃ ସ୍ଥାପନ କରନ୍ତୁ"
 
-#: src/ui/frames.c:1356
+#: src/ui/frames.c:1359
 msgid "Roll Up Window"
 msgstr "ୱିଣ୍ଡୋକୁ ଉପରକୁ ଗୁଡ଼ାନ୍ତୁ"
 
-#: src/ui/frames.c:1359
+#: src/ui/frames.c:1362
 msgid "Unroll Window"
 msgstr "ୱିଣ୍ଡୋକୁ ଗୁଡ଼ାନ୍ତୁ ନାହିଁ"
 
-#: src/ui/frames.c:1362
+#: src/ui/frames.c:1365
 msgid "Keep Window On Top"
 msgstr "ୱିଣ୍ଡୋକୁ ଉପରେ ରଖନ୍ତୁ"
 
-#: src/ui/frames.c:1365
+#: src/ui/frames.c:1368
 msgid "Remove Window From Top"
 msgstr "ୱିଣ୍ଡୋକୁ ଉପରୁ କାଢ଼ନ୍ତୁ"
 
-#: src/ui/frames.c:1368
+#: src/ui/frames.c:1371
 msgid "Always On Visible Workspace"
 msgstr "ସଦାବେଳେ ଦୃଶ୍ଯମାନ କାର୍ଯ୍ଯକ୍ଷେତ୍ରରେ ଥାଏ"
 
-#: src/ui/frames.c:1371
+#: src/ui/frames.c:1374
 msgid "Put Window On Only One Workspace"
 msgstr "ୱିଣ୍ଡୋକୁ ସର୍ବଦା କେବଳ ଗୋଟିଏ କାର୍ଯ୍ଯକ୍ଷେତ୍ରରେ ରଖନ୍ତୁ"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:65
+#: src/ui/menu.c:66
 msgid "Mi_nimize"
 msgstr "ଯଥାସମ୍ଭବ ଛୋଟ କରନ୍ତୁ (_n)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:67
+#: src/ui/menu.c:68
 msgid "Ma_ximize"
 msgstr "ଯଥାସମ୍ଭବ ବଡ଼ କରନ୍ତୁ (_x)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:69
+#: src/ui/menu.c:70
 msgid "Unma_ximize"
 msgstr "ବୃହତ୍ତମରୁ ଛୋଟ କରନ୍ତୁ (_x)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:71
+#: src/ui/menu.c:72
 msgid "Roll _Up"
 msgstr "ଉପରକୁ ଗୁଡ଼ାନ୍ତୁ (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:73
+#: src/ui/menu.c:74
 msgid "_Unroll"
 msgstr "ଖୋଲନ୍ତୁ (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:75
+#: src/ui/menu.c:76
 msgid "_Move"
 msgstr "ଘୁଞ୍ଚାନ୍ତୁ (_M)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:77
+#: src/ui/menu.c:78
 msgid "_Resize"
 msgstr "ଆକାର ବଦଳାନ୍ତୁ (_R)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:79
+#: src/ui/menu.c:80
 msgid "Move Titlebar On_screen"
 msgstr "ଶୀର୍ଷକ ପରଦାକୁ ପଟି ଘୁଞ୍ଚାନ୍ତୁ (_s)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:82 src/ui/menu.c:84
+#: src/ui/menu.c:83 src/ui/menu.c:85
 msgid "Always on _Top"
 msgstr "ସର୍ବଦା ଉପରେ (_T)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:86
+#: src/ui/menu.c:87
 msgid "_Always on Visible Workspace"
 msgstr "ସଦାବେଳେ ଦୃଶ୍ଯମାନ କାର୍ଯ୍ଯକ୍ଷେତ୍ରରେ (_A)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:88
+#: src/ui/menu.c:89
 msgid "_Only on This Workspace"
 msgstr "କେବଳ ଏହି କାର୍ଯ୍ଯକ୍ଷେତ୍ରରେ (_O)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:90
+#: src/ui/menu.c:91
 msgid "Move to Workspace _Left"
 msgstr "ବାମ କାର୍ଯ୍ଯକ୍ଷେତ୍ରକୁ ଘୁଞ୍ଚାନ୍ତୁ (_L)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:92
+#: src/ui/menu.c:93
 msgid "Move to Workspace R_ight"
 msgstr "ଡାହାଣ କାର୍ଯ୍ଯକ୍ଷେତ୍ରକୁ ଘୁଞ୍ଚାନ୍ତୁ (_i)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:94
+#: src/ui/menu.c:95
 msgid "Move to Workspace _Up"
 msgstr "ଉପର କାର୍ଯ୍ଯକ୍ଷେତ୍ରକୁ ଘୁଞ୍ଚାନ୍ତୁ (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:96
+#: src/ui/menu.c:97
 msgid "Move to Workspace _Down"
 msgstr "ତଳ କାର୍ଯ୍ଯକ୍ଷେତ୍ରକୁ ଘୁଞ୍ଚାନ୍ତୁ (_D)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:100
+#: src/ui/menu.c:101
 msgid "_Close"
 msgstr "ବନ୍ଦ କରନ୍ତୁ (_C)"
 
-#: src/ui/menu.c:197
+#: src/ui/menu.c:198
 #, c-format
 msgid "Workspace %d%n"
 msgstr "କାର୍ଯ୍ଯକ୍ଷେତ୍ର %d%n"
 
-#: src/ui/menu.c:207
+#: src/ui/menu.c:208
 msgid "Workspace 1_0"
 msgstr "କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୧_୦"
 
-#: src/ui/menu.c:209
+#: src/ui/menu.c:210
 #, c-format
 msgid "Workspace %s%d"
 msgstr "କାର୍ଯ୍ଯକ୍ଷେତ୍ର %s%d"
 
-#: src/ui/menu.c:388
+#: src/ui/menu.c:386
 msgid "Move to Another _Workspace"
 msgstr "ଅନ୍ଯ କାର୍ଯ୍ଯକ୍ଷେତ୍ରକୁ ଘୁଞ୍ଚାନ୍ତୁ (_W)"
 
@@ -1682,7 +1669,7 @@ msgstr "ଅନ୍ଯ କାର୍ଯ୍ଯକ୍ଷେତ୍ରକୁ ଘୁଞ�
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:80
+#: src/ui/metaaccellabel.c:81
 msgid "Shift"
 msgstr "Shift"
 
@@ -1690,7 +1677,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:86
+#: src/ui/metaaccellabel.c:87
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -1698,7 +1685,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:92
+#: src/ui/metaaccellabel.c:93
 msgid "Alt"
 msgstr "Alt"
 
@@ -1706,7 +1693,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:98
+#: src/ui/metaaccellabel.c:99
 msgid "Meta"
 msgstr "Meta"
 
@@ -1714,7 +1701,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:104
+#: src/ui/metaaccellabel.c:105
 msgid "Super"
 msgstr "Super"
 
@@ -1722,7 +1709,7 @@ msgstr "Super"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:110
+#: src/ui/metaaccellabel.c:111
 msgid "Hyper"
 msgstr "Hyper"
 
@@ -1730,7 +1717,7 @@ msgstr "Hyper"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:116
+#: src/ui/metaaccellabel.c:117
 msgid "Mod2"
 msgstr "Mod2"
 
@@ -1738,7 +1725,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:122
+#: src/ui/metaaccellabel.c:123
 msgid "Mod3"
 msgstr "Mod3"
 
@@ -1746,7 +1733,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:128
+#: src/ui/metaaccellabel.c:129
 msgid "Mod4"
 msgstr "Mod4"
 
@@ -1754,13 +1741,13 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:134
+#: src/ui/metaaccellabel.c:135
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: src/ui/resizepopup.c:117
+#: src/ui/resizepopup.c:119
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -1990,12 +1977,12 @@ msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr ""
 "ସ୍ଥାନ ନିର୍ଣ୍ଣୟ ଅଭିବ୍ଯକ୍ତିରେ କୌଣସି ଚାଳକ ବା ସଂକାର୍ଯ୍ଯ ଥାଲା ଭଳିଆ ବୋଧହେଉ ନାହିଁ"
 
-#: src/ui/theme.c:3027 src/ui/theme.c:3047 src/ui/theme.c:3067
+#: src/ui/theme.c:3026 src/ui/theme.c:3046 src/ui/theme.c:3066
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "ପ୍ରସଙ୍ଗରେ ଗୋଟିଏ ଅଭିବ୍ଯକ୍ତି ଥିଲା ଯାହା ଯୋଗୁ ତ୍ରୁଟି ହେଲା: %s\n"
 
-#: src/ui/theme.c:4857
+#: src/ui/theme.c:4856
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2004,23 +1991,23 @@ msgstr ""
 "ଏହି ବନ୍ଧେଇ ସଜ୍ଜିକରଣ ଶୈଳୀ ପାଇଁ <button function=\"%s\" state=\"%s\" "
 "draw_ops=\"whatever\"/> ନିର୍ଦ୍ଦିଷ୍ଟ କରିବା ବାଧ୍ଯ"
 
-#: src/ui/theme.c:5393 src/ui/theme.c:5418
+#: src/ui/theme.c:5391 src/ui/theme.c:5416
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "ନିଖୋଜ <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: src/ui/theme.c:5462
+#: src/ui/theme.c:5460
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" ପ୍ରସଙ୍ଗ ଧାରଣ କରିବାରେ ଅସଫଳ: %s\n"
 
-#: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
-#: src/ui/theme.c:5615 src/ui/theme.c:5622
+#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
+#: src/ui/theme.c:5612 src/ui/theme.c:5619
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "\"%2$s\" ପ୍ରସଙ୍ଗ ପାଇଁ କୌଣସି <%1$s> ବିନ୍ଯାସ କରାଯାଇ ନାହିଁ"
 
-#: src/ui/theme.c:5630
+#: src/ui/theme.c:5627
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2030,83 +2017,83 @@ msgstr ""
 "କରାଯାଇ ନାହିଁ, ଗୋଟିଏ <windowtype=\"%3$s\" style_set=\"whatever\"/> ଉପାଦାନ ଯୋଗ"
 " କରନ୍ତୁ"
 
-#: src/ui/theme.c:6045 src/ui/theme.c:6107 src/ui/theme.c:6170
+#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "ଚାଳକ ଦ୍ବାରା ବ୍ଯାଖ୍ଯା କରାଯାଇଥାବା ସ୍ଥାୟୀ ମୂଲ୍ଯଗୁଡ଼ିକ ବଡ଼ ଅକ୍ଷରରେ ଆରମ୍ଭ ହେବା "
 "ବାଧ୍ଯ; \"%s\" କରୁ ନାହିଁ"
 
-#: src/ui/theme.c:6053 src/ui/theme.c:6115 src/ui/theme.c:6178
+#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "\"%s\" ସ୍ଥାୟୀ ମୂଲ୍ଯ ପୂର୍ବରୁ ବ୍ଯାଖ୍ଯା କରାଯାଇଛି"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: src/ui/theme-parser.c:252
+#: src/ui/theme-parser.c:253
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "କୌଣସି \"%s\" ଗୁଣ ବସ୍ତୁରେ ନାହିଁ <%s>"
 
-#: src/ui/theme-parser.c:281 src/ui/theme-parser.c:299
+#: src/ui/theme-parser.c:282 src/ui/theme-parser.c:300
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "%d ଲାଇନ %d ଅକ୍ଷର: %s"
 
-#: src/ui/theme-parser.c:499
+#: src/ui/theme-parser.c:500
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "\"%s\" ଗୁଣ ଏକା ଉପାଦାନ <%s>ରେ ଦୁଇଥର ଅଛି"
 
-#: src/ui/theme-parser.c:523 src/ui/theme-parser.c:572
+#: src/ui/theme-parser.c:524 src/ui/theme-parser.c:573
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "ଏହି ପ୍ରସଙ୍ଗରେ \"%s\" ଗୁଣଟି <%s> ତତ୍ବରେ ଅବୈଧ"
 
-#: src/ui/theme-parser.c:614
+#: src/ui/theme-parser.c:615
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\"କୁ ପୁର୍ଣ ସଂଖ୍ଯା ଭାବରେ ବିଶ୍ଳେଷଣ କରିହେଲା ନାହିଁ"
 
-#: src/ui/theme-parser.c:623 src/ui/theme-parser.c:678
+#: src/ui/theme-parser.c:624 src/ui/theme-parser.c:679
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "\"%s\" ବାକ୍ଯଖଣ୍ଡର ପଛପାଖରେ ଥିବା ଅକ୍ଷର \"%s\" ବୁଝିହେଲା ନାହିଁ"
 
-#: src/ui/theme-parser.c:633
+#: src/ui/theme-parser.c:634
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "%ld ପୂର୍ଣ୍ମ ସମଖ୍ଯା ଶୂନ୍ଯଠାରୁ ଅଧିକ ହେବା ବାଧ୍ଯ"
 
-#: src/ui/theme-parser.c:641
+#: src/ui/theme-parser.c:642
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "%ld ପୂର୍ଣ୍ମ ସମଖ୍ଯାଟି ଅତି ବଡ଼, ସାମ୍ପ୍ରତିକ ସର୍ବାଧିକ ମୂଲ୍ଯ ହେଲା %d"
 
-#: src/ui/theme-parser.c:669 src/ui/theme-parser.c:785
+#: src/ui/theme-parser.c:670 src/ui/theme-parser.c:786
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "\"%s\"କୁ ଅସ୍ଥାୟୀ ବିନ୍ଦୁ ରୂପେ ବିଶ୍ଳେଷଣ କରିବାରେ ଅସଫଳ"
 
-#: src/ui/theme-parser.c:700 src/ui/theme-parser.c:728
+#: src/ui/theme-parser.c:701 src/ui/theme-parser.c:729
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "ବୁଲିଆନ ମୂଲ୍ଯଗୁଡ଼ିକ \"true\" ବା \"false\" ହୋଇଥିବା ବାଧ୍ଯ, \"%s\" ନୁହେଁ"
 
-#: src/ui/theme-parser.c:755
+#: src/ui/theme-parser.c:756
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "କୋଣ ୦.୦ ଓ ୩୬୦.୦ ମଧ୍ଯରେ ଥିବା ବାଧ୍ଯ, %g ଥିଲା\n"
 
-#: src/ui/theme-parser.c:818
+#: src/ui/theme-parser.c:819
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "ଆଲ୍ଫା ୦.୦ (ଅଦୃଶ୍ଯ) ଓ ୧.୦ (ସମ୍ପୂର୍ଣ୍ମ ଭାବେ ଅସ୍ବଚ୍ଛ) ମଧ୍ଯରେ ଥିବା ବାଧ୍ଯ, %g "
 "ଥିଲା\n"
 
-#: src/ui/theme-parser.c:883
+#: src/ui/theme-parser.c:884
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2115,50 +2102,50 @@ msgstr ""
 "ଅବୈଧ ଶୀର୍ଷକ ମାପ \"%s\" (xx-small,x-small,small,medium,large,x-large,xx-large"
 " ମଧ୍ଯରୁ ଗୋଟିଏ ହୋଇଥିବା ବାଧ୍ଯ)\n"
 
-#: src/ui/theme-parser.c:1039 src/ui/theme-parser.c:1102
-#: src/ui/theme-parser.c:1136 src/ui/theme-parser.c:1239
+#: src/ui/theme-parser.c:1040 src/ui/theme-parser.c:1103
+#: src/ui/theme-parser.c:1137 src/ui/theme-parser.c:1240
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> ନାମ \"%s\" ଦୁଇଥର ବ୍ଯବହୃତ"
 
-#: src/ui/theme-parser.c:1051 src/ui/theme-parser.c:1148
-#: src/ui/theme-parser.c:1251
+#: src/ui/theme-parser.c:1052 src/ui/theme-parser.c:1149
+#: src/ui/theme-parser.c:1252
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> ମୂଳ \"%s\" ବ୍ଯାଖ୍ଯା ହୋଇ ନାହିଁ"
 
-#: src/ui/theme-parser.c:1161
+#: src/ui/theme-parser.c:1162
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> ଜ୍ଯାମିତି \"%s\" ବ୍ଯାଖ୍ଯା ହୋଇ ନାହିଁ"
 
-#: src/ui/theme-parser.c:1174
+#: src/ui/theme-parser.c:1175
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> ଗୋଟିଏ ଜ୍ଯାମିତି ବା ଜ୍ଯାମିତି ଥିବା ମୂଳ ନିର୍ଦ୍ଦିଷ୍ଟ କରିବା ବାଧ୍ଯ"
 
-#: src/ui/theme-parser.c:1216
+#: src/ui/theme-parser.c:1217
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "ଆପଣଙ୍କୁ ଆଲଫା ମୂଲ୍ୟ ପାଇଁ ଗୋଟିଏ ଅର୍ଥପୂର୍ଣ୍ଣ ପୃଷ୍ଠଭୂମି ଉଲ୍ଲେଖ କରିବା ଉଚିତ"
 
-#: src/ui/theme-parser.c:1284
+#: src/ui/theme-parser.c:1285
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "ଉପାଦାନ <%s>ରେ ଅଜଣା ପ୍ରକାର \"%s\""
 
-#: src/ui/theme-parser.c:1295
+#: src/ui/theme-parser.c:1296
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "ଉପାଦାନ <%s>ରେ ଅଜଣା ଶୈଳୀ_ସେଟ୍ \"%s\""
 
-#: src/ui/theme-parser.c:1303
+#: src/ui/theme-parser.c:1304
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "\"%s\" ୱିଣ୍ଡୋ ପ୍ରକାର ପାଇଁ ପୂର୍ବରୁ ଗୋଟିଏ ଶୈଳୀ ସେଟ୍ ନିର୍ଦ୍ଧାରିତ କରାଯାଇଛି"
 
-#: src/ui/theme-parser.c:1333 src/ui/theme-parser.c:1397
-#: src/ui/theme-parser.c:1623 src/ui/theme-parser.c:2858
-#: src/ui/theme-parser.c:2904 src/ui/theme-parser.c:3062
+#: src/ui/theme-parser.c:1334 src/ui/theme-parser.c:1398
+#: src/ui/theme-parser.c:1624 src/ui/theme-parser.c:2859
+#: src/ui/theme-parser.c:2905 src/ui/theme-parser.c:3063
 #: src/ui/theme-parser.c:3298 src/ui/theme-parser.c:3336
 #: src/ui/theme-parser.c:3374 src/ui/theme-parser.c:3391
 #: src/ui/theme-parser.c:3407 src/ui/theme-parser.c:3444
@@ -2166,8 +2153,8 @@ msgstr "\"%s\" ୱିଣ୍ଡୋ ପ୍ରକାର ପାଇଁ ପୂର୍�
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "<%s> ବସ୍ତୁ <%s> ତଳେ ସ୍ବୀକାର୍ଯ୍ଯ ନୁହେଁ"
 
-#: src/ui/theme-parser.c:1447 src/ui/theme-parser.c:1461
-#: src/ui/theme-parser.c:1506
+#: src/ui/theme-parser.c:1448 src/ui/theme-parser.c:1462
+#: src/ui/theme-parser.c:1507
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2175,113 +2162,113 @@ msgstr ""
 "ବଟନଗୁଡ଼ିକ ପାଇଁ ଉଭୟ \"button_width\"/\"button_height\" ଏବଂ \"aspect_ratio\"କୁ"
 " ଉଲ୍ଲେଖ କରିପାରିବେ ନାହିଁ"
 
-#: src/ui/theme-parser.c:1470
+#: src/ui/theme-parser.c:1471
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "\"%s\" ଦୂରତା ଅଜଣା"
 
-#: src/ui/theme-parser.c:1515
+#: src/ui/theme-parser.c:1516
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "\"%s\" ପରିମାପ ଅନୁପାଦ ଅଜଣା"
 
-#: src/ui/theme-parser.c:1577
+#: src/ui/theme-parser.c:1578
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "\"%s\" ଧାର ଅଜଣା"
 
-#: src/ui/theme-parser.c:1888
+#: src/ui/theme-parser.c:1889
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "ଉପାଦାନ <%s> ରେ କୌଣସି \"start_angle\" ଅଥବା \"from\" ଗୁଣ ନାହିଁ"
 
-#: src/ui/theme-parser.c:1895
+#: src/ui/theme-parser.c:1896
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "ଉପାଦାନ <%s> ରେ କୌଣସି \"extent_angle\" ଅଥବା \"to\" ଗୁଣ ନାହିଁ"
 
-#: src/ui/theme-parser.c:2135
+#: src/ui/theme-parser.c:2136
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "ଗଡ଼ାଣି ପ୍ରକାର ପାଇଁ \"%s\" ମୂଲ୍ଯ ବୁଝିହେଲା ନାହିଁ"
 
-#: src/ui/theme-parser.c:2213 src/ui/theme-parser.c:2588
+#: src/ui/theme-parser.c:2214 src/ui/theme-parser.c:2589
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "<%2$s> ଉପାଦାନ ପାଇଁ \"%1$s\" ଭରଣ ଶୈଳୀ ବୁଝିହେଲା ନାହିଁ"
 
-#: src/ui/theme-parser.c:2380 src/ui/theme-parser.c:2463
-#: src/ui/theme-parser.c:2526
+#: src/ui/theme-parser.c:2381 src/ui/theme-parser.c:2464
+#: src/ui/theme-parser.c:2527
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "<%2$s> ଉପାଦାନ ପାଇଁ \"%1$s\" ଅବସ୍ଥା ବୁଝିହେଲା ନାହିଁ"
 
-#: src/ui/theme-parser.c:2390 src/ui/theme-parser.c:2473
+#: src/ui/theme-parser.c:2391 src/ui/theme-parser.c:2474
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "<%2$s> ଉପାଦାନ ପାଇଁ \"%1$s\" ଛାଇ ବୁଝିହେଲା ନାହିଁ"
 
-#: src/ui/theme-parser.c:2400
+#: src/ui/theme-parser.c:2401
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "<%2$s> ଉପାଦାନ ପାଇଁ \"%1$s\" ତୀର ବୁଝିହେଲା ନାହିଁ"
 
-#: src/ui/theme-parser.c:2714 src/ui/theme-parser.c:2810
+#: src/ui/theme-parser.c:2715 src/ui/theme-parser.c:2811
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "\"%s\" ନାମକ <draw_ops> ବ୍ଯାଖ୍ଯା ହୋଇ ନାହିଁ"
 
-#: src/ui/theme-parser.c:2726 src/ui/theme-parser.c:2822
+#: src/ui/theme-parser.c:2727 src/ui/theme-parser.c:2823
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "ଏଠାରେ \"%s\" draw_ops ଭର୍ତ୍ତି କଲେ, ଗୋଟିଏ ବୃତ୍ତାକାର ରେଫରେନ୍ସ ସୃଷ୍ଟି ହେବ"
 
-#: src/ui/theme-parser.c:2937
+#: src/ui/theme-parser.c:2938
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "ବନ୍ଧେଇ ଖଣ୍ଡ ପାଇଁ ଅଜଣା ଅବସ୍ଥାନ \"%s\""
 
-#: src/ui/theme-parser.c:2945
+#: src/ui/theme-parser.c:2946
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "ବନ୍ଧେଇ ଶୈଳୀର ପୂର୍ବରୁ %s ଅବସ୍ଥାନରେ ଗୋଟିଏ ଖଣ୍ଡ ଅଛି"
 
-#: src/ui/theme-parser.c:2962 src/ui/theme-parser.c:3039
+#: src/ui/theme-parser.c:2963 src/ui/theme-parser.c:3040
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "\"%s\" ନାମକ <draw_ops> ବ୍ଯାଖ୍ଯା ହୋଇ ନାହିଁ"
 
-#: src/ui/theme-parser.c:2992
+#: src/ui/theme-parser.c:2993
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "ଚାବି ପାଇଁ ଅଜଣା ଫଳନ \"%s\""
 
-#: src/ui/theme-parser.c:3002
+#: src/ui/theme-parser.c:3003
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "ବଟନ ଫଳନ \"%s\" ଏହି ସଂସ୍କରଣରେ ଅବସ୍ଥିତ ନାହିଁ (%d, %d ଆବଶ୍ୟକ)"
 
-#: src/ui/theme-parser.c:3014
+#: src/ui/theme-parser.c:3015
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "ଚାବି ପାଇଁ ଅଜଣା ଅବସ୍ଥା\"%s\""
 
-#: src/ui/theme-parser.c:3022
+#: src/ui/theme-parser.c:3023
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "ଫଳନ %s, ସ୍ଥିତି %s ପାଇଁ ପୂର୍ବରୁ ବନ୍ଧେଇ ଶୈଳୀର ଗୋଟିଏ ଚାବି ଅଛି"
 
-#: src/ui/theme-parser.c:3101
+#: src/ui/theme-parser.c:3102
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "କେନ୍ଦ୍ର ଗୁଣ ପାଇଁ \"%s\" ବୈଧ ମୂଲ୍ଯ ନୁହେଁ"
 
-#: src/ui/theme-parser.c:3110
+#: src/ui/theme-parser.c:3111
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "ଅବସ୍ଥା ଗୁଣ ପାଇଁ \"%s\" ବୈଧ ମୂଲ୍ଯ ନୁହେଁ"
 
-#: src/ui/theme-parser.c:3120
+#: src/ui/theme-parser.c:3121
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "\"%s\" ନାମକ ଶୈଳୀ ବ୍ଯାଖ୍ଯା ହୋଇ ନାହିଁ"
@@ -2416,104 +2403,104 @@ msgstr "ଏହି ପ୍ରସଙ୍ଗ ପାଇଁ <%s> ଦୁଇଥର ଉଲ
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "ପ୍ରସଙ୍ଗ %s ପାଇଁ ଗୋଟିଏ ବୈଧ ଫାଇଲ ପାଇବାରେ ଅସଫଳ\n"
 
-#: src/ui/theme-viewer.c:256
+#: src/ui/theme-viewer.c:254
 msgid "_OK"
 msgstr ""
 
-#: src/ui/theme-viewer.c:268
+#: src/ui/theme-viewer.c:266
 msgid "This is a sample message in a sample dialog"
 msgstr "ଏହା ଗୋଟିଏ ନମୁନା ସଂଳାପରେ ଗୋଟିଏ ନମୁନା ସନ୍ଦେଶ"
 
-#: src/ui/theme-viewer.c:352
+#: src/ui/theme-viewer.c:350
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "ନକଲି ମେନୁ ବସ୍ତୁ %d\n"
 
-#: src/ui/theme-viewer.c:408
+#: src/ui/theme-viewer.c:406
 msgid "Border-only window"
 msgstr "କେବଳ ଧାରବାଲା ୱିଣ୍ଡୋ"
 
-#: src/ui/theme-viewer.c:410
+#: src/ui/theme-viewer.c:408
 msgid "Bar"
 msgstr "ପିଣ୍ଡ"
 
-#: src/ui/theme-viewer.c:427
+#: src/ui/theme-viewer.c:425
 msgid "Normal Application Window"
 msgstr "ସାଧାରଣ ପ୍ରୟୋଗ ୱିଣ୍ଡୋ"
 
-#: src/ui/theme-viewer.c:431
+#: src/ui/theme-viewer.c:429
 msgid "Dialog Box"
 msgstr "ସଂଳାପ ବାକ୍ସ"
 
-#: src/ui/theme-viewer.c:435
+#: src/ui/theme-viewer.c:433
 msgid "Modal Dialog Box"
 msgstr "ଧାରା ସଂଳାପ ବାକ୍ସ"
 
-#: src/ui/theme-viewer.c:439
+#: src/ui/theme-viewer.c:437
 msgid "Utility Palette"
 msgstr "ସାଧନ ଥାଳି"
 
-#: src/ui/theme-viewer.c:443
+#: src/ui/theme-viewer.c:441
 msgid "Torn-off Menu"
 msgstr "ଛିଣ୍ଡା ମେନୁ"
 
-#: src/ui/theme-viewer.c:447
+#: src/ui/theme-viewer.c:445
 msgid "Border"
 msgstr "ଧାରର୍"
 
-#: src/ui/theme-viewer.c:451
+#: src/ui/theme-viewer.c:449
 msgid "Attached Modal Dialog"
 msgstr ""
 
-#: src/ui/theme-viewer.c:811
+#: src/ui/theme-viewer.c:808
 #, c-format
 msgid "Button layout test %d"
 msgstr "ଚାବି ବିନ୍ଯାସ ପରିକ୍ଷଣ %d"
 
-#: src/ui/theme-viewer.c:836
+#: src/ui/theme-viewer.c:833
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "ଗୋଟିଏ ୱିଣ୍ଡୋ ବନ୍ଧେଇ ଆଙ୍କିବାକୁ %g ମିଲିସେକଣ୍ଡ"
 
-#: src/ui/theme-viewer.c:876
+#: src/ui/theme-viewer.c:873
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "ବ୍ଯବହାର: marco-theme-viewer [ପ୍ରସଙ୍ଗ ନାମ]\n"
 
-#: src/ui/theme-viewer.c:883
+#: src/ui/theme-viewer.c:880
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "ପ୍ରସଙ୍ଗ ଧାରଣ କରିବାରେ ତ୍ରୁଟି: %s\n"
 
-#: src/ui/theme-viewer.c:889
+#: src/ui/theme-viewer.c:886
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" ପ୍ରସଙ୍ଗ %g ସେକଣ୍ଡରେ ଧାରଣ ହେଲା\n"
 
-#: src/ui/theme-viewer.c:933
+#: src/ui/theme-viewer.c:930
 msgid "Normal Title Font"
 msgstr "ସାଧାରଣ ଶୀର୍ଷକ ଅକ୍ଷରରୂପ"
 
-#: src/ui/theme-viewer.c:939
+#: src/ui/theme-viewer.c:936
 msgid "Small Title Font"
 msgstr "ଛୋଟ ଶୀର୍ଷକ ଅକ୍ଷରରୂପ"
 
-#: src/ui/theme-viewer.c:945
+#: src/ui/theme-viewer.c:942
 msgid "Large Title Font"
 msgstr "ବଡ଼ ଶୀର୍ଷକ ଅକ୍ଷରରୂପ"
 
-#: src/ui/theme-viewer.c:950
+#: src/ui/theme-viewer.c:947
 msgid "Button Layouts"
 msgstr "ଚାବି ବିନ୍ଯାସଗୁଡ଼ିକ"
 
-#: src/ui/theme-viewer.c:955
+#: src/ui/theme-viewer.c:952
 msgid "Benchmark"
 msgstr "ମାନଦଣ୍ଡ"
 
-#: src/ui/theme-viewer.c:1012
+#: src/ui/theme-viewer.c:1008
 msgid "Window Title Goes Here"
 msgstr "ୱିଣ୍ଡୋ ଶୀର୍ଷକ ଏଇଠି"
 
-#: src/ui/theme-viewer.c:1114
+#: src/ui/theme-viewer.c:1110
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

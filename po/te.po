@@ -10,9 +10,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.23.1\n"
+"Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2019-11-18 19:44+0100\n"
+"POT-Creation-Date: 2021-06-04 17:32+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Telugu (https://www.transifex.com/mate/teams/13566/te/)\n"
@@ -1102,51 +1102,51 @@ msgstr ""
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
 
-#: src/core/bell.c:294
+#: src/core/bell.c:298
 msgid "Bell event"
 msgstr "బెల్ ఘటన"
 
-#: src/core/core.c:214
+#: src/core/core.c:216
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "తెలియని విండో సమాచార అభ్యర్ధన: %d"
 
 #. Translators: %s is a window title
-#: src/core/delete.c:96
+#: src/core/delete.c:98
 #, c-format
 msgid "<tt>%s</tt> is not responding."
 msgstr ""
 
-#: src/core/delete.c:101
+#: src/core/delete.c:103
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
 msgstr ""
 
-#: src/core/delete.c:110
+#: src/core/delete.c:112
 msgid "_Wait"
 msgstr "ఆగుము (_W)"
 
-#: src/core/delete.c:110
+#: src/core/delete.c:112
 msgid "_Force Quit"
 msgstr "బలవంతపు నిష్క్రమణ (_F)"
 
-#: src/core/delete.c:180
+#: src/core/delete.c:181
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "హోస్టునామము పొందుటలో విఫలమైంది: %s\n"
 
-#: src/core/display.c:270
+#: src/core/display.c:271
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "కంపోజిటింగ్ కొరకు తప్పిపోయిన %s పొడిగింపు అవసరమైంది"
 
-#: src/core/display.c:348
+#: src/core/display.c:349
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X విండో సిస్టమ్ ప్రదర్శన '%s' తెరుచుటకు విఫలమైంది\n"
 
-#: src/core/keybindings.c:723
+#: src/core/keybindings.c:722
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1157,7 +1157,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2396
+#: src/core/keybindings.c:2415
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1168,91 +1168,78 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2485
+#: src/core/keybindings.c:2503
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "ఏ ఆదేశము %d నిర్వచించబడిలేదు.\n"
 
-#: src/core/keybindings.c:3595
+#: src/core/keybindings.c:3610
 msgid "No terminal command has been defined.\n"
 msgstr "ఎటువంటి టెర్మినల్ ఆదేశము నిర్వచించబడిలేదు.\n"
 
-#: src/core/keybindings.c:3735
+#: src/core/keybindings.c:3747
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: src/core/keybindings.c:3736
+#: src/core/keybindings.c:3748
 msgid "New Workspace Name:"
 msgstr ""
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3759
 msgid "OK"
 msgstr ""
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3759
 msgid "Cancel"
 msgstr "రద్దు"
 
-#: src/core/main.c:132
-#, c-format
-msgid ""
-"marco %s\n"
-"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
-"This is free software; see the source for copying conditions.\n"
-"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"మెటాసిటి %s\n"
-"కాపీరైట్ (C) 2001-%s Havoc Pennington, Red Hat, Inc., మరియు యితరులు\n"
-"యిది వుచిత సాఫ్టువేర్; నకలు నియమాల కొరకు మూలాన్ని చూడండి.\n"
-"వ్యాపారము కొరకుగాని లేదా వొక ప్రత్యేక ప్రయోజనము కొరకు వుపయోగపడుతుంది గాని;అక్కడ యెటువంటి వారెంటి లేదు.\n"
-
-#: src/core/main.c:270
+#: src/core/main.c:245
 msgid "Disable connection to session manager"
 msgstr "సెషన్ నిర్వాహకునికి అనుసంధానమును అచేతనము చేయుము"
 
-#: src/core/main.c:276
+#: src/core/main.c:251
 msgid "Replace the running window manager with Marco"
 msgstr "నడుచుచున్న విండో నిర్వాహికను మెటాసిటితో పునఃస్థాపించుము"
 
-#: src/core/main.c:282
+#: src/core/main.c:257
 msgid "Specify session management ID"
 msgstr "సెషన్ నిర్వహణ IDను తెలుపుము"
 
-#: src/core/main.c:287
+#: src/core/main.c:262
 msgid "X Display to use"
 msgstr "ఉపయోగించుటకు X ప్రదర్శన"
 
-#: src/core/main.c:293
+#: src/core/main.c:268
 msgid "Initialize session from savefile"
 msgstr "విభాగమును దాచినదస్త్రమునుండి సిద్దముచేయుము"
 
-#: src/core/main.c:299
+#: src/core/main.c:274
 msgid "Print version"
 msgstr "ముద్రణ వివరణము"
 
-#: src/core/main.c:305
+#: src/core/main.c:280
 msgid "Make X calls synchronous"
 msgstr "X కాల్స్‍‌ను ఏకకాలం చేయుము"
 
-#: src/core/main.c:311
+#: src/core/main.c:286
 msgid "Turn compositing on"
 msgstr "కంపోజిటింగ్‌ను ఆన్ చేయుము"
 
-#: src/core/main.c:317
+#: src/core/main.c:292
 msgid "Turn compositing off"
 msgstr "కంపోజిటింగ్‌ను ఆఫ్ చేయుము"
 
-#: src/core/main.c:323
+#: src/core/main.c:298
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "పెద్దవిచేయబడిన మరియు అలంకరణలులేని విండోలను పెద్దస్క్రీను చేయవద్దు"
 
-#: src/core/main.c:522
+#: src/core/main.c:499
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "థీమ్స్ డైరెక్టరీను స్కాను చేయుటకు విఫలమైంది: %s\n"
 
-#: src/core/main.c:538
+#: src/core/main.c:515
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1260,7 +1247,7 @@ msgstr ""
 "ఒక థీమ్‌ను కనుగొనలేక పోయింది! %s వుండునట్లు మరియు అది సాదారణ థీమ్సును "
 "కలిగివుండునట్లు చూచుకొనుము.\n"
 
-#: src/core/main.c:597
+#: src/core/main.c:574
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "పునఃప్రారంభమునకు విఫలమైంది: %s\n"
@@ -1268,12 +1255,12 @@ msgstr "పునఃప్రారంభమునకు విఫలమైం�
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: src/core/prefs.c:641 src/core/prefs.c:794
+#: src/core/prefs.c:642 src/core/prefs.c:795
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: src/core/prefs.c:1088
+#: src/core/prefs.c:1087
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1281,12 +1268,12 @@ msgstr ""
 "విరిగిపోయిన అనువర్తనములకు పరిష్కారములు అచేతనము చేయబడినవి. కొన్ని "
 "అనువర్తనములు సరిగా ప్రవర్తించక పోవచ్చును.\n"
 
-#: src/core/prefs.c:1194
+#: src/core/prefs.c:1193
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
 
-#: src/core/prefs.c:1256
+#: src/core/prefs.c:1255
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1295,7 +1282,7 @@ msgstr ""
 "ఆకృతీకరణ డాటాబేస్ నందు కనిపించిన \"%s\" మౌస్ బటన్ సవరణికి చెల్లునటువంటి "
 "విలువ కాదు\n"
 
-#: src/core/prefs.c:1844
+#: src/core/prefs.c:1843
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1304,17 +1291,17 @@ msgstr ""
 "ఆకృతీకరణ డాటాబేస్ నందు కనిపించిన \"%s\" అనునది కీబందనము \"%s\" కొరకు "
 "చెల్లునటువంటి విలువకాదు\n"
 
-#: src/core/prefs.c:2147
+#: src/core/prefs.c:2146
 #, c-format
 msgid "Workspace %d"
 msgstr "పనిస్థలము %d"
 
-#: src/core/screen.c:362
+#: src/core/screen.c:363
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "తెర %d ప్రదర్శన '%s' నందలిది చెల్లనిది\n"
 
-#: src/core/screen.c:378
+#: src/core/screen.c:379
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1324,68 +1311,68 @@ msgstr ""
 "ప్రస్తుత విండో నిర్వాహికను పునఃస్థాపించుటకు --replace ఐచ్చికాన్ని "
 "ప్రయత్నించుము.\n"
 
-#: src/core/screen.c:405
+#: src/core/screen.c:406
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr "తెర %d ప్రదర్శన \"%s\" పైన విండో నిర్వాహిక యెంపికను పొందలేక పోయింది\n"
 
-#: src/core/screen.c:463
+#: src/core/screen.c:464
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "తెర %d ప్రదర్శన \"%s\"పైన యిప్పటికే విండో నిర్వాహికను కలిగివుంది\n"
 
-#: src/core/screen.c:677
+#: src/core/screen.c:678
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "తెర %d ప్రదర్శన \"%s\"పైన విడుదల చేయలేకపోయింది\n"
 
-#: src/core/session.c:842 src/core/session.c:849
+#: src/core/session.c:841 src/core/session.c:848
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "డైరెక్టరీ '%s'ను సృష్టించలేక పోయింది: %s\n"
 
-#: src/core/session.c:859
+#: src/core/session.c:858
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "విభాగపు దస్త్రము '%s'ను వ్రాయుట కొరకు తెరువలేక పోయింది: %s\n"
 
-#: src/core/session.c:999
+#: src/core/session.c:998
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "విభాగపు దస్త్రము '%s'ను వ్రాయుటలో దోషము: %s\n"
 
-#: src/core/session.c:1004
+#: src/core/session.c:1003
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "విభాగపు దస్త్రము '%s'ను మూయుటలో దోషము: %s\n"
 
-#: src/core/session.c:1134
+#: src/core/session.c:1132
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "దాచిన విభాగపు దస్త్రమును పార్శ్ చేయుటకు విఫలమైంది: %s\n"
 
-#: src/core/session.c:1183
+#: src/core/session.c:1181
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr ""
 "<marco_session> యాట్రిబ్యూట్ చూడబడింది అయితే మనము యిప్పటికే విభాగపు IDను "
 "కలిగివున్నాము"
 
-#: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
-#: src/core/session.c:1375 src/core/session.c:1435
+#: src/core/session.c:1194 src/core/session.c:1269 src/core/session.c:1301
+#: src/core/session.c:1373 src/core/session.c:1433
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "తెలియని యాట్రిబ్యూట్ %s మూలకం <%s> పైన"
 
-#: src/core/session.c:1213
+#: src/core/session.c:1211
 msgid "nested <window> tag"
 msgstr "పునరావృత <window> టాగ్"
 
-#: src/core/session.c:1455
+#: src/core/session.c:1453
 #, c-format
 msgid "Unknown element %s"
 msgstr "తెలియని మూలకం %s"
 
-#: src/core/session.c:1807
+#: src/core/session.c:1805
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
@@ -1393,49 +1380,49 @@ msgstr ""
 "ఈ విండోలు &quot;ప్రస్తుత అమర్పును దాయి&quot; మద్దతునీయవు అందువలన మీరు "
 "తరువాతి సారి లాగినైనప్పుడు మానవీయంగా పునఃప్రారంభించవలసి వుంటుంది."
 
-#: src/core/util.c:101
+#: src/core/util.c:103
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "డీబగ్ లాగ్ తెరుచుటలో విఫలమైంది: %s\n"
 
-#: src/core/util.c:111
+#: src/core/util.c:113
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "లాగ్ దస్త్రము %sను fdopen() చెయుటకు విఫలమైంది: %s\n"
 
-#: src/core/util.c:117
+#: src/core/util.c:119
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "తెరిచిన లాగ్ దస్త్రము %s\n"
 
-#: src/core/util.c:136 src/tools/marco-message.c:176
+#: src/core/util.c:138 src/tools/marco-message.c:172
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "వెర్బోస్ రీతికి మద్దతులేకుండా మెటాసిటి నిర్వర్తించబడింది\n"
 
-#: src/core/util.c:227
+#: src/core/util.c:229
 msgid "Window manager: "
 msgstr "విండో నిర్వాహిక: "
 
-#: src/core/util.c:379
+#: src/core/util.c:381
 msgid "Bug in window manager: "
 msgstr "విండో నిర్వాహిక నందు బగ్: "
 
-#: src/core/util.c:412
+#: src/core/util.c:414
 msgid "Window manager warning: "
 msgstr "విండో నిర్వాహిక హెచ్చరిక: "
 
-#: src/core/util.c:440
+#: src/core/util.c:442
 msgid "Window manager error: "
 msgstr "విండో నిర్వాహిక దోషము: "
 
 #. Translators: This is the title used on dialog boxes
-#: src/core/util.c:560 src/core/util.c:658 src/marco.desktop.in:4
+#: src/core/util.c:562 src/core/util.c:660 src/marco.desktop.in:4
 #: src/marco-wm.desktop.in:4
 msgid "Marco"
 msgstr "మెటాసిటి"
 
 #. first time through
-#: src/core/window.c:6004
+#: src/core/window.c:6008
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1450,7 +1437,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6582
+#: src/core/window.c:6596
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1460,7 +1447,7 @@ msgstr ""
 "కనిష్ట పరిమాణమును %d x %dగా మరియు గరిష్ట పరిమాణమును %d x %dగా అమర్చినది;యిది"
 " అంత అర్దవంతంగా లేదు.\n"
 
-#: src/core/window-props.c:306
+#: src/core/window-props.c:307
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "అనువర్తనము బూటకపు _NET_WM_PID %lu అమర్చినది\n"
@@ -1496,7 +1483,7 @@ msgstr "%s (వేరే వినియోగదారివలె)"
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "చెల్లని WM_TRANSIENT_FOR విండో 0x%lx అనునది %s కొరకు తెలుపబడింది.\n"
 
-#: src/core/xprops.c:155
+#: src/core/xprops.c:156
 #, c-format
 msgid ""
 "Window 0x%lx has property %s\n"
@@ -1511,12 +1498,12 @@ msgstr ""
 "ఇది సాదారణంగా వొక అనువర్తనపు బగ్, విండో నిర్వాహిక బగ్ కాదు.\n"
 "విండో title=\"%s\" class=\"%s\" name=\"%s\" కలిగివుంది\n"
 
-#: src/core/xprops.c:411
+#: src/core/xprops.c:412
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgstr "లక్షణం %s విం‍డో 0x%lx పైన చెల్లని UTF-8 కలిగివుంది\n"
 
-#: src/core/xprops.c:494
+#: src/core/xprops.c:495
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
@@ -1525,156 +1512,156 @@ msgstr ""
 "లక్షణం %s విండో 0x%lx పైన చెల్లని UTF-8ను జాబితానందలి %d అంశముకొరకు "
 "కలిగివుంది\n"
 
-#: src/tools/marco-message.c:150
+#: src/tools/marco-message.c:146
 #, c-format
 msgid "Usage: %s\n"
 msgstr "వినియోగము: %s\n"
 
-#: src/ui/frames.c:1338
+#: src/ui/frames.c:1341
 msgid "Close Window"
 msgstr "విండో మూయుము"
 
-#: src/ui/frames.c:1341
+#: src/ui/frames.c:1344
 msgid "Window Menu"
 msgstr "విండో మెనూ"
 
-#: src/ui/frames.c:1344
+#: src/ui/frames.c:1347
 msgid "Window App Menu"
 msgstr ""
 
-#: src/ui/frames.c:1347
+#: src/ui/frames.c:1350
 msgid "Minimize Window"
 msgstr "విండోను క్రిందకుమూయుము"
 
-#: src/ui/frames.c:1350
+#: src/ui/frames.c:1353
 msgid "Maximize Window"
 msgstr "విండోను పెద్దదిచేయుము"
 
-#: src/ui/frames.c:1353
+#: src/ui/frames.c:1356
 msgid "Restore Window"
 msgstr "విండోను పూర్వస్థితికి వుంచుము"
 
-#: src/ui/frames.c:1356
+#: src/ui/frames.c:1359
 msgid "Roll Up Window"
 msgstr "విండోను చుట్టుము"
 
-#: src/ui/frames.c:1359
+#: src/ui/frames.c:1362
 msgid "Unroll Window"
 msgstr "విండో చుట్టుతీయుము"
 
-#: src/ui/frames.c:1362
+#: src/ui/frames.c:1365
 msgid "Keep Window On Top"
 msgstr "విండోను పైన వుంచుము"
 
-#: src/ui/frames.c:1365
+#: src/ui/frames.c:1368
 msgid "Remove Window From Top"
 msgstr "విండోను పైననుండి తీసివేయుము"
 
-#: src/ui/frames.c:1368
+#: src/ui/frames.c:1371
 msgid "Always On Visible Workspace"
 msgstr "ఎల్లప్పుడూ కనిపిస్తున్న పనిస్థలము"
 
-#: src/ui/frames.c:1371
+#: src/ui/frames.c:1374
 msgid "Put Window On Only One Workspace"
 msgstr "విండో వొక పనిస్థలమునందు మాత్రమే వుంచుము"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:65
+#: src/ui/menu.c:66
 msgid "Mi_nimize"
 msgstr "కనిష్టీకరించు (_n)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:67
+#: src/ui/menu.c:68
 msgid "Ma_ximize"
 msgstr "పెద్దదిచేయి (_x)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:69
+#: src/ui/menu.c:70
 msgid "Unma_ximize"
 msgstr "చిన్నదిగాచేయి (_x)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:71
+#: src/ui/menu.c:72
 msgid "Roll _Up"
 msgstr "చుట్టుము (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:73
+#: src/ui/menu.c:74
 msgid "_Unroll"
 msgstr "చుట్టుతీయుము (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:75
+#: src/ui/menu.c:76
 msgid "_Move"
 msgstr "కదులు(_M)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:77
+#: src/ui/menu.c:78
 msgid "_Resize"
 msgstr "పునఃపరిమాణీకరణ (_R)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:79
+#: src/ui/menu.c:80
 msgid "Move Titlebar On_screen"
 msgstr "శీర్షికపట్టీను తెరపైనకు కదుపుము (_s)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:82 src/ui/menu.c:84
+#: src/ui/menu.c:83 src/ui/menu.c:85
 msgid "Always on _Top"
 msgstr "ఎల్లప్పుడూ పైన వుంచుము (_T)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:86
+#: src/ui/menu.c:87
 msgid "_Always on Visible Workspace"
 msgstr "ఎల్లప్పుడూ కనిపించుచున్న పనిస్థలముపైనే (_A)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:88
+#: src/ui/menu.c:89
 msgid "_Only on This Workspace"
 msgstr "ఈ పనిస్థలముపైన మాత్రమే (_O)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:90
+#: src/ui/menu.c:91
 msgid "Move to Workspace _Left"
 msgstr "పనిచేస్తున్న చోటునుండీ ఎడమవైపుకు కదులు (_L)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:92
+#: src/ui/menu.c:93
 msgid "Move to Workspace R_ight"
 msgstr "పనిచేస్తున్న చోటునుండీ కుడివైపుకు కదులు (_i)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:94
+#: src/ui/menu.c:95
 msgid "Move to Workspace _Up"
 msgstr "పనిచేస్తున్న చోటునుండీ పైకి కదులు (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:96
+#: src/ui/menu.c:97
 msgid "Move to Workspace _Down"
 msgstr "పనిచేస్తున్న చోటునుండీ కిందకు కదులు (_D)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:100
+#: src/ui/menu.c:101
 msgid "_Close"
 msgstr "మూసివేయి (_C)"
 
-#: src/ui/menu.c:197
+#: src/ui/menu.c:198
 #, c-format
 msgid "Workspace %d%n"
 msgstr "పనిస్థలము %d%n"
 
-#: src/ui/menu.c:207
+#: src/ui/menu.c:208
 msgid "Workspace 1_0"
 msgstr "పనిస్థలము 1_0"
 
-#: src/ui/menu.c:209
+#: src/ui/menu.c:210
 #, c-format
 msgid "Workspace %s%d"
 msgstr "పనిస్థలము %s%d"
 
-#: src/ui/menu.c:388
+#: src/ui/menu.c:386
 msgid "Move to Another _Workspace"
 msgstr "వేరే పనిచేసెచోటుకి కదులు (_W)"
 
@@ -1682,7 +1669,7 @@ msgstr "వేరే పనిచేసెచోటుకి కదులు (_W
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:80
+#: src/ui/metaaccellabel.c:81
 msgid "Shift"
 msgstr "Shift"
 
@@ -1690,7 +1677,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:86
+#: src/ui/metaaccellabel.c:87
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -1698,7 +1685,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:92
+#: src/ui/metaaccellabel.c:93
 msgid "Alt"
 msgstr "ఆల్ట్"
 
@@ -1706,7 +1693,7 @@ msgstr "ఆల్ట్"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:98
+#: src/ui/metaaccellabel.c:99
 msgid "Meta"
 msgstr "Meta"
 
@@ -1714,7 +1701,7 @@ msgstr "Meta"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:104
+#: src/ui/metaaccellabel.c:105
 msgid "Super"
 msgstr "సూపర్"
 
@@ -1722,7 +1709,7 @@ msgstr "సూపర్"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:110
+#: src/ui/metaaccellabel.c:111
 msgid "Hyper"
 msgstr "హైపర్"
 
@@ -1730,7 +1717,7 @@ msgstr "హైపర్"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:116
+#: src/ui/metaaccellabel.c:117
 msgid "Mod2"
 msgstr "Mod2"
 
@@ -1738,7 +1725,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:122
+#: src/ui/metaaccellabel.c:123
 msgid "Mod3"
 msgstr "Mod3"
 
@@ -1746,7 +1733,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:128
+#: src/ui/metaaccellabel.c:129
 msgid "Mod4"
 msgstr "Mod4"
 
@@ -1754,13 +1741,13 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:134
+#: src/ui/metaaccellabel.c:135
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: src/ui/resizepopup.c:117
+#: src/ui/resizepopup.c:119
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -1983,12 +1970,12 @@ msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr ""
 "కోఆర్డినేట్ సమీకరణము ఆపరేటర్లను కాని ఆపరెండ్లను కాని కలిగివున్నట్లులేదు"
 
-#: src/ui/theme.c:3027 src/ui/theme.c:3047 src/ui/theme.c:3067
+#: src/ui/theme.c:3026 src/ui/theme.c:3046 src/ui/theme.c:3066
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "దోషపూరిత పలితాన్ని యిచ్చు సమీకరణమును థీమ్ కలిగివుంది: %s\n"
 
-#: src/ui/theme.c:4857
+#: src/ui/theme.c:4856
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1997,23 +1984,23 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> ఈ చట్రపు శైలికి"
 " తప్పక తెలుపవలెను"
 
-#: src/ui/theme.c:5393 src/ui/theme.c:5418
+#: src/ui/theme.c:5391 src/ui/theme.c:5416
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> తప్పిపోయినది"
 
-#: src/ui/theme.c:5462
+#: src/ui/theme.c:5460
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "థీమ్ \"%s\" లోడ్ చేయుటలో విఫలమైంది: %s\n"
 
-#: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
-#: src/ui/theme.c:5615 src/ui/theme.c:5622
+#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
+#: src/ui/theme.c:5612 src/ui/theme.c:5619
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "ఎటువంటి <%s> అమర్చబడలేదు థీమ్ \"%s\" కొరకు"
 
-#: src/ui/theme.c:5630
+#: src/ui/theme.c:5627
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2022,83 +2009,83 @@ msgstr ""
 "విండో రకము \"%s\" కొరకు థీమ్ \"%s\" నందు యెటువంటి చట్రపు శైలి అమర్చబడలేదు, "
 "వొక <window type=\"%s\" style_set=\"whatever\"/> మూలకం జతచేయుము"
 
-#: src/ui/theme.c:6045 src/ui/theme.c:6107 src/ui/theme.c:6170
+#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "వినియోగదారి-నిర్వచిత స్థరిరాశులు తప్పక పెద్ద అక్షరముతో ప్రారంభించబడాలి; "
 "\"%s\" అలా లేదు"
 
-#: src/ui/theme.c:6053 src/ui/theme.c:6115 src/ui/theme.c:6178
+#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "స్థిరరాశి \"%s\" యిప్పటికే నిర్వచింపడివుంది"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: src/ui/theme-parser.c:252
+#: src/ui/theme-parser.c:253
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "ఎటువంటి \"%s\" మూల వస్తువు పై ఆపాదించు <%s>"
 
-#: src/ui/theme-parser.c:281 src/ui/theme-parser.c:299
+#: src/ui/theme-parser.c:282 src/ui/theme-parser.c:300
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "గీత %d అక్షరం %d: %s"
 
-#: src/ui/theme-parser.c:499
+#: src/ui/theme-parser.c:500
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "ఆపాదించుట \"%s\" ఒక దానిపై రెండుసార్లు మళ్ళీచేయబడిన <%s> మూల వస్తువు"
 
-#: src/ui/theme-parser.c:523 src/ui/theme-parser.c:572
+#: src/ui/theme-parser.c:524 src/ui/theme-parser.c:573
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "ఆపాదించుట \"%s\" పై నిస్సారము <%s> ఈ సంధర్భంలో మూల వాక్యము"
 
-#: src/ui/theme-parser.c:614
+#: src/ui/theme-parser.c:615
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\" వొక యింటీజర్‌లా పార్శ్ చేయలేము"
 
-#: src/ui/theme-parser.c:623 src/ui/theme-parser.c:678
+#: src/ui/theme-parser.c:624 src/ui/theme-parser.c:679
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "ట్రెయిలింగ్ అక్షరములు \"%s\"ను స్ట్రింగు \"%s\" నందు అర్దముచేసుకోలేదు"
 
-#: src/ui/theme-parser.c:633
+#: src/ui/theme-parser.c:634
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "పూర్ణాంకము %ld తప్పక ధనరాశి కావాలి"
 
-#: src/ui/theme-parser.c:641
+#: src/ui/theme-parser.c:642
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "పూర్ణాంకము %ld మరీ పెద్దది, ప్రస్తుత గరిష్టము %d"
 
-#: src/ui/theme-parser.c:669 src/ui/theme-parser.c:785
+#: src/ui/theme-parser.c:670 src/ui/theme-parser.c:786
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "ఫ్లోటింగ్ పాయింట్ సంఖ్యవలె \"%s\"ను పార్శ్ చేయలేకపోయింది"
 
-#: src/ui/theme-parser.c:700 src/ui/theme-parser.c:728
+#: src/ui/theme-parser.c:701 src/ui/theme-parser.c:729
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "బూలియన్ విలువలు తప్పక \"సత్యము\" లేదా \"అసత్యము\" కావాలి \"%s\" కాదు"
 
-#: src/ui/theme-parser.c:755
+#: src/ui/theme-parser.c:756
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "కోణము తప్పక 0.0 మరియు 360.0 మధ్య వుండాలి, %gగా వుంది\n"
 
-#: src/ui/theme-parser.c:818
+#: src/ui/theme-parser.c:819
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr ""
 "అల్ఫా అనునది తప్పక 0.0 (అదృశ్యంగా) మరియు 1.0 (పూర్తి ఒపాక్యూ) మద్య వుండాలి, "
 "%gగా వుంది\n"
 
-#: src/ui/theme-parser.c:883
+#: src/ui/theme-parser.c:884
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2107,52 +2094,52 @@ msgstr ""
 "చెల్లని శీర్షిక స్కేల్ \"%s\" (తప్పక వీటిలో వొకటిగా వుండాలి xx-"
 "small,x-small,small,medium,large,x-large,xx-large)\n"
 
-#: src/ui/theme-parser.c:1039 src/ui/theme-parser.c:1102
-#: src/ui/theme-parser.c:1136 src/ui/theme-parser.c:1239
+#: src/ui/theme-parser.c:1040 src/ui/theme-parser.c:1103
+#: src/ui/theme-parser.c:1137 src/ui/theme-parser.c:1240
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> నామము \"%s\" రెండవసారి వుపయోగించబడింది"
 
-#: src/ui/theme-parser.c:1051 src/ui/theme-parser.c:1148
-#: src/ui/theme-parser.c:1251
+#: src/ui/theme-parser.c:1052 src/ui/theme-parser.c:1149
+#: src/ui/theme-parser.c:1252
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> మాత్రుక(పేరెంట్) \"%s\" నిర్వచింపబడిలేదు"
 
-#: src/ui/theme-parser.c:1161
+#: src/ui/theme-parser.c:1162
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> జియోమెట్రీ \"%s\" నిర్వచింపబడిలేదు"
 
-#: src/ui/theme-parser.c:1174
+#: src/ui/theme-parser.c:1175
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr ""
 "<%s> తప్పక జియెమెట్రీను లేదా జియెమెట్రీను కలిగివున్న మాత్రుకను తెలుపవలెను"
 
-#: src/ui/theme-parser.c:1216
+#: src/ui/theme-parser.c:1217
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr ""
 "అల్ఫా విలువ అర్ధవంతంగా వుండుటకు మీరు తప్పక బ్యాక్‌గ్రౌండును తెలుపవలెను"
 
-#: src/ui/theme-parser.c:1284
+#: src/ui/theme-parser.c:1285
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "తెలియని రకము \"%s\" మూలకం <%s> పైన"
 
-#: src/ui/theme-parser.c:1295
+#: src/ui/theme-parser.c:1296
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "తెలియని style_set \"%s\" మూలకం <%s> పైన"
 
-#: src/ui/theme-parser.c:1303
+#: src/ui/theme-parser.c:1304
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "విండో రకము \"%s\"కు యిప్పటికే వొక శైలి అమర్చబడింది"
 
-#: src/ui/theme-parser.c:1333 src/ui/theme-parser.c:1397
-#: src/ui/theme-parser.c:1623 src/ui/theme-parser.c:2858
-#: src/ui/theme-parser.c:2904 src/ui/theme-parser.c:3062
+#: src/ui/theme-parser.c:1334 src/ui/theme-parser.c:1398
+#: src/ui/theme-parser.c:1624 src/ui/theme-parser.c:2859
+#: src/ui/theme-parser.c:2905 src/ui/theme-parser.c:3063
 #: src/ui/theme-parser.c:3298 src/ui/theme-parser.c:3336
 #: src/ui/theme-parser.c:3374 src/ui/theme-parser.c:3391
 #: src/ui/theme-parser.c:3407 src/ui/theme-parser.c:3444
@@ -2160,8 +2147,8 @@ msgstr "విండో రకము \"%s\"కు యిప్పటికే �
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "<%s> మూల వస్తువు <%s> క్రింద అనుమతించబడవు"
 
-#: src/ui/theme-parser.c:1447 src/ui/theme-parser.c:1461
-#: src/ui/theme-parser.c:1506
+#: src/ui/theme-parser.c:1448 src/ui/theme-parser.c:1462
+#: src/ui/theme-parser.c:1507
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2169,113 +2156,113 @@ msgstr ""
 "బటన్ల కొరకు \"button_width\"/\"button_height\" మరియు \"aspect_ratio\" "
 "రెంటిని తెలుపలేదు"
 
-#: src/ui/theme-parser.c:1470
+#: src/ui/theme-parser.c:1471
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "\"%s\" దూరం తెలియనిది"
 
-#: src/ui/theme-parser.c:1515
+#: src/ui/theme-parser.c:1516
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "ఏస్పెక్ట్ రేషియో \"%s\" తెలియనిది"
 
-#: src/ui/theme-parser.c:1577
+#: src/ui/theme-parser.c:1578
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "హద్దు \"%s\" తెలియనిది"
 
-#: src/ui/theme-parser.c:1888
+#: src/ui/theme-parser.c:1889
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "మూలకం <%s> పైన యెటువంటి \"start_angle\" లేదా \"from\" యాట్రిబ్యూట్ లేదు"
 
-#: src/ui/theme-parser.c:1895
+#: src/ui/theme-parser.c:1896
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "మూలకం <%s> పైన యెటువంటి \"extent_angle\" లేదా \"to\" యాట్రిబ్యూట్ లేదు"
 
-#: src/ui/theme-parser.c:2135
+#: src/ui/theme-parser.c:2136
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "గ్రేడియంట్ రకమునకు \"%s\" విలువ అర్దము కాలేదు"
 
-#: src/ui/theme-parser.c:2213 src/ui/theme-parser.c:2588
+#: src/ui/theme-parser.c:2214 src/ui/theme-parser.c:2589
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "ఫిల్ రకము \"%s\"ను మూలకం <%s> కొరకు అర్దము కాలేదు"
 
-#: src/ui/theme-parser.c:2380 src/ui/theme-parser.c:2463
-#: src/ui/theme-parser.c:2526
+#: src/ui/theme-parser.c:2381 src/ui/theme-parser.c:2464
+#: src/ui/theme-parser.c:2527
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "స్థితి \"%s\" మూలకం <%s> కొరకు అర్దము కాలేదు"
 
-#: src/ui/theme-parser.c:2390 src/ui/theme-parser.c:2473
+#: src/ui/theme-parser.c:2391 src/ui/theme-parser.c:2474
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "షాడో \"%s\" మూలకం <%s> కొరకు అర్దము కాలేదు"
 
-#: src/ui/theme-parser.c:2400
+#: src/ui/theme-parser.c:2401
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "ఏరో \"%s\" మూలకం <%s> కొరకు అర్దము కాలేదు"
 
-#: src/ui/theme-parser.c:2714 src/ui/theme-parser.c:2810
+#: src/ui/theme-parser.c:2715 src/ui/theme-parser.c:2811
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "ఏ <draw_ops> పిలువబడిన \"%s\" నిర్వచింపబడలేదు"
 
-#: src/ui/theme-parser.c:2726 src/ui/theme-parser.c:2822
+#: src/ui/theme-parser.c:2727 src/ui/theme-parser.c:2823
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "draw_ops \"%s\" కలుపుకొని యిక్కడ ఆవృత సంప్రదింపును సృష్టించేది"
 
-#: src/ui/theme-parser.c:2937
+#: src/ui/theme-parser.c:2938
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "చట్రము ముక్క కొరకు తెలియని స్థానము \"%s\""
 
-#: src/ui/theme-parser.c:2945
+#: src/ui/theme-parser.c:2946
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "చట్రము శైలి యిప్పటికే స్థానము %s వద్ద ముక్కను కలిగివుంది"
 
-#: src/ui/theme-parser.c:2962 src/ui/theme-parser.c:3039
+#: src/ui/theme-parser.c:2963 src/ui/theme-parser.c:3040
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "ఎటువంటి <draw_ops> నామము \"%s\"తో నిర్వచింపబడిలేవు"
 
-#: src/ui/theme-parser.c:2992
+#: src/ui/theme-parser.c:2993
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "బటన్ కొరకు తెలియని ప్రమేయం \"%s\""
 
-#: src/ui/theme-parser.c:3002
+#: src/ui/theme-parser.c:3003
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr "బటన్ ప్రమేయం \"%s\" ఈ వర్షన్ (%d, %d అవసరము) నందు లేదు"
 
-#: src/ui/theme-parser.c:3014
+#: src/ui/theme-parser.c:3015
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "బటన్ కొరకు తెలియని స్థితి \"%s\""
 
-#: src/ui/theme-parser.c:3022
+#: src/ui/theme-parser.c:3023
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "ప్రమేయం %s స్థితి %s కొరకు చట్రము శైలి యిప్పటికే బటన్ కలిగివుంది"
 
-#: src/ui/theme-parser.c:3101
+#: src/ui/theme-parser.c:3102
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\" అనునది ఫోకస్ యాట్రిబ్యూట్‌నకు చెల్లునటువంటి విలువ కాదు"
 
-#: src/ui/theme-parser.c:3110
+#: src/ui/theme-parser.c:3111
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\" అనునది స్థితి యాట్రిబ్యూట్‌నకు చెల్లునటువంటి విలువకాదు"
 
-#: src/ui/theme-parser.c:3120
+#: src/ui/theme-parser.c:3121
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "\"%s\" అని పిలువబడే శైలి యింకా నిర్వచింపబడిలేదు"
@@ -2411,104 +2398,104 @@ msgstr "ఈ థీమ్ కొరకు <%s> రెండుసార్లు 
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "థీమ్ %s కొరకు విలువైన ఫైలును కనుగొనుటలో విఫలమైంది\n"
 
-#: src/ui/theme-viewer.c:256
+#: src/ui/theme-viewer.c:254
 msgid "_OK"
 msgstr ""
 
-#: src/ui/theme-viewer.c:268
+#: src/ui/theme-viewer.c:266
 msgid "This is a sample message in a sample dialog"
 msgstr "మాదిరి డైలాగునందు యిదివొక మాదిరి సందేశము"
 
-#: src/ui/theme-viewer.c:352
+#: src/ui/theme-viewer.c:350
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "బూటకపు మెనూ అంశము %d\n"
 
-#: src/ui/theme-viewer.c:408
+#: src/ui/theme-viewer.c:406
 msgid "Border-only window"
 msgstr "హద్దు-మాత్రమే విండో"
 
-#: src/ui/theme-viewer.c:410
+#: src/ui/theme-viewer.c:408
 msgid "Bar"
 msgstr "పట్టీ"
 
-#: src/ui/theme-viewer.c:427
+#: src/ui/theme-viewer.c:425
 msgid "Normal Application Window"
 msgstr "సాదారణ అనువర్తనపు విండో"
 
-#: src/ui/theme-viewer.c:431
+#: src/ui/theme-viewer.c:429
 msgid "Dialog Box"
 msgstr "వివరణ పేటిక"
 
-#: src/ui/theme-viewer.c:435
+#: src/ui/theme-viewer.c:433
 msgid "Modal Dialog Box"
 msgstr "మోడల్ డైలాగ్ బాక్స్"
 
-#: src/ui/theme-viewer.c:439
+#: src/ui/theme-viewer.c:437
 msgid "Utility Palette"
 msgstr "సౌలభ్యపు పాలెట్"
 
-#: src/ui/theme-viewer.c:443
+#: src/ui/theme-viewer.c:441
 msgid "Torn-off Menu"
 msgstr "టార్న్-ఆఫ్ మెనూ"
 
-#: src/ui/theme-viewer.c:447
+#: src/ui/theme-viewer.c:445
 msgid "Border"
 msgstr "సరిహద్దు"
 
-#: src/ui/theme-viewer.c:451
+#: src/ui/theme-viewer.c:449
 msgid "Attached Modal Dialog"
 msgstr ""
 
-#: src/ui/theme-viewer.c:811
+#: src/ui/theme-viewer.c:808
 #, c-format
 msgid "Button layout test %d"
 msgstr "బటన్ నమూనా పరిశీలన %d"
 
-#: src/ui/theme-viewer.c:836
+#: src/ui/theme-viewer.c:833
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "ఒక విండో చట్రమును గీయుటకు %g మిల్లీసెకనులు"
 
-#: src/ui/theme-viewer.c:876
+#: src/ui/theme-viewer.c:873
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "Usage: marco-theme-viewer [THEMENAME]\n"
 
-#: src/ui/theme-viewer.c:883
+#: src/ui/theme-viewer.c:880
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "థీమ్ లోడుచేయుటలో దోషము: %s\n"
 
-#: src/ui/theme-viewer.c:889
+#: src/ui/theme-viewer.c:886
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "థీమ్ \"%s\" %g సెకనులలో లోడైనది\n"
 
-#: src/ui/theme-viewer.c:933
+#: src/ui/theme-viewer.c:930
 msgid "Normal Title Font"
 msgstr "సాధారణ శీర్షిక ఫాంటు"
 
-#: src/ui/theme-viewer.c:939
+#: src/ui/theme-viewer.c:936
 msgid "Small Title Font"
 msgstr "చిన్న శీర్షిక ఫాంటు"
 
-#: src/ui/theme-viewer.c:945
+#: src/ui/theme-viewer.c:942
 msgid "Large Title Font"
 msgstr "పెద్ద శీర్షిక ఫాంటు"
 
-#: src/ui/theme-viewer.c:950
+#: src/ui/theme-viewer.c:947
 msgid "Button Layouts"
 msgstr "బటన్ నమూనాలు"
 
-#: src/ui/theme-viewer.c:955
+#: src/ui/theme-viewer.c:952
 msgid "Benchmark"
 msgstr "బెంట్‌మార్కు"
 
-#: src/ui/theme-viewer.c:1012
+#: src/ui/theme-viewer.c:1008
 msgid "Window Title Goes Here"
 msgstr "విండో శీర్షిక యిక్కడకు వెళుతుంది"
 
-#: src/ui/theme-viewer.c:1114
+#: src/ui/theme-viewer.c:1110
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

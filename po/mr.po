@@ -10,9 +10,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.23.1\n"
+"Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2019-11-18 19:44+0100\n"
+"POT-Creation-Date: 2021-06-04 17:32+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Marathi (https://www.transifex.com/mate/teams/13566/mr/)\n"
@@ -1095,22 +1095,22 @@ msgstr ""
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
 
-#: src/core/bell.c:294
+#: src/core/bell.c:298
 msgid "Bell event"
 msgstr "घंटा घटना"
 
-#: src/core/core.c:214
+#: src/core/core.c:216
 #, c-format
 msgid "Unknown window information request: %d"
 msgstr "अपरिचीत पटल माहिती विनंती: %d"
 
 #. Translators: %s is a window title
-#: src/core/delete.c:96
+#: src/core/delete.c:98
 #, c-format
 msgid "<tt>%s</tt> is not responding."
 msgstr "<tt>%s</tt> प्रतिसाद देत नाही."
 
-#: src/core/delete.c:101
+#: src/core/delete.c:103
 msgid ""
 "You may choose to wait a short while for it to continue or force the "
 "application to quit entirely."
@@ -1118,30 +1118,30 @@ msgstr ""
 "तुम्ही जरावेळ थांबण्याचा पर्याय नीवडू शकता किंवा ऍप्लिकेशनला बाहेर "
 "पडण्यासाठी जबरनरित्या आग्रह करू शकता."
 
-#: src/core/delete.c:110
+#: src/core/delete.c:112
 msgid "_Wait"
 msgstr "प्रतीक्षा करा (_W)"
 
-#: src/core/delete.c:110
+#: src/core/delete.c:112
 msgid "_Force Quit"
 msgstr "जबरन बाहेर पडा (_F)"
 
-#: src/core/delete.c:180
+#: src/core/delete.c:181
 #, c-format
 msgid "Failed to get hostname: %s\n"
 msgstr "यजमाननाव प्राप्त करण्यास अपयशी: %s\n"
 
-#: src/core/display.c:270
+#: src/core/display.c:271
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "एकत्रीकरण करीता आवश्यक %s विस्तार आढळले नाही"
 
-#: src/core/display.c:348
+#: src/core/display.c:349
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "X पटल प्रणाली दृश्य '%s' उघडण्यास अपयशी\n"
 
-#: src/core/keybindings.c:723
+#: src/core/keybindings.c:722
 #, c-format
 msgid ""
 "Some other program is already using the key %s with modifiers %x as a "
@@ -1152,7 +1152,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2396
+#: src/core/keybindings.c:2415
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1163,91 +1163,78 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2485
+#: src/core/keybindings.c:2503
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "आदेश %d परिभाषीत नाही.\n"
 
-#: src/core/keybindings.c:3595
+#: src/core/keybindings.c:3610
 msgid "No terminal command has been defined.\n"
 msgstr "टर्मिनल आदेश परिभाषीत नाही.\n"
 
-#: src/core/keybindings.c:3735
+#: src/core/keybindings.c:3747
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: src/core/keybindings.c:3736
+#: src/core/keybindings.c:3748
 msgid "New Workspace Name:"
 msgstr ""
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3759
 msgid "OK"
 msgstr ""
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3759
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: src/core/main.c:132
-#, c-format
-msgid ""
-"marco %s\n"
-"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
-"This is free software; see the source for copying conditions.\n"
-"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"marco %s\n"
-"Copyright (C) 2001-%s Havoc Pennington, Red Hat, Inc., and others\n"
-"This is free software; see the source for copying conditions.\n"
-"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-
-#: src/core/main.c:270
+#: src/core/main.c:245
 msgid "Disable connection to session manager"
 msgstr "सत्र व्यवस्थापकशी जुळवणी अकार्यान्वीत करा"
 
-#: src/core/main.c:276
+#: src/core/main.c:251
 msgid "Replace the running window manager with Marco"
 msgstr "सध्याचे कार्यरत पटल व्यवस्थापक Marco शी बदलवा"
 
-#: src/core/main.c:282
+#: src/core/main.c:257
 msgid "Specify session management ID"
 msgstr "सत्र व्यवस्थापन ID निश्चित करा"
 
-#: src/core/main.c:287
+#: src/core/main.c:262
 msgid "X Display to use"
 msgstr "वापरणीकरीता X डिस्प्ले"
 
-#: src/core/main.c:293
+#: src/core/main.c:268
 msgid "Initialize session from savefile"
 msgstr "संचयन फाइल पासून सत्र प्रारंभीत करा"
 
-#: src/core/main.c:299
+#: src/core/main.c:274
 msgid "Print version"
 msgstr "छपाई आवृत्ती"
 
-#: src/core/main.c:305
+#: src/core/main.c:280
 msgid "Make X calls synchronous"
 msgstr "X कोल एकाच वेळी घडवा "
 
-#: src/core/main.c:311
+#: src/core/main.c:286
 msgid "Turn compositing on"
 msgstr "कंपोजीटींग सुरू करा"
 
-#: src/core/main.c:317
+#: src/core/main.c:292
 msgid "Turn compositing off"
 msgstr "कंपोजीटींग बंद करा"
 
-#: src/core/main.c:323
+#: src/core/main.c:298
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "मोठे केलेले व सजावट विना पटल, पडदाभर करू नका"
 
-#: src/core/main.c:522
+#: src/core/main.c:499
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "सुत्रयोजना संचयीका स्कॅन करण्यास अपयशी: %s\n"
 
-#: src/core/main.c:538
+#: src/core/main.c:515
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1255,7 +1242,7 @@ msgstr ""
 "सुत्रयोजना शोधू शकले नाही! %s अस्तित्वात आहे व त्यात नेहमीचे सुत्रयोजना "
 "समाविष्टीत आहे याची खात्री घ्या.\n"
 
-#: src/core/main.c:597
+#: src/core/main.c:574
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "पुनःआरंभ करण्यास अपयशी: %s\n"
@@ -1263,12 +1250,12 @@ msgstr "पुनःआरंभ करण्यास अपयशी: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: src/core/prefs.c:641 src/core/prefs.c:794
+#: src/core/prefs.c:642 src/core/prefs.c:795
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 
-#: src/core/prefs.c:1088
+#: src/core/prefs.c:1087
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1276,12 +1263,12 @@ msgstr ""
 "अनिश्चित अनुप्रोयगांकरीता कार्य अकार्यान्वीत केले गेले. काहीक अनुप्रयोगांची "
 "वागणून योग्यरित्या आढळणार नाही\n"
 
-#: src/core/prefs.c:1194
+#: src/core/prefs.c:1193
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "GSetting किल्ली \"%s\" पासून फॉन्टची माहिती पार्स करू शकली नाही %s\n"
 
-#: src/core/prefs.c:1256
+#: src/core/prefs.c:1255
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1290,7 +1277,7 @@ msgstr ""
 "माउस बटन संपादक करीता संयोजना माहितीकोश मध्ये आढळलेले \"%s\" वैध मुल्य "
 "नाही\n"
 
-#: src/core/prefs.c:1844
+#: src/core/prefs.c:1843
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1299,17 +1286,17 @@ msgstr ""
 "keybinding \"%2$s\" करीता संयोजना माहितीकोश मध्ये आढळलेले \"%1$s\" वैध मुल्य"
 " नाही\n"
 
-#: src/core/prefs.c:2147
+#: src/core/prefs.c:2146
 #, c-format
 msgid "Workspace %d"
 msgstr "कार्यक्षेत्र %d"
 
-#: src/core/screen.c:362
+#: src/core/screen.c:363
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "दृश्य '%2$s' वरील पडदा %1$d अवैध आहे\n"
 
-#: src/core/screen.c:378
+#: src/core/screen.c:379
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1318,69 +1305,69 @@ msgstr ""
 "दृश्य \"%2$s\" वरील पडदा %1$d कडे आधिपासूनच पटल व्यवस्थापक आहे; --replace "
 "पर्याय चा वापर सद्याचे पटल व्यवस्थापक बदलविण्याकरीता केले जाऊ शकतो.\n"
 
-#: src/core/screen.c:405
+#: src/core/screen.c:406
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "दृश्य \"%2$s\" वरील पडदा %1$d करीता पटल व्यवस्थापक निवड प्राप्त करू शकले "
 "नाही\n"
 
-#: src/core/screen.c:463
+#: src/core/screen.c:464
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "दृश्य \"%2$s\" वरील पडदा %1$d कडे आधिपासूनच पटल व्यवस्थापक आहे\n"
 
-#: src/core/screen.c:677
+#: src/core/screen.c:678
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "दृश्य \"%2$s\" वरील पडदा %1$d मोकळे करू शकला नाही\n"
 
-#: src/core/session.c:842 src/core/session.c:849
+#: src/core/session.c:841 src/core/session.c:848
 #, c-format
 msgid "Could not create directory '%s': %s\n"
 msgstr "संचयीका '%s' बनवू शकले नाही: %s\n"
 
-#: src/core/session.c:859
+#: src/core/session.c:858
 #, c-format
 msgid "Could not open session file '%s' for writing: %s\n"
 msgstr "लिहीण्यासाठी सत्र फाइल '%s' उघडू शकले नाही: %s\n"
 
-#: src/core/session.c:999
+#: src/core/session.c:998
 #, c-format
 msgid "Error writing session file '%s': %s\n"
 msgstr "सत्र फाइल '%s' लिहीतेवेळी त्रुटी: %s\n"
 
-#: src/core/session.c:1004
+#: src/core/session.c:1003
 #, c-format
 msgid "Error closing session file '%s': %s\n"
 msgstr "सत्र फाइल '%s' लिहीतेवेळी त्रुटी: %s\n"
 
-#: src/core/session.c:1134
+#: src/core/session.c:1132
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
 msgstr "संचयीत सत्र फाइल वाचण्यास अपयशी: %s\n"
 
-#: src/core/session.c:1183
+#: src/core/session.c:1181
 msgid "<marco_session> attribute seen but we already have the session ID"
 msgstr ""
 "<marco_session> हा गुणधर्म आढळले पण आमच्याकडे आधिपासूनच सत्र ओळखक्रमांक आहे"
 
-#: src/core/session.c:1196 src/core/session.c:1271 src/core/session.c:1303
-#: src/core/session.c:1375 src/core/session.c:1435
+#: src/core/session.c:1194 src/core/session.c:1269 src/core/session.c:1301
+#: src/core/session.c:1373 src/core/session.c:1433
 #, c-format
 msgid "Unknown attribute %s on <%s> element"
 msgstr "<%2$s> घटकावरील अपरिचीत गुणधर्म %1$s"
 
-#: src/core/session.c:1213
+#: src/core/session.c:1211
 msgid "nested <window> tag"
 msgstr "नेस्टेड <window> टॅग"
 
-#: src/core/session.c:1455
+#: src/core/session.c:1453
 #, c-format
 msgid "Unknown element %s"
 msgstr "अपरिचीत घटक %s"
 
-#: src/core/session.c:1807
+#: src/core/session.c:1805
 msgid ""
 "These windows do not support &quot;save current setup&quot; and will have to"
 " be restarted manually next time you log in."
@@ -1388,49 +1375,49 @@ msgstr ""
 "हे पटल &quot;सद्याचे सेटअप साठवा&quot; करीता समर्थन पुरवत नाही व पुढच्यावेळी"
 " प्रवेश करतेवेळी तुम्हाला स्वतः पुन्हा सुरू करावे लागेल."
 
-#: src/core/util.c:101
+#: src/core/util.c:103
 #, c-format
 msgid "Failed to open debug log: %s\n"
 msgstr "डिबग लॉग उघडण्यास अपयश आले: %s\n"
 
-#: src/core/util.c:111
+#: src/core/util.c:113
 #, c-format
 msgid "Failed to fdopen() log file %s: %s\n"
 msgstr "एफडीउघड() लॉग फाइल उघडण्यास अपयशी%s: %s\n"
 
-#: src/core/util.c:117
+#: src/core/util.c:119
 #, c-format
 msgid "Opened log file %s\n"
 msgstr "लॉग फाइल %s उघडली\n"
 
-#: src/core/util.c:136 src/tools/marco-message.c:176
+#: src/core/util.c:138 src/tools/marco-message.c:172
 msgid "Marco was compiled without support for verbose mode\n"
 msgstr "Marco शब्दबंबाळ रितीव्यतिरिक्त कम्पाइल केला होता\n"
 
-#: src/core/util.c:227
+#: src/core/util.c:229
 msgid "Window manager: "
 msgstr "पटल व्यवस्थापक: "
 
-#: src/core/util.c:379
+#: src/core/util.c:381
 msgid "Bug in window manager: "
 msgstr "पटल व्यवस्थापकात त्रुटी: "
 
-#: src/core/util.c:412
+#: src/core/util.c:414
 msgid "Window manager warning: "
 msgstr "पटल व्यवस्थापक सुचना: "
 
-#: src/core/util.c:440
+#: src/core/util.c:442
 msgid "Window manager error: "
 msgstr "पटल व्यवस्थापक त्रुटी: "
 
 #. Translators: This is the title used on dialog boxes
-#: src/core/util.c:560 src/core/util.c:658 src/marco.desktop.in:4
+#: src/core/util.c:562 src/core/util.c:660 src/marco.desktop.in:4
 #: src/marco-wm.desktop.in:4
 msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6004
+#: src/core/window.c:6008
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1445,7 +1432,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6582
+#: src/core/window.c:6596
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1455,7 +1442,7 @@ msgstr ""
 "किमान आकार %d x %d व कमाल आकार %d x %d; निश्चित करते ज्याचा जास्त अर्थ दिसून"
 " येत नाही.\n"
 
-#: src/core/window-props.c:306
+#: src/core/window-props.c:307
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "अनुप्रयोग फरजी _NET_WM_PID %lu निश्चित करा\n"
@@ -1491,7 +1478,7 @@ msgstr "%s (इतर वापकर्ता नुरूप)"
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "%2$s करीता अवैध WM_TRANSIENT_FOR window 0x%1$lx निश्चित केले गेले.\n"
 
-#: src/core/xprops.c:155
+#: src/core/xprops.c:156
 #, c-format
 msgid ""
 "Window 0x%lx has property %s\n"
@@ -1506,12 +1493,12 @@ msgstr ""
 "ये संभाव्यरित्या अनुप्रयोग दोष आहे, व पटल व्यवस्थापक दोष नाही.\n"
 "पटलचे शिर्षक=\"%s\" वर्ग=\"%s\" नाव=\"%s\" या प्रमाणे आहे\n"
 
-#: src/core/xprops.c:411
+#: src/core/xprops.c:412
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
 msgstr "पटल %s वरील गुणधर्म 0x%lx चुकीचे UTF-8 साठविले\n"
 
-#: src/core/xprops.c:494
+#: src/core/xprops.c:495
 #, c-format
 msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
@@ -1520,156 +1507,156 @@ msgstr ""
 "पटल 0x%2$lx वरील गुणधर्म %1$s मध्ये यादी मधिल %3$d करीता अवैध UTF-8 घटक "
 "समाविष्टीत\n"
 
-#: src/tools/marco-message.c:150
+#: src/tools/marco-message.c:146
 #, c-format
 msgid "Usage: %s\n"
 msgstr "वापर: %s\n"
 
-#: src/ui/frames.c:1338
+#: src/ui/frames.c:1341
 msgid "Close Window"
 msgstr "चौकट बंद करा"
 
-#: src/ui/frames.c:1341
+#: src/ui/frames.c:1344
 msgid "Window Menu"
 msgstr "पटल मेनू"
 
-#: src/ui/frames.c:1344
+#: src/ui/frames.c:1347
 msgid "Window App Menu"
 msgstr ""
 
-#: src/ui/frames.c:1347
+#: src/ui/frames.c:1350
 msgid "Minimize Window"
 msgstr "पटल लहान करा"
 
-#: src/ui/frames.c:1350
+#: src/ui/frames.c:1353
 msgid "Maximize Window"
 msgstr "पटल मोठ्यात मोठी करा"
 
-#: src/ui/frames.c:1353
+#: src/ui/frames.c:1356
 msgid "Restore Window"
 msgstr "पटल पूर्वस्थितीत आणा"
 
-#: src/ui/frames.c:1356
+#: src/ui/frames.c:1359
 msgid "Roll Up Window"
 msgstr "पटल गुंडाळा"
 
-#: src/ui/frames.c:1359
+#: src/ui/frames.c:1362
 msgid "Unroll Window"
 msgstr "पटल गुंडाळा"
 
-#: src/ui/frames.c:1362
+#: src/ui/frames.c:1365
 msgid "Keep Window On Top"
 msgstr "पटल वर दर्शवा"
 
-#: src/ui/frames.c:1365
+#: src/ui/frames.c:1368
 msgid "Remove Window From Top"
 msgstr "शिर्ष पासून पटल काढूण टाका"
 
-#: src/ui/frames.c:1368
+#: src/ui/frames.c:1371
 msgid "Always On Visible Workspace"
 msgstr "नेहमी दिसण्याजोगी कार्यक्षेत्रावर दर्शवा"
 
-#: src/ui/frames.c:1371
+#: src/ui/frames.c:1374
 msgid "Put Window On Only One Workspace"
 msgstr "पटल फक्त एका कार्यक्षेत्रावर दर्शवा"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:65
+#: src/ui/menu.c:66
 msgid "Mi_nimize"
 msgstr "लहान करा (_n)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:67
+#: src/ui/menu.c:68
 msgid "Ma_ximize"
 msgstr "मोठे  करा  (_x)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:69
+#: src/ui/menu.c:70
 msgid "Unma_ximize"
 msgstr "मोठे करू करा (_x)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:71
+#: src/ui/menu.c:72
 msgid "Roll _Up"
 msgstr "वर गुंडाळा(_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:73
+#: src/ui/menu.c:74
 msgid "_Unroll"
 msgstr "गुंडाळी उघडा(_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:75
+#: src/ui/menu.c:76
 msgid "_Move"
 msgstr "हलवा (_M)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:77
+#: src/ui/menu.c:78
 msgid "_Resize"
 msgstr "पुनःआकारित करा(_R)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:79
+#: src/ui/menu.c:80
 msgid "Move Titlebar On_screen"
 msgstr "शिर्षकपट्टी स्क्रीनवर हलवा(_s)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:82 src/ui/menu.c:84
+#: src/ui/menu.c:83 src/ui/menu.c:85
 msgid "Always on _Top"
 msgstr "नेहमी वर (_T)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:86
+#: src/ui/menu.c:87
 msgid "_Always on Visible Workspace"
 msgstr "फक्त दृश्मय कार्यक्षेत्रवर (_A)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:88
+#: src/ui/menu.c:89
 msgid "_Only on This Workspace"
 msgstr "फक्त या कार्यक्षेत्रावर (_O)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:90
+#: src/ui/menu.c:91
 msgid "Move to Workspace _Left"
 msgstr "कार्यक्षेत्र डावीकडे हलवा (_L)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:92
+#: src/ui/menu.c:93
 msgid "Move to Workspace R_ight"
 msgstr "कार्यक्षेत्र उजवीकडे हलवा (_i)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:94
+#: src/ui/menu.c:95
 msgid "Move to Workspace _Up"
 msgstr "कार्यक्षेत्र वर हलवा (_U)"
 
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:96
+#: src/ui/menu.c:97
 msgid "Move to Workspace _Down"
 msgstr "कार्यक्षेत्र खाली हलवा (_D)"
 
 #. separator
 #. Translators: Translate this string the same way as you do in libwnck!
-#: src/ui/menu.c:100
+#: src/ui/menu.c:101
 msgid "_Close"
 msgstr "बंद करा (_C)"
 
-#: src/ui/menu.c:197
+#: src/ui/menu.c:198
 #, c-format
 msgid "Workspace %d%n"
 msgstr "कार्यक्षेत्र %d%n"
 
-#: src/ui/menu.c:207
+#: src/ui/menu.c:208
 msgid "Workspace 1_0"
 msgstr "कार्यक्षेत्र 1_0"
 
-#: src/ui/menu.c:209
+#: src/ui/menu.c:210
 #, c-format
 msgid "Workspace %s%d"
 msgstr "कार्यक्षेत्र %s%d"
 
-#: src/ui/menu.c:388
+#: src/ui/menu.c:386
 msgid "Move to Another _Workspace"
 msgstr "वेगळ्या कार्यक्षेत्रावर जा (_W)"
 
@@ -1677,7 +1664,7 @@ msgstr "वेगळ्या कार्यक्षेत्रावर ज�
 #. * that use the shift key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:80
+#: src/ui/metaaccellabel.c:81
 msgid "Shift"
 msgstr "Shift"
 
@@ -1685,7 +1672,7 @@ msgstr "Shift"
 #. * that use the control key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:86
+#: src/ui/metaaccellabel.c:87
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -1693,7 +1680,7 @@ msgstr "Ctrl"
 #. * that use the alt key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:92
+#: src/ui/metaaccellabel.c:93
 msgid "Alt"
 msgstr "Alt"
 
@@ -1701,7 +1688,7 @@ msgstr "Alt"
 #. * that use the meta key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:98
+#: src/ui/metaaccellabel.c:99
 msgid "Meta"
 msgstr "मेटा"
 
@@ -1709,7 +1696,7 @@ msgstr "मेटा"
 #. * that use the super key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:104
+#: src/ui/metaaccellabel.c:105
 msgid "Super"
 msgstr "सुपर"
 
@@ -1717,7 +1704,7 @@ msgstr "सुपर"
 #. * that use the hyper key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:110
+#: src/ui/metaaccellabel.c:111
 msgid "Hyper"
 msgstr "हायपर"
 
@@ -1725,7 +1712,7 @@ msgstr "हायपर"
 #. * that use the mod2 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:116
+#: src/ui/metaaccellabel.c:117
 msgid "Mod2"
 msgstr "Mod2"
 
@@ -1733,7 +1720,7 @@ msgstr "Mod2"
 #. * that use the mod3 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:122
+#: src/ui/metaaccellabel.c:123
 msgid "Mod3"
 msgstr "Mod3"
 
@@ -1741,7 +1728,7 @@ msgstr "Mod3"
 #. * that use the mod4 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:128
+#: src/ui/metaaccellabel.c:129
 msgid "Mod4"
 msgstr "Mod4"
 
@@ -1749,13 +1736,13 @@ msgstr "Mod4"
 #. * that use the mod5 key. If the text on this key isn't typically
 #. * translated on keyboards used for your language, don't translate
 #. * this.
-#: src/ui/metaaccellabel.c:134
+#: src/ui/metaaccellabel.c:135
 msgid "Mod5"
 msgstr "Mod5"
 
 #. Translators: This represents the size of a window.  The first number is
 #. * the width of the window and the second is the height.
-#: src/ui/resizepopup.c:117
+#: src/ui/resizepopup.c:119
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
@@ -1973,14 +1960,14 @@ msgstr "निबंधक वाक्यरचना कडे उघडे �
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr "निबंधक वाक्यरचना कडे ऑपरेटर किंवा ऑपरंड नाही असे दिसून येत"
 
-#: src/ui/theme.c:3027 src/ui/theme.c:3047 src/ui/theme.c:3067
+#: src/ui/theme.c:3026 src/ui/theme.c:3046 src/ui/theme.c:3066
 #, c-format
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr ""
 "सुत्रयोजना मध्ये वाक्यरचना समाविष्टीत आहे ज्यामुळे त्रुटी परिणामस्वरूपी "
 "उधभवली: %s\n"
 
-#: src/ui/theme.c:4857
+#: src/ui/theme.c:4856
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1989,23 +1976,23 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/>  ह्या "
 "भिंतफितीसाठी ठरविलेले आहे"
 
-#: src/ui/theme.c:5393 src/ui/theme.c:5418
+#: src/ui/theme.c:5391 src/ui/theme.c:5416
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "हरवले आहे <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: src/ui/theme.c:5462
+#: src/ui/theme.c:5460
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "थीम \"%s\" भारित करण्यास अपयशी: %s\n"
 
-#: src/ui/theme.c:5594 src/ui/theme.c:5601 src/ui/theme.c:5608
-#: src/ui/theme.c:5615 src/ui/theme.c:5622
+#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
+#: src/ui/theme.c:5612 src/ui/theme.c:5619
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "कोणतेही <%s> थीम \"%s\" साठी निर्धारित नाही"
 
-#: src/ui/theme.c:5630
+#: src/ui/theme.c:5627
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2014,81 +2001,81 @@ msgstr ""
 "संकल्पनेमध्ये पटल प्रकारासाठी फिती \"%s\" शैलीची मांडणी नाही \"%s\", गुणधर्म"
 " <window type=\"%s\" style_set=\"whatever\"/> जोडा"
 
-#: src/ui/theme.c:6045 src/ui/theme.c:6107 src/ui/theme.c:6170
+#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "वापरणाऱ्याने सुचविलेला स्थिरांक मोठ्या अक्षरांचे सुरू व्हायला हवा; \"%s\" "
 "नाही "
 
-#: src/ui/theme.c:6053 src/ui/theme.c:6115 src/ui/theme.c:6178
+#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "स्थिरांक \"%s\" हा अगोदर पासूनच ठरवण्यात आलेला आहे"
 
 #. Translators: This means that an attribute which should have been found
 #. * on an XML element was not in fact found.
-#: src/ui/theme-parser.c:252
+#: src/ui/theme-parser.c:253
 #, c-format
 msgid "No \"%s\" attribute on element <%s>"
 msgstr "<%s> घटकावर कुठलाही \"%s\" गुणधर्म नाही"
 
-#: src/ui/theme-parser.c:281 src/ui/theme-parser.c:299
+#: src/ui/theme-parser.c:282 src/ui/theme-parser.c:300
 #, c-format
 msgid "Line %d character %d: %s"
 msgstr "ओळ %d अक्षर %d: %s"
 
-#: src/ui/theme-parser.c:499
+#: src/ui/theme-parser.c:500
 #, c-format
 msgid "Attribute \"%s\" repeated twice on the same <%s> element"
 msgstr "त्याच \"%s\" गुणधर्मावर हे गुणधर्म दोनदा <%s> लिहीले आहेत"
 
-#: src/ui/theme-parser.c:523 src/ui/theme-parser.c:572
+#: src/ui/theme-parser.c:524 src/ui/theme-parser.c:573
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
 msgstr "या संदर्भात <%s> घटकावरील \"%s\" गुणधर्म अवैध आहे"
 
-#: src/ui/theme-parser.c:614
+#: src/ui/theme-parser.c:615
 #, c-format
 msgid "Could not parse \"%s\" as an integer"
 msgstr "\"%s\" चे पुर्णांक म्हणून विश्लेषण करता आले नाही"
 
-#: src/ui/theme-parser.c:623 src/ui/theme-parser.c:678
+#: src/ui/theme-parser.c:624 src/ui/theme-parser.c:679
 #, c-format
 msgid "Did not understand trailing characters \"%s\" in string \"%s\""
 msgstr "अक्षरमाळा \"%2$s\" मधिल शेवटचे अक्षरं \"%1$s\" कळले नाही"
 
-#: src/ui/theme-parser.c:633
+#: src/ui/theme-parser.c:634
 #, c-format
 msgid "Integer %ld must be positive"
 msgstr "%ld हा अंक धन हवा"
 
-#: src/ui/theme-parser.c:641
+#: src/ui/theme-parser.c:642
 #, c-format
 msgid "Integer %ld is too large, current max is %d"
 msgstr "सध्याचा सर्वात %ld जास्त इंटीजर आहे, हा खूप मोठा आहे %d"
 
-#: src/ui/theme-parser.c:669 src/ui/theme-parser.c:785
+#: src/ui/theme-parser.c:670 src/ui/theme-parser.c:786
 #, c-format
 msgid "Could not parse \"%s\" as a floating point number"
 msgstr "वाहता बिंदू क्रमांक म्हणून \"%s\" हा पार्स करता आला नाही"
 
-#: src/ui/theme-parser.c:700 src/ui/theme-parser.c:728
+#: src/ui/theme-parser.c:701 src/ui/theme-parser.c:729
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
 msgstr "बुलीयन मुल्य  \"खरे\" किंवा \"खोटे\" असावे पण \"%s\" नाही"
 
-#: src/ui/theme-parser.c:755
+#: src/ui/theme-parser.c:756
 #, c-format
 msgid "Angle must be between 0.0 and 360.0, was %g\n"
 msgstr "अल्फाची किंमत 0.0 आणि 360.0, असायला हवी %g होती\n"
 
-#: src/ui/theme-parser.c:818
+#: src/ui/theme-parser.c:819
 #, c-format
 msgid "Alpha must be between 0.0 (invisible) and 1.0 (fully opaque), was %g\n"
 msgstr "अल्फाची किंमत 0.0 आणि 1.0, असायला हवी %g होती\n"
 
-#: src/ui/theme-parser.c:883
+#: src/ui/theme-parser.c:884
 #, c-format
 msgid ""
 "Invalid title scale \"%s\" (must be one of xx-"
@@ -2097,50 +2084,50 @@ msgstr ""
 "अवैध शिर्षक प्रमाण \"%s\" (यापैकी एक असायले हवे xx-"
 "लहान,x-लहान,लहान,मध्यम,मोठे,x-मोठे,xx-मोठे)\n"
 
-#: src/ui/theme-parser.c:1039 src/ui/theme-parser.c:1102
-#: src/ui/theme-parser.c:1136 src/ui/theme-parser.c:1239
+#: src/ui/theme-parser.c:1040 src/ui/theme-parser.c:1103
+#: src/ui/theme-parser.c:1137 src/ui/theme-parser.c:1240
 #, c-format
 msgid "<%s> name \"%s\" used a second time"
 msgstr "<%s> हे नाव \"%s\" दुसऱ्यांदा वापरले"
 
-#: src/ui/theme-parser.c:1051 src/ui/theme-parser.c:1148
-#: src/ui/theme-parser.c:1251
+#: src/ui/theme-parser.c:1052 src/ui/theme-parser.c:1149
+#: src/ui/theme-parser.c:1252
 #, c-format
 msgid "<%s> parent \"%s\" has not been defined"
 msgstr "<%s> मुख्य \"%s\" चे वर्णन नाही"
 
-#: src/ui/theme-parser.c:1161
+#: src/ui/theme-parser.c:1162
 #, c-format
 msgid "<%s> geometry \"%s\" has not been defined"
 msgstr "<%s> भूमिती \"%s\" संज्ञा झाली नाही"
 
-#: src/ui/theme-parser.c:1174
+#: src/ui/theme-parser.c:1175
 #, c-format
 msgid "<%s> must specify either a geometry or a parent that has a geometry"
 msgstr "<%s> ने भूमिती किंवा मूळ ज्याला भूमिती आहे ते ठरवून घ्या"
 
-#: src/ui/theme-parser.c:1216
+#: src/ui/theme-parser.c:1217
 msgid "You must specify a background for an alpha value to be meaningful"
 msgstr "अल्फा मुल्य अर्थयुक्त करीता तुम्ही पार्श्वभूमी निश्चित केले पाहिजे"
 
-#: src/ui/theme-parser.c:1284
+#: src/ui/theme-parser.c:1285
 #, c-format
 msgid "Unknown type \"%s\" on <%s> element"
 msgstr "गुणधर्मावर \"%s\" अपरिचीत <%s> प्रकार"
 
-#: src/ui/theme-parser.c:1295
+#: src/ui/theme-parser.c:1296
 #, c-format
 msgid "Unknown style_set \"%s\" on <%s> element"
 msgstr "अपरिचीत style_set \"%s\", <%s> घटकावरील"
 
-#: src/ui/theme-parser.c:1303
+#: src/ui/theme-parser.c:1304
 #, c-format
 msgid "Window type \"%s\" has already been assigned a style set"
 msgstr "पटल प्रकार \"%s\" आधीच शैलीसंचात ठरवून ठेवलेला आहे"
 
-#: src/ui/theme-parser.c:1333 src/ui/theme-parser.c:1397
-#: src/ui/theme-parser.c:1623 src/ui/theme-parser.c:2858
-#: src/ui/theme-parser.c:2904 src/ui/theme-parser.c:3062
+#: src/ui/theme-parser.c:1334 src/ui/theme-parser.c:1398
+#: src/ui/theme-parser.c:1624 src/ui/theme-parser.c:2859
+#: src/ui/theme-parser.c:2905 src/ui/theme-parser.c:3063
 #: src/ui/theme-parser.c:3298 src/ui/theme-parser.c:3336
 #: src/ui/theme-parser.c:3374 src/ui/theme-parser.c:3391
 #: src/ui/theme-parser.c:3407 src/ui/theme-parser.c:3444
@@ -2148,8 +2135,8 @@ msgstr "पटल प्रकार \"%s\" आधीच शैलीसंच�
 msgid "Element <%s> is not allowed below <%s>"
 msgstr "<%s> च्या खाली घटक <%s> ला परवानगी नाही"
 
-#: src/ui/theme-parser.c:1447 src/ui/theme-parser.c:1461
-#: src/ui/theme-parser.c:1506
+#: src/ui/theme-parser.c:1448 src/ui/theme-parser.c:1462
+#: src/ui/theme-parser.c:1507
 msgid ""
 "Cannot specify both \"button_width\"/\"button_height\" and \"aspect_ratio\" "
 "for buttons"
@@ -2157,115 +2144,115 @@ msgstr ""
 "या बटनकरीता दोन्ही \"button_width\"/\"button_height\" व \"aspect_ratio\" "
 "निर्देशीत केले गेले नाही"
 
-#: src/ui/theme-parser.c:1470
+#: src/ui/theme-parser.c:1471
 #, c-format
 msgid "Distance \"%s\" is unknown"
 msgstr "\"%s\" अंतर अजञात"
 
-#: src/ui/theme-parser.c:1515
+#: src/ui/theme-parser.c:1516
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
 msgstr "Aspect प्रमाण \"%s\" अपरिचीत आहे"
 
-#: src/ui/theme-parser.c:1577
+#: src/ui/theme-parser.c:1578
 #, c-format
 msgid "Border \"%s\" is unknown"
 msgstr "कडा \"%s\" अपरिचीत आहे"
 
-#: src/ui/theme-parser.c:1888
+#: src/ui/theme-parser.c:1889
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr "घटक <%s> वरील \"start_angle\" किंवा \"पासून\" गुणधर्म नाही"
 
-#: src/ui/theme-parser.c:1895
+#: src/ui/theme-parser.c:1896
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr "घटक <%s> वरील \"extent_angle\" किंवा \"प्रति\" गुणधर्म नाही"
 
-#: src/ui/theme-parser.c:2135
+#: src/ui/theme-parser.c:2136
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
 msgstr "ही किंमत \"%s\" प्रकारच्या चढाकरिता समजू शकली नाही"
 
-#: src/ui/theme-parser.c:2213 src/ui/theme-parser.c:2588
+#: src/ui/theme-parser.c:2214 src/ui/theme-parser.c:2589
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
 msgstr "गुणधर्मासाठी रिकाम्या प्रकारचे \"%s\" for <%s>  समजू शकली नाही"
 
-#: src/ui/theme-parser.c:2380 src/ui/theme-parser.c:2463
-#: src/ui/theme-parser.c:2526
+#: src/ui/theme-parser.c:2381 src/ui/theme-parser.c:2464
+#: src/ui/theme-parser.c:2527
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
 msgstr "गुणधर्मासाठी स्थिती \"%s\" for <%s>  समजू शकली नाही"
 
-#: src/ui/theme-parser.c:2390 src/ui/theme-parser.c:2473
+#: src/ui/theme-parser.c:2391 src/ui/theme-parser.c:2474
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
 msgstr "गुणधर्मासाठी सावली \"%s\" for <%s>  समजू शकली नाही"
 
-#: src/ui/theme-parser.c:2400
+#: src/ui/theme-parser.c:2401
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
 msgstr "गुणधर्मासाठी बाण \"%s\" for <%s>  समजू शकला नाही"
 
-#: src/ui/theme-parser.c:2714 src/ui/theme-parser.c:2810
+#: src/ui/theme-parser.c:2715 src/ui/theme-parser.c:2811
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
 msgstr "म्हणून <draw_ops> तो \"%s\" ठरवले आहे"
 
-#: src/ui/theme-parser.c:2726 src/ui/theme-parser.c:2822
+#: src/ui/theme-parser.c:2727 src/ui/theme-parser.c:2823
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr "draw_ops \"%s\" समाविष्ट केल्यास येथे वर्तुळाकार संदर्भ निर्माण होईल"
 
-#: src/ui/theme-parser.c:2937
+#: src/ui/theme-parser.c:2938
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
 msgstr "फितीवरील चित्रासाठी \"%s\" स्थिती अवैध आहे"
 
-#: src/ui/theme-parser.c:2945
+#: src/ui/theme-parser.c:2946
 #, c-format
 msgid "Frame style already has a piece at position %s"
 msgstr "%s ह्या स्थितीतील फितचित्राकरिता शैली आधीच आहे"
 
-#: src/ui/theme-parser.c:2962 src/ui/theme-parser.c:3039
+#: src/ui/theme-parser.c:2963 src/ui/theme-parser.c:3040
 #, c-format
 msgid "No <draw_ops> with the name \"%s\" has been defined"
 msgstr "नावाबरोबर <draw_ops> विश्लेषण \"%s\"  केले नाही"
 
-#: src/ui/theme-parser.c:2992
+#: src/ui/theme-parser.c:2993
 #, c-format
 msgid "Unknown function \"%s\" for button"
 msgstr "बटणासाठी \"%s\" अयोग्य कार्य"
 
-#: src/ui/theme-parser.c:3002
+#: src/ui/theme-parser.c:3003
 #, c-format
 msgid "Button function \"%s\" does not exist in this version (%d, need %d)"
 msgstr ""
 "बटन कार्यपध्दती \"%1$s\" या आवृत्ती मध्ये अस्तीत्वात नाही (%2$d, आवश्यक "
 "%3$d)"
 
-#: src/ui/theme-parser.c:3014
+#: src/ui/theme-parser.c:3015
 #, c-format
 msgid "Unknown state \"%s\" for button"
 msgstr "बटणाकरिता \"%s\" अयोग्य स्थिती"
 
-#: src/ui/theme-parser.c:3022
+#: src/ui/theme-parser.c:3023
 #, c-format
 msgid "Frame style already has a button for function %s state %s"
 msgstr "कार्य %s स्थिती %s करिता फितीची शैली आधीच आहे"
 
-#: src/ui/theme-parser.c:3101
+#: src/ui/theme-parser.c:3102
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
 msgstr "\"%s\" फोकस गुणविशेषासाठी हि योग्य किंमत नाही"
 
-#: src/ui/theme-parser.c:3110
+#: src/ui/theme-parser.c:3111
 #, c-format
 msgid "\"%s\" is not a valid value for state attribute"
 msgstr "\"%s\" स्थिती गुणविशेषासाठी हि योग्य किंमत नाही"
 
-#: src/ui/theme-parser.c:3120
+#: src/ui/theme-parser.c:3121
 #, c-format
 msgid "A style called \"%s\" has not been defined"
 msgstr "\"%s\" ह्या नावाची शैली अस्तित्वात नाही"
@@ -2397,104 +2384,104 @@ msgstr "या योजना करीता <%s> दोनवेळा नि
 msgid "Failed to find a valid file for theme %s\n"
 msgstr "सुत्रयोजना %s करीता वैध फाइल शोधण्यास अपयशी\n"
 
-#: src/ui/theme-viewer.c:256
+#: src/ui/theme-viewer.c:254
 msgid "_OK"
 msgstr ""
 
-#: src/ui/theme-viewer.c:268
+#: src/ui/theme-viewer.c:266
 msgid "This is a sample message in a sample dialog"
 msgstr "उदाहरणाकरिता दिलेल्या संभाषणात ह्या नमुन्याचा संदेश आहे"
 
-#: src/ui/theme-viewer.c:352
+#: src/ui/theme-viewer.c:350
 #, c-format
 msgid "Fake menu item %d\n"
 msgstr "खोटी मेनू वस्तू %d\n"
 
-#: src/ui/theme-viewer.c:408
+#: src/ui/theme-viewer.c:406
 msgid "Border-only window"
 msgstr "फक्त-किनार पटल"
 
-#: src/ui/theme-viewer.c:410
+#: src/ui/theme-viewer.c:408
 msgid "Bar"
 msgstr "पट्टी"
 
-#: src/ui/theme-viewer.c:427
+#: src/ui/theme-viewer.c:425
 msgid "Normal Application Window"
 msgstr "सामान्य अनुप्रयोग पटल"
 
-#: src/ui/theme-viewer.c:431
+#: src/ui/theme-viewer.c:429
 msgid "Dialog Box"
 msgstr "संवाद खोका"
 
-#: src/ui/theme-viewer.c:435
+#: src/ui/theme-viewer.c:433
 msgid "Modal Dialog Box"
 msgstr "मोडल संवाद खोका"
 
-#: src/ui/theme-viewer.c:439
+#: src/ui/theme-viewer.c:437
 msgid "Utility Palette"
 msgstr "उपयुक्तता पॅलेट"
 
-#: src/ui/theme-viewer.c:443
+#: src/ui/theme-viewer.c:441
 msgid "Torn-off Menu"
 msgstr "टिअर-ऑफ मेनू"
 
-#: src/ui/theme-viewer.c:447
+#: src/ui/theme-viewer.c:445
 msgid "Border"
 msgstr "किनार"
 
-#: src/ui/theme-viewer.c:451
+#: src/ui/theme-viewer.c:449
 msgid "Attached Modal Dialog"
 msgstr ""
 
-#: src/ui/theme-viewer.c:811
+#: src/ui/theme-viewer.c:808
 #, c-format
 msgid "Button layout test %d"
 msgstr "बटन लेआउट कसोटी %d"
 
-#: src/ui/theme-viewer.c:836
+#: src/ui/theme-viewer.c:833
 #, c-format
 msgid "%g milliseconds to draw one window frame"
 msgstr "एक पटलची पटल काढण्यासाठी %g मिलीसेकंद"
 
-#: src/ui/theme-viewer.c:876
+#: src/ui/theme-viewer.c:873
 msgid "Usage: marco-theme-viewer [THEMENAME]\n"
 msgstr "वापर: marco-theme-viewer [THEMENAME]\n"
 
-#: src/ui/theme-viewer.c:883
+#: src/ui/theme-viewer.c:880
 #, c-format
 msgid "Error loading theme: %s\n"
 msgstr "थीम भारित करण्यात त्रुटी: %s\n"
 
-#: src/ui/theme-viewer.c:889
+#: src/ui/theme-viewer.c:886
 #, c-format
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" थीम %g सेकंदांत भारित करत आहे\n"
 
-#: src/ui/theme-viewer.c:933
+#: src/ui/theme-viewer.c:930
 msgid "Normal Title Font"
 msgstr "सामान्य शिर्षक फॉन्ट"
 
-#: src/ui/theme-viewer.c:939
+#: src/ui/theme-viewer.c:936
 msgid "Small Title Font"
 msgstr "लहान शिर्षक फॉन्ट"
 
-#: src/ui/theme-viewer.c:945
+#: src/ui/theme-viewer.c:942
 msgid "Large Title Font"
 msgstr "मोठा शिर्षक फॉन्ट"
 
-#: src/ui/theme-viewer.c:950
+#: src/ui/theme-viewer.c:947
 msgid "Button Layouts"
 msgstr "बटन लेआउट"
 
-#: src/ui/theme-viewer.c:955
+#: src/ui/theme-viewer.c:952
 msgid "Benchmark"
 msgstr "बेंचमार्क"
 
-#: src/ui/theme-viewer.c:1012
+#: src/ui/theme-viewer.c:1008
 msgid "Window Title Goes Here"
 msgstr "पटलचे शिर्षक येथे जाते"
 
-#: src/ui/theme-viewer.c:1114
+#: src/ui/theme-viewer.c:1110
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
