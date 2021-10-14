@@ -241,18 +241,9 @@ static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 	GtkWidget* mi;
 	GtkWidget* accel_label;
 
-	if (menuitem->type == MENU_ITEM_NORMAL)
+	if (menuitem->type == MENU_ITEM_NORMAL || menuitem->type == MENU_ITEM_IMAGE)
 	{
 		mi = gtk_menu_item_new ();
-	}
-	else if (menuitem->type == MENU_ITEM_IMAGE)
-	{
-		GtkWidget* image = gtk_image_new_from_icon_name(menuitem->stock_id, GTK_ICON_SIZE_MENU);
-
-		mi = gtk_image_menu_item_new();
-
-		gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(mi), image);
-		gtk_widget_show(image);
 	}
 	else if (menuitem->type == MENU_ITEM_CHECKBOX)
 	{
@@ -282,8 +273,22 @@ static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 	accel_label = meta_accel_label_new_with_mnemonic (i18n_label);
 	gtk_widget_set_halign (accel_label, GTK_ALIGN_START);
 
-	gtk_container_add (GTK_CONTAINER (mi), accel_label);
-	gtk_widget_show (accel_label);
+	if (menuitem->type == MENU_ITEM_IMAGE)
+	{
+		GtkWidget* image = gtk_image_new_from_icon_name(menuitem->stock_id, GTK_ICON_SIZE_MENU);
+		GtkWidget* box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+
+		gtk_container_add (GTK_CONTAINER (box), image);
+		gtk_label_set_xalign (GTK_LABEL (accel_label), 0.0);
+		gtk_box_pack_end (GTK_BOX (box), accel_label, TRUE, TRUE, 0);
+		gtk_container_add (GTK_CONTAINER (mi), box);
+		gtk_widget_show_all (mi);
+	}
+	else
+	{
+		gtk_container_add (GTK_CONTAINER (mi), accel_label);
+		gtk_widget_show (accel_label);
+	}
 
 	meta_accel_label_set_accelerator (META_ACCEL_LABEL (accel_label), key, mods);
 
