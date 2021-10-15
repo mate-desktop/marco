@@ -1615,8 +1615,11 @@ mouse_event_is_in_tab_popup (MetaDisplay *display,
       GtkWidget *popup_widget = meta_ui_tab_popup_get_widget (screen->tab_popup);
       if (ok1 && popup_widget != NULL)
         {
-          Window popup_xid = gdk_x11_window_get_xid (gtk_widget_get_window (popup_widget));
-
+          GdkWindow * window = gtk_widget_get_window (popup_widget);
+          if (window == NULL)
+            return FALSE;
+            
+          Window popup_xid = gdk_x11_window_get_xid (window);
           gboolean ok2 = XTranslateCoordinates (display->xdisplay,
                                                 event_window, popup_xid,
                                                 event_x, event_y,
