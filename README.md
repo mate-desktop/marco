@@ -6,7 +6,7 @@ MATE Marco is a fork of GNOME Metacity.
 COMPILING MARCO
 ===
 
-You need GTK+ 3.14.  For startup notification to work you need
+You need GTK+ 3.22.  For startup notification to work you need
 libstartup-notification at
 http://www.freedesktop.org/software/startup-notification/.
 
@@ -24,7 +24,8 @@ about missing features or misfeatures.
 
 Feel free to send patches too; Marco is relatively small and
 simple, so if you find a bug or want to add a feature it should be
-pretty easy.  Send me mail, or put the patch in bugzilla.
+pretty easy.  Send me mail, or file a pull request at
+https://github.com/mate-desktop/marco/pulls
 
 See the HACKING file for some notes on hacking Marco.
 
