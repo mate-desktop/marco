@@ -516,13 +516,9 @@ meta_ui_window_menu_new  (MetaUI             *ui,
 }
 
 void
-meta_ui_window_menu_popup (MetaWindowMenu     *menu,
-                           int                 root_x,
-                           int                 root_y,
-                           int                 button,
-                           guint32             timestamp)
+meta_ui_window_menu_popup (MetaWindowMenu     *menu)
 {
-  meta_window_menu_popup (menu, root_x, root_y, button, timestamp);
+  gtk_menu_popup_at_pointer (GTK_MENU (menu->menu), NULL);
 }
 
 void
