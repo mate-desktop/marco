@@ -1746,21 +1746,23 @@ static void
 init_bindings (GSettings *settings)
 {
   GSettingsSchema *schema;
-  gchar **list = NULL;
-  gchar *str_val = NULL;
+  gchar **list;
+  gsize i;
 
   g_object_get (settings, "settings-schema", &schema, NULL);
   list = g_settings_schema_list_keys (schema);
   g_settings_schema_unref (schema);
 
-  while (*list != NULL)
+  for (i = 0; list[i] != NULL; i++)
     {
-      str_val = g_settings_get_string (settings, *list);
-      update_key_binding (*list, str_val);
-      list++;
+      gchar *str_val;
+
+      str_val = g_settings_get_string (settings, list[i]);
+      update_key_binding (list[i], str_val);
+      g_free (str_val);
     }
 
-  g_free (str_val);
+  g_strfreev (list);
 }
 
 static void
@@ -1779,42 +1781,46 @@ static void
 init_commands (void)
 {
   GSettingsSchema *schema;
-  gchar **list = NULL;
-  gchar *str_val = NULL;
+  gchar **list;
+  gsize i;
 
   g_object_get (settings_command, "settings-schema", &schema, NULL);
   list = g_settings_schema_list_keys (schema);
   g_settings_schema_unref (schema);
 
-  while (*list != NULL)
+  for (i = 0; list[i] != NULL; i++)
     {
-      str_val = g_settings_get_string (settings_command, *list);
-      update_command (*list, str_val);
-      list++;
+      gchar *str_val;
+
+      str_val = g_settings_get_string (settings_command, list[i]);
+      update_command (list[i], str_val);
+      g_free (str_val);
     }
 
-  g_free (str_val);
+  g_strfreev (list);
 }
 
 static void
 init_workspace_names (void)
 {
   GSettingsSchema *schema;
-  gchar **list = NULL;
-  gchar *str_val = NULL;
+  gchar **list;
+  gsize i;
 
   g_object_get (settings_workspace_names, "settings-schema", &schema, NULL);
   list = g_settings_schema_list_keys (schema);
   g_settings_schema_unref (schema);
 
-  while (*list != NULL)
+  for (i = 0; list[i] != NULL; i++)
     {
-      str_val = g_settings_get_string (settings_workspace_names, *list);
-      update_workspace_name (*list, str_val);
-      list++;
+      gchar *str_val;
+
+      str_val = g_settings_get_string (settings_workspace_names, list[i]);
+      update_workspace_name (list[i], str_val);
+      g_free (str_val);
     }
 
-  g_free (str_val);
+  g_strfreev (list);
 }
 
 static gboolean
