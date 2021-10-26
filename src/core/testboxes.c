@@ -1105,7 +1105,7 @@ test_find_onscreen_edges (void)
   tmp = g_list_prepend (tmp, new_screen_edge (   0,   20, 0, 1180, left));
 
 #if 0
-  #define FUDGE 50 /* number of edges */
+#define FUDGE 50 /* number of edges */
   char big_buffer1[(EDGE_LENGTH+2)*FUDGE], big_buffer2[(EDGE_LENGTH+2)*FUDGE];
   meta_rectangle_edge_list_to_string (edges, "\n ", big_buffer1);
   meta_rectangle_edge_list_to_string (tmp,   "\n ", big_buffer2);
@@ -1194,7 +1194,7 @@ test_find_nonintersected_xinerama_edges (void)
   tmp = g_list_prepend (tmp, new_xinerama_edge ( 800,   20, 0, 1080, right));
   tmp = g_list_prepend (tmp, new_xinerama_edge ( 800,   20, 0, 1180, left));
 #if 0
-  #define FUDGE 50
+#define FUDGE 50
   char big_buffer1[(EDGE_LENGTH+2)*FUDGE], big_buffer2[(EDGE_LENGTH+2)*FUDGE];
   meta_rectangle_edge_list_to_string (edges, "\n ", big_buffer1);
   meta_rectangle_edge_list_to_string (tmp,   "\n ", big_buffer2);
