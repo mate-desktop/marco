@@ -771,6 +771,7 @@ meta_gradient_create_interwoven (int            width,
   unsigned char *ptr;
   unsigned char *pixels;
   int rowstride;
+  double height_scaling;
 
   pixbuf = blank_pixbuf (width, height);
   if (pixbuf == NULL)
@@ -779,25 +780,29 @@ meta_gradient_create_interwoven (int            width,
   pixels = gdk_pixbuf_get_pixels (pixbuf);
   rowstride = gdk_pixbuf_get_rowstride (pixbuf);
 
-  r1 = (long)(colors1[0].red*0xffffff);
-  g1 = (long)(colors1[0].green*0xffffff);
-  b1 = (long)(colors1[0].blue*0xffffff);
-  a1 = (long)(colors1[0].alpha*0xffffff);
+#define RGBA_SCALING 16777215.0 /* 0xffffff */
+  r1 = (long) (colors1[0].red   * RGBA_SCALING);
+  g1 = (long) (colors1[0].green * RGBA_SCALING);
+  b1 = (long) (colors1[0].blue  * RGBA_SCALING);
+  a1 = (long) (colors1[0].alpha * RGBA_SCALING);
 
-  r2 = (long)(colors2[0].red*0xffffff);
-  g2 = (long)(colors2[0].green*0xffffff);
-  b2 = (long)(colors2[0].blue*0xffffff);
-  a2 = (long)(colors2[0].alpha*0xffffff);
+  r2 = (long) (colors2[0].red   * RGBA_SCALING);
+  g2 = (long) (colors2[0].green * RGBA_SCALING);
+  b2 = (long) (colors2[0].blue  * RGBA_SCALING);
+  a2 = (long) (colors2[0].alpha * RGBA_SCALING);
 
-  dr1 = ((colors1[1].red-colors1[0].red)*0xffffff)/(int)height;
-  dg1 = ((colors1[1].green-colors1[0].green)*0xffffff)/(int)height;
-  db1 = ((colors1[1].blue-colors1[0].blue)*0xffffff)/(int)height;
-  da1 = ((colors1[1].alpha-colors1[0].alpha)*0xffffff)/(int)height;
+  height_scaling = RGBA_SCALING / (gdouble) height;
 
-  dr2 = ((colors2[1].red-colors2[0].red)*0xffffff)/(int)height;
-  dg2 = ((colors2[1].green-colors2[0].green)*0xffffff)/(int)height;
-  db2 = ((colors2[1].blue-colors2[0].blue)*0xffffff)/(int)height;
-  da2 = ((colors2[1].alpha-colors2[0].alpha)*0xffffff)/(int)height;
+  dr1 = (long) (colors1[1].red-colors1[0].red     * height_scaling);
+  dg1 = (long) (colors1[1].green-colors1[0].green * height_scaling);
+  db1 = (long) (colors1[1].blue-colors1[0].blue   * height_scaling);
+  da1 = (long) (colors1[1].alpha-colors1[0].alpha * height_scaling);
+
+  dr2 = (long) (colors2[1].red-colors2[0].red     * height_scaling);
+  dg2 = (long) (colors2[1].green-colors2[0].green * height_scaling);
+  db2 = (long) (colors2[1].blue-colors2[0].blue   * height_scaling);
+  da2 = (long) (colors2[1].alpha-colors2[0].alpha * height_scaling);
+#undef RGBA_SCALING
 
   for (i=0,k=0,l=0,ll=thickness1; i<height; i++)
     {

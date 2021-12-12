@@ -83,8 +83,8 @@ calculate_position (int i, int is_doubled, int *x, int *y)
           yoff *= 2;
         }
 
-      *x = screen_x_fraction[i % 3] * screen_width + xoff;
-      *y = screen_y_fraction[i / 3] * screen_height + yoff;
+      *x = (int) (screen_x_fraction[i % 3] * (double) screen_width) + xoff;
+      *y = (int) (screen_y_fraction[i / 3] * (double) screen_height) + yoff;
     }
 }
 

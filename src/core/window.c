@@ -2914,10 +2914,10 @@ static void meta_window_transform_to_monitor(MetaRectangle *target_rect,
   target_rect->x -= from_monitor->x;
   target_rect->y -= from_monitor->y;
 
-  target_rect->width *= horizontal_ratio;
-  target_rect->height *= vertical_ratio;
-  target_rect->x *= horizontal_ratio;
-  target_rect->y *= vertical_ratio;
+  target_rect->width = (int) (horizontal_ratio * (double) target_rect->width);
+  target_rect->height = (int) (vertical_ratio * (double) target_rect->height);
+  target_rect->x = (int) (horizontal_ratio * (double) target_rect->x);
+  target_rect->y = (int) (vertical_ratio * (double) target_rect->y);
 
   target_rect->x += to_monitor->x;
   target_rect->y += to_monitor->y;
@@ -7177,7 +7177,7 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
   gboolean       is_onscreen;
 
   const int min_height_needed  = 8;
-  const int min_width_percent  = 0.5;
+  const double min_width_percent  = 0.5;
   const int min_width_absolute = 50;
 
   /* Titlebar can't be offscreen if there is no titlebar... */
@@ -7200,7 +7200,7 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
 
       meta_rectangle_intersect (&titlebar_rect, spanning_rect, &overlap);
       if (overlap.height > MIN (titlebar_rect.height, min_height_needed) &&
-          overlap.width  > MIN (titlebar_rect.width * min_width_percent,
+          overlap.width  > MIN ((int) (min_width_percent * (double) titlebar_rect.width),
                                 min_width_absolute))
         {
           is_onscreen = TRUE;
@@ -7426,7 +7426,7 @@ update_move (MetaWindow  *window,
         ((double)display->grab_initial_window_pos.width);
 
       display->grab_initial_window_pos.x =
-        x - window->saved_rect.width * prop;
+        x - (int) (prop * (double) window->saved_rect.width);
       display->grab_initial_window_pos.y = y;
 
       if (window->frame)

@@ -46,10 +46,10 @@ get_window_rect (const WnckWindowDisplayInfo *win,
   width = win->width;
   height = win->height;
 
-  x *= width_ratio;
-  y *= height_ratio;
-  width *= width_ratio;
-  height *= height_ratio;
+  x = (int) (width_ratio * (double) x);
+  y = (int) (height_ratio * (double) y);
+  width = (int) (width_ratio * (double) width);
+  height = (int) (height_ratio * (double) height);
 
   x += workspace_rect->x;
   y += workspace_rect->y;

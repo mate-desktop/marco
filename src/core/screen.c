@@ -1214,7 +1214,7 @@ meta_screen_update_cursor (MetaScreen *screen)
 }
 
 #define MAX_PREVIEW_SCREEN_FRACTION 0.33
-#define MAX_PREVIEW_SIZE 300
+#define MAX_PREVIEW_SIZE 300.0
 
 static cairo_surface_t *
 get_window_surface (MetaWindow *window)
@@ -1222,7 +1222,8 @@ get_window_surface (MetaWindow *window)
   cairo_surface_t *surface, *scaled;
   cairo_t *cr;
   const MetaXineramaScreenInfo *current;
-  int width, height, max_columns, max_size;
+  int width, height, max_columns;
+  double max_size;
   double ratio;
 
   surface = meta_compositor_get_window_surface (window->display->compositor, window);
@@ -1239,14 +1240,14 @@ get_window_surface (MetaWindow *window)
   /* Scale surface to fit current screen */
   if (width > height)
     {
-      max_size = MIN (MAX_PREVIEW_SIZE, current->rect.width / max_columns * MAX_PREVIEW_SCREEN_FRACTION);
+      max_size = MIN (MAX_PREVIEW_SIZE, MAX_PREVIEW_SCREEN_FRACTION * ((double) current->rect.width) / ((double) max_columns));
       ratio = ((double) width) / max_size;
       width = (int) max_size;
       height = (int) (((double) height) / ratio);
     }
   else
     {
-      max_size = MIN (MAX_PREVIEW_SIZE, current->rect.height / max_columns * MAX_PREVIEW_SCREEN_FRACTION);
+      max_size = MIN (MAX_PREVIEW_SIZE, MAX_PREVIEW_SCREEN_FRACTION * ((double) current->rect.height) / ((double) max_columns));
       ratio = ((double) height) / max_size;
       height = (int) max_size;
       width = (int) (((double) width) / ratio);
