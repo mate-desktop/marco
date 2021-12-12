@@ -108,8 +108,8 @@ scale_surface (cairo_surface_t *surface,
   gdouble scale_x;
   gdouble scale_y;
   cairo_content_t content;
-  gint width;
-  gint height;
+  gdouble width;
+  gdouble height;
   cairo_surface_t *scaled;
   cairo_t *cr;
 
@@ -131,7 +131,7 @@ scale_surface (cairo_surface_t *surface,
   width = ceil (new_width);
   height = ceil (new_height);
 
-  scaled = cairo_surface_create_similar (surface, content, width, height);
+  scaled = cairo_surface_create_similar (surface, content, (int) width, (int) height);
   cr = cairo_create (scaled);
 
   cairo_scale (cr, scale_x, scale_y);
@@ -185,7 +185,7 @@ get_surface_from_pixbuf (GdkPixbuf         *pixbuf,
   width = ceil (width);
   height = ceil (height);
 
-  copy = cairo_surface_create_similar (surface, content, width, height);
+  copy = cairo_surface_create_similar (surface, content, (int) width, (int) height);
   cr = cairo_create (copy);
 
   cairo_set_source_surface (cr, surface, 0, 0);
@@ -779,7 +779,7 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
     {
     case META_BUTTON_SIZING_ASPECT:
       button_height = borders.visible.top - layout->button_border.top - layout->button_border.bottom;
-      button_width = button_height / layout->button_aspect;
+      button_width = (int) (((double) button_height) / layout->button_aspect);
       break;
     case META_BUTTON_SIZING_FIXED:
       button_width = layout->button_width;
@@ -882,12 +882,12 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
       space_used_by_buttons = 0;
 
       space_used_by_buttons += button_width * n_left;
-      space_used_by_buttons += (button_width * 0.75) * n_left_spacers;
+      space_used_by_buttons += (int) (0.75 * (double) (button_width * n_left_spacers));
       space_used_by_buttons += layout->button_border.left * n_left;
       space_used_by_buttons += layout->button_border.right * n_left;
 
       space_used_by_buttons += button_width * n_right;
-      space_used_by_buttons += (button_width * 0.75) * n_right_spacers;
+      space_used_by_buttons += (int) (0.75 * (double) (button_width * n_right_spacers));
       space_used_by_buttons += layout->button_border.left * n_right;
       space_used_by_buttons += layout->button_border.right * n_right;
 
@@ -988,7 +988,7 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
       rect = right_func_rects[i];
       rect->visible.x = x - layout->button_border.right - button_width;
       if (right_buttons_has_spacer[i])
-        rect->visible.x -= (button_width * 0.75);
+        rect->visible.x -= (int) (0.75 * (double) button_width);
 
       rect->visible.y = button_y;
       rect->visible.width = button_width;
@@ -1047,7 +1047,7 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
 
       x = rect->visible.x + rect->visible.width + layout->button_border.right;
       if (left_buttons_has_spacer[i])
-        x += (button_width * 0.75);
+        x += (int) (0.75 * (double) button_width);
 
       *(left_bg_rects[i]) = rect->visible;
     }
@@ -2880,7 +2880,7 @@ pos_eval (MetaDrawSpec              *spec,
           *val_p = expr.d.int_val;
           break;
         case POS_EXPR_DOUBLE:
-          *val_p = expr.d.double_val;
+          *val_p = (int) expr.d.double_val;
           break;
         case POS_EXPR_OPERATOR:
           g_assert_not_reached ();
@@ -6234,6 +6234,7 @@ meta_gtk_widget_get_font_desc (GtkWidget *widget,
 			       const PangoFontDescription *override)
 {
   PangoFontDescription *font_desc;
+  gint font_size;
 
   GtkStyleContext *style = gtk_widget_get_style_context (widget);
   GtkStateFlags state = gtk_widget_get_state_flags (widget);
@@ -6242,8 +6243,9 @@ meta_gtk_widget_get_font_desc (GtkWidget *widget,
   if (override)
     pango_font_description_merge (font_desc, override, TRUE);
 
+  font_size = pango_font_description_get_size (font_desc);
   pango_font_description_set_size (font_desc,
-                                   MAX (pango_font_description_get_size (font_desc) * scale, 1));
+                                   MAX ((gint) (scale * (double) font_size), 1));
 
   return font_desc;
 }

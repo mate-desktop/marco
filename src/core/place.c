@@ -46,8 +46,8 @@ northwestcmp (gconstpointer a, gconstpointer b)
 {
   MetaWindow *aw = (gpointer) a;
   MetaWindow *bw = (gpointer) b;
-  int from_origin_a;
-  int from_origin_b;
+  double from_origin_a;
+  double from_origin_b;
   int ax, ay, bx, by;
 
   /* we're interested in the frame position for cascading,
@@ -76,8 +76,8 @@ northwestcmp (gconstpointer a, gconstpointer b)
     }
 
   /* probably there's a fast good-enough-guess we could use here. */
-  from_origin_a = sqrt (ax * ax + ay * ay);
-  from_origin_b = sqrt (bx * bx + by * by);
+  from_origin_a = sqrt ((double) (ax * ax + ay * ay));
+  from_origin_b = sqrt ((double) (bx * bx + by * by));
 
   if (from_origin_a < from_origin_b)
     return -1;

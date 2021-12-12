@@ -541,15 +541,15 @@ place_window_if_needed(MetaWindow     *window,
            */
           if (info->current.width >= info->work_area_xinerama.width)
             {
-              info->current.width = .75 * info->work_area_xinerama.width;
+              info->current.width = (int) (.75 * (double) info->work_area_xinerama.width);
               info->current.x = info->work_area_xinerama.x +
-                       .125 * info->work_area_xinerama.width;
+                                (int) (.125 * (double) info->work_area_xinerama.width);
             }
           if (info->current.height >= info->work_area_xinerama.height)
             {
-              info->current.height = .75 * info->work_area_xinerama.height;
+              info->current.height = (int) (.75 * (double) info->work_area_xinerama.height);
               info->current.y = info->work_area_xinerama.y +
-                       .083 * info->work_area_xinerama.height;
+                                (int) (.083 * (double) info->work_area_xinerama.height);
             }
 
           if (window->maximize_horizontally_after_placement ||
@@ -1225,7 +1225,8 @@ constrain_aspect_ratio (MetaWindow         *window,
 {
   double minr, maxr;
   gboolean constraints_are_inconsistent, constraint_already_satisfied;
-  int fudge, new_width, new_height;
+  int fudge;
+  double new_width, new_height;
   double best_width, best_height;
   double alt_width, alt_height;
   MetaRectangle *start_rect;
@@ -1286,20 +1287,18 @@ constrain_aspect_ratio (MetaWindow         *window,
     return constraint_already_satisfied;
 
   /*** Enforce constraint ***/
-  new_width = info->current.width;
-  new_height = info->current.height;
+  new_width = (double) info->current.width;
+  new_height = (double) info->current.height;
 
   switch (info->resize_gravity)
     {
     case WestGravity:
     case EastGravity:
-      /* Yeah, I suck for doing implicit rounding -- sue me */
       new_height = CLAMP (new_height, new_width / maxr,  new_width / minr);
       break;
 
     case NorthGravity:
     case SouthGravity:
-      /* Yeah, I suck for doing implicit rounding -- sue me */
       new_width  = CLAMP (new_width,  new_height * minr, new_height * maxr);
       break;
 
@@ -1344,8 +1343,8 @@ constrain_aspect_ratio (MetaWindow         *window,
   meta_rectangle_resize_with_gravity (start_rect,
                                       &info->current,
                                       info->resize_gravity,
-                                      new_width,
-                                      new_height);
+                                      (int) new_width,
+                                      (int) new_height);
 
   return TRUE;
 }
