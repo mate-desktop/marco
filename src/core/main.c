@@ -269,7 +269,7 @@ meta_parse_options (int *argc, char ***argv,
       "FILE"
     },
     {
-      "version", 0, 0, G_OPTION_ARG_NONE,
+      "version", 'v', 0, G_OPTION_ARG_NONE,
       &my_args.print_version,
       N_("Print version"),
       NULL
