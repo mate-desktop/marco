@@ -606,11 +606,9 @@ void     meta_window_set_current_workspace_hint (MetaWindow *window);
 
 unsigned long meta_window_get_net_wm_desktop (MetaWindow *window);
 
-void meta_window_show_menu (MetaWindow *window,
-                            int         root_x,
-                            int         root_y,
-                            int         button,
-                            guint32     timestamp);
+void meta_window_show_menu (MetaWindow         *window,
+                            const GdkRectangle *rect,
+                            const GdkEvent     *event);
 
 gboolean meta_window_titlebar_is_onscreen    (MetaWindow *window);
 void     meta_window_shove_titlebar_onscreen (MetaWindow *window);

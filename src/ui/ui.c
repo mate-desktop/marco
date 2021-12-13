@@ -516,12 +516,10 @@ meta_ui_window_menu_new  (MetaUI             *ui,
 
 void
 meta_ui_window_menu_popup (MetaWindowMenu     *menu,
-                           int                 root_x,
-                           int                 root_y,
-                           int                 button,
-                           guint32             timestamp)
+                           const GdkRectangle *rect,
+                           const GdkEvent     *event)
 {
-  meta_window_menu_popup (menu, root_x, root_y, button, timestamp);
+  meta_window_menu_popup (menu, rect, event);
 }
 
 void
