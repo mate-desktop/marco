@@ -473,6 +473,12 @@ meta_ui_destroy_frame_window (MetaUI *ui,
   meta_frames_unmanage_window (ui->frames, xwindow);
 }
 
+gint
+meta_ui_get_scale (MetaUI *ui)
+{
+  return ui->scale;
+}
+
 void
 meta_ui_move_resize_frame (MetaUI *ui,
 			   Window frame,
