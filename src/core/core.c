@@ -530,18 +530,18 @@ meta_core_get_active_workspace (Screen *xscreen)
 }
 
 void
-meta_core_show_window_menu (Display              *xdisplay,
-                            Window                frame_xwindow,
-                            const GdkRectangle   *rect,
-                            const GdkEventButton *event)
+meta_core_show_window_menu (Display            *xdisplay,
+                            Window              frame_xwindow,
+                            const GdkRectangle *rect,
+                            guint32             timestamp)
 {
   MetaWindow *window = get_window (xdisplay, frame_xwindow);
 
   if (meta_prefs_get_raise_on_click ())
     meta_window_raise (window);
-  meta_window_focus (window, event->time);
+  meta_window_focus (window, timestamp);
 
-  meta_window_show_menu (window, rect, (GdkEvent *) event);
+  meta_window_show_menu (window, rect, timestamp);
 }
 
 void

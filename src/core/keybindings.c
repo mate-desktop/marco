@@ -42,7 +42,6 @@
 
 #include <gio/gio.h>
 
-#include <gdk/gdkx.h>
 #include <X11/keysym.h>
 #include <string.h>
 #include <stdio.h>
@@ -2947,34 +2946,6 @@ handle_panel (MetaDisplay    *display,
   meta_error_trap_pop (display, FALSE);
 }
 
-static GdkEvent *
-key_press_event_new (XEvent *xevent)
-{
-  GdkDisplay *display;
-  GdkSeat *seat;
-  GdkWindow *window;
-  GdkDevice *device;
-  GdkEvent *event;
-
-  display = gdk_display_get_default ();
-  seat = gdk_display_get_default_seat (display);
-
-  window = gdk_x11_window_lookup_for_display (display, xevent->xkey.window);
-  device = gdk_seat_get_keyboard (seat);
-
-  event = gdk_event_new (GDK_KEY_PRESS);
-
-  event->key.window = window ? g_object_ref (window) : NULL;
-  event->key.send_event = xevent->xkey.send_event ? TRUE : FALSE;
-  event->key.time = xevent->xkey.time;
-  event->key.state = (GdkModifierType) xevent->xkey.state;
-  event->key.hardware_keycode = xevent->xkey.keycode;
-
-  gdk_event_set_device (event, device);
-
-  return event;
-}
-
 static void
 handle_activate_window_menu (MetaDisplay    *display,
                       MetaScreen     *screen,
@@ -2985,16 +2956,13 @@ handle_activate_window_menu (MetaDisplay    *display,
   if (display->focus_window)
     {
       GdkRectangle rect;
-      GdkEvent *gdk_event;
 
-      rect.x = display->focus_window->rect.x;
-      rect.y = display->focus_window->rect.y;
+      meta_window_get_position (display->focus_window,
+                                &rect.x, &rect.y);
       rect.width = display->focus_window->rect.width;
       rect.height = 0;
 
-      gdk_event = key_press_event_new (event);
-      meta_window_show_menu (display->focus_window, &rect, gdk_event);
-      gdk_event_free (gdk_event);
+      meta_window_show_menu (display->focus_window, &rect, event->xkey.time);
     }
 }
 

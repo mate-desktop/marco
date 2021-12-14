@@ -594,9 +594,9 @@ meta_ui_window_menu_new  (MetaUI             *ui,
 void
 meta_ui_window_menu_popup (MetaWindowMenu     *menu,
                            const GdkRectangle *rect,
-                           const GdkEvent     *event)
+                           guint32             timestamp)
 {
-  meta_window_menu_popup (menu, rect, event);
+  meta_window_menu_popup (menu, rect, timestamp);
 }
 
 void

@@ -134,7 +134,7 @@ MetaWindowMenu* meta_ui_window_menu_new   (MetaUI             *ui,
                                            gpointer            data);
 void            meta_ui_window_menu_popup (MetaWindowMenu     *menu,
                                            const GdkRectangle *rect,
-                                           const GdkEvent     *event);
+                                           guint32             timestamp);
 void            meta_ui_window_menu_free  (MetaWindowMenu     *menu);
 
 GdkPixbuf* meta_gdk_pixbuf_get_from_pixmap (GdkPixbuf   *dest,

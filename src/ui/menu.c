@@ -467,12 +467,25 @@ meta_window_menu_new   (MetaFrames         *frames,
   return menu;
 }
 
-void meta_window_menu_popup(MetaWindowMenu* menu, const GdkRectangle *rect, const GdkEvent *event)
+void meta_window_menu_popup(MetaWindowMenu* menu, const GdkRectangle *rect, guint32 timestamp)
 {
-	GdkEventAny *any;
+	GdkDisplay *display;
+	GdkEvent *event;
+	GdkWindow *window;
+	GdkDevice *device;
 
-	any = (GdkEventAny *) event;
-	gtk_menu_popup_at_rect(GTK_MENU (menu->menu), any->window, rect, GDK_GRAVITY_SOUTH_WEST, GDK_GRAVITY_NORTH_WEST, event);
+	display = gdk_display_get_default ();
+
+	event = gdk_event_new (GDK_BUTTON_PRESS);
+	event->button.time = timestamp;
+
+	window = gdk_screen_get_root_window (gdk_display_get_default_screen (display));
+	event->button.window = g_object_ref (window);
+
+	device = gdk_seat_get_pointer (gdk_display_get_default_seat (display));
+	gdk_event_set_device (event, device);
+
+	gtk_menu_popup_at_rect(GTK_MENU (menu->menu), event->any.window, rect, GDK_GRAVITY_SOUTH_WEST, GDK_GRAVITY_NORTH_WEST, event);
 
     if (!gtk_widget_get_visible (menu->menu))
       meta_warning("GtkMenu failed to grab the pointer\n");

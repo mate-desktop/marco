@@ -5562,7 +5562,7 @@ meta_window_client_message (MetaWindow *window,
            display->atom__GTK_SHOW_WINDOW_MENU)
     {
       GdkRectangle rect;
-      GdkEvent *gdk_event;
+      guint32 timestamp;
 
       if (meta_prefs_get_raise_on_click ())
         meta_window_raise (window);
@@ -5572,10 +5572,8 @@ meta_window_client_message (MetaWindow *window,
       rect.width = 0;
       rect.height = 0;
 
-      gdk_event = gdk_event_new(GDK_BUTTON_PRESS);
-      gdk_event->button.button = 3;
-      meta_window_show_menu (window, &rect, gdk_event);
-      gdk_event_free(gdk_event);
+      timestamp = meta_display_get_current_time_roundtrip (display);
+      meta_window_show_menu (window, &rect, timestamp);
     }
 
   return FALSE;
@@ -6995,7 +6993,7 @@ menu_callback (MetaWindowMenu *menu,
 void
 meta_window_show_menu (MetaWindow         *window,
                        const GdkRectangle *rect,
-                       const GdkEvent     *event)
+                       guint32             timestamp)
 {
   MetaMenuOp ops;
   MetaMenuOp insensitive;
@@ -7116,7 +7114,7 @@ meta_window_show_menu (MetaWindow         *window,
 
   meta_verbose ("Popping up window menu for %s\n", window->desc);
 
-  meta_ui_window_menu_popup (menu, rect, event);
+  meta_ui_window_menu_popup (menu, rect, timestamp);
 }
 
 void

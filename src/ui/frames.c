@@ -1567,14 +1567,14 @@ meta_frame_titlebar_event (MetaUIFrame    *frame,
       {
         GdkRectangle rect;
 
-        rect.x = event->x;
-        rect.y = event->y;
+        rect.x = event->x_root;
+        rect.y = event->y_root;
         rect.width = 0;
         rect.height = 0;
         meta_core_show_window_menu (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
                                   frame->xwindow,
                                   &rect,
-                                  event);
+                                  event->time);
       }
       break;
 
@@ -1752,7 +1752,7 @@ meta_frames_button_press_event (GtkWidget      *widget,
           meta_core_show_window_menu (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
                                       frame->xwindow,
                                       rect,
-                                      event);
+                                      event->time);
         }
     }
   else if (event->button == 1 &&

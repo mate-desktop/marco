@@ -608,7 +608,7 @@ unsigned long meta_window_get_net_wm_desktop (MetaWindow *window);
 
 void meta_window_show_menu (MetaWindow         *window,
                             const GdkRectangle *rect,
-                            const GdkEvent     *event);
+                            guint32             timestamp);
 
 gboolean meta_window_titlebar_is_onscreen    (MetaWindow *window);
 void     meta_window_shove_titlebar_onscreen (MetaWindow *window);
