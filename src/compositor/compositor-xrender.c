@@ -78,7 +78,7 @@ typedef enum _MetaCompWindowType
 
 typedef enum _MetaShadowType
 {
-  META_SHADOW_SMALL,
+  META_SHADOW_SMALL = 0,
   META_SHADOW_MEDIUM,
   META_SHADOW_LARGE,
   LAST_SHADOW_TYPE
@@ -450,18 +450,22 @@ presum_gaussian (shadow *shad)
 static void
 generate_shadows (MetaCompScreen *info)
 {
-  double radii[LAST_SHADOW_TYPE] = {SHADOW_SMALL_RADIUS,
-                                    SHADOW_MEDIUM_RADIUS,
-                                    SHADOW_LARGE_RADIUS};
-  int i;
+  double radii [LAST_SHADOW_TYPE] = {
+    [META_SHADOW_SMALL]  = SHADOW_SMALL_RADIUS,
+    [META_SHADOW_MEDIUM] = SHADOW_MEDIUM_RADIUS,
+    [META_SHADOW_LARGE]  = SHADOW_LARGE_RADIUS
+  };
 
-  for (i = 0; i < LAST_SHADOW_TYPE; i++) {
-    shadow *shad = g_new0 (shadow, 1);
+  MetaShadowType t;
 
-    shad->gaussian_map = make_gaussian_map (radii[i]);
-    presum_gaussian (shad);
+  for (t = META_SHADOW_SMALL; t < LAST_SHADOW_TYPE; t++)
+    {
+      shadow *shad;
 
-    info->shadows[i] = shad;
+      shad = g_new0 (shadow, 1);
+      shad->gaussian_map = make_gaussian_map (radii [t]);
+      presum_gaussian (shad);
+      info->shadows [t] = shad;
   }
 }
 
@@ -593,12 +597,17 @@ make_shadow (MetaDisplay   *display,
   return ximage;
 }
 
-double shadow_offsets_x[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_X,
-                                             SHADOW_MEDIUM_OFFSET_X,
-                                             SHADOW_LARGE_OFFSET_X};
-double shadow_offsets_y[LAST_SHADOW_TYPE] = {SHADOW_SMALL_OFFSET_Y,
-                                             SHADOW_MEDIUM_OFFSET_Y,
-                                             SHADOW_LARGE_OFFSET_Y};
+double shadow_offsets_x [LAST_SHADOW_TYPE] = {
+  [META_SHADOW_SMALL]  = SHADOW_SMALL_OFFSET_X,
+  [META_SHADOW_MEDIUM] = SHADOW_MEDIUM_OFFSET_X,
+  [META_SHADOW_LARGE]  = SHADOW_LARGE_OFFSET_X
+};
+
+double shadow_offsets_y[LAST_SHADOW_TYPE] = {
+  [META_SHADOW_SMALL]  = SHADOW_SMALL_OFFSET_Y,
+  [META_SHADOW_MEDIUM] = SHADOW_MEDIUM_OFFSET_Y,
+  [META_SHADOW_LARGE]  = SHADOW_LARGE_OFFSET_Y
+};
 
 static XserverRegion
 cairo_region_to_xserver_region (Display        *xdisplay,
@@ -3072,10 +3081,15 @@ xrender_unmanage_screen (MetaCompositor *compositor,
 
   if (info->have_shadows)
     {
-      int i;
+      MetaShadowType t;
 
-      for (i = 0; i < LAST_SHADOW_TYPE; i++)
-        g_free (info->shadows[i]->gaussian_map);
+      for (t = META_SHADOW_SMALL; t < LAST_SHADOW_TYPE; t++)
+        {
+          g_free (info->shadows[t]->gaussian_map);
+          g_free (info->shadows[t]->shadow_corner);
+          g_free (info->shadows[t]->shadow_top);
+          g_free (info->shadows[t]);
+        }
     }
 
   XCompositeUnredirectSubwindows (xdisplay, xroot,
