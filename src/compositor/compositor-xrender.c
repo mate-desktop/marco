@@ -402,11 +402,6 @@ presum_gaussian (shadow *shad)
   msize = map->size;
   centre = map->size / 2;
 
-  if (shad->shadow_corner)
-    g_free (shad->shadow_corner);
-  if (shad->shadow_top)
-    g_free (shad->shadow_top);
-
   shad->shadow_corner = (guchar *)(g_malloc ((msize + 1) * (msize + 1) * 26));
   shad->shadow_top = (guchar *) (g_malloc ((msize + 1) * 26));
 
