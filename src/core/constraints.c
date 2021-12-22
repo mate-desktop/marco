@@ -628,8 +628,8 @@ update_onscreen_requirements (MetaWindow     *window,
    */
   old = window->require_fully_onscreen;
   window->require_fully_onscreen =
-    meta_rectangle_contained_in_region (info->usable_screen_region,
-                                        &info->current);
+    (meta_rectangle_contained_in_region (info->usable_screen_region,
+                                         &info->current) != FALSE);
   if (old ^ window->require_fully_onscreen)
     meta_topic (META_DEBUG_GEOMETRY,
                 "require_fully_onscreen for %s toggled to %s\n",
@@ -641,8 +641,8 @@ update_onscreen_requirements (MetaWindow     *window,
    */
   old = window->require_on_single_xinerama;
   window->require_on_single_xinerama =
-    meta_rectangle_contained_in_region (info->usable_xinerama_region,
-                                        &info->current);
+    (meta_rectangle_contained_in_region (info->usable_xinerama_region,
+                                         &info->current) != FALSE);
   if (old ^ window->require_on_single_xinerama)
     meta_topic (META_DEBUG_GEOMETRY,
                 "require_on_single_xinerama for %s toggled to %s\n",
@@ -660,8 +660,8 @@ update_onscreen_requirements (MetaWindow     *window,
       titlebar_rect.height = info->borders->visible.top;
       old = window->require_titlebar_visible;
       window->require_titlebar_visible =
-        meta_rectangle_overlaps_with_region (info->usable_screen_region,
-                                             &titlebar_rect);
+        (meta_rectangle_overlaps_with_region (info->usable_screen_region,
+                                              &titlebar_rect) != FALSE);
       if (old ^ window->require_titlebar_visible)
         meta_topic (META_DEBUG_GEOMETRY,
                     "require_titlebar_visible for %s toggled to %s\n",

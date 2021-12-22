@@ -551,7 +551,7 @@ set_window_title (MetaWindow *window,
                     title,
                     window->display->atom__NET_WM_VISIBLE_NAME,
                     &window->title);
-  window->using_net_wm_visible_name = modified;
+  window->using_net_wm_visible_name = (modified != FALSE);
 
   /* strndup is a hack since GNU libc has broken %.10s */
   str = g_strndup (window->title, 10);
@@ -622,7 +622,7 @@ set_icon_title (MetaWindow *window,
                     title,
                     window->display->atom__NET_WM_VISIBLE_ICON_NAME,
                     &window->icon_name);
-  window->using_net_wm_visible_icon_name = modified;
+  window->using_net_wm_visible_icon_name = (modified != FALSE);
 }
 
 static void
@@ -819,31 +819,31 @@ reload_mwm_hints (MetaWindow    *window,
         {
           meta_verbose ("Window %s toggles close via MWM hints\n",
                         window->desc);
-          window->mwm_has_close_func = toggle_value;
+          window->mwm_has_close_func = (toggle_value != FALSE);
         }
       if ((hints->functions & MWM_FUNC_MINIMIZE) != 0)
         {
           meta_verbose ("Window %s toggles minimize via MWM hints\n",
                         window->desc);
-          window->mwm_has_minimize_func = toggle_value;
+          window->mwm_has_minimize_func = (toggle_value != FALSE);
         }
       if ((hints->functions & MWM_FUNC_MAXIMIZE) != 0)
         {
           meta_verbose ("Window %s toggles maximize via MWM hints\n",
                         window->desc);
-          window->mwm_has_maximize_func = toggle_value;
+          window->mwm_has_maximize_func = (toggle_value != FALSE);
         }
       if ((hints->functions & MWM_FUNC_MOVE) != 0)
         {
           meta_verbose ("Window %s toggles move via MWM hints\n",
                         window->desc);
-          window->mwm_has_move_func = toggle_value;
+          window->mwm_has_move_func = (toggle_value != FALSE);
         }
       if ((hints->functions & MWM_FUNC_RESIZE) != 0)
         {
           meta_verbose ("Window %s toggles resize via MWM hints\n",
                         window->desc);
-          window->mwm_has_resize_func = toggle_value;
+          window->mwm_has_resize_func = (toggle_value != FALSE);
         }
     }
   else

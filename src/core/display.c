@@ -3623,11 +3623,11 @@ meta_display_begin_grab_op (MetaDisplay *display,
     {
       if (window)
         display->grab_have_keyboard =
-                     meta_window_grab_all_keys (window, timestamp);
+          (meta_window_grab_all_keys (window, timestamp) != FALSE);
 
       else
         display->grab_have_keyboard =
-                     meta_screen_grab_all_keys (screen, timestamp);
+          (meta_screen_grab_all_keys (screen, timestamp) != FALSE);
 
       if (!display->grab_have_keyboard)
         {
@@ -3668,7 +3668,7 @@ meta_display_begin_grab_op (MetaDisplay *display,
   display->grab_last_user_action_was_snap = FALSE;
 #endif
   display->grab_was_cancelled = FALSE;
-  display->grab_frame_action = frame_action;
+  display->grab_frame_action = (frame_action != FALSE);
 
   if (display->grab_resize_timeout_id)
     {
@@ -3855,7 +3855,7 @@ meta_display_end_grab_op (MetaDisplay *display,
        * For raise on click mode, the window was raised at the
        * beginning of the grab_op.
        */
-      if (!display->grab_threshold_movement_reached)
+      if (display->grab_threshold_movement_reached == FALSE)
         meta_window_raise (display->grab_window);
     }
 
@@ -3979,7 +3979,7 @@ meta_display_check_threshold_reached (MetaDisplay *display,
 {
   /* Don't bother doing the check again if we've already reached the threshold */
   if (meta_prefs_get_raise_on_click () ||
-      display->grab_threshold_movement_reached)
+      display->grab_threshold_movement_reached != FALSE)
     return;
 
   if (ABS (display->grab_initial_x - x) >= 8 ||
