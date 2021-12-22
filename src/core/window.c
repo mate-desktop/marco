@@ -432,7 +432,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   /* avoid tons of stack updates */
   meta_stack_freeze (window->screen->stack);
 
-  window->has_shape = has_shape;
+  window->has_shape = (has_shape != FALSE);
 
   window->rect.x = attrs->x;
   window->rect.y = attrs->y;
@@ -7298,7 +7298,7 @@ update_move_timeout (gpointer data)
   MetaWindow *window = data;
 
   update_move (window,
-               window->display->grab_last_user_action_was_snap,
+               window->display->grab_last_user_action_was_snap != FALSE,
                window->display->grab_latest_motion_x,
                window->display->grab_latest_motion_y);
 
@@ -7604,7 +7604,7 @@ update_resize_timeout (gpointer data)
   MetaWindow *window = data;
 
   update_resize (window,
-                 window->display->grab_last_user_action_was_snap,
+                 window->display->grab_last_user_action_was_snap != FALSE,
                  window->display->grab_latest_motion_x,
                  window->display->grab_latest_motion_y,
                  TRUE);
@@ -7968,7 +7968,7 @@ meta_window_handle_mouse_grab_op_event (MetaWindow *window,
         case META_GRAB_OP_KEYBOARD_RESIZING_NW:
           /* no pointer round trip here, to keep in sync */
           update_resize (window,
-                         window->display->grab_last_user_action_was_snap,
+                         window->display->grab_last_user_action_was_snap != FALSE,
                          window->display->grab_latest_motion_x,
                          window->display->grab_latest_motion_y,
                          TRUE);
@@ -7991,7 +7991,7 @@ meta_window_handle_mouse_grab_op_event (MetaWindow *window,
        * mouse button and they almost certainly do not want a
        * non-snapped movement to occur from the button release.
        */
-      if (!window->display->grab_last_user_action_was_snap)
+      if (window->display->grab_last_user_action_was_snap == FALSE)
         {
           if (meta_grab_op_is_moving (window->display->grab_op))
             {

@@ -1161,7 +1161,7 @@ meta_window_edge_resistance_for_move (MetaWindow  *window,
   proposed_outer.y += (*new_y - old_y);
   new_outer = proposed_outer;
 
-  window->display->grab_last_user_action_was_snap = snap;
+  window->display->grab_last_user_action_was_snap = (snap != FALSE);
   is_resize = FALSE;
   if (apply_edge_resistance_to_each_side (window->display,
                                           window,
@@ -1259,7 +1259,7 @@ meta_window_edge_resistance_for_resize (MetaWindow  *window,
                                       proposed_outer_width,
                                       proposed_outer_height);
 
-  window->display->grab_last_user_action_was_snap = snap;
+  window->display->grab_last_user_action_was_snap = (snap != FALSE);
   is_resize = TRUE;
   if (apply_edge_resistance_to_each_side (window->display,
                                           window,
