@@ -56,6 +56,7 @@
 #define KEY_GENERAL_CENTER_NEW_WINDOWS "center-new-windows"
 #define KEY_GENERAL_ICON_SIZE "icon-size"
 #define KEY_GENERAL_ALT_TAB_MAX_COLUMNS "alt-tab-max-columns"
+#define KEY_GENERAL_ALT_TAB_RAISE_WINDOWS "alt-tab-raise-windows"
 #define KEY_GENERAL_ALT_TAB_EXPAND_TO_FIT_TITLE "alt-tab-expand-to-fit-title"
 
 #define KEY_COMMAND_SCHEMA "org.mate.Marco.keybinding-commands"
@@ -121,6 +122,7 @@ static char *cursor_theme = NULL;
 static int   cursor_size = 24;
 static int   icon_size   = META_DEFAULT_ICON_SIZE;
 static int   alt_tab_max_columns = META_DEFAULT_ALT_TAB_MAX_COLUMNS;
+static gboolean alt_tab_raise_windows = META_DEFAULT_ALT_TAB_RAISE_WINDOWS;
 static gboolean alt_tab_expand_to_fit_title = META_DEFAULT_ALT_TAB_EXPAND_TO_FIT_TITLE;
 static gboolean use_force_compositor_manager = FALSE;
 static gboolean force_compositor_manager = FALSE;
@@ -457,6 +459,12 @@ static MetaBoolPreference preferences_bool[] =
       META_PREF_ALT_TAB_EXPAND_TO_FIT_TITLE,
       &alt_tab_expand_to_fit_title,
       META_DEFAULT_ALT_TAB_EXPAND_TO_FIT_TITLE,
+    },
+    { "alt-tab-raise-windows",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ALT_TAB_RAISE_WINDOWS,
+      &alt_tab_raise_windows,
+      META_DEFAULT_ALT_TAB_RAISE_WINDOWS,
     },
     { NULL, NULL, 0, NULL, FALSE },
   };
@@ -1162,6 +1170,12 @@ meta_prefs_get_alt_tab_expand_to_fit_title (void)
 }
 
 gboolean
+meta_prefs_get_alt_tab_raise_windows (void)
+{
+  return alt_tab_raise_windows;
+}
+
+gboolean
 meta_prefs_is_in_skip_list (char *class)
 {
   GList *item;
@@ -1681,6 +1695,9 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_ALT_TAB_EXPAND_TO_FIT_TITLE:
       return "ALT_TAB_EXPAND_TO_FIT_TITLE";
+
+    case META_PREF_ALT_TAB_RAISE_WINDOWS:
+      return "ALT_TAB_RAISE_WINDOWS";
 
     case META_PREF_COMPOSITING_MANAGER:
       return "COMPOSITING_MANAGER";
