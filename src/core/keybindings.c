@@ -2128,11 +2128,15 @@ process_tab_grab (MetaDisplay *display,
     return TRUE;
 
   key = meta_ui_tab_popup_get_selected (screen->tab_popup);
-  prev_window  = meta_display_lookup_x_window (display, (Window) key);
+  prev_window = meta_display_lookup_x_window (display, (Window) key);
   action = display_get_keybinding_action (display,
                                           keysym,
                                           event->xkey.keycode,
                                           display->grab_mask);
+
+  gboolean raise_windows;
+  raise_windows = meta_prefs_get_alt_tab_raise_windows ();
+  gboolean escaped_alt_tab = FALSE;
 
   /* Cancel when alt-Escape is pressed during using alt-Tab, and vice
    * versa.
@@ -2153,6 +2157,15 @@ process_tab_grab (MetaDisplay *display,
         case META_GRAB_OP_KEYBOARD_ESCAPING_DOCK:
          /* carry on */
           break;
+        case META_GRAB_OP_KEYBOARD_TABBING_NORMAL:
+          // handle escape pressed when using raise_windows with alt+tab
+          // in order to restore selected window in stack
+          if (raise_windows)
+            {
+              escaped_alt_tab = TRUE;
+              break;
+            }
+          return FALSE;
         default:
           return FALSE;
         }
@@ -2223,7 +2236,7 @@ process_tab_grab (MetaDisplay *display,
     case META_KEYBINDING_ACTION_CYCLE_WINDOWS:
     case META_KEYBINDING_ACTION_CYCLE_GROUP:
       popup_not_showing = TRUE;
-      key_used = TRUE;
+      key_used = !escaped_alt_tab;
       break;
     case META_KEYBINDING_ACTION_CYCLE_PANELS_BACKWARD:
     case META_KEYBINDING_ACTION_CYCLE_WINDOWS_BACKWARD:
@@ -2288,7 +2301,7 @@ process_tab_grab (MetaDisplay *display,
       else if (direction == UP)
         meta_ui_tab_popup_up (screen->tab_popup);
 
-      if (popup_not_showing)
+      if (popup_not_showing || raise_windows)
         {
           /* We can't actually change window focus, due to the grab.
            * but raise the window.
