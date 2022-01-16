@@ -915,7 +915,9 @@ main (int argc, char **argv)
 
   gtk_widget_realize (window);
   style = gtk_widget_get_style_context (window);
-  gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL, "font", &font_desc, NULL);
+  gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL,
+                         GTK_STYLE_PROPERTY_FONT, &font_desc,
+                         NULL);
 
   g_assert (style);
   g_assert (font_desc);
@@ -993,7 +995,9 @@ get_text_height (GtkWidget *widget)
   int                   text_height;
 
   style = gtk_widget_get_style_context (widget);
-  gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL, "font", &font_desc, NULL);
+  gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL,
+                         GTK_STYLE_PROPERTY_FONT, &font_desc,
+                         NULL);
   text_height = meta_pango_font_desc_get_text_height (font_desc, gtk_widget_get_pango_context (widget));
   pango_font_description_free (font_desc);
 
