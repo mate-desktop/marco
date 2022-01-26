@@ -211,7 +211,7 @@ xml_files = [
   ]
 
 foreach xml : xml_files
-  i18n.merge_file(xml,
+  i18n.merge_file(
     input: xml+ '.in',
     output: xml,
     po_dir: '../po',
