@@ -2917,7 +2917,7 @@ meta_parse_position_expression (MetaDrawSpec              *spec,
     val = spec->value;
   else
     {
-      if (pos_eval (spec, env, &spec->value, err) == FALSE)
+      if (!pos_eval (spec, env, &spec->value, err))
         {
           g_assert (err == NULL || *err != NULL);
           return FALSE;
@@ -2946,7 +2946,7 @@ meta_parse_size_expression (MetaDrawSpec              *spec,
     val = spec->value;
   else
     {
-      if (pos_eval (spec, env, &spec->value, err) == FALSE)
+      if (!pos_eval (spec, env, &spec->value, err))
         {
           g_assert (err == NULL || *err != NULL);
           return FALSE;
@@ -3095,10 +3095,7 @@ meta_draw_spec_new (MetaTheme  *theme,
                                                  spec->n_tokens, NULL);
   if (spec->constant)
     {
-      gboolean result;
-
-      result = pos_eval (spec, NULL, &spec->value, error);
-      if (result == FALSE)
+      if (!pos_eval (spec, NULL, &spec->value, error))
         {
           meta_draw_spec_free (spec);
           return NULL;

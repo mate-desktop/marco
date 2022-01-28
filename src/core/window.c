@@ -1863,11 +1863,8 @@ intervening_user_event_occurred (MetaWindow *window)
    * deal with that case rapidly, we use special case it--this is
    * merely a preliminary optimization.  :)
    */
-  if ( ((window->net_wm_user_time_set == TRUE) &&
-       (window->net_wm_user_time == 0))
-      ||
-       ((window->initial_timestamp_set == TRUE) &&
-       (window->initial_timestamp == 0)))
+  if ((window->net_wm_user_time_set && (window->net_wm_user_time == 0)) ||
+      (window->initial_timestamp_set && (window->initial_timestamp == 0)))
     {
       meta_topic (META_DEBUG_STARTUP,
                   "window %s explicitly requested no focus\n",
@@ -1875,7 +1872,7 @@ intervening_user_event_occurred (MetaWindow *window)
       return TRUE;
     }
 
-  if (!(window->net_wm_user_time_set) && !(window->initial_timestamp_set))
+  if (!window->net_wm_user_time_set && !window->initial_timestamp_set)
     {
       meta_topic (META_DEBUG_STARTUP,
                   "no information about window %s found\n",
@@ -6941,7 +6938,7 @@ menu_callback (MetaWindowMenu *menu,
 
         case META_MENU_OP_ABOVE:
         case META_MENU_OP_UNABOVE:
-          if (window->wm_state_above == FALSE)
+          if (!window->wm_state_above)
             meta_window_make_above (window);
           else
             meta_window_unmake_above (window);
@@ -7991,7 +7988,7 @@ meta_window_handle_mouse_grab_op_event (MetaWindow *window,
        * mouse button and they almost certainly do not want a
        * non-snapped movement to occur from the button release.
        */
-      if (window->display->grab_last_user_action_was_snap == FALSE)
+      if (!window->display->grab_last_user_action_was_snap)
         {
           if (meta_grab_op_is_moving (window->display->grab_op))
             {
