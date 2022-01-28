@@ -3855,7 +3855,7 @@ meta_display_end_grab_op (MetaDisplay *display,
        * For raise on click mode, the window was raised at the
        * beginning of the grab_op.
        */
-      if (display->grab_threshold_movement_reached == FALSE)
+      if (!display->grab_threshold_movement_reached)
         meta_window_raise (display->grab_window);
     }
 

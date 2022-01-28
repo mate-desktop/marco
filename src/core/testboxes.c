@@ -208,10 +208,10 @@ test_basic_fitting (void)
     {
       get_random_rect (&temp1);
       get_random_rect (&temp2);
-      g_assert (meta_rectangle_contains_rect (&temp1, &temp2) == FALSE ||
-                meta_rectangle_could_fit_rect (&temp1, &temp2) == TRUE);
-      g_assert (meta_rectangle_contains_rect (&temp2, &temp1) == FALSE ||
-                meta_rectangle_could_fit_rect (&temp2, &temp1) == TRUE);
+      g_assert (!meta_rectangle_contains_rect (&temp1, &temp2) ||
+                meta_rectangle_could_fit_rect (&temp1, &temp2));
+      g_assert (!meta_rectangle_contains_rect (&temp2, &temp1) ||
+                meta_rectangle_could_fit_rect (&temp2, &temp1));
     }
 
   temp1 = meta_rect ( 0, 0, 10, 10);
@@ -694,8 +694,8 @@ test_region_fitting (void)
   for (i = 0; i < NUM_RANDOM_RUNS; i++)
     {
       get_random_rect (&rect);
-      g_assert (meta_rectangle_contained_in_region (region, &rect) == FALSE ||
-                meta_rectangle_could_fit_in_region (region, &rect) == TRUE);
+      g_assert (!meta_rectangle_contained_in_region (region, &rect) ||
+                meta_rectangle_could_fit_in_region (region, &rect));
     }
   g_list_free_full (region, g_free);
 
@@ -748,7 +748,7 @@ test_clamping_to_region (void)
                                                fixed_directions,
                                                &rect,
                                                &min_size);
-      g_assert (meta_rectangle_could_fit_in_region (region, &rect) == TRUE);
+      g_assert (meta_rectangle_could_fit_in_region (region, &rect));
       g_assert (rect.x == temp.x && rect.y == temp.y);
     }
   g_list_free_full (region, g_free);
@@ -858,7 +858,7 @@ test_clipping_to_region (void)
       if (rect_overlaps_region (region, &rect))
         {
           meta_rectangle_clip_to_region (region, 0, &rect);
-          g_assert (meta_rectangle_contained_in_region (region, &rect) == TRUE);
+          g_assert (meta_rectangle_contained_in_region (region, &rect));
         }
     }
   g_list_free_full (region, g_free);

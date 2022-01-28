@@ -1014,7 +1014,7 @@ window_has_shadow (MetaCompWindow *cw)
 {
   MetaCompScreen *info = meta_screen_get_compositor_data (cw->screen);
 
-  if (info == NULL || info->have_shadows == FALSE)
+  if (info == NULL || !info->have_shadows)
     return FALSE;
 
   /* Always put a shadow around windows with a frame - This should override
@@ -2605,9 +2605,9 @@ process_property_notify (MetaCompositorXRender *compositor,
       if (!cw)
         return;
 
-      if (meta_prop_get_cardinal (display, event->window,
-                                  compositor->atom_net_wm_window_opacity,
-                                  &value) == FALSE)
+      if (!meta_prop_get_cardinal (display, event->window,
+                                   compositor->atom_net_wm_window_opacity,
+                                   &value))
         value = OPAQUE;
 
       cw->opacity = (guint)value;
@@ -2769,7 +2769,7 @@ process_damage (MetaCompositorXRender *compositor,
   repair_win (cw);
 
 #ifdef USE_IDLE_REPAINT
-  if (event->more == FALSE)
+  if (!event->more)
     add_repair (compositor->display);
 #endif
 }
