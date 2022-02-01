@@ -1334,9 +1334,10 @@ get_disjoint_strut_rect_list_in_region (const GSList        *old_struts,
 gint
 meta_rectangle_edge_cmp_ignore_type (gconstpointer a, gconstpointer b)
 {
-  const MetaEdge *a_edge_rect = (gconstpointer) a;
-  const MetaEdge *b_edge_rect = (gconstpointer) b;
-  int a_compare, b_compare;
+  const MetaEdge *a_edge_rect = a;
+  const MetaEdge *b_edge_rect = b;
+  int a_compare = 0;
+  int b_compare = 0;
 
   /* Edges must be both vertical or both horizontal, or it doesn't make
    * sense to compare them.
@@ -1344,33 +1345,31 @@ meta_rectangle_edge_cmp_ignore_type (gconstpointer a, gconstpointer b)
   g_assert ((a_edge_rect->rect.width  == 0 && b_edge_rect->rect.width == 0) ||
             (a_edge_rect->rect.height == 0 && b_edge_rect->rect.height == 0));
 
-  a_compare = b_compare = 0;  /* gcc-3.4.2 sucks at figuring initialized'ness */
-
-  if (a_edge_rect->side_type == META_SIDE_LEFT ||
-      a_edge_rect->side_type == META_SIDE_RIGHT)
+  switch (a_edge_rect->side_type)
     {
-      a_compare = a_edge_rect->rect.x;
-      b_compare = b_edge_rect->rect.x;
-      if (a_compare == b_compare)
-        {
-          a_compare = a_edge_rect->rect.y;
-          b_compare = b_edge_rect->rect.y;
-        }
+      case META_SIDE_LEFT:
+      case META_SIDE_RIGHT:
+        a_compare = a_edge_rect->rect.x;
+        b_compare = b_edge_rect->rect.x;
+        if (a_compare == b_compare)
+          {
+            a_compare = a_edge_rect->rect.y;
+            b_compare = b_edge_rect->rect.y;
+          }
+        break;
+      case META_SIDE_TOP:
+      case META_SIDE_BOTTOM:
+        a_compare = a_edge_rect->rect.y;
+        b_compare = b_edge_rect->rect.y;
+        if (a_compare == b_compare)
+          {
+            a_compare = a_edge_rect->rect.x;
+            b_compare = b_edge_rect->rect.x;
+          }
+        break;
+      default:
+        g_assert_not_reached ();
     }
-  else if (a_edge_rect->side_type == META_SIDE_TOP ||
-           a_edge_rect->side_type == META_SIDE_BOTTOM)
-    {
-      a_compare = a_edge_rect->rect.y;
-      b_compare = b_edge_rect->rect.y;
-      if (a_compare == b_compare)
-        {
-          a_compare = a_edge_rect->rect.x;
-          b_compare = b_edge_rect->rect.x;
-        }
-    }
-  else
-    g_assert ("Some idiot wanted to sort sides of different types.\n");
-
   return a_compare - b_compare; /* positive value denotes a > b ... */
 }
 
