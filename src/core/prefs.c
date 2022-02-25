@@ -37,9 +37,10 @@
 #define MAX_REASONABLE_WORKSPACES 36
 
 #define MAX_COMMANDS (32 + NUM_EXTRA_COMMANDS)
-#define NUM_EXTRA_COMMANDS 2
-#define SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 2)
-#define WIN_SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 1)
+#define NUM_EXTRA_COMMANDS 3
+#define SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 3)
+#define WIN_SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 2)
+#define AREA_SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 1)
 
 /* If you add a key, it needs updating in init() and in the GSettings
  * notify listener and of course in the .gschema file.
@@ -2018,6 +2019,10 @@ update_command (const char  *name,
         {
           i = WIN_SCREENSHOT_COMMAND_IDX;
         }
+      else if (strcmp (name, "command-area-screenshot") == 0)
+        {
+          i = AREA_SCREENSHOT_COMMAND_IDX;
+        }
       else
         {
           meta_topic (META_DEBUG_KEYBINDINGS,
@@ -2071,6 +2076,9 @@ meta_prefs_get_settings_key_for_command (int i)
       break;
     case WIN_SCREENSHOT_COMMAND_IDX:
       key = g_strdup (KEY_COMMAND_PREFIX "window-screenshot");
+      break;
+    case AREA_SCREENSHOT_COMMAND_IDX:
+      key = g_strdup (KEY_COMMAND_PREFIX "area-screenshot");
       break;
     default:
       key = g_strdup_printf (KEY_COMMAND_PREFIX"%d", i + 1);
