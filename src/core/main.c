@@ -51,6 +51,7 @@
 #include "util.h"
 #include "display-private.h"
 #include "errors.h"
+#include "keybindings.h"
 #include "ui.h"
 #include "session.h"
 #include "prefs.h"
@@ -211,6 +212,7 @@ typedef struct
   gboolean composite;
   gboolean no_composite;
   gboolean no_force_fullscreen;
+  gboolean no_keybindings;
 } MetaArguments;
 
 #ifdef HAVE_COMPOSITE_EXTENSIONS
@@ -296,6 +298,12 @@ meta_parse_options (int *argc, char ***argv,
       "no-force-fullscreen", 0, COMPOSITE_OPTS_FLAGS, G_OPTION_ARG_NONE,
       &my_args.no_force_fullscreen,
       N_("Don't make fullscreen windows that are maximized and have no decorations"),
+      NULL
+    },
+    {
+      "no-keybindings", 0, 0, G_OPTION_ARG_NONE,
+      &my_args.no_keybindings,
+      N_("Have all keybindings disabled on startup"),
       NULL
     },
     {NULL}
@@ -549,6 +557,9 @@ main (int argc, char **argv)
 
   if (meta_args.no_force_fullscreen)
     meta_prefs_set_force_fullscreen (FALSE);
+
+  if (meta_args.no_keybindings)
+    meta_set_keybindings_disabled (TRUE);
 
   if (!meta_display_open ())
     meta_exit (META_EXIT_ERROR);
