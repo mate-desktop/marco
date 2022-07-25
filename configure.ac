@@ -1,4 +1,4 @@
-AC_PREREQ(2.50)
+AC_PREREQ(2.58)
 
 m4_define([marco_major_version], [1])
 m4_define([marco_minor_version], [27])
@@ -65,7 +65,7 @@ MARCO_PC_MODULES="gtk+-3.0 >= $GTK_MIN_VERSION gio-2.0 >= $GIO_MIN_VERSION pango
 GLIB_GSETTINGS
 
 AC_ARG_ENABLE(verbose-mode,
-  AC_HELP_STRING([--enable-verbose-mode],
+  AS_HELP_STRING([--enable-verbose-mode],
                  [enable marco's ability to do verbose logging, for embedded/size-sensitive custom builds]),,
   enable_verbose_mode=no)
 
@@ -74,32 +74,32 @@ if test x$enable_verbose_mode = xyes; then
 fi
 
 AC_ARG_ENABLE(sm,
-  AC_HELP_STRING([--disable-sm],
+  AS_HELP_STRING([--disable-sm],
                  [disable marco's session management support, for embedded/size-sensitive custom non-MATE builds]),,
   enable_sm=auto)
 
 AC_ARG_ENABLE(startup-notification,
-  AC_HELP_STRING([--disable-startup-notification],
+  AS_HELP_STRING([--disable-startup-notification],
                  [disable marco's startup notification support, for embedded/size-sensitive custom non-MATE builds]),,
   enable_startup_notification=auto)
 
 AC_ARG_ENABLE(compositor,
-  AC_HELP_STRING([--disable-compositor],
+  AS_HELP_STRING([--disable-compositor],
                  [disable marco's compositing manager]),,
   enable_compositor=auto)
 
 AC_ARG_ENABLE(xsync,
-  AC_HELP_STRING([--disable-xsync],
+  AS_HELP_STRING([--disable-xsync],
                  [disable marco's use of the XSync extension]),,
   enable_xsync=auto)
 
 AC_ARG_ENABLE(render,
-  AC_HELP_STRING([--disable-render],
+  AS_HELP_STRING([--disable-render],
                  [disable marco's use of the RENDER extension]),,
   enable_render=auto)
 
 AC_ARG_ENABLE(shape,
-  AC_HELP_STRING([--disable-shape],
+  AS_HELP_STRING([--disable-shape],
                  [disable marco's use of the shaped window extension]),,
   enable_shape=auto)
 
@@ -243,7 +243,7 @@ marco_save_cppflags="$CPPFLAGS"
 CPPFLAGS="$CPPFLAGS $X_CFLAGS"
 
 AC_ARG_ENABLE(xinerama,
-  AC_HELP_STRING([--disable-xinerama],
+  AS_HELP_STRING([--disable-xinerama],
                  [disable marco's use of the Xinerama extension]),
   try_xinerama=$enable_xinerama,try_xinerama=yes)
 
