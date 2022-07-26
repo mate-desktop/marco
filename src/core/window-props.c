@@ -486,7 +486,7 @@ set_title_text (MetaWindow  *window,
           if (window_owner==0)
             {
               /* Simple case-- don't bother to look it up.  It's root. */
-              *target = g_strdup_printf (_("%s (as superuser)"),
+              *target = g_strdup_printf (_("%s"),
                                          title);
             }
           else
