@@ -688,10 +688,12 @@ load_window_icon_from_name (char *name, int size, int scale)
   info = g_desktop_app_info_new (desktop_id);
   gicon = g_app_info_get_icon (G_APP_INFO (info));
   icon_info = gtk_icon_theme_lookup_by_gicon_for_scale (theme, gicon, size, scale, GTK_ICON_LOOKUP_FORCE_SIZE);
+  if (icon_info)
+    {
+      pixbuf = gtk_icon_info_load_icon (icon_info, NULL);
+      g_object_unref (icon_info);
+    }
 
-  pixbuf = gtk_icon_info_load_icon (icon_info, NULL);
-
-  g_object_unref (icon_info);
   g_free (desktop_id);
 
   return pixbuf;
