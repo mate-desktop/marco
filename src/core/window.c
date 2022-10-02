@@ -6729,7 +6729,8 @@ recalc_window_features (MetaWindow *window)
       window->has_resize_func = FALSE;
     }
 
-  if (window->type != META_WINDOW_NORMAL)
+  if (window->type != META_WINDOW_NORMAL &&
+      window->type != META_WINDOW_DIALOG)
     {
       window->has_minimize_func = FALSE;
       window->has_maximize_func = FALSE;
