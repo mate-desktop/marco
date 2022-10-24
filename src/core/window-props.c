@@ -47,6 +47,7 @@
 #include "frame-private.h"
 #include "group.h"
 #include <X11/Xatom.h>
+#include <X11/extensions/XRes.h>
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
