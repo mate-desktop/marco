@@ -294,11 +294,56 @@ reload_wm_window_role (MetaWindow    *window,
   meta_window_update_role (window);
 }
 
+static pid_t
+get_local_pid (MetaWindow *window)
+{
+  pid_t pid;
+  XResClientIdSpec spec;
+  long num_ids;
+  XResClientIdValue *client_ids;
+  long i;
+
+  pid = -1;
+
+  spec.client = window->xwindow;
+  spec.mask = XRES_CLIENT_ID_PID_MASK;
+
+  XResQueryClientIds (window->display->xdisplay,
+                      1,
+                      &spec,
+                      &num_ids,
+                      &client_ids);
+
+  for (i = 0; i < num_ids; i++)
+    {
+      if (client_ids[i].spec.mask == XRES_CLIENT_ID_PID_MASK)
+        {
+          pid = XResGetClientPid (&client_ids[i]);
+          break;
+        }
+    }
+
+  XResClientIdsDestroy (num_ids, client_ids);
+
+  return pid;
+}
+
 static void
 reload_net_wm_pid (MetaWindow    *window,
                    MetaPropValue *value,
                    gboolean       initial)
 {
+  pid_t pid;
+
+  pid = get_local_pid (window);
+
+  if (pid != -1)
+    {
+      meta_verbose ("Using XResGetClientPid instead of _NET_WM_PID\n");
+
+      window->net_wm_pid = pid;
+      return;
+    }
   if (value->type != META_PROP_VALUE_INVALID)
     {
       gulong cardinal = (int) value->v.cardinal;

@@ -164,7 +164,7 @@ if test x$have_xcomposite = xyes; then
 fi
 
 if test x$have_xcomposite = xyes; then
-  MARCO_PC_MODULES="$MARCO_PC_MODULES xcomposite >= $XCOMPOSITE_VERSION xfixes xrender xdamage"
+  MARCO_PC_MODULES="$MARCO_PC_MODULES xcomposite >= $XCOMPOSITE_VERSION xfixes xrender xdamage xres"
   AC_DEFINE(HAVE_COMPOSITE_EXTENSIONS, 1, [Building with compositing manager support])
   echo "Building with compositing manager"
 
