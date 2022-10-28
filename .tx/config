@@ -1,9 +1,10 @@
 [main]
 host = https://www.transifex.com
- 
-[MATE.master--marco]
-file_filter = po/<lang>.po
-source_file = po/marco.pot
-source_lang = en
-type = PO
+
+[o:mate:p:MATE:r:master--marco]
+file_filter  = po/<lang>.po
+source_file  = po/marco.pot
+source_lang  = en
+type         = PO
 minimum_perc = 2
+
