@@ -153,12 +153,14 @@ gtk_req = '>= 3.22.0'
 pango_req = '>= 1.2.0'
 libcanberra_gtk_req = '>= 3.22.0'
 startup_notification_req = '>= 0.7'
+libxres_req = '>= 1.2.0'
 
 glib_dep = dependency('glib-2.0', version: glib_req)
 gtk_dep = dependency('gtk+-3.0', version: gtk_req)
 gio_dep = dependency('gio-2.0', version: gio_req)
 pango_dep = dependency('pango', version: pango_req)
 libcanberra_gtk_dep = dependency('libcanberra-gtk3')
+libxres_dep = dependency('libxres', version: libxres_req)
 x11_dep = dependency('x11')
 
 marco_deps = [
@@ -167,6 +169,7 @@ marco_deps = [
   gio_dep,
   pango_dep,
   libcanberra_gtk_dep,
+  libxres_dep,
 ]
 
 marco_message_deps = [
