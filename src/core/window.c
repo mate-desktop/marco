@@ -4725,7 +4725,10 @@ meta_window_raise (MetaWindow  *window)
    * the child windows appropriately.
    */
   if (window->screen->stack == ancestor->screen->stack)
-    meta_stack_raise (window->screen->stack, ancestor);
+    {
+      meta_stack_raise (window->screen->stack, ancestor);
+      meta_window_focus (window, meta_display_get_current_time_roundtrip (window->display));
+    }
   else
     {
       meta_warning (
