@@ -2345,6 +2345,8 @@ static gboolean event_callback(XEvent* event, gpointer data)
         {
           window = meta_window_new (display, event->xmaprequest.window,
                                     FALSE);
+          meta_window_focus (window, meta_display_get_current_time_roundtrip (window->display));
+          meta_window_raise (window);
         }
       /* if frame was receiver it's some malicious send event or something */
       else if (!frame_was_receiver && window)
