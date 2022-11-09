@@ -12,9 +12,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Любомир Василев, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/mate/teams/13566/bg/)\n"
@@ -1246,7 +1246,7 @@ msgstr "Някоя друга програма използва бързия к�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1257,79 +1257,83 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Не е дефинирана команда %d.\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "Не е дефинирана команда за терминал.\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Преименуване на текущия работен плот</tt>"
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr "Ново име на работния плот:"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr "Добре"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "Отказ"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "Изключване на връзката с управлението на сесиите"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr "Замяна на текущия мениджър на прозорци с Marco"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "Указване на идентификатор за управлението на сесиите"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "X дисплеят, който да се използва"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "Инициализиране на сесия от файл със запазено състояние"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "Отпечатване на версията"
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "Синхронни X извиквания"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "Включване на наслагването"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "Изключване на наслагването"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "Максимизираните прозорци без украси да не минават в режим на цял екран"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr ""
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Неуспех при сканирането на папката с темите: %s\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1337,7 +1341,7 @@ msgstr ""
 "Неуспех при намирането на тема! Проверете дали %s съществува и съдържа "
 "обичайните теми.\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Неуспех при рестартиране: %s\n"
@@ -1375,7 +1379,7 @@ msgstr ""
 "„%s“, който е открит в базата от данни с настройките, не е валиден "
 "модификатор на бутон на мишката\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1384,17 +1388,17 @@ msgstr ""
 "Низът „%s“ открит в базата от данни с настройки е невалиден за стойност на "
 "клавишната комбинация „%s“\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "Работен плот %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "Екранът %d на дисплей „%s“ е невалиден\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1403,19 +1407,19 @@ msgstr ""
 "Екранът %d на дисплей „%s“ вече има мениджър на прозорци; пробвайте да го "
 "замените с опцията --replace.\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "Неуспех при получаването на избрания мениджър за прозорци на екран %d, "
 "дисплей „%s“\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "Екран %d на дисплей „%s“ вече има мениджър за прозорци\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Неуспех при отстъпването на екран %d на дисплей „%s“\n"
@@ -1515,7 +1519,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1530,7 +1534,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -2074,7 +2078,7 @@ msgstr "Изразът за координати не съдържа нито о
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Темата съдържа израз, който даде грешка: %s\n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2083,23 +2087,23 @@ msgstr ""
 "За този стил на рамката трябва да се укаже <button function=\"%s\" "
 "state=\"%s\" draw_ops=\"нещо си\"/>"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Липсва <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"нещо си\"/>"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Неуспех при зареждането на темата „%s“: %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Не е даден елементът <%s> за темата „%s“"
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2108,14 +2112,14 @@ msgstr ""
 "Няма указан стил на рамката за прозорците от вид „%s“ в темата „%s“. "
 "Добавете елемент <window type=\"%s\" style_set=\"нещо си\"/>"
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Константите определени от потребителя трябва да започват с главна буква, а "
 "„%s“ не започва така"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Константата „%s“ вече е дефинирана"
@@ -2571,31 +2575,31 @@ msgstr "Грешка при зареждането на темата: %s\n"
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Темата „%s“ е заредена за %g секунди\n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "Нормален шрифт на заглавието"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "Малък шрифт на заглавието"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "Голям шрифт на заглавието"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "Изглед на бутоните"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "Статистика"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "Тук се поставя заглавието на прозорците"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

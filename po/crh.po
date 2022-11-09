@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Crimean Turkish (https://www.transifex.com/mate/teams/13566/crh/)\n"
@@ -1162,7 +1162,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1173,78 +1173,82 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "%d komutu tanımlanmamış.\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "Hiçbir termina komutu tanımlanmamış.\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr ""
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr ""
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "Vazgeç"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "Oturım idarecisine bağlantını ğayrı qabilleştir"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr "Çapmaqta olğan pencere idarecisini Marco ile deñiştir"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "Oturım idaresi kimligini belirtiñiz"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "Qullanılacaq X Kösterimi"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "Ortamı kayıtlı dosyadan başlat"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "Sürümni bastır"
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "X çağırımlarını eşzamanlı yap"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "Bileşiklemeni köçür"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "Bileşiklemeni söndür"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "Büyütülmüş ve dekorasyonları olmayan pencereleri tam ekran yapma"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr ""
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Tema dizini taranırken hata oluştu: %s\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1252,7 +1256,7 @@ msgstr ""
 "İç bir tema tapılamadı! %s mevcudiyetinden ve adetiy temalarnı ihtiva "
 "etkeninden emin oluñız.\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Yeniden başlatılamadı: %s\n"
@@ -1287,7 +1291,7 @@ msgstr ""
 "Yapılandırma veritabanında bulunan \"%s\", fare düğme düzenleyicisi olarak "
 "geçerli bir değer değil\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1296,17 +1300,17 @@ msgstr ""
 "Yapılandırma veritabanında bulunan \"%s\", \"%s\" tuş bağı olarak geçerli "
 "bir değer değil\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "Çalışma Fezası %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "'%2$s' X oturumundaki ekran %1$d geçersiz\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1316,19 +1320,19 @@ msgstr ""
 "ağımdaki pencere idarecisini ivaz etmek içün --replace ihtiyarını qullanuvnı"
 " deñeñiz.\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "\"%2$s\" kösteriminiñ %1$d ekranındaki pencere idarecisi saylamı "
 "edinilamadı\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "\"%2$s\" kösterimindeki ekran %1$d endi bir pencere idarecisine saiptir\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "\"%2$s\" X oturumundaki ekran %1$d serberst bırakılamadı\"\n"
@@ -1430,7 +1434,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1445,7 +1449,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1980,7 +1984,7 @@ msgstr "Kordinat ifadesi göründüğü kadarıyla ne işleç ne de işlenen iç
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Tema bir hata ile neticelengen bir ifadeni ihtiva etti: %s\n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1989,23 +1993,23 @@ msgstr ""
 "Bu çerçive üslübi içün <button function=\"%s\" state=\"%s\" draw_ops=\"er "
 "neyse\"/> belirtilmelidir"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"er neyse\"/> eksik"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" teması yüklenemedi: %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "\"%2$s\" teması içün <%1$s> tayin etilmegen"
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2014,12 +2018,12 @@ msgstr ""
 "\"%2$s\" temasında \"%1$s\" pencere türü içün iç bir çerçive üslübi tayin "
 "etilmegen, bir <window type=\"%3$s\" style_set=\"er neyse\"/> unsurı ekleñiz"
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "Kullanıcı tanımlı sabitler büyük harfle başlamalıdır; \"%s\" buna uymuyor"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "\"%s\" sabit değeri zaten tanımlanmış"
@@ -2474,31 +2478,31 @@ msgstr "Tema yüklenirken hata: %s\n"
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" teması %g saniye içerisinde yüklendi\n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "Normal Serleva Urufatı"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "Kiçik Serleva Urufatı"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "Büyük Serleva Urufatı"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "Dögme Tizilimleri"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "Karşılaştırma"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "Pencere Serlevası Mında Barır"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

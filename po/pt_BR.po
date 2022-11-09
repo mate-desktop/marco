@@ -19,20 +19,21 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 18ab4449a00621534598e84a949423ea, 2018
 # Rafael Sachetto <rsachetto@gmail.com>, 2020
+# Luciano Luck, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Rafael Sachetto <rsachetto@gmail.com>, 2020\n"
+"Last-Translator: Luciano Luck, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
@@ -40,7 +41,7 @@ msgstr "Área de trabalho"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Mostrar a caixa de diálogo 'Executar aplicativo' do painel"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -878,13 +879,16 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Se deve habilitar o ciclo por diferentes tamanhos de ladrilhos"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"Se ativado, a disposição lado a lado de uma janela percorrerá vários \n"
+"tamanhos diferentes usando o mesmo atalho de teclado várias vezes \n"
+"seguidas."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -929,6 +933,8 @@ msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Tamanho dos ícones do aplicativo exibidos na janela pop-up alt-tab. O fator "
+"de escala da tela é aplicado a este valor."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
@@ -938,16 +944,21 @@ msgstr "Número máximo de colunas na janela do alt-tab"
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
 msgstr ""
+"A janela pop-up será expandida para acomodar essas muitas entradas por "
+"linha."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
 msgstr ""
+"Expanda a janela pop-up alt-tab para ajustar títulos de janela mais longos"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"A janela pop-up pode ser expandida até a largura determinada pelo parâmetro "
+"de configuração 'alt-tab-max-columns'."
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -1014,6 +1025,12 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"A combinação de teclas que executa o comando numerado \n"
+"correspondentemente em /apps/marco/keybinding_commands O formato se \n"
+"parece com \"<Control>a\" ou \"<Shift><Alt>F1\". O analisador é bastante liberal e permite letras\n"
+" minúsculas ou maiúsculas, e também abreviações como \"<Ctl>'' e ''<Ctrl>\". Se você \n"
+"definir a opção para a string especial 'disabled', não haverá atalho de \n"
+"teclado para esta ação."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -1059,6 +1076,10 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"O formato se parece com \"<Control>a\" ou \"<Shift><Alt>F1\". O analisador é bastante liberal e \n"
+"permite letras minúsculas ou maiúsculas, e também abreviações como \"<Ctl>\" e \n"
+"\"<Ctrl>\". Se você definir a opção para a string especial 'disabled', não \n"
+"haverá atalho de teclado para esta ação."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -1075,6 +1096,11 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"O formato se parece com \"<Control>a\" ou \"<Shift><Alt>F1\". O analisador é bastante liberal e \n"
+"permite letras minúsculas ou maiúsculas, e também abreviações como \"<Ctl>\" e \"<Ctrl>\". Se você definir a opção para a string especial 'disabled', não \n"
+"haverá atalho de teclado para esta ação. Esta combinação de teclas pode \n"
+"ser revertida mantendo pressionada a tecla 'shift'; portanto, 'shift' \n"
+"não pode ser uma das teclas que ele usa."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1248,7 +1274,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1259,79 +1285,83 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Nenhum comando %d foi definido.\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "Nenhum comando de terminal foi definido.\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Renomear Área de Trabalho</tt>"
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr "Nome da nova Área de Trabalho:"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr "OK"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "Desabilita a conexão com o gerenciador de sessões"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr "Substituir o gerenciador de sessões em execução pelo Marco"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "Especifica o ID de gerenciamento de sessão"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "Exibição do X a ser utilizada"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "Inicializar a sessão a partir do arquivo salvo"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "Imprimir versão"
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "Torna síncronas as chamadas do X"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "Ativar composição"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "Desativar composição"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "Não torna janelas em tela-cheia que estão maximizadas e não tem decorações"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr ""
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Falha ao varrer a pasta de temas: %s\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1339,7 +1369,7 @@ msgstr ""
 "Não foi possível localizar um tema! Verifique se %s existe e contém os temas"
 " comuns.\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Falha ao reiniciar: %s\n"
@@ -1375,7 +1405,7 @@ msgstr ""
 "\"%s\" localizado no banco de dados de configurações não é um valor válido "
 "para o modificador de botão do mouse\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1384,17 +1414,17 @@ msgstr ""
 "\"%s\" localizado no banco de dados de configurações não é um valor válido "
 "para a tecla de atalho \"%s\"\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "Espaço de Trabalho %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "A tela %d na exibição \"%s\" é inválida\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1403,19 +1433,19 @@ msgstr ""
 "A tela %d na exibição \"%s\" já possui um gerenciador de janelas; tente usar"
 " a opção --replace para substituir o gerenciador de janelas atual.\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "Não foi possível obter a seleção do gerenciador de janelas na exibição "
 "\"%2$s\" da tela %1$d\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "A tela %d na exibição \"%s\" já possui um gerenciador de janelas\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Não foi possível liberar a tela %d na exibição \"%s\"\n"
@@ -1515,7 +1545,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1530,7 +1560,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1620,7 +1650,7 @@ msgstr "Menu de janela"
 
 #: src/ui/frames.c:1347
 msgid "Window App Menu"
-msgstr ""
+msgstr "Menu do Aplicativo da Janela"
 
 #: src/ui/frames.c:1350
 msgid "Minimize Window"
@@ -1890,6 +1920,9 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"A especificação de cores personalizadas do GTK deve ter o nome da cor e o\n"
+" substituto entre parênteses, por exemplo gtk:custom(foo,bar); não foi \n"
+"possível analisar \"%s\""
 
 #: src/ui/theme.c:1413
 #, c-format
@@ -1906,6 +1939,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Gtk:formato personalizado é \"gtk:custom(color_name,fallback)\",\"%s\" não "
+"se encaixa no formato"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2079,7 +2114,7 @@ msgstr "Aparentemente não há operadores nem operandos na expressão coordenada
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "O tema continha uma expressão que resultou em um erro: %s \n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2088,23 +2123,23 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> deve ser "
 "especificado para este estilo de quadro"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> ausente"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Falha ao carregar o tema \"%s\": %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Nenhum <%s> definido para o tema \"%s\""
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2113,14 +2148,14 @@ msgstr ""
 "Nenhum estilo de quadro definido para o tipo de janela \"%s\" no tema "
 "\"%s\", adicione um elemento <window type=\"%s\" style_set=\"whatever\"/>"
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "As constantes definidas pelo usuário devem iniciar com letra maiúscula; "
 "\"%s\" não inicia"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "A constante \"%s\" já foi definida"
@@ -2434,13 +2469,15 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Especificação de versão ruim '%s'"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"O atributo 'versão' não pode ser usado em metacidade-tema-1.xml ou "
+"metacidade-tema-2.xml"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
@@ -2556,7 +2593,7 @@ msgstr "Borda"
 
 #: src/ui/theme-viewer.c:449
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Diálogo Modal Anexado"
 
 #: src/ui/theme-viewer.c:808
 #, c-format
@@ -2582,31 +2619,31 @@ msgstr "Erro ao carregar tema: %s\n"
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Tema \"%s\" carregado em %g segundos\n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "Fonte de título normal"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "Fonte de título pequeno"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "Fonte de título grande"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "Disposições de botões"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "Benchmark"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "O título da janela vem aqui"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

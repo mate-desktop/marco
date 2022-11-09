@@ -9,9 +9,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Malayalam (https://www.transifex.com/mate/teams/13566/ml/)\n"
@@ -1181,7 +1181,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1192,81 +1192,85 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "%d എന്ന കമാന്‍ഡ് ലഭ്യമല്ല.\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "ഒരു ടെര്‍മിനല്‍ കമാന്‍ഡും ലഭ്യമല്ല.\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr ""
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr ""
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "സെഷന്‍ മാനേജറിലേക്കുള്ള കണക്ഷന്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr ""
 "പ്രവര്‍ത്തനത്തിലുള്ള ജാലകത്തിന്റെ മാനേജറിനെ മെറ്റാസിറ്റി ഉപയോഗിച്ച് മാറ്റുക"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ID വ്യക്തമാക്കുക"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "ഉപയോഗിക്കുന്നതിനുള്ള X ഡിസ്പ്ളെ"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "savefile-ല്‍ നിന്നും സെഷന്‍ ആരംഭിക്കുക"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "പതിപ്പു് കാണിക്കുക "
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "X കോള്‍സ് ഒരേ സമയത്തു് ആക്കുക"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "കംപോസിറ്റിങ് ഓണ്‍ ആക്കുക"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "കംപോസിറ്റിങ് ഓഫ് ആക്കുക"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "ഏറ്റവും വലിതും അലങ്കാരങ്ങളില്ലാത്തതുമായ ജാലകങ്ങള്‍ "
 "പൂര്‍ണ്ണവലിപ്പത്തിലാക്കരുതു്"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr ""
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "പ്രമേയം സ്കാന്‍ ചെയ്യുവാന്‍ കഴിഞ്ഞില്ല: %s\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1274,7 +1278,7 @@ msgstr ""
 "ഒരു പ്രമേയം ലഭ്യമായില്ല! %s നിലവിലുണ്ടെന്നും പതിവായ പ്രമേയങ്ങള്‍ ലഭ്യമെന്നും"
 " ഉറപ്പാക്കുക.\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "പുനരാരംഭിക്കുന്നതില്‌ പരാജയപ്പെട്ടു: %s\n"
@@ -1309,7 +1313,7 @@ msgstr ""
 "ക്രമീകരണ ഡേറ്റാബെയിസില്‍ ലഭ്യമായ \"%s\" മൌസ് ബട്ടണ്‍ മോഡിഫയറിനുള്ള ശരിയായൊരു"
 " മൂല്ല്യമല്ല\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1318,17 +1322,17 @@ msgstr ""
 "ക്രമീകരണ ഡേറ്റാബെയിസില്‍ ലഭ്യമായ \"%s\" കീബൈന്‍ഡിങിനുള്ള \"%s\" ശരിയായൊരു "
 "മൂല്ല്യമല്ല\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "പണിയറ %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "സ്ക്രീന്‍ %d തെറ്റാണു്. ഇതു് '%s' പ്രദര്‍ശത്തിലാണു്\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1337,20 +1341,20 @@ msgstr ""
 "സ്ക്രീന്‍ %d, \"%s\" പ്രദര്‍ശനത്തിലുള്ളതില്‍ നിലവില്‍ ഒരു ജാലക പാലകനുണ്ടു്; "
 "നിലവിലുള്ള ജാലക പാലകനെ മാറ്റുന്നതിനായി --replace ഉപാധി ഉപയോഗിക്കുക.\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "സ്ക്രീന്‍ %d, \"%s\" പ്രദര്‍ശനത്തിലുള്ള ജാലക പാലക തെരഞ്ഞെടുക്കല്‍ "
 "ലഭ്യമാകുവാന്‍ സാധിച്ചില്ല\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr ""
 "സ്ക്രീന്‍ %d, \"%s\" പ്രദര്‍ശനത്തിലുള്ളതില്‍ നിലവില്‍ ഒരു ജാലക പാലകനുണ്ടു്\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "സ്ക്രീന്‍ %d \"%s\" പ്രദര്‍ശനത്തില്‍ വിടുവാന്‍ സാധ്യമല്ല\n"
@@ -1451,7 +1455,7 @@ msgid "Marco"
 msgstr "മെറ്റാസിറ്റി"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1467,7 +1471,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -2017,7 +2021,7 @@ msgstr "കോര്‍ഡിനേറ്റ് എക്സ്പ്രെഷ�
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "ഒരു പിശകുണ്ടാക്കിയ എക്സ്പ്രെഷന്‍ പ്രമേയത്തിലുണ്ടായിരുന്നു: %s\n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2026,23 +2030,23 @@ msgstr ""
 "ഈ ഫ്രെയിം ശൈലിയ്ക്കു് <button function=\"%s\" state=\"%s\" "
 "draw_ops=\"whatever\"/>  വ്യക്തമാക്കിയിരിക്കണം"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> ലഭ്യമല്ല"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "പ്രമേയം %s കൊണ്ട് വരാന് കഴിഞ്ഞില്ല: %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "<%s> \"%s\" പ്രമേയത്തിനു് സജ്ജമല്ല"
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2051,14 +2055,14 @@ msgstr ""
 "\"%s\" ജാലക തരത്തിലുള്ള \"%s\" പ്രമേയത്തില്‍ ഒരു ഫ്രെയിം ശൈലിയും സജ്ജമല്ല, "
 "ഒരു <window type=\"%s\" style_set=\"whatever\"/> എലമെന്റ് ചേര്‍ക്കുക"
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "ഉപയോക്താവു് നിഷ്കര്‍ഷിച്ചിട്ടുള്ള കോണ്‍സ്റ്റന്റുകള്‍ കാപ്പിറ്റല്‍ "
 "അക്ഷരത്തില്‍ ആരംഭിക്കണം; \"%s\" അങ്ങനെയല്ല"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "കോണ്‍സ്റ്റന്റ് \"%s\" നിലവില്‍ നിഷ്കര്‍ഷിച്ചിട്ടുണ്ടു്"
@@ -2523,31 +2527,31 @@ msgstr "പ്രമേയം ലോഡ് ചെയ്യുന്നതില�
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" പ്രമേയം %g സെക്കന്‍ഡുകളില്‍ ലഭ്യമാക്കി\n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "തലക്കെട്ടിനുള്ള സാധാരണ അക്ഷരസഞ്ചയം"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "തലക്കെട്ടിനുള്ള ചെറിയ  അക്ഷരസഞ്ചയം"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "തലക്കെട്ടിനുള്ള വലിയ അക്ഷരസഞ്ചയം"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "ബട്ടണ്‍ ശൈലികള്‍"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "പരീക്ഷണ നിലവാരം"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "ജാലകത്തിനുള്ള തലക്കെട്ടിവിടെ"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

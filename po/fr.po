@@ -17,9 +17,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Tubuntu, 2021\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
@@ -402,9 +402,9 @@ msgid ""
 " set it to false to make it work the opposite way around."
 msgstr ""
 "Définir à « true » pour redimensionner avec le bouton droit et afficher un "
-"menu avec le bouton du milieu en maintenant enfoncée la touche donnée dans «"
-" mouse_button_modifier » ; définir à « false » pour avoir le fonctionnement "
-"inverse."
+"menu avec le bouton du milieu en maintenant enfoncée la touche donnée dans "
+"« mouse_button_modifier » ; définir à « false » pour avoir le fonctionnement"
+" inverse."
 
 #: src/org.mate.marco.gschema.xml:60
 msgid "Whether to display preselected tab window border"
@@ -458,8 +458,8 @@ msgstr ""
 "Le mode de focus de la fenêtre indique la façon dont les fenêtres sont "
 "activées. Il présente trois valeurs possibles ; « click » signifie que vous "
 "devez cliquer sur les fenêtres pour les activer, « sloppy » (« coulé ») "
-"signifie que les fenêtres sont activées lorsque la souris s'y place et « "
-"mouse » (« souris »), signifie que les fenêtres sont activées lorsque la "
+"signifie que les fenêtres sont activées lorsque la souris s'y place et "
+"« mouse » (« souris »), signifie que les fenêtres sont activées lorsque la "
 "souris s'y place et désactivées lorsqu'elle les quitte."
 
 #: src/org.mate.marco.gschema.xml:75
@@ -474,9 +474,9 @@ msgid ""
 "given focus."
 msgstr ""
 "Cette option fournit un contrôle supplémentaire sur la façon dont les "
-"nouvelles fenêtres deviennent actives. Elle a deux valeurs possible: « smart"
-" » qui correspond au mode d'activation utilisateur normal et « strict » qui "
-"n'active pas les fenêtre démarrées depuis un terminal."
+"nouvelles fenêtres deviennent actives. Elle a deux valeurs "
+"possible: « smart » qui correspond au mode d'activation utilisateur normal "
+"et « strict » qui n'active pas les fenêtre démarrées depuis un terminal."
 
 #: src/org.mate.marco.gschema.xml:80
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -546,8 +546,8 @@ msgstr ""
 "Cette option détermine les effets d'un double-clic sur la barre de titre "
 "d'une fenêtre. Les valeurs possibles sont « toggle_shade » qui replie la "
 "fenêtre ou la déplie, « toggle_maximize » qui maximise la fenêtre ou la "
-"remet à sa taille initiale avant maximisation, « "
-"toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
+"remet à sa taille initiale avant maximisation, "
+"« toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
 "limitent la maximisation dans la direction indiquée, « minimize » qui réduit"
 " la fenêtre, « shade » qui replie la fenêtre, « menu » qui affiche le menu "
 "de la fenêtre, « lower » qui place la fenêtre derrière toutes les autres et "
@@ -571,8 +571,8 @@ msgstr ""
 "Cette option détermine les effets d'un clic du milieu sur la barre de titre "
 "d'une fenêtre. Les valeurs possibles sont « toggle_shade » qui replie la "
 "fenêtre ou la déplie, « toggle_maximize » qui maximise la fenêtre ou la "
-"remet à sa taille initiale avant maximisation, « "
-"toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
+"remet à sa taille initiale avant maximisation, "
+"« toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
 "limitent la maximisation dans la direction indiquée, « minimize » qui réduit"
 " la fenêtre, « shade » qui replie la fenêtre, « menu » qui affiche le menu "
 "de la fenêtre, « lower » qui place la fenêtre derrière toutes les autres et "
@@ -596,8 +596,8 @@ msgstr ""
 "Cette option détermine les effets d'un clic droit sur la barre de titre "
 "d'une fenêtre. Les valeurs possibles sont « toggle_shade » qui replie la "
 "fenêtre ou la déplie, « toggle_maximize » qui maximise la fenêtre ou la "
-"remet à sa taille initiale avant maximisation, « "
-"toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
+"remet à sa taille initiale avant maximisation, "
+"« toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
 "limitent la maximisation dans la direction indiquée, « minimize » qui réduit"
 " la fenêtre, « shade » qui replie la fenêtre, « menu » qui affiche le menu "
 "de la fenêtre, « lower » qui place la fenêtre derrière toutes les autres et "
@@ -1125,8 +1125,8 @@ msgstr ""
 "abréviations telles que « <Ctl> » et « <Ctrl> ». Si vous définissez l'option"
 " sur la chaîne spéciale « disabled » (désactivé), il n'y aura pas de "
 "combinaison de touches pour cette action. Cette combinaison de touches peut "
-"être inversée en maintenant enfoncée la touche « Maj ». Par conséquent, « "
-"Maj » ne peut pas faire partie de cette combinaison."
+"être inversée en maintenant enfoncée la touche « Maj ». Par conséquent, "
+"« Maj » ne peut pas faire partie de cette combinaison."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1308,7 +1308,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1319,81 +1319,85 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Aucune commande %d n'a été définie.\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "Aucune commande de terminal n'a été définie.\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Renommer l'espace de travail</tt>"
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr "Nom du nouvel espace de travail :"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr "Valider"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "Désactive la connexion au gestionnaire de sessions"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr ""
 "Remplacer le gestionnaire de fenêtres en cours de fonctionnement par Marco"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "Indique l'ID de la gestion de sessions"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "Visuel X à utiliser"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "Initialiser la session depuis le fichier de sauvegarde"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "Affiche la version"
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "Effectuer des appels X synchrones"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "Activer la composition"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "Désactiver la composition"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "Ne pas mettre en plein écran des fenêtres qui sont maximisées et ne "
 "possèdent pas de décorations"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr ""
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Le parcours du répertoire de thèmes a échoué : %s\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1401,7 +1405,7 @@ msgstr ""
 "Impossible de trouver un thème ! Assurez-vous que %s existe et contient les "
 "thèmes habituels.\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Impossible de redémarrer : %s\n"
@@ -1439,7 +1443,7 @@ msgstr ""
 "« %s » trouvée dans la base de données de configuration n'est pas une valeur"
 " correcte pour le bouton de souris\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1448,17 +1452,17 @@ msgstr ""
 "« %s » trouvé dans la base de données de configuration n'est pas une valeur "
 "correcte pour la combinaison de touches « %s »\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "Espace de travail %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "L'écran %d sur le visuel « %s » n'est pas valide\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1468,19 +1472,19 @@ msgstr ""
 " d'utiliser l'option --replace pour remplacer le gestionnaire de fenêtres "
 "actuel.\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "Impossible d'avoir la sélection du gestionnaire de fenêtres sur l'écran %d "
 "du visuel « %s »\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "L'écran %d sur le visuel « %s » a déjà un gestionnaire de fenêtres\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Impossible de libérer l'écran %d sur le visuel « %s »\n"
@@ -1584,7 +1588,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1599,7 +1603,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1940,8 +1944,8 @@ msgstr "la géométrie du cadre n'indique pas la dimension « %s »"
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr ""
-"la géométrie du cadre n'indique pas la dimension « %s » pour la bordure « %s"
-" »"
+"la géométrie du cadre n'indique pas la dimension « %s » pour la bordure "
+"« %s »"
 
 #: src/ui/theme.c:455
 #, c-format
@@ -2130,15 +2134,15 @@ msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr ""
-"L'expression de la coordonnée a un opérateur « %c » suivant l'opérateur « %c"
-" » sans opérande entre eux"
+"L'expression de la coordonnée a un opérateur « %c » suivant l'opérateur "
+"« %c » sans opérande entre eux"
 
 #: src/ui/theme.c:2620 src/ui/theme.c:2665
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr ""
-"L'expression de la coordonnée possède une variable ou constante inconnue « "
-"%s »"
+"L'expression de la coordonnée possède une variable ou constante inconnue "
+"« %s »"
 
 #: src/ui/theme.c:2719
 msgid "Coordinate expression parser overflowed its buffer."
@@ -2169,7 +2173,7 @@ msgstr ""
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Le thème contient une expression qui a entraîné une erreur : %s\n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2178,39 +2182,39 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> doit être "
 "indiqué pour ce style de cadre"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> manquant"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Impossible de charger le thème « %s » : %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Aucun <%s> défini pour le thème « %s »"
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr ""
-"Aucun style de cadre défini pour le type de fenêtre « %s » dans le thème « "
-"%s », ajoutez un élément <window type=\"%s\" style_set=\"whatever\"/>"
+"Aucun style de cadre défini pour le type de fenêtre « %s » dans le thème "
+"« %s », ajoutez un élément <window type=\"%s\" style_set=\"whatever\"/>"
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Les constantes définies par l'utilisateur doivent commencer par une "
 "majuscule ; « %s » commence par une minuscule"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "La constante « %s » a déjà été définie"
@@ -2685,31 +2689,31 @@ msgstr "Erreur lors du chargement du thème : %s\n"
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Thème « %s » chargé en %g secondes\n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "Police de titre normal"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "Petite police de titre"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "Grande police de titre"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "Agencements des boutons"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "Performance"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "Le titre des fenêtres se trouve ici"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

@@ -7,17 +7,18 @@
 # worm <thewormhole@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Damir Jerovšek <jierro@windowslive.com>, 2018
-# Damir Mevkić <damir.mevkic@gmail.com>, 2018
+# Damir Mevkić 52K <damir.mevkic@gmail.com>, 2018
 # Arnold Marko <arnold.marko@gmail.com>, 2019
 # Helena S <ele@tutamail.com>, 2020
+# Martin Srebotnjak <miles@filmsi.net>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Helena S <ele@tutamail.com>, 2020\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2021\n"
 "Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +32,7 @@ msgstr "Namizje"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Pokaži pogovorno okno pulta »Zaženi program«"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -51,7 +52,7 @@ msgstr "Zaženi terminal"
 
 #: src/50-marco-desktop-key.xml.in:14 src/org.mate.marco.gschema.xml:654
 msgid "Rename current workspace"
-msgstr ""
+msgstr "Preimenuj trenutno delovno površino"
 
 #: src/50-marco-global-key.xml.in:2 src/50-marco-window-key.xml.in:2
 msgid "Window Management"
@@ -287,7 +288,7 @@ msgstr "Premaklni okno na južni (spodnji) del monitorja"
 
 #: src/50-marco-window-key.xml.in:142 src/org.mate.marco.gschema.xml:985
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Premakni okno na vzhodni (desni) zaslon"
 
 #: src/50-marco-window-key.xml.in:146 src/org.mate.marco.gschema.xml:990
 msgid "Move window to west (left) monitor"
@@ -369,6 +370,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Klik na okno ob držanju tipke spremenilnika bo premaknil okno (levi klik), "
+"spremenil velikost okna (srednji klik) ali prikazal meni okna (desni klik). "
+"Delovanje srednje in desne tipke je mogoče zamenjati s ključem "
+"»spremeni_velikost_z_desnim gumbom«. Spremenilnik je izražen kot npr. "
+"»<Alt>« ali »<Super>«."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -417,7 +423,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
-msgstr "Način žariščenja oken"
+msgstr "Način usmerjanja pozornosti na okna"
 
 #: src/org.mate.marco.gschema.xml:71
 msgid ""
@@ -427,14 +433,14 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
-"Način žariščenja določa kako se okna postavijo v žarišče. Možnosti so; "
-"\"click\", ki zahteva klik miške na oknu, \"sloppy\", ki omogoča žariščenje "
-"s pomikom miške na okno in \"mouse\", ki omogoča žariščenje, ko je kazalka "
-"miške v oknu, in sprostitev žarišča, ko okno zapusti."
+"Način usmerjanja pozornosti med okni določa, kako okna pridobijo pozornost. "
+"Možnosti so: \"click\", ki zahteva klik miške v oknu, \"sloppy\", ki omogoča"
+" žariščenje s pomikom miške na okno, in \"mouse\", ki pridobi pozornost, ko "
+"je kazalka miške v oknu, in izgubi pozornosti, ko okno zapusti."
 
 #: src/org.mate.marco.gschema.xml:75
 msgid "Control how new windows get focus"
-msgstr "Nadzor žariščenja okna"
+msgstr "Nadzor usmerjanja pozornosti med okni"
 
 #: src/org.mate.marco.gschema.xml:76
 msgid ""
@@ -443,9 +449,10 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
-"Možnost omogoča dodaten nadzor za pridobivanje žarišča novih oken. Na voljo "
-"sta možnosti: \"smart\", ki uveljavi običajen način žariščenja in "
-"\"strict\", ki pa žarišča ne dodeli oknom zagnanim preko terminala."
+"Možnost omogoča dodaten nadzor za pridobivanje pozornosti novih oken. Na "
+"voljo sta možnosti: \"smart\", ki uveljavi običajen način usmerjanja "
+"pozornosti, in \"strict\", ki pa pozornosti ne dodeli oknom, zagnanim prek "
+"terminala."
 
 #: src/org.mate.marco.gschema.xml:80
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -564,10 +571,10 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
-"Izbrana možnost omogoča, da je način žariščenja \"sloppy\" ali \"mouse\", "
-"potem bo okno v žarišču po premoru, določenem v ključu auto_raise_delay, "
-"samodejno dvignjeno. To ni povezano s klikanjem za dviganje okna, niti z "
-"vstopom v okno z metodo povleci-spusti."
+"Izbrana možnost omogoča, da je način usmerjanja pozornosti \"sloppy\" ali "
+"\"mouse\", potem bo okno s pozornostjo po premoru, določenem v ključu "
+"auto_raise_delay, samodejno dvignjeno. To ni povezano s klikanjem za dvig "
+"okna, niti z vstopom v okno z metodo povleci-spusti."
 
 #: src/org.mate.marco.gschema.xml:105
 msgid "Delay in milliseconds for the auto raise option"
@@ -819,7 +826,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
-msgstr ""
+msgstr "Način postavitve oken"
 
 #: src/org.mate.marco.gschema.xml:197
 msgid ""
@@ -935,6 +942,11 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Tipkovna bližnjica, ki zažene ustrezno oštevilčen ukaz v "
+"/apps/marco/keybinding_commands. Oblikovana je kot »<Control>a« ali "
+"»<Shift><Alt>F1«. Razčlenjevalnik je precej popustljiv in dopušča različno "
+"velikost črk ter okrajšave kot npr. »<Ctl>« in »<Ctrl>«. V kolikor je "
+"izbrana možnost »onemogočeno«, potem za to dejanje ne bo bližnjice."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -980,6 +992,10 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Zapis je oblikovan kot »<Control>a« ali pa »<Shift><Alt>F1«. Razčlenjevalnik"
+" je precej popustljiv in dopušča različno velikost črk ter okrajšave kot "
+"npr. »<Ctl>« in »<Ctrl>«. V primeru, da uporabit možnost \"disabled\", potem"
+" za to dejanje ne bo tipkovne bližnjice."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -996,6 +1012,12 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Zapis je oblikovan kot »<Control>a« ali pa »<Shift><Alt>F1«. Razčlenjevalnik"
+" je precej popustljiv in dopušča različno velikost črk ter okrajšave kot "
+"npr. »<Ctl>« in »<Ctrl>«. V primeru, da uporabite možnost \"disabled\", "
+"potem za to dejanje ne bo bližnjice tipk. Tipkovno bližnjico je lahko "
+"povrnete s pritiskom tipke \"shift\" zato tipka \"shift\" ne more biti del "
+"tipkovne bližnjice."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1100,7 +1122,7 @@ msgstr "Razpostavi okno na južno-vzhodni (nižje desni) kot zaslona"
 
 #: src/org.mate.marco.gschema.xml:925
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Razpostavi okno na južno-zahodbni (nižje levi) kot zaslona"
 
 #: src/core/bell.c:298
 msgid "Bell event"
@@ -1158,7 +1180,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1169,78 +1191,82 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Ukaz %d ni določen.\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "Ni navedenih ukazov terminala.\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr "1 Preimenuj Delovno površino 1"
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr "Novo Ime Delovne površine"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr "OK"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "Onemogoči povezavo z upravljalnikom seje"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr "Zamenjaj trenutni upravljalnik oken z Marco"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "Določi ID upravljanja seje"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "Zaslon X, ki naj se uporabi"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "Začenjaj sejo iz shranjene datoteke"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "Izpiši različico"
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "Naredi klice X usklajene"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "Vključi skladnjo 3D"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "Izključi skladnjo 3D"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "Ne ustvari celozaslonskih oken, ki so razpeta in nimajo okraskov"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr ""
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Ni mogoče preiskati mape s temami: %s\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1248,7 +1274,7 @@ msgstr ""
 "Ni mogoče najti teme! Prepričajte se, da %s obstaja in vsebuje običajne "
 "teme.\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Ni mogoče znova začeti: %s\n"
@@ -1283,7 +1309,7 @@ msgstr ""
 "\"%s\", najden v podatkovni zbirki nastavitev, ni veljavna vrednost za "
 "spremenilnik miškinega gumba.\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1292,17 +1318,17 @@ msgstr ""
 "\"%s\", najden v podatkovni zbirki nastavitev, ni veljaven ključ za tipkovno"
 " bližnjico \"%s\"\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "Delovna površina %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "Zaslon %d na prikazu '%s' ni veljaven\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1311,17 +1337,17 @@ msgstr ""
 "Zaslon %d na prikazu \"%s\" že ima upravljalnik oken; poskušajte uporabiti "
 "možnost --replace za zamenjavo trenutnega upravljalnika zaslona.\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr "Ni mogoče dobiti izbire upravljalnika oken na zaslonu %d prikaz \"%s\"\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "Zaslon %d na prikazu \"%s\" že ima določenega upravljalnika oken\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Ni mogoče sprostiti prikaza %d na zalonu \"%s\"\n"
@@ -1422,7 +1448,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1437,7 +1463,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1804,6 +1830,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Neveljaven znak »%c« v parametru imena barve (color_name) za gtk:custom, "
+"veljavni so le nizi iz znakov A-Za-z0-9-_"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1971,7 +1999,7 @@ msgstr "Videti je, da izraz koordinat ne vsebuje operatorjev ali operandov"
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Tema vsebuje izraz, ki je povzročil napako: %s\n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1980,23 +2008,23 @@ msgstr ""
 "za ta slog okvirja mora biti naveden <button function=\"%s\" state=\"%s\" "
 "draw_ops=\"karkoli\"/>"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Manjka <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"karkoli\"/>"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Nalaganje teme \"%s\" je podletelo: %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Ni nastavljen <%s> za temo \"%s\""
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2005,13 +2033,13 @@ msgstr ""
 "Slog okvirja za okno vrste \"%s\" v temi \"%s\" ni nastavljen, dodajte "
 "predmet <window type=\"%s\" style_set=\"whatever\"/>"
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Uporabniško določene konstante se morajo začeti z veliko črko; \"%s\" se ne"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Konstanta \"%s\" je bila že določena"
@@ -2470,31 +2498,31 @@ msgstr "Napaka med nalaganjem teme: %s\n"
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Tema \"%s\" je bila naložena v %g sekundah\n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "Običajna pisava naziva"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "Majhna pisava naziva"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "Velika pisava naziva"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "Razporeditev tipk"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "Primerjalni preizkus"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "Tukaj je naziv okna"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

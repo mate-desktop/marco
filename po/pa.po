@@ -9,9 +9,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Panjabi (Punjabi) (https://www.transifex.com/mate/teams/13566/pa/)\n"
@@ -1140,7 +1140,7 @@ msgstr "ਕੋਈ ਹੋਰ ਕਾਰਜ %s ਸਵਿੱਚ ਨੂੰ %x ਸੋ�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1151,86 +1151,90 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "ਕੋਈ ਕਮਾਂਡ %d ਪਰਭਾਸ਼ਿਤ ਨਹੀ ਕੀਤੀ।\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "ਕੋਈ ਟਰਮੀਨਲ ਕਮਾਂਡ ਪ੍ਰਭਾਸ਼ਿਤ ਨਹੀ ਕੀਤੀ।\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr ""
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr ""
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ ਨਾਲ ਕੁਨੈਕਸ਼ਨ ਬੰਦ ਕਰੋ"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr "ਚੱਲ ਰਹੇ ਵਿੰਡੋ ਮੈਨੇਜਰ ਨੂੰ ਮੈਟਾਸਿਟੀ ਨਾਲ ਤਬਦੀਲ"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "ਸ਼ੈਸ਼ਨ ਪਰਬੰਧ ID ਦਿਓ"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "ਵਰਤਣ ਲਈ X ਦਰਿਸ਼"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "ਸੰਭਾਲੀ ਫਾਇਲ ਤੋਂ ਸ਼ੈਸ਼ਨ ਸ਼ੁਰੂ"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "ਵਰਜਨ ਪਰਿੰਟ ਕਰੋ"
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "X ਕਾਲ ਸੈਕਰੋਨਸ ਬਣਾਓ"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "ਕੰਪੋਜਿੰਗ ਚਾਲੂ ਕਰੋ"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "ਕੰਪੋਜ਼ੀਸ਼ਨ ਬੰਦ ਕਰੋ"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "ਪੂਰੀ ਸਕਰੀਨ ਵਿੰਡੋ ਨਾ ਬਣਾਓ, ਜਿਸ ਲਈ ਵੱਧ ਤੋਂ ਵੱਧ ਹੋਵੇ, ਪਰ ਕੋਈ ਸਜਾਵਟ ਨਾ ਹੋਵੇ"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr ""
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "ਥੀਮ ਡਾਇਰੈਕਟਰੀ ਦੀ ਜਾਂਚ ਅਸਫਲ: %s\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
 msgstr ""
 "ਥੀਮ ਨਹੀ ਲੱਭ ਸਕਿਆ! ਯਕੀਨੀ ਬਣਾਓ ਕਿ %s ਮੌਜੂਦ ਹੈ ਅਤੇ ਇਸ ਵਿਚ ਵਰਤਣ ਵਾਲੇ ਥੀਮ ਹਨ।\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "ਮੁੜ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਅਸਫਲ: %s\n"
@@ -1262,24 +1266,24 @@ msgid ""
 " modifier\n"
 msgstr "ਸੰਰਚਨਾ ਡਾਟਾਬੇਸ ਵਿੱਚ ਲੱਭੀ ਹੋਈ \"%s\" ਮਾਊਸ ਬਟਨ ਸੋਧਕ ਲਈ ਯੋਗ ਕੀਮਤ ਨਹੀਂ ਹੈ\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "ਸੰਰਚਨਾ ਡਾਟਾਬੇਸ ਵਿੱਚ  ਲੱਭੀ ਹੋਈ \"%s\" ਸਵਿੱਚ-ਬਾਈਡਿੰਗ \"%s\" ਲਈ ਯੋਗ ਕੀਮਤ ਨਹੀਂ ਹੈ\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "ਵਰਕਸਪੇਸ %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "ਸਕਰੀਨ %d ਲਈ ਡਿਸਪਲੇਅ '%s' ਅਯੋਗ ਹੈ\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1288,17 +1292,17 @@ msgstr ""
 "ਸਕਰੀਨ %d ਉੱਤੇ ਡਿਸਪਲੇਅ \"%s\" ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ, ਇਸ ਨੂੰ ਤਬਦੀਲ ਕਰਨ ਦੀ ਚੋਣ "
 "--replace ਮੌਜੂਦਾ ਵਿੰਡੋ ਮੈਨੇਜਰ ਵਰਤੋਂ।\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr "%d ਸਕਰੀਨ ਉੱਤੇ ਡਿਸਪਲੇਅ \"%s\" ਉੱਤੇ ਵਿੰਡੋ ਮੈਨੇਜਰ ਚੋਣ ਉਪਲੱਬਧ ਨਹੀਂ ਹੋ ਸਕੀ\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "ਸਕਰੀਨ %d ਉੱਤੇ ਡਿਸਪਲੇਅ \"%s\" ਉੱਤੇ ਕੋਲ ਪਹਿਲਾਂ ਹੀ ਵਿੰਡੋ ਮੈਨੇਜਰ ਹੈ\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "ਸਕਰੀਨ %d ਉੱਤੇ ਡਿਸਪਲੇਅ \"%s\" ਰੀਲਿਜ਼ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ\n"
@@ -1397,7 +1401,7 @@ msgid "Marco"
 msgstr "ਮੈਟਾਸਿਟੀ"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1412,7 +1416,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1947,7 +1951,7 @@ msgstr "ਕਰੋਆਡੀਨੇਟ ਐਕਸ਼ਪਰੈਸ਼ਨ ਵਿੱਚ 
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "ਥੀਮ ਵਿੱਚ ਸਮੀਕਰਨ ਹੈ, ਜਿਸ ਦਾ ਨਤੀਜਾ ਹੈ ਗਲਤੀ: %s\n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1956,23 +1960,23 @@ msgstr ""
 "ਇਸ ਫਰੇਮ ਵਾਸਤੇ <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> "
 "ਦੇਣਾ ਲਾਜ਼ਮੀ ਹੈ"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> ਗੁੰਮ ਹੈ"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "ਥੀਮ \"%s\" ਲੋਡ ਕਰਨ ਲਈ ਅਸਫਲ: %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "ਥੀਮ \"%2$s\" ਲਈ <%1$s> ਨਹੀਂ ਸੈੱਟ ਕੀਤਾ"
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1981,12 +1985,12 @@ msgstr ""
 "ਸ਼ੈਸ਼ਨ \"%s\" ਵਿੱਚ ਵਿੰਡੋ ਕਿਸਮ \"%s\" ਲਈ ਕੋਈ ਫਰੇਮ ਸਾਇਟਲ ਸੈੱਟ ਨਹੀਂ ਕੀਤਾ, ਇੱਕ "
 "<window type=\"%s\" style_set=\"whatever\"/> ਐਲਿਮੰਟ ਸ਼ਾਮਿਲ ਕਰੋ"
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "ਯੂਜ਼ਰ ਰਾਹੀਂ ਪਰਭਾਸ਼ਿਤ ਸਥਿਰ ਵੱਡੇ ਅੱਖਰ ਨਾਲ ਸ਼ੁਰੂ ਹੋਣ; \"%s\" ਨਹੀਂ ਹੁੰਦੇ"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "ਸਥਿਰ \"%s\" ਪਹਿਲਾਂ ਹੀ ਪਰਭਾਸ਼ਿਤ ਕੀਤਾ ਹੈ"
@@ -2435,31 +2439,31 @@ msgstr "ਥੀਮ ਲੋਡ ਕਰਨ ਵਿੱਚ ਗਲਤੀ: %s\n"
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "ਥੀਮ \"%s\" ਨੂੰ ਲੋਡ ਕਰਨ ਵਿੱਚ ਲੱਗਾ ਸਮਾਂ %g ਸਕਿੰਟਾਂ ਵਿੱਚ \n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "ਸਾਧਾਰਨ ਟਾਇਟਲ ਫੋਂਟ"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "ਛੋਟੇ ਟਾਇਟਲ ਫੋਂਟ"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "ਵੱਡੇ ਟਾਇਟਲ ਫੋਂਟ"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "ਬਟਨ ਲੇਆਉਟ"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "ਬੈਂਚਮਾਰਕ"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "ਵਿੰਡੋ ਟਾਇਟਲ ਇੱਥੇ ਹੋਵੇਗਾ"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

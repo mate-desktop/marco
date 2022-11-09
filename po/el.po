@@ -10,7 +10,7 @@
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2018
 # Νίκος Κοντ. <nkontopos@gmail.com>, 2018
 # Alexandros Kapetanios <alexandros@gnugr.org>, 2018
-# Angelos Chraniotis <chraniotis@gmail.com>, 2018
+# Angelos Chraniotis, 2018
 # Le Pa <lepa.22@hotmail.com>, 2018
 # 437c9d6e19936ed69f57bed9e0fe4716, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
@@ -18,9 +18,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: anvo <fragos.george@hotmail.com>, 2019\n"
 "Language-Team: Greek (https://www.transifex.com/mate/teams/13566/el/)\n"
@@ -1242,7 +1242,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1253,80 +1253,84 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Δεν έχει ορισθεί εντολή %d.\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "Δεν έχει ορισθεί εντολή τερματικού.\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Μετονομάστε το Χώρο εργασίας</tt>"
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr "Νέο όνομα χώρου εργασίας"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr "ΟΚ"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "Απενεργοποίηση σύνδεσης με τον διαχειριστή συνεδρίας"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr "Αντικατάσταση του διαχειριστή παραθύρων που εκτελείται με το Marco"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "Καθορισμός ID διαχείρισης συνεδρίας"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "X Display για χρήση"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "Εκκίνηση συνεδρίας από savefile"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "Έκδοση εκτύπωσης"
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "Χρήση σύγχρονων κλήσεων X"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "Ενεργοποίηση compositing"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "Απενεργοποίηση compositing"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "Μην κάνετε παράθυρα πλήρης οθόνης που είναι μεγιστοποιημένα και δεν έχουν "
 "καμία διακόσμηση"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr ""
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Αποτυχία σάρωσης καταλόγου θεμάτων: %s\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1334,7 +1338,7 @@ msgstr ""
 "Δεν είναι δυνατή η εύρεση θέματος! Βεβαιωθείτε ότι το %s υπάρχει και "
 "περιέχει τα συνήθη θέματα.\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Αποτυχία επανεκκίνησης: %s\n"
@@ -1371,7 +1375,7 @@ msgstr ""
 "Το \"%s\" που βρέθηκε στη βάση δεδομένων ρυθμίσεων δεν είναι μια έγκυρη τιμή"
 " για μετατροπέα κουμπιού ποντικιού\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1380,17 +1384,17 @@ msgstr ""
 "Το \"%s\" που βρέθηκε στη βάση δεδομένων ρυθμίσεων δεν είναι μια έγκυρη τιμή"
 " για συνδυασμό πλήκτρων\"%s\"\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "Χώρος Εργασίας %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "Η οθόνη %d στην προβολή '%s' δεν είναι έγκυρη\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1400,18 +1404,18 @@ msgstr ""
 " να χρησιμοποιήσετε την επιλογή --replace για να αντικαταστήσετε τον τρέχων "
 "διαχειριστή παραθύρων.\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "Αδυναμία λήψης επιλογής διαχειριστή παραθύρων στην οθόνη %d προβολή \"%s\"\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "Η οθόνη  %d στην προβολή \"%s\" έχει ήδη ένα διαχειριστή παραθύρων\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Αδυναμία απελευθέρωσης οθόνης %d στην προβολή \"%s\"\n"
@@ -1512,7 +1516,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1527,7 +1531,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -2070,7 +2074,7 @@ msgstr "Η συντεταγμένη έκφραση δεν φαίνεται να 
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Το θέμα περιείχε μια έκφραση που είχε σαν αποτέλεσμα σφάλμα: %s\n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2079,23 +2083,23 @@ msgstr ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> θα πρέπει να "
 "καθοριστεί στο στυλ πλαισίου"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Λείπει <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Αποτυχία φόρτωσης θέματος \"%s\": %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Δεν έχει ορισθεί  <%s> για θέμα \"%s\""
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2104,14 +2108,14 @@ msgstr ""
 "Δεν έχει ορισθεί στύλ πλαισίου για τον τύπο παραθύρου \"%s\" στο θέμα "
 "\"%s\", add a <window type=\"%s\" style_set=\"whatever\"/> element"
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Οι συνεχείς που ορίζονται από το χρήστη θα πρέπει να ξεκινάνε με κεφαλαίο "
 "γράμμα, η \"%s\" δεν έχει"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Constant \"%s\" έχει ήδη καθορισθεί"
@@ -2587,31 +2591,31 @@ msgstr "Σφάλμα φόρτωσης θέματος: %s\n"
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Το θέμα \"%s\" φορτώθηκε σε %g  δευτερόλεπτα\n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "Γραμματοσειρά κανονικού τίτλου"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "Γραμματοσειρά μικρού τίτλου"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "Γραμματοσειρά μεγάλου τίτλου"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "Διατάξεις κουμπιού"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "Benchmark"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "Τίτλος παραθύρου εδώ"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

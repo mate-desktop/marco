@@ -8,12 +8,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
-"Language-Team: Oriya (https://www.transifex.com/mate/teams/13566/or/)\n"
+"Language-Team: Odia (https://www.transifex.com/mate/teams/13566/or/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1157,7 +1157,7 @@ msgstr ""
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1168,80 +1168,84 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "%d ନିର୍ଦ୍ଦେଶ ବ୍ଯାଖ୍ଯା କରାଯାଇ ନାହିଁ.\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "କୌଣସି ଟର୍ମିନାଲ ନିର୍ଦ୍ଦେଶ ବ୍ଯାଖ୍ଯା କରାଯାଇ ନାହିଁ.\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr ""
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr ""
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr ""
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "ବାତିଲ କରନ୍ତୁ"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "ଅଧିବେଶନ ପରିଚାଳକଙ୍କ ସହିତ ସଂଯୋଗକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr "ଚଳନ୍ତା ୱିଣ୍ଡୋ ପରିଚାଳକକୁ ମେଟାସିଟି ସହିତ ବଦଳାନ୍ତୁ"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "ଅଧିବେଶନ ପରିଚାଳକ ID ଉଲ୍ଲେଖ କରନ୍ତୁ"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "ବ୍ଯବହାର ପାଇଁ ଏକ୍ସ ପ୍ରଦର୍ଶକ"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "ଅଧିବେଶନକୁ ସଞ୍ଚିତ ଫାଇଲଠାରୁ ପ୍ରାରମ୍ଭ କରନ୍ତୁ"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "ସଂସକରଣ ମୁଦ୍ରଣ"
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "ଏକ୍ସ ଡାକରାଗୁଡିକୁ ସମକାଳୀନ କରନ୍ତୁ"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "ମିଶ୍ରଣ ପ୍ରକ୍ରିୟାକୁ ଅନ କରନ୍ତୁ"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "ମିଶ୍ରଣ ପ୍ରକ୍ରିୟାକୁ ଅଫକରନ୍ତୁ"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "ୱିଣ୍ଡୋଗୁଡ଼ିକୁ ସମ୍ପୂର୍ଣ୍ଣ ପରଦା କରନ୍ତୁ ନାହିଁ ଯାହାକି ବର୍ଦ୍ଧିତ ହୋଇଥାଏ ଏବଂ କୌଣସି "
 "ବିଭୁଷଣ ନଥାଏ"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr ""
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "ପ୍ରସଙ୍ଗ ଡିରେକ୍ଟୋରି: %sକୁ କ୍ରମବୀକ୍ଷଣ କରିବାରେ ଅସମର୍ଥ\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1249,7 +1253,7 @@ msgstr ""
 "ଏକ ପ୍ରସଙ୍ଗ ମିଳିଲା ନାହିଁ! ନିଶ୍ଚିତ କରନ୍ତୁ କି %s ବାସ୍ତବରେ ଅଛି ଓ ତାହା ଭିତରେ "
 "ସାଧାରଣ ପ୍ରସଙ୍ଗଗୁଡ଼ିକ ରହିଛି।\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "ପୁନଃ ପ୍ରାରମ୍ଭ କରିବାରେ ଅସମର୍ଥ: %s\n"
@@ -1284,7 +1288,7 @@ msgstr ""
 "ବିନ୍ଯାସ ତଥ୍ଯାଧାରରେ ପାୟାଯାଇଥିବା \"%s\" ମାଉସ ଚାବି ରୂପାନ୍ତରକ ପାଇଁ ଗୋଟିଏ ବୈଧ "
 "ମୂଲ୍ଯ ନୁହେଁ\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1293,17 +1297,17 @@ msgstr ""
 "ବିନ୍ଯାସ ତଥ୍ଯାଧାରରେ ପାୟାଯାଇଥିବା \"%s\" ଚାବିବନ୍ଧନୀ \"%s\" ପାଇଁ ଗୋଟିଏ ବୈଧ ମୂଲ୍ଯ"
 " ନୁହେଁ\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "କାର୍ଯ୍ଯକ୍ଷେତ୍ର %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "ପ୍ରଦର୍ଶକ '%2$s'ରେ ପରଦା %1$d ଅବୈଧ\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1312,17 +1316,17 @@ msgstr ""
 "ପ୍ରଦର୍ଶକ \"%2$s\"ରେ ପରଦା %1$dର ପୂର୍ବରୁ ଗୋଟିଏ ୱିଣ୍ଢୋ ପରିଚାଳକ ଅଛି; ସାମ୍ପ୍ରତିକ "
 "ୱିଣ୍ଢୋ ପରିଚାଳକକୁ ବଦଳାଇବା ପାଇଁ, ବଦଳ ଚୟନ ବ୍ଯବହାର କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ.\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr "ପ୍ରଦର୍ଶକ \"%2$s\"ରେ ପରଦା %1$dର ୱିଣ୍ଢୋ ପରିଚାଳକ ଚୟନ ବୁଝିହେଲା ନାହିଁ\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "ପ୍ରଦର୍ଶକ \"%2$s\"ରେ ପରଦା %1$dର ପୂର୍ବରୁ ଗୋଟିଏ ୱିଣ୍ଢୋ ପରିଚାଳକ ଅଛି\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "ପ୍ରଦର୍ଶକ \"%2$s\"ରେ ପରଦା %1$dକୁ ନୁକ୍ତ କରିହେଲା ନାହିଁ\n"
@@ -1423,7 +1427,7 @@ msgid "Marco"
 msgstr "ମେଟାସିଟି"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1438,7 +1442,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1982,7 +1986,7 @@ msgstr ""
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "ପ୍ରସଙ୍ଗରେ ଗୋଟିଏ ଅଭିବ୍ଯକ୍ତି ଥିଲା ଯାହା ଯୋଗୁ ତ୍ରୁଟି ହେଲା: %s\n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1991,23 +1995,23 @@ msgstr ""
 "ଏହି ବନ୍ଧେଇ ସଜ୍ଜିକରଣ ଶୈଳୀ ପାଇଁ <button function=\"%s\" state=\"%s\" "
 "draw_ops=\"whatever\"/> ନିର୍ଦ୍ଦିଷ୍ଟ କରିବା ବାଧ୍ଯ"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "ନିଖୋଜ <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "\"%s\" ପ୍ରସଙ୍ଗ ଧାରଣ କରିବାରେ ଅସଫଳ: %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "\"%2$s\" ପ୍ରସଙ୍ଗ ପାଇଁ କୌଣସି <%1$s> ବିନ୍ଯାସ କରାଯାଇ ନାହିଁ"
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2017,14 +2021,14 @@ msgstr ""
 "କରାଯାଇ ନାହିଁ, ଗୋଟିଏ <windowtype=\"%3$s\" style_set=\"whatever\"/> ଉପାଦାନ ଯୋଗ"
 " କରନ୍ତୁ"
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "ଚାଳକ ଦ୍ବାରା ବ୍ଯାଖ୍ଯା କରାଯାଇଥାବା ସ୍ଥାୟୀ ମୂଲ୍ଯଗୁଡ଼ିକ ବଡ଼ ଅକ୍ଷରରେ ଆରମ୍ଭ ହେବା "
 "ବାଧ୍ଯ; \"%s\" କରୁ ନାହିଁ"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "\"%s\" ସ୍ଥାୟୀ ମୂଲ୍ଯ ପୂର୍ବରୁ ବ୍ଯାଖ୍ଯା କରାଯାଇଛି"
@@ -2476,31 +2480,31 @@ msgstr "ପ୍ରସଙ୍ଗ ଧାରଣ କରିବାରେ ତ୍ରୁଟ
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" ପ୍ରସଙ୍ଗ %g ସେକଣ୍ଡରେ ଧାରଣ ହେଲା\n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "ସାଧାରଣ ଶୀର୍ଷକ ଅକ୍ଷରରୂପ"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "ଛୋଟ ଶୀର୍ଷକ ଅକ୍ଷରରୂପ"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "ବଡ଼ ଶୀର୍ଷକ ଅକ୍ଷରରୂପ"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "ଚାବି ବିନ୍ଯାସଗୁଡ଼ିକ"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "ମାନଦଣ୍ଡ"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "ୱିଣ୍ଡୋ ଶୀର୍ଷକ ଏଇଠି"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

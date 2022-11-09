@@ -7,21 +7,21 @@
 # mauron, 2018
 # shinmili <rmsk.pl.ur.lpt@gmail.com>, 2018
 # ABE Tsunehiko, 2018
-# Mika Kobayashi, 2018
+# fbc955180bc2b956cb4ef52d00eb80a0_91487f8, 2018
 # Rockers <sumorock@hotmail.com>, 2018
 # Ikuru K <kanumaiku@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # c7a0a66e0476db158663636124cfb54f_370a183, 2018
 # pivo thusr, 2020
-# Green, 2021
+# Green, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Green, 2021\n"
+"Last-Translator: Green, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "デスクトップ"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr "パネルの &quot;Run Application&quot; ダイアログ・ボックスを表示する"
+msgstr "パネルの「アプリケーションの実行」ダイアログ・ボックスを表示する"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -845,7 +845,7 @@ msgstr "alt-tab ポップアップウィンドウに表示されるアプリケ�
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr "alt-tab ポップアップウィンドウの最大カラム数"
+msgstr "alt-tab ポップアップウィンドウの最大列数"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
@@ -1157,7 +1157,7 @@ msgstr "既にバインディングとして別のプログラムでキー %s (�
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1168,84 +1168,88 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "コマンド %d は定義されていません。\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "端末を起動するコマンドが定義されていません。\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>ワークスペースの名前変更</tt>"
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr "新規ワークスペース名："
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr "OK"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "セッションマネージャーに接続しない"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr "実行中のウィンドウ・マネージャを Marco で置き換える"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "セッション管理 ID を指定する"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "使用するXディスプレイを指定する"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "保存ファイルからセッションを初期化する"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "バージョンを表示する"
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "X の呼び出しを同期する"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "合成マネージャをオン"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "合成マネージャをオフ"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr "最大化されて、装飾のない全画面のウィンドウを作成しない"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr "起動時にすべてのキーバインドを無効にする"
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "テーマ・フォルダのスキャンに失敗しました: %s\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
 msgstr "テーマが見つかりませんでした! %s の存在と通常のテーマが含まれていることを確認してください。\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "再起動に失敗しました: %s\n"
@@ -1276,24 +1280,24 @@ msgid ""
 " modifier\n"
 msgstr "MateConf の \"%s\" はマウス・ボタンの修飾キーとして妥当な値ではありません\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
 "\"%s\"\n"
 msgstr "設定データベースで発見した \"%s\" はキーバインド \"%s\" に有効な値ではありません\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "ワークスペース %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "ディスプレイ '%2$s' 上のスクリーン %1$d は無効です\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1302,17 +1306,17 @@ msgstr ""
 "ディスプレイ \"%2$s\" 上のスクリーン %1$d はすでにウィンドウマネージャを持っています; 現在のウィンドウマネージャを上書きするために--"
 "replace オプションの使用を試してください。\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr "ディスプレイ \"%2$s\" 上のスクリーン %1$d でウィンドウマネージャの選択を取得できませんでした\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "ディスプレイ \"%2$s\" 上のスクリーン %1$d はすでにウィンドウマネージャを持っています\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "ディスプレイ \"%2$s\" 上のスクリーン %1$d を解放できませんでした\n"
@@ -1388,19 +1392,19 @@ msgstr "この marco は詳細ログ・モードをサポートしていませ�
 
 #: src/core/util.c:229
 msgid "Window manager: "
-msgstr "ウィンドウ・マネージャ: "
+msgstr "ウィンドウマネージャ: "
 
 #: src/core/util.c:381
 msgid "Bug in window manager: "
-msgstr "ウィンドウ・マネージャのバグ: "
+msgstr "ウィンドウマネージャのバグ: "
 
 #: src/core/util.c:414
 msgid "Window manager warning: "
-msgstr "ウィンドウ・マネージャの警告: "
+msgstr "ウィンドウマネージャの警告: "
 
 #: src/core/util.c:442
 msgid "Window manager error: "
-msgstr "ウィンドウ・マネージャのエラー: "
+msgstr "ウィンドウマネージャのエラー: "
 
 #. Translators: This is the title used on dialog boxes
 #: src/core/util.c:562 src/core/util.c:660 src/marco.desktop.in:4
@@ -1409,7 +1413,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1424,7 +1428,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1507,7 +1511,7 @@ msgstr "ウィンドウを閉じる"
 
 #: src/ui/frames.c:1344
 msgid "Window Menu"
-msgstr "ウィンドウ・メニューを表示します"
+msgstr "ウィンドウメニューを表示します"
 
 #: src/ui/frames.c:1347
 msgid "Window App Menu"
@@ -1949,7 +1953,7 @@ msgstr "座標式は演算子もオペランドも使用していないようで
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "テーマにエラーを引き起こす式が含まれていました: %s\n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -1958,23 +1962,23 @@ msgstr ""
 "このフレームスタイルは <button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> "
 "を指定する必要があります"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>がありません"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "テーマ \"%s\" の読み込みに失敗しました: %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "テーマ \"%1$s\" の <%2$s> が設定されていません"
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -1983,12 +1987,12 @@ msgstr ""
 "テーマ \"%2$s\" にウィンドウタイプ \"%1$s\" のフレームスタイルが設定されていません。<window type=\"%3$s\" "
 "style_set=\"whatever\"/> エレメントを追加してください"
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr "ユーザ定義の定数は大文字で始まらなければなりません; \"%s\" は違います"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "定数 \"%s\" は既に定義されています"
@@ -2435,31 +2439,31 @@ msgstr "テーマのロードでエラーが発生しました: %s\n"
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "\"%s\" というテーマを %g秒で読み込みました\n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "通常のタイトルフォント"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "小さいタイトルフォント"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "大きいタイトルフォント"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "ボタンレイアウト"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "ベンチマーク"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "ここにウィンドウのタイトルが表示されます"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "

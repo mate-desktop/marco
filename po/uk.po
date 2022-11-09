@@ -10,14 +10,15 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Oleksii Khalikov <oleksii.khalikov@gmail.com>, 2020
 # Микола Ткач <chistomov@gmail.com>, 2021
+# Sergiy <sergiy@gorichenko.com>, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.25.0\n"
+"Project-Id-Version: marco 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2021-06-04 17:32+0200\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2021\n"
+"Last-Translator: Sergiy <sergiy@gorichenko.com>, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -372,6 +373,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Клацнувши по вікну при натисканні цього клавіша-модифікатора, ви зможете "
+"перемістити вікно (ліва кнопка), змінити його розмір (середня кнопка), чи "
+"показати меню вікна (права кнопка). Функції лівої та правої кнопок "
+"міняються, якщо увімкнено параметр &quot;resize_with_right_button&quot; "
+"Модифікатор визначається, наприклад, як «1» або «2»."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -718,11 +724,12 @@ msgid ""
 "(as is usually the case for the default \"system beep\"), the currently "
 "focused window's titlebar is flashed."
 msgstr ""
-"Вказує Marco, як зреалізувати індикацію звукового сигналу. Наразі існують "
-"два значення цього ключа: «fullscreen» викликає мерехтіння екрану у "
-"відтінках сірого, «frame_flash» викликає мерехтіння рядка заголовку того "
-"вікна, застосунок у якому подав звуковий сигнал. Якщо невідомо, який додаток"
-" подав сигнал, мерехтіти буде заголовок активного вікна."
+"Вказує Marco, як реалізувати візуальну індикацію системного звукового "
+"сигналу або іншого програмного звукового сигналу. Зараз існують два можливих"
+" значення: \"fullscreen\" викликає чорно-біле мерехтіння екрана, "
+"\"frame_flash\" викликає мерехтіння заголовка того вікна програми, де "
+"\"звучав\" сигнал. Якщо невідомо, з якої програми був сигнал (наприклад, "
+"типовий системний), мерехтіти буде заголовок поточного активного вікна."
 
 #: src/org.mate.marco.gschema.xml:151
 msgid "Compositing Manager"
@@ -743,6 +750,9 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"З даною опцією мініатюри передпрогляду не будуть показуватися у виринному "
+"вікні Alt+Tab, коли увімкнено композитовий упорядник. Замість них, будуть "
+"показуватися піктограми додатків."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -847,13 +857,15 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Чи увімкнути циклічну зміну розмірів вікна при тайлінґу"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"З даною опцією при тайлінґу вікна будуть перебиратися різні розміри, якщо "
+"одне й те ж сполучення клавішів буде натиснуто декілька разів поспіль."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -987,6 +999,12 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Сполучення клавішів, яке запускає відповідну номеру команду в "
+"/apps/marco/keybinding_commands Формат виглядає як \"1a\" чи \"23;F1\". "
+"Парсер досить ліберальний і дозволяє нижній або верхній регістр, а також "
+"такі скорочення як \"4\" та \"5\". Якщо ви вкажете цей параметр спеціальним "
+"рядком \"disabled\", то для даної дії не буде призначено сполучення "
+"клавішів."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -1032,6 +1050,10 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Використовується формат «1a» чи «23F1». Формат виразу не вельми суворий, "
+"можна використовувати верхній і нижній регістр і скорочення, наприклад «4» "
+"та «5». Якщо параметру встановити значення «disabled», для цієї дії не буде "
+"використовуватися ніяке сполучення клавішів."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -1048,6 +1070,12 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Використовується формат «1a» чи «23F1». Формат виразу не вельми суворий, "
+"можна використовувати верхній і нижній регістр і скорочення, наприклад «4» "
+"та «5». Якщо параметру встановити значення «disabled», для цієї дії не буде "
+"використовуватися ніяке сполучення клавішів. Дію цього сполучення клавішів "
+"може бути змінено шляхом втримування клавіша «shift», тому «shift» не може "
+"бути одним із клавішів цього сполучення."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1217,7 +1245,7 @@ msgstr "Клавішу \"%s\" з модифікаторами \"%x\" вже ви
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2415
+#: src/core/keybindings.c:2411
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1228,80 +1256,84 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2503
+#: src/core/keybindings.c:2499
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Команду %d не визначено.\n"
 
-#: src/core/keybindings.c:3610
+#: src/core/keybindings.c:3606
 msgid "No terminal command has been defined.\n"
 msgstr "Команду терміналу не визначено.\n"
 
-#: src/core/keybindings.c:3747
+#: src/core/keybindings.c:3743
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Перейменувати робочий простір</tt>"
 
-#: src/core/keybindings.c:3748
+#: src/core/keybindings.c:3744
 msgid "New Workspace Name:"
 msgstr "Нова назва робочого простору"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "OK"
 msgstr "Так"
 
-#: src/core/keybindings.c:3759
+#: src/core/keybindings.c:3755
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/core/main.c:245
+#: src/core/main.c:247
 msgid "Disable connection to session manager"
 msgstr "Заборонити під’єднання до керівника сеансів"
 
-#: src/core/main.c:251
+#: src/core/main.c:253
 msgid "Replace the running window manager with Marco"
 msgstr "Замінити запущений упорядник вікон на Marco"
 
-#: src/core/main.c:257
+#: src/core/main.c:259
 msgid "Specify session management ID"
 msgstr "Визначити ідентифікатор для керівника сеансів"
 
-#: src/core/main.c:262
+#: src/core/main.c:264
 msgid "X Display to use"
 msgstr "X дисплей"
 
-#: src/core/main.c:268
+#: src/core/main.c:270
 msgid "Initialize session from savefile"
 msgstr "Ініціалізувати сеанс із збереженого файлу"
 
-#: src/core/main.c:274
+#: src/core/main.c:276
 msgid "Print version"
 msgstr "Вивести версію"
 
-#: src/core/main.c:280
+#: src/core/main.c:282
 msgid "Make X calls synchronous"
 msgstr "Синхронізовані виклики X Window"
 
-#: src/core/main.c:286
+#: src/core/main.c:288
 msgid "Turn compositing on"
 msgstr "Увімкнути упорядник композитинґу"
 
-#: src/core/main.c:292
+#: src/core/main.c:294
 msgid "Turn compositing off"
 msgstr "Вимкнути упорядник композитинґу"
 
-#: src/core/main.c:298
+#: src/core/main.c:300
 msgid ""
 "Don't make fullscreen windows that are maximized and have no decorations"
 msgstr ""
 "Не створюйте повноекранних вікон, які розгортаються на увесь екран і не "
 "мають рамок"
 
-#: src/core/main.c:499
+#: src/core/main.c:306
+msgid "Have all keybindings disabled on startup"
+msgstr ""
+
+#: src/core/main.c:507
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
 msgstr "Помилка зчитування теки тем: %s\n"
 
-#: src/core/main.c:515
+#: src/core/main.c:523
 #, c-format
 msgid ""
 "Could not find a theme! Be sure %s exists and contains the usual themes.\n"
@@ -1309,7 +1341,7 @@ msgstr ""
 "Не вдається знайти тему! Перевірте чи існує %s та чи містить він звичайну "
 "тему.\n"
 
-#: src/core/main.c:574
+#: src/core/main.c:585
 #, c-format
 msgid "Failed to restart: %s\n"
 msgstr "Збій перезапуску: %s\n"
@@ -1346,7 +1378,7 @@ msgstr ""
 "У базі даних конфігурації знайдено \"%s\" - що не є правильним значенням "
 "модифікатора клавіші миші.\n"
 
-#: src/core/prefs.c:1843
+#: src/core/prefs.c:1849
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1355,17 +1387,17 @@ msgstr ""
 "Знайдене у конфігураційній базі даних значення \"%s\" не є правильним "
 "записом сполучення клавіш \"%s\"\n"
 
-#: src/core/prefs.c:2146
+#: src/core/prefs.c:2152
 #, c-format
 msgid "Workspace %d"
 msgstr "Робочий простір %d"
 
-#: src/core/screen.c:363
+#: src/core/screen.c:364
 #, c-format
 msgid "Screen %d on display '%s' is invalid\n"
 msgstr "Екран %d на дисплеї \"%s\" не правильний\n"
 
-#: src/core/screen.c:379
+#: src/core/screen.c:380
 #, c-format
 msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
@@ -1374,19 +1406,19 @@ msgstr ""
 "Екран %d на дисплеї \"%s\" вже контролюється упорядником вікон; спробуйте "
 "вказати параметр --replace, щоб замінити поточний керівник вікнами.\n"
 
-#: src/core/screen.c:406
+#: src/core/screen.c:407
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
 msgstr ""
 "Не вдається отримати функцію виділення упоряднику вікон на екрані %d дисплею"
 " \"%s\"\n"
 
-#: src/core/screen.c:464
+#: src/core/screen.c:465
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
 msgstr "Екран %d на дисплеї \"%s\" вже контролюється упорядником вікон\n"
 
-#: src/core/screen.c:678
+#: src/core/screen.c:679
 #, c-format
 msgid "Could not release screen %d on display \"%s\"\n"
 msgstr "Не вдається повернути екран %d на дисплеї \"%s\"\n"
@@ -1487,7 +1519,7 @@ msgid "Marco"
 msgstr "Marco"
 
 #. first time through
-#: src/core/window.c:6008
+#: src/core/window.c:6005
 #, c-format
 msgid ""
 "Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER "
@@ -1502,7 +1534,7 @@ msgstr ""
 #. * leads to e.g. us not fullscreening their windows.  Apps that set
 #. * MWM but not WM_NORMAL_HINTS are basically broken. We complain
 #. * about these apps but make them work.
-#: src/core/window.c:6596
+#: src/core/window.c:6681
 #, c-format
 msgid ""
 "Window %s sets an MWM hint indicating it isn't resizable, but sets min size "
@@ -1871,6 +1903,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Невірний символ '%c' у параметрі color_name gtk:custom, дозволяється "
+"використовувати лише символи A-Za-z0-9-_"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1878,6 +1912,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Формат Gtk:custom — «gtk:custom(color_name,fallback)»; «%s» не відповідає "
+"формату"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2037,7 +2073,7 @@ msgstr "Здається вираз координати не містить ж�
 msgid "Theme contained an expression that resulted in an error: %s\n"
 msgstr "Тема містить вираз, що призводить до помилки: %s\n"
 
-#: src/ui/theme.c:4856
+#: src/ui/theme.c:4853
 #, c-format
 msgid ""
 "<button function=\"%s\" state=\"%s\" draw_ops=\"whatever\"/> must be "
@@ -2046,23 +2082,23 @@ msgstr ""
 "для цього стилю рамки треба вказати <button function=\"%s\" state=\"%s\" "
 "draw_ops=\"будь-що\"/>"
 
-#: src/ui/theme.c:5391 src/ui/theme.c:5416
+#: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
 msgstr "Відсутнє <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"будь-що\"/>"
 
-#: src/ui/theme.c:5460
+#: src/ui/theme.c:5457
 #, c-format
 msgid "Failed to load theme \"%s\": %s\n"
 msgstr "Збій завантаження теми \"%s\": %s\n"
 
-#: src/ui/theme.c:5591 src/ui/theme.c:5598 src/ui/theme.c:5605
-#: src/ui/theme.c:5612 src/ui/theme.c:5619
+#: src/ui/theme.c:5588 src/ui/theme.c:5595 src/ui/theme.c:5602
+#: src/ui/theme.c:5609 src/ui/theme.c:5616
 #, c-format
 msgid "No <%s> set for theme \"%s\""
 msgstr "Не встановлено <%s> для теми \"%s\""
 
-#: src/ui/theme.c:5627
+#: src/ui/theme.c:5624
 #, c-format
 msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
@@ -2071,14 +2107,14 @@ msgstr ""
 "Немає стилю рамки для вікна типу \"%s\" у темі \"%s\", додайте елемент  "
 "<window type=\"%s\" style_set=\"будь-що\"/> "
 
-#: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
+#: src/ui/theme.c:6051 src/ui/theme.c:6113 src/ui/theme.c:6176
 #, c-format
 msgid "User-defined constants must begin with a capital letter; \"%s\" does not"
 msgstr ""
 "Визначені користувачем константи повинні починатися з великої літери; \"%s\""
 " не починається з великої літери"
 
-#: src/ui/theme.c:6062 src/ui/theme.c:6124 src/ui/theme.c:6187
+#: src/ui/theme.c:6059 src/ui/theme.c:6121 src/ui/theme.c:6184
 #, c-format
 msgid "Constant \"%s\" has already been defined"
 msgstr "Константа \"%s\" вже визначена"
@@ -2543,31 +2579,31 @@ msgstr "Помилка завантаження теми: %s\n"
 msgid "Loaded theme \"%s\" in %g seconds\n"
 msgstr "Завантажено тему \"%s\" за %g с\n"
 
-#: src/ui/theme-viewer.c:930
+#: src/ui/theme-viewer.c:932
 msgid "Normal Title Font"
 msgstr "Звичайний шрифт заголовку"
 
-#: src/ui/theme-viewer.c:936
+#: src/ui/theme-viewer.c:938
 msgid "Small Title Font"
 msgstr "Малий шрифт заголовку"
 
-#: src/ui/theme-viewer.c:942
+#: src/ui/theme-viewer.c:944
 msgid "Large Title Font"
 msgstr "Великий шрифт заголовку"
 
-#: src/ui/theme-viewer.c:947
+#: src/ui/theme-viewer.c:949
 msgid "Button Layouts"
 msgstr "Розташування кнопок"
 
-#: src/ui/theme-viewer.c:952
+#: src/ui/theme-viewer.c:954
 msgid "Benchmark"
 msgstr "Продуктивність"
 
-#: src/ui/theme-viewer.c:1008
+#: src/ui/theme-viewer.c:1012
 msgid "Window Title Goes Here"
 msgstr "Тут буде заголовок вікна"
 
-#: src/ui/theme-viewer.c:1110
+#: src/ui/theme-viewer.c:1114
 #, c-format
 msgid ""
 "Drew %d frames in %g client-side seconds (%g milliseconds per frame) and %g "
