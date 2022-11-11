@@ -1,3 +1,31 @@
+### marco 1.27.0
+
+  * tx: sync with transifex
+  * replace _NET_WM_PID with XResGetClientPid (#741)
+  * Always bring into foreground the previous window after closing one
+  * tx: update resource
+  * tx: migrate config file
+  * window: do not disable fullscreen for dialogs
+  * ui: avoid 'g_object_unref (NULL)'
+  * marco: Add cmdline option --no-keybindings for disabling all key bindings directly on WM startup.
+  * boxes: fix build warning -Wstring-conversion
+  * Fix some -Wfloat-conversion warnings
+  * keybindings: fix build warning -Wbad-function-cast
+  * Remove TRUE, FALSE from if statement
+  * ci: drop -Wunused-parameter compiler cflag from debian build
+  * theme-viewer: use GTK_STYLE_PROPERTY_FONT
+  * theme: fix memory leak
+  * Fix implicit conversion changes signedness: 'gboolean' to 'guint'
+  * compositor-xrender: remove unrequired g_free because of g_new0
+  * compositor-xrender: fix memory leak
+  * build: fix meson build
+  * prefs: fix memory leak
+  * main: Add short name for version option
+  * Remove whitespaces before #define, #ifdef, and #endif
+  * fix code-formatting issue of previous commit
+  * Safeguard against calling gdk_x11_window_get_xid with a NULL GdkWindow
+  * README: Update gtk requirement and patch submission
+
 ### marco 1.26.0
 
   * update translations
