@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# 趙惟倫 <bluebat@member.fsf.org>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 黃柏諺 <s8321414@gmail.com>, 2019
-# Hsiu-Ming Chang <cges30901@gmail.com>, 2020
+# Hsiu-Ming Chang <cges30901@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# 趙惟倫 <bluebat@member.fsf.org>, 2021
+# 黃柏諺 <s8321414@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Hsiu-Ming Chang <cges30901@gmail.com>, 2020\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2022\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/mate/teams/13566/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,7 +760,7 @@ msgstr "是否啟用循環切換不同的平鋪大小"
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
-msgstr ""
+msgstr "啟用後，可連續使用同一個鍵盤快捷鍵讓平鋪視窗在不同的尺寸間循環。"
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -789,7 +789,7 @@ msgstr "逗號分隔的類型清單。每個正在執行且引用指定的視窗
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "alt-tab 中彈出式視窗的圖示大小"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
@@ -804,17 +804,17 @@ msgstr "在 alt-tab 彈出式視窗中最大欄數"
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
-msgstr ""
+msgstr "彈出式視窗將延展以容納每行的這些條目。"
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
-msgstr ""
+msgstr "展開 alt-tab 彈出式視窗以容納較長的視窗標題"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
-msgstr ""
+msgstr "彈出式視窗可以延展到「alt-tab-max-columns」設定所指定的寬度。"
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -881,6 +881,8 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"本按鍵組合可以執行在 /apps/marco/keybinding_commands "
+"中加上相應數字的指令。格式可以像「<Control>a」或是「<Shift><Alt>F1」。分析按鍵組合字串時是比較寬鬆的，允許使用大寫或小寫，也允許使用像「<Ctl>」及「<Ctrl>」等的縮寫。如果將此選項設定為字串「disabled」，則不會為該項操作安排任何按鍵組合。"
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -926,6 +928,8 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"格式可以像「<Control>a」或是「<Shift><Alt>F1」。\n"
+"分析按鍵組合字串時是比較寬鬆的，允許使用大寫或小寫，也允許使用像「<Ctl>」及「<Ctrl>」等的縮寫。如果將此選項設定為字串「disabled」，則不會為該項動作安排任何按鍵組合。"
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -942,6 +946,8 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"格式可以像「<Control>a」或是 "
+"<Shift><Alt>F1。分析按鍵組合字串時是比較寬鬆的，允許使用大寫或小寫，也允許使用像「<Ctl>」及「<Ctrl>」等的縮寫。如果將此選項設定為字串「disabled」，則不會為該項動作安排任何按鍵組合。此按鍵組合可按下「shift」按鍵讓它反轉；因此，「shift」不能成為它所使用的按鍵之一。"
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"

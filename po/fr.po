@@ -4,30 +4,31 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# mauron, 2018
-# Charles Monzat <c.monzat@laposte.net>, 2018
-# yoplait <yoplait@tememe.org>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Étienne Deparis <etienne@depar.is>, 2018
-# roxfr <roxfr@outlook.fr>, 2019
-# Laurent Napias, 2020
-# Yoan Mollard <yoan@aubrune.eu>, 2020
-# David D, 2021
+# Yoan Mollard <yoan@aubrune.eu>, 2021
+# mauron, 2021
 # Tubuntu, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Charles Monzat <c.monzat@laposte.net>, 2021
+# Laurent Napias, 2021
+# David D, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Étienne Deparis <etienne@depar.is>, 2021
+# yoplait <yoplait@tememe.org>, 2021
+# roxfr <roxfr@outlook.fr>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Tubuntu, 2021\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: roxfr <roxfr@outlook.fr>, 2021\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
@@ -188,7 +189,7 @@ msgstr "Basculer l'état de repli"
 
 #: src/50-marco-window-key.xml.in:30 src/org.mate.marco.gschema.xml:775
 msgid "Close window"
-msgstr "Fermer la fenêtre"
+msgstr "Ferme la fenêtre"
 
 #: src/50-marco-window-key.xml.in:34 src/org.mate.marco.gschema.xml:770
 msgid "Minimize window"
@@ -402,9 +403,9 @@ msgid ""
 " set it to false to make it work the opposite way around."
 msgstr ""
 "Définir à « true » pour redimensionner avec le bouton droit et afficher un "
-"menu avec le bouton du milieu en maintenant enfoncée la touche donnée dans «"
-" mouse_button_modifier » ; définir à « false » pour avoir le fonctionnement "
-"inverse."
+"menu avec le bouton du milieu en maintenant enfoncée la touche donnée dans "
+"« mouse_button_modifier » ; définir à « false » pour avoir le fonctionnement"
+" inverse."
 
 #: src/org.mate.marco.gschema.xml:60
 msgid "Whether to display preselected tab window border"
@@ -458,8 +459,8 @@ msgstr ""
 "Le mode de focus de la fenêtre indique la façon dont les fenêtres sont "
 "activées. Il présente trois valeurs possibles ; « click » signifie que vous "
 "devez cliquer sur les fenêtres pour les activer, « sloppy » (« coulé ») "
-"signifie que les fenêtres sont activées lorsque la souris s'y place et « "
-"mouse » (« souris »), signifie que les fenêtres sont activées lorsque la "
+"signifie que les fenêtres sont activées lorsque la souris s'y place et "
+"« mouse » (« souris »), signifie que les fenêtres sont activées lorsque la "
 "souris s'y place et désactivées lorsqu'elle les quitte."
 
 #: src/org.mate.marco.gschema.xml:75
@@ -474,9 +475,9 @@ msgid ""
 "given focus."
 msgstr ""
 "Cette option fournit un contrôle supplémentaire sur la façon dont les "
-"nouvelles fenêtres deviennent actives. Elle a deux valeurs possible: « smart"
-" » qui correspond au mode d'activation utilisateur normal et « strict » qui "
-"n'active pas les fenêtre démarrées depuis un terminal."
+"nouvelles fenêtres deviennent actives. Elle a deux valeurs "
+"possible: « smart » qui correspond au mode d'activation utilisateur normal "
+"et « strict » qui n'active pas les fenêtre démarrées depuis un terminal."
 
 #: src/org.mate.marco.gschema.xml:80
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -546,8 +547,8 @@ msgstr ""
 "Cette option détermine les effets d'un double-clic sur la barre de titre "
 "d'une fenêtre. Les valeurs possibles sont « toggle_shade » qui replie la "
 "fenêtre ou la déplie, « toggle_maximize » qui maximise la fenêtre ou la "
-"remet à sa taille initiale avant maximisation, « "
-"toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
+"remet à sa taille initiale avant maximisation, "
+"« toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
 "limitent la maximisation dans la direction indiquée, « minimize » qui réduit"
 " la fenêtre, « shade » qui replie la fenêtre, « menu » qui affiche le menu "
 "de la fenêtre, « lower » qui place la fenêtre derrière toutes les autres et "
@@ -571,8 +572,8 @@ msgstr ""
 "Cette option détermine les effets d'un clic du milieu sur la barre de titre "
 "d'une fenêtre. Les valeurs possibles sont « toggle_shade » qui replie la "
 "fenêtre ou la déplie, « toggle_maximize » qui maximise la fenêtre ou la "
-"remet à sa taille initiale avant maximisation, « "
-"toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
+"remet à sa taille initiale avant maximisation, "
+"« toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
 "limitent la maximisation dans la direction indiquée, « minimize » qui réduit"
 " la fenêtre, « shade » qui replie la fenêtre, « menu » qui affiche le menu "
 "de la fenêtre, « lower » qui place la fenêtre derrière toutes les autres et "
@@ -596,8 +597,8 @@ msgstr ""
 "Cette option détermine les effets d'un clic droit sur la barre de titre "
 "d'une fenêtre. Les valeurs possibles sont « toggle_shade » qui replie la "
 "fenêtre ou la déplie, « toggle_maximize » qui maximise la fenêtre ou la "
-"remet à sa taille initiale avant maximisation, « "
-"toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
+"remet à sa taille initiale avant maximisation, "
+"« toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
 "limitent la maximisation dans la direction indiquée, « minimize » qui réduit"
 " la fenêtre, « shade » qui replie la fenêtre, « menu » qui affiche le menu "
 "de la fenêtre, « lower » qui place la fenêtre derrière toutes les autres et "
@@ -1125,8 +1126,8 @@ msgstr ""
 "abréviations telles que « <Ctl> » et « <Ctrl> ». Si vous définissez l'option"
 " sur la chaîne spéciale « disabled » (désactivé), il n'y aura pas de "
 "combinaison de touches pour cette action. Cette combinaison de touches peut "
-"être inversée en maintenant enfoncée la touche « Maj ». Par conséquent, « "
-"Maj » ne peut pas faire partie de cette combinaison."
+"être inversée en maintenant enfoncée la touche « Maj ». Par conséquent, "
+"« Maj » ne peut pas faire partie de cette combinaison."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1940,8 +1941,8 @@ msgstr "la géométrie du cadre n'indique pas la dimension « %s »"
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr ""
-"la géométrie du cadre n'indique pas la dimension « %s » pour la bordure « %s"
-" »"
+"la géométrie du cadre n'indique pas la dimension « %s » pour la bordure "
+"« %s »"
 
 #: src/ui/theme.c:455
 #, c-format
@@ -2130,15 +2131,15 @@ msgid ""
 "Coordinate expression has operator \"%c\" following operator \"%c\" with no "
 "operand in between"
 msgstr ""
-"L'expression de la coordonnée a un opérateur « %c » suivant l'opérateur « %c"
-" » sans opérande entre eux"
+"L'expression de la coordonnée a un opérateur « %c » suivant l'opérateur "
+"« %c » sans opérande entre eux"
 
 #: src/ui/theme.c:2620 src/ui/theme.c:2665
 #, c-format
 msgid "Coordinate expression had unknown variable or constant \"%s\""
 msgstr ""
-"L'expression de la coordonnée possède une variable ou constante inconnue « "
-"%s »"
+"L'expression de la coordonnée possède une variable ou constante inconnue "
+"« %s »"
 
 #: src/ui/theme.c:2719
 msgid "Coordinate expression parser overflowed its buffer."
@@ -2200,8 +2201,8 @@ msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr ""
-"Aucun style de cadre défini pour le type de fenêtre « %s » dans le thème « "
-"%s », ajoutez un élément <window type=\"%s\" style_set=\"whatever\"/>"
+"Aucun style de cadre défini pour le type de fenêtre « %s » dans le thème "
+"« %s », ajoutez un élément <window type=\"%s\" style_set=\"whatever\"/>"
 
 #: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
 #, c-format

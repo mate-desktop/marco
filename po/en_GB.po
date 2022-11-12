@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Martin Wimpress <code@flexion.org>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Andi Chandler <andi@gowling.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Martin Wimpress <code@flexion.org>, 2021
+# Andi Chandler <andi@gowling.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>, 2018\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>, 2022\n"
 "Language-Team: English (United Kingdom) (https://www.transifex.com/mate/teams/13566/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +28,7 @@ msgstr "Desktop"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Show the panel's &quot;Run Application&quot; dialogue box"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -366,6 +366,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Clicking a window while holding down this modifier key will move the window "
+"(left click), resize the window (middle click), or show the window menu "
+"(right click). The middle and right click operations may be swapped using "
+"the \"resize_with_right_button\" key. The modifier is expressed as \"<Alt>\""
+" or \"<Super>\" for example."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -738,6 +743,10 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"If set to true, no window thumbnails will be displayed in the alt-tab popup "
+"window when the compositing manager is enabled. Application icons will be "
+"displayed instead. Note that on high resolution screens with many visible "
+"windows there can be a perceptible lag in rendering."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -837,13 +846,15 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Whether to enable cycling through different tile sizes"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"If enabled, tiling a window will cycle through multiple different sizes by "
+"using the same keyboard shortcut multiple times in a row."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -879,32 +890,37 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Icon size in alt-tab popup window"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Size of the application icons displayed in alt-tab popup window. The "
+"screen's scale factor is applied to this value."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Maximum number of columns in alt-tab popup window"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
 msgstr ""
+"The popup window will be expanded to fit up to these many entries per row."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
-msgstr ""
+msgstr "Expand the alt-tab popup window to fit longer window titles"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"The popup window may be expanded up to the width determined by the config "
+"parameter 'alt-tab-max-columns'."
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -971,6 +987,12 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"The keybinding that runs the correspondingly-numbered command in "
+"/apps/marco/keybinding_commands The format looks like \"<Control>a\" or "
+"\"<Shift><Alt>F1\". The parser is fairly liberal and allows lower or upper "
+"case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". If you set "
+"the option to the special string \"disabled\", then there will be no "
+"keybinding for this action."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -1016,6 +1038,10 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
+"fairly liberal and allows lower or upper case, and also abbreviations such "
+"as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
+"\"disabled\", then there will be no keybinding for this action."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -1032,6 +1058,12 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
+"fairly liberal and allows lower or upper case, and also abbreviations such "
+"as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
+"\"disabled\", then there will be no keybinding for this action. This "
+"keybinding may be reversed by holding down the \"shift\" key; therefore, "
+"\"shift\" cannot be one of the keys it uses."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1562,7 +1594,7 @@ msgstr "Window Menu"
 
 #: src/ui/frames.c:1347
 msgid "Window App Menu"
-msgstr ""
+msgstr "Window App Menu"
 
 #: src/ui/frames.c:1350
 msgid "Minimize Window"
@@ -1832,6 +1864,8 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"GTK custom colour specification must have colour name and fallback in "
+"parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 
 #: src/ui/theme.c:1413
 #, c-format
@@ -1839,6 +1873,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Invalid character '%c' in color_name parameter of gtk:custom, only "
+"A-Za-z0-9-_ are valid"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1846,6 +1882,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
+"fit the format"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2352,18 +2390,20 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Bad version specification '%s'"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
+"theme-2.xml"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
-msgstr ""
+msgstr "Theme requires version %s but latest supported theme version is %d.%d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
@@ -2472,7 +2512,7 @@ msgstr "Border"
 
 #: src/ui/theme-viewer.c:449
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Attached Modal Dialogue"
 
 #: src/ui/theme-viewer.c:808
 #, c-format

@@ -4,35 +4,38 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Fabrizzio Alphonsus Soares <fabrizzio.soares@gmail.com>, 2018
-# Alberto Federman Neto <mrtabac@gmail.com>, 2018
-# Felipe Rozelio <feliperozelio@gmail.com>, 2018
-# Enrico Nicoletto <enrico.BR@gmx.co.uk>, 2018
-# Matheus Macabu <mkbu95@gmail.com>, 2018
-# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2018
-# Victor Gonçalves <hotcyv@gmail.com>, 2018
-# Samuel Henrique <samueloph@debian.org>, 2018
-# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2018
-# 642cf48d39bca7f9ad9d185d4bcea8c8, 2018
-# Roger Araújo <roger.rf@gmail.com>, 2018
-# 710a500dd1d5560bb05c8b24814b8c26, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 18ab4449a00621534598e84a949423ea, 2018
-# Rafael Sachetto <rsachetto@gmail.com>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Samuel Henrique <samueloph@debian.org>, 2021
+# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2021
+# 642cf48d39bca7f9ad9d185d4bcea8c8, 2021
+# Fabrizzio Alphonsus Soares <fabrizzio.soares@gmail.com>, 2021
+# Alberto Federman Neto <mrtabac@gmail.com>, 2021
+# Matheus Macabu <mkbu95@gmail.com>, 2021
+# Enrico Nicoletto <enrico.BR@gmx.co.uk>, 2021
+# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Roger Araújo <roger.rf@gmail.com>, 2021
+# 710a500dd1d5560bb05c8b24814b8c26, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Felipe Rozelio <feliperozelio@gmail.com>, 2021
+# Victor Gonçalves <hotcyv@gmail.com>, 2021
+# 18ab4449a00621534598e84a949423ea, 2021
+# Rafael Sachetto <rsachetto@gmail.com>, 2021
+# Luciano Luck, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Rafael Sachetto <rsachetto@gmail.com>, 2020\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: Luciano Luck, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
@@ -40,7 +43,7 @@ msgstr "Área de trabalho"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Mostrar a caixa de diálogo 'Executar aplicativo' do painel"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -64,7 +67,7 @@ msgstr "Renomear a área de trabalho atual"
 
 #: src/50-marco-global-key.xml.in:2 src/50-marco-window-key.xml.in:2
 msgid "Window Management"
-msgstr "Gerenciamento de janelas"
+msgstr "Gerenciamento de Janelas"
 
 #: src/50-marco-global-key.xml.in:4 src/org.mate.marco.gschema.xml:564
 msgid "Move between windows, using a popup window"
@@ -770,8 +773,8 @@ msgid ""
 "windows there can be a perceptible lag in rendering."
 msgstr ""
 "Se definido como verdadeiro, as miniaturas de janelas não serão exibidas na "
-"janela do alt-tab quando o gerenciador de composição estiver habilitado. Em "
-"vez disso, será exibido o ícone do aplicativo. Note que em telas com alta "
+"janela do alt-tab quando o gerente de composição estiver habilitado. Em vez "
+"disso, será exibido o ícone do aplicativo. Note que em telas com alta "
 "resolução com muitas janelas visíveis pode haver um atraso perceptível na "
 "renderização. "
 
@@ -878,13 +881,16 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Se deve habilitar o ciclo por diferentes tamanhos de ladrilhos"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"Se ativado, a disposição lado a lado de uma janela percorrerá vários \n"
+"tamanhos diferentes usando o mesmo atalho de teclado várias vezes \n"
+"seguidas."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -929,6 +935,8 @@ msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Tamanho dos ícones do aplicativo exibidos na janela pop-up alt-tab. O fator "
+"de escala da tela é aplicado a este valor."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
@@ -938,16 +946,21 @@ msgstr "Número máximo de colunas na janela do alt-tab"
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
 msgstr ""
+"A janela pop-up será expandida para acomodar essas muitas entradas por "
+"linha."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
 msgstr ""
+"Expanda a janela pop-up alt-tab para ajustar títulos de janela mais longos"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"A janela pop-up pode ser expandida até a largura determinada pelo parâmetro "
+"de configuração 'alt-tab-max-columns'."
 
 #: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
 #: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
@@ -1014,6 +1027,12 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"A combinação de teclas que executa o comando numerado \n"
+"correspondentemente em /apps/marco/keybinding_commands O formato se \n"
+"parece com \"<Control>a\" ou \"<Shift><Alt>F1\". O analisador é bastante liberal e permite letras\n"
+" minúsculas ou maiúsculas, e também abreviações como \"<Ctl>'' e ''<Ctrl>\". Se você \n"
+"definir a opção para a string especial 'disabled', não haverá atalho de \n"
+"teclado para esta ação."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -1059,6 +1078,10 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"O formato se parece com \"<Control>a\" ou \"<Shift><Alt>F1\". O analisador é bastante liberal e \n"
+"permite letras minúsculas ou maiúsculas, e também abreviações como \"<Ctl>\" e \n"
+"\"<Ctrl>\". Se você definir a opção para a string especial 'disabled', não \n"
+"haverá atalho de teclado para esta ação."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -1075,6 +1098,11 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"O formato se parece com \"<Control>a\" ou \"<Shift><Alt>F1\". O analisador é bastante liberal e \n"
+"permite letras minúsculas ou maiúsculas, e também abreviações como \"<Ctl>\" e \"<Ctrl>\". Se você definir a opção para a string especial 'disabled', não \n"
+"haverá atalho de teclado para esta ação. Esta combinação de teclas pode \n"
+"ser revertida mantendo pressionada a tecla 'shift'; portanto, 'shift' \n"
+"não pode ser uma das teclas que ele usa."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1620,7 +1648,7 @@ msgstr "Menu de janela"
 
 #: src/ui/frames.c:1347
 msgid "Window App Menu"
-msgstr ""
+msgstr "Menu do Aplicativo da Janela"
 
 #: src/ui/frames.c:1350
 msgid "Minimize Window"
@@ -1890,6 +1918,9 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"A especificação de cores personalizadas do GTK deve ter o nome da cor e o\n"
+" substituto entre parênteses, por exemplo gtk:custom(foo,bar); não foi \n"
+"possível analisar \"%s\""
 
 #: src/ui/theme.c:1413
 #, c-format
@@ -1906,6 +1937,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Gtk:formato personalizado é \"gtk:custom(color_name,fallback)\",\"%s\" não "
+"se encaixa no formato"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -2434,13 +2467,15 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Especificação de versão ruim '%s'"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
 "\"version\" attribute cannot be used in metacity-theme-1.xml or metacity-"
 "theme-2.xml"
 msgstr ""
+"O atributo 'versão' não pode ser usado em metacidade-tema-1.xml ou "
+"metacidade-tema-2.xml"
 
 #: src/ui/theme-parser.c:3585
 #, c-format
@@ -2556,7 +2591,7 @@ msgstr "Borda"
 
 #: src/ui/theme-viewer.c:449
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Diálogo Modal Anexado"
 
 #: src/ui/theme-viewer.c:808
 #, c-format

@@ -4,33 +4,33 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lluís Tusquellas <lutusq@gmail.com>, 2018
-# ebray187 <ebray187@gmail.com>, 2018
-# difusion, 2018
-# ZenWalker <scow@riseup.net>, 2018
-# Benjamin Perez Carrillo <benperezc@gmail.com>, 2018
-# Juan Sánchez <jsrmadrid@gmail.com>, 2018
-# Emiliano Fascetti, 2018
-# Arcenio Cid <gusty.miliki@gmail.com>, 2018
-# Adolfo Jayme Barrientos, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# David García-Abad <dgarciabad@gmail.com>, 2018
-# Joel Barrios <darkshram@gmail.com>, 2018
-# Toni Estévez <toni.estevez@gmail.com>, 2020
+# Adolfo Jayme-Barrientos, 2021
+# Lluís Tusquellas <lutusq@gmail.com>, 2021
+# ebray187 <ebray187@gmail.com>, 2021
+# Benjamin Perez Carrillo <benperezc@gmail.com>, 2021
+# difusion, 2021
+# Emiliano Fascetti, 2021
+# Joel Barrios <darkshram@gmail.com>, 2021
+# ZenWalker <scow@riseup.net>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Juan Sánchez <jsrmadrid@gmail.com>, 2021
+# David García-Abad <dgarciabad@gmail.com>, 2021
+# Arcenio Cid <gusty.miliki@gmail.com>, 2021
+# Toni Estévez <toni.estevez@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2020\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
@@ -1805,7 +1805,7 @@ msgstr "Mover a _otra área de trabajo"
 #. * this.
 #: src/ui/metaaccellabel.c:81
 msgid "Shift"
-msgstr "Mayús."
+msgstr "Mayús"
 
 #. This is the text that should appear next to menu accelerators
 #. * that use the control key. If the text on this key isn't typically
@@ -2607,7 +2607,7 @@ msgstr "Diálogo modal"
 
 #: src/ui/theme-viewer.c:437
 msgid "Utility Palette"
-msgstr "Paleta de utilidades"
+msgstr "Paleta de herramientas"
 
 #: src/ui/theme-viewer.c:441
 msgid "Torn-off Menu"

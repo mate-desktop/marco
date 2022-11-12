@@ -4,33 +4,33 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Luis Filipe Teixeira <lufilte@gmail.com>, 2018
-# Manuela Silva <mmsrs@sky.com>, 2018
-# José Vieira <jvieira33@sapo.pt>, 2018
-# Sérgio Marques <smarquespt@gmail.com>, 2018
-# Carlos Moreira, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Manel Tinoco <maneltinoco@gmail.com>, 2018
-# Rui <xymarior@yandex.com>, 2018
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2020
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021
+# Manel Tinoco <maneltinoco@gmail.com>, 2021
+# Luis Filipe Teixeira <lufilte@gmail.com>, 2021
+# Manuela Silva <mmsrs@sky.com>, 2021
+# Sérgio Marques <smarquespt@gmail.com>, 2021
+# Carlos Moreira, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Rui <xymarior@yandex.com>, 2021
+# José Vieira <jvieira33@sapo.pt>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2020\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: José Vieira <jvieira33@sapo.pt>, 2021\n"
 "Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
-msgstr "Área de Trabalho"
+msgstr "Ambiente de trabalho"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
@@ -738,11 +738,11 @@ msgid ""
 msgstr ""
 "Estabelece como implementar a indicação visual de como tocou a campainha do "
 "sistema ou o indicador 'campainha' doutra aplicação. Presentemente, há dois "
-"valores válidos, \"ecrã completo\", que provoca um lampejo (flash) a "
-"preto-e-branco em todo o ecrã, e \"moldura\" que faz lampejar a barra de "
-"título da aplicação que enviou o sinal de campainha. Se a aplicação que "
-"enviou o sinal não for identificada (como é normalmente o caso para o \"som "
-"de sistema\" pré-definido), lampejará a barra de título da janela em foco. "
+"valores válidos, \"ecrã completo\", que provoca um lampejo (flash) a preto-"
+"e-branco em todo o ecrã, e \"moldura\" que faz lampejar a barra de título da"
+" aplicação que enviou o sinal de campainha. Se a aplicação que enviou o "
+"sinal não for identificada (como é normalmente o caso para o \"som de "
+"sistema\" pré-definido), lampejará a barra de título da janela em foco. "
 
 #: src/org.mate.marco.gschema.xml:151
 msgid "Compositing Manager"
@@ -1340,7 +1340,7 @@ msgstr "Falha ao reiniciar: %s\n"
 #: src/core/prefs.c:642 src/core/prefs.c:795
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
-msgstr "%d armazenado na chave GSettings %s está fora do intervalo de %d a %d\n"
+msgstr "%d guardado na chave GSettings %s está fora do intervalo de %d a %d\n"
 
 #: src/core/prefs.c:1087
 msgid ""
@@ -1353,7 +1353,9 @@ msgstr ""
 #: src/core/prefs.c:1193
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
-msgstr "Incapaz de processar descrição da letra \"%s\" da chave GSettings %s\n"
+msgstr ""
+"Não foi possível analisar a descrição do tipo de letra \"%s\" da chave "
+"GSettings %s\n"
 
 #: src/core/prefs.c:1255
 #, c-format

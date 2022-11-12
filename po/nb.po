@@ -4,20 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Allan Nordhøy <epost@anotheragency.no>, 2018
-# Kim Malmo <berencamlost@msn.com>, 2018
-# 87d96f43665dd9fb55eba4603e184cae, 2019
-# heskjestad <cato@heskjestad.xyz>, 2019
+# Kim Malmo <berencamlost@msn.com>, 2021
+# 87d96f43665dd9fb55eba4603e184cae, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Allan Nordhøy <epost@anotheragency.no>, 2021
+# heskjestad <cato@heskjestad.xyz>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2019\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2021\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -243,19 +242,19 @@ msgstr "Flislegg vinduet til sørøstre hjørne (nederst til høyre)"
 
 #: src/50-marco-window-key.xml.in:98 src/org.mate.marco.gschema.xml:930
 msgid "Move window to north-west (top left) corner"
-msgstr "Flytt vindu til nord-vestlig hjørne (øverst til venstre)"
+msgstr "Flytt vinduet til nordvestre hjørne (øverst til venstre)"
 
 #: src/50-marco-window-key.xml.in:102 src/org.mate.marco.gschema.xml:935
 msgid "Move window to north-east (top right) corner"
-msgstr "Flytt vinduet til det nordøstlige (øverst til høyre) hjørne"
+msgstr "Flytt vinduet til nordøstre hjørne (øverst til høyre)"
 
 #: src/50-marco-window-key.xml.in:106 src/org.mate.marco.gschema.xml:940
 msgid "Move window to south-west (bottom left) corner"
-msgstr "Flytt vindu til syd-østlig hjørne (nederst til venstre)"
+msgstr "Flytt vindu til sørøstre hjørne (nederst til venstre)"
 
 #: src/50-marco-window-key.xml.in:110 src/org.mate.marco.gschema.xml:945
 msgid "Move window to south-east (bottom right) corner"
-msgstr "Flytt vinduet til sydøstre (nederst i høyre) hjørne"
+msgstr "Flytt vinduet til sørøstre hjørne (nederst til høyre)"
 
 #: src/50-marco-window-key.xml.in:114 src/org.mate.marco.gschema.xml:950
 msgid "Move window to north (top) side of screen"
@@ -275,7 +274,7 @@ msgstr "Flytt vinduet til skjermens vestre (venstre) kant"
 
 #: src/50-marco-window-key.xml.in:130 src/org.mate.marco.gschema.xml:970
 msgid "Move window to center of screen"
-msgstr "Flytt vindu til midten av skjermen"
+msgstr "Flytt vinduet til midten av skjermen"
 
 #: src/50-marco-window-key.xml.in:134 src/org.mate.marco.gschema.xml:975
 msgid "Move window to north (top) monitor"
@@ -425,7 +424,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
-msgstr "Vindufokuseringstilstand"
+msgstr "Fokuseringsmodus for vindu"
 
 #: src/org.mate.marco.gschema.xml:71
 msgid ""
@@ -615,7 +614,7 @@ msgstr "Drakten bestemmer utseende for vinduskanter, tittellinjer osv."
 
 #: src/org.mate.marco.gschema.xml:115
 msgid "Use standard system font in window titles"
-msgstr "Bruk forvalgt systemskrift i vinsutitler"
+msgstr "Bruk forvalgt systemskrift i vindustitler"
 
 #: src/org.mate.marco.gschema.xml:116
 msgid ""
@@ -736,7 +735,7 @@ msgstr "Bestemmer om Marco skal håndtere «kompositering»"
 
 #: src/org.mate.marco.gschema.xml:156
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
-msgstr "Hurtig Alt+Tab med kompositeringshåndering (skru av miniatyrbilder)"
+msgstr "Hurtig Alt + Tab med kompositeringshåndering (skru av miniatyrbilder)"
 
 #: src/org.mate.marco.gschema.xml:157
 msgid ""
@@ -805,7 +804,7 @@ msgid ""
 "run any misbehaving applications."
 msgstr ""
 "Noen programmer overser spesifikasjoner på måter som resulterer i problemer "
-"i vindushåndtereren. Dette alternativet setter Marco i strengt korrekt modus"
+"i vindusbehandleren. Dette alternativet setter Marco i strengt korrekt modus"
 " som vil gi et mer konsist brukergrensesnitt gitt at man ikke må kjøre "
 "programmer som oppfører seg på feil måte."
 
@@ -862,7 +861,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
-msgstr "Vinduplasseringsmodus"
+msgstr "Plasseringsmodus for vindu"
 
 #: src/org.mate.marco.gschema.xml:197
 msgid ""
@@ -975,7 +974,7 @@ msgstr "Arbeidsområdets navn."
 #: src/org.mate.marco.gschema.xml:449 src/org.mate.marco.gschema.xml:454
 #: src/org.mate.marco.gschema.xml:459 src/org.mate.marco.gschema.xml:464
 msgid "Run a defined command"
-msgstr "Kjør egendefinert kommando"
+msgstr "Kjør selvvalgt kommando"
 
 #: src/org.mate.marco.gschema.xml:410 src/org.mate.marco.gschema.xml:415
 #: src/org.mate.marco.gschema.xml:420 src/org.mate.marco.gschema.xml:425
@@ -1226,7 +1225,7 @@ msgstr "Mangler utvidelsen %s som kreves for kompositeringsfunksjon"
 #: src/core/display.c:349
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
-msgstr "Feil under åpning av X Window System skjerm «%s»\n"
+msgstr "Feil under åpning av X Window System-skjerm «%s»\n"
 
 #: src/core/keybindings.c:722
 #, c-format
@@ -1253,11 +1252,11 @@ msgstr ""
 #: src/core/keybindings.c:2503
 #, c-format
 msgid "No command %d has been defined.\n"
-msgstr "Ingen kommando %d er definert\n"
+msgstr "Ingen kommando %d er definert\n"
 
 #: src/core/keybindings.c:3610
 msgid "No terminal command has been defined.\n"
-msgstr "Ingen terminalkommando er definert\n"
+msgstr "Ingen terminalkommando er definert\n"
 
 #: src/core/keybindings.c:3747
 msgid "<tt>Rename Workspace</tt>"
@@ -1281,7 +1280,7 @@ msgstr "Slå av tilkobling til øktbehandler"
 
 #: src/core/main.c:251
 msgid "Replace the running window manager with Marco"
-msgstr "Erstatt kjørende vindushåndterer med Marco"
+msgstr "Erstatt kjørende vindusbehandler med Marco"
 
 #: src/core/main.c:257
 msgid "Specify session management ID"
@@ -1320,7 +1319,7 @@ msgstr ""
 #: src/core/main.c:499
 #, c-format
 msgid "Failed to scan themes directory: %s\n"
-msgstr "Feil under søk i draktkatalog: %s\n"
+msgstr "Feil under søk i draktmappe: %s\n"
 
 #: src/core/main.c:515
 #, c-format
@@ -1390,18 +1389,19 @@ msgid ""
 "Screen %d on display \"%s\" already has a window manager; try using the "
 "--replace option to replace the current window manager.\n"
 msgstr ""
-"Skjerm %d på display «%s» har allerede en vindushåndterer; prøv å bruke "
-"flagget --replace for å erstatte aktiv vindushåndterer.\n"
+"Skjerm %d på display «%s» har allerede en vindusbehandler; prøv å bruke "
+"flagget --replace for å erstatte aktiv vindusbehandler.\n"
 
 #: src/core/screen.c:406
 #, c-format
 msgid "Could not acquire window manager selection on screen %d display \"%s\"\n"
-msgstr "Kunne ikke hente utvalg fra vinduhåndterer på skjerm %d, display «%s»\n"
+msgstr ""
+"Kunne ikke hente utvalg fra vindusbehandler på skjerm %d, display «%s»\n"
 
 #: src/core/screen.c:464
 #, c-format
 msgid "Screen %d on display \"%s\" already has a window manager\n"
-msgstr "Skjerm %d på display «%s» har allerede en vinduhåndterer\n"
+msgstr "Skjerm %d på display «%s» har allerede en vindusbehandler\n"
 
 #: src/core/screen.c:678
 #, c-format
@@ -1411,7 +1411,7 @@ msgstr "Kunne ikke slippe skjerm %d på display «%s»\n"
 #: src/core/session.c:841 src/core/session.c:848
 #, c-format
 msgid "Could not create directory '%s': %s\n"
-msgstr "Kunne ikke opprette katalog «%s»: %s\n"
+msgstr "Kunne ikke opprette mappe «%s»: %s\n"
 
 #: src/core/session.c:858
 #, c-format
@@ -1445,7 +1445,7 @@ msgstr "Ukjent attributt %s på <%s>-element"
 
 #: src/core/session.c:1211
 msgid "nested <window> tag"
-msgstr "<window> tag med flere nivåer"
+msgstr "<window>-tag med flere nivåer"
 
 #: src/core/session.c:1453
 #, c-format
@@ -1477,23 +1477,23 @@ msgstr "Åpnet loggfil %s\n"
 
 #: src/core/util.c:138 src/tools/marco-message.c:172
 msgid "Marco was compiled without support for verbose mode\n"
-msgstr "Marco er kompilert uten støtte for «verbose» modus\n"
+msgstr "Marco er kompilert uten støtte for «verbose»-modus\n"
 
 #: src/core/util.c:229
 msgid "Window manager: "
-msgstr "Vindushåndterer: "
+msgstr "Vindusbehandler: "
 
 #: src/core/util.c:381
 msgid "Bug in window manager: "
-msgstr "Feil i vindushåndterer: "
+msgstr "Feil i vindusbehandler: "
 
 #: src/core/util.c:414
 msgid "Window manager warning: "
-msgstr "Advarsel fra vindushåndterer: "
+msgstr "Advarsel fra vindusbehandler: "
 
 #: src/core/util.c:442
 msgid "Window manager error: "
-msgstr "Feil i vindushåndterer: "
+msgstr "Feil i vindusbehandler: "
 
 #. Translators: This is the title used on dialog boxes
 #: src/core/util.c:562 src/core/util.c:660 src/marco.desktop.in:4
@@ -1575,7 +1575,7 @@ msgstr ""
 "Vindu 0x%lx har egenskap %s\n"
 "som var forventet å ha type %s format %d\n"
 "og faktisk har type %s format %d n_items %d.\n"
-"Dette er mest sannsynlig en feil i programmet, ikke vindushåndtereren.\n"
+"Dette er mest sannsynlig en feil i programmet, ikke vindusbehandleren.\n"
 "Vinduet har title=«%s» class=«%s» name=«%s»\n"
 
 #: src/core/xprops.c:412
@@ -1861,7 +1861,7 @@ msgstr "rammegeometri spesifiserer ikke dimensjon «%s» for kant «%s»"
 #: src/ui/theme.c:455
 #, c-format
 msgid "Button aspect ratio %g is not reasonable"
-msgstr "Aspektrate %g for knapp er ikke fornuftig"
+msgstr "Høyde/bredde-forhold %g for knapp er ikke fornuftig"
 
 #: src/ui/theme.c:467
 msgid "Frame geometry does not specify size of buttons"
@@ -1869,7 +1869,7 @@ msgstr "Rammegeometrien spesifiserer ikke størrelse på knapper"
 
 #: src/ui/theme.c:1227
 msgid "Gradients should have at least two colors"
-msgstr "Gradienter må ha minst to farger"
+msgstr "En fargeovergang må ha minst to farger"
 
 #: src/ui/theme.c:1397
 #, c-format
@@ -2152,7 +2152,7 @@ msgstr "Kunne ikke lese «%s» som et flyttall"
 #: src/ui/theme-parser.c:701 src/ui/theme-parser.c:729
 #, c-format
 msgid "Boolean values must be \"true\" or \"false\" not \"%s\""
-msgstr "Bolske verdier må være «sann» eller «usann» ikke «%s»"
+msgstr "Boolske verdier må være «sann» eller «usann», ikke «%s»"
 
 #: src/ui/theme-parser.c:756
 #, c-format
@@ -2238,12 +2238,12 @@ msgstr ""
 #: src/ui/theme-parser.c:1471
 #, c-format
 msgid "Distance \"%s\" is unknown"
-msgstr "Avstand «%s» er ukjent"
+msgstr "Avstand «%s» er ukjent"
 
 #: src/ui/theme-parser.c:1516
 #, c-format
 msgid "Aspect ratio \"%s\" is unknown"
-msgstr "Aspektrate «%s» er ukjent"
+msgstr "Høyde/bredde-forhold «%s» er ukjent"
 
 #: src/ui/theme-parser.c:1578
 #, c-format
@@ -2263,7 +2263,7 @@ msgstr "Ingen «extent_angle» eller «to»-attributt <%s>-element"
 #: src/ui/theme-parser.c:2136
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
-msgstr "Forsto ikke verdi «%s» for gradienttype"
+msgstr "Forsto ikke verdi «%s» for type fargeovergang"
 
 #: src/ui/theme-parser.c:2214 src/ui/theme-parser.c:2589
 #, c-format
@@ -2289,18 +2289,18 @@ msgstr "Forsto ikke pil «%s» for element <%s>"
 #: src/ui/theme-parser.c:2715 src/ui/theme-parser.c:2811
 #, c-format
 msgid "No <draw_ops> called \"%s\" has been defined"
-msgstr "Ingen <draw_ops> kalt «%s» er definert"
+msgstr "Ingen <draw_ops> kalt «%s» er definert"
 
 #: src/ui/theme-parser.c:2727 src/ui/theme-parser.c:2823
 #, c-format
 msgid "Including draw_ops \"%s\" here would create a circular reference"
 msgstr ""
-"Hvis du tar med draw_ops «%s» her vil dette lage en sirkulær referanse"
+"Hvis du tar med draw_ops «%s» her vil dette lage en sirkulær referanse"
 
 #: src/ui/theme-parser.c:2938
 #, c-format
 msgid "Unknown position \"%s\" for frame piece"
-msgstr "Ukjent posisjon «%s» for rammesdel"
+msgstr "Ukjent posisjon «%s» for rammedel"
 
 #: src/ui/theme-parser.c:2946
 #, c-format
@@ -2335,7 +2335,7 @@ msgstr "Rammestil har allerede en knapp for funksjon %s tilstand %s"
 #: src/ui/theme-parser.c:3102
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
-msgstr "«%s» er ikke en gyldig verdi for fokusattributt"
+msgstr "«%s» er ikke en gyldig verdi for fokusattributt"
 
 #: src/ui/theme-parser.c:3111
 #, c-format
@@ -2345,12 +2345,12 @@ msgstr "«%s» er ikke en gyldig verdi for tilstandsattributt"
 #: src/ui/theme-parser.c:3121
 #, c-format
 msgid "A style called \"%s\" has not been defined"
-msgstr "En stil med navn «%s» er ikke definert"
+msgstr "En stil med navn «%s» er ikke definert"
 
 #: src/ui/theme-parser.c:3141 src/ui/theme-parser.c:3164
 #, c-format
 msgid "\"%s\" is not a valid value for resize attribute"
-msgstr "«%s» er ikke en gyldig verdi for attributt for endring av størrelse"
+msgstr "«%s» er ikke en gyldig verdi for attributt for endring av størrelse"
 
 #: src/ui/theme-parser.c:3175
 #, c-format

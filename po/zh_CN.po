@@ -4,24 +4,24 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2018
-# gtrslower, 2018
-# Mingcong Bai <jeffbai@aosc.xyz>, 2018
-# Mingye Wang <arthur200126@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# shuyu liu <liushuyu011@gmail.com>, 2018
-# Wenbin Lv <wenbin816@gmail.com>, 2019
-# zhineng404 <zhinengge@gmail.com>, 2019
-# 玉堂白鹤 <yjwork@qq.com>, 2020
-# liulitchi <xingzuo88@qq.com>, 2020
+# Wenbin Lv <wenbin816@gmail.com>, 2021
+# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2021
+# liu lizhi <xingzuo88@qq.com>, 2021
+# gtrslower, 2021
+# 玉堂白鹤 <yjwork@qq.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Mingcong Bai <jeffbai@aosc.xyz>, 2021
+# shuyu liu <liushuyu011@gmail.com>, 2021
+# Mingye Wang <arthur200126@gmail.com>, 2021
+# zhineng404 <zhinengge@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: liulitchi <xingzuo88@qq.com>, 2020\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: zhineng404 <zhinengge@gmail.com>, 2021\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -469,8 +469,8 @@ msgstr ""
 "的默认值。许多动作（如点击客户端区域、移动或调整窗口大小）通常会有前置窗口的副作用。强烈不建议将此项设为 "
 "false，否则会将前置与其他的用户动作解绑，并同时忽略由应用程序所产生的前置请求，参见 "
 "http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 。此项被设为 false 时，Alt "
-"加上在单击窗口、在窗口的边框上按下一般的鼠标左键，或是来自工作区切换器的特殊消息像是工作菜单小程序的启动请求，仍然均可以将窗口前置。目前这个项目于单击取得焦点"
-"（click-to-focus）模式中停用。请注意当 raise_on_click 为 false "
+"加上在单击窗口、在窗口的边框上按下一般的鼠标左键，或是来自工作区切换器的特殊消息像是工作菜单小程序的启动请求，仍然均可以将窗口前置。目前这个项目于单击取得焦点（click-"
+"to-focus）模式中停用。请注意当 raise_on_click 为 false "
 "时，来自应用软件的窗口前置程序要求无论原因为何都不会生效。如果您是一位应用程序开发者，接到某位用户抱怨说您的应用软件无法在此项设置为停用时正常工作的话，请告诉他们这是他们的错误而搞坏了窗口管理器，而他们需要将此项改回"
 " true，或是接受这个他们所要求的程序错误。"
 
@@ -2292,7 +2292,7 @@ msgstr "找不到主题 %s 的有效文件\n"
 
 #: src/ui/theme-viewer.c:254
 msgid "_OK"
-msgstr "确定 (_O)"
+msgstr "确定(_O)"
 
 #: src/ui/theme-viewer.c:266
 msgid "This is a sample message in a sample dialog"

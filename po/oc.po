@@ -4,19 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Cédric Valmary <cvalmary@yahoo.fr>, 2018
-# Sébastien Denux <sebcxjo@gmail.com>, 2018
-# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Quentin PAGÈS, 2021
+# Sébastien Denux <sebcxjo@gmail.com>, 2021
+# Cédric Valmary <cvalmary@yahoo.fr>, 2021
+# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Quentin PAGÈS, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Quentin PAGÈS, 2021\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: Quentin PAGÈS, 2022\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -386,8 +386,8 @@ msgid ""
 " set it to false to make it work the opposite way around."
 msgstr ""
 "Definir a « true » per redimensionar amb lo boton drech e afichar un menut "
-"amb lo boton del mitan en mantenent quichada la tòca balhada dins « "
-"mouse_button_modifier » ; definir a « false » per aver lo foncionament "
+"amb lo boton del mitan en mantenent quichada la tòca balhada dins "
+"« mouse_button_modifier » ; definir a « false » per aver lo foncionament "
 "invèrse."
 
 #: src/org.mate.marco.gschema.xml:60
@@ -438,9 +438,9 @@ msgstr ""
 "Lo mòde de focus de la fenèstra indica lo biais que las fenèstras son "
 "activadas. Presenta tres valors possiblas ; « click » significa que vos cal "
 "clicar sus las fenèstras per las activar,  « sloppy » (« rajat ») significa "
-"que las fenèstras son activadas quand la mirga s'i plaça e « mouse » (« "
-"mirga »), significa que las fenèstras son activadas quand la mirga s'i plaça"
-" e desactivadas quand las quita."
+"que las fenèstras son activadas quand la mirga s'i plaça e « mouse » "
+"(« mirga »), significa que las fenèstras son activadas quand la mirga s'i "
+"plaça e desactivadas quand las quita."
 
 #: src/org.mate.marco.gschema.xml:75
 msgid "Control how new windows get focus"
@@ -504,11 +504,12 @@ msgstr ""
 "Aquesta opcion determina los efièches d'un clic doble sus la barra de títol "
 "d'una fenèstra. Las valors possiblas son « toggle_shade » que replega la "
 "fenèstra o la desplega, « toggle_maximize » que maximiza la fenèstra o la "
-"remet a sa talha iniciala abans maximizacion, « toggle_maximize_horizontally"
-" » e « toggle_maximize_vertically » que limitan la maximizacion dins la "
-"direccion indicada, « minimize » que redusís la fenèstra, « shade » que "
-"replega la fenèstra, « menut » qu'aficha lo menut de la fenèstra, « lower » "
-"que plaça la fenèstra darrièr totas las autras e « none » que fa pas res."
+"remet a sa talha iniciala abans maximizacion, "
+"« toggle_maximize_horizontally » e « toggle_maximize_vertically » que "
+"limitan la maximizacion dins la direccion indicada, « minimize » que redusís"
+" la fenèstra, « shade » que replega la fenèstra, « menut » qu'aficha lo "
+"menut de la fenèstra, « lower » que plaça la fenèstra darrièr totas las "
+"autras e « none » que fa pas res."
 
 #: src/org.mate.marco.gschema.xml:90
 msgid "Action on title bar middle-click"
@@ -525,15 +526,15 @@ msgid ""
 "will display the window menu, 'lower' which will put the window behind all "
 "the others, and 'none' which will not do anything."
 msgstr ""
-"Cette option détermine les effets d'un clic du milieu sur la barre de titre "
-"d'une fenêtre. Les valeurs possibles sont « toggle_shade » qui replie la "
-"fenêtre ou la déplie, « toggle_maximize » qui maximise la fenêtre ou la "
-"remet à sa taille initiale avant maximisation, « "
-"toggle_maximize_horizontally » et « toggle_maximize_vertically » qui "
-"limitent la maximisation dans la direction indiquée, « minimize » qui réduit"
-" la fenêtre, « shade » qui replie la fenêtre, « menu » qui affiche le menu "
-"de la fenêtre, « lower » qui place la fenêtre derrière toutes les autres et "
-"« none » qui ne fait rien."
+"Aquela opcion determina los efièches d'un clic del mitan sus la barra de "
+"títol d'una fenèstra. Las valors possiblas son « toggle_shade » que replega "
+"la fenèstra o la desplega, « toggle_maximize » que maximiza la fenèstra o la"
+" remet a sa talha iniciala abans maximizacion, « "
+"toggle_maximize_horizontally » e « toggle_maximize_vertically » que limitan "
+"la maximizacion dins la direccion indicada, « minimize » que reduch la "
+"fenèstra, « shade » que replega la fenèstra, « menut » que aficha lo menut "
+"de la fenèstra, « lower » que plaça la fenèstra darrièr totas las autras e «"
+" nòna » que fa pas res."
 
 #: src/org.mate.marco.gschema.xml:95
 msgid "Action on title bar right-click"
@@ -553,11 +554,12 @@ msgstr ""
 "Aquesta opcion determina los efièches d'un clic drech sus la barra de títol "
 "d'una fenèstra. Las valors possiblas son « toggle_shade » que replega la "
 "fenèstra o la desplega, « toggle_maximize » que maximiza la fenèstra o la "
-"remet a sa talha iniciala abans maximizacion, « toggle_maximize_horizontally"
-" » e « toggle_maximize_vertically » que limitan la maximizacion dins la "
-"direccion indicada, « minimize » que reduís la fenèstra, « shade » que "
-"replega la fenèstra, « menu » qu'aficha lo menut de la fenèstra, « lower » "
-"que plaça la fenèstra darrièr totas las autras e « none » que fa pas res."
+"remet a sa talha iniciala abans maximizacion, "
+"« toggle_maximize_horizontally » e « toggle_maximize_vertically » que "
+"limitan la maximizacion dins la direccion indicada, « minimize » que reduís "
+"la fenèstra, « shade » que replega la fenèstra, « menu » qu'aficha lo menut "
+"de la fenèstra, « lower » que plaça la fenèstra darrièr totas las autras e "
+"« none » que fa pas res."
 
 #: src/org.mate.marco.gschema.xml:100
 msgid "Automatically raises the focused window"
@@ -604,19 +606,19 @@ msgstr ""
 #: src/org.mate.marco.gschema.xml:115
 msgid "Use standard system font in window titles"
 msgstr ""
-"Utilizar la poliça estandarda del sistèma dins los títols de las fenèstras"
+"Utilizar la polissa estandarda del sistèma dins los títols de las fenèstras"
 
 #: src/org.mate.marco.gschema.xml:116
 msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
-"Se VERAI, ignora l'opcion titlebar_font e utiliza la poliça estandarde de "
+"Se VERAI, ignora l'opcion titlebar_font e utiliza la polissa estandarda de "
 "l'aplicacion pels títols de fenèstras."
 
 #: src/org.mate.marco.gschema.xml:120
 msgid "Window title font"
-msgstr "Poliça de títol de las fenèstras"
+msgstr "Polissa de títol de las fenèstras"
 
 #: src/org.mate.marco.gschema.xml:121
 msgid ""
@@ -625,10 +627,10 @@ msgid ""
 "set to 0. Also, this option is disabled if the titlebar_uses_desktop_font "
 "option is set to true."
 msgstr ""
-"Una cadena de descripcion de poliça descrivent una poliça per las barras de "
-"títol de fenèstras. La talha de la descripcion serà utilizada, çaquelà, pas "
-"que se l'opcion titlebar_font_size es reglada sus 0. Aquesta opcion es en "
-"otra desactivada se l'opcion titlebar_uses_desktop_font es reglada sus "
+"Una cadena de descripcion de polissa descrivent una polissa per las barras "
+"de títol de fenèstras. La talha de la descripcion serà utilizada, çaquelà, "
+"pas que se l'opcion titlebar_font_size es reglada sus 0. Aquesta opcion es "
+"en otra desactivada se l'opcion titlebar_uses_desktop_font es reglada sus "
 "VERAI."
 
 #: src/org.mate.marco.gschema.xml:126
@@ -671,8 +673,8 @@ msgid ""
 "'bell' or 'beep'; useful for the hard-of-hearing and for use in noisy "
 "environments."
 msgstr ""
-"Activa una indicacion visuala quand una aplicacion o lo sistèma emet un bip "
-"; util pels mal-entendents e per una utilizacion dins d'environaments "
+"Activa una indicacion visuala quand una aplicacion o lo sistèma emet un "
+"bip ; util pels mal-entendents e per una utilizacion dins d'environaments "
 "brusents."
 
 #: src/org.mate.marco.gschema.xml:141
@@ -704,8 +706,8 @@ msgid ""
 msgstr ""
 "Indica a Marco quin metòde d'indicacion visuala cal utilizar aprèp una "
 "sonariá del sistèma o d'una aplicacion. I a actualament doas valors "
-"possiblas, « fullscreen », que provòca lo cluquejament de tot l'ecran, e « "
-"frame_flash » que provòca lo cluquejament de la barra de títol de "
+"possiblas, « fullscreen », que provòca lo cluquejament de tot l'ecran, e "
+"« frame_flash » que provòca lo cluquejament de la barra de títol de "
 "l'aplicacion qu'a mandat lo senhal de sonariá. Se l'aplicacion que manda la "
 "sonariá es desconeguda (es lo cas de la sonariá del sistèma per defaut), la "
 "barra de títol de la fenèstra qu'a actualament lo focus cluqueja."
@@ -1481,8 +1483,8 @@ msgid ""
 "%d x %d and max size %d x %d; this doesn't make much sense.\n"
 msgstr ""
 "La fenèstra %s posiciona un indici MWM qu'indica qu'es pas redimensionabla, "
-"mas posiciona una talha minimala de %d x %d e una talha maximala de %d x %d "
-"; aquò a pas gaire de sens.\n"
+"mas posiciona una talha minimala de %d x %d e una talha maximala de %d x "
+"%d ; aquò a pas gaire de sens.\n"
 
 #: src/core/window-props.c:307
 #, c-format
@@ -1815,8 +1817,8 @@ msgstr "la geometria del quadre indica pas la dimension « %s »"
 #, c-format
 msgid "frame geometry does not specify dimension \"%s\" for border \"%s\""
 msgstr ""
-"la geometria del quadre indica pas la dimension « %s » per la bordadura « %s"
-" »"
+"la geometria del quadre indica pas la dimension « %s » per la bordadura "
+"« %s »"
 
 #: src/ui/theme.c:455
 #, c-format
@@ -1890,7 +1892,7 @@ msgid ""
 "format"
 msgstr ""
 "Lo format de mescla es « blend/bg_color/fg_color/alpha », « %s » correspond "
-"pas a aqueste format ."
+"pas a aqueste format"
 
 #: src/ui/theme.c:1548
 #, c-format
@@ -2065,8 +2067,8 @@ msgid ""
 "No frame style set for window type \"%s\" in theme \"%s\", add a <window "
 "type=\"%s\" style_set=\"whatever\"/> element"
 msgstr ""
-"Cap d'estil de quadre pas definit pel tipe de fenèstra « %s » dins lo tèma «"
-" %s », apondètz un element <window type=\"%s\" style_set=\"whatever\"/>"
+"Cap d'estil de quadre pas definit pel tipe de fenèstra « %s » dins lo tèma "
+"« %s », apondètz un element <window type=\"%s\" style_set=\"whatever\"/>"
 
 #: src/ui/theme.c:6054 src/ui/theme.c:6116 src/ui/theme.c:6179
 #, c-format
@@ -2233,15 +2235,15 @@ msgstr "La bordadura « %s » es desconeguda"
 #, c-format
 msgid "No \"start_angle\" or \"from\" attribute on element <%s>"
 msgstr ""
-"Pas cap d'atribut « start_angle » (« començament d'angle ») o « from » (« "
-"dempuèi ») sus l'element <%s>"
+"Pas cap d'atribut « start_angle » (« començament d'angle ») o « from » "
+"(« dempuèi ») sus l'element <%s>"
 
 #: src/ui/theme-parser.c:1896
 #, c-format
 msgid "No \"extent_angle\" or \"to\" attribute on element <%s>"
 msgstr ""
-"Pas cap d'atribut « extent_angle » (« extension d'angle ») o « to » (« vers "
-"») sus l'element <%s>"
+"Pas cap d'atribut « extent_angle » (« extension d'angle ») o « to » "
+"(« vers ») sus l'element <%s>"
 
 #: src/ui/theme-parser.c:2136
 #, c-format
@@ -2542,15 +2544,15 @@ msgstr "Tèma « %s » cargat en %g segondas\n"
 
 #: src/ui/theme-viewer.c:930
 msgid "Normal Title Font"
-msgstr "Poliça de títol normal"
+msgstr "Polissa de títol normal"
 
 #: src/ui/theme-viewer.c:936
 msgid "Small Title Font"
-msgstr "Pichona poliça de títol"
+msgstr "Pichona polissa de títol"
 
 #: src/ui/theme-viewer.c:942
 msgid "Large Title Font"
-msgstr "Granda poliça de títol"
+msgstr "Granda polissa de títol"
 
 #: src/ui/theme-viewer.c:947
 msgid "Button Layouts"

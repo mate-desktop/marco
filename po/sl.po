@@ -4,20 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# worm <thewormhole@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Damir Jerovšek <jierro@windowslive.com>, 2018
-# Damir Mevkić <damir.mevkic@gmail.com>, 2018
-# Arnold Marko <arnold.marko@gmail.com>, 2019
-# Helena S <ele@tutamail.com>, 2020
+# Arnold Marko <arnold.marko@gmail.com>, 2021
+# worm <thewormhole@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Damir Jerovšek <jierro@windowslive.com>, 2021
+# Damir Mevkić 52K <damir.mevkic@gmail.com>, 2021
+# Helena S <ele@tutamail.com>, 2021
+# Martin Srebotnjak <miles@filmsi.net>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Helena S <ele@tutamail.com>, 2020\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2021\n"
 "Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +32,7 @@ msgstr "Namizje"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Pokaži pogovorno okno pulta »Zaženi program«"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
 msgid "Show the panel's main menu"
@@ -51,7 +52,7 @@ msgstr "Zaženi terminal"
 
 #: src/50-marco-desktop-key.xml.in:14 src/org.mate.marco.gschema.xml:654
 msgid "Rename current workspace"
-msgstr ""
+msgstr "Preimenuj trenutno delovno površino"
 
 #: src/50-marco-global-key.xml.in:2 src/50-marco-window-key.xml.in:2
 msgid "Window Management"
@@ -287,7 +288,7 @@ msgstr "Premaklni okno na južni (spodnji) del monitorja"
 
 #: src/50-marco-window-key.xml.in:142 src/org.mate.marco.gschema.xml:985
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Premakni okno na vzhodni (desni) del monitorja"
 
 #: src/50-marco-window-key.xml.in:146 src/org.mate.marco.gschema.xml:990
 msgid "Move window to west (left) monitor"
@@ -369,6 +370,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Klik na okno ob držanju tipke spremenilnika bo premaknil okno (levi klik), "
+"spremenil velikost okna (srednji klik) ali prikazal meni okna (desni klik). "
+"Delovanje srednje in desne tipke je mogoče zamenjati s ključem "
+"»spremeni_velikost_z_desnim gumbom«. Spremenilnik je izražen kot npr. "
+"»<Alt>« ali »<Super>«."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -417,7 +423,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
-msgstr "Način žariščenja oken"
+msgstr "Način usmerjanja pozornosti med okni"
 
 #: src/org.mate.marco.gschema.xml:71
 msgid ""
@@ -427,14 +433,14 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
-"Način žariščenja določa kako se okna postavijo v žarišče. Možnosti so; "
-"\"click\", ki zahteva klik miške na oknu, \"sloppy\", ki omogoča žariščenje "
-"s pomikom miške na okno in \"mouse\", ki omogoča žariščenje, ko je kazalka "
-"miške v oknu, in sprostitev žarišča, ko okno zapusti."
+"Način usmerjanja pozornosti med okni določa, kako okna pridobijo pozornost. "
+"Možnosti so: \"click\", ki zahteva klik miške v oknu, \"sloppy\", ki omogoča"
+" žariščenje s pomikom miške na okno, in \"mouse\", ki pridobi pozornost, ko "
+"je kazalka miške v oknu, in izgubi pozornosti, ko okno zapusti."
 
 #: src/org.mate.marco.gschema.xml:75
 msgid "Control how new windows get focus"
-msgstr "Nadzor žariščenja okna"
+msgstr "Nadzor usmerjanja pozornosti med okni"
 
 #: src/org.mate.marco.gschema.xml:76
 msgid ""
@@ -443,9 +449,10 @@ msgid ""
 " mode, and \"strict\" results in windows started from a terminal not being "
 "given focus."
 msgstr ""
-"Možnost omogoča dodaten nadzor za pridobivanje žarišča novih oken. Na voljo "
-"sta možnosti: \"smart\", ki uveljavi običajen način žariščenja in "
-"\"strict\", ki pa žarišča ne dodeli oknom zagnanim preko terminala."
+"Možnost omogoča dodaten nadzor za pridobivanje pozornosti novih oken. Na "
+"voljo sta možnosti: \"smart\", ki uveljavi običajen način usmerjanja "
+"pozornosti, in \"strict\", ki pa pozornosti ne dodeli oknom, zagnanim prek "
+"terminala."
 
 #: src/org.mate.marco.gschema.xml:80
 msgid "Whether raising should be a side-effect of other user interactions"
@@ -564,10 +571,10 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
-"Izbrana možnost omogoča, da je način žariščenja \"sloppy\" ali \"mouse\", "
-"potem bo okno v žarišču po premoru, določenem v ključu auto_raise_delay, "
-"samodejno dvignjeno. To ni povezano s klikanjem za dviganje okna, niti z "
-"vstopom v okno z metodo povleci-spusti."
+"Izbrana možnost omogoča, da je način usmerjanja pozornosti \"sloppy\" ali "
+"\"mouse\", potem bo okno s pozornostjo po premoru, določenem v ključu "
+"auto_raise_delay, samodejno dvignjeno. To ni povezano s klikanjem za dvig "
+"okna, niti z vstopom v okno z metodo povleci-spusti."
 
 #: src/org.mate.marco.gschema.xml:105
 msgid "Delay in milliseconds for the auto raise option"
@@ -819,7 +826,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
-msgstr ""
+msgstr "Način postavitve oken"
 
 #: src/org.mate.marco.gschema.xml:197
 msgid ""
@@ -935,6 +942,11 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Tipkovna bližnjica, ki zažene ustrezno oštevilčen ukaz v "
+"/apps/marco/keybinding_commands. Oblikovana je kot »<Control>a« ali "
+"»<Shift><Alt>F1«. Razčlenjevalnik je precej popustljiv in dopušča različno "
+"velikost črk ter okrajšave kot npr. »<Ctl>« in »<Ctrl>«. V kolikor je "
+"izbrana možnost »onemogočeno«, potem za to dejanje ne bo bližnjice."
 
 #: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
 #: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
@@ -980,6 +992,10 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Zapis je oblikovan kot »<Control>a« ali pa »<Shift><Alt>F1«. Razčlenjevalnik"
+" je precej popustljiv in dopušča različno velikost črk ter okrajšave kot "
+"npr. »<Ctl>« in »<Ctrl>«. V primeru, da uporabit možnost \"disabled\", potem"
+" za to dejanje ne bo tipkovne bližnjice."
 
 #: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
 #: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
@@ -996,6 +1012,12 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Zapis je oblikovan kot »<Control>a« ali pa »<Shift><Alt>F1«. Razčlenjevalnik"
+" je precej popustljiv in dopušča različno velikost črk ter okrajšave kot "
+"npr. »<Ctl>« in »<Ctrl>«. V primeru, da uporabite možnost \"disabled\", "
+"potem za to dejanje ne bo bližnjice tipk. Tipkovno bližnjico je lahko "
+"povrnete s pritiskom tipke \"shift\" zato tipka \"shift\" ne more biti del "
+"tipkovne bližnjice."
 
 #: src/org.mate.marco.gschema.xml:559
 msgid "Move backward between windows of an application, using a popup window"
@@ -1100,7 +1122,7 @@ msgstr "Razpostavi okno na južno-vzhodni (nižje desni) kot zaslona"
 
 #: src/org.mate.marco.gschema.xml:925
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Razpostavi okno na južno-zahodbni (nižje levi) kot zaslona"
 
 #: src/core/bell.c:298
 msgid "Bell event"
@@ -1804,6 +1826,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Neveljaven znak »%c« v parametru imena barve (color_name) za gtk:custom, "
+"veljavni so le nizi iz znakov A-Za-z0-9-_."
 
 #: src/ui/theme.c:1427
 #, c-format

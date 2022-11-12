@@ -4,29 +4,30 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Aleksey Kabanov <ak099@mail.ru>, 2018
-# Alexei Sorokin, 2018
-# Дмитрий Михирев, 2018
-# AlexL <loginov.alex.valer@gmail.com>, 2018
-# Evolve32 <evolve32@yandex.ru>, 2018
-# monsta <monsta@inbox.ru>, 2018
-# Ivan Kuzmenko, 2018
-# Andreï Victorovitch Kostyrka, 2018
-# Dmitry Kireev <dinimito@mail.ru>, 2018
-# theirix <theirix@gmail.com>, 2018
-# Oldboy Boyold <boyoldboyold@gmail.com>, 2018
-# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Alex Putz, 2018
-# Anna Vyalkova <cybertailor@gmail.com>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# XRevan86, 2021
+# Evolve32 <evolve32@yandex.ru>, 2021
+# monsta <monsta@inbox.ru>, 2021
+# Andreï Victorovitch Kostyrka, 2021
+# Dmitry Kireev <dinimito@mail.ru>, 2021
+# Oldboy Boyold <boyoldboyold@gmail.com>, 2021
+# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2021
+# Дмитрий Астанков <mornie@basealt.ru>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Дмитрий Михирев, 2021
+# AlexL <loginov.alex.valer@gmail.com>, 2021
+# Cyber Tailor <cyber@sysrq.in>, 2021
+# Ivan Kuzmenko, 2021
+# theirix <theirix@gmail.com>, 2021
+# Alex Puts, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2021-06-04 17:32+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Anna Vyalkova <cybertailor@gmail.com>, 2020\n"
+"PO-Revision-Date: 2021-09-18 19:58+0000\n"
+"Last-Translator: Alex Puts, 2021\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -743,7 +744,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:151
 msgid "Compositing Manager"
-msgstr "Композитный менеджер"
+msgstr "Композитный диспетчер окон"
 
 #: src/org.mate.marco.gschema.xml:152
 msgid "Determines whether Marco is a compositing manager."
@@ -1296,7 +1297,7 @@ msgstr "Отмена"
 
 #: src/core/main.c:245
 msgid "Disable connection to session manager"
-msgstr "Не соединиться с менеджером сеансов"
+msgstr "Отключить подключение к диспетчеру сеансов"
 
 #: src/core/main.c:251
 msgid "Replace the running window manager with Marco"
@@ -1304,7 +1305,7 @@ msgstr "Заменить запущенный менеджер окон на Mar
 
 #: src/core/main.c:257
 msgid "Specify session management ID"
-msgstr "Указать ID сеанса"
+msgstr "Указать идентификатор сеанса"
 
 #: src/core/main.c:262
 msgid "X Display to use"
@@ -1316,7 +1317,7 @@ msgstr "Инициализировать сеанс из сохранённог�
 
 #: src/core/main.c:274
 msgid "Print version"
-msgstr "Версия для печати"
+msgstr "Вывести версию"
 
 #: src/core/main.c:280
 msgid "Make X calls synchronous"
@@ -1744,7 +1745,7 @@ msgstr "Переместить на рабочее место _ниже"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: src/ui/menu.c:101
 msgid "_Close"
-msgstr "_Закрыть"
+msgstr "З_акрыть"
 
 #: src/ui/menu.c:198
 #, c-format
@@ -1849,7 +1850,7 @@ msgstr "Mod5"
 #: src/ui/resizepopup.c:119
 #, c-format
 msgid "%d x %d"
-msgstr "%d x %d"
+msgstr "%d × %d"
 
 #: src/ui/theme.c:366
 msgid "top"
