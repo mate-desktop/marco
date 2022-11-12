@@ -1,3 +1,16 @@
+### marco 1.26.1
+
+  * update translations
+  * replace _NET_WM_PID with XResGetClientPid
+  * Always bring into foreground the previous window after closing one
+  * window: do not disable fullscreen for dialogs
+  * theme: fix memory leak
+  * compositor-xrender: fix memory leak
+  * build: fix meson build
+  * prefs: fix memory leak
+  * fix code-formatting issue of previous commit
+  * Safeguard against calling gdk_x11_window_get_xid with a NULL GdkWindow
+
 ### marco 1.26.0
 
   * update translations
