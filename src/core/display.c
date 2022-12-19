@@ -50,6 +50,7 @@
 #include "compositor.h"
 #include <X11/Xatom.h>
 #include <X11/cursorfont.h>
+#include <X11/extensions/XRes.h>
 
 #ifdef HAVE_SOLARIS_XINERAMA
 	#include <X11/extensions/xinerama.h>
@@ -329,7 +330,8 @@ meta_display_open (void)
   Display *xdisplay;
   GSList *screens;
   GSList *tmp;
-  int i;
+  int i, event_base, error_base, major, minor;
+  gboolean have_xres = FALSE;
   guint32 timestamp;
 
   /* A list of all atom names, so that we can intern them in one go. */
@@ -343,6 +345,7 @@ meta_display_open (void)
   meta_verbose ("Opening display '%s'\n", XDisplayName (NULL));
 
   xdisplay = meta_ui_get_display ();
+  event_base = error_base = major = minor = 0;
 
   if (xdisplay == NULL)
     {
@@ -350,7 +353,13 @@ meta_display_open (void)
 		    XDisplayName (NULL));
       return FALSE;
     }
-
+  /* Make sure to init Xres any extensions */
+  if (XResQueryExtension(xdisplay, &event_base, &error_base) &&
+      XResQueryVersion (xdisplay, &major, &minor) == 1)
+    {
+      if (major > 1 || (major == 1 && minor >= 2))
+          have_xres = TRUE;
+    }
   if (meta_is_syncing ())
     XSynchronize (xdisplay, True);
 
@@ -365,6 +374,7 @@ meta_display_open (void)
    */
   the_display->name = g_strdup (XDisplayName (NULL));
   the_display->xdisplay = xdisplay;
+  the_display->have_xres = have_xres;
   the_display->error_trap_synced_at_last_pop = TRUE;
   the_display->error_traps = 0;
   the_display->error_trap_handler = NULL;
