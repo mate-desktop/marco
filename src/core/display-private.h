@@ -80,6 +80,7 @@ typedef enum {
 struct _MetaDisplay {
 	char* name;
 	Display* xdisplay;
+	gboolean have_xres; /* Got XRES >= 1.2 */
 
 	Window leader_window;
 	Window timestamp_pinging_window;
