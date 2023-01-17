@@ -992,11 +992,6 @@ meta_ui_window_is_widget (MetaUI *ui,
 
 /* stock icon code Copyright (C) 2002 Jorn Baayen <jorn@nl.linux.org> */
 
-typedef struct {
-	char* stock_id;
-	const guint8* icon_data;
-} MetaStockIcon;
-
 int meta_ui_get_drag_threshold(MetaUI* ui)
 {
 	int threshold = 8;

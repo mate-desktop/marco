@@ -198,7 +198,7 @@ reload_modmap (MetaDisplay *display)
             {
               if (syms[j] != 0)
                 {
-                  const char *str;
+                  const char *str G_GNUC_UNUSED;
 
                   str = XKeysymToString (syms[j]);
                   meta_topic (META_DEBUG_KEYBINDINGS,
@@ -1284,7 +1284,7 @@ meta_display_process_key_event (MetaDisplay *display,
   KeySym keysym;
   gboolean keep_grab;
   gboolean all_keys_grabbed;
-  const char *str;
+  const char *str G_GNUC_UNUSED;
   MetaScreen *screen;
 
   XAllowEvents (display->xdisplay,

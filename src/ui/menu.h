@@ -25,12 +25,6 @@
 #include <gtk/gtk.h>
 #include "frames.h"
 
-/* Stock icons */
-#define MARCO_STOCK_DELETE   "window-close"
-#define MARCO_STOCK_RESTORE  "view-restore"
-#define MARCO_STOCK_MINIMIZE "go-down"
-#define MARCO_STOCK_MAXIMIZE "view-fullscreen"
-
 struct _MetaWindowMenu {
 	MetaFrames* frames;
 	Window client_xwindow;

@@ -2739,7 +2739,7 @@ meta_screen_sn_event (SnMonitorEvent *event,
     {
     case SN_MONITOR_EVENT_INITIATED:
       {
-        const char *wmclass;
+        const char *wmclass G_GNUC_UNUSED;
 
         wmclass = sn_startup_sequence_get_wmclass (sequence);
 

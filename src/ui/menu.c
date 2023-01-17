@@ -40,7 +40,6 @@ typedef struct _MenuData MenuData;
 typedef enum {
 	MENU_ITEM_SEPARATOR = 0,
 	MENU_ITEM_NORMAL,
-	MENU_ITEM_IMAGE,
 	MENU_ITEM_CHECKBOX,
 	MENU_ITEM_RADIOBUTTON,
 	MENU_ITEM_WORKSPACE_LIST,
@@ -49,7 +48,6 @@ typedef enum {
 struct _MenuItem {
 	MetaMenuOp op;
 	MetaMenuItemType type;
-	const char* stock_id;
 	const gboolean checked;
 	const char* label;
 };
@@ -63,65 +61,43 @@ static void activate_cb(GtkWidget* menuitem, gpointer data);
 
 static MenuItem menuitems[] = {
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_MINIMIZE, MENU_ITEM_IMAGE, MARCO_STOCK_MINIMIZE, FALSE, N_("Mi_nimize")},
+	{META_MENU_OP_MINIMIZE, MENU_ITEM_NORMAL, FALSE, N_("Mi_nimize")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_MAXIMIZE, MENU_ITEM_IMAGE, MARCO_STOCK_MAXIMIZE, FALSE, N_("Ma_ximize")},
+	{META_MENU_OP_MAXIMIZE, MENU_ITEM_NORMAL, FALSE, N_("Ma_ximize")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_UNMAXIMIZE, MENU_ITEM_IMAGE, MARCO_STOCK_RESTORE, FALSE, N_("Unma_ximize")},
+	{META_MENU_OP_UNMAXIMIZE, MENU_ITEM_NORMAL, FALSE, N_("Unma_ximize")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_SHADE, MENU_ITEM_NORMAL, NULL, FALSE, N_("Roll _Up")},
+	{META_MENU_OP_SHADE, MENU_ITEM_NORMAL, FALSE, N_("Roll _Up")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_UNSHADE, MENU_ITEM_NORMAL, NULL, FALSE, N_("_Unroll")},
+	{META_MENU_OP_UNSHADE, MENU_ITEM_NORMAL, FALSE, N_("_Unroll")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_MOVE, MENU_ITEM_NORMAL, NULL, FALSE, N_("_Move") },
+	{META_MENU_OP_MOVE, MENU_ITEM_NORMAL, FALSE, N_("_Move") },
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_RESIZE, MENU_ITEM_NORMAL, NULL, FALSE, N_("_Resize")},
+	{META_MENU_OP_RESIZE, MENU_ITEM_NORMAL, FALSE, N_("_Resize")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_RECOVER, MENU_ITEM_NORMAL, NULL, FALSE, N_("Move Titlebar On_screen")},
-	{META_MENU_OP_WORKSPACES, MENU_ITEM_SEPARATOR, NULL, FALSE, NULL}, /* separator */
+	{META_MENU_OP_RECOVER, MENU_ITEM_NORMAL, FALSE, N_("Move Titlebar On_screen")},
+	{META_MENU_OP_WORKSPACES, MENU_ITEM_SEPARATOR, FALSE, NULL}, /* separator */
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_ABOVE, MENU_ITEM_CHECKBOX, NULL, FALSE, N_("Always on _Top")},
+	{META_MENU_OP_ABOVE, MENU_ITEM_CHECKBOX, FALSE, N_("Always on _Top")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_UNABOVE, MENU_ITEM_CHECKBOX, NULL, TRUE, N_("Always on _Top")},
+	{META_MENU_OP_UNABOVE, MENU_ITEM_CHECKBOX, TRUE, N_("Always on _Top")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_STICK, MENU_ITEM_RADIOBUTTON, NULL, FALSE, N_("_Always on Visible Workspace")},
+	{META_MENU_OP_STICK, MENU_ITEM_RADIOBUTTON, FALSE, N_("_Always on Visible Workspace")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_UNSTICK, MENU_ITEM_RADIOBUTTON, NULL, FALSE,  N_("_Only on This Workspace")},
+	{META_MENU_OP_UNSTICK, MENU_ITEM_RADIOBUTTON, FALSE,  N_("_Only on This Workspace")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_MOVE_LEFT, MENU_ITEM_NORMAL, NULL, FALSE, N_("Move to Workspace _Left")},
+	{META_MENU_OP_MOVE_LEFT, MENU_ITEM_NORMAL, FALSE, N_("Move to Workspace _Left")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_MOVE_RIGHT, MENU_ITEM_NORMAL, NULL, FALSE, N_("Move to Workspace R_ight")},
+	{META_MENU_OP_MOVE_RIGHT, MENU_ITEM_NORMAL, FALSE, N_("Move to Workspace R_ight")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_MOVE_UP, MENU_ITEM_NORMAL, NULL, FALSE, N_("Move to Workspace _Up")},
+	{META_MENU_OP_MOVE_UP, MENU_ITEM_NORMAL, FALSE, N_("Move to Workspace _Up")},
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_MOVE_DOWN, MENU_ITEM_NORMAL, NULL, FALSE, N_("Move to Workspace _Down")},
-	{0, MENU_ITEM_WORKSPACE_LIST, NULL, FALSE, NULL},
-	{0, MENU_ITEM_SEPARATOR, NULL, FALSE, NULL}, /* separator */
+	{META_MENU_OP_MOVE_DOWN, MENU_ITEM_NORMAL, FALSE, N_("Move to Workspace _Down")},
+	{0, MENU_ITEM_WORKSPACE_LIST, FALSE, NULL},
+	{0, MENU_ITEM_SEPARATOR, FALSE, NULL}, /* separator */
 	/* Translators: Translate this string the same way as you do in libwnck! */
-	{META_MENU_OP_DELETE, MENU_ITEM_IMAGE, MARCO_STOCK_DELETE, FALSE, N_("_Close")}
+	{META_MENU_OP_DELETE, MENU_ITEM_NORMAL, FALSE, N_("_Close")}
 };
-
-static void popup_position_func(GtkMenu* menu, gint* x, gint* y, gboolean* push_in, gpointer user_data)
-{
-	GtkRequisition req;
-	GdkPoint* pos;
-
-	pos = user_data;
-
-	gtk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
-
-	*x = pos->x;
-	*y = pos->y;
-
-	if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
-	{
-		*x = MAX (0, *x - req.width);
-	}
-
-	/* Ensure onscreen */
-	*x = CLAMP (*x, 0, MAX(0, WidthOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())) - req.width));
-	*y = CLAMP (*y, 0, MAX(0, HeightOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())) - req.height));
-}
 
 static void menu_closed(GtkMenu* widget, gpointer data)
 {
@@ -267,15 +243,6 @@ static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 	{
 		mi = gtk_menu_item_new ();
 	}
-	else if (menuitem->type == MENU_ITEM_IMAGE)
-	{
-		GtkWidget* image = gtk_image_new_from_icon_name(menuitem->stock_id, GTK_ICON_SIZE_MENU);
-
-		mi = gtk_image_menu_item_new();
-
-		gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(mi), image);
-		gtk_widget_show(image);
-	}
 	else if (menuitem->type == MENU_ITEM_CHECKBOX)
 	{
 		mi = gtk_check_menu_item_new ();
@@ -382,7 +349,7 @@ meta_window_menu_new   (MetaFrames         *frames,
 
                   MenuItem to_another_workspace = {
                     0, MENU_ITEM_NORMAL,
-                    NULL, FALSE,
+                    FALSE,
                     N_("Move to Another _Workspace")
                   };
 
@@ -489,8 +456,43 @@ meta_window_menu_new   (MetaFrames         *frames,
   return menu;
 }
 
+static GdkEvent *
+menu_popup_event (gint root_x, gint root_y, guint button, guint32 timestamp,
+                  GdkWindow *window)
+{
+    GdkEvent  *event;
+    GdkSeat   *seat;
+    GdkDevice *device;
+
+    event = gtk_get_current_event ();
+
+    if (event != NULL)
+        event = gdk_event_copy (event);
+    else
+    {
+        /* Create fake event since menu can be show without any events */
+
+        seat = gdk_display_get_default_seat (gdk_window_get_display (window));
+        device = gdk_seat_get_pointer (seat);
+
+        event = gdk_event_new (GDK_BUTTON_PRESS);
+        event->button.window = g_object_ref (window);
+        event->button.time = timestamp;
+        event->button.x = event->button.x_root = root_x;
+        event->button.y = event->button.y_root = root_y;
+        event->button.button = button;
+        event->button.device = device;
+        gdk_event_set_device (event, device);
+    }
+
+    return event;
+}
+
 void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int button, guint32 timestamp)
 {
+	GdkWindow   *window;
+	GdkEvent    *event;
+	GdkRectangle rect;
 	GdkPoint* pt = g_new(GdkPoint, 1);
 	gint scale;
 
@@ -500,7 +502,15 @@ void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int bu
 	pt->x = root_x / scale;
 	pt->y = root_y / scale;
 
-	gtk_menu_popup(GTK_MENU (menu->menu), NULL, NULL, popup_position_func, pt, button, timestamp);
+	window = gdk_screen_get_root_window (gdk_screen_get_default ());
+	rect.x = root_x;
+	rect.y = root_y;
+	rect.width = 1;
+	rect.height = 1;
+	event = menu_popup_event (root_x, root_y, button, timestamp, window);
+	gtk_menu_popup_at_rect (GTK_MENU (menu->menu), window, &rect,
+                          GDK_GRAVITY_SOUTH_WEST, GDK_GRAVITY_SOUTH_WEST, event);
+	gdk_event_free (event);
 
     if (!gtk_widget_get_visible (menu->menu))
       meta_warning("GtkMenu failed to grab the pointer\n");
