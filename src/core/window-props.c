@@ -489,7 +489,7 @@ set_title_text (MetaWindow  *window,
 
   g_free (*target);
 
-  if (!title)
+  if (!title || g_utf8_strlen (title, 2) < 1)
     *target = g_strdup ("");
   else if (g_utf8_strlen (title, MAX_TITLE_LENGTH + 1) > MAX_TITLE_LENGTH)
     {
