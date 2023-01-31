@@ -1,6 +1,6 @@
 option('verbose-mode',
-  type: 'boolean', value: false,
-  description: 'verbose logging, for embedded/size-sensitive custom builds')
+  type: 'boolean', value: true,
+  description: 'verbose logging, disable for embedded/size-sensitive custom builds')
 
 option('sm',
   type: 'boolean', value: true,
