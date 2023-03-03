@@ -31,7 +31,7 @@
 
 /* The icon-reading code is also in libwnck, please sync bugfixes */
 
-static void
+static gboolean
 get_fallback_icons (MetaScreen     *screen,
                     GdkPixbuf     **iconp,
                     int             ideal_width,
@@ -45,6 +45,11 @@ get_fallback_icons (MetaScreen     *screen,
    */
   *iconp = meta_ui_get_default_window_icon (screen->ui);
   *mini_iconp = meta_ui_get_default_mini_icon (screen->ui);
+
+  if (*iconp && *mini_iconp)
+    return TRUE;
+
+  return FALSE;
 }
 
 static gboolean
@@ -524,6 +529,7 @@ meta_icon_cache_init (MetaIconCache *icon_cache)
   icon_cache->wm_hints_dirty = TRUE;
   icon_cache->kwm_win_icon_dirty = TRUE;
   icon_cache->net_wm_icon_dirty = TRUE;
+  icon_cache->g_desktop_app_icon_dirty = TRUE;
 
   icon_cache->wm_hints_dirty_forced = FALSE;
   icon_cache->kwm_win_icon_dirty_forced = FALSE;
@@ -551,6 +557,7 @@ clear_icon_cache (MetaIconCache *icon_cache,
       icon_cache->wm_hints_dirty = TRUE;
       icon_cache->kwm_win_icon_dirty = TRUE;
       icon_cache->net_wm_icon_dirty = TRUE;
+      icon_cache->g_desktop_app_icon_dirty = TRUE;
     }
 }
 
@@ -566,6 +573,7 @@ meta_icon_cache_invalidate (MetaIconCache *icon_cache)
   icon_cache->wm_hints_dirty = TRUE;
   icon_cache->kwm_win_icon_dirty = TRUE;
   icon_cache->net_wm_icon_dirty = TRUE;
+  icon_cache->g_desktop_app_icon_dirty = TRUE;
 
   icon_cache->wm_hints_dirty_forced = TRUE;
   icon_cache->kwm_win_icon_dirty_forced = TRUE;
@@ -593,6 +601,9 @@ meta_icon_cache_get_icon_invalidated (MetaIconCache *icon_cache)
     return TRUE;
   else if (icon_cache->origin <= USING_WM_HINTS &&
            icon_cache->wm_hints_dirty)
+    return TRUE;
+  else if (icon_cache->origin <= USING_G_DESKTOP_APP &&
+           icon_cache->g_desktop_app_icon_dirty)
     return TRUE;
   else if (icon_cache->origin <= USING_NET_WM_ICON &&
            icon_cache->net_wm_icon_dirty)
@@ -743,6 +754,31 @@ meta_read_icons (MetaScreen     *screen,
    * we haven't done that since the last change.
    */
 
+  if (icon_cache->origin <= USING_G_DESKTOP_APP &&
+      icon_cache->g_desktop_app_icon_dirty &&
+      res_name != NULL)
+    {
+      icon_cache->g_desktop_app_icon_dirty = FALSE;
+
+      *iconp = meta_ui_get_window_icon_from_name (screen->ui, res_name);
+      *mini_iconp = meta_ui_get_mini_icon_from_name (screen->ui, res_name);
+
+      if (*iconp && *mini_iconp)
+        {
+          replace_cache (icon_cache, USING_G_DESKTOP_APP,
+                         *iconp, *mini_iconp);
+
+          return TRUE;
+        }
+      else
+        {
+          if (*iconp)
+            g_object_unref (G_OBJECT (*iconp));
+          if (*mini_iconp)
+            g_object_unref (G_OBJECT (*mini_iconp));
+        }
+    }
+
   if (icon_cache->origin <= USING_NET_WM_ICON &&
       icon_cache->net_wm_icon_dirty)
 
@@ -849,25 +885,19 @@ meta_read_icons (MetaScreen     *screen,
     {
       icon_cache->fallback_icon_dirty_forced = FALSE;
 
-      if (res_name != NULL)
+      if (get_fallback_icons (screen,
+                              iconp,
+                              ideal_width,
+                              ideal_height,
+                              mini_iconp,
+                              ideal_mini_width,
+                              ideal_mini_height))
         {
-          *iconp = meta_ui_get_window_icon_from_name (screen->ui, res_name);
-          *mini_iconp = meta_ui_get_mini_icon_from_name (screen->ui, res_name);
+          replace_cache (icon_cache, USING_FALLBACK_ICON,
+                         *iconp, *mini_iconp);
+
+          return TRUE;
         }
-
-      if (*iconp == NULL || *mini_iconp == NULL)
-        get_fallback_icons (screen,
-                            iconp,
-                            ideal_width,
-                            ideal_height,
-                            mini_iconp,
-                            ideal_mini_width,
-                            ideal_mini_height);
-
-      replace_cache (icon_cache, USING_FALLBACK_ICON,
-                     *iconp, *mini_iconp);
-
-      return TRUE;
     }
 
   if (!icon_cache->want_fallback &&

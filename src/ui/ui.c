@@ -654,17 +654,15 @@ load_window_icon_from_name (char *name, int size, int scale)
   GtkIconTheme *theme = gtk_icon_theme_get_default ();
   GdkPixbuf *pixbuf = NULL;
 
-  /* If the res_name window property maps to an icon, use that */
-  pixbuf = gtk_icon_theme_load_icon_for_scale (theme, name, size, scale, GTK_ICON_LOOKUP_FORCE_SIZE, NULL);
-  if (pixbuf != NULL)
-    return pixbuf;
-
   char ***results;
   gchar *desktop_id = NULL;
   gint i, j;
   GDesktopAppInfo *info;
   GIcon *gicon;
   GtkIconInfo *icon_info;
+
+  /* Generate a desktop ID suffix from the window name (e.g. foo.desktop) to compare against the found desktop ID. */
+  gchar *suffix = g_strconcat(g_ascii_strdown(name, -1), ".desktop", NULL);
 
   /* Find a proper desktop file based on the window property name */
   results = g_desktop_app_info_search (name);
@@ -674,12 +672,14 @@ load_window_icon_from_name (char *name, int size, int scale)
       for (j = 0; results[i][j]; j++)
         {
           /* We are only interested in the top ranking result, so we use that and free up the rest */
-          if (desktop_id == NULL)
+          /* If we get a result that contains the generated suffix (e.g. org.gnome.foo.desktop) we consider it a better match. */
+          if ((desktop_id == NULL && g_str_match_string(name, results[i][j], FALSE)) || g_str_has_suffix(g_ascii_strdown(results[i][j], -1), suffix))
             desktop_id = g_strdup(results[i][j]);
         }
       g_strfreev (results[i]);
     }
   g_free (results);
+  g_free (suffix);
 
   if (desktop_id == NULL)
     return NULL;

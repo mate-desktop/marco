@@ -38,7 +38,8 @@ typedef enum
   USING_FALLBACK_ICON,
   USING_KWM_WIN_ICON,
   USING_WM_HINTS,
-  USING_NET_WM_ICON
+  USING_NET_WM_ICON,
+  USING_G_DESKTOP_APP
 } IconOrigin;
 
 struct _MetaIconCache
@@ -51,6 +52,7 @@ struct _MetaIconCache
   guint wm_hints_dirty : 1;
   guint kwm_win_icon_dirty : 1;
   guint net_wm_icon_dirty : 1;
+  guint g_desktop_app_icon_dirty : 1;
 
   guint wm_hints_dirty_forced : 1;
   guint kwm_win_icon_dirty_forced : 1;
