@@ -650,43 +650,26 @@ meta_ui_get_default_mini_icon (MetaUI *ui)
 }
 
 static GdkPixbuf *
-load_window_icon_from_name (char *name, int size, int scale)
+load_window_icon_from_app (char *app_id, int size, int scale)
 {
   GtkIconTheme *theme = gtk_icon_theme_get_default ();
   GdkPixbuf *pixbuf = NULL;
 
-  /* If the res_name window property maps to an icon, use that */
-  pixbuf = gtk_icon_theme_load_icon_for_scale (theme, name, size, scale, GTK_ICON_LOOKUP_FORCE_SIZE, NULL);
-  if (pixbuf != NULL)
-    return pixbuf;
-
-  char ***results;
-  gchar *desktop_id = NULL;
-  gint i, j;
   GDesktopAppInfo *info;
   GIcon *gicon;
   GtkIconInfo *icon_info;
 
-  /* Find a proper desktop file based on the window property name */
-  results = g_desktop_app_info_search (name);
-
-  for (i = 0; results[i]; i++)
-    {
-      for (j = 0; results[i][j]; j++)
-        {
-          /* We are only interested in the top ranking result, so we use that and free up the rest */
-          if (desktop_id == NULL)
-            desktop_id = g_strdup(results[i][j]);
-        }
-      g_strfreev (results[i]);
-    }
-  g_free (results);
+  /* Generate a desktop ID the GTK Application ID name (e.g. org.mate.Caja.desktop). */
+  gchar *desktop_id = g_strconcat(app_id, ".desktop", NULL);
 
   if (desktop_id == NULL)
     return NULL;
 
   /* Now that we have the desktop file ID, we extract the icon from it and render it */
   info = g_desktop_app_info_new (desktop_id);
+  g_free(desktop_id);
+  if (info == NULL)
+    return NULL;
   gicon = g_app_info_get_icon (G_APP_INFO (info));
   icon_info = gtk_icon_theme_lookup_by_gicon_for_scale (theme, gicon, size, scale, GTK_ICON_LOOKUP_FORCE_SIZE);
   if (icon_info)
@@ -695,13 +678,11 @@ load_window_icon_from_name (char *name, int size, int scale)
       g_object_unref (icon_info);
     }
 
-  g_free (desktop_id);
-
   return pixbuf;
 }
 
 GdkPixbuf*
-meta_ui_get_window_icon_from_name (MetaUI *ui, char *name)
+meta_ui_get_window_icon_from_app (MetaUI *ui, char *name)
 {
   int scale;
   int size;
@@ -709,11 +690,11 @@ meta_ui_get_window_icon_from_name (MetaUI *ui, char *name)
   scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
   size = meta_prefs_get_icon_size() / scale;
 
-  return load_window_icon_from_name (name, size, scale);
+  return load_window_icon_from_app (name, size, scale);
 }
 
 GdkPixbuf*
-meta_ui_get_mini_icon_from_name (MetaUI *ui, char *name)
+meta_ui_get_mini_icon_from_app (MetaUI *ui, char *name)
 {
   int scale;
   int size;
@@ -721,7 +702,7 @@ meta_ui_get_mini_icon_from_name (MetaUI *ui, char *name)
   scale = gtk_widget_get_scale_factor (GTK_WIDGET (ui->frames));
   size = META_MINI_ICON_WIDTH / scale;
 
-  return load_window_icon_from_name (name, size, scale);
+  return load_window_icon_from_app (name, size, scale);
 }
 
 gboolean
