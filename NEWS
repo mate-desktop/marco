@@ -1,3 +1,12 @@
+### marco 1.26.2
+
+  * update translations
+  * Show correct window title when owned by superuser. Issue #749
+  * Test if XResQueryClientIds() is available before using it.
+  * Needed for X2Go as it does not have XRES 1.2 extension.
+  * Test Xres 1.2 is present
+  * test return value from XResQueryClientIds()
+
 ### marco 1.26.1
 
   * update translations
