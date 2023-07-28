@@ -152,6 +152,7 @@ meta_window_ensure_frame (MetaWindow *window)
 
   /* Shape mask */
   meta_ui_apply_frame_shape (frame->window->screen->ui,
+                             frame->window->display,
                              frame->xwindow,
                              frame->rect.width,
                              frame->rect.height,
@@ -325,6 +326,7 @@ update_shape (MetaFrame *frame)
   if (frame->need_reapply_frame_shape)
     {
       meta_ui_apply_frame_shape (frame->window->screen->ui,
+                                 frame->window->display,
                                  frame->xwindow,
                                  frame->rect.width,
                                  frame->rect.height,

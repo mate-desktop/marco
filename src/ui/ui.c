@@ -458,13 +458,14 @@ meta_ui_repaint_frame (MetaUI *ui,
 }
 
 void
-meta_ui_apply_frame_shape  (MetaUI  *ui,
-                            Window   xwindow,
-                            int      new_window_width,
-                            int      new_window_height,
-                            gboolean window_has_shape)
+meta_ui_apply_frame_shape  (MetaUI      *ui,
+                            MetaDisplay *display,
+                            Window       xwindow,
+                            int          new_window_width,
+                            int          new_window_height,
+                            gboolean     window_has_shape)
 {
-  meta_frames_apply_shapes (ui->frames, xwindow,
+  meta_frames_apply_shapes (ui->frames, display, xwindow,
                             new_window_width, new_window_height,
                             window_has_shape);
 }

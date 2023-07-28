@@ -26,6 +26,7 @@
 
 /* Don't include gtk.h or gdk.h here */
 #include "common.h"
+#include "types.h"
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <glib.h>
@@ -91,11 +92,12 @@ void meta_ui_map_frame   (MetaUI *ui,
 void meta_ui_unmap_frame (MetaUI *ui,
                           Window  xwindow);
 
-void meta_ui_apply_frame_shape  (MetaUI  *ui,
-                                 Window   xwindow,
-                                 int      new_window_width,
-                                 int      new_window_height,
-                                 gboolean window_has_shape);
+void meta_ui_apply_frame_shape  (MetaUI      *ui,
+                                 MetaDisplay *display,
+                                 Window       xwindow,
+                                 int          new_window_width,
+                                 int          new_window_height,
+                                 gboolean     window_has_shape);
 
 cairo_region_t *meta_ui_get_frame_bounds (MetaUI *ui,
                                           Window  xwindow,
