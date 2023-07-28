@@ -28,6 +28,7 @@
 /* Don't include gtk.h or gdk.h here */
 #include "common.h"
 #include "boxes.h"
+#include "types.h"
 #include <X11/Xlib.h>
 #include <glib.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
@@ -58,6 +59,7 @@ struct _MetaTabEntry
 };
 
 MetaTabPopup*   meta_ui_tab_popup_new          (const MetaTabEntry *entries,
+                                                MetaScreen         *meta_screen,
                                                 int                 entry_count,
                                                 int                 width,
                                                 gboolean            expand_for_titles,

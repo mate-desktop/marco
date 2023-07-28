@@ -30,6 +30,7 @@
 #include "tabpopup.h"
 #include "theme.h"
 #include "prefs.h"
+#include "screen.h"
 /* FIXME these two includes are 100% broken... */
 #include "../core/workspace.h"
 #include "../core/frame-private.h"
@@ -235,6 +236,7 @@ tab_entry_new (const MetaTabEntry *entry,
 
 MetaTabPopup*
 meta_ui_tab_popup_new (const MetaTabEntry *entries,
+                       MetaScreen         *meta_screen,
                        int                 entry_count,
                        int                 width,
                        gboolean            expand_for_titles,
@@ -285,7 +287,8 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   gtk_window_set_resizable (GTK_WINDOW (popup->window), TRUE);
 
   /* This style should only be set for composited mode. */
-  if (meta_prefs_get_compositing_manager ())
+  if (meta_prefs_get_compositing_manager () && meta_screen &&
+      !!(meta_display_get_compositor (meta_screen_get_display (meta_screen))))
     {
       frame_shadow = GTK_SHADOW_NONE;
       gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (popup->window)),
@@ -1117,13 +1120,15 @@ meta_select_workspace_draw (GtkWidget *widget,
     {
       GtkStyleContext *context;
       GdkRGBA color;
+      MetaScreen *screen = META_SELECT_WORKSPACE (widget)->workspace->screen;
 
       context = gtk_widget_get_style_context (widget);
 
       gtk_style_context_set_state (context,
                                    gtk_widget_get_state_flags (widget));
 
-      if (meta_prefs_get_compositing_manager ())
+      if (meta_prefs_get_compositing_manager () && screen &&
+          !!(meta_display_get_compositor (meta_screen_get_display (screen))))
         {
           /* compositing manager creates a dark background: show the selection in a light color */
           meta_gtk_style_get_light_color (context, GTK_STATE_FLAG_SELECTED, &color);
