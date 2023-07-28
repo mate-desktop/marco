@@ -28,6 +28,7 @@
 #include <gdk/gdkx.h>
 #include "common.h"
 #include "theme.h"
+#include "types.h"
 
 typedef enum
 {
@@ -135,11 +136,12 @@ void meta_frames_get_borders (MetaFrames       *frames,
                               Window            xwindow,
                               MetaFrameBorders *borders);
 
-void meta_frames_apply_shapes (MetaFrames *frames,
-                               Window      xwindow,
-                               int         new_window_width,
-                               int         new_window_height,
-                               gboolean    window_has_shape);
+void meta_frames_apply_shapes (MetaFrames  *frames,
+                               MetaDisplay *meta_display,
+                               Window       xwindow,
+                               int          new_window_width,
+                               int          new_window_height,
+                               gboolean     window_has_shape);
 cairo_region_t *meta_frames_get_frame_bounds (MetaFrames *frames,
                                               Window      xwindow,
                                               int         window_width,
