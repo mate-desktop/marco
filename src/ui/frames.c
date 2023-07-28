@@ -37,6 +37,7 @@
 #include "theme.h"
 #include "prefs.h"
 #include "ui.h"
+#include "display.h"
 
 #ifdef HAVE_SHAPE
 #include <X11/extensions/shape.h>
@@ -1063,11 +1064,12 @@ get_frame_region (int window_width,
 #endif /* HAVE_SHAPE */
 
 void
-meta_frames_apply_shapes (MetaFrames *frames,
-                          Window      xwindow,
-                          int         new_window_width,
-                          int         new_window_height,
-                          gboolean    window_has_shape)
+meta_frames_apply_shapes (MetaFrames  *frames,
+                          MetaDisplay *meta_display,
+                          Window       xwindow,
+                          int          new_window_width,
+                          int          new_window_height,
+                          gboolean     window_has_shape)
 {
 #ifdef HAVE_SHAPE
   /* Apply shapes as if window had new_window_width, new_window_height */
@@ -1095,7 +1097,9 @@ meta_frames_apply_shapes (MetaFrames *frames,
 
   meta_frames_calc_geometry (frames, frame, &fgeom);
 
-  compositing_manager = meta_prefs_get_compositing_manager ();
+  compositing_manager = meta_prefs_get_compositing_manager () &&
+                        meta_display &&
+                        !!(meta_display_get_compositor (meta_display));
 
   if (!window_has_shape && compositing_manager)
     return;
