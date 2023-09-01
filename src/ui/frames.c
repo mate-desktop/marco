@@ -1306,11 +1306,6 @@ meta_frames_repaint_frame (MetaFrames *frames,
   frame = meta_frames_lookup_window (frames, xwindow);
 
   g_assert (frame);
-
-  /* repaint everything, so the other frame don't
-   * lag behind if they are exposed
-   */
-  gdk_window_process_all_updates ();
 }
 
 static void
@@ -2970,7 +2965,6 @@ meta_frames_push_delay_exposes (MetaFrames *frames)
   if (frames->expose_delay_count == 0)
     {
       /* Make sure we've repainted things */
-      gdk_window_process_all_updates ();
       XFlush (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
     }
 
