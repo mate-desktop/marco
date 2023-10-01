@@ -60,7 +60,7 @@ AC_C_BIGENDIAN
 GIO_MIN_VERSION=2.25.10
 GTK_MIN_VERSION=3.22.0
 
-MARCO_PC_MODULES="gtk+-3.0 >= $GTK_MIN_VERSION gio-2.0 >= $GIO_MIN_VERSION pango >= 1.2.0 libcanberra-gtk3"
+MARCO_PC_MODULES="gtk+-3.0 >= $GTK_MIN_VERSION gio-2.0 >= $GIO_MIN_VERSION pango >= 1.2.0 libcanberra-gtk3 mate-desktop-2.0 >= 1.27.1"
 
 GLIB_GSETTINGS
 
