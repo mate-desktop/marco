@@ -24,6 +24,8 @@
 #include <config.h>
 #include <glib/gi18n-lib.h>
 
+#include <libmate-desktop/mate-image-menu-item.h>
+
 #include <gdk/gdkx.h>
 #include <stdio.h>
 #include <string.h>
@@ -271,9 +273,9 @@ static GtkWidget* menu_item_new(MenuItem* menuitem, int workspace_id)
 	{
 		GtkWidget* image = gtk_image_new_from_icon_name(menuitem->stock_id, GTK_ICON_SIZE_MENU);
 
-		mi = gtk_image_menu_item_new();
+		mi = mate_image_menu_item_new();
 
-		gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(mi), image);
+		mate_image_menu_item_set_image(MATE_IMAGE_MENU_ITEM(mi), image);
 		gtk_widget_show(image);
 	}
 	else if (menuitem->type == MENU_ITEM_CHECKBOX)
