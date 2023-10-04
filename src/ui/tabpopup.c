@@ -234,6 +234,13 @@ tab_entry_new (const MetaTabEntry *entry,
   return te;
 }
 
+static gboolean
+screen_use_osd_style (MetaScreen *screen)
+{
+  return (meta_prefs_get_compositing_manager () && screen &&
+          !!(meta_display_get_compositor (meta_screen_get_display (screen))));
+}
+
 MetaTabPopup*
 meta_ui_tab_popup_new (const MetaTabEntry *entries,
                        MetaScreen         *meta_screen,
@@ -287,8 +294,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   gtk_window_set_resizable (GTK_WINDOW (popup->window), TRUE);
 
   /* This style should only be set for composited mode. */
-  if (meta_prefs_get_compositing_manager () && meta_screen &&
-      !!(meta_display_get_compositor (meta_screen_get_display (meta_screen))))
+  if (screen_use_osd_style (meta_screen))
     {
       frame_shadow = GTK_SHADOW_NONE;
       gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (popup->window)),
@@ -872,9 +878,12 @@ meta_select_image_draw (GtkWidget *widget,
 
   if (META_SELECT_IMAGE (widget)->selected)
     {
+      MetaScreen *screen;
       GtkRequisition requisition;
       GdkRGBA color;
       int x, y, w, h;
+
+      screen = meta_screen_for_x_screen (GDK_SCREEN_XSCREEN (gtk_widget_get_screen (widget)));
 
       gtk_widget_get_preferred_size (widget, &requisition, 0);
 
@@ -885,7 +894,10 @@ meta_select_image_draw (GtkWidget *widget,
       h = requisition.height - OUTSIDE_SELECT_RECT * 2;
 
       gtk_style_context_set_state (context, GTK_STATE_FLAG_SELECTED);
-      meta_gtk_style_get_light_color (context, GTK_STATE_FLAG_SELECTED, &color);
+      if (screen_use_osd_style (screen))
+        meta_gtk_style_get_light_color (context, GTK_STATE_FLAG_SELECTED, &color);
+      else
+        meta_gtk_style_get_dark_color (context, GTK_STATE_FLAG_SELECTED, &color);
 
       /* We set the line width absurdly high to overflow it behind the icon. */
       cairo_set_line_width (cr, 256.0);
@@ -1127,8 +1139,7 @@ meta_select_workspace_draw (GtkWidget *widget,
       gtk_style_context_set_state (context,
                                    gtk_widget_get_state_flags (widget));
 
-      if (meta_prefs_get_compositing_manager () && screen &&
-          !!(meta_display_get_compositor (meta_screen_get_display (screen))))
+      if (screen_use_osd_style (screen))
         {
           /* compositing manager creates a dark background: show the selection in a light color */
           meta_gtk_style_get_light_color (context, GTK_STATE_FLAG_SELECTED, &color);
