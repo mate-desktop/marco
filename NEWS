@@ -1,6 +1,24 @@
+### marco 1.27.1
+
+  * update translations
+  * tabpopup: Use more contrasting background when not composited
+  * Allow applications to raise windows when raise_on_click is off.
+  * replace deprecated gtk_image_menu_item
+  * ui/tabpopup: likewise only enable compositing code if available.
+  * ui/frames: check that compositing is not only requested, but also available.
+  * Fix losing title of windows with a 3 or 4 bytes first character
+  * meson: Enable verbose mode support by default in line with Autoconf
+  * Revert "build: by default disable also the verbose mode for autoconf"
+  * configure.ac: The macro 'AC_HELP_STRING' is obsolete
+  * Show correct window title when owned by superuser. Issue #749
+  * Add setting to raise windows on alt+tab popup
+  * Test if XResQueryClientIds() is available before using it.
+  * Test Xres 1.2 is present
+  * test return value from XResQueryClientIds()
+
 ### marco 1.27.0
 
-  * tx: sync with transifex
+  * update translations
   * replace _NET_WM_PID with XResGetClientPid (#741)
   * Always bring into foreground the previous window after closing one
   * tx: update resource
