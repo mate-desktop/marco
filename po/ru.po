@@ -19,15 +19,16 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Alex Puts, 2018
 # Cyber Tailor <cyber@sysrq.in>, 2020
+# Sergej A. <Ser82-png@yandex.ru>, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: marco 1.26.0\n"
+"Project-Id-Version: marco 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
-"POT-Creation-Date: 2022-10-29 15:34+0200\n"
+"POT-Creation-Date: 2023-09-01 20:14+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Cyber Tailor <cyber@sysrq.in>, 2020\n"
-"Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
+"Last-Translator: Sergej A. <Ser82-png@yandex.ru>, 2024\n"
+"Language-Team: Russian (https://app.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,23 +43,23 @@ msgstr "Рабочий стол"
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
 msgstr "Показать диалоговое окно панели &quot;Выполнить программу&quot;"
 
-#: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:629
+#: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:634
 msgid "Show the panel's main menu"
 msgstr "Вызвать главное меню панели"
 
-#: src/50-marco-desktop-key.xml.in:8 src/org.mate.marco.gschema.xml:639
+#: src/50-marco-desktop-key.xml.in:8 src/org.mate.marco.gschema.xml:644
 msgid "Take a screenshot"
 msgstr "Получить снимок экрана"
 
-#: src/50-marco-desktop-key.xml.in:10 src/org.mate.marco.gschema.xml:644
+#: src/50-marco-desktop-key.xml.in:10 src/org.mate.marco.gschema.xml:649
 msgid "Take a screenshot of a window"
 msgstr "Получить снимок окна"
 
-#: src/50-marco-desktop-key.xml.in:12 src/org.mate.marco.gschema.xml:649
+#: src/50-marco-desktop-key.xml.in:12 src/org.mate.marco.gschema.xml:654
 msgid "Run a terminal"
 msgstr "Открыть терминал"
 
-#: src/50-marco-desktop-key.xml.in:14 src/org.mate.marco.gschema.xml:654
+#: src/50-marco-desktop-key.xml.in:14 src/org.mate.marco.gschema.xml:659
 msgid "Rename current workspace"
 msgstr "Переименовать текущее рабочее место"
 
@@ -66,173 +67,173 @@ msgstr "Переименовать текущее рабочее место"
 msgid "Window Management"
 msgstr "Управление окнами"
 
-#: src/50-marco-global-key.xml.in:4 src/org.mate.marco.gschema.xml:564
+#: src/50-marco-global-key.xml.in:4 src/org.mate.marco.gschema.xml:569
 msgid "Move between windows, using a popup window"
 msgstr "Переключиться между окнами через всплывающее окно"
 
-#: src/50-marco-global-key.xml.in:6 src/org.mate.marco.gschema.xml:554
+#: src/50-marco-global-key.xml.in:6 src/org.mate.marco.gschema.xml:559
 msgid "Move between windows of an application, using a popup window"
 msgstr "Переключиться между окнами приложения через всплывающее окно"
 
-#: src/50-marco-global-key.xml.in:8 src/org.mate.marco.gschema.xml:584
+#: src/50-marco-global-key.xml.in:8 src/org.mate.marco.gschema.xml:589
 msgid "Move between panels and the desktop, using a popup window"
 msgstr "Переключиться между панелями и рабочим столом через всплывающее окно"
 
-#: src/50-marco-global-key.xml.in:10 src/org.mate.marco.gschema.xml:604
+#: src/50-marco-global-key.xml.in:10 src/org.mate.marco.gschema.xml:609
 msgid "Move between windows immediately"
 msgstr "Переключиться между окнами немедленно"
 
-#: src/50-marco-global-key.xml.in:12 src/org.mate.marco.gschema.xml:594
+#: src/50-marco-global-key.xml.in:12 src/org.mate.marco.gschema.xml:599
 msgid "Move between windows of an application immediately"
 msgstr "Переключиться между окнами приложения немедленно"
 
-#: src/50-marco-global-key.xml.in:14 src/org.mate.marco.gschema.xml:614
+#: src/50-marco-global-key.xml.in:14 src/org.mate.marco.gschema.xml:619
 msgid "Move between panels and the desktop immediately"
 msgstr "Переключиться между панелями и рабочим столом немедленно"
 
-#: src/50-marco-global-key.xml.in:16 src/org.mate.marco.gschema.xml:624
+#: src/50-marco-global-key.xml.in:16 src/org.mate.marco.gschema.xml:629
 msgid "Hide all normal windows and set focus to the desktop"
 msgstr "Скрыть все обычные окна и активировать рабочий стол"
 
-#: src/50-marco-global-key.xml.in:23 src/org.mate.marco.gschema.xml:469
+#: src/50-marco-global-key.xml.in:23 src/org.mate.marco.gschema.xml:474
 msgid "Switch to workspace 1"
 msgstr "Переключиться на рабочее место 1"
 
-#: src/50-marco-global-key.xml.in:30 src/org.mate.marco.gschema.xml:474
+#: src/50-marco-global-key.xml.in:30 src/org.mate.marco.gschema.xml:479
 msgid "Switch to workspace 2"
 msgstr "Переключиться на рабочее место 2"
 
-#: src/50-marco-global-key.xml.in:37 src/org.mate.marco.gschema.xml:479
+#: src/50-marco-global-key.xml.in:37 src/org.mate.marco.gschema.xml:484
 msgid "Switch to workspace 3"
 msgstr "Переключиться на рабочее место 3"
 
-#: src/50-marco-global-key.xml.in:44 src/org.mate.marco.gschema.xml:484
+#: src/50-marco-global-key.xml.in:44 src/org.mate.marco.gschema.xml:489
 msgid "Switch to workspace 4"
 msgstr "Переключиться на рабочее место 4"
 
-#: src/50-marco-global-key.xml.in:51 src/org.mate.marco.gschema.xml:489
+#: src/50-marco-global-key.xml.in:51 src/org.mate.marco.gschema.xml:494
 msgid "Switch to workspace 5"
 msgstr "Переключиться на рабочее место 5"
 
-#: src/50-marco-global-key.xml.in:58 src/org.mate.marco.gschema.xml:494
+#: src/50-marco-global-key.xml.in:58 src/org.mate.marco.gschema.xml:499
 msgid "Switch to workspace 6"
 msgstr "Переключиться на рабочее место 6"
 
-#: src/50-marco-global-key.xml.in:65 src/org.mate.marco.gschema.xml:499
+#: src/50-marco-global-key.xml.in:65 src/org.mate.marco.gschema.xml:504
 msgid "Switch to workspace 7"
 msgstr "Переключиться на рабочее место 7"
 
-#: src/50-marco-global-key.xml.in:72 src/org.mate.marco.gschema.xml:504
+#: src/50-marco-global-key.xml.in:72 src/org.mate.marco.gschema.xml:509
 msgid "Switch to workspace 8"
 msgstr "Переключиться на рабочее место 8"
 
-#: src/50-marco-global-key.xml.in:79 src/org.mate.marco.gschema.xml:509
+#: src/50-marco-global-key.xml.in:79 src/org.mate.marco.gschema.xml:514
 msgid "Switch to workspace 9"
 msgstr "Переключиться на рабочее место 9"
 
-#: src/50-marco-global-key.xml.in:86 src/org.mate.marco.gschema.xml:514
+#: src/50-marco-global-key.xml.in:86 src/org.mate.marco.gschema.xml:519
 msgid "Switch to workspace 10"
 msgstr "Переключиться на рабочее место 10"
 
-#: src/50-marco-global-key.xml.in:93 src/org.mate.marco.gschema.xml:519
+#: src/50-marco-global-key.xml.in:93 src/org.mate.marco.gschema.xml:524
 msgid "Switch to workspace 11"
 msgstr "Переключиться на рабочее место 11"
 
-#: src/50-marco-global-key.xml.in:100 src/org.mate.marco.gschema.xml:524
+#: src/50-marco-global-key.xml.in:100 src/org.mate.marco.gschema.xml:529
 msgid "Switch to workspace 12"
 msgstr "Переключиться на рабочее место 12"
 
-#: src/50-marco-global-key.xml.in:107 src/org.mate.marco.gschema.xml:529
+#: src/50-marco-global-key.xml.in:107 src/org.mate.marco.gschema.xml:534
 msgid "Switch to workspace on the left of the current workspace"
 msgstr "Переключиться на рабочее место слева от текущего"
 
-#: src/50-marco-global-key.xml.in:114 src/org.mate.marco.gschema.xml:534
+#: src/50-marco-global-key.xml.in:114 src/org.mate.marco.gschema.xml:539
 msgid "Switch to workspace on the right of the current workspace"
 msgstr "Переключиться на рабочее место справа от текущего"
 
-#: src/50-marco-global-key.xml.in:121 src/org.mate.marco.gschema.xml:539
+#: src/50-marco-global-key.xml.in:121 src/org.mate.marco.gschema.xml:544
 msgid "Switch to workspace above the current workspace"
 msgstr "Переключиться на рабочее место над текущим"
 
-#: src/50-marco-global-key.xml.in:128 src/org.mate.marco.gschema.xml:544
+#: src/50-marco-global-key.xml.in:128 src/org.mate.marco.gschema.xml:549
 msgid "Switch to workspace below the current workspace"
 msgstr "Переключиться на рабочее место под текущим"
 
-#: src/50-marco-global-key.xml.in:131 src/org.mate.marco.gschema.xml:549
+#: src/50-marco-global-key.xml.in:131 src/org.mate.marco.gschema.xml:554
 msgid "Switch to previously selected workspace"
 msgstr "Переключиться на предыдущее рабочее место"
 
-#: src/50-marco-window-key.xml.in:6 src/org.mate.marco.gschema.xml:735
+#: src/50-marco-window-key.xml.in:6 src/org.mate.marco.gschema.xml:740
 msgid "Activate the window menu"
 msgstr "Активировать меню окна"
 
-#: src/50-marco-window-key.xml.in:10 src/org.mate.marco.gschema.xml:740
+#: src/50-marco-window-key.xml.in:10 src/org.mate.marco.gschema.xml:745
 msgid "Toggle fullscreen mode"
 msgstr "Переключить полноэкранный режим"
 
-#: src/50-marco-window-key.xml.in:14 src/org.mate.marco.gschema.xml:745
+#: src/50-marco-window-key.xml.in:14 src/org.mate.marco.gschema.xml:750
 msgid "Toggle maximization state"
 msgstr "Переключить состояние развёрнутости на весь экран"
 
-#: src/50-marco-window-key.xml.in:18 src/org.mate.marco.gschema.xml:755
+#: src/50-marco-window-key.xml.in:18 src/org.mate.marco.gschema.xml:760
 msgid "Maximize window"
 msgstr "Развернуть окно на весь экран"
 
-#: src/50-marco-window-key.xml.in:22 src/org.mate.marco.gschema.xml:760
+#: src/50-marco-window-key.xml.in:22 src/org.mate.marco.gschema.xml:765
 msgid "Restore window"
 msgstr "Восстановить окно"
 
-#: src/50-marco-window-key.xml.in:26 src/org.mate.marco.gschema.xml:765
+#: src/50-marco-window-key.xml.in:26 src/org.mate.marco.gschema.xml:770
 msgid "Toggle shaded state"
 msgstr "Переключить состояние скрученности в полоску"
 
-#: src/50-marco-window-key.xml.in:30 src/org.mate.marco.gschema.xml:775
+#: src/50-marco-window-key.xml.in:30 src/org.mate.marco.gschema.xml:780
 msgid "Close window"
 msgstr "Закрыть окно"
 
-#: src/50-marco-window-key.xml.in:34 src/org.mate.marco.gschema.xml:770
+#: src/50-marco-window-key.xml.in:34 src/org.mate.marco.gschema.xml:775
 msgid "Minimize window"
 msgstr "Свернуть окно"
 
-#: src/50-marco-window-key.xml.in:38 src/org.mate.marco.gschema.xml:780
+#: src/50-marco-window-key.xml.in:38 src/org.mate.marco.gschema.xml:785
 msgid "Move window"
 msgstr "Переместить окно"
 
-#: src/50-marco-window-key.xml.in:42 src/org.mate.marco.gschema.xml:785
+#: src/50-marco-window-key.xml.in:42 src/org.mate.marco.gschema.xml:790
 msgid "Resize window"
 msgstr "Изменить размер окна"
 
-#: src/50-marco-window-key.xml.in:50 src/org.mate.marco.gschema.xml:790
+#: src/50-marco-window-key.xml.in:50 src/org.mate.marco.gschema.xml:795
 msgid "Toggle whether window is on all workspaces or just one"
 msgstr "Будет ли окно помещено на всех рабочих местах или только на одном"
 
-#: src/50-marco-window-key.xml.in:54 src/org.mate.marco.gschema.xml:875
+#: src/50-marco-window-key.xml.in:54 src/org.mate.marco.gschema.xml:880
 msgid "Raise window if it's covered by another window, otherwise lower it"
 msgstr ""
 "Поднять окно на передний план, если оно заслонено другими, иначе опустить "
 "его"
 
-#: src/50-marco-window-key.xml.in:58 src/org.mate.marco.gschema.xml:880
+#: src/50-marco-window-key.xml.in:58 src/org.mate.marco.gschema.xml:885
 msgid "Raise window above other windows"
 msgstr "Поднять окно на передний план"
 
-#: src/50-marco-window-key.xml.in:62 src/org.mate.marco.gschema.xml:885
+#: src/50-marco-window-key.xml.in:62 src/org.mate.marco.gschema.xml:890
 msgid "Lower window below other windows"
 msgstr "Поместить окно под другими окнами"
 
-#: src/50-marco-window-key.xml.in:66 src/org.mate.marco.gschema.xml:890
+#: src/50-marco-window-key.xml.in:66 src/org.mate.marco.gschema.xml:895
 msgid "Maximize window vertically"
 msgstr "Развернуть окно на весь экран вертикально"
 
-#: src/50-marco-window-key.xml.in:70 src/org.mate.marco.gschema.xml:895
+#: src/50-marco-window-key.xml.in:70 src/org.mate.marco.gschema.xml:900
 msgid "Maximize window horizontally"
 msgstr "Развернуть окно на весь экран горизонтально"
 
-#: src/50-marco-window-key.xml.in:74 src/org.mate.marco.gschema.xml:900
+#: src/50-marco-window-key.xml.in:74 src/org.mate.marco.gschema.xml:905
 msgid "Tile window to east (right) side of screen"
 msgstr "Пригнать окно к восточной (правой) стороне экрана."
 
-#: src/50-marco-window-key.xml.in:78 src/org.mate.marco.gschema.xml:905
+#: src/50-marco-window-key.xml.in:78 src/org.mate.marco.gschema.xml:910
 msgid "Tile window to west (left) side of screen"
 msgstr "Пригнать окно к западной (левой) стороне экрана"
 
@@ -252,119 +253,119 @@ msgstr "Пригнать окно к юго-западному (нижнему �
 msgid "Tile window to south-east (bottom right) corner"
 msgstr "Пригнать окно к юго-восточному (нижнему правому) углу"
 
-#: src/50-marco-window-key.xml.in:98 src/org.mate.marco.gschema.xml:930
+#: src/50-marco-window-key.xml.in:98 src/org.mate.marco.gschema.xml:935
 msgid "Move window to north-west (top left) corner"
 msgstr "Переместить окно в северо-западный (верхний левый) угол"
 
-#: src/50-marco-window-key.xml.in:102 src/org.mate.marco.gschema.xml:935
+#: src/50-marco-window-key.xml.in:102 src/org.mate.marco.gschema.xml:940
 msgid "Move window to north-east (top right) corner"
 msgstr "Переместить окно в северо-восточный (верхний правый) угол"
 
-#: src/50-marco-window-key.xml.in:106 src/org.mate.marco.gschema.xml:940
+#: src/50-marco-window-key.xml.in:106 src/org.mate.marco.gschema.xml:945
 msgid "Move window to south-west (bottom left) corner"
 msgstr "Переместить окно в юго-западный (нижний левый) угол"
 
-#: src/50-marco-window-key.xml.in:110 src/org.mate.marco.gschema.xml:945
+#: src/50-marco-window-key.xml.in:110 src/org.mate.marco.gschema.xml:950
 msgid "Move window to south-east (bottom right) corner"
 msgstr "Переместить окно в юго-восточный (нижний правый) угол"
 
-#: src/50-marco-window-key.xml.in:114 src/org.mate.marco.gschema.xml:950
+#: src/50-marco-window-key.xml.in:114 src/org.mate.marco.gschema.xml:955
 msgid "Move window to north (top) side of screen"
 msgstr "Переместить окно к северной (верхней) стороне экрана"
 
-#: src/50-marco-window-key.xml.in:118 src/org.mate.marco.gschema.xml:955
+#: src/50-marco-window-key.xml.in:118 src/org.mate.marco.gschema.xml:960
 msgid "Move window to south (bottom) side of screen"
 msgstr "Переместить окно к южной (нижней) стороне экрана"
 
-#: src/50-marco-window-key.xml.in:122 src/org.mate.marco.gschema.xml:960
+#: src/50-marco-window-key.xml.in:122 src/org.mate.marco.gschema.xml:965
 msgid "Move window to east (right) side of screen"
 msgstr "Переместить окно к восточной (правой) стороне экрана"
 
-#: src/50-marco-window-key.xml.in:126 src/org.mate.marco.gschema.xml:965
+#: src/50-marco-window-key.xml.in:126 src/org.mate.marco.gschema.xml:970
 msgid "Move window to west (left) side of screen"
 msgstr "Переместить окно к западной (левой) стороне экрана"
 
-#: src/50-marco-window-key.xml.in:130 src/org.mate.marco.gschema.xml:970
+#: src/50-marco-window-key.xml.in:130 src/org.mate.marco.gschema.xml:975
 msgid "Move window to center of screen"
 msgstr "Переместить окно в центр экрана"
 
-#: src/50-marco-window-key.xml.in:134 src/org.mate.marco.gschema.xml:975
+#: src/50-marco-window-key.xml.in:134 src/org.mate.marco.gschema.xml:980
 msgid "Move window to north (top) monitor"
 msgstr "Переместить окно на северный (верхний) монитор"
 
-#: src/50-marco-window-key.xml.in:138 src/org.mate.marco.gschema.xml:980
+#: src/50-marco-window-key.xml.in:138 src/org.mate.marco.gschema.xml:985
 msgid "Move window to south (bottom) monitor"
 msgstr "Переместить окно на южный (нижний) монитор"
 
-#: src/50-marco-window-key.xml.in:142 src/org.mate.marco.gschema.xml:985
+#: src/50-marco-window-key.xml.in:142 src/org.mate.marco.gschema.xml:990
 msgid "Move window to east (right) monitor"
 msgstr "Переместить окно на восточный (правый) монитор"
 
-#: src/50-marco-window-key.xml.in:146 src/org.mate.marco.gschema.xml:990
+#: src/50-marco-window-key.xml.in:146 src/org.mate.marco.gschema.xml:995
 msgid "Move window to west (left) monitor"
 msgstr "Переместить окно на западный (левый) монитор"
 
-#: src/50-marco-window-key.xml.in:154 src/org.mate.marco.gschema.xml:795
+#: src/50-marco-window-key.xml.in:154 src/org.mate.marco.gschema.xml:800
 msgid "Move window to workspace 1"
 msgstr "Переместить окно на рабочее место 1"
 
-#: src/50-marco-window-key.xml.in:162 src/org.mate.marco.gschema.xml:800
+#: src/50-marco-window-key.xml.in:162 src/org.mate.marco.gschema.xml:805
 msgid "Move window to workspace 2"
 msgstr "Переместить окно на рабочее место 2"
 
-#: src/50-marco-window-key.xml.in:170 src/org.mate.marco.gschema.xml:805
+#: src/50-marco-window-key.xml.in:170 src/org.mate.marco.gschema.xml:810
 msgid "Move window to workspace 3"
 msgstr "Переместить окно на рабочее место 3"
 
-#: src/50-marco-window-key.xml.in:178 src/org.mate.marco.gschema.xml:810
+#: src/50-marco-window-key.xml.in:178 src/org.mate.marco.gschema.xml:815
 msgid "Move window to workspace 4"
 msgstr "Переместить окно на рабочее место 4"
 
-#: src/50-marco-window-key.xml.in:186 src/org.mate.marco.gschema.xml:815
+#: src/50-marco-window-key.xml.in:186 src/org.mate.marco.gschema.xml:820
 msgid "Move window to workspace 5"
 msgstr "Переместить окно на рабочее место 5"
 
-#: src/50-marco-window-key.xml.in:194 src/org.mate.marco.gschema.xml:820
+#: src/50-marco-window-key.xml.in:194 src/org.mate.marco.gschema.xml:825
 msgid "Move window to workspace 6"
 msgstr "Переместить окно на рабочее место 6"
 
-#: src/50-marco-window-key.xml.in:202 src/org.mate.marco.gschema.xml:825
+#: src/50-marco-window-key.xml.in:202 src/org.mate.marco.gschema.xml:830
 msgid "Move window to workspace 7"
 msgstr "Переместить окно на рабочее место 7"
 
-#: src/50-marco-window-key.xml.in:210 src/org.mate.marco.gschema.xml:830
+#: src/50-marco-window-key.xml.in:210 src/org.mate.marco.gschema.xml:835
 msgid "Move window to workspace 8"
 msgstr "Переместить окно на рабочее место 8"
 
-#: src/50-marco-window-key.xml.in:218 src/org.mate.marco.gschema.xml:835
+#: src/50-marco-window-key.xml.in:218 src/org.mate.marco.gschema.xml:840
 msgid "Move window to workspace 9"
 msgstr "Переместить окно на рабочее место 9"
 
-#: src/50-marco-window-key.xml.in:226 src/org.mate.marco.gschema.xml:840
+#: src/50-marco-window-key.xml.in:226 src/org.mate.marco.gschema.xml:845
 msgid "Move window to workspace 10"
 msgstr "Переместить окно на рабочее место 10"
 
-#: src/50-marco-window-key.xml.in:234 src/org.mate.marco.gschema.xml:845
+#: src/50-marco-window-key.xml.in:234 src/org.mate.marco.gschema.xml:850
 msgid "Move window to workspace 11"
 msgstr "Переместить окно на рабочее место 11"
 
-#: src/50-marco-window-key.xml.in:242 src/org.mate.marco.gschema.xml:850
+#: src/50-marco-window-key.xml.in:242 src/org.mate.marco.gschema.xml:855
 msgid "Move window to workspace 12"
 msgstr "Переместить окно на рабочее место 12"
 
-#: src/50-marco-window-key.xml.in:250 src/org.mate.marco.gschema.xml:855
+#: src/50-marco-window-key.xml.in:250 src/org.mate.marco.gschema.xml:860
 msgid "Move window one workspace to the left"
 msgstr "Переместить окно на одно рабочее место влево"
 
-#: src/50-marco-window-key.xml.in:258 src/org.mate.marco.gschema.xml:860
+#: src/50-marco-window-key.xml.in:258 src/org.mate.marco.gschema.xml:865
 msgid "Move window one workspace to the right"
 msgstr "Переместить окно на одно рабочее место вправо"
 
-#: src/50-marco-window-key.xml.in:266 src/org.mate.marco.gschema.xml:865
+#: src/50-marco-window-key.xml.in:266 src/org.mate.marco.gschema.xml:870
 msgid "Move window one workspace up"
 msgstr "Переместить окно на одно рабочее место вверх"
 
-#: src/50-marco-window-key.xml.in:274 src/org.mate.marco.gschema.xml:870
+#: src/50-marco-window-key.xml.in:274 src/org.mate.marco.gschema.xml:875
 msgid "Move window one workspace down"
 msgstr "Переместить окно на одно рабочее место вниз"
 
@@ -947,63 +948,75 @@ msgstr ""
 "Всплывающее окно может быть расширено до значения, определяемого параметром "
 "конфигурации 'alt-tab-max-columns'."
 
-#: src/org.mate.marco.gschema.xml:226 src/org.mate.marco.gschema.xml:231
-#: src/org.mate.marco.gschema.xml:236 src/org.mate.marco.gschema.xml:241
-#: src/org.mate.marco.gschema.xml:246 src/org.mate.marco.gschema.xml:251
-#: src/org.mate.marco.gschema.xml:256 src/org.mate.marco.gschema.xml:261
-#: src/org.mate.marco.gschema.xml:266 src/org.mate.marco.gschema.xml:271
-#: src/org.mate.marco.gschema.xml:276 src/org.mate.marco.gschema.xml:281
-#: src/org.mate.marco.gschema.xml:286 src/org.mate.marco.gschema.xml:291
-#: src/org.mate.marco.gschema.xml:296 src/org.mate.marco.gschema.xml:301
-#: src/org.mate.marco.gschema.xml:306 src/org.mate.marco.gschema.xml:311
-#: src/org.mate.marco.gschema.xml:316 src/org.mate.marco.gschema.xml:321
-#: src/org.mate.marco.gschema.xml:326 src/org.mate.marco.gschema.xml:331
-#: src/org.mate.marco.gschema.xml:336 src/org.mate.marco.gschema.xml:341
-#: src/org.mate.marco.gschema.xml:346 src/org.mate.marco.gschema.xml:351
-#: src/org.mate.marco.gschema.xml:356 src/org.mate.marco.gschema.xml:361
-#: src/org.mate.marco.gschema.xml:366 src/org.mate.marco.gschema.xml:371
-#: src/org.mate.marco.gschema.xml:376 src/org.mate.marco.gschema.xml:381
-#: src/org.mate.marco.gschema.xml:386 src/org.mate.marco.gschema.xml:391
-#: src/org.mate.marco.gschema.xml:396 src/org.mate.marco.gschema.xml:401
+#: src/org.mate.marco.gschema.xml:223
+msgid "Raise windows to surface while cycling alt-tab popup"
+msgstr "Выводите окна на передний план, задействуя всплывающее окно alt-tab"
+
+#: src/org.mate.marco.gschema.xml:224
+msgid ""
+"While using the popup window, selected windows will be raised to make them "
+"easy to identify."
+msgstr ""
+"Во время использования всплывающего окна на передний план будут выходить "
+"выбираемые окна, чтобы их было легче идентифицировать."
+
+#: src/org.mate.marco.gschema.xml:231 src/org.mate.marco.gschema.xml:236
+#: src/org.mate.marco.gschema.xml:241 src/org.mate.marco.gschema.xml:246
+#: src/org.mate.marco.gschema.xml:251 src/org.mate.marco.gschema.xml:256
+#: src/org.mate.marco.gschema.xml:261 src/org.mate.marco.gschema.xml:266
+#: src/org.mate.marco.gschema.xml:271 src/org.mate.marco.gschema.xml:276
+#: src/org.mate.marco.gschema.xml:281 src/org.mate.marco.gschema.xml:286
+#: src/org.mate.marco.gschema.xml:291 src/org.mate.marco.gschema.xml:296
+#: src/org.mate.marco.gschema.xml:301 src/org.mate.marco.gschema.xml:306
+#: src/org.mate.marco.gschema.xml:311 src/org.mate.marco.gschema.xml:316
+#: src/org.mate.marco.gschema.xml:321 src/org.mate.marco.gschema.xml:326
+#: src/org.mate.marco.gschema.xml:331 src/org.mate.marco.gschema.xml:336
+#: src/org.mate.marco.gschema.xml:341 src/org.mate.marco.gschema.xml:346
+#: src/org.mate.marco.gschema.xml:351 src/org.mate.marco.gschema.xml:356
+#: src/org.mate.marco.gschema.xml:361 src/org.mate.marco.gschema.xml:366
+#: src/org.mate.marco.gschema.xml:371 src/org.mate.marco.gschema.xml:376
+#: src/org.mate.marco.gschema.xml:381 src/org.mate.marco.gschema.xml:386
+#: src/org.mate.marco.gschema.xml:391 src/org.mate.marco.gschema.xml:396
+#: src/org.mate.marco.gschema.xml:401 src/org.mate.marco.gschema.xml:406
 msgid "Name of workspace"
 msgstr "Имя рабочего места"
 
-#: src/org.mate.marco.gschema.xml:227 src/org.mate.marco.gschema.xml:232
-#: src/org.mate.marco.gschema.xml:237 src/org.mate.marco.gschema.xml:242
-#: src/org.mate.marco.gschema.xml:247 src/org.mate.marco.gschema.xml:252
-#: src/org.mate.marco.gschema.xml:257 src/org.mate.marco.gschema.xml:262
-#: src/org.mate.marco.gschema.xml:267 src/org.mate.marco.gschema.xml:272
-#: src/org.mate.marco.gschema.xml:277 src/org.mate.marco.gschema.xml:282
-#: src/org.mate.marco.gschema.xml:287 src/org.mate.marco.gschema.xml:292
-#: src/org.mate.marco.gschema.xml:297 src/org.mate.marco.gschema.xml:302
-#: src/org.mate.marco.gschema.xml:307 src/org.mate.marco.gschema.xml:312
-#: src/org.mate.marco.gschema.xml:317 src/org.mate.marco.gschema.xml:322
-#: src/org.mate.marco.gschema.xml:327 src/org.mate.marco.gschema.xml:332
-#: src/org.mate.marco.gschema.xml:337 src/org.mate.marco.gschema.xml:342
-#: src/org.mate.marco.gschema.xml:347 src/org.mate.marco.gschema.xml:352
-#: src/org.mate.marco.gschema.xml:357 src/org.mate.marco.gschema.xml:362
-#: src/org.mate.marco.gschema.xml:367 src/org.mate.marco.gschema.xml:372
-#: src/org.mate.marco.gschema.xml:377 src/org.mate.marco.gschema.xml:382
-#: src/org.mate.marco.gschema.xml:387 src/org.mate.marco.gschema.xml:392
-#: src/org.mate.marco.gschema.xml:397 src/org.mate.marco.gschema.xml:402
+#: src/org.mate.marco.gschema.xml:232 src/org.mate.marco.gschema.xml:237
+#: src/org.mate.marco.gschema.xml:242 src/org.mate.marco.gschema.xml:247
+#: src/org.mate.marco.gschema.xml:252 src/org.mate.marco.gschema.xml:257
+#: src/org.mate.marco.gschema.xml:262 src/org.mate.marco.gschema.xml:267
+#: src/org.mate.marco.gschema.xml:272 src/org.mate.marco.gschema.xml:277
+#: src/org.mate.marco.gschema.xml:282 src/org.mate.marco.gschema.xml:287
+#: src/org.mate.marco.gschema.xml:292 src/org.mate.marco.gschema.xml:297
+#: src/org.mate.marco.gschema.xml:302 src/org.mate.marco.gschema.xml:307
+#: src/org.mate.marco.gschema.xml:312 src/org.mate.marco.gschema.xml:317
+#: src/org.mate.marco.gschema.xml:322 src/org.mate.marco.gschema.xml:327
+#: src/org.mate.marco.gschema.xml:332 src/org.mate.marco.gschema.xml:337
+#: src/org.mate.marco.gschema.xml:342 src/org.mate.marco.gschema.xml:347
+#: src/org.mate.marco.gschema.xml:352 src/org.mate.marco.gschema.xml:357
+#: src/org.mate.marco.gschema.xml:362 src/org.mate.marco.gschema.xml:367
+#: src/org.mate.marco.gschema.xml:372 src/org.mate.marco.gschema.xml:377
+#: src/org.mate.marco.gschema.xml:382 src/org.mate.marco.gschema.xml:387
+#: src/org.mate.marco.gschema.xml:392 src/org.mate.marco.gschema.xml:397
+#: src/org.mate.marco.gschema.xml:402 src/org.mate.marco.gschema.xml:407
 msgid "The name of a workspace."
 msgstr "Название рабочего места."
 
-#: src/org.mate.marco.gschema.xml:409 src/org.mate.marco.gschema.xml:414
-#: src/org.mate.marco.gschema.xml:419 src/org.mate.marco.gschema.xml:424
-#: src/org.mate.marco.gschema.xml:429 src/org.mate.marco.gschema.xml:434
-#: src/org.mate.marco.gschema.xml:439 src/org.mate.marco.gschema.xml:444
-#: src/org.mate.marco.gschema.xml:449 src/org.mate.marco.gschema.xml:454
-#: src/org.mate.marco.gschema.xml:459 src/org.mate.marco.gschema.xml:464
+#: src/org.mate.marco.gschema.xml:414 src/org.mate.marco.gschema.xml:419
+#: src/org.mate.marco.gschema.xml:424 src/org.mate.marco.gschema.xml:429
+#: src/org.mate.marco.gschema.xml:434 src/org.mate.marco.gschema.xml:439
+#: src/org.mate.marco.gschema.xml:444 src/org.mate.marco.gschema.xml:449
+#: src/org.mate.marco.gschema.xml:454 src/org.mate.marco.gschema.xml:459
+#: src/org.mate.marco.gschema.xml:464 src/org.mate.marco.gschema.xml:469
 msgid "Run a defined command"
 msgstr "Запустить определённую команду"
 
-#: src/org.mate.marco.gschema.xml:410 src/org.mate.marco.gschema.xml:415
-#: src/org.mate.marco.gschema.xml:420 src/org.mate.marco.gschema.xml:425
-#: src/org.mate.marco.gschema.xml:430 src/org.mate.marco.gschema.xml:435
-#: src/org.mate.marco.gschema.xml:440 src/org.mate.marco.gschema.xml:445
-#: src/org.mate.marco.gschema.xml:450 src/org.mate.marco.gschema.xml:455
-#: src/org.mate.marco.gschema.xml:460 src/org.mate.marco.gschema.xml:465
+#: src/org.mate.marco.gschema.xml:415 src/org.mate.marco.gschema.xml:420
+#: src/org.mate.marco.gschema.xml:425 src/org.mate.marco.gschema.xml:430
+#: src/org.mate.marco.gschema.xml:435 src/org.mate.marco.gschema.xml:440
+#: src/org.mate.marco.gschema.xml:445 src/org.mate.marco.gschema.xml:450
+#: src/org.mate.marco.gschema.xml:455 src/org.mate.marco.gschema.xml:460
+#: src/org.mate.marco.gschema.xml:465 src/org.mate.marco.gschema.xml:470
 msgid ""
 "The keybinding that runs the correspondingly-numbered command in "
 "/apps/marco/keybinding_commands The format looks like \"<Control>a\" or "
@@ -1019,44 +1032,44 @@ msgstr ""
 "вы зададите этот параметр специальной строкой \"disabled\", то для данного "
 "действие не будет назначено комбинаций клавиш."
 
-#: src/org.mate.marco.gschema.xml:470 src/org.mate.marco.gschema.xml:475
-#: src/org.mate.marco.gschema.xml:480 src/org.mate.marco.gschema.xml:485
-#: src/org.mate.marco.gschema.xml:490 src/org.mate.marco.gschema.xml:495
-#: src/org.mate.marco.gschema.xml:500 src/org.mate.marco.gschema.xml:505
-#: src/org.mate.marco.gschema.xml:510 src/org.mate.marco.gschema.xml:515
-#: src/org.mate.marco.gschema.xml:520 src/org.mate.marco.gschema.xml:525
-#: src/org.mate.marco.gschema.xml:530 src/org.mate.marco.gschema.xml:535
-#: src/org.mate.marco.gschema.xml:540 src/org.mate.marco.gschema.xml:545
-#: src/org.mate.marco.gschema.xml:550 src/org.mate.marco.gschema.xml:625
-#: src/org.mate.marco.gschema.xml:630 src/org.mate.marco.gschema.xml:635
-#: src/org.mate.marco.gschema.xml:640 src/org.mate.marco.gschema.xml:645
-#: src/org.mate.marco.gschema.xml:650 src/org.mate.marco.gschema.xml:655
-#: src/org.mate.marco.gschema.xml:736 src/org.mate.marco.gschema.xml:741
-#: src/org.mate.marco.gschema.xml:746 src/org.mate.marco.gschema.xml:751
-#: src/org.mate.marco.gschema.xml:756 src/org.mate.marco.gschema.xml:761
-#: src/org.mate.marco.gschema.xml:766 src/org.mate.marco.gschema.xml:771
-#: src/org.mate.marco.gschema.xml:776 src/org.mate.marco.gschema.xml:781
-#: src/org.mate.marco.gschema.xml:786 src/org.mate.marco.gschema.xml:791
-#: src/org.mate.marco.gschema.xml:796 src/org.mate.marco.gschema.xml:801
-#: src/org.mate.marco.gschema.xml:806 src/org.mate.marco.gschema.xml:811
-#: src/org.mate.marco.gschema.xml:816 src/org.mate.marco.gschema.xml:821
-#: src/org.mate.marco.gschema.xml:826 src/org.mate.marco.gschema.xml:831
-#: src/org.mate.marco.gschema.xml:836 src/org.mate.marco.gschema.xml:841
-#: src/org.mate.marco.gschema.xml:846 src/org.mate.marco.gschema.xml:851
-#: src/org.mate.marco.gschema.xml:856 src/org.mate.marco.gschema.xml:861
-#: src/org.mate.marco.gschema.xml:866 src/org.mate.marco.gschema.xml:871
-#: src/org.mate.marco.gschema.xml:876 src/org.mate.marco.gschema.xml:881
-#: src/org.mate.marco.gschema.xml:886 src/org.mate.marco.gschema.xml:891
-#: src/org.mate.marco.gschema.xml:896 src/org.mate.marco.gschema.xml:901
-#: src/org.mate.marco.gschema.xml:906 src/org.mate.marco.gschema.xml:911
-#: src/org.mate.marco.gschema.xml:916 src/org.mate.marco.gschema.xml:921
-#: src/org.mate.marco.gschema.xml:926 src/org.mate.marco.gschema.xml:931
-#: src/org.mate.marco.gschema.xml:936 src/org.mate.marco.gschema.xml:941
-#: src/org.mate.marco.gschema.xml:946 src/org.mate.marco.gschema.xml:951
-#: src/org.mate.marco.gschema.xml:956 src/org.mate.marco.gschema.xml:961
-#: src/org.mate.marco.gschema.xml:966 src/org.mate.marco.gschema.xml:971
-#: src/org.mate.marco.gschema.xml:976 src/org.mate.marco.gschema.xml:981
-#: src/org.mate.marco.gschema.xml:986 src/org.mate.marco.gschema.xml:991
+#: src/org.mate.marco.gschema.xml:475 src/org.mate.marco.gschema.xml:480
+#: src/org.mate.marco.gschema.xml:485 src/org.mate.marco.gschema.xml:490
+#: src/org.mate.marco.gschema.xml:495 src/org.mate.marco.gschema.xml:500
+#: src/org.mate.marco.gschema.xml:505 src/org.mate.marco.gschema.xml:510
+#: src/org.mate.marco.gschema.xml:515 src/org.mate.marco.gschema.xml:520
+#: src/org.mate.marco.gschema.xml:525 src/org.mate.marco.gschema.xml:530
+#: src/org.mate.marco.gschema.xml:535 src/org.mate.marco.gschema.xml:540
+#: src/org.mate.marco.gschema.xml:545 src/org.mate.marco.gschema.xml:550
+#: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:630
+#: src/org.mate.marco.gschema.xml:635 src/org.mate.marco.gschema.xml:640
+#: src/org.mate.marco.gschema.xml:645 src/org.mate.marco.gschema.xml:650
+#: src/org.mate.marco.gschema.xml:655 src/org.mate.marco.gschema.xml:660
+#: src/org.mate.marco.gschema.xml:741 src/org.mate.marco.gschema.xml:746
+#: src/org.mate.marco.gschema.xml:751 src/org.mate.marco.gschema.xml:756
+#: src/org.mate.marco.gschema.xml:761 src/org.mate.marco.gschema.xml:766
+#: src/org.mate.marco.gschema.xml:771 src/org.mate.marco.gschema.xml:776
+#: src/org.mate.marco.gschema.xml:781 src/org.mate.marco.gschema.xml:786
+#: src/org.mate.marco.gschema.xml:791 src/org.mate.marco.gschema.xml:796
+#: src/org.mate.marco.gschema.xml:801 src/org.mate.marco.gschema.xml:806
+#: src/org.mate.marco.gschema.xml:811 src/org.mate.marco.gschema.xml:816
+#: src/org.mate.marco.gschema.xml:821 src/org.mate.marco.gschema.xml:826
+#: src/org.mate.marco.gschema.xml:831 src/org.mate.marco.gschema.xml:836
+#: src/org.mate.marco.gschema.xml:841 src/org.mate.marco.gschema.xml:846
+#: src/org.mate.marco.gschema.xml:851 src/org.mate.marco.gschema.xml:856
+#: src/org.mate.marco.gschema.xml:861 src/org.mate.marco.gschema.xml:866
+#: src/org.mate.marco.gschema.xml:871 src/org.mate.marco.gschema.xml:876
+#: src/org.mate.marco.gschema.xml:881 src/org.mate.marco.gschema.xml:886
+#: src/org.mate.marco.gschema.xml:891 src/org.mate.marco.gschema.xml:896
+#: src/org.mate.marco.gschema.xml:901 src/org.mate.marco.gschema.xml:906
+#: src/org.mate.marco.gschema.xml:911 src/org.mate.marco.gschema.xml:916
+#: src/org.mate.marco.gschema.xml:921 src/org.mate.marco.gschema.xml:926
+#: src/org.mate.marco.gschema.xml:931 src/org.mate.marco.gschema.xml:936
+#: src/org.mate.marco.gschema.xml:941 src/org.mate.marco.gschema.xml:946
+#: src/org.mate.marco.gschema.xml:951 src/org.mate.marco.gschema.xml:956
+#: src/org.mate.marco.gschema.xml:961 src/org.mate.marco.gschema.xml:966
+#: src/org.mate.marco.gschema.xml:971 src/org.mate.marco.gschema.xml:976
+#: src/org.mate.marco.gschema.xml:981 src/org.mate.marco.gschema.xml:986
+#: src/org.mate.marco.gschema.xml:991 src/org.mate.marco.gschema.xml:996
 msgid ""
 "The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
 "fairly liberal and allows lower or upper case, and also abbreviations such "
@@ -1068,13 +1081,13 @@ msgstr ""
 "например «<Ctl>» и «<Ctrl>». Если параметру установить значение «disabled», "
 "для этого действия не будет использоваться никакая комбинация клавиш."
 
-#: src/org.mate.marco.gschema.xml:555 src/org.mate.marco.gschema.xml:560
-#: src/org.mate.marco.gschema.xml:565 src/org.mate.marco.gschema.xml:570
-#: src/org.mate.marco.gschema.xml:575 src/org.mate.marco.gschema.xml:580
-#: src/org.mate.marco.gschema.xml:585 src/org.mate.marco.gschema.xml:590
-#: src/org.mate.marco.gschema.xml:595 src/org.mate.marco.gschema.xml:600
-#: src/org.mate.marco.gschema.xml:605 src/org.mate.marco.gschema.xml:610
-#: src/org.mate.marco.gschema.xml:615 src/org.mate.marco.gschema.xml:620
+#: src/org.mate.marco.gschema.xml:560 src/org.mate.marco.gschema.xml:565
+#: src/org.mate.marco.gschema.xml:570 src/org.mate.marco.gschema.xml:575
+#: src/org.mate.marco.gschema.xml:580 src/org.mate.marco.gschema.xml:585
+#: src/org.mate.marco.gschema.xml:590 src/org.mate.marco.gschema.xml:595
+#: src/org.mate.marco.gschema.xml:600 src/org.mate.marco.gschema.xml:605
+#: src/org.mate.marco.gschema.xml:610 src/org.mate.marco.gschema.xml:615
+#: src/org.mate.marco.gschema.xml:620 src/org.mate.marco.gschema.xml:625
 msgid ""
 "The format looks like \"<Control>a\" or \"<Shift><Alt>F1\". The parser is "
 "fairly liberal and allows lower or upper case, and also abbreviations such "
@@ -1090,68 +1103,68 @@ msgstr ""
 "Действие этой комбинации клавиш может быть изменено путём удержания клавиши "
 "«shift», поэтому «shift» не может быть одной из клавиш этой комбинации."
 
-#: src/org.mate.marco.gschema.xml:559
+#: src/org.mate.marco.gschema.xml:564
 msgid "Move backward between windows of an application, using a popup window"
 msgstr ""
 "Переключиться в обратном порядке между окнами приложения через всплывающее "
 "окно"
 
-#: src/org.mate.marco.gschema.xml:569
+#: src/org.mate.marco.gschema.xml:574
 msgid "Move backward between windows, using a popup window"
 msgstr ""
 "Переключиться в обратном порядке между окнами с использованием всплывающего "
 "окна"
 
-#: src/org.mate.marco.gschema.xml:574
+#: src/org.mate.marco.gschema.xml:579
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr ""
 "Переключиться между окнами на всех рабочих местах с использованием "
 "всплывающего окна"
 
-#: src/org.mate.marco.gschema.xml:579
+#: src/org.mate.marco.gschema.xml:584
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr ""
 "Переключиться в обратном порядке между окнами на всех рабочих местах с "
 "использованием всплывающего окна"
 
-#: src/org.mate.marco.gschema.xml:589
+#: src/org.mate.marco.gschema.xml:594
 msgid "Move backward between panels and the desktop, using a popup window"
 msgstr ""
 "Переключиться в обратном порядке между панелями и рабочим столом через "
 "всплывающее окно"
 
-#: src/org.mate.marco.gschema.xml:599
+#: src/org.mate.marco.gschema.xml:604
 msgid "Move backward between windows of an application immediately"
 msgstr "Переключиться в обратном порядке между окнами приложения немедленно"
 
-#: src/org.mate.marco.gschema.xml:609
+#: src/org.mate.marco.gschema.xml:614
 msgid "Move backward between windows immediately"
 msgstr "Переключиться в обратном порядке между окнами немедленно"
 
-#: src/org.mate.marco.gschema.xml:619
+#: src/org.mate.marco.gschema.xml:624
 msgid "Move backward between panels and the desktop immediately"
 msgstr ""
 "Переключиться в обратном порядке между панелями и рабочим столом немедленно"
 
-#: src/org.mate.marco.gschema.xml:634
+#: src/org.mate.marco.gschema.xml:639
 msgid "Show the panel's \"Run Application\" dialog box"
 msgstr "Показать диалоговое окно панели «Выполнить программу»"
 
-#: src/org.mate.marco.gschema.xml:662 src/org.mate.marco.gschema.xml:667
-#: src/org.mate.marco.gschema.xml:672 src/org.mate.marco.gschema.xml:677
-#: src/org.mate.marco.gschema.xml:682 src/org.mate.marco.gschema.xml:687
-#: src/org.mate.marco.gschema.xml:692 src/org.mate.marco.gschema.xml:697
-#: src/org.mate.marco.gschema.xml:702 src/org.mate.marco.gschema.xml:707
-#: src/org.mate.marco.gschema.xml:712 src/org.mate.marco.gschema.xml:717
+#: src/org.mate.marco.gschema.xml:667 src/org.mate.marco.gschema.xml:672
+#: src/org.mate.marco.gschema.xml:677 src/org.mate.marco.gschema.xml:682
+#: src/org.mate.marco.gschema.xml:687 src/org.mate.marco.gschema.xml:692
+#: src/org.mate.marco.gschema.xml:697 src/org.mate.marco.gschema.xml:702
+#: src/org.mate.marco.gschema.xml:707 src/org.mate.marco.gschema.xml:712
+#: src/org.mate.marco.gschema.xml:717 src/org.mate.marco.gschema.xml:722
 msgid "Commands to run in response to keybindings"
 msgstr "Команды для запуска по комбинациям клавиш"
 
-#: src/org.mate.marco.gschema.xml:663 src/org.mate.marco.gschema.xml:668
-#: src/org.mate.marco.gschema.xml:673 src/org.mate.marco.gschema.xml:678
-#: src/org.mate.marco.gschema.xml:683 src/org.mate.marco.gschema.xml:688
-#: src/org.mate.marco.gschema.xml:693 src/org.mate.marco.gschema.xml:698
-#: src/org.mate.marco.gschema.xml:703 src/org.mate.marco.gschema.xml:708
-#: src/org.mate.marco.gschema.xml:713 src/org.mate.marco.gschema.xml:718
+#: src/org.mate.marco.gschema.xml:668 src/org.mate.marco.gschema.xml:673
+#: src/org.mate.marco.gschema.xml:678 src/org.mate.marco.gschema.xml:683
+#: src/org.mate.marco.gschema.xml:688 src/org.mate.marco.gschema.xml:693
+#: src/org.mate.marco.gschema.xml:698 src/org.mate.marco.gschema.xml:703
+#: src/org.mate.marco.gschema.xml:708 src/org.mate.marco.gschema.xml:713
+#: src/org.mate.marco.gschema.xml:718 src/org.mate.marco.gschema.xml:723
 msgid ""
 "The /apps/marco/global_keybindings/run_command_N keys define keybindings "
 "that correspond to these commands. Pressing the keybinding for run_command_N"
@@ -1161,11 +1174,11 @@ msgstr ""
 "клавиш, которые соответствуют этим командам. Нажатие комбинации "
 "run_command_N запустит на выполнение command_N."
 
-#: src/org.mate.marco.gschema.xml:722
+#: src/org.mate.marco.gschema.xml:727
 msgid "The screenshot command"
 msgstr "Команда для получения снимка экрана"
 
-#: src/org.mate.marco.gschema.xml:723
+#: src/org.mate.marco.gschema.xml:728
 msgid ""
 "The /apps/marco/global_keybindings/run_command_screenshot key defines a "
 "keybinding which causes the command specified by this setting to be invoked."
@@ -1173,11 +1186,11 @@ msgstr ""
 "Комбинация клавиш, которая вызывает запуск команды для создания снимка "
 "экрана."
 
-#: src/org.mate.marco.gschema.xml:727
+#: src/org.mate.marco.gschema.xml:732
 msgid "The window screenshot command"
 msgstr "Команда для получения снимка окна"
 
-#: src/org.mate.marco.gschema.xml:728
+#: src/org.mate.marco.gschema.xml:733
 msgid ""
 "The /apps/marco/global_keybindings/run_command_window_screenshot key defines"
 " a keybinding which causes the command specified by this setting to be "
@@ -1185,23 +1198,23 @@ msgid ""
 msgstr ""
 "Комбинация клавиш, которая вызывает запуск команды для создания снимка окна."
 
-#: src/org.mate.marco.gschema.xml:750
+#: src/org.mate.marco.gschema.xml:755
 msgid "Toggle whether a window will always be visible over other windows"
 msgstr "Будет ли окно всегда расположено поверх других окон"
 
-#: src/org.mate.marco.gschema.xml:910
+#: src/org.mate.marco.gschema.xml:915
 msgid "Tile window to north-west (upper left) corner of screen"
 msgstr "Пригнать окно к северо-западному (верхнему левому) углу экрана"
 
-#: src/org.mate.marco.gschema.xml:915
+#: src/org.mate.marco.gschema.xml:920
 msgid "Tile window to north-east (upper right) corner of screen"
 msgstr "Пригнать окно к северо-восточному (верхнему правому) углу экрана"
 
-#: src/org.mate.marco.gschema.xml:920
+#: src/org.mate.marco.gschema.xml:925
 msgid "Tile window to south-east (lower right) corner of screen"
 msgstr "Пригнать окно к юго-восточному (нижнему правому) углу экрана"
 
-#: src/org.mate.marco.gschema.xml:925
+#: src/org.mate.marco.gschema.xml:930
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr "Пригнать окно к юго-западному (нижнему левому) углу экрана"
 
@@ -1239,12 +1252,12 @@ msgstr "Завер_шить"
 msgid "Failed to get hostname: %s\n"
 msgstr "Не удалось получить имя узла: %s\n"
 
-#: src/core/display.c:271
+#: src/core/display.c:272
 #, c-format
 msgid "Missing %s extension required for compositing"
 msgstr "Отсутствует расширение %s, требуемое для композиции"
 
-#: src/core/display.c:349
+#: src/core/display.c:352
 #, c-format
 msgid "Failed to open X Window System display '%s'\n"
 msgstr "Не удалось открыть дисплей «%s» системы X Window\n"
@@ -1258,7 +1271,7 @@ msgstr "Клавишу «%s» с модификаторами «%x» уже ис
 
 #. Displayed when a keybinding which is
 #. * supposed to launch a program fails.
-#: src/core/keybindings.c:2411
+#: src/core/keybindings.c:2424
 #, c-format
 msgid ""
 "There was an error running <tt>%s</tt>:\n"
@@ -1269,28 +1282,28 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/core/keybindings.c:2499
+#: src/core/keybindings.c:2512
 #, c-format
 msgid "No command %d has been defined.\n"
 msgstr "Команда %d не была определена.\n"
 
-#: src/core/keybindings.c:3606
+#: src/core/keybindings.c:3619
 msgid "No terminal command has been defined.\n"
 msgstr "Команда терминала не была определена.\n"
 
-#: src/core/keybindings.c:3743
+#: src/core/keybindings.c:3756
 msgid "<tt>Rename Workspace</tt>"
 msgstr "<tt>Переименовать рабочее место</tt>"
 
-#: src/core/keybindings.c:3744
+#: src/core/keybindings.c:3757
 msgid "New Workspace Name:"
 msgstr "Новое название рабочего места:"
 
-#: src/core/keybindings.c:3755
+#: src/core/keybindings.c:3768
 msgid "OK"
 msgstr "OK"
 
-#: src/core/keybindings.c:3755
+#: src/core/keybindings.c:3768
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -1337,7 +1350,7 @@ msgstr "Не создавать полноэкранные окна, не име
 
 #: src/core/main.c:306
 msgid "Have all keybindings disabled on startup"
-msgstr ""
+msgstr "Отключить все комбинации клавиш при запуске"
 
 #: src/core/main.c:507
 #, c-format
@@ -1360,13 +1373,13 @@ msgstr "Не удалось перезапустить: %s\n"
 #. FIXME: check if this can be avoided by GSettings
 #. FIXME! GSettings, instead of MateConf, has Minimum/Maximun in schema!
 #. * But some preferences depends on costants for minimum/maximum values
-#: src/core/prefs.c:642 src/core/prefs.c:795
+#: src/core/prefs.c:650 src/core/prefs.c:803
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
 "Значение %d ключа GSettings «%s» не входит в диапазон значений от %d до %d\n"
 
-#: src/core/prefs.c:1087
+#: src/core/prefs.c:1095
 msgid ""
 "Workarounds for broken applications disabled. Some applications may not "
 "behave properly.\n"
@@ -1374,12 +1387,12 @@ msgstr ""
 "Устранение недоделок для сломанных приложений отключено. Некоторые "
 "приложения могут работать неправильно.\n"
 
-#: src/core/prefs.c:1193
+#: src/core/prefs.c:1207
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr "Не удалось разобрать описание шрифта «%s» из ключа GSettings %s\n"
 
-#: src/core/prefs.c:1255
+#: src/core/prefs.c:1269
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for mouse button"
@@ -1388,7 +1401,7 @@ msgstr ""
 "Значение «%s» из базы данных параметров является недопустимым значением для "
 "модификатора кнопки мыши\n"
 
-#: src/core/prefs.c:1849
+#: src/core/prefs.c:1866
 #, c-format
 msgid ""
 "\"%s\" found in configuration database is not a valid value for keybinding "
@@ -1397,7 +1410,7 @@ msgstr ""
 "Значение «%s» из базы данных параметров является недопустимым значением для "
 "комбинации клавиш «%s»\n"
 
-#: src/core/prefs.c:2152
+#: src/core/prefs.c:2169
 #, c-format
 msgid "Workspace %d"
 msgstr "Рабочее место %d"
@@ -1550,38 +1563,38 @@ msgstr ""
 "но установило минимальный размер %d × %d и максимальный размер %d × %d, что "
 "не имеет смысла.\n"
 
-#: src/core/window-props.c:307
+#: src/core/window-props.c:356
 #, c-format
 msgid "Application set a bogus _NET_WM_PID %lu\n"
 msgstr "Приложение установило неправильное значение параметра _NET_WM_PID %lu\n"
 
 #. Translators: the title of a window from another machine
-#: src/core/window-props.c:457
+#: src/core/window-props.c:506
 #, c-format
 msgid "%s (on %s)"
 msgstr "%s (на %s)"
 
 #. Simple case-- don't bother to look it up.  It's root.
-#: src/core/window-props.c:489
+#: src/core/window-props.c:538
 #, c-format
 msgid "%s (as superuser)"
 msgstr "%s (от суперпользователя)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine
-#: src/core/window-props.c:507
+#: src/core/window-props.c:556
 #, c-format
 msgid "%s (as %s)"
 msgstr "%s (от %s)"
 
 #. Translators: the title of a window owned by another user
 #. * on this machine, whose name we don't know
-#: src/core/window-props.c:513
+#: src/core/window-props.c:562
 #, c-format
 msgid "%s (as another user)"
 msgstr "%s (от другого пользователя)"
 
-#: src/core/window-props.c:1499
+#: src/core/window-props.c:1548
 #, c-format
 msgid "Invalid WM_TRANSIENT_FOR window 0x%lx specified for %s.\n"
 msgstr "Неверный параметр WM_TRANSIENT_FOR окна 0x%lx указан для %s.\n"
@@ -1620,51 +1633,51 @@ msgstr ""
 msgid "Usage: %s\n"
 msgstr "Применение: %s\n"
 
-#: src/ui/frames.c:1341
+#: src/ui/frames.c:1345
 msgid "Close Window"
 msgstr "Закрыть окно"
 
-#: src/ui/frames.c:1344
+#: src/ui/frames.c:1348
 msgid "Window Menu"
 msgstr "Меню окна"
 
-#: src/ui/frames.c:1347
+#: src/ui/frames.c:1351
 msgid "Window App Menu"
 msgstr "Меню окна приложения"
 
-#: src/ui/frames.c:1350
+#: src/ui/frames.c:1354
 msgid "Minimize Window"
 msgstr "Свернуть окно"
 
-#: src/ui/frames.c:1353
+#: src/ui/frames.c:1357
 msgid "Maximize Window"
 msgstr "Развернуть окно на весь экран"
 
-#: src/ui/frames.c:1356
+#: src/ui/frames.c:1360
 msgid "Restore Window"
 msgstr "Восстановить окно"
 
-#: src/ui/frames.c:1359
+#: src/ui/frames.c:1363
 msgid "Roll Up Window"
 msgstr "Скрутить окно в полоску"
 
-#: src/ui/frames.c:1362
+#: src/ui/frames.c:1366
 msgid "Unroll Window"
 msgstr "Раскатать окно"
 
-#: src/ui/frames.c:1365
+#: src/ui/frames.c:1369
 msgid "Keep Window On Top"
 msgstr "Сохранять окно на переднем плане"
 
-#: src/ui/frames.c:1368
+#: src/ui/frames.c:1372
 msgid "Remove Window From Top"
 msgstr "Убрать с переднего плана"
 
-#: src/ui/frames.c:1371
+#: src/ui/frames.c:1375
 msgid "Always On Visible Workspace"
 msgstr "Всегда на видимом рабочем месте"
 
-#: src/ui/frames.c:1374
+#: src/ui/frames.c:1378
 msgid "Put Window On Only One Workspace"
 msgstr "Помещать только на одно рабочее место"
 
