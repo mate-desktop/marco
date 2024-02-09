@@ -1049,8 +1049,9 @@ focus_ancestor_or_top_window (MetaWorkspace *workspace,
     meta_topic (META_DEBUG_FOCUS,
                 "Focusing MRU window\n");
 
-  /* First, check to see if we need to focus an ancestor of a window */
-  if (not_this_one)
+  /* First, check to see if we need to focus an ancestor of a window
+   * that exists in this workspace */
+  if (not_this_one && g_list_find (workspace->mru_list, not_this_one) != NULL)
     {
       MetaWindow *ancestor;
       ancestor = NULL;
