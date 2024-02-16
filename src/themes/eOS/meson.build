@@ -18,6 +18,8 @@ install_data(
   'trough_middle_unfocused.png',
   'trough_right.png',
   'trough_right_unfocused.png',
+  'trough_single.png',
+  'trough_single_unfocused.png',
   'unmaximize.png',
   'unmaximize_unfocused_over.png',
   'unmaximize_unfocused.png',
