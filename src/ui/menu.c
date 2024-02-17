@@ -103,28 +103,6 @@ static MenuItem menuitems[] = {
 	{META_MENU_OP_DELETE, MENU_ITEM_IMAGE, MARCO_STOCK_DELETE, FALSE, N_("_Close")}
 };
 
-static void popup_position_func(GtkMenu* menu, gint* x, gint* y, gboolean* push_in, gpointer user_data)
-{
-	GtkRequisition req;
-	GdkPoint* pos;
-
-	pos = user_data;
-
-	gtk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
-
-	*x = pos->x;
-	*y = pos->y;
-
-	if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
-	{
-		*x = MAX (0, *x - req.width);
-	}
-
-	/* Ensure onscreen */
-	*x = CLAMP (*x, 0, MAX(0, WidthOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())) - req.width));
-	*y = CLAMP (*y, 0, MAX(0, HeightOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())) - req.height));
-}
-
 static void menu_closed(GtkMenu* widget, gpointer data)
 {
 	MetaWindowMenu *menu;
@@ -491,18 +469,25 @@ meta_window_menu_new   (MetaFrames         *frames,
   return menu;
 }
 
-void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int button, guint32 timestamp)
+void meta_window_menu_popup(MetaWindowMenu* menu, const GdkRectangle *rect, guint32 timestamp)
 {
-	GdkPoint* pt = g_new(GdkPoint, 1);
-	gint scale;
+	GdkDisplay *display;
+	GdkEvent *event;
+	GdkWindow *window;
+	GdkDevice *device;
 
-	g_object_set_data_full(G_OBJECT(menu->menu), "destroy-point", pt, g_free);
+	display = gdk_display_get_default ();
 
-	scale = gtk_widget_get_scale_factor (menu->menu);
-	pt->x = root_x / scale;
-	pt->y = root_y / scale;
+	event = gdk_event_new (GDK_BUTTON_PRESS);
+	event->button.time = timestamp;
 
-	gtk_menu_popup(GTK_MENU (menu->menu), NULL, NULL, popup_position_func, pt, button, timestamp);
+	window = gdk_screen_get_root_window (gdk_display_get_default_screen (display));
+	event->button.window = g_object_ref (window);
+
+	device = gdk_seat_get_pointer (gdk_display_get_default_seat (display));
+	gdk_event_set_device (event, device);
+
+	gtk_menu_popup_at_rect(GTK_MENU (menu->menu), event->any.window, rect, GDK_GRAVITY_SOUTH_WEST, GDK_GRAVITY_NORTH_WEST, event);
 
     if (!gtk_widget_get_visible (menu->menu))
       meta_warning("GtkMenu failed to grab the pointer\n");

@@ -63,6 +63,8 @@ MetaUI* meta_ui_new (Display *xdisplay,
                      Screen  *screen);
 void    meta_ui_free (MetaUI *ui);
 
+gint meta_ui_get_scale (MetaUI *ui);
+
 void meta_ui_theme_get_frame_borders (MetaUI           *ui,
                                       MetaFrameType     type,
                                       MetaFrameFlags    flags,
@@ -133,9 +135,7 @@ MetaWindowMenu* meta_ui_window_menu_new   (MetaUI             *ui,
                                            MetaWindowMenuFunc  func,
                                            gpointer            data);
 void            meta_ui_window_menu_popup (MetaWindowMenu     *menu,
-                                           int                 root_x,
-                                           int                 root_y,
-                                           int                 button,
+                                           const GdkRectangle *rect,
                                            guint32             timestamp);
 void            meta_ui_window_menu_free  (MetaWindowMenu     *menu);
 

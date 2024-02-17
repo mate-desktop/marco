@@ -2008,13 +2008,17 @@ static gboolean event_callback(XEvent* event, gpointer data)
             }
           else if (event->xbutton.button == meta_prefs_get_mouse_button_menu())
             {
+              GdkRectangle rect;
+
               if (meta_prefs_get_raise_on_click ())
                 meta_window_raise (window);
-              meta_window_show_menu (window,
-                                     event->xbutton.x_root,
-                                     event->xbutton.y_root,
-                                     event->xbutton.button,
-                                     event->xbutton.time);
+
+              rect.x = event->xbutton.x_root;
+              rect.y = event->xbutton.y_root;
+              rect.width = 0;
+              rect.height = 0;
+
+              meta_window_show_menu (window, &rect, event->xbutton.time);
             }
 
           if (!frame_was_receiver && unmodified)

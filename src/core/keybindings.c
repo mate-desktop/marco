@@ -2964,18 +2964,14 @@ handle_activate_window_menu (MetaDisplay    *display,
 {
   if (display->focus_window)
     {
-      int x, y;
+      GdkRectangle rect;
 
       meta_window_get_position (display->focus_window,
-                                &x, &y);
+                                &rect.x, &rect.y);
+      rect.width = display->focus_window->rect.width;
+      rect.height = 0;
 
-      if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
-	  x += display->focus_window->rect.width;
-
-      meta_window_show_menu (display->focus_window,
-                             x, y,
-                             0,
-                             event->xkey.time);
+      meta_window_show_menu (display->focus_window, &rect, event->xkey.time);
     }
 }
 
