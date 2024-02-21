@@ -408,13 +408,6 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
 
   popup->label = gtk_label_new ("");
 
-  /* Set the accessible role of the label to a status bar so it
-   * will emit name changed events that can be used by screen
-   * readers.
-   */
-  obj = gtk_widget_get_accessible (popup->label);
-  atk_object_set_role (obj, ATK_ROLE_STATUSBAR);
-
   gtk_widget_set_margin_start (popup->label, 16);
   gtk_widget_set_margin_end (popup->label, 16);
   gtk_widget_set_margin_top (popup->label, 0);
@@ -488,6 +481,15 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   gtk_label_set_text (GTK_LABEL (popup->label), "");
   /* Make it so that we ellipsize if the text is too long */
   gtk_label_set_ellipsize (GTK_LABEL (popup->label), PANGO_ELLIPSIZE_END);
+
+  /* Set the accessible role of the label to a status bar so it
+   * will emit name changed events that can be used by screen
+   * readers.
+   * We do this *after* messing with the label content for computing the size
+   * not to send a change even for each entry at start.
+   */
+  obj = gtk_widget_get_accessible (popup->label);
+  atk_object_set_role (obj, ATK_ROLE_STATUSBAR);
 
   int default_window_width = 0; /* 0 == small as possible, truncate label */
 
