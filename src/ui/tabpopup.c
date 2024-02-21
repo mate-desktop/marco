@@ -36,6 +36,7 @@
 #include "../core/frame-private.h"
 #include "draw-workspace.h"
 #include <gtk/gtk.h>
+#include <gtk/gtk-a11y.h>
 #include <gdk/gdkx.h>
 #include <math.h>
 
@@ -70,6 +71,14 @@ struct _MetaTabPopup
   gint border;
 };
 
+typedef GtkWindowAccessibleClass MetaTabPopupWindowAccessibleClass;
+typedef GtkWindowAccessible MetaTabPopupWindowAccessible;
+typedef GtkWindowClass MetaTabPopupWindowClass;
+typedef GtkWindow MetaTabPopupWindow;
+
+static GType      meta_tab_popup_window_get_type            (void);
+static GType      meta_tab_popup_window_accessible_get_type (void);
+
 static GtkWidget* selectable_image_new (GdkPixbuf *pixbuf, cairo_surface_t *win_surface);
 static void       select_image         (GtkWidget *widget);
 static void       unselect_image       (GtkWidget *widget);
@@ -78,6 +87,65 @@ static GtkWidget* selectable_workspace_new (MetaWorkspace *workspace,
                                                            int entry_count);
 static void       select_workspace         (GtkWidget *widget);
 static void       unselect_workspace       (GtkWidget *widget);
+
+G_DEFINE_TYPE (MetaTabPopupWindowAccessible, meta_tab_popup_window_accessible, GTK_TYPE_WINDOW_ACCESSIBLE)
+G_DEFINE_TYPE (MetaTabPopupWindow, meta_tab_popup_window, GTK_TYPE_WINDOW)
+
+/*--- Accessible implementation for the popup window to report itself as active
+ *    when a switch is in progress.  We need special handling because the
+ *    actual interaction is done through key grabs, and thus GTK doesn't see
+ *    the switcher window as active, but that confuses some ATs that are
+ *    looking for the active window and find nothing. ---*/
+static AtkStateSet *
+meta_tab_popup_window_accessible_ref_state_set (AtkObject *accessible)
+{
+  AtkStateSet *state_set;
+  GtkWidget *widget;
+
+  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (accessible));
+  if (widget == NULL)
+    return NULL;
+
+  state_set = ATK_OBJECT_CLASS (meta_tab_popup_window_accessible_parent_class)->ref_state_set (accessible);
+
+  if (gtk_widget_get_visible (widget))
+    atk_state_set_add_state (state_set, ATK_STATE_ACTIVE);
+
+  return state_set;
+}
+
+static void
+meta_tab_popup_window_accessible_class_init (MetaTabPopupWindowAccessibleClass *cls)
+{
+  AtkObjectClass *atk_cls = ATK_OBJECT_CLASS (cls);
+
+  atk_cls->ref_state_set = meta_tab_popup_window_accessible_ref_state_set;
+}
+
+static void
+meta_tab_popup_window_accessible_init (MetaTabPopupWindowAccessible *self)
+{
+}
+
+/*--- Custom GtkWindow subclass, mainly to be able to have our own accessible
+ *    implementation overrides ---*/
+static void
+meta_tab_popup_window_class_init (MetaTabPopupWindowClass *cls)
+{
+  gtk_widget_class_set_accessible_type (GTK_WIDGET_CLASS (cls), meta_tab_popup_window_accessible_get_type ());
+}
+
+static void
+meta_tab_popup_window_init (MetaTabPopupWindow *self)
+{
+}
+
+/* Creates a MetaTabPopupWindow instance with the required defaults */
+static GtkWidget *
+meta_tab_popup_window_new (void)
+{
+  return g_object_new (meta_tab_popup_window_get_type (), "type", GTK_WINDOW_POPUP, NULL);
+}
 
 static gboolean
 outline_window_draw (GtkWidget *widget,
@@ -285,7 +353,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   else
     popup->outline_window = NULL;
 
-  popup->window = gtk_window_new (GTK_WINDOW_POPUP);
+  popup->window = meta_tab_popup_window_new ();
 
   gtk_window_set_screen (GTK_WINDOW (popup->window), screen);
   gtk_window_set_position (GTK_WINDOW (popup->window), GTK_WIN_POS_CENTER_ALWAYS);
