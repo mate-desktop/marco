@@ -263,7 +263,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   gulong existing_wm_state;
   gulong event_mask;
   MetaMoveResizeFlags flags;
-#define N_INITIAL_PROPS 20
+#define N_INITIAL_PROPS 21
   Atom initial_props[N_INITIAL_PROPS];
   int i;
   gboolean has_shape;
@@ -563,6 +563,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->wm_client_machine = NULL;
   window->startup_id = NULL;
   window->gtk_theme_variant = NULL;
+  window->gtk_application_id = NULL;
 
   window->net_wm_pid = -1;
 
@@ -621,6 +622,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   initial_props[i++] = display->atom__NET_WM_USER_TIME_WINDOW;
   initial_props[i++] = display->atom__NET_WM_FULLSCREEN_MONITORS;
   initial_props[i++] = display->atom__GTK_THEME_VARIANT;
+  initial_props[i++] = display->atom__GTK_APPLICATION_ID;
   g_assert (N_INITIAL_PROPS == i);
 
   meta_window_reload_properties (window, initial_props, N_INITIAL_PROPS, TRUE);
@@ -9015,6 +9017,7 @@ meta_window_finalize (GObject *object)
   g_clear_pointer (&window->icon_name, g_free);
   g_clear_pointer (&window->desc, g_free);
   g_clear_pointer (&window->gtk_theme_variant, g_free);
+  g_clear_pointer (&window->gtk_application_id, g_free);
 
   G_OBJECT_CLASS (meta_window_parent_class)->finalize (object);
 }
