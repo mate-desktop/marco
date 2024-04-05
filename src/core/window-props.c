@@ -1602,6 +1602,30 @@ reload_gtk_theme_variant (MetaWindow    *window,
         meta_ui_update_frame_style (window->screen->ui, window->frame->xwindow);
     }
 }
+
+static void
+reload_gtk_application_id (MetaWindow    *window,
+                           MetaPropValue *value,
+                           gboolean       initial)
+{
+  char *requested = NULL;
+  char *current = window->gtk_application_id;
+
+  if (value->type != META_PROP_VALUE_INVALID)
+    {
+      requested = value->v.str;
+      meta_verbose ("Requested \"%s\" gtk-application-id for window %s.\n",
+                    requested, window->desc);
+    }
+
+  if (g_strcmp0 (requested, current) != 0)
+    {
+      g_free (current);
+
+      window->gtk_application_id = g_strdup (requested);
+    }
+}
+
 /**
  * Initialises the property hooks system.  Each row in the table named "hooks"
  * represents an action to take when a property is found on a newly-created
@@ -1651,6 +1675,7 @@ meta_display_init_window_prop_hooks (MetaDisplay *display)
     { display->atom__NET_WM_USER_TIME_WINDOW, META_PROP_VALUE_WINDOW, reload_net_wm_user_time_window },
     { display->atom__GTK_THEME_VARIANT, META_PROP_VALUE_UTF8, reload_gtk_theme_variant, },
     { display->atom__GTK_FRAME_EXTENTS, META_PROP_VALUE_CARDINAL_LIST, reload_gtk_frame_extents },
+    { display->atom__GTK_APPLICATION_ID, META_PROP_VALUE_UTF8, reload_gtk_application_id },
     { 0 },
   };
 
