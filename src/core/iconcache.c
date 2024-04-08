@@ -702,7 +702,7 @@ scaled_from_pixdata (guchar *pixdata,
 gboolean
 meta_read_icons (MetaScreen     *screen,
                  Window          xwindow,
-                 char           *app_id,
+                 char           *desktop_id,
                  MetaIconCache  *icon_cache,
                  Pixmap          wm_hints_pixmap,
                  Pixmap          wm_hints_mask,
@@ -756,12 +756,12 @@ meta_read_icons (MetaScreen     *screen,
 
   if (icon_cache->origin <= USING_G_DESKTOP_APP &&
       icon_cache->g_desktop_app_icon_dirty &&
-      app_id != NULL)
+      desktop_id != NULL)
     {
       icon_cache->g_desktop_app_icon_dirty = FALSE;
 
-      *iconp = meta_ui_get_window_icon_from_app (screen->ui, app_id);
-      *mini_iconp = meta_ui_get_mini_icon_from_app (screen->ui, app_id);
+      *iconp = meta_ui_get_window_icon_from_desktop_id (screen->ui, desktop_id);
+      *mini_iconp = meta_ui_get_mini_icon_from_desktop_id (screen->ui, desktop_id);
 
       if (*iconp && *mini_iconp)
         {
