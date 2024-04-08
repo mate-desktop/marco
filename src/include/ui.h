@@ -157,8 +157,8 @@ void      meta_ui_pop_delay_exposes  (MetaUI *ui);
 
 GdkPixbuf* meta_ui_get_default_window_icon (MetaUI *ui);
 GdkPixbuf* meta_ui_get_default_mini_icon (MetaUI *ui);
-GdkPixbuf* meta_ui_get_window_icon_from_app (MetaUI *ui, char *name);
-GdkPixbuf* meta_ui_get_mini_icon_from_app (MetaUI *ui, char *name);
+GdkPixbuf* meta_ui_get_window_icon_from_desktop_id (MetaUI *ui, char *desktop_id);
+GdkPixbuf* meta_ui_get_mini_icon_from_desktop_id (MetaUI *ui, char *desktop_id);
 
 gboolean  meta_ui_window_should_not_cause_focus (Display *xdisplay,
                                                  Window   xwindow);

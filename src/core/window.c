@@ -263,7 +263,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   gulong existing_wm_state;
   gulong event_mask;
   MetaMoveResizeFlags flags;
-#define N_INITIAL_PROPS 21
+#define N_INITIAL_PROPS 22
   Atom initial_props[N_INITIAL_PROPS];
   int i;
   gboolean has_shape;
@@ -564,6 +564,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   window->startup_id = NULL;
   window->gtk_theme_variant = NULL;
   window->gtk_application_id = NULL;
+  window->bamf_desktop_file = NULL;
 
   window->net_wm_pid = -1;
 
@@ -623,6 +624,7 @@ meta_window_new_with_attrs (MetaDisplay       *display,
   initial_props[i++] = display->atom__NET_WM_FULLSCREEN_MONITORS;
   initial_props[i++] = display->atom__GTK_THEME_VARIANT;
   initial_props[i++] = display->atom__GTK_APPLICATION_ID;
+  initial_props[i++] = display->atom__BAMF_DESKTOP_FILE;
   g_assert (N_INITIAL_PROPS == i);
 
   meta_window_reload_properties (window, initial_props, N_INITIAL_PROPS, TRUE);
@@ -6109,6 +6111,33 @@ redraw_icon (MetaWindow *window)
     meta_ui_queue_frame_draw (window->screen->ui, window->frame->xwindow);
 }
 
+static gchar*
+meta_window_get_desktop_id (MetaWindow *window)
+{
+  gchar* desktop_id = NULL;
+
+  if (window->gtk_application_id != NULL)
+    {
+      meta_verbose ("Request desktop ID from _GTK_APPLICATION_ID '%s'\n", window->gtk_application_id);
+
+      /* Generate a desktop extension to the application ID (e.g. org.mate.Caja.desktop). */
+      desktop_id = g_strconcat(window->gtk_application_id, ".desktop", NULL);
+    }
+  else if (window->bamf_desktop_file != NULL)
+    {
+      meta_verbose ("Request desktop ID from _BAMF_DESKTOP_FILE '%s'\n", window->bamf_desktop_file);
+
+      /* Remove any paths to separate the application ID */
+      gchar **path_parts = g_strsplit (window->bamf_desktop_file, "/", -1);
+      /* Generate a desktop ID the application ID (e.g. org.mate.Caja.desktop). */
+      if (g_strv_length(path_parts) > 0)
+        desktop_id = g_strdup (path_parts[g_strv_length(path_parts)-1]);
+      g_strfreev (path_parts);
+    }
+
+  return desktop_id;
+}
+
 void
 meta_window_update_icon_now (MetaWindow *window)
 {
@@ -6119,10 +6148,11 @@ meta_window_update_icon_now (MetaWindow *window)
   mini_icon = NULL;
 
   int icon_size = meta_prefs_get_icon_size();
+  gchar* desktop_id = meta_window_get_desktop_id (window);
 
   if (meta_read_icons (window->screen,
                        window->xwindow,
-                       window->gtk_application_id,
+                       desktop_id,
                        &window->icon_cache,
                        window->wm_hints_pixmap,
                        window->wm_hints_mask,
@@ -6144,6 +6174,8 @@ meta_window_update_icon_now (MetaWindow *window)
 
       redraw_icon (window);
     }
+
+  g_free (desktop_id);
 
   g_assert (window->icon);
   g_assert (window->mini_icon);
@@ -9018,6 +9050,7 @@ meta_window_finalize (GObject *object)
   g_clear_pointer (&window->desc, g_free);
   g_clear_pointer (&window->gtk_theme_variant, g_free);
   g_clear_pointer (&window->gtk_application_id, g_free);
+  g_clear_pointer (&window->bamf_desktop_file, g_free);
 
   G_OBJECT_CLASS (meta_window_parent_class)->finalize (object);
 }
