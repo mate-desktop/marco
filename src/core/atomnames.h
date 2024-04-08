@@ -77,6 +77,11 @@ item(TIMESTAMP)
 item(VERSION)
 item(ATOM_PAIR)
 
+/* This is only used if BAMF is installed and the daemon is running.
+ * Otherwise it's a no-op
+ */
+item(_BAMF_DESKTOP_FILE)
+
 /* Oddities: These are used, and we need atoms for them,
  * but when we need all _NET_WM hints (i.e. when we're making
  * lists of which _NET_WM hints we support in order to advertise
