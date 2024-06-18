@@ -40,7 +40,8 @@ notifications:
 
 deploy:
   - provider: pages
-    edge: true
+    edge:
+      branch: v2.0.3-beta.4
     token: $GITHUB_TOKEN
     keep_history: false
     committer_from_gh: true
@@ -51,7 +52,8 @@ deploy:
       all_branches: true
       condition: ${DISTRO} =~ ^fedora.*$
   - provider: script
-    edge: true
+    edge:
+      branch: v2.0.3-beta.4
     script: ./docker-build --verbose --config .build.yml --release github
     on:
       tags: true
