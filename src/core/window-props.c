@@ -320,11 +320,10 @@ get_local_pid (MetaWindow *window)
 
   for (i = 0; i < num_ids; i++)
     {
-      if (client_ids[i].spec.mask == XRES_CLIENT_ID_PID_MASK)
-        {
-          pid = XResGetClientPid (&client_ids[i]);
-          break;
-        }
+      pid = XResGetClientPid (&client_ids[i]);
+
+      if (pid != -1)
+        break;
     }
 
   XResClientIdsDestroy (num_ids, client_ids);
