@@ -311,12 +311,12 @@ get_local_pid (MetaWindow *window)
   spec.client = window->xwindow;
   spec.mask = XRES_CLIENT_ID_PID_MASK;
 
-  if (!XResQueryClientIds (window->display->xdisplay,
+  if (XResQueryClientIds (window->display->xdisplay,
                           1,
                           &spec,
                           &num_ids,
-                          &client_ids))
-      return pid;
+                          &client_ids) != Success)
+    return pid;
 
   for (i = 0; i < num_ids; i++)
     {
