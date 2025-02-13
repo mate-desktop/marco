@@ -3186,6 +3186,10 @@ window_activate (MetaWindow     *window,
          the source window.  */
       meta_window_change_workspace (window, workspace);
     }
+  else
+    {
+      meta_workspace_activate_with_focus(workspace, window, timestamp);
+    }
 
   if (window->shaded)
     meta_window_unshade (window, timestamp);
@@ -3210,11 +3214,14 @@ void
 meta_window_activate (MetaWindow     *window,
                       guint32         timestamp)
 {
+  MetaWorkspace *workspace;
+
+  workspace = window->on_all_workspaces ? NULL : window->workspace;
   /* We're not really a pager, but the behavior we want is the same as if
    * we were such.  If we change the pager behavior later, we could revisit
    * this and just add extra flags to window_activate.
    */
-  window_activate (window, timestamp, META_CLIENT_TYPE_PAGER, NULL);
+  window_activate (window, timestamp, META_CLIENT_TYPE_PAGER, workspace);
 }
 
 void
