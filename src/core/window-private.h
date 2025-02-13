@@ -133,6 +133,8 @@ struct _MetaWindow
   char *wm_client_machine;
   char *startup_id;
   char *gtk_theme_variant;
+  char *gtk_application_id;
+  char *bamf_desktop_file;
 
   int net_wm_pid;
 
