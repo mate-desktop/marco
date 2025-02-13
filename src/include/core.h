@@ -162,12 +162,10 @@ const char* meta_core_get_workspace_name_with_index (Display *xdisplay,
                                                      Window xroot,
                                                      int    index);
 
-void meta_core_show_window_menu (Display *xdisplay,
-                                 Window   frame_xwindow,
-                                 int      root_x,
-                                 int      root_y,
-                                 int      button,
-                                 guint32  timestamp);
+void meta_core_show_window_menu (Display            *xdisplay,
+                                 Window              frame_xwindow,
+                                 const GdkRectangle *rect,
+                                 guint32             timestamp);
 
 void meta_core_get_menu_accelerator (MetaMenuOp           menu_op,
                                      int                  workspace,
