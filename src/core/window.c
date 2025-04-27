@@ -5561,23 +5561,19 @@ meta_window_client_message (MetaWindow *window,
   else if (event->xclient.message_type ==
            display->atom__GTK_SHOW_WINDOW_MENU)
     {
-      gulong x_root, y_root;
+      GdkRectangle rect;
       guint32 timestamp;
-      int button;
 
       if (meta_prefs_get_raise_on_click ())
         meta_window_raise (window);
 
-      timestamp = meta_display_get_current_time_roundtrip (display);
-      x_root = event->xclient.data.l[1];
-      y_root = event->xclient.data.l[2];
-      button = 3;
+      rect.x = event->xclient.data.l[1];
+      rect.y = event->xclient.data.l[2];
+      rect.width = 0;
+      rect.height = 0;
 
-      meta_window_show_menu (window,
-                             x_root,
-                             y_root,
-                             button,
-                             timestamp);
+      timestamp = meta_display_get_current_time_roundtrip (display);
+      meta_window_show_menu (window, &rect, timestamp);
     }
 
   return FALSE;
@@ -7026,11 +7022,9 @@ menu_callback (MetaWindowMenu *menu,
 }
 
 void
-meta_window_show_menu (MetaWindow *window,
-                       int         root_x,
-                       int         root_y,
-                       int         button,
-                       guint32     timestamp)
+meta_window_show_menu (MetaWindow         *window,
+                       const GdkRectangle *rect,
+                       guint32             timestamp)
 {
   MetaMenuOp ops;
   MetaMenuOp insensitive;
@@ -7151,7 +7145,7 @@ meta_window_show_menu (MetaWindow *window,
 
   meta_verbose ("Popping up window menu for %s\n", window->desc);
 
-  meta_ui_window_menu_popup (menu, root_x, root_y, button, timestamp);
+  meta_ui_window_menu_popup (menu, rect, timestamp);
 }
 
 void
