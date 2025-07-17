@@ -504,7 +504,7 @@ meta_frames_ensure_layout (MetaFrames  *frames,
   MetaFrameType type;
   MetaFrameStyle *style;
 
-  g_return_if_fail (gtk_widget_get_realized (GTK_WIDGET (frames)));
+  g_return_if_fail (gtk_widget_get_mapped (GTK_WIDGET (frames)));
 
   widget = GTK_WIDGET (frames);
 

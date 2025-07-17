@@ -73,7 +73,7 @@ on_realize_set_struts (GtkWindow *window,
 
   widget = GTK_WIDGET (window);
 
-  g_return_if_fail (gtk_widget_get_realized (widget));
+  g_return_if_fail (gtk_widget_get_mapped (widget));
 
   left = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (window), "meta-strut-left"));
   right = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (window), "meta-strut-right"));
@@ -113,7 +113,7 @@ set_gtk_window_struts (GtkWidget  *window,
                           G_CALLBACK (on_realize_set_struts),
                           NULL);
 
-  if (gtk_widget_get_realized (widget))
+  if (gtk_widget_get_mapped (widget))
     set_gdk_window_struts (gtk_widget_get_window (widget),
                            left, right, top, bottom);
 }
@@ -141,7 +141,7 @@ on_realize_set_type (GtkWindow *window,
 {
   const char *type;
 
-  g_return_if_fail (gtk_widget_get_realized (GTK_WIDGET (window)));
+  g_return_if_fail (gtk_widget_get_mapped (GTK_WIDGET (window)));
 
   type = g_object_get_data (G_OBJECT (window), "meta-window-type");
 
@@ -170,7 +170,7 @@ set_gtk_window_type (GtkWindow  *window,
                           G_CALLBACK (on_realize_set_type),
                           NULL);
 
-  if (gtk_widget_get_realized (widget))
+  if (gtk_widget_get_mapped (widget))
     set_gdk_window_type (gtk_widget_get_window (widget),
                          type);
 }
@@ -189,7 +189,7 @@ on_realize_set_border_only (GtkWindow *window,
 
   widget = GTK_WIDGET (window);
 
-  g_return_if_fail (gtk_widget_get_realized (widget));
+  g_return_if_fail (gtk_widget_get_mapped (widget));
 
   set_gdk_window_border_only (gtk_widget_get_window (widget));
 }
@@ -210,7 +210,7 @@ GtkWidget *widget;
                           G_CALLBACK (on_realize_set_border_only),
                           NULL);
 
-  if (gtk_widget_get_realized (widget))
+  if (gtk_widget_get_mapped (widget))
     set_gdk_window_border_only (gtk_widget_get_window (widget));
 }
 

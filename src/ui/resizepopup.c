@@ -135,7 +135,7 @@ update_size_window (MetaResizePopup *popup)
       y = y / scale;
     }
 
-  if (gtk_widget_get_realized (popup->size_window))
+  if (gtk_widget_get_mapped (popup->size_window))
     {
       /* using move_resize to avoid jumpiness */
       gdk_window_move_resize (gtk_widget_get_window (popup->size_window),
@@ -157,7 +157,7 @@ sync_showing (MetaResizePopup *popup)
       if (popup->size_window)
         gtk_widget_show (popup->size_window);
 
-      if (popup->size_window && gtk_widget_get_realized (popup->size_window))
+      if (popup->size_window && gtk_widget_get_mapped (popup->size_window))
         gdk_window_raise (gtk_widget_get_window(GTK_WIDGET(popup->size_window)));
     }
   else
