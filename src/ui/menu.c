@@ -103,28 +103,6 @@ static MenuItem menuitems[] = {
 	{META_MENU_OP_DELETE, MENU_ITEM_IMAGE, MARCO_STOCK_DELETE, FALSE, N_("_Close")}
 };
 
-static void popup_position_func(GtkMenu* menu, gint* x, gint* y, gboolean* push_in, gpointer user_data)
-{
-	GtkRequisition req;
-	GdkPoint* pos;
-
-	pos = user_data;
-
-	gtk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
-
-	*x = pos->x;
-	*y = pos->y;
-
-	if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
-	{
-		*x = MAX (0, *x - req.width);
-	}
-
-	/* Ensure onscreen */
-	*x = CLAMP (*x, 0, MAX(0, WidthOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())) - req.width));
-	*y = CLAMP (*y, 0, MAX(0, HeightOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())) - req.height));
-}
-
 static void menu_closed(GtkMenu* widget, gpointer data)
 {
 	MetaWindowMenu *menu;
@@ -493,16 +471,41 @@ meta_window_menu_new   (MetaFrames         *frames,
 
 void meta_window_menu_popup(MetaWindowMenu* menu, int root_x, int root_y, int button, guint32 timestamp)
 {
-	GdkPoint* pt = g_new(GdkPoint, 1);
+	GtkRequisition req;
 	gint scale;
-
-	g_object_set_data_full(G_OBJECT(menu->menu), "destroy-point", pt, g_free);
+	GdkRectangle rect;
+	GdkWindow *rect_window;
+	int window_x, window_y;
 
 	scale = gtk_widget_get_scale_factor (menu->menu);
-	pt->x = root_x / scale;
-	pt->y = root_y / scale;
+	rect_window = gtk_widget_get_window(GTK_WIDGET(menu->frames));
 
-	gtk_menu_popup(GTK_MENU (menu->menu), NULL, NULL, popup_position_func, pt, button, timestamp);
+	/* Convert absolute screen coordinates to coordinates relative to the frame window */
+	gdk_window_get_position(rect_window, &window_x, &window_y);
+	rect.x = (root_x / scale) - window_x;
+	rect.y = (root_y / scale) - window_y;
+	rect.width = 1;
+	rect.height = 1;
+
+	/* Calculate menu size for positioning */
+	gtk_widget_get_preferred_size (GTK_WIDGET (menu->menu), &req, NULL);
+
+	/* Apply RTL adjustment */
+	if (meta_ui_get_direction() == META_UI_DIRECTION_RTL)
+	{
+		rect.x = MAX (0, rect.x - req.width);
+	}
+
+	/* Ensure onscreen */
+	rect.x = CLAMP (rect.x, 0, MAX(0, WidthOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())) - req.width));
+	rect.y = CLAMP (rect.y, 0, MAX(0, HeightOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())) - req.height));
+
+	/* Note: NULL trigger_event will cause a GTK warning when using
+	 * keyboard shortcut. Not sure there's a way around this, but seems
+	 * harmless. */
+	gtk_menu_popup_at_rect(GTK_MENU (menu->menu), rect_window, &rect,
+			       GDK_GRAVITY_NORTH_WEST, GDK_GRAVITY_NORTH_WEST,
+			       NULL);
 
     if (!gtk_widget_get_visible (menu->menu))
       meta_warning("GtkMenu failed to grab the pointer\n");
