@@ -55,6 +55,8 @@
 #include <string.h>
 #include <stdio.h>
 
+#define MAX_REASONABLE_WORKSPACES 36
+
 static char* get_screen_name (MetaDisplay *display,
                               int          number);
 
@@ -506,6 +508,7 @@ meta_screen_new (MetaDisplay *display,
   screen->vertical_workspaces = FALSE;
   screen->starting_corner = META_SCREEN_TOPLEFT;
   screen->compositor_data = NULL;
+  screen->dynamic_workspace_idle_id = 0;
 
   {
     XFontStruct *font_info;
@@ -637,6 +640,12 @@ meta_screen_free (MetaScreen *screen,
   display = screen->display;
 
   screen->closing += 1;
+
+  if (screen->dynamic_workspace_idle_id != 0)
+    {
+      g_source_remove (screen->dynamic_workspace_idle_id);
+      screen->dynamic_workspace_idle_id = 0;
+    }
 
   meta_display_grab (display);
 
@@ -872,6 +881,10 @@ prefs_changed_callback (MetaPreference pref,
         meta_display_get_current_time_roundtrip (screen->display);
       update_num_workspaces (screen, timestamp);
     }
+  else if (pref == META_PREF_DYNAMIC_WORKSPACES)
+    {
+      meta_screen_update_dynamic_workspaces (screen);
+    }
   else if (pref == META_PREF_FOCUS_MODE)
     {
       update_focus_mode (screen);
@@ -1051,6 +1064,40 @@ set_number_of_spaces_hint (MetaScreen *screen,
   meta_error_trap_pop (screen->display, FALSE);
 }
 
+/*
+ * Asks the window manager to change the number of workspaces on screen.
+ * This function is copied from libwnck.
+ */
+static void
+request_workspace_count_change (MetaScreen *screen,
+                                int         count)
+{
+  XEvent xev;
+
+  if (screen->closing > 0)
+    return;
+
+  meta_verbose ("Requesting workspace count change to %d via client message\n", count);
+
+  /* Send _NET_NUMBER_OF_DESKTOPS client message to trigger proper GSettings update */
+  xev.xclient.type = ClientMessage;
+  xev.xclient.serial = 0;
+  xev.xclient.window = screen->xroot;
+  xev.xclient.send_event = True;
+  xev.xclient.display = screen->display->xdisplay;
+  xev.xclient.message_type = screen->display->atom__NET_NUMBER_OF_DESKTOPS;
+  xev.xclient.format = 32;
+  xev.xclient.data.l[0] = count;
+
+  meta_error_trap_push (screen->display);
+  XSendEvent (screen->display->xdisplay,
+              screen->xroot,
+              False,
+              SubstructureRedirectMask | SubstructureNotifyMask,
+              &xev);
+  meta_error_trap_pop (screen->display, FALSE);
+}
+
 static void
 set_desktop_geometry_hint (MetaScreen *screen)
 {
@@ -1094,6 +1141,119 @@ set_desktop_viewport_hint (MetaScreen *screen)
                    XA_CARDINAL,
                    32, PropModeReplace, (guchar*) data, 2);
   meta_error_trap_pop (screen->display, FALSE);
+}
+
+
+static gboolean
+workspace_has_non_sticky_windows (MetaWorkspace *workspace)
+{
+  GList *window_list;
+
+  for (window_list = workspace->windows; window_list != NULL; window_list = window_list->next)
+    {
+      MetaWindow *window = window_list->data;
+      if (!window->on_all_workspaces && !window->always_sticky)
+        return TRUE;
+    }
+  return FALSE;
+}
+
+static gboolean
+dynamic_workspaces_idle_callback (gpointer user_data)
+{
+  MetaScreen *screen = user_data;
+  int workspace_count = meta_screen_get_n_workspaces (screen);
+  GList *workspace_list;
+  int empty_workspaces = 0;
+
+  screen->dynamic_workspace_idle_id = 0;
+
+  if (!meta_prefs_get_dynamic_workspaces ())
+    return G_SOURCE_REMOVE;
+
+  /* Count empty workspaces */
+  for (workspace_list = screen->workspaces; workspace_list != NULL; workspace_list = workspace_list->next)
+    {
+      MetaWorkspace *workspace = workspace_list->data;
+      if (!workspace_has_non_sticky_windows (workspace))
+        empty_workspaces++;
+    }
+
+  /* Make sure there's at least one empty workspace */
+  if (empty_workspaces == 0 && workspace_count < MAX_REASONABLE_WORKSPACES)
+    {
+      meta_workspace_new (screen);
+      workspace_count++;
+      empty_workspaces++;
+      request_workspace_count_change (screen, workspace_count);
+    }
+
+  /* If there are empty workspaces in the middle, consolidate windows from the
+   * next workspace into it. Do this sequentially to make sure all empty
+   * workspaces are at the end. */
+  for (int i = 0; i < workspace_count - 1; i++)
+    {
+      MetaWorkspace *current_ws = meta_screen_get_workspace_by_index (screen, i);
+      if (current_ws && !workspace_has_non_sticky_windows (current_ws))
+        {
+          /* Find next workspace with windows to move into this empty slot */
+          for (int j = i + 1; j < workspace_count; j++)
+            {
+              MetaWorkspace *source_ws = meta_screen_get_workspace_by_index (screen, j);
+              if (source_ws && workspace_has_non_sticky_windows (source_ws))
+                {
+                  meta_workspace_relocate_windows (source_ws, current_ws);
+                  break;
+                }
+            }
+        }
+    }
+
+  /* Count how many trailing empty workspaces there are */
+  int trailing_empty_count = 0;
+  for (int i = workspace_count - 1; i >= 0; i--)
+    {
+      MetaWorkspace *ws = meta_screen_get_workspace_by_index (screen, i);
+      if (ws && !workspace_has_non_sticky_windows (ws))
+        {
+          trailing_empty_count++;
+        }
+      else
+        {
+          break;
+        }
+    }
+
+  /* Remove all but one trailing empty workspace */
+  int workspaces_to_remove = MAX (0, trailing_empty_count - 1);
+  for (int i = 0; i < workspaces_to_remove; i++)
+    {
+      MetaWorkspace *last_ws = meta_screen_get_workspace_by_index (screen, workspace_count - 1);
+      if (last_ws)
+        {
+          meta_workspace_free (last_ws);
+          workspace_count--;
+        }
+    }
+
+  if (workspaces_to_remove > 0)
+    request_workspace_count_change (screen, workspace_count);
+
+  return G_SOURCE_REMOVE;
+}
+
+void
+meta_screen_update_dynamic_workspaces (MetaScreen *screen)
+{
+  if (!meta_prefs_get_dynamic_workspaces ())
+    return;
+
+  /* Don't queue multiple idle callbacks */
+  if (screen->dynamic_workspace_idle_id != 0)
+    return;
+
+  /* Queue idle callback to run after current operations complete */
+  screen->dynamic_workspace_idle_id = g_idle_add (dynamic_workspaces_idle_callback, screen);
 }
 
 static void
