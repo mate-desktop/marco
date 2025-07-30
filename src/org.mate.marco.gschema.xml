@@ -142,6 +142,11 @@
       <summary>Number of workspaces</summary>
       <description>Number of workspaces. Must be more than zero, and has a fixed maximum to prevent making the desktop unusable by accidentally asking for too many workspaces.</description>
     </key>
+    <key name="dynamic-workspaces" type="b">
+      <default>false</default>
+      <summary>Enable dynamic workspaces</summary>
+      <description>If true, workspaces are automatically created and deleted as needed. A new workspace is created when there are no empty ones, and empty workspaces are deleted when there is more than one empty workspace.</description>
+    </key>
     <key name="wrap-style" enum="org.mate.Marco.WrapStyle">
       <default>'no wrap'</default>
       <summary>Workspace wrap style</summary>

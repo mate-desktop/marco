@@ -105,6 +105,7 @@ static gboolean raise_on_click = TRUE;
 static gboolean attach_modal_dialogs = FALSE;
 static char* current_theme = NULL;
 static int num_workspaces = 4;
+static gboolean dynamic_workspaces = FALSE;
 static MetaWrapStyle wrap_style = META_WRAP_NONE;
 static MetaActionTitlebar action_double_click_titlebar = META_ACTION_TITLEBAR_TOGGLE_MAXIMIZE;
 static MetaActionTitlebar action_middle_click_titlebar = META_ACTION_TITLEBAR_LOWER;
@@ -374,6 +375,12 @@ static MetaBoolPreference preferences_bool[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_APPLICATION_BASED,
       NULL, /* feature is known but disabled */
+      FALSE,
+    },
+    { "dynamic-workspaces",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_DYNAMIC_WORKSPACES,
+      &dynamic_workspaces,
       FALSE,
     },
     { "disable-workarounds",
@@ -1583,6 +1590,12 @@ meta_prefs_get_num_workspaces (void)
   return num_workspaces;
 }
 
+gboolean
+meta_prefs_get_dynamic_workspaces (void)
+{
+  return dynamic_workspaces;
+}
+
 MetaWrapStyle
 meta_prefs_get_wrap_style (void)
 {
@@ -1635,6 +1648,9 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_NUM_WORKSPACES:
       return "NUM_WORKSPACES";
+
+    case META_PREF_DYNAMIC_WORKSPACES:
+      return "DYNAMIC_WORKSPACES";
 
     case META_PREF_WRAP_STYLE:
       return "WRAP_STYLE";
