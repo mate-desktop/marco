@@ -55,11 +55,17 @@
 #include <string.h>
 #include <stdio.h>
 
+#define MAX_REASONABLE_WORKSPACES 36
+
 static char* get_screen_name (MetaDisplay *display,
                               int          number);
 
 static void update_num_workspaces  (MetaScreen *screen,
                                     guint32     timestamp);
+static void safely_remove_workspaces (MetaScreen *screen,
+                                      GList *extras,
+                                      MetaWorkspace *last_remaining,
+                                      guint32 timestamp);
 static void update_focus_mode      (MetaScreen *screen);
 static void set_workspace_names    (MetaScreen *screen);
 static void prefs_changed_callback (MetaPreference pref,
@@ -509,6 +515,7 @@ meta_screen_new (MetaDisplay *display,
   screen->vertical_workspaces = FALSE;
   screen->starting_corner = META_SCREEN_TOPLEFT;
   screen->compositor_data = NULL;
+  screen->dynamic_workspace_idle_id = 0;
 
   {
     XFontStruct *font_info;
@@ -644,6 +651,12 @@ meta_screen_free (MetaScreen *screen,
   display = screen->display;
 
   screen->closing += 1;
+
+  if (screen->dynamic_workspace_idle_id != 0)
+    {
+      g_source_remove (screen->dynamic_workspace_idle_id);
+      screen->dynamic_workspace_idle_id = 0;
+    }
 
   meta_display_grab (display);
 
@@ -882,6 +895,10 @@ prefs_changed_callback (MetaPreference pref,
         meta_display_get_current_time_roundtrip (screen->display);
       update_num_workspaces (screen, timestamp);
     }
+  else if (pref == META_PREF_DYNAMIC_WORKSPACES)
+    {
+      meta_screen_update_dynamic_workspaces (screen);
+    }
   else if (pref == META_PREF_FOCUS_MODE)
     {
       update_focus_mode (screen);
@@ -1113,6 +1130,40 @@ set_number_of_spaces_hint (MetaScreen *screen,
   meta_error_trap_pop (screen->display, FALSE);
 }
 
+/*
+ * Asks the window manager to change the number of workspaces on screen.
+ * This function is copied from libwnck.
+ */
+static void
+request_workspace_count_change (MetaScreen *screen,
+                                int         count)
+{
+  XEvent xev;
+
+  if (screen->closing > 0)
+    return;
+
+  meta_verbose ("Requesting workspace count change to %d via client message\n", count);
+
+  /* Send _NET_NUMBER_OF_DESKTOPS client message to trigger proper GSettings update */
+  xev.xclient.type = ClientMessage;
+  xev.xclient.serial = 0;
+  xev.xclient.window = screen->xroot;
+  xev.xclient.send_event = True;
+  xev.xclient.display = screen->display->xdisplay;
+  xev.xclient.message_type = screen->display->atom__NET_NUMBER_OF_DESKTOPS;
+  xev.xclient.format = 32;
+  xev.xclient.data.l[0] = count;
+
+  meta_error_trap_push (screen->display);
+  XSendEvent (screen->display->xdisplay,
+              screen->xroot,
+              False,
+              SubstructureRedirectMask | SubstructureNotifyMask,
+              &xev);
+  meta_error_trap_pop (screen->display, FALSE);
+}
+
 static void
 set_desktop_geometry_hint (MetaScreen *screen)
 {
@@ -1158,39 +1209,200 @@ set_desktop_viewport_hint (MetaScreen *screen)
   meta_error_trap_pop (screen->display, FALSE);
 }
 
-static void
-update_num_workspaces (MetaScreen *screen,
-                       guint32     timestamp)
+
+static gboolean
+workspace_has_non_sticky_windows (MetaWorkspace *workspace)
 {
-  int new_num;
-  GList *tmp;
-  int i;
-  GList *extras;
-  MetaWorkspace *last_remaining;
-  gboolean need_change_space;
+  GList *window_list;
 
-  new_num = meta_prefs_get_num_workspaces ();
-
-  g_assert (new_num > 0);
-
-  last_remaining = NULL;
-  extras = NULL;
-  i = 0;
-  tmp = screen->workspaces;
-  while (tmp != NULL)
+  for (window_list = workspace->windows; window_list != NULL; window_list = window_list->next)
     {
-      MetaWorkspace *w = tmp->data;
+      MetaWindow *window = window_list->data;
+      if (!window->on_all_workspaces && !window->always_sticky)
+        return TRUE;
+    }
+  return FALSE;
+}
 
-      if (i >= new_num)
-        extras = g_list_prepend (extras, w);
-      else
-        last_remaining = w;
+static gboolean
+dynamic_workspaces_idle_callback (gpointer user_data)
+{
+  MetaScreen *screen = user_data;
+  int workspace_count = meta_screen_get_n_workspaces (screen);
+  GList *workspace_list;
+  int empty_workspaces = 0;
 
-      ++i;
-      tmp = tmp->next;
+  screen->dynamic_workspace_idle_id = 0;
+
+  if (!meta_prefs_get_dynamic_workspaces ())
+    return G_SOURCE_REMOVE;
+
+  /* Count empty workspaces */
+  for (workspace_list = screen->workspaces; workspace_list != NULL; workspace_list = workspace_list->next)
+    {
+      MetaWorkspace *workspace = workspace_list->data;
+      if (!workspace_has_non_sticky_windows (workspace))
+        empty_workspaces++;
     }
 
-  g_assert (last_remaining);
+  /* Make sure there's at least one empty workspace */
+  if (empty_workspaces == 0 && workspace_count < MAX_REASONABLE_WORKSPACES)
+    {
+      meta_workspace_new (screen);
+      workspace_count++;
+      empty_workspaces++;
+      request_workspace_count_change (screen, workspace_count);
+    }
+
+  /* If there are empty workspaces in the middle, consolidate windows from the
+   * next workspace into it. Do this sequentially to make sure all empty
+   * workspaces are at the end. */
+  for (int i = 0; i < workspace_count - 1; i++)
+    {
+      MetaWorkspace *current_ws = meta_screen_get_workspace_by_index (screen, i);
+      if (current_ws && !workspace_has_non_sticky_windows (current_ws))
+        {
+          /* Find next workspace with windows to move into this empty slot */
+          for (int j = i + 1; j < workspace_count; j++)
+            {
+              MetaWorkspace *source_ws = meta_screen_get_workspace_by_index (screen, j);
+              if (source_ws && workspace_has_non_sticky_windows (source_ws))
+                {
+                  meta_workspace_relocate_windows (source_ws, current_ws);
+                  break;
+                }
+            }
+        }
+    }
+
+  /* Count how many trailing empty workspaces there are */
+  int trailing_empty_count = 0;
+  for (int i = workspace_count - 1; i >= 0; i--)
+    {
+      MetaWorkspace *ws = meta_screen_get_workspace_by_index (screen, i);
+      if (ws && !workspace_has_non_sticky_windows (ws))
+        {
+          trailing_empty_count++;
+        }
+      else
+        {
+          break;
+        }
+    }
+
+  /* Remove all but one trailing empty workspace */
+  int workspaces_to_remove_count = MAX (0, trailing_empty_count - 1);
+  if (workspaces_to_remove_count > 0)
+    {
+      GList *workspaces_to_remove = NULL;
+      MetaWorkspace *safe_target = NULL;
+
+      /* Build list of workspaces to remove */
+      int current_count = meta_screen_get_n_workspaces (screen);
+      for (int i = 0; i < workspaces_to_remove_count; i++)
+        {
+          MetaWorkspace *last_ws = meta_screen_get_workspace_by_index (screen, current_count - 1 - i);
+          if (last_ws && !workspace_has_non_sticky_windows (last_ws))
+            {
+              workspaces_to_remove = g_list_prepend (workspaces_to_remove, last_ws);
+            }
+        }
+
+      /* Find a safe target workspace - prefer non-empty workspaces, but accept
+       * any workspace that will remain if all are empty */
+      for (int i = 0; i < meta_screen_get_n_workspaces (screen); i++)
+        {
+          MetaWorkspace *ws = meta_screen_get_workspace_by_index (screen, i);
+          if (ws && !g_list_find (workspaces_to_remove, ws))
+            {
+              /* Found a workspace that will remain */
+              if (!safe_target)
+                safe_target = ws;  /* Use this as fallback */
+
+              /* Prefer non-empty workspaces */
+              if (workspace_has_non_sticky_windows (ws))
+                {
+                  safe_target = ws;
+                  break;
+                }
+            }
+        }
+
+      /* If we found workspaces to remove and a safe target, do the removal */
+      if (workspaces_to_remove && safe_target)
+        {
+          guint32 timestamp = meta_display_get_current_time_roundtrip (screen->display);
+          int expected_count = current_count - g_list_length (workspaces_to_remove);
+          safely_remove_workspaces (screen, workspaces_to_remove, safe_target, timestamp);
+
+          /* Verify workspace count is as expected after removal */
+          int actual_count = meta_screen_get_n_workspaces (screen);
+          if (actual_count != expected_count)
+            {
+              meta_warning ("Dynamic workspaces: expected %d workspaces after removal, got %d\n",
+                            expected_count, actual_count);
+            }
+
+          request_workspace_count_change (screen, actual_count);
+        }
+      else if (workspaces_to_remove && !safe_target)
+        {
+          meta_warning ("Dynamic workspaces: could not find safe target for workspace removal\n");
+        }
+
+      g_list_free (workspaces_to_remove);
+    }
+
+  return G_SOURCE_REMOVE;
+}
+
+void
+meta_screen_update_dynamic_workspaces (MetaScreen *screen)
+{
+  if (!meta_prefs_get_dynamic_workspaces ())
+    return;
+
+  /* Don't queue multiple idle callbacks */
+  if (screen->dynamic_workspace_idle_id != 0)
+    return;
+
+  /* Queue idle callback to run after current operations complete */
+  screen->dynamic_workspace_idle_id = g_idle_add (dynamic_workspaces_idle_callback, screen);
+}
+
+static void
+safely_remove_workspaces (MetaScreen *screen,
+                          GList *extras,
+                          MetaWorkspace *last_remaining,
+                          guint32 timestamp)
+{
+  GList *tmp;
+  gboolean need_change_space;
+
+  g_return_if_fail (screen != NULL);
+  g_return_if_fail (last_remaining != NULL);
+
+  if (extras == NULL)
+    return;
+
+  /* Validate that we're not trying to remove all workspaces */
+  int total_workspaces = meta_screen_get_n_workspaces (screen);
+  int removal_count = g_list_length (extras);
+  if (removal_count >= total_workspaces)
+    {
+      meta_warning ("Attempted to remove all workspaces (%d >= %d), aborting\n",
+                    removal_count, total_workspaces);
+      return;
+    }
+
+  /* Validate that last_remaining is not in the removal list */
+  if (g_list_find (extras, last_remaining))
+    {
+      meta_warning ("Last remaining workspace is in removal list, aborting workspace removal\n");
+      return;
+    }
+
+  meta_verbose ("Safely removing %d workspaces\n", g_list_length (extras));
 
   /* Get rid of the extra workspaces by moving all their windows
    * to last_remaining, then activating last_remaining if
@@ -1226,6 +1438,44 @@ update_num_workspaces (MetaScreen *screen,
 
       tmp = tmp->next;
     }
+
+  meta_verbose ("Workspace removal completed successfully\n");
+}
+
+static void
+update_num_workspaces (MetaScreen *screen,
+                       guint32     timestamp)
+{
+  int new_num;
+  GList *tmp;
+  int i;
+  GList *extras;
+  MetaWorkspace *last_remaining;
+
+  new_num = meta_prefs_get_num_workspaces ();
+
+  g_assert (new_num > 0);
+
+  last_remaining = NULL;
+  extras = NULL;
+  i = 0;
+  tmp = screen->workspaces;
+  while (tmp != NULL)
+    {
+      MetaWorkspace *w = tmp->data;
+
+      if (i >= new_num)
+        extras = g_list_prepend (extras, w);
+      else
+        last_remaining = w;
+
+      ++i;
+      tmp = tmp->next;
+    }
+
+  g_assert (last_remaining);
+
+  safely_remove_workspaces (screen, extras, last_remaining, timestamp);
 
   g_list_free (extras);
 
