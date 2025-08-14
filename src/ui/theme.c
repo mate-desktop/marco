@@ -1004,7 +1004,17 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
           rect->clickable.height = button_height;
 
           if (i == n_right - 1)
-            rect->clickable.width += layout->right_titlebar_edge + layout->right_width + layout->button_border.right;
+            {
+              /* Extend clickable area to the right edge */
+              rect->clickable.width += layout->right_titlebar_edge + layout->right_width + layout->button_border.right;
+
+              /* For maximized and right-tiled windows, extend clickable area to the top edge (Fitts's law)*/
+              if (flags & META_FRAME_MAXIMIZED || flags & META_FRAME_TILED_RIGHT)
+                {
+                  rect->clickable.y = 0;
+                  rect->clickable.height = button_y + button_height;
+                }
+            }
 
         }
       else
@@ -1035,12 +1045,23 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
       rect->visible.width = button_width;
       rect->visible.height = button_height;
 
-      if (flags & META_FRAME_MAXIMIZED)
+      if (flags & META_FRAME_MAXIMIZED ||
+          flags & META_FRAME_TILED_LEFT ||
+          flags & META_FRAME_TILED_RIGHT)
         {
           rect->clickable.x = rect->visible.x;
           rect->clickable.y = rect->visible.y;
           rect->clickable.width = button_width;
           rect->clickable.height = button_height;
+
+          /* For the first left button on maximized/left-tiled windows, extend to top-left corner (Fitts's law) */
+          if (i == 0 && (flags & META_FRAME_MAXIMIZED || flags & META_FRAME_TILED_LEFT))
+            {
+              rect->clickable.x = 0;
+              rect->clickable.y = 0;
+              rect->clickable.width = rect->visible.x + button_width;
+              rect->clickable.height = button_y + button_height;
+            }
         }
       else
         memmove (&(rect->clickable), &(rect->visible), sizeof(rect->clickable));
