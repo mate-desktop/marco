@@ -1576,6 +1576,71 @@ meta_frame_titlebar_event (MetaUIFrame    *frame,
                                   event->time);
       break;
 
+    case META_ACTION_TITLEBAR_CLOSE:
+      meta_core_delete (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+                        frame->xwindow,
+                        event->time);
+      break;
+
+    case META_ACTION_TITLEBAR_RAISE:
+      meta_core_user_raise (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+                            frame->xwindow);
+      break;
+
+    case META_ACTION_TITLEBAR_SHADE:
+      meta_core_get (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow,
+                     META_CORE_GET_FRAME_FLAGS, &flags,
+                     META_CORE_GET_END);
+      if ((flags & META_FRAME_ALLOWS_SHADE) && !(flags & META_FRAME_SHADED))
+        {
+          meta_core_shade (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+                           frame->xwindow,
+                           event->time);
+        }
+      break;
+
+    case META_ACTION_TITLEBAR_UNSHADE:
+      meta_core_get (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow,
+                     META_CORE_GET_FRAME_FLAGS, &flags,
+                     META_CORE_GET_END);
+      if ((flags & META_FRAME_ALLOWS_SHADE) && (flags & META_FRAME_SHADED))
+        {
+          meta_core_unshade (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+                             frame->xwindow,
+                             event->time);
+        }
+      break;
+
+    case META_ACTION_TITLEBAR_TOGGLE_STICK:
+      {
+        MetaFrameFlags flags;
+        meta_core_get (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow,
+                       META_CORE_GET_FRAME_FLAGS, &flags,
+                       META_CORE_GET_END);
+        if (flags & META_FRAME_STUCK)
+          meta_core_unstick (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+                             frame->xwindow);
+        else
+          meta_core_stick (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+                           frame->xwindow);
+      }
+      break;
+
+    case META_ACTION_TITLEBAR_TOGGLE_ABOVE:
+      {
+        MetaFrameFlags flags;
+        meta_core_get (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), frame->xwindow,
+                       META_CORE_GET_FRAME_FLAGS, &flags,
+                       META_CORE_GET_END);
+        if (flags & META_FRAME_ABOVE)
+          meta_core_unmake_above (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+                                  frame->xwindow);
+        else
+          meta_core_make_above (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+                                frame->xwindow);
+      }
+      break;
+
     case META_ACTION_TITLEBAR_LAST:
       break;
     }
@@ -1606,6 +1671,24 @@ meta_frame_right_click_event(MetaUIFrame     *frame,
                              GdkEventButton  *event)
 {
   int action = meta_prefs_get_action_right_click_titlebar();
+
+  return meta_frame_titlebar_event (frame, event, action);
+}
+
+static gboolean
+meta_frame_scroll_up_event (MetaUIFrame    *frame,
+                            GdkEventButton *event)
+{
+  int action = meta_prefs_get_action_scroll_up_titlebar();
+
+  return meta_frame_titlebar_event (frame, event, action);
+}
+
+static gboolean
+meta_frame_scroll_down_event (MetaUIFrame    *frame,
+                              GdkEventButton *event)
+{
+  int action = meta_prefs_get_action_scroll_down_titlebar();
 
   return meta_frame_titlebar_event (frame, event, action);
 }
@@ -1850,6 +1933,18 @@ meta_frames_button_press_event (GtkWidget      *widget,
   else if (event->button == 3)
     {
       return meta_frame_right_click_event (frame, event);
+    }
+  else if (event->button == 4)  /* scroll up */
+    {
+      /* Only handle scroll on titlebar, not on other frame controls */
+      if (control == META_FRAME_CONTROL_TITLE)
+        return meta_frame_scroll_up_event (frame, event);
+    }
+  else if (event->button == 5)  /* scroll down */
+    {
+      /* Only handle scroll on titlebar, not on other frame controls */
+      if (control == META_FRAME_CONTROL_TITLE)
+        return meta_frame_scroll_down_event (frame, event);
     }
 
   return TRUE;

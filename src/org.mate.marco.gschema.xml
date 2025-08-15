@@ -20,15 +20,21 @@
     <value nick="frame_flash" value="2"/>
   </enum>
   <enum id="org.mate.Marco.ActionTitlebar">
-    <value nick="toggle_shade" value="0"/>
-    <value nick="toggle_maximize" value="1"/>
-    <value nick="toggle_maximize_horizontally" value="2"/>
-    <value nick="toggle_maximize_vertically" value="3"/>
-    <value nick="minimize" value="4"/>
-    <value nick="none" value="5"/>
-    <value nick="lower" value="6"/>
-    <value nick="menu" value="7"/>
-    <value nick="last" value="8"/>
+    <value nick="close" value="0"/>
+    <value nick="minimize" value="1"/>
+    <value nick="toggle_maximize" value="2"/>
+    <value nick="toggle_maximize_horizontally" value="3"/>
+    <value nick="toggle_maximize_vertically" value="4"/>
+    <value nick="toggle_shade" value="5"/>
+    <value nick="shade" value="6"/>
+    <value nick="unshade" value="7"/>
+    <value nick="raise" value="8"/>
+    <value nick="lower" value="9"/>
+    <value nick="toggle_stick" value="10"/>
+    <value nick="toggle_above" value="11"/>
+    <value nick="menu" value="12"/>
+    <value nick="none" value="13"/>
+    <value nick="last" value="14"/>
   </enum>
   <enum id="org.mate.Marco.placement_type">
     <value value="0" nick="automatic"/>
@@ -83,17 +89,27 @@
     <key name="action-double-click-titlebar" enum="org.mate.Marco.ActionTitlebar">
       <default>'toggle_maximize'</default>
       <summary>Action on title bar double-click</summary>
-      <description>This option determines the effects of double-clicking on the title bar.  Current valid options are 'toggle_shade', which will shade/unshade the window, 'toggle_maximize' which will maximize/unmaximize the window, 'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will maximize/unmaximize the window in that direction only, 'minimize' which will minimize the window, 'shade' which will roll the window up, 'menu' which will display the window menu, 'lower' which will put the window behind all the others, and 'none' which will not do anything.</description>
+      <description>This option determines the effects of double-clicking on the title bar.  Current valid options are 'toggle_shade', which will shade/unshade the window, 'toggle_maximize' which will maximize/unmaximize the window, 'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will maximize/unmaximize the window in that direction only, 'minimize' which will minimize the window, 'shade' which will roll the window up, 'unshade' which will unroll the window, 'menu' which will display the window menu, 'lower' which will put the window behind all the others, 'raise' which will raise the window above all others, 'close' which will close the window, 'toggle_stick' which will toggle the window's sticky state, 'toggle_above' which will toggle the window's always-on-top state, and 'none' which will not do anything.</description>
     </key>
     <key name="action-middle-click-titlebar" enum="org.mate.Marco.ActionTitlebar">
       <default>'lower'</default>
       <summary>Action on title bar middle-click</summary>
-      <description>This option determines the effects of middle-clicking on the title bar.  Current valid options are 'toggle_shade', which will shade/unshade the window, 'toggle_maximize' which will maximize/unmaximize the window, 'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will maximize/unmaximize the window in that direction only, 'minimize' which will minimize the window, 'shade' which will roll the window up, 'menu' which will display the window menu, 'lower' which will put the window behind all the others, and 'none' which will not do anything.</description>
+      <description>This option determines the effects of middle-clicking on the title bar.  Current valid options are 'toggle_shade', which will shade/unshade the window, 'toggle_maximize' which will maximize/unmaximize the window, 'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will maximize/unmaximize the window in that direction only, 'minimize' which will minimize the window, 'shade' which will roll the window up, 'unshade' which will unroll the window, 'menu' which will display the window menu, 'lower' which will put the window behind all the others, 'raise' which will raise the window above all others, 'close' which will close the window, 'toggle_stick' which will toggle the window's sticky state, 'toggle_above' which will toggle the window's always-on-top state, and 'none' which will not do anything.</description>
     </key>
     <key name="action-right-click-titlebar" enum="org.mate.Marco.ActionTitlebar">
       <default>'menu'</default>
       <summary>Action on title bar right-click</summary>
-      <description>This option determines the effects of right-clicking on the title bar.  Current valid options are 'toggle_shade', which will shade/unshade the window, 'toggle_maximize' which will maximize/unmaximize the window, 'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will maximize/unmaximize the window in that direction only, 'minimize' which will minimize the window, 'shade' which will roll the window up, 'menu' which will display the window menu, 'lower' which will put the window behind all the others, and 'none' which will not do anything.</description>
+      <description>This option determines the effects of right-clicking on the title bar.  Current valid options are 'toggle_shade', which will shade/unshade the window, 'toggle_maximize' which will maximize/unmaximize the window, 'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will maximize/unmaximize the window in that direction only, 'minimize' which will minimize the window, 'shade' which will roll the window up, 'unshade' which will unroll the window, 'menu' which will display the window menu, 'lower' which will put the window behind all the others, 'raise' which will raise the window above all others, 'close' which will close the window, 'toggle_stick' which will toggle the window's sticky state, 'toggle_above' which will toggle the window's always-on-top state, and 'none' which will not do anything.</description>
+    </key>
+    <key name="action-scroll-up-titlebar" enum="org.mate.Marco.ActionTitlebar">
+      <default>'none'</default>
+      <summary>Action on title bar scroll up</summary>
+      <description>This option determines the effects of scrolling up on the title bar (using mouse wheel or touchpad).  Current valid options are 'toggle_shade', which will shade/unshade the window, 'toggle_maximize' which will maximize/unmaximize the window, 'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will maximize/unmaximize the window in that direction only, 'minimize' which will minimize the window, 'shade' which will roll the window up, 'unshade' which will unroll the window, 'menu' which will display the window menu, 'lower' which will put the window behind all the others, 'raise' which will raise the window above all others, 'close' which will close the window, 'toggle_stick' which will toggle the window's sticky state, 'toggle_above' which will toggle the window's always-on-top state, and 'none' which will not do anything.</description>
+    </key>
+    <key name="action-scroll-down-titlebar" enum="org.mate.Marco.ActionTitlebar">
+      <default>'none'</default>
+      <summary>Action on title bar scroll down</summary>
+      <description>This option determines the effects of scrolling down on the title bar (using mouse wheel or touchpad).  Current valid options are 'toggle_shade', which will shade/unshade the window, 'toggle_maximize' which will maximize/unmaximize the window, 'toggle_maximize_horizontally' and 'toggle_maximize_vertically' which will maximize/unmaximize the window in that direction only, 'minimize' which will minimize the window, 'shade' which will roll the window up, 'unshade' which will unroll the window, 'menu' which will display the window menu, 'lower' which will put the window behind all the others, 'raise' which will raise the window above all others, 'close' which will close the window, 'toggle_stick' which will toggle the window's sticky state, 'toggle_above' which will toggle the window's always-on-top state, and 'none' which will not do anything.</description>
     </key>
     <key name="auto-raise" type="b">
       <default>false</default>
