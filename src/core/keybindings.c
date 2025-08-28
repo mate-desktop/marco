@@ -2447,19 +2447,6 @@ error_on_command (int         command_index,
     }
 }
 
-static void
-set_display_setup_func (void *data)
-{
-  const char *screen_name = data;
-  char *full;
-
-  full = g_strdup_printf ("DISPLAY=%s", screen_name);
-
-  putenv (full);
-
-  /* do not free full, because putenv is lame */
-}
-
 static gboolean
 meta_spawn_command_line_async_on_screen (const gchar *command_line,
                                          MetaScreen  *screen,
@@ -2467,6 +2454,7 @@ meta_spawn_command_line_async_on_screen (const gchar *command_line,
 {
   gboolean retval;
   gchar **argv = NULL;
+  gchar **envp = NULL;
 
   g_return_val_if_fail (command_line != NULL, FALSE);
 
@@ -2475,15 +2463,20 @@ meta_spawn_command_line_async_on_screen (const gchar *command_line,
                            error))
     return FALSE;
 
+  envp = g_get_environ();
+  envp = g_environ_setenv(envp, "DISPLAY", screen->screen_name, TRUE);
+
   retval = g_spawn_async (NULL,
                           argv,
-                          NULL,
+                          envp,
                           G_SPAWN_SEARCH_PATH,
-                          set_display_setup_func,
-                          screen->screen_name,
+                          NULL,
+                          NULL,
                           NULL,
                           error);
+
   g_strfreev (argv);
+  g_strfreev (envp);
 
   return retval;
 }
