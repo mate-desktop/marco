@@ -29,6 +29,11 @@
 #include "common.h"
 #include <pango/pango-font.h>
 
+#define MAX_COMMANDS (32 + NUM_EXTRA_COMMANDS)
+#define NUM_EXTRA_COMMANDS 2
+#define SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 2)
+#define WIN_SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 1)
+
 typedef enum
 {
   META_PREF_MOUSE_BUTTON_MODS,
