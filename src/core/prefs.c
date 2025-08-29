@@ -36,10 +36,6 @@
 
 #define MAX_REASONABLE_WORKSPACES 36
 
-#define MAX_COMMANDS (32 + NUM_EXTRA_COMMANDS)
-#define NUM_EXTRA_COMMANDS 2
-#define SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 2)
-#define WIN_SCREENSHOT_COMMAND_IDX (MAX_COMMANDS - 1)
 
 /* If you add a key, it needs updating in init() and in the GSettings
  * notify listener and of course in the .gschema file.
