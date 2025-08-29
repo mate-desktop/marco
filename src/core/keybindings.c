@@ -2514,7 +2514,7 @@ handle_run_command (MetaDisplay    *display,
    * input grabbing. This prevents race conditions with applications like
    * mate-screenshot that need to grab input for area selection.
    */
-  if (which >= SCREENSHOT_COMMAND_IDX && which <= WIN_SCREENSHOT_COMMAND_IDX)
+  if (which >= SCREENSHOT_COMMAND_IDX && which <= AREA_SCREENSHOT_COMMAND_IDX)
     {
       ungrab_keyboard (display, event->xkey.time);
     }

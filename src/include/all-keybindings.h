@@ -194,6 +194,7 @@ keybind (run-command-32, handle_run_command, 31, 0)
 
 keybind (run-command-screenshot, handle_run_command, 32, 0)
 keybind (run-command-window-screenshot, handle_run_command, 33, 0)
+keybind (run-command-area-screenshot, handle_run_command, 34, 0)
 
 keybind (run-command-terminal, handle_run_terminal, 0, 0)
 keybind (rename-workspace, handle_rename_workspace, 0, 0)
