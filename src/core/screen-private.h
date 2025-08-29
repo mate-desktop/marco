@@ -140,6 +140,8 @@ struct _MetaScreen
 
   /* Managed by compositor.c */
   gpointer compositor_data;
+
+  guint dynamic_workspace_idle_id;
 };
 
 MetaScreen*   meta_screen_new                 (MetaDisplay                *display,
@@ -191,6 +193,7 @@ void          meta_screen_get_natural_xinerama_list (MetaScreen *screen,
 void          meta_screen_update_workspace_layout (MetaScreen             *screen);
 void          meta_screen_update_workspace_names  (MetaScreen             *screen);
 void          meta_screen_queue_workarea_recalc   (MetaScreen             *screen);
+void          meta_screen_update_dynamic_workspaces (MetaScreen           *screen);
 
 Window meta_create_offscreen_window (Display *xdisplay,
                                      Window   parent,
