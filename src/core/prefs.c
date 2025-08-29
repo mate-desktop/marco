@@ -2049,6 +2049,10 @@ update_command (const char  *name,
         {
           i = WIN_SCREENSHOT_COMMAND_IDX;
         }
+      else if (strcmp (name, "command-area-screenshot") == 0)
+        {
+          i = AREA_SCREENSHOT_COMMAND_IDX;
+        }
       else
         {
           meta_topic (META_DEBUG_KEYBINDINGS,
@@ -2102,6 +2106,9 @@ meta_prefs_get_settings_key_for_command (int i)
       break;
     case WIN_SCREENSHOT_COMMAND_IDX:
       key = g_strdup (KEY_COMMAND_PREFIX "window-screenshot");
+      break;
+    case AREA_SCREENSHOT_COMMAND_IDX:
+      key = g_strdup (KEY_COMMAND_PREFIX "area-screenshot");
       break;
     default:
       key = g_strdup_printf (KEY_COMMAND_PREFIX"%d", i + 1);
