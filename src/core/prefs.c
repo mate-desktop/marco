@@ -109,6 +109,8 @@ static MetaWrapStyle wrap_style = META_WRAP_NONE;
 static MetaActionTitlebar action_double_click_titlebar = META_ACTION_TITLEBAR_TOGGLE_MAXIMIZE;
 static MetaActionTitlebar action_middle_click_titlebar = META_ACTION_TITLEBAR_LOWER;
 static MetaActionTitlebar action_right_click_titlebar = META_ACTION_TITLEBAR_MENU;
+static MetaActionTitlebar action_scroll_up_titlebar = META_ACTION_TITLEBAR_NONE;
+static MetaActionTitlebar action_scroll_down_titlebar = META_ACTION_TITLEBAR_NONE;
 static gboolean application_based = FALSE;
 static gboolean disable_workarounds = FALSE;
 static gboolean auto_raise = FALSE;
@@ -335,6 +337,16 @@ static MetaEnumPreference preferences_enum[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_ACTION_RIGHT_CLICK_TITLEBAR,
       (gint *) &action_right_click_titlebar,
+    },
+    { "action-scroll-up-titlebar",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ACTION_SCROLL_UP_TITLEBAR,
+      (gint *) &action_scroll_up_titlebar,
+    },
+    { "action-scroll-down-titlebar",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ACTION_SCROLL_DOWN_TITLEBAR,
+      (gint *) &action_scroll_down_titlebar,
     },
     { "placement-mode",
       KEY_GENERAL_SCHEMA,
@@ -1645,6 +1657,12 @@ meta_preference_to_string (MetaPreference pref)
     case META_PREF_ACTION_RIGHT_CLICK_TITLEBAR:
       return "ACTION_RIGHT_CLICK_TITLEBAR";
 
+    case META_PREF_ACTION_SCROLL_UP_TITLEBAR:
+      return "ACTION_SCROLL_UP_TITLEBAR";
+
+    case META_PREF_ACTION_SCROLL_DOWN_TITLEBAR:
+      return "ACTION_SCROLL_DOWN_TITLEBAR";
+
     case META_PREF_AUTO_RAISE:
       return "AUTO_RAISE";
 
@@ -2297,6 +2315,18 @@ MetaActionTitlebar
 meta_prefs_get_action_right_click_titlebar (void)
 {
   return action_right_click_titlebar;
+}
+
+MetaActionTitlebar
+meta_prefs_get_action_scroll_up_titlebar (void)
+{
+  return action_scroll_up_titlebar;
+}
+
+MetaActionTitlebar
+meta_prefs_get_action_scroll_down_titlebar (void)
+{
+  return action_scroll_down_titlebar;
 }
 
 gboolean
