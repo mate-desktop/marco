@@ -30,5 +30,6 @@
 Window meta_frame_get_xwindow (MetaFrame *frame);
 void   meta_frame_calc_borders (MetaFrame        *frame,
                                 MetaFrameBorders *borders);
+void   meta_frame_clear_cached_borders (MetaFrame *frame);
 
 #endif

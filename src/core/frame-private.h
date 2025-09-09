@@ -48,9 +48,13 @@ struct _MetaFrame
   int right_width;
   int bottom_height;
 
+  /* valid if borders_cached is set */
+  MetaFrameBorders cached_borders;
+
   guint mapped : 1;
   guint need_reapply_frame_shape : 1;
   guint is_flashing : 1; /* used by the visual bell flash */
+  guint borders_cached : 1;
 };
 
 void     meta_window_ensure_frame           (MetaWindow *window);
