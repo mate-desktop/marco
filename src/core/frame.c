@@ -85,6 +85,7 @@ meta_window_ensure_frame (MetaWindow *window)
   frame->mapped = FALSE;
   frame->need_reapply_frame_shape = TRUE;
   frame->is_flashing = FALSE;
+  frame->borders_cached = FALSE;
 
   meta_verbose ("Frame geometry %d,%d  %dx%d\n",
                 frame->rect.x, frame->rect.y,
@@ -302,22 +303,51 @@ meta_frame_get_flags (MetaFrame *frame)
   return flags;
 }
 
-void
-meta_frame_borders_clear (MetaFrameBorders *self)
+static void
+clear_border (GtkBorder *border)
 {
-  self->visible.top = self->invisible.top = self->total.top = 0;
-  self->visible.bottom = self->invisible.bottom = self->total.bottom = 0;
-  self->visible.left = self->invisible.left = self->total.left = 0;
-  self->visible.right = self->invisible.right = self->total.right = 0;
+  border->left = 0;
+  border->right = 0;
+  border->top = 0;
+  border->bottom = 0;
+}
+
+void
+meta_frame_borders_clear (MetaFrameBorders *borders)
+{
+  clear_border (&borders->visible);
+  clear_border (&borders->shadow);
+  clear_border (&borders->resize);
+  clear_border (&borders->invisible);
+  clear_border (&borders->total);
 }
 
 void
 meta_frame_calc_borders (MetaFrame        *frame,
                          MetaFrameBorders *borders)
 {
-  meta_ui_get_frame_borders (frame->window->screen->ui,
-                             frame->xwindow,
-                             borders);
+  if (frame == NULL)
+    {
+      meta_frame_borders_clear (borders);
+    }
+  else
+    {
+      if (!frame->borders_cached)
+        {
+          meta_ui_get_frame_borders (frame->window->screen->ui,
+                                     frame->xwindow,
+                                     &frame->cached_borders);
+          frame->borders_cached = TRUE;
+        }
+
+      *borders = frame->cached_borders;
+   }
+}
+
+void
+meta_frame_clear_cached_borders (MetaFrame *frame)
+{
+  frame->borders_cached = FALSE;
 }
 
 static gboolean
