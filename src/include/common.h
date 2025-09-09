@@ -310,15 +310,11 @@ struct _MetaButtonLayout
 typedef struct _MetaFrameBorders MetaFrameBorders;
 struct _MetaFrameBorders
 {
-  /* The frame border is made up of two pieces - an inner visible portion
-   * and an outer portion that is invisible but responds to events.
-   */
-  GtkBorder visible;
-  GtkBorder invisible;
-
-  /* For convenience, we have a "total" border which is equal to the sum
-   * of the two borders above. */
-  GtkBorder total;
+  GtkBorder visible;   /* Visible window frame decoration */
+  GtkBorder shadow;    /* Extra size needed for shadow */
+  GtkBorder resize;    /* Extra size used for resize cursor area */
+  GtkBorder invisible; /* Max of shadow and resize borders */
+  GtkBorder total;     /* Sum of visible and invisible borders */
 };
 
 /* sets all dimensions to zero */

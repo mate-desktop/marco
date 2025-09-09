@@ -92,8 +92,7 @@ struct _MetaFrameLayout
   /** Size of bottom side */
   int bottom_height;
 
-  /** Invisible border */
-  GtkBorder invisible_border;
+  GtkBorder invisible_resize_border;
 
   /** Border of blue title region
    * \bug (blue?!)
@@ -874,6 +873,7 @@ void             meta_frame_layout_unref         (MetaFrameLayout       *layout)
 void             meta_frame_layout_get_borders   (const MetaFrameLayout *layout,
                                                   int                    text_height,
                                                   MetaFrameFlags         flags,
+                                                  MetaFrameType          type,
                                                   MetaFrameBorders      *borders);
 void             meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
                                                   int                     text_height,

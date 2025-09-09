@@ -328,10 +328,10 @@ meta_frame_layout_new  (void)
   layout->right_width = -1;
   layout->bottom_height = -1;
 
-  layout->invisible_border.left = 10;
-  layout->invisible_border.right = 10;
-  layout->invisible_border.bottom = 10;
-  layout->invisible_border.top = 10;
+  layout->invisible_resize_border.left = 10;
+  layout->invisible_resize_border.right = 10;
+  layout->invisible_resize_border.bottom = 10;
+  layout->invisible_resize_border.top = 10;
 
   init_border (&layout->title_border);
 
@@ -514,6 +514,7 @@ void
 meta_frame_layout_get_borders (const MetaFrameLayout *layout,
                                int                    text_height,
                                MetaFrameFlags         flags,
+                               MetaFrameType          type,
                                MetaFrameBorders      *borders)
 {
   int buttons_height, title_height;
@@ -540,25 +541,52 @@ meta_frame_layout_get_borders (const MetaFrameLayout *layout,
   borders->visible.right = layout->right_width;
   borders->visible.bottom = layout->bottom_height;
 
+  borders->shadow.top = 0;
+  borders->shadow.left = 0;
+  borders->shadow.right = 0;
+  borders->shadow.bottom = 0;
+
   if (flags & META_FRAME_ALLOWS_HORIZONTAL_RESIZE)
     {
-      borders->invisible.left = layout->invisible_border.left;
-      borders->invisible.right = layout->invisible_border.right;
+      borders->resize.left = layout->invisible_resize_border.left;
+      borders->resize.right = layout->invisible_resize_border.right;
     }
 
   if (flags & META_FRAME_ALLOWS_VERTICAL_RESIZE)
     {
-      borders->invisible.bottom = layout->invisible_border.bottom;
-      borders->invisible.top = layout->invisible_border.top;
+      borders->resize.bottom = layout->invisible_resize_border.bottom;
+
+      if (type != META_FRAME_TYPE_ATTACHED)
+        borders->resize.top = layout->invisible_resize_border.top;
     }
 
-  if (flags & META_FRAME_SHADED)
-    borders->visible.bottom = borders->invisible.bottom = 0;
+  borders->invisible.left = MAX (borders->shadow.left, borders->resize.left);
+  borders->invisible.right = MAX (borders->shadow.right, borders->resize.right);
+  borders->invisible.bottom = MAX (borders->shadow.bottom, borders->resize.bottom);
+  borders->invisible.top = MAX (borders->shadow.top, borders->resize.top);
+
+  /* Maximized and tiled windows should not have invisible borders on the sides
+   * that touch the screen edges */
+  if (flags & (META_FRAME_MAXIMIZED | META_FRAME_TILED_LEFT | META_FRAME_TILED_RIGHT))
+    {
+      borders->invisible.top = 0;
+      borders->invisible.bottom = 0;
+    }
+  if (flags & (META_FRAME_MAXIMIZED | META_FRAME_TILED_LEFT))
+      borders->invisible.left = 0;
+  if (flags & (META_FRAME_MAXIMIZED | META_FRAME_TILED_RIGHT))
+      borders->invisible.right = 0;
+
+  if (type == META_FRAME_TYPE_ATTACHED)
+      borders->invisible.top = 0;
 
   borders->total.left = borders->invisible.left + borders->visible.left;
   borders->total.right = borders->invisible.right + borders->visible.right;
   borders->total.bottom = borders->invisible.bottom + borders->visible.bottom;
   borders->total.top = borders->invisible.top + borders->visible.top;
+
+  if (flags & META_FRAME_SHADED)
+    borders->visible.bottom = borders->invisible.bottom = 0;
 }
 
 static MetaButtonType
@@ -758,6 +786,7 @@ meta_frame_layout_calc_geometry (const MetaFrameLayout  *layout,
 
   meta_frame_layout_get_borders (layout, text_height,
                                  flags,
+                                 META_FRAME_TYPE_NORMAL, /* Will be updated when type parameter is passed down */
                                  &borders);
 
   fgeom->borders = borders;
@@ -5947,6 +5976,7 @@ meta_theme_get_frame_borders (MetaTheme        *theme,
   meta_frame_layout_get_borders (style->layout,
                                  text_height,
                                  flags,
+                                 type,
                                  borders);
 }
 
