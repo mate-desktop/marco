@@ -34,4 +34,7 @@ void meta_window_place (MetaWindow       *window,
                         int              *new_x,
                         int              *new_y);
 
+void center_rect_in_area (MetaRectangle *rect,
+                          MetaRectangle *work_area);
+
 #endif
