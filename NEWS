@@ -1,3 +1,22 @@
+### mate-desktop 1.29.0
+
+  * window: Add configurable mouse actions for titlebar
+  * theme: Fix left-side Fitt's Law
+  * theme: Extend button clickable area to edge of screen
+  * build(deps): bump actions/cache from 3 to 4
+  * build(deps): bump actions/checkout from 4 to 5
+  * build(deps): bump dev-hanz-ops/install-gh-cli-action from 0.1.0 to 0.2.1
+  * GitHub action (#795)
+  * Fix GTK deprecations (#798)
+  * window: Parse _BAMF_DESKTOP_FILE property
+  * iconcache: Add GDesktopAppInfo lookup as an icon caching strategy
+  * window: Parse _GTK_APPLICATION_ID property
+  * window-props: remove incorrect mask check
+  * window-props: Fix check for XResQueryClientIds() success
+  * ci: fix travis deploy
+  * tabpopup: Stop spamming the ATs with label changes at startup
+  * tabpopup: Report the window as active to a11y when it's showing
+
 ### mate-desktop 1.28.1
 
   * fix packaging with meson
