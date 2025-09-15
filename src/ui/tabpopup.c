@@ -403,6 +403,7 @@ meta_ui_tab_popup_new (const MetaTabEntry *entries,
   gtk_container_set_border_width (GTK_CONTAINER (grid), 16);
   gtk_container_add (GTK_CONTAINER (popup->window), frame);
   gtk_container_add (GTK_CONTAINER (frame), vbox);
+  gtk_style_context_add_class (gtk_widget_get_style_context (frame), "mate-tabwin");
 
   gtk_box_pack_start (GTK_BOX (vbox), grid, TRUE, TRUE, 0);
 
