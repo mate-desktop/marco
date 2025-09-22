@@ -25,7 +25,14 @@ jobs:
         run: sudo .github/workflows/mate-desktop.sh ${{env.MATE_DESKTOP_VERSION}} ${{ env.CACHE_PATH }}
 
       - name: Build the source code
-        run: .github/workflows/builds.sh meson
+        run: .github/workflows/builds.sh autotools
+
+      - name: Generate release tarball and checksums
+        run: |
+          make distcheck
+          TARBALL=$(ls marco-*.tar.xz | head -1)
+          sha256sum "$TARBALL" > "$TARBALL.sha256"
+          md5sum "$TARBALL" > "$TARBALL.md5"
 
       - name: Install GH CLI
         uses: dev-hanz-ops/install-gh-cli-action@v0.2.1
@@ -34,6 +41,12 @@ jobs:
 
       - name: Create github release
         run: |
-          gh release create ${{ github.ref_name }} --title ${{ github.ref_name }} --generate-notes _build/meson-dist/*
+          gh release create ${{ github.ref_name }} --title "Marco ${{ github.ref_name }}" --generate-notes marco-*.tar.xz marco-*.tar.xz.sha256 marco-*.tar.xz.md5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Notify MATE release server
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+            -d "{\"tag\": \"${{ github.ref_name }}\", \"repository\": \"${{ github.repository }}\", \"release_url\": \"https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}\"}" \
+            https://release.mate-desktop.org/release || echo "::warning::Release notification failed"
