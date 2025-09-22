@@ -98,3 +98,15 @@ jobs:
 
       - name: Build the source code
         run: .github/workflows/builds.sh ${{ matrix.build-system }}
+
+      - name: IRC notification on failure
+        if: failure() && (github.event_name == 'push' && github.ref == 'refs/heads/master' || github.event_name == 'pull_request')
+        uses: rectalogic/notify-irc@v2
+        with:
+          channel: "#mate-dev"
+          server: "irc.libera.chat"
+          nickname: "github-marco"
+          message: |
+            [marco] ${{ github.actor }}: Build failed for ${{ github.event_name }}
+            [${{ github.ref_name }}] ${{ github.sha }} - ${{ github.event.head_commit.message || github.event.pull_request.title }}
+            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
