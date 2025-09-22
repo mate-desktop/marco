@@ -9,6 +9,7 @@
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2020
 # 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2020
 # shy tzedaka <shaytzedaka123@gmail.com>, 2020
+# Avi Markovitz <avi.markovitz@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
@@ -16,13 +17,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2023-09-01 20:14+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: shy tzedaka <shaytzedaka123@gmail.com>, 2020\n"
+"Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>, 2024\n"
 "Language-Team: Hebrew (https://app.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
@@ -1235,7 +1236,7 @@ msgstr "X Display to use"
 
 #: src/core/main.c:270
 msgid "Initialize session from savefile"
-msgstr "Initialize session from savefile"
+msgstr ""
 
 #: src/core/main.c:276
 msgid "Print version"
@@ -1375,7 +1376,7 @@ msgstr "Error closing session file '%s': %s\n"
 #: src/core/session.c:1132
 #, c-format
 msgid "Failed to parse saved session file: %s\n"
-msgstr "Failed to parse saved session file: %s\n"
+msgstr ""
 
 #: src/core/session.c:1181
 msgid "<marco_session> attribute seen but we already have the session ID"
@@ -1668,7 +1669,7 @@ msgstr "הזז לסביבת העבודה ל_מטה"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: src/ui/menu.c:101
 msgid "_Close"
-msgstr "_סגור"
+msgstr "_סגירה"
 
 #: src/ui/menu.c:198
 #, c-format
@@ -2060,7 +2061,7 @@ msgstr "Attribute \"%s\" repeated twice on the same <%s> element"
 #: src/ui/theme-parser.c:524 src/ui/theme-parser.c:573
 #, c-format
 msgid "Attribute \"%s\" is invalid on <%s> element in this context"
-msgstr "Attribute \"%s\" is invalid on <%s> element in this context"
+msgstr ""
 
 #: src/ui/theme-parser.c:615
 #, c-format

@@ -15,6 +15,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Ludvig Nybogård <ludvig@nybogard.nu>, 2018
 # Philip Andersen <renegadevi@codeofmagi.net>, 2020
+# Luna Jernberg <droidbittin@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
@@ -22,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2023-09-01 20:14+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Philip Andersen <renegadevi@codeofmagi.net>, 2020\n"
+"Last-Translator: Luna Jernberg <droidbittin@gmail.com>, 2024\n"
 "Language-Team: Swedish (https://app.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +37,7 @@ msgstr "Skrivbord"
 
 #: src/50-marco-desktop-key.xml.in:4
 msgid "Show the panel's &quot;Run Application&quot; dialog box"
-msgstr ""
+msgstr "Visa panelens &quot;\"Kör program &quot; dialogruta"
 
 #: src/50-marco-desktop-key.xml.in:6 src/org.mate.marco.gschema.xml:634
 msgid "Show the panel's main menu"
@@ -857,13 +858,15 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Huruvida man ska möjliggöra cykling genom olika kakelstorlekar"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"Om det är aktiverat, kommer det att lägga ett fönster vid sidan av flera "
+"olika storlekar genom att använda samma kortkommando flera gånger i rad. "
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -899,32 +902,38 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Ikonstorlek i alt-tab popup-fönster"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Storleken på applikationsikonerna som visas i alt-tab-popupfönstret. "
+"Skärmens skalfaktor tillämpas med detta värde."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Maximalt antal kolumner i alt-tabs popup-fönster "
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
 msgstr ""
+"Popup-fönstret kommer att utökas så att det passar dessa många poster per "
+"rad."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
-msgstr ""
+msgstr "Expandera alt-tab popup-fönstret för att passa längre fönstertitlar"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"Popup-fönstret kan utökas upp till den bredd som bestäms av "
+"konfigurationsparametern 'alt-tab-max-columns'."
 
 #: src/org.mate.marco.gschema.xml:223
 msgid "Raise windows to surface while cycling alt-tab popup"

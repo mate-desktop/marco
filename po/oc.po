@@ -8,7 +8,7 @@
 # Sébastien Denux <sebcxjo@gmail.com>, 2018
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Quentin PAGÈS, 2023
+# Quentin PAGÈS, 2024
 # 
 msgid ""
 msgstr ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2023-09-01 20:14+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Quentin PAGÈS, 2023\n"
+"Last-Translator: Quentin PAGÈS, 2024\n"
 "Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -842,7 +842,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
-msgstr ""
+msgstr "Mòde de posicionament de las fenèstras"
 
 #: src/org.mate.marco.gschema.xml:197
 msgid ""
@@ -1322,6 +1322,8 @@ msgstr ""
 #, c-format
 msgid "Could not parse font description \"%s\" from GSettings key %s\n"
 msgstr ""
+"Impossible d'analisar la descripcion de polissa « %s » dempuèi la clau "
+"GSettings %s\n"
 
 #: src/core/prefs.c:1269
 #, c-format
@@ -1890,14 +1892,15 @@ msgstr ""
 #: src/ui/theme.c:1496
 #, c-format
 msgid "Did not understand state \"%s\" in color specification"
-msgstr "Impossible de comprene l'estat « %s » dins l'especificacion de color"
+msgstr ""
+"Impossible de comprendre l'estat « %s » dins l'especificacion de color"
 
 #: src/ui/theme.c:1509
 #, c-format
 msgid "Did not understand color component \"%s\" in color specification"
 msgstr ""
-"Impossible de comprene lo compausant de color « %s » dins l'especificacion "
-"de color"
+"Impossible de comprendre lo compausant de color « %s » dins l'especificacion"
+" de color"
 
 #: src/ui/theme.c:1537
 #, c-format
@@ -2043,7 +2046,7 @@ msgstr ""
 #: src/ui/theme.c:2823
 msgid "Coordinate expression doesn't seem to have any operators or operands"
 msgstr ""
-"L'expression de la coordenada sembla pas comprene d'operador ni d'operand"
+"L'expression de la coordenada sembla pas comprendre d'operador ni d'operand"
 
 #: src/ui/theme.c:3026 src/ui/theme.c:3046 src/ui/theme.c:3066
 #, c-format
@@ -2194,7 +2197,7 @@ msgstr "<%s> deu indicar una geometria o un parent que ne possedís una"
 
 #: src/ui/theme-parser.c:1217
 msgid "You must specify a background for an alpha value to be meaningful"
-msgstr "Vos cal indicar una valor pel paramètre alfa."
+msgstr "Vos cal indicar una valor pel paramètre alfa"
 
 #: src/ui/theme-parser.c:1285
 #, c-format
@@ -2262,28 +2265,29 @@ msgstr ""
 #: src/ui/theme-parser.c:2136
 #, c-format
 msgid "Did not understand value \"%s\" for type of gradient"
-msgstr "Impossible de comprene la valor « %s » pel tipe de degradat"
+msgstr "Impossible de comprendre la valor « %s » pel tipe de degradat"
 
 #: src/ui/theme-parser.c:2214 src/ui/theme-parser.c:2589
 #, c-format
 msgid "Did not understand fill type \"%s\" for <%s> element"
-msgstr "Impossible de comprene lo tipe d'emplenatge « %s » per l'element <%s>"
+msgstr ""
+"Impossible de comprendre lo tipe d'emplenatge « %s » per l'element <%s>"
 
 #: src/ui/theme-parser.c:2381 src/ui/theme-parser.c:2464
 #: src/ui/theme-parser.c:2527
 #, c-format
 msgid "Did not understand state \"%s\" for <%s> element"
-msgstr "Impossible de comprene l'estat « %s » per l'element <%s>"
+msgstr "Impossible de comprendre l'estat « %s » per l'element <%s>"
 
 #: src/ui/theme-parser.c:2391 src/ui/theme-parser.c:2474
 #, c-format
 msgid "Did not understand shadow \"%s\" for <%s> element"
-msgstr "Impossible de comprene l'ombra « %s » per l'element <%s>"
+msgstr "Impossible de comprendre l'ombra « %s » per l'element <%s>"
 
 #: src/ui/theme-parser.c:2401
 #, c-format
 msgid "Did not understand arrow \"%s\" for <%s> element"
-msgstr "Impossible de comprene la sageta « %s » per l'element <%s>"
+msgstr "Impossible de comprendre la sageta « %s » per l'element <%s>"
 
 #: src/ui/theme-parser.c:2715 src/ui/theme-parser.c:2811
 #, c-format
@@ -2407,7 +2411,7 @@ msgstr ""
 #: src/ui/theme-parser.c:3491
 #, c-format
 msgid "Bad version specification '%s'"
-msgstr ""
+msgstr "Marrida especificacion de version « %s »"
 
 #: src/ui/theme-parser.c:3562
 msgid ""
@@ -2426,6 +2430,8 @@ msgstr ""
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
 msgstr ""
+"L'element lo mai exterior dins lo tèma deu èsser <metacity_theme> e non pas "
+"<%s>"
 
 #: src/ui/theme-parser.c:3637
 #, c-format
@@ -2530,7 +2536,7 @@ msgstr "Bordadura"
 
 #: src/ui/theme-viewer.c:449
 msgid "Attached Modal Dialog"
-msgstr ""
+msgstr "Bóstia de dialòg modala estacada"
 
 #: src/ui/theme-viewer.c:808
 #, c-format
