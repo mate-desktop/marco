@@ -2703,23 +2703,34 @@ handle_move_to_center  (MetaDisplay    *display,
   const MetaXineramaScreenInfo* current;
   MetaRectangle work_area;
   MetaRectangle outer;
-  int orig_x, orig_y;
-  int frame_width, frame_height;
+  MetaFrameBorders borders;
+  int client_x, client_y;
 
   current = meta_screen_get_xinerama_for_window(screen, window);
   meta_window_get_work_area_for_xinerama (window,
                                           current->number,
                                           &work_area);
   meta_window_get_outer_rect (window, &outer);
-  meta_window_get_position (window, &orig_x, &orig_y);
 
-  frame_width = (window->frame ? window->frame->child_x : 0);
-  frame_height = (window->frame ? window->frame->child_y : 0);
+  center_rect_in_area (&outer, &work_area);
+
+  /* Convert frame position to client position */
+  if (window->frame)
+    {
+      meta_frame_calc_borders (window->frame, &borders);
+      client_x = outer.x + borders.visible.left;
+      client_y = outer.y + borders.visible.top;
+    }
+  else
+    {
+      client_x = outer.x;
+      client_y = outer.y;
+    }
 
   meta_window_move_resize (window,
           TRUE,
-          work_area.x + (work_area.width +frame_width -outer.width )/2,
-          work_area.y + (work_area.height+frame_height-outer.height)/2,
+          client_x,
+          client_y,
           window->rect.width,
           window->rect.height);
 }

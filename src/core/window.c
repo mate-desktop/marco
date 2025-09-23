@@ -2593,6 +2593,8 @@ meta_window_maximize_internal (MetaWindow        *window,
   window->maximized_vertically =
     window->maximized_vertically   || maximize_vertically;
 
+  meta_window_frame_size_changed (window);
+
   /* Fix for #336850: If the frame shape isn't reapplied, it is
    * possible that the frame will retains its rounded corners. That
    * happens if the client's size when maximized equals the unmaximized
@@ -2725,6 +2727,13 @@ meta_window_tile (MetaWindow *window)
    */
   meta_window_queue (window, META_QUEUE_MOVE_RESIZE);
 
+  /* Clear cached frame bounds that depend on invisible border calculations */
+  if (window->frame_bounds)
+    {
+      cairo_region_destroy (window->frame_bounds);
+      window->frame_bounds = NULL;
+    }
+
   set_allowed_actions_hint (window);
 }
 
@@ -2807,6 +2816,8 @@ meta_window_unmaximize (MetaWindow        *window,
         window->maximized_horizontally && !unmaximize_horizontally;
       window->maximized_vertically =
         window->maximized_vertically   && !unmaximize_vertically;
+
+      meta_window_frame_size_changed (window);
 
       /* Unmaximize to the saved_rect position in the direction(s)
        * being unmaximized.
@@ -2932,6 +2943,8 @@ meta_window_make_above (MetaWindow  *window)
   meta_window_update_layer (window);
   meta_window_raise (window);
   set_net_wm_state (window);
+
+  meta_window_frame_size_changed (window);
 }
 
 void
@@ -2941,6 +2954,8 @@ meta_window_unmake_above (MetaWindow  *window)
   meta_window_raise (window);
   meta_window_update_layer (window);
   set_net_wm_state (window);
+
+  meta_window_frame_size_changed (window);
 }
 
 void
@@ -3071,7 +3086,8 @@ meta_window_shade (MetaWindow  *window,
     {
       window->shaded = TRUE;
 
-      meta_window_queue(window, META_QUEUE_MOVE_RESIZE | META_QUEUE_CALC_SHOWING);
+      meta_window_queue (window, META_QUEUE_MOVE_RESIZE | META_QUEUE_CALC_SHOWING);
+      meta_window_frame_size_changed (window);
 
       set_allowed_actions_hint (window);
 
@@ -3096,7 +3112,9 @@ meta_window_unshade (MetaWindow  *window,
   if (window->shaded)
     {
       window->shaded = FALSE;
-      meta_window_queue(window, META_QUEUE_MOVE_RESIZE | META_QUEUE_CALC_SHOWING);
+
+      meta_window_queue (window, META_QUEUE_MOVE_RESIZE | META_QUEUE_CALC_SHOWING);
+      meta_window_frame_size_changed (window);
 
       set_allowed_actions_hint (window);
 
@@ -4531,6 +4549,8 @@ window_stick_impl (MetaWindow  *window)
    */
   window->on_all_workspaces = TRUE;
 
+  meta_window_frame_size_changed (window);
+
   /* We do, however, change the MRU lists of all the workspaces
    */
   tmp = window->screen->workspaces;
@@ -4560,6 +4580,8 @@ window_unstick_impl (MetaWindow  *window)
   /* Revert to window->workspaces */
 
   window->on_all_workspaces = FALSE;
+
+  meta_window_frame_size_changed (window);
 
   /* Remove window from MRU lists that it doesn't belong in */
   tmp = window->screen->workspaces;
@@ -5587,6 +5609,7 @@ static void
 meta_window_appears_focused_changed (MetaWindow *window)
 {
   set_net_wm_state (window);
+  meta_window_frame_size_changed (window);
 
   if (window->frame)
     meta_frame_queue_draw (window->frame);
@@ -6583,6 +6606,13 @@ recalc_window_type (MetaWindow *window)
     }
 }
 
+void
+meta_window_frame_size_changed (MetaWindow *window)
+{
+  if (window->frame)
+    meta_frame_clear_cached_borders (window->frame);
+}
+
 static void
 set_allowed_actions_hint (MetaWindow *window)
 {
@@ -6876,6 +6906,8 @@ recalc_window_features (MetaWindow *window)
       old_has_shade_func != window->has_shade_func       ||
       old_always_sticky != window->always_sticky)
     set_allowed_actions_hint (window);
+
+  meta_window_frame_size_changed (window);
 
   /* FIXME perhaps should ensure if we don't have a shade func,
    * we aren't shaded, etc.

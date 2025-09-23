@@ -528,7 +528,7 @@ center_tile_rect_in_area (MetaRectangle *rect,
   rect->y = work_area->y + fluff;
 }
 
-static void
+void
 center_rect_in_area (MetaRectangle *rect,
                      MetaRectangle *work_area)
 {
