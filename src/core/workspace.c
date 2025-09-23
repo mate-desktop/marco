@@ -27,6 +27,7 @@
 #include "workspace.h"
 #include "errors.h"
 #include "prefs.h"
+#include "screen-private.h"
 #include <X11/Xatom.h>
 #include <string.h>
 #include <canberra-gtk.h>
@@ -217,6 +218,9 @@ meta_workspace_add_window (MetaWorkspace *workspace,
    * the relevant struts
    */
   meta_window_queue (window, META_QUEUE_CALC_SHOWING|META_QUEUE_MOVE_RESIZE);
+
+  /* Update dynamic workspaces (this will add a new workspace if necessary) */
+  meta_screen_update_dynamic_workspaces (workspace->screen);
 }
 
 void
@@ -263,6 +267,9 @@ meta_workspace_remove_window (MetaWorkspace *workspace,
    * the relevant struts
    */
   meta_window_queue (window, META_QUEUE_CALC_SHOWING|META_QUEUE_MOVE_RESIZE);
+
+  /* Update dynamic workspaces (this will remove an empty workspace if necessary) */
+  meta_screen_update_dynamic_workspaces (workspace->screen);
 }
 
 void
