@@ -65,6 +65,9 @@ static void set_workspace_names    (MetaScreen *screen);
 static void prefs_changed_callback (MetaPreference pref,
                                     gpointer       data);
 
+static void on_monitors_changed    (GdkScreen      *gdk_screen,
+                                    gpointer        user_data);
+
 static void set_desktop_geometry_hint (MetaScreen *screen);
 static void set_desktop_viewport_hint (MetaScreen *screen);
 
@@ -599,6 +602,10 @@ meta_screen_new (MetaDisplay *display,
 
   meta_prefs_add_listener (prefs_changed_callback, screen);
 
+  /* Connect to monitors-changed signal to handle dynamic HiDPI scale changes */
+  g_signal_connect (gdk_display_get_default_screen (gdk_display_get_default ()),
+                    "monitors-changed", G_CALLBACK (on_monitors_changed), screen);
+
 #ifdef HAVE_STARTUP_NOTIFICATION
   screen->sn_context =
     sn_monitor_context_new (screen->display->sn_display,
@@ -649,6 +656,9 @@ meta_screen_free (MetaScreen *screen,
   meta_display_unmanage_windows_for_screen (display, screen, timestamp);
 
   meta_prefs_remove_listener (prefs_changed_callback, screen);
+
+  g_signal_handlers_disconnect_by_func (gdk_display_get_default_screen (gdk_display_get_default ()),
+                                        G_CALLBACK (on_monitors_changed), screen);
 
   meta_screen_ungrab_keys (screen);
 
@@ -879,6 +889,58 @@ prefs_changed_callback (MetaPreference pref,
   else if (pref == META_PREF_WORKSPACE_NAMES)
     {
       set_workspace_names (screen);
+    }
+}
+
+static void
+on_monitors_changed (GdkScreen *gdk_screen,
+                     gpointer   user_data)
+{
+  MetaScreen *screen = user_data;
+  GSList *windows;
+  GSList *tmp;
+
+  /* When monitors change (including HiDPI scale changes), update all window
+   * icons to render at the new scale. The icons are loaded at a specific pixel
+   * size based on meta_prefs_get_icon_size() which includes the scale factor,
+   * so we need to reload them when the scale changes.
+   */
+  windows = meta_display_list_windows (screen->display);
+
+  tmp = windows;
+  while (tmp != NULL)
+    {
+      MetaWindow *window = tmp->data;
+
+      /* Only update icons for windows on this screen */
+      if (window->screen == screen)
+        {
+          /* Invalidate the icon cache to force reload at new size */
+          meta_icon_cache_invalidate (&window->icon_cache);
+          meta_window_update_icon_now (window);
+        }
+
+      tmp = tmp->next;
+    }
+
+  g_slist_free (windows);
+
+  /* Update cursor size for new scale. meta_prefs_get_cursor_size() returns
+   * a scale-aware value, so this will reload cursors at the correct size.
+   */
+  meta_display_set_cursor_theme (meta_prefs_get_cursor_theme (),
+                                 meta_prefs_get_cursor_size ());
+
+  /* Update the WM_ICON_SIZE hint so applications know the new preferred icon size */
+  set_wm_icon_size_hint (screen);
+
+  /* If there's an active tab popup, destroy it so it gets recreated with the
+   * new scaled icons next time Alt+Tab is pressed.
+   */
+  if (screen->tab_popup)
+    {
+      meta_ui_tab_popup_free (screen->tab_popup);
+      screen->tab_popup = NULL;
     }
 }
 
