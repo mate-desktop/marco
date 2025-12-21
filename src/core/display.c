@@ -4713,6 +4713,7 @@ meta_display_get_tab_list (MetaDisplay   *display,
 {
   GList *tab_list, *workspace_list, *l, link;
   MetaWorkspace *workspace;
+  gboolean put_minimized_last;
 
   g_return_val_if_fail (active_workspace != NULL, NULL);
 
@@ -4730,7 +4731,10 @@ meta_display_get_tab_list (MetaDisplay   *display,
     }
 
   tab_list = NULL;
-  /* Windows sellout mode - MRU order. Collect unminimized windows
+  put_minimized_last = meta_prefs_get_alt_tab_put_minimized_last ();
+
+  /* If put_minimized_last is false, mix all windows, otherwise:
+   * Windows sellout mode - MRU order. Collect unminimized windows
    * then minimized so minimized windows aren't in the way so much.
    */
   for (l = workspace_list; l != NULL; l = l->next)
@@ -4744,7 +4748,7 @@ meta_display_get_tab_list (MetaDisplay   *display,
         {
           MetaWindow *window = tmp->data;
 
-          if (!window->minimized &&
+          if ((!put_minimized_last || !window->minimized) &&
               window->screen == screen &&
               IN_TAB_CHAIN (window, type))
             tab_list = g_list_prepend (tab_list, window);
@@ -4753,25 +4757,27 @@ meta_display_get_tab_list (MetaDisplay   *display,
         }
     }
 
-  for (l = workspace_list; l != NULL; l = l->next)
-    {
-      GList *tmp;
+  /* Mixing minimized and unminimized windows is handled above, if enabled. */
+  if (put_minimized_last)
+    for (l = workspace_list; l != NULL; l = l->next)
+      {
+        GList *tmp;
 
-      workspace = l->data;
+        workspace = l->data;
 
-      tmp = workspace->mru_list;
-      while (tmp != NULL)
-        {
-          MetaWindow *window = tmp->data;
+        tmp = workspace->mru_list;
+        while (tmp != NULL)
+          {
+            MetaWindow *window = tmp->data;
 
-          if (window->minimized &&
-              window->screen == screen &&
-              IN_TAB_CHAIN (window, type))
-            tab_list = g_list_prepend (tab_list, window);
+            if (window->minimized &&
+                window->screen == screen &&
+                IN_TAB_CHAIN (window, type))
+              tab_list = g_list_prepend (tab_list, window);
 
-          tmp = tmp->next;
-        }
-    }
+            tmp = tmp->next;
+          }
+      }
 
   tab_list = g_list_reverse (tab_list);
 
