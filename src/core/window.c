@@ -2715,9 +2715,12 @@ meta_window_tile (MetaWindow *window)
            window->tile_mode == META_TILE_TOP_RIGHT ||
            window->tile_mode == META_TILE_TOP_LEFT)
     {
-      MetaRectangle *saved_rect = NULL;
-      saved_rect = &window->saved_rect;
-      meta_window_maximize_internal (window, META_MAXIMIZE_HORIZONTAL, saved_rect);
+      /* Corner-tiled windows should not be maximized in any direction.
+       * Don't modify saved_rect to preserve it when corner-tiling a
+       * maximized window. Make sure both maximized flags are cleared
+       * so _NET_WM_STATE doesn't get MAXIMIZED_HORZ or MAXIMIZED_VERT set. */
+      window->maximized_horizontally = FALSE;
+      window->maximized_vertically = FALSE;
     }
   else
     meta_window_save_rect (window);
@@ -2735,6 +2738,7 @@ meta_window_tile (MetaWindow *window)
     }
 
   set_allowed_actions_hint (window);
+  set_net_wm_state (window);
 }
 
 void
