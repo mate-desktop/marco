@@ -73,6 +73,7 @@ typedef enum
   META_PREF_ALT_TAB_MAX_COLUMNS,
   META_PREF_ALT_TAB_RAISE_WINDOWS,
   META_PREF_ALT_TAB_EXPAND_TO_FIT_TITLE,
+  META_PREF_ALT_TAB_PUT_MINIMIZED_LAST,
   META_PREF_COMPOSITING_MANAGER,
   META_PREF_COMPOSITING_FAST_ALT_TAB,
   META_PREF_RESIZE_WITH_RIGHT_BUTTON,
@@ -151,6 +152,7 @@ int         meta_prefs_get_icon_size         (void);
 int         meta_prefs_get_alt_tab_max_columns (void);
 gboolean    meta_prefs_get_alt_tab_expand_to_fit_title (void);
 gboolean    meta_prefs_get_alt_tab_raise_windows (void);
+gboolean    meta_prefs_get_alt_tab_put_minimized_last (void);
 gboolean    meta_prefs_get_compositing_manager (void);
 gboolean    meta_prefs_get_compositing_fast_alt_tab (void);
 gboolean    meta_prefs_get_center_new_windows  (void);
