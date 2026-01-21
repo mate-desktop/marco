@@ -1,3 +1,16 @@
+### mate-desktop 1.28.2
+
+  * tabpopup: Report the window as active to a11y when it's showing
+  * Fix client pid check
+  * iconcache: Use desktop_id to lookup GDesktopAppInfo
+  * Fix GTK deprecations
+  * GitHub action
+  * build(deps): bump dev-hanz-ops/install-gh-cli-action from 0.1.0 to 0.2.1
+  * build(deps): bump actions/checkout from 4 to 5
+  * build(deps): bump actions/cache from 3 to 4
+  * theme: Extend button clickable area to edge of screen
+  * theme: Fix left-side Fitt's Law
+
 ### mate-desktop 1.28.1
 
   * fix packaging with meson
