@@ -2105,7 +2105,7 @@ process_tab_grab (MetaDisplay *display,
                       "selection and turning mouse_mode off\n",
                       target_window->desc);
           display->mouse_mode = FALSE;
-          meta_window_activate (target_window, event->xkey.time);
+          meta_window_activate_with_workspace (target_window, event->xkey.time, target_window->workspace);
           if (!target_window->on_all_workspaces)
             meta_workspace_activate (target_window->workspace, event->xkey.time);
 
@@ -3080,7 +3080,7 @@ do_choose_window (MetaDisplay    *display,
                       "switch/cycle windows with no modifiers\n",
                       initial_selection->desc);
           display->mouse_mode = FALSE;
-          meta_window_activate (initial_selection, event->xkey.time);
+          meta_window_activate_with_workspace (initial_selection, event->xkey.time, initial_selection->workspace);
           if (!initial_selection->on_all_workspaces)
             meta_workspace_activate (initial_selection->workspace, event->xkey.time);
         }
@@ -3111,7 +3111,7 @@ do_choose_window (MetaDisplay    *display,
                           initial_selection->desc);
               meta_display_end_grab_op (display, event->xkey.time);
               display->mouse_mode = FALSE;
-              meta_window_activate (initial_selection, event->xkey.time);
+              meta_window_activate_with_workspace (initial_selection, event->xkey.time, initial_selection->workspace);
               if (!initial_selection->on_all_workspaces)
                 meta_workspace_activate (initial_selection->workspace, event->xkey.time);
             }
