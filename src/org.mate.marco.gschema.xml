@@ -244,6 +244,11 @@
         <summary>Raise windows to surface while cycling alt-tab popup</summary>
         <description>While using the popup window, selected windows will be raised to make them easy to identify.</description>
     </key>
+    <key name="alt-tab-put-minimized-last" type="b">
+        <default>true</default>
+        <summary>Put minimized windows at the end of the alt-tab window list</summary>
+        <description>If true, when alt-tabbing, all non-minimized windows will be listed first.</description>
+    </key>
   </schema>
 
   <schema id="org.mate.Marco.workspace-names" path="/org/mate/marco/workspace-names/">
