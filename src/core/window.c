@@ -8839,6 +8839,12 @@ meta_window_set_user_time (MetaWindow *window,
     }
 }
 
+guint32
+meta_window_get_user_time (MetaWindow *window)
+{
+  return window->net_wm_user_time;
+}
+
 /* Sets the demands_attention hint on a window, but only
  * if it's at least partially obscured (see #305882).
  */
