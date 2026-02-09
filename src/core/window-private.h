@@ -695,6 +695,8 @@ void meta_window_stack_just_below (MetaWindow *window,
 void meta_window_set_user_time (MetaWindow *window,
                                 guint32     timestamp);
 
+guint32 meta_window_get_user_time (MetaWindow *window);
+
 void meta_window_set_demands_attention (MetaWindow *window);
 
 void meta_window_unset_demands_attention (MetaWindow *window);

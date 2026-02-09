@@ -4705,72 +4705,80 @@ find_tab_backward (MetaDisplay   *display,
   return NULL;
 }
 
+static int
+mru_cmp (gconstpointer a,
+         gconstpointer b)
+{
+  guint32 time_a, time_b;
+
+  time_a = meta_window_get_user_time ((MetaWindow *)a);
+  time_b = meta_window_get_user_time ((MetaWindow *)b);
+
+  if (time_a > time_b)
+    return -1;
+  else if (time_a < time_b)
+    return 1;
+  else
+    return 0;
+}
+
 GList*
 meta_display_get_tab_list (MetaDisplay   *display,
                            MetaTabList    type,
                            MetaScreen    *screen,
                            MetaWorkspace *active_workspace)
 {
-  GList *tab_list, *workspace_list, *l, link;
-  MetaWorkspace *workspace;
+  GList *tab_list, *mru_list, *l;
 
   g_return_val_if_fail (active_workspace != NULL, NULL);
 
+  /* Build MRU list based on whether we use global or per-workspace */
   if (type == META_TAB_LIST_NORMAL_ALL_WORKSPACES)
     {
-      workspace_list = screen->workspaces;
+      /* Create global MRU list sorted by user_time */
+      GSList *windows = meta_display_list_windows (display);
+      GSList *w;
+
+      mru_list = NULL;
+      for (w = windows; w; w = w->next)
+        {
+          MetaWindow *window = w->data;
+          if (window->screen == screen)
+            mru_list = g_list_prepend (mru_list, window);
+        }
+
+      mru_list = g_list_sort (mru_list, mru_cmp);
+
+      g_slist_free (windows);
       type = META_TAB_LIST_NORMAL;
     }
   else
     {
-      link.next = NULL;
-      link.prev = NULL;
-      link.data = active_workspace;
-      workspace_list = &link;
+      mru_list = g_list_copy (active_workspace->mru_list);
     }
 
   tab_list = NULL;
   /* Windows sellout mode - MRU order. Collect unminimized windows
    * then minimized so minimized windows aren't in the way so much.
    */
-  for (l = workspace_list; l != NULL; l = l->next)
+  for (l = mru_list; l != NULL; l = l->next)
     {
-      GList *tmp;
+      MetaWindow *window = l->data;
 
-      workspace = l->data;
-
-      tmp = workspace->mru_list;
-      while (tmp != NULL)
-        {
-          MetaWindow *window = tmp->data;
-
-          if (!window->minimized &&
-              window->screen == screen &&
-              IN_TAB_CHAIN (window, type))
-            tab_list = g_list_prepend (tab_list, window);
-
-          tmp = tmp->next;
-        }
+      if (!window->minimized &&
+          window->screen == screen &&
+          IN_TAB_CHAIN (window, type))
+        tab_list = g_list_prepend (tab_list, window);
     }
 
-  for (l = workspace_list; l != NULL; l = l->next)
+  for (l = mru_list; l != NULL; l = l->next)
     {
-      GList *tmp;
+      MetaWindow *window = l->data;
 
-      workspace = l->data;
-
-      tmp = workspace->mru_list;
-      while (tmp != NULL)
-        {
-          MetaWindow *window = tmp->data;
-
-          if (window->minimized &&
-              window->screen == screen &&
-              IN_TAB_CHAIN (window, type))
-            tab_list = g_list_prepend (tab_list, window);
-
-          tmp = tmp->next;
-        }
+      if (window->minimized &&
+          window->screen == screen &&
+          IN_TAB_CHAIN (window, type))
+        tab_list = g_list_prepend (tab_list, window);
     }
 
   tab_list = g_list_reverse (tab_list);
@@ -4800,6 +4808,8 @@ meta_display_get_tab_list (MetaDisplay   *display,
       } /* End while tmp!=NULL */
       g_slist_free (windows);
   }
+
+  g_list_free (mru_list);
 
   return tab_list;
 }
