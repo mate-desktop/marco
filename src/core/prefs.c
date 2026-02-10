@@ -123,6 +123,8 @@ static int   icon_size   = META_DEFAULT_ICON_SIZE;
 static int   alt_tab_max_columns = META_DEFAULT_ALT_TAB_MAX_COLUMNS;
 static gboolean alt_tab_raise_windows = META_DEFAULT_ALT_TAB_RAISE_WINDOWS;
 static gboolean alt_tab_expand_to_fit_title = META_DEFAULT_ALT_TAB_EXPAND_TO_FIT_TITLE;
+static MetaMinimizedWindowPlacement alt_tab_minimized_placement = META_DEFAULT_ALT_TAB_MINIMIZED_PLACEMENT;
+static MetaUrgentWindowPlacement alt_tab_urgent_placement = META_DEFAULT_ALT_TAB_URGENT_PLACEMENT;
 static gboolean use_force_compositor_manager = FALSE;
 static gboolean force_compositor_manager = FALSE;
 static gboolean compositing_manager = FALSE;
@@ -349,6 +351,16 @@ static MetaEnumPreference preferences_enum[] =
       KEY_GENERAL_SCHEMA,
       META_PREF_PLACEMENT_MODE,
       (gint *) &placement_mode,
+    },
+    { "alt-tab-minimized-placement",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ALT_TAB_MINIMIZED_PLACEMENT,
+      (gint *) &alt_tab_minimized_placement,
+    },
+    { "alt-tab-urgent-placement",
+      KEY_GENERAL_SCHEMA,
+      META_PREF_ALT_TAB_URGENT_PLACEMENT,
+      (gint *) &alt_tab_urgent_placement,
     },
     { NULL, NULL, 0, NULL },
   };
@@ -1190,6 +1202,18 @@ meta_prefs_get_alt_tab_raise_windows (void)
   return alt_tab_raise_windows;
 }
 
+MetaMinimizedWindowPlacement
+meta_prefs_get_alt_tab_minimized_placement (void)
+{
+  return alt_tab_minimized_placement;
+}
+
+MetaUrgentWindowPlacement
+meta_prefs_get_alt_tab_urgent_placement (void)
+{
+  return alt_tab_urgent_placement;
+}
+
 gboolean
 meta_prefs_is_in_skip_list (char *class)
 {
@@ -1728,6 +1752,12 @@ meta_preference_to_string (MetaPreference pref)
 
     case META_PREF_ALT_TAB_RAISE_WINDOWS:
       return "ALT_TAB_RAISE_WINDOWS";
+
+    case META_PREF_ALT_TAB_MINIMIZED_PLACEMENT:
+      return "ALT_TAB_MINIMIZED_PLACEMENT";
+
+    case META_PREF_ALT_TAB_URGENT_PLACEMENT:
+      return "ALT_TAB_URGENT_PLACEMENT";
 
     case META_PREF_COMPOSITING_MANAGER:
       return "COMPOSITING_MANAGER";

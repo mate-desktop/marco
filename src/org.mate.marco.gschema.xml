@@ -41,6 +41,15 @@
     <value value="1" nick="pointer"/>
     <value value="2" nick="manual"/>
   </enum>
+  <enum id="org.mate.Marco.MinimizedWindowPlacement">
+    <value nick="mru" value="0"/>
+    <value nick="end" value="1"/>
+    <value nick="hidden" value="2"/>
+  </enum>
+  <enum id="org.mate.Marco.UrgentWindowPlacement">
+    <value nick="start" value="0"/>
+    <value nick="mru" value="1"/>
+  </enum>
 
   <schema id="org.mate.Marco" path="/org/mate/marco/">
     <child name="general" schema="org.mate.Marco.general"/>
@@ -243,6 +252,16 @@
         <default>false</default>
         <summary>Raise windows to surface while cycling alt-tab popup</summary>
         <description>While using the popup window, selected windows will be raised to make them easy to identify.</description>
+    </key>
+    <key name="alt-tab-minimized-placement" enum="org.mate.Marco.MinimizedWindowPlacement">
+        <default>'end'</default>
+        <summary>Minimized window placement</summary>
+        <description>Where to show minimized windows: mix in MRU order, show last (default), or hide completely.</description>
+    </key>
+    <key name="alt-tab-urgent-placement" enum="org.mate.Marco.UrgentWindowPlacement">
+        <default>'start'</default>
+        <summary>Urgent window placement</summary>
+        <description>Where to show urgent windows: first (default) or mixed in MRU order.</description>
     </key>
   </schema>
 

@@ -4728,88 +4728,87 @@ meta_display_get_tab_list (MetaDisplay   *display,
                            MetaScreen    *screen,
                            MetaWorkspace *active_workspace)
 {
-  GList *tab_list, *mru_list, *l;
+  GList *tab_list, *window_list, *l;
+  GList *start_list, *mru_list, *end_list;
+  MetaMinimizedWindowPlacement minimized_placement;
+  MetaUrgentWindowPlacement urgent_placement;
+  gboolean all_workspaces;
 
   g_return_val_if_fail (active_workspace != NULL, NULL);
 
-  /* Build MRU list based on whether we use global or per-workspace */
-  if (type == META_TAB_LIST_NORMAL_ALL_WORKSPACES)
+  /* Get user preferences */
+  minimized_placement = meta_prefs_get_alt_tab_minimized_placement ();
+  urgent_placement = meta_prefs_get_alt_tab_urgent_placement ();
+
+  /* Determine workspace scope */
+  all_workspaces = (type == META_TAB_LIST_NORMAL_ALL_WORKSPACES);
+  if (all_workspaces)
+    type = META_TAB_LIST_NORMAL;
+
+  /* Build a complete window list from all windows */
+  GSList *windows = meta_display_list_windows (display);
+  GSList *w;
+
+  window_list = NULL;
+  for (w = windows; w; w = w->next)
     {
-      /* Create global MRU list sorted by user_time */
-      GSList *windows = meta_display_list_windows (display);
-      GSList *w;
-
-      mru_list = NULL;
-      for (w = windows; w; w = w->next)
-        {
-          MetaWindow *window = w->data;
-          if (window->screen == screen)
-            mru_list = g_list_prepend (mru_list, window);
-        }
-
-      mru_list = g_list_sort (mru_list, mru_cmp);
-
-      g_slist_free (windows);
-      type = META_TAB_LIST_NORMAL;
+      MetaWindow *window = w->data;
+      if (window->screen == screen)
+        window_list = g_list_prepend (window_list, window);
     }
-  else
-    {
-      mru_list = g_list_copy (active_workspace->mru_list);
-    }
+  window_list = g_list_sort (window_list, mru_cmp);
 
-  tab_list = NULL;
-  /* Windows sellout mode - MRU order. Collect unminimized windows
-   * then minimized so minimized windows aren't in the way so much.
+  g_slist_free (windows);
+
+  /* Initialize placement buckets */
+  start_list = NULL;
+  mru_list = NULL;
+  end_list = NULL;
+
+  /* Windows sellout mode - MRU order. Collect windows into placement
+   * buckets to sort based on user preferences.
    */
-  for (l = mru_list; l != NULL; l = l->next)
+  for (l = window_list; l != NULL; l = l->next)
     {
       MetaWindow *window = l->data;
+      gboolean include_window;
 
-      if (!window->minimized &&
-          window->screen == screen &&
-          IN_TAB_CHAIN (window, type))
-        tab_list = g_list_prepend (tab_list, window);
+      if (window->screen != screen || !IN_TAB_CHAIN (window, type))
+        continue;
+
+      /* Determine if window should be included based on workspace */
+      include_window = all_workspaces ||
+                       meta_window_located_on_workspace (window, active_workspace);
+
+      /* Handle minimized windows */
+      if (window->minimized && include_window)
+        {
+          if (minimized_placement == META_MINIMIZED_WINDOW_PLACEMENT_MRU)
+            mru_list = g_list_append (mru_list, window);
+          else if (minimized_placement == META_MINIMIZED_WINDOW_PLACEMENT_END)
+            end_list = g_list_append (end_list, window);
+          /* HIDDEN: skip */
+        }
+      /* Handle urgent windows */
+      else if (window->wm_state_demands_attention)
+        {
+          if (urgent_placement == META_URGENT_WINDOW_PLACEMENT_START)
+            start_list = g_list_append (start_list, window);
+          else
+            mru_list = g_list_append (mru_list, window);
+        }
+      /* Handle normal unminimized windows */
+      else if (include_window)
+        {
+          mru_list = g_list_append (mru_list, window);
+        }
     }
 
-  for (l = mru_list; l != NULL; l = l->next)
-    {
-      MetaWindow *window = l->data;
+  /* Concatenate buckets: start + MRU + end */
+  tab_list = g_list_concat (start_list, mru_list);
+  tab_list = g_list_concat (tab_list, end_list);
 
-      if (window->minimized &&
-          window->screen == screen &&
-          IN_TAB_CHAIN (window, type))
-        tab_list = g_list_prepend (tab_list, window);
-    }
-
-  tab_list = g_list_reverse (tab_list);
-
-  {
-    GSList *windows, *tmp;
-    MetaWindow *l_window;
-
-    windows = meta_display_list_windows (display);
-    tmp = windows;
-
-    /* Go through all windows */
-    while (tmp != NULL)
-      {
-        l_window=tmp->data;
-
-        /* Check to see if it demands attention */
-        if (l_window->wm_state_demands_attention &&
-            l_window->workspace!=active_workspace &&
-            IN_TAB_CHAIN (l_window, type))
-          {
-            /* if it does, add it to the popup */
-            tab_list = g_list_prepend (tab_list, l_window);
-          }
-
-        tmp = tmp->next;
-      } /* End while tmp!=NULL */
-      g_slist_free (windows);
-  }
-
-  g_list_free (mru_list);
+  g_list_free (window_list);
 
   return tab_list;
 }
