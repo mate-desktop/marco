@@ -170,6 +170,7 @@ meta_window_destroy_frame (MetaWindow *window)
 {
   MetaFrame *frame;
   MetaFrameBorders borders;
+  int offset_x, offset_y;
 
   if (window->frame == NULL)
     return;
@@ -198,6 +199,24 @@ meta_window_destroy_frame (MetaWindow *window)
                   "Incrementing unmaps_pending on %s for reparent back to root\n", window->desc);
       window->unmaps_pending += 1;
     }
+
+  /* Account for window gravity when choosing where to place the client
+   * on the root window, so that re-managing it doesn't shift its
+   * position. StaticGravity clients (e.g. Qt) expect the client's own
+   * position; other gravities need the visible frame corner so that
+   * adjust_for_gravity() can add the borders back correctly.
+   */
+  if (window->size_hints.win_gravity == StaticGravity)
+    {
+      offset_x = frame->child_x;
+      offset_y = frame->child_y;
+    }
+  else
+    {
+      offset_x = borders.invisible.left;
+      offset_y = borders.invisible.top;
+    }
+
   XReparentWindow (window->display->xdisplay,
                    window->xwindow,
                    window->screen->xroot,
@@ -205,8 +224,8 @@ meta_window_destroy_frame (MetaWindow *window)
                     * coordinates here means we'll need to ensure a configure
                     * notify event is sent; see bug 399552.
                     */
-                   window->frame->rect.x + borders.invisible.left,
-                   window->frame->rect.y + borders.invisible.top);
+                   window->frame->rect.x + offset_x,
+                   window->frame->rect.y + offset_y);
   meta_error_trap_pop (window->display, FALSE);
 
   meta_ui_destroy_frame_window (window->screen->ui, frame->xwindow);
