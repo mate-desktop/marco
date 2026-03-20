@@ -4238,14 +4238,17 @@ meta_window_get_xor_rect (MetaWindow          *window,
 {
   if (window->frame)
     {
-      xor_rect->x = grab_wireframe_rect->x - window->frame->child_x;
-      xor_rect->y = grab_wireframe_rect->y - window->frame->child_y;
-      xor_rect->width = grab_wireframe_rect->width + window->frame->child_x + window->frame->right_width;
+      MetaFrameBorders borders;
+      meta_frame_calc_borders (window->frame, &borders);
+
+      xor_rect->x = grab_wireframe_rect->x - window->frame->child_x + borders.invisible.left;
+      xor_rect->y = grab_wireframe_rect->y - window->frame->child_y + borders.invisible.top;
+      xor_rect->width = grab_wireframe_rect->width + window->frame->child_x + window->frame->right_width - borders.invisible.left - borders.invisible.right;
 
       if (window->shaded)
-        xor_rect->height = window->frame->child_y;
+        xor_rect->height = window->frame->child_y - borders.invisible.top;
       else
-        xor_rect->height = grab_wireframe_rect->height + window->frame->child_y + window->frame->bottom_height;
+        xor_rect->height = grab_wireframe_rect->height + window->frame->child_y + window->frame->bottom_height - borders.invisible.top - borders.invisible.bottom;
     }
   else
     *xor_rect = *grab_wireframe_rect;
