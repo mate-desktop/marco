@@ -529,7 +529,7 @@ meta_screen_new (MetaDisplay *display,
     gc_values.line_width = META_WIREFRAME_XOR_LINE_WIDTH;
     value_mask |= GCLineWidth;
 
-    font_info = XLoadQueryFont (screen->display->xdisplay, "fixed");
+    font_info = XLoadQueryFont (screen->display->xdisplay, "10x20");
 
     if (font_info != NULL)
       {
@@ -538,7 +538,7 @@ meta_screen_new (MetaDisplay *display,
         XFreeFontInfo (NULL, font_info, 1);
       }
     else
-      meta_warning ("xserver doesn't have 'fixed' font.\n");
+      meta_warning ("xserver doesn't have '10x20' font.\n");
 
     screen->root_xor_gc = XCreateGC (screen->display->xdisplay,
                                      screen->xroot,
