@@ -7872,6 +7872,34 @@ update_resize (MetaWindow *window,
   gravity = meta_resize_gravity_from_grab_op (window->display->grab_op);
   g_assert (gravity >= 0);
 
+  /* Clamp resize to respect the minimum size of the matched window */
+  if (window->display->grab_tile_match != NULL)
+    {
+      MetaWindow *match = window->display->grab_tile_match;
+      MetaRectangle work_area;
+      MetaFrameBorders borders;
+      int max_primary_width;
+      int primary_borders_w = 0;
+      int match_borders_w = 0;
+
+      meta_window_get_work_area_for_xinerama (window,
+                                              window->tile_monitor_number,
+                                              &work_area);
+
+      /* Use visible borders only since invisible borders overlap between
+       * adjacent tiled windows and don't consume work area space */
+      meta_frame_calc_borders (window->frame, &borders);
+      primary_borders_w = borders.visible.left + borders.visible.right;
+
+      meta_frame_calc_borders (match->frame, &borders);
+      match_borders_w = borders.visible.left + borders.visible.right;
+
+      max_primary_width = work_area.width - primary_borders_w -
+                          match->size_hints.min_width - match_borders_w;
+      if (new_w > max_primary_width)
+        new_w = max_primary_width;
+    }
+
   /* Do any edge resistance/snapping */
   meta_window_edge_resistance_for_resize (window,
                                           old.width,
@@ -7904,6 +7932,61 @@ update_resize (MetaWindow *window,
        */
       if (old.width != new_w || old.height != new_h)
         meta_window_resize_with_gravity (window, TRUE, new_w, new_h, gravity);
+    }
+
+  /* Resize matching tiled window */
+  if (window->display->grab_tile_match != NULL && !window->display->grab_wireframe_active)
+    {
+      MetaWindow *match = window->display->grab_tile_match;
+
+      /* Validate match is still valid */
+      if (!match->tiled || match->minimized || match->workspace != window->workspace)
+        {
+          window->display->grab_tile_match = NULL;
+        }
+      else
+        {
+          MetaRectangle work_area;
+          MetaFrameBorders borders;
+          int match_gravity;
+          int match_width;
+          int primary_borders_w = 0;
+          int match_borders_w = 0;
+
+          meta_window_get_work_area_for_xinerama (window,
+                                                  window->tile_monitor_number,
+                                                  &work_area);
+
+          /* Use visible borders only since invisible borders overlap between
+           * adjacent tiled windows and don't consume work area space */
+          meta_frame_calc_borders (window->frame, &borders);
+          primary_borders_w = borders.visible.left + borders.visible.right;
+
+          meta_frame_calc_borders (match->frame, &borders);
+          match_borders_w = borders.visible.left + borders.visible.right;
+
+          /* Match client width */
+          match_width = work_area.width - window->rect.width - primary_borders_w - match_borders_w;
+
+          /* Determine what gravity to use regardless of
+           * whether it's corner tiled or edge tiled. */
+          if (match->tile_mode == META_TILE_LEFT ||
+              match->tile_mode == META_TILE_TOP_LEFT ||
+              match->tile_mode == META_TILE_BOTTOM_LEFT)
+            match_gravity = WestGravity;
+          else
+            match_gravity = EastGravity;
+
+          /* Do the actual resize of the matching window */
+          if (match_width >= match->size_hints.min_width)
+            {
+              match->tile_resized = TRUE;
+              meta_window_resize_with_gravity (match, TRUE,
+                                               match_width,
+                                               match->rect.height, /* keep original height */
+                                               match_gravity);
+            }
+        }
     }
 
   /* Store the latest resize time, if we actually resized. */
@@ -8322,6 +8405,92 @@ meta_window_get_current_tile_area (MetaWindow    *window,
     tile_area->y += tile_area->height;
 
   tile_area->width = width;
+}
+
+MetaWindow*
+meta_window_find_tile_match (MetaWindow *window)
+{
+  MetaTileMode opposite_mode;
+  GList *windows, *l;
+
+  if (!window->tiled || !window->frame)
+    return NULL;
+
+  switch (window->tile_mode)
+    {
+    case META_TILE_LEFT:
+      opposite_mode = META_TILE_RIGHT;
+      break;
+    case META_TILE_RIGHT:
+      opposite_mode = META_TILE_LEFT;
+      break;
+    case META_TILE_TOP_LEFT:
+      opposite_mode = META_TILE_TOP_RIGHT;
+      break;
+    case META_TILE_TOP_RIGHT:
+      opposite_mode = META_TILE_TOP_LEFT;
+      break;
+    case META_TILE_BOTTOM_LEFT:
+      opposite_mode = META_TILE_BOTTOM_RIGHT;
+      break;
+    case META_TILE_BOTTOM_RIGHT:
+      opposite_mode = META_TILE_BOTTOM_LEFT;
+      break;
+    default:
+      return NULL;
+    }
+
+  /* Use stack list and iterate backwards since meta_stack_list_windows returns
+   * bottom-to-top order. We want to match the most likely visible window */
+  windows = meta_stack_list_windows (window->screen->stack, window->workspace);
+
+  for (l = g_list_last (windows); l != NULL; l = l->prev)
+    {
+      MetaWindow *candidate = l->data;
+
+      /* Skip itself, non-tiled windows, and windows without frames (e.g. docks, etc.) */
+      if (candidate == window || !candidate->tiled || !candidate->frame)
+        continue;
+
+      /* Skip windows that don't match the opposite tile mode */
+      if (candidate->tile_mode != opposite_mode)
+        continue;
+
+      /* Skip windows on different monitors */
+      if (candidate->tile_monitor_number != window->tile_monitor_number)
+        continue;
+
+      /* Skip windows not visible in the current workspace (e.g. minimized) */
+      if (!meta_window_showing_on_its_workspace (candidate))
+        continue;
+
+      /* Since windows can be tiled at different sizes, we verify that their
+       * edges touch (or at least are close enough) */
+      MetaRectangle win_rect, cand_rect;
+      int tolerance = 8; /* pixels */
+
+      meta_window_get_outer_rect (window, &win_rect);
+      meta_window_get_outer_rect (candidate, &cand_rect);
+
+      if (window->tile_mode == META_TILE_LEFT ||
+          window->tile_mode == META_TILE_TOP_LEFT ||
+          window->tile_mode == META_TILE_BOTTOM_LEFT)
+      {
+        if (ABS (win_rect.x + win_rect.width - cand_rect.x) > tolerance)
+          continue;
+      }
+      else
+      {
+        if (ABS (cand_rect.x + cand_rect.width - win_rect.x) > tolerance)
+          continue;
+      }
+
+      g_list_free (windows);
+      return candidate;
+    }
+
+  g_list_free (windows);
+  return NULL;
 }
 
 gboolean
