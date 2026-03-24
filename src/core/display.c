@@ -3666,6 +3666,22 @@ meta_display_begin_grab_op (MetaDisplay *display,
       display->grab_tile_mode = META_TILE_NONE;
       display->grab_tile_monitor_number = -1;
     }
+
+  /* Find whether there's a tiled window that matches the one we're resizing. */
+  display->grab_tile_match = NULL;
+  if (window && meta_grab_op_is_resizing (op) && META_WINDOW_TILED (window))
+    {
+      int gravity = meta_resize_gravity_from_grab_op (op);
+
+      if ((window->tile_mode == META_TILE_LEFT && gravity == WestGravity) ||
+          (window->tile_mode == META_TILE_RIGHT && gravity == EastGravity) ||
+          (window->tile_mode == META_TILE_TOP_LEFT && (gravity == WestGravity || gravity == NorthWestGravity)) ||
+          (window->tile_mode == META_TILE_TOP_RIGHT && (gravity == EastGravity || gravity == NorthEastGravity)) ||
+          (window->tile_mode == META_TILE_BOTTOM_LEFT && (gravity == WestGravity || gravity == SouthWestGravity)) ||
+          (window->tile_mode == META_TILE_BOTTOM_RIGHT && (gravity == EastGravity || gravity == SouthEastGravity)))
+        display->grab_tile_match = meta_window_find_tile_match (window);
+    }
+
   display->grab_anchor_root_x = root_x;
   display->grab_anchor_root_y = root_y;
   display->grab_latest_motion_x = root_x;
@@ -3845,6 +3861,8 @@ meta_display_end_grab_op (MetaDisplay *display,
 
   if (display->grab_op == META_GRAB_OP_NONE)
     return;
+
+  display->grab_tile_match = NULL;
 
   if (display->grab_window != NULL)
     display->grab_window->shaken_loose = FALSE;

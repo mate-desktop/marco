@@ -642,6 +642,8 @@ void meta_window_get_work_area_all_xineramas    (MetaWindow    *window,
 void meta_window_get_current_tile_area         (MetaWindow    *window,
                                                 MetaRectangle *tile_area);
 
+MetaWindow* meta_window_find_tile_match        (MetaWindow    *window);
+
 gboolean meta_window_same_application (MetaWindow *window,
                                        MetaWindow *other_window);
 
