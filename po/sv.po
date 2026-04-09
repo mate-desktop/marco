@@ -16,6 +16,7 @@
 # Ludvig Nybogård <ludvig@nybogard.nu>, 2018
 # Philip Andersen <renegadevi@codeofmagi.net>, 2020
 # Luna Jernberg <droidbittin@gmail.com>, 2024
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 msgid ""
 msgstr ""
@@ -23,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2023-09-01 20:14+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>, 2024\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -375,6 +376,11 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Om du klickar på ett fönster samtidigt som du håller ned denna "
+"modifieringstangent flyttas fönstret (vänsterklick), ändras storleken på "
+"fönstret (mittklick) eller visas fönstermenyn (högerklick). Mitt- och "
+"högerklick kan bytas ut med hjälp av tangenten \"resize_with_right_button\"."
+" Modifieraren uttrycks t.ex. som \"<Alt>\" eller \"<Super>\"."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -752,6 +758,10 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"Om inställningen är true visas inga fönsterminiatyrer i popup-fönstret i "
+"alt-tabben när compositing-hanteraren är aktiverad. Applikationsikoner "
+"kommer att visas istället. Observera att på högupplösta skärmar med många "
+"synliga fönster kan det bli en märkbar fördröjning i renderingen."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -937,13 +947,15 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:223
 msgid "Raise windows to surface while cycling alt-tab popup"
-msgstr ""
+msgstr "Höj fönster till yta vid alt-tab-växlingspopup"
 
 #: src/org.mate.marco.gschema.xml:224
 msgid ""
 "While using the popup window, selected windows will be raised to make them "
 "easy to identify."
 msgstr ""
+"Vid användning av popup-fönstret höjs valda fönster upp så att de blir lätta"
+" att identifiera."
 
 #: src/org.mate.marco.gschema.xml:231 src/org.mate.marco.gschema.xml:236
 #: src/org.mate.marco.gschema.xml:241 src/org.mate.marco.gschema.xml:246
@@ -1010,6 +1022,12 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Den tangentbindning som kör kommandot med motsvarande nummer i "
+"/apps/marco/keybinding_commands Formatet ser ut som \"<Control>a\" eller "
+"\"<Shift><Alt>F1\". Parsern är ganska liberal och tillåter små eller stora "
+"bokstäver, och även förkortningar som \"<Ctl>\" och \"<Ctrl>\". Om du "
+"ställer in alternativet till den speciella strängen \"disabled\" kommer det "
+"inte att finnas någon tangentbindning för den här åtgärden."
 
 #: src/org.mate.marco.gschema.xml:475 src/org.mate.marco.gschema.xml:480
 #: src/org.mate.marco.gschema.xml:485 src/org.mate.marco.gschema.xml:490
@@ -1055,6 +1073,11 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Formatet ser ut som \"<Control>a\" eller \"<Shift><Alt>F1\". Parsern är "
+"ganska liberal och tillåter små eller stora bokstäver, och även "
+"förkortningar som \"<Ctl>\" och \"<Ctrl>\". Om du ställer in alternativet "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"tangentbindning för den här åtgärden."
 
 #: src/org.mate.marco.gschema.xml:560 src/org.mate.marco.gschema.xml:565
 #: src/org.mate.marco.gschema.xml:570 src/org.mate.marco.gschema.xml:575
@@ -1071,6 +1094,13 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Formatet ser ut som \"<Control>a\" eller \"<Shift><Alt>F1\". Parsern är "
+"ganska liberal och tillåter små eller stora bokstäver, och även "
+"förkortningar som \"<Ctl>\" och \"<Ctrl>\". Om du ställer in alternativet "
+"till den speciella strängen \"disabled\", kommer det inte att finnas någon "
+"tangentbindning för denna åtgärd. Denna tangentbindning kan upphävas genom "
+"att hålla ned \"shift\"-tangenten; därför kan \"shift\" inte vara en av de "
+"tangenter som används."
 
 #: src/org.mate.marco.gschema.xml:564
 msgid "Move backward between windows of an application, using a popup window"
@@ -1325,7 +1355,7 @@ msgstr "Skapa inte helskärmsfönster som är maximerade och saknar dekorationer
 
 #: src/core/main.c:306
 msgid "Have all keybindings disabled on startup"
-msgstr ""
+msgstr "Ha alla tangentbindningar inaktiverade vid uppstart"
 
 #: src/core/main.c:507
 #, c-format

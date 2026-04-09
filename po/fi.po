@@ -10,6 +10,8 @@
 # Rauli Laine <rauli.laine@iki.fi>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # nomen omen, 2018
+# Tommi Nieminen <translator@legisign.org>, 2026
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -17,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2023-09-01 20:14+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: nomen omen, 2018\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Finnish (https://app.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -772,7 +774,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:176
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Määrittää, luodaanko uudet ikkunat näytön keskelle"
 
 #: src/org.mate.marco.gschema.xml:177
 msgid ""
@@ -782,7 +784,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:181
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Otetaanko ikkunalaatoitus käyttöön"
 
 #: src/org.mate.marco.gschema.xml:182
 msgid ""
@@ -813,7 +815,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
-msgstr ""
+msgstr "Ikkunoiden sijoittamistapa"
 
 #: src/org.mate.marco.gschema.xml:197
 msgid ""
@@ -837,7 +839,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Alt-sarkain-ponnahdusikkunan kuvakekoko"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
@@ -847,7 +849,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Alt-sarkain-ponnahdusikkunan sarakkeiden enimmäismäärä"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
@@ -1012,10 +1014,13 @@ msgstr "Siirry taaksepäin ikkunoiden välillä ponnahdusikkunalla"
 #: src/org.mate.marco.gschema.xml:579
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr ""
+"Siirry ikkunoiden välillä kaikilla työpöydillä ponnahdusikkunan avulla"
 
 #: src/org.mate.marco.gschema.xml:584
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr ""
+"Siirry ikkunoiden välillä takaperin kaikilla työpöydillä ponnahdusikkunan "
+"avulla"
 
 #: src/org.mate.marco.gschema.xml:594
 msgid "Move backward between panels and the desktop, using a popup window"
@@ -1093,19 +1098,19 @@ msgstr "Vaihda tilaa, jossa ikkuna on aina näkyvissä muiden ikkunoiden pääll
 
 #: src/org.mate.marco.gschema.xml:915
 msgid "Tile window to north-west (upper left) corner of screen"
-msgstr ""
+msgstr "Laatoita ikkuna näytön ylävasempaan nurkkaan"
 
 #: src/org.mate.marco.gschema.xml:920
 msgid "Tile window to north-east (upper right) corner of screen"
-msgstr ""
+msgstr "Laatoita ikkuna näytön yläoikeaan nurkkaan"
 
 #: src/org.mate.marco.gschema.xml:925
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Laatoita ikkuna näytön alaoikeaan nurkkaan"
 
 #: src/org.mate.marco.gschema.xml:930
 msgid "Tile window to south-west (lower left) corner of screen"
-msgstr ""
+msgstr "Laatoita ikkuna näytön alavasempaan nurkkaan"
 
 #: src/core/bell.c:298
 msgid "Bell event"
@@ -1537,7 +1542,7 @@ msgstr "Ikkunavalikko"
 
 #: src/ui/frames.c:1351
 msgid "Window App Menu"
-msgstr ""
+msgstr "Ikkunasovellusvalikko"
 
 #: src/ui/frames.c:1354
 msgid "Minimize Window"
@@ -2345,11 +2350,12 @@ msgstr ""
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
+"Teema vaatii version %s, mutta viimeisin tuettu teeman versio on %d. %d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
 msgid "Outermost element in theme must be <metacity_theme> not <%s>"
-msgstr ""
+msgstr "Teeman uloimman alkion on oltava <metacity_theme>, ei <%s>"
 
 #: src/ui/theme-parser.c:3637
 #, c-format
