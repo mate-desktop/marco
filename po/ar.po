@@ -9,6 +9,8 @@
 # مهدي السطيفي <chinoune.mehdi@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Mosaab Alzoubi <moceap@hotmail.com>, 2018
+# Mostapha Mostapha, 2025
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -16,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2023-09-01 20:14+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Mosaab Alzoubi <moceap@hotmail.com>, 2018\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Arabic (https://app.transifex.com/mate/teams/13566/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -468,6 +470,21 @@ msgid ""
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
 msgstr ""
+"تغيير هذا الخيار إلى false قد يؤدي إلى سلوك معطوب، لذا يُنصح المستخدمون بشدة"
+" بعدم تغييره عن القيمة الافتراضية true. العديد من الأفعال (مثل النقر في "
+"منطقة العميل، أو تحريك/تغيير حجم النافذة) ترفع النافذة عادةً كأثر جانبي. "
+"تعيين هذا الخيار إلى false — وهو أمر غير مُستحسن — سيفصل عملية الرفع عن "
+"الأفعال الأخرى للمستخدم، ويتجاهل طلبات الرفع المولدة من التطبيقات. انظر "
+"http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. حتى عندما يكون هذا "
+"الخيار false، لا يزال بالإمكان رفع النوافذ عبر نقر Alt+زر أيسر في أي مكان "
+"على النافذة، أو نقر عادي على زينة النافذة، أو بواسطة رسائل خاصة من أدوات "
+"التبديل (pagers)، مثل طلبات التفعيل من ملحقات قائمة المهام. هذا الخيار معطل "
+"حاليًا في وضع النقر للتركيز. لاحظ أن قائمة طرق رفع النوافذ عندما تكون "
+"raise_on_click = false لا تتضمن الطلبات البرمجية من التطبيقات لرفع النوافذ؛ "
+"فمثل هذه الطلبات ستُتجاهَل بغض النظر عن سبب الطلب. إذا كنت مطور تطبيق وتلقى "
+"مستخدم شكاية من أن تطبيقك لا يعمل مع تعطيل هذا الإعداد، أخبره بأن الخطأ من "
+"جانبه لتعديله مدير النوافذ، وأن عليه إما إعادة هذا الخيار إلى true أو "
+"التعايش مع \"الخلل\" الذي طلبه."
 
 #: src/org.mate.marco.gschema.xml:85
 msgid "Action on title bar double-click"
@@ -803,6 +820,11 @@ msgid ""
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
 msgstr ""
+"وضع موضع النوافذ يوضّح كيفية وضع النوافذ الجديدة. \"automatic\" يعني أن "
+"النظام يختار الموقع تلقائيًا بناءً على المساحة المتاحة على سطح المكتب، أو "
+"بتتالي بسيط إذا لم تتوفر مساحة؛ \"pointer\" يعني أن النوافذ الجديدة تُوضَع "
+"وفق موقع مؤشر الفأرة؛ \"manual\" يعني أن المستخدم يجب أن يضع النافذة الجديدة"
+" يدويًا باستخدام الفأرة أو لوحة المفاتيح."
 
 #: src/org.mate.marco.gschema.xml:201
 msgid "List of applications ignored by show-desktop"

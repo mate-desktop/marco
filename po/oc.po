@@ -8,7 +8,8 @@
 # Sébastien Denux <sebcxjo@gmail.com>, 2018
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Quentin PAGÈS, 2024
+# Quentin PAGÈS, 2026
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2023-09-01 20:14+0200\n"
 "PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Quentin PAGÈS, 2024\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -86,7 +87,7 @@ msgstr "Se desplaçar entre los tablèus de bòrd e lo burèu immediatament"
 
 #: src/50-marco-global-key.xml.in:16 src/org.mate.marco.gschema.xml:629
 msgid "Hide all normal windows and set focus to the desktop"
-msgstr "Amagar totas las fenèstras normalas e balhar lo focus al burèu"
+msgstr "Amagar totas las fenèstras normalas e balhar lo fòcus al burèu"
 
 #: src/50-marco-global-key.xml.in:23 src/org.mate.marco.gschema.xml:474
 msgid "Switch to workspace 1"
@@ -415,9 +416,9 @@ msgid ""
 "some space between two adjacent buttons."
 msgstr ""
 "Agençament dels botons sus la barra de títol. La valor deu èsser una cadena,"
-" per exemple « menu:minimize,maximize,spacer,close » ; los dos punts separan"
-" lo canton esquèrre de la fenèstra del canton drech, e los noms dels botons "
-"an d'èsser separats per de virgulas. Los botons duplicats son pas "
+" per exemple « menu:minimize,maximize,spacer,close » ; los dos ponches "
+"separan lo canton esquèrre de la fenèstra del canton drech, e los noms dels "
+"botons an d'èsser separats per de virgulas. Los botons duplicats son pas "
 "autorizats. Los noms de boton desconeguts son silenciosament ignorats, e mai"
 " de botons poiràn èsser aponduts dins de versions futuras de marco sens "
 "copar las versions ancianas. Una balisa especiala « spacer » permet "
@@ -425,7 +426,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
-msgstr "Mòde de focus de las fenèstras"
+msgstr "Mòde de fòcus de las fenèstras"
 
 #: src/org.mate.marco.gschema.xml:71
 msgid ""
@@ -435,7 +436,7 @@ msgid ""
 " and \"mouse\" means windows are focused when the mouse enters the window "
 "and unfocused when the mouse leaves the window."
 msgstr ""
-"Lo mòde de focus de la fenèstra indica lo biais que las fenèstras son "
+"Lo mòde de fòcus de la fenèstra indica lo biais que las fenèstras son "
 "activadas. Presenta tres valors possiblas ; « click » significa que vos cal "
 "clicar sus las fenèstras per las activar,  « sloppy » (« rajat ») significa "
 "que las fenèstras son activadas quand la mirga s'i plaça e « mouse » "
@@ -572,11 +573,11 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
-"Se VERAI e que lo mòde de focus es siá « sloppy » siá « mouse » alara la "
-"fenèstra qu'a lo focus es automaticament mes al primièr plan aprèp un "
-"relambi indicat per la clau auto_raise_delay. Aquò es pas similar a clicar "
-"sus una fenèstra per la metre al primièr plan, ni a desplaçar una fenèstra "
-"pendent un lisar-depausar."
+"Se definit sus « true » e que lo mòde de fòcus es siá « sloppy » siá "
+"« mouse » alara la fenèstra qu'a lo fòcus es automaticament mes al primièr "
+"plan aprèp un relambi indicat per la clau auto_raise_delay. Aquò es pas "
+"similar a clicar sus una fenèstra per la metre al primièr plan, ni a "
+"desplaçar una fenèstra pendent un lisar-depausar."
 
 #: src/org.mate.marco.gschema.xml:105
 msgid "Delay in milliseconds for the auto raise option"
@@ -589,7 +590,7 @@ msgid ""
 "delay is given in thousandths of a second."
 msgstr ""
 "Lo relambi abans la mesa al primièr plan de la fenèstra se l'opcion "
-"auto_raise a la valor VERAI. Es indicat en milens de segondas."
+"auto_raise a la valor True. Es indicat en milens de segondas."
 
 #: src/org.mate.marco.gschema.xml:110
 msgid "Current theme"
@@ -613,8 +614,8 @@ msgid ""
 "If true, ignore the titlebar_font option, and use the standard application "
 "font for window titles."
 msgstr ""
-"Se VERAI, ignora l'opcion titlebar_font e utiliza la polissa estandarda de "
-"l'aplicacion pels títols de fenèstras."
+"Se definit sus « true », ignora l'opcion titlebar_font e utiliza la polissa "
+"estandarda de l'aplicacion pels títols de fenèstras."
 
 #: src/org.mate.marco.gschema.xml:120
 msgid "Window title font"
@@ -630,8 +631,8 @@ msgstr ""
 "Una cadena de descripcion de polissa descrivent una polissa per las barras "
 "de títol de fenèstras. La talha de la descripcion serà utilizada, çaquelà, "
 "pas que se l'opcion titlebar_font_size es reglada sus 0. Aquesta opcion es "
-"en otra desactivada se l'opcion titlebar_uses_desktop_font es reglada sus "
-"VERAI."
+"en otra desactivada se l'opcion titlebar_uses_desktop_font es reglada sus « "
+"true »."
 
 #: src/org.mate.marco.gschema.xml:126
 msgid "Number of workspaces"
@@ -710,7 +711,7 @@ msgstr ""
 "« frame_flash » que provòca lo cluquejament de la barra de títol de "
 "l'aplicacion qu'a mandat lo senhal de sonariá. Se l'aplicacion que manda la "
 "sonariá es desconeguda (es lo cas de la sonariá del sistèma per defaut), la "
-"barra de títol de la fenèstra qu'a actualament lo focus cluqueja."
+"barra de títol de la fenèstra qu'a actualament lo fòcus cluqueja."
 
 #: src/org.mate.marco.gschema.xml:151
 msgid "Compositing Manager"
@@ -735,8 +736,8 @@ msgstr ""
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
 msgstr ""
-"Se VERAI, afavorís una febla utilizacion de las ressorsas al detriment de la"
-" convivialitat"
+"Se definit sus « true », afavorís una febla utilizacion de las ressorsas al "
+"detriment de la convivialitat"
 
 #: src/org.mate.marco.gschema.xml:162
 msgid ""
@@ -746,13 +747,13 @@ msgid ""
 "working, and may also be a useful tradeoff for terminal servers. However, "
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
-"Se VERAI, Marco donarà a l'utilizaire mens de retorn d'informacions en "
-"utilizant de contorns en fial de fèrre, evitant d'animacions o autras "
-"floriduras. Aquò significa una baissa d'ergonomia per fòrça utilizaires mas "
-"pòt permetre a las vièlhas aplicacions de contunhar de foncionar, e pòt "
-"tanben èsser util als servidors de terminals X per melhorar las "
-"performanças. Çaquelà, la foncion fial de fèrre es desactivat quand "
-"l'accessibilitat es activada."
+"Se definit sus « true », Marco donarà a l'utilizaire mens de retorn "
+"d'informacions en utilizant de contorns en fial de fèrre, evitant "
+"d'animacions o autras floriduras. Aquò significa una baissa d'ergonomia per "
+"fòrça utilizaires mas pòt permetre a las vièlhas aplicacions de contunhar de"
+" foncionar, e pòt tanben èsser util als servidors de terminals X per "
+"melhorar las performanças. Çaquelà, la foncion fial de fèrre es desactivat "
+"quand l'accessibilitat es activada."
 
 #: src/org.mate.marco.gschema.xml:166
 msgid ""
@@ -776,7 +777,7 @@ msgstr ""
 " aplicacions es mai pròcha de Mac OS que de Windows. Quand activatz una "
 "fenèstra en mòde basat sus las aplicacions, totas las fenèstras de "
 "l'aplicacion seràn mesas al primièr plan. En otra, en mòde basat sus las "
-"aplicacions, los clics de focus son pas transmeses a las fenèstras d'autras "
+"aplicacions, los clics de fòcus son pas transmeses a las fenèstras d'autras "
 "aplicacions. Pel moment, lo mòde basat sus d'aplicacions es generalament pas"
 " mes en òbra."
 
@@ -1557,7 +1558,7 @@ msgstr ""
 #: src/core/xprops.c:412
 #, c-format
 msgid "Property %s on window 0x%lx contained invalid UTF-8\n"
-msgstr "La proprietat %s de la fenèstra 0x%lx conten un còde UTF-8 invalid\n"
+msgstr "La proprietat %s de la fenèstra 0x%lx conten un còdi UTF-8 invalid\n"
 
 #: src/core/xprops.c:495
 #, c-format
@@ -1565,7 +1566,7 @@ msgid ""
 "Property %s on window 0x%lx contained invalid UTF-8 for item %d in the "
 "list\n"
 msgstr ""
-"La proprietat %s de la fenèstra 0x%lx conten un còde UTF-8 invalid per "
+"La proprietat %s de la fenèstra 0x%lx conten un còdi UTF-8 invalid per "
 "l'element %d dins la lista\n"
 
 #: src/tools/marco-message.c:146
@@ -2338,7 +2339,7 @@ msgstr "L'estil de quadre a ja un boton per la foncion %s, estat %s"
 #: src/ui/theme-parser.c:3102
 #, c-format
 msgid "\"%s\" is not a valid value for focus attribute"
-msgstr "« %s » es pas una valor valida per l'atribut de focus"
+msgstr "« %s » es pas una valor valida per l'atribut de fòcus"
 
 #: src/ui/theme-parser.c:3111
 #, c-format
@@ -2375,14 +2376,14 @@ msgstr ""
 #, c-format
 msgid "Style has already been specified for state %s resize %s focus %s"
 msgstr ""
-"L'estil es ja estat indicat per l'estat %s, redimensionament %s, focus %s"
+"L'estil es ja estat indicat per l'estat %s, redimensionament %s, fòcus %s"
 
 #: src/ui/theme-parser.c:3214 src/ui/theme-parser.c:3225
 #: src/ui/theme-parser.c:3236 src/ui/theme-parser.c:3258
 #: src/ui/theme-parser.c:3269 src/ui/theme-parser.c:3280
 #, c-format
 msgid "Style has already been specified for state %s focus %s"
-msgstr "L'estil es ja estat indicat per l'estat %s, focus %s"
+msgstr "L'estil es ja estat indicat per l'estat %s, fòcus %s"
 
 #: src/ui/theme-parser.c:3319
 msgid ""
