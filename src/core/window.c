@@ -2158,6 +2158,14 @@ meta_window_show (MetaWindow *window)
           if (!window->placed)
             window->denied_focus_and_not_transient = TRUE;
         }
+      else if (window->type == META_WINDOW_MODAL_DIALOG)
+        {
+          /* Keep the non-modal transient behavior from 6ea23df for GTK
+           * popups and VLC controls, but focus modal dialogs that block
+           * the focused ancestor.
+           */
+          takes_focus_on_map = TRUE;
+        }
     }
 
   if (!window->placed)
