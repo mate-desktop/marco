@@ -26,6 +26,7 @@
 
 #include <X11/Xlib.h>
 
+#include <config.h>
 #include "util.h"
 #include "display.h"
 

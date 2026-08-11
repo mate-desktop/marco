@@ -26,6 +26,7 @@
  * 02110-1301, USA.
  */
 
+#include <config.h>
 #include "boxes.h"
 #include "util.h"
 #include <X11/Xutil.h>  /* Just for the definition of the various gravities */

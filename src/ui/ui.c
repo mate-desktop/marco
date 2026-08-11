@@ -20,6 +20,7 @@
  * 02110-1301, USA.
  */
 
+#include <config.h>
 #include "prefs.h"
 #include "ui.h"
 #include "frames.h"
