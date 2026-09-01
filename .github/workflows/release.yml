@@ -34,11 +34,6 @@ jobs:
           sha256sum "$TARBALL" > "$TARBALL.sha256"
           md5sum "$TARBALL" > "$TARBALL.md5"
 
-      - name: Install GH CLI
-        uses: dev-hanz-ops/install-gh-cli-action@v0.2.1
-        with:
-          gh-cli-version: 2.39.1
-
       - name: Create github release
         run: |
           gh release create ${{ github.ref_name }} --title "Marco ${{ github.ref_name }}" --generate-notes marco-*.tar.xz marco-*.tar.xz.sha256 marco-*.tar.xz.md5
