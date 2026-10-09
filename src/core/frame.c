@@ -240,6 +240,8 @@ meta_window_destroy_frame (MetaWindow *window)
       window->frame_bounds = NULL;
     }
 
+  meta_window_update_net_frame_extents (window);
+
   /* Move keybindings to window instead of frame */
   meta_window_grab_keys (window);
 

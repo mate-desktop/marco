@@ -59,7 +59,6 @@
 static int destroying_windows_disallowed = 0;
 
 static void     update_sm_hints           (MetaWindow     *window);
-static void     update_net_frame_extents  (MetaWindow     *window);
 static void     recalc_window_type        (MetaWindow     *window);
 static void     recalc_window_features    (MetaWindow     *window);
 static void     invalidate_work_areas     (MetaWindow     *window);
@@ -691,6 +690,8 @@ meta_window_new_with_attrs (MetaDisplay       *display,
 
   if (window->decorated)
     meta_window_ensure_frame (window);
+  else
+    meta_window_update_net_frame_extents (window);
 
   meta_window_grab_keys (window);
   if (window->type != META_WINDOW_DOCK)
@@ -3764,7 +3765,7 @@ meta_window_move_resize_internal (MetaWindow          *window,
       window->frame->right_width = borders.total.right;
       window->frame->bottom_height = borders.total.bottom;
 
-      update_net_frame_extents (window);
+      meta_window_update_net_frame_extents (window);
     }
 
   /* See ICCCM 4.1.5 for when to send ConfigureNotify */
@@ -4671,8 +4672,8 @@ meta_window_get_net_wm_desktop (MetaWindow *window)
     return meta_workspace_index (window->workspace);
 }
 
-static void
-update_net_frame_extents (MetaWindow *window)
+void
+meta_window_update_net_frame_extents (MetaWindow *window)
 {
   unsigned long data[4] = { 0, 0, 0, 0 };
 
