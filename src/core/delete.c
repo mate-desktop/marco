@@ -87,10 +87,7 @@ delete_ping_timeout_func (MetaDisplay *display,
               window->desc);
 
   if (window->dialog_pid >= 0)
-    {
-      meta_window_present_delete_dialog (window, timestamp);
-      return;
-    }
+    return;
 
   window_title = g_locale_from_utf8 (window->title, -1, NULL, NULL, NULL);
 
@@ -108,8 +105,7 @@ delete_ping_timeout_func (MetaDisplay *display,
   dialog_pid =
     meta_show_dialog ("--question",
                       window_content, NULL,
-                      window->screen->screen_name,
-                      _("_Wait"), _("_Force Quit"), window->xwindow,
+                      _("_Wait"), _("_Force Quit"),
                       NULL, NULL);
 
   g_free (window_content);
@@ -123,6 +119,12 @@ void
 meta_window_delete (MetaWindow  *window,
                     guint32      timestamp)
 {
+  if (window->dialog_pid >= 0)
+    {
+      meta_window_present_delete_dialog (window, timestamp);
+      return;
+    }
+
   meta_error_trap_push (window->display);
   if (window->delete_window)
     {
@@ -223,11 +225,11 @@ meta_window_present_delete_dialog (MetaWindow *window, guint32 timestamp)
         {
           MetaWindow *w = tmp->data;
 
-          if (w->xtransient_for == window->xwindow &&
-              w->res_class &&
-              g_ascii_strcasecmp (w->res_class, "marco-dialog") == 0)
+          if (w->net_wm_pid == window->dialog_pid)
             {
-              meta_window_activate (w, timestamp);
+              meta_window_activate (
+                  w,
+                  meta_display_get_current_time_roundtrip (window->display));
               break;
             }
 
