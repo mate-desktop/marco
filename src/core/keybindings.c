@@ -2427,8 +2427,7 @@ error_on_command (int         command_index,
       meta_show_dialog ("--error",
                         text,
                         NULL,
-                        screen_name,
-                        NULL, NULL, 0,
+                        NULL, NULL,
                         NULL, NULL);
 
       g_free (text);
@@ -2439,8 +2438,7 @@ error_on_command (int         command_index,
       meta_show_dialog ("--error",
                         message,
                         NULL,
-                        screen_name,
-                        NULL, NULL, 0,
+                        NULL, NULL,
                         NULL, NULL);
     }
 }
@@ -3771,9 +3769,7 @@ handle_rename_workspace(MetaDisplay *display,
   dialog_pid = meta_show_entry_dialog (window_content,
                                        workspace_index,
                                        entry_text,
-                                       screen->screen_name,
                                        _("OK"), _("Cancel"),
-                                       0,
                                        handle_rename_workspace_callback);
 
   g_free (window_title);

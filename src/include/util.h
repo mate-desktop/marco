@@ -95,10 +95,8 @@ char* meta_g_utf8_strndup (const gchar *src, gsize n);
 GPid meta_show_dialog (const char *type,
                        const char *message,
 		       const char *timeout,
-		       const char *display,
                        const char *ok_text,
                        const char *cancel_text,
-                       const int transient_for,
                        GSList *columns,
                        GSList *entries);
 
@@ -106,10 +104,8 @@ GPid
 meta_show_entry_dialog (const char *message,
                         gint *active_workspace_id,
                         const char *entry_text,
-                        const char *display,
                         const char *ok_text,
                         const char *cancel_text,
-                        const int transient_for,
                         const GIOFunc stdio_func_cb);
 /* To disable verbose mode, we make these functions into no-ops */
 #ifdef WITH_VERBOSE_MODE

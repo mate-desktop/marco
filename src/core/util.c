@@ -535,28 +535,22 @@ GPid
 meta_show_dialog (const char *type,
                   const char *message,
                   const char *timeout,
-                  const char *display,
                   const char *ok_text,
                   const char *cancel_text,
-                  const int transient_for,
                   GSList *columns,
                   GSList *entries)
 {
   GError *error = NULL;
   GSList *tmp;
   int i=0;
-  GPid child_pid;
+  GPid child_pid = -1;
   const char **argvl = g_malloc(sizeof (char*) *
-                                (17 +
+                                (13 +
                                  g_slist_length (columns)*2 +
                                  g_slist_length (entries)));
 
   argvl[i++] = "zenity";
   argvl[i++] = type;
-  argvl[i++] = "--display";
-  argvl[i++] = display;
-  argvl[i++] = "--class";
-  argvl[i++] = "marco-dialog";
   argvl[i++] = "--title";
   /* Translators: This is the title used on dialog boxes */
   argvl[i++] = _("Marco");
@@ -598,13 +592,6 @@ meta_show_dialog (const char *type,
 
   argvl[i] = NULL;
 
-  if (transient_for)
-    {
-      gchar *env = g_strdup_printf("%d", transient_for);
-      setenv ("WINDOWID", env, 1);
-      g_free (env);
-    }
-
   g_spawn_async (
                  "/",
                  (gchar**) argvl, /* ugh */
@@ -614,9 +601,6 @@ meta_show_dialog (const char *type,
                  &child_pid,
                  &error
                  );
-
-  if (transient_for)
-    unsetenv ("WINDOWID");
 
   g_free (argvl);
 
@@ -633,10 +617,8 @@ GPid
 meta_show_entry_dialog(const char *message,
                        gint *active_workspace_id,
                        const char *entry_text,
-                       const char *display,
                        const char *ok_text,
                        const char *cancel_text,
-                       const int transient_for,
                        const GIOFunc stdio_func_cb)
 {
   meta_topic (META_DEBUG_KEYBINDINGS,
@@ -647,14 +629,10 @@ meta_show_entry_dialog(const char *message,
   int i = 0;
   GPid child_pid;
   gint stdout_fd;
-  const char **argvl = g_malloc (sizeof (char *) * (17));
+  const char **argvl = g_malloc (sizeof (char *) * (13));
 
   argvl[i++] = "zenity";
   argvl[i++] = "--entry";
-  argvl[i++] = "--display";
-  argvl[i++] = display;
-  argvl[i++] = "--class";
-  argvl[i++] = "marco-dialog";
   argvl[i++] = "--title";
   /* Translators: This is the title used on dialog boxes */
   argvl[i++] = _ ("Marco");
@@ -680,7 +658,6 @@ meta_show_entry_dialog(const char *message,
     }
   argvl[i] = NULL;
 
-  unsetenv ("WINDOWID"); /* start in current workspace */
   g_spawn_async_with_pipes (
                             "/",
                             (gchar **) argvl,
