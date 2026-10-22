@@ -553,10 +553,6 @@ meta_show_dialog (const char *type,
 
   argvl[i++] = "zenity";
   argvl[i++] = type;
-  argvl[i++] = "--display";
-  argvl[i++] = display;
-  argvl[i++] = "--class";
-  argvl[i++] = "marco-dialog";
   argvl[i++] = "--title";
   /* Translators: This is the title used on dialog boxes */
   argvl[i++] = _("Marco");
