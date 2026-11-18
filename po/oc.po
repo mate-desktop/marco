@@ -1,29 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the marco package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Cédric Valmary <cvalmary@yahoo.fr>, 2018
 # Sébastien Denux <sebcxjo@gmail.com>, 2018
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Quentin PAGÈS, 2026
 # Transifex Bot <>, 2026
-# 
+# Quentin PAGÈS <quentinantonin@free.fr>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2023-09-01 20:14+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
-"Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
+"PO-Revision-Date: 2026-10-05 10:17+0000\n"
+"Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
+"Language-Team: Occitan <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/marco/oc/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: oc\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.10\n"
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
@@ -225,27 +227,28 @@ msgstr "Maximizar la fenèstra orizontalament"
 
 #: src/50-marco-window-key.xml.in:74 src/org.mate.marco.gschema.xml:905
 msgid "Tile window to east (right) side of screen"
-msgstr ""
+msgstr "Ajustar la fenèstra en mosaïc al costat èst (drech) de l’ecran"
 
 #: src/50-marco-window-key.xml.in:78 src/org.mate.marco.gschema.xml:910
 msgid "Tile window to west (left) side of screen"
-msgstr ""
+msgstr "Ajustar la fenèstra en mosaïc al costat oèst (esquèr) de l’ecran"
 
 #: src/50-marco-window-key.xml.in:82
 msgid "Tile window to north-west (top left) corner"
 msgstr ""
+"Ajustar la fenèstra dins lo canton nòrd-oèst (naut a esquèrra) de l’ecran"
 
 #: src/50-marco-window-key.xml.in:86
 msgid "Tile window to north-east (top right) corner"
-msgstr ""
+msgstr "Ajustar la fenèstra dins lo canton nòrd-èst (naut a drecha) de l’ecran"
 
 #: src/50-marco-window-key.xml.in:90
 msgid "Tile window to south-west (bottom left) corner"
-msgstr ""
+msgstr "Ajustar la fenèstra dins lo canton sud-oèst (bas a esquèrra) de l’ecran"
 
 #: src/50-marco-window-key.xml.in:94
 msgid "Tile window to south-east (bottom right) corner"
-msgstr ""
+msgstr "Ajustar la fenèstra dins lo canton sud-èst (bas a drecha) de l’ecran"
 
 #: src/50-marco-window-key.xml.in:98 src/org.mate.marco.gschema.xml:935
 msgid "Move window to north-west (top left) corner"
@@ -285,19 +288,19 @@ msgstr "Desplaçar la fenèstra al centre de l'ecran"
 
 #: src/50-marco-window-key.xml.in:134 src/org.mate.marco.gschema.xml:980
 msgid "Move window to north (top) monitor"
-msgstr ""
+msgstr "Desplaçar la fenèstra cal a monitor nòrd (superior)"
 
 #: src/50-marco-window-key.xml.in:138 src/org.mate.marco.gschema.xml:985
 msgid "Move window to south (bottom) monitor"
-msgstr ""
+msgstr "Desplaçar la fenèstra cap al monitor sud (inferior)"
 
 #: src/50-marco-window-key.xml.in:142 src/org.mate.marco.gschema.xml:990
 msgid "Move window to east (right) monitor"
-msgstr ""
+msgstr "Desplaçar la fenèstra cap al monitor èst (drecha)"
 
 #: src/50-marco-window-key.xml.in:146 src/org.mate.marco.gschema.xml:995
 msgid "Move window to west (left) monitor"
-msgstr ""
+msgstr "Desplaçar la fenèstra cap al monitor oèst (esquèrra)"
 
 #: src/50-marco-window-key.xml.in:154 src/org.mate.marco.gschema.xml:800
 msgid "Move window to workspace 1"
@@ -375,6 +378,12 @@ msgid ""
 "the \"resize_with_right_button\" key. Modifier is expressed as \"<Alt>\" or "
 "\"<Super>\" for example."
 msgstr ""
+"Clicar sus una fenèstra en mantenent aquesta tòca modificadoira quichada "
+"permetrà de desplaçar la fenèstra (clic esquèrra), de la redimensionar (clic "
+"del mitan) o d'afichar lo menú de la fenèstra (clic drech). Las operacions "
+"de clic del mitan e de clic drech pòdon èsser inversadas amb la clau «"
+"resize_with_right_button». La tòca modificadoira s’exprimís, per exemple, "
+"coma «<Alt>» o «<Super>»."
 
 #: src/org.mate.marco.gschema.xml:55
 msgid "Whether to resize with the right button"
@@ -394,12 +403,16 @@ msgstr ""
 #: src/org.mate.marco.gschema.xml:60
 msgid "Whether to display preselected tab window border"
 msgstr ""
+"Indica se cal dessenhar la bordadura de la fenèstra de l’onglet "
+"preseleccionat"
 
 #: src/org.mate.marco.gschema.xml:61
 msgid ""
 "Set this to false to disable border of preselected window while performing "
 "tab switching."
 msgstr ""
+"Definissètz aqueste paramètre a false per desactivar la bordadura de la "
+"fenèstra preseleccionada pendent lo cambiament d’onglets."
 
 #: src/org.mate.marco.gschema.xml:65
 msgid "Arrangement of buttons on the titlebar"
@@ -438,10 +451,10 @@ msgid ""
 msgstr ""
 "Lo mòde de fòcus de la fenèstra indica lo biais que las fenèstras son "
 "activadas. Presenta tres valors possiblas ; « click » significa que vos cal "
-"clicar sus las fenèstras per las activar,  « sloppy » (« rajat ») significa "
-"que las fenèstras son activadas quand la mirga s'i plaça e « mouse » "
-"(« mirga »), significa que las fenèstras son activadas quand la mirga s'i "
-"plaça e desactivadas quand las quita."
+"clicar sus las fenèstras per las activar, « sloppy » (« rajat ») significa "
+"que las fenèstras son activadas quand la mirga s'i plaça e « mouse » (« mirga"
+" »), significa que las fenèstras son activadas quand la mirga s'i plaça e "
+"desactivadas quand las quita."
 
 #: src/org.mate.marco.gschema.xml:75
 msgid "Control how new windows get focus"
@@ -486,6 +499,27 @@ msgid ""
 " window manager and that they need to change this option back to true or "
 "live with the \"bug\" they requested."
 msgstr ""
+"Configurar aquesta opcion a false pòt provocar un compòrtament defectuós ; "
+"òm desconselha als utilizaires de cambiar sa valor per defaut, true. Mantuna "
+"accion (per exemple, clicar dins la zòna del client, desplaçar o "
+"redimensionar la fenèstra) fa normalament montar la fenèstra en efecte "
+"segondari. Configurar aquesta opcion a false, çò qu’es fòrça desaconselhat, "
+"desolidarizarà la mesa al primièr plan de las autras accions de l’utilizaire "
+"e ignorarà las demandas de mesa al primièr plan generadas per las "
+"aplicacions. Veire http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. "
+"Quitament quand aquesta opcion es a false, las fenèstras pòdon totjorn èsser "
+"mesas al primièr plan amb un clic esquèrra e la tòca Alt en quin luòc que "
+"siá de la fenèstra, amb un clic normal sus las decoracions de la fenèstra, o "
+"per de messatges especials dels paginadors, coma las demandas d’activacion "
+"dels ajustons de lista de prètzfaches. Aquesta opcion es actualament "
+"desactivada dins lo mòde de fòcus al clic. Remarca que la lista dels mejans "
+"de montar las fenèstras quand raise_on_click es false inclutz pas las "
+"demandas programaticas de las aplicacions per montar las fenèstras; aquelas "
+"demandas seràn ignoradas quin que siá lo motiu. Se sètz un desvolopaire "
+"d’aplicacions e qu’un utilizaire se planh que vòstra aplicacion fonciona pas "
+"amb aqueste parametratge desactivat, digatz-li que la fauta es _seuna_ per "
+"aver copat son gestionari de fenèstras e que deu tornar metre aquesta opcion "
+"a true o viure amb lo «bug» qu’a demandat."
 
 #: src/org.mate.marco.gschema.xml:85
 msgid "Action on title bar double-click"
@@ -650,7 +684,7 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:131
 msgid "Workspace wrap style"
-msgstr ""
+msgstr "Estil d’ajustament de l’espaci de trabalh"
 
 #: src/org.mate.marco.gschema.xml:132
 msgid ""
@@ -663,6 +697,15 @@ msgid ""
 "workspaces are connected like a doughnut: the end of each row leads to its "
 "own beginning and the end of each column leads to its own beginning."
 msgstr ""
+"L’estil d’envelopament permet de determinar cossí passar d’un espaci de "
+"trabalh a un autre al bòrd del selector d’espacis de trabalh. Amb l’opcion « "
+"sens retorn », res se passarà se temptatz de passar a un espaci de trabalh "
+"situat mai enlà del bòrd del selector. Amb l’opcion « classic », s’utiliza "
+"l’ancian compòrtament de Marco: la fin d’una linha mena al començament de la "
+"linha seguenta, e la fin d’una colomna mena al començament de la colomna "
+"seguenta. Amb l’opcion « toroidal », los espacis de trabalh son connectats "
+"coma un anèl: la fin de cada linha mena a son pròpri començament, e la fin "
+"de cada colomna mena a son pròpri començament."
 
 #: src/org.mate.marco.gschema.xml:136
 msgid "Enable Visual Bell"
@@ -724,6 +767,7 @@ msgstr "Determina se Marco es utilizat coma gestionari de composicion."
 #: src/org.mate.marco.gschema.xml:156
 msgid "Fast Alt-Tab with compositing manager (disable thumbnails)"
 msgstr ""
+"Alt-Tab rapid amb un gestionari de composicion (desactivar las miniaturas)"
 
 #: src/org.mate.marco.gschema.xml:157
 msgid ""
@@ -732,6 +776,11 @@ msgid ""
 "displayed instead. Note that on high resolution screens with many visible "
 "windows there can be a perceptible lag in rendering."
 msgstr ""
+"Se definit a « true », cap de miniaturas de fenèstras serà pas afichada dins "
+"la fenèstra surgissenta Alt-Tab quand lo gestionari de composicion es "
+"activat. A la plaça, las icònas de las aplicacions seràn afichadas. Notatz "
+"que, sus d’ecrans de nauta resolucion amb fòrça fenèstras visiblas, lo "
+"rendut pòt presentar un retard perceptible."
 
 #: src/org.mate.marco.gschema.xml:161
 msgid "If true, trade off usability for less resource usage"
@@ -802,17 +851,19 @@ msgstr ""
 
 #: src/org.mate.marco.gschema.xml:176
 msgid "Determines if new windows are created on the center of the screen"
-msgstr ""
+msgstr "Determina se las fenèstras novèlas se crèan al centre de l’ecran"
 
 #: src/org.mate.marco.gschema.xml:177
 msgid ""
 "If set to true, new windows are opened in the center of the screen. "
 "Otherwise, they are opened at the top left of the screen."
 msgstr ""
+"Se definit a « true », las fenèstras novèlas se dorbisson al centre de "
+"l’ecran. Autrament, seràn dobèrtas ennaut a esquèrra de l’ecran."
 
 #: src/org.mate.marco.gschema.xml:181
 msgid "Whether to enable window tiling"
-msgstr ""
+msgstr "Indica se cal activar la juxtaposicion de las fenèstras"
 
 #: src/org.mate.marco.gschema.xml:182
 msgid ""
@@ -820,26 +871,37 @@ msgid ""
 "resizes them horizontally to cover half of the available area. Drag-dropping"
 " to the top maximizes the window if allow-top-tiling is enabled."
 msgstr ""
+"Se activat lo fach de depausar de fenèstras suls bòrds de l’ecran las "
+"maximiza verticalament e las redimensiona orizontalament per cobrir la mitat "
+"de l’espaci disponible. Se se depausa una fenèstra en la fasent lisar cap a "
+"la part superior, aquesta es maximizada se l’opcion allow-top-tiling es "
+"activada."
 
 #: src/org.mate.marco.gschema.xml:186
 msgid "Whether to maximize the window when dragged to the top of the screen"
 msgstr ""
+"Indica se una fenèstra deu èsser maximizada quand es desplaçada sul bòrd "
+"naut de l’ecran"
 
 #: src/org.mate.marco.gschema.xml:187
 msgid ""
 "If enabled, drag-dropping a window to the top of the screen will maximize "
 "it. Only works when allow-tiling is enabled."
 msgstr ""
+"S’es activat, lisar e depausar una fenèstra cap al naut de l’ecran la "
+"maximizarà. Fonciona pas que se «permetre lo mosaïc» es activat."
 
 #: src/org.mate.marco.gschema.xml:191
 msgid "Whether to enable cycling through different tile sizes"
-msgstr ""
+msgstr "Se cal activar lo passatge ciclic entre de talhas diferentas de teulas"
 
 #: src/org.mate.marco.gschema.xml:192
 msgid ""
 "If enabled, tiling a window will cycle through multiple different sizes by "
 "using the same keyboard shortcut multiple times in a row."
 msgstr ""
+"S'es activat, l’assemblatge d’una fenèstra farà defilar diferentas talhas en "
+"utilizant mantun còp de seguida lo meteis acorchi de clavièr."
 
 #: src/org.mate.marco.gschema.xml:196
 msgid "Window placement mode"
@@ -854,6 +916,13 @@ msgid ""
 "pointer position; \"manual\" means that the user must manually place the new"
 " window with the mouse or keyboard."
 msgstr ""
+"Lo mòde de posicionament de las fenèstras indica cossí son posicionadas las "
+"fenèstras novèlas. « automatic » significa que lo sistèma causís "
+"automaticament un emplaçament en foncion de l’espaci disponible sul burèu, o "
+"las apila simplament se i a pas pro d’espaci; « pointe r» significa que las "
+"fenèstras novèlas son plaçadas en foncion de la posicion del puntaire de la "
+"mirga; «manual» significa que l’utilizaire deu plaçar manualament la "
+"fenèstra novèla amb la mirga o lo clavièr."
 
 #: src/org.mate.marco.gschema.xml:201
 msgid "List of applications ignored by show-desktop"
@@ -864,45 +933,58 @@ msgid ""
 "Comma separated class list. Each running GUI application referenced to given"
 " windows manager class will be ignored by 'Show Desktop' functionality."
 msgstr ""
+"Lista de classas separadas per de virgulas. Cada aplicacion d’interfàcia "
+"grafica en execucion associada a una classa donada del gestionari de "
+"fenèstras serà ignorada per la foncionalitat « Afichar lo burèu »."
 
 #: src/org.mate.marco.gschema.xml:207
 msgid "Icon size in alt-tab popup window"
-msgstr ""
+msgstr "Talha de las icònas dins la fenèstra popup alt-tab"
 
 #: src/org.mate.marco.gschema.xml:208
 msgid ""
 "Size of the application icons displayed in alt-tab popup window. The "
 "screen's scale factor is applied to this value."
 msgstr ""
+"Talha de las icònas de las aplicacions afichadas dins la fenèstra emergenta "
+"Alt-Tab. Lo factor d’escala de l’ecran s’aplica a aquesta valor."
 
 #: src/org.mate.marco.gschema.xml:213
 msgid "Maximum number of columns in alt-tab popup window"
-msgstr ""
+msgstr "Nombre maximum de colomnas dins la fenèstra surgissenta Alt+Tab"
 
 #: src/org.mate.marco.gschema.xml:214
 msgid ""
 "The popup window will be expanded to fit up to these many entries per row."
 msgstr ""
+"La fenèstra surgissenta serà agrandida per poder afichar fins a aqueste "
+"nombre d’entradas per linha."
 
 #: src/org.mate.marco.gschema.xml:218
 msgid "Expand the alt-tab popup window to fit longer window titles"
 msgstr ""
+"Agrandir la fenèstra surgissenta Alt-Tab per que pòsca afichar de títols de "
+"fenèstra mai longs"
 
 #: src/org.mate.marco.gschema.xml:219
 msgid ""
 "The popup window may be expanded up to the width determined by the config "
 "parameter 'alt-tab-max-columns'."
 msgstr ""
+"La fenèstra surgissenta pòt èsser agrandida fins a la largor determinada pel "
+"paramètre de configuracion «alt-tab-max-columns»."
 
 #: src/org.mate.marco.gschema.xml:223
 msgid "Raise windows to surface while cycling alt-tab popup"
-msgstr ""
+msgstr "Levar las fenèstras a la superficia pendent lo cambiament amb Alt-Tab"
 
 #: src/org.mate.marco.gschema.xml:224
 msgid ""
 "While using the popup window, selected windows will be raised to make them "
 "easy to identify."
 msgstr ""
+"Mentre utilizatz la fenèstra surgissenta, las fenèstras seleccionadas seràn "
+"mesas al primièr plan per las identificar mai aisidament."
 
 #: src/org.mate.marco.gschema.xml:231 src/org.mate.marco.gschema.xml:236
 #: src/org.mate.marco.gschema.xml:241 src/org.mate.marco.gschema.xml:246
@@ -969,6 +1051,13 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
+"Las combinasons de tòcas qu’executan las comandas numerotadas "
+"correspondentas dins /apps/marco/keybinding_commands. Lo format sembla a "
+"aquò: « <Control>a » o « <Shift><Alt>F1 ». L’analizador es pro sople e "
+"permet d’utilizar de majusculas o de minusculas e d’abreviacions coma « "
+"<Ctl> » e « <Ctrl> ». Se definissètz l’opcion amb la cadena especiala « "
+"disabled » (desactivat), i aurà pas cap de combinason de tòcas per aquesta "
+"accion."
 
 #: src/org.mate.marco.gschema.xml:475 src/org.mate.marco.gschema.xml:480
 #: src/org.mate.marco.gschema.xml:485 src/org.mate.marco.gschema.xml:490
@@ -1014,6 +1103,11 @@ msgid ""
 "as \"<Ctl>\" and \"<Ctrl>\". If you set the option to the special string "
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Lo format sembla « <Control>a » o « <Shift><Alt>F1 ». L'analizador es pro "
+"flexible e permet d'utilizar de majusculas o de minusculas e d'abreviacions "
+"coma « <Ctl> » e « <Ctrl> ». Se definissètz l'opcion amb la cadena especiala "
+"« disabled » (desactivat), i aurà pas cap de combinason de tòcas per aquesta "
+"accion."
 
 #: src/org.mate.marco.gschema.xml:560 src/org.mate.marco.gschema.xml:565
 #: src/org.mate.marco.gschema.xml:570 src/org.mate.marco.gschema.xml:575
@@ -1030,6 +1124,13 @@ msgid ""
 "keybinding may be reversed by holding down the \"shift\" key; therefore, "
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
+"Lo format sembla « <Control>a » o « <Shift><Alt>F1 ». L’analizador es pro "
+"flexible e permet d’utilizar de majusculas o de minusculas e d’abreviacions "
+"coma « <Ctl> » e « <Ctrl> ». Se definissètz l’opcion amb la cadena especiala "
+"« disabled » (desactivat), i aurà pas cap de combinason de tòcas per aquesta "
+"accion. Aquesta combinason de tòcas pòt èsser invertida en mantenent la tòca "
+"« Maj » quichada. Per consequent, « Maj » pòt pas far partida d’aquesta "
+"combinason."
 
 #: src/org.mate.marco.gschema.xml:564
 msgid "Move backward between windows of an application, using a popup window"
@@ -1045,10 +1146,14 @@ msgstr ""
 #: src/org.mate.marco.gschema.xml:579
 msgid "Move between windows on all workspaces, using a popup window"
 msgstr ""
+"Se desplaçar entre las fenèstras de totes los espacis de trabalh amb una "
+"fenèstra surgissenta"
 
 #: src/org.mate.marco.gschema.xml:584
 msgid "Move backward between windows on all workspaces, using a popup window"
 msgstr ""
+"Passar cap enrèire entre las fenèstras de totes los espacis de trabalh, en "
+"utilizant una fenèstra surgissenta"
 
 #: src/org.mate.marco.gschema.xml:594
 msgid "Move backward between panels and the desktop, using a popup window"
@@ -1133,18 +1238,21 @@ msgstr ""
 #: src/org.mate.marco.gschema.xml:915
 msgid "Tile window to north-west (upper left) corner of screen"
 msgstr ""
+"Cobrir la partida nòrd-oèst (superiora esquèrra) de l’ecran amb la fenèstra"
 
 #: src/org.mate.marco.gschema.xml:920
 msgid "Tile window to north-east (upper right) corner of screen"
 msgstr ""
+"Cobrir la partida nòrd-èst (superiora drecha) de l’ecran amb la fenèstra"
 
 #: src/org.mate.marco.gschema.xml:925
 msgid "Tile window to south-east (lower right) corner of screen"
-msgstr ""
+msgstr "Cobrir la partida sud-èst (inferiora dreita) de l'ecran amb la fenèstra"
 
 #: src/org.mate.marco.gschema.xml:930
 msgid "Tile window to south-west (lower left) corner of screen"
 msgstr ""
+"Cobrir la partida sud-oèst (inferiora esquèrra) de l’ecran amb la fenèstra"
 
 #: src/core/bell.c:298
 msgid "Bell event"
@@ -1283,7 +1391,7 @@ msgstr ""
 
 #: src/core/main.c:306
 msgid "Have all keybindings disabled on startup"
-msgstr ""
+msgstr "Aver totas las combinasons de tòcas desactivadas a l’aviada"
 
 #: src/core/main.c:507
 #, c-format
@@ -1310,6 +1418,7 @@ msgstr "Impossible de tornar aviar : %s\n"
 #, c-format
 msgid "%d stored in GSettings key %s is out of range %d to %d\n"
 msgstr ""
+"%d enregistrat dins la clau GSettings %s es fòra de l’interval de %d a %d\n"
 
 #: src/core/prefs.c:1095
 msgid ""
@@ -1584,7 +1693,7 @@ msgstr "Menú Fenèstra"
 
 #: src/ui/frames.c:1351
 msgid "Window App Menu"
-msgstr ""
+msgstr "Menú Aplicacion Fenèstra"
 
 #: src/ui/frames.c:1354
 msgid "Minimize Window"
@@ -1856,6 +1965,9 @@ msgid ""
 "GTK custom color specification must have color name and fallback in "
 "parentheses, e.g. gtk:custom(foo,bar); could not parse \"%s\""
 msgstr ""
+"La especificacion de color personalizat GTK deu conténer un nom de color e "
+"una valor de secors entre parentèsis, per exemple gtk:custom(foo,bar); "
+"impossible d’analisar «%s»"
 
 #: src/ui/theme.c:1413
 #, c-format
@@ -1863,6 +1975,8 @@ msgid ""
 "Invalid character '%c' in color_name parameter of gtk:custom, only "
 "A-Za-z0-9-_ are valid"
 msgstr ""
+"Caractèr non valid « %c » dins lo paramètre color_name de gtk:custom, sols "
+"los caractèrs A-Za-z0-9-_ son valids"
 
 #: src/ui/theme.c:1427
 #, c-format
@@ -1870,6 +1984,8 @@ msgid ""
 "Gtk:custom format is \"gtk:custom(color_name,fallback)\", \"%s\" does not "
 "fit the format"
 msgstr ""
+"Gtk : lo format personalizat es «gtk:custom(color_name,fallback)», «%s» "
+"correspond pas al format"
 
 #: src/ui/theme.c:1471
 #, c-format
@@ -1910,7 +2026,7 @@ msgid ""
 "format"
 msgstr ""
 "Lo format de mescla es « blend/bg_color/fg_color/alpha », « %s » correspond "
-"pas a aqueste format ."
+"pas a aqueste format"
 
 #: src/ui/theme.c:1548
 #, c-format
@@ -2066,7 +2182,8 @@ msgstr ""
 #: src/ui/theme.c:5388 src/ui/theme.c:5413
 #, c-format
 msgid "Missing <frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>"
-msgstr "<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/>  mancant"
+msgstr ""
+"<frame state=\"%s\" resize=\"%s\" focus=\"%s\" style=\"whatever\"/> mancant"
 
 #: src/ui/theme.c:5457
 #, c-format
@@ -2426,6 +2543,8 @@ msgstr ""
 #, c-format
 msgid "Theme requires version %s but latest supported theme version is %d.%d"
 msgstr ""
+"Lo tèma requerís una version %s, mas la darrièra version del tèma presa en "
+"carga es %d.%d"
 
 #: src/ui/theme-parser.c:3617
 #, c-format
