@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the marco package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Kristoffer Grundström <lovaren@gmail.com>, 2018
 # Henrik Mattsson-Mårn <h@reglage.net>, 2018
 # Patrik Nilsson <asavartzeth@gmail.com>, 2018
@@ -16,21 +13,25 @@
 # Ludvig Nybogård <ludvig@nybogard.nu>, 2018
 # Philip Andersen <renegadevi@codeofmagi.net>, 2020
 # Luna Jernberg <droidbittin@gmail.com>, 2024
-# Daniel Nylander <po@danielnylander.se>, 2025
-# 
+# Daniel Nylander <po@danielnylander.se>, 2025, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: marco 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/marco\n"
 "POT-Creation-Date: 2023-09-01 20:14+0200\n"
-"PO-Revision-Date: 2018-03-11 16:12+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
-"Language-Team: Swedish (https://app.transifex.com/mate/teams/13566/sv/)\n"
+"PO-Revision-Date: 2026-10-25 11:18+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/marco/sv/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sv\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.10.1\n"
 
 #: src/50-marco-desktop-key.xml.in:2
 msgid "Desktop"
@@ -423,13 +424,13 @@ msgid ""
 "without breaking older versions. A special spacer tag can be used to insert "
 "some space between two adjacent buttons."
 msgstr ""
-"Arrangemang av knapparna på titelraden. Värdet måste vara en sträng som till"
-" exempel \"menu:minimize,maximize,close\"; kolonet skiljer det vänstra "
-"hörnet från det högra hörnet, och knappnamnen är kommaseparerade. Två "
-"knappar av samma typ är inte tillåtet. Okända knappnamn ignoreras helt och "
-"hållet så att knappar kan läggas till i framtida versioner utan att gamla "
-"versioner går sönder. En speciell utfyllnadstagg kan användas för att infoga"
-" utrymme mellan två närliggande knappar."
+"Arrangemang av knapparna på titelraden. Värdet måste vara en sträng som till "
+"exempel \"menu:minimize,maximize,close\"; kolonet skiljer det vänstra hörnet "
+"från det högra hörnet och knappnamnen är kommaseparerade. Två knappar av "
+"samma typ är inte tillåtet. Okända knappnamn ignoreras helt och hållet så "
+"att knappar kan läggas till i framtida versioner utan att gamla versioner "
+"går sönder. En speciell utfyllnadstagg kan användas för att infoga utrymme "
+"mellan två närliggande knappar."
 
 #: src/org.mate.marco.gschema.xml:70
 msgid "Window focus mode"
@@ -446,8 +447,8 @@ msgstr ""
 "Fönsterfokusläget anger hur fönster ska aktiveras. Det har tre möjliga "
 "värden; \"click\" betyder att fönster måste klickas på för att de ska få "
 "fokus, \"sloppy\" betyder att fönster fokuseras då muspekaren hamnar i "
-"fönstret, och \"mouse\" betyder att fönster fokuseras då muspekaren hamnar i"
-" fönstret och förlorar fokus då muspekaren lämnar fönstret."
+"fönstret och \"mouse\" betyder att fönster fokuseras då muspekaren hamnar i "
+"fönstret och förlorar fokus då muspekaren lämnar fönstret."
 
 #: src/org.mate.marco.gschema.xml:75
 msgid "Control how new windows get focus"
@@ -462,7 +463,7 @@ msgid ""
 msgstr ""
 "Detta alternativ tillhandahåller ytterligare kontroll över hur nyligen "
 "skapade fönster får fokus. Det har två möjliga värden; \"smart\" som "
-"verkställer användarens normala fokusläge, och \"strict\" som resulterar i "
+"verkställer användarens normala fokusläge och \"strict\" som resulterar i "
 "att fönster som startar från en terminal inte ges fokus."
 
 #: src/org.mate.marco.gschema.xml:80
@@ -596,11 +597,11 @@ msgid ""
 "the auto_raise_delay key. This is not related to clicking on a window to "
 "raise it, nor to entering a window during drag-and-drop."
 msgstr ""
-"Om sant, och om fokusläget antingen är \"sloppy\" eller \"mouse\", kommer "
-"det fokuserade fönstret att automatiskt höjas efter en fördröjning "
+"Om sant och om fokusläget antingen är \"sloppy\" eller \"mouse\", kommer det "
+"fokuserade fönstret att automatiskt höjas efter en fördröjning "
 "(fördröjningen anges av nyckeln auto_raise_delay). Detta är inte relaterat "
-"till att klicka på ett fönster för att höja det, inte heller att gå in i ett"
-" fönster med drag-och-släpp."
+"till att klicka på ett fönster för att höja det, inte heller att gå in i ett "
+"fönster med drag-och-släpp."
 
 #: src/org.mate.marco.gschema.xml:105
 msgid "Delay in milliseconds for the auto raise option"
@@ -622,7 +623,7 @@ msgstr "Aktuellt tema"
 msgid ""
 "The theme determines the appearance of window borders, titlebar, and so "
 "forth."
-msgstr "Temat avgör utseendet på fönsterramar, titelrader, och så vidare."
+msgstr "Temat avgör utseendet på fönsterramar, titelrader och så vidare."
 
 #: src/org.mate.marco.gschema.xml:115
 msgid "Use standard system font in window titles"
@@ -663,9 +664,9 @@ msgid ""
 "prevent making the desktop unusable by accidentally asking for too many "
 "workspaces."
 msgstr ""
-"Antal arbetsytor. Måste vara större än noll, och har ett fast maxvärde för "
-"att förhindra att skrivbordet förstörs genom att för många arbetsytor begärs"
-" av misstag."
+"Antal arbetsytor. Måste vara större än noll och har ett fast maxvärde för "
+"att förhindra att skrivbordet förstörs genom att för många arbetsytor begärs "
+"av misstag."
 
 #: src/org.mate.marco.gschema.xml:131
 msgid "Workspace wrap style"
@@ -734,8 +735,8 @@ msgstr ""
 "Talar om för Marco hur den synliga indikeringen att systemsignalen eller en "
 "annan programsignal har ljudit ska implementeras. För tillfället finns det "
 "två giltiga värden, \"fullscreen\", som genererar en svartvit blinkning i "
-"helskärmsformat, och \"frame_flash\" som gör att titelraden på programmet "
-"som skickade signalen blinkar. Om programmet som skickade signalen är okänd "
+"helskärmsformat och \"frame_flash\" som gör att titelraden på programmet som "
+"skickade signalen blinkar. Om programmet som skickade signalen är okänd "
 "(vilket normalt är fallet för \"standardsystempipet\"), blinkas titelraden "
 "på det för tillfället fokuserade fönstret."
 
@@ -778,7 +779,7 @@ msgid ""
 "the wireframe feature is disabled when accessibility is on."
 msgstr ""
 "Om detta är sant kommer marco att ge användaren mindre återkoppling genom "
-"att använda trådramar, undvika animationer, och andra sätt. Detta är en "
+"att använda trådramar, undvika animationer och andra sätt. Detta är en "
 "betydande minskning av användbarheten för många användare, men kan tillåta "
 "äldre program och terminalservrar att fungera i de fall de annars skulle "
 "varit olämpliga. Funktionaliteten med trådramar är dock inaktiverad då "
@@ -1022,12 +1023,12 @@ msgid ""
 "the option to the special string \"disabled\", then there will be no "
 "keybinding for this action."
 msgstr ""
-"Den tangentbindning som kör kommandot med motsvarande nummer i "
-"/apps/marco/keybinding_commands Formatet ser ut som \"<Control>a\" eller "
-"\"<Shift><Alt>F1\". Parsern är ganska liberal och tillåter små eller stora "
-"bokstäver, och även förkortningar som \"<Ctl>\" och \"<Ctrl>\". Om du "
-"ställer in alternativet till den speciella strängen \"disabled\" kommer det "
-"inte att finnas någon tangentbindning för den här åtgärden."
+"Den tangentbindning som kör kommandot med motsvarande nummer i /apps/marco/"
+"keybinding_commands Formatet ser ut som \"<Control>a\" eller \"<Shift><Alt>"
+"F1\". Parsern är ganska liberal och tillåter små eller stora bokstäver och "
+"även förkortningar som \"<Ctl>\" och \"<Ctrl>\". Om du ställer in "
+"alternativet till den speciella strängen \"disabled\" kommer det inte att "
+"finnas någon tangentbindning för den här åtgärden."
 
 #: src/org.mate.marco.gschema.xml:475 src/org.mate.marco.gschema.xml:480
 #: src/org.mate.marco.gschema.xml:485 src/org.mate.marco.gschema.xml:490
@@ -1074,9 +1075,9 @@ msgid ""
 "\"disabled\", then there will be no keybinding for this action."
 msgstr ""
 "Formatet ser ut som \"<Control>a\" eller \"<Shift><Alt>F1\". Parsern är "
-"ganska liberal och tillåter små eller stora bokstäver, och även "
-"förkortningar som \"<Ctl>\" och \"<Ctrl>\". Om du ställer in alternativet "
-"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"ganska liberal och tillåter små eller stora bokstäver och även förkortningar "
+"som \"<Ctl>\" och \"<Ctrl>\". Om du ställer in alternativet till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon "
 "tangentbindning för den här åtgärden."
 
 #: src/org.mate.marco.gschema.xml:560 src/org.mate.marco.gschema.xml:565
@@ -1095,9 +1096,9 @@ msgid ""
 "\"shift\" cannot be one of the keys it uses."
 msgstr ""
 "Formatet ser ut som \"<Control>a\" eller \"<Shift><Alt>F1\". Parsern är "
-"ganska liberal och tillåter små eller stora bokstäver, och även "
-"förkortningar som \"<Ctl>\" och \"<Ctrl>\". Om du ställer in alternativet "
-"till den speciella strängen \"disabled\", kommer det inte att finnas någon "
+"ganska liberal och tillåter små eller stora bokstäver och även förkortningar "
+"som \"<Ctl>\" och \"<Ctrl>\". Om du ställer in alternativet till den "
+"speciella strängen \"disabled\", kommer det inte att finnas någon "
 "tangentbindning för denna åtgärd. Denna tangentbindning kan upphävas genom "
 "att hålla ned \"shift\"-tangenten; därför kan \"shift\" inte vara en av de "
 "tangenter som används."
@@ -1728,7 +1729,7 @@ msgstr "Flytta titelrad på _skärm"
 #. Translators: Translate this string the same way as you do in libwnck!
 #: src/ui/menu.c:83 src/ui/menu.c:85
 msgid "Always on _Top"
-msgstr "Alltid _överst"
+msgstr "Alltid ö_verst"
 
 #. Translators: Translate this string the same way as you do in libwnck!
 #: src/ui/menu.c:87
@@ -2520,7 +2521,7 @@ msgstr "Misslyckades med att hitta en giltig fil för temat %s\n"
 
 #: src/ui/theme-viewer.c:254
 msgid "_OK"
-msgstr "Ok"
+msgstr "_OK"
 
 #: src/ui/theme-viewer.c:266
 msgid "This is a sample message in a sample dialog"
